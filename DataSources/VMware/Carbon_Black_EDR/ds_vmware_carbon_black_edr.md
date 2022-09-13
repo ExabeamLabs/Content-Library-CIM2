@@ -1,0 +1,14 @@
+Vendor: VMware
+==============
+Product: Carbon Black EDR
+-------------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       9        |    9    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  ""app-notification:success""<br> ↳[vmware-edr-cef-app-notification-error](Ps/pC_vmwareedrcefappnotificationerror.md)<br><br> ""endpoint-activity:success""<br> ↳[vmware-carbonblackedr-sk4-endpoint-activity-apicall](Ps/pC_vmwarecarbonblackedrsk4endpointactivityapicall.md)<br> ↳[vmware-carbonblackedr-sk4-endpoint-activity-apicall](Ps/pC_vmwarecarbonblackedrsk4endpointactivityapicall.md)<br> ↳[vmware-carbonblackedr-sk4-endpoint-activity-apicall](Ps/pC_vmwarecarbonblackedrsk4endpointactivityapicall.md)<br> ↳[vmware-carbonblackedr-kv-endpoint-activity-cbprotection](Ps/pC_vmwarecarbonblackedrkvendpointactivitycbprotection.md)<br><br> ""process-close:success""<br> ↳[vmware-carbonblackedr-sk4-process-close-success-endpointeventprocend](Ps/pC_vmwarecarbonblackedrsk4processclosesuccessendpointeventprocend.md)<br><br> "app-activity"<br> ↳[vmware-carbonblackedr-cef-app-activity-protection](Ps/pC_vmwarecarbonblackedrcefappactivityprotection.md)<br><br> "image-loaded"<br> ↳[vmware-carbonblackedr-sk4-dll-load-actionloadmodule](Ps/pC_vmwarecarbonblackedrsk4dllloadactionloadmodule.md)<br><br> "network-connection-failed"<br> ↳[vmware-carbonblackedr-sk4-network-traffic-fail-operationfailed](Ps/pC_vmwarecarbonblackedrsk4networktrafficfailoperationfailed.md)<br><br> "process-created"<br> ↳[vmware-carbonblackedr-sk4-process-create-success-redcanary](Ps/pC_vmwarecarbonblackedrsk4processcreatesuccessredcanary.md)<br> ↳[vmware-carbonblackedr-json-process-create-success-createprocess](Ps/pC_vmwarecarbonblackedrjsonprocesscreatesuccesscreateprocess.md)<br> ↳[vmware-carbonblackedr-cef-process-create-success-crossproc](Ps/pC_vmwarecarbonblackedrcefprocesscreatesuccesscrossproc.md)<br> ↳[vmware-carbonblackedr-cef-process-create-success-childproc](Ps/pC_vmwarecarbonblackedrcefprocesscreatesuccesschildproc.md)<br> ↳[vmware-carbonblackceedr-json-process-create-success-procstart](Ps/pC_vmwarecarbonblackceedrjsonprocesscreatesuccessprocstart.md)<br><br> "registry-write"<br> ↳[vmware-carbonblackedr-sk4-registry-registryoperation](Ps/pC_vmwarecarbonblackedrsk4registryregistryoperation.md)<br> ↳[vmware-carbonblackedr-sk4-registry-registryoperation](Ps/pC_vmwarecarbonblackedrsk4registryregistryoperation.md)<br><br> "security-alert"<br> ↳[vmware-carbonblackedr-kv-alert-trigger-ingresshit](Ps/pC_vmwarecarbonblackedrkvalerttriggeringresshit.md)<br> |    | [](RM/r_m_vmware_carbon_black_edr_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------

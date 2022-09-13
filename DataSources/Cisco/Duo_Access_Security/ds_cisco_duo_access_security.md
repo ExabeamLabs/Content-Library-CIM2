@@ -1,0 +1,14 @@
+Vendor: Cisco
+=============
+Product: Duo Access Security
+----------------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       5        |    5    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  "account-creation"<br> ↳[cisco-duo-json-user-create-success-usercreate](Ps/pC_ciscoduojsonusercreatesuccessusercreate.md)<br> ↳[cisco-duo-json-app-activity-success-api](Ps/pC_ciscoduojsonappactivitysuccessapi.md)<br><br> "account-deleted"<br> ↳[cisco-duo-json-app-activity-success-api](Ps/pC_ciscoduojsonappactivitysuccessapi.md)<br><br> "app-activity"<br> ↳[cisco-duo-sk4-app-activity-success-useradded](Ps/pC_ciscoduosk4appactivitysuccessuseradded.md)<br> ↳[cisco-duo-json-app-activity-success-api](Ps/pC_ciscoduojsonappactivitysuccessapi.md)<br> ↳[cisco-duo-kv-app-activity-success-sendenrollcode](Ps/pC_ciscoduokvappactivitysuccesssendenrollcode.md)<br> ↳[cisco-duo-json-app-activity-success-userpending](Ps/pC_ciscoduojsonappactivitysuccessuserpending.md)<br> ↳[cisco-duo-json-app-activity-success-admindelete](Ps/pC_ciscoduojsonappactivitysuccessadmindelete.md)<br> ↳[cisco-duo-sk4-app-activity-success-app-userupdate](Ps/pC_ciscoduosk4appactivitysuccessappuserupdate.md)<br> ↳[cisco-duo-json-app-activity-success-adminselfactivate](Ps/pC_ciscoduojsonappactivitysuccessadminselfactivate.md)<br> ↳[cisco-duo-json-app-activity-success-usercreate-1](Ps/pC_ciscoduojsonappactivitysuccessusercreate1.md)<br> ↳[cisco-duo-sk4-app-activity-success-admincreate-1](Ps/pC_ciscoduosk4appactivitysuccessadmincreate1.md)<br> ↳[cisco-duo-json-app-activity-success-phoneupdate](Ps/pC_ciscoduojsonappactivitysuccessphoneupdate.md)<br> ↳[cisco-duo-sk4-app-activity-success-useradminupdate](Ps/pC_ciscoduosk4appactivitysuccessuseradminupdate.md)<br> ↳[cisco-duo-json-app-activity-success-adminactivate](Ps/pC_ciscoduojsonappactivitysuccessadminactivate.md)<br> ↳[cisco-duo-json-app-activity-success-adminupdate-1](Ps/pC_ciscoduojsonappactivitysuccessadminupdate1.md)<br> ↳[cisco-duo-json-app-activity-success-api](Ps/pC_ciscoduojsonappactivitysuccessapi.md)<br> ↳[cisco-duo-json-app-activity-success-updateuser](Ps/pC_ciscoduojsonappactivitysuccessupdateuser.md)<br><br> "app-login"<br> ↳[cisco-duo-kv-app-login-success-adminlogin](Ps/pC_ciscoduokvapploginsuccessadminlogin.md)<br> ↳[cisco-duo-cef-app-login-success-success](Ps/pC_ciscoduocefapploginsuccesssuccess.md)<br><br> "failed-app-login"<br> ↳[cisco-duo-kv-app-login-fail-adminloginerror](Ps/pC_ciscoduokvapploginfailadminloginerror.md)<br> ↳[cisco-duo-csv-app-login-fail-failure](Ps/pC_ciscoduocsvapploginfailfailure.md)<br> |    | [](RM/r_m_cisco_duo_access_security_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------

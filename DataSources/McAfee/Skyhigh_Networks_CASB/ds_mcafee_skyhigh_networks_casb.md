@@ -1,0 +1,14 @@
+Vendor: McAfee
+==============
+Product: Skyhigh Networks CASB
+------------------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       5        |    5    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  ""app-logout:success""<br> ↳[mcafee-sncasb-cef-app-logout-success-userloggedout](Ps/pC_mcafeesncasbcefapplogoutsuccessuserloggedout.md)<br><br> "app-activity"<br> ↳[mcafee-sncasb-kv-app-success-mvision](Ps/pC_mcafeesncasbkvappsuccessmvision.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-userdeleted](Ps/pC_mcafeesncasbcefappactivitysuccessuserdeleted.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-newusercreated](Ps/pC_mcafeesncasbcefappactivitysuccessnewusercreated.md)<br> ↳[mcafee-sncasb-leef-app-activity-success-changeincidentstatus](Ps/pC_mcafeesncasbleefappactivitysuccesschangeincidentstatus.md)<br> ↳[mcafee-sncasb-leef-app-activity-success-reportdownloaded](Ps/pC_mcafeesncasbleefappactivitysuccessreportdownloaded.md)<br> ↳[mcafee-sncasb-leef-app-activity-success-scheduledreportcreated](Ps/pC_mcafeesncasbleefappactivitysuccessscheduledreportcreated.md)<br> ↳[mcafee-sncasb-leef-app-activity-success-apiaccess](Ps/pC_mcafeesncasbleefappactivitysuccessapiaccess.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-apploadtimings](Ps/pC_mcafeesncasbcefappactivitysuccessapploadtimings.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-showlessview](Ps/pC_mcafeesncasbcefappactivitysuccessshowlessview.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-userinfoedited](Ps/pC_mcafeesncasbcefappactivitysuccessuserinfoedited.md)<br> ↳[mcafee-sncasb-leef-app-activity-success-savedviewdeleted](Ps/pC_mcafeesncasbleefappactivitysuccesssavedviewdeleted.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-showmoreview](Ps/pC_mcafeesncasbcefappactivitysuccessshowmoreview.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-appnavigation](Ps/pC_mcafeesncasbcefappactivitysuccessappnavigation.md)<br> ↳[mcafee-sncasb-cef-app-activity-success-incidentdownloaded](Ps/pC_mcafeesncasbcefappactivitysuccessincidentdownloaded.md)<br><br> "app-login"<br> ↳[mcafee-sncasb-kv-app-success-mvision](Ps/pC_mcafeesncasbkvappsuccessmvision.md)<br> ↳[mcafee-sncasb-cef-app-login-success-userloggedin](Ps/pC_mcafeesncasbcefapploginsuccessuserloggedin.md)<br><br> "failed-app-login"<br> ↳[mcafee-sncasb-cef-app-login-fail-auditlogs](Ps/pC_mcafeesncasbcefapploginfailauditlogs.md)<br><br> "security-alert"<br> ↳[mcafee-sncasb-cef-alert-trigger-success-alertpolicy](Ps/pC_mcafeesncasbcefalerttriggersuccessalertpolicy.md)<br> ↳[mcafee-sncasb-mix-alert-trigger-success-anomalies](Ps/pC_mcafeesncasbmixalerttriggersuccessanomalies.md)<br> |    | [](RM/r_m_mcafee_skyhigh_networks_casb_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------

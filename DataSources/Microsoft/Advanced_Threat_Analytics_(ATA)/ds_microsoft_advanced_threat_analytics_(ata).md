@@ -1,0 +1,14 @@
+Vendor: Microsoft
+=================
+Product: Advanced Threat Analytics (ATA)
+----------------------------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       3        |    3    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  ""app-notification:success""<br> ↳[microsoft-ata-cef-app-notification-gatewaydisconnectedmonitoringalert](Ps/pC_microsoftatacefappnotificationgatewaydisconnectedmonitoringalert.md)<br><br> ""endpoint-notification:success""<br> ↳[microsoft-ata-cef-endpoint-notification-gatewaylowmemorymonitoringalert](Ps/pC_microsoftatacefendpointnotificationgatewaylowmemorymonitoringalert.md)<br><br> "security-alert"<br> ↳[microsoft-ata-cef-alert-trigger-success-accountactivity](Ps/pC_microsoftatacefalerttriggersuccessaccountactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-bruteforceactivity](Ps/pC_microsoftatacefalerttriggersuccessbruteforceactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-abnormprotoactivity](Ps/pC_microsoftatacefalerttriggersuccessabnormprotoactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-replicationactivity](Ps/pC_microsoftatacefalerttriggersuccessreplicationactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-ticketactivity](Ps/pC_microsoftatacefalerttriggersuccessticketactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-sessionactivity](Ps/pC_microsoftatacefalerttriggersuccesssessionactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-executionactivity](Ps/pC_microsoftatacefalerttriggersuccessexecutionactivity.md)<br> ↳[microsoft-ata-cef-alert-trigger-monitoringalert](Ps/pC_microsoftatacefalerttriggermonitoringalert.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-forgedpac](Ps/pC_microsoftatacefalerttriggersuccessforgedpac.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-massiveobjectdeletion](Ps/pC_microsoftatacefalerttriggersuccessmassiveobjectdeletion.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-goldenticket](Ps/pC_microsoftatacefalerttriggersuccessgoldenticket.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-passthehash](Ps/pC_microsoftatacefalerttriggersuccesspassthehash.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-retrievedata](Ps/pC_microsoftatacefalerttriggersuccessretrievedata.md)<br> ↳[microsoft-ata-cef-alert-trigger-success-monitoringalert](Ps/pC_microsoftatacefalerttriggersuccessmonitoringalert.md)<br> |    | [](RM/r_m_microsoft_advanced_threat_analytics_(ata)_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------

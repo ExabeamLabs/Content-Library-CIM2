@@ -1,0 +1,14 @@
+Vendor: Salesforce
+==================
+Product: Salesforce
+-------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       4        |    4    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  "app-activity"<br> ↳[salesforce-sf-sk4-app-activity-success-deletedpicklistwithcolor](Ps/pC_salesforcesfsk4appactivitysuccessdeletedpicklistwithcolor.md)<br> ↳[salesforce-sf-sk4-app-activity-success-setupentityaccessaudit](Ps/pC_salesforcesfsk4appactivitysuccesssetupentityaccessaudit.md)<br> ↳[salesforce-sf-sk4-app-activity-success-resourcepropertyupdated](Ps/pC_salesforcesfsk4appactivitysuccessresourcepropertyupdated.md)<br> ↳[salesforce-sf-sk4-app-activity-success-createipwhitelist](Ps/pC_salesforcesfsk4appactivitysuccesscreateipwhitelist.md)<br> ↳[salesforce-sf-kv-app-activity-success-appactivity](Ps/pC_salesforcesfkvappactivitysuccessappactivity.md)<br> ↳[salesforce-sf-sk4-app-activity-success-changedprofileforuserstdtostd](Ps/pC_salesforcesfsk4appactivitysuccesschangedprofileforuserstdtostd.md)<br> ↳[salesforce-sf-sk4-app-activity-success-unlockeduser](Ps/pC_salesforcesfsk4appactivitysuccessunlockeduser.md)<br> ↳[salesforce-sf-sk4-app-activity-success-changedpicklist](Ps/pC_salesforcesfsk4appactivitysuccesschangedpicklist.md)<br> ↳[salesforce-sf-sk4-app-activity-success-addedtodelegatedgroup](Ps/pC_salesforcesfsk4appactivitysuccessaddedtodelegatedgroup.md)<br> ↳[salesforce-sf-sk4-app-activity-success-deletedprofile](Ps/pC_salesforcesfsk4appactivitysuccessdeletedprofile.md)<br> ↳[salesforce-sf-sk4-app-activity-success-updatedcompactlayoutmapping](Ps/pC_salesforcesfsk4appactivitysuccessupdatedcompactlayoutmapping.md)<br> ↳[salesforce-sf-sk4-app-activity-success-profilecustappcustom](Ps/pC_salesforcesfsk4appactivitysuccessprofilecustappcustom.md)<br> ↳[salesforce-sf-sk4-app-activity-success-changedpicklistvalueapiname](Ps/pC_salesforcesfsk4appactivitysuccesschangedpicklistvalueapiname.md)<br><br> "app-login"<br> ↳[salesforce-sf-json-app-login-success-loginurl](Ps/pC_salesforcesfjsonapploginsuccessloginurl.md)<br> ↳[salesforce-sf-csv-app-login-success-loginsuccess](Ps/pC_salesforcesfcsvapploginsuccessloginsuccess.md)<br> ↳[salesforce-sf-kv-app-login-logingeoid](Ps/pC_salesforcesfkvapploginlogingeoid.md)<br><br> "dlp-email-alert-out"<br> ↳[salesforce-sf-cef-email-send-success-emailmessage](Ps/pC_salesforcesfcefemailsendsuccessemailmessage.md)<br><br> "failed-app-login"<br> ↳[salesforce-sf-csv-app-login-fail-invalidpassword](Ps/pC_salesforcesfcsvapploginfailinvalidpassword.md)<br> ↳[salesforce-sf-kv-app-login-logingeoid](Ps/pC_salesforcesfkvapploginlogingeoid.md)<br> |    | [](RM/r_m_salesforce_salesforce_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------

@@ -1,0 +1,14 @@
+Vendor: Accellion
+=================
+Product: Kiteworks
+------------------
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   0   |   0    |     0      |       13       |   13    |
+
+|  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
+|:----------:| ---- | --------- | ---- |
+| Enrichment |  ""app-logout:success""<br> ↳[accellion-kw-kv-app-logout-success-userloggedout](Ps/pC_accellionkwkvapplogoutsuccessuserloggedout.md)<br><br> "account-lockout"<br> ↳[accellion-kw-kv-user-lock-success-useraccountlocked](Ps/pC_accellionkwkvuserlocksuccessuseraccountlocked.md)<br><br> "account-password-change"<br> ↳[accellion-kw-kv-user-password-modify-success-resetpassword](Ps/pC_accellionkwkvuserpasswordmodifysuccessresetpassword.md)<br><br> "account-unlocked"<br> ↳[accellion-kw-kv-user-unlock-success-useraccountunlocked](Ps/pC_accellionkwkvuserunlocksuccessuseraccountunlocked.md)<br> ↳[accellion-kw-kv-user-unlock-success-reactivateuser](Ps/pC_accellionkwkvuserunlocksuccessreactivateuser.md)<br><br> "app-activity"<br> ↳[accellion-kw-json-app-activity-success-networksettings](Ps/pC_accellionkwjsonappactivitysuccessnetworksettings.md)<br><br> "app-login"<br> ↳[accellion-kw-str-app-login-success-sessionstarted](Ps/pC_accellionkwstrapploginsuccesssessionstarted.md)<br> ↳[accellion-kw-mix-app-login-success-loggedin](Ps/pC_accellionkwmixapploginsuccessloggedin.md)<br><br> "dlp-email-alert-out"<br> ↳[accellion-kw-kv-email-send-success-withfiles](Ps/pC_accellionkwkvemailsendsuccesswithfiles.md)<br> ↳[accellion-kw-kv-email-send-success-draftcreated](Ps/pC_accellionkwkvemailsendsuccessdraftcreated.md)<br><br> "failed-app-login"<br> ↳[accellion-kw-kv-app-login-fail-userlogin](Ps/pC_accellionkwkvapploginfailuserlogin.md)<br><br> "file-download"<br> ↳[accellion-kw-kv-file-download-success-downloadedfile](Ps/pC_accellionkwkvfiledownloadsuccessdownloadedfile.md)<br> ↳[accellion-kw-kv-file-download-success-downloaded](Ps/pC_accellionkwkvfiledownloadsuccessdownloaded.md)<br> ↳[accellion-kw-kv-file-download-success-downloadedarchive](Ps/pC_accellionkwkvfiledownloadsuccessdownloadedarchive.md)<br><br> "file-read"<br> ↳[accellion-kw-kv-file-read-success-viewfile](Ps/pC_accellionkwkvfilereadsuccessviewfile.md)<br> ↳[accellion-kw-kv-file-read-success-viewedfile](Ps/pC_accellionkwkvfilereadsuccessviewedfile.md)<br><br> "file-upload"<br> ↳[accellion-kw-kv-file-upload-success-uploadedfile](Ps/pC_accellionkwkvfileuploadsuccessuploadedfile.md)<br><br> "file-write"<br> ↳[accellion-kw-kv-file-write-success-createdfolder](Ps/pC_accellionkwkvfilewritesuccesscreatedfolder.md)<br><br> "member-added"<br> ↳[accellion-kw-kv-group-member-add-adduser](Ps/pC_accellionkwkvgroupmemberaddadduser.md)<br> |    | [](RM/r_m_accellion_kiteworks_Enrichment.md) |
+
+ATT&CK Matrix for Enterprise
+----------------------------
