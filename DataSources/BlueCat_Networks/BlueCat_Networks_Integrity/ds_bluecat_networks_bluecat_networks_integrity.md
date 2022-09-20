@@ -8,7 +8,7 @@ Product: BlueCat Networks Integrity
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "computer-logon"<br> ↳[bluecatnetworks-integrity-kv-dhcp-session-success-dhcpd](Ps/pC_bluecatnetworksintegritykvdhcpsessionsuccessdhcpd.md)<br> |    | [](RM/r_m_bluecat_networks_bluecat_networks_integrity_Enrichment.md) |
+| Enrichment |  computer-logon<br> ↳[bluecatnetworks-integrity-kv-dhcp-session-success-dhcpd](Ps/pC_bluecatnetworksintegritykvdhcpsessionsuccessdhcpd.md)<br> |    | [](RM/r_m_bluecat_networks_bluecat_networks_integrity_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

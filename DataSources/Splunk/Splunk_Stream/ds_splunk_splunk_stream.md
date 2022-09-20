@@ -8,7 +8,7 @@ Product: Splunk Stream
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "computer-logon"<br> ↳[splunk-s-json-dhcp-session-success-dhcpack](Ps/pC_splunksjsondhcpsessionsuccessdhcpack.md)<br> |    | [](RM/r_m_splunk_splunk_stream_Enrichment.md) |
+| Enrichment |  computer-logon<br> ↳[splunk-s-json-dhcp-session-success-dhcpack](Ps/pC_splunksjsondhcpsessionsuccessdhcpack.md)<br> |    | [](RM/r_m_splunk_splunk_stream_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

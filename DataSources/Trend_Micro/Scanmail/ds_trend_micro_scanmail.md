@@ -8,7 +8,7 @@ Product: Scanmail
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "config-change"<br> ↳[trendmicro-scanmail-cef-configuration-modify-300101](Ps/pC_trendmicroscanmailcefconfigurationmodify300101.md)<br> |    | [](RM/r_m_trend_micro_scanmail_Enrichment.md) |
+| Enrichment |  config-change<br> ↳[trendmicro-scanmail-cef-configuration-modify-300101](Ps/pC_trendmicroscanmailcefconfigurationmodify300101.md)<br> |    | [](RM/r_m_trend_micro_scanmail_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

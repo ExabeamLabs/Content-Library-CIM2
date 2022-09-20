@@ -8,7 +8,7 @@ Product: Threat Response
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "database-access"<br> ↳[tanium-tr-json-database-activity-inteldb](Ps/pC_taniumtrjsondatabaseactivityinteldb.md)<br> |    | [](RM/r_m_tanium_threat_response_Enrichment.md) |
+| Enrichment |  database-access<br> ↳[tanium-tr-json-database-activity-inteldb](Ps/pC_taniumtrjsondatabaseactivityinteldb.md)<br> |    | [](RM/r_m_tanium_threat_response_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

@@ -1,0 +1,21 @@
+#### Parser Content
+```Java
+{
+Name = citrix-cgateway-str-vpn-logout-success-removesessiondebug
+  ParserVersion = v1.0.0
+  Vendor = Citrix
+  Product = Citrix Gateway
+  TimeFormat = "MM/dd/yyyy:HH:mm:ss z"
+  Conditions = [ """ SSLVPN REMOVE_SESSION_DEBUG """ ]
+  Fields = [
+    """({time}\d\d/\d\d/\d\d\d\d:\d\d:\d\d:\d\d \w+)\s+({host}[\w.\-]+)(\s+\S+){3}\s+SSLVPN ({event_name}REMOVE_SESSION_DEBUG)\s""",
+    """\s((?i)SessionId):?\s*({session_id}\d+)""",
+      """\sUser\s+({user}[^\-\s]+)\s""",
+      """\sClient_ip\s+({src_ip}[a-fA-F\d.:]+)""",
+      """\sVserver_ip\s+({dest_translated_ip}[a-fA-F\d.:]+)""",
+      """\sErrmsg\s+"({reason}[^"]+)""",
+  ]
+
+
+}
+```

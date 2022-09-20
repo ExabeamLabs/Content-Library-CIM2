@@ -1,0 +1,13 @@
+Vendor: Microsoft
+=================
+### Product: [Microsoft Defender for Endpoint](../ds_microsoft_microsoft_defender_for_endpoint.md)
+### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
+
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   7   |   2    |     2      |       19       |   19    |
+
+| Event Type    | Rules    | Models    |
+| ---- | ---- | ---- |
+| app-activity    | <b>T1090.003 - Proxy: Multi-hop Proxy</b><br> ↳ <b>Auth-Tor-Shost</b>: User authentication or login from a known TOR IP    |    |
+| process-created-failed | <b>T1021.003 - T1021.003</b><br> ↳ <b>A-PC-ParentName-ProcessName-DCOM-F</b>: First time child process creation for DCOM associated process on this asset.<br> ↳ <b>A-PC-ParentName-ProcessName-DCOM-A</b>: Abnormal child process creation for DCOM associated process on the asset.<br> ↳ <b>A-DCOMActivation-Known</b>: Remote DCOM activation under DcomLaunch service on this asset.<br> ↳ <b>PC-ParentName-ProcessName-DCOM-F</b>: First time child process creation for DCOM associated process<br> ↳ <b>PC-ParentName-ProcessName-DCOM-A</b>: Abnormal child process creation for DCOM associated process.<br> ↳ <b>DCOMActivation-Known</b>: Remote DCOM activation under DcomLaunch service |  • <b>PC-ParentName-ProcessName</b>: Child processes created by a parent process<br> • <b>A-PC-ParentName-ProcessName</b>: Processes for parent parent processes. |

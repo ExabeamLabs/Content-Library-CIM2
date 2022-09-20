@@ -1,0 +1,61 @@
+#### Parser Content
+```Java
+{
+Name = zscaler-ia-cef-http-session-spriv
+  ParserVersion = v1.0.0
+  Vendor = Zscaler
+  Product = Zscaler Internet Access
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [
+"""|Zscaler|NSSWeblog|""",
+"""requestClientApplication=""",
+"""act="""
+  ]
+  Fields = [
+    """({time}\d\d\d\d\s\w+\s\d{1,2}\s\d\d:\d\d:\d\d)\szscaler-nss""",
+    """\srt=({time}\d+)""",
+    """\srt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
+    """\d\d:\d\d:\d\d ({host}\S+) CEF:""",
+    """\sdvchost=(NA|({host}[\w\-.]+))\s*(\w+=|$|")""",
+    """\ssrc=({src_ip}[a-fA-F:\d.]+)\s*(\w+=|$)""",
+    """\sdst=({dest_ip}[a-fA-F:\d.]+)\s*(\w+=|$)""",
+    """([^\|]*\|){5}({action}[^\|]+)""",
+    """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
+    """\ssuser=(NA|None|\$NULL|(?![^\s]+@[^\s]+)({user}[^=\s]+?))\s*(\w+=|$)""",
+    """\slogin=({email_address}[^@\s]+@[^@\s]+)\s\w+=""",
+    """\ssuser=(noauth-protocol[^=]+?|({email_address}({user}[^\s@]+)@[^\s]+))\s*(\w+=|$)""",
+    """\|({severity}\d+)\|act=""",
+    """proto=({protocol}[^\s]+)""",
+    """\seurl=({url}[^\s\/\?]+({uri_path}\/[^\?\s]+)?({uri_query}\?[^\s]+)?)""",
+    """\sapp=({protocol}[^=]+?)\s*(\w+=|$)""",
+    """\srequestProtocol=({protocol}[^=]+?)\s*(\w+=|$)""",
+    """\scs4=(None|({ransomware_name}[^=]+?))\s*(\w+=|$)""",
+    """\srequest=({url}[^\s]+?)\s+(\w+=|$)""",
+    """\srequest=(\w+:\/{2})?[^\/]+({uri_path}\/[^?\s]+)(\?\S+)?\s+(\w+=|$)""",
+    """\srequest=(\w+:\/+)?[^|\/:]+(:\d+)?[^|?]+({uri_query}\?[^\s]+)""",
+    """\srequest=(?:[^:?]+:\/+)?({web_domain}[^\/:\s]+)""",
+    """\srequestMethod=(NA|({method}[^=]+?))\s*(\w+=|$)""",
+    """\srequestClientApplication=([uU]nknown|({user_agent}[^=]+?))\s*(\w+=|$)""",
+    """\scn1=({risk_level}\d+)""",
+    """reqsize=({bytes_out}\d+)""",
+    """respsize=({bytes_in}\d+)""",
+    """\sout=({bytes_out}\d+)""",
+    """\sin=({bytes_in}\d+)""",
+    """\scat=({category}[^=]+?)\s+\w+=""",
+    """\sfileType=(None|({mime}[^=]+?))\s*(\w+=|$)""",
+    """\soutcome=({http_response_code}\d+)""",
+    """\sreason=({proxy_action}[^=]+?)\s*(\w+=|$)""",
+    """\scs1=({department}[^=]+?)\s*(\w+=|$)""",
+    """\scs2=({categories}[^=]+?)\s*(\w+=|$)""",
+    """\scs5=(None|({threat_name}[^=]+?))\s*(\w+=|$)""",
+    """\scs6=(None|({dlp_engine}[^=]+?))\s*(\w+=|$)""",
+    """sourcehost=(NA|None|\$NULL|({src_host}[^=]+?))\s+destinationhost=""",
+    """devicehostname=(NA|({src_host}[^\s"]+?))\s*(\w+=|$)""",
+    """ZscalerNSSWeblogDLPDictionaries=(None|({web_log_dict}[^=]+?))\s*([\w.]+=|$)""",
+    """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)"""
+  ]
+  DupFields = ["ransomware_name->threat_category", "risk_level->suspicious_content"]
+
+
+}
+```

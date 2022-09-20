@@ -8,7 +8,7 @@ Product: IBM Racf
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "database-failed-login"<br> ↳[ibm-racf-kv-database-login-fail-signon](Ps/pC_ibmracfkvdatabaseloginfailsignon.md)<br> |    | [](RM/r_m_ibm_racf_ibm_racf_Enrichment.md) |
+| Enrichment |  database-failed-login<br> ↳[ibm-racf-kv-database-login-fail-signon](Ps/pC_ibmracfkvdatabaseloginfailsignon.md)<br> |    | [](RM/r_m_ibm_racf_ibm_racf_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

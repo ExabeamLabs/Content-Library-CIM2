@@ -1,0 +1,28 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-evsecurity-json-user-privilege-assign-success-4672-3
+    Vendor = Microsoft
+    Product = Event Viewer - Security 
+    ParserVersion = "v1.0.0"
+	TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    Conditions = [ """McAfee_SIEM:""", """Special privileges assigned to new logon.""" ]
+    Fields = [
+      """({event_name}Special privileges assigned to new logon)""",
+      """"src_ip":"({src_ip}[^"]+)""",
+      """"dst_ip":"({dest_ip}[^"]+)""",
+      """"id":\d*({event_code}4672)""",
+      """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
+      """"DomainID":"({domain}[^"]+)""",
+      """"HostID":"({host}[^"]+)""",
+      """"UserIDSrc":"({user}[^"]+)""",
+      n""""Security_ID":"({user_sid}[^"]+)""",
+      """"Source_Logon_ID":"({login_id}[^"]+)""",
+      """"Privileges":"({privileges}[^"]+)"""
+      """({event_code}4672)"""
+    ]
+    DupFields = [ "host->dest_host" ]
+  
+
+}
+```

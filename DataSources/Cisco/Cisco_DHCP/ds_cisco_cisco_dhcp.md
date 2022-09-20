@@ -8,7 +8,7 @@ Product: Cisco DHCP
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "computer-logon"<br> ↳[cisco-dhcp-kv-endpoint-login-success-domain](Ps/pC_ciscodhcpkvendpointloginsuccessdomain.md)<br> |    | [](RM/r_m_cisco_cisco_dhcp_Enrichment.md) |
+| Enrichment |  computer-logon<br> ↳[cisco-dhcp-kv-endpoint-login-success-domain](Ps/pC_ciscodhcpkvendpointloginsuccessdomain.md)<br> |    | [](RM/r_m_cisco_cisco_dhcp_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------

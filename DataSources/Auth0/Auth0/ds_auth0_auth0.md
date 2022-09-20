@@ -8,7 +8,7 @@ Product: Auth0
 
 |  Use-Case  | Activity Types/Parsers    | MITRE TTP | Content    |
 |:----------:| ---- | --------- | ---- |
-| Enrichment |  "account-password-change-failed"<br> ↳[auth0-a-json-user-password-modify-fail-fcp](Ps/pC_auth0ajsonuserpasswordmodifyfailfcp.md)<br> |    | [](RM/r_m_auth0_auth0_Enrichment.md) |
+| Enrichment |  account-password-change-failed<br> ↳[auth0-a-json-user-password-modify-fail-fcp](Ps/pC_auth0ajsonuserpasswordmodifyfailfcp.md)<br> |    | [](RM/r_m_auth0_auth0_Enrichment.md) |
 
 ATT&CK Matrix for Enterprise
 ----------------------------
