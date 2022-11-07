@@ -1,0 +1,16 @@
+#### Parser Content
+```Java
+{
+Name = juniper-srx-str-network-traffic-success-sessioncreated
+  ParserVersion = v1.0.0
+  Vendor = Juniper Networks
+  Product = Juniper SRX
+  TimeFormat = "MMM dd yyyy HH:mm:ss Z"
+  Conditions = [ """RT_FLOW_SESSION_CREATE: session created""", """ testbed-untrust """, """ testbed-trust """ ]
+  Fields = [
+    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \+\d\d:\d\d)\s+RT_FLOW_SESSION_CREATE:\s+({event_name}session created)\s+({src_ip}[\da-fA-F.:]+)\/({src_port}\d+)->({dest_ip}[\da-fA-F.:]+)\/({dest_port}\d+)\s+(None|junos-({protocol}[^\s]+))\s+({src_translated_ip}[\da-fA-F.:]+)\/({src_translated_port}\d+)->({dest_translated_ip}[\da-fA-F.:]+)\/({dest_translated_port}\d+)\s+({rule}[^\s]+\srule)(\s+\S+){4}\s({policy_name}[^\s]+)(\s+\S+){4}\s+({src_interface}[^\s]+)""",
+  ]
+
+
+}
+```

@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = esector-defesa-json-file-read-success-user
+  ParserVersion = "v1.0.0"
+  Conditions = [ """"pri":"user""", """"ident":"""", """"ファイル参照""", """"receivedFrom":""""]
+  Fields = ${ESectorParserTemplates.esector-file-activity.Fields}[
+    """ファイル参照\\",\\"({file_path}({file_dir}.*?[\\\/]+)?({file_name}[^\\\/]+?(\.({file_ext}[^\\\.]+))?))\\"""",
+    """({event_name}ファイル参照)"""
+  ]
+
+esector-file-activity {
+    Vendor = ESector
+    Product = ESector DEFESA
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    Fields = [
+      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)[+-]\d\d:\d\d\s+\w+""",
+      """receivedFrom":"({host}[^"]+)""",
+      """host":"({host_ip}[a-fA-F:\.\d]+)"""",
+      """ident":"({app}[^"]+)"""",
+      """"message":([^,]+,){2}"({src_host}[^"]+)"""",
+      """"message":([^,]+,){3}"([\w+\\-]+?-)?({user}[^"]+)""""
+    
+}
+```

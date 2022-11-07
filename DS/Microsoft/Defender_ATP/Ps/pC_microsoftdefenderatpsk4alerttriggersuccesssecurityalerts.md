@@ -1,0 +1,31 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-defenderatp-sk4-alert-trigger-success-securityalerts
+   ParserVersion = v1.0.0
+   Vendor = Microsoft
+   Product = Defender ATP
+   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+   Conditions = [ """dproc=Graph Security Alerts""", """provider":"Microsoft Defender ATP""" ]
+   Fields = [
+     """\s({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[^\s]+\s+""",
+     """"+hostStates"+:[^\}\]]+?fqdn"+:"+({host}[^"]+)""",
+     """"+hostStates"+:[^\}\]]+?privateIpAddress"+:"+({src_ip}[A-Fa-f:\d.]+)"""",
+     """"+hostStates"+:[^\}\]]+?publicIpAddress"+:"+({dest_ip}[A-Fa-f:\d.]+)"""",
+     """"+hostStates"+:[^\}\]]+?riskScore"+:"+({alert_severity}[^"]+)""",
+     """"+hostStates"+:[^=]+?accountName"+:"+({user}[^"]+)""",
+     """"+hostStates"+:[^=]+?domainName"+:"+({domain}[^"]+)""",
+     """"+hostStates"+:[^=]+?userPrincipalName"+:"+({email_address}[^@"]+@[^"]+)"""",
+     """recommendedActions"+[^=]+?severity"+:"+({alert_severity}[^"]+)""",
+     """recommendedActions"+[^=]+?title"+:"+({alert_name}[^"]+)""",
+     """"+category"+:"+({alert_type}[^"]+)""",
+     """"+fileHash"+[^\}\]]+?hashValue"+:"+({sha1_sum}[^"]+)""",
+     """"+description"+:"({additional_info}[^"]+?)\s*"""",
+     """"+sourceMaterials"+:\["+({additional_info}[^"]+)""",
+     """"id"+:"+({alert_id}[^"]+)""""
+   ]
+   DupFields = [ "host->dest_host"]
+
+
+}
+```

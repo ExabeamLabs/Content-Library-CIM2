@@ -56,7 +56,7 @@ ATT&CK Matrix for Enterprise
 | T1070.001 | [Indicator Removal on Host: Clear Windows Event Logs](https://attack.mitre.org/techniques/T1070/001)<br><br>                                              | 8     |
 | T1070.004 | [Indicator Removal on Host: File Deletion](https://attack.mitre.org/techniques/T1070/004)<br><br>                                                         | 1     |
 | T1071     | [Application Layer Protocol](https://attack.mitre.org/techniques/T1071)<br><br>                                                                           | 5     |
-| T1071.001 | [Application Layer Protocol: Web Protocols](https://attack.mitre.org/techniques/T1071/001)<br><br>                                                        | 56    |
+| T1071.001 | [Application Layer Protocol: Web Protocols](https://attack.mitre.org/techniques/T1071/001)<br><br>                                                        | 58    |
 | T1071.002 | [Application Layer Protocol: File Transfer Protocols](https://attack.mitre.org/techniques/T1071/002)<br><br>                                              | 1     |
 | T1071.004 | [Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004)<br><br>                                                                  | 2     |
 | T1072     | [Software Deployment Tools](https://attack.mitre.org/techniques/T1072)<br><br>                                                                            | 1     |
