@@ -3,11 +3,11 @@
 {
 Name = amazon-awscloudtrail-sk4-app-activity-success-redshift
   Vendor = Amazon
-  Product = aws cloudtrail
+  Product = AWS CloudTrail
   TimeFormat = "epoch"
   Conditions = [ """CEF:""", """destinationServiceName =AWS""", """dproc=Redshift""" ]
   Fields = [
-    """"date":"*({time}\d+)"?""",
+    """"date":"*({time}\d{13})"?""",
     """suser=({user}\S+)""",
     """suid=({user_id}\S+)""",
     """"message":"({additional_info}[^"]+?)"""",

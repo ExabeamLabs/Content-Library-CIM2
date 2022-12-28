@@ -3,7 +3,7 @@
 {
 Name = cisco-ios-kv-endpoint-notification-success-endpointnotification-1
   Vendor = Cisco
-  Product = cisco ios
+  Product = Cisco IOS
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ %CLIENT_ORCH_LOG-6-CLIENT_ADDED_TO_RUN_STATE: """ ]
   ParserVersion = "v1.0.0"

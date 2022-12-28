@@ -1,11 +1,13 @@
+Rules by Product and UseCase
+============================
 Vendor: Amazon
-==============
-### Product: [aws cloudtrail](../ds_amazon_aws_cloudtrail.md)
+--------------
+### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
 | Rules | Models | MITRE TTPs | Activity Types | Parsers |
 |:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       1        |    1    |
+|  39   |   24   |     2      |       9        |    9    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

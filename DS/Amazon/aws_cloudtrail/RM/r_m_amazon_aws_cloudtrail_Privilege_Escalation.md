@@ -1,11 +1,13 @@
+Rules by Product and UseCase
+============================
 Vendor: Amazon
-==============
-### Product: [aws cloudtrail](../ds_amazon_aws_cloudtrail.md)
+--------------
+### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
 | Rules | Models | MITRE TTPs | Activity Types | Parsers |
 |:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       1        |    1    |
+|   3   |   1    |     1      |       9        |    9    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

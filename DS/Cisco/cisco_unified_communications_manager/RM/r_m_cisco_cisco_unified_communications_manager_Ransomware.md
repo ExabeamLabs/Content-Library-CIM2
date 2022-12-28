@@ -1,0 +1,14 @@
+Rules by Product and UseCase
+============================
+Vendor: Cisco
+-------------
+### Product: [Cisco Unified Communications Manager](../ds_cisco_cisco_unified_communications_manager.md)
+### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
+
+| Rules | Models | MITRE TTPs | Activity Types | Parsers |
+|:-----:|:------:|:----------:|:--------------:|:-------:|
+|   1   |   0    |     1      |       3        |    3    |
+
+| Event Type    | Rules    | Models |
+| ---- | ---- | ------ |
+| authentication-successful | <b>T1078 - Valid Accounts</b><br> ↳ <b>Auth-Ransomware-Shost</b>: User authentication or login from a known ransomware IP |        |

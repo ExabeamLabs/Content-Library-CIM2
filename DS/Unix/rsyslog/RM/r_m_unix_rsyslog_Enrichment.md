@@ -1,5 +1,7 @@
+Rules by Product and UseCase
+============================
 Vendor: Unix
-============
+------------
 ### Product: [rsyslog](../ds_unix_rsyslog.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 

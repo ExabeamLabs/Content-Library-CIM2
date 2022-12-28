@@ -1,5 +1,7 @@
+Rules by Product and UseCase
+============================
 Vendor: IBM
-===========
+-----------
 ### Product: [sterling b2b integrator](../ds_ibm_sterling_b2b_integrator.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 

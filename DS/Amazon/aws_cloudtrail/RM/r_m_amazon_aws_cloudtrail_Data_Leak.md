@@ -1,11 +1,13 @@
+Rules by Product and UseCase
+============================
 Vendor: Amazon
-==============
-### Product: [aws cloudtrail](../ds_amazon_aws_cloudtrail.md)
+--------------
+### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
 | Rules | Models | MITRE TTPs | Activity Types | Parsers |
 |:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       1        |    1    |
+|   3   |   0    |     1      |       9        |    9    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

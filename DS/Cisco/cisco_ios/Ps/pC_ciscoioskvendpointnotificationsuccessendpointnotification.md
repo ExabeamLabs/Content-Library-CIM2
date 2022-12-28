@@ -3,7 +3,7 @@
 {
 Name = cisco-ios-kv-endpoint-notification-success-endpointnotification
   Vendor = Cisco
-  Product = cisco ios
+  Product = Cisco IOS
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ %IOSXE-3-PLATFORM: """ ]
   ParserVersion = "v1.0.0"
