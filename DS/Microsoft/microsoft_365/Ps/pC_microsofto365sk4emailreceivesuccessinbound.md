@@ -11,7 +11,7 @@ Name = microsoft-o365-sk4-email-receive-success-inbound
     """"Date":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """"Subject":"({email_subject}[^"]+)"""",
     """"Direction":"({direction}[^"]+)"""",
-    """"SenderAddress":"({email_address}[^",]+)"""",
+    """"SenderAddress":"({sender}[^",]+)"""",
     """"RecipientAddress":"({email_recipients}[^"]+)"""",
     """"MessageSize":"?({bytes}\d+)""",
     """"EventType":"({alert_type}[^"]+)""""

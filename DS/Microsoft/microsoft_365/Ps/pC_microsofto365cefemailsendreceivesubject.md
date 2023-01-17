@@ -19,19 +19,19 @@ Name = microsoft-o365-cef-email-send-receive-subject
     """"Subject":"\s*({email_subject}.+?)\s*"}""",
     """"Subject":"\s*({email_subject}.+?)\s*",""",
     """"Direction":"({direction}[^"]+)"""",
-    """"SenderAddress":"({email_address}[^@,]+@[^\.,]+\.[^\]\s",\|]+)","""",
-    """"RecipientAddress":"({email_recipients}[^"]+)"""",
-    """"RecipientAddress":"({dest_email_address}[^"\s,;]+)""",
+    """"SenderAddress":"({sender}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""",
+    """"RecipientAddress":"({email_recipients}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[+-?_~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"Size":"?({bytes}\d+)""",
     """"Status":"({result}[^"]+)"""",
     """"ToIP":"?(?:null|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """"FromIP":"?(?:null|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """"EventType":"({alert_type}[^"]+)"""",
     """"MessageTraceId":"({message_id}[^"]+)"""",
-    """"triggered-by":\{"user-email":"({email_address}[^",]+)"""",
+    """"triggered-by":\{"user-email":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """Category\s+\[({category}[^\]]+)\]"""
   ]
-  DupFields = [ "alert_type->alert_name" ]
+  DupFields = [ "alert_type->alert_name" ,"sender->orig_user" ]
  
 
 }

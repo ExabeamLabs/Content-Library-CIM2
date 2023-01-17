@@ -240,7 +240,7 @@ Fields = [
   """requestClientApplication=({app}.*?)\s\w+="""
   """suser=({user}[^\s]+)"""
   """flexString2=({auth_method}.*?)\s\w+"""
-  """message":"({auth_method}[^\\]+)\s\"({device_name}[^\\]+)"""
+  """message":"({auth_method}[^\\]+)\s\"({device_name}[^\\"]+)"""
 ]
 ParserVersion = "v1.0.0"
 },

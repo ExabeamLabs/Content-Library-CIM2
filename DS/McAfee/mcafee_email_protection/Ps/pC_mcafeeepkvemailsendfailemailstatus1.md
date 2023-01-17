@@ -8,7 +8,7 @@ Name = mcafee-ep-kv-email-send-fail-emailstatus-1
     Conditions = [ """event='email status""" ]
     Fields = [
       """(?i)({time}\d\d \d\d \d\d\d\d \d\d:\d\d:\d\d)\s({host}\S+)\s<mail:info>""",
-      """\sfrom=<({email_address}[^>,;]+)""",
+      """\sfrom=<({sender}[^>,;]+)""",
       """\ssize=({bytes}\d+)""",
       """\ssource=({src_host}[^(,]+?)?\(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\snrcpts=({num_recipients}\d+)""",

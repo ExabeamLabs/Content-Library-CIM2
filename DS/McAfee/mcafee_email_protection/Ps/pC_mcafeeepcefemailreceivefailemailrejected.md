@@ -14,12 +14,12 @@ Name = mcafee-ep-cef-email-receive-fail-emailrejected
     """\Wact=({action}.+?)\s+([\w\\]+=|$)""",
     """\Wshost=({src_host}[\w\-.]+)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\WFrom\\=<({email_address}[^\s>]+)""",
+    """\WFrom\\=<({sender}[^\s>]+)""",
     """\Wsize=(|({bytes}\d+))""",
     """\Wto\\=<(unknown|({email_recipients}[^>]+))""",
-    """\Wto\\=<(unknown|({email_recipients}[^\s>,;]+))""",
+    """\Wto\\=<(unknown|({dest_email_address}[^\s>,;]+))""",
     """\Wattachment\(s\)\\='(|({email_attachments}[^']+))'""",
-    """\Wattachment\(s\)\\='(|({email_attachments}[^,']+)),""",
+    """\Wattachment\(s\)\\='(|({email_attachment}[^,']+)),""",
   ]
   DupFields = [ "alert_name->alert_type" ]
   ParserVersion = "v1.0.0"

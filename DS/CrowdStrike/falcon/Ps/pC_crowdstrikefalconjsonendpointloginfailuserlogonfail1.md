@@ -12,7 +12,7 @@ crowdstrike-auth-activity = {
   Product = Falcon
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
-    """"@timestamp\\*"+:\s*\\*"+({time}[^"\\]\d{10})""",
+    """"@?timestamp\\*"+:\s*\\*"+({time}[^"\\]\d{10})""",
     """"name\\*"+:\\*"+({name}[^"\\]+)""",
     """"event_simpleName\\*"+:\\*"+({event_name}[^"\\]+)""",
     """"event_platform\\*"+:\\*"+({os}[^"\\]+)""",

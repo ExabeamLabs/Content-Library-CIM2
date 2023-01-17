@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-cef-endpoint-activity-microsoftwindowssecurityauditi
   TimeFormat = "epoch"
   Conditions = [ """|Microsoft-Windows-Security-Auditing""", """|Snare|""", """ externalId="""]
   Fields = [
-    """rt=({time}\d{13})""",
+    """\srt=({time}\d{13})""",
     """\|Microsoft-Windows-Security-Auditing:({event_code}\d+)\|({event_name}[^\|=]+?)\|"""
     """ahost=({host}[^\s]+)"""
     """dvchost=({dest_host}[^\s]+)""",

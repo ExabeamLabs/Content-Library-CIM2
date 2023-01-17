@@ -66,6 +66,7 @@ Use Case: Workforce Protection
 ### Vendor: Fortinet
 |                                        Product                                         | MITRE TTP                                                 | Content                                                                                                                                           |
 |:--------------------------------------------------------------------------------------:| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+|             [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md)             | T1071.001 - Application Layer Protocol: Web Protocols<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Workforce_Protection.md)                 |
 | [Fortinet FortiWeb](../DS/Fortinet/fortinet_fortiweb/ds_fortinet_fortinet_fortiweb.md) | T1071.001 - Application Layer Protocol: Web Protocols<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](../DS/Fortinet/fortinet_fortiweb/RM/r_m_fortinet_fortinet_fortiweb_Workforce_Protection.md) |
 |        [Fortinet UTM](../DS/Fortinet/fortinet_utm/ds_fortinet_fortinet_utm.md)         | T1071.001 - Application Layer Protocol: Web Protocols<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](../DS/Fortinet/fortinet_utm/RM/r_m_fortinet_fortinet_utm_Workforce_Protection.md)           |
 ### Vendor: Google

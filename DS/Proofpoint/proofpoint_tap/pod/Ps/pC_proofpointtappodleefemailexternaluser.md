@@ -18,7 +18,7 @@ Fields = [
   """"timestamp"+:\s*"+({time}\d+.\d+-\d+T\d+:\d+:\d+.\d+Z)"""
   """"ts"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+[\+\-]\d+)"""
   """"sizeBytes"+:\s*({bytes}\d+)"""
-  """"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?({email_address}[^"@\s,<>]+@[^"\.@\s,<>]+\.[^",<>]+)"""
+  """"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?({sender}[^"@\s,<>]+@[^"\.@\s,<>]+\.[^",<>]+)"""
   """"subject"+:\s*\["+({email_subject}[^"]+?)\s*""""
   """"rcpts"+:\s*\[({email_recipients}"+({dest_email_address}[^"@]+@[^"]+)[^\]]*?"*)\]"""
   """"filter"+:.*?"disposition"+:\s*"+({result}[^"]+)"""

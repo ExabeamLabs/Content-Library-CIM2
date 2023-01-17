@@ -8,7 +8,7 @@ Name = vmware-nsxfw-cef-network-traffic-success-nsxfw
   TimeFormat = "epoch"
   Conditions = [ """CEF:""" ,"""|VMware|NSX FW|""", """destinationZoneURI="""]
   Fields = [
-    """rt=({time}\d{13})"""
+    """\srt=({time}\d{13})"""
     """NSX FW\|[^\|]*\|({action}[^\|]+)"""
     """categoryOutcome=\/({result}[^\s]*)""",
     """eventId=({event_code}[^\s]+)""",

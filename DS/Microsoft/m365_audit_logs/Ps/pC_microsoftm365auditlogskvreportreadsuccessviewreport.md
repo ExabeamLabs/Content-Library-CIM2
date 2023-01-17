@@ -16,7 +16,7 @@ logrhythm-o365-app-activity = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[^\s@]+)(@({email_domain}[^\s]+))?)\s+\w+=""",
+    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[^\s@]+)(@({domain}[^\s]+))?)\s+\w+=""",
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",

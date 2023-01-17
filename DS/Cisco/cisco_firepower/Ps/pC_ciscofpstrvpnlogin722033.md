@@ -11,7 +11,7 @@ Name = cisco-fp-str-vpn-login-722033
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """\sGroup\s*<({group_name}.*?)>""",
-    """\sUser\s*<({user}[^@>]+)(?:@({email_domain}[^>]+))?>""",
+    """\sUser\s*<({user}[^@>]+)(?:@({domain}[^>]+))?>""",
     """\sIP\s*<(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))>\s*First\s({protocol}\w+)\s({event_name}.*?)\sfor SVC session"""
   ]
 

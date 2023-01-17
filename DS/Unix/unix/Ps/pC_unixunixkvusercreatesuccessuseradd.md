@@ -12,7 +12,7 @@ Name = unix-unix-kv-user-create-success-useradd
 """new user: name=({account_name}[^,]+),""",
 """new user: .+?UID=({account_id}[^,]+),""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "account_name->dest_user" ]
 
 
 }

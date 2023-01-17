@@ -24,8 +24,8 @@ Name = microsoft-o365-cef-email-success-subject
     """"Subject":"\s*({email_subject}[^",]+)\s*"""",
     """"MessageSize":({bytes}\d+)""",
     """"Direction":"({direction}[^"]+)""",
-    """"SenderAddress":"({email_address}[^"]+)""",
-    """"RecipientAddress":"({dest_email_address}[^"]+)""",
+    """"SenderAddress":"({sender}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"TransportRule":"({alert_name}[^"]+)""",
     """"EventType":"({alert_type}[^"]+)""",
     """Category\s+\[({category}[^\]]+)\]"""

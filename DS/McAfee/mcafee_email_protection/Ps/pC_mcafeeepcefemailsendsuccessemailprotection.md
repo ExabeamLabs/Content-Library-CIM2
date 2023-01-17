@@ -20,8 +20,8 @@ Fields = [
   """(\s|\|)sproc=({process_name}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)cs1=({alert_name}.+?)\s+cs2="""
   """(\s|\|)cs2=.*?({email_address}[^<\s@']+?@[^<>\s;']+).*?\s+cs3="""
-  """(\s|\|)cs5=Recipients:\s*'*({dest_email_address}[^<\s@';]+?@[^<>\s;']+).*?\s+Recipients Cc:"""
   """(\s|\|)cs5=Recipients:[^;]+?<({dest_email_address}[^<\s@';]+?@[^<>\s;']+)>.*?Recipients Cc:"""
+  """(\s|\|)cs5=Recipients:\s*'*({dest_email_address}[^@;']+@[^;']+).*?\s+Recipients Cc:"""
   """(\s|\|)cs5=Recipients:\s*({email_recipients}.+?)\s+Recipients Cc:"""
   """(\s|\|)cs6=({email_subject}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)fname=({file_name}[^\.]+({file_ext}.+?))\s+([\w\.-]+=|$)"""
@@ -34,6 +34,7 @@ Fields = [
 DupFields = [
   "dest_email_address->target"
   "file_name->email_attachments"
+  "email_address->sender"
 ]
 ParserVersion = "v1.0.0"
 

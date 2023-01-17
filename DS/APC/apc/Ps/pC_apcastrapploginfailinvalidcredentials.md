@@ -4,10 +4,10 @@
 Name = apc-a-str-app-login-fail-invalidcredentials
   Vendor = APC
   Product = APC
-  TimeFormat = "EEE DDMMMyy HH:mm:ss"
+  TimeFormat = "ddMMMyy HH:mm:ss"
   Conditions = [ """Invalid login credentials;""", """user: """" ]
   Fields = [
-    """\s({time}\w{1,3}\s\d{1,2}\w{1,3}\d\d\s\d\d:\d\d:\d\d)\s""",
+    """\s\w\w\w\s({time}\d{1,2}\w{1,3}\d\d\s\d\d:\d\d:\d\d)\s""",
     """user:\s"({user}[^"]+)"""",
     """({failure_reason}Invalid login credentials)"""
     ]

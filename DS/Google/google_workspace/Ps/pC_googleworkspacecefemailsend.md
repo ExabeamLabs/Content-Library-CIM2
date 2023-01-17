@@ -14,7 +14,7 @@ Name = google-workspace-cef-email-send
   Fields = [
      """"timestamp_usec":({time}\d{13})""",
      """"destination":\[\{"address[":]*({dest_email_address}[^",]+)"""",
-     """"source":\{"address[":]*({email_address}[^",]+)""",
+     """"source":\{"address[":]*({sender}[^",]+)""",
      """"subject":"({email_subject}[^",]+)"""",
      """"selector":"({action}[^",]+)""",
      """"success":({result}true|false)""",

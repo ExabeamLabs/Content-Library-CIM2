@@ -14,7 +14,7 @@ Name = hornet-email-kv-alert-trigger-success-5
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-    """from=({email_address}[^@\s]+?@[^\s]+)""",
+    """from=({sender}[^@\s]+?@[^\s]+)""",
     """to=({dest_email_address}[^@\s]+?@[^\s]+)""",
     """src_host=((?i)unknown|({src_host}[^\s]+))""",
     """src_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

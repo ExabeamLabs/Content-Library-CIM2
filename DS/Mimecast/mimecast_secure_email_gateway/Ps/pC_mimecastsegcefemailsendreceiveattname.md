@@ -18,7 +18,7 @@ Name = mimecast-seg-cef-email-send-receive-attname
     """"acc":"({user}[^"]+)"""",
     """"MsgSize":"*({bytes}\d+)""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
-    """"Sender":"(<>|({email_address}[^"]+))""",
+    """"Sender":"(<>|({sender}[^"]+))""",
     """"datetime":"({time}\d+-\d+-\d+T\d+:\d+:\d+-\d+)""",
     """"AttCnt":({attachment_count}\d+)""",
     """"AttSize":({attachment_size}\d+)""",

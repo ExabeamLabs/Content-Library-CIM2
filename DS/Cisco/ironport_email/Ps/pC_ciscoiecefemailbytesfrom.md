@@ -11,7 +11,7 @@ Name = cisco-ie-cef-email-bytesfrom
       """ahost=({host}[\w\-\.]+)\s*""",
       """\srt=({time}\d{13})""",
       """MID ({alert_id}\d+)""",
-      """({bytes}\d+) bytes from <({email_address}[^@>]+@[^>]+)>""",
+      """({bytes}\d+) bytes from <({sender}[^@>]+@[^>]+)>""",
       """\sduser=({dest_email_address}[^\@]+\@[^\s]+)\s*""",
       """cs6=({email_subject}[^=]+)\s+""",
       """\sagt=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*"""    

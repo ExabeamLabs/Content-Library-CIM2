@@ -22,7 +22,8 @@ Name = juniper-ps-str-vpn-login-success-started
       """\s(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s+(Juniper|PulseSecure):""",
       """\- \[({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\]"""
       """\- \[({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\]\s+([\w\s]+?::)?(({domain}[^\\]+)\\)?({user}[^\(]+)\(({realm}[^\[]+)?\)\[(?!Machine Cert)""",
-      """with IP(?:v4 address)?\s+({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """with IP(?:v4 address)?\s+({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+      """Session started for user\s+\(({additional_info}[^\)]+)\)\s"""
     ]
     DupFields = [ "host->dest_host" , "user->account" ]
   

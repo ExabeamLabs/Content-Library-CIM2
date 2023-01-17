@@ -7,7 +7,6 @@ Name = pan-ngfw-json-network-traffic-start
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Conditions = [ """"LogSetting":"CDL"""", """"LogType":"DECRYPTION"""", """"SubType":"start"""", """"FromZone":"""", """"ToZone":"""" ]
   Fields = [
-    """exabeam_host=({host}[^\s]+)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """"host":"({host}[^"]+)"""",
     """"SourceUser":"({email_address}[^"@]+@[^"]+)"""",

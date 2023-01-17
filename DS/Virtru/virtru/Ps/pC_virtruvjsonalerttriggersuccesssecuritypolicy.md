@@ -18,7 +18,6 @@ Name = virtru-v-json-alert-trigger-success-security-policy
      """"displayName"+:\s+"+\s+({additional_info}[^"]+?)\s+"""",
      """"type"+:\s+"+({alert_type}[^"]+)""""
   ]
-  DupFields = [ "sender->email_address" ]
 
 
 }

@@ -44,6 +44,7 @@ Use Case: Physical Security
 ### Vendor: Fortinet
 |                                 Product                                 | MITRE TTP                            | Content                                                                                                                              |
 |:-----------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+|     [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md)      | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Physical_Security.md)       |
 | [Fortinet VPN](../DS/Fortinet/fortinet_vpn/ds_fortinet_fortinet_vpn.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortinet_vpn/RM/r_m_fortinet_fortinet_vpn_Physical_Security.md) |
 ### Vendor: Generic Badge Access
 |                                                         Product                                                         | MITRE TTP                  | Content                                                                                                                                                                      |

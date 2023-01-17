@@ -4,6 +4,9 @@
 Name = checkpoint-ngfw-kv-app-activity-securitygateway
   ParserVersion = v1.0.0
   Conditions = [ """CheckPoint""", """product:"Security Gateway/Management"""" ]
+  Fields = ${DLCheckpointParsersTemplates.checkpoint-firewall-2.Fields}[
+    """\Wstatus:"({result}[^"]+)""",
+  ]
 
 checkpoint-firewall-2 = {
   Vendor = Check Point 

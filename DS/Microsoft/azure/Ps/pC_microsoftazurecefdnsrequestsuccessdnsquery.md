@@ -40,8 +40,6 @@ cef-azure-app-activity = {
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
   ]
  },
-
-
 o365-dlp-email-out = {
   Vendor = Microsoft
   Product = Microsoft 365
@@ -52,7 +50,7 @@ o365-dlp-email-out = {
     """"ResultStatus\\*"+:[\s\\]*"+({result}[^"\\]+)""",
     """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"UserId\\*"+:[\s\\]*"+({email_address}[^"\\@]+@[^"\\@]+)""",
-    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({sender}[^"\\]+)""",
     """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"SendOnBehalfOfUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"Attachments\\*"+:[\s\\]*"+\s*({email_attachments}[^\n]+?)\s*\\?","Id"""",

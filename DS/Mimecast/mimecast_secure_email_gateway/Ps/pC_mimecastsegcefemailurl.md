@@ -17,10 +17,10 @@ Name = mimecast-seg-cef-email-url
 ]
   Fields = [
     """"date":"({time}[^"]+)""",
-    """"userEmailAddress":"({dest_email_address}[^\s@"]+@[^\s@"]+)""",
+    """"userEmailAddress":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """"action":"({action}[^"]+)""",
     """"category":"(Unknown|({category}[^"]+))""",
-    """"+fromUserEmailAddress"+:"+({email_address}[^"]+)""",
+    """"+fromUserEmailAddress"+:"+({sender}[^"]+)""",
     """"+url"+:"+({url}[^"]+)""",
     """"+ttpDefinition"+:"+({service_name}[^"]+)""",
     """"+subject"+:"+\s*({email_subject}.+?)\s*"+""",
@@ -28,6 +28,7 @@ Name = mimecast-seg-cef-email-url
     """"+scanResult"+:"+({url_verdict}[^"]+)""",
     """"+scanResult"+:"+(clean|({failure_reason}[^"]+))"""
     ]
+    DupFields = ["email_address->dest_email_address","email_address->email_user"]
 
 
 }

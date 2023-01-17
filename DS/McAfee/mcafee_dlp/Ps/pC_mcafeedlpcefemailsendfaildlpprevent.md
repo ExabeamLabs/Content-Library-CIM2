@@ -15,14 +15,14 @@ Name = mcafee-dlp-cef-email-send-fail-dlpprevent
       """(\s|\|)msg=(\s+|(({alert_name}.+?)\s*))(\w+=|$)""",
       """(\s|\|)src=({src_ip}(\d{1,3}\.){3}\d{1,3})""",
       """(\s|\|)shost=({src_host}[^\s]+)""",
-      """(\s|\|)suser=<?({email_address}[^\s@<>]+?@[^\s@<>]+)"""
+      """(\s|\|)suser=<?({sender}[^\s@<>]+?@[^\s@<>]+)"""
       """(\s|\|)duser=<?({dest_email_address}[^\s@<>]+?@[^\s@<>]+)"""
       """(\s|\|)duser=(\s+|(({email_recipients}.+?)\s*))(\w+=|$)""",
       """(\s|\|)fsize=({bytes}\d+)""",
       """\scs4=(\s+|(({email_attachments}.+?)\s*))(\w+=|$)""",
       """\scs6=(\s+|(({email_subject}.+?)\s*))(\w+=|$)""",
       """\scn3=({num_recipients}\d+)"""
-      """(\s|\|)sMcAfeeDLPEmailSender=<?({email_address}[^\s@<>]+?@[^\s@<>]+)"""
+      """(\s|\|)sMcAfeeDLPEmailSender=<?({sender}[^\s@<>]+?@[^\s@<>]+)"""
       """(\s|\|)sMcAfeeDLPEmailRecipients=<?({dest_email_address}[^\s@<>]+?@[^\s@<>]+)"""
       """\sMcAfeeDLPEmailRecipients=(\s+|((email_recipients}.+?)\s*))(\w+=|$)"""
       """\sMcAfeeDLPHostDomainName =({domain}[\w\-\.]+?)\s*(\w+=|$)"""

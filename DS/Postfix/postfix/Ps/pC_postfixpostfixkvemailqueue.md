@@ -14,7 +14,7 @@ Name = postfix-postfix-kv-email-queue
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}([+-]\d\d:\d\d)?)"""
     """({host}[\w.\-]+) postfix""",
-    """({message_id}[^\s"]+): from=<?((root@host.company.web.ds)|(\\u\d+)?({email_address}[^@>]+?@[^,\\>]+\.[^,\\>]+))>?""",
+    """({message_id}[^\s"]+): from=<?((root@host.company.web.ds)|(\\u\d+)?({sender}[^@>]+?@[^,\\>]+\.[^,\\>]+))>?""",
     """\ssize=({bytes}\d+)""",
     """\snrcpt=({num_recipients}\d+)""",
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",

@@ -37,7 +37,7 @@ aws-cloudtrail-json = {
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_code}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"+\s*[,\]\}]""",
-      """"errorCode"\s*:\s*"({result_code}[^"]+)"""",
+      """"errorCode"\s*:\s*"({result}[^"]+)"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",}]+)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -46,7 +46,7 @@ aws-cloudtrail-json = {
       """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
       """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?""""
       """"userName"\\?:\s*\\?"({user}[^"]+@({domain}[^@"]+)|[^"]+)\\?"""",
-      """\ssuser=[^\/]+\/[^\/]+\/({user}[^@"\s]+)@?({domain}[^@"\s]+)?"""
+      """\ssuser=([^\/=]+\/[^\/=]+\/)?({user}[^@"\s]+)@?({domain}[^@"\s]+)?"""
     
 }
 ```

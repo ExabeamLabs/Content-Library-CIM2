@@ -27,6 +27,7 @@ Name = netskope-sc-sk4-alert-trigger-success-actdetect
     """dpriv=({alert_type}[^=]+?)\s\w+=""",
     """"malware_type"+:"+({alert_name}[^"]+)"""",
     """"+malware_sev"+:"+({alert_severity}[^"]+)""",
+    """suser=(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))"""
   ]
 
 cef-netskope-alert = {

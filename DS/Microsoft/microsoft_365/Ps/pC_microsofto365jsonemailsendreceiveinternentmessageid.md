@@ -24,8 +24,8 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """"Verdict":"({verdict}[^"]+)"""",
     """"Subject":"\s*({additional_info}[^,"]+?)[\s\t]*"(,|$)"""",
     """"Directionality":"({direction}[^",]+)"""",
-    """"P2Sender":"([^@]+?\\=)?({email_address}[^@",\\=]+@[^",]+)"""",
-    """"P1Sender":"([^@]+?\\=)?({email_address}[^@",\\=]+@[^",]+)"""",  
+    """"P2Sender":"([^@]+?\\=)?({sender}[^@",\\=]+@[^",]+)"""",
+    """"P1Sender":"([^@]+?\\=)?({sender}[^@",\\=]+@[^",]+)"""",  
 ]
   DupFields = [ "email_recipients->dest_email_address","additional_info->email_subject" ]
  

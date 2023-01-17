@@ -7,6 +7,7 @@ Name = microsoft-o365-cef-app-file-success-adduser
   Conditions= [ """destinationServiceName =Office 365""", """"Add user""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
     """"targetResources":[^\}]+"userPrincipalName":"({object}[^"]+)""""
+    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {

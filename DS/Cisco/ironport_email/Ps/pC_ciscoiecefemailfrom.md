@@ -11,7 +11,7 @@ Name = cisco-ie-cef-email-from
       """\sahost=({host}[\w\-\.]+)\s*""",
       """\srt=({time}\d{13})""",
       """MID ({alert_id}\d+)""",
-      """(F|f)rom[:'].+?<({email_address}[^@>]+@[^>]+)>""",
+      """(F|f)rom[:'].+?<({sender}[^@>]+@[^>]+)>""",
       """\sagt=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*"""    
     ]
     DupFields = [ "alert_id->message_id" ]

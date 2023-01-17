@@ -36,7 +36,8 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """ParentBaseFileName":"({file_name}[^"]+)"""",
     """"ContextProcessId":"({process_guid}[^"]+)"""",
     """"ParentBaseFileName":"({parent_process}[^"]+)"""",
-    """"GrandParentBaseFileName":"({grandparent_process_name}[^"]+)""""
+    """"GrandParentBaseFileName":"({grandparent_process_name}[^"]+)"""",
+    """"event_platform":\s*"({os}[^"]+)"""
   ]
  DupFields = [ "process_dir->process_path_directory", "parent_process->parent_process_name" ]
 

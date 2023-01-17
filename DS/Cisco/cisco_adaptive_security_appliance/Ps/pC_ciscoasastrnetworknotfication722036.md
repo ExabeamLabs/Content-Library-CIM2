@@ -15,7 +15,7 @@ Name = cisco-asa-str-network-notfication-722036
     """IP\s*<(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))""",
     """Group\s*<({group_name}[^>]+)""",
     """User\s*<(({domain}[^\\]+)\\+)?({user}[^>\\]+)"""
-    """User\s*<({user}[^@>\\]+)(?:@({email_domain}[^>]+))?>""",
+    """User\s*<({user}[^@>\\]+)(?:@({domain}[^>]+))?>""",
   ]
 
 

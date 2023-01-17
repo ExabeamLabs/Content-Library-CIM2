@@ -15,7 +15,7 @@ Name = google-workspace-cef-email-receive
     """"timestamp_usec":({time}\d{13})""",
     """"subject":"({email_subject}[^"]+)"""",
     """"destination":\[\{"address[":]*({dest_email_address}[^",]+)"""",
-    """"source":\{"address[":]*({email_address}[^",]+)""",
+    """"source":\{"address[":]*({sender}[^",]+)""",
     """"service":"({action}[^",]+)""",
     """"success":({result}true|false)""",
     """"rfc2822_message_id"+:"+({message_id}[^",]+)""",
@@ -23,6 +23,7 @@ Name = google-workspace-cef-email-receive
     """"client_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """\sdestinationServiceName =({app}[^=]+?)\s*\w+="""
   ]
+  DupFields = [ "sender->external_address" ]
 
 
 }

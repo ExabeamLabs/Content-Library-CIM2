@@ -5,7 +5,7 @@ Name = symantec-endpointprotection-kv-app-activity-category
     ParserVersion = v1.0.0
     Vendor = Symantec
     Product = Symantec Endpoint Protection
-    TimeFormat = "YYYY-mm-dd HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Conditions = [ """SymantecServer: """, """,Category: """]
     Fields = [
       """\d\d:\d\d:\d\d\s({host}[^\s]+) SymantecServer:""",

@@ -6,7 +6,7 @@ Name = juniper-ps-sk4-vpn-login-success-agentlogin
   Conditions = [ """"host":""", """"PulseSecure:"""", """Agent login succeeded for""" ]
   Fields = ${JuniperParsersTemplates.cef-pulsesecure-vpn-events.Fields} [
     """\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\][^\[]+?\[({resource}[^\]]+)\]""",
-    """({event_code}Agent login succeeded) for ({user}[^",@\/]+)(?:@({email_domain}[^\/]+))?.+? from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """({event_code}Agent login succeeded) for ({user}[^",@\/]+)(?:@({domain}[^\/]+))?.+? from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({os}iOS|Android|BlackBerry|iPhone OS|Windows Phone|BeOS|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)"""
   ]
 

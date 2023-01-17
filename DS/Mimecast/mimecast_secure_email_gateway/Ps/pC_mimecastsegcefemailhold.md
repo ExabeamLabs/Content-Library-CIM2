@@ -18,7 +18,7 @@ Name = mimecast-seg-cef-email-hold
     """"(?i)Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
     """"(recipientAddress|Recipient)":"({dest_email_address}[^"]+)""",
-    """(senderAddress|Sender)":"(<>|({email_address}[^@"]+@[^"]+))""",
+    """(senderAddress|Sender)":"(<>|({sender}[^@"]+@[^"]+))""",
     """"(?i)Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
     """"fileName":"({email_attachment}[^"]+\.({file_ext}[^"]+))""",

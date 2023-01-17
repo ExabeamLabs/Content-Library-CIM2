@@ -23,7 +23,7 @@ Name = amazon-awscloudtrail-cef-app-activity-assumedrole
     """"policyArn"\s*:\s*"(|({object}[^"]+))"""",
     """"roleName"\s*:\s*"(|({object}[^"]+))"""",
     """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
-    """"+errorCode"+\s*:\s*"+?(|({activity_outcome}[^"]+?))"+\s*[,\]\}]""",
+    """"+errorCode"+\s*:\s*"+?(|({result}[^"]+?))"+\s*[,\]\}]""",
     """"+errorMessage"+\s*:\s*"+?(|({additional_info}[^"]+?))"+\s*[,\]\}]""",
     """"+accountId"+\s*:\s*"+?(|({resource}[^"].+?))"+\s*[,\]\}]""",
     """"requestParameters"\s*:[^\}]+?"instanceId"\s*:\s*"({request_id}[^"]+)",("attribute"\s*:\s*"({request_action}[^"]+)")?""",

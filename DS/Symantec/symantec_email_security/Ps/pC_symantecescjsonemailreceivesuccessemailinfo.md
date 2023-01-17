@@ -13,7 +13,7 @@ Name = symantec-esc-json-email-receive-success-emailinfo
    ]
    Fields = [
      """"mailProcessingStartTime"+:({time}\d{10})""",
-     """"headerFrom":"({email_address}[^"@]+@[^@"]+)",""",
+     """"headerFrom":"({sender}[^"@]+@[^@"]+)",""",
      """"subject":"({email_subject}[^"]+)",""",
      """"messageSize":({bytes}\d+)""",
      """"messageId":"({alert_id}[^"]+)",""",

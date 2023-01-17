@@ -18,7 +18,7 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """"internal_id":\s*"({alert_id}[^"]+)"""",
     """"category\s*":"({additional_info}[^"]+)""",
     """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"user"+:\s*"+(unknown|(({email_address}[^"@\\\/\s]+@({email_domain}[^.]+)[^"]+)))"""",
+    """"user"+:\s*"+(unknown|(({email_address}[^"@\\\/\s]+@({domain}[^.]+)[^"]+)))"""",
     """"activity":\s*"({operation}[^"]+)""",
     """"src_country":\s*"({country}[^"]+)""",
     """"os":\s*"((U|u)nknown|({os}[^"]+))""",

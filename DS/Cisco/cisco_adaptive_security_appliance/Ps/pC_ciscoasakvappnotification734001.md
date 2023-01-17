@@ -9,7 +9,7 @@ Name = cisco-asa-kv-app-notification-734001
   Conditions = [ """%ASA-""", """-734001""" ]
   Fields = [
     """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d):\s*%ASA\-({priority}\d+)\-({event_code}\d+)""",
-    """User ({user}[^\s@,]+)(@({email_domain}[^\s@,]+))?""",
+    """User ({user}[^\s@,]+)(@({domain}[^\s@,]+))?""",
     """Addr (({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))""",
     """({event_name}The following DAP records were selected)"""
   ]

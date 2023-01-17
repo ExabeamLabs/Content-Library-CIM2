@@ -14,7 +14,7 @@ s-cisco-amp-alert = {
     """\Wact=(|({action}[^=]+?))(\s+\w+=|\s*$)""",
     """\Wdproc=(|({process_path}[^=]+?))\s*(\w+=|$|"|')""",
     """\Woutcome=(|({result}[^=]+?))(\s+\w+=|\s*$)""",
-    """timestamp":\s*({time}\d{10})""",
+    """"timestamp":\s*({time}\d{10})""",
     """dpriv=({alert_name}[^=]+?)\s\w+=""",
     """"detection":\s*"(|({alert_name}[^"]+?))"""",
     """\Wsuser=((?i)(anonymous|system)|({user}[^\\\s@]+?))(\s+\w+=|\s*$)""",

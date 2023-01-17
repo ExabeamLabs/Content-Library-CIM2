@@ -13,8 +13,8 @@ Name = cisco-fp-str-network-notification-722036
     """({event_name}Transmitting large packet)""",
     """IP\s*<(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))""",
     """Group\s*<({group_name}[^>]+)""",
-    """User\s*<(({email_domain}[^\\]+)\\+)?({user}[^>\\]+)"""
-    """User\s*<({user}[^@>\\]+)(?:@({email_domain}[^>]+))?>""",
+    """User\s*<(({domain}[^\\]+)\\+)?({user}[^>\\]+)"""
+    """User\s*<({user}[^@>\\]+)(?:@({domain}[^>]+))?>""",
     ]
 
 

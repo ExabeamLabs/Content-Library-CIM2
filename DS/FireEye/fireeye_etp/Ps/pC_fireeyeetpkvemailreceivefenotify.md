@@ -18,7 +18,7 @@ Name = fireeye-etp-kv-email-receive-fenotify
     """occurred:\s*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """\salert\s*\(id:({alert_id}[^,]+),\s*name:({alert_type}[^\)]+)""",
     """severity:\s*({alert_severity}[^\s]+)""",
-    """smtp-mail-from:\s*([^<]+<)?({email_address}[^@\s]+@[^\s>]+)""",
+    """smtp-mail-from:\s*([^<]+<)?({sender}[^@\s]+@[^\s>]+)""",
     """smtp-to:\s*({dest_email_address}[^@\s]+@[^\s,]+)""",
     """\saction:\s*({action}[^\s]+)""",
     """\ssubject:\s*({email_subject}.+?)\s+src:""",

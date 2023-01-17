@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({event_name}Logon attempt using explicit credentials)"""
   """({event_code}552)"""
-  """rt=({time}\d{13})"""
+  """\srt=({time}\d{13})"""
   """ahost=({host}[^\s]+)"""
   """dvchost=({dest_host}[^\s]+)"""
   """duser=({account}[\w\-\.]+(?:\w+)?\$?)\s+\w+="""

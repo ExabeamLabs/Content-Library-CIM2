@@ -16,7 +16,7 @@ Name = symantec-dlp-str-email-receive-incident
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^)({alert_id}\d+)\^\^""",
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){2}(N\/A|({email_subject}.+?))\^\^""",
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){3}(N\/A|({alert_severity}.+?))\^\^""",
-    """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){6}(N\/A|({email_address}[^@\^\s]+@\S+?))\^\^""",
+    """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){6}(N\/A|({sender}[^@\^\s]+@\S+?))\^\^""",
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){6}(N\/A|({os}[^:\^]+):\/\/({domain}[^\/\^]+)\/({user}[^\^]+?))\^\^""",
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){6}(N\/A|({src_ip}(\d{1,3}\.){3}\d{1,3}))\^\^""",
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){7}(N\/A|({email_recipients}((?!\w+:\/\/)[^@\s]+@\S+?)(,[^@\s]+@\S+?)*))\^\^""",
@@ -26,7 +26,7 @@ Name = symantec-dlp-str-email-receive-incident
     """Vontu Incident:\s+(([^\^]|\^[^\^])+?\^\^){13}(N\/A|({alert_type}.+?))\^\^""",
     """({direction}o)""",
   ]
-  DupFields = [ "email_address->user", "email_address->original_user" ]
+  DupFields = [ "sender->user", "sender->original_user" ]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "src_ip->dlpDeviceName", "action->dlpActionTaken"]

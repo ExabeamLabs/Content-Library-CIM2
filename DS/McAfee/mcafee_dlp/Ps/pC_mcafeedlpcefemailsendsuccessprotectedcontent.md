@@ -17,7 +17,7 @@ Name = mcafee-dlp-cef-email-send-success-protectedcontent
       """(\s|\|)dhost=({dest_host}[^\s]+)""",
       """(\s|\|)src=({src_ip}(\d{1,3}\.){3}\d{1,3})""",
       """(\s|\|)shost=({src_host}[^\s]+)""",
-      """(\s|\|)suser=(?:<>|<?({email_address}[^\s>]+)>?)\s*(\w+=|$)""",
+      """(\s|\|)suser=(?:<>|<?({sender}[^\s>]+)>?)\s*(\w+=|$)""",
       """(\s|\|)duser=({email_recipients}.*?)\s*(\w+=|$)""",
       """(\s|\|)duser=<({external_address}[^@<]+@?[^\s,>]+)>""",
       """(\s|\|)fsize=({bytes}\d+)""",
@@ -27,7 +27,7 @@ Name = mcafee-dlp-cef-email-send-success-protectedcontent
       """\scn2=({num_attachments}\d+)""",
       """\sfilePath=(({file_path}[^\s]+\\)?({file_name}[^\s]+\.({file_ext}[^\s]+)))""",
     ]
-    DupFields = [ "email_address->user" ]
+    DupFields = [ "sender->user" ]
 	ParserVersion = "v1.0.0"
   
 

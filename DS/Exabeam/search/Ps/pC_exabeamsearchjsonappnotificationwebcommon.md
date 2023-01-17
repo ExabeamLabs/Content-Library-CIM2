@@ -14,7 +14,7 @@ exabeam-system-health-alert {
       """\d\d.\d\d\dZ\s+({event_name}[^\s]+)\s""",
       """app":"({app}[^"]+)""",
       """event_subtype":"({event_subtype}[^"]+)""",
-      """src_ip":"({src_ip}[\da-fA-F.:]+)""",
+      """src_ip":"({src_ip}[\da-fA-F.:]+)"""",
       """user":"(Unknown|({user}[^"]+))""",
       """host":"({host}[^"]+)""",
       """activity":"({operation}[^"]+)""",

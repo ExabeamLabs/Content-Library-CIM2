@@ -22,7 +22,7 @@ Fields = [
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
-  """sender_address":"(?:|({email_address}[^"]+))","""
+  """sender_address":"(?:|({sender}[^"]+))","""
   """sender_address":"(?:|({external_address}[^,;@]+@[^;,"']+))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
   """recipient_address":"({dest_email_address}[^,;@]+@([^;,"]+))"""

@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-cef-audit-policy-modify-success-policychanged
     Fields = [
       """({event_name}System audit policy was changed)""",
       """({event_code}4719)"""
-      """rt=({time}\d{13})""",
+      """\srt=({time}\d{13})""",
       """ahost=({host}[^\s]+)"""
       """dvchost=({dest_host}[^\s]+)""",
       """duser=({user}[\w\-\.\s]+(?:\w+)?\$?)\s+\w+="""

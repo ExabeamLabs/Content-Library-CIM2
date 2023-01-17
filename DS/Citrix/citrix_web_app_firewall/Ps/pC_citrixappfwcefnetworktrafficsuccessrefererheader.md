@@ -18,7 +18,7 @@ citrix-appfw-network-connection = {
       """\smsg=\s*({additional_info}[^=]+?)\s+\w+=""",
       """\|APPFW\|({event_name}[^\|]+)""",
       """\scs4=({category}[^=]+?)\s\w+=""",
-      """act=({action}[^$]+?)\s*$""",
+      """act=({action}(not blocked)|([^=]+?)(\d+|"))"""
       """\scs1=({rule}[^=]+?)\s\w+=""",
       """\scs2=({interface_in}[^=]+?)\s\w+="""
     

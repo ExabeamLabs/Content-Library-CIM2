@@ -12,10 +12,10 @@ splunk-digitalguardian-dlp-email-out = {
   Fields = [
     """(Agent_UTC_Time|Server_UTC_Timestamp)="({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))"""",
     """Computer_Name ="([^\/\"]+[\\\/])?({host}[^"]+)"""",
-    """User_Name ="(?:|(({email_domain}[^"\/\\]+)[\/\\]+)?({user}[^"]+))"""",
-    """Domain_Name ="(?:|({email_domain}[^"]+))"""",
-    """Email_Sender="(?:|({email_address}[^"]+))"""",
-    """Email_Address="(?:|({email_address}[^"]+))"""",
+    """Email_Sender="(?:|({sender}[^"]+))"""",
+    """Email_Address="(?:|({sender}[^"]+))"""",
+    """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[^"]+))"""",
+    """Domain_Name ="(?:|({domain}[^"]+))"""",
     """Email_Recipient="([^"]+\-)?({email_recipients}({dest_email_address}[^"@\s;,]+@[^"@\s;,]+[^"]*))"""",
     """Destination_File="(?:|({file_name}[^"]+))"""",
     """Destination_File="(?:|message body|({email_attachment}[^"]+))"""",
@@ -24,7 +24,7 @@ splunk-digitalguardian-dlp-email-out = {
     """Bytes_Read="(?:|({bytes}\d+))"""",
     """Operation(_ID)?="({event_code}[^"]+)""""
   ]
-  DupFields = [ "email_address->email_user", "dest_email_address->external_address" ]
+  DupFields = [ "sender->email_user", "dest_email_address->external_address" ]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "email_address->dlpUser", "email_address->emailFrom", "email_subject->emailSubject", "email_recipients->emailTo", "file_name->dlpFileName", "bytes->dlpFileSize"]

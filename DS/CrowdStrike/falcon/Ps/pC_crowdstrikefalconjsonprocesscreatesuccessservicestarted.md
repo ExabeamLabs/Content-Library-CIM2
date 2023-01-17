@@ -19,7 +19,8 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """"UserName":\s*"((LOCAL SERVICE|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+)))|({user}[^"\s]+))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """"ImageFileName":\s*"[\\\?]+(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
-    """"aid":\s*"({aid}[^"]+)"""
+    """"aid":\s*"({aid}[^"]+)""",
+    """"event_platform":\s*"({os}[^"]+)"""
   ]
   DupFields = [ "process_dir->process_path_directory" ]
 

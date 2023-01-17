@@ -23,7 +23,7 @@ checkpoint-firewall = {
     """\Wcp_severity=(|({alert_severity}.+?))(\s+\w+=|\s*$)""",
     """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[^\)]+))""",
     """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[^\)]+))""",
-    """\Wshost=(|({src_host}[\w\-.]+?)(@({email_domain}[^\s@]+))?)(\s+\w+=|\s*$)""",
+    """\Wshost=(|({src_host}[\w\-.]+?)(@({domain}[^\s@]+))?)(\s+\w+=|\s*$)""",
     """\Wsntdom=(|({domain}.+?))(\s+\w+=|\s*$)""",
     """\Wos_name=(|({os}.+?))(\s+\w+=|\s*$)""",
     """\WdestinationTranslatedAddress=(0\.0\.0\.0|({dest_translated_ip}[a-fA-F\d.:]+))""",

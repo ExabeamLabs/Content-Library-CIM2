@@ -5,12 +5,12 @@ Name = dg-ndlp-kv-email-send-success-smtp
   Vendor = Digital Guardian
   Product = Digital Guardian Network DLP
   TimeFormat = "yyyy-MM-dd HH:mm:ss z"
-  Conditions = [ """protocol="SMTP"""", """email_subject=""", """exabeam_raw""" ]
+  Conditions = [ """protocol="SMTP"""", """email_subject=""" ]
   Fields = [
     """timestamp="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d \w+)"""",
     """\d\d:\d\d ({host}[^\s]+)\s+\d+\s+\d{4}\-\d\d\-\d\d""",
     """source="(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^"\\;]+))"""",
-    """email_sender="(?:|({email_address}[^"\\]+))"""",
+    """email_sender="(?:|({sender}[^"\\]+))"""",
     """email_recipients="({external_address}[^";]+)""",
     """email_recipients="({email_recipients}.+?)"""",
     """inspected_document="(?:|({file_name}.+?))"""",

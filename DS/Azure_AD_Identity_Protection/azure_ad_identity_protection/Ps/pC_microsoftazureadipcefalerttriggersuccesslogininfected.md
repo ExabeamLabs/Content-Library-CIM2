@@ -14,7 +14,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-azure-app-activity-skyfromation.Fields}[
+azure-app-activity-skyfromation.Fields} [
     """"resourceProviderName":\s*\{[^\}]*?"localizedValue":\s*"({resource}[^"]+)"""",
     """"eventTimestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """"operationName":\s*\{[^\}]*?"localizedValue":\s*"({operation}[^"]+)"""",

@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-cef-handle-request-4659
   Fields = [
     """({event_name}A handle to an object was requested with intent to delete)""",
     """({event_code}4659)""",
-    """rt=({time}\d{13})""",
+    """\srt=({time}\d{13})""",
     """dvchost=({host}.*?)\s\w+="""
     """dhost=({dest_host}.*?)\s\w+="""
     """eventId=({event_code}.*?)\s\w+=""",

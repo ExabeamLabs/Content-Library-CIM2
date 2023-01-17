@@ -16,13 +16,12 @@ Fields = [
   """"email_direction":"({direction}[^"]+)"""
   """"message_subject":"({email_subject}.+?)\s*""""
   """"attachment_name":"(UNKNOWN|({email_attachment}[^"]+))"""
-  """"sender_address":"({email_address}[^"]+)"""
+  """"sender_address":"({sender}[^"]+)"""
   """"total_bytes":({bytes}\d+)"""
   """"email_event":"({action}[^"]+)"""
 ]
 DupFields = [
-  "email_address->email_address"
-  "email_address->user"
+  "sender->user"
 ]
 ParserVersion = "v1.0.0"
 

@@ -34,11 +34,12 @@ Name = netskope-sc-cef-email-send-success-mail
     """"page_site":\s*"({app}[^"]+)"""",
     """"dstport":"\s*({dest_port}\d+)"""",
     """"action":"({action}[^"]+)""",
-    """"from_user":"({email_address}[^"\s@]+@[^"\s@]+)""",
+    """"from_user":"({sender}[^"\s@]+@[^"\s@]+)""",
     """"to_user":"({email_recipients}({dest_email_address}[^"\s@;,]+@[^"\s@,]+)[^"]*)""",
     """"site":"({site_at}[^"]+)""""
     """"referer":"({referrer}[^"]+)"""",
   ]
+  DupFields = [ "dest_email_address->external_address", "sender->from_user_at" ]
 
 
 }
