@@ -5,9 +5,9 @@ Vendor: Imperva
 ### Product: [Imperva Incapsula](../ds_imperva_imperva_incapsula.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   2    |     5      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   2    |         5          |       3        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

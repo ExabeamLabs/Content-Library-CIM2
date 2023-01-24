@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Windows](../ds_microsoft_windows.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  11   |   2    |     7      |       20       |   20    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  11   |   2    |         7          |       20       |   20    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

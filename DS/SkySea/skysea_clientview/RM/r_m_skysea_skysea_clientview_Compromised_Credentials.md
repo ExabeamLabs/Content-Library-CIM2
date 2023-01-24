@@ -5,9 +5,9 @@ Vendor: SkySea
 ### Product: [SkySea ClientView](../ds_skysea_skysea_clientview.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  157  |   66   |     21     |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  157  |   66   |         21         |       12       |   12    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

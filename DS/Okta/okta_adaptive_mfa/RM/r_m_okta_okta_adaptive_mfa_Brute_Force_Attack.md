@@ -5,9 +5,9 @@ Vendor: Okta
 ### Product: [Okta Adaptive MFA](../ds_okta_okta_adaptive_mfa.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   0    |     3      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   0    |         3          |       14       |   14    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [Palo Alto NGFW](../ds_palo_alto_networks_palo_alto_ngfw.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       14       |   14    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

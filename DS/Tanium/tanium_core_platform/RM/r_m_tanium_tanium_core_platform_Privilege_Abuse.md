@@ -5,9 +5,9 @@ Vendor: Tanium
 ### Product: [Tanium Core Platform](../ds_tanium_tanium_core_platform.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   6    |     5      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   6    |         5          |       4        |    4    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

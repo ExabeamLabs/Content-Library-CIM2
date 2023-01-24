@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black CES](../ds_vmware_carbon_black_ces.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  118  |   43   |     13     |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  118  |   43   |         13         |       8        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

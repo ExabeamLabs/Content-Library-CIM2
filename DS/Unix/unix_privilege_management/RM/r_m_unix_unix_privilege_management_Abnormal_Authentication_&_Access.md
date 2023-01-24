@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Privilege Management](../ds_unix_unix_privilege_management.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       2        |    2    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

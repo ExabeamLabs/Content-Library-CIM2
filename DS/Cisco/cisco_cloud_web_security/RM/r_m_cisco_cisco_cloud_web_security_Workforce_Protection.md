@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Cloud Web Security](../ds_cisco_cisco_cloud_web_security.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   2    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   2    |         1          |       2        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

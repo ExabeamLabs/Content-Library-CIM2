@@ -5,9 +5,9 @@ Vendor: Trend Micro
 ### Product: [Trend Micro](../ds_trend_micro_trend_micro.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  37   |   20   |     9      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  37   |   20   |         9          |       3        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

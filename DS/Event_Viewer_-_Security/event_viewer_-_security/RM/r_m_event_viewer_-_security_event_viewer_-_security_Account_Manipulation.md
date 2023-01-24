@@ -5,9 +5,9 @@ Vendor: Event Viewer - Security
 ### Product: [Event Viewer - Security](../ds_event_viewer_-_security_event_viewer_-_security.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   8    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   8    |         1          |       4        |    4    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [McAfee DLP](../ds_mcafee_mcafee_dlp.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       7        |    7    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

@@ -2,11 +2,11 @@ Vendor: Silverfort
 ==================
 Product: Silverfort Authentication Platform
 -------------------------------------------
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  46   |   17   |     4      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  46   |   17   |         4          |       2        |    2    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
 | [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br><br> failed-app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br>    | [<ul><li>15 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_silverfort_silverfort_authentication_platform_Abnormal_Authentication_&_Access.md) |
 |          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br><br> failed-app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>28 Rules</li></ul><ul><li>16 Models</li></ul>](RM/r_m_silverfort_silverfort_authentication_platform_Compromised_Credentials.md)         |
@@ -17,8 +17,8 @@ Product: Silverfort Authentication Platform
 |    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br><br> failed-app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_silverfort_silverfort_authentication_platform_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br><br> failed-app-login<br> ↳[silverfort-s-cef-app-login-adminconsole](Ps/pC_silverfortscefapploginadminconsole.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_silverfort_silverfort_authentication_platform_Ransomware.md)    |
 
-ATT&CK Matrix for Enterprise
-----------------------------
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
 | Initial Access                                                                                                                                                                                                                         | Execution | Persistence                                                                                                                                      | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                                                                                       | Exfiltration | Impact |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------ |
 | [External Remote Services](https://attack.mitre.org/techniques/T1133)<br><br>[Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [External Remote Services](https://attack.mitre.org/techniques/T1133)<br><br>[Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>[Proxy](https://attack.mitre.org/techniques/T1090)<br><br> |              |        |

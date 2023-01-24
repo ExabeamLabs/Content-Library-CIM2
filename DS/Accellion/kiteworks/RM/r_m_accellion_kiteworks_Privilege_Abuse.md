@@ -5,9 +5,9 @@ Vendor: Accellion
 ### Product: [Kiteworks](../ds_accellion_kiteworks.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  32   |   14   |     4      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  32   |   14   |         4          |       13       |   13    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Windows](../ds_microsoft_windows.md)
 ### Use-Case: [Evasion](../../../../UseCases/uc_evasion.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  72   |   3    |     33     |       20       |   20    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  72   |   3    |         33         |       20       |   20    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

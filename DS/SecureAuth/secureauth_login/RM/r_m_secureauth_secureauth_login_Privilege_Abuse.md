@@ -5,9 +5,9 @@ Vendor: SecureAuth
 ### Product: [SecureAuth Login](../ds_secureauth_secureauth_login.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       7        |    7    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

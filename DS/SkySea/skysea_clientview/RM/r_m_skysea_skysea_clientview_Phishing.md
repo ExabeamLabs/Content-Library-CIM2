@@ -5,9 +5,9 @@ Vendor: SkySea
 ### Product: [SkySea ClientView](../ds_skysea_skysea_clientview.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   1    |     7      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   1    |         7          |       12       |   12    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

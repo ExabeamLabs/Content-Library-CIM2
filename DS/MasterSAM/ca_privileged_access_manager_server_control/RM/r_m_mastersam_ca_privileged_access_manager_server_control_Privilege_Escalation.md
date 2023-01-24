@@ -5,9 +5,9 @@ Vendor: MasterSAM
 ### Product: [CA Privileged Access Manager Server Control](../ds_mastersam_ca_privileged_access_manager_server_control.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       2        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

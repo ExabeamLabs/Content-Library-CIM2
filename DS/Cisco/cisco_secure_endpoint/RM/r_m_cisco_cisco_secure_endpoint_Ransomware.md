@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Secure Endpoint](../ds_cisco_cisco_secure_endpoint.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       6        |    6    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

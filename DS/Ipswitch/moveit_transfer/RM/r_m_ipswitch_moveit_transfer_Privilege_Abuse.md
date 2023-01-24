@@ -5,9 +5,9 @@ Vendor: Ipswitch
 ### Product: [MoveIt Transfer](../ds_ipswitch_moveit_transfer.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  34   |   14   |     4      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  34   |   14   |         4          |       8        |    8    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Sysmon](../ds_microsoft_sysmon.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     8      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         8          |       19       |   19    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

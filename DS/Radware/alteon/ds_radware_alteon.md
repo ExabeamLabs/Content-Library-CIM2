@@ -2,11 +2,11 @@ Vendor: Radware
 ===============
 Product: Alteon
 ---------------
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   3    |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   3    |         3          |       2        |    2    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
 | [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  ""app-notification:success""<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br><br> failed-app-login<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br> | T1133 - External Remote Services<br>    | [<ul><li>3 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_radware_alteon_Abnormal_Authentication_&_Access.md) |
 |          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  ""app-notification:success""<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br><br> failed-app-login<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Compromised_Credentials.md)    |
@@ -16,8 +16,8 @@ Product: Alteon
 |    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  ""app-notification:success""<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br><br> failed-app-login<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  ""app-notification:success""<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br><br> failed-app-login<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Ransomware.md)    |
 
-ATT&CK Matrix for Enterprise
-----------------------------
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
 | Initial Access                                                                                                                                   | Execution | Persistence                                                                                                                                      | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                                                                                       | Exfiltration | Impact |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------ |
 | [External Remote Services](https://attack.mitre.org/techniques/T1133)<br><br>[Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |           | [External Remote Services](https://attack.mitre.org/techniques/T1133)<br><br>[Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>[Proxy](https://attack.mitre.org/techniques/T1090)<br><br> |              |        |

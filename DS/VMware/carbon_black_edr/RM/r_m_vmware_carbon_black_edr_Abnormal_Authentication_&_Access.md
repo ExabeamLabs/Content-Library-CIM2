@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black EDR](../ds_vmware_carbon_black_edr.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   4    |     2      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   4    |         2          |       11       |   11    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

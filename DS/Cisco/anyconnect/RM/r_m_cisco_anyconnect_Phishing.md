@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [AnyConnect](../ds_cisco_anyconnect.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   2    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   2    |         1          |       4        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

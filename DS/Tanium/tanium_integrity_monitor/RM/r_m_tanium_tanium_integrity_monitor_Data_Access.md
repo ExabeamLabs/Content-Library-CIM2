@@ -5,9 +5,9 @@ Vendor: Tanium
 ### Product: [Tanium Integrity Monitor](../ds_tanium_tanium_integrity_monitor.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  26   |   13   |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  26   |   13   |         2          |       6        |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

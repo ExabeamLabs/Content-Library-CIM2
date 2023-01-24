@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix dhcpd](../ds_unix_unix_dhcpd.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   17   |     5      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   17   |         5          |       8        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

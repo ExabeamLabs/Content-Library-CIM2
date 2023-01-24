@@ -5,9 +5,9 @@ Vendor: NCP
 ### Product: [NCP](../ds_ncp_ncp.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   3    |     3      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   3    |         3          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

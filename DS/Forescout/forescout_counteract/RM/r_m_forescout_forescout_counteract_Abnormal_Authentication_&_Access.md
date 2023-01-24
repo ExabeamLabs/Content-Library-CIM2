@@ -5,9 +5,9 @@ Vendor: Forescout
 ### Product: [Forescout CounterACT](../ds_forescout_forescout_counteract.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   4    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   4    |         2          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

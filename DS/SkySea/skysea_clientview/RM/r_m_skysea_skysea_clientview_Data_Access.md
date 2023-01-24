@@ -5,9 +5,9 @@ Vendor: SkySea
 ### Product: [SkySea ClientView](../ds_skysea_skysea_clientview.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  45   |   24   |     3      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  45   |   24   |         3          |       12       |   12    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

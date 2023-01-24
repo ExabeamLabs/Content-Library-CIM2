@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft Defender for Endpoint](../ds_microsoft_microsoft_defender_for_endpoint.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  42   |   18   |     14     |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  42   |   18   |         14         |       25       |   25    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

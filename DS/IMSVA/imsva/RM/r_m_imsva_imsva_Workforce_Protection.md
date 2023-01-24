@@ -5,9 +5,9 @@ Vendor: IMSVA
 ### Product: [IMSVA](../ds_imsva_imsva.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         1          |       3        |    3    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Citrix
 ### Product: [Citrix Gateway](../ds_citrix_citrix_gateway.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  25   |   13   |     14     |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  25   |   13   |         14         |       11       |   11    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

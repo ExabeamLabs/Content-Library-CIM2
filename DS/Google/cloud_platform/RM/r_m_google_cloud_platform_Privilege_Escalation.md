@@ -5,9 +5,9 @@ Vendor: Google
 ### Product: [Cloud Platform](../ds_google_cloud_platform.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   10   |     3      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   10   |         3          |       15       |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

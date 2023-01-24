@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [VMware View](../ds_vmware_vmware_view.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       8        |    8    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

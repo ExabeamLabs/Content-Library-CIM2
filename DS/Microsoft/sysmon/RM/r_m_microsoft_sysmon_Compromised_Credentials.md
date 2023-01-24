@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Sysmon](../ds_microsoft_sysmon.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  80   |   20   |     12     |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  80   |   20   |         12         |       19       |   19    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

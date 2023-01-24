@@ -5,9 +5,9 @@ Vendor: Apache
 ### Product: [Apache Subversion](../ds_apache_apache_subversion.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       2        |    2    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: ESector
 ### Product: [ESector DEFESA Logger](../ds_esector_esector_defesa_logger.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  75   |   38   |     7      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  75   |   38   |         7          |       6        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

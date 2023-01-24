@@ -5,9 +5,9 @@ Vendor: Okta
 ### Product: [Okta Adaptive MFA](../ds_okta_okta_adaptive_mfa.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  32   |   18   |     4      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  32   |   18   |         4          |       14       |   14    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

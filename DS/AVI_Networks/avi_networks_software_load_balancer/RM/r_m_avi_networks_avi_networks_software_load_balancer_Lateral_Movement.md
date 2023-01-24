@@ -5,9 +5,9 @@ Vendor: AVI Networks
 ### Product: [AVI Networks Software Load Balancer](../ds_avi_networks_avi_networks_software_load_balancer.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       1        |    1    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

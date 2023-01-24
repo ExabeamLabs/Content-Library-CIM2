@@ -5,9 +5,9 @@ Vendor: SentinelOne
 ### Product: [Singularity Platform](../ds_sentinelone_singularity_platform.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       15       |   15    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

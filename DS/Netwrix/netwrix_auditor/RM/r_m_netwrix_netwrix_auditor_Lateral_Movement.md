@@ -5,9 +5,9 @@ Vendor: Netwrix
 ### Product: [Netwrix Auditor](../ds_netwrix_netwrix_auditor.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   1    |     8      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   1    |         8          |       7        |    7    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

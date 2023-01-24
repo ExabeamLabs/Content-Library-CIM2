@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure Monitor](../ds_microsoft_azure_monitor.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   2    |     5      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   2    |         5          |       19       |   19    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

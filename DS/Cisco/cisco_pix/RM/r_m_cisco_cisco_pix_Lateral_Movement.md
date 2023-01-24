@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco PIX](../ds_cisco_cisco_pix.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  68   |   24   |     11     |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  68   |   24   |         11         |       4        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

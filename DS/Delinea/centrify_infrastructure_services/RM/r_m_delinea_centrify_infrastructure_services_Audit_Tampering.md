@@ -5,9 +5,9 @@ Vendor: Delinea
 ### Product: [Centrify Infrastructure Services](../ds_delinea_centrify_infrastructure_services.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       1        |    1    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

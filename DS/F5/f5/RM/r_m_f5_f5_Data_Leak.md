@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5](../ds_f5_f5.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

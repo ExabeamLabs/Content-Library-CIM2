@@ -5,9 +5,9 @@ Vendor: Barracuda
 ### Product: [Barracuda Email Security Gateway](../ds_barracuda_barracuda_email_security_gateway.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  37   |   16   |     2      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  37   |   16   |         2          |       5        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

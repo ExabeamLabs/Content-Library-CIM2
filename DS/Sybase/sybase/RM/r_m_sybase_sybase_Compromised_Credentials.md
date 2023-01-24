@@ -5,9 +5,9 @@ Vendor: Sybase
 ### Product: [Sybase](../ds_sybase_sybase.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   5    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   5    |         1          |       2        |    2    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Google
 ### Product: [Google Workspace](../ds_google_google_workspace.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       7        |    7    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Secure Endpoint](../ds_cisco_cisco_secure_endpoint.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  32   |   18   |     4      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  32   |   18   |         4          |       6        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [ACI](../ds_cisco_aci.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

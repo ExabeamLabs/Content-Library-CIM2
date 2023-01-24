@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [MSSQL](../ds_microsoft_mssql.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  58   |   34   |     3      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  58   |   34   |         3          |       10       |   10    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

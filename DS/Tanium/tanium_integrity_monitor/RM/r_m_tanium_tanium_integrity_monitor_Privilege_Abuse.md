@@ -5,9 +5,9 @@ Vendor: Tanium
 ### Product: [Tanium Integrity Monitor](../ds_tanium_tanium_integrity_monitor.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  11   |   6    |     5      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  11   |   6    |         5          |       6        |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

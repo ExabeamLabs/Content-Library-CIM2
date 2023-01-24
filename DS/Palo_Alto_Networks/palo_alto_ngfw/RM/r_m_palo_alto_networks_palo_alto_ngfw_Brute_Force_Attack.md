@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [Palo Alto NGFW](../ds_palo_alto_networks_palo_alto_ngfw.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       14       |   14    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

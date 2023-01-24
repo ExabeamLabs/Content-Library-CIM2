@@ -5,9 +5,9 @@ Vendor: Huawei
 ### Product: [Huawei Unified Security Gateway](../ds_huawei_huawei_unified_security_gateway.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  25   |   13   |     14     |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  25   |   13   |         14         |       6        |    6    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

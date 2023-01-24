@@ -5,9 +5,9 @@ Vendor: HP
 ### Product: [Aruba Clearpass Policy Manager](../ds_hp_aruba_clearpass_policy_manager.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       4        |    4    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

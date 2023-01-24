@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [Palo Alto Aperture](../ds_palo_alto_networks_palo_alto_aperture.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       2        |    2    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

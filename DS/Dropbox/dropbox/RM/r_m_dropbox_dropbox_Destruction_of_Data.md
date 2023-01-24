@@ -5,9 +5,9 @@ Vendor: Dropbox
 ### Product: [Dropbox](../ds_dropbox_dropbox.md)
 ### Use-Case: [Destruction of Data](../../../../UseCases/uc_destruction_of_data.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       8        |    8    |
 
 | Event Type  | Rules    | Models |
 | ---- | ---- | ------ |

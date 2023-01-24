@@ -5,9 +5,9 @@ Vendor: BeyondTrust
 ### Product: [BeyondTrust Privilege Management](../ds_beyondtrust_beyondtrust_privilege_management.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     9      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         9          |       2        |    2    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

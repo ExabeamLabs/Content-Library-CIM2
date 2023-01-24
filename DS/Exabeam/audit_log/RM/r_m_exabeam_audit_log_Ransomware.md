@@ -5,9 +5,9 @@ Vendor: Exabeam
 ### Product: [Audit Log](../ds_exabeam_audit_log.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       18       |   18    |
 
 | Event Type          | Rules    | Models |
 | ---- | ---- | ------ |

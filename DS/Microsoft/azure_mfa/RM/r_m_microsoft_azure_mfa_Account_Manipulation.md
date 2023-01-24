@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure MFA](../ds_microsoft_azure_mfa.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         2          |       6        |    6    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

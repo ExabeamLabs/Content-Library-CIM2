@@ -5,9 +5,9 @@ Vendor: Citrix
 ### Product: [Citrix Web App Firewall](../ds_citrix_citrix_web_app_firewall.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [RSA Authentication Manager](../ds_dell_rsa_authentication_manager.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       6        |    6    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

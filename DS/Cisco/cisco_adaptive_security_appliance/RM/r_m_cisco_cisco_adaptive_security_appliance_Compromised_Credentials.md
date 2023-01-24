@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Adaptive Security Appliance](../ds_cisco_cisco_adaptive_security_appliance.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  154  |   64   |     22     |       33       |   33    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  154  |   64   |         22         |       33       |   33    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

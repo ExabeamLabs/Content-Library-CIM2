@@ -5,9 +5,9 @@ Vendor: Imprivata
 ### Product: [Imprivata](../ds_imprivata_imprivata.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  28   |   16   |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  28   |   16   |         3          |       2        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

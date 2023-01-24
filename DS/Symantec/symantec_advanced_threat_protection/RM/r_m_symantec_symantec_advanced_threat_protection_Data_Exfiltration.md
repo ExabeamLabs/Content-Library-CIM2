@@ -5,9 +5,9 @@ Vendor: Symantec
 ### Product: [Symantec Advanced Threat Protection](../ds_symantec_symantec_advanced_threat_protection.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  42   |   18   |     14     |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  42   |   18   |         14         |       2        |    2    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

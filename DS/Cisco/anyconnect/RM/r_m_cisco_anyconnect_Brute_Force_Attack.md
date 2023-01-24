@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [AnyConnect](../ds_cisco_anyconnect.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       4        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

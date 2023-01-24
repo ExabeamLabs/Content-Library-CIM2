@@ -5,9 +5,9 @@ Vendor: RSA
 ### Product: [RSA Netwitness Platform](../ds_rsa_rsa_netwitness_platform.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   4    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   4    |         1          |       2        |    2    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Accellion
 ### Product: [Kiteworks](../ds_accellion_kiteworks.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  36   |   15   |     3      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  36   |   15   |         3          |       13       |   13    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

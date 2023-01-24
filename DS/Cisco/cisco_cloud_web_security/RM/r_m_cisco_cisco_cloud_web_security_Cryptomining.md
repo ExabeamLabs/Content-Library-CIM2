@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Cloud Web Security](../ds_cisco_cisco_cloud_web_security.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       2        |    2    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

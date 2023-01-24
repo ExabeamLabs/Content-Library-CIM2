@@ -5,9 +5,9 @@ Vendor: Claroty
 ### Product: [Claroty](../ds_claroty_claroty.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       2        |    2    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

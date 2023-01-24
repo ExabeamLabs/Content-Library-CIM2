@@ -5,9 +5,9 @@ Vendor: Claroty
 ### Product: [CTD](../ds_claroty_ctd.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   0    |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   0    |         3          |       3        |    3    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Symantec
 ### Product: [Symantec Endpoint Protection](../ds_symantec_symantec_endpoint_protection.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  57   |   20   |     5      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  57   |   20   |         5          |       5        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

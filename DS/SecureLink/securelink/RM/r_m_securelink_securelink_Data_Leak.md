@@ -5,9 +5,9 @@ Vendor: SecureLink
 ### Product: [SecureLink](../ds_securelink_securelink.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       2        |    2    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

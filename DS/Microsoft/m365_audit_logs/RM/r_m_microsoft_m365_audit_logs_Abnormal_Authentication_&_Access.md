@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [M365 Audit Logs](../ds_microsoft_m365_audit_logs.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   4    |     2      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   4    |         2          |       19       |   19    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Teradata
 ### Product: [Teradata RDBMS](../ds_teradata_teradata_rdbms.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   5    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   5    |         1          |       1        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

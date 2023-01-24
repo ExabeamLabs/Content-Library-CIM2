@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [VMware ESXi](../ds_vmware_vmware_esxi.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  18   |   7    |     3      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  18   |   7    |         3          |       11       |   11    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

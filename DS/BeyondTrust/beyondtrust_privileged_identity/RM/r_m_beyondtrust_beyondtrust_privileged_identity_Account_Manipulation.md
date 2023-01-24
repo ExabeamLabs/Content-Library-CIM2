@@ -5,9 +5,9 @@ Vendor: BeyondTrust
 ### Product: [BeyondTrust Privileged Identity](../ds_beyondtrust_beyondtrust_privileged_identity.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     2      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         2          |       10       |   10    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

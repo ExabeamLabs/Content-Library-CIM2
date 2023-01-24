@@ -5,9 +5,9 @@ Vendor: Mimecast
 ### Product: [Mimecast Secure Email Gateway](../ds_mimecast_mimecast_secure_email_gateway.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  43   |   24   |     3      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  43   |   24   |         3          |       7        |    7    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

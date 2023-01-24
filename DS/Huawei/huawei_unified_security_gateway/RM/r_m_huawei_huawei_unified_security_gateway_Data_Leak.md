@@ -5,9 +5,9 @@ Vendor: Huawei
 ### Product: [Huawei Unified Security Gateway](../ds_huawei_huawei_unified_security_gateway.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  14   |   11   |     6      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  14   |   11   |         6          |       6        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Secure Network Analytics](../ds_cisco_cisco_secure_network_analytics.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  30   |   18   |     5      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  30   |   18   |         5          |       2        |    2    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

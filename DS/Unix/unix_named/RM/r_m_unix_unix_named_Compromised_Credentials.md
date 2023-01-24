@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Named](../ds_unix_unix_named.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   24   |         2          |       5        |    5    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

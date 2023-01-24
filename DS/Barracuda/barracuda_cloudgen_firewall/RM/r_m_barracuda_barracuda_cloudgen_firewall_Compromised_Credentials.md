@@ -5,9 +5,9 @@ Vendor: Barracuda
 ### Product: [Barracuda Cloudgen Firewall](../ds_barracuda_barracuda_cloudgen_firewall.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  16   |   8    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  16   |   8    |         2          |       8        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [McAfee DLP](../ds_mcafee_mcafee_dlp.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       7        |    7    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [CheckPoint Endpoint Security](../ds_check_point_checkpoint_endpoint_security.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       1        |    1    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

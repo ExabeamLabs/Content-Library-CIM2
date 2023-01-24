@@ -5,9 +5,9 @@ Vendor: Ping Identity
 ### Product: [Ping Identity](../ds_ping_identity_ping_identity.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       11       |   11    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

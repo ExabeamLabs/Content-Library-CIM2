@@ -5,9 +5,9 @@ Vendor: Accellion
 ### Product: [Kiteworks](../ds_accellion_kiteworks.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  76   |   38   |     7      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  76   |   38   |         7          |       13       |   13    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

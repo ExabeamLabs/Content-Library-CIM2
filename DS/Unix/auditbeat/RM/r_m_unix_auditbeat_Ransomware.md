@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Auditbeat](../ds_unix_auditbeat.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     8      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         8          |       9        |    9    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

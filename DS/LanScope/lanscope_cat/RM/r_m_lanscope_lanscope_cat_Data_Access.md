@@ -5,9 +5,9 @@ Vendor: LanScope
 ### Product: [LanScope Cat](../ds_lanscope_lanscope_cat.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  45   |   24   |     3      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  45   |   24   |         3          |       13       |   13    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

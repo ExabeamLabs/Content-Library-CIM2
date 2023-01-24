@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Adaptive Security Appliance](../ds_cisco_cisco_adaptive_security_appliance.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   1    |     3      |       33       |   33    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   1    |         3          |       33       |   33    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

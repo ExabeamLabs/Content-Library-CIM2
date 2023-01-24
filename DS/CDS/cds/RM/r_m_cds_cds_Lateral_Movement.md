@@ -5,9 +5,9 @@ Vendor: CDS
 ### Product: [CDS](../ds_cds_cds.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   1    |     8      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   1    |         8          |       4        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

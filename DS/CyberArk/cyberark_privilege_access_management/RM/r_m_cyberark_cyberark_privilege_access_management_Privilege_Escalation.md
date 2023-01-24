@@ -5,9 +5,9 @@ Vendor: CyberArk
 ### Product: [Cyberark Privilege Access Management](../ds_cyberark_cyberark_privilege_access_management.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  16   |   8    |     4      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  16   |   8    |         4          |       13       |   13    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

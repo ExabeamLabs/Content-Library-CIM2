@@ -5,9 +5,9 @@ Vendor: Exabeam
 ### Product: [Audit Log](../ds_exabeam_audit_log.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   24   |         2          |       18       |   18    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [Check Point NGFW](../ds_check_point_check_point_ngfw.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       17       |   17    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       17       |   17    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

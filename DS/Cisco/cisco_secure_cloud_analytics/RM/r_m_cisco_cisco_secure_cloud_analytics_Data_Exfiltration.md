@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Secure Cloud Analytics](../ds_cisco_cisco_secure_cloud_analytics.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       1        |    1    |
 
 | Event Type         | Rules    | Models |
 | ---- | ---- | ------ |

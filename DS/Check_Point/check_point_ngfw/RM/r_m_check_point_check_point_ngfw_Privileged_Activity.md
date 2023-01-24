@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [Check Point NGFW](../ds_check_point_check_point_ngfw.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     3      |       17       |   17    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         3          |       17       |   17    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

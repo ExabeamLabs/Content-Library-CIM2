@@ -5,9 +5,9 @@ Vendor: Thales Group
 ### Product: [Gemalto MFA](../ds_thales_group_gemalto_mfa.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   4    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   4    |         2          |       1        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

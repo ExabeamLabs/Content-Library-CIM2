@@ -5,9 +5,9 @@ Vendor: QUSH
 ### Product: [Reveal](../ds_qush_reveal.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   2    |     1      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   2    |         1          |       8        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

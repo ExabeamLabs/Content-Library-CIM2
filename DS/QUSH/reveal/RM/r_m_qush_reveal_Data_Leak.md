@@ -5,9 +5,9 @@ Vendor: QUSH
 ### Product: [Reveal](../ds_qush_reveal.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  53   |   26   |     11     |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  53   |   26   |         11         |       8        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

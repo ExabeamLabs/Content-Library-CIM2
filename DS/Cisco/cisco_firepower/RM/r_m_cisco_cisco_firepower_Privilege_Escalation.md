@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Firepower](../ds_cisco_cisco_firepower.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  77   |   13   |     43     |       30       |   30    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  77   |   13   |         43         |       30       |   30    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

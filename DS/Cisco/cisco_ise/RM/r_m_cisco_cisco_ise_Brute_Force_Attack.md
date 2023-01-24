@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco ISE](../ds_cisco_cisco_ise.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   0    |     3      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   0    |         3          |       15       |   15    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

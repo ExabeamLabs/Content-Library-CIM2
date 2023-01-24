@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [GlobalProtect](../ds_palo_alto_networks_globalprotect.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   7    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   7    |         2          |       6        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

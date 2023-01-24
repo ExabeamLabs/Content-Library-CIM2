@@ -5,9 +5,9 @@ Vendor: Proofpoint
 ### Product: [Proofpoint Enterprise Protection](../ds_proofpoint_proofpoint_enterprise_protection.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   4    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   4    |         2          |       6        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

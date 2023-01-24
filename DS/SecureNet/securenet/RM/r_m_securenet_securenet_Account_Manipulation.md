@@ -5,9 +5,9 @@ Vendor: SecureNet
 ### Product: [SecureNet](../ds_securenet_securenet.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   7    |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   7    |         2          |       2        |    2    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

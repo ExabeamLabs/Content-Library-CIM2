@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft Exchange](../ds_microsoft_microsoft_exchange.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       13       |   13    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

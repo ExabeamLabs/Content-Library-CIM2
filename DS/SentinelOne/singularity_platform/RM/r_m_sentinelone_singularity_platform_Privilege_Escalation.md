@@ -5,9 +5,9 @@ Vendor: SentinelOne
 ### Product: [Singularity Platform](../ds_sentinelone_singularity_platform.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  69   |   8    |     41     |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  69   |   8    |         41         |       15       |   15    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Symantec
 ### Product: [Symantec Web Security Service](../ds_symantec_symantec_web_security_service.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         3          |       3        |    3    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

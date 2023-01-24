@@ -5,9 +5,9 @@ Vendor: CatoNetworks
 ### Product: [Cato Cloud](../ds_catonetworks_cato_cloud.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

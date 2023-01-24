@@ -5,9 +5,9 @@ Vendor: Fortinet
 ### Product: [Fortinet VPN](../ds_fortinet_fortinet_vpn.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   7    |     3      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   7    |         3          |       4        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Zscaler
 ### Product: [Zscaler Private Access](../ds_zscaler_zscaler_private_access.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  17   |   5    |     3      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  17   |   5    |         3          |       6        |    6    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Citrix
 ### Product: [Citrix Gateway](../ds_citrix_citrix_gateway.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  22   |   12   |     3      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  22   |   12   |         3          |       11       |   11    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

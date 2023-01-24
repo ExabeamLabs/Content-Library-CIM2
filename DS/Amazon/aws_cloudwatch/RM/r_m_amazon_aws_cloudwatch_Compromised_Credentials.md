@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS CloudWatch](../ds_amazon_aws_cloudwatch.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   24   |         2          |       2        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

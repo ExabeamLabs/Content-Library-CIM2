@@ -5,9 +5,9 @@ Vendor: Oracle
 ### Product: [Oracle Public Cloud](../ds_oracle_oracle_public_cloud.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       2        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

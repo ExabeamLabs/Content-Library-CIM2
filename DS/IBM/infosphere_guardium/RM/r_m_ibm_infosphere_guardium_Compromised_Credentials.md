@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [Infosphere Guardium](../ds_ibm_infosphere_guardium.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  18   |   10   |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  18   |   10   |         1          |       3        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

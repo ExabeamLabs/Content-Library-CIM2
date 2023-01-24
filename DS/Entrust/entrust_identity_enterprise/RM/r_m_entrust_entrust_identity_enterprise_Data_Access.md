@@ -5,9 +5,9 @@ Vendor: Entrust
 ### Product: [Entrust Identity Enterprise](../ds_entrust_entrust_identity_enterprise.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  19   |   11   |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  19   |   11   |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

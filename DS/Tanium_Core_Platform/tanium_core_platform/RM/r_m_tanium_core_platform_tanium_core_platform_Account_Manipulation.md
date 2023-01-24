@@ -5,9 +5,9 @@ Vendor: Tanium Core Platform
 ### Product: [Tanium Core Platform](../ds_tanium_core_platform_tanium_core_platform.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

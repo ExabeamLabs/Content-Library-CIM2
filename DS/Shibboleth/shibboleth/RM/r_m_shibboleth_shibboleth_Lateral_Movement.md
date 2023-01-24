@@ -5,9 +5,9 @@ Vendor: Shibboleth
 ### Product: [Shibboleth](../ds_shibboleth_shibboleth.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       3        |    3    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [GlobalProtect](../ds_palo_alto_networks_globalprotect.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   4    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   4    |         2          |       6        |    6    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

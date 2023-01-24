@@ -5,9 +5,9 @@ Vendor: APC
 ### Product: [APC](../ds_apc_apc.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  14   |   1    |     8      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  14   |   1    |         8          |       5        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

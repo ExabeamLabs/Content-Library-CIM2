@@ -5,9 +5,9 @@ Vendor: SentinelOne
 ### Product: [Singularity Platform](../ds_sentinelone_singularity_platform.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  35   |   20   |     8      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  35   |   20   |         8          |       15       |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

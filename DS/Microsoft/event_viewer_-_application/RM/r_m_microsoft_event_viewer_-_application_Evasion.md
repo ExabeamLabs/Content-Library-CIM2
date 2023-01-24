@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - Application](../ds_microsoft_event_viewer_-_application.md)
 ### Use-Case: [Evasion](../../../../UseCases/uc_evasion.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  71   |   3    |     33     |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  71   |   3    |         33         |       11       |   11    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

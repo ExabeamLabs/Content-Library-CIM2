@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Cloud Web Security](../ds_cisco_cisco_cloud_web_security.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       2        |    2    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

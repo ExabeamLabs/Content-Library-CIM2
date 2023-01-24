@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black EDR](../ds_vmware_carbon_black_edr.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  18   |   7    |     13     |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  18   |   7    |         13         |       11       |   11    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Sophos
 ### Product: [Sophos Endpoint Protection](../ds_sophos_sophos_endpoint_protection.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       11       |   11    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

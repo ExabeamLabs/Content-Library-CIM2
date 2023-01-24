@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black App Control](../ds_vmware_carbon_black_app_control.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  46   |   22   |     6      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  46   |   22   |         6          |       11       |   11    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

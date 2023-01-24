@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Auditd](../ds_unix_unix_auditd.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  17   |   6    |     3      |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  17   |   6    |         3          |       18       |   18    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

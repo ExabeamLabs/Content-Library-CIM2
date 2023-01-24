@@ -5,9 +5,9 @@ Vendor: Tyco
 ### Product: [CCURE Building Management System](../ds_tyco_ccure_building_management_system.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  13   |   5    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  13   |   5    |         2          |       4        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

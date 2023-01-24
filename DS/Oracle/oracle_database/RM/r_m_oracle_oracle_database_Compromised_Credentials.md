@@ -5,9 +5,9 @@ Vendor: Oracle
 ### Product: [Oracle Database](../ds_oracle_oracle_database.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  58   |   34   |     3      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  58   |   34   |         3          |       8        |    8    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

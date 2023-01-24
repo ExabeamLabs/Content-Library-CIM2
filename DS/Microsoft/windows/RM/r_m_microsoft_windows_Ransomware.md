@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Windows](../ds_microsoft_windows.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     9      |       20       |   20    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         9          |       20       |   20    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

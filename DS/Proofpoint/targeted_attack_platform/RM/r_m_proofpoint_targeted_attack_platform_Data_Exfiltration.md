@@ -5,9 +5,9 @@ Vendor: Proofpoint
 ### Product: [Targeted Attack Platform](../ds_proofpoint_targeted_attack_platform.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       5        |    5    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

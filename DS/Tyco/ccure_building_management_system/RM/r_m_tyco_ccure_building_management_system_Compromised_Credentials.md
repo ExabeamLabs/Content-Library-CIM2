@@ -5,9 +5,9 @@ Vendor: Tyco
 ### Product: [CCURE Building Management System](../ds_tyco_ccure_building_management_system.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  27   |   16   |     3      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  27   |   16   |         3          |       4        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

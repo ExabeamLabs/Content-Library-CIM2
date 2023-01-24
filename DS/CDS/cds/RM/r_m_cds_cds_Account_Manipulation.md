@@ -5,9 +5,9 @@ Vendor: CDS
 ### Product: [CDS](../ds_cds_cds.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  20   |   8    |     4      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  20   |   8    |         4          |       4        |    4    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

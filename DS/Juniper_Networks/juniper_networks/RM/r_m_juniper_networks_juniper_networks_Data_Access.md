@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper Networks](../ds_juniper_networks_juniper_networks.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         2          |       9        |    9    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

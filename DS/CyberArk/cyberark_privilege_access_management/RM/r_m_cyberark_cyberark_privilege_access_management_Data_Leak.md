@@ -5,9 +5,9 @@ Vendor: CyberArk
 ### Product: [Cyberark Privilege Access Management](../ds_cyberark_cyberark_privilege_access_management.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  33   |   18   |     5      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  33   |   18   |         5          |       13       |   13    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

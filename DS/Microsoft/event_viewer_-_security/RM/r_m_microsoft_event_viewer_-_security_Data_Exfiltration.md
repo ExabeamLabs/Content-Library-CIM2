@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - Security](../ds_microsoft_event_viewer_-_security.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  49   |   23   |     17     |       87       |   87    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  49   |   23   |         17         |       87       |   87    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

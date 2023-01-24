@@ -5,9 +5,9 @@ Vendor: Ping Identity
 ### Product: [Ping Identity](../ds_ping_identity_ping_identity.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  31   |   17   |     3      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  31   |   17   |         3          |       11       |   11    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

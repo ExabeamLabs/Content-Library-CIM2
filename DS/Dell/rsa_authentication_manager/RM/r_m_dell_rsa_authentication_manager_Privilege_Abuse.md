@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [RSA Authentication Manager](../ds_dell_rsa_authentication_manager.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       6        |    6    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

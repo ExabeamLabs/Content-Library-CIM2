@@ -5,9 +5,9 @@ Vendor: Hornet
 ### Product: [Hornetsecurity Cloud Email Security Services](../ds_hornet_hornetsecurity_cloud_email_security_services.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       5        |    5    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

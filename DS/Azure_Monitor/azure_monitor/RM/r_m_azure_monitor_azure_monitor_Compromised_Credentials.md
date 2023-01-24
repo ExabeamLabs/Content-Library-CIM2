@@ -5,9 +5,9 @@ Vendor: Azure Monitor
 ### Product: [Azure Monitor](../ds_azure_monitor_azure_monitor.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   24   |         2          |       1        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

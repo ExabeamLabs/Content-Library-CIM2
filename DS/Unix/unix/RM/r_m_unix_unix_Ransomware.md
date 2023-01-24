@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix](../ds_unix_unix.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     9      |       34       |   34    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         9          |       34       |   34    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

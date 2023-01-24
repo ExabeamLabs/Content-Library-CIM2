@@ -5,9 +5,9 @@ Vendor: Code42
 ### Product: [Code42 Incydr](../ds_code42_code42_incydr.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       15       |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

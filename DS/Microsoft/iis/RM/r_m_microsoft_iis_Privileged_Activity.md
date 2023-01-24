@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [IIS](../ds_microsoft_iis.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         3          |       2        |    2    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

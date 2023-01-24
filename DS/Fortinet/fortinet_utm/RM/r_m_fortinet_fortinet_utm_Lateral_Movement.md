@@ -5,9 +5,9 @@ Vendor: Fortinet
 ### Product: [Fortinet UTM](../ds_fortinet_fortinet_utm.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   0    |     4      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   0    |         4          |       5        |    5    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

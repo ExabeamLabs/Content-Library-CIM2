@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Firepower](../ds_cisco_cisco_firepower.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       30       |   30    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       30       |   30    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

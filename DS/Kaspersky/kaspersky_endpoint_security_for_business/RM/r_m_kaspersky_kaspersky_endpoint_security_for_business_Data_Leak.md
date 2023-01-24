@@ -5,9 +5,9 @@ Vendor: Kaspersky
 ### Product: [Kaspersky Endpoint Security for Business](../ds_kaspersky_kaspersky_endpoint_security_for_business.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  46   |   22   |     6      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  46   |   22   |         6          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

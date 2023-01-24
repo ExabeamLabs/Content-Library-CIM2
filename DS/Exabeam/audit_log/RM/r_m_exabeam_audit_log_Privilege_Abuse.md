@@ -5,9 +5,9 @@ Vendor: Exabeam
 ### Product: [Audit Log](../ds_exabeam_audit_log.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       18       |   18    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

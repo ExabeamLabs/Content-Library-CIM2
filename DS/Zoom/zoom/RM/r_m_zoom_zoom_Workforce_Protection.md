@@ -5,9 +5,9 @@ Vendor: Zoom
 ### Product: [Zoom](../ds_zoom_zoom.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       5        |    5    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

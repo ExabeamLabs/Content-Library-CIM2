@@ -5,9 +5,9 @@ Vendor: InfoWatch
 ### Product: [InfoWatch DLP](../ds_infowatch_infowatch_dlp.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         3          |       3        |    3    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

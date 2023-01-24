@@ -5,9 +5,9 @@ Vendor: Xiting
 ### Product: [XAMS](../ds_xiting_xams.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       3        |    3    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

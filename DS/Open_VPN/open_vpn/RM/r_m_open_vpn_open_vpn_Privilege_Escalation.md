@@ -5,9 +5,9 @@ Vendor: Open VPN
 ### Product: [Open VPN](../ds_open_vpn_open_vpn.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   5    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   5    |         2          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

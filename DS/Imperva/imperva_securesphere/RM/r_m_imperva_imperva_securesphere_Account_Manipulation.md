@@ -5,9 +5,9 @@ Vendor: Imperva
 ### Product: [Imperva SecureSphere](../ds_imperva_imperva_securesphere.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       12       |   12    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

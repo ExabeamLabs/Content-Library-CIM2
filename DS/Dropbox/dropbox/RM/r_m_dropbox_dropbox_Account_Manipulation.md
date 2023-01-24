@@ -5,9 +5,9 @@ Vendor: Dropbox
 ### Product: [Dropbox](../ds_dropbox_dropbox.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   7    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   7    |         2          |       8        |    8    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

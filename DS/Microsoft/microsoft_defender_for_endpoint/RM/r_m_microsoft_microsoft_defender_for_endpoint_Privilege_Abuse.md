@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft Defender for Endpoint](../ds_microsoft_microsoft_defender_for_endpoint.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  20   |   10   |     8      |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  20   |   10   |         8          |       25       |   25    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

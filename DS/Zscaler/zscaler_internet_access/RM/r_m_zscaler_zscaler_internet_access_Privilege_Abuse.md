@@ -5,9 +5,9 @@ Vendor: Zscaler
 ### Product: [Zscaler Internet Access](../ds_zscaler_zscaler_internet_access.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       7        |    7    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

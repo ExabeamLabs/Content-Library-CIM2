@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [Palo Alto NGFW](../ds_palo_alto_networks_palo_alto_ngfw.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   5    |     2      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   5    |         2          |       14       |   14    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

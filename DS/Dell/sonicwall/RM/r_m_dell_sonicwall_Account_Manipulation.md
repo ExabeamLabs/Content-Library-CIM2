@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [SonicWALL](../ds_dell_sonicwall.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   7    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   7    |         2          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

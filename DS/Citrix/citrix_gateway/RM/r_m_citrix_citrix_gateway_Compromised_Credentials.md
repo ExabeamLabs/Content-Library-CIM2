@@ -5,9 +5,9 @@ Vendor: Citrix
 ### Product: [Citrix Gateway](../ds_citrix_citrix_gateway.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  106  |   37   |     13     |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  106  |   37   |         13         |       11       |   11    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

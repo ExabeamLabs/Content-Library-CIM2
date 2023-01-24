@@ -5,9 +5,9 @@ Vendor: Safend
 ### Product: [Data Protection Suite (DPS)](../ds_safend_data_protection_suite_(dps).md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       3        |    3    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

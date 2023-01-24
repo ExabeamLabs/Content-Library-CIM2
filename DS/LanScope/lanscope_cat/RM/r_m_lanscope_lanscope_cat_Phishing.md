@@ -5,9 +5,9 @@ Vendor: LanScope
 ### Product: [LanScope Cat](../ds_lanscope_lanscope_cat.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     6      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         6          |       13       |   13    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

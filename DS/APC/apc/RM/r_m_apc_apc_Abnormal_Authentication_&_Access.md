@@ -5,9 +5,9 @@ Vendor: APC
 ### Product: [APC](../ds_apc_apc.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   5    |     3      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   5    |         3          |       5        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

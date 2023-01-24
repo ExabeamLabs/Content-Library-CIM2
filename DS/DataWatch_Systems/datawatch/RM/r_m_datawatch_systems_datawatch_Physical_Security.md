@@ -5,9 +5,9 @@ Vendor: DataWatch Systems
 ### Product: [DataWatch](../ds_datawatch_systems_datawatch.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   4    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   4    |         1          |       1        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

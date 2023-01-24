@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper Networks](../ds_juniper_networks_juniper_networks.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   6    |     12     |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   6    |         12         |       9        |    9    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

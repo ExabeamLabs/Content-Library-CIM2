@@ -5,9 +5,9 @@ Vendor: Zeek
 ### Product: [Zeek](../ds_zeek_zeek.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     3      |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         3          |       25       |   25    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

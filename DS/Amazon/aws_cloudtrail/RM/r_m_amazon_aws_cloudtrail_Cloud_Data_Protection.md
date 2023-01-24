@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Cloud Data Protection](../../../../UseCases/uc_cloud_data_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  11   |   6    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  11   |   6    |         2          |       9        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

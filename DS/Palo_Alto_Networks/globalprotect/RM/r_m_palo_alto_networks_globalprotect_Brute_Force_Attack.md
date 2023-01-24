@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [GlobalProtect](../ds_palo_alto_networks_globalprotect.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       6        |    6    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

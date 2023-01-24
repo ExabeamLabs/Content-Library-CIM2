@@ -5,9 +5,9 @@ Vendor: Forcepoint
 ### Product: [Forcepoint DLP](../ds_forcepoint_forcepoint_dlp.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       6        |    6    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

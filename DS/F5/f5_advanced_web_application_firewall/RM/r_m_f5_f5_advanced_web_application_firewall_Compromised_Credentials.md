@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5 Advanced Web Application Firewall](../ds_f5_f5_advanced_web_application_firewall.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  48   |   5    |     10     |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  48   |   5    |         10         |       6        |    6    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -1,3 +1,3 @@
-|    Use-Case    | Activity Types/Parsers    | MITRE TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP   | Content    |
 |:----:| ---- | ---- | ---- |
 | [Malware](../../../UseCases/uc_malware.md) |  dlp-alert<br> ↳[imss-i-str-alert-trigger-success-dlpalert](Ps/pC_imssistralerttriggersuccessdlpalert.md)<br> ↳[imss-i-str-alert-trigger-success-securityalert](Ps/pC_imssistralerttriggersuccesssecurityalert.md)<br> ↳[imss-i-json-alert-trigger-success-spf](Ps/pC_imssijsonalerttriggersuccessspf.md)<br> ↳[imss-i-str-alert-trigger-success-antispamrules](Ps/pC_imssistralerttriggersuccessantispamrules.md)<br> ↳[imss-i-str-alert-trigger-success-spoofedemailfilter](Ps/pC_imssistralerttriggersuccessspoofedemailfilter.md)<br> ↳[imss-i-str-alert-trigger-success-capacityregulation](Ps/pC_imssistralerttriggersuccesscapacityregulation.md)<br> | TA0002 - TA0002<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_imss_imss_Malware.md) |

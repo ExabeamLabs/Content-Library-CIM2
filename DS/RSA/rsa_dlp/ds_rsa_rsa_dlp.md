@@ -2,11 +2,11 @@ Vendor: RSA
 ===========
 Product: RSA DLP
 ----------------
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  70   |   36   |     7      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  70   |   36   |         7          |       2        |    2    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
 |    [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)    |  dlp-alert<br> ↳[rsa-dlp-kv-alert-trigger-success-glba](Ps/pC_rsadlpkvalerttriggersuccessglba.md)<br><br> dlp-email-alert-out<br> ↳[rsa-dlp-kv-email-send-success-smtp](Ps/pC_rsadlpkvemailsendsuccesssmtp.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br>    | [<ul><li>29 Rules</li></ul><ul><li>18 Models</li></ul>](RM/r_m_rsa_rsa_dlp_Data_Exfiltration.md)  |
 |    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-alert<br> ↳[rsa-dlp-kv-alert-trigger-success-glba](Ps/pC_rsadlpkvalerttriggersuccessglba.md)<br><br> dlp-email-alert-out<br> ↳[rsa-dlp-kv-email-send-success-smtp](Ps/pC_rsadlpkvemailsendsuccesssmtp.md)<br> | T1020 - Automated Exfiltration<br>T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>61 Rules</li></ul><ul><li>33 Models</li></ul>](RM/r_m_rsa_rsa_dlp_Data_Leak.md)          |
@@ -16,8 +16,8 @@ Product: RSA DLP
 |  [Privileged Activity](../../../UseCases/uc_privileged_activity.md)  |  dlp-alert<br> ↳[rsa-dlp-kv-alert-trigger-success-glba](Ps/pC_rsadlpkvalerttriggersuccessglba.md)<br><br> dlp-email-alert-out<br> ↳[rsa-dlp-kv-email-send-success-smtp](Ps/pC_rsadlpkvemailsendsuccesssmtp.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_rsa_rsa_dlp_Privileged_Activity.md)    |
 | [Workforce Protection](../../../UseCases/uc_workforce_protection.md) |  dlp-alert<br> ↳[rsa-dlp-kv-alert-trigger-success-glba](Ps/pC_rsadlpkvalerttriggersuccessglba.md)<br><br> dlp-email-alert-out<br> ↳[rsa-dlp-kv-email-send-success-smtp](Ps/pC_rsadlpkvemailsendsuccesssmtp.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br>    | [<ul><li>4 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_rsa_rsa_dlp_Workforce_Protection.md) |
 
-ATT&CK Matrix for Enterprise
-----------------------------
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
 | Initial Access                                                                                                                                            | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                             | Exfiltration                                                                                                                                                                                                                                                                                                                    | Impact |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
 | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            | [Application Layer Protocol](https://attack.mitre.org/techniques/T1071)<br><br> | [Exfiltration Over Alternative Protocol](https://attack.mitre.org/techniques/T1048)<br><br>[Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol](https://attack.mitre.org/techniques/T1048/003)<br><br>[Automated Exfiltration](https://attack.mitre.org/techniques/T1020)<br><br> |        |

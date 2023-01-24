@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Firepower](../ds_cisco_cisco_firepower.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  135  |   34   |     21     |       30       |   30    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  135  |   34   |         21         |       30       |   30    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

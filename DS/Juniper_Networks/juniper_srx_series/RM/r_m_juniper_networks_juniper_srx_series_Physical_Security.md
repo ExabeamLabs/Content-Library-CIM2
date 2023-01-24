@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper SRX Series](../ds_juniper_networks_juniper_srx_series.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       10       |   10    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

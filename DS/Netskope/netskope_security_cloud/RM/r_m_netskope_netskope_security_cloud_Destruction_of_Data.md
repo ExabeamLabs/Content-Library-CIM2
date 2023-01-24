@@ -5,9 +5,9 @@ Vendor: Netskope
 ### Product: [Netskope Security Cloud](../ds_netskope_netskope_security_cloud.md)
 ### Use-Case: [Destruction of Data](../../../../UseCases/uc_destruction_of_data.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       16       |   16    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       16       |   16    |
 
 | Event Type  | Rules    | Models |
 | ---- | ---- | ------ |

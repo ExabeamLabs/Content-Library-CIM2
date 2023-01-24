@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Auditd](../ds_unix_unix_auditd.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  42   |   18   |     14     |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  42   |   18   |         14         |       18       |   18    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

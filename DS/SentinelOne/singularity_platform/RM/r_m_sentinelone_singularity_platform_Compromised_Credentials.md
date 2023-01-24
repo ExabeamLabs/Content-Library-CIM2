@@ -5,9 +5,9 @@ Vendor: SentinelOne
 ### Product: [Singularity Platform](../ds_sentinelone_singularity_platform.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  117  |   43   |     20     |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  117  |   43   |         20         |       15       |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

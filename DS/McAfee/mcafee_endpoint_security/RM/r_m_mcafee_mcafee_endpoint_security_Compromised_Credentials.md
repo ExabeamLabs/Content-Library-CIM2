@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [McAfee Endpoint Security](../ds_mcafee_mcafee_endpoint_security.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  70   |   38   |     5      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  70   |   38   |         5          |       12       |   12    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

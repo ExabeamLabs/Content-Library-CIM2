@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper Pulse Secure](../ds_juniper_networks_juniper_pulse_secure.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       12       |   12    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

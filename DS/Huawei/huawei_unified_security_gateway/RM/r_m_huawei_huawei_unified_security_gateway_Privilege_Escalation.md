@@ -5,9 +5,9 @@ Vendor: Huawei
 ### Product: [Huawei Unified Security Gateway](../ds_huawei_huawei_unified_security_gateway.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  77   |   13   |     43     |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  77   |   13   |         43         |       6        |    6    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

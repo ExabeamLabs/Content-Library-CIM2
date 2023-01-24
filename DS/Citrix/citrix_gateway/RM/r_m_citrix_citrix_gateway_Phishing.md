@@ -5,9 +5,9 @@ Vendor: Citrix
 ### Product: [Citrix Gateway](../ds_citrix_citrix_gateway.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   2    |     2      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   2    |         2          |       11       |   11    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

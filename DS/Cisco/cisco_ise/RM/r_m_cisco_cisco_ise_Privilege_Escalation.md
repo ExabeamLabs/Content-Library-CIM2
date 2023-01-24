@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco ISE](../ds_cisco_cisco_ise.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     4      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         4          |       15       |   15    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: CyberArk
 ### Product: [Cyberark Endpoint Protection Manager](../ds_cyberark_cyberark_endpoint_protection_manager.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  19   |   11   |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  19   |   11   |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

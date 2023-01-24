@@ -5,9 +5,9 @@ Vendor: Cisco Unified Communications Manager
 ### Product: [Cisco Unified Communications Manager](../ds_cisco_unified_communications_manager_cisco_unified_communications_manager.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  27   |   16   |     3      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  27   |   16   |         3          |       4        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

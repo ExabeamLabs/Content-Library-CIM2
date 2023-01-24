@@ -5,9 +5,9 @@ Vendor: GoAnywhere
 ### Product: [GoAnywhere MFT](../ds_goanywhere_goanywhere_mft.md)
 ### Use-Case: [Destruction of Data](../../../../UseCases/uc_destruction_of_data.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       7        |    7    |
 
 | Event Type  | Rules    | Models |
 | ---- | ---- | ------ |

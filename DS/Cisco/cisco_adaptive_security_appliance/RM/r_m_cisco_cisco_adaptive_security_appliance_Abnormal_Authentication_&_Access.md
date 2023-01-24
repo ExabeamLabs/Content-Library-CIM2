@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Adaptive Security Appliance](../ds_cisco_cisco_adaptive_security_appliance.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  46   |   18   |     5      |       33       |   33    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  46   |   18   |         5          |       33       |   33    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

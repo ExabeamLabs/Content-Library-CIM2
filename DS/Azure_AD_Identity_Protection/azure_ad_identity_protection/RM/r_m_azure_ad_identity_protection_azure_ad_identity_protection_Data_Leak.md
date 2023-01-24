@@ -5,9 +5,9 @@ Vendor: Azure AD Identity Protection
 ### Product: [Azure AD Identity Protection](../ds_azure_ad_identity_protection_azure_ad_identity_protection.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

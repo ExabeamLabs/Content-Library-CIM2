@@ -5,9 +5,9 @@ Vendor: RStudio
 ### Product: [RStudio Server](../ds_rstudio_rstudio_server.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       2        |    2    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Adaptive Security Appliance](../ds_cisco_cisco_adaptive_security_appliance.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       33       |   33    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       33       |   33    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

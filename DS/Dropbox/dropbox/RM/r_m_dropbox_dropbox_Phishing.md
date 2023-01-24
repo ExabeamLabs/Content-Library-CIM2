@@ -5,9 +5,9 @@ Vendor: Dropbox
 ### Product: [Dropbox](../ds_dropbox_dropbox.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   2    |     1      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   2    |         1          |       8        |    8    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: RSA
 ### Product: [RSA Authentication Manager](../ds_rsa_rsa_authentication_manager.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

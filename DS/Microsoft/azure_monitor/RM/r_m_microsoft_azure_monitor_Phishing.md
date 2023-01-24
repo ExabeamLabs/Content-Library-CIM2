@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure Monitor](../ds_microsoft_azure_monitor.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     5      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         5          |       19       |   19    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

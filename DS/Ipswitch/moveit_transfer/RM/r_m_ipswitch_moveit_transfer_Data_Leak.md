@@ -5,9 +5,9 @@ Vendor: Ipswitch
 ### Product: [MoveIt Transfer](../ds_ipswitch_moveit_transfer.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         2          |       8        |    8    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

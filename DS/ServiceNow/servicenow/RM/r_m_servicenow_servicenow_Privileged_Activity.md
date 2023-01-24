@@ -5,9 +5,9 @@ Vendor: ServiceNow
 ### Product: [ServiceNow](../ds_servicenow_servicenow.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       9        |    9    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

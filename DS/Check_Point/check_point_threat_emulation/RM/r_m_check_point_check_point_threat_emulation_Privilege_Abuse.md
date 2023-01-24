@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [Check Point Threat Emulation](../ds_check_point_check_point_threat_emulation.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   2    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   2    |         2          |       1        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

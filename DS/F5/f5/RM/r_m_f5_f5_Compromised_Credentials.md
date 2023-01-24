@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5](../ds_f5_f5.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  43   |   24   |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  43   |   24   |         3          |       3        |    3    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

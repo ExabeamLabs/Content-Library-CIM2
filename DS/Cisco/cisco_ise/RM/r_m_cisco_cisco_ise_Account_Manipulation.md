@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco ISE](../ds_cisco_cisco_ise.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     2      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         2          |       15       |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

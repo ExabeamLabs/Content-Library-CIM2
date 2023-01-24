@@ -5,9 +5,9 @@ Vendor: Zeek
 ### Product: [Zeek](../ds_zeek_zeek.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  170  |   88   |     22     |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  170  |   88   |         22         |       25       |   25    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

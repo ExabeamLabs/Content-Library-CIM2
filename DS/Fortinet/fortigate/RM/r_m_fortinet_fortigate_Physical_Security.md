@@ -5,9 +5,9 @@ Vendor: Fortinet
 ### Product: [FortiGate](../ds_fortinet_fortigate.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       5        |    5    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

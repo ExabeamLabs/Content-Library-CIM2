@@ -5,9 +5,9 @@ Vendor: CyberArk
 ### Product: [Cyberark Privilege Access Management](../ds_cyberark_cyberark_privilege_access_management.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  40   |   16   |     6      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  40   |   16   |         6          |       13       |   13    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

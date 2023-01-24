@@ -5,9 +5,9 @@ Vendor: Symantec
 ### Product: [Symantec Endpoint Protection](../ds_symantec_symantec_endpoint_protection.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  19   |   11   |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  19   |   11   |         1          |       5        |    5    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

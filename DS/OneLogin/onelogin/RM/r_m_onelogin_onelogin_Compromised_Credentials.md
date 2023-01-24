@@ -5,9 +5,9 @@ Vendor: OneLogin
 ### Product: [OneLogin](../ds_onelogin_onelogin.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  43   |   24   |     3      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  43   |   24   |         3          |       5        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

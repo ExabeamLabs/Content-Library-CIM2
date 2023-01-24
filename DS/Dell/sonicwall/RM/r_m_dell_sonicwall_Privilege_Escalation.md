@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [SonicWALL](../ds_dell_sonicwall.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   5    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   5    |         2          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

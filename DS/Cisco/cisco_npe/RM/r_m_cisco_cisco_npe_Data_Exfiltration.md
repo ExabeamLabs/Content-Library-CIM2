@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco NPE](../ds_cisco_cisco_npe.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  13   |   0    |     11     |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  13   |   0    |         11         |       1        |    1    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

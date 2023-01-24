@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Auditd](../ds_unix_unix_auditd.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   1    |     3      |       18       |   18    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   1    |         3          |       18       |   18    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

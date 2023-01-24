@@ -5,9 +5,9 @@ Vendor: Tanium Core Platform
 ### Product: [Tanium Core Platform](../ds_tanium_core_platform_tanium_core_platform.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         2          |       4        |    4    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

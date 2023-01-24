@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - DNSServer](../ds_microsoft_event_viewer_-_dnsserver.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  43   |   2    |     9      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  43   |   2    |         9          |       5        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

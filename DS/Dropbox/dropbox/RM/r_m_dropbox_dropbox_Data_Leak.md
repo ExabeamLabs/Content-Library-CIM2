@@ -5,9 +5,9 @@ Vendor: Dropbox
 ### Product: [Dropbox](../ds_dropbox_dropbox.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   11   |     7      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   11   |         7          |       8        |    8    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

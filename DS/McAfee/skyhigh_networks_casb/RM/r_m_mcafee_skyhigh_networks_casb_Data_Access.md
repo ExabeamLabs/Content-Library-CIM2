@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [Skyhigh Networks CASB](../ds_mcafee_skyhigh_networks_casb.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  20   |   11   |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  20   |   11   |         1          |       5        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Sysmon](../ds_microsoft_sysmon.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  26   |   13   |     2      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  26   |   13   |         2          |       19       |   19    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

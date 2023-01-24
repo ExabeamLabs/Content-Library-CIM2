@@ -5,9 +5,9 @@ Vendor: Xiting
 ### Product: [XAMS](../ds_xiting_xams.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       3        |    3    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

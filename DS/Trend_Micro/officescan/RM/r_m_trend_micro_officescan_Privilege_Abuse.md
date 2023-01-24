@@ -5,9 +5,9 @@ Vendor: Trend Micro
 ### Product: [OfficeScan](../ds_trend_micro_officescan.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     2      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         2          |       7        |    7    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

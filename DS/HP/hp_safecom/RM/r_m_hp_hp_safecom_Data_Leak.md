@@ -5,9 +5,9 @@ Vendor: HP
 ### Product: [HP SafeCom](../ds_hp_hp_safecom.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   2    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   2    |         1          |       1        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

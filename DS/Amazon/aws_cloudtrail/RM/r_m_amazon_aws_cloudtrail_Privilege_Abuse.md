@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  23   |   9    |     6      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  23   |   9    |         6          |       9        |    9    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

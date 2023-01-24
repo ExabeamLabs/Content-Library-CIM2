@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Sendmail](../ds_unix_unix_sendmail.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         1          |       4        |    4    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

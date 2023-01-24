@@ -5,9 +5,9 @@ Vendor: Duo Access
 ### Product: [Duo Access](../ds_duo_access_duo_access.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   24   |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   24   |         2          |       1        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

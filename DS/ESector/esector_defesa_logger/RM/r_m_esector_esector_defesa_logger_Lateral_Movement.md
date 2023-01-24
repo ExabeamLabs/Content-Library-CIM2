@@ -5,9 +5,9 @@ Vendor: ESector
 ### Product: [ESector DEFESA Logger](../ds_esector_esector_defesa_logger.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       6        |    6    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

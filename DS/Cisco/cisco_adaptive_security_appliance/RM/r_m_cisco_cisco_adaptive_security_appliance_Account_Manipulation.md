@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Adaptive Security Appliance](../ds_cisco_cisco_adaptive_security_appliance.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  25   |   13   |     14     |       33       |   33    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  25   |   13   |         14         |       33       |   33    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

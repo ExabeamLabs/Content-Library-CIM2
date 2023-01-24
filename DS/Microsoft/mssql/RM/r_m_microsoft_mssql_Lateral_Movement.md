@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [MSSQL](../ds_microsoft_mssql.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  20   |   7    |     5      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  20   |   7    |         5          |       10       |   10    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

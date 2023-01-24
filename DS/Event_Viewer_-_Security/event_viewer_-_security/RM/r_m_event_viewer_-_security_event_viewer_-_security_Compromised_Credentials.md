@@ -5,9 +5,9 @@ Vendor: Event Viewer - Security
 ### Product: [Event Viewer - Security](../ds_event_viewer_-_security_event_viewer_-_security.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  33   |   14   |     4      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  33   |   14   |         4          |       4        |    4    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

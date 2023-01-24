@@ -5,9 +5,9 @@ Vendor: Okta
 ### Product: [Okta Adaptive MFA](../ds_okta_okta_adaptive_mfa.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  49   |   19   |     6      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  49   |   19   |         6          |       14       |   14    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

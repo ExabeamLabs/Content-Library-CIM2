@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - Security](../ds_microsoft_event_viewer_-_security.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  46   |   25   |     4      |       87       |   87    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  46   |   25   |         4          |       87       |   87    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

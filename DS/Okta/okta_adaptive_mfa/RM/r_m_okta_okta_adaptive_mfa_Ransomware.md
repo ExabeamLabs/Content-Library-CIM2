@@ -5,9 +5,9 @@ Vendor: Okta
 ### Product: [Okta Adaptive MFA](../ds_okta_okta_adaptive_mfa.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       14       |   14    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

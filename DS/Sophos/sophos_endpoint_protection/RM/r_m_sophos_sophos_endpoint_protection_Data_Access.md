@@ -5,9 +5,9 @@ Vendor: Sophos
 ### Product: [Sophos Endpoint Protection](../ds_sophos_sophos_endpoint_protection.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  43   |   24   |     2      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  43   |   24   |         2          |       11       |   11    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

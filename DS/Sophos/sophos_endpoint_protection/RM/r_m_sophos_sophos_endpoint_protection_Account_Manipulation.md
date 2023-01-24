@@ -5,9 +5,9 @@ Vendor: Sophos
 ### Product: [Sophos Endpoint Protection](../ds_sophos_sophos_endpoint_protection.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  23   |   9    |     5      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  23   |   9    |         5          |       11       |   11    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

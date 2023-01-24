@@ -5,9 +5,9 @@ Vendor: Oracle
 ### Product: [Oracle Database](../ds_oracle_oracle_database.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       8        |    8    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

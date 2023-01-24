@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix Named](../ds_unix_unix_named.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  19   |   11   |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  19   |   11   |         1          |       5        |    5    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

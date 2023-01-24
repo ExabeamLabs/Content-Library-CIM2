@@ -5,9 +5,9 @@ Vendor: Epic
 ### Product: [Epic SIEM](../ds_epic_epic_siem.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  20   |   11   |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  20   |   11   |         1          |       6        |    6    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

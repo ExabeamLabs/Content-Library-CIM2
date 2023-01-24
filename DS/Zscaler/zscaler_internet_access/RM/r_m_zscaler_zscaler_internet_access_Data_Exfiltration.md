@@ -5,9 +5,9 @@ Vendor: Zscaler
 ### Product: [Zscaler Internet Access](../ds_zscaler_zscaler_internet_access.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  38   |   20   |     11     |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  38   |   20   |         11         |       7        |    7    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

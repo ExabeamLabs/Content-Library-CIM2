@@ -5,9 +5,9 @@ Vendor: Password Manager Pro
 ### Product: [Password Manager Pro](../ds_password_manager_pro_password_manager_pro.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  27   |   16   |     3      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  27   |   16   |         3          |       9        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

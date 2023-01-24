@@ -5,9 +5,9 @@ Vendor: NetIQ
 ### Product: [Micro Focus NetIQ Identity Manager](../ds_netiq_micro_focus_netiq_identity_manager.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       2        |    2    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

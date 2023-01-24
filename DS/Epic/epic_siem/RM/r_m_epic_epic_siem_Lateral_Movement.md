@@ -5,9 +5,9 @@ Vendor: Epic
 ### Product: [Epic SIEM](../ds_epic_epic_siem.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       6        |    6    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Zeek
 ### Product: [Zeek](../ds_zeek_zeek.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  40   |   21   |     12     |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  40   |   21   |         12         |       25       |   25    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

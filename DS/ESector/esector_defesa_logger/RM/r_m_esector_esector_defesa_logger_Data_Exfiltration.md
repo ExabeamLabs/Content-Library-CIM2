@@ -5,9 +5,9 @@ Vendor: ESector
 ### Product: [ESector DEFESA Logger](../ds_esector_esector_defesa_logger.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       6        |    6    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: MariaDB
 ### Product: [MariaDB](../ds_mariadb_mariadb.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   5    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   5    |         1          |       4        |    4    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Bitglass
 ### Product: [Bitglass CASB](../ds_bitglass_bitglass_casb.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  64   |   33   |     5      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  64   |   33   |         5          |       6        |    6    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

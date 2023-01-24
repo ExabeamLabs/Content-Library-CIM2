@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft 365](../ds_microsoft_microsoft_365.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  124  |   43   |     14     |       17       |   17    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  124  |   43   |         14         |       17       |   17    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

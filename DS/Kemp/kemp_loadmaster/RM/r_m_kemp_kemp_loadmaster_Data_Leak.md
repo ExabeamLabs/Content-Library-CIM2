@@ -5,9 +5,9 @@ Vendor: Kemp
 ### Product: [Kemp LoadMaster](../ds_kemp_kemp_loadmaster.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  32   |   18   |     4      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  32   |   18   |         4          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [Check Point Security Gateway](../ds_check_point_check_point_security_gateway.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   4    |     2      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   4    |         2          |       3        |    3    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

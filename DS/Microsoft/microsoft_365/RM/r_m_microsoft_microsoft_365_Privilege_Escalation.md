@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft 365](../ds_microsoft_microsoft_365.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  72   |   9    |     42     |       17       |   17    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  72   |   9    |         42         |       17       |   17    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

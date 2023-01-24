@@ -5,9 +5,9 @@ Vendor: Postfix
 ### Product: [Postfix](../ds_postfix_postfix.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       2        |    2    |
 
 | Event Type          | Rules    | Models |
 | ---- | ---- | ------ |

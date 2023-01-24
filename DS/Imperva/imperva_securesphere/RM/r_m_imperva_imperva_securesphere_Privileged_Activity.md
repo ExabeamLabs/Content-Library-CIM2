@@ -5,9 +5,9 @@ Vendor: Imperva
 ### Product: [Imperva SecureSphere](../ds_imperva_imperva_securesphere.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       12       |   12    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

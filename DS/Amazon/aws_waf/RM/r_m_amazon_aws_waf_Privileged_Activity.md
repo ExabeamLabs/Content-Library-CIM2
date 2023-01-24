@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS WAF](../ds_amazon_aws_waf.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       3        |    3    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

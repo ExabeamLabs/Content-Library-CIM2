@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft 365](../ds_microsoft_microsoft_365.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       17       |   17    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       17       |   17    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Apache
 ### Product: [Apache Subversion](../ds_apache_apache_subversion.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       2        |    2    |
 
 | Event Type          | Rules    | Models |
 | ---- | ---- | ------ |

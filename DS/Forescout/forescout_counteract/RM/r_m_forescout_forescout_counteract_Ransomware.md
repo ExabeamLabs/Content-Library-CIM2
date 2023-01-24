@@ -5,9 +5,9 @@ Vendor: Forescout
 ### Product: [Forescout CounterACT](../ds_forescout_forescout_counteract.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       4        |    4    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

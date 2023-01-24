@@ -5,9 +5,9 @@ Vendor: Sophos
 ### Product: [Sophos Endpoint Protection](../ds_sophos_sophos_endpoint_protection.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  78   |   41   |     7      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  78   |   41   |         7          |       11       |   11    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

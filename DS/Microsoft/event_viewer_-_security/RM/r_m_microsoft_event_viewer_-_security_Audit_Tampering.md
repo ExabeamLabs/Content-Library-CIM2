@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - Security](../ds_microsoft_event_viewer_-_security.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   2    |     7      |       87       |   87    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   2    |         7          |       87       |   87    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

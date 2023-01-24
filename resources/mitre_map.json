@@ -10,7 +10,7 @@
         "maxValue": 20, 
         "minValue": 0
     }, 
-    "version": "4.3", 
+    "version": "4.4", 
     "techniques": [
         {
             "comment": "19 rules", 
@@ -53,9 +53,9 @@
             "score": 9
         }, 
         {
-            "comment": "10 rules", 
+            "comment": "15 rules", 
             "techniqueID": "T1204", 
-            "score": 10
+            "score": 15
         }, 
         {
             "comment": "2 rules", 
@@ -468,9 +468,9 @@
             "score": 1
         }, 
         {
-            "comment": "7 rules", 
+            "comment": "8 rules", 
             "techniqueID": "T1496", 
-            "score": 7
+            "score": 8
         }, 
         {
             "comment": "36 rules", 
@@ -503,9 +503,9 @@
             "score": 38
         }, 
         {
-            "comment": "1 rules", 
+            "comment": "3 rules", 
             "techniqueID": "T1204.003", 
-            "score": 1
+            "score": 3
         }, 
         {
             "comment": "4 rules", 
@@ -548,9 +548,9 @@
             "score": 5
         }, 
         {
-            "comment": "24 rules", 
+            "comment": "27 rules", 
             "techniqueID": "TA0004", 
-            "score": 24
+            "score": 27
         }, 
         {
             "comment": "2 rules", 
@@ -783,9 +783,9 @@
             "score": 2
         }, 
         {
-            "comment": "25 rules", 
+            "comment": "32 rules", 
             "techniqueID": "T1530", 
-            "score": 25
+            "score": 32
         }, 
         {
             "comment": "3 rules", 
@@ -798,9 +798,9 @@
             "score": 3
         }, 
         {
-            "comment": "3 rules", 
+            "comment": "5 rules", 
             "techniqueID": "T1535", 
-            "score": 3
+            "score": 5
         }, 
         {
             "comment": "2 rules", 
@@ -868,9 +868,9 @@
             "score": 6
         }, 
         {
-            "comment": "3 rules", 
+            "comment": "4 rules", 
             "techniqueID": "T1580", 
-            "score": 3
+            "score": 4
         }, 
         {
             "comment": "1 rules", 
@@ -898,9 +898,9 @@
             "score": 8
         }, 
         {
-            "comment": "290 rules", 
+            "comment": "297 rules", 
             "techniqueID": "T1078", 
-            "score": 290
+            "score": 297
         }, 
         {
             "comment": "6 rules", 
@@ -958,9 +958,9 @@
             "score": 3
         }, 
         {
-            "comment": "20 rules", 
+            "comment": "27 rules", 
             "techniqueID": "T1078.004", 
-            "score": 20
+            "score": 27
         }, 
         {
             "comment": "25 rules", 
@@ -988,9 +988,9 @@
             "score": 6
         }, 
         {
-            "comment": "3 rules", 
+            "comment": "6 rules", 
             "techniqueID": "TA0009", 
-            "score": 3
+            "score": 6
         }, 
         {
             "comment": "1 rules", 
@@ -1013,9 +1013,9 @@
             "score": 2
         }, 
         {
-            "comment": "6 rules", 
+            "comment": "7 rules", 
             "techniqueID": "TA0007", 
-            "score": 6
+            "score": 7
         }, 
         {
             "comment": "2 rules", 
@@ -1033,5 +1033,5 @@
             "score": 2
         }
     ], 
-    "description": "Exabeam MITRE Map"
+    "description": "Exabeam Coverage Map"
 }

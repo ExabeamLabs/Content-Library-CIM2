@@ -5,9 +5,9 @@ Vendor: Namespace rDirectory
 ### Product: [Namespace rDirectory](../ds_namespace_rdirectory_namespace_rdirectory.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   2    |     3      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   2    |         3          |       5        |    5    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

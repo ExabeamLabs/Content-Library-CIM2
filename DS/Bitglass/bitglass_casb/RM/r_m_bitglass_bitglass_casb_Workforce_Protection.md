@@ -5,9 +5,9 @@ Vendor: Bitglass
 ### Product: [Bitglass CASB](../ds_bitglass_bitglass_casb.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         1          |       6        |    6    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

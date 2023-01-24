@@ -5,9 +5,9 @@ Vendor: SiteSpect
 ### Product: [SiteSpect](../ds_sitespect_sitespect.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       1        |    1    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

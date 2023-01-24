@@ -5,9 +5,9 @@ Vendor: GoAnywhere
 ### Product: [GoAnywhere MFT](../ds_goanywhere_goanywhere_mft.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         1          |       7        |    7    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

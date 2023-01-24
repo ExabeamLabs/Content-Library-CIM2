@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5 Access Policy Manager](../ds_f5_f5_access_policy_manager.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   7    |     3      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   7    |         3          |       2        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

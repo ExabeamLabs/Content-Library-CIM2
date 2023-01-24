@@ -5,9 +5,9 @@ Vendor: GTB
 ### Product: [GTB Technologies DLP](../ds_gtb_gtb_technologies_dlp.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  24   |   13   |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  24   |   13   |         1          |       2        |    2    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Zeek
 ### Product: [Zeek](../ds_zeek_zeek.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  135  |   46   |     21     |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  135  |   46   |         21         |       25       |   25    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

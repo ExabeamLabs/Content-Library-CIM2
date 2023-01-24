@@ -5,9 +5,9 @@ Vendor: Google
 ### Product: [Cloud Platform](../ds_google_cloud_platform.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       15       |   15    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

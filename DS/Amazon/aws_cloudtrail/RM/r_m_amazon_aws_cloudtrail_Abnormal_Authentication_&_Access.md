@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS CloudTrail](../ds_amazon_aws_cloudtrail.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   4    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   4    |         2          |       9        |    9    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

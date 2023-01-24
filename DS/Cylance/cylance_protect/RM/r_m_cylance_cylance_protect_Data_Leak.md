@@ -5,9 +5,9 @@ Vendor: Cylance
 ### Product: [Cylance PROTECT](../ds_cylance_cylance_protect.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       5        |    5    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

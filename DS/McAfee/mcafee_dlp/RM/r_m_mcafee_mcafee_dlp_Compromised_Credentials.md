@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [McAfee DLP](../ds_mcafee_mcafee_dlp.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  31   |   14   |     3      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  31   |   14   |         3          |       7        |    7    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

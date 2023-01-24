@@ -5,9 +5,9 @@ Vendor: Tanium
 ### Product: [Tanium Core Platform](../ds_tanium_tanium_core_platform.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       4        |    4    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

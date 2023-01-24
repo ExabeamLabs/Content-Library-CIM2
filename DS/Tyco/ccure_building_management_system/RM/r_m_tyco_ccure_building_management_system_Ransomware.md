@@ -5,9 +5,9 @@ Vendor: Tyco
 ### Product: [CCURE Building Management System](../ds_tyco_ccure_building_management_system.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       4        |    4    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

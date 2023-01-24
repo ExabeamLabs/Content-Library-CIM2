@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [Sonicwall](../ds_dell_sonicwall.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         2          |       9        |    9    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

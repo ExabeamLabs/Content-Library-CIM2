@@ -5,9 +5,9 @@ Vendor: Zeek
 ### Product: [Zeek](../ds_zeek_zeek.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       25       |   25    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       25       |   25    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

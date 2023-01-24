@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper SRX Series](../ds_juniper_networks_juniper_srx_series.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   1    |     1      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   1    |         1          |       10       |   10    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

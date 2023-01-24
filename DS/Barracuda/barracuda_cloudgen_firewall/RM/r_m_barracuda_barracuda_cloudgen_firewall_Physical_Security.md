@@ -5,9 +5,9 @@ Vendor: Barracuda
 ### Product: [Barracuda Cloudgen Firewall](../ds_barracuda_barracuda_cloudgen_firewall.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       8        |    8    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

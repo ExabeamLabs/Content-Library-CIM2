@@ -5,9 +5,9 @@ Vendor: Password Manager Pro
 ### Product: [Password Manager Pro](../ds_password_manager_pro_password_manager_pro.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       9        |    9    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

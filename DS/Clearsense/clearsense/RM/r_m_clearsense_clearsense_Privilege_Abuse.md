@@ -5,9 +5,9 @@ Vendor: Clearsense
 ### Product: [Clearsense](../ds_clearsense_clearsense.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       1        |    1    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: NetIQ
 ### Product: [Micro Focus NetIQ Identity Manager](../ds_netiq_micro_focus_netiq_identity_manager.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   4    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   4    |         1          |       2        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

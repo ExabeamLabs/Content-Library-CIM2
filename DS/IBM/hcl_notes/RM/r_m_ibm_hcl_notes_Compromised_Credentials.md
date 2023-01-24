@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [HCL Notes](../ds_ibm_hcl_notes.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  31   |   14   |     3      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  31   |   14   |         3          |       6        |    6    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Kaspersky
 ### Product: [Kaspersky Endpoint Security for Business](../ds_kaspersky_kaspersky_endpoint_security_for_business.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       3        |    3    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

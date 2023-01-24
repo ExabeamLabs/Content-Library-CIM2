@@ -5,9 +5,9 @@ Vendor: Imperva
 ### Product: [Imperva SecureSphere](../ds_imperva_imperva_securesphere.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  60   |   34   |     4      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  60   |   34   |         4          |       12       |   12    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

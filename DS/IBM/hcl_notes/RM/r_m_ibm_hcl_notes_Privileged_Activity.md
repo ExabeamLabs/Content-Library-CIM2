@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [HCL Notes](../ds_ibm_hcl_notes.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       6        |    6    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       6        |    6    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

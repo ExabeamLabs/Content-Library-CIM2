@@ -5,9 +5,9 @@ Vendor: Safend
 ### Product: [Data Protection Suite (DPS)](../ds_safend_data_protection_suite_(dps).md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  31   |   14   |     3      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  31   |   14   |         3          |       3        |    3    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

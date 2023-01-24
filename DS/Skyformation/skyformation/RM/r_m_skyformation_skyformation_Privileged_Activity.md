@@ -5,9 +5,9 @@ Vendor: Skyformation
 ### Product: [Skyformation](../ds_skyformation_skyformation.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       1        |    1    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

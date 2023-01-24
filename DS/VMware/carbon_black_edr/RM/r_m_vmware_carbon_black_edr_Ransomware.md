@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black EDR](../ds_vmware_carbon_black_edr.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     9      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         9          |       11       |   11    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

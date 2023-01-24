@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft](../ds_microsoft_microsoft.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   3    |     3      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   3    |         3          |       9        |    9    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

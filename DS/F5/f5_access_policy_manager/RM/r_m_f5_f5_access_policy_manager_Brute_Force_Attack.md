@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5 Access Policy Manager](../ds_f5_f5_access_policy_manager.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       2        |    2    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Fortinet
 ### Product: [Fortinet VPN](../ds_fortinet_fortinet_vpn.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   7    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   7    |         2          |       4        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

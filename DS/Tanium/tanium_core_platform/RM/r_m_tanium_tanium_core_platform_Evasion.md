@@ -5,9 +5,9 @@ Vendor: Tanium
 ### Product: [Tanium Core Platform](../ds_tanium_tanium_core_platform.md)
 ### Use-Case: [Evasion](../../../../UseCases/uc_evasion.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  71   |   3    |     33     |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  71   |   3    |         33         |       4        |    4    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Microsoft](../ds_microsoft_microsoft.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         2          |       9        |    9    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

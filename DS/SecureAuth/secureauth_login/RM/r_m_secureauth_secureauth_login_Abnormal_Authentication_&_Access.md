@@ -5,9 +5,9 @@ Vendor: SecureAuth
 ### Product: [SecureAuth Login](../ds_secureauth_secureauth_login.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   4    |     2      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   4    |         2          |       7        |    7    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

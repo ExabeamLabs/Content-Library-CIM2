@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - PowerShell](../ds_microsoft_event_viewer_-_powershell.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       5        |    5    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

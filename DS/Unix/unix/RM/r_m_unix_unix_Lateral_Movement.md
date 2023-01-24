@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix](../ds_unix_unix.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  107  |   23   |     23     |       34       |   34    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  107  |   23   |         23         |       34       |   34    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: HelpSystems
 ### Product: [Powertech Identity and Access Manager](../ds_helpsystems_powertech_identity_and_access_manager.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   0    |     8      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   0    |         8          |       2        |    2    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Fortinet
 ### Product: [Fortinet UTM](../ds_fortinet_fortinet_utm.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     2      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         2          |       5        |    5    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

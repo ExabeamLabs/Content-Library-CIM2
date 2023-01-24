@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Unix](../ds_unix_unix.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   0    |     3      |       34       |   34    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   0    |         3          |       34       |   34    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

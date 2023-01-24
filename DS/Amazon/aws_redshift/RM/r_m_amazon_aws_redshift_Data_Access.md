@@ -5,9 +5,9 @@ Vendor: Amazon
 ### Product: [AWS Redshift](../ds_amazon_aws_redshift.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  18   |   10   |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  18   |   10   |         1          |       1        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

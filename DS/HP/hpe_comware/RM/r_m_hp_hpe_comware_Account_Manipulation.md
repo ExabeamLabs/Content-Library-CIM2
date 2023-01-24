@@ -5,9 +5,9 @@ Vendor: HP
 ### Product: [HPE Comware](../ds_hp_hpe_comware.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   6    |     12     |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   6    |         12         |       8        |    8    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

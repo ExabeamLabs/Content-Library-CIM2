@@ -5,9 +5,9 @@ Vendor: ServiceNow
 ### Product: [ServiceNow](../ds_servicenow_servicenow.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  72   |   38   |     6      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  72   |   38   |         6          |       9        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

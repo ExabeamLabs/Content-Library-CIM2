@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure Monitor](../ds_microsoft_azure_monitor.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   2    |     1      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   2    |         1          |       19       |   19    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

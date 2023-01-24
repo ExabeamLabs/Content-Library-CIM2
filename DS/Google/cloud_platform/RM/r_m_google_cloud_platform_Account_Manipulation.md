@@ -5,9 +5,9 @@ Vendor: Google
 ### Product: [Cloud Platform](../ds_google_cloud_platform.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  23   |   9    |     5      |       15       |   15    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  23   |   9    |         5          |       15       |   15    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

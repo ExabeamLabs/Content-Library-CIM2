@@ -5,9 +5,9 @@ Vendor: Symantec
 ### Product: [Symantec EDR](../ds_symantec_symantec_edr.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       4        |    4    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

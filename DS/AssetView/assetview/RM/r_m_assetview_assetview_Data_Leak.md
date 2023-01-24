@@ -5,9 +5,9 @@ Vendor: AssetView
 ### Product: [AssetView](../ds_assetview_assetview.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  44   |   22   |     6      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  44   |   22   |         6          |       3        |    3    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

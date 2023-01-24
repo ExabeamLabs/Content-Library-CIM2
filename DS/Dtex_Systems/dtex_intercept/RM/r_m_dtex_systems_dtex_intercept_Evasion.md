@@ -5,9 +5,9 @@ Vendor: Dtex Systems
 ### Product: [DTEX InTERCEPT](../ds_dtex_systems_dtex_intercept.md)
 ### Use-Case: [Evasion](../../../../UseCases/uc_evasion.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  71   |   3    |     33     |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  71   |   3    |         33         |       3        |    3    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

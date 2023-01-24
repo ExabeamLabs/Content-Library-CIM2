@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [MSSQL](../ds_microsoft_mssql.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       10       |   10    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Attivo
 ### Product: [BOTsink](../ds_attivo_botsink.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  39   |   17   |     5      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  39   |   17   |         5          |       1        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

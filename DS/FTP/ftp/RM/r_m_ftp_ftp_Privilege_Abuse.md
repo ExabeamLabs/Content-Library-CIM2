@@ -5,9 +5,9 @@ Vendor: FTP
 ### Product: [FTP](../ds_ftp_ftp.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   2    |     2      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   2    |         2          |       8        |    8    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

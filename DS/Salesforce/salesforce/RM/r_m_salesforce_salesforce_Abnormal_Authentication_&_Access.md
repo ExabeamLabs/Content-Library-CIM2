@@ -5,9 +5,9 @@ Vendor: Salesforce
 ### Product: [Salesforce](../ds_salesforce_salesforce.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   4    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   4    |         2          |       4        |    4    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

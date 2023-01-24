@@ -5,9 +5,9 @@ Vendor: AssetView
 ### Product: [AssetView](../ds_assetview_assetview.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       3        |    3    |
 
 | Event Type | Rules    | Models |
 | ---------- | ---- | ------ |

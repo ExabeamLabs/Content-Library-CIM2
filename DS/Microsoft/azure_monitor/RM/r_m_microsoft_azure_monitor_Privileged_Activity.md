@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure Monitor](../ds_microsoft_azure_monitor.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     3      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         3          |       19       |   19    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Sysmon](../ds_microsoft_sysmon.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  30   |   18   |     4      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  30   |   18   |         4          |       19       |   19    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

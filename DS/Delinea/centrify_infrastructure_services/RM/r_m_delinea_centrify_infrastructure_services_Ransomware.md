@@ -5,9 +5,9 @@ Vendor: Delinea
 ### Product: [Centrify Infrastructure Services](../ds_delinea_centrify_infrastructure_services.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   0    |     8      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   0    |         8          |       1        |    1    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

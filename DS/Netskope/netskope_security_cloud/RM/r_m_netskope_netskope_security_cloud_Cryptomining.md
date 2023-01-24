@@ -5,9 +5,9 @@ Vendor: Netskope
 ### Product: [Netskope Security Cloud](../ds_netskope_netskope_security_cloud.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       16       |   16    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       16       |   16    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

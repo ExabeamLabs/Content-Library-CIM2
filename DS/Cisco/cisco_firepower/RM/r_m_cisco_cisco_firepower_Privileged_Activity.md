@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Firepower](../ds_cisco_cisco_firepower.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   1    |     4      |       30       |   30    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   1    |         4          |       30       |   30    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

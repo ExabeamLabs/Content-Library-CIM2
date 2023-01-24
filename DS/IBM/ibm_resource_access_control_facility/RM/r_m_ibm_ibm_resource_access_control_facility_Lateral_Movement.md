@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [IBM Resource Access Control Facility](../ds_ibm_ibm_resource_access_control_facility.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       5        |    5    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

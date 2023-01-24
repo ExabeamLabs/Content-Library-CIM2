@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [M365 Audit Logs](../ds_microsoft_m365_audit_logs.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       19       |   19    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

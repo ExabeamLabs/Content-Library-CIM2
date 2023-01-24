@@ -5,9 +5,9 @@ Vendor: CrowdStrike
 ### Product: [Falcon](../ds_crowdstrike_falcon.md)
 ### Use-Case: [Phishing](../../../../UseCases/uc_phishing.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       36       |   36    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       36       |   36    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

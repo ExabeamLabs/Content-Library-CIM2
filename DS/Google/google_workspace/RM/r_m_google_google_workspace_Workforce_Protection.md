@@ -5,9 +5,9 @@ Vendor: Google
 ### Product: [Google Workspace](../ds_google_google_workspace.md)
 ### Use-Case: [Workforce Protection](../../../../UseCases/uc_workforce_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   1    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   1    |         1          |       7        |    7    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

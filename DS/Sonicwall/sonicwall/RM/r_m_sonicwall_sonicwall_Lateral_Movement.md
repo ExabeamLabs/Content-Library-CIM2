@@ -5,9 +5,9 @@ Vendor: Sonicwall
 ### Product: [Sonicwall](../ds_sonicwall_sonicwall.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  78   |   33   |     17     |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  78   |   33   |         17         |       3        |    3    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

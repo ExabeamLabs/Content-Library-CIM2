@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - PowerShell](../ds_microsoft_event_viewer_-_powershell.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  69   |   8    |     41     |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  69   |   8    |         41         |       5        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

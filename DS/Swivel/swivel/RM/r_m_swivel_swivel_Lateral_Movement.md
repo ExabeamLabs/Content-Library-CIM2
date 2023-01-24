@@ -5,9 +5,9 @@ Vendor: Swivel
 ### Product: [Swivel](../ds_swivel_swivel.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       2        |    2    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black Cloud Enterprise EDR](../ds_vmware_carbon_black_cloud_enterprise_edr.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  10   |   6    |     5      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  10   |   6    |         5          |       3        |    3    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

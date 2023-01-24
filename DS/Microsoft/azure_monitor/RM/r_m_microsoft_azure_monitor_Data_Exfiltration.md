@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Azure Monitor](../ds_microsoft_azure_monitor.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   2    |     8      |       19       |   19    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   2    |         8          |       19       |   19    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

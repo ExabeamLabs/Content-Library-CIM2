@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [IBM Mainframe](../ds_ibm_ibm_mainframe.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  28   |   16   |     3      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  28   |   16   |         3          |       4        |    4    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

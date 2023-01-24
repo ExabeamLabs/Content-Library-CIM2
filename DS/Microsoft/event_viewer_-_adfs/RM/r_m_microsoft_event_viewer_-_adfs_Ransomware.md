@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - ADFS](../ds_microsoft_event_viewer_-_adfs.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper Pulse Secure](../ds_juniper_networks_juniper_pulse_secure.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  12   |   8    |     4      |       13       |   13    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   8    |         4          |       12       |   12    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

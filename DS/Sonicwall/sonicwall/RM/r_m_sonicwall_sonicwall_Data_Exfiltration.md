@@ -5,9 +5,9 @@ Vendor: Sonicwall
 ### Product: [Sonicwall](../ds_sonicwall_sonicwall.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       3        |    3    |
 
 | Event Type         | Rules    | Models |
 | ---- | ---- | ------ |

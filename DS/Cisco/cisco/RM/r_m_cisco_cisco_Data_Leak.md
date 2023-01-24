@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco](../ds_cisco_cisco.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       3        |    3    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

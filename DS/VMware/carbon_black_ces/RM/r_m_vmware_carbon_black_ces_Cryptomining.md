@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black CES](../ds_vmware_carbon_black_ces.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       8        |    8    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

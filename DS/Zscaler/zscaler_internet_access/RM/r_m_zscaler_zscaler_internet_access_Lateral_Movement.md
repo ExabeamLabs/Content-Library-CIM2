@@ -5,9 +5,9 @@ Vendor: Zscaler
 ### Product: [Zscaler Internet Access](../ds_zscaler_zscaler_internet_access.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  80   |   27   |     12     |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  80   |   27   |         12         |       7        |    7    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

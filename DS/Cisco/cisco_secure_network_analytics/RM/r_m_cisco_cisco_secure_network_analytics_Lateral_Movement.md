@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Secure Network Analytics](../ds_cisco_cisco_secure_network_analytics.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  51   |   21   |     11     |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  51   |   21   |         11         |       2        |    2    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

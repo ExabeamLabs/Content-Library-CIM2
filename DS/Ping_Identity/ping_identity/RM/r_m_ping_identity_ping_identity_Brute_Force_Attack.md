@@ -5,9 +5,9 @@ Vendor: Ping Identity
 ### Product: [Ping Identity](../ds_ping_identity_ping_identity.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   0    |     3      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   0    |         3          |       11       |   11    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

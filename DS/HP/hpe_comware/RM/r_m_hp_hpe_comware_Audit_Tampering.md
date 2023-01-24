@@ -5,9 +5,9 @@ Vendor: HP
 ### Product: [HPE Comware](../ds_hp_hpe_comware.md)
 ### Use-Case: [Audit Tampering](../../../../UseCases/uc_audit_tampering.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   7   |   0    |     6      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   7   |   0    |         6          |       8        |    8    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

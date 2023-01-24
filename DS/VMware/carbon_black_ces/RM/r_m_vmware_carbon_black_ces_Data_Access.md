@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black CES](../ds_vmware_carbon_black_ces.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  45   |   24   |     3      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  45   |   24   |         3          |       8        |    8    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

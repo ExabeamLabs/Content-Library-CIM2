@@ -5,9 +5,9 @@ Vendor: SiteSpect
 ### Product: [SiteSpect](../ds_sitespect_sitespect.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   0    |     3      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   0    |         3          |       1        |    1    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

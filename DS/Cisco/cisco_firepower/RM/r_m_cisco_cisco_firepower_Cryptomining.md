@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Firepower](../ds_cisco_cisco_firepower.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   4   |   0    |     2      |       30       |   30    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   4   |   0    |         2          |       30       |   30    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

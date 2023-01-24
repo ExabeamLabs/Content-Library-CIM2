@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black Cloud Enterprise EDR](../ds_vmware_carbon_black_cloud_enterprise_edr.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  49   |   6    |     11     |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  49   |   6    |         11         |       3        |    3    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

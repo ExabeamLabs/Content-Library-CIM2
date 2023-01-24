@@ -5,9 +5,9 @@ Vendor: Check Point
 ### Product: [Check Point Identity Awareness](../ds_check_point_check_point_identity_awareness.md)
 ### Use-Case: [Physical Security](../../../../UseCases/uc_physical_security.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       3        |    3    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       3        |    3    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

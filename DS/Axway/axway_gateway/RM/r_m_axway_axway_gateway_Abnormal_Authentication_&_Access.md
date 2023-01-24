@@ -5,9 +5,9 @@ Vendor: Axway
 ### Product: [Axway Gateway](../ds_axway_axway_gateway.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  11   |   4    |     2      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  11   |   4    |         2          |       1        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

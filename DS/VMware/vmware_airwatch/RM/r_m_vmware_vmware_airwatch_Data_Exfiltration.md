@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Vmware AirWatch](../ds_vmware_vmware_airwatch.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   18   |     3      |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   18   |         3          |       8        |    8    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

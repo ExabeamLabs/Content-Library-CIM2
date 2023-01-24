@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco Meraki MX appliance](../ds_cisco_cisco_meraki_mx_appliance.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       4        |    4    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

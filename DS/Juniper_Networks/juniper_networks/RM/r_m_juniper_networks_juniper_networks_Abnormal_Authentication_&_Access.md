@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper Networks](../ds_juniper_networks_juniper_networks.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   3    |     1      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   3    |         1          |       9        |    9    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

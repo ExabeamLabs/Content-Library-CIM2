@@ -5,9 +5,9 @@ Vendor: Palo Alto Networks
 ### Product: [Palo Alto NGFW](../ds_palo_alto_networks_palo_alto_ngfw.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  64   |   23   |     8      |       14       |   14    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  64   |   23   |         8          |       14       |   14    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

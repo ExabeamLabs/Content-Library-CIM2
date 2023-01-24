@@ -5,9 +5,9 @@ Vendor: Tufin
 ### Product: [SecureTrack](../ds_tufin_securetrack.md)
 ### Use-Case: [Cloud Data Protection](../../../../UseCases/uc_cloud_data_protection.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   1    |     1      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   1    |         1          |       2        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

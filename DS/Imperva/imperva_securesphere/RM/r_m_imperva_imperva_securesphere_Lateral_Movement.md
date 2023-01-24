@@ -5,9 +5,9 @@ Vendor: Imperva
 ### Product: [Imperva SecureSphere](../ds_imperva_imperva_securesphere.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       12       |   12    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

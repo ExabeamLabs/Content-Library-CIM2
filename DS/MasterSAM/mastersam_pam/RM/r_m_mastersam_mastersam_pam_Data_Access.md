@@ -5,9 +5,9 @@ Vendor: MasterSAM
 ### Product: [MasterSAM PAM](../ds_mastersam_mastersam_pam.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  29   |   16   |     2      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  29   |   16   |         2          |       5        |    5    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

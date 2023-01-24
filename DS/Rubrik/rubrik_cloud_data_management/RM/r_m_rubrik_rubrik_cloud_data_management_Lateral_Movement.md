@@ -5,9 +5,9 @@ Vendor: Rubrik
 ### Product: [Rubrik Cloud Data Management](../ds_rubrik_rubrik_cloud_data_management.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       4        |    4    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

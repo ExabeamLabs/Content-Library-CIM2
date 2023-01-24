@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [VMware Horizon](../ds_vmware_vmware_horizon.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   9   |   0    |     3      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   9   |   0    |         3          |       7        |    7    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

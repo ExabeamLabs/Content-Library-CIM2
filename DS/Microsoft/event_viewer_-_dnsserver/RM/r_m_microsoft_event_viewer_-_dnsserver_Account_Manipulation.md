@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - DNSServer](../ds_microsoft_event_viewer_-_dnsserver.md)
 ### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   6    |     12     |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   6    |         12         |       5        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

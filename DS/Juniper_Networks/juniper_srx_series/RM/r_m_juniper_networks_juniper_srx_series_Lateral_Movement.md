@@ -5,9 +5,9 @@ Vendor: Juniper Networks
 ### Product: [Juniper SRX Series](../ds_juniper_networks_juniper_srx_series.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  76   |   27   |     12     |       10       |   10    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  76   |   27   |         12         |       10       |   10    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

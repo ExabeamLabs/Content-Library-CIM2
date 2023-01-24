@@ -5,9 +5,9 @@ Vendor: Netwrix
 ### Product: [Netwrix Auditor](../ds_netwrix_netwrix_auditor.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   4    |     1      |       7        |    7    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   4    |         1          |       7        |    7    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

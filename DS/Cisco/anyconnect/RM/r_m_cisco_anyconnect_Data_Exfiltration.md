@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [AnyConnect](../ds_cisco_anyconnect.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   5   |   4    |     4      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   5   |   4    |         4          |       4        |    4    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

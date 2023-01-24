@@ -5,9 +5,9 @@ Vendor: CrowdStrike
 ### Product: [Falcon](../ds_crowdstrike_falcon.md)
 ### Use-Case: [Privilege Abuse](../../../../UseCases/uc_privilege_abuse.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  69   |   31   |     8      |       36       |   36    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  69   |   31   |         8          |       36       |   36    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

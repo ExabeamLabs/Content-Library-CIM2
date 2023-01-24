@@ -5,9 +5,9 @@ Vendor: OneLogin
 ### Product: [OneLogin](../ds_onelogin_onelogin.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         1          |       5        |    5    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

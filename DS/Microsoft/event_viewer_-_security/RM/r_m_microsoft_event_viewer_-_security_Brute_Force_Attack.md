@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - Security](../ds_microsoft_event_viewer_-_security.md)
 ### Use-Case: [Brute Force Attack](../../../../UseCases/uc_brute_force_attack.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  11   |   1    |     3      |       87       |   87    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  11   |   1    |         3          |       87       |   87    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

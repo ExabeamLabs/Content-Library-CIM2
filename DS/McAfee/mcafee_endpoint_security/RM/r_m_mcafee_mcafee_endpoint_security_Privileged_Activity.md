@@ -5,9 +5,9 @@ Vendor: McAfee
 ### Product: [McAfee Endpoint Security](../ds_mcafee_mcafee_endpoint_security.md)
 ### Use-Case: [Privileged Activity](../../../../UseCases/uc_privileged_activity.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   1    |     1      |       12       |   12    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   1    |         1          |       12       |   12    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

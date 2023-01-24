@@ -5,9 +5,9 @@ Vendor: Dell
 ### Product: [Sonicwall](../ds_dell_sonicwall.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     2      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       9        |    9    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

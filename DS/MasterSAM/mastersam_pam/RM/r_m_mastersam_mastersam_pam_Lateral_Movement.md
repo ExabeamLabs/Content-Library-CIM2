@@ -5,9 +5,9 @@ Vendor: MasterSAM
 ### Product: [MasterSAM PAM](../ds_mastersam_mastersam_pam.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       5        |    5    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

@@ -5,9 +5,9 @@ Vendor: IBM
 ### Product: [Proventia Network IPS](../ds_ibm_proventia_network_ips.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     1      |       1        |    1    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         1          |       1        |    1    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

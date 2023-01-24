@@ -5,9 +5,9 @@ Vendor: Unix
 ### Product: [Auditbeat](../ds_unix_auditbeat.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  80   |   20   |     12     |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  80   |   20   |         12         |       9        |    9    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

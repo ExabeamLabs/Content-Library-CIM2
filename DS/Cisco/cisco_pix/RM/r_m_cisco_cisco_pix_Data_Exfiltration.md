@@ -5,9 +5,9 @@ Vendor: Cisco
 ### Product: [Cisco PIX](../ds_cisco_cisco_pix.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   1   |   0    |     2      |       4        |    4    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   1   |   0    |         2          |       4        |    4    |
 
 | Event Type         | Rules    | Models |
 | ---- | ---- | ------ |

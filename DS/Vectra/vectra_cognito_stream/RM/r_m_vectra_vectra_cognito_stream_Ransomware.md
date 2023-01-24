@@ -5,9 +5,9 @@ Vendor: Vectra
 ### Product: [Vectra Cognito Stream](../ds_vectra_vectra_cognito_stream.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   3   |   0    |     3      |       9        |    9    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   3   |   0    |         3          |       9        |    9    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

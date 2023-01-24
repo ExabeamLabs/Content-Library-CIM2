@@ -5,9 +5,9 @@ Vendor: VMware
 ### Product: [Carbon Black App Control](../ds_vmware_carbon_black_app_control.md)
 ### Use-Case: [Cryptomining](../../../../UseCases/uc_cryptomining.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   2   |   0    |     1      |       11       |   11    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         1          |       11       |   11    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |

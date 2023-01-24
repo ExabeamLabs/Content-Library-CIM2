@@ -5,9 +5,9 @@ Vendor: HP
 ### Product: [HPE Comware](../ds_hp_hpe_comware.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  15   |   1    |     12     |       8        |    8    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   1    |         12         |       8        |    8    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

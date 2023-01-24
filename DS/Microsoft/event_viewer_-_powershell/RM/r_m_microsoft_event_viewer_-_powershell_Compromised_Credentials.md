@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - PowerShell](../ds_microsoft_event_viewer_-_powershell.md)
 ### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|  48   |   5    |     10     |       5        |    5    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  48   |   5    |         10         |       5        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

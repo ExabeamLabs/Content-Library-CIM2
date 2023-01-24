@@ -5,9 +5,9 @@ Vendor: F5
 ### Product: [F5 Access Policy Manager](../ds_f5_f5_access_policy_manager.md)
 ### Use-Case: [Lateral Movement](../../../../UseCases/uc_lateral_movement.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   8   |   3    |     4      |       2        |    2    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   8   |   3    |         4          |       2        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

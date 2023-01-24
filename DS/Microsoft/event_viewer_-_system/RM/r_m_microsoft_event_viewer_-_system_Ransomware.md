@@ -5,9 +5,9 @@ Vendor: Microsoft
 ### Product: [Event Viewer - System](../ds_microsoft_event_viewer_-_system.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
-| Rules | Models | MITRE TTPs | Activity Types | Parsers |
-|:-----:|:------:|:----------:|:--------------:|:-------:|
-|   6   |   0    |     9      |       28       |   28    |
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   6   |   0    |         9          |       28       |   28    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |
