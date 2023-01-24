@@ -10,9 +10,9 @@ The Content Library is an online repository of knowledge and content that organi
 
 This library reflects the hierarchical framework of the Exabeam Common Information Model. The library is programmaticly generated from the Exabeam content repository. As changes are made to the information model and new content is added to the content repository, the Content Library is automatically updated to provide fast and easy access.
 
-|Branch|Version|Content|MITRE
+|Branch|Version|Content|MITRE ATT&CK®
 |--|--|--|--|
-|master|canary|[Data Sources](Exabeam%20Data%20Sources.md), [Use Cases](Exabeam%20Use%20Cases.md), [Product Categories](https://github.com/ExabeamLabs/Content-Library-CIM2/blob/master/Exabeam%20Products%20by%20Categories.md)|[MITRE MAP](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/ExabeamLabs/Content-Doc/master/resources/mitre_map.json)
+|master|canary|[Data Sources](Exabeam%20Data%20Sources.md), [Use Cases](Exabeam%20Use%20Cases.md), [Product Categories](https://github.com/ExabeamLabs/Content-Library-CIM2/blob/master/Exabeam%20Products%20by%20Categories.md)|[Coverage Map](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/ExabeamLabs/Content-Library-CIM2/master/resources/mitre_map.json)
 
 
 ## How do I use it?
