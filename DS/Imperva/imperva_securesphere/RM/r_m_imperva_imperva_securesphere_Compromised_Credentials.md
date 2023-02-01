@@ -7,7 +7,7 @@ Vendor: Imperva
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  60   |   34   |         4          |       12       |   12    |
+|  60   |   34   |         4          |       4        |    4    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

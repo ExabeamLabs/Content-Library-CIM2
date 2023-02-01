@@ -7,7 +7,7 @@ Vendor: ObserveIT
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  43   |   2    |         9          |       2        |    2    |
+|  43   |   2    |         9          |       1        |    1    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

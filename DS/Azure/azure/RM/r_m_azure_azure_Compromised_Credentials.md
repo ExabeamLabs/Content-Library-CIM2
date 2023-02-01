@@ -7,7 +7,7 @@ Vendor: Azure
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  72   |   38   |         6          |       6        |    6    |
+|  72   |   38   |         6          |       4        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

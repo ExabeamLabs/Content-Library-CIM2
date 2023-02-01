@@ -7,7 +7,7 @@ Vendor: QUSH
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  53   |   26   |         11         |       8        |    8    |
+|  53   |   26   |         11         |       5        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

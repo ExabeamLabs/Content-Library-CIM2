@@ -7,7 +7,7 @@ Vendor: Postfix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  32   |   15   |         1          |       2        |    2    |
+|  32   |   15   |         1          |       1        |    1    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

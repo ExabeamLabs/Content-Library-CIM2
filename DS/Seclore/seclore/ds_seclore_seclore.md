@@ -4,12 +4,12 @@ Product: Seclore
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   2    |         2          |       2        |    2    |
+|   5   |   2    |         2          |       1        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  ""file-share:success""<br> ↳[seclore-s-json-file-share-offlineaccessright](Ps/pC_secloresjsonfileshareofflineaccessright.md)<br><br> print-activity<br> ↳[seclore-s-json-printer-activity-machinename](Ps/pC_secloresjsonprinteractivitymachinename.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_seclore_seclore_Abnormal_Authentication_&_Access.md)    |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  ""file-share:success""<br> ↳[seclore-s-json-file-share-offlineaccessright](Ps/pC_secloresjsonfileshareofflineaccessright.md)<br><br> print-activity<br> ↳[seclore-s-json-printer-activity-machinename](Ps/pC_secloresjsonprinteractivitymachinename.md)<br> | T1052 - Exfiltration Over Physical Medium<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_seclore_seclore_Data_Leak.md) |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  print-activity<br> ↳[seclore-s-json-printer-activity-machinename](Ps/pC_secloresjsonprinteractivitymachinename.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_seclore_seclore_Abnormal_Authentication_&_Access.md)    |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  print-activity<br> ↳[seclore-s-json-printer-activity-machinename](Ps/pC_secloresjsonprinteractivitymachinename.md)<br> | T1052 - Exfiltration Over Physical Medium<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_seclore_seclore_Data_Leak.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

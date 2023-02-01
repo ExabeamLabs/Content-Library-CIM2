@@ -7,7 +7,7 @@ Vendor: IMSVA
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  32   |   15   |         1          |       3        |    3    |
+|  32   |   15   |         1          |       1        |    1    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

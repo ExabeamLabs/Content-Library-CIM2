@@ -7,7 +7,7 @@ Vendor: Event Viewer - Security
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  33   |   14   |         4          |       4        |    4    |
+|  33   |   14   |         4          |       3        |    3    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

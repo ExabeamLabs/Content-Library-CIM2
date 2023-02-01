@@ -7,7 +7,7 @@ Vendor: Juniper Networks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   0    |         9          |       9        |    9    |
+|   6   |   0    |         9          |       2        |    2    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

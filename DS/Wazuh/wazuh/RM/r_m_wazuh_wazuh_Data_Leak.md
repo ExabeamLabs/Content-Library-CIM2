@@ -7,7 +7,7 @@ Vendor: Wazuh
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  46   |   22   |         6          |       6        |    6    |
+|  46   |   22   |         6          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

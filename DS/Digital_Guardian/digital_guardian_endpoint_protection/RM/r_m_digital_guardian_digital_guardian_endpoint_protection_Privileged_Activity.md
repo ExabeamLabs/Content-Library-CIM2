@@ -7,7 +7,7 @@ Vendor: Digital Guardian
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   7   |   1    |         3          |       16       |   16    |
+|   7   |   1    |         3          |       10       |   10    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

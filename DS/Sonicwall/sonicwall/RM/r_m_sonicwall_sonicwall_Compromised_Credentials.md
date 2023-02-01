@@ -7,7 +7,7 @@ Vendor: Sonicwall
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  37   |   17   |         9          |       3        |    3    |
+|  37   |   17   |         9          |       2        |    2    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

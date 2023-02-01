@@ -7,6 +7,6 @@ Vendor: Nagios
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   0   |   0    |         0          |       2        |    2    |
+|   0   |   0    |         0          |       0        |    0    |
 
 | Event Type | Rules | Models || ---------- | ----- | ------ |
