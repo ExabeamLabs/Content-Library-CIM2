@@ -2,7 +2,7 @@
 ```Java
 {
 Name = microsoft-azuremon-cef-app-activity-category
-  Conditions= [ """destinationServiceName =Azure""", """"operationName":"""", """"category":"""" ]
+  Conditions= [ """CEF:""", """destinationServiceName =Azure""", """"operationName":"""", """"category":"""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """category":"({category}[^"]+)""",
     """"path":"(-|({file_path}({file_dir}\/(\S+\/)?)({file_name}[^"\\\/]+)))\s*",""",

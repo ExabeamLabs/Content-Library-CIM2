@@ -15,7 +15,7 @@ Name = unix-sm-kv-email-send
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
     """sendmail\S*:\s+({alert_id}\S+?):\s""",
     """sm-mta\S*:\s+({alert_id}\S+?):\s""",
-    """\s+from=<?({sender}[^@=<>,]+@[^\s@=<>,]+)""",
+    """\s+from=<?({sender}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>?""",
     """\ssize=({bytes}\d+)""",
     """\snrcpts=({num_recipients}\d+)""",
     """\smsgid=<({return_path}[^>]+)>""",

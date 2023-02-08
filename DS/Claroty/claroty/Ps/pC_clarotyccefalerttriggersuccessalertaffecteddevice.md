@@ -21,8 +21,6 @@ Name = claroty-c-cef-alert-trigger-success-alertaffecteddevice
        """\sdevice_os=({device_os}.*?)(?=(?:\s|\||,|;)[\w.-]+=)""",
        """\sdevice_site_name=({device_site_name}[^\s]*)""",
        """\sdevice_ip_list=\['({src_ip}[^\s,'\]]*)[\s',\]]""",
-       """({src_host}THISWILLNEVERMATCH)""",
-       """({user}THISWILLNEVERMATCH)""",
        """\|alert_affected_device\|({alert_severity}\d+)\|""",
        """\s alert_category=({alert_type}[^\s]*)"""
     ]

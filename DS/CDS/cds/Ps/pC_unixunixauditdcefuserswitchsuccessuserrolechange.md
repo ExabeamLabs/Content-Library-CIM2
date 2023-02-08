@@ -19,7 +19,7 @@ cds-user-activity = {
        """\d\d:\d\d:\d\d(\.\S+)?\s({host}[^\s]+)\s""",
        """\sexe="({process_dir}.+\/)({process_name}.+?)"""",
        """\spid=({process_id}[^\s]+)\s""",
-       """\sauid=({account_used_id}[^\s]+)\s"""
+       """\sauid=({account_id}[^\s]+)\s"""
        """addr=({dest_host}[^\s]+)\s""",
        """acct="({account}[^"]+)"""",
        """res=({result}failed|success)"""

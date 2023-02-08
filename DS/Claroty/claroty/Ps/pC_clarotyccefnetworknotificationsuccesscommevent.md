@@ -24,11 +24,8 @@ Name = claroty-c-cef-network-notification-success-commevent
        """\sdst_port=({dest_port}\d+)""",
        """\sdevice_site_name=({device_site_name}[^\s]*)""",
        """\sprotocol=({protocol}[^\s]*)""",
-       # """({bytes}THISWILLNEVERMATCH)""",
        """\sevent_id=({event_code}[^\s]*)""",
-       """\|comm_event\|({priority}\d+)\|""",
-       # """({packets}THISWILLNEVERMATCH)""",
-       """({direction}THISWILLNEVERMATCH)"""
+       """\|comm_event\|({priority}\d+)\|"""
     ]
 
 

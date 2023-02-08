@@ -96,6 +96,10 @@ Use Case: Physical Security
 |                        Product                        | MITRE ATT&CK® TTP          | Content                                                                                                                |
 |:-----------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | [Megaflex](../DS/Visma/megaflex/ds_visma_megaflex.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Visma/megaflex/RM/r_m_visma_megaflex_Physical_Security.md) |
+### Vendor: XPLAN
+|                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |
+|:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| [XPLAN](../DS/XPLAN/xplan/ds_xplan_xplan.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/XPLAN/xplan/RM/r_m_xplan_xplan_Physical_Security.md) |
 ### Vendor: Zscaler
 |                                               Product                                               | MITRE ATT&CK® TTP                    | Content                                                                                                                                                |
 |:---------------------------------------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |

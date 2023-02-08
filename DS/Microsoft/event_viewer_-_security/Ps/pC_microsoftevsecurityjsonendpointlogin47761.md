@@ -13,13 +13,14 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """"(?:winlog\.)?computer_name"+\s*:\s*"+({host}[^"]+)"""",
     """"(?:winlog\.)?computer_name"+\s*:\s*"+[^\."]+\.({domain}[^"]+)""",
     """"event_id"\s*:\s*({event_code}\d+)""",
-    """"event_data"\s*:\s*\{.*?"Workstation"\s*:\s*"(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|(?:(?!NULL)(\\*({dest_host}[^\s"]+))))"""",
+    """"event_data"\s*:\s*\{.*?"Workstation"\s*:\s*"(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)(\\*({src_host}[^\s"]+))))"""",
     """"event_data"\s*:\s*\{.*?"Status"\s*:\s*"({result_code}[\w\-]+)"""",
     """"TargetUserName"\s*:\s*"(?![^\s"@]+@[^\s"@]+)({user}[^\s@"]+)"""",
     """"TargetUserName"\s*:\s*"({email_address}[^@"]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)?(({user}[^\s"@]+)@({domain}[^\s"@]+))?"""",
     """"TargetUserName"\s*:\s*"({email_address}({user}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+)@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"(record_number|record_id)"\s*:\s*"*({event_id}\d+)""",
   ]
+  DupFields = ["host->dest_host"]
 
 
 }

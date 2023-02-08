@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
   Conditions = [ """"event_simpleName":"UserLogonFailed""" ]
   Fields = [
     """"timestamp":\s*"*({time}\d{13})"""",
-    """"UserName":\s*"({email_address}[^"@]+@[^"@]+)"""",
+    """"UserName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"UserName":\s*"(-|\/+|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[^"@\s]+))"""",
     """"UserSid":\s*"({user_sid}[^"]+)"""",
     """"event_simpleName":"({event_code}[^"]+)""",

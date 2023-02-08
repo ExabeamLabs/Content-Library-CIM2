@@ -15,7 +15,7 @@ Fields = [
   """({host}[\w.\-]+)\s+\w+\[.*?\]:\s*AppUserName ="""
   """\WreceiptTime=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
   """\WAppUserName =PLAN=({user}[^;\|]+?)\s*(?:;|\||$)"""
-  """\WPROG=({src_program}[^;\|]+?)\s*(?:;|\||$)"""
+  """\WPROG=({src_interface}[^;\|]+?)\s*(?:;|\||$)"""
   """\WDB_NAME=({db_name}[^;\|]+?)\s*(?:;|\||$)"""
   """\WclientHostname=({src_host}[^;\|]+?)\s*(?:;|\||$)"""
   """\WclientIP=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

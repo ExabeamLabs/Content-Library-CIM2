@@ -47,8 +47,11 @@ Name = netskope-sc-sk4-alert-trigger-success-alertypedlp
     """shared_with":"({shared_with_at}[^"]+)""",
     """"sha256":"({hash_sha256_at}[^"]+)"""",
     """"site":"({site_at}[^"]+)""""
+    """"policy":"({alert_name}[^"]+)""",
+    """"referer":"({referrer}[^"]+)"""",
+    """"dlp_incident_id":({alert_id}\d+)"""
     ]
-  DupFields = [ "object->file_name", "host->src_host"]
+  DupFields = [ "object->file_name", "host->src_host","operation->alert_type"]
 
 SOAR {
     IncidentType = "malware"

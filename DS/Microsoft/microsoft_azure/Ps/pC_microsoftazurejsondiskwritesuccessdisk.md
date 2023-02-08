@@ -25,7 +25,7 @@ azure-activity-json = {
     TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
     Fields = [
       """"+eventTimestamp"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
-      """"+authorization"+:[^\}]+scope"+:\s*"+({auth_scope}[^"]+)""", 
+      """"+authorization"+:[^\}]+scope"+:\s*"+({authorization_scope}[^"]+)""", 
       """"+caller"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
       """"+claims"+:[^\}]+ipaddr"+:\s*"+({src_ip}[^"]+)"+""",
       """"+correlationId"+:\s*"+({correlation_id}[^"]+)""",

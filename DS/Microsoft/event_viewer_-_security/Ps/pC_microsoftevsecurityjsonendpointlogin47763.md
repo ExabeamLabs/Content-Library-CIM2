@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
   Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
-    """Workstation\\?"+:\\?"+({dest_host}[^\\]+)\\?"""",
+    """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
     """TargetUserName\\?"+:\\?"+((({user}[^@\s\\]+?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
 
@@ -19,6 +19,7 @@ json-windows-events-2 = {
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[^\\]+)""",
     """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",

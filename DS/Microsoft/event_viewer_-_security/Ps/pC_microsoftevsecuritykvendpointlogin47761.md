@@ -16,8 +16,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776-1
       """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
       """Logon (?:a|A)ccount(:|=)[\s\\\\t]*(({email_address}[^@\s]+?@[^\s]+?\.[^\s]+?)|(({user}[^@\s,;=\\]+)(?:@({email_domain}[^\s.;,@=]+).*?)?))[\\rnt]*Source Workstation(:|=)([\s\\]+|(\s*\\*((({dest_ip}[A-Fa-f:\d.]+?)(:({dest_port}\d+))?)|({dest_host}.+?))[\s;]*))Error Code(:|=)""",
       """Error Code(:|=)\s*(\\+t)?({result_code}[\w\-]+)""",
-      """Source Workstation(:|=)[\s\\\\t]+((({dest_ip}[A-Fa-f:\d.]+?)(:({dest_port}\d+))?)|({dest_host}[^\s]+?))[\s\\\\n\;]*Error Code(:|=)""",
-    ]
+      """Source Workstation(:|=)[\s\\\\t]+((({src_ip}[A-Fa-f:\d.]+?)(:({src_port}\d+))?)|({src_host}[^\s]+?))[\s\\\\n\;]*Error Code(:|=)""",
+    ],
+    DupFields = ["host->dest_nost"]
   
 
 }

@@ -155,6 +155,7 @@ The following list are the out-of-the-box supported Data Sources. This list is a
 | NNT            | [NNT ChangeTracker](DS/NNT/nnt_changetracker/ds_nnt_nnt_changetracker.md)<br>  |
 | Nortel Contivity                     | [Nortel Contivity VPN](DS/Nortel_Contivity/nortel_contivity_vpn/ds_nortel_contivity_nortel_contivity_vpn.md)<br>           |
 | Novell         | [eDirectory](DS/Novell/edirectory/ds_novell_edirectory.md)<br>                 |
+| Nozomi Networks| [Guardian](DS/Nozomi_Networks/guardian/ds_nozomi_networks_guardian.md)<br>     |
 | OAM            | [Oracle Access Management](DS/OAM/oracle_access_management/ds_oam_oracle_access_management.md)<br>   |
 | ObserveIT      | [ObserveIT](DS/ObserveIT/observeit/ds_observeit_observeit.md)<br>              |
 | Okta           | [Okta Adaptive MFA](DS/Okta/okta_adaptive_mfa/ds_okta_okta_adaptive_mfa.md)<br>|
@@ -258,6 +259,7 @@ The following list are the out-of-the-box supported Data Sources. This list is a
 | Workday        | [Workday](DS/Workday/workday/ds_workday_workday.md)<br>  |
 | Xceedium       | [Xceedium](DS/Xceedium/xceedium/ds_xceedium_xceedium.md)<br>                   |
 | Xiting         | [XAMS](DS/Xiting/xams/ds_xiting_xams.md)<br>             |
+| XPLAN          | [XPLAN](DS/XPLAN/xplan/ds_xplan_xplan.md)<br>            |
 | XPS            | [XPS](DS/XPS/xps/ds_xps_xps.md)<br>|
 | YSoft          | [YSoft](DS/YSoft/ysoft/ds_ysoft_ysoft.md)<br>            |
 | Zeek           | [Zeek](DS/Zeek/zeek/ds_zeek_zeek.md)<br>                 |

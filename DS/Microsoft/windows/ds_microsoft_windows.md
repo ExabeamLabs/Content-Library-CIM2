@@ -4,7 +4,7 @@ Product: Windows
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  659  |  120   |        130         |       12       |   12    |
+|  689  |  137   |        131         |       13       |   13    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

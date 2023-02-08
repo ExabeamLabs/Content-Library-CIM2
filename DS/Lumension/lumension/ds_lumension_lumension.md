@@ -4,7 +4,7 @@ Product: Lumension
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   23   |         11         |       2        |    2    |
+|  58   |   23   |         11         |       2        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

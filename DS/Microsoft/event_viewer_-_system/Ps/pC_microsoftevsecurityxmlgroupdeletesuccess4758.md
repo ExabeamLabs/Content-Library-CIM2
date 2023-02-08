@@ -51,6 +51,7 @@ json-windows-events-2 = {
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[^\\]+)""",
     """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",

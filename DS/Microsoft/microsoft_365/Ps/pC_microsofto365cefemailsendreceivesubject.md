@@ -21,7 +21,7 @@ Name = microsoft-o365-cef-email-send-receive-subject
     """"Direction":"({direction}[^"]+)"""",
     """"SenderAddress":"({sender}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""",
     """"RecipientAddress":"({email_recipients}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
-    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[+-?_~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"Size":"?({bytes}\d+)""",
     """"Status":"({result}[^"]+)"""",
     """"ToIP":"?(?:null|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",

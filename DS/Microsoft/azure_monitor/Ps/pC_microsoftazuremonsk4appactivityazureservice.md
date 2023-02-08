@@ -2,7 +2,7 @@
 ```Java
 {
 Name = microsoft-azuremon-sk4-app-activity-azureservice
-  Conditions= [ """"OperationName":""", """"resourceId":"""", """destinationServiceName =Azure""", """"OperationId":"""" ]
+  Conditions= [ """CEF:""", """"OperationName":""", """"resourceId":"""", """destinationServiceName =Azure""", """"OperationId":"""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[  
     """"OperationName":"({operation}[^"]+)"""
     """"Success":({result}[^,]+)"""

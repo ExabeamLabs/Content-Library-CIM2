@@ -10,7 +10,7 @@ Name = microsoft-azuremon-sk4-http-request-applicationgateway
     """"host":"({host}[^"]+)"""",
     """"time": "({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """"operationName": "({operation}[^"]+)"""",
-    """originalHost":"(({src_ip}[A-Fa-f\d.:]+)|({src_host}[^"]+))"""",
+    """originalHost":"(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[^"]+))"""",
     """"userAgent":"(-|({user_agent}[^"]+))"""",
     """requestUri":"({request_uri}[^"]+)"""",
     """receivedBytes":"*({bytes_in}\d+)""",

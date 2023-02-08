@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776
     """\s+ソース ワークステーション:\s+(\\+)?(({dest_ip}[A-Fa-f:\d.]+)|(?:(?!NULL)({dest_host}[^\s]+)))\s+エラー コード:""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4776,""",
     """ComputerName =({computer_name}[\w.\-]+)""",
+    """ComputerName =({dest_host}[\w.\-]+)""",
     """\W4776\s+({host}[\w\-.]+)""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?コンピューターがアカウントの資格情報の確認を試行しました。""",
     """({event_code}4776)""",

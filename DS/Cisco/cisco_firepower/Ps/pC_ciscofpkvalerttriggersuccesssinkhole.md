@@ -25,7 +25,7 @@ Name = cisco-fp-kv-alert-trigger-success-sinkhole
     """NAPPolicy:\s*({nap_policy}[^,]+)""",
     """\sDNSQuery:\s*({query}[^,]+)""",
     """\WDNSResponseType:\s*({response_type}[^,]+)""",
-    """\sDNSRecordType:\s*({query_type}[^,]+)""",
+    """\sDNSRecordType:\s*({dns_query_type}[^,]+)""",
     """URLCategory:\s*({category}[^,]+)""",
     """\WURLReputation:\s*({reputation}[^,]+?)(,|\s*$)""",
   ]

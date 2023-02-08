@@ -14,6 +14,10 @@ Use Case: Cloud Data Protection
 |                           Product                           | MITRE ATT&CK® TTP   | Content                                                                                                                            |
 |:-----------------------------------------------------------:| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [Falcon](../DS/CrowdStrike/falcon/ds_crowdstrike_falcon.md) | TA0004 - TA0004<br> | [<ul><li>8 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/CrowdStrike/falcon/RM/r_m_crowdstrike_falcon_Cloud_Data_Protection.md) |
+### Vendor: Exabeam
+|                           Product                            | MITRE ATT&CK® TTP   | Content                                                                                                                          |
+|:------------------------------------------------------------:| ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [Audit Log](../DS/Exabeam/audit_log/ds_exabeam_audit_log.md) | TA0004 - TA0004<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Exabeam/audit_log/RM/r_m_exabeam_audit_log_Cloud_Data_Protection.md) |
 ### Vendor: Google
 |                                  Product                                  | MITRE ATT&CK® TTP                      | Content                                                                                                                                  |
 |:-------------------------------------------------------------------------:| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

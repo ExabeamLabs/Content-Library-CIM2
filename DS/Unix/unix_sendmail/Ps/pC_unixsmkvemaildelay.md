@@ -16,8 +16,8 @@ Name = unix-sm-kv-email-delay
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
     """\w+ \d{2} \d{2}:\d{2}:\d{2} (Message forwarded from )?(::ffff:)?({host}[\w.\-]+):? \S+ ({alert_id}\S+?):""",
     """\sstat=({result}\w+)""",
-    """to=({email_recipients}<?({dest_email_address}[^@=]+@[^>,]+\.[^>,]+)[^=]*?),\s+\w+=""",
-    """\srelay=({dest_host}[^\s\[]+?)\.?\s*\[({dest_ip}[a-fA-F:\d.]+)?""",
+    """to=({email_recipients}<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^=]+)>?,\s+\w+=""",
+    """\srelay=({dest_host}[^\s\[]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?""",
     """({bytes}\d+)\sbytes"""
   ]
 

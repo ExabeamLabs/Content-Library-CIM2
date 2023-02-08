@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-network-session-success-5156
     """<Data Name\\*='Application'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))<\/Data>""",
     """<Data Name\\*='SourceAddress'>(::1|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?<\/Data>""",
     """<Data Name\\*='SourcePort'>({src_port}\d+)</Data>""",
-    """<Data Name\\*='DestAddress'>(::1({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({dest_port}\d+))?<\/Data>""",
+    """<Data Name\\*='DestAddress'>(::1|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({dest_port}\d+))?<\/Data>""",
     """<Data Name\\*='DestPort'>({dest_port}\d+)<\/Data>""",
     """<Data Name\\*='Protocol'>({protocol}[^<>]+)<\/Data>""",
     """<RenderingInfo[^$]+?<Task>({operation_type}}[^<>]+)</Task>[^$]*?</RenderingInfo>""",

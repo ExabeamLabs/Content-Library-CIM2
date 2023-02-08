@@ -39,7 +39,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1048.003 | [Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol](https://attack.mitre.org/techniques/T1048/003)<br><br> | 41    |
 | T1049     | [System Network Connections Discovery](https://attack.mitre.org/techniques/T1049)<br><br>                                                                 | 6     |
 | T1052     | [Exfiltration Over Physical Medium](https://attack.mitre.org/techniques/T1052)<br><br>                                                                    | 5     |
-| T1052.001 | [Exfiltration Over Physical Medium: Exfiltration over USB](https://attack.mitre.org/techniques/T1052/001)<br><br>                                         | 16    |
+| T1052.001 | [Exfiltration Over Physical Medium: Exfiltration over USB](https://attack.mitre.org/techniques/T1052/001)<br><br>                                         | 15    |
 | T1053     | [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053)<br><br>                                                                                   | 4     |
 | T1053.002 | [Scheduled Task/Job: At (Windows)](https://attack.mitre.org/techniques/T1053/002)<br><br>                                                                 | 2     |
 | T1053.003 | [T1053.003](https://attack.mitre.org/techniques/T1053/003)<br><br>                                                                                        | 4     |
@@ -73,7 +73,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1087.002 | [Account Discovery: Domain Account](https://attack.mitre.org/techniques/T1087/002)<br><br>                                                                | 6     |
 | T1090     | [Proxy](https://attack.mitre.org/techniques/T1090)<br><br>                                                                                                | 2     |
 | T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 11    |
-| T1091     | [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)<br><br>                                                                  | 14    |
+| T1091     | [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)<br><br>                                                                  | 13    |
 | T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 33    |
 | T1098.002 | [Account Manipulation: Exchange Email Delegate Permissions](https://attack.mitre.org/techniques/T1098/002)<br><br>                                        | 4     |
 | T1102     | [Web Service](https://attack.mitre.org/techniques/T1102)<br><br>                                                                                          | 1     |
