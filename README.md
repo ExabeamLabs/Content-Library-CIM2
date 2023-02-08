@@ -1,5 +1,5 @@
 
-![Exabeam](banner.png)
+![image](https://user-images.githubusercontent.com/57500390/217626382-804f4547-9119-4605-b9ef-b338a2ee6b08.png)
 
 # Exabeam Content Library
 Based on the Common Information Model 2.0
