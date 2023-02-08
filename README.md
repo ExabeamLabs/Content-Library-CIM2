@@ -16,9 +16,6 @@ This library reflects the hierarchical framework of the Exabeam Common Informati
 
 [Correlation Rules](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases 
 
-[Platforms and Landscapes](https://github.com/ExabeamLabs/CIMLibrary) – A list of platforms, listed by landscape (redirects to the Common Information Model Library) 
-
-[Field Descriptions](https://github.com/ExabeamLabs/CIMLibrary) – A list of available fields and their descriptions (redirects to the Common Information Model Library) 
 
 ## How do I use it? 
 
