@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = cisco-asa-str-vpn-logout-success-716002
+   ParserVersion = v1.0.0
+   Vendor = Cisco
+   Product = Cisco Adaptive Security Appliance
+   TimeFormat = "MMM dd yyyy HH:mm:ss"
+   Conditions = [ """WebVPN session terminated""" , """-716002""" ]
+   Fields = [
+     """({time}\w+ \d+ \d\d\d\d \d+:\d+:\d\d)""",
+     """\w{1,3}\s{1,2}\d{1,2}\s(\d{4})?\s\d\d:\d\d:\d\d\s({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s.+?ASA-""",
+     """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}Z?)""",
+     """({host}[^\s]+)\s+:\s+%FTD-""",
+     """({host}[^\s]+)\s+:\s+%ASA-""",
+     """User\s*<(({domain}[^\\\/]+)[\\\/])?(({email_address}[^@>]+@[^>\.]+\.[^>]+)|({user}[^>]+))\s*>""",
+     """IP\s+<({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>""",
+     """%(FTD|ASA)(-\w+)?-({priority}\d+)-({event_code}\d+)""",
+     """Group\s*<({group_name}.*?)>"""
+   ]
+   DupFields = [ "group_name->realm" ]
+ 
+
+}
+```

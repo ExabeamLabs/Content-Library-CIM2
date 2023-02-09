@@ -1,0 +1,21 @@
+Vendor: FireEye
+===============
+Product: FireEye ETP
+--------------------
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  35   |   20   |         6          |       3        |    3    |
+
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|:----:| ---- | ---- | ---- |
+|   [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)   |  dlp-alert<br> ↳[fireeye-etp-kv-alert-trigger-fenotify](Ps/pC_fireeyeetpkvalerttriggerfenotify.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>18 Models</li></ul>](RM/r_m_fireeye_fireeye_etp_Data_Exfiltration.md) |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-alert<br> ↳[fireeye-etp-kv-alert-trigger-fenotify](Ps/pC_fireeyeetpkvalerttriggerfenotify.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>18 Models</li></ul>](RM/r_m_fireeye_fireeye_etp_Data_Leak.md)         |
+|    [Malware](../../../UseCases/uc_malware.md)    |  dlp-alert<br> ↳[fireeye-etp-kv-alert-trigger-fenotify](Ps/pC_fireeyeetpkvalerttriggerfenotify.md)<br><br> dlp-email-alert-in<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br>    | T1190 - Exploit Public Fasing Application<br>TA0002 - TA0002<br>    | [<ul><li>5 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_fireeye_fireeye_etp_Malware.md)    |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  dlp-email-alert-in<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br><br> dlp-email-alert-in-failed<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_fireeye_fireeye_etp_Privilege_Abuse.md)    |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  dlp-email-alert-in<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br><br> dlp-email-alert-in-failed<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_fireeye_fireeye_etp_Privileged_Activity.md)    |
+
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
+| Initial Access                                                                                                                                            | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                             | Exfiltration                                                                | Impact |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------- | ------ |
+| [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            | [Application Layer Protocol](https://attack.mitre.org/techniques/T1071)<br><br> | [Automated Exfiltration](https://attack.mitre.org/techniques/T1020)<br><br> |        |
