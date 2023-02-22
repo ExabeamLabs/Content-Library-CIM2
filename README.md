@@ -16,9 +16,9 @@ This library reflects the hierarchical framework of the Exabeam Common Informati
 
 [Correlation Rule Templates](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases
 
-[Platforms and Landscapes](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Platforms_Landscapes.md) – A list of platforms listed by landscape
+[Platforms and Landscapes](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Platforms_Landscapes.md) – A list of platforms listed by landscape (opens new tab in CIMLibrary)
 
-[Field Descriptions](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Fields_Descriptions.md) – A list of available fields and their descriptions 
+[Field Descriptions](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Fields_Descriptions.md) – A list of available fields and their descriptions (opens new tab in CIMLibrary)
 
 
 ## How do I use it? 
