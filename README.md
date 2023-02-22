@@ -10,9 +10,9 @@ The Content Library is an online repository of knowledge and content that organi
 
 This library reflects the hierarchical framework of the Exabeam Common Information Model. The library is programmaticly generated  from the Exabeam content repository. As changes are made to the information model, or new content is addedto the content repository, the Content Library is automatically updated to provide fast and easy access.
 
-|Branch|Version|Content|MITRE ATT&CK®
-|--|--|--|--|
-|master|canary|[Data Sources](Exabeam%20Data%20Sources.md), [Use Cases](Exabeam%20Use%20Cases.md), [Product Categories](Exabeam%20Product%20Categories.md)|[Coverage Map](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/ExabeamLabs/Content-Library-CIM2/master/resources/mitre_map.json)
+|Version|Content|MITRE ATT&CK®
+|--|--|--|
+|I63|[Data Sources](Exabeam%20Data%20Sources.md), [Use Cases](Exabeam%20Use%20Cases.md), [Product Categories](Exabeam%20Product%20Categories.md)|[Coverage Map](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/ExabeamLabs/Content-Library-CIM2/master/resources/mitre_map.json)
 
 [Correlation Rule Templates](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases
 
