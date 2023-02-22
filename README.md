@@ -14,7 +14,11 @@ This library reflects the hierarchical framework of the Exabeam Common Informati
 |--|--|--|--|
 |master|canary|[Data Sources](Exabeam%20Data%20Sources.md), [Use Cases](Exabeam%20Use%20Cases.md), [Product Categories](Exabeam%20Product%20Categories.md)|[Coverage Map](https://mitre-attack.github.io/attack-navigator/#layerURL=https://raw.githubusercontent.com/ExabeamLabs/Content-Library-CIM2/master/resources/mitre_map.json)
 
-[Correlation Rule Templates](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases 
+[Correlation Rule Templates](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases
+
+[Platforms and Landscapes](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Platforms_Landscapes.md) – A list of platforms listed by landscape
+
+[Field Descriptions](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Fields_Descriptions.md) – A list of available fields and their descriptions 
 
 
 ## How do I use it? 
