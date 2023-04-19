@@ -1,5 +1,4 @@
-
-![image](https://user-images.githubusercontent.com/57500390/233129963-f6395c81-5c85-458c-b526-368de7b82aae.svg)
+![Exabeam](https://user-images.githubusercontent.com/57500390/233131296-b8618125-ef0d-497b-9c50-a8abe8b0d2b4.svg)
 
 # Exabeam Content Library
 Based on the Common Information Model 2.0
