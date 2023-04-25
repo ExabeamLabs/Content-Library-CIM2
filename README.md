@@ -32,6 +32,9 @@ The Content Library contains information about parsers, events, models, and rule
 
 - <b>Product Categories</b> – Click Product Categories to view a list of products arranged by categories. Select a product to view the activity types, parsers, and the number of rules and models Exabeam employs to cover this data source. Drill down further to view the parser syntax or the names of the rules and models. 
 
+- <b>MITRE ATT&CK®</b> - Click Coverage Map to view the attack techniques Exabeam covers with its rules and models.
+
+
 The Content Library also includes a list of prebuilt correlation rules. In addition, you can browse other resources to understand how the library is based on the Common Information Model 2.0, including a list of platforms and landscapes and a list of field descriptions. 
 
 ## How can it help me?
