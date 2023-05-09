@@ -15,7 +15,7 @@ carbonblack-endpoint = {
     """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(SYSTEM|({user}[^",]+))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
-    """"+sensor_action"+:"+({action}[^"]+)"+""",
+    """"+sensor_action"+:"+({result}[^"]+)"+""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))"""",
     """"+action"+:"+({action}[^"]+)?"*""",
     """"+parent_cmdline"+:"+({parent_process_command_line}[^,]+"+)?"\,""",

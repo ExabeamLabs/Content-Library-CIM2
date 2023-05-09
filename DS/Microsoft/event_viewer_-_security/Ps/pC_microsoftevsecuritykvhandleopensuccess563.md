@@ -6,17 +6,21 @@ Name = microsoft-evsecurity-kv-handle-open-success-563
   ParserVersion = v1.0.0
   Conditions = [ """EventCode=563""", """Message=Object Open for Delete""" ]
 
-windows-events = {
+windows-events-4 = {
   Vendor = Microsoft
-  Product = Windows
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  Product = Event Viewer - Security
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Fields = [
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)'""",
-    """<EventID>({event_code}\d+)<\/EventID>""",
-    """<Message>({event_name}[^<\.]+)""",
-    """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
+    """"Computer":"({host}({dest_host}[\w\-\.]+))"""",
+    """"EventID":({event_code}\d+),""",
+    """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
+    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserSid":"({user_sid}[^"]+)"""",
+    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectLogonId":"({login_id}[^"]+)"""",
+    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"IpPort":"({src_port}\d{1,5})"""
   
 }
 ```

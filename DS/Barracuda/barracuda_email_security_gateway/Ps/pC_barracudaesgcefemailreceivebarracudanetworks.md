@@ -16,7 +16,7 @@ Fields = [
   """act=({action}[^\s]+)"""
   """flexString1=({operation}[^\:]+):({result}\d+)"""
   """\|({alert_severity}[^\|]+)\|\s*event"""
-  """suser=(-|({sender}[^\s]+))"""
+  """suser=(-|({src_email_address}[^\s]+))"""
   """duser=(-|({dest_email_address}[^\s]+))"""
   """reason=({alert_name}\d+)"""
 ]

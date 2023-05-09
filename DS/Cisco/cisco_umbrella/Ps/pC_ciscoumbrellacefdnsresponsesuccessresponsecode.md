@@ -11,7 +11,7 @@ Name = cisco-umbrella-cef-dns-response-success-responsecode
     """\"timestamp\":\"({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
     """\"identities\":\[[^\]]*?\"({host}[\w\-\.]+)\"""",
     """\"identities\":\[\"({full_name}[^\(\"]+?)?(?:\s*\(\w+\)\s*)?(\s+\((({email_address}[^@"]+@({email_domain}[^\."]+\.[^"]+))(?<!local)|(({user}[^"@]+)(@({domain}[^"]+)?)))\))?\"?,(\"({host}[\w\-\.]+)\")?"""
-    """\"action\":\"({action}[^\"]+)\"""",
+    """\"action\":\"({result}[^\"]+)\"""",
     """\"queryType\":\"[^\"]*\(({dns_query_type}[^\"\)]+)\)\"""",
     """\"responseCode\":\"({dns_response_code}[^\"]+)\"""",
     """\"domain\":\"({dns_query}[^\"]*?)\.?\"""",

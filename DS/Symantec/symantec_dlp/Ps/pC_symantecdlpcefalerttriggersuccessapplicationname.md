@@ -21,7 +21,7 @@ Name = symantec-dlp-cef-alert-trigger-success-applicationname
       """\WATTACHMENT_FILENAME=\s*(N\/A|({file_name}[^=]+?))\s*\w+=""",
       """\WSENDER=((WinNT:\/+({domain}[^\/]+)\/({user}[^=]+))|({email_address}[^@]+@[^=]+))\s\w+=""",
     ]
-    DupFields = [ "email_subject->additional_info" , "email_address->sender"]
+    DupFields = [ "email_subject->additional_info" , "email_address->src_email_address"]
     SOAR {
       IncidentType = "dlp"
       DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "protocol->dlpProtocol", "action->dlpActionTaken"]

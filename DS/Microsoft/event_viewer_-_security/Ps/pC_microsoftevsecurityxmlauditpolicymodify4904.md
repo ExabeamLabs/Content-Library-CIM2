@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """An attempt was made to register a security event source""", """<EventID>4904<""" ]
   Fields = [
-    """TimeCreated SystemTime(\\)?='({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
+    """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """<Computer>({host}[^<]+)"""
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",

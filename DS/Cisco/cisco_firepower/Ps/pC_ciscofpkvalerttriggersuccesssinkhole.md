@@ -18,7 +18,7 @@ Name = cisco-fp-kv-alert-trigger-success-sinkhole
     """\WDE:\s*({engine_name}[^,]+)\s*(,|$)""",
     """\WRevision:\s*({revision}[^,]+)\s*(,|$)""",
     """\WPolicy:\s*({policy_name}[^,]+)\s*(,|$)"""
-    """\WAccessControlRuleAction:\s*({action}[^,]+)""",
+    """\WAccessControlRuleAction:\s*({result}[^,]+)""",
     """\WUserName:\s*({user}[^,]+)""",
     """InitiatorBytes:\s*({bytes_in}\d+)""",
     """\WResponderBytes:\s*({bytes_out}\d+)""",

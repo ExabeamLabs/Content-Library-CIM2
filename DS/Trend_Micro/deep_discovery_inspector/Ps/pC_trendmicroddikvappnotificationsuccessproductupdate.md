@@ -15,7 +15,7 @@ cef-trendmicro-system-event = {
       """\Wmsg=(|({event_description}.+?))(\s+\w+=|\s*$)""",
       """\Wdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",
 # host_mac is removed
-      """\Wdvc=({host_ip}[a-fA-F\d:.]+)""",
+      """\Wdvc=({host_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     
 }
 ```

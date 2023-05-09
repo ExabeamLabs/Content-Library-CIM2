@@ -6,7 +6,7 @@ Name = netskope-sc-sk4-alert-trigger-success-actdetect
   Product = Netskope Security Cloud
   Conditions = [ """"alert_type":"policy"""", """destinationServiceName =Netskope""", """"alert":"yes"""", """act=detect""" ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-alert.Fields}[
-    """"srcip":"({src_translated_ip}[A-Fa-f:\d.]+)""",
+    """"srcip":"({src_translated_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """"malsite_category":\["({threat_category}[^"]+)"[^\]]*?\]""",
     """"alert_type":"({alert_type}[^"]+)""",
     """"action":"({action}[^"]+)""",
@@ -36,7 +36,7 @@ cef-netskope-alert = {
   Fields = [
     """"hostname":"({host}[^",]+)"""",
     """"timestamp":({time}\d{10})""",
-    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^@"\s]+)?|(({domain}[^"@\\\/\s]+)[\\\/]+)?|({user}[^"\\\/\s]+))"""",
+    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))"""",
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"alert_name":"({alert_name}[^"]+)""",
     """"url":"({malware_url}[^"]+)""",

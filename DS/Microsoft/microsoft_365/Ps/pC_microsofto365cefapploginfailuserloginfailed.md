@@ -9,7 +9,11 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"ResultStatusDetail":"((?i)Success|({failure_reason}[^"]+))"""",
     """"LogonError":"({failure_reason}[^"]+)""",
     """"Operation":"UserLogin({result}[^"]+)""",
-    """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
+    """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
+    """"ErrorNumber":"({error_code}\d+)"""",
+    """reason=({failure_code}[^=]+?)\s\w+=""",
+    """"OS.*?Value":"({os}[^"]+)"""",
+    """"BrowserType.*?Value":"({browser}[^"]+)""""
   ]
 
 cef-o365-app-login-2 = {
@@ -19,7 +23,7 @@ cef-o365-app-login-2 = {
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """"UserId":"({email_address}[^@\s"]+@[^@\s\."]+\.[^\s",]+)"""",
-    """"ClientIP":"\[?({src_ip}[A-Fa-f:\d.]+?)(\]:({src_port}\d+))?"""",
+    """"ClientIP":"\[?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(\]:({src_port}\d+))?"""",
     """"Operation":"({event_name}[^"]+)""",
     """"ResultStatus":"({result}[^"]+)"""",
     """destinationServiceName =({app}Office 365)""",

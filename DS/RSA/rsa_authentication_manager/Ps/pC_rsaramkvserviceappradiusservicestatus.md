@@ -18,7 +18,7 @@ rsa-system-events = {
     """SESSION_ID="({session_id}[^"]+)"""",
     """USER_AGENT="({user_agent}[^"]+)"""",
     """(APPLICATION|APP_NAME)="({app}[^"]+)"""",
-    """REASON="({failure_reason}[^"]+)"""",
+    """REASON="({result_reason}[^"]+)"""",
     """DESCRIPTION="({additional_info}[^"]+?)\.*""""
   
 }

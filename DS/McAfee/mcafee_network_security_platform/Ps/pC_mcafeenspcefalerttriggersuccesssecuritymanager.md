@@ -13,7 +13,7 @@ Name = mcafee-nsp-cef-alert-trigger-success-securitymanager
     """\Wdvchost=({host}\S+)""",
     """\WeventId=({alert_id}\d+)""",
     """\Wcat=({alert_type}.+?)\s+(\w+=|$)""",
-    """\Wact=(Unknown|({action}.+?))\s+(\w+=|$)""",
+    """\Wact=(Unknown|({result}.+?))\s+(\w+=|$)""",
     """\Wapp=({app_protocol}.+?)\s+(\w+=|$)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

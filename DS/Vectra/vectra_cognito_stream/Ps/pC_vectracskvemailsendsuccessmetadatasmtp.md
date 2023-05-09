@@ -6,7 +6,7 @@ Name = vectra-cs-kv-email-send-success-metadatasmtp
   Conditions = [ """COGNITO_STREAM""", """vectra_metadata_smtp""", """METADATA_SMTP""" ]
   Fields = ${VectraParserTemplates.vectra-meta-data.Fields} [
     """subject="({log_subject}[^"]+)"""",
-    """mail_from="({sender}[^"@]+@[^"]+)"""",
+    """mail_from="({src_email_address}[^"@]+@[^"]+)"""",
     """rcpt_to="({dest_email_address}[^"@]+@[^"]+)"""",
     """msgid="<({message_id}[^"]+)>""""
   ]

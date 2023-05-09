@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
     """TargetUserName\\?"+:\\?"+((({user}[^@\s\\]+?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
+  DupFields = ["host->dest_host"]
 
 json-windows-events-2 = {
   Vendor = Microsoft

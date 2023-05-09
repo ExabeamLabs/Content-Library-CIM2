@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-1
     """TargetUserName\\?"+:\\?"+((({user}[^@\s\\]+?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?"""",
     """TargetDomainName\\?"+:\\?"+({web_domain}[^\\]+)""",
     """ServiceName\\?"+:\\?"+({dest_host}[^\s\\]+)""",
-    """IpAddress\\?"+:\\?"+(::[\w]+:)?({src_ip}[\da-fA-F.:]+)\\?"""",
+    """IpAddress\\?"+:\\?"+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
     """Status\\?"+:\\?"+({result_code}[^\s\\]+)""",
     """TicketOptions\\?"+:\\?"+({ticket_options}[^\s\\]+)""",
     """TicketEncryptionType\\?"+:\\?"+({ticket_encryption_type}[^\s\\]+)"""

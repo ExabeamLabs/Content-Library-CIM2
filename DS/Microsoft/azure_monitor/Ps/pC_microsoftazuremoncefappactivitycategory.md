@@ -11,7 +11,8 @@ Name = microsoft-azuremon-cef-app-activity-category
     """ResourceId":"({resource}[^"]+)""",
 # azure_event_hub_namespace is removed
 # azure_event_hub_name is removed
-    """deviceName"+:\s*"+({dest_host}[^"]+)"""
+    """deviceName"+:\s*"+({dest_host}[^"]+)""",
+    """"resultType":"({result}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -7,12 +7,12 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-1
   Conditions = [ """<EventID>4670<""", """Permissions on an object were changed""", """<Data Name\=""", """ObjectServer""" ]
   Fields = ${DLWindowsParsersTemplates.windows-events-3.Fields}[
     """({event_name}Permissions on an object were changed)""",
-    """<Data Name\\='HandleId'>({object_id}[^<]+)<""",
-    """<Data Name\\='ObjectServer'>(-|({object_server}[^<]+))<""",
-    """<Data Name\\='ObjectType'>(-|({object_type}[^<]+))<""",
-    """<Data Name\\='ObjectName'>(-|({object}[^<]+))<""",
-    """<Data Name\\='OldSd'>({old_attribute}[^<]+)<""",
-    """<Data Name\\='NewSd'>({new_attribute}[^<]+)<"""
+    """<Data Name\\=('|")HandleId('|")>({object_id}[^<]+)<""",
+    """<Data Name\\=('|")ObjectServer('|")>(-|({object_server}[^<]+))<""",
+    """<Data Name\\=('|")ObjectType('|")>(-|({object_type}[^<]+))<""",
+    """<Data Name\\=('|")ObjectName('|")>(-|({object}[^<]+))<""",
+    """<Data Name\\=('|")OldSd('|")>({old_attribute}[^<]+)<""",
+    """<Data Name\\=('|")NewSd('|")>({new_attribute}[^<]+)<"""
   ]
   DupFields = ["process_name -> file_name"]
 
@@ -33,6 +33,7 @@ windows-events-3 = {
         """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
         """\said=({aid}[^\s\\]+)""",
         """categoryOutcome=\/({result}[^\s]+)"""
+        """Source Port(=|:)\s*({src_port}\d+)"""
         
 }
 ```

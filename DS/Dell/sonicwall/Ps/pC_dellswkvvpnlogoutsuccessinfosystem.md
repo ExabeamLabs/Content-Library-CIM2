@@ -3,7 +3,7 @@
 {
 Name = dell-sw-kv-vpn-logout-success-infosystem
   Vendor = Dell
-  Product = SonicWALL
+  Product = Sonicwall
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss"
   Conditions = [ """Info System Session End:""",]
   Fields = [

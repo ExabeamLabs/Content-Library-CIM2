@@ -16,7 +16,8 @@ Name = crowdstrike-falcon-sk4-alert-trigger-incidentsummaryevent
     """"FineScore":({priority}[.\d]+)""",
     """suid=({user_id}\S+)""",
     """suser=({user}\S+)""",
-    """"State":"({result}[^"]+)"""
+    """"State":"({result}[^"]+)""",
+    """"HostID":"({aid}[^"]+)"""",
     """"event_platform":"({os}[^"]+)""""
         ]
 

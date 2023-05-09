@@ -10,11 +10,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-beyondtrust-pi-app-activity.Fields}[
-  """"ElevationGroup\\?"\svalue=\\?"({privileges}[^"\\]+)\\?""""
-  """"\ssEventID=\\?"({operation}[^"]+?)\\""""
-]
-DupFields = [ "account->dest_user", "account_domain->dest_domain","operation->event_name" ]
+beyondtrust-pi-app-activity.DupFields}[ "account->dest_user", "account_domain->dest_domain","operation->event_name" ]
 Conditions = [
   """EVENT_ID_JOB_ACCOUNT_ELEVATION_DEELEVATED"""
   """2053"""
@@ -81,7 +77,7 @@ Fields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.Fields}[
   """"ElevationGroup\\?"\svalue=\\?"({privileges}[^"\\]+)\\?""""
   """"\ssEventID=\\?"({operation}[^"]+?)\\""""
 ]
-DupFields = [ "account->dest_user", "account_domain->dest_domain" ,"operation->event_name"]
+DupFields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.DupFields}[ "account->dest_user", "account_domain->dest_domain" ,"operation->event_name"]
 Conditions = [
   """EVENT_ID_JOB_ACCOUNT_ELEVATED"""
   """2051"""
@@ -127,7 +123,7 @@ Fields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.Fields}[
   """sMessage=\\?"checked-out password for\s*\([^\)]*\)'(({account_domain}[^\\']+)\\+)?({account}[^\\\s']+)"""
   """"\ssEventID=\\?"({operation}[^"]+?)\\""""
 ]
-DupFields = [ "account->dest_user", "account_domain->dest_domain", "operation->event_name"]
+DupFields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.DupFields}[ "account->dest_user", "account_domain->dest_domain", "operation->event_name"]
 Conditions = [
   """EVENT_ID_PASSWORD_CHECKED_OUT"""
   """2002"""
@@ -537,7 +533,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """\d\d:\d\d:\d\d\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({event_name}Successful login)""",
-    """Successful login on\s*\[?({dest_ip}[a-fA-F\d.:]+)\]?""",
+    """Successful login on\s*\[?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\]?""",
     """Username:\s*"+({user}[^"]+)""",
     """({auth_package}SSH)"""
   ]
@@ -552,9 +548,9 @@ ParserVersion = "v1.0.0"
   Conditions = [ """ LOGIN ATTEMPT: """, """ Security """, """: Denied: """, """: Login """, """box_Auth_access:""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)""",
-    """Login (|({user}[^\s]+)\s)from ({src_ip}[a-fA-F\d:.]+)\s*:\s*({action}[^:.]+)(:|\.)""",
-    """({event_name}LOGIN ATTEMPT)"""
-  """Denied:\s({failure_reason}[^$]+?)\s*$"""
+    """Login (|({user}[^\s]+)\s)from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*:\s*({action}[^:.]+)(:|\.)""",
+    """({event_name}LOGIN ATTEMPT)""",
+    """Denied:\s({failure_reason}[^$]+?)\s*$"""
   ]
   ParserVersion = "v1.0.0"
 },
@@ -567,7 +563,7 @@ ParserVersion = "v1.0.0"
   Conditions = [ """ LOGIN ATTEMPT: """, """ Info """, """ : Allowed""", """box_Auth_access:""", """: Login """ ]
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)""",
-    """Login (|({user}[^\s]+)\s)from ({src_ip}[a-fA-F\d:.]+)\s*:\s*({action}[^:.]+)(:|\.)""",
+    """Login (|({user}[^\s]+)\s)from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*:\s*({action}[^:.]+)(:|\.)""",
     """({event_name}LOGIN ATTEMPT)"""
   ]
   ParserVersion = "v1.0.0"
@@ -614,8 +610,8 @@ ParserVersion = "v1.0.0"
   Fields = [
     """\[({time}\d\d\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d [-\+]\d+)\]""",
     """conn=({connection_id}\d+)""",
-    """from=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """to=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))""",
+    """from=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """to=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """protocol=({auth_method}[^\s]+)"""
   ]
   ParserVersion = "v1.0.0"
@@ -659,7 +655,7 @@ ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """|SMB|""","""|OPEN|""" ]
   Fields = [
-    """({time}\d+-\d+-\d+T\d+:\d+:\d+(([\+\-]\d+:\d+)|Z))\s+({host}[\w\-.]+)\s+([^\[\s]*)?\[[^\]]*\]:?\s+({user_sid}[^\s\|]+)\|({user_uid}[^\|]*)\|({server_name}[^\|]+)\|({zone_id}[^\|]*)\|({src_ip}[A-Fa-f:\d.]+)\|({protocol}[^\|]*)\|({access}OPEN)\|({result}[^\|\s]*)\|({desire_access}[^\|]*)\|({file_type}[^\|]*)\|({create_result}[^\|]*)\|(|({inode}[^\|]*))\|({file_path}({file_dir}[^"]+[\\\/])?({file_name}[^"]+(\.({file_ext}[^"]+)?)\s+)?)""",
+    """({time}\d+-\d+-\d+T\d+:\d+:\d+(([\+\-]\d+:\d+)|Z))\s+({host}[\w\-.]+)\s+([^\[\s]*)?\[[^\]]*\]:?\s+({user_sid}[^\s\|]+)\|({user_uid}[^\|]*)\|({server_name}[^\|]+)\|({zone_id}[^\|]*)\|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|({protocol}[^\|]*)\|({access}OPEN)\|({result}[^\|\s]*)\|({desire_access}[^\|]*)\|({file_type}[^\|]*)\|({create_result}[^\|]*)\|(|({inode}[^\|]*))\|({file_path}({file_dir}[^"]+[\\\/])?({file_name}[^"]+(\.({file_ext}[^"]+)?)\s+)?)""",
   
 }
 ```

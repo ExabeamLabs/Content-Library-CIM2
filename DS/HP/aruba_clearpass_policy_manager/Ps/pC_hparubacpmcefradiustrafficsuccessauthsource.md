@@ -3,10 +3,10 @@
 {
 Name = hp-arubacpm-cef-radius-traffic-success-authsource
   Vendor = HP
-  Product = Aruba Clearpass Policy Manager
+  Product = Aruba ClearPass Policy Manager
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
-  Conditions = [ """"ttam_category":"network/clearpass/""","""Error-Code""","""Auth-Source""" ]
+  Conditions = [ """"network/clearpass/""","""Error-Code""","""Auth-Source""", """Auth-Method""", """"message":""" ]
   Fields = [
     """Common\.Request-Timestamp\\=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d[+-]\d+)""",
     """"host":"({host}[^"]+)"""",

@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>4756</EventID>""", """<Data Name ='TargetSid'>""" ]
+  Conditions = [ """<EventID>4756</EventID>""", """<Data Name""","""'TargetSid'>""" ]
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """SystemTime(\\)?=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

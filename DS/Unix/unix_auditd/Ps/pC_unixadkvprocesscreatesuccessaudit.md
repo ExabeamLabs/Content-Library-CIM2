@@ -18,7 +18,8 @@ Name = unix-ad-kv-process-create-success-audit
     """auid=({account_id}[^\s]+)""",
     """pid=({process_id}[^\s]+)""",
     """cmd="?({process_path}[^"]*?)\s*("|\w+=|$)""",
-    """res=({result}[^\s'"]+)"""
+    """res=({result}[^\s'"]+)""",
+    """cmd=({process_command_line}[^=]+?)\s*\w+="""
   ]
 
 

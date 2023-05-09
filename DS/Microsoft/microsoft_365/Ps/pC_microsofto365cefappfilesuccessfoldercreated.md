@@ -5,6 +5,9 @@ Name = microsoft-o365-cef-app-file-success-foldercreated
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"FolderCreated""" ]
+  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
+    """"Platform":"({os}[^"]+)""""
+  ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

@@ -36,7 +36,7 @@ Fields = [
 """\WPROTOCOL=(N\/A|({protocol}.+?))\s+(\w+=|$)"""
 ]
 DupFields = [
-"email_address->sender"
+"email_address->src_email_address"
 ]
 SOAR {
   IncidentType = "dlp"

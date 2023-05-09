@@ -29,12 +29,12 @@ Fields = [
   """(\s|\|)eventId=({alert_id}\d+)\s"""
   """({direction}OUTGOING)_EMAIL"""
   """({alert_type}DLP: Email Protection)"""
-  """(\s|\|)act=({action}[^=]+?)\s+([\w\.-]+=|$)"""
+  """(\s|\|)act=({result}[^=]+?)\s+([\w\.-]+=|$)"""
 ]
 DupFields = [
   "dest_email_address->target"
   "file_name->email_attachments"
-  "email_address->sender"
+  "email_address->src_email_address"
 ]
 ParserVersion = "v1.0.0"
 

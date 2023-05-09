@@ -23,7 +23,7 @@ cef-juniper-vpn-events = {
     """\Wshost=({src_host}[\w\-.]+)""",
     """\Wsuser=({user}[^\s"@]+)""",
     """\Wsuser=({email_address}[^\s@]+@[^\s@]+)""",
-    """\Wact=({action}.+?)\s+(\w+=|$)""",
+    """\Wact=({result}.+?)\s+(\w+=|$)""",
   ]
   DupFields = ["user->account"
 }

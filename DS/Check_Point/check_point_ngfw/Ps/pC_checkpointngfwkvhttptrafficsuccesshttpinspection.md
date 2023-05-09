@@ -5,7 +5,7 @@ Name = checkpoint-ngfw-kv-http-traffic-success-httpinspection
   ParserVersion = v1.0.0
   Vendor = Check Point
   Product = Check Point NGFW
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss--SS:SS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """ProductName ="""", """"HTTPS Inspection"""" ]
   Fields = [
     """ProductName ="({product_name}HTTPS Inspection)""""

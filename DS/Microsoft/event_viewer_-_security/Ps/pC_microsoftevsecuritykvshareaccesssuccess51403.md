@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5140-3
       """\s共用名稱:\s*(?:\\+\*\\+)?({share_name}.+?)\s+共用路徑:""",
       """\s共用路徑:\s*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+?)\\)?({d_name}\s*\S[^\\]+?))\\?\s+)""",
       """({access}Read)"""
+      """Source Port(=|:)\s*({src_port}\d+)"""
     ]
   
 

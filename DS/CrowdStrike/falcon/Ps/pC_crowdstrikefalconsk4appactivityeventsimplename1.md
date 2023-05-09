@@ -3,20 +3,17 @@
 {
 Name = crowdstrike-falcon-sk4-app-activity-eventsimplename-1
   ParserVersion = "v1.0.0"
-  Conditions = [ """"event_simpleName":""" , """destinationServiceName =CrowdStrike""" ]
+  Conditions = [ """"event_simpleName":""" , """destinationServiceName":"CrowdStrike""" ]
   Fields = ${DLCrowdStrikeParserTemplates.crowdstrike-process-info.Fields}[
-# entitlements is removed
-# effective_transmission_class is removed
-# config_state_hash is removed
-# config_build is removed
-# cid is removed
     """"aip":\s*"({aip}[A-Fa-f:\d.]+)""",
     """"aid":\s*"({aid}[^"]+)""",
     """"UserSid":"({user_sid}[^"]+)"""",
     """"UserPrincipal":\s*"(?:[^"@]+@)?({domain}[^"]+)""",
+    """"UserPrincipal":"({user}[^@"]+)@({domain}[^"]+)""""
     """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
-    """"event_platform":"({os}[^"]+)""""
+    """"ClientComputerName":\s*"({src_host}[^"]+)"""
   ]
+  DupFields = ["aip->src_ip"]
 
 crowdstrike-process-info = {
   Vendor = CrowdStrike

@@ -3,7 +3,7 @@
 {
 Name = rsa-netwitness-cef-app-logout-success-logoff
   Vendor = RSA
-  Product = RSA Netwitness Platform
+  Product = RSA NetWitness Platform
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = ["""AUTHENTICATION|Logoff"""]
   Fields = [

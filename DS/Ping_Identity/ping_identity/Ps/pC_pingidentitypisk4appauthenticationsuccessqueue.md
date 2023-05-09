@@ -13,8 +13,8 @@ Name = pingidentity-pi-sk4-app-authentication-success-queue
     """"message":"({additional_info}[^}]+?)"\s*\}""",
     """destinationServiceName =({app}Ping)""",
     """subject":"({email_subject}[^:]+?)","\w+":""",
-    """"fromAddress":"({sender}[^"]+?)",""",
-    """"toAddress":"({recipient}[^"]+?)","""
+    """"fromAddress":"({src_email_address}[^"]+?)",""",
+    """"toAddress":"({dest_email_address}[^"]+?)","""
   ]
   ParserVersion = "v1.0.0"
 

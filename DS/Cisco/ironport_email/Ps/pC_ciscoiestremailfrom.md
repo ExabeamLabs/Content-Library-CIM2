@@ -10,7 +10,7 @@ Name = cisco-ie-str-email-from
     Fields = [
       """({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \d\d\d\d) Info: MID""",
       """MID ({alert_id}\d+)""",
-      """(F|f)rom[:']*.+?<({sender}[^@>]+@[^>]+)>"""
+      """(F|f)rom[:']*.+?<({src_email_address}[^@>]+@[^>]+)>"""
     ]
     DupFields = [ "alert_id->message_id" ]
  

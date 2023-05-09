@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-process-close-success-4689-2
   Vendor = Microsoft
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss+SS:SS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """Event_ID="4689"""", """Task="Process Termination"""", """A process has exited""" ]
   Fields = [
     """({event_name}A process has exited)""",

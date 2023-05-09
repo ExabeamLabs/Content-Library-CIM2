@@ -15,7 +15,7 @@ Fields = [
   """\sGUID="*({alert_id}[^\s"]+)"""
   """- ProofpointTAP -\s+CLKBLK\s+-.*?\smessageID=({alert_id}\S+)"""
   """\srecipient="*({dest_email_address}[^\s"]+)"""
-  """\ssender="*(null|({email_address}[^\s"]+))"""
+  """\ssender="*(null|({src_email_address}[^\s"]+))"""
   """\ssenderIP="*(null|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
   """\sthreatsInfoMap=\[\{.+?,({alert_type}.+?)\}"""
   """\sthreatsInfoMap="*\[\{.+?,\\"*classification\\"*:\\"*({alert_type}[^\\"]+)"""
@@ -28,7 +28,7 @@ Fields = [
 ]
 DupFields = [
   "dest_email_address->email_recipients"
-  "email_address->external_address"
+  "src_email_address->external_address"
 ]
 ParserVersion = "v1.0.0"
 

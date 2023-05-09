@@ -4,7 +4,7 @@
 Name = pan-ngfw-json-network-traffic-fail-deny-1
   Conditions = [ """"LogType":"TRAFFIC"""", """"Subtype":"deny"""", """"LogSetting":"CDL"""" ]
   Fields = ${PaloAltoParsersTemplates.paloalto-vpn.Fields}[
-    """"Action":"({action}[^"]+)"""",
+    """"Action":"({result}[^"]+)"""",
     """"NATSource":"({src_translated_ip}[a-fA-F\d:.]+)""",
     """"NATDestination":"({dest_translated_ip}[a-fA-F\d:.]+)""",
     """"NATSourcePort":({src_translated_port}\d+)""",
@@ -32,7 +32,9 @@ paloalto-vpn = {
     """"SourcePort":({src_port}\d+)""",
     """"DestinationPort":({dest_port}\d+)""",
     """"Protocol":"({protocol}[^"]+)"""",
-    """"LogType":"({event_category}[^"]+)""""
+    """"LogType":"({event_category}[^"]+)"""",
+    """"AuthMethod":"({auth_method}[^"]+)"""",
+    """"EventIDValue":"({event_name}[^"]+)""""
   
 }
 ```

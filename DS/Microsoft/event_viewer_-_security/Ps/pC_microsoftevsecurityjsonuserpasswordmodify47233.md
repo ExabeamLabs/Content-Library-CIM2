@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-json-user-password-modify-4723-3
       """"Security_ID":"({user_sid}[^"]+)""",
       """"Source_Logon_ID":"({login_id}[^"]+)""",
       """"UserIDDst":"({dest_user}[^"]+)""",
-      """"action":"({action}[^"]+)"""
+      """"action":"({result}[^"]+)"""
     ]
     DupFields = [ "host->dest_host" ]
     ParserVersion = "v1.0.0"

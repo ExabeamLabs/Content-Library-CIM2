@@ -5,8 +5,8 @@ Name = cisco-asa-kv-app-notification-adjchg
   ParserVersion = "v1.0.0"
   Conditions = [ """%OSPF-""", """ADJCHG:""" ]
   Fields = ${CiscoParsersTemplates.cisco-system-info.Fields} [
-    """ADJCHG:\s*.+?({event_name}Nbr ({src_ip}[A-Fa-f:\d.]+)[^,]+)""",
-    """Neighbor Down:\s*({failure_reason}.+?)\s+$""",
+    """ADJCHG:\s*.+?({event_name}Nbr ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?[^,]+)""",
+    """Neighbor Down:\s*({result_reason}.+?)\s+$""",
   ]
 
 cisco-system-info = {

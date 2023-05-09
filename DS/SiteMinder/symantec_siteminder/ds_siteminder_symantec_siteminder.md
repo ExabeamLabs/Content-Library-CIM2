@@ -1,6 +1,6 @@
 Vendor: SiteMinder
 ==================
-Product: Symantec Siteminder
+Product: Symantec SiteMinder
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

@@ -4,7 +4,7 @@
 Name = hp-arubacpm-str-app-notification-8904
   ParserVersion = v1.0.0
   Vendor = HP
-  Product = Aruba Clearpass Policy Manager
+  Product = Aruba ClearPass Policy Manager
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = ["""Event|8904|""", """LOG_INFO|MSTR""", """|CDP neighbor""" ]
   Fields = [

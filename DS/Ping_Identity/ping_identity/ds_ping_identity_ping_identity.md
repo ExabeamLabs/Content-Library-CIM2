@@ -1,6 +1,6 @@
 Vendor: Ping Identity
 =====================
-Product: ping identity
+Product: Ping Identity
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

@@ -6,12 +6,12 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
  Vendor = Microsoft
  Product = Event Viewer - Security
  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
- Conditions = [ """<EventID Qualifiers='16640'>1310<""", """Failed NTLM Authentication"""]
+ Conditions = [ """<EventID Qualifiers""","""'16640'>1310<""", """Failed NTLM Authentication"""]
  Fields = [
-   """<Provider Name ='({provider_name}[^']+)""",
-   """<EventID Qualifiers='16640'>({event_code}[^<]+)""",
+   """<Provider Name\\*='({provider_name}[^']+)""",
+   """<EventID Qualifiers\\*='16640'>({event_code}[^<]+)""",
    """<Keywords>({result}[^<]+)""",
-   """<TimeCreated SystemTime='({time}.+?)'""",
+   """<TimeCreated SystemTime\\*='({time}.+?)'""",
    """<EventRecordID>({event_id}[^<]+)""",
    """<Computer>({host}[^<]+)""",
    """status=([^:]+:)({result_code}[^:]+):"""

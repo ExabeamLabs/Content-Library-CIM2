@@ -18,7 +18,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"Subject":"\s*({email_subject}.+?)\s*"}""",
     """"Subject":"\s*({email_subject}.+?)\s*",""",
     """"Direction":"({direction}[^"]+)"""",
-    """"SenderAddress":"({sender}[^",]+)"""",
+    """"SenderAddress":"({src_email_address}[^",]+)"""",
     """"RecipientAddress":"({email_recipients}[^"]+)"""",
     """"RecipientAddress":"({dest_email_address}[^"\s,;]+)""",
     """"Size":"?({bytes}\d+)""",
@@ -30,7 +30,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"triggered-by":\{"user-email":"({email_address}[^",]+)"""",
     """Category\s+\[({category}[^\]]+)\]"""
   ]
-  DupFields = [ "alert_type->alert_name" ,"sender->orig_user"]
+  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user"]
  
 
 }

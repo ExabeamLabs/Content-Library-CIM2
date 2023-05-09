@@ -10,7 +10,7 @@ Name = oracle-db-kv-database-logout-success-dbuser
   Fields = [
     """\sLOGOFF_TIME=({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))""",
 # audit_type is removed
-    """\sSTATEMENT_TYPE=(|({reason}.+?))(\s+\w+=|\s*$)""",
+    """\sSTATEMENT_TYPE=(|({result_reason}.+?))(\s+\w+=|\s*$)""",
     """\sOS_USER=(|({user}.+?))(\s+\w+=|\s*$)""",
     """\sDB_USER=(|({db_user}.+?))(\s+\w+=|\s*$)""",
     """\sUHOST=(|({host}.+?))(\s+\w+=|\s*$)""",

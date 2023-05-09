@@ -9,7 +9,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [ """EVNTPRODESCR=VANGUARD_ACTIVE_ALERTS""", """EVNTNAME=AUDIT""", """EVNTTEXT=General audit record written"""]
 Fields = [
   """APPLSIEMVRM=({host}[^=]+?)\s\w+=""",
-  """APPLHOSTIPADD=({host_ip}[A-Fa-f.:\d]+)""",
+  """APPLHOSTIPADD=({host_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
   """EVNTUSERID=({db_user}[^=]+?)\s\w+=""",
   """EVNTNAME=({event_name}[^=]+?)\s\w+=""",
   """EVNTJOBNAME=({service_name}[^=]+?)\s\w+=""",

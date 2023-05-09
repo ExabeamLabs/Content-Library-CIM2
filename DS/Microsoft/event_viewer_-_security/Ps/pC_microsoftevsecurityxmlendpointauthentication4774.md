@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-4774
   Conditions = [ """<EventID>4774</EventID>""", """<Task>Credential Validation""", """An account was mapped for logon""" ]
   Fields = [
     """({event_name}An account was mapped for logon)""",
-    """<TimeCreated SystemTime='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
+    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[^\s\\\/]+)""",

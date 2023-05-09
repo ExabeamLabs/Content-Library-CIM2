@@ -156,7 +156,7 @@ Fields = [
   """act=({action}[^\s]+)"""
   """flexString1=({operation}[^\:]+):({result}\d+)"""
   """\|({alert_severity}[^\|]+)\|\s*event"""
-  """suser=(-|({sender}[^\s]+))"""
+  """suser=(-|({src_email_address}[^\s]+))"""
   """duser=(-|({dest_email_address}[^\s]+))"""
   """reason=({alert_name}\d+)"""
 ]
@@ -183,8 +183,8 @@ Fields = [
   """\Wdvchost=({host}[^\s]+)"""
   """\WmessageId=({alert_id}[^\s]+)"""
   """\|Forcepoint\|Email Security\|[^\|]*\|({alert_name}[^\|]*)\|({alert_type}[^\|]*)\|({alert_severity}[^\|]*)\|"""
-  """suser=({sender}[^@=]+?@[^\s>]+?)(>)?(\s|\s*$)"""
-  """\Wsuser=\s*([^<]+<)?(<)?({sender}[^@=>]+?@[^@=>]+?)(>)?(\s+\w+=|\s*$)"""
+  """suser=({src_email_address}[^@=]+?@[^\s>]+?)(>)?(\s|\s*$)"""
+  """\Wsuser=\s*([^<]+<)?(<)?({src_email_address}[^@=>]+?@[^@=>]+?)(>)?(\s+\w+=|\s*$)"""
   """duser=({dest_email_address}[^@=]+?@[^\s>]+?)(>)?(\s|\s*$)"""
   """\Wduser=\s*([^<]+<)?(<)?({dest_email_address}[^@=>]+?@[^@=>]+?)(>)?(\s+\w+=|\s*$)"""
   """ad.fnameAndfileHash=({email_attachments}[^|]+?)\s*\|\s*({file_hash}[^|\s]+)"""
@@ -214,7 +214,7 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-    """from=({sender}[^@\s]+?@[^\s]+)""",
+    """from=({src_email_address}[^@\s]+?@[^\s]+)""",
     """to=({dest_email_address}[^@\s]+?@[^\s]+)""",
     """src_host=((?i)unknown|({src_host}[^\s]+))""",
     """src_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

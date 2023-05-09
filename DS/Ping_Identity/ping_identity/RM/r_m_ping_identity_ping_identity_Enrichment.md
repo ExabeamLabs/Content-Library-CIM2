@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Ping Identity
 ---------------------
-### Product: [ping identity](../ds_ping_identity_ping_identity.md)
+### Product: [Ping Identity](../ds_ping_identity_ping_identity.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

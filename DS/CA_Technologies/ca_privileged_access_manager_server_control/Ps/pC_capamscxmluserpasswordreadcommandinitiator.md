@@ -12,7 +12,7 @@ Name = ca-pamsc-xml-user-password-read-commandinitiator
     """<type>({operation}[^<]+)<""",
     """<k>commandInitiator<\/k><v>({object}[^<]+)<""",
     """<k>adminUserID<\/k><v>(({email_address}[^@<]+?@[^<]+?)|({user}[^<]+?))<\/v>""",
-    """<k>reason<\/k><v>({failure_reason}[^<]+)<""",
+    """<k>reason<\/k><v>({result_reason}[^<]+)<""",
     """<k>reasonDetails<\/k><v>({additional_info}[^<]+)<""",
     """<k>TargetAccount.userName<\/k><v>({dest_user}[^<]+)<""",
     """<k>TargetApplication.name<\/k><v>({target}[^<]+)<""",

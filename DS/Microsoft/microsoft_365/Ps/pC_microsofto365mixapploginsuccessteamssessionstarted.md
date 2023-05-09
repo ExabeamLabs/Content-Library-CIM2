@@ -12,7 +12,9 @@ Name = microsoft-o365-mix-app-login-success-teamssessionstarted
     """"Workload":"({app}[^"]+)"""",
     """"UserId":"({email_address}[^@]+@({email_domain}[^"]+))"""",
     """\Wsuser=({email_address}[^@]+@({email_domain}[^\s]+))\s+(\w+=|$)""",
-    """"Operation":"({additional_info}[^"]+)""""
+    """"Operation":"({operation}[^"]+)"""",
+    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ObjectId":"(Unknown \(Unknown\)|({object}[^"]+))""""
   ]
 
 

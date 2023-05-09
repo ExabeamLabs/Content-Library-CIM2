@@ -19,7 +19,7 @@ Name = symantec-dlp-kv-alert-trigger-success-incidentid
     """subject="\s*({additional_info}[^"]+?)\s*"""",
     """blocked="({action}\d+)""""
   ]
-  DupFields = [ "alert_name->alert_type", "email_address->sender"]
+  DupFields = [ "alert_name->alert_type", "email_address->src_email_address"]
   ParserVersion = "v1.0.0"
 
 

@@ -2,11 +2,13 @@
 ```Java
 {
 Name = crowdstrike-falcon-sk4-alert-trigger-success-idpdetection
-  ParserVersion = v1.0.0
+  ParserVersion = "v1.0.0"
+  Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """destinationServiceName =CrowdStrike""" ]
+
+json-crowdstrike-alert = {
   Vendor = CrowdStrike
   Product = Falcon
   TimeFormat = "epoch_sec"
-  Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """destinationServiceName =CrowdStrike""" ]
   Fields = [
     """"eventCreationTime":({time}\d{10}),""",
     """"DetectId":"({alert_id}[^"]+)"""",
@@ -25,8 +27,6 @@ Name = crowdstrike-falcon-sk4-alert-trigger-success-idpdetection
     """"FalconHostLink":"({falcon_host_link}[^"]+)"""",
     """"Tactic":"({category}[^"]+)"""",
     """"aid":"({aid}[^"]+)"""
-  ]
-
-
+  
 }
 ```

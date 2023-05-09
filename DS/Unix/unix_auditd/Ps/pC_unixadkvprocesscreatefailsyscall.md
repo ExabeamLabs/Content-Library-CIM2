@@ -16,7 +16,7 @@ Name = unix-ad-kv-process-create-fail-syscall
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """exe=\"({process_path}[^\"]*)\"""",
     """exe=\"({process_dir}.+\/)({process_name}.+?)\"""",
-    """\d\d:\d\d\s+({host}[\w\-.]+)\s+""",
+    """\d\d:\d\d\s+({host}({dest_host}[\w\-.]+))\s+""",
     """\sppid=({parent_process_id}.+?)\s+(\w+=|$)""",
     """\spid=({process_id}.+?)\s+(\w+=|$)""",
     """\suid=({user_id}.+?)\s+(\w+=|$)""",
@@ -25,8 +25,8 @@ Name = unix-ad-kv-process-create-fail-syscall
     """\sses=({session_id}\d+)\s+(\w+=|$)""",
     """\stype=({operation_type}.+?)\s+(\w+=|$)""",
     """\skey="({failure_reason}[^"]+)""""
+    """node=({dest_host}[\w\-.]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

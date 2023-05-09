@@ -23,7 +23,7 @@ Fields = [
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
-  """sender_address":"(?:|({sender}[^"]+))","""
+  """sender_address":"(?:|({src_email_address}[^"]+))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
 ]
 DupFields = [

@@ -15,13 +15,13 @@ Name = symantec-dlp-kv-alert-trigger-success-monitorname
      """protocol="+({protocol}[^"]+)""",
      """severity="+({alert_severity}[^"]+)""",
      """(policy|Policy)="+({alert_name}[^"]+)""",
-     """sender="+(({email_address}[^"@]+@[^"@]+)|({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|(WinNT:\/+)?({domain}[^\\\/]+)(\\|\/)({user}[^"]+))"+""",     
+     """sender="+(({src_email_address}[^"@]+@[^"@]+)|({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|(WinNT:\/+)?({domain}[^\\\/]+)(\\|\/)({user}[^"]+))"+""",     
      """block="+({action}[^"]+)""",
-     """recipients="+((({target}http.+?)"+)|({recipients}({recipient}[^,"]+)[^"]*)"+)""",
+     """recipients="+((({target}http.+?)"+)|({recipients}({dest_email_address}[^,"]+)[^"]*)"+)""",
      """attachment="+({email_attachments}[^"]+)\s+""",
      """match_count="+({match_count}[^"]+)""",
   ]
-  DupFields = [ "email_attachments->file_name", "email_address->sender"]
+  DupFields = [ "email_attachments->file_name"]
   ParserVersion = "v1.0.0"
 
 

@@ -29,7 +29,7 @@ Fields = [
   """\scategoryOutcome=(\/)?({result}[^\s]*)"""
 ]
 DupFields = [
-  "orig_user->sender"
+  "orig_user->src_email_address"
   "orig_user->user"
 ]
 ParserVersion = "v1.0.0"

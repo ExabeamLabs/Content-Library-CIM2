@@ -18,7 +18,7 @@ microsoft-sql-events {
     """schema_name:({db_schema}[^\s]+)""",
     """server_instance_name:({dest_host}[^\s]+)""",
     """object_name:({object}[^\s]+)""",
-    """statement:\s*({db_query}((?i)(Select|alter|BACKUP|RESTORE|dbcc|drop)).+?)\s+additional_information:""",
+    """statement:\s*({db_query}((?i)(Select|alter|BACKUP|RESTORE|dbcc|drop|CREATE|update|insert|delete|set|show)).+?)\s+additional_information:""",
     """additional_information:\s*({additional_info}.+?)\s+\w+:""",
 # permission_bitmask is removed
     """object_id:({object_id}[^\s]+)""",
@@ -32,11 +32,13 @@ microsoft-sql-events {
 # sequence_group_id is removed
     """\sserver_principal_sid:({user_sid}[^\s]+)""",
     """\starget_server_principal_sid:({dest_user_sid}[^\s]+)""",
+    """client_ip:({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
  }
 
 logrhythm-o365-app-activity = {
-  Vendor = Microsoft
+  Vendor = LogRhythm
+  Product = LogRhythm
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

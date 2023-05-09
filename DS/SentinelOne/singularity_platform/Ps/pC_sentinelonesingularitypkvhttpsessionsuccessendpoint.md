@@ -15,9 +15,16 @@ sentinelone-activity {
     Vendor = SentinelOne
     Product = Singularity Platform
     TimeFormat = "epoch"
+    Conditions = [
+    """dproc=Deep Visibility Endpoint""",
+    """destinationServiceName =SentinelOne""",
+    """method:""",
+    """http {"""
+    ]
     Fields = [
       """\smillisecondsSinceEpoch:\s*({time}\d{13})""",
-      """\\ncomputer_name:\s*"+({host}[^"]+)""",
+      """\\ncomputer_name:\s*"+({host}[\w\-.]+)"""",
+      """\\ncomputer_name:\s*"+({dest_translated_host}[^"]+)"""",
       """\\nos_name:\s*"+({os}[^"]+)""",
       """\\nagent_version:\s*"+({user_agent}[^"]+)""",
       """\ssizeBytes:\s*({bytes}\d+)""",
@@ -31,9 +38,11 @@ sentinelone-activity {
       """destinationAddress\s.*?address:\s*[\\\/]?"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """destinationAddress\s.*?port:\s*({dest_port}\d+)""",
       """\sstatus:\s*({result}\w+)""",
-      """sourceAddress\s.*?port:\s*({src_port}\d+)""",
-      """sourceAddress\s.*?address:\s*[\\\/]?"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """sha1:\s*"*({hash_sha1}[^"]+)""""
+      """(sourceAddress|\slocal)\s.*?port:\s*({src_port}\d{1,5})""",
+      """(sourceAddress|\slocal)\s.*?address:\s*[\\\/]?"+(0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?""",
+      """sha1:\s*"*({hash_sha1}[^"]+)"""",
+      """sizeBytes:\s*({bytes}\d+)""",
+      """commandLine:\s*"({process_command_line}[^\{]+?)"\\n\s"""
     
 }
 ```

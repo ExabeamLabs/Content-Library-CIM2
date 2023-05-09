@@ -14,7 +14,7 @@ Name = pingidentity-pingone-sk4-app-login-fail-loginfailed
     """suser=({user}[^\s]+)""",
     """flexString2=({auth_method}.*?)\s\w+=""",
     """message":"({auth_method}[^\\]+)\s\\"({device_name}[^\\]+)""",
-    """msg=({failure_reason}.*?)\s\w+=""",
+    """msg=({result_reason}.*?)\s\w+=""",
   ]
   ParserVersion = "v1.0.0"
 

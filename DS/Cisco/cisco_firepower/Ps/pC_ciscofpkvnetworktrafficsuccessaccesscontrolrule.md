@@ -18,7 +18,7 @@ Name = cisco-fp-kv-network-traffic-success-accesscontrolrule
     """\WEgressZone(:|=")\s*({egress_zone}[^,"]+)""",
     """\WPolicy(:|=")\s*({policy_name}[^,"]+)""",
     """\WAccessControlRuleName(:|=")\s*(Unknown|({rule}[^,"]+))""",
-    """\WAccessControlRuleAction(:|=")\s*({action}[^,"]+)""",
+    """\WAccessControlRuleAction(:|=")\s*({result}[^,"]+)""",
     """\WUser(:|=")\s*(No Authentication Required|({user}[^,\s"]+))"""",
     """\WInitiatorPackets(:|=")\s*({initiator_packets}[^,"]+)""",
     """\WResponderPackets(:|=")\s*({responder_packets}\d+)""",
@@ -27,6 +27,7 @@ Name = cisco-fp-kv-network-traffic-success-accesscontrolrule
     """\WNAPPolicy(:|=")\s*({nap_policy}[^,"]+)""",
     """\WDNSResponseType(:|=")\s*({response_type}[^,"]+)""",
   ]
+  DupFields = [ "result->action" ]
 
 
 }

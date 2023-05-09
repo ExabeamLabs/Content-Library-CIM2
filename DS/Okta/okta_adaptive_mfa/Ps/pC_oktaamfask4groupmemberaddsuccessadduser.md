@@ -14,7 +14,10 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """"target":\[[^\]]*?"type":"User","alternateId":"({account_id}[^"]+)"""",
     """"target":\[[^\]]*?"type":"User","alternateId":"(({target_user_email}[^@"]+@[^"]+)|({dest_user}[^"]+))"""",
     """"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"outcome":\{"result":"({result}[^"]+)""""
+    """"outcome":\{"result":"({result}[^"]+)"""",
+    """duser=({dest_user}[^\s]+)\s*"""
+    """"type":"UserGroup".*?"displayName":"({group_name}[^",]+)","id":"({group_id}[^",]+)""""
+    """"target(s)?":[^\]]+?"displayName":"({member}[^",]+)[^\]\}]+?"type":"User""""
   ]
   ParserVersion = "v1.0.0"
 

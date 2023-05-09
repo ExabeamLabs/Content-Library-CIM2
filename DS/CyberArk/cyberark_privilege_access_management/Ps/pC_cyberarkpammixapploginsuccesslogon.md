@@ -16,7 +16,7 @@ Name = cyberark-pam-mix-app-login-success-logon
     """\sEventMessage=(\s+|({event_subtype}[^=]+?))\s+(\w+=|$)""",
     """\sSafe=(\s+|({safe_value}[^=]+?))\s+(\w+=|$)""",
     """\sGatewayStation=({gateway_station}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
-    """\sReason=(\s+|({reason}[^=]+?))\s+(\w+=|$)""",
+    """\sReason=(\s+|({result_reason}[^=]+?))\s+(\w+=|$)""",
     """({app}Cyber-Ark)""",
     """Action=({action}[^=]+?)\s*\w+="""
   ]

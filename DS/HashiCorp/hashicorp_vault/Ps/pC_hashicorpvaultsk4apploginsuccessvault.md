@@ -6,7 +6,7 @@ Name = hashicorp-vault-sk4-app-login-success-vault
   Vendor = HashiCorp
   Product = HashiCorp Vault
   TimeFormat = "epoch_sec"
-  Conditions = [ """"type":"request"""", """"auth":{""", """"token_type"""", """"ttam_service":"vault"""" ]
+  Conditions = [ """"type":"request"""", """"auth":{""", """"token_type"""", """"vault"""" ]
   Fields = [
     """"username"+:"+({user}[^"]+)""",
     """"time"+:({time}\d{10})""",

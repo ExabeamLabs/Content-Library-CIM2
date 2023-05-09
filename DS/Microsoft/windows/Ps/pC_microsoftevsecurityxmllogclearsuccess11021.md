@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
   Vendor = "Microsoft"
   Product = Windows
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [  """>1102</EventID>""", """<TimeCreated SystemTime="""    ]
+  Conditions = [  """>1102</EventID>""", """<TimeCreated SystemTime"""    ]
   Fields = [
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>(Classic|({result}[^<]+))</Keyword>""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

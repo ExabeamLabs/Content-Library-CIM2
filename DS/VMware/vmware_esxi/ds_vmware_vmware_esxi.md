@@ -1,6 +1,6 @@
 Vendor: VMware
 ==============
-Product: VMware ESXI
+Product: VMware ESXi
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

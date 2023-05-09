@@ -18,7 +18,7 @@ Fields = [
   """\|usrName =(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({email_address}[^\|@]+@[^\|@]+)|(N/A|({user}[^\|]+)))"""
   """\|suser=((NT AUTHORITY|({domain}[^\|\\\/]+))[\\\/]+)?(system|N/A|({user}[^\|\\\/]+))\|"""
   """\|usrName =(N/A|({user}[^\|@]+))@"""
-  """\|usrName =(?=[\w.]+@[\w.])({sender}[^\|]+)"""
+  """\|usrName =(?=[\w.]+@[\w.])({src_email_address}[^\|]+)"""
   """\|duser=(?=[\w.]+@[\w.])({email_recipients}[^\|]+)"""
   """\|subject=\s*((?!SFTP|HTTP|FTP|TCP|N/A)({email_subject}[^\|]+?))\s*\|"""
   """\|rules=\s*({alert_type}[^\|]+?)\s*\|"""
@@ -46,7 +46,7 @@ SOAR {
     "file_name->dlpFileName"
     "action->dlpActionTaken"
     "email_subject->emailSubject"
-    "sender->emailFrom"
+    "src_email_address->emailFrom"
     "email_recipients->emailTo"
   ]
   NameTemplate = "Symantec DLP Alert ${alert_name} found"

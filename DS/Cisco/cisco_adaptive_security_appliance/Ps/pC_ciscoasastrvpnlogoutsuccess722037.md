@@ -14,7 +14,7 @@ Name = cisco-asa-str-vpn-logout-success-722037
      """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}Z?)""",
      """%(FTD|ASA)(-\w+)?-({priority}\d+)-({event_code}\d+)""",
      """Group\s*<({group_name}.*?)>""",
-     """IP\s*<({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>\s*({event_name}.*?):\s""",
+     """IP\s*<({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))>\s*({event_name}.*?):\s""",
      """User\s*<(({domain}[^\\\/]+)[\\\/])?(({email_address}[^@>]+@[^>\.]+\.[^>]+)|({user}[^>]+))\s*>"""
    ]
  

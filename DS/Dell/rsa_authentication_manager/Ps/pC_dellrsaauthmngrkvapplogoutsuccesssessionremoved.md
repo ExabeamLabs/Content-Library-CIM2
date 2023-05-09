@@ -12,7 +12,7 @@ Name = dell-rsaauthmngr-kv-app-logout-success-sessionremoved
     """USERNAME="(N\/A|({user}[^"]+))""",
 # remote_ip is removed
     """SESSION_ID="(N\/A|({session_id}[^"]+))""",
-    """REASON="(N\/A|({reason}[^"]+))""",
+    """REASON="(N\/A|({result_reason}[^"]+))""",
     """({event_name}USER_LOGOUT_AFTER_SESSION_REMOVED)""",
     """\]\s+({additional_info}User[^"]+?)\s*$"""
   ]

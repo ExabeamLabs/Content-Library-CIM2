@@ -21,7 +21,7 @@ onewelcome-authentication-event = {
       """"result":"({result}[^"]+)"""",
       """"authres":"({result}[^"]+)"""",
       """"action":"({event_name}[^"]+)"""",
-      """"hdetail":"({event_name}[^"]+)"""",
+      """"hdetail":"({additional_info}[^"]+)"""",
       """"human":"({additional_info}[^"]+)"""",
     ]
     DupFields = [ "event_name->operation" 

@@ -22,7 +22,7 @@ Name = symantec-dlp-kv-alert-trigger-success-alerttrigger
     """\|\s*SUBJECT=+\s*(N\/A|({email_subject}[^\|]+?))\s*\|""",
     """\|\s*ATTACHMENTS=({file_path}(({file_dir}[^"\|]+)?[\\\/]+)?({file_name}[^\|"]+?))\s*(\||$|")"""
   ]
-  DupFields = [ "email_subject->additional_info" , "target->email_recipients", "email_address->sender"]
+  DupFields = [ "email_subject->additional_info" , "target->email_recipients", "email_address->src_email_address"]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "protocol->dlpProtocol", "action->dlpActionTaken"]

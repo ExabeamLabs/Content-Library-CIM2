@@ -8,7 +8,7 @@ Name = mcafee-es-csv-alert-trigger-success-alerttrigger
   TimeFormat = "M/d/yy h:mm:ss a zzz"
   Conditions = [ """,Endpoint Security Platform,""" ]
   Fields = [
-    """({time}\d+\/\d+\/\d+ \d+:\d+:\d+ (am|AM|pm|PM) \w+),(?:|({src_host}[^,]+)),(?:|({alert_name}[^,]+)),(?:|({action}[^,]+)),[^,]*,Endpoint Security Platform,([^,]*,){2}(?:|({alert_type}[^,]+)),(?:|({additional_info}[^,]+)),(?:|({alert_severity}[^,]+)),(?:|({process_path}[^,]*?({process_name}[^,\\\/]+))),([^,]*,){2}\s*(?:,|({url}.+?))\s*($|\w+=)""",
+    """({time}\d+\/\d+\/\d+ \d+:\d+:\d+ (am|AM|pm|PM) \w+),(?:|({src_host}[^,]+)),(?:|({alert_name}[^,]+)),(?:|({result}[^,]+)),[^,]*,Endpoint Security Platform,([^,]*,){2}(?:|({alert_type}[^,]+)),(?:|({additional_info}[^,]+)),(?:|({alert_severity}[^,]+)),(?:|({process_path}[^,]*?({process_name}[^,\\\/]+))),([^,]*,){2}\s*(?:,|({url}.+?))\s*($|\w+=)""",
   ]
 
 

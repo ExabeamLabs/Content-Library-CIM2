@@ -24,7 +24,7 @@ Name = mcafee-es-cef-alert-trigger-success-notauthorized
     """\scat=({threat_category}.+?)\s+(\w+=|$)""",
     """\|McAfee\|ePolicy[^|]+?\|[^|]+?\|[^|]+?\|({alert_type}[^.|]+)""",
     """\|McAfee\|ePolicy[^|]+?\|[^|]+?\|[^|]+?\|[^|]+?\|({alert_severity}[^\|]+)""",
-    """\scategoryOutcome=/?({action}.+?)\s+(\w+=|$)""",
+    """\scategoryOutcome=/?({result}.+?)\s+(\w+=|$)""",
     """\ssuser=({user}.+?)\s+(\w+=|$)""",
     """\scatdt=({alert_type}.*?)\s+(\w+=|$)""",
   ]

@@ -7,6 +7,9 @@ Name = microsoft-o365-sk4-alert-trigger-threatmanagement
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """"category":"ThreatManagement"""", """"title":""", """"vendor":"Microsoft"""", """"provider":"Office 365 Security and Compliance""""  ]
   ParserVersion = "v1.0.0"
+  Fields = ${MicrosoftParserTemplates.json-microsoft-security-events.Fields}[
+    """msg=.*?Alert Detected by \[?({alert_source}[^\]:]+)\]?:?"""
+  ]
 
 json-microsoft-security-events = {
      Vendor = Microsoft
@@ -32,6 +35,8 @@ json-microsoft-security-events = {
        """"description":\s*"An actor on\s*({src_host}\S+)\s*performed suspicious"""
        """"fileStates":[^]]+?"name":\s*"({file_name}[^."]+([\.\w]+)?)""""
        """"destinationServiceName":"({app}[^"]+)""""
+       """"status":"({result}[^"]+)"""",
+       """"logonLocation"+:\s*"+({location}[^"]+)""""
      
 }
 ```

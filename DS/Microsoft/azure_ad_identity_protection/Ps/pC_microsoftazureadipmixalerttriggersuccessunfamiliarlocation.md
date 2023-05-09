@@ -21,6 +21,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
      """"domainName"+:\s*"+({domain}[^"]+)"""",
      """"logonLocation"+:\s*"+({location}[^"]+)""""
      """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
+     """status=({result}[^\s]+)"""
   ]
 
 

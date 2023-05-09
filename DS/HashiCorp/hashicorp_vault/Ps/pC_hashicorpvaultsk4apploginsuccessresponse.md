@@ -6,7 +6,7 @@ Vendor = HashiCorp
 Product = HashiCorp Vault
 ParserVersion = "v1.0.0"
 TimeFormat = "epoch"
-Conditions = [ """"type":"response"""", """"auth":{""", """"operation":"""", """"token_type"""", """"ttam_service":"vault"""" ]
+Conditions = [ """"type":"response"""", """"auth":{""", """"operation":"""", """"token_type"""", """"vault"""" ]
 Fields = [
     """"username":"(hmac-[^"]+|({user}[^"]+))""",
     """"time"+:({time}\d{13})""",

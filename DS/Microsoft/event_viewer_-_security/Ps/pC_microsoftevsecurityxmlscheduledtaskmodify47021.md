@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-1
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [ """<EventID>4702<""", """A scheduled task was updated""", """&lt;Settings&gt;""" ]
   Fields = [
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
     """({event_code}4702)""",
     """({event_name}A scheduled task was updated)""",
     """<Computer>({host}[^<]+)""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-1
     """&lt;Command&gt;"?({process_path}({process_dir}(?:(\w+:)?[^:&"]+?)?[\\\/]+)?({process_name}[^&"\\\/]+?))&lt;/Command&gt;""",
     """&lt;Arguments&gt;({arg}.+?)&lt;/Arguments&gt;"""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->src_host" ]
 
 
 }

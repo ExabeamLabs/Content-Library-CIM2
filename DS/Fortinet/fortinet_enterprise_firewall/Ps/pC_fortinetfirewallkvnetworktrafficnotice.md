@@ -8,7 +8,7 @@ Name = fortinet-firewall-kv-network-traffic-notice
   TimeFormat = "epoch_sec"
   Conditions = [
 """type="""
-"""traffic"""
+""""traffic""""
 """action="""
 """service="""
 """date="""
@@ -33,7 +33,9 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\Wsrcintfrole=\"+(undefined|({src_interface_role}[^\"]+))\"+""",
     """\Wdstintfrole=\"+(undefined|({dest_interface_role}[^\"]+))\"+""",
     """\Wsrccountry="(Reserved|({src_country}[^"]+))"""",
-    """\Wdstcountry="(Reserved|({dest_country}[^"]+))""""
+    """\Wdstcountry="(Reserved|({dest_country}[^"]+))"""",
+    """\Wtype=\"+({event_category}[^"]+)""",
+    """\Wsubtype=\"({operation}[^"]+)"""
 ]
 
 

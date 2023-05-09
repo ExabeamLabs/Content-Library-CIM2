@@ -7,7 +7,7 @@ Name = pan-ngfw-csv-app-notification-connstatus
   Conditions = [ """,SYSTEM,""", """,syslog-conn-status,""" ]
   Fields = ${DLPaloAltoParsersTemplates.pan-system-1.Fields}[
     """({event_name}Syslog connection.+?server)\[""",
-    """\['AF_INET\.({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):({dest_port}\d+)""",
+    """\['AF_INET\.({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)""",
   ]
 
 pan-system-1 {
@@ -16,9 +16,9 @@ pan-system-1 {
   Fields = [
     """SYSTEM,([^,]+,){2}({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),""",
     """SYSTEM[^"]+?({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
-    """SYSTEM,("[^"]*",|[^,]*,){18}({host}[\w\-\.]+)""",
-    """:\d\d:\d\d\s+({host}[\w.-]+)\s""",
-    """,({host_id}\d+),SYSTEM,""",
+    """SYSTEM,("[^"]*",|[^,]*,){18}({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))""",
+    """:\d\d:\d\d\s+({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s""",
+    """,({asset_id}\d+),SYSTEM,""",
     """({event_category}SYSTEM)""",
     """SYSTEM,({event_subtype}[^,]+),""",
     """SYSTEM,([^,]*,){9}({severity}[^,]+),""",

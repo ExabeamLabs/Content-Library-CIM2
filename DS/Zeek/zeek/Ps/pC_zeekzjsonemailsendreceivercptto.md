@@ -11,7 +11,7 @@ Name = zeek-z-json-email-send-receive-rcptto
 ]
   Fields = ${ZeekParsersTemplates.json-bro-activity.Fields}[
     """"helo":\s*"({helo}[^"]+)""",
-    """"mailfrom":\s*"({sender}[^"@]+@({exter_domain_sender}[^"@]+))"""
+    """"mailfrom":\s*"({src_email_address}[^"@]+@({exter_domain_sender}[^"@]+))"""
     """rcptto":\[({email_recipients}"({dest_email_address}[^",@]+@({exter_domain_recipient}[^"@,]+))".*?)\]""",
     """"subject":\s*"({email_subject}[^"]+)""",
     """"user_agent":\s*"({user_agent}[^"]+)"""

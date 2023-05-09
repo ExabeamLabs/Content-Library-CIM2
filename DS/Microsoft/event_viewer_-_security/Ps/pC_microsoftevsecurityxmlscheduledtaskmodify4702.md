@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702
   Conditions = [ """4702""", """A scheduled task was updated""" ]
   Fields = [
     """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
-    """<TimeCreated SystemTime='({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
     """({event_code}4702)""",
     """({event_name}A scheduled task was updated)""",
     """"Computer":"({host}[^"]+)"""",

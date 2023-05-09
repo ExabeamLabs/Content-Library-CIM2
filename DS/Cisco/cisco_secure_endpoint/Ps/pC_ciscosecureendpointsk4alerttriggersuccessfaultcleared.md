@@ -7,7 +7,8 @@ Name = cisco-secureendpoint-sk4-alert-trigger-success-faultcleared
   Conditions = [ """"event_type"""", """"Fault Cleared""", """"trajectory":""", """"timestamp_nanoseconds":""" ]
   Fields = ${DLLMSCiscoParsersTemplates.s-cisco-amp-alert.Fields} [
         """timestamp":\s*({time}\d{10})""",
-    """"fault_event_title":"({event_description}[^"]+)""""
+    """"fault_event_title":"({event_description}[^"]+)"""",
+    """"event_type":"({alert_name}[^"]+)""""
   ] 
 
 s-cisco-amp-alert = {

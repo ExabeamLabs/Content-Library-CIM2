@@ -12,7 +12,7 @@ Name = citrix-cgateway-cef-app-activity-appactivity
       """\Wmsg=(|\s*({additional_info}.+?))(\s+w+=|\s*$)""",
       """\Wdvc=({host}[\w.\-]+)""",
       """\Wrt=({time}\d{13})""",
-      """(||\s)src=({src_ip}[\d.:a-fA-F]+)(\s+w+=|\s*$)""",
+      """(||\s)src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?(\s+w+=|\s*$)""",
       """\sspt=({src_port}\d+)""",
       """\smethod=({method}[^\s]+)""",
       """\srequest=({url}(({protocol}[^:\s]+):\/+)?[^\s:\/]+(:({dest_port}\d+))?\/(({uri_path}[^?\s]+))?({uri_query}\?[^\s]+)?)""",

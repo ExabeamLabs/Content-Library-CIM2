@@ -30,14 +30,17 @@ Name = fortinet-utm-kv-http-session-webfilter
     """\Wdstport=({dest_port}\d+)(\s|")""",
     """\Wsentbyte=({bytes_out}\d+)(\s|")""",
     """\Wrcvdbyte=({bytes_in}\d+)(\s|")""",
-    """\Wdevid="*({host_id}[^"\s]+)"*(\s|")""",
+    """\Wdevid="*({asset_id}[^"\s]+)"*(\s|")""",
     """\Wreferralurl="*(\.+|({referrer}[^"\s]+))""",
     """\Wgroup="*({user_group_name}[^=]+?)["\s]*(\w+=|$)""",
     """\Wmsg="*({additional_info}[^=]+?)["\s]*(\w+=|$)""",
-    """\Waction="*blocked"*[^=]+?\Wmsg="*({failure_reason}[^=]+?)["\s]*(\w+=|$)""",
-    """\Wmsg="*({failure_reason}[^=]+?)["\s]*(\w+=|$)[^=]+?\Waction="*blocked"*""",
+    """\Waction="*blocked"*[^=]+?\Wmsg="*({result_reason}[^=]+?)["\s]*(\w+=|$)""",
+    """\Wmsg="*({result_reason}[^=]+?)["\s]*(\w+=|$)[^=]+?\Waction="*blocked"*""",
     """\Wurl="({url}[^"]+)"""",
-    """policyid=({policy_id}\d+)"""
+    """policyid=({policy_id}\d+)""",
+    """cat=({http_response_code}\d+)""",
+    """\surl="*.+?({top_domain}[^\/\.\s]*(?i)(\.(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za))+)[\\\/\s]""",
+    """method="({method}[^"]+)""""
   ]
 
 
