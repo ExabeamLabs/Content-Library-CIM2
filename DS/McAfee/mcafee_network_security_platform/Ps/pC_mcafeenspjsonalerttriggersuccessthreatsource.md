@@ -8,7 +8,7 @@ Name = mcafee-nsp-json-alert-trigger-success-threatsource
   Conditions = ["""threat_source_ip_address""" , """McAfee Host Intrusion Prevention"""]
   Fields = [
     """"event_generated_time":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
-    """"action_taken":"({result}[^"]+)"""", 
+    """"action_taken":"({action}[^"]+)"""", 
     """"detecting_product_ipv4_address":"({host}[^"]+)"""",
     """"detecting_product_host_name":"({host}[^"]+)"""",
     """"threat_source_ip_address":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",

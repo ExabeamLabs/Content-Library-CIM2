@@ -20,7 +20,6 @@ Name = microsoft-evsecurity-kv-share-access-success-5143
     """Share Information:\s+Object Type:\s+({file_type}[^:]+?)\s+Share Name:""",
     """Share Name:\s+[\\\*]*({share_name}[^\s]+)\s+Share Path:""",
     """Share Path:\s*[\\\?]*({share_path}(({d_parent}[^@]+?)\\)?(|({d_name}[^\\]+?)))\s*Old Remark:"""
-    """Source Port(=|:)\s*({src_port}\d+)"""
   ]
 
 

@@ -15,7 +15,7 @@ Name = cisco-asa-str-vpn-logout-722023
     """%ASA-({priority}\d+)-({event_code}\d+)"""
     """\sGroup\s*<({group_name}.*?)>"""
     """User <(({user_ou}\w+=[^<]+)|(({user}[^>@]+)(@({domain}[^>@]+))?))>"""
-    """\sIP\s*<(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({src_port}\d+))?|([A-Fa-f0-9%.]+:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+))>\s*({protocol}\w+)\s({event_name}SVC connection terminated)\s"""
+    """\sIP\s*<(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]+:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+))>\s*({protocol}\w+)\s({event_name}SVC connection terminated)\s"""
   ]
 
 

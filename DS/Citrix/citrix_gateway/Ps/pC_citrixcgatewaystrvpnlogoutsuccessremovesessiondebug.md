@@ -13,7 +13,7 @@ Name = citrix-cgateway-str-vpn-logout-success-removesessiondebug
       """\sUser\s+({user}[^\-\s]+)\s""",
       """\sClient_ip\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\sVserver_ip\s+({dest_translated_ip}[a-fA-F\d.:]+)""",
-      """\sErrmsg\s+"({result_reason}[^"]+)""",
+      """\sErrmsg\s+"({reason}[^"]+)""",
   ]
 
 

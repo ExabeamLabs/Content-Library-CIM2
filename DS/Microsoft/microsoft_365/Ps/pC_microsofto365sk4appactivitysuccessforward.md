@@ -17,7 +17,7 @@ Name = microsoft-o365-sk4-app-activity-success-forward
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s*(\w+=|$)""",
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)""",
     """flexString1=({event_name}[^=]+?)\s+\w+=""",
-    """Forward.+?Recipients\\?":\[?\\?"({dest_email_address}[^\@"]+@({dest_domain}[^",;\\]+))"""
+    """Forward.+?Recipients\\?":\[?\\?"({dest_email_address}[^\@]+@({dest_domain}[^",;\\]+))"""
   ]
   DupFields = ["domain->email_domain"]
 

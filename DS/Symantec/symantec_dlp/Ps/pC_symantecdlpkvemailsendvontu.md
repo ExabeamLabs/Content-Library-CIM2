@@ -16,7 +16,7 @@ Fields = [
   """\|policy=({alert_name}[^|]+)\|"""
   """\|rules=({alert_type}[^|]+)\|"""
   """\|(src|suser)=(?:({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|((?!\w+[:@]+))({src_host}[^|\s]+))"""
-  """\|(src|suser)=(?=[^\s@]+@(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))({src_email_address}[^|\s]+)"""
+  """\|(src|suser)=(?=[^\s@]+@(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))({sender}[^|\s]+)"""
   """\|(src|suser)=({user}[^@|]+)@[^|]+"""
   """\|subject=(?:N\/A|({email_subject}[^|]+))"""
   """\|subject=(?=\s*FTP\s*)\s*({protocol}FTP)\s*({file_name}[^|]+)"""

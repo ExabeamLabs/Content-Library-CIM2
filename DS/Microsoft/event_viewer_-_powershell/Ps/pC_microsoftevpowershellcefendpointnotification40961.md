@@ -57,7 +57,7 @@ microsoft-windows-cef-powershell = {
 # msg is removed
         """\sout=({bytes_out}\d+)""",
         """\sproto=({protocol}.+?)\s*\w+=""",
-        """\sreason=({result_reason}.+?)\s*\w+=""",
+        """\sreason=({failure_reason}.+?)\s*\w+=""",
         """\srequest=({request}.+?)\s*\w+=""",
         """\srt=({time}\d{13})\s*\w+=""",
         """\sshost=({src_host}.+?)\s*\w+=""",

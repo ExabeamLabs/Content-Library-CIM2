@@ -8,7 +8,7 @@ Name = questsoftware-caad-leef-ds-object-activity-changeauditor
   Conditions = [ """LEEF:""", """|Quest Software""" , """|Change Auditor|""" , """action=""" ]
   Fields = [
     """devTime=({time}\w+\s+\d+\s+\d\d\d\d\s+\d\d:\d\d:\d\d)""",
-    """ipAddress=({host_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """ipAddress=({host_ip}[A-Fa-f:\d.]+)""",
     """computer=({host}[\w\-.]+)""",
     """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """dstPort=({dest_port}\d+)""",

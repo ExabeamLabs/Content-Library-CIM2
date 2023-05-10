@@ -4,7 +4,7 @@
 Name = hp-arubamm-sk4-app-notification-appnotification-1
   ParserVersion = v1.0.0
   Product = Aruba Mobility Master
-  Conditions = [ """CEF:""", """"ident":""", """"extradata":""", """"msgid":""" ]
+  Conditions = [ """CEF:""", """"ident":""", """"extradata":""", """"ttam_file":""", """"ttam_reporter":"""]
 
 aruba-system-info-1 = {
     Vendor = HP
@@ -18,7 +18,7 @@ aruba-system-info-1 = {
 # bssid_mac is removed
       """\|ids\|\s+({event_name}[^:]+):""",
       """({event_name}User Add message received for a client not allowed!|Authentication server request Timeout|CDR started for client)""",
-      """\s+reason\\*=({result_reason}Station resetting role)""",
+      """\s+reason\\*=({failure_reason}Station resetting role)""",
       """({channel}CHANNEL \d+)""",
 # access_point is removed
 # access_point is removed

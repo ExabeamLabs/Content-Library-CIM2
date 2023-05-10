@@ -28,7 +28,6 @@ json-microsoft-app-activity = {
     """\WsourceServiceName =({app}[^=]+?)\s+(\w+=|$)"""
     """\WdestinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)"""
     """\Wmsg=({additional_info}.*?)\s+(\w+=|$)""",
-    """"name":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]""""
   ]
   DupFields = [ "object->resource" 
 }

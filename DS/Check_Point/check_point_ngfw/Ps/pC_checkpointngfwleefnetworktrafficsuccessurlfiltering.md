@@ -38,8 +38,6 @@ leef-checkpoint-firewall = {
     """\WusrName =({full_name}.+?)\s*\(\s*({user}.+?)\s*\)""",
     """LEEF:([^\|]*\|){2}({product_name}[^\|]+)\|[^\|]*\|({action}[^\|]+)""",
     """\Wrule_action=({action}.+?)(\s+\w+=|\s*$)""",
-    """\WdestinationDnsDomain=(?:|({url}.+?))(\s+\w+=|\s*$)""",
-    """\Wappi_name=({web_domain}.+?)(\s+\w+=|\s*$)""",
   
 }
 ```

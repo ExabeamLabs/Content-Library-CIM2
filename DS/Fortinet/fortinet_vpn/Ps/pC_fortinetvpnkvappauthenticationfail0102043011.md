@@ -5,10 +5,6 @@ Name = fortinet-vpn-kv-app-authentication-fail-0102043011
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd 'time='HH:mm:ss"
   Conditions = [ """ logid="0102043011" """ ]
-  Fields = ${DLFortinetParsersTemplates.fortinet-ssl-vpn-end.Fields} [
-    """\Wstatus="*({failure_code}[^\s"]+)"""",
-    """\slogdesc="({failure_reason}[^"]+)""",
-  ]
 
 fortinet-ssl-vpn-end = {
   Vendor = Fortinet

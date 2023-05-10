@@ -1,6 +1,6 @@
 Vendor: VMware
 ==============
-Product: VMware Identity Manager
+Product: VMWare Identity Manager
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-endpoint-4768
     """TicketOptions:({ticket_options}[^,]+),""",
     """TicketEncryptionType:({ticket_encryption_type}[^,]+),""",
     """Status:({result_code}[^,]+),""",
-    """IpAddress:(::ffff:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,""",
+    """IpAddress:(::ffff:)?({dest_ip}[a-fA-F\d:.]+),""",
     """({result}(Success|Failure) Audit)"""
   ]
   DupFields = [

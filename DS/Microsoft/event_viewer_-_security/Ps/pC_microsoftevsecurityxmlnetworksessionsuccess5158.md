@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-xml-network-session-success-5158
     """<Data Name\\*='DestAddress'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?</Data>""",
     """<Data Name\\*='DestPort'>({dest_port}\d+)</Data>""",
     """<Data Name\\*='Protocol'>({ms_protocol_num}\d+)</Data>""",
-    """<Data Name ='Protocol'>({protocol}[^<]+)<"""
     """<Data Name\\*='LayerName'>\s*({layer_name}[^<]+?)\s*</Data>"""
 ]
   DupFields = [ "host->dest_host" ]

@@ -11,10 +11,10 @@ Name = cisco-ie-cef-email-bytesfrom
       """ahost=({host}[\w\-\.]+)\s*""",
       """\srt=({time}\d{13})""",
       """MID ({alert_id}\d+)""",
-      """({bytes}\d+) bytes from <({src_email_address}[^@>]+@[^>]+)>""",
+      """({bytes}\d+) bytes from <({sender}[^@>]+@[^>]+)>""",
       """\sduser=({dest_email_address}[^\@]+\@[^\s]+)\s*""",
       """cs6=({email_subject}[^=]+)\s+""",
-      """\sagt=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*"""    
+      """\sagt=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*"""    
     ]
     DupFields = [ "alert_id->message_id" ]
   

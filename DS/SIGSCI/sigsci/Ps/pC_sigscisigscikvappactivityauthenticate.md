@@ -19,7 +19,7 @@ Name = sigsci-sigsci-kv-app-activity-authenticate
 # interface_guid is removed
     """Local MAC Address:\s*({src_mac}[^\s]+)""",
 # peer_mac_address is removed
-    """Additional Information:\s*Reason Code:\s*({result_reason}.+?)\s*Error Code:"""
+    """Additional Information:\s*Reason Code:\s*({failure_reason}.+?)\s*Error Code:"""
   ]
   ParserVersion = "v1.0.0"
 

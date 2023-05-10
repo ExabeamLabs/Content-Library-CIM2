@@ -18,8 +18,7 @@ Name = unix-unix-kv-process-create-success-command
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d\d:\d\d) (::ffff:)?({host}[\w.\-]+)\s""",
     """; USER=({account}[^;]+?)\s*;""",
     """; COMMAND=({process_command_line}[^;]+?)\s*(;|$|")""",
-    """; COMMAND=({process_path}({process_dir}[^\s]+[\\\/]+)?({process_name}[^";\\\/\s]+))[\s"](?:|;|$)""",
-    """COMMAND=[^;]+;\s*({dest_process_path}({dest_process_dir}[^"]+)\/)?({dest_process_name}[^"]+)("|'|$)"""
+    """; COMMAND=({process_path}({process_dir}[^\s]+[\\\/]+)?({process_name}[^";\\\/\s]+))[\s"](?:|;|$)"""
   ]
   DupFields = [ "host->dest_host" ]
 

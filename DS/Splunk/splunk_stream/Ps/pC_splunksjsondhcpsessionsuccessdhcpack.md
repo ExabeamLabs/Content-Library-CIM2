@@ -24,7 +24,7 @@ Name = splunk-s-json-dhcp-session-success-dhcpack
     """"subnetmask":"({router_subnet}[^"]+)"""",
     """"transaction_id":({trans_id}[^,]+),""",
     """({protocol}dhcp)""",
-    """"yiaddr":"({assigned_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"yiaddr":"({assigned_ip}[^"]+)"""",
     """"ip_lease_time":({ip_lease_time}\d+),""",
     """"host_name":"({host}[^"]+)"""",
   ]

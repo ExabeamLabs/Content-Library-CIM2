@@ -19,7 +19,6 @@ Name = microsoft-evsecurity-kv-share-access-success-5142
     """Share Name:\s*[\\\*]*({share_name}[^:]+?)\s*Share Path:""",
     """Share Path:\s*(\s|({share_path}[^"]+?))\s*$""",
     """Keywords=({result}[^:=]+?)\s*\w+[:=]"""
-    """Source Port(=|:)\s*({src_port}\d+)"""
   ]
   DupFields = [ "host->dest_host" ]
 

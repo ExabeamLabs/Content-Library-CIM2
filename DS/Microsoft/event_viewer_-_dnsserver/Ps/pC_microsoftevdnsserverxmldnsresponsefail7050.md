@@ -12,11 +12,11 @@ Name = microsoft-evdnsserver-xml-dns-response-fail-7050
      """>({event_code}[^<>]+)</EventID>""",
      """EventData Name ='({event_name}[^>']+)""",
      """<Computer>({host}[^<>]+)</Computer>""",
-     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
      """<EventRecordID>({event_id}[^<]+)""",
-     """<Security UserID\\*='({user_sid}[^']+)""",
-     """Guid\\*='\{({process_guid}[^}']+?)\}'""",
-     """ProcessID\\*='({process_id}\d+)""",
+     """<Security UserID='({user_sid}[^']+)""",
+     """Guid='\{({process_guid}[^}']+?)\}'""",
+     """ProcessID='({process_id}\d+)""",
   ]
 
 

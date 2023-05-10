@@ -4,7 +4,7 @@
 Name = pan-ngfw-leef-network-traffic-success-allow
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = "yyyy/MM/dd HH:mm:ss"
+TimeFormat = "MMM dd yyyy HH:mm:ss"
 Conditions = [
   """LEEF:"""
   """|Palo Alto Networks|PAN-OS Syslog Integration|"""
@@ -12,8 +12,8 @@ Conditions = [
 ]
 Fields = [
   """\s({host}[\w\.-]+)\s+LEEF:"""
-  """\|devTime=({time}\w{3}\s+\d+ \d\d\d\d \d\d:\d\d:\d\d)"""
   """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)"""
+  """\|devTime=({time}\w{3}\s+\d+ \d\d\d\d \d\d:\d\d:\d\d)"""
   """\|Type=({event_category}\w+)\|"""
   """\|Subtype=({subtype}\w+)\|"""
   """\|src=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\|"""

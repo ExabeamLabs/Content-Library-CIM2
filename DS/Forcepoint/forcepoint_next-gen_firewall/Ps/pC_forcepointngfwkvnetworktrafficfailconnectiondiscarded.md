@@ -37,7 +37,7 @@ forcepoint-network-connection-template = {
     """\Wrt=({time}\d{13})""",
     """src=\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""".
     """dhost=\s*({dest_host}.+?)(\s\w+=)""",
-    """dst=\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?(\s\w+=)""",
+    """dst=\s*({dest_ip}[A-Fa-f\d.:]+)(\s\w+=)""",
     """amac=\s*({src_mac}.+?)(\s\w+=)""",
     """dvc=\s*({src_host}.+?)(\s\w+=)""",
     """app=\s*({protocol}.+?)(\s\w+=)""",
@@ -68,7 +68,7 @@ aruba-system-info-1 = {
 # bssid_mac is removed
       """\|ids\|\s+({event_name}[^:]+):""",
       """({event_name}User Add message received for a client not allowed!|Authentication server request Timeout|CDR started for client)""",
-      """\s+reason\\*=({result_reason}Station resetting role)""",
+      """\s+reason\\*=({failure_reason}Station resetting role)""",
       """({channel}CHANNEL \d+)""",
 # access_point is removed
 # access_point is removed

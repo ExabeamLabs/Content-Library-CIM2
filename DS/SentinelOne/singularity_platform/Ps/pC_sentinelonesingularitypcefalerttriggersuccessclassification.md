@@ -20,7 +20,6 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"fileExtensionType":(\s*"None|null|\s*"+(Unknown|({file_type}[^"]+))")""",
      """"agentLastLoggedInUserName":"({last_loggedin_user}[^"]+)"""",
      """"processUser":"(({process_domain}[^\\"]+)\\{1,200})?({process_user}[^"]+)",""",
-     """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[^=\s]+?)(\s+\w+=|\s*$)""",
      """username":"(({domain}[^\\"]+)\\{1,200})?({user}[^"]+)",""",
      """"rank":({alert_severity}\d+)""",
      """"mitigationReport":({additional_info}\{.{1,400}?\}\}),""",
@@ -35,8 +34,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"agentOsType":"({os}[^"]+)"""",
      """"incidentStatus":"({incident_status}[^"]+)"""",
      """"analystVerdict":"({verdict}[^"]+)"""",
-     """"groupName":"({group_name}[^"]+)"""",
-     """msg=.*?Alert Detected by\s*\[({alert_source}[^\]]+)\]"""
+     """"groupName":"({group_name}[^"]+)""""
   ]
    SOAR {
     IncidentType = "malware"

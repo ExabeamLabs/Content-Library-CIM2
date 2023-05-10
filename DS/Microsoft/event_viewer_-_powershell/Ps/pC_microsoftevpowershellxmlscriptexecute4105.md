@@ -4,7 +4,7 @@
 Name = microsoft-evpowershell-xml-script-execute-4105
   Product = Event Viewer - PowerShell
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>4105</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """<EventID>4105</EventID>""", """<TimeCreated SystemTime=""" ]
 
 s-xml-events = {
   Vendor = Microsoft
@@ -22,7 +22,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

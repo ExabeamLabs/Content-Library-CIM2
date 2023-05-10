@@ -6,7 +6,7 @@ Name = microsoft-azuremon-sk4-network-session-azurefirewall
   Conditions = [ """destinationServiceName =Azure""", """"Category":"AzureFirewallNetworkRule"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"AZUREFIREWALLS"""" ]
   Fields = ${LMSMSParsersTemplates.azure-ad-activity-1.Fields}[
     """"msg_s":"({additional_info}[^"]+?)\s*"""",
-    """request from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+) to ({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)"""
+    """request from ({src_ip}[A-Fa-f:\d.]+):({src_port}\d+) to ({dest_ip}[A-Fa-f:\d.]+):({dest_port}\d+)"""
    ]
 
 azure-ad-activity-1 = {

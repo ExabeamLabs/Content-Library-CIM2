@@ -21,7 +21,7 @@ defender-atp-events = {
       """"AccountDomain":"({domain}[^"]+)"""",
       """"InitiatingProcessFileName":"({process_name}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",
-      """"ActionType":"({result}[^"]+)"""",
+      """"ActionType":"({action}[^"]+)"""",
       """"RemoteIP":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """"Protocol":"({protocol}[^"]+)"""",
       """LogonId":(null|({login_id}[^:]+?)),""",

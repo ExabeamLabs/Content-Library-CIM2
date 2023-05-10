@@ -4,7 +4,7 @@
 Name = skysea-cv-csv-file-success-fileactivity
   ParserVersion = v1.0.0
   Vendor = SkySea
-  Product = SkySea ClientView
+  Product = Skysea ClientView
   TimeFormat = "yyyy/MM/dd HH:mm:ss"
   Conditions = [ ",ファイルアクセス," ]
   Fields = [

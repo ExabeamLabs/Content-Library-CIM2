@@ -31,7 +31,7 @@ Name = symantec-dlp-kv-alert-trigger-success-blocked
     """\WSubject:\s+({email_subject}[^,]+?)(,\s*\w+:|\s*$)""",
     """\WAttachment_Filename:\s+({email_attachments}[^,]+?)(,\s*\w+:|\s*$)"""
   ]
-  DupFields = ["email_address->src_email_address", "target->email_recipients"]
+  DupFields = ["email_address->sender", "target->email_recipients"]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "protocol->dlpProtocol", "src_host->dlpDeviceName", "src_file_name->dlpFileName", "bytes->dlpFileSize", "action->dlpActionTaken"]

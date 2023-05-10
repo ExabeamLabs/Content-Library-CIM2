@@ -3,7 +3,7 @@
 {
 Name = rsa-netwitness-cef-app-login-success-httpsrequest
   Vendor = RSA
-  Product = RSA NetWitness Platform
+  Product = RSA Netwitness Platform
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """custom-condition-cont-10052""", """DATA_ACCESS|HttpRequest"""]

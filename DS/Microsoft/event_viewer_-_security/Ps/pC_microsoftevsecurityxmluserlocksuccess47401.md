@@ -11,20 +11,20 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was locked out)"""
-"""SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+"""SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """<Computer>({host}[^<]+)</Computer>"""
 """<EventID>({event_code}[^<]+)</EventID>"""
 """Subject:[^=]+?Account Name:\s*([\\t]*)({src_user}[^:]+?)\s*([\\t]*)Account Domain:\s*(?=\w|([\\t]*))({src_domain}[^:]+?)\s*([\\t]*)Logon ID:\s*({login_id}[^:]+?)\s*Account That Was"""
 """Account That Was Locked Out:\s*([\\t]*)Security ID:\s*([\\t]*)({user_sid}[^:]+?)\s*([\\t]*)Account Name:\s*([\\t]*)({user}[^:]+?)\s*Additional"""
-"""<Data Name\\*=('|")TargetUserName('|")>({user}[^<]+)<"""
-"""<Data Name\\*=('|")TargetSid('|")>({user_sid}[^<]+)<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}[^<]+)<"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)<"""
-"""<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
-"""<Data Name\\*=('|")TargetDomainName('|")>(?:\\+)?({src_host}[^<=\s]+)(<|\s)"""
+"""<Data Name ='TargetUserName'>({user}[^<]+)<"""
+"""<Data Name ='TargetSid'>({user_sid}[^<]+)<"""
+"""<Data Name ='SubjectUserName'>({src_user}[^<]+)<"""
+"""<Data Name ='SubjectDomainName'>({src_domain}[^<]+)<"""
+"""<Data Name ='SubjectLogonId'>({login_id}[^<]+)<"""
+"""<Data Name ='TargetDomainName'>(?:\\+)?({src_host}[^<=\s]+)(<|\s)"""
 ]
 DupFields = [
-"host->dest_host","src_domain->domain","user->dest_user","src_host->domain"
+"host->dest_host","src_domain->domain"
 ]
 ParserVersion = "v1.0.0"
 

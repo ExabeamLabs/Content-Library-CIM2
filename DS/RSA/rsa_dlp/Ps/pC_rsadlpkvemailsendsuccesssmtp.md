@@ -17,7 +17,7 @@ Fields = [
   """Severity=({alert_severity}[^\s]+)"""
   """User=(({domain}[^\\]+)\\)?({user}.+?)\s+\w+="""
   """Policy=({alert_type}.+?)\s+\w+="""
-  """userEmail=({src_email_address}[^\s]+)"""
+  """userEmail=({sender}[^\s]+)"""
   """sessionEmailMailto=({email_recipients}.+?)\s+\w+="""
   """sessionEmailMailto=({external_address}[^\s\^]+)"""
   """sessionEmailSubject=({email_subject}.+?)\s+\w+="""

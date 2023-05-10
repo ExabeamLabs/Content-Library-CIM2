@@ -18,7 +18,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"machine_domain":"({domain}[^"]+)""",
       """"filename":"({process_name}[^"]+)""",
       """"hostname":"({src_host}[^"]+)""",
-      """"show_in_ui":.*?"status":"({result}[^"]+)""",
+      """"show_in_ui":.*?"status":"({action}[^"]+)""",
       """"cmdline":"({additional_info}.+?)\s*","""",
       """"tactic":"({category}[^"]+)""",
       """"((?i)SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,""",

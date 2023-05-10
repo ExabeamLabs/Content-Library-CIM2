@@ -15,15 +15,14 @@ Name = microsoft-evsecurity-kv-endpoint-notification-trustedlogonprocessregister
       """(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[^\/\s]+)))\/Microsoft-Windows-Security-Auditing""",
       """__li_source_path="(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[^"]+)))"""",
       """Computer(Name)?["\s]*(:|=)\s*"?(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[^$]+?)))("|\s)""",
-      """Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*(?=\w)({user}[^:]+?)\s*Account Domain:\s*(?=\w)({domain}[^:]+?)\s*Logon ID""",
-      """Logon ID:\s*({login_id}[^:]+?)\s*Logon Process Name:\s*({process_name}[^,\s"]+)""",
+      """Security ID:\s+({user_sid}.+?)\s+Account Name:\s+(?=\w)({user}.+?)\s+Account Domain:\s+(?=\w)({domain}.+?)\s+Logon ID""",
+      """Logon ID:\s+({login_id}.+?)\s+Logon Process Name:\s+({process_name}[^,\s]+)""",
       """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))""",
       """Subject:Security ID=({user_sid}\S+)""",
       """Subject:Account Name =({user}[^\s]+)\sSubject:""",
       """Subject:Account Domain=({domain}[^\s]+)\sSubject:""",
       """Subject:Logon ID=({login_id}[^\s]+)\s""",
       """Logon Process Name =({process_name}\S+)"""
-      """"Message":"({additional_info}[^:]+?)\s*\w+:"""
     ]
 
 

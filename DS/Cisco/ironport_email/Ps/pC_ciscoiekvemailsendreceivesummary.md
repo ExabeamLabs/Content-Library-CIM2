@@ -11,7 +11,7 @@ Name = cisco-ie-kv-email-send-receive-summary
     """\srt=({time}\d+)""",
     """({time}\w+ \d+ \d\d:\d\d:\d\d) mail_logs:""",
     """direction=({direction}[^,]+)""",
-    """From:\s*<({src_email_address}[^\s@>]+@[^\s@>]+)""",
+    """From:\s*<({sender}[^\s@>]+@[^\s@>]+)""",
     """To:\s*<({email_recipients}({dest_email_address}[^\s@>;,]+@[^\s@>;,]+)[^>]*)""",
     """(?i)(Subject)[\s\\=]*"({email_subject}[^"]+)""",
     """({time}\d+\/\d+\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+[\+\-]\d+)""",

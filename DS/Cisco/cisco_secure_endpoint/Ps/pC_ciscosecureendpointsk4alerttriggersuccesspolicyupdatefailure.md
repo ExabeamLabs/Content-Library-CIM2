@@ -6,8 +6,7 @@ Name = cisco-secureendpoint-sk4-alert-trigger-success-policyupdatefailure
   Product = Cisco Secure Endpoint
   Conditions = [ """"event_type"""", """"Policy Update Failure"""", """"trajectory":""", """"timestamp_nanoseconds":""" ]
   Fields=${CiscoParsersTemplates.s-cisco-amp-alert.Fields}[
-    """file_name":"({process_name}[^\.]+\.exe)""",
-    """"event_type":"({alert_name}[^"]+)""""
+    """file_name":"({process_name}[^\.]+\.exe)"""
   ]
 
 s-cisco-amp-alert = {

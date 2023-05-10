@@ -30,7 +30,7 @@ Fields = [
   """\|(Username|src)=WinNT:\/+({domain}[^\\\/\|]+)(\\|\/)+({user}[^\s\|]+)"""
   """\|endpointhostname=(N\/A|({src_host}[\w\-.]+))"""
   """\|endpointipaddress=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\|sender=(?=[\w.]+@[\w.])({src_email_address}[^\|]+)"""
+  """\|sender=(?=[\w.]+@[\w.])({sender}[^\|]+)"""
   """\|sender=(?=[\w.]+@[\w.])({user}[^\|]+)"""
   """\|EmailAddress=({email_address}[^\|]+?)\s*(\||$)"""
   """\|recipients=({target}[^\|]+?)\s*(\||$)"""

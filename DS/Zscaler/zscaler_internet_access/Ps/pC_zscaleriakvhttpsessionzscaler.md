@@ -16,7 +16,7 @@ Name = zscaler-ia-kv-http-session-zscaler
   """locationname=({location}[^\=]+?)\s+\w+=""",
   """client_src_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   """server_dst_ip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-  """tunnel_src_ip=({tunnel_src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+  """tunnel_src_ip=({tunnel_src_ip}[a-fA-F:\d.]+)""",
   """action=({action}[^=]+?)\s""",
   """service=({service_name}[^=]+?)\s""",
   """application=({app}[^=]+?)\s""",

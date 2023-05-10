@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-user-switch-success-4648-4
     """\sLogonGuid:({user_login_guid}[^,]+),""",
     """ProcessId:({process_id}[^,]+),""",
     """ProcessName:({process_path}({process_dir}([^,]+)[\\\/])?({process_name}[^,\\]+?)),\s+\w+:""",
-    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
+    """IpAddress:(::ffff:)?({src_ip}[a-fA-F\d:.]+),""",
     """IpPort:({src_port}\d+),"""
   ]
 

@@ -10,7 +10,7 @@ Fields = ${SymantecParsersTemplates.symantec-critical-sys-protection.Fields} [
   """({old_attribute}Old Entry: [^\s]+)""",
   """({new_attribute}New Entry: [^"]+)"""
 ]
-DupFields = ${SymantecParsersTemplates.symantec-critical-sys-protection.DupFields}["object->group_name"]
+DupFields = ["object->group_name"]
 
 symantec-critical-sys-protection = {
     Vendor = Symantec

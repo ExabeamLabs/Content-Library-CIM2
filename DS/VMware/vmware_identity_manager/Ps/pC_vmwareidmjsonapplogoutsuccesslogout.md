@@ -4,7 +4,7 @@
 Name = vmware-idm-json-app-logout-success-logout
   ParserVersion = "v1.0.0"
   Vendor = VMware
-  Product = VMware Identity Manager
+  Product = VMWare Identity Manager
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS z"
   Conditions = [ """"objectType""", """"vidm""", """"organizationId""", """\"LOGOUT\""""]
   Fields = [

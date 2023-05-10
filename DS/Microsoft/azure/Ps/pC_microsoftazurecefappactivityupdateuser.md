@@ -26,7 +26,7 @@ Fields = [
 """\"SourceAccountUpnName\",\"value\":\"({email_address}[^@\"]+@({email_domain}[^\"]+))\""""
 """\"SourceComputerDnsName\",\"value\":\"({src_host}[^\"]+)\""""
 """\"DestinationComputerDnsName\",\"value\":\"({dest_host}[^\"]+)\""""
-"""\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
+"""\"DestinationIpAddress\",\"value\":\"({dest_ip}[a-fA-F\d.:]+)\""""
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
 
 }

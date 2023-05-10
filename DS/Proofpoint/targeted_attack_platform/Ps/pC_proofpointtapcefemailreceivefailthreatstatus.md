@@ -15,16 +15,15 @@ Name = proofpoint-tap-cef-email-receive-fail-threatstatus
     """"threat":\s*"([A-Fa-f\d]{64}|[^@]+@[^\.]+\.[^"]+|({malware_url}[^"]+))""",
     """threat":\s*"({malware_url}[^",]+?)\s*(,|")"""
     """"threat(Url|URL)":\s*"<?({threat_url}[^"]+?)"""",
-    """(fromAddress|sender)":\s*\[?"({src_email_address}[^"\s,@]+@[^"\s,@]+\.[^"\s,@]+?)([\\]+)?([\\]+)?"\]?""",
+    """fromAddress":\s*\[?"({sender}[^"\s,@]+@[^"\s,@]+\.[^"\s,@]+?)([\\]+)?([\\]+)?"\]?""",
     """toAddresses":\s*\[({email_recipients}"({dest_email_address}[^"\s@,;]+@[^"\s,;]+\.[^"\s,;]+)[^\]]*?)\]""",
     """"classification":\s*"({alert_name}[^"]+)""",
     """:\sCategory\s\[[^\]]+\]\s,\sName\s\[({alert_name}[^\]]+)\]""",
-    """"fromArray":"({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)"""",
+    """"fromArray":"({action}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)"""",
     """"threatStatus":"({status}[^"]+)""",
-    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+\.({file_ext}[^"]+))[^"]*?)",\s*"\w+":""",
-    """"recipient":\["({dest_email_address}[^<]+)"],"""
+    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+\.({file_ext}[^"]+))[^"]*?)",\s*"\w+":"""
   ]
-  DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_type->alert_name","email_attachment->file_name","src_email_address->external_address","dest_email_address->email_address" ]
+  DupFields = [ "alert_type->alert_name","email_attachment->file_name","sender->external_address","dest_email_address->email_address" ]
 
 s-proofpoint-email-in-1 = {
   Vendor = Proofpoint
@@ -41,9 +40,9 @@ s-proofpoint-email-in-1 = {
     """"threatsInfoMap":\s*\[\{"[^}\]]+?"classification":\s*"({alert_type}[^"]+)""",
     """"threatsInfoMap":\s*\[\{"[^}\]]+?"threatType":\s*"({alert_type}[^"]+)""",
     """subject":\s*"\s*(\{\\|({email_subject}[^",]+?))\s*(,|")""",
-    """suser=({src_email_address}[^"\s,@]+@[^"\s,@]+)""",
+    """suser=({sender}[^"\s,@]+@[^"\s,@]+)""",
     """duser=({dest_email_address}[^"\s,@]+@[^"\s,@]+)""",
-    """sender":\s*"({src_email_address}[^"\s,@]+@[^"\s,@]+)""",
+    """sender":\s*"({sender}[^"\s,@]+@[^"\s,@]+)""",
     """recipient":\s*\[?"({email_recipients}[^",;]+@[^",;]+[^"]*)""",
     """recipient":\s*\[?"({dest_email_address}[^",;]+@[^",;]+)""",
     """GUID":\s*"({alert_id}[^",]+?)\s*(,|")""",
@@ -52,8 +51,8 @@ s-proofpoint-email-in-1 = {
     """\scs1=Policy \[id: [^\]]*? ; name: ({alert_name}[^\]]+?) ; category: ({category}[^\]]+?)]""",
     """threat":\s*"\s*([A-Fa-f\d]{64}|[^@,]+@[^\.]+\.[^",]+|({malware_url}[^",]+?))\s*(,|")""",
     """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)",\s*"\w+":""",
-    ""","fromArray":"({result}[^\]]+?)","\w+":""",
-    """eventType":\s*"({result}[^",]+?)\s*(,|")""",
+    ""","fromArray":"({action}[^\]]+?)","\w+":""",
+    """eventType":\s*"({action}[^",]+?)\s*(,|")""",
     """"messageID":\s*"<?({message_id}[^>"]+)""",
     """src-account-name":"({account_name}[^"]+)""",
     """src-account-name":"({account_name}[^"]+)""",

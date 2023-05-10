@@ -3,7 +3,7 @@
 {
 Name = ibm-sbi-csv-app-notification-success-nologinfailures
   Vendor = IBM
-  Product = Sterling B2B Integrator
+  Product = sterling b2b integrator
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Conditions = [ """SecurityManager""", """No login failures for the user""",  """sterling"""]
   Fields = [

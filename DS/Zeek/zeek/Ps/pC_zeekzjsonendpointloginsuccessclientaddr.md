@@ -7,7 +7,7 @@ Name = zeek-z-json-endpoint-login-success-clientaddr
   Conditions = [ """client_addr":""", """"duration":""", """"msg_types":"""]
   Fields = ${ZeekParsersTemplates.json-bro-activity.Fields}[
     """"host_name":"({host}[\w.-]+)""",
-    """"client_addr":"({assigned_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """"client_addr":"({assigned_ip}\d+.\d+.\d+.\d+)""",
     """"domain":"({domain}[^"]+)""",
     """"duration":({duration}[^\}]+)"""
   ]

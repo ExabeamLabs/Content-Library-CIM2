@@ -8,7 +8,7 @@ Name = siteminder-symantecsm-kv-http-request-success-azaccept
   Conditions = [ """AzAccept """, """,o=""" ]
 
 siteminder-web-activity = {
-  Product = Symantec SiteMinder
+  Product = Symantec Siteminder
   Vendor = SiteMinder
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
   Fields = [

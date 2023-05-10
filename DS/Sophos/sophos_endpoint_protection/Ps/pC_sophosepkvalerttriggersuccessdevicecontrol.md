@@ -15,7 +15,7 @@ Fields = [
   """EventID=({alert_id}[\d]+);"""
   """EventTime=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
   """EventType=({alert_name}[^;]+);"""
-  """Action=({result}[^;]+);"""
+  """Action=({action}[^;]+);"""
   """UserName =([^\\]+\\+)?({user}[^;]+);"""
   """ReportingName =({additional_info}.+?);"""
   """({additional_info}SubType=[^;]+)"""
@@ -24,7 +24,7 @@ Fields = [
   """ComputerDomain=({domain}[^;]+)"""
 ]
 DupFields = [
-  "result->alert_severity"
+  "action->alert_severity"
 ]
 ParserVersion = "v1.0.0"
 

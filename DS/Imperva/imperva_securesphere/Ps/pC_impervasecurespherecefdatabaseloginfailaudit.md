@@ -26,7 +26,7 @@ Name = imperva-securesphere-cef-database-login-fail-audit
     """\Wcs11="*(({domain}[^\\\s",]+)\\+)?({user}[^\\\s",]+)"*\s*(\w+=|$)""",
     """\Wcs13=(|({db_name}.+?))\s*(\w+=|$)""",
     """\Wcs14=(|({db_schema}.+?))\s*(\w+=|$)""",
-    """\Wcs18=(|({result_reason}.+?))\s*(\w+=|$)""",
+    """\Wcs18=(|({failure_reason}.+?))\s*(\w+=|$)""",
   ]
   DupFields = [ "db_user->account" ]
 

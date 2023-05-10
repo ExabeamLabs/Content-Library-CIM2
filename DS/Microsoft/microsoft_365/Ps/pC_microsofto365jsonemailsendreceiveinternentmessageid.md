@@ -17,17 +17,17 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """({alert_type}Phish)""",
     """"DetectionMethod":"({alert_name}[^"]+)"""",
     """"eventTypeName":"({alert_name}[^"]+)"""",
-    """"Recipients":\[?"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"?\]?""", 
+    """"Recipients":\[?"({email_recipients}[^,;@]+@([^;,"]+))""",
     """"Id":"({alert_id}[^"]+)"""",
-    """"SenderIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"SenderIp":"(0.0.0.0|({dest_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?)))"""",
     """"SHA256":"({hash_md5}[^"]+)"""",
     """"Verdict":"({verdict}[^"]+)"""",
     """"Subject":"\s*({additional_info}[^,"]+?)[\s\t]*"(,|$)"""",
     """"Directionality":"({direction}[^",]+)"""",
-    """"P2Sender":"([^@]+?\\=)?(({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))"""", 
-    """"P1Sender":"([^@]+?\\=)?(({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))""""
+    """"P2Sender":"([^@]+?\\=)?({sender}[^@",\\=]+@[^",]+)"""",
+    """"P1Sender":"([^@]+?\\=)?({sender}[^@",\\=]+@[^",]+)"""",  
 ]
-  DupFields = [ "dest_email_address->email_address","additional_info->email_subject" ]
+  DupFields = [ "email_recipients->dest_email_address","additional_info->email_subject" ]
  
 
 }

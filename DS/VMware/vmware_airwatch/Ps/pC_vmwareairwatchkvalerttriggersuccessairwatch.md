@@ -3,7 +3,7 @@
 {
 Name = vmware-airwatch-kv-alert-trigger-success-airwatch
   ParserVersion = v1.0.0
-  Product = VMware AirWatch
+  Product = Vmware AirWatch
   Conditions = [ """AirWatch""", """Event Category:"""", """Event:"""" ]
 
 airwatch-auth-activity = {

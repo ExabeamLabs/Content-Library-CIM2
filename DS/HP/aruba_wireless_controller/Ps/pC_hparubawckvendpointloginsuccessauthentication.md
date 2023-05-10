@@ -3,7 +3,7 @@
 {
 Name = hp-arubawc-kv-endpoint-login-success-authentication
   Vendor = HP
-  Product = Aruba Wireless controller
+  Product = Aruba Wireless Controller
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """,attr_name=Authentication:Full-Username,""", """,attr_value=""" ]
   Fields = [

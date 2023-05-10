@@ -1,6 +1,6 @@
 Vendor: Cisco
 =============
-Product: IronPort Email
+Product: Ironport Email
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

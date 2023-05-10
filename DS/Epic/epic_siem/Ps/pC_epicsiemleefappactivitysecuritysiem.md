@@ -16,7 +16,7 @@ Name = epic-siem-leef-app-activity-securitysiem
     """devTime=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
     """E3MID=({event_id}[^=]+?)(\s+\w+=|\s*$)""",
     """LOGIN_LDAP_ID=({user}[^=]+?)(\s+\w+=|\s*$)""",
-    """IP=(?:({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))\/)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """IP=(?:({dest_ip}[a-fA-F\d.:]+)\/)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """LOGINERROR=({failure_reason}[^\s]*?)(\s+\w+=|\s*$)""",
     """ERRMSG=(|({failure_reason}[^\s]*?))(\s+\w+=|\s*$)""",
     """UID=({user_id}[^=]+?)(\s+\w+=|\s*$)""",

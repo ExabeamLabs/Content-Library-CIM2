@@ -22,13 +22,13 @@ Fields = [
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*({email_subject}[^,]+)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*'({email_subject}(?:[^']|'')+)'\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*"({email_subject}(?:[^"]|"")+)"\s*,"""
-  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}\s*(?:'|")?(|MicrosoftExchange.*?|({src_email_address}[^,]+?)(?:'|")?)\s*,"""
+  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}\s*(?:'|")?(|MicrosoftExchange.*?|({sender}[^,]+?)(?:'|")?)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){10}\s*(?:'|")?(?:<>|({return_path}[^,]+?))(?:'|")?\s*,"""
 ]
 DupFields = [
   "orig_user->user"
   "alert_name->alert_type"
-  "src_email_address->external_address"
+  "sender->external_address"
 ]
 ParserVersion = "v1.0.0"
 

@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-activity-operationname
   Product = Azure Monitor
-  Conditions= [ """CEF:""", """destinationServiceName =Azure""", """"OperationName":"""", """"Category":"""" ]
+  Conditions= [ """CEF:""", """destinationServiceName =Azure""", """"OperationName":"""", """"Category":""""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """Category":"({category}[^"]+)""",
     """"Path":"(-|({file_path}({file_dir}\/(\S+\/)?)({file_name}[^"\\\/]+)))\s*",""",

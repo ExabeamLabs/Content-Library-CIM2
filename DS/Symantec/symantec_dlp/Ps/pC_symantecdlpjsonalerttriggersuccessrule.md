@@ -18,7 +18,7 @@ Name = symantec-dlp-json-alert-trigger-success-rule
       """protocol=\\"*({protocol}[^\\]+)\\""",
       """block=\\"*({action}[^\\]+)\\""",
       """subject=\\"*({alert_subject}[^\\]+)\\""",
-      """sender=\\"*({src_email_address}[^\\]+)\\""",
+      """sender=\\"*({sender}[^\\]+)\\""",
       """recipients=\\"*({email_recipients}[^\\]+)\\""",
       """recipients=\\"*({email_recipients}({dest_email_address}[^,\\]+)[^\\]*)\\"*""",
       """(?i)recipients="*(?=[\w.]+@[\w.])({external_address}[^",]+)("|,|\s*$)""",

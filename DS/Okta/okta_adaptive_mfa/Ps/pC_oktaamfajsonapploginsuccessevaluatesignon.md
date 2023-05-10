@@ -12,7 +12,7 @@ Name = okta-amfa-json-app-login-success-evaluatesignon
     """"+actor"+:\{[^\{\}]*?"+displayName"+:"+(Okta System|Okta Admin|unknown|({full_name}[^",]+))"+,""",
     """"policyType"+:"+({alert_type}[^",]+)""",
     """"eventType"+:"+({operation}[^",]+)""",
-    """"+result"+:"+({result}[^",]+)"+,""",
+    """"+result"+:"+({action}[^",]+)"+,""",
     """"reason"+:"+({additional_info}[^",]+)"+""",
     """"severity"+:"+({alert_severity}[^",]+)"+""",
     """"+userAgent"+:(null|"+({user_agent}[^",]+))"+""",

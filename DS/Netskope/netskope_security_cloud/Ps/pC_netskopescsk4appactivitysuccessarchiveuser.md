@@ -17,7 +17,7 @@ cef-netskope-activity = {
 """"User Name\s*":"({full_name}[^\"]+)"""
 """"srcip":\s*"({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """"object":\s*"(\s+\"|(\s*(Unknown Unknown|unknown|Unknown|null|({object}[^\"]+?))\s*\"))"""
-""""user":\s*"(unknown|(({email_address}[^\s@\"]+@[^\s@\"]+\.[^\s@\"]+?)|(({domain}[^\s\"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^\s\"@\\\/:]+))))\\?""""
+""""user":\s*"(unknown|(({email_address}[^\s@\"]+@[^\s@\"]+\.[^\s@\"]+)|(({domain}[^\s\"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^\s\"@\\\/]+))))"""
 """"access_method":\s*"({auth_method}[^\"]+)"""
 """"logintype":\s*"({auth_method}[^\"]+)"""
 """"activity":\s*"({operation}[^\"]+)"""

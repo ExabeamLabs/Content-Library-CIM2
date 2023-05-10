@@ -3,7 +3,7 @@
 {
 Name = zscaler-pa-json-app-login-success-signin
   ParserVersion = "v1.0.0"
-  Conditions = [ """"AuditOperationType":"Sign In"""", """"User":"""", """"ObjectType":"Authentication"""" ]
+  Conditions = [ """"User Audit Logs"""", """"AuditOperationType":"Sign In"""", """"User":"""", """"ObjectType":"Authentication"""" ]
 
 zscaler-audit-events = {
     Vendor = Zscaler

@@ -5,7 +5,7 @@ Name = checkpoint-ngfw-kv-http-session-fail-vpn1
   ParserVersion = v1.0.0
   Vendor = Check Point
   Product = Check Point NGFW
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss--SS:SS"
   Conditions = [ """ProductName ="""", """VPN-1 & FireWall-1""" ]
   Fields = [
     """ProductName ="({product_name}VPN-1 & FireWall-1)"""",

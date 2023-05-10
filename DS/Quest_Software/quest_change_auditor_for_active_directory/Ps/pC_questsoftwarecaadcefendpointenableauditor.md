@@ -4,7 +4,7 @@
 Name = questsoftware-caad-cef-endpoint-enable-auditor
   Vendor = Quest Software
   ParserVersion = "v1.0.0"
-  Product = Quest Change Auditor for Active Directory
+  Product = Quest Change Auditor For Active Directory
   TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """CEF:""", """Quest Software""", """|Change Auditor|""", """|Active Directory|""", """Computer account enabled""" ]
   Fields = [

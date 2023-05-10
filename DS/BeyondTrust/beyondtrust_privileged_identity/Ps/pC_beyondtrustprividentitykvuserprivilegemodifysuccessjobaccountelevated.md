@@ -6,7 +6,7 @@ Fields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.Fields}[
   """"ElevationGroup\\?"\svalue=\\?"({privileges}[^"\\]+)\\?""""
   """"\ssEventID=\\?"({operation}[^"]+?)\\""""
 ]
-DupFields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.DupFields}[ "account->dest_user", "account_domain->dest_domain" ,"operation->event_name"]
+DupFields = [ "account->dest_user", "account_domain->dest_domain" ,"operation->event_name"]
 Conditions = [
   """EVENT_ID_JOB_ACCOUNT_ELEVATED"""
   """2051"""
@@ -50,7 +50,7 @@ HornetDlpEmailTemplates = {
       """date=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """dir=({direction}1|2)""",
       """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-      """from=({src_email_address}[^@\s]+?@[^\s]+)""",
+      """from=({sender}[^@\s]+?@[^\s]+)""",
       """to=({dest_email_address}[^@\s]+?@[^\s]+)""",
       """\stype=({result}\d+)""",
       """reason="({additional_info}[^"]+)""",

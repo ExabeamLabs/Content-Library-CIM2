@@ -3,7 +3,7 @@
 {
 Name = cisco-sourcefire-kv-alert-trigger-classification
   ParserVersion = "v1.0.0"
-  Product = Cisco SourceFire
+  Product = Cisco Sourcefire
   Vendor = Cisco
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """SFIMS:""", """Classification:""", """Priority:""" ]

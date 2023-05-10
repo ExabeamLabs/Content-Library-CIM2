@@ -9,7 +9,7 @@ Name = sophos-ep-json-alert-trigger-success-deviceblocked
   Conditions = [ """"Event::Endpoint::Device::Blocked""", """"name": "Peripheral """ ]
   Fields = [
     """"rt":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """\s"name":\s*"({alert_name}[^"':]+)""",
+    """"name":\s*"({alert_name}[^"':]+)""",
     """"name":\s*"({additional_info}[^"]+)""",
     """"type":\s*"({alert_type}[^"]+)""",
     """"dhost":\s*"({src_host}[^"]+)""",

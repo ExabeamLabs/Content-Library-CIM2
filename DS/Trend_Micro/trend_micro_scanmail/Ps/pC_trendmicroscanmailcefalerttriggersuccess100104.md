@@ -16,7 +16,7 @@ Name = trendmicro-scanmail-cef-alert-trigger-success-100104
     """CEF:([^\|]*\|){4}({event_code}[^|]+)""",
     """cat=((?i)Unknown|({alert_type}[^=,]+))(\s+,\S+)?\s+\w+=""",
     """duser=({email_recipients}({dest_email_address}[^;]+)[^=]*?);?\s+\w+=""",
-    """suser=({src_email_address}[^\s;]+);?\s+\w+=""",
+    """suser=({sender}[^\s;]+);?\s+\w+=""",
     """act=({action}[^\s=])\s+\w+=""",
     """policyReason=({malware_url}[^\s]+)""",
     """msg=({additional_info}[^=]+)\s+\w+="""

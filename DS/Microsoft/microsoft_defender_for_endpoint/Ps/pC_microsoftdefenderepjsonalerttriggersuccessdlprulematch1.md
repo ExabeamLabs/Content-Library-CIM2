@@ -12,7 +12,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """"SensitiveInformation":\s*\[\{[^\}]*?"Location":\s*"(|({additional_info}[^"]+))"(,|\})""",
     """"Severity":\s*"({alert_severity}[^"]+)"""",
     """"IncidentId":\s*"({alert_id}[^"]+)"""",
-    """"Actions":\s*\["({result}[^"]+)"""",
+    """"Actions":\s*\["({action}[^"]+)"""",
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
     """"From":\s*"({email_address}[^@"]+@[^@"]+\.[^@"]+)"""",

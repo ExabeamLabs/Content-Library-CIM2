@@ -11,7 +11,7 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s+EvntSLog""",
     """({event_code}1644)""",
     """({event_name}A client issued a search operation with the following options)""",
-    """Client:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?):({src_port}\d+)\s""",
+    """Client:\s*({src_ip}[A-Fa-f:\d.]+?):({src_port}\d+)\s""",
     """Filter:\s*({filter}.*?)\s+Search scope:""",
     """Search scope:\s*({search_scope}.*?)\s+Attribute selection:""",
     """Attribute selection:\s*\[?({attribute_selection}[^\]]*?)\]?\s+Server controls:""",
@@ -26,7 +26,7 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
     """Dirty pages modified:\s*({dirty_pages_modified}\d+)""",
     """Search time \(ms\):\s*({search_time}\d+)""",
     """Attributes Preventing Optimization:\s*({attributes_preventing_optimization}.*?)\s+User:""",
-    """User:\s*(({domain}[^\\\s"]+)\\+)?\s*(CN\s*=|\s*)({user}[^\\\s",]+)"""
+    """User:\s*(({domain}[^\\\s"]+)\\+)?({user}[^\\\s"]+)""",
   ]
 
 

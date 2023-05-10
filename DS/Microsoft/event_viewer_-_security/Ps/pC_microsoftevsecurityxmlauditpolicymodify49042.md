@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-2
   Fields = [
     """({event_name}An attempt was made to register a security event source)""",
     """<Computer>(::ffff:)?({host}[^<]+)</Computer>""",
-    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))"""
     """({event_code}4904)""",

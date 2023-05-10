@@ -26,7 +26,6 @@ windows-events-3 = {
         """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
         """\said=({aid}[^\s\\]+)""",
         """categoryOutcome=\/({result}[^\s]+)"""
-        """Source Port(=|:)\s*({src_port}\d+)"""
         
 }
 ```

@@ -14,9 +14,9 @@ Name = microsoft-evsecurity-xml-handle-request-4659
     """Handle ID:\s+({object_id}[^\s]+)\s+Process Information:""",
 # process_info is removed
     """Transaction ID:\s+({transaction_id}[^\s]+)\s+Accesses:""",
-    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
-    """ThreadID\\*='({thread_id}\d+)'""",
+    """ThreadID='({thread_id}\d+)'""",
     """<Keyword>({result}[^<]+)<""",
     """<Task>({operation}File System)"""
     """<Provider>({provider_name}[^<]+)"""

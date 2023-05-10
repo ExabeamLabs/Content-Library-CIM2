@@ -15,14 +15,13 @@ Name = microsoft-evsecurity-kv-share-access-5145
     """SubjectDomainName:({domain}[^,]+),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """ObjectType:({file_type}[^,]+),""",
-    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
+    """IpAddress:(::ffff:)?({src_ip}[a-fA-F\d:.]+),""",
     """IpPort:({src_port}\d+),""",
     """ShareName:(?:\\\\\*\\)?({share_name}[^,]+),""",
     """ShareLocalPath:(|({share_path}(({d_parent}[^,]+?)\\)?(|({d_name}[^\\,]+?)))),""",
-    """RelativeTargetName:({file_dir}(?:[^,]+)?[\\\/])?({file_name}[^\\:,]+?(\.\s*({file_ext}[^"\\.,]+?))?),""",
+    """RelativeTargetName:({f_parent}(?:[^,]+)?[\\\/])?({file_name}[^\\:,]+?(\.\s*({file_ext}[^"\\.,]+?))?),""",
     """AccessList:({access}[^:]+),""",
     """({result}(Success|Failure) Audit)"""
-    """Source Port(=|:)\s*({src_port}\d+)"""
   ]
   DupFields = ["host->dest_host"]
 

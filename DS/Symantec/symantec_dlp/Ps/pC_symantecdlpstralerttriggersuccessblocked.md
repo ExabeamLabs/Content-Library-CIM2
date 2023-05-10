@@ -10,7 +10,7 @@ Name = symantec-dlp-str-alert-trigger-success-blocked
     Fields = [
     """\sFILE_NAME\s(?:N\/A|({email_attachments}({file_name}.+?)))\sPARENT_PATH\s""",
     """\sSENDER\s\w+:\/\/({domain}[^\<\>\[\]\"\/\\:;\|=,+*\?]+)\/({user}[^\<\>\[\]\"\/\\:;\|=,+*\?]+?)\sRECIPIENTS\s""",
-    """\sSENDER\s({src_email_address}[^\s"@,]+@({domain}[^\s"@,]+))\sRECIPIENTS\s""",
+    """\sSENDER\s({sender}[^\s"@,]+@({domain}[^\s"@,]+))\sRECIPIENTS\s""",
     """\sSENDER\s({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\sRECIPIENTS\s""",
     """\sBLOCKED\s(?:N\/A|({action}.+?))\sURL\s""",
     """\sSEVERITY\s(?:N\/A|({alert_severity}.*?))\sBLOCKED\s""",

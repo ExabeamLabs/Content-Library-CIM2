@@ -13,7 +13,7 @@ Name = trendmicro-officescan-cef-email-send-success-controlmanager
     """({host}[\w\-.]+)\s+CEF:""",
     """\Wdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\Wdvchost=({host}[^\s]+)""",
-    """\WflexString1=({src_email_address}.+?)\s+\w+=""",
+    """\WflexString1=({email_address}.+?)\s+\w+=""",
     """\WflexString2=({email_recipients}.+?)\s+\w+=""",
     """\WflexString2=({dest_email_address}[^\s;]+)""",
     """\Wmsg=({email_subject}.+?)\s+\w+=""",

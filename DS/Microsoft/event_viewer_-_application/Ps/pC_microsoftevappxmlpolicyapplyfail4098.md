@@ -9,11 +9,11 @@ Name = microsoft-evapp-xml-policy-apply-fail-4098
   Conditions = [ """4098</EventID>""", """Group Policy Object did not apply""" ]
   Fields = [
     """({event_name}Group Policy Object did not apply)""",
-    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
+    """<TimeCreated SystemTime='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """({event_code}4098)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Security UserID='({user_sid}.+?)'\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """error code '({error_code}[^\s]+)\s"""
   ]

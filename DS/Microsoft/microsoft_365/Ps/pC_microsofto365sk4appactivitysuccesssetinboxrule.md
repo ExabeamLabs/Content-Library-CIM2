@@ -22,8 +22,7 @@ Name = microsoft-o365-sk4-app-activity-success-setinboxrule
     """UserId":"({email_address}[^"\\]+@({domain}[^"]+)[^"]+)"""",
     """destinationServiceName =({app}.+?)\s*filePath"""
     """({app}Office 365)"""
-    """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)""",
-    """"ObjectId":"({object}[^"]+)""""
+    """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
   ]
   DupFields = ["domain->email_domain"]
 

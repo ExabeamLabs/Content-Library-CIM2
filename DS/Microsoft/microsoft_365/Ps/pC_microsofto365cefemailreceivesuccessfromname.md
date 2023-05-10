@@ -14,7 +14,7 @@ Name = microsoft-o365-cef-email-receive-success-fromname
     """FromAddress\="""
   ]
   Fields = [
-    """\Wsuser=({src_email_address}[^@]+@[^@\s]+)""",
+    """\Wsuser=({sender}[^@]+@[^@\s]+)""",
     """\Wcs2=({dest_email_address}[^@]*@[^@=]+?)\s+(\w+=|$)""",
     """ToAddress\\=({to_address}.+?)(;\w+\\=|\s+\w+=|\s*$)""",
     """CcAddress\\=(?:null|({cc_address}.+?))(;\w+\\=|\s+\w+=|\s*$)""",
@@ -25,9 +25,9 @@ Name = microsoft-o365-cef-email-receive-success-fromname
     """\Wact=({alert_name}.+?)\s+(\w+=|$)""",
     """Id\\=({alert_id}[^;\s]+)""",
     """({direction}o)"""
-    """ValidatedFromAddress\\=({src_email_address}[^@;]+@[^@\s;]+);"""
+    """ValidatedFromAddress\\=({sender}[^@;]+@[^@\s;]+);"""
   ]
-  DupFields = [ "src_email_address->email_user","src_email_address->orig_user", "alert_name->alert_type", "to_address->email_recipients", "dest_email_address->external_address","src_email_address->email_address" ]
+  DupFields = [ "sender->email_user","sender->orig_user", "alert_name->alert_type", "to_address->email_recipients", "dest_email_address->external_address" ]
  
 
 }

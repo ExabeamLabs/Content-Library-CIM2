@@ -3,7 +3,6 @@
 {
 Name = microsoft-evsecurity-sk4-endpoint-4624
   ParserVersion = v1.0.0
-  Vendor = Microsoft
   Product = Event Viewer - Security
   Conditions = [ """EventID': 4624""", """destinationServiceName =""" ]
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [

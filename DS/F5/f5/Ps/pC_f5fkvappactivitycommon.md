@@ -11,7 +11,7 @@ Name = f5-f-kv-app-activity-common
  Conditions = [ """:Common:""" ]
  Fields = [
    """:Common:({session_id}[^:]+)""",
-   """domain' set to '({domain}[^\\\/\s'"]+)'""",
+   """ set to '({user}[^\\\/\s'"]+)'""",
    """sAMAccountName =({account}[^\s'"\)]+)\)' ({result}\S+)""",
    """ Username '({account}[^\s'"]+)""",
    """ AD agent:\s*({user}[^\s]+).+? authenticate with '({account}[^\s'"]+)' ({result}\S+)""",
@@ -19,7 +19,7 @@ Name = f5-f-kv-app-activity-common
    """ bytes in:\s*({bytes_in}\d+)""",
    """ bytes out:\s*({bytes_out}\d+)""",
    """ client IP ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-   """ request from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+) to ({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)""",
+   """ request from ({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):({src_port}\d+) to ({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):({dest_port}\d+)""",
    """ SID:\s*({user_sid}[^\s:]+)""",
    """ request:\s*({request}[^\s]+)""",
    """ Access policy result:\s*({result}[^\s]+)""",
@@ -28,12 +28,8 @@ Name = f5-f-kv-app-activity-common
    """at VIP\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
    """({start_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z).+?({end_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
    """sAMAccountName =({account}[^\s'"\)]+)\)'""",
-   """ authentication with '({account}[^\s']+)'\s*({result}[^:]+):({additional_info}[^"]+)""",
-   """platform' set to '({os}[^'"]+)'"""
-   """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d+:\d+\s({vpn_server}[^\s]+)"""
-   """hostname' set to '({src_host}[\w\-.]+)"""
+   """ authentication with '({account}[^\s']+)'\s*({result}[^:]+):({additional_info}[^"]+)"""
  ]
-  DupFields = [ "vpn_server->realm" ]
 
 
 }

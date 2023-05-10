@@ -12,7 +12,7 @@ Name = barracuda-waf-str-http-request-success-tr
 # log_type_code is removed
 # unit_name is removed
 # service_ip is removed
-      """ barracuda TR ([^\s]+\s+){2}({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)""",
+      """ barracuda TR ([^\s]+\s+){2}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+({src_port}\d+)""",
       """ barracuda TR ([^\s]+\s+){4}"(?:-|({login_id}[^"]+))"""",
 # certificate_user is removed
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}(?:-|({method}[^\s]+))""",

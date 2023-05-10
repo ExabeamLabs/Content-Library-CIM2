@@ -16,7 +16,7 @@ leef-digitalguardian-dlp-email-alert-out = {
     """IdentHostName =(({domain}[^\\])+\\+)?({dest_host}[\w\-.]+?)\s*(\w+=|$)""",
     """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """EmailSender=({src_email_address}.+?)\s*(\w+=|$)""",
+    """EmailSender=({sender}.+?)\s*(\w+=|$)""",
     """usrName =(?![^\s]+@[^\s]+)(({domain}[^\\]+)\\+)?({user}[^\\\s@]+)\s*(\w+=|$)""",
     """usrName =(?=[^\s]+@[^\s]+)({email_address}[^\s@]+@[^\s]+)""",
     """EmailRecipient=(|({dest_email_address}[^\s,;]+))""",

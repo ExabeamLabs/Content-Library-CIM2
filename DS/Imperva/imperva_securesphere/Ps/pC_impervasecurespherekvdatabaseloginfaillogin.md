@@ -18,7 +18,7 @@ Fields = [
   """source_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """destination_ip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """dbName =({db_name}.+?)\s*(\w+=|$)"""
-  """sqlError="({result_reason}[^"]+?)\s*(\w+=|$)"""
+  """sqlError="({failure_reason}[^"]+?)\s*(\w+=|$)"""
 ]
 DupFields = [
   "db_user->account"

@@ -12,7 +12,7 @@ Name = microsoft-windows-mix-configuration-modify-success-4739
     """({event_name}Domain Policy was changed)""",
     """<Execution ProcessID(\\)?='({process_id}[^']+)""",
     """<EventID>({event_code}\d+)</EventID>""",
-    """<Keyword>({result}[^<]+)<""",
+    """<Keyword>({action}[^<]+)<""",
     """<Data Name\\?='SubjectUserSid'>({user_sid}[^<]+)<\/Data>""",
     """ThreadID\\?='({thread_id}\d+)""",
     """<Data Name\\?='SubjectUserName'>({user}[^<]+)<\/Data>""",

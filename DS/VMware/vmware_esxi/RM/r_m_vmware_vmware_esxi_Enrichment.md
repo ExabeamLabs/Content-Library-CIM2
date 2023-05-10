@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: VMware
 --------------
-### Product: [VMware ESXi](../ds_vmware_vmware_esxi.md)
+### Product: [VMware ESXI](../ds_vmware_vmware_esxi.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

@@ -14,10 +14,9 @@ Conditions = [ """AlertTriggered""", """"AlertType":""", """AlertId""", """desti
    """"AlertId":"({alert_id}[^"]+)""""
    """"(sev|Severity)":"({alert_severity}[^"]+)""",
    """"AlertType":"({alert_type}[^"]+)"""",
-   """requestClientApplication=({process_path}.*?)\s\w+=""",
-   """"Source":"({alert_source}[^"]+)"""
+   """requestClientApplication=({process_path}.*?)\s\w+="""
   ]
-  DupFields = ["process_path->process_name", "additional_info->alert_subject"]
+  DupFields = ["process_path->process_name"]
   ParserVersion = "v1.0.0"
 
 

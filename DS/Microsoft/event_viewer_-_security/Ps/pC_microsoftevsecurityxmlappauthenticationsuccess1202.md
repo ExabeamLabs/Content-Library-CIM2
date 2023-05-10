@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-app-authentication-success-1202
 
 s-xml-events-1 = {
   Vendor = Microsoft
-  Product = Event Viewer - Security
+  Product = event viewer - security
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Fields = [
     """MSWinEventLog\s.+?\s({time}\w{3}\s\d{2}\s(\d{2}:){2}\d{2}\s\d{4})""",

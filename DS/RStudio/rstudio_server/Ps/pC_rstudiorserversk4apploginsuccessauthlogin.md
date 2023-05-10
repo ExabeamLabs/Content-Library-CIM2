@@ -9,6 +9,7 @@ Name = rstudio-rserver-sk4-app-login-success-authlogin
   Conditions = [ """, auth_login,""", """-rstudio-server/sessions""", """"logger.account":"""" ]
   Fields = [
     """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
+    """ttam_reporter":"({host}[^"]+)"""",
     """({event_name}auth_login)""",
     """message":"({additional_info}[^,]+),\s\\?"({user}[^"\\]+)\\?""""
   ]

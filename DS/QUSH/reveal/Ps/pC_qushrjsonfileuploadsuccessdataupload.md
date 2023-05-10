@@ -5,8 +5,6 @@ Name = qush-r-json-file-upload-success-dataupload
   Conditions = [ """reveal""", """"dataupload"""", """"tags":""", """"datatracking"""" ]
   Fields = ${QUSHRevealParserTemplates.qush-reveal-events.Fields} [
     """({operation}dataupload)"""
-    """"target_file_name":\["({dest_file}[^"]+)""""
-    """"target_file_path":\["({dest_path}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 
@@ -19,9 +17,9 @@ qush-reveal-events = {
       """"timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",
       """"description"+:"+({additional_info}[^\n]+?)\s*",""",
       """"username":"(({full_name}[^\\\s"]+\s[^"\\]+)|(({domain}[^"\s\\]+)\\+)?({user}[^"\s]+))"""",
-      """"destination_ip":\["({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"\]""",
+      """"destination_ip":\["({dest_ip}[a-fA-F\d:\.]+)"\]""",
       """"destination_port":\["({dest_port}\d{1,5})"\]""",
-      """"source_ip":\["({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"\]""",
+      """"source_ip":\["({src_ip}[a-fA-F\d:\.]+)"\]""",
       """"source_port":\["({src_port}\d{1,5})"\]"""
       """"binary_path"+:"+({process_path}({process_dir}[^"]+?)\\+({process_name}[^"\\]+))"""",
       """"binary_name"+:\["+({process_name}[^",]+)"\]""",

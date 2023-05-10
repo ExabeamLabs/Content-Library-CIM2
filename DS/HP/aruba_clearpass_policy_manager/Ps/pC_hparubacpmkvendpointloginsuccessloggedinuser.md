@@ -7,7 +7,7 @@ Name = hp-arubacpm-kv-endpoint-login-success-loggedinuser
 
 q-aruba-nac-logon = {
   Vendor = HP
-  Product = Aruba ClearPass Policy Manager
+  Product = Aruba Clearpass Policy Manager
   TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
   Fields = [
     """Common\.Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+)?[\+\-]\d+)""",

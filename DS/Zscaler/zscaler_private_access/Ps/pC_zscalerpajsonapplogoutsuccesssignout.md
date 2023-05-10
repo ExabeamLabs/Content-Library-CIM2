@@ -3,7 +3,7 @@
 {
 Name = zscaler-pa-json-app-logout-success-signout
   ParserVersion = "v1.0.0"
-  Conditions = [ """"AuditOperationType":"Sign Out"""", """"User":"""", """"ObjectType":"Authentication"""" ]
+  Conditions = [ """"User Audit Logs"""", """"AuditOperationType":"Sign Out"""", """"User":"""", """"ObjectType":"Authentication"""" ]
 
 zscaler-audit-events = {
     Vendor = Zscaler

@@ -6,7 +6,7 @@ Name = mcafee-es-cef-alert-trigger-success-epolicyorchestrator
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|McAfee|ePolicy Orchestrator|""", """Access Protection rule violation detected and """ ]
   Fields = ${McAfeeParsersTemplates.cef-mcafee-epo-alert.Fields}[
-    """Access Protection rule violation detected and ({result}(NOT )?blocked)""",
+    """Access Protection rule violation detected and ({action}(NOT )?blocked)""",
     """\sshost=(_|({dest_host}.+?))(\s+\w+=|\s*$)""",
     """\ssrc=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\ssproc=({process_path}({process_dir}[^=]*?[\\\/]+)?({process_name}[^=\\\/]+))(\s+\w+=|\s*$)""",

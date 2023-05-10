@@ -3,7 +3,7 @@
 {
 Name = hp-arubacpm-kv-radius-traffic-success-radiusaccounting
   Vendor = HP
-  Product = Aruba ClearPass Policy Manager
+  Product = Aruba Clearpass Policy Manager
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSZ"
   Conditions = [ """ Radius Accounting """, """RADIUS.Acct-Timestamp=""" ]
   Fields = [

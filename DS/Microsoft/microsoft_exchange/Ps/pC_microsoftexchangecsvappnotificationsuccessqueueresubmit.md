@@ -7,7 +7,7 @@ Name = microsoft-exchange-csv-app-notification-success-queueresubmit
   Fields = ${MicrosoftParsersTemplates.exchange-dlp-email-alert.Fields}[
    """,QUEUE,RESUBMIT,([^,]*,){3}({email_recipients}({dest_email_address}[^,;@]+@([^,;@]+)[^,]*?))""", #dl field removed
    """,QUEUE,RESUBMIT,([^,]*,){9}({email_subject}[^,]+)""",
-   """,QUEUE,RESUBMIT,([^,]*,){10}({src_email_address}[^,@]+@([^,@]+))""" #dl field removed
+   """,QUEUE,RESUBMIT,([^,]*,){10}({email_address}[^,@]+@([^,@]+))""" #dl field removed
   ]
 
 exchange-dlp-email-alert = {
@@ -22,10 +22,10 @@ exchange-dlp-email-alert = {
     """([^,]*,){4}\s*({dest_host}[\w\-.]+)\s*,""",
     """,({log_source}SMTP|AGENT|ROUTING|DSN)""",
     """,({event_code}HADISCARD|HARECEIVE|AGENTINFO|RECEIVE|HAREDIRECT|SEND|SUPPRESSED|RESOLVE|TRANSFER|BADMAIL|EXPAND|DROP|DSN|REDIRECT)""",
-    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}[^,;"\s@<]+@[^,;"\s@>]+)[^,>]*?)[\s>]*,""",
+    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({recipient}[^,;"\s@<]+@[^,;"\s@>]+)[^,>]*?)[\s>]*,""",
     """,\s*({email_subject}[^,]+?)["\s]*,([^,]*,){3}(Incoming|Originating),""",
     """,\s*"({email_subject}[^"]+?)\s*",([^,]*,){3}(Incoming|Originating),""",
-    """,[<\s]*({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
+    """,[<\s]*({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
 # transport_traffic_type is removed
   
 }

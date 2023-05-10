@@ -20,8 +20,7 @@ exchange-dlp-email-alert-2 = {
     """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)[^,>]*?)[\s>]*,""",
     """,\s*({email_subject}[^,]+?)["\s]*,([^,]*,){3}(Incoming|Originating),""",
     """,\s*"({email_subject}[^"]+?)\s*",([^,]*,){3}(Incoming|Originating),""",
-    """,[<\s]*({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
-    """[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
+    """,[<\s]*({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
 # transport_traffic_type is removed
   
 }

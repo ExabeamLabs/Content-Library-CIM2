@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-sk4-handle-request-success-4656-1
   Vendor = Microsoft
-  Product = Event Viewer - Security
+  Product = event viewer - security
   TimeFormat = "epoch_sec"
   Conditions = [ """"EVENT_NUMBER":"4656"""", """"REMARKS":"A handle to an object was requested."""" ]
   Fields = [

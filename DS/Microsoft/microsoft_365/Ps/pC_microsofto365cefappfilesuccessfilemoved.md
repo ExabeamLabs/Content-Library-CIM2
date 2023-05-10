@@ -5,12 +5,6 @@ Name = microsoft-o365-cef-app-file-success-filemoved
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"FileMoved""" ]
-  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """filePath=\{"ObjectUrl":"({file_path}({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}[^"]+)))?)"""",
-    """"SourceFileExtension":"({src_file_ext}[^"]+)"""",
-    """"SourceRelativeUrl":"({src_file_path}[^"]+)""""
-  ]
-  DupFields = [ "src_file_path->src_file_dir" ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

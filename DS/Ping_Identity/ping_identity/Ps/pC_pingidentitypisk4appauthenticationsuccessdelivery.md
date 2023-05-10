@@ -13,7 +13,7 @@ Name = pingidentity-pi-sk4-app-authentication-success-delivery
     """"message":"({additional_info}[^}]+?)"\s*\}""",
     """destinationServiceName =({app}Ping)""",
     """subject":"({email_subject}[^:]+?)","\w+":""",
-    """"toAddress":"({dest_email_address}[^"]+?)",""",
+    """"toAddress":"({recipient}[^"]+?)",""",
     """"smtpResponse":"({additional_info}[^"]+?)","""
   ]
   ParserVersion = "v1.0.0"

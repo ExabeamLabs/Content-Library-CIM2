@@ -14,7 +14,7 @@ Name = cisco-fp-kv-dns-response-success-dnsquery
     """DstIP:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """SrcPort:\s*({src_port}\d+)""",
     """DstPort:\s*({dest_port}\d+)""",
-    """AccessControlRuleAction:\s*({result}[^,]+)""",
+    """AccessControlRuleAction:\s*({action}[^,]+)""",
     """Protocol:\s*({protocol}[^,]+)""",
     """User:\s*(Unknown|Not Found|No Authentication Required|({user}[^,]+)),""",
     """InitiatorBytes:\s*({bytes_out}\d+)""",

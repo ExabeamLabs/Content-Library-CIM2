@@ -20,15 +20,14 @@ o365-dlp-email-out = {
     """"ResultStatus\\*"+:[\s\\]*"+({result}[^"\\]+)""",
     """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"UserId\\*"+:[\s\\]*"+({email_address}[^"\\@]+@[^"\\@]+)""",
-    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({sender}[^"\\]+)""",
     """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"SendOnBehalfOfUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"Attachments\\*"+:[\s\\]*"+\s*({email_attachments}[^\n]+?)\s*\\?","Id"""",
     """"Attachments\\*"+:[\s\\]*"+\s*({email_attachment}[^"\\;]+)\s*""",
     """"Subject\\*"+:[\s\\]*"+\s*({email_subject}[^"]+?)\s*\\?"""",
     """"ClientInfoString\\*"+:[\s\\]*"+Client\\*=({alert_name}[^"\\;]+)""",
-    """src-account-name":"({account_name}[^"]+)""",
-    """"SizeInBytes":({bytes}\d+)"""
+    """src-account-name":"({account_name}[^"]+)"""
   ]
   DupFields = [ "alert_name->alert_type" ]
  },
@@ -54,7 +53,7 @@ Fields = [
 """\"SourceAccountUpnName\",\"value\":\"({email_address}[^@\"]+@({email_domain}[^\"]+))\""""
 """\"SourceComputerDnsName\",\"value\":\"({src_host}[^\"]+)\""""
 """\"DestinationComputerDnsName\",\"value\":\"({dest_host}[^\"]+)\""""
-"""\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
+"""\"DestinationIpAddress\",\"value\":\"({dest_ip}[a-fA-F\d.:]+)\""""
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
 
 }

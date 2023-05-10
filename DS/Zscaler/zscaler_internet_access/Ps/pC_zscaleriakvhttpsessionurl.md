@@ -18,8 +18,6 @@ s-zscaler-web-activity = {
   Product = Zscaler Internet Access 
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
-    """datetime=({time}\w{1,3}\s\w{1,3}\s{1,5}\d{1,2}\s\d\d:\d\d:\d\d\s\d{4})"""
-    """devicehostname=(NA|({host}[\w\.\-]+))\s\w+=""",
     """({time}\d\d\d\d-\d\d-\d\d \d+:\d+:\d+)\s+(\w+=|$)""",
     """\sreason=(Allowed|({failure_reason}[^=]+?))\s*(\w+=|$)""",
     """\saction=({action}[^=]+?)\s*(\w+=|$)""",

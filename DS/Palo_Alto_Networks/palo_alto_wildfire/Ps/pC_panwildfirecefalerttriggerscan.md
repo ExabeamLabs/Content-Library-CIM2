@@ -16,7 +16,7 @@ pan-cef-alert = {
     """cat=(|({alert_name}.+?))(\s+\w+=|\s*$)""",
     """\Wproto=(|({protocol}.+?))(\s+\w+=|\s*$)""",
     """\Wapp=(|({process_name}.+?))(\s+\w+=|\s*$)""",
-    """\Wact=(|({result}.+?))(\s+\w+=|\s*$)""",
+    """\Wact=(|({action}.+?))(\s+\w+=|\s*$)""",
     """\sflexString2=({additional_info}[^\s]+)""",
     """\Wcs1=(|({additional_info}.+?))(\s+\w+=|\s*$)""",
     """\sexternalId=({alert_id}[^\s]+)""",

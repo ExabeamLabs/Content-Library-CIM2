@@ -23,7 +23,7 @@ cef-gtb-alerts = {
       """\|GTB\|({dest_host}[^\|]+)\|""",
       """\Woperation=({operation}[^=]+)\s+\w+=""",
       """\WdeviceExternalId=({device_id}[^=]+)\s+\w+=""",
-      """\Wcs7=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+\w+=""",
+      """\Wcs7=({src_ip}[[A-Fa-f\d:.]+)\s+\w+=""",
       """\Wact=({action}[^=]+)\s+\w+=""",
       """CEF:[^\|]+\|GTB\|(?:[^\|]+\|){2}({alert_type}[^\|]+)?\|\s*({alert_name}[^\|]+)\|({alert_severity}\d+)\|"""
     ]

@@ -7,7 +7,7 @@ Name = vmware-airwatch-kv-app-activity-success-appremoved
 
 airwatch-app-activity = {
     Vendor = VMware
-    Product = VMware AirWatch
+    Product = Vmware AirWatch
     TimeFormat = "MMMM dd, yyyy HH:mm:ss"
     Fields = [
       """Timestamp: ({time}\w+\s\d{1,2},\s\d{4}\s(\d{2}:){2}\d{2})""",

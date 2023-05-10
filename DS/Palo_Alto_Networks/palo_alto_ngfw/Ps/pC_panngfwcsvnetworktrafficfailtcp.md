@@ -15,7 +15,7 @@ Name = pan-ngfw-csv-network-traffic-fail-tcp
 paloalto-firewall = {
    Vendor = Palo Alto Networks
    Product = Palo Alto NGFW
-   TimeFormat = "yyyy/MM/dd HH:mm:ss"
+   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
    Fields = [
      """\s({host}[^\s]+)\s+(\[.*?\]\s+)?\d+,([^,]*,){2}TRAFFIC,""",
      """TRAFFIC,("[^"]*",|[^,]*,){48}({host}[\w\-\.]+)""",
@@ -30,7 +30,7 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){6}(0.0.0.0|({dest_translated_ip}(?!::)[a-fA-F\d.:]+))""",
      """TRAFFIC,([^,]*,){7}({rule}[^,]+?)\s*,""",
      """TRAFFIC,([^,]*,){8}\s*((?:({src_domain}[^\s,\\]+)\\)?({src_user}[^\s,]+)),""",
-     """TRAFFIC,([^,]*,){9}\s*(?:({dest_domain}[^\s,\\]+)\\)?(({dest_email_address}[^@",\s]+@[^@",\s]+)|({dest_user}[^\s,]+)),"""
+     """TRAFFIC,([^,]*,){9}\s*(?:({dest_domain}[^\s,\\]+)\\)?({dest_user}[^\s,]+),""",
      """TRAFFIC,([^,]*,){10}(not-applicable|({network_app}[^,]+?))\s*,""",
      """TRAFFIC,([^,]*,){12}({src_network_zone}[^,]+?)\s*,""",
      """TRAFFIC,([^,]*,){13}({dest_network_zone}[^,]+?)\s*,""",
@@ -46,8 +46,7 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){33}(any|unknown|({category}[^,]+?)\s*,)""",
      """TRAFFIC,([^,]*,){37}({src_country}[^\.:]*?)\s*,""",
      """TRAFFIC,([^,]*,){38}({dest_country}[^\.:]*?)\s*,""",
-     """TRAFFIC,([^,]*,){18}({session_id}\d+),""",
-     """TRAFFIC,("[^"]*",|[^,]*,){48}({src_host}[\w\-\.]+)"""
+     """TRAFFIC,([^,]*,){18}({session_id}\d+),"""
    
 }
 ```

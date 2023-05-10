@@ -9,13 +9,12 @@ Name = crowdstrike-falcon-cef-file-download-success-loadconfirmation
 ]
 Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
 """\"+aip\"+:\"+({aip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""DownloadPath\"+:\"+({file_path}[^\"]+)"""
 """DownloadPort\"+:\"+({dest_port}\d+)"""
 """DownloadServer\"+:\"+({dest_host}[^\"]+)"""
 """\"ConfigStateHash\":\"({old_hash}[^\"]+)"""
 """\"SHA256HashData\":\"({new_hash}[^\"]+)"""
-""""timestamp":\s*"({time}\d{13})"""",
-""""DownloadPath":"({file_url}({src_file_path}(({file_dir}[^"]+)[\\\/]+)?(({src_file_name}[^"\\\/]+?(\.({src_file_ext}[^\."]+))?))))"""",
-""""TargetFileName":"({file_path}(({file_dir}[^"]+)[\\\/]+)?(({file_name}[^"\\\/]+?(\.({file_ext}[^\."]+))?)))""""
+""""timestamp":\s*"({time}\d{13})""""
 ]
 
 crowdstrike-file-operations = {

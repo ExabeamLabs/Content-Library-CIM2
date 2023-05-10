@@ -24,7 +24,7 @@ cef-edirectory-events = {
     """\Wsuser=CN\\*=({src_host}[\w\-.]+)""",
     """\Wduser=CN\\*=({full_name}[^,]+),({user_ou}OU\\*=.+?)\s+(\w+=|$)""",
     """\Woutcome=({result}\w+)""",
-    """\Wcs1=(({protocol}\w+):\s*)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)""",
+    """\Wcs1=(({protocol}\w+):\s*)?({dest_ip}[A-Fa-f:\d.]+?):({dest_port}\d+)""",
   
 }
 ```

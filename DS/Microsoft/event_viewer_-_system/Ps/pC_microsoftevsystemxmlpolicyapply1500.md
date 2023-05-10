@@ -10,10 +10,10 @@ Name = microsoft-evsystem-xml-policy-apply-1500
   Fields = [
     """({event_name}The Group Policy settings for the computer were processed successfully)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
-    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
+    """<TimeCreated SystemTime='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Security UserID='({user_sid}.+?)'\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
 # dc_name is removed
   ]

@@ -27,7 +27,7 @@ logrhythm-o365-file-operation = {
 
 azure-app-activity-skyfromation= {
   Vendor = Microsoft
-  Product = Azure Monitor
+  Product = Azure
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[^\s]+\s+""",
@@ -36,7 +36,6 @@ azure-app-activity-skyfromation= {
     """"+application-module"+:"+({app_module}[^"]+)""",
     """"+authorization"+:.+?action"+:"+({action}[^"]+)""",
     """"+authorization"+:.+?scope"+:"+({scope}[^"]+)""",
-    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[^"]+))"""
     """"channels"+:"+({channels}[^"]+)""",
     """"claims".+?aud"+:"+({aud}[^"]+)""",
     """"claims".+?iss"+:"+({iss}[^"]+)""",

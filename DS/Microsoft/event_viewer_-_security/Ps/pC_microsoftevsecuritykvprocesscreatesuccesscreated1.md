@@ -22,12 +22,9 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """ComputerName =({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s"""
     """(Success Audit|information)\s+({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))"""
     """Process Name:\s*({process_path}({process_dir}[^"]+?[\\]*)?)?({process_name}[^\\\/";]+)[\s\\n;]*Token Elevation Type:""",
-    """Target Subject:.+?Account Name:\s*(-|SYSTEM|({dest_user}[^\s]+?))\s""",
-    """Creator Subject:.+?Account Name:\s*(-|SYSTEM|({user}[^\s]+?))\s""",
+    """Account Name:\s*(-|SYSTEM|({user}[^\s]+?))[\s\\n;]*Account Domain:""",
     """Account Domain:\s*(-|({domain}[^\s]+?))[\\n\s;]*Logon ID:""",
     """Logon ID:\s*({login_id}[^\s;]+?)[\\n\s]*(Target|Process)""",
-    """Creator Subject:.+?Account Domain:\s*(-|({domain}[^\s]+?))[\\n\s;]*Logon ID:""",
-    """Creator Subject:.+?Logon ID:\s*({login_id}[^\s;]+?)[\\n\s]*(Target|Process)""",
     """New Process Name:\s*({process_path}({process_dir}[^"]+?[\\]*)?({process_name}[^"\\]+?))[\s\\n]*Token Elevation Type:""",
     """New Process ID:\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
     """Creator Process ID:\s*({parent_process_guid}[^\\\s;]+)(\s|;|\\)""",

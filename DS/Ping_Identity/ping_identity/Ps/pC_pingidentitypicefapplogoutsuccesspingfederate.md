@@ -3,7 +3,7 @@
 {
 Name = pingidentity-pi-cef-app-logout-success-pingfederate
   Vendor = Ping Identity
-  Product = Ping Identity
+  Product = ping identity
   TimeFormat = "MMM dd yyyy HH:mm:ss.SSS"
   Conditions = [ """CEF:""", """|Ping Identity|PingFederate|""", """|SRI_REVOKED|""", """ msg=success """ ]
   Fields = [

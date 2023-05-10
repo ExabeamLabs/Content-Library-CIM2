@@ -20,8 +20,7 @@ Name = microsoft-o365-sk4-app-activity-auditevent
     """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({result_code}\d+)""",
     """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
-    """\[Namespace:\s*({host}\S+) ; EventHub name:""",
-    """"clientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """\[Namespace:\s*({host}\S+) ; EventHub name:"""
   ]
   ParserVersion = "v1.0.0"
 

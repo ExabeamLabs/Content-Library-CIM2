@@ -11,7 +11,7 @@ Name = symantec-esc-str-email-sender
     ]
     Fields = [
       """\s({host}[\w\.-]+)\s+\w+\[\d+\]:""",
-      """\\s*({time}\d{10})\|(|({alert_id}[^\|]+))\|SENDER\|(?:<>|({src_email_address}[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+))"""
+      """\\s*({time}\d{10})\|(|({alert_id}[^\|]+))\|SENDER\|(?:<>|({email_address}[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+))"""
     ]
   
 

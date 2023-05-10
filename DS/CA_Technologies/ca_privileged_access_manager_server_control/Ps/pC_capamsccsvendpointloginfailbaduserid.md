@@ -7,7 +7,7 @@ Name = ca-pamsc-csv-endpoint-login-fail-baduserid
   Fields = ${PamParsersTemplates.pam-authentication.Fields}[
     """({event_name}Bad User ID)""",
   ]
-  DupFields = ${PamParsersTemplates.pam-authentication.DupFields}[ "event_name->failure_reason" ]
+  DupFields = [ "event_name->failure_reason" ]
 
 pam-authentication = {
     Vendor = CA Technologies

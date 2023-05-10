@@ -5,7 +5,7 @@ Name = mcafee-es-str-alert-trigger-success-deleted
   ParserVersion = v1.0.0
   Vendor = McAfee
   Product = McAfee Endpoint Security
-  TimeFormat = "M/d/yyyy H:mm:ss a"
+  TimeFormat = "M/d/yyyy\tH:mm:ss a"
   Conditions = [ """ (MD5)""", """ Deleted""" ]
   Fields = [
     """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\t({additional_info}[^\t]+?)\s*\t(({domain}[^\t]+)(\\)+)?({user}[^\t]+)\t({process_path}[^\t]+)\t({url}.+?\\({malware_file_name}[^\\]+))\t({alert_name}[^\t]+?)\s*\(({alert_type}[^\)]+)\)\t({hash_md5}\S+?)\s*\(MD5\)"""

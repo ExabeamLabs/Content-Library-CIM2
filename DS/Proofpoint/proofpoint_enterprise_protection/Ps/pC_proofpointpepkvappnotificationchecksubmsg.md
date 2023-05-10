@@ -29,8 +29,8 @@ proofpoint-dlp-log = {
     """spamscore=({spam_score}[\d]+)\s""",
     """phishscore=({phishing_score}[\d]+)\s""",
     """malwarescore=({malware_score}[\d]+)\s""",
-    """value=({src_email_address}.*?@[^=]+?)\s+(\w+=|$)""",
-    """from=({src_email_address}[^\s]+?)("+|\s+\w+=)""",
+    """value=({email_address}.*?@[^=]+?)\s+(\w+=|$)""",
+    """from=({email_address}[^\s]+?)("+|\s+\w+=)""",
   
 }
 ```

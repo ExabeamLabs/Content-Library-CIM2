@@ -9,7 +9,7 @@ Name = zscaler-ia-kv-alert-trigger-success-dlp
   Conditions = [ """dlpengine=""", """vendor=Zscaler""", """event_id=""", """url=""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d+:\d+:\d+)""",
-    """\saction=({result}.+?)\s+(\w+=|$)""",
+    """\saction=({action}.+?)\s+(\w+=|$)""",
     """\sprotocol=({protocol}.+?)\s+(\w+=|$)""",
     """\sserverip=(?:0.0.0.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """\suseragent=({user_agent}.+?)\s+(\w+=|$)""",

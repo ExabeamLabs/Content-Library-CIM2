@@ -24,7 +24,7 @@ cef-netscreen-network-connection = {
     """\Wshost=({src_host}.+?)(\s+[\w\-]+=|\s*$)""",
     """\Wsuser=({user}.+?)(\s+[\w\-]+=|\s*$)""",
     """\Wcat=({rule}.+?)(\s+[\w\-]+=|\s*$)""",
-    """\WnitroReason=({result_reason}.+?)(\s+[\w\-]+=|\s*$)""",
+    """\WnitroReason=({reason}.+?)(\s+[\w\-]+=|\s*$)""",
   
 }
 ```

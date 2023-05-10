@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: SiteMinder
 ------------------
-### Product: [Symantec SiteMinder](../ds_siteminder_symantec_siteminder.md)
+### Product: [Symantec Siteminder](../ds_siteminder_symantec_siteminder.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

@@ -15,7 +15,7 @@ Name = imperva-incapsula-cef-http-session-siemintegration
   Fields = [
       """sip\\?=(0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s""",
       """start\\?=({time}\d{13})""",
-      """src\\?=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
+      """src\\?=({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s""",
       """sourceServiceName\\*=({web_domain}.+?)\s+(\w+\\?=|$)""",
       """act\\?=({action}[A-Z_]+)\s""",
       """requestClientApplication\\?=({user_agent}.+?)\s+(\w+\\?=|$)""",

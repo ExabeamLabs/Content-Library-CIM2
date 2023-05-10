@@ -3,7 +3,7 @@
 {
 Name = hp-arubacpm-kv-endpoint-authentication-fail-authfailed
   Vendor = HP
-  Product = Aruba ClearPass Policy Manager
+  Product = Aruba Clearpass Policy Manager
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """Authentication failed""", """method=""", """server=""", """authmgr""" ]

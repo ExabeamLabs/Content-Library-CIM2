@@ -8,7 +8,7 @@ Name = cisco-secureendpoint-mix-alert-trigger-success-vulnerable
   Fields=${CiscoParsersTemplates.s-cisco-amp-alert.Fields}[
     """file_name":"({process_name}[^\.]+\.exe)"""
   ]
-  DupFields = ${CiscoParsersTemplates.s-cisco-amp-alert.DupFields}[ "alert_type->alert_name" ]
+  DupFields = [ "alert_type->alert_name" ]
 
 s-cisco-amp-alert = {
   Vendor = Cisco

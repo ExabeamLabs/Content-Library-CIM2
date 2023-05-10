@@ -4,7 +4,7 @@
 Name = lenel-og-kv-physical-location-access-success-accessgranted-1
     Vendor = Lenel
     Product = OnGuard
-    TimeFormat = "yyyy-MM-dd HH:mm:ss"
+    TimeFormat =  "yyyy-MM-dd HH:mm:ss"
     Conditions = [ """ EVDESCR: ""Access Granted"" """, """"" EMPID: """"" ]
     Fields = [
       """EVENT_LOCAL_TIME:\s*"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",

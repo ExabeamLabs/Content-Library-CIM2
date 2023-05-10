@@ -5,7 +5,7 @@ Name = microsoft-exchange-kv-app-login-success-401
   Vendor = Microsoft
   Product = Microsoft Exchange
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd' time='HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'\ttime='HH:mm:ss"
   Conditions = [ """AgentDevice=MSIIS""", """sc-status=401""" ]
   Fields = [
     """date=({time}\d\d\d\d\-\d\d\-\d\d\s*time\=\d\d:\d\d:\d\d)""",

@@ -11,7 +11,7 @@ barracuda-vpn-auth-attempt = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """Info\s+({host}[^\s:]+)\s+Session""",
-    """\W(login|user)=(({email_address}[^@\s\(]+@[^\s\(@]+)|({user}[^\s\(]+))\s*\(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))""",
+    """\W(login|user)=(({email_address}[^@\s\(]+@[^\s\(@]+)|({user}[^\s\(]+))\s*\(({src_ip}[A-Fa-f:\d.]+?):({src_port}\d+)""",
     """\W((?i)(login|user))=(({email_address}[^@\s\(]+@[^\s\(@]+)|({user}[^\s\(=]+))""",
     """user '(({email_address}[^'@\s\(]+@[^'\s\(@]+)|({user}[^'\s\(=]+))\s*'""",
     """Session PHS:\s*({event_name}[^:=\(]+?)\s*(:|\w+=|\(|$)""",

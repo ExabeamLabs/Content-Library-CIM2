@@ -18,9 +18,9 @@ Name = fireeye-etp-kv-email-receive-fenotify
     """occurred:\s*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """\salert\s*\(id:({alert_id}[^,]+),\s*name:({alert_type}[^\)]+)""",
     """severity:\s*({alert_severity}[^\s]+)""",
-    """smtp-mail-from:\s*([^<]+<)?({src_email_address}[^@\s]+@[^\s>]+)""",
+    """smtp-mail-from:\s*([^<]+<)?({sender}[^@\s]+@[^\s>]+)""",
     """smtp-to:\s*({dest_email_address}[^@\s]+@[^\s,]+)""",
-    """\saction:\s*({result}[^\s]+)""",
+    """\saction:\s*({action}[^\s]+)""",
     """\ssubject:\s*({email_subject}.+?)\s+src:""",
     """\stype:\s*({category}[^\s]+)\s+stype:""",
     """X-ETP-TRAFFIC-TYPE:\s*({direction}[^\s]+)""",
@@ -34,7 +34,7 @@ Name = fireeye-etp-kv-email-receive-fenotify
   ]
   SOAR {
     IncidentType = "dlp"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_type->description", "dest_email_address->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "result->dlpActionTaken","host->dlpDeviceName"]
+    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_type->description", "dest_email_address->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "action->dlpActionTaken","host->dlpDeviceName"]
     NameTemplate = """FireEye DLP Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

@@ -5,9 +5,6 @@ Name = cisco-secureendpoint-sk4-alert-trigger-success-quarantinefailure
   ParserVersion = "v1.0.0"
   Product = Cisco Secure Endpoint
   Conditions = [ """"event_type"""", """"Quarantine Failure"""", """"trajectory":""", """"timestamp_nanoseconds":""" ]
-  Fields=${CiscoParsersTemplates.s-cisco-amp-alert.Fields}[
-    """"event_type":"({alert_name}[^"]+)""""
-  ]
 
 s-cisco-amp-alert = {
   Vendor = Cisco

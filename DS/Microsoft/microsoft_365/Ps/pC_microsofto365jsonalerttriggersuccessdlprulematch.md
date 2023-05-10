@@ -16,7 +16,7 @@ Fields = [
   """({event_name}DlpRuleMatch)"""
   """"CreationTime"+:\s*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """"From"+:\s*"+({email_address}[^@]+?@.+?)""""
-  """"To"+:\s*\[({recipients}({dest_email_address}[^,]+)[^\]]*)\],"""
+  """"To"+:\s*\[({recipients}({recipient}[^,]+)[^\]]*)\],"""
   """"BCC"+:\s*\[({bcc}[^\]]+)"""
   """"CC"+:\s*\[({cc}[^\]]+)"""
   """"PolicyName"+:\s*"+({alert_type}.*?[^"])""""

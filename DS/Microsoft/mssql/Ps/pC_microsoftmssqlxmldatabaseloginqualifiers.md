@@ -22,7 +22,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
     """Connection made using ({auth_package}[^.]+).""",
     """<EventID Qualifiers=[^>]+>({event_code}\d+)""",
     """<Keyword>({result}Audit.+?)</Keyword>""",
-    """<Message>[^<>]*?Reason:\s*({result_reason}[^.]+?)\."""
+    """<Message>[^<>]*?Reason:\s*({failure_reason}[^.]+?)\."""
     """\sserver_principal_name:(({domain}[^\\]+)\\)?({user}[^\s]+)\sserver_principal_sid""",
     """database_name:({db_name}[^\s]+)""",
     """\Wserver_principal_name:(({domain}[^\\\/]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",

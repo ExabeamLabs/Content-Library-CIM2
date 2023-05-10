@@ -25,7 +25,6 @@ Fields = [
 """\sDBID:\[\d+\]\s*'(|({db_id}[^']+))'"""
 """\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\/\s]+))'"""
 """\sPRIVILEGE\s*:\[\d+\]\s*'({privilege}[^']+)'"""
-"""(?i:((create|drop) user))\s+({dest_user}[^\s]+)"""
 ]
 DupFields = [
 "account->db_user"

@@ -7,7 +7,7 @@ Product = "Event Viewer - Security"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """5158"""
-  """<Data Name"""
+  """<Data Name ='"""
   """The Windows Filtering Platform has permitted a bind to a local port"""
 ]
 Fields = [
@@ -15,12 +15,12 @@ Fields = [
   """({event_code}5158)"""
   """"Activity":"({event_name}[^"]+)"""
   """"Computer":"({host}[^"]+)"""
-  """<Data Name\\*='ProcessId'>({process_id}.+?)</Data>"""
-  """<Data Name\\*='Application'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^"\\\/]+))</Data>"""
-  """<Data Name\\*='SourceAddress'>(0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)</Data>"""
-  """<Data Name\\*='SourcePort'>({dest_port}\d+)"""
-  """<Data Name\\*='Protocol'>({ms_protocol_num}.+?)</Data>"""
-  """<Data Name\\*='LayerName'>({layer_name}.+?)</Data>"""
+  """<Data Name ='ProcessId'>({process_id}.+?)</Data>"""
+  """<Data Name ='Application'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^"\\\/]+))</Data>"""
+  """<Data Name ='SourceAddress'>(0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)</Data>"""
+  """<Data Name ='SourcePort'>({dest_port}\d+)"""
+  """<Data Name ='Protocol'>({ms_protocol_num}.+?)</Data>"""
+  """<Data Name ='LayerName'>({layer_name}.+?)</Data>"""
 ]
 DupFields = [
   "host->dest_host"

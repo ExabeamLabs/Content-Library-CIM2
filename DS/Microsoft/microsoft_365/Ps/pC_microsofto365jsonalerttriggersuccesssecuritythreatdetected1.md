@@ -6,7 +6,7 @@ Vendor = "Microsoft"
 Product = "Microsoft 365"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
-  """"src-application-name":"Office 365""""
+  """"src-application-name":"Office365""""
   """event-name":"security-threat-detected""""
   """"src-event-id""""
 ]

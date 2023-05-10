@@ -13,7 +13,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
    ]
    Fields = [
      """"mailProcessingStartTime"+:({time}\d{10})""",
-     """"headerFrom":"({src_email_address}[^"]+)",""",
+     """"headerFrom":"({sender}[^"]+)",""",
      """"subject":"({email_subject}[^"]+)",""",
      """"messageSize":({bytes}\d+)""",
      """"messageId":"({alert_id}[^"]+)",""",
@@ -23,7 +23,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
      """"senderIp":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """\[\{"fileNameOrURL":"({email_attachment}[^\.]+\.({file_ext}[^"]+))"""
    ]
-  DupFields = [ "src_email_address->email_user" , "dest_email_address->external_address" , "email_attachment->file_name"]
+  DupFields = [ "sender->email_user" , "dest_email_address->external_address" , "email_attachment->file_name"]
  
 
 }

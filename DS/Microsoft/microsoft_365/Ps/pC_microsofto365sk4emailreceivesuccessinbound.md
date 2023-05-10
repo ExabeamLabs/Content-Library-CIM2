@@ -11,12 +11,12 @@ Name = microsoft-o365-sk4-email-receive-success-inbound
     """"Date":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """"Subject":"({email_subject}[^"]+)"""",
     """"Direction":"({direction}[^"]+)"""",
-    """"SenderAddress":"({src_email_address}[^",]+)"""",
+    """"SenderAddress":"({sender}[^",]+)"""",
     """"RecipientAddress":"({email_recipients}[^"]+)"""",
     """"MessageSize":"?({bytes}\d+)""",
     """"EventType":"({alert_type}[^"]+)""""
   ]
-  DupFields = [ "alert_type->alert_name", "alert_type->action", "email_recipients->dest_email_address" ]
+  DupFields = [ "alert_type->alert_name", "alert_type->action" ]
 
 
 }

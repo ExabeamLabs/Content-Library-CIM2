@@ -27,7 +27,7 @@ cef-defender-atp-2.Fields} [
 
 {
 Vendor = Microsoft
-Product = Azure ATP
+Product = Azure Advanced Threat Protection
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Fields = [
   """CEF:?([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|"""
@@ -52,7 +52,7 @@ ParserVersion = "v1.0.0"
 
 {
 Vendor = Microsoft
-Product = Azure ATP
+Product = Azure Advanced Threat Protection
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Fields = [
   """CEF:?([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|"""

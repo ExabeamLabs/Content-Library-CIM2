@@ -5,9 +5,6 @@ Name = microsoft-evsecurity-xml-policy-apply-6144
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
   Conditions = [ """<EventID>6144<""", """Security policy in the group policy objects has been applied successfully""" ]
-  Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
-    """<Data Name ='GPOList'>({policy_name}[^<]+)<"""
-  ]
 
 s-xml-events = {
   Vendor = Microsoft
@@ -25,7 +22,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

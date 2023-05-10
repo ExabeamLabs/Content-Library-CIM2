@@ -13,7 +13,7 @@ mcafee-usb-insert = {
       """<GMTTime>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """({host}[\w\-.]+)\s+EPOEvents""",
       """<MachineName>({dest_host}[\w\-.]+)""",
-      """<IPAddress>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?<""",
+      """<IPAddress>({dest_ip}[A-Fa-f:\d.]+)<""",
       """<OSName>({os}[^<]+)""",
       """<UserName>({domain}[^\\<]+)\\+[^<]+<""",
       """<UserName>(({domain}[^\\<]+)\\+)?({user}[^,<]+)<\/UserName>""",
