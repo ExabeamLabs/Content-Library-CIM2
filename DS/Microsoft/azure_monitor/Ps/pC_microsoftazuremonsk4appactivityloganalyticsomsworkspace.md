@@ -44,7 +44,8 @@ cef-cloud-system-info = {
     """"AlertSeverity":"({alert_severity}[^",]+)""",
     """"AlertName":"({alert_name}[^",]+)""",
     """"RiskScore"+:\s*"+({alert_severity}[^",]+)""",
-    """"Process":"({process_name}[^"]+)"""
+    """"Process":"({process_name}[^"]+)""",
+    """"OSName":"({os}[^"]+)""""
   ]
  
 }

@@ -17,7 +17,7 @@ Name = pan-gp-csv-vpn-logout-success-succeeded
     """User name:\s*({email_address}[^@\s]+@[^\s,]+),""",    
     """globalprotectgateway-\S+?,({host}[\w.-]+?),""",
     """SYSTEM,({vpn_client}[^,]+),""",
-    """\WReason:\s*({reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)"""
+    """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)"""
   ]
 
 

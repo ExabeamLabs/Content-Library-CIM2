@@ -22,7 +22,7 @@ Name = cisco-ie-str-email-success-dcid
     """\('(subject|Subject)',\s*'({email_subject}.*?)'\)""",
     """\('(x-fr({direction}o)m-mailhub|X-Fr({=direction}o)m-MailHub)',\s*'true'\)"""
   ]
-  DupFields = [ "user->sender" ]
+  DupFields = [ "user->src_email_address" ]
 
 
 }

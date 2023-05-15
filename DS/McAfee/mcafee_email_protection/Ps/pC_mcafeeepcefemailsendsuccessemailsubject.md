@@ -38,7 +38,7 @@ Fields = [
   """\sfilePath=(({file_path}[^\s]+\\)?({file_name}[^\s]+\.({file_ext}[^\s]+)))"""
 ]
 DupFields = [
-  "orig_user->sender"
+  "orig_user->src_email_address"
   "orig_user->user"
 ]
 ParserVersion = "v1.0.0"

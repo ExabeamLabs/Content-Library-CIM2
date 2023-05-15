@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Akamai
 --------------
-### Product: [Akamai Siem](../ds_akamai_akamai_siem.md)
+### Product: [Akamai SIEM](../ds_akamai_akamai_siem.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

@@ -1,0 +1,31 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-evsecurity-xml-audit-policy-modify-4905-2
+  ParserVersion = v1.0.0
+  Vendor = Microsoft
+  Product = Event Viewer - Security
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  Conditions = ["""<EventID>4905<""" , """<Event xmlns""" ,"""<Provider Name""","""Microsoft-Windows-Security-Auditing""" ]
+  Fields = [
+    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<Computer>({host}[^<]+)""",
+    """<EventID>({event_code}\d+)""",
+    """<Task>({sub_category}[^<]+)""",
+    """<Keywords>({result}[^<]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\"\}]+)""",
+    """ThreadID(\\)?=('|")({thread_id}\d+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'\"]+)""",
+    """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?ProcessId[^<>]+?>({process_id}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
+    """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
+  ]
+  DupFields = [ "host-> dest_host" ]
+
+
+}
+```

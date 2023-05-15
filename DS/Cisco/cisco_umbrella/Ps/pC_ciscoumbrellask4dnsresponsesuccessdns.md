@@ -15,7 +15,7 @@ Fields = [
   """"mostGranularIdentity":"({host}[^"]+)""""
   """"timestamp":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""""
   """"responseCode":"({dns_response_code}[^"]+)""""
-  """"action":"({action}[^"]+)""""
+  """"action":"({result}[^"]+)""""
   """"queryType":"({dns_query_type}[^"]+)""""
   """"domain":"({dns_query}[^"]+)""""
   """"categories":\[(|""|({categories}[^\]]+))\]"""

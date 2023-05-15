@@ -2,7 +2,7 @@
 ```Java
 {
 Name = akamai-siem-cef-alert-trigger-success-alerttriggerd
-Product = Akamai Siem
+Product = Akamai SIEM
 Vendor = Akamai
 TimeFormat = "epoch"
 Conditions = [ """CEF:""", """Akamai|akamai_siem""", """requestMethod=""", """ cs2Label=Rule""", """Vector Score:""", """Triggered Rules:""" ]

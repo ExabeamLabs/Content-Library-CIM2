@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
   TimeFormat = "MM-dd-yyyy'T'HH:mm:ss.SSS"
   Conditions = [ """A user's local group membership was enumerated""", """Account Name:""" ]
   Fields = [
-    """<TimeCreated SystemTime='({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
+    """<TimeCreated SystemTime\\*='({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({event_code}4798)""",
     """<Computer>({host}.+?)</Computer>""",

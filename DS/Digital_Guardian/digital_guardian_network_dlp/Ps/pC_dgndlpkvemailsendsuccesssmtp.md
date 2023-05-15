@@ -10,7 +10,7 @@ Name = dg-ndlp-kv-email-send-success-smtp
     """timestamp="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d \w+)"""",
     """\d\d:\d\d ({host}[^\s]+)\s+\d+\s+\d{4}\-\d\d\-\d\d""",
     """source="(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^"\\;]+))"""",
-    """email_sender="(?:|({sender}[^"\\]+))"""",
+    """email_sender="(?:|({src_email_address}[^"\\]+))"""",
     """email_recipients="({external_address}[^";]+)""",
     """email_recipients="({email_recipients}.+?)"""",
     """inspected_document="(?:|({file_name}.+?))"""",

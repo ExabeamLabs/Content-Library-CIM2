@@ -7,16 +7,14 @@ Name = amazon-awscloudtrail-cef-app-activity-assumedrole
   ParserVersion = "v1.0.0"
   Product = AWS CloudTrail
   Conditions = [  """AwsApiCall""", """eventName""", """awsRegion""", """type=AssumedRole""" ]
-  Fields = [
+  Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
     """"+eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
-    """"+sourceIPAddress"+\s*:\s*"+?(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^"].+?))"+\s*[,\]\}]""",
+    """"+sourceIPAddress"+\s*:\s*"+?(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^"].+?))"+\s*[,\]\}]""",
     """"+eventSource"+\s*:\s*"+?(|({host}[^"]+?))"+\s*[,\]\}]""",
     """"userIdentity".+?"+invokedBy"+\s*:\s*"+?(|({dest_host}[^"].+?))"+\s*[,\]\}]""",
     """({app}AwsApiCall)""",
     """"+eventName"+\s*:\s*"+?(|({action}[^"].+?))"+\s*[,\]\}]""",
     """"+eventName"+\s*:\s*"+?(|({operation}[^"].+?))"+\s*[,\]\}]""",
-    """"userIdentity\\?".+?"arn\\?"\s*:\s*\\?"?(|arn:aws:sts::\d+:[^\/]+\/({user}[^"]+)\/+(?!\-\d+)[^\/]+?)(@[\w\.]+)?\\?"\s*[,\]\}]""",
-    """"+userName"+\s*:\s*"+?(|({user}[^"].+?))"+\s*[,\]\}]""",
     """"eventSource"\s*:\s*"(|({service_name}[^"]+))"""",
     """"sessionIssuer"\s*:\s*.*?"arn"\s*:\s*"(?:|({object}[^"]+))"""",
     """"bucketName"\s*:\s*"(|({bucket_name}[^"]+))"""",
@@ -37,13 +35,22 @@ Name = amazon-awscloudtrail-cef-app-activity-assumedrole
     """\srequestClientApplication=({app}[^\s]+)\s""",
     """items":\[[^\]]+?fromPort":({src_port}\d+),"""",
     """items":\[[^\]]+?toPort":({dest_port}\d+),"""",
-    """items":\[[^\]]+?ipProtocol":"({protocol}[^"]+)"""",    
-    """\Wsuser=[^=]*?({user}[^\\\/@=]+)@[^=]+?(\s+\w+=|\s*$)""",
+    """items":\[[^\]]+?ipProtocol":"({protocol}[^"]+)"""",
     #"""\Wext_userIdentity_sessionContext_sessionIssuer_type=(|({operation}.+?))(\s+\w+=|\s*$)""",
     """"userIdentity".*?"sessionContext".*?"sessionIssuer".*?"type":"({operation}[^"]+)"""",
     """\WflexString1=(|({operation}[^=]+?))(\s+\w+=|\s*$)""",
     """"+userName"+\s*:\s*"+?(|({target}[^"]+?))"+\s*[,\]\}]""",
     """"requestParameters":\{"userName":"({target}[^"]+)"\
-
+aws-cloudtrail-user-template = {
+    Fields = [
+      """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[^\\\/@=]+?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
+      """"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """"userIdentity\\?":.+?"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/([^\/"]+\/)(AssumeRoleSession|((?![\w\-\.]{30,})(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)))\\?"""",
+      """"sourceIdentity\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """"userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,50}:({email_address}[^"]+?@[^@"]+)\\?"\s*[,\]\}]""",
+      """"userIdentity\\?":.+?"AssumedRole\\?".+?"sessionIssuer\\?":\s*\{[^\}]+?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """"userIdentity\\?":.+?"IAMUser\\?".+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """"userIdentity\\?":\s*\{.*?"type\\?":\s*\\?"({user}Root)\\?""""
+    
 }
 ```

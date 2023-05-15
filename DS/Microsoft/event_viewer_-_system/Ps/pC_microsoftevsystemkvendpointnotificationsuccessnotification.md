@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsystem-kv-endpoint-notification-success-notification
   Vendor = Microsoft
-  Product = event viewer - system
+  Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat =  "epoch"
   Conditions = [ """EventIDCode=""", """Computer=""", """RecordNumber=""", """TimeGenerated=""", """Message=""" ]

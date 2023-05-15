@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-kv-share-access-5145-9
       """\s來源連接埠:\s*({src_port}\d+)""",
       """\s共用名稱:\s*(?:\\\\\*\\)?({share_name}.+?)\s+共用路徑:""",
       """\s共用路徑:\s*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+?)\\)?({d_name}\s*\S[^\\]+?))\\?\s+)相對目標名稱:""",
-      """\s相對目標名稱:\s*\\?(?:\s*|(?:({f_parent}.+?)\\)?({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.]+?))?)(?:\\HEAD|:.+?|\\|\s)\s*)存取要求資訊:""",
+      """\s相對目標名稱:\s*\\?(?:\s*|(?:({file_dir}.+?)\\)?({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.]+?))?)(?:\\HEAD|:.+?|\\|\s)\s*)存取要求資訊:""",
       """\s存取:\s*.*\s({access}SYNCHRONIZE|Execute|Traverse|Read|READ).*\s*存取檢查結果:""",
       """\s存取:\s*.*\s({access}WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA).*\s*存取檢查
 結果:""",

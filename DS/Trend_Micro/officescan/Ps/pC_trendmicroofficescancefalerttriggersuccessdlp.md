@@ -47,7 +47,7 @@ cef-trendmicro-security-alert = {
     """\Wdpt=({dest_port}\d+)""",
     """\Wsrc=(::|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s""",
     """\Wspt=({src_port}\d+)""",
-    """\Wact=(Unknown|({action}[^=]+?))(?:\s+\w+=|\s*$|\s*")""",
+    """\Wact=(Unknown|({result}[^=]+?))(?:\s+\w+=|\s*$|\s*")""",
     """\Wcn3=({threat_type}[^=]+?)(\s+\w+=|\s*$|\s*")""",
     """\Wrequest="*(|({malware_url}[^"]+?))(\s+\w+=|\s*$|\s*"|”\]+\s+\w+=)""",
     """\WdeviceProcessName =({process_path}({process_dir}[^=]*?)({process_name}[^\/\\=]+?))(\s+\w+=|\s*$|\s*")""",

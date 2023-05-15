@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-app-notification-510
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """>510</EventID>""", """<TimeCreated SystemTime=""" ]
+  Conditions = [ """>510</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<EventData><Data>({instance_id}[^<]+)"""
   ]
@@ -25,7 +25,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

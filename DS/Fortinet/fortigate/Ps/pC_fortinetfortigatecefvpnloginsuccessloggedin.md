@@ -9,9 +9,9 @@ Name = fortinet-fortigate-cef-vpn-login-success-loggedin
   Fields = [
     """FTNTFGTeventtime=({time}\d{13})""",
     """\s\d\d:\d\d:\d\d\s({host}[\w\-\.]+)""",
-    """\ssrc=({src_ip}[a-fA-F\d\.]+)""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sspt=({src_port}\d{1,5})""",
-    """\sdst=({dest_ip}[a-fA-F\d\.]+)""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sdpt=({dest_port}\d{1,5})""",
     """\sact=({action}[^=]+?)\s\w+=""",
     """FTNTFGTresult=({result}[^"]+)$""",

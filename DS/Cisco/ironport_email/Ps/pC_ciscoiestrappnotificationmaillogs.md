@@ -4,7 +4,7 @@
 Name = cisco-ie-str-app-notification-maillogs
   ParserVersion = "v1.0.0"
   Vendor = Cisco
-  Product = Ironport Email
+  Product = IronPort Email
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ mail_logs""", """ Info: """, """ DCID """ ]
   Fields = [

@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: HP
 ----------
-### Product: [Aruba Wireless Controller](../ds_hp_aruba_wireless_controller.md)
+### Product: [Aruba Wireless controller](../ds_hp_aruba_wireless_controller.md)
 ### Use-Case: [Ransomware](../../../../UseCases/uc_ransomware.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

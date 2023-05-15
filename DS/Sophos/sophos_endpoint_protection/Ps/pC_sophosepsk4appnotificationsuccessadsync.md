@@ -8,7 +8,7 @@ Name = sophos-ep-sk4-app-notification-success-adsync
     """"group":"({alert_type}[^"]+)"""",
     """"name":"({additional_info}[^"]+)""""
   ]
-  DupFields = [ "alert_name->event_name"]
+  DupFields = ${SophosParsersTemplates.cef-sophos-security-alert-1.DupFields}[ "alert_name->event_name"]
   ParserVersion = "v1.0.0"
 
 cef-sophos-security-alert-1 = {
@@ -31,7 +31,7 @@ cef-sophos-security-alert-1 = {
     """"source":"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\s\\]+))""",
     """"source":"(n\/a|(([^\\\s"]*\s+[^\\"]*|({domain}[^\\"]+?))\\+)?({user}[^\\\s"]+))"""",
     """"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-    """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}[A-Fa-f:\d.]+)\))?)"""",
+    """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
     """"description":"({additional_info}[^:"]+:?([^"]+? at '({malware_url}[^"]+)')?)"""",
     """"descriptor":"({process_path}[^\s]+\\({process_name}[^"]+))"""",
   ]

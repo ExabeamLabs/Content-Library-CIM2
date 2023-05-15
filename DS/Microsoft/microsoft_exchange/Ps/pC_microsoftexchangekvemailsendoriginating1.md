@@ -25,14 +25,14 @@ Fields = [
   """total-bytes=({bytes}\d+)"""
   """recipient-count=({num_recipients}\d+)"""
   """message-subject="*({email_subject}.+?)"*\s+((\w+-)*\w+=|$)"""
-  """sender-address=({sender}\S+)"""
+  """sender-address=({src_email_address}\S+)"""
   """directionality=({direction}\w+)"""
 ]
 DupFields = [
   "alert_name->alert_type"
   "dest_email_address->external_address"
-  "sender->user"
-  "sender->orig_user"
+  "src_email_address->user"
+  "src_email_address->orig_user"
 ]
 ParserVersion = "v1.0.0"
 

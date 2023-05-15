@@ -16,7 +16,7 @@ Fields = [
 """"AccountName":"(-|system|({user}[^"\s]+))""""
 """"AccountDomain":"({domain}[^"\s]+)""""
 """"AccountSid":"({user_sid}[^"]+)""""
-""""ActionType":"({action}[^"]+)""""
+""""ActionType":"({result}[^"]+)""""
 """"FileName":"({process_name}[^"]+)""""
 """"MD5":"({hash_md5}[^"]+)""""
 """"ProcessId":({process_id}\d+)"""

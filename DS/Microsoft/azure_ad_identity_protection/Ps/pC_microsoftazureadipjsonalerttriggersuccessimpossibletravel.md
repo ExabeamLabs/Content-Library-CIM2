@@ -21,6 +21,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-impossibletravel
      """"domainName"+:\s*"+({domain}[^"]+)"""",
      """"logonLocation"+:\s*"+({location}[^"]+)""""
      """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
+     """status=({result}[^\s]+)"""
   ]
 
 

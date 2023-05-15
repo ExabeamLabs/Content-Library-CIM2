@@ -9,10 +9,10 @@ Name = unix-unix-kv-user-create-success-useradd
   Conditions = [ """new user:""", """useradd""", """UID""" ]
   Fields = [
 """\d\d:\d\d:\d\d ({host}[\w.\-]+)\suseradd""",
-"""new user: name=({account_name}[^,]+),""",
-"""new user: .+?UID=({account_id}[^,]+),""",
+"""new user: name\\*=({account_name}[^,]+),""",
+"""new user: .+?UID\\*=({account_id}[^,]+),""",
   ]
-  DupFields = [ "host->dest_host", "account_name->dest_user" ]
+  DupFields = [ "host->src_host", "account_name->dest_user" ]
 
 
 }

@@ -3,7 +3,7 @@
 {
 Name = dell-sw-cef-vpn-logout-success-sessionend
   Vendor = Dell
-  Product = SonicWALL
+  Product = Sonicwall
   TimeFormat = "epoch"
   Conditions = [ """|McAfee|ESM""", """Aventail Session End"""]
   Fields = [

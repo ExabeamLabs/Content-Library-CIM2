@@ -17,7 +17,7 @@ cef-windows-dhcp-events = {
     """EventID":({event_code}\d+)""",
     """Name\\?="Errorvalue">({error_code}\d+)""",
     """Name\\?="FQDNName">({dest_host}[^<]+)<\/Data>""",
-    """Name\\?="IP_Name">\[{2}({dest_ip}[a-fA-F\d:.]+)\]{2}<\/Data>""",
+    """Name\\?="IP_Name">\[{2}({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\]{2}<\/Data>""",
     """"RenderedDescription":"({additional_info}[^"]+?)\s*""""
   
 }

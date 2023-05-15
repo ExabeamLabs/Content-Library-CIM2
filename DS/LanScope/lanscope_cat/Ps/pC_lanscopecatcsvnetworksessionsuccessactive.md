@@ -6,7 +6,7 @@ Name = lanscope-cat-csv-network-session-success-active
   ParserVersion = v1.0.0
   Conditions = [ """"リアルタイムイベントログ"""", """"ACTIVE"""" ]
   Fields = ${LanScopeParserTemplates.s-lanscope-app-activity.Fields}[
-    ""","*リアルタイムイベントログ"*,"*ACTIVE"*,("*[^"]*"*,){5}"*({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):({dest_port}\d+)\s+\-\s+({account}[^\s@]+)@({dest_host}[^:]+):({process_command_line}[^"]+)"*,"""
+    ""","*リアルタイムイベントログ"*,"*ACTIVE"*,("*[^"]*"*,){5}"*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)\s+\-\s+({account}[^\s@]+)@({dest_host}[^:]+):({process_command_line}[^"]+)"*,"""
   ]
   DupFields = [ "app->process_name" ]
 

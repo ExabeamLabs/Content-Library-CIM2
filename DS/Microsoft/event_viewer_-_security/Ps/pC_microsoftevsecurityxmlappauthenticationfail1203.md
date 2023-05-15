@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-app-authentication-fail-1203
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Security
-  Conditions = [ """>1203</EventID>""", """<TimeCreated SystemTime=""" ]
+  Conditions = [ """>1203</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields} [
 # audit_type is removed
     """(<|&lt;)AuditResult(&gt;|>)({result}.+?)(&lt;|<)\/AuditResult(&gt;|>)""",
@@ -37,7 +37,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

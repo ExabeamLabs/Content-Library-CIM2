@@ -1,6 +1,6 @@
 Vendor: Akamai
 ==============
-Product: Akamai Siem
+Product: Akamai SIEM
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

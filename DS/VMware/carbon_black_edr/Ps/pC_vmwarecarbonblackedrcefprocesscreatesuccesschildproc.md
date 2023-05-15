@@ -24,7 +24,7 @@ carbonblack-edr {
     """"+process_username"+:"+((NT AUTHORITY|({domain}[^\\,]+))\\\\)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^",]+))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
-    """"+sensor_action"+:"+({action}[^"]+)"+""",
+    """"+sensor_action"+:"+({result}[^"]+)"+""",
     """"+process_path"+:"+((?i)(SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""",
     """"+action"+:"+({action}[^"]+)?"*""",
     """"+parent_cmdline"+:"+\s*({parent_process_command_line}[^,"]+)""",

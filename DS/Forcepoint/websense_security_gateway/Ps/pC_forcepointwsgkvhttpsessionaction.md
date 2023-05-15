@@ -32,7 +32,7 @@ Name = forcepoint-wsg-kv-http-session-action
     """\shttp_content_type=(?:-|({mime}[^"]+?))\s+http_""",
     """\shttp_proxy_status_code=({http_response_code}\d+)""",
     """\sdisposition=({disposition}[^=]+?)\s+(\w+=|$)""",
-    """\sreason=(-|({failure_reason}[^=]+?))\s+(\w+=|$)"""
+    """\sreason=(-|({result_reason}[^=]+?))\s+(\w+=|$)"""
   ]
 
 

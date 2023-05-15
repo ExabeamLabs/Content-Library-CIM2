@@ -9,7 +9,7 @@ Name = vmware-esxi-str-app-activity-hostd
   Conditions = [""" Hostd:""", """Originator@6876""", """ hostd[""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)\s+({host}[^\s]+)\sHostd:""",
-    """user=([^:]+:)?((({domain}[^\\\s@]+)\\+)?({user}[^\s\\@\]]+))""",
+    """user=([^:]+:)?((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-]+\$?))""",
     """Hostd:\s+({additional_info}[^"]+?)\s*$"""
   ]
 

@@ -10,10 +10,10 @@ Name = microsoft-evsecurity-xml-endpoint-notification-5031
   Fields = [
     """<EventID>({event_code}\d+)""",
     """({event_name}Windows Firewall blocked an application from accepting incoming connections on the network.)""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'""",
-    """<Data Name ='Application'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))<\/Data>"""
+    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'""",
+    """<Data Name\\*='Application'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))<\/Data>"""
   ]
 
 

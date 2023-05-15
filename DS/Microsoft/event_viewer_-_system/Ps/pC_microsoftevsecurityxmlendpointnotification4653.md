@@ -6,8 +6,8 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4653
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4653<""", """An IPsec main mode negotiation failed""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
-    """Local Endpoint:.*?Network Address:\s*({src_ip}[a-fA-F\d.:]+)\s*Keying Module Port:\s*({src_port}\d+)""",
-    """Remote Endpoint:.*?Network Address:\s*({dest_ip}[a-fA-F\d.:]+)\s*Keying Module Port:\s*({dest_port}\d+)""",
+    """Local Endpoint:.*?Network Address:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({src_port}\d+)""",
+    """Remote Endpoint:.*?Network Address:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({dest_port}\d+)""",
     """Authentication Method:\s*(-|({auth_method}\S.*?))\s*Role:""",
     """Failure Reason:\s*(-|({failure_reason}.+?))\s*State:"""
   ]
@@ -28,7 +28,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

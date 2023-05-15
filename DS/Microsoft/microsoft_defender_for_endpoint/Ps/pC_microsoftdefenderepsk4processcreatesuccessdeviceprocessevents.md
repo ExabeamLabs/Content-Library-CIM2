@@ -26,7 +26,7 @@ cef-defender-atp-2 = {
        """"Protocol"+:\s*"+({protocol}[^"]+)""",
        """LocalIP"+:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
        """LocalPort"+:({src_port}\d+)""",
-       """ActionType"+:\s*"+({action}[^"]+)""",
+       """ActionType"+:\s*"+({result}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}[^"]+)""",
        """InitiatingProcessAccountName"+:\s*"+((?i)SYSTEM|(?i)network service|({user}[^"]+))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",

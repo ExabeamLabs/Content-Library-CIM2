@@ -50,17 +50,6 @@ f5-waf-activity.Fields} [
   ParserVersion = "v1.0.0"
 },
 
-${SentinelOneParsersTemplates.json-sentinelone-threat-events}{
-  Name = sentinelone-singularityp-json-process-create-success-processcreation
-  Product = Singularity Platform
-  Conditions = [ """"eventType": "Process Creation"""",  """"agentName":""", """"processImagePath":""" ]
-  Fields = ${SentinelOneParsersTemplates.json-sentinelone-threat-events.Fields}[
-    """"parentProcessName":\s*"({parent_process_name}[^"]+)"""",
-    """"processImagePath":\s*"({process_path}[^"]+)""""
-  ]
-  ParserVersion = "v1.0.0"
-},
-
 {
   Name = dtexsystems-intercept-cef-process-create-success-processcreated
   Vendor = Dtex Systems

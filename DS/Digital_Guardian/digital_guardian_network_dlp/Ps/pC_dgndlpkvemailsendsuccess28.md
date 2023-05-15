@@ -6,7 +6,7 @@ Name = dg-ndlp-kv-email-send-success-28
   Product = Digital Guardian Network DLP
   Conditions = [ """ Agent_Local_Time="""", """ User_Name ="""", """ Operation="28"""" ]
   Fields = ${DGParsersTemplates.digital-guardian-activity.Fields}[
-    """Email_Sender="({sender}[^@]+@[^.]+\.[^"]+)"""",
+    """Email_Sender="({src_email_address}[^@]+@[^.]+\.[^"]+)"""",
     """Email_Subject="\s*({email_subject}[^"]+?)\s*"""",
     """Email_Recipient="(?i)(unknown|({dest_email_address}[^"@]+@[^\."]+\.[^"]+))""""
   ]

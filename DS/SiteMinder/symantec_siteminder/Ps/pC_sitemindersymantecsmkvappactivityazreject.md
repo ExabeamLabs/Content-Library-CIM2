@@ -8,7 +8,7 @@ Name = siteminder-symantecsm-kv-app-activity-azreject
   Conditions = [ """AzReject """, """,o=""" ]
 
 siteminder-web-activity = {
-  Product = Symantec Siteminder
+  Product = Symantec SiteMinder
   Vendor = SiteMinder
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
   Fields = [

@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: VMware
 --------------
-### Product: [Vmware AirWatch](../ds_vmware_vmware_airwatch.md)
+### Product: [VMware AirWatch](../ds_vmware_vmware_airwatch.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

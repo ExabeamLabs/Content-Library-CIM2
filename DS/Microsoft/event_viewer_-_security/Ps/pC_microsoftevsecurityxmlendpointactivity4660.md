@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
     """<Data Name(\\)?=('|")ObjectType('|")>({object_class}.+?)</Data>""",
     """<Data Name(\\)?=('|")ObjectName('|")>({object}.+?)</Data>""",
     """<Data Name(\\)?=('|")(HandleID|HandleId)('|")>({object_id}.+?)</Data>""",
-    """<Data Name =('|")ProcessName('|")>\s*({process_path}({process_dir}[^"<]+?)({process_name}[^"<\\]+))\s*</Data>""",
+    """<Data Name\\*=('|")ProcessName('|")>\s*({process_path}({process_dir}[^"<]+?)({process_name}[^"<\\]+))\s*</Data>""",
     """<Data Name(\\)?='SubjectLogonId'>({login_id}[^<]+)""",
     """<EventName>({event_name}[^<]+)<\/EventName>"""
 ]

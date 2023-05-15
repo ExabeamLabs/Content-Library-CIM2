@@ -5,7 +5,7 @@ Name = mcafee-es-csv-alert-trigger-success-cleanfailed
     Vendor = McAfee
     Product = McAfee Endpoint Security
     ParserVersion = "v1.0.0"
-    TimeFormat = "M/d/yyyy\tH:mm:ss a"
+    TimeFormat = "M/d/yyyy H:mm:ss a"
     Conditions = [ " (MD5)", " (Clean failed)"]
     Fields = [
       """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\t({additional_info}[^\t]+?)\s*\t(({domain}[^\t]+)(\\)+)?({user}[^\t]+)\t(\w+\[({process_id}\d+)\]|({process_path}[^\t]+))\t({malware_url}.+?\\({malware_file_name}[^\\]+))\t({alert_name}[^\t]+?)\s*\(({alert_type}[^\)]+)\)\t({hash_md5}\S+?)\s*\(MD5\)"""

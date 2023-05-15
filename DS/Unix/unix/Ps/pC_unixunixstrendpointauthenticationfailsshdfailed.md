@@ -11,6 +11,8 @@ Name = unix-unix-str-endpoint-authentication-fail-sshdfailed
     """(\d\d:|(\+|-))\d\d:\d\d (::ffff:)?({host}[\w\-.]+)\s""",
     """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)? sshd\[""",
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """sshd\[\d+\]:\s*({failure_reason}[^<;$"]+)\s*('|"|$)"""
+    """({failure_code}[^\s]+)\s+sshd"""
   ]
 
 

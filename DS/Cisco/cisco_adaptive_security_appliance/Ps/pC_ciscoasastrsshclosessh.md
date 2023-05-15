@@ -8,7 +8,7 @@ Name = cisco-asa-str-ssh-close-ssh
 """SSH2_CLOSE:""" 
 ]
   Fields = ${CiscoParsersTemplates.cisco-system-info.Fields} [
-    """SSH2_CLOSE:\sSSH2 Session from ({src_ip}[A-Fa-f:\d.]+).+? for user '(|({user}[^\s']+))"""
+    """SSH2_CLOSE:\sSSH2 Session from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+? for user '(|({user}[^\s']+))"""
     """({result}closed)"""
   ]
 

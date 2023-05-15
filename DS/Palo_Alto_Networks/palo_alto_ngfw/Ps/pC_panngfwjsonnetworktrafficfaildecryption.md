@@ -21,7 +21,7 @@ Name = pan-ngfw-json-network-traffic-fail-decryption
     """"NATDestinationPort":({dest_translated_port}\d+)""",
     """"LogType":"({event_name}[^"]+)"""",
     """"SubType:"({operation}[^"]+)"""",
-    """"Action":"({action}[^"]+)"""",
+    """"Action":"({result}[^"]+)"""",
     """"Protocol":"({protocol}[^"]+)"""",
     """"Rule":"({rule}[^"]+)"""",
     """"PolicyName":"({additional_info}[^"]+)"""",

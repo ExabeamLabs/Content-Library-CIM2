@@ -6,12 +6,13 @@ Name = microsoft-evsecurity-xml-process-close-4689
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4689<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
-    """<Data Name ='SubjectUserSid'>({user_sid}[^<]+)""",
-    """<Data Name ='SubjectUserName'>({user}[^<]+)""",
-    """<Data Name ='SubjectDomainName'>({domain}[^<]+)""",
-    """<Data Name ='SubjectLogonId'>({login_id}[^<]+)""",
-    """<Data Name ='TaskName'>({task_name}[^<]+)""",
+    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
+    """<Data Name\\*='SubjectUserName'>({user}[^<]+)""",
+    """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)""",
+    """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)""",
+    """<Data Name\\*='TaskName'>({task_name}[^<]+)""",
   ]
+  DupFields = [ "host->src_host" ]
 
 s-xml-events = {
   Vendor = Microsoft
@@ -29,7 +30,7 @@ s-xml-events = {
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
     """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",

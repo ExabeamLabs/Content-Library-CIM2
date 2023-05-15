@@ -11,7 +11,7 @@ Conditions = [
   """Message details:"""
 ]
 Fields = [
-  """(|({alert_name}[^"]+?))\s+has been detected,and\s+(|({action}.+?))\s+has been taken on\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(PM|AM|pm|am)).\\nMessage details:\\nServer:\s*(|({host}[\w.\-]+))\\nFound in:\s*(|({alert_type}.+?))\\nSender:\s*(|({malware_url}.+?));\\nRecipient:\s*(|({email_address}.+?));\\nSubject:\s*(|({additional_info}.+?))\s*\\nAttachment name:\s*(|({file_name}[^"]+?))("|\s*$)"""
+  """(|({alert_name}[^"]+?))\s+has been detected,and\s+(|({result}.+?))\s+has been taken on\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(PM|AM|pm|am)).\\nMessage details:\\nServer:\s*(|({host}[\w.\-]+))\\nFound in:\s*(|({alert_type}.+?))\\nSender:\s*(|({malware_url}.+?));\\nRecipient:\s*(|({email_address}.+?));\\nSubject:\s*(|({additional_info}.+?))\s*\\nAttachment name:\s*(|({file_name}[^"]+?))("|\s*$)"""
   """"hostname":"({src_host}[^"]+)"""
   """"level":"({alert_severity}[^"]+)"""
 ]

@@ -40,7 +40,7 @@ HornetDlpEmailTemplates = {
       """date=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """dir=({direction}1|2)""",
       """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-      """from=({sender}[^@\s]+?@[^\s]+)""",
+      """from=({src_email_address}[^@\s]+?@[^\s]+)""",
       """to=({dest_email_address}[^@\s]+?@[^\s]+)""",
       """\stype=({result}\d+)""",
       """reason="({additional_info}[^"]+)""",

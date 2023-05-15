@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-mix-key-5061
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """"EventID":"5061"""", """<Data Name ='""" ]
+  Conditions = [ """"EventID":"5061"""", """<Data Name""" ]
 
 json-xml-object-access = {
   Vendor = Microsoft

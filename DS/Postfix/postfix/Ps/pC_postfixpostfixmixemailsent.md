@@ -18,7 +18,7 @@ Name = postfix-postfix-mix-email-sent
     """"host(_name)?":"({host}[^"]+)""",
     """\d\d:\d\d:\d\d ({host}\S+) ( postfix[^:]+: )?""",
     """\Wto=<({email_recipients}[^\>]+)""",
-    """\Wto=<?(\\u\d+)?({dest_email_address}[^@>]+?@[^,\\>]+\.[^,\\>]+)>?""",
+    """\Wto=<?(\\u\d+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_domain}[^\]\s"\\,\|>]+))(?<!local)(?<!loc)(?<!localdomain)>""",
     """\Wrelay=({dest_host}[\w\-.]+)\[({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """originalAgentHostName =({host}[^"]+)\soriginalAgentAddress"""
   ]

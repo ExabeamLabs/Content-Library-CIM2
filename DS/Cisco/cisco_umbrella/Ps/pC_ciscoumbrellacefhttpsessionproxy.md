@@ -20,7 +20,7 @@ Name = cisco-umbrella-cef-http-session-proxy
     """"timestamp"+:"+({time}[^",]+)"""",
     """"referer"+:"+({referrer}[^",]+)"""",
     """"userAgent"+:"+(\s+|({user_agent}[^"]+))"""",
-    """"url"+:"+(-|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({web_domain}[^\\\/\s:,"]+))?(:({dest_port}\d+))?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?))"""",
+    """"url"+:"+(-|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({web_domain}[^\\\/\s:,"]+))?(:({dest_port}\d+))?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?))"""",
     """"url"+:"+({protocol}http(s)?)""",
     """"sha"+:"+({sha}[^",]+)"""",
     """"categories"+:\["+({category}[^",]+)""",

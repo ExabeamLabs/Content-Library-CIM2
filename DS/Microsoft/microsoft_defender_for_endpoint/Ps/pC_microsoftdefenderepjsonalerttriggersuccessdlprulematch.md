@@ -12,13 +12,12 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch
     """"SensitiveInformation":\s*\[\{[^\}]*?"Location":\s*"(|({additional_info}[^"]+))"(,|\})""",
     """"Severity":\s*"({alert_severity}[^"]+)"""",
     """"IncidentId":\s*"({alert_id}[^"]+)"""",
-    """"Actions":\s*\["({action}[^"]+)"""",
+    """"Actions":\s*\["({result}[^"]+)"""",
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
     """"From":\s*"(({email_address}[^@"]+?@[^\."]+\.[^"]+)|({user}[^@"]+)@({domain}[^@"]+))""", 
     """"To":\s*\["?({target}[^\]"]+?)"?\]"""
   ]
-  DupFields = [ "email_address->user" ]
   ParserVersion = "v1.0.0"
 
 

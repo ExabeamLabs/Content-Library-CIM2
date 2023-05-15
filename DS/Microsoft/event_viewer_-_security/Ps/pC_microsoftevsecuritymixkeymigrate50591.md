@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-mix-key-migrate-5059-1
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """"EventID":"5059"""", """<Data Name ='""" ]
+  Conditions = [ """"EventID":"5059"""", """<Data Name""" ]
 
 json-xml-object-access = {
   Vendor = Microsoft

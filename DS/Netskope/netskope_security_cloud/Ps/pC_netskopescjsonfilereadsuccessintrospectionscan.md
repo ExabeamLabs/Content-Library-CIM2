@@ -7,7 +7,7 @@ Name = netskope-sc-json-file-read-success-introspectionscan
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity-1.Fields} [
     """"timestamp":\s*({time}\d+)""",
   ]
-  DupFields = [ "operation->access", "object->file_name" ]
+  DupFields = ${NetskopeParsersTemplates.cef-netskope-activity-1.DupFields}[ "operation->access", "object->file_name" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity-1 = {

@@ -10,7 +10,7 @@ Name = safesend-s-kv-email-send-success-emailexternal
     """({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(AM|PM|am|pm))""",
     """\WComputerName =({host}[\w\-.]+)""",
     """\Wuser="({user}[^"\s]+)""",
-    """\Wfrom="({sender}[^"\s@]+@[^"\s@]+)""",
+    """\Wfrom="({src_email_address}[^"\s@]+@[^"\s@]+)""",
     """\Wsubject="({email_subject}[^"]+?)\s*"""",
     """\Wnr_total_recipients=({num_recipients}\d+)""",
     """\Wnr_internal_recipients=({num_internal_recipients}\d+)""",

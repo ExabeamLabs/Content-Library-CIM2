@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Microsoft
 -----------------
-### Product: [event viewer - application](../ds_microsoft_event_viewer_-_application.md)
+### Product: [Event Viewer - Application](../ds_microsoft_event_viewer_-_application.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

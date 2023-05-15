@@ -3,7 +3,7 @@
 {
 Name = zscaler-pa-json-user-lock-success-accountlock
   ParserVersion = "v1.0.0"
-  Conditions = [ """"User Audit Logs"""", """"AuditOperationType":"Account Locked"""", """"User":"""", """"ObjectType":"Authentication"""" ]
+  Conditions = [ """"AuditOperationType":"Account Locked"""", """"User":"""", """"ObjectType":"Authentication"""" ]
 
 zscaler-audit-events = {
     Vendor = Zscaler

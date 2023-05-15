@@ -21,7 +21,7 @@ Name = microsoft-x-csv-email-deliver
     """,\s*({bytes}\d+)\s*,(?:[^,]*,){7}Incoming,""",
     """,\s*({num_recipients}\d+)\s*,(?:[^,]*,){6}Incoming,""",
     """,\s*({email_subject}[^,]+?)\s*,(?:[^,]*,){3}Incoming,""",
-    """,\s*['"]*(|MicrosoftExchange.*?|({sender}[^@,]+@[^\.]+\.[^,]+)['"]*)\s*,(?:[^,]*,){2}Incoming,""",
+    """,\s*['"]*(|MicrosoftExchange.*?|({src_email_address}[^@,]+@[^\.]+\.[^,]+)['"]*)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*['"]*(|.+?@({external_domain}[^,]+?)['"]*)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*['"]*(?:<>|({return_path}[^,]+?))['"]*\s*,(?:[^,]*,)Incoming,"""
   ]

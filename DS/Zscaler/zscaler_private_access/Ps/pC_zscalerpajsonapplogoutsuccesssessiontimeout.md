@@ -3,7 +3,7 @@
 {
 Name = zscaler-pa-json-app-logout-success-sessiontimeout
   ParserVersion = "v1.0.0"
-  Conditions = [ """"User Audit Logs"""", """"AuditOperationType":"Session Time Out"""", """"User":"""", """"ObjectType":"Authentication"""" ]
+  Conditions = [ """"AuditOperationType":"Session Time Out"""", """"User":"""", """"ObjectType":"Authentication"""" ]
 
 zscaler-audit-events = {
     Vendor = Zscaler

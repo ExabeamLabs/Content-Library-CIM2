@@ -3,12 +3,12 @@
 {
 Name = hp-arubacpm-kv-endpoint-login-success-authenticated
   ParserVersion = v1.0.0 
-  TimeFormat="yyyy-MM-dd HH:mm:ss-SS"
+  TimeFormat="yyyy-MM-dd HH:mm:ssZ"
   Conditions = [ """Authenticated]""", """Common.Request-Timestamp=""" ]
 
 q-aruba-nac-logon = {
   Vendor = HP
-  Product = Aruba Clearpass Policy Manager
+  Product = Aruba ClearPass Policy Manager
   TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
   Fields = [
     """Common\.Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+)?[\+\-]\d+)""",

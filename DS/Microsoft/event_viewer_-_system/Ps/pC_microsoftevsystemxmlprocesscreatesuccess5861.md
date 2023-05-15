@@ -14,7 +14,7 @@ Name = microsoft-evsystem-xml-process-create-success-5861
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """<Computer>({host}[^<]+)</Computer>""",
-    """<Security UserID='({user_sid}[^']+)""",
+    """<Security UserID\\*='({user_sid}[^']+)""",
     """({process_name}WMI)""",
     """Query\s*=\s*"*({process_command_line}[^";]+)""",
     """Consumer:\s* instance of\s*({process_path}.+?)\s*\{"""

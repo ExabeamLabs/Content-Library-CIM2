@@ -11,8 +11,8 @@ Name = hmail-hmailserver-json-app-activity-winhmailserver
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"host":\{"name":"({host}[^"]+)""",
     """"log_type":"({event_category}[^"]+)""",
-    """"message":".*?\\t\d+\\t({session_id}\d+)\\t.*?\\t\\"({src_ip}[a-fA-F\d.:]+)\\"\\t\\"(\w+):""", #dl field removed
-    """(MAIL FROM):<({email_address}.+?@([^@]+?))>""", #dl fields are removed
+    """(MAIL FROM):<({src_email_address}.+?@([^@]+?))>""", #dl fields are removed
+    """"message":".*?\\t\d+\\t({session_id}\d+)\\t.*?\\t\\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\"\\t\\"(\w+):""", #dl field removed
     """(RCPT TO):<({dest_email_address}.+?@([^@]+?))>""", #dl fields are removed
     """(?:MAIL FROM|RCPT TO):<({email_address}.+?)>""",
   ]

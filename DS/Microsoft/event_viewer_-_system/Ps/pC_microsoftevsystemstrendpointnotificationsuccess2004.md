@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsystem-str-endpoint-notification-success-2004
   Vendor = Microsoft
-  Product = event viewer - system
+  Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """2004""", """Windows successfully diagnosed a low virtual memory condition""" ]

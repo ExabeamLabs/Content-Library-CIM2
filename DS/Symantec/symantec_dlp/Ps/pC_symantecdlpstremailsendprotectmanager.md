@@ -11,12 +11,12 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-  """({host}[\w.\-]+)\s+({alert_name}[^\s\^]+)\^\^({alert_id}\d+)\^\^({additional_info}[^\^]+)\^\^[^\^]*\^\^({email_recipients}({dest_email_address}[^\^,]+)[^\^]*)\^\^({sender}[^\^]+)\^\^({alert_severity}[^\^]+)\^\^({email_subject}[^\^]+)\^\^(N/A|({object}[^\^]+))\^\^([^\^]*\^\^){9}({protocol}[^\^]+?)\s*(\^|$)"""
+  """({host}[\w.\-]+)\s+({alert_name}[^\s\^]+)\^\^({alert_id}\d+)\^\^({additional_info}[^\^]+)\^\^[^\^]*\^\^({email_recipients}({dest_email_address}[^\^,]+)[^\^]*)\^\^({src_email_address}[^\^]+)\^\^({alert_severity}[^\^]+)\^\^({email_subject}[^\^]+)\^\^(N/A|({object}[^\^]+))\^\^([^\^]*\^\^){9}({protocol}[^\^]+?)\s*(\^|$)"""
   """\d\d:\d\d:\d\d\s+({host}[\w.\-]+)\s+({action}[^\^]+?)\^\^"""
   """\d\d:\d\d:\d\d\s+[\w.\-]+\s+[^\^]*?\^\^({alert_id}[^\^]+)"""
   """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){2}({url}(\w+:\/+)?({web_domain}[^\\\/]+)[^\^]+)"""
   """\d\d:\d\d:\d\d\s+({host}[\w.\-]+)\s+([^\^]*?\^\^){4}({email_recipients}({dest_email_address}[^\^,]+)[^\^]*)"""
-  """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){5}({sender}[^\^]+)"""
+  """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){5}({src_email_address}[^\^]+)"""
   """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){6}({alert_severity}[^\^]+)"""
   """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){7}({email_subject}[^\^]+)"""
   """\d\d:\d\d:\d\d\s+[\w.\-]+\s+([^\^]*?\^\^){13}({alert_name}[^\^]+)"""
@@ -25,7 +25,7 @@ Fields = [
   """\^\^\?{3}\s*({action}\S+)"""
 ]
 DupFields = [
-  "sender->original_user"
+  "src_email_address->original_user"
 ]
 SOAR {
   IncidentType = "dlp"

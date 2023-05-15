@@ -14,11 +14,11 @@ Name = microsoft-o365-json-app-activity-success-updateinboxrules
     """"UserId":\s*"({email_address}[^@"]+@({domain}[^"]+))"""",
     """"ActionType(\\)?":(\\)?"({operation}[^"\\]+)(\\)?"""",
     """"Operation":\s*"({event_name}[^"]+)"""",
-    """Forward[^\}\]]+Recipients(\\)?":\[(\\)?({recipients}"({recipient}[^\\",;@]+@({dest_domain}[^\\",;@]+))[^\]]+)\]""",
+    """Forward[^\}\]]+Recipients(\\)?":\[(\\)?({recipients}"({dest_email_address}[^\\",;@]+@({dest_domain}[^\\",;@]+))[^\]]+)\]""",
     """"Workload":\s*"({app}[^"]+)"""",
     """"ClientProcessName":\s*"({process_name}[^"]+)""""
   ]
-  DupFields = [ "recipient->target" ]
+  DupFields = [ "dest_email_address->target" ]
   ParserVersion = "v1.0.0"
 
 

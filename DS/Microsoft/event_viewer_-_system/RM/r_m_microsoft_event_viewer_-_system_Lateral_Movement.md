@@ -7,10 +7,11 @@ Vendor: Microsoft
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  47   |   2    |         10         |       4        |    4    |
+|  47   |   2    |         10         |       5        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |
+| app-activity    | <b>T1090.003 - Proxy: Multi-hop Proxy</b><br> ↳ <b>Auth-Tor-Shost</b>: User authentication or login from a known TOR IP    |    |
 | authentication-successful | <b>T1090.003 - Proxy: Multi-hop Proxy</b><br> ↳ <b>Auth-Tor-Shost</b>: User authentication or login from a known TOR IP    |    |
 | dcom-activation-failed    | <b>T1021.003 - T1021.003</b><br> ↳ <b>A-DCOMFailure-Known</b>: Remote DCOM activation failure on this asset.<br> ↳ <b>DCOMFailure-Known</b>: Remote DCOM activation failure.    |    |
 | logout-remote    | <b>T1210 - Exploitation of Remote Services</b><br> ↳ <b>A-Suspicious-Bluekeep2</b>: The channel ms_t120 has been closed on this asset.    |    |

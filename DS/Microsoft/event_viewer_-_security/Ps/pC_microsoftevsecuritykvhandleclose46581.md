@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-handle-close-4658-1
   Fields = [
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_code}4658)""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """({event_name}The handle to an object was closed)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",

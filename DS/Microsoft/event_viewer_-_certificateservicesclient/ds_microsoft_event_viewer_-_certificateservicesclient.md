@@ -1,6 +1,6 @@
 Vendor: Microsoft
 =================
-Product: Event Viewer - Certificateservicesclient
+Product: Event Viewer - CertificateServicesClient
 -------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

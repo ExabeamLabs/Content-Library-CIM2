@@ -8,7 +8,8 @@ Name = okta-amfg-cef-endpoint-login-success-attemptsuccess
 """destinationServiceName =Okta"""
   ]
   Fields = ${OktaParserTemplates.json-okta-auth.Fields}[
-    """({result}(?i)success)"""
+    """({result}(?i)success)""",
+    """"factor":"({login_type_text}[^"]+)""""
   ]
 
 json-okta-auth = {
@@ -33,7 +34,7 @@ json-okta-auth = {
     """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|(?i)unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
     """"actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
     """request"+:.+?"+type"+:"+User"+,"+alternateId"+:(null|"+(system@okta\.com|(?:({email_address}[^"@]+@({domain}[^"]+))|(({=domain}[^\\\/]+)[\/\\]+)?({user}[^"]+))))""",
-    """"actor"+:[^\]]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:({email_address}[^"@]+@({domain}[^"]+))|({user}[^"]+)))"""",
+    """"actor"+:[^\]]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:({email_address}([A-Za-z0-9]+[!#$%&'+\.\-\/=?^_`~])*[A-Za-z0-9]+@({domain}[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*))|({user}[\w\-.]+)))"""",
     """"login":\s*"({email_address}[^"\s@]+@[^"\s@]+)"""",
     """"login":\s*"[^@]+@({domain}[^"]+)""""
     """requestUri":\s*"({request_uri}[^"]+?)\s*"""",

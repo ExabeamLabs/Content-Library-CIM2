@@ -10,7 +10,7 @@ Name = ibm-racf-cef-app-login-ibmracf
   Fields = [
     """CEF:([^\|]*\|){4}({event_code}[^\|]+)\|({operation}[^\|]+)""",
     """\Wrt=({time}\d{13})""",
-    """\Wdvc=(|({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}.+?))(\s+\w+=|\s*$)""",
+    """\Wdvc=(|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}.+?))(\s+\w+=|\s*$)""",
     """\WcategoryOutcome=(|/({result}.+?))(\s+\w+=|\s*$)""",
     """\Wshost=(|({src_host}.+?))(\s+\w+=|\s*$)""",
     """\Wdhost=(|({host}.+?))(\s+\w+=|\s*$)""",

@@ -4,7 +4,7 @@ Product: Auditbeat
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  606  |   95   |        124         |       6        |    6    |
+|  613  |   97   |        124         |       6        |    6    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Cisco
 -------------
-### Product: [duo access](../ds_cisco_duo_access.md)
+### Product: [Duo Access](../ds_cisco_duo_access.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

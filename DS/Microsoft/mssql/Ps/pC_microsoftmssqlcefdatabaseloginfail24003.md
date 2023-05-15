@@ -15,9 +15,9 @@ Fields = [
   """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+)"""
   """\Wsuser=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[^=\\\/]+?))(\s+\w+=|\s*$)"""
   """\WdeviceExternalId=(|({dest_host}.+?))(\s+\w+=|\s*$)"""
-  """\Wcs1=({failure_reason}[^;\.]+)"""
-  """Reason:\s*({failure_reason}[^;\.]+)"""
-  """<address>({src_ip}[a-fA-F\d.:]+)</address>"""
+  """\Wcs1=({result_reason}[^;\.]+)"""
+  """Reason:\s*({result_reason}[^;\.]+)"""
+  """<address>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</address>"""
   """CLIENT:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"

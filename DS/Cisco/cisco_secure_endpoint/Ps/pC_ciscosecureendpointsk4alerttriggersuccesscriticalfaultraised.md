@@ -5,6 +5,9 @@ Name = cisco-secureendpoint-sk4-alert-trigger-success-criticalfaultraised
   ParserVersion = "v1.0.0"
   Product = Cisco Secure Endpoint
   Conditions = [ """"event_type"""", """"Critical Fault Raised"""", """"trajectory":""", """"timestamp_nanoseconds":""" ]
+  Fields=${CiscoParsersTemplates.s-cisco-amp-alert.Fields}[
+    """"event_type":"({alert_name}[^"]+)""""
+  ]
 
 s-cisco-amp-alert = {
   Vendor = Cisco

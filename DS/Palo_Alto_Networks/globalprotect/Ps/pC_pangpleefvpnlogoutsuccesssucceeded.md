@@ -17,7 +17,7 @@ Name = pan-gp-leef-vpn-logout-success-succeeded
     """User name:\s*({user}[\w.'\-\\$]+)""",
     """User name:\s*({email_address}[^@\s]+@[^\s,]+),""",
     """DeviceName =({host}[\w\-.]+)""",
-    """\WReason:\s*({reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
+    """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
     """:\d\d:\d\d (-|({host}[\w.-]+))\s"""
   ]
 

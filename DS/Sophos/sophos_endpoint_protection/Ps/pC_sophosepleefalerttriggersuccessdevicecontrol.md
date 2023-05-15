@@ -16,7 +16,7 @@ Name = sophos-ep-leef-alert-trigger-success-devicecontrol
           """src=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
           """domain=({domain}.+?)\s+(\w+=|$)""",
           """DeviceID=(?:\s|({device_id}.+?))\s+(\w+=|$)""",
-          """ActionName =({action}.+?)\s+(?:\w+=|$)"""
+          """ActionName =({result}.+?)\s+(?:\w+=|$)"""
   ]
   ParserVersion = "v1.0.0"
 

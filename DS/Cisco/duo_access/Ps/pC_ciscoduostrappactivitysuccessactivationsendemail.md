@@ -7,7 +7,7 @@ Name = cisco-duo-str-app-activity-success-activationsendemail
 
 duo-app-activity = {
   Vendor = Cisco
-  Product = duo access
+  Product = Duo Access
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",

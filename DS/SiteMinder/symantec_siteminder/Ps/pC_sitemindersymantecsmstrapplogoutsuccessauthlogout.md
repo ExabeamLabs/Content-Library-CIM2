@@ -3,7 +3,7 @@
 {
 Name = siteminder-symantecsm-str-app-logout-success-authlogout
   Vendor = SiteMinder
-  Product = Symantec Siteminder
+  Product = Symantec SiteMinder
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
   Conditions = [ """ AuthLogout """, """ [""", """] """" ]
   Fields = [

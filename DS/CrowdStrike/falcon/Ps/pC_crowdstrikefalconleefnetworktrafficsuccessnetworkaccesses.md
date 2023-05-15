@@ -7,7 +7,7 @@ Name = crowdstrike-falcon-leef-network-traffic-success-networkaccesses
   Conditions = [ """LEEF:""", """|CrowdStrike|FalconHost|""", """cat=NetworkAccesses""" ]
   Fields = ${CrowdStrikeParsersTemplates.leef-crowdstrike-alert-t.Fields} [
     """CrowdStrike\|([^|]+\|){2}({alert_name}[^|]+)""",
-    """\Wdst=({dest_ip}[a-fA-F:\d.]+)(\t|\s+\w+=|\s*\||\s*$|\s*"*\s*$)"""
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?(\t|\s+\w+=|\s*\||\s*$|\s*"*\s*$)"""
   ]
 
 leef-crowdstrike-alert-t = {

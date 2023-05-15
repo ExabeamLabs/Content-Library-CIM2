@@ -5,7 +5,7 @@ Name = accellion-kw-json-app-activity-success-networksettings
   Product = Kiteworks
   Conditions = [ """url_host""", """app_host""", """description""", """network_settings""", """event""" ]
   Fields = ${KiteWorksParsersTemplates.accelion-kite-app.Fields}[
-    """proxy_ip\\"+.+to\s+\\"+({proxy_ip}[^\/]+)"""
+    """proxy_ip\\"+.+to\s+\\"+({proxy_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """"+description"+:\s+"+({additional_info}.*?)""*\,\s"+successful"""
     ]
    DupFields = [ "additional_info->operation" ]

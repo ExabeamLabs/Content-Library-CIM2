@@ -9,10 +9,10 @@ Name = microsoft-azuremon-sk4-app-activity-applicationgatewayaccess
     """"requestUri_s":"({request_uri}[^"]+)"""",
     """"clientIP_s":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"clientPort_d":({src_port}\d+)""",
-    """"httpStatus_d":({http_response_code}\d+)""",
+    """"httpStatus_d":({result_code}\d+)""",
     """"receivedBytes_d":({bytes_out}\d+)""",
     """"sentBytes_d":({bytes_in}\d+)""",
-    """"serverRouted_s":"({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):({dest_port}\d+)"""
+    """"serverRouted_s":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)"""
   ]
 
 azure-ad-activity-1 = {

@@ -12,7 +12,7 @@ Name = sentinelone-singularityp-json-file-delete-success-deletionfile
 json-sentinelone-threat-events = {
     Vendor = SentinelOne
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-    Fields = [ 
+    Fields = [
       """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",
       """"eventType":\s*"({event_name}[^"]+)"""",
       """"agentName":\s*"({dest_host}[^"]+)"""",

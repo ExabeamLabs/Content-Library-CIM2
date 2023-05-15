@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Cisco
 -------------
-### Product: [Cisco Sourcefire](../ds_cisco_cisco_sourcefire.md)
+### Product: [Cisco SourceFire](../ds_cisco_cisco_sourcefire.md)
 ### Use-Case: [Data Exfiltration](../../../../UseCases/uc_data_exfiltration.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

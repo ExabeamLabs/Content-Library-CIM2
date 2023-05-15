@@ -22,11 +22,14 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """ComputerName =({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s"""
     """(Success Audit|information)\s+({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))"""
     """Process Name:\s*({process_path}({process_dir}[^"]+?[\\]*)?)?({process_name}[^\\\/";]+)[\s\\n;]*Token Elevation Type:""",
-    """Account Name:\s*(-|SYSTEM|({user}[^\s]+?))[\s\\n;]*Account Domain:""",
-    """Account Domain:\s*(-|({domain}[^\s]+?))[\\n\s;]*Logon ID:""",
+    """Target Subject:.+?Account Name:((\\)*(\\r|\\t|\\n))*\s*(-|SYSTEM|({dest_user}[^\\\s]+))((\\)*(\\r|\\t|\\n))*\s*""",
+    """Creator Subject:.+?Account Name:\s*(-|SYSTEM|({user}[^\s]+?))\s""",
+    """Account Domain:((\\)*(\\t|\\r|\\n))*\s*(-|({domain}[^\s]+?))[\\n\s;]*((\\)*(\\t|\\r|\\n))*Logon ID:""",
     """Logon ID:\s*({login_id}[^\s;]+?)[\\n\s]*(Target|Process)""",
+    """Creator Subject:.+?Account Domain:((\\)*(\\t|\\r|\\n))*\s*(-|({domain}[^\s]+?))[\\n\s;]*((\\)*(\\t|\\r|\\n))*Logon ID:""",
+    """Creator Subject:.+?Logon ID:\s*({login_id}[^\s;]+?)[\\n\s]*(Target|Process)""",
     """New Process Name:\s*({process_path}({process_dir}[^"]+?[\\]*)?({process_name}[^"\\]+?))[\s\\n]*Token Elevation Type:""",
-    """New Process ID:\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
+    """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
     """Creator Process ID:\s*({parent_process_guid}[^\\\s;]+)(\s|;|\\)""",
     """Creator Process Name:\s*({parent_process}((?:[^";]+)?[\\\/])?({parent_process_name}[^\\\/";]+?))[\s;]*Process Command Line:""",
     """Process Command Line:\s+"?(\s*|({process_command_line}.+?))"?[\s\\n]*Token Elevation Type indicates""",
@@ -42,6 +45,10 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)"""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_exe}.+?\.exe)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^"\\]+))\\?""""
+    """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
+    """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
+    """\"SubjectDomainName\\?":\\?"({domain}[^\\"]+)"""
   ]
   DupFields = [ "host->dest_host","process_guid->process_id" ]
 

@@ -8,7 +8,7 @@ Name = skysea-cv-csv-file-upload-success-web
   TimeFormat = "yyyy/MM/dd HH:mm:ss"
   Conditions = [""",Webアクセス,""", """,Webアップロード,"""]
   Fields = [
-    """({host}[^,]+),(({src_ip}[A-Fa-f:\d.]+)|({src_host}[\w\-.]+)),[^,]*,({user}[^,]*),[^,]*,[^,]*,[^,]*,[^,]*,Webアクセス""",
+    """({host}[^,]+),(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+)),[^,]*,({user}[^,]*),[^,]*,[^,]*,[^,]*,[^,]*,Webアクセス""",
     """({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
     """,Webアクセス,[^,]*,[^,]*,({access}(?:[^:\\\/\s,"]+:[\\\/]+)?({domain}[^\\\/\s:,"]+)[^,]*)""",
     """Webアップロード,([^,]*,){23}(({src_file_dir}[^=]+?)\\+)?({src_file_name}[^\\]+?),""",
