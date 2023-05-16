@@ -1,7 +1,7 @@
  Security Content canary Release Notes
 ======================================
 
-These Release Notes document security content updates from content package c2109.2 to canary.
+These Release Notes document security content updates from content package c2206.2_63_4_adap to latest version.
 
 The security content updates listed below include changes to the following areas:
 
