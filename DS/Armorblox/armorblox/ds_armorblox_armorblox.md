@@ -1,0 +1,19 @@
+Vendor: Armorblox
+=================
+Product: Armorblox
+------------------
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       1        |    1    |
+
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|:----:| ---- | ---- | ---- |
+|    [Malware](../../../UseCases/uc_malware.md)    |  dlp-email-alert-in<br> ↳[armorblox-ab-json-email-graymail](Ps/pC_armorbloxabjsonemailgraymail.md)<br> ↳[armorblox-ab-json-email-abuse](Ps/pC_armorbloxabjsonemailabuse.md)<br> ↳[armorblox-ab-json-email-threat](Ps/pC_armorbloxabjsonemailthreat.md)<br> | T1190 - Exploit Public Fasing Application<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_armorblox_armorblox_Malware.md)    |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  dlp-email-alert-in<br> ↳[armorblox-ab-json-email-graymail](Ps/pC_armorbloxabjsonemailgraymail.md)<br> ↳[armorblox-ab-json-email-abuse](Ps/pC_armorbloxabjsonemailabuse.md)<br> ↳[armorblox-ab-json-email-threat](Ps/pC_armorbloxabjsonemailthreat.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_armorblox_armorblox_Privilege_Abuse.md)     |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  dlp-email-alert-in<br> ↳[armorblox-ab-json-email-graymail](Ps/pC_armorbloxabjsonemailgraymail.md)<br> ↳[armorblox-ab-json-email-abuse](Ps/pC_armorbloxabjsonemailabuse.md)<br> ↳[armorblox-ab-json-email-threat](Ps/pC_armorbloxabjsonemailthreat.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_armorblox_armorblox_Privileged_Activity.md) |
+
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
+| Initial Access                                                                                                                                            | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control | Exfiltration | Impact |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------- | ------------ | ------ |
+| [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            |                     |              |        |

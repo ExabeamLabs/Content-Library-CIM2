@@ -338,8 +338,16 @@
 | dummy-new-parser-313               | checkpoint-ngfw-kv-network-traffic-fail-reject                                  |
 | dummy-new-parser-314               | checkpoint-ngfw-kv-network-traffic-outbound                                     |
 | dummy-new-parser-315               | checkpoint-ngfw-kv-network-traffic-outbound-1                                   |
+| dummy-new-parser-316               | armorblox-ab-json-email-abuse                                                   |
+| dummy-new-parser-317               | armorblox-ab-json-email-graymail                                                |
+| dummy-new-parser-318               | armorblox-ab-json-email-threat                                                  |
 | dummy-new-parser-32                | microsoft-evadfs-kv-user-password-modify-success-1204                           |
 | dummy-new-parser-33                | microsoft-evadfs-kv-user-password-modify-fail-1205                              |
+| dummy-new-parser-330               | symantec-bcpa-cef-network-traffic-success-sshtransferred                        |
+| dummy-new-parser-331               | symantec-bcpa-cef-network-traffic-fail-sshreceiveddisconnect                    |
+| dummy-new-parser-332               | symantec-bcpa-cef-app-notification-success-snapshotfetched                      |
+| dummy-new-parser-333               | symantec-bcpa-cef-app-notification-success-uploadrequestcompleted               |
+| dummy-new-parser-334               | symantec-bcpa-cef-app-notification-success-oktosenddata                         |
 | dummy-new-parser-339               | symantec-edr-json-app-notification-success-1000                                 |
 | dummy-new-parser-34                | microsoft-evadfs-kv-log-clear-success-1102                                      |
 | dummy-new-parser-340               | symantec-edr-json-app-alert-success-8061                                        |
@@ -391,6 +399,8 @@
 | dummy-new-parser-408               | microsoft-evsecurity-kv-user-unlock-success-4767-1                              |
 | dummy-new-parser-409               | microsoft-evsecurity-kv-configuration-modify-fail-4957                          |
 | dummy-new-parser-42                | juniper-ps-str-vpn-login-success-startedaovpn                                   |
+| dummy-new-parser-420               | symantec-endpointprotection-json-process-create-success-8027                    |
+| dummy-new-parser-421               | symantec-endpointprotection-json-alert-trigger-success-8027                     |
 | dummy-new-parser-43                | "exabeam-aa-kv-rule-trigger-success-anomaly                                     |
 | dummy-new-parser-44                | juniper-ps-str-vpn-login-success-startedaovpn                                   |
 | dummy-new-parser-45                | oracle-pc-json-app-activity-success-appaccess                                   |

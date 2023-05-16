@@ -38,6 +38,10 @@ Use Case: Privileged Activity
 |:----------------------------------------------------------------------------------:| ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 |                 [Apache](../DS/Apache/apache/ds_apache_apache.md)                  | T1071.001 - Application Layer Protocol: Web Protocols<br>T1078 - Valid Accounts<br>T1102 - Web Service<br> | [<ul><li>2 Rules</li></ul>](../DS/Apache/apache/RM/r_m_apache_apache_Privileged_Activity.md)                                                 |
 | [Apache Subversion](../DS/Apache/apache_subversion/ds_apache_apache_subversion.md) | T1078 - Valid Accounts<br>                                                                                 | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Apache/apache_subversion/RM/r_m_apache_apache_subversion_Privileged_Activity.md) |
+### Vendor: Armorblox
+|                             Product                              | MITRE ATT&CK® TTP          | Content                                                                                                  |
+|:----------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [Armorblox](../DS/Armorblox/armorblox/ds_armorblox_armorblox.md) | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](../DS/Armorblox/armorblox/RM/r_m_armorblox_armorblox_Privileged_Activity.md) |
 ### Vendor: AssetView
 |                             Product                              | MITRE ATT&CK® TTP          | Content                                                                                                  |
 |:----------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------- |

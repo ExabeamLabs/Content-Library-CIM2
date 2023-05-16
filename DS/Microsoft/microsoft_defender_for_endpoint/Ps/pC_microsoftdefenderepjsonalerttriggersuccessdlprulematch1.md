@@ -19,7 +19,8 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """"To":\s*\["(({dest_email_address}[^@\]"]+@[^\.\]"]+\.[^\]"]+)|({target}[^\]"]+))"\]""",
     """"To":\s*\[({target}[^\]]+)\]""",
     """src-account-name":"({account_name}[^"]+)""",
-    """Operation":\s*"({additional_info}[^"]+)""""
+    """Operation":\s*"({additional_info}[^"]+)"""",
+    """"Workload":\s*"({alert_source}[^",]+)""""
   ]
   ParserVersion = "v1.0.0"
 

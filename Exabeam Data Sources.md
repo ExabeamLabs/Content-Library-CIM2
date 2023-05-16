@@ -19,6 +19,7 @@ The following list are the out-of-the-box supported Data Sources. This list is a
 | APC            | [APC](DS/APC/apc/ds_apc_apc.md)<br>                   |
 | Arista Networks| [Awake Security](DS/Arista_Networks/awake_security/ds_arista_networks_awake_security.md)<br>      |
 | Armis          | [Armis Platform](DS/Armis/armis_platform/ds_armis_armis_platform.md)<br>    |
+| Armorblox      | [Armorblox](DS/Armorblox/armorblox/ds_armorblox_armorblox.md)<br>           |
 | AssetView      | [AssetView](DS/AssetView/assetview/ds_assetview_assetview.md)<br>           |
 | Attivo         | [BOTsink](DS/Attivo/botsink/ds_attivo_botsink.md)<br> |
 | Auth0          | [Auth0](DS/Auth0/auth0/ds_auth0_auth0.md)<br>         |

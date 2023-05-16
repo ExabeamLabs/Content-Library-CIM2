@@ -16,7 +16,8 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
     """"From":\s*"(({email_address}[^@"]+?@[^\."]+\.[^"]+)|({user}[^@"]+)@({domain}[^@"]+))""", 
-    """"To":\s*\["?({target}[^\]"]+?)"?\]"""
+    """"To":\s*\["?({target}[^\]"]+?)"?\]""",
+    """"Workload":\s*"({alert_source}[^",]+)""""
   ]
   ParserVersion = "v1.0.0"
 

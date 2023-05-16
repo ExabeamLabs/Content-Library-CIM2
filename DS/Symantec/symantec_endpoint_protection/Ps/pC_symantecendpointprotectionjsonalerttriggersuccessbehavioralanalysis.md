@@ -20,8 +20,8 @@ json-symantec-endpoint-protection = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
     Fields = [
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-      """"message":"({additional_info}[^"]+)""",
-      """"user_name":"({user}[^"]+)""",
+      """"message":"\s*({additional_info}[^"]+)""",
+      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[^"]+)""",
       """"uuid":"({user_uid}[^"]+)""",
       """"destinationServiceName":"({app}[^"]+)""",
       """"session_id":"({session_id}[^"]+)""",

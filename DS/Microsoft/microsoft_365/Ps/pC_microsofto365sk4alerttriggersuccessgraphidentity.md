@@ -14,7 +14,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s+[\w\-.]+\s+"""
 """({alert_type}({alert_name}IdentityProtection))"""
 """({alert_type}({alert_name}graph-identity-protection-risk-detection))"""
-""""source":"(generic|({alert_type}[^"]+))""""
+""""source":"(generic|({alert_source}({alert_type}[^"]+)))""""
 """"riskType":"(generic|({alert_name}[^"]+))""""
 """"requestId":"({alert_id}[^"]+)""""
 """"riskLevel":"({alert_severity}[^"]+)""""

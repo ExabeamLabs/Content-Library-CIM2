@@ -6,11 +6,14 @@ Name = microsoft-o365-cef-app-file-success-filerenamed
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"FileRenamed""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """filePath=\{"ObjectUrl":"({file_path}({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}[^"]+)))?)"""",
+    """"ObjectId":"({src_file_path}({src_file_dir}[^"]+[\\\/])({src_file_name}[^"]+?(\.({src_file_ext}[^\\\."]+))?))"""",
+    """filePath=\{"ObjectUrl":"({src_file_path}({src_file_dir}[^"]+\/)?({src_file_name}[^"]+(\.({src_file_ext}[^"]+)))?)"""",
     """"SourceFileExtension":"({src_file_ext}[^"]+)"""",
-    """"SourceRelativeUrl":"({src_file_path}[^"]+)"""",
-    """"SourceRelativeUrl":"({file_path}({file_dir}([^"]+)?[\/\\])?[^"]+)""",
-    """"FileSizeBytes":({bytes}\d+)"""
+    """"SourceRelativeUrl":"({src_file_path}({src_file_dir}([^"]+)?[\/\\])?[^"]+)""",
+    """"FileSizeBytes":({bytes}\d+)""",
+    """"DestinationRelativeUrl":"({file_path}[^"]+)"""",
+    """"DestinationFileName":"(({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))"""",
+    """"TargetFilePath":"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))""""
   ]
   DupFields = [ "src_file_path->src_file_dir","src_file_ext->file_ext"]
 
