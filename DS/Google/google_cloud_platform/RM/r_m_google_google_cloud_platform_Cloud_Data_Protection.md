@@ -11,8 +11,8 @@ Vendor: Google
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |
-| aws-role-assumepolicy   | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserModifyAssumeRole-Org-F</b>: First time this user modified who can assume a role in AWS   |  • <b>AWS-UserModifyAssumeRole-Org</b>: AWS users who modified assume role policies in the organization         |
-| aws-role-write          | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserCreateRole-Org-F</b>: First time this user has performed role creation.    |  • <b>AWS-UserCreateRole-Org</b>: AWS users who created roles in the organization    |
+| aws-role-assumepolicy   | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserModifyAssumeRole-Org-F</b>: First time this user modified who can assume a role in AWS   |  • <b>AWS-UserModifyAssumeRole-Org</b>: AWS - users who modified assume role policies in the organization       |
+| aws-role-write          | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserCreateRole-Org-F</b>: First time this user has performed role creation.    |  • <b>AWS-UserCreateRole-Org</b>: AWS - users who created roles in the organization    |
 | gcp-bucket-create       | <b>T1074 - Data Staged</b><br> ↳ <b>GCP-UserCreateBucket-Org-F</b>: First time storage bucket creation for user    |  • <b>GCP-UserCreateBucket-Org</b>: Users who created storage buckets in GCP    |
 | gcp-compute-list        | <b>T1580 - T1580</b><br> ↳ <b>GCP-UserComputeList-Org-F</b>: First time enumeration of compute resources for user    |  • <b>GCP-UserComputeList-Org</b>: Users who listed storage resources in GCP    |
 | gcp-disk-attach         | <b>TA0009 - TA0009</b><br> ↳ <b>GCP-UserAttachDisks-Org-F</b>: First time disk attachment for user    |  • <b>GCP-UserAttachDisks-Org</b>: Users who attached disks in GCP    |

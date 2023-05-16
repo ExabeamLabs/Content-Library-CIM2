@@ -11,4 +11,4 @@ Vendor: Exabeam
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |
-| aws-role-write | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserCreateRole-Org-F</b>: First time this user has performed role creation. |  • <b>AWS-UserCreateRole-Org</b>: AWS users who created roles in the organization |
+| aws-role-write | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-UserCreateRole-Org-F</b>: First time this user has performed role creation. |  • <b>AWS-UserCreateRole-Org</b>: AWS - users who created roles in the organization |
