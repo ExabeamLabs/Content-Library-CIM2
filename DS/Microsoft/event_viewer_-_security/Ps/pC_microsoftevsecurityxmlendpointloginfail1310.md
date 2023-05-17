@@ -13,14 +13,14 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
    """<Keywords>({result}[^<]+)""",
    """<TimeCreated SystemTime\\*='({time}.+?)'""",
    """<EventRecordID>({event_id}[^<]+)""",
-   """<Computer>({host}[^<]+)""",
+   """<Computer>({dest_host}({host}[^<]+))""",
+   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
    """status=([^:]+:)({result_code}[^:]+):"""
    """Failed NTLM Authentication for user:\s+'({domain}[^\\]+)\\({user}[^']+)""",
    """<Message>({event_name}.+?)\s{0,100}<"""
    """status=([^:]+:){2}({failure_reason}.+?)\s<"""
    ]
    DupFields = [
-    "host->dest_host"
     "result_code->failure_code"
    ]
 

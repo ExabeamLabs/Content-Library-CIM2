@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4905-2
   Conditions = ["""<EventID>4905<""" , """<Event xmlns""" ,"""<Provider Name""","""Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({host}[^<]+)""",
+    """<Computer>({dest_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
@@ -24,7 +25,6 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4905-2
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

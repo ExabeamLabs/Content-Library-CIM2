@@ -11,6 +11,7 @@ Name = microsoft-evsystem-xml-app-activity-success-305
     """<Execution ProcessID\\*='({process_id}\d+)'""",
     """<Security UserID\\*='({user_sid}\S+)'/>""",
     """<Computer>({host}[^"<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^"\\\.]+)""",
     """<EventID>({event_code}305)</EventID>""",
     """<EventRecordID>({event_id}[^\<]+)<\/EventRecordID>"""

@@ -3,15 +3,13 @@
 {
 Name = pan-ngfw-csv-network-traffic-fail-panorama
     ParserVersion = v1.0.0
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Conditions = [
 """,TRAFFIC,""",
 """,deny,""",
 """PANORAMA"""
     ]
     Fields = ${PaloAltoParsersTemplates.paloalto-firewall.Fields}[
-      """TRAFFIC,([^,]+,){42}({result}.*?)\s+(,|$)""",
-      """,TRAFFIC,([^,]*,){1,98}((1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[^,]+?)),"""
+      """TRAFFIC,([^,]+,){42}({result}.*?)\s+(,|$)"""
     ]
     DupFields = [ "src_user->user" ]
 

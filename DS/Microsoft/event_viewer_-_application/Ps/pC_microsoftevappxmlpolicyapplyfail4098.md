@@ -11,6 +11,7 @@ Name = microsoft-evapp-xml-policy-apply-fail-4098
     """({event_name}Group Policy Object did not apply)""",
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4098)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Security UserID\\*='({user_sid}.+?)'\/>""",

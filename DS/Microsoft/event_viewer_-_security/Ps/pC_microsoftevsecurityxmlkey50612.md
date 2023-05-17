@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-key-5061-2
   Conditions = ["""<EventID>5061<""","""SubjectLogonId""", """<Data Name""" ]
   Fields = [
     """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({host}[^<]+)"""
+    """<Computer>({dest_host}({host}[^<]+))"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
@@ -21,7 +22,6 @@ Name = microsoft-evsecurity-xml-key-5061-2
     """<Data Name(\\)?=('|")Operation('|")>({operation}[^<]+)""",
     """<Data Name(\\)?=('|")ReturnCode('|")>({return_code}[^<]+)"""
   ]
-  DupFields = [ "host-> dest_host"]
 
 
 }

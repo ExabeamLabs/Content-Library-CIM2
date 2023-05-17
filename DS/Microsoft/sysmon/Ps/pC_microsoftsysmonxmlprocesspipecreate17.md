@@ -10,6 +10,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-17
   Fields = [
     """<Data Name\\*='UtcTime'>({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d+)<\/Data>""",
     """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Data Name\\*='ProcessId'>({process_id}\d+)<\/Data>""",
 # pipe_name is removed

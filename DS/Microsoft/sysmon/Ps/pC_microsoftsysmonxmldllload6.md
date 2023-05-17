@@ -9,7 +9,8 @@ Name = microsoft-sysmon-xml-dll-load-6
   Conditions = [ """<EventID>6</EventID>""", """<EventRecordID>""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """({event_name}Driver loaded)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
@@ -19,7 +20,7 @@ Name = microsoft-sysmon-xml-dll-load-6
     """<Data Name\\*='Hashes'>[^<>]*?MD5=({hash_md5}[^,<]+)""",
     """({log_name}Microsoft-Windows-Sysmon)"""
   ]
-  DupFields = [ "host->dest_host", "event_name->operation" ]
+  DupFields = [ "event_name->operation" ]
 
 
 }

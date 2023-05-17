@@ -96,6 +96,7 @@
 | unix-logout-1                        | unix-unix-str-endpoint-logout-sshclosedconnection               |
 | unix-logout-10                       | unix-unix-kv-ftp-close-success-timeoutsession                   |
 | unix-logout-2                        | unix-unix-str-endpoint-logout-sshconnectionclosed               |
+| unix-logout-22                       | unix-unix-mix-endpoint-logout-sessionclosed                     |
 | unix-logout-3                        | unix-unix-str-endpoint-logout-success-loggedoutfrom             |
 | unix-logout-4                        | unix-unix-str-endpoint-logout-success-sshsdisconnect            |
 | unix-logout-5                        | unix-unix-str-endpoint-logout-success-loggedout                 |
@@ -158,7 +159,6 @@
 | unix-system-event-7                  | unix-unix-str-endpoint-notification-success-statistics          |
 | unix-system-event-8                  | unix-unix-str-app-notification-success-drvdebug                 |
 | unix-system-events                   | unix-unix-str-endpoint-activity-system                          |
-| unix-system-info                     | unix-unix-mix-endpoint-logout-sessionclosed                     |
 | unix-system-info-1                   | unix-unix-str-endpoint-notification-passwordexpire              |
 | unix-system-info-10                  | unix-unix-str-endpoint-activity-success-rgmanager               |
 | unix-system-info-11                  | unix-unix-str-endpoint-login-sshdconnectionfrom                 |

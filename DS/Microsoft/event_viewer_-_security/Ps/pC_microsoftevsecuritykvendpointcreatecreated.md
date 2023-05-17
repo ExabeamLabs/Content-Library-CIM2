@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-kv-endpoint-create-created
   Conditions = [ """A computer account was created""" ]
   Fields = [
     """({event_name}A computer account was created)""",
-    """<Computer>({host}[^<]+)</Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
     """({event_code}4741)""",
@@ -18,7 +19,6 @@ Name = microsoft-evsecurity-kv-endpoint-create-created
     """\sUser Principal Name:\s*(|-|({attribute}.+?))\s*Home Directory:""",
     """New Computer Account:\s+Security ID:\s*({account_id}[^\s]+)"""
   ]
-  DupFields = [ "host-> dest_host"]
 
 
 }

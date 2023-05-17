@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-kv-log-clear-success-logfileclear
   Fields = [
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w\-\.]+))"""
     """<SubjectLogonId>({login_id}[^<]+)""",
     """({event_code}1102)""",

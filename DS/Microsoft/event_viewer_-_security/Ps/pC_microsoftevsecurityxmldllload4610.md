@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-dll-load-4610
     """({event_name}An authentication package has been loaded by the Local Security Authority)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({src_host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4610)""",
     """ProcessID\\*='({process_id}\d+)'""",
     """ThreadID\\*='({thread_id}\d+)'""",

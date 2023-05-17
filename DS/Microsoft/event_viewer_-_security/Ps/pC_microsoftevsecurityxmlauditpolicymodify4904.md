@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904
   Conditions = [ """An attempt was made to register a security event source""", """<EventID>4904<""" ]
   Fields = [
     """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({host}[^<]+)"""
+    """<Computer>({dest_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
@@ -19,7 +20,6 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>"""
     """({event_name}An attempt was made to register a security event source)"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

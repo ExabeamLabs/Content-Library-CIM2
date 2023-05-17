@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-password-read-5379-1
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'\"\}]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
     """<EventID[^<]*?>({event_code}\d+)""",

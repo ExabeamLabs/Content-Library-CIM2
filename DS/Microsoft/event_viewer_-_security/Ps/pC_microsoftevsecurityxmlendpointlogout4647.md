@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4647
     """({event_name}User initiated logoff)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<\/Data>""",

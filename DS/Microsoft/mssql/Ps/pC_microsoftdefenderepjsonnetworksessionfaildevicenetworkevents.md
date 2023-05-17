@@ -50,7 +50,7 @@ ParserVersion = "v1.0.0"
 
 ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
   Name = microsoft-windows-kv-dhcp-session-success-dns
-  Product = Windows
+  Product = Microsoft DHCP Log
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """,DNS の更新要求,""" ]
   ParserVersion = "v1.0.0"
@@ -58,7 +58,7 @@ ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
 
 ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
   Name = microsoft-windows-kv-dhcp-session-success-dns-1
-  Product = Windows
+  Product = Microsoft DHCP Log
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """,DNS の更新は成功しました,""" ]
   ParserVersion = "v1.0.0"
@@ -76,6 +76,7 @@ Conditions = [
 Fields = [
   """SystemTime='({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
   """<Computer>({host}[\w\-.]+)"""
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}6272)"""
   """'SubjectUserName'>(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[^<]+)"""
   """'SubjectDomainName'>(?:-|({domain}[^\s\<]+))"""
@@ -172,7 +173,7 @@ ParserVersion = "v1.0.0"
 {
 Name = "microsoft-windows-cef-dhcp-session-success-dhcpserver"
 Vendor = "Microsoft"
-Product = "Windows"
+Product = "Event Viewer - DHCP-Server"
 TimeFormat = "epoch"
 Conditions = [
   """|Microsoft|DHCP|"""

@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627-1
     """({event_name}GroupMembership)""",
     """<TimeCreated SystemTime(\\)?='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name(\\)?='SubjectUserSid'>({user_sid}[^<]+)<""",
     """<Data Name(\\)?='TargetUserSid'>({user_sid}[^<]+)<""",

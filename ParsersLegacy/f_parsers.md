@@ -148,6 +148,11 @@
 | fortinet-network-connection-1               | fortinet-fortigate-cef-network-traffic-success-trafficdns          |
 | fortinet-network-connection-2               | fortinet-fortigate-cef-network-traffic-success-trafficipconn       |
 | fortinet-network-connection-3               | fortinet-fortigate-cef-network-traffic-success-forward             |
+| fortinet-network-info                       | fortinet-fortigate-cef-app-activity-success-router                 |
+| fortinet-network-info-1                     | fortinet-fortigate-cef-app-activity-success-system                 |
+| fortinet-network-info-2                     | fortinet-fortigate-cef-app-activity-success-connector              |
+| fortinet-network-info-3                     | fortinet-fortigate-cef-app-activity-success-ha                     |
+| fortinet-network-info-4                     | fortinet-fortigate-cef-app-activity-success-vpn                    |
 | fortinet-security-alert                     | fortinet-utm-kv-alert-trigger-success-virus                        |
 | fortinet-security-alert-1                   | fortinet-utm-kv-alert-trigger-virus                                |
 | fortinet-security-alert-2                   | fortinet-utm-kv-alert-trigger-success-anomaly                      |

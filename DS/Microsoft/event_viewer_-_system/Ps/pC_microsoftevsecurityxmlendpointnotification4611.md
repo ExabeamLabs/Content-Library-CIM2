@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4611
   Fields = [
     """<TimeCreated SystemTime(\\)?='({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """<Computer>({host}[\w\-.]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4611)""",
     """<EventRecordID>({event_id}[^<]+)""",
     """'LogonProcessName'>({auth_process}[^<"]+)<""",

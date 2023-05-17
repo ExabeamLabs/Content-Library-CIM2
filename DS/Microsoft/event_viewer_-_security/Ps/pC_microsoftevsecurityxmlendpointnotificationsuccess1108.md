@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-1108
     """<Keywords>({result}[^<]+)""",
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)"""
 	]

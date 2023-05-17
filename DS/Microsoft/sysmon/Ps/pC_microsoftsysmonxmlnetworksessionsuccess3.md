@@ -18,6 +18,7 @@ Name = microsoft-sysmon-xml-network-session-success-3
     """<Execution ProcessID\\*='({process_id}\d+)"""
     """UtcTime:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
     """<Computer>({host}.+?)<\/Computer>"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<Security UserID\\*='(({domain}[^\\]+)[\\\/]+)?({user}.+?)'\s*\/>"""
     """<EventData>.*?Image:\s*({process_path}({process_dir}.*?)({process_name}[^.]+\.exe))\s*User:"""
     """<EventData>.*?Image:\s*({path}.+?)\s*User:"""

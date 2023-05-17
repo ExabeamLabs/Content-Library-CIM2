@@ -9,7 +9,8 @@ Name = microsoft-sysmon-xml-process-close-5-1
   Conditions = [ """<EventID>5</EventID>""", """<Message>Process terminated:""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """({event_name}Process terminated)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
@@ -20,7 +21,7 @@ Name = microsoft-sysmon-xml-process-close-5-1
     """<Data Name\\*='Image'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/<]+?))<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
   ]
-  DupFields = [ "host->dest_host", "process_guid->process_id" ]
+  DupFields = [ "process_guid->process_id" ]
 
 
 }

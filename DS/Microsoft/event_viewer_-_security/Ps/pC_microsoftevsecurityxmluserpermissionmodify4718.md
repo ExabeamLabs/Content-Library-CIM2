@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name[^<>]+?AccessRemoved[^<>]+?>({access_type}[^<>]+?)</Data>""",
     """<EventID>({event_code}\d+)""",
     """<Keywords>({result}[^<]+)""",

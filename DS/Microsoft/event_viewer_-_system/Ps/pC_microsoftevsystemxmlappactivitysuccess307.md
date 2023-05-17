@@ -10,6 +10,7 @@ Name = microsoft-evsystem-xml-app-activity-success-307
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{1,10}Z)'/>""",
     """<Execution ProcessID\\*='({process_id}\d+)'""",
     """<Computer>({host}[^"<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^"\\\.]+)""",
     """<Security UserID\\*='({user_sid}\S+)'/>""",
     """<EventID>({event_code}307)</EventID>""",

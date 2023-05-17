@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447-1
     """({event_name}Microsoft-Windows-Security-Auditing)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}5447)""",
     """<Data Name\\*='UserName'>(({domain}[^\\]+)\\)?({user}[^<]+)<""",
     """<Data Name\\*='UserSid'>({user_sid}[^<]+)<""",

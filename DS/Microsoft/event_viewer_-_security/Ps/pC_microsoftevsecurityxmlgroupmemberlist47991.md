@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-xml-group-member-list-4799-1
     """({event_name}A security-enabled local group membership was enumerated)""",
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?='SubjectUserSid'>({user_sid}[^<]+)""",
     """<Data Name(\\)?='SubjectUserName'>({user}[^<]+)""",
     """<Data Name(\\)?='SubjectDomainName'>({domain}[^<]+)""",

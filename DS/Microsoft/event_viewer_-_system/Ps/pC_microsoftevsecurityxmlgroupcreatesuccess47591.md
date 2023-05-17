@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
     """Provider Name\\*='({provider_name}[^\']+)""",
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",

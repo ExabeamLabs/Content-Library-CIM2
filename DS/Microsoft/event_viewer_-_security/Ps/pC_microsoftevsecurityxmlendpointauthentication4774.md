@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-4774
     """({event_name}An account was mapped for logon)""",
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[^\s\\\/]+)""",
     """Mapped Name:\s*({account}[^\s\<]+)""",

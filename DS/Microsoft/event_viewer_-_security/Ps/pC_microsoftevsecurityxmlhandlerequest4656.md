@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-handle-request-4656
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
     """<Computer>([^<>]+?[\\\/]+)?({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<>]+)<""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>(NT AUTHORITY|({domain}[^<>]+))<""",

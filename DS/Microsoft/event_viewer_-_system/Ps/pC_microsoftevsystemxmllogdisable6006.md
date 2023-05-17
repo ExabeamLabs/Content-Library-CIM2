@@ -9,6 +9,7 @@ Name = microsoft-evsystem-xml-log-disable-6006
   Conditions = [ """>6006<""", """The Event log service was stopped""" ]
   Fields = [
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventRecordID>({event_id}\d+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",

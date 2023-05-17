@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-4
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """<Computer>({host}[^<]+)</Computer>""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s|;)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4769)""",
     """Account Name(:|=)\s*(\w+\/({src_host}[^@\s]+)(@({domain}[\w._\-]+))?|({user}[^@:\s;]+)(@({=domain}[\w._\-]+))?)[\s;]*Account Domain(:|=)""",
     """Account Domain(:|=)\s*({domain}[^\\:=]+?)[\n\s;]*Logon GUID(:|=)""",    

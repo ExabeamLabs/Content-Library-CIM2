@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4727-1
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}[^<]+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",

@@ -8,7 +8,8 @@ Name = microsoft-evsystem-xml-service-start-6005
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [ """>6005<""", """The Event log service was started""" ]
   Fields = [
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventRecordID>({event_id}\d+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",
@@ -18,7 +19,6 @@ Name = microsoft-evsystem-xml-service-start-6005
     """ProcessID\\*='({process_id}\d+)""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

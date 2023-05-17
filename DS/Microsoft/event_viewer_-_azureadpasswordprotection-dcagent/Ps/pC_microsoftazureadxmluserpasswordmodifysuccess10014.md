@@ -9,6 +9,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-10014
   Conditions = [ """<EventID>10014</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""", """The changed password for the specified user was validated as compliant with the current Azure password policy""" ]
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
     """<Data Name\\*='Data1'>({user}[^<]+)</Data>""",
     """<Data Name\\*='Data2'>({full_name}[^<]+)</Data>""",

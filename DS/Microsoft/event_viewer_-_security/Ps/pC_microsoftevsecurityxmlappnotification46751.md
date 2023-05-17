@@ -10,7 +10,8 @@ Name = microsoft-evsecurity-xml-app-notification-4675-1
   Fields = [
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
-    """<Computer>({host}[^<]+)""",
+    """<Computer>({dest_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
@@ -20,7 +21,6 @@ Name = microsoft-evsecurity-xml-app-notification-4675-1
     """ThreadID(\\)?='({thread_id}\d+)""",
     """Provider Name\\*='({provider_name}[^\']+)"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

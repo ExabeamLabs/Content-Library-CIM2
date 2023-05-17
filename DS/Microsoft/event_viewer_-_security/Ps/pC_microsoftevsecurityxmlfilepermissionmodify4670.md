@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """({event_name}Permissions on an object were changed)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)""",
     """Subject:\s*([^"]+?)Account Name:\s*(-|({user}[^\s]+))""",

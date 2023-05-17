@@ -15,6 +15,7 @@
 | hp-aruba-clearpass-info-4            | hp-arubacpm-str-app-notification-8904                       |
 | hp-aruba-clearpass-info-5            | hp-arubacpm-str-app-activity-5691                           |
 | hp-aruba-clearpass-info-6            | hp-arubacpm-str-app-notification-5688                       |
+| hp-aruba-logout                      | hp-arubawc-str-endpoint-logout-success-loggedout            |
 | hp-aruba-switch-info                 | hp-arubaos-str-port-block-00435                             |
 | hp-aruba-switch-info-1               | hp-arubaos-str-port-disable-00077                           |
 | hp-aruba-switch-info-10              | hp-arubaos-str-configuration-modify-success-04695           |

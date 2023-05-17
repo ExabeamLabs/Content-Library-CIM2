@@ -12,6 +12,7 @@ Name = microsoft-evdnsserver-xml-network-notification-6001
      """>({event_code}[^<>]+)</EventID>""",
      """EventData Name ='({event_name}[^>']+)""",
      """<Computer>({host}[^<>]+)</Computer>""",
+     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
      """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
      """<EventRecordID>({event_id}[^<]+)""",
      """<Security UserID\\*='({user_sid}[^']+)""",

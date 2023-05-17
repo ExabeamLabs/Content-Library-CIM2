@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4793-1
   Fields = [
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Task>({sub_category}[^<]+)""",
     """ThreadID(\\)?='({thread_id}\d+)""",
     """Provider Name\\*='({provider_name}[^\']+)""",

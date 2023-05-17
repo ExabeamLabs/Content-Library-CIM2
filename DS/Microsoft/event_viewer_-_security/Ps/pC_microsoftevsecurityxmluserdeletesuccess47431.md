@@ -9,7 +9,8 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
 Conditions = [ """<EventID>4743</EventID>""" ,"""Computer Account Management""" ,"""<Provider Name""","""'Microsoft-Windows-Security-Auditing"""]
 Fields = [
   """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-  """<Computer>({host}[^<]+)</Computer>""",
+  """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
   """<EventID>({event_code}\d+)""",
   """<Task>({sub_category}[^<]+)""",
@@ -25,7 +26,6 @@ Fields = [
   """<Data Name[^<>]+?TargetDomainName[^<>]+?>({dest_domain}[^<>]+?)<\Data>""",
   """<Data Name[^<>]+?TargetUserName[^<>]+?>({dest_user}[^<>]+?)</Data>"""
 ]
-     DupFields = [ "host-> dest_host" ]
 
 
 }

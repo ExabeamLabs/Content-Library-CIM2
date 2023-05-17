@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-key-migrate-5059-1
   Conditions = ["""<EventID>5059<""","""SubjectLogonId""" ]
   Fields = [
     """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({host}[^<]+)"""
+    """<Computer>({dest_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
@@ -21,7 +22,6 @@ Name = microsoft-evsecurity-xml-key-migrate-5059-1
     """<Data Name(\\)?=('|")KeyName('|")>({key_name}[^<]+)""",
     """<Data Name(\\)?=('|")KeyType('|")>({key_type}[^<]+)"""
   ]
-  DupFields = [ "host-> dest_host"]
 
 
 }

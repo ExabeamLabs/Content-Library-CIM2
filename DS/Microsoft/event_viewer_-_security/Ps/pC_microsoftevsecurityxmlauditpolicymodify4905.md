@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4905
   Conditions = [ """An attempt was made to unregister a security event source""", """<EventID>4905<""" ]
   Fields = [
     """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({host}[^<]+)"""
+    """<Computer>({dest_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """({event_name}An attempt was made to unregister a security event source)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
@@ -21,7 +22,6 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4905
     """<Data Name[^<>]+?ProcessId[^<>]+?>({process_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

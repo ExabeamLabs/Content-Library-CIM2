@@ -14,8 +14,9 @@ Name = sentinelone-singularityp-json-scheduled_task-scheduledtask
     """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""",
     """"src.process.pid":\s*({process_id}\d+)""",
     """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*"""",
-    """"event\.category":"({additional_info}[^"]+)""""
+    """"task.name":"({task_name}[^"]+)""",
   ]
+  DupFields = [ "host->dest_host"]
   ParserVersion = "v1.0.0"
 
 json-sentinelone-edr-events = {
@@ -25,10 +26,12 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({dest_host}[^"]+)""",
+      """"endpoint\.name":"({host}[^"]+)""",
       """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)"""
+      """"endpoint.os":"({os}[^"]+)""",
+      """"event\.category":"({additional_info}[^"]+)"""",
+      """"endpoint\.type":"({host_type}[^"]+)"""
     
 }
 ```

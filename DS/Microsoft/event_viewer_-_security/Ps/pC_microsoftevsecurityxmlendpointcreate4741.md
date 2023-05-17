@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-create-4741
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Data Name\\*='SubjectUserName'>({user}[^<]+)</Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",

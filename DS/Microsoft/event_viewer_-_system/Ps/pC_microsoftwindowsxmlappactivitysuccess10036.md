@@ -9,6 +9,7 @@ Name = microsoft-windows-xml-app-activity-success-10036
   Conditions = [ """<EventID Qualifiers""", """<System><Provider Name""", """<TimeCreated SystemTime""", """<Computer>""" ,""">10036<""" ]
   Fields = [
     """<Computer>({host}[\w.-]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)'""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",
     """<Message>\s*({event_name}[^<]+?)\s*</Message>""",

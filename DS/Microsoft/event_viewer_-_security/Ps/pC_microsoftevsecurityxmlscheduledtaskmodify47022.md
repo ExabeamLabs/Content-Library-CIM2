@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """<EventID>({event_code}\d+)""",
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[^<]+)""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",

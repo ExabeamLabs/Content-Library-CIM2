@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
     """<Computer>([^<>]+?[\\\/]+)?({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name(\\)?=('|")SubjectIP('|").*?>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}.+?)</Data>""",

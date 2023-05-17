@@ -18,6 +18,7 @@ Name = microsoft-sysmon-xml-dns-request-success-query
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<EventID>({event_code}\d+)</EventID>""",
     """<Computer>({host}.+?)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Security UserID\\*='({user_sid}.+?)'/>""",
     """(?i)<Data Name\\*='ProcessGuid'>\{({process_guid}[A-F0-9a-f-]+)\}</Data>""",
     """<Data Name\\*='ProcessId'>({process_id}\d+)</Data>""",

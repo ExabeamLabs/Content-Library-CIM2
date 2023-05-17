@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985
   Conditions = [ """The state of a transaction has changed""", """4985""", """Account Name:""" ]
   Fields = [
     """({event_name}The state of a transaction has changed)""",
-    """<Computer>(::ffff:)?({host}[^<]+)</Computer>""",
+    """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """\Wrt=({time}\d+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
@@ -20,7 +21,6 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985
     """ComputerName:\s*(::ffff:)?({host}[\w.\-]+)""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

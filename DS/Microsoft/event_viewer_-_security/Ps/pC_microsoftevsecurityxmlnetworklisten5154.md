@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-xml-network-listen-5154
     """({event_name}The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='Protocol'>({protocol}[^<>]+?)<\/Data>""",
     """<Data Name\\*='SourceAddress'>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """<Data Name\\*='SourcePort'>(0|({src_port}\d+))""",

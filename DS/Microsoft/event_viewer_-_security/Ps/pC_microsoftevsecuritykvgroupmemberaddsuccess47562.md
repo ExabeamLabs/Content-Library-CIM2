@@ -10,7 +10,8 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
   Fields = [
     """SystemTime(\\)?=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({host}[^<]+)</Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?='MemberName'>({user_dn}(?i)(cn)=.+?,({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?='MemberSid'>({account_id}(?=[^\\<]+\\)({sid_domain}[^\\]+)\\({user_sid}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Data Name(\\)?='TargetUserName'>(?=\w)({group_name}[^<]+)</Data>""",
@@ -31,7 +32,6 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Security UserID(\\)?='({user_sid}[^']+)""",
     """<Data Name(\\)?='RemoteMachineAccount'>({dest_host}[^<]+)"""
       ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

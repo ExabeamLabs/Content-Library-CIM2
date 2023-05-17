@@ -10,6 +10,7 @@ Name = microsoft-evsystem-xml-endpoint-stop-1074
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
     """<Computer>({host}({dest_host}[\w\-]+)[^<]*)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='param7'>(({domain}[^\\<]+?)\\)?({user}[^<]+)</Data>""",
     """({event_code}1074)</EventID>""",
     """<Message>The process [^<]+ has ({event_name}[^<]+?)\s+[\w\-]+\s+on behalf of user""",

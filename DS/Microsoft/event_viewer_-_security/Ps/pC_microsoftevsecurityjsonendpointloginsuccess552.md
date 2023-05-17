@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-json-endpoint-login-success-552
     """<Computer>({host}[^<]+)</Computer>""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s)""",
     """ComputerName =({host}[\w.\-]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """User Name:\s*({user}[\w\-\.]+(?:\s*\w+)?\$?)\s*Domain:""",
     """Domain:\s*({domain}[\w\-\.]+(?:[\s\.\-\w])*?)\s*Logon ID:""",
     """Logon ID:\s*\(\w+(\,|\s)({login_id}\w+)\)\s*Logon GUID:""",

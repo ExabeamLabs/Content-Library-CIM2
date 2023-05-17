@@ -14,6 +14,7 @@ Name = sentinelone-singularityp-json-script-execute-success-commandscript
     """"src\.process\.cmdline":"({process_command_line}.+?)",""",
     """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*"""",
   ]
+  DupFields = [ "host->dest_host"]
 
 json-sentinelone-edr-events = {
     Vendor = SentinelOne
@@ -22,10 +23,12 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({dest_host}[^"]+)""",
+      """"endpoint\.name":"({host}[^"]+)""",
       """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)"""
+      """"endpoint.os":"({os}[^"]+)""",
+      """"event\.category":"({additional_info}[^"]+)"""",
+      """"endpoint\.type":"({host_type}[^"]+)"""
     
 }
 ```

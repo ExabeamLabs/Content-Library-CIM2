@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({event_code}4798)""",
     """<Computer>({host}.+?)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",
     """({event_name}A user's local group membership was enumerated)""",
     """\sSubject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}.+?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*User:""",

@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-2
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name\\*=('|")ObjectServer('|")>(-|({object_server}[^<]+))</Data>""",
     """<Data Name\\*=('|")ObjectType('|")>(-|({object_type}[^<]+))</Data>""",

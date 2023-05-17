@@ -10,6 +10,7 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
   Fields = [
      """<TimeCreated\sSystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
          """<Computer>({host}[^<]+)<\/Computer>""",
+         """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
          """<EventID>({event_code}[^<]+)<\/EventID>""",
          """({event_name}The service is now enforcing the following Azure password policy)""",
          """<Security\sUserID\\*='({user_sid}[^']+)'""",

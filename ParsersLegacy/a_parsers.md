@@ -337,6 +337,7 @@
 | aws-getconsolescreenshot-json                         | amazon-awscloudtrail-json-app-activity-getscreenshot                              |
 | aws-getobject-json                                    | amazon-awscloudtrail-json-file-read-getobject                                     |
 | aws-getpassworddata-json                              | amazon-awscloudtrail-json-key-read-getpassword                                    |
+| aws-inspector-system-info                             | amazon-awsguardduty-sk4-alert-trigger-success-inspector                           |
 | aws-listattachedgrouppolicies-json                    | amazon-awscloudtrail-json-policy-list-success-grouppolicies                       |
 | aws-listattachedrolepolicies-json                     | amazon-awscloudtrail-json-policy-list-success-rolepolicies                        |
 | aws-listattacheduserpolicies-json                     | amazon-awscloudtrail-json-policy-list-success-userpolicies                        |

@@ -9,6 +9,7 @@ Name = microsoft-azuread-xml-user-password-reset-success-10025
   Conditions = [ """<EventID>10025</EventID>""", """<Provider Name""","""'Microsoft-AzureADPasswordProtection-DCAgent'""" ]
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
     """<Data Name\\*='Data1'>({user}[^<]+)</Data>""",
     """<Data Name\\*='Data2'>({full_name}[^<]+)</Data>""",

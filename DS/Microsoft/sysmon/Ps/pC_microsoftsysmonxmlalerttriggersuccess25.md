@@ -9,7 +9,8 @@ Name = microsoft-sysmon-xml-alert-trigger-success-25
   Conditions = [ """<Provider Name""","""'Microsoft-Windows-Sysmon'""", """<EventID>25</EventID>""", """<Data Name ='Image'>""","""Process Tampering""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """<Computer>({host}[\w\-.]+)""",
+    """<Computer>({dest_host}({host}[\w\-.]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}25)""",
     """ProcessID\\*='({process_id}\d+)'""",
     """ThreadID\\*='({thread_id}\d+)'""",
@@ -18,7 +19,6 @@ Name = microsoft-sysmon-xml-alert-trigger-success-25
     """({alert_name}Process Tampering)""",
     """<Data Name ='Image'>({process_path}({process_dir}[^<>"]*?[\\\/]+)?({process_name}[^"<>\\\/]*))<\/Data>"""
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

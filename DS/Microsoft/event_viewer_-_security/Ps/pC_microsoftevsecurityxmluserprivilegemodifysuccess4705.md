@@ -19,6 +19,7 @@ Fields = [
 """<Execution ProcessID\\*='({process_id}[^']+)"""
 """ThreadID\\*='({thread_id}[^']+)"""
 """<Computer>({host}[^<]+?)<"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)<"""
 """<Data Name\\*='SubjectUserName'>({user}[^<]+)<"""
 """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<"""

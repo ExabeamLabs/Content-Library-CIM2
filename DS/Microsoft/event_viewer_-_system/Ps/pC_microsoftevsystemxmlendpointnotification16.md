@@ -9,6 +9,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
   Conditions = [ """<EventID>16</EventID>""", """<Provider Name""","""'Microsoft-Windows-Kernel-General'""" ]
   Fields = [
     """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",

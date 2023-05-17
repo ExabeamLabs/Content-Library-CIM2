@@ -10,6 +10,7 @@ Name = microsoft-sysmon-xml-service-state-modify-4
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """({event_name}Sysmon service state changed)""",
     """<Keywords>({result}[^<]+)</Keywords>""",

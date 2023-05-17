@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
   Conditions = [ """An attempt was made to unregister a security event source""", """4905""" ]
   Fields = [
     """({event_name}An attempt was made to unregister a security event source)""",
-    """<Computer>(::ffff:)?({host}[^<]+)</Computer>""",
+    """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))""",
@@ -20,7 +21,6 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
 # src_id is removed
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

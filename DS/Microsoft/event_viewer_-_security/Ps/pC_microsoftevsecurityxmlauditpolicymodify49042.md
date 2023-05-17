@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-2
   Conditions = [ """An attempt was made to register a security event source""", """4904""" ]
   Fields = [
     """({event_name}An attempt was made to register a security event source)""",
-    """<Computer>(::ffff:)?({host}[^<]+)</Computer>""",
+    """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))"""
@@ -18,7 +19,6 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-2
     """\sProcess ID:\s*(|-|({process_id}.+?))\s*Process Name:\s*(|-|({process_path}({process_dir}.*?)({process_name}[^\\\/]+?)))\s*Event Source:""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
   ]
-  DupFields = [ "host-> dest_host" ]
 
 
 }

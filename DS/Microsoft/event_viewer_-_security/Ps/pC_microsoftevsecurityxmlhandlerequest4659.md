@@ -15,7 +15,8 @@ Name = microsoft-evsecurity-xml-handle-request-4659
 # process_info is removed
     """Transaction ID:\s+({transaction_id}[^\s]+)\s+Accesses:""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """ThreadID\\*='({thread_id}\d+)'""",
     """<Keyword>({result}[^<]+)<""",
     """<Task>({operation}File System)"""
@@ -30,7 +31,6 @@ Name = microsoft-evsecurity-xml-handle-request-4659
     """Accesses:\s*(-|({access}[^\s]+))\s*"""
     """Process ID:\s*({process_id}\S+)\s+"""
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

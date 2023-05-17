@@ -9,6 +9,7 @@ Name = microsoft-defenderep-xml-alert-trigger-success-1009
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)'\/>""",
     """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Security UserID\\*='({user_sid}[^'>]+)'\/>""",
     """<Data Name\\*='Domain'>({domain}[^<]+)<\/Data>""",

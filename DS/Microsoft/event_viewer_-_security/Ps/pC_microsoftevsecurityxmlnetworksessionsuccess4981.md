@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-network-session-success-4981
     """<EventID>({event_code}\d+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({task_name}[^<]+)""",
     """<Data Name\\*='LocalMMPrincipalName'>({src_host}[^<]+)""",

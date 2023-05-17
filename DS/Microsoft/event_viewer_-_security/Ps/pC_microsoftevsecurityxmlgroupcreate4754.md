@@ -9,7 +9,8 @@ Name = microsoft-evsecurity-xml-group-create-4754
   Conditions = [ """<Message>A security-enabled universal group was created""", """<EventID>4754</EventID>""" ]
   Fields = [
     """<Message>({event_name}[^\.:]+?)\.""",
-    """<Computer>(::ffff:)?({host}[^<]+)</Computer>""",
+    """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """<EventID>({event_code}\d+)""",
@@ -21,7 +22,6 @@ Name = microsoft-evsecurity-xml-group-create-4754
     """EventID="*({event_code}\d+)""",
     """EventType="*({result}[^"\s]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

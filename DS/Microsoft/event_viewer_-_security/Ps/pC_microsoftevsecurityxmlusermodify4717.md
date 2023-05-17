@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='SubjectUserName'>({user}[^<]+)</Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",

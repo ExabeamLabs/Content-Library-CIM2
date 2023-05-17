@@ -8,7 +8,8 @@ Name = microsoft-evsecurity-xml-group-create-success-4731
   Conditions = [ """A security-enabled local group was created""", """<EventID>4731</EventID>""" ]
   Fields = [
     """({event_name}A security-enabled local group was created)""",
-    """<Computer>({host}[^<]+)</Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime\\?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9})""",
     """({event_code}4731)""",
     """<Data Name\\?='SubjectUserSid'>(-|({user_sid}[^<>]+))<""",
@@ -19,7 +20,6 @@ Name = microsoft-evsecurity-xml-group-create-success-4731
     """<Data Name\\?='TargetDomainName'>({group_domain}[^<]+)<""",
     """<Data Name\\?='TargetSid'>({group_id}[^<]+)""",
   ]
-  DupFields = [ "host-> dest_host" ]
   ParserVersion = "v1.0.0"
 
 

@@ -112,6 +112,7 @@
 | pan-leef-network-alert                   | pan-ngfw-leef-alert-trigger-success-syslogintegration                   |
 | pan-logout                               | pan-ngfw-csv-app-logout-logout                                          |
 | pan-ngfw-system-auth                     | pan-ngfw-csv-app-authentication-success-general                         |
+| pan-ngfw-system-info                     | pan-ngfw-csv-network-notification-success-general                       |
 | pan-packet-network-connection            | pan-ngfw-csv-network-traffic-packet                                     |
 | pan-proxy                                | pan-ngfw-csv-http-session-9999                                          |
 | pan-remote-logon                         | pan-ngfw-csv-endpoint-login-success-system                              |

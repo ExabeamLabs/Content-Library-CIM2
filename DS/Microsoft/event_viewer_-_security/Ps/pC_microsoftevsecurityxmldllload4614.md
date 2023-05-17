@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-dll-load-4614
     """({event_name}Microsoft-Windows-Security-Auditing)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Computer>({src_host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4614)""",
     """ProcessID\\*='({process_id}\d+)'""",
     """ThreadID\\*='({thread_id}\d+)'""",

@@ -3,13 +3,9 @@
 {
 Name = pan-ngfw-csv-network-traffic-success-end
     ParserVersion = v1.0.0
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Conditions = [
 """,TRAFFIC,""",
 """,allow,"""
-    ]
-    Fields = ${PaloAltoParsersTemplates.paloalto-firewall.Fields}[
-      """,TRAFFIC,([^,]*,){1,98}((1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[^,]+?)),"""
     ]
 
 paloalto-firewall = {

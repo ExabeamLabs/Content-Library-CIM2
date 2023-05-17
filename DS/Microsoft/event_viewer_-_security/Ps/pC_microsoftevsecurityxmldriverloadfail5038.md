@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-driver-load-fail-5038
     """({event_name}Code integrity determined that the image hash of a file is not valid)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({src_host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}5038)""",
     """ProcessID\\*='({process_id}\d+)'""",
     """ThreadID\\*='({thread_id}\d+)'""",

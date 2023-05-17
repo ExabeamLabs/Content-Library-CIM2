@@ -9,7 +9,8 @@ Name = windows-evsystem-xml-endpoint-notification-12
   Conditions = [ """<EventID>12<""", """<Provider>Microsoft-Windows-Wininit""", """was started as a protected process with level:""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """<Computer>({host}[\w\-.]+)""",
+    """<Computer>({dest_host}({host}[\w\-.]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}12)<""",
     """<Message>({event_name}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<""",
@@ -19,7 +20,6 @@ Name = windows-evsystem-xml-endpoint-notification-12
     """<Provider>({provider_name}[^<]+)<""",
     """<Message>({process_name}\S+)\swas started as a protected process with level"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

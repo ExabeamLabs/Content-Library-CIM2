@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """<Data Name\\*='TargetDomainName'>({group_domain}[^<]+)<""",
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)"""

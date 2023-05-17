@@ -11,7 +11,8 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-1
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
     """({event_code}4702)""",
     """({event_name}A scheduled task was updated)""",
-    """<Computer>({host}[^<]+)""",
+    """<Computer>({src_host}({host}[^<]+))""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",
     """Security ID:\s*({user_sid}.+?)\s*Account Name:\s*({user}.+?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Task Information:""",
     """Task Name:\s*({task_name}.+?)\s*Task New""",
@@ -23,7 +24,6 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-1
     """&lt;Command&gt;"?({process_path}({process_dir}(?:(\w+:)?[^:&"]+?)?[\\\/]+)?({process_name}[^&"\\\/]+?))&lt;/Command&gt;""",
     """&lt;Arguments&gt;({arg}.+?)&lt;/Arguments&gt;"""
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

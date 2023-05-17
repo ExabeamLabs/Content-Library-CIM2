@@ -9,7 +9,8 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [ """<EventID>5478<""", """IPsec Driver""", """<Provider Name""","""'Microsoft-Windows-Security-Auditing""" ]
 Fields = [
   """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  """<Computer>({host}[^<]+)""",
+  """<Computer>({dest_host}({host}[^<]+))""",
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<Task>({sub_category}[^<]+)""",
   """<Keywords>({result}[^<]+)<\/Keywords>""",
   """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
@@ -18,7 +19,6 @@ Fields = [
   """<Execution ProcessID\\*='({process_id}[^']+)""",
   """ThreadID\\*='({thread_id}[^']+)"""
 ]
-DupFields = ["host->dest_host"]
 
 
 }

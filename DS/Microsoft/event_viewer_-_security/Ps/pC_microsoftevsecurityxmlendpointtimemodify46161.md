@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-time-modify-4616-1
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Task>({sub_category}[^<]+)""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",

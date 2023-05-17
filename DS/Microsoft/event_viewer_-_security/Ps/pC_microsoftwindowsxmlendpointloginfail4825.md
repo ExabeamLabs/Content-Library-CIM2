@@ -9,6 +9,7 @@ Name = microsoft-windows-xml-endpoint-login-fail-4825
     Fields = [
       """TimeCreated SystemTime(\\)?='({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d{9})Z""",
       """<Computer>({host}({dest_host}[\w\-\.]+)[^<]*)</Computer>""",
+      """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
       """<EventID>({event_code}\d+)</EventID>""",
       """<Data Name(\\)?='AccountName'>(?=\w)?(-|({user}[^<]+))<\/Data>""",
       """<Data Name(\\)?='AccountDomain'>(-|({domain}[^<]+))<\/Data>""",

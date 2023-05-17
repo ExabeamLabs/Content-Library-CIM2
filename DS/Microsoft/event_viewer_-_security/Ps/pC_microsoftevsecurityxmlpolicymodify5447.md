@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447
     """<EventID>({event_code}\d+)""",
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID(\\)?='({process_id}\d+)""",
     """<Task>({task_name}[^<]+)""",
     """<Data Name(\\)?='UserSid'>({user_sid}[^<]+)""",

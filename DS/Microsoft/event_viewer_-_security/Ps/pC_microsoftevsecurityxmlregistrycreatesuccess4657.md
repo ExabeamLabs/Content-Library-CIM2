@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
     """<EventRecordID>({event_id}[^\<]+)</EventRecordID>""",
     """<Computer>({host}[^\<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^\<]+)</Data>""",
     """<Data Name\\*='SubjectUserName'>({user}[^\<]+)</Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^\<]+)</Data>""",

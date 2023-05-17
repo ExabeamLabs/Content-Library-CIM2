@@ -10,11 +10,11 @@ Name = sentinelone-singularityp-json-alert-trigger-success-dnsresolved
     """"src.process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"""",
     """"src.process.pid":({process_id}\d+)""",
     """"src.process.cmdline":"({process_command_line}.+?)",""",
-    """"event.dns.response":"({response}[^"]+")""",
-    """"event.dns.request":"({query}[^"]+")""",
+    """"event.dns.response":"({dns_response}[^"]+")""",
+    """"event.dns.request":"({dns_query}[^"]+")""",
     """"event.category":"({alert_type}[^"]+)"""
   ]
-  DupFields = [ "event_name->alert_name" ]
+  DupFields = [ "host->dest_host", "event_name->alert_name" ]
 
 json-sentinelone-edr-events = {
     Vendor = SentinelOne
@@ -23,10 +23,12 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({dest_host}[^"]+)""",
+      """"endpoint\.name":"({host}[^"]+)""",
       """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)"""
+      """"endpoint.os":"({os}[^"]+)""",
+      """"event\.category":"({additional_info}[^"]+)"""",
+      """"endpoint\.type":"({host_type}[^"]+)"""
     
 }
 ```
