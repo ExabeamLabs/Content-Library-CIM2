@@ -3,7 +3,10 @@
 {
 Name = osquery-o-json-app-activity-success-snapshot
   ParserVersion = "v1.0.0"
-  Conditions = [ """osquery""",""""action":"snapshot"""",""""decorations":""",""""hostname":"""" ]
+  Conditions = [ """"calendarTime":""",""""action":"snapshot"""",""""decorations":""",""""hostname":"""" ]
+     Fields = ${OSqueryParsersTemplates.osquery-app-activity.Fields}[
+     """"query":"\s*({db_query}.+?)\s*","""
+  ]
 
 osquery-app-activity = {
   Vendor = Osquery
@@ -13,7 +16,11 @@ osquery-app-activity = {
     """"calendarTime":"\w{3}\s({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d\s\w+)"""",
 	""""hostname":"({host}[\w\-.]+)""""
 	""""destinationServiceName":"({app}[^"]+)"""",
-    """"action":"({action}[^"]+)""""
+    """"action":"({action}[^"]+)"""",
+    """"uid":"({user_id}\d+)"""",
+    """"protocol":"({protocol}[^"]+)"""",
+    """"cmdline":"({process_command_line}[^"]+)"""",
+    """destinationServiceName.+?"name":"({additioanl_info}[^"]+)""""
   
 }
 ```
