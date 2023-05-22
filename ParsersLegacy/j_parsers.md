@@ -291,6 +291,8 @@
 | json-okta-system-info-1                         | okta-amfa-json-user-password-expire-provider                                        |
 | json-paloalto-firewall-traffic-drop             | pan-ngfw-json-network-traffic-fail-deny-1                                           |
 | json-paloalto-ngfw-network-connection           | pan-ngfw-json-network-traffic-start                                                 |
+| json-pan-authentication-attempt                 | pan-gp-json-app-authentication-success-beforelogin                                  |
+| json-pan-authentication-attempt-1               | pan-gp-json-app-authentication-success-configuration                                |
 | json-pan-file-alert                             | pan-ngfw-json-alert-trigger-success-file                                            |
 | json-pan-system-general                         | pan-ngfw-json-app-activity-success-subtype                                          |
 | json-pan-system-hipmatch                        | pan-ngfw-json-alert-trigger-success-hipmatch                                        |

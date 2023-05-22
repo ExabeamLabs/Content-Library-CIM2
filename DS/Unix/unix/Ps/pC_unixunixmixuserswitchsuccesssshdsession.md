@@ -24,6 +24,9 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """\"host\":\"(::ffff:)?({host}[^\"]+)""",
 """\"timestamp\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
 """\d\d:\d\d:\d\d (::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))\s+sshd\[""",
+""""project_id":"({project_id}[^"]+)""""
+""""zone":"(-|({zone}[^"]+))""""
+""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""""
   ]
   DupFields = [ "user_id->user_uid"]
 

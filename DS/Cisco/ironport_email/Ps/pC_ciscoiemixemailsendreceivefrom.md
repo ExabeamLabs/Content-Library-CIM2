@@ -12,6 +12,7 @@ Name = cisco-ie-mix-email-send-receive-from
       """MID ({alert_id}\d+)""",
       """(F|f)rom[:'].+?<({src_email_address}[^@>]+@[^>]+)>"""
     ]
+    DupFields = [ "alert_id->message_id" ]
   
 
 }

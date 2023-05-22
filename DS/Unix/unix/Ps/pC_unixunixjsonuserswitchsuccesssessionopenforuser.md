@@ -15,6 +15,7 @@ DupFields = [
   "host->dest_host"
   "user_uid->user_id"
   "description->event_name"
+  "dest_user->account"
 ]
 ParserVersion = "v1.0.0"
 

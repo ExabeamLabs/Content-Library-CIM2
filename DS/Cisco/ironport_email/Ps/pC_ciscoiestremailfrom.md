@@ -6,7 +6,7 @@ Name = cisco-ie-str-email-from
     Vendor = Cisco
     Product = IronPort Email
     TimeFormat = "EEE MMM dd HH:mm:ss yyyy"
-    Conditions = [ """MID """, """CID """, """rom""" ]
+    Conditions = [ """MID """, """CID """, """from""" ]
     Fields = [
       """({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \d\d\d\d) Info: MID""",
       """MID ({alert_id}\d+)""",

@@ -19,8 +19,16 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"serviceName":\s*"({app}[^"]+)""",
     """\sdproc=({app}[^=]+)\s\w+=""",
     """"bucket_name":"({bucket_name}[^",}]+)""""
-  ]
-
+    """"resource":\s*\{\s*"type":\s*"({resource_type}[^"\\\/]+)"""",
+    """"resourceName":\s*"({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))"""",
+    """"resource"+:[^\}]*labels[^\}]*"+location"+:\s*"+({region}[^"\\\/\}]+)"+""",
+    """"operation"+:[^\}]*first"+:\s*({operation_first}[^"\\\/\}\s,]+)""",
+    """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
+    """"logName"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
+    """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
+    """"resource"+:[^\}]*labels[^\}]*"+project_id"+:\s*"+({project_id}[^"\\\/\}]+)"+"""
+    """"status":.+"code":\s*({result_code}\d+)""",
+    """"status":.+"message":\s*"?({failure_reason}[^
 
 }
 ```

@@ -24,6 +24,9 @@ Name = pan-ngfw-cef-alert-trigger-success-spyware
     """\sspt=({src_port}\d+)""",
     """\sdpt=({dest_port}\d+)""",
     """\scs1="*({rule}[^="]+?)"*\s+\w+="""
+    """\sapp=({app}[^=]+)\s+\w+=""",
+    """\scs2=({category}[^=]+)\s+\w+=""",
+    """\sflexString2=({direction}[^=]+)\s+\w+="""
   ]
   ParserVersion = v1.0.0
 

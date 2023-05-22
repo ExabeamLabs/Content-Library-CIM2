@@ -17,7 +17,7 @@ osquery-app-activity = {
     """"uid":"({user_id}\d+)"""",
     """"protocol":"({protocol}[^"]+)"""",
     """"cmdline":"({process_command_line}[^"]+)"""",
-    """destinationServiceName.+?"name":"({additioanl_info}[^"]+)""""
+    """destinationServiceName.+?"name":"({additional_info}[^"]+)""""
   
 }
 ```

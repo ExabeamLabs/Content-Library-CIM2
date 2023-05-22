@@ -109,6 +109,7 @@
 | pan-file-alert                           | pan-ngfw-json-alert-trigger-success-threatalert                         |
 | pan-flood-alert                          | pan-ngfw-csv-alert-trigger-success-flood                                |
 | pan-fw-packet-logs                       | pan-ngfw-kv-network-traffic-success-packetlog                           |
+| pan-gp-app-activity                      | pan-gp-json-app-activity-success-tunnel                                 |
 | pan-leef-network-alert                   | pan-ngfw-leef-alert-trigger-success-syslogintegration                   |
 | pan-logout                               | pan-ngfw-csv-app-logout-logout                                          |
 | pan-ngfw-system-auth                     | pan-ngfw-csv-app-authentication-success-general                         |

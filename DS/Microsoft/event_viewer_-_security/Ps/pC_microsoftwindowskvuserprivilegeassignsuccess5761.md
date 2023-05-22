@@ -6,7 +6,7 @@ Name = microsoft-windows-kv-user-privilege-assign-success-576-1
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [ "\t576\t", "Special privileges assigned to new logon:" ]
+  Conditions = [ """576""", """Special privileges assigned to new logon:""" ]
   Fields = [
     """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
     """({event_name}Special privileges assigned to new logon)""",
