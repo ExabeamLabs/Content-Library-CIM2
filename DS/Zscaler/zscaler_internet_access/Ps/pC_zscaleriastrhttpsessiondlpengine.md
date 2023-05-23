@@ -42,7 +42,7 @@ s-zscaler-web-activity = {
     """\surl=(\w+:\/+)?[^|\/:]+(:\d+)?[^|?]+({uri_query}\?[^\s]+)""",
     """\shostname=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}\S+))""",
     """\spagerisk=({risk_level}\d+)""",
-    """\sfileclass=(?:None|({mime}[^=]+?))\s*(\w+=|$)""",
+    """\scontenttype=(?:None|({mime}[^=]+?))\s*(\w+=|$)""",
     """\sappname=({app}[^=]+?)\s+(\w+|$)""",
     """\slocation=({location}[^=]+?)\s+\w+="""
   

@@ -28,7 +28,6 @@ Name = exabeam-aa-kv-alert-trigger-exaanalyticsmaster
       """\sexternal_address="(\()*({external_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\)\]\s"\\,\|]+)\)*"""",
       """\ssubject="({email_subject}[^"]+)"""",
       """\sdirection="({direction}[^"]+)"""",
-      """\sfull_url="({url}[^"]+)"""",
       """\sweb_domain="({web_domain}[^"]+)"""",
       """\scategory="({category}[^"]+)"""",
       # incident_start_time is removed

@@ -348,6 +348,7 @@
 | dummy-new-parser-332               | symantec-bcpa-cef-app-notification-success-snapshotfetched                      |
 | dummy-new-parser-333               | symantec-bcpa-cef-app-notification-success-uploadrequestcompleted               |
 | dummy-new-parser-334               | symantec-bcpa-cef-app-notification-success-oktosenddata                         |
+| dummy-new-parser-335               | cisco-cucm-csv-app-notification-success-cucm                                    |
 | dummy-new-parser-339               | symantec-edr-json-app-notification-success-1000                                 |
 | dummy-new-parser-34                | microsoft-evadfs-kv-log-clear-success-1102                                      |
 | dummy-new-parser-340               | symantec-edr-json-app-alert-success-8061                                        |
