@@ -16,6 +16,7 @@ Name = namespacerdirectory-nrd-xml-user-create-success-createuser
     """Credentials:({account_domain}[^\\]+)\\+([^\s.]+\.)*({account}[^\s.]+)""",
     """Add:13=({user_type}\d+)\[Employee Type\]"""
   ]
+   DupFields = [ "account_name->dest_user" ]
 
 
 }

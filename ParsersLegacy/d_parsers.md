@@ -1,4 +1,4 @@
-| Legacy Parser Name                 | New Parser Name                                                                 |
+| Old Parser Name                    | New Parser Name                                                                 |
 | ---------------------------------- | ------------------------------------------------------------------------------- |
 | damballa-cef-alert                 | damballa-fs-cef-alert-trigger-success-failsafe                                  |
 | damballa-leef-alert                | damballa-fs-leef-alert-trigger-success-failsafe                                 |
@@ -405,7 +405,23 @@
 | dummy-new-parser-43                | "exabeam-aa-kv-rule-trigger-success-anomaly                                     |
 | dummy-new-parser-44                | juniper-ps-str-vpn-login-success-startedaovpn                                   |
 | dummy-new-parser-45                | oracle-pc-json-app-activity-success-appaccess                                   |
+| dummy-new-parser-450               | atlassian-bitbucket-json-app-activity-success-filterused                        |
+| dummy-new-parser-451               | atlassian-bitbucket-json-repository-read-success-readrepo                       |
+| dummy-new-parser-452               | atlassian-bitbucket-json-app-authentication-success-repoaccess                  |
+| dummy-new-parser-453               | atlassian-bitbucket-json-app-authentication-fail-failrepoaccess                 |
+| dummy-new-parser-454               | atlassian-bitbucket-json-repository-create-success-repoclone                    |
+| dummy-new-parser-455               | atlassian-bitbucket-json-repository-pull-success-repopull                       |
+| dummy-new-parser-456               | atlassian-bitbucket-json-app-activity-success-repowatcheradd                    |
+| dummy-new-parser-457               | atlassian-bitbucket-json-repository-push-success-repopush                       |
+| dummy-new-parser-458               | atlassian-bitbucket-json-app-activity-success-diffsuccess                       |
+| dummy-new-parser-459               | atlassian-bitbucket-json-app-activity-success-prapprove                         |
 | dummy-new-parser-46                | oracle-pc-json-app-login-success-sessioncreatesuccess                           |
+| dummy-new-parser-460               | atlassian-bitbucket-json-app-activity-success-prcommented                       |
+| dummy-new-parser-461               | atlassian-bitbucket-json-app-activity-success-prcommentreply                    |
+| dummy-new-parser-462               | atlassian-bitbucket-json-branch-modify-success-prmerged                         |
+| dummy-new-parser-463               | atlassian-bitbucket-json-configuration-modify-success-hooksettingchange         |
+| dummy-new-parser-464               | atlassian-bitbucket-json-branch-modify-fail-prmergefail                         |
+| dummy-new-parser-465               | atlassian-bitbucket-json-branch-create-success-branchcreate                     |
 | dummy-new-parser-47                | oracle-pc-json-app-activity-success-authfactorinitiated                         |
 | dummy-new-parser-48                | oracle-pc-json-configuration-modify-success-sessionmodifysuccess                |
 | dummy-new-parser-49                | oracle-pc-json-app-logout-success-sessiondeletesuccess                          |

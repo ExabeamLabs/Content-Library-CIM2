@@ -13,6 +13,7 @@ Name = cisco-duo-json-user-create-success-usercreate
     """"email":\s*"({email_address}[^@"]+@({email_domain}[^"\s]+))"""",
     """({app}duo)"""
   ]
+  DupFields = [ "dest_user->account_name" ]
 
 
 }

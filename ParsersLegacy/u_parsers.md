@@ -1,4 +1,4 @@
-| Legacy Parser Name                   | New Parser Name                                                 |
+| Old Parser Name                      | New Parser Name                                                 |
 | ------------------------------------ | --------------------------------------------------------------- |
 | u-4688                               | microsoft-evsecurity-kv-process-create-success-4688-2           |
 | u-680                                | microsoft-evsecurity-kv-endpoint-login-680-2                    |

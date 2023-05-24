@@ -1,4 +1,4 @@
-| Legacy Parser Name                                       | New Parser Name                                                                      |
+| Old Parser Name                                          | New Parser Name                                                                      |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | carbonblack-app-activity                                 | vmware-carbonblack-sk4-app-activity-cbdefense                                        |
 | carbonblack-edr-auth-successful                          | vmware-carbonblackedr-sk4-app-authentication-success-loginname                       |

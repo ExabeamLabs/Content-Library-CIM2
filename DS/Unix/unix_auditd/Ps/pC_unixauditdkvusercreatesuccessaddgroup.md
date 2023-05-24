@@ -17,6 +17,9 @@ Name = unix-auditd-kv-user-create-success-addgroup
 """\spid=({process_id}\d+)"""
   ]
   ParserVersion = "v1.0.0"
+    DupFields = [
+"account_name->dest_user"
+  ]
 
 
 }

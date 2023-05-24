@@ -1,4 +1,4 @@
-| Legacy Parser Name                   | New Parser Name                                             |
+| Old Parser Name                      | New Parser Name                                             |
 | ------------------------------------ | ----------------------------------------------------------- |
 | hashicorp-app-login-1                | hashicorp-vault-sk4-app-login-success-response              |
 | hashicorp-app-login-2                | hashicorp-vault-json-app-login-success-applogin             |

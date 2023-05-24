@@ -1,4 +1,4 @@
-| Legacy Parser Name                                | New Parser Name                                                                        |
+| Old Parser Name                                   | New Parser Name                                                                        |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | l-4673                                            | "microsoft-evsecurity-xml-user-privilege-assign-success-4673                           |
 | l-4674                                            | microsoft-evsecurity-cef-user-privilege-use-success-4674-1                             |

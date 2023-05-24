@@ -1,7 +1,7 @@
- Matrix of Legacy vs. New Parser Names
-======================================
+ Matrix of Old vs. New Parser Names
+===================================
 
- Parser names follow a standardized set of conventions that ensure consistency across Exabeam products. For more information, see Parser Naming Conventions. If you've been using Exabeam products prior to the introduction of this parser-naming convention, consult the alphabetic tables below to find the new name for existing parsers.
+ Parser names follow a standardized set of conventions that ensure consistency across Exabeam products. For more information, see [Parser Naming Conventions](https://docs.exabeam.com/en/content/all/exabeam-security-content-cim/exabeam-parsers/parser-naming-conventions.html). If you've been using Exabeam products prior to the introduction of this parser-naming convention, consult the alphabetic tables below to find the new name for existing parsers.
 
 | [A](ParsersLegacy/a_parsers.md) | [B](ParsersLegacy/b_parsers.md) | [C](ParsersLegacy/c_parsers.md) | [D](ParsersLegacy/d_parsers.md) | [E](ParsersLegacy/e_parsers.md) | [F](ParsersLegacy/f_parsers.md) | [G](ParsersLegacy/g_parsers.md) | [H](ParsersLegacy/h_parsers.md) | [I](ParsersLegacy/i_parsers.md) | [J](ParsersLegacy/j_parsers.md) | [K](ParsersLegacy/k_parsers.md) | [L](ParsersLegacy/l_parsers.md) |                                 |                                 |
 |:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|:-------------------------------:|

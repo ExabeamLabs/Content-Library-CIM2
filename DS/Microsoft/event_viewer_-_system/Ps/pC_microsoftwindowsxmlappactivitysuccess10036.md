@@ -6,7 +6,7 @@ Name = microsoft-windows-xml-app-activity-success-10036
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID Qualifiers""", """<System><Provider Name""", """<TimeCreated SystemTime""", """<Computer>""" ,""">10036<""" ]
+  Conditions = [ """<EventID Qualifiers""", """<System><Provider Name""", """<TimeCreated SystemTime""", """<Computer>""" ]
   Fields = [
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

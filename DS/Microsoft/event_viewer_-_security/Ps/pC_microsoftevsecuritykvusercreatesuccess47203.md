@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-user-create-success-4720-3
 ン ID:\s+({login_id}[^\s]+)""",
      """新しいアカウント:.+?セキュリティ ID:\s+({account_id}[^\s]+)\s+アカウント名:\s+({account_name}.+?)\s+アカウント ドメイン:\s+({account_domain}[^\s]+)"""
    ]
-   DupFields = [ "computer_name->host" ]
+   DupFields = [ "computer_name->host" , "account_name->dest_user" ]
 
 
 }

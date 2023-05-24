@@ -1,4 +1,4 @@
-| Legacy Parser Name                     | New Parser Name                                                    |
+| Old Parser Name                        | New Parser Name                                                    |
 | -------------------------------------- | ------------------------------------------------------------------ |
 | o365-activity-1                        | "microsoft-o365-xml-file-write-success-mailboxpermission           |
 | o365-activity-2                        | microsoft-o365-sk4-app-activity-appactivity                        |

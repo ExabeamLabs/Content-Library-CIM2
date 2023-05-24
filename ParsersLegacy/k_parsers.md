@@ -1,4 +1,4 @@
-| Legacy Parser Name           | New Parser Name                                                             |
+| Old Parser Name              | New Parser Name                                                             |
 | ---------------------------- | --------------------------------------------------------------------------- |
 | kaspersky-es-alert-1         | kaspersky-endpointsecurity-kv-alert-trigger-success-kes                     |
 | kaspersky-es-alert-2         | kaspersky-endpointsecurity-kv-alert-trigger-success-wsee                    |

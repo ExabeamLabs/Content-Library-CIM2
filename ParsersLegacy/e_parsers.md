@@ -1,4 +1,4 @@
-| Legacy Parser Name                    | New Parser Name                                                       |
+| Old Parser Name                       | New Parser Name                                                       |
 | ------------------------------------- | --------------------------------------------------------------------- |
 | edocs-app-activity                    | opentext-edocs-kv-app-activity-success-permitted                      |
 | egnyte-app-login                      | egnyte-e-cef-app-login-success-eventlogin                             |

@@ -1,4 +1,4 @@
-| Legacy Parser Name                 | New Parser Name                                                            |
+| Old Parser Name                    | New Parser Name                                                            |
 | ---------------------------------- | -------------------------------------------------------------------------- |
 | r-asa-aaa-vpn-start                | cisco-asa-str-vpn-login-success-109005-1                                   |
 | r-nic-4771                         | microsoft-evsecurity-kv-endpoint-login-fail-4771-1                         |

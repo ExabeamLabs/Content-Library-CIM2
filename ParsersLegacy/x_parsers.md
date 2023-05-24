@@ -1,4 +1,4 @@
-| Legacy Parser Name                   | New Parser Name                                                   |
+| Old Parser Name                      | New Parser Name                                                   |
 | ------------------------------------ | ----------------------------------------------------------------- |
 | xams-failed-app-login                | xiting-x-cef-app-login-fail-gescheitert                           |
 | xams-system-info                     | xiting-x-cef-app-activity-success-xams                            |

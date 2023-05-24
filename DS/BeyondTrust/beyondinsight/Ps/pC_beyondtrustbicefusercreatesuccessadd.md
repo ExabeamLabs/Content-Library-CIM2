@@ -17,6 +17,7 @@ Name = beyondtrust-bi-cef-user-create-success-add
   """({app}BeyondInsight)"""
   """dhost=({account_domain}[^\/,]+?)[\/]+({account_name}[^,\s]+)"""
   ]
+  DupFields = [ "account_name->dest_user" ]
 
 
 }

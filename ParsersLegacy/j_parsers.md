@@ -1,4 +1,4 @@
-| Legacy Parser Name                              | New Parser Name                                                                     |
+| Old Parser Name                                 | New Parser Name                                                                     |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------- |
 | jp-4662                                         | microsoft-evsecurity-kv-ds-object-activity-success-4662-4                           |
 | jp-5158                                         | microsoft-evsecurity-kv-network-session-success-5158-1                              |

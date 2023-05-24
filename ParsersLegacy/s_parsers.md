@@ -1,4 +1,4 @@
-| Legacy Parser Name                          | New Parser Name                                                                |
+| Old Parser Name                             | New Parser Name                                                                |
 | ------------------------------------------- | ------------------------------------------------------------------------------ |
 | s-4611                                      | microsoft-evsecurity-kv-endpoint-notification-success-4611                     |
 | s-4624-jp                                   | microsoft-evsecurity-kv-endpoint-login-success-4624-4                          |

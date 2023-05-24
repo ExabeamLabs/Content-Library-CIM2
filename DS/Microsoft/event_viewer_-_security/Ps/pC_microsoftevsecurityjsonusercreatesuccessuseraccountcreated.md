@@ -24,6 +24,7 @@ Fields = [
   """"Event_Class":"({additional_info}[^"]+)"""
   """Enabled,({user_type}.*?)\s-\sEnabled"""
 ]
+DupFields = [ "account_name->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

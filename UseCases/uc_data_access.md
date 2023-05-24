@@ -39,6 +39,10 @@ Use Case: Data Access
 |                             Product                              | MITRE ATT&CK® TTP                        | Content                                                                                                                      |
 |:----------------------------------------------------------------:| ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | [AssetView](../DS/AssetView/assetview/ds_assetview_assetview.md) | T1083 - File and Directory Discovery<br> | [<ul><li>24 Rules</li></ul><ul><li>13 Models</li></ul>](../DS/AssetView/assetview/RM/r_m_assetview_assetview_Data_Access.md) |
+### Vendor: Atlassian
+|                                            Product                                             | MITRE ATT&CK® TTP          | Content                                                                                                                                          |
+|:----------------------------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Atlassian BitBucket](../DS/Atlassian/atlassian_bitbucket/ds_atlassian_atlassian_bitbucket.md) | T1078 - Valid Accounts<br> | [<ul><li>19 Rules</li></ul><ul><li>11 Models</li></ul>](../DS/Atlassian/atlassian_bitbucket/RM/r_m_atlassian_atlassian_bitbucket_Data_Access.md) |
 ### Vendor: Auth0
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                    |
 |:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------- |

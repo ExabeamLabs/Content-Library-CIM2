@@ -43,6 +43,10 @@ Use Case: Ransomware
 |                             Product                              | MITRE ATT&CK® TTP                     | Content                                                                                         |
 |:----------------------------------------------------------------:| ------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | [AssetView](../DS/AssetView/assetview/ds_assetview_assetview.md) | T1486 - Data Encrypted for Impact<br> | [<ul><li>1 Rules</li></ul>](../DS/AssetView/assetview/RM/r_m_assetview_assetview_Ransomware.md) |
+### Vendor: Atlassian
+|                                            Product                                             | MITRE ATT&CK® TTP          | Content                                                                                                             |
+|:----------------------------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| [Atlassian BitBucket](../DS/Atlassian/atlassian_bitbucket/ds_atlassian_atlassian_bitbucket.md) | T1078 - Valid Accounts<br> | [<ul><li>2 Rules</li></ul>](../DS/Atlassian/atlassian_bitbucket/RM/r_m_atlassian_atlassian_bitbucket_Ransomware.md) |
 ### Vendor: Auth0
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                         |
 |:--------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------- |

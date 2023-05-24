@@ -6,7 +6,8 @@ Name = rubrik-cdm-kv-user-create-success-createlocaluser
     Conditions = [ """ Rubrik """, """status="Success"""", """eventName ="Audit.CreateLocalUserAudit"""", """ created local user """ ]
     Fields = ${RubrikCDMParserTemplates.rubrik-events.Fields}[
       """\] ({user}\S+?) [^\)]+?\) created local user '({account_name}[^']+?)'"""
-   ]
+   ],
+   DupFields = ${RubrikCDMParserTemplates.rubrik-events.DupFields}["account_name->dest_user"]
   
 rubrik-events = {
   Vendor = Rubrik

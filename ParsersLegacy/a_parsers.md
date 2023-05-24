@@ -1,4 +1,4 @@
-| Legacy Parser Name                                    | New Parser Name                                                                   |
+| Old Parser Name                                       | New Parser Name                                                                   |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
 | abnormal-security-alert                               | abnormalsecurity-as-json-alert-trigger-success-attacktype                         |
 | absolute-app-activity                                 | absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated      |
@@ -408,6 +408,7 @@
 | azure-atp-security-alert-5                            | microsoft-azureatp-json-alert-trigger-success-remoteexecutionsecurityalert-1      |
 | azure-atp-security-alert-6                            | microsoft-azureatp-json-alert-trigger-success-netlogonbypasssecurityalert-1       |
 | azure-atp-security-alert-7                            | microsoft-azure-sk4-alert-trigger-success-aatp                                    |
+| azure-atp-security-alert-8                            | microsoft-azureatp-json-alert-trigger-success-enumeratesessions                   |
 | azure-blob-activity1                                  | microsoft-azure-json-file-success-1                                               |
 | azure-blob-activity2                                  | microsoft-azure-json-file-success-2                                               |
 | azure-cloud-system-info                               | microsoft-azuremon-json-app-activity-success-sourcesystem                         |

@@ -1,1 +1,1 @@
-| Legacy Parser Name | New Parser Name || ------------------ | --------------- |
+| Old Parser Name | New Parser Name || --------------- | --------------- |

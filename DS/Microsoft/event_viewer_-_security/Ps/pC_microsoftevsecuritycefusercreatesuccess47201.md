@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-cef-user-create-success-4720-1
     """"TargetUserName":"({account_name}[^"]+)"""",
     """"TargetDomainName":"({dest_domain}[^"]+)"""",
     ]
-    DupFields = ["host->dest_host"]
+    DupFields = ["host->dest_host", "account_name->dest_user"]
 
 json-windows-events-1 = {
   Vendor = Microsoft
