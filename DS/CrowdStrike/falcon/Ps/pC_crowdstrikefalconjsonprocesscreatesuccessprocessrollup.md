@@ -25,7 +25,6 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"CommandLine":\s*"\s*(?=\w:[\\])({process_path}({process_dir}(?:[^"=]+)?[\\])?({process_name}[^\\\/"\s=]+))""",
     """"CommandLine":\s*"\s*(?=\\"*[^\\]*\\"*)\\"*({process_path}({process_dir}(?:[^"=]+)?[\\])?({process_name}[^\\\/"\s=]+))""",
     """"ImageFileName":\s*"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+\.\w+))"""",
-    """"id":\s*"({process_guid}[^"]+)""",
     """"MD5HashData":\s*"({hash_md5}[^"]+)""",
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"TargetProcessId":\s*"({process_id}[^"]+)""",

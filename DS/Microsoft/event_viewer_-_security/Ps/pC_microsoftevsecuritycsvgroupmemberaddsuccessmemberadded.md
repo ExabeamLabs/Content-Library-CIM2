@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-csv-group-member-add-success-memberadded
       """サブジェクト:.+?アカウント名:\s+({user}[^\s]+)""",
       """アカウント ドメイン:\s+({domain}[^\s]+)""",
       """ログオン ID:\s+({login_id}[^\s]+)\s+""",
-      """メンバー:\s+セキュリティ ID:\s+({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({user_sid}.+?)|(?:.+?))\s+アカウント名:""",
+      """メンバー:\s+セキュリティ ID:\s+({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}.+?)|(?:.+?))\s+アカウント名:""",
       """メンバー:.+?アカウント名:\s*({user_dn}.+?)\s*グループ:""",
       """グループ:\s+セキュリティ ID:\s+({group_id}[^\s]+)""",
       """グループ:.+?グループ名:\s+({group_name}.+?)?\s+グループ ドメイン:""",

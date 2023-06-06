@@ -19,7 +19,8 @@ raw-pan-vpn-event  = {
     """\d\d:\d\d:\d\d\s({host}[^,]+?)\s*\d*,({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d),""",
     """({vpn_client}GLOBALPROTECT),"+(({domain}[^\\,]+)\\)?({user}[^,]+)"+,""",
     """({vpn_client}GLOBALPROTECT),(?:[^,]*,){4}({event_name}[^,]+)?,({operation}[^,]*)(?:[^,]*,){3}((({domain}[^\\,]+)\\)?((({user}[^@,]+)@({=domain}[^@,]+(\.lan)?))|(pre-logon|\.{3}|({=user}[^,]+))))?,({country}[^,]+)?,[^,]*,(|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),[^,]*,(|0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?),""",
-    """GLOBALPROTECT,([^,]*,){19}"({os}[^"]+)"""",
+    #"""GLOBALPROTECT,([^,]*,){19}"({os}[^"]+)"""",
+    """GLOBALPROTECT,([^,]*,){18}(|(?i)any|({os}[^,]*)),"""
     """GLOBALPROTECT,([^,]*,){19}("+,|"+[^"]+"+,)([^,]*,){3}("+,|"+({additional_info}[^"]+)"+,)""",
     """,(|\s*({failure_reason}[^,]+?)\s*"*\s*),(""+|"({additional_info}[^"]+)"),({result}failure)""",
     """GLOBALPROTECT,([^,]*,){19}("+,|"+[^"]+"+,)([^,]*,){3}("+,|"+[^"]+"+,)({result}failure|success)""",

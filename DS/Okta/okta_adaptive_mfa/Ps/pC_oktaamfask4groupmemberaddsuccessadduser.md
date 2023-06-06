@@ -9,7 +9,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
   Fields=[
     """"published":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
     """"actor":\{[^\}]*?("type":"User",)?"alternateId":"(({email_address}[^@"]+@[^"]+)|({user}[^"]+))"""",
-    """"actor":\{[^\}]*?("type":"User"[^\}]*?)?"displayName":"({full_name}({first_name}[^"]+?)\s({last_name}[^"\s]+))"""",
+    """"actor":\{[^\}]*?("type":"User"[^\}]*?)?"displayName":"(Okta System|({full_name}({first_name}[^"]+?)\s({last_name}[^"\s]+)))"""",
     """"type":"User".*?"displayName":"({group_name}[^"]+)".*?"id":"({group_id}[^"]+)".*?"type":"UserGroup"""",
     """\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",
     """"target":\[[^\]]*?("type":"User",)?"alternateId":"({account_id}[^"]+)"""",

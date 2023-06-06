@@ -4,7 +4,7 @@ Product: Code42 Incydr
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  150  |   68   |         21         |       8        |    8    |
+|  151  |   68   |         21         |       8        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -10,8 +10,9 @@ Name = microsoft-evapp-xml-certificate-request-fail-33370
     """policy id:\s*({policy_id}[^\s]+)""",
     """<Data Name\\*='ErrorCode'>({failure_reason}[^<]+?)</Data>""",
     """<Security UserID\\*='({user_id}[^']+)""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "host->src_host" ]
 
 s-xml-object-access = {
   Vendor = Microsoft

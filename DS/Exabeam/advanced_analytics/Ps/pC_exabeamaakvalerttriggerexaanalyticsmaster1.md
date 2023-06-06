@@ -5,10 +5,10 @@ Name = exabeam-aa-kv-alert-trigger-exaanalyticsmaster-1
     ParserVersion = v1.0.0
     Vendor = Exabeam
     Product = Advanced Analytics
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Conditions = [ """exabeam-analytics-master""", """Exabeam""", """ top_reasons="""", """ id="""", """ score="""" ]
-    Fields = [
-        """start_time="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    Fields = [ 
+        """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\sexabeam-analytics-master""",
         """\sid="({session_id}[^"]+)"""",
         """\sscore="({original_risk_score}\d+)"""",
         """\suser="(\*+|({user}[^"]+))"""",

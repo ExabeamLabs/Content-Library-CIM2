@@ -11,7 +11,8 @@ Name = symantec-endpointprotection-json-alert-trigger-success-8027
     """"actor":.+?"pid":({process_id}\d+)""",
     """"feature_name":"({alert_type}[^"]+)"""",
     """"policy":[^\}]+?"name":"({alert_name}[^"]+)""",
-    """"severity_id":({alert_severity}\d+)"""
+    """"severity_id":({alert_severity}\d+)""",
+    """"type_id":({event_code}8027)"""
   ]
 
 json-symantec-endpoint-protection = {

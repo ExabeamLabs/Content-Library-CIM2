@@ -8,6 +8,7 @@ Name = microsoft-evsystem-xml-network-notification-49152
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """({event_code}49152)""",
     """<Data Name\\*='Endpoint'>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?</Data>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

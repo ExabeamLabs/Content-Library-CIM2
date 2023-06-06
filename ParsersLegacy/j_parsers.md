@@ -272,6 +272,9 @@
 | json-o365-dlp-email                             | "microsoft-o365-json-email-send-receive-subject                                     |
 | json-o365-failed-app-login                      | microsoft-o365-sk4-app-login-fail-appdisplayname                                    |
 | json-o365-file-write-7                          | microsoft-o365-sk4-file-write-success-fileuploaded                                  |
+| json-o365-graph-audit-app-activity              | microsoft-o365-json-app-activity-graphdirectoryauditlogs                            |
+| json-o365-graph-identity-alert                  | microsoft-o365-json-alert-trigger-success-graphidentity                             |
+| json-o365-graph-sign-in                         | microsoft-o365-json-app-login-graphsignin                                           |
 | json-okta-account-lockout                       | okta-amfa-json-user-lock-success-lockedout                                          |
 | json-okta-app-login                             | okta-amfa-cef-app-login-success-appadloginsuccess                                   |
 | json-okta-app-login-1                           | okta-amfa-cef-app-login-success-coreuserauthloginsuccess                            |

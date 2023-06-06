@@ -7,8 +7,9 @@ Name = microsoft-evapp-xml-endpoint-notification-6398
   Conditions = [ """<EventID>6398</EventID>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Data Name\\*='string2'>({additional_info}.+?)</Data>""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "host->src_host" ]
 
 s-xml-object-access = {
   Vendor = Microsoft

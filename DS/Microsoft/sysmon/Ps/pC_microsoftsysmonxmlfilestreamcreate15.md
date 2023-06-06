@@ -7,8 +7,9 @@ Name = microsoft-sysmon-xml-file-stream-create-15
   Conditions = [ """<EventID>15</EventID>""", """<Provider Name""","""'Microsoft-Windows-Sysmon'""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
     """<Data Name\\*='Hashes'>MD5=({hash_md5}[^,]+)""",
+    """<Computer>({dest_host}({host}.+?))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 xml-sysmon-activity = {
   Vendor = Microsoft

@@ -28,7 +28,7 @@ windows-events-3 = {
         """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
         """\Wdntdom=({domain}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
         """\Wduser=\s*({user}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-        """\Wduid=({login_id}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
+        """\Wduid=(-|({login_id}[^=]+))\s\w+=""",
         """\WfilePath=(?:[\\\*]+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
         """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
         """\said=({aid}[^\s\\]+)""",

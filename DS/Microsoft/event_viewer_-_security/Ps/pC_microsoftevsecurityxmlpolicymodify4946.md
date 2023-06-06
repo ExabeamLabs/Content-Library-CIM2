@@ -7,8 +7,9 @@ Name = microsoft-evsecurity-xml-policy-modify-4946
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [ """<EventID>4946</EventID>""", """A change was made to the Windows Firewall exception list""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Message>({additional_info}[^<]+)</Message>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

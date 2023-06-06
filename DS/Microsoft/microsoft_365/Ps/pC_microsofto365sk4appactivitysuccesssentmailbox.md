@@ -18,7 +18,7 @@ Name = microsoft-o365-sk4-app-activity-success-sentmailbox
     """cs1=(\[\{"additional-properties"\:)?\{"({policy_name}[^"]+)""",
     """msg=({additional_info}[^=]+?)\s\w+=""",
     """"Value":"(?:smtp:)?[^@]+?@({dest_domain}[^;"]+)"""",
-    """UserId":"({email_address}[^"\\\s@]+@({email_domain}[^"\\\s@]+\.[^"\\\s@]+))""",
+    """"UserId":"(({email_address}[^"\\\s@]+@({email_domain}[^"\\\s@]+\.[^"\\\s@]+))|(({domain}[^\\"]+)\\+)({user}[\w\.\-]+)|({=user}[\w\.\-"]+)(@({=domain}[^"]+))?)""",
     """destinationServiceName =({app}[^=]+?)\s*filePath"""
     """({app}Office 365)"""
   ]

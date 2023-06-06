@@ -14,7 +14,8 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
     """<Security UserID\\*='({user_sid}[^']+)""",
-    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='ScriptBlockId'>({scriptblock_id}[^<]+)</Data>""",
     """Function\s+'({function}[^']+)""",
     """<Data Name\\*='MessageTotal'>({message_total}\d+)""",
@@ -28,7 +29,6 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
     """<Data Name\\*='ScriptBlockText'>\s*({scriptblock_text}[^<]+?)\s*<\/Data>""",
     """"ScriptBlockText":"({scriptblock_text}[^"]+?)\s*""""
 ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

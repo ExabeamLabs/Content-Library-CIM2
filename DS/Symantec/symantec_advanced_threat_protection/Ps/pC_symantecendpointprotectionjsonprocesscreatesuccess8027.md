@@ -10,7 +10,8 @@ Name = symantec-endpointprotection-json-process-create-success-8027
     """"actor":[^\}]+?"path":"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))"""",
     """"actor":.+?"pid":({process_id}\d+)""",
     """"feature_name":"({alert_type}[^"]+)"""",
-    """"policy":[^\}]+?"name":"({alert_name}[^"]+)"""
+    """"policy":[^\}]+?"name":"({alert_name}[^"]+)""",
+    """"type_id":({event_code}8027)"""
   ]
 
 json-symantec-endpoint-protection = {

@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-6278
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)</Data>""",
     """<Data Name\\*='SubjectUserName'>({user}[^<]+)</Data>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

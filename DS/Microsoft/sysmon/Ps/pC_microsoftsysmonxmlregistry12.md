@@ -7,9 +7,10 @@ Name = microsoft-sysmon-xml-registry-12
   Conditions = [ """<EventID>12</EventID>""", """<Provider Name""","""'Microsoft-Windows-Sysmon'""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
     """<Data Name\\*='TargetObject'>({file_path}(({file_dir}[^<>]+?)[\\\/]+)?({file_name}[^\\\/<>]*?(\.({file_ext}\w+))?))<\/Data>""",
-    """<Data Name\\*='EventType'>({operation}[^<]+)<"""
+    """<Data Name\\*='EventType'>({operation}[^<]+)<""",
+    """<Computer>({dest_host}({host}.+?))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 xml-sysmon-activity = {
   Vendor = Microsoft

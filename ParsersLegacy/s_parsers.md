@@ -265,6 +265,7 @@
 | s-dropbox-members-activity                  | dropbox-d-json-app-activity-success-members                                    |
 | s-dropbox-sharing-activity                  | dropbox-d-json-file-success-sharing                                            |
 | s-dtex                                      | dtexsystems-intercept-str-file-process-success-userdept                        |
+| s-dummy-new-parser-445                      | amazon-route53-json-dns-request-success-dnsquery                               |
 | s-duo-app-activity                          | cisco-duo-json-app-activity-success-phonecreate                                |
 | s-duo-app-login                             | cisco-duo-json-app-login-success-adminlogin                                    |
 | s-duo-auth-json                             | cisco-duo-json-endpoint-authentication-ip                                      |

@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-key-5061-1
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectUserName('|")>({user}[^<]+)</Data>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

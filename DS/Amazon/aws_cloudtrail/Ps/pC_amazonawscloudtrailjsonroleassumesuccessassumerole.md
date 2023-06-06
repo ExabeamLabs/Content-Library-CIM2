@@ -39,7 +39,7 @@ Name = amazon-awscloudtrail-json-role-assume-success-assumerole
 aws-cloudtrail-user-template = {
     Fields = [
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[^\\\/@=]+?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
-      """"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/([^\/"]+\/)(AssumeRoleSession|((?![\w\-\.]{30,})(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)))\\?"""",
       """"sourceIdentity\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,50}:({email_address}[^"]+?@[^@"]+)\\?"\s*[,\]\}]""",

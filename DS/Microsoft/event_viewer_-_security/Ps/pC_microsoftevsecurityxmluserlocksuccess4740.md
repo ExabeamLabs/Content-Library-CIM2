@@ -12,7 +12,8 @@ Conditions = [
 ]
 Fields = [
 """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""<Computer>({host}[^<]+)</Computer>"""
+"""<Computer>({dest_host}({host}[^<]+))</Computer>"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<EventID>({event_code}[^<]+)</EventID>"""
 """<Data Name\\*=('|")SubjectUserName('|")>({src_user}[^<]+)</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)</Data>"""
@@ -21,9 +22,6 @@ Fields = [
 """<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[^<]+)</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
   ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

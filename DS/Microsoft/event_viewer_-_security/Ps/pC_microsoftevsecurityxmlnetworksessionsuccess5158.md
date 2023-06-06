@@ -13,7 +13,8 @@ Name = microsoft-evsecurity-xml-network-session-success-5158
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'/>""",
     """({event_code}5158)""",
-    """<Computer>({host}[^<>]+?)</Computer>""",
+    """<Computer>({dest_host}({host}[^<>]+?))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='ProcessId'>({process_id}[^<>]+)</Data>""",
     """<Data Name\\*='Application'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))</Data>""",
     """<Data Name\\*='SourceAddress'>(::|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)</Data>""",
@@ -24,7 +25,6 @@ Name = microsoft-evsecurity-xml-network-session-success-5158
     """<Data Name ='Protocol'>({protocol}[^<]+)<"""
     """<Data Name\\*='LayerName'>\s*({layer_name}[^<]+?)\s*</Data>"""
 ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

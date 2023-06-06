@@ -6,7 +6,8 @@ Name = microsoft-evsystem-xml-policy-apply-fail-1030
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>1030</EventID>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<Data Name ='ErrorCode'>({failure_code}[^<]+)<"""
+    """<Data Name ='ErrorCode'>({failure_code}[^<]+)<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

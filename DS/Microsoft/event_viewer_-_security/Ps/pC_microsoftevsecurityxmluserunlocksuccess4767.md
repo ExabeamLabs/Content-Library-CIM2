@@ -10,7 +10,8 @@ Conditions = [
 """<Event xmlns="""
 ]
 Fields = [
-"""<Computer>({host}.+?)</Computer>"""
+"""<Computer>({dest_host}({host}.+?))</Computer>"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")/>"""
 """<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>"""
 """<Data Name\\*=('|")SubjectUserName('|")>\s*(SYSTEM|({user}[^\s]+?))\s*</Data>"""
@@ -21,9 +22,6 @@ Fields = [
 """<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
 """({event_code}4767)"""
   ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 
