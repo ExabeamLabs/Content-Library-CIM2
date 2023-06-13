@@ -26,7 +26,7 @@ This library reflects the hierarchical framework of the Exabeam Common Informati
 
 ## How do I use it? 
 
-The Content Library contains information about parsers, events, models, and rules. It shows what content is available and how the content elements map to one and other. To use the library, find your version of Advanced Analytics and drill into the information in one of the following ways: 
+The New-Scale Content Library contains information about parsers, events, models, and rules. It shows what content is available and how the content elements map to one and other. To use the library, find your version of Advanced Analytics and drill into the information in one of the following ways: 
 
 - <b>Data Sources</b> – Click Data Sources and select a vendor and a product that are the source of specific data. View the activity types, the parsers, and the number of rules and models Exabeam employs to cover this data source. Drill down further to view the parser syntax or the names of the rules and models. 
 
@@ -37,10 +37,10 @@ The Content Library contains information about parsers, events, models, and rule
 - <b>MITRE ATT&CK®</b> - Click Coverage Map to view the attack techniques Exabeam covers with its rules and models.
 
 
-The Content Library also includes a list of prebuilt correlation rules. In addition, you can browse other resources to understand how the library is based on the Common Information Model 2.0, including a list of platforms and landscapes and a list of field descriptions. 
+The New-Scale Content Library also includes a list of prebuilt correlation rules. In addition, you can browse other resources to understand how the library is based on the Common Information Model 2.0, including a list of platforms and landscapes and a list of field descriptions. 
 
 ## How can it help me?
-The Content Library helps answer some of the most frequently asked questions regarding Exabeam's rich security content:
+The New-Scale Content Library helps answer some of the most frequently asked questions regarding Exabeam's rich security content:
 
  - What use cases does Exabeam content support out of the box?
    - What are the data sources that can be used to get that content to function? 
