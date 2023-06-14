@@ -1,4 +1,4 @@
-| Old Parser Name                          | New Parser Name                                                     |
+| Old Parser Name                          | New-Scale Parser Name                                               |
 | ---------------------------------------- | ------------------------------------------------------------------- |
 | zebra-wlm-system-info                    | extremenetworks-zwlanm-str-endpoint-notification-success-filesystem |
 | zimperium-mobile-endpoint-security-alert | zimperium-mtd-json-alert-trigger-success-threatuuid                 |

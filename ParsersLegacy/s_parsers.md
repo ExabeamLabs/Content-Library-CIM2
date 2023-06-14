@@ -1,4 +1,4 @@
-| Old Parser Name                             | New Parser Name                                                                |
+| Old Parser Name                             | New-Scale Parser Name                                                          |
 | ------------------------------------------- | ------------------------------------------------------------------------------ |
 | s-4611                                      | microsoft-evsecurity-kv-endpoint-notification-success-4611                     |
 | s-4624-jp                                   | microsoft-evsecurity-kv-endpoint-login-success-4624-4                          |
@@ -265,6 +265,7 @@
 | s-dropbox-members-activity                  | dropbox-d-json-app-activity-success-members                                    |
 | s-dropbox-sharing-activity                  | dropbox-d-json-file-success-sharing                                            |
 | s-dtex                                      | dtexsystems-intercept-str-file-process-success-userdept                        |
+| s-dummy-new-parser-445                      | amazon-route53-json-dns-request-success-dnsquery                               |
 | s-duo-app-activity                          | cisco-duo-json-app-activity-success-phonecreate                                |
 | s-duo-app-login                             | cisco-duo-json-app-login-success-adminlogin                                    |
 | s-duo-auth-json                             | cisco-duo-json-endpoint-authentication-ip                                      |
@@ -1458,6 +1459,7 @@
 | symantec-system-info-2                      | symantec-edr-json-app-notification-success-liveupdatesession                   |
 | symantec-system-info-3                      | symantec-edr-json-app-notification-success-update                              |
 | symantec-system-info-4                      | symantec-edr-json-app-notification-success-scancomplete                        |
+| symantec-system-info-french                 | symantec-endpointprotection-kv-endpoint-scan-success-analyse                   |
 | symantec-usb-activity                       | symantec-dlp-kv-alert-trigger-success-policyviolated                           |
 | symantec-usb-block                          | symantec-endpointprotection-csv-peripheral-storage-activity-fail-blocked       |
 | symantec-usb-delete                         | symantec-dlp-csv-file-write-success-filedelete                                 |

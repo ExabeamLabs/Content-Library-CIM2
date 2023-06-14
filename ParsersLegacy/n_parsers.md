@@ -1,4 +1,4 @@
-| Old Parser Name                             | New Parser Name                                                             |
+| Old Parser Name                             | New-Scale Parser Name                                                       |
 | ------------------------------------------- | --------------------------------------------------------------------------- |
 | n-cef-mcafee-alert                          | mcafee-esm-csv-alert-trigger-success-mcafeensmopmnsmp3                      |
 | n-forwarded-cef-4611                        | microsoft-evsecurity-cef-endpoint-notification-success-esm                  |

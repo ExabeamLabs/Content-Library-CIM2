@@ -4,7 +4,7 @@
 Name = pan-tesm-mix-alert-trigger-success-trapsagent
   Vendor = Palo Alto Networks
   Product = Traps Endpoint Security Manager
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """|Palo Alto Networks|Traps Agent|""","""Prevention Key:""" ]
   Fields = [
     """\d\d:\d\d:\d\d ({host}[^\s]+)\sCEF""",
@@ -18,7 +18,8 @@ Name = pan-tesm-mix-alert-trigger-success-trapsagent
     """deviceProcessName =(?: |({malware_url}.+?))\s*\w+=""",
     """msg=(?: |({additional_info}.+?))(\.|:)"""
     """\sdst=({dest_ip}\d+\.\d+\.\d+\.\d+)\s"""
-    """\ssrc=({src_ip}\d+\.\d+\.\d+\.\d+)\s"""
+    """\ssrc=({src_ip}\d+\.\d+\.\d+\.\d+)\s""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
   SOAR {
     IncidentType = "malware"

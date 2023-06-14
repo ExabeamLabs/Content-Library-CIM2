@@ -15,7 +15,7 @@ Name = pan-ngfw-csv-network-traffic-fail-tcp
 paloalto-firewall = {
    Vendor = Palo Alto Networks
    Product = Palo Alto NGFW
-   TimeFormat = "yyyy/MM/dd HH:mm:ss"
+   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
    Fields = [
      """\s({host}[^\s]+)\s+(\[.*?\]\s+)?\d+,([^,]*,){2}TRAFFIC,""",
      """TRAFFIC,("[^"]*",|[^,]*,){48}({host}[\w\-\.]+)""",
@@ -47,7 +47,8 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){37}({src_country}[^\.:]*?)\s*,""",
      """TRAFFIC,([^,]*,){38}({dest_country}[^\.:]*?)\s*,""",
      """TRAFFIC,([^,]*,){18}({session_id}\d+),""",
-     """TRAFFIC,("[^"]*",|[^,]*,){48}({src_host}[\w\-\.]+)"""
+     """TRAFFIC,("[^"]*",|[^,]*,){48}({src_host}[\w\-\.]+)""",
+     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
    
 }
 ```

@@ -15,6 +15,7 @@ azure-ad-system-info = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """Security UserID\\*='({user_sid}[^']+)'""",

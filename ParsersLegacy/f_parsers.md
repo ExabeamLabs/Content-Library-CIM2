@@ -1,4 +1,4 @@
-| Old Parser Name                             | New Parser Name                                                    |
+| Old Parser Name                             | New-Scale Parser Name                                              |
 | ------------------------------------------- | ------------------------------------------------------------------ |
 | f5-afm-alert                                | f5-afm-kv-alert-trigger-success-module                             |
 | f5-anacron-system-info                      | f5-waf-json-endpoint-activity-success-anacron                      |

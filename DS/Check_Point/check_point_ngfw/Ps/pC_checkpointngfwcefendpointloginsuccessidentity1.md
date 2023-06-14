@@ -3,7 +3,7 @@
 {
 Name = checkpoint-ngfw-cef-endpoint-login-success-identity-1
   ParserVersion = v1.0.0
-  Conditions = [ """CEF:""", """|Check Point|Identity Awareness|""", """act=Update""", """auth_status=Successful Login""" ]
+  Conditions = [ """CheckPoint""", """product:"""", """action:"Update"""", """product:"Identity Awareness"""", """auth_status:"Successful Login"""" ]
 
 cef-checkpoint-firewall = {
   Vendor = Check Point

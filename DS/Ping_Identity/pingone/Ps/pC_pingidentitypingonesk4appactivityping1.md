@@ -22,6 +22,8 @@ Name = pingidentity-pingone-sk4-app-activity-ping-1
     """Mobile OS Version:\s({os}.*?)\s*(\\n)*Device Model""",
     """Device Model:\s(N\/A|({device_name}.*?))\s*(\\n)*Device Lock""",
     """"actors":\[\{"type":"user","name":"({user}[^"]+?)""""
+    """dproc=({process_name}[^\s]+)"""
+    """flexString2=({result}[^\s]+)"""
   ]
 
 

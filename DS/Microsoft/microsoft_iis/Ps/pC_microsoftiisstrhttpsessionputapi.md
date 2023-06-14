@@ -2,7 +2,11 @@
 ```Java
 {
 Name = microsoft-iis-str-http-session-putapi
+  TimeFormat = "epoch_sec"
   Conditions = [ """ PUT /api""" ]
+  Fields = ${IISParsersTemplates.iis-web-activity.Fields} [
+    """"timestamp":"({time}\d{10})"""
+  ]
   ParserVersion = "v1.0.0"
 
 iis-web-activity = {

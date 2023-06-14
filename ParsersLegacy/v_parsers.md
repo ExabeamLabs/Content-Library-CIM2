@@ -1,4 +1,4 @@
-| Old Parser Name                         | New Parser Name                                                      |
+| Old Parser Name                         | New-Scale Parser Name                                                |
 | --------------------------------------- | -------------------------------------------------------------------- |
 | varonis-dlp-alert-1                     | varonis-dsp-json-alert-trigger-success-varonisinc                    |
 | varonis-dlp-alert-2                     | varonis-dsp-kv-alert-trigger-success-alerttriggerd                   |

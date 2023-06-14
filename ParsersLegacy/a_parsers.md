@@ -1,4 +1,4 @@
-| Old Parser Name                                       | New Parser Name                                                                   |
+| Old Parser Name                                       | New-Scale Parser Name                                                             |
 | ----------------------------------------------------- | --------------------------------------------------------------------------------- |
 | abnormal-security-alert                               | abnormalsecurity-as-json-alert-trigger-success-attacktype                         |
 | absolute-app-activity                                 | absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated      |

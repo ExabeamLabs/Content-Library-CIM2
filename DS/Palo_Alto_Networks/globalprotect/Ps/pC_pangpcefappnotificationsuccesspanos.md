@@ -4,7 +4,7 @@
 Name = pan-gp-cef-app-notification-success-panos
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """CEF:""", """|Palo Alto Networks|PAN-OS|""", """|GLOBALPROTECT|""", """PanOSEventID=gateway-config-release""" ]
   Fields = [
     """\s({host}[\w\-.]+?)\sCEF:""",
@@ -19,7 +19,8 @@ Name = pan-gp-cef-app-notification-success-panos
     """({app}GLOBALPROTECT)""",
     """PanOSEndpointOSVersion="({os}[^"]+?)"""",
     """PanOSSourceRegion=({src_country}[^=]+?)\s\w+=""",
-    """PanOSDescription="({additional_info}[^"]+)""""
+    """PanOSDescription="({additional_info}[^"]+)"""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
   ParserVersion = "v1.0.0"
 

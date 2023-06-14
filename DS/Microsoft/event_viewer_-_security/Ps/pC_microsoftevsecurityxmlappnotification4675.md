@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-app-notification-4675
     """({event_name}SIDs were filtered)""",
     """<Computer>({dest_host}({host}[^<]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({event_code}4675)""",
     """\sTarget Account:\s*(|-|(.+?))\s*Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}.+?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Trust Information:\s*(|-|(.+?))\s*Trust Direction:\s*(|-|(.+?))\s*Trust Attributes:\s*(|-|(.+?))\s*Trust Type:\s*(|-|({trust_type}.+?))\s*TDO Domain SID:\s*(|-|(.+?))\s*Filtered SIDs:\s*(|-|(.+?))\s*($|<)""",
 # DL Fields are removed

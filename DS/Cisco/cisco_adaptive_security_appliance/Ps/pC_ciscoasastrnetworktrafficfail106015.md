@@ -5,7 +5,7 @@ Name = cisco-asa-str-network-traffic-fail-106015
   Vendor = Cisco
   Product = Cisco Adaptive Security Appliance
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """%ASA-""", """-106015""", """Deny TCP""" ]
   Fields = [
     """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d+)""",

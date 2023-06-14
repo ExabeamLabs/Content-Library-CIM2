@@ -1,4 +1,4 @@
-| Old Parser Name                        | New Parser Name                                                   |
+| Old Parser Name                        | New-Scale Parser Name                                             |
 | -------------------------------------- | ----------------------------------------------------------------- |
 | ibm-auth-successful                    | ibm-i-str-app-authentication-success-indbinddn                    |
 | ibm-datapower-network-info             | ibm-datapower-str-app-notification-certificate                    |

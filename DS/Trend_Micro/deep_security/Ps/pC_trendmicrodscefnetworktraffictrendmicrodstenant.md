@@ -23,6 +23,9 @@ Name = trendmicro-ds-cef-network-traffic-trendmicrodstenant
     """[\|\s]act=({operation}[^\|\s]+)""",
     """[\|\s]dmac=({dest_mac}[^\s\|]+?)[\s\|]""",
     """CEF:(\s*\d+)\|(([^\|]+)\|){4}({alert_name}[^\|]+)""",
+    """cat=({category}[^=]+?)\s*\w+=""",
+    """name=({alert_name}[^=]+?)\s*\w+=""",
+    """sev=({alert_severity}[^\s]+)"""
   ]
 
 

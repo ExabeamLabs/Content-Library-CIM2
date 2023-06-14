@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447-2
   Conditions = [ """<EventID>5447</EventID>""", """<Task>Other Policy Change Events""", """A Windows Filtering Platform filter has been changed""" ]
   Fields = [
     """({event_name}A Windows Filtering Platform filter has been changed)""",
-    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",

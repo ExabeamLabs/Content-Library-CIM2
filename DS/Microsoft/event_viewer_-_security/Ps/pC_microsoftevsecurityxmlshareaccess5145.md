@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """ProcessID\\*=('|")({process_id}\d+)('|")""",
       """<Computer>({host}[^<]+)</Computer>""",
+      """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
       """<Computer>(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[^<]+)</Computer>)""",
       """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
       """<Data Name\\*=('|")SubjectUserName('|")>({user}[^\s<]+)</Data>""",

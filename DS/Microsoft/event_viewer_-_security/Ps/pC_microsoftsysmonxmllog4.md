@@ -5,6 +5,9 @@ Name = microsoft-sysmon-xml-log-4
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4</EventID>""", """<Provider Name""","""'Microsoft-Windows-Sysmon'""" ]
+  Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
 
 xml-sysmon-activity = {
   Vendor = Microsoft

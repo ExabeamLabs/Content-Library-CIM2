@@ -9,8 +9,9 @@ Name = microsoft-evsecurity-xml-vpn-authentication-fail-6
     """>({event_code}\d+)</EventID>""",
     """<Data Name\\*='Context'>({account}[^<]+?)</Data>""",
     """<Data Name\\*='ErrorCode'>({failure_reason}[^<]+?)</Data>""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "host->src_host" ]
 
 s-xml-object-access = {
   Vendor = Microsoft

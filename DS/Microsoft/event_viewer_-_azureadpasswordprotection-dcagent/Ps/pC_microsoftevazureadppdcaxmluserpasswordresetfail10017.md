@@ -16,6 +16,7 @@ account-password-reset = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)'/>""",
     """<Message>({event_name}[^.<]+)""",
     """UserName:\s*({user}[^\s]+)""",

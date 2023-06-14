@@ -17,7 +17,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"aid":\s*"({aid}[^"]+)""",
     """"CommandLine":\s*"\s*({process_command_line}[^\n]+?)\s*"?,"""",
-    """"CommandLine":"({process_path}({process_dir}[^\s,"]+[\\\/]+)?({process_name}[^\s"]+))\s*""",
+    """"CommandLine":"({process_path}({process_dir}[^\s,"]+[\\\/]+)?({process_name}[^\s"]{1,100}))(\s|")""",
     """"CommandLine":\s*"\s*[^",]*"({process_path}({process_dir}[^"=]*[\\\/]+?)({process_name}[^\\\/"=]+))""",
     """"CommandLine":\s*"\s*(?=[\\\/\w.]+\s+)(({process_dir}[^\s"=]*[\\\/]+?)({process_name}[^\s"=]+\.\w+))""",
     """"CommandLine":\s*"\s*(?=[\w.]+\s+)({process_name}[^\s"=]+\.\w+)""",
@@ -25,7 +25,6 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"CommandLine":\s*"\s*(?=\w:[\\])({process_path}({process_dir}(?:[^"=]+)?[\\])?({process_name}[^\\\/"\s=]+))""",
     """"CommandLine":\s*"\s*(?=\\"*[^\\]*\\"*)\\"*({process_path}({process_dir}(?:[^"=]+)?[\\])?({process_name}[^\\\/"\s=]+))""",
     """"ImageFileName":\s*"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+\.\w+))"""",
-    """"id":\s*"({process_guid}[^"]+)""",
     """"MD5HashData":\s*"({hash_md5}[^"]+)""",
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"TargetProcessId":\s*"({process_id}[^"]+)""",
@@ -40,7 +39,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"event_platform":\s*"({os}[^"]+)"""
     """"IntegrityLevel":"({process_integrity}[^"]+)""""
   ]
- DupFields = [ "process_dir->process_path_directory", "parent_process->parent_process_name" ]
+ DupFields = [ "process_dir->process_path_directory", "parent_process->parent_process_name", "process_command_line->parent_process_command_line" ]
 
 
 }

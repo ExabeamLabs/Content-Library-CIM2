@@ -8,7 +8,6 @@ Name = microsoft-o365-sk4-app-activity-success-softdelete
 
 cef-microsoft-o365-app-activity = {
   Vendor = Microsoft
-  Product = Office 365
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """"CreationTime\\*"+:[\s\\]*"+({time}\d+-\d+-\d+T\d+:\d+:\d+)""",

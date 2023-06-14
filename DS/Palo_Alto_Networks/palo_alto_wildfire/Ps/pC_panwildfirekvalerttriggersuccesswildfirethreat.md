@@ -2,7 +2,7 @@
 ```Java
 {
 Name = pan-wildfire-kv-alert-trigger-success-wildfirethreat
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """|Palo Alto Networks|PAN-OS|""","""wildfire|THREAT|""" ]
   ParserVersion = "v1.0.0"
 

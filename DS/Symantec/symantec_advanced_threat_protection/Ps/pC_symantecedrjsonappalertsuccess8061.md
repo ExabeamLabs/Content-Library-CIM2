@@ -3,9 +3,10 @@
 {
 Name = symantec-edr-json-app-alert-success-8061
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"Symantec"""", """"product_name":"Symantec Endpoint Security"""", """"event_data_type":"sep"""",""""type_id":8061""" ]
+  Conditions = [ """"destinationServiceName":"Symantec"""", """"product_name":""", """"event_data_type":"sep"""",""""type_id":8061""" ]
   Fields = ${DLSymantecParserTemplates.symantec-system-info-template.Fields}[
-    """"prev_security_level_id":"({alert_severity}\d+)"""
+    """"curr_security_level_id":"({alert_severity}\d+)""",
+    """"type_id":({event_code}8061)"""
   ]
 
 

@@ -8,7 +8,7 @@ Name = osquery-o-json-app-activity-success-added
 osquery-app-activity = {
   Vendor = Osquery
   Product = Osquery
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd HH:mm:ss yyyy 'UTC'"
   Fields = [
     """"calendarTime":"\w{3}\s({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d\s\w+)"""",
 	""""hostname":"({host}[\w\-.]+)""""

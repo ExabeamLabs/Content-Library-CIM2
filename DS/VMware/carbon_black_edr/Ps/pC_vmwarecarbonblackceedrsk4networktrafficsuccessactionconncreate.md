@@ -4,6 +4,10 @@
 Name = vmware-carbonblackceedr-sk4-network-traffic-success-actionconncreate
   ParserVersion = v1.0.0
   Conditions = [ """endpoint.event.netconn""", """"process_username":"""", """"event_origin":"EDR"""", """"action":"ACTION_CONNECTION_CREATE"""", """"netconn_domain":"""" ]
+  Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields} [
+    """\"+process_username\"+:\"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\",]+))\"+"""
+    """\"parent_path\":\"({parent_process}({parent_process_dir}[^\"]+(\\|\/)+)?({parent_process_name}[^\"]+))\""""
+  ]
 
 carbonblack-edr {
    Vendor = VMware

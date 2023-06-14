@@ -11,7 +11,7 @@ Name = pan-wildfire-leef-alert-trigger-success-virus
 leef-pan-alert = {
   Vendor = Palo Alto Networks
   Product = Palo Alto WildFire
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
     """({host}[\w\.-]+)(\s+|,"+)LEEF:""",
@@ -32,6 +32,7 @@ leef-pan-alert = {
     """usrName =({domain}[^\\\|]+)\\({user}[^\s\|]+)""",
     """\|SourceZone=({src_network_zone}[^\|]+?)\|""",
     """\|DestinationZone=({dest_network_zone}[^\|]+?)\|""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     
 }
 ```

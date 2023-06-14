@@ -25,9 +25,12 @@ Name = microsoft-azuremon-sk4-http-request-frontdoorwebapplicationfirewalllog
     """"requestUri":"({url}[^"]+)"""",
     """Namespace:\s*({event_hub_namespace}\S+)""",
     """EventHub name:\s*({event_hub_name}[^\]\s]+)\s*\]""",
+    """"operationName":"({operation}[^"]+)""",
+    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """category":"({category}[^"]+)""""
 # policy_mode is removed
   ]
-   DupFields= ["event_hub_namespace->host"]
+   DupFields= ["event_hub_namespace->host", "object->resource" ]
 
 
 }

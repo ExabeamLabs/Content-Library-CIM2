@@ -1,4 +1,4 @@
-| Old Parser Name                                          | New Parser Name                                                                      |
+| Old Parser Name                                          | New-Scale Parser Name                                                                |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | carbonblack-app-activity                                 | vmware-carbonblack-sk4-app-activity-cbdefense                                        |
 | carbonblack-edr-auth-successful                          | vmware-carbonblackedr-sk4-app-authentication-success-loginname                       |
@@ -2160,6 +2160,12 @@
 | cisco-wsa-squid-proxy                                    | cisco-securewebapp-str-http-session-squid                                            |
 | cisco-wsa-web-activity                                   | cisco-securewebapp-csv-http-session-info                                             |
 | cisco-wsa-web-activity-1                                 | cisco-securewebapp-kv-http-session-accesslogs                                        |
+| ciscoironport-dummy-parser-1                             | cisco-ie-cef-email-av-verdict                                                        |
+| ciscoironport-dummy-parser-2                             | cisco-ie-cef-email-graymail                                                          |
+| ciscoironport-dummy-parser-3                             | cisco-ie-cef-email-file-verdict                                                      |
+| ciscoironport-dummy-parser-4                             | cisco-ie-cef-email-deliverystart                                                     |
+| ciscoironport-dummy-parser-5                             | cisco-ie-cef-email-response                                                          |
+| ciscoironport-dummy-parser-6                             | cisco-ie-cef-email-attachment                                                        |
 | cise-alarm-info                                          | cisco-ise-str-app-notification-alarm                                                 |
 | cise-audit-info                                          | cisco-ise-str-app-notification-audit                                                 |
 | cise-config-change                                       | cisco-ise-kv-configuration-modify-success-52001                                      |

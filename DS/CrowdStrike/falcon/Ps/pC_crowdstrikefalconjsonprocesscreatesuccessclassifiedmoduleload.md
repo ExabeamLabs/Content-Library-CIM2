@@ -16,7 +16,7 @@ crowdstrike-process-info-1 = {
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_name}[^"]+)""",
     """"name":\s*"({process_name}[^"]+)""",
-    """"id":\s*"({user_sid}[^"]+)""",
+    """"UserSid":\s*"({user_sid}[^"]+)""",
     """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",

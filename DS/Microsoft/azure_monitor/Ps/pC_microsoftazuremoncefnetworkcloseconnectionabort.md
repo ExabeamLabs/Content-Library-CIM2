@@ -8,7 +8,7 @@ Name = microsoft-azuremon-cef-network-close-connectionabort
     """Category":"({category}[^"]+)""",
     """OperationName":"({operation}[^"]+)""",
   ]
-  DupFields = [ "additional_info->failure_reason" ]
+  DupFields = [ "additional_info->failure_reason", "object->resource" ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

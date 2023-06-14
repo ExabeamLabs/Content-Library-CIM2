@@ -1,4 +1,4 @@
-| Old Parser Name                           | New Parser Name                                                                            |
+| Old Parser Name                           | New-Scale Parser Name                                                                      |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------ |
 | badgepoint-physical-badge-access-1        | badgepoint-b-kv-physical-location-access-readerid                                          |
 | barracuda-accounting-login                | barracuda-firewall-kv-vpn-login-success-accountinglogin                                    |

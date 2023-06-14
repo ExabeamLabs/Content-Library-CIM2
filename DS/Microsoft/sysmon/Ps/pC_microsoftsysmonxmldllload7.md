@@ -9,7 +9,8 @@ Name = microsoft-sysmon-xml-dll-load-7
     """<Data Name\\*='Signed'>({signed}[^<>]+?)<\/Data>""",
     """<Data Name\\*='Signature'>({signature}[^<>]+?)<\/Data>""",
 # signature_status is removed
-    """({log_name}Microsoft-Windows-Sysmon)"""
+    """({log_name}Microsoft-Windows-Sysmon)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   ]
   DupFields = [ "process_name->src_process_name" ]
 

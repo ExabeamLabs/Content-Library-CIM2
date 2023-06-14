@@ -5,7 +5,7 @@ Name = amazon-awscloudtrail-json-key-write-createkeypair
   Vendor = Amazon
   Product = AWS CloudTrail
   ParserVersion = "v1.0.0"
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """AwsApiCall""", """"eventName":"CreateKeyPair"""" ] 
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
   """"+requestParameters.+?keyName\\?":\s*\\?"({key_name}[^"]+?)\\?"""",
@@ -16,7 +16,7 @@ Name = amazon-awscloudtrail-json-key-write-createkeypair
 aws-cloudtrail-json = {
     Vendor = Amazon
     Product = AWS CloudTrail
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [
       """"userIdentity":\{("[^,]+,)*"type"\\?:\s*\\?"({user_type}[^"]+?)\\?"""",
       """"userIdentity":\{("[^,]+,)*"arn"\\?:\s*\\?"({user_arn}[^"]+?)\\?"""",
@@ -24,7 +24,8 @@ aws-cloudtrail-json = {
       """"userIdentity":\{("[^,]+,)*"principalId\\?"+\s*:\s*\\?"+?({principal_id}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"attributes":\{("[^,]+,)*"mfaAuthenticated"\\?:\s*\\?"({mfa}[^"]+?)\\?"""",
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({assumed_role_arn}[^"]+)\\?""""
-      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
+      # """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
+      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ?))"+\s*[,\]\}]""",
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"+\s*[,\]\}]""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"+\s*[,\]\}]""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
@@ -41,7 +42,7 @@ aws-cloudtrail-json = {
       """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?"""",
       #AWS CloudTrail user regexes
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[^\\\/@=]+?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
-      """"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/([^\/"]+\/)(AssumeRoleSession|((?![\w\-\.]{30,})(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)))\\?"""",
       """"sourceIdentity\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,50}:({email_address}[^"]+?@[^@"]+)\\?"\s*[,\]\}]""",

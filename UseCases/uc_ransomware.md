@@ -231,6 +231,10 @@ Use Case: Ransomware
 |                                                      Product                                                       | MITRE ATT&CK® TTP          | Content                                                                                                                         |
 |:------------------------------------------------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | [Entrust Identity Enterprise](../DS/Entrust/entrust_identity_enterprise/ds_entrust_entrust_identity_enterprise.md) | T1078 - Valid Accounts<br> | [<ul><li>2 Rules</li></ul>](../DS/Entrust/entrust_identity_enterprise/RM/r_m_entrust_entrust_identity_enterprise_Ransomware.md) |
+### Vendor: Envoy
+|                   Product                    | MITRE ATT&CK® TTP                                         | Content                                                                         |
+|:--------------------------------------------:| --------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| [Envoy](../DS/Envoy/envoy/ds_envoy_envoy.md) | T1071.001 - Application Layer Protocol: Web Protocols<br> | [<ul><li>1 Rules</li></ul>](../DS/Envoy/envoy/RM/r_m_envoy_envoy_Ransomware.md) |
 ### Vendor: Epic
 |                        Product                         | MITRE ATT&CK® TTP          | Content                                                                               |
 |:------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------- |

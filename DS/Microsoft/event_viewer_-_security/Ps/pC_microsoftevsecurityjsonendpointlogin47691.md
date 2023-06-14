@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-1
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
   Conditions = ["""A Kerberos service ticket was requested""", """Account Name""", """computer_name""", """event_id\":4769"""]
-  Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+  Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
     """({event_name}A Kerberos service ticket was requested)""",
     """TargetUserName\\?"+:\\?"+((({user}[^@\s\\]+?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?"""",
     """TargetDomainName\\?"+:\\?"+({web_domain}[^\\]+)""",

@@ -1,4 +1,4 @@
-| Old Parser Name                          | New Parser Name                                                                 |
+| Old Parser Name                          | New-Scale Parser Name                                                           |
 | ---------------------------------------- | ------------------------------------------------------------------------------- |
 | watchguard-event-2                       | watchguard-w-kv-network-traffic-firewall-1                                      |
 | watchguard-event-3                       | watchguard-w-kv-network-traffic-firewall-2                                      |

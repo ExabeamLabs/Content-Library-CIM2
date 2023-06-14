@@ -26,7 +26,8 @@ paloalto-vpn = {
     """"Protocol":"({protocol}[^"]+)"""",
     """"LogType":"({event_category}[^"]+)"""",
     """"AuthMethod":"({auth_method}[^"]+)"""",
-    """"EventIDValue":"({event_name}[^"]+)""""
+    """"EventIDValue":"({event_name}[^"]+)"""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   
 }
 ```

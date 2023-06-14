@@ -1,4 +1,4 @@
-| Old Parser Name                          | New Parser Name                                                         |
+| Old Parser Name                          | New-Scale Parser Name                                                   |
 | ---------------------------------------- | ----------------------------------------------------------------------- |
 | packetfence-system-info-1                | packetfence-p-kv-app-notification-status                                |
 | packetfence-system-info-2                | packetfence-p-kv-app-notification-role                                  |

@@ -5,27 +5,26 @@ Name = amazon-awscloudtrail-json-file-copy-copyobject
   Vendor = Amazon
   Product = AWS CloudTrail
   ParserVersion = "v1.0.0"
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """AwsApiCall""", """"eventName":"CopyObject"""" ] 
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
   """"+requestParameters.+?bucketName\\?":\s*\\?"({bucket_name}[^"]+?)\\?"""",
   """"+requestParameters.+?Host\\?":\s*\\?"({bucket_host}[^"]+?)\\?"""",
-  """"+requestParameters.+?copy-source\\?":\s*\\?"({src_file_path}(({src_file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))\"*""",
   """"+requestParameters.+?key\\?":\s*\\?"({file_path}.*?[\\\/]*({file_name}[^\\\/]+?))\s*"""",
+  """"+requestParameters.+?copy-source\\?":\s*\\?"({src_file_path}(({src_file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))\"*""",
   """"+additionalEventData.+?bytesTransferredIn\\*":\s*({bytes_in}\d+)""",
   """"+additionalEventData.+?bytesTransferredOut\\*":\s*({bytes_out}\d+)""",
   """"+resources.+?Object.+?(?:ARN|arn)\\?":\s*\\?"({src_file_arn}[^"]+?)\\?"""",
   """"+resources.+?Bucket.+?(?:ARN|arn)\\?":\s*\\?"({src_bucket_arn}[^"]+?)\\?"""",
   """"+resources.+?Object.+?Object.+?(?:ARN|arn)\\?":\s*\\?"({dest_file_arn}[^"]+?)\\?"""",
   """"+resources.+?Bucket.+?Bucket.+?(?:ARN|arn)\\?":\s*\\?"({dest_bucket_arn}[^"]+?)\\?"""",
-
   ]
-  DupFields = ["result->failure_code"]
+  DupFields = ["result->failure_code","src_file_ext->file_ext"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
     Product = AWS CloudTrail
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [
       """"userIdentity":\{("[^,]+,)*"type"\\?:\s*\\?"({user_type}[^"]+?)\\?"""",
       """"userIdentity":\{("[^,]+,)*"arn"\\?:\s*\\?"({user_arn}[^"]+?)\\?"""",
@@ -33,7 +32,8 @@ aws-cloudtrail-json = {
       """"userIdentity":\{("[^,]+,)*"principalId\\?"+\s*:\s*\\?"+?({principal_id}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"attributes":\{("[^,]+,)*"mfaAuthenticated"\\?:\s*\\?"({mfa}[^"]+?)\\?"""",
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({assumed_role_arn}[^"]+)\\?""""
-      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
+      # """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
+      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ?))"+\s*[,\]\}]""",
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"+\s*[,\]\}]""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"+\s*[,\]\}]""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
@@ -50,7 +50,7 @@ aws-cloudtrail-json = {
       """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?"""",
       #AWS CloudTrail user regexes
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[^\\\/@=]+?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
-      """"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/([^\/"]+\/)(AssumeRoleSession|((?![\w\-\.]{30,})(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)))\\?"""",
       """"sourceIdentity\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,50}:({email_address}[^"]+?@[^@"]+)\\?"\s*[,\]\}]""",

@@ -7,6 +7,9 @@ Name = dell-sw-kv-dns-request-success-1481
   Conditions = [ """ m=1481 """, """id=""", """ fw=""", """ c=""", """ pri="""]
   Fields = ${SonicwallParsersTemplates.sonicwall-firewall.Fields} [
     """Domain:\s*({query}[^"]+)"""
+    """time="({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
+    """\spri=({severity}\d+)""",
+    """\snote="\s*({additional_info}[^"]+?)\s*""""
   ]
 
 sonicwall-firewall = {

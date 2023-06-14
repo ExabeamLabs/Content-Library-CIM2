@@ -14,7 +14,7 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
      """"event_simpleName":"({event_code}[^"]+)""",
      """"aid":"({aid}[^"]+)"""
     ]
-    DupFields = ["event_code->alert_name", "event_code->alert_type"]
+    DupFields = ["event_code->alert_name", "event_code->alert_type", "domain->top_domain"]
 
 
 }

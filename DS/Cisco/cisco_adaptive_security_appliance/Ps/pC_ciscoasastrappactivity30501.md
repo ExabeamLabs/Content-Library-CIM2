@@ -4,7 +4,7 @@
 Name = cisco-asa-str-app-activity-30501
   Vendor = Cisco
   Product = Cisco Adaptive Security Appliance
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = ["""%ASA""", """-30501"""]
   Fields = [
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",

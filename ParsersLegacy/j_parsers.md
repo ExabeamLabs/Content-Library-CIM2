@@ -1,4 +1,4 @@
-| Old Parser Name                                 | New Parser Name                                                                     |
+| Old Parser Name                                 | New-Scale Parser Name                                                               |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------- |
 | jp-4662                                         | microsoft-evsecurity-kv-ds-object-activity-success-4662-4                           |
 | jp-5158                                         | microsoft-evsecurity-kv-network-session-success-5158-1                              |
@@ -140,6 +140,7 @@
 | json-azure-ad-security-alert-1                  | microsoft-azureadip-json-alert-trigger-success-impossibletravel                     |
 | json-azure-ad-security-alert-2                  | microsoft-azureadip-json-alert-trigger-success-exfiltration                         |
 | json-bluecoat-proxy-web-activity                | symantec-wss-json-http-session-actioncf                                             |
+| json-box-file-download                          | box-ccm-json-file-download-success-manageddevice                                    |
 | json-bro-certs-analyzer                         | zeek-z-json-network-notification-certificate                                        |
 | json-bro-dce_rpc                                | zeek-z-json-endpoint-login-success-operation                                        |
 | json-bro-dhcp                                   | zeek-z-json-dhcp-traffic-success-uids                                               |
@@ -272,6 +273,9 @@
 | json-o365-dlp-email                             | "microsoft-o365-json-email-send-receive-subject                                     |
 | json-o365-failed-app-login                      | microsoft-o365-sk4-app-login-fail-appdisplayname                                    |
 | json-o365-file-write-7                          | microsoft-o365-sk4-file-write-success-fileuploaded                                  |
+| json-o365-graph-audit-app-activity              | microsoft-o365-json-app-activity-graphdirectoryauditlogs                            |
+| json-o365-graph-identity-alert                  | microsoft-o365-json-alert-trigger-success-graphidentity                             |
+| json-o365-graph-sign-in                         | microsoft-o365-json-app-login-graphsignin                                           |
 | json-okta-account-lockout                       | okta-amfa-json-user-lock-success-lockedout                                          |
 | json-okta-app-login                             | okta-amfa-cef-app-login-success-appadloginsuccess                                   |
 | json-okta-app-login-1                           | okta-amfa-cef-app-login-success-coreuserauthloginsuccess                            |

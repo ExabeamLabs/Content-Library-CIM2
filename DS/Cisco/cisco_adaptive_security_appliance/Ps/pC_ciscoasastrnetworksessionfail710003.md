@@ -12,7 +12,7 @@ Name = cisco-asa-str-network-session-fail-710003
     """(::ffff:)?({host}[\w\-.]+)\s+({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d):\s*%ASA""",
     """%ASA-({priority}\d+)""",
     """({event_code}710003)""",
-    """({protocol}\S+?) ({event_name}access denied by ACL)""",
+    """({failure_reason}({protocol}\S+?) ({event_name}access denied by ACL))""",
     """ from ((::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|(::ffff:)?({src_host}[^\s]+?))\/({src_port}\d+) to ({dest_interface}\S+?)\s*:\s*((::ffff:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|(::ffff:)?({dest_host}[^\s]+?))\/({dest_port}\d+)"""
   ]
 

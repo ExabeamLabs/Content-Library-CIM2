@@ -14,7 +14,8 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A new process has been created)""",
-    """<Computer>({host}[^<]+)<""",
+    """<Computer>({src_host}({host}[^<]+))<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4688)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+?)<""",
     """<Data Name(\\)?=('|")SubjectUserName('|")>(-|LOCAL SERVICE|({full_name}[^<\s]+\s[^<]+)|({user}[^<]+?))<""",
@@ -29,7 +30,7 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
     """Creator Process Name:\s*({parent_process_path}[^\s]+)\s*""",
     """<Data Name(\\)?=('|")NewProcessName('|")>({dest_process_path}({dest_process_dir}(?:[^<>]+)?[\\\/])?({dest_process_name}[^\\\/<>]+))<"""
   ]
-  DupFields = [ "host->src_host","process_guid->process_id" ]
+  DupFields = [ "process_guid->process_id" ]
 
 
 }

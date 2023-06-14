@@ -5,7 +5,7 @@ Name = exabeam-cr-kv-rule-trigger-success-correlationrule
     ParserVersion = "v1.0.0"
     Vendor = Exabeam
     Product = Correlation Rule
-    TimeFormat = "epoch"
+    TimeFormat = "epoch_sec"
     trigger_timeFormat = ["epoch_sec", "epoch"]
     Conditions = ["""operation="rule-trigger"""", """alert_source="correlation""""]
     Fields = [
@@ -26,7 +26,8 @@ Name = exabeam-cr-kv-rule-trigger-success-correlationrule
       """trigger_time="({trigger_time}\d{10,13})"""",
       """operation="({operation}[^"]+)"""",
       """alert_source="({alert_source}correlation)"""",
-      """tags="({tags}[^"]+)""""
+      """tags="({tags}[^"]+)"""",
+      """trigger_time="({time}\d{10})"""
     ]
   
 

@@ -1,5 +1,5 @@
- Matrix of Old vs. New Parser Names
-===================================
+ Matrix of Old vs. New-Scale Parser Names
+=========================================
 
  Parser names follow a standardized set of conventions that ensure consistency across Exabeam products. For more information, see [Parser Naming Conventions](https://docs.exabeam.com/en/content/all/exabeam-security-content-cim/exabeam-parsers/parser-naming-conventions.html). If you've been using Exabeam products prior to the introduction of this parser-naming convention, consult the alphabetic tables below to find the new name for existing parsers.
 

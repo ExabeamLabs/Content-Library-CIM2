@@ -4,7 +4,7 @@
 Name = pan-aperture-sk4-alert-trigger-success-policyviolation
     Vendor = Palo Alto Networks
     Product = Palo Alto Aperture
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Conditions = [ """"policy_violation"""", """cloud_app_instance""" ]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z""",
@@ -23,7 +23,8 @@ Name = pan-aperture-sk4-alert-trigger-success-policyviolation
       """"item_creator":"(|({item_creator}[^"]+))"""",
       """"item_creator_email":"(|Unknown|({email_address}[^"]+))"""",
       """"collaborators":"(|({collaborators}[^"]+))"""",
-      """"severity":({alert_severity}[\d.]+)"""
+      """"severity":({alert_severity}[\d.]+)""",
+      """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     ]
     SOAR {
     IncidentType = "dlp"

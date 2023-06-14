@@ -7,8 +7,9 @@ Name = microsoft-evcertsc-xml-certificate-expire-64
   Conditions = [ """>64</EventID>""", """<Execution ProcessID=""", """<Event xmlns=""", """<Message>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """({event_code}64)""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "host->src_host" ]
 
 s-xml-object-access = {
   Vendor = Microsoft

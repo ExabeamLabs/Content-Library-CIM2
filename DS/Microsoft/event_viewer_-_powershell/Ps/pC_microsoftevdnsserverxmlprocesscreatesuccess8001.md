@@ -15,6 +15,7 @@ Name = microsoft-evdnsserver-xml-process-create-success-800-1
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """UserId\\*=({domain}[^\\]+)\\({user}[^\s]*?)\s*HostName""",
     """({event_code}800)""",
     """ScriptName\\*=\s*(|({process_path}({process_dir}([\w:]+\\)?([^\\]+?\\)*?)({process_name}[^\\=]*?)))\s+CommandLine""",

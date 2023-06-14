@@ -24,7 +24,7 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """"event_platform":\s*"({os}[^"]+)"""
     """"InterfaceGuid":"({process_guid}[^"]+)""""
   ]
-  DupFields = [ "process_dir->process_path_directory" ]
+  DupFields = [ "process_dir->process_path_directory", "process_command_line->parent_process_command_line" ]
 
 
 }

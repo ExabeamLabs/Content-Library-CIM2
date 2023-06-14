@@ -6,7 +6,8 @@ Name = symantec-edr-json-alert-trigger-success-8015
   Conditions = [ """"destinationServiceName":"Symantec"""", """"product_name":"Symantec Endpoint Security"""", """"event_data_type":"fdr"""",""""type_id":8015""" ]
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
     """"severity_id":({alert_severity}\d+)""",
-    """"rule_name":"({alert_name}[^"]+)"""
+    """"rule_name":"({alert_name}[^"]+)""",
+    """"type_id":({event_code}8015)"""
   ]
   DupFields = [ "alert_name->alert_type" ]
 
@@ -17,7 +18,7 @@ symantec-parser-template = {
     Fields = [
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"device_domain":"({domain}[^"]+)"""",
-      """"device_name":"({host}[\w\-.]+)"""",
+      """"device_name":"({src_host}[\w\-.]+)"""",
       """"device_os_name":"({os}[^"]+)"""",
       """"ipv4":\[?"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"user_name":"({user}[^"]+)"""",

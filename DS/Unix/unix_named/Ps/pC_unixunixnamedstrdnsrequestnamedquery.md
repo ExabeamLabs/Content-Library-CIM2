@@ -10,6 +10,7 @@ Name = unix-unixnamed-str-dns-request-namedquery
     """\d\d:\d\d:\d\d ({host}\S+)\s+named\[""",
     """client\s*(@[^\s]+)?\s*({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\#({src_port}\d+)""",
     """query\s*.+?(\([^\)]*\))?(for)?\s*'?({dns_query}[^\s'\/]+)\/({dns_query_type}[^\/']+)[^']*'?\s*({result}\S+)""",
+    """query ({result}failed)\s*(\([^\)]*\))?\s*for ({dns_query}[^\s'\/]+)\/(?:[^\/']+)\/({dns_query_type}[^\s]+) at"""
   ]
   ParserVersion = "v1.0.0"
 

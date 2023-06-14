@@ -5,7 +5,7 @@ Name = pan-ngfw-csv-network-notification-success-general
   ParserVersion = "v1.0.0"
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """,SYSTEM,rtsig,""", """,general,"""]
   Fields = [
     """({host}[\w\-\.]+)[\s\-]+\d+,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),[^,]*,SYSTEM,rtsig,""",

@@ -5,7 +5,7 @@ Name = f5-f-kv-app-activity-common
  ParserVersion = v1.0.0
  Vendor = F5
  Product = F5 Access Policy Manager
- TimeFormat = "yyyy-MM-dd HH:mm:ss"
+ TimeFormat = "epoch_sec"
  start_timeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
  end_timeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
  Conditions = [ """:Common:""" ]
@@ -31,7 +31,8 @@ Name = f5-f-kv-app-activity-common
    """ authentication with '({account}[^\s']+)'\s*({result}[^:]+):({additional_info}[^"]+)""",
    """platform' set to '({os}[^'"]+)'"""
    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d+:\d+\s({vpn_server}[^\s]+)"""
-   """hostname' set to '({src_host}[\w\-.]+)"""
+   """hostname' set to '({src_host}[\w\-.]+)""",
+   """"timestamp":"({time}\d{10})"""
  ]
   DupFields = [ "vpn_server->realm" ]
 

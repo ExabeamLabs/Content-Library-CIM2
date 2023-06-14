@@ -8,6 +8,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-1101
   Conditions = [ """<EventID>1101</EventID>""", """Audit events have been dropped by the transport""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

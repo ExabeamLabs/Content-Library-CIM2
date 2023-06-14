@@ -5,7 +5,7 @@ Name = pan-ngfw-csv-http-session-9999
    ParserVersion = v1.0.0
    Vendor = Palo Alto Networks
    Product = Palo Alto NGFW
-   TimeFormat = "yyyy/MM/dd HH:mm:ss"
+   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
    Conditions = [
 """,THREAT,url,""",
 """(9999)"""

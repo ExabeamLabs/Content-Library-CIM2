@@ -4,7 +4,7 @@
 Name = pan-ngfw-cef-http-session-url-1
   Vendor = "Palo Alto Networks"
   Product = "Palo Alto NGFW"
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """CEF:""", """|Palo Alto Networks|LF|""", """|THREAT|url|""" ]
   Fields = [
     """\srt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)\s""",
@@ -20,7 +20,8 @@ Name = pan-ngfw-cef-http-session-url-1
     """\scs2=({category}[^=]+?)\scs2Label=URLCategory""",
     """\srequestContext=(|({mime}[^=]+))\s{1,100}\w+=""",
     """\srequest="?({url}(\w+\\{0,20}:\/{1,20})?({web_domain}[^\/:"\s]+)?({uri_path}\/[^\?\s"]*)?({uri_query}\?[^\s"]+)?)"?\s\w+=""",
-    """\sflexString2=({direction}[^=]+?)\s\w+="""
+    """\sflexString2=({direction}[^=]+?)\s\w+=""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
   ParserVersion = v1.0.0
 

@@ -4,6 +4,11 @@
 Name = okta-amfa-json-app-login-success-evaluatesignon-1
   ParserVersion = "v1.0.0"
   Conditions = [ """"eventType":""", """"policy.evaluate_sign_on"""", """Evaluation of sign-on policy""" ]
+  Fields = ${OktaParserTemplates.s-okta-app-login.Fields}[
+    """"os":"({os}[^"]+)""""
+    """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"domain":"({domain}[^"]+)""""
+  ]
 
 s-okta-app-login = {
   Vendor = "Okta"

@@ -1,4 +1,4 @@
-| Old Parser Name                        | New Parser Name                                                 |
+| Old Parser Name                        | New-Scale Parser Name                                           |
 | -------------------------------------- | --------------------------------------------------------------- |
 | tanium-auth                            | tanium-cp-kv-app-authentication-exabeamlogoneventest            |
 | tanium-cloud-app-activity              | tanium-cpp-json-app-activity-success-packagespecaudit           |

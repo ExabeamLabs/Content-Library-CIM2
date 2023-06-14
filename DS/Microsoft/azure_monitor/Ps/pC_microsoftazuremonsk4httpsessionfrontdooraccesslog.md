@@ -30,8 +30,10 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
    """"category":"({category}[^"]+)""",
    """suser=(anonymous|({user}.+?))\s+\w+=""",
    """"resourceId":"({object}[^"]+)""",
+   """"operationName":"({operation}[^"]+)""",
+   """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
   ]
-   DupFields=["event_hub_namespace->host"]
+   DupFields=["event_hub_namespace->host", "object->resource"]
 
 
 }

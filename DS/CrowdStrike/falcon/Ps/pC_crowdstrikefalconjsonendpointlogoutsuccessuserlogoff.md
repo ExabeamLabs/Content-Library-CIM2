@@ -16,7 +16,7 @@ Name = crowdstrike-falcon-json-endpoint-logout-success-userlogoff
     """"LogonDomain":"({domain}[^"]+)"""",
     """"AuthenticationPackage":"({auth_package}[^"]+)"""",
     """"UserSid":"({user_sid}[^"]+)""",
-    """"UserPrincipal":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"UserPrincipal":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!localdomain)"""",
     """"event_platform":"({os}[^"]+)"""",
   ]
 

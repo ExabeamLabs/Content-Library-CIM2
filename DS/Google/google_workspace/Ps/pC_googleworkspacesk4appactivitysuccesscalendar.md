@@ -8,6 +8,7 @@ Name = google-workspace-sk4-app-activity-success-calendar
     """({app}calendar)""",
     """"name":"notification_type","value":"({operation}[^"]+)"""",
     """"name":"recipient_email","value":"({object}[^"]+)""""
+    """"name":"user_agent","value":"(unknown|({user_agent}[^"]+))""""
   ]
 
 cef-google-app-activity = {

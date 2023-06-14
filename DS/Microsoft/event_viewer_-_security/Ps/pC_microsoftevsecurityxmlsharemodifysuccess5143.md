@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-share-modify-success-5143
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
     """<Computer>({host}[\w\-.]{1,20000})<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}5143)""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)<""",
     """<Data Name\\*='SubjectUserName'>({user}[^<]+)<""",

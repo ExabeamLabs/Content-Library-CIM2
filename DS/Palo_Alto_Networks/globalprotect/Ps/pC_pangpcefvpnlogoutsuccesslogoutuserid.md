@@ -5,7 +5,7 @@ Name = pan-gp-cef-vpn-logout-success-logoutuserid
   Vendor = Palo Alto Networks
   Product = GlobalProtect
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """globalprotect """, """|logout|USERID|""" ]
   Fields = [
     """end=({time}\d{4}\/\d{2}\/\d{2}\s(\d{2}:){2}\d{2})\s""",
@@ -13,7 +13,8 @@ Name = pan-gp-cef-vpn-logout-success-logoutuserid
     """({event_name}logout)""",
     """duser=(({domain}[^\\\s,]+)\\+)?({user}[^\\\s,]+)""",
     """dvchost=({src_host}[\w.-]+?)\s""",
-    """GPStatus=({result}\S+?)\s"""
+    """GPStatus=({result}\S+?)\s""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
 
 

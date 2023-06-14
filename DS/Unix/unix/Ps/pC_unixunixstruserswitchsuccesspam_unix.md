@@ -20,6 +20,7 @@ Name = unix-unix-str-user-switch-success-pam_unix
 """session opened for user ({account}.+?) by""",
 """\(uid\\?=({user_id}\d+)\)""",
 """session opened for user \S+ by ({user}[^\(\"=,]+)""",
+""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   ]
   DupFields = [ "host->dest_host", "user_id->user_uid"]
 

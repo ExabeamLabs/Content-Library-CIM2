@@ -1,4 +1,4 @@
-| Old Parser Name                      | New Parser Name                                                          |
+| Old Parser Name                      | New-Scale Parser Name                                                    |
 | ------------------------------------ | ------------------------------------------------------------------------ |
 | q-4656                               | microsoft-evsecurity-kv-handle-request-4656-1                            |
 | q-4662                               | microsoft-evsecurity-kv-ds-object-move-success-4662                      |

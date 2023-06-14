@@ -5,7 +5,7 @@ Name = pan-ngfw-csv-app-authentication-success-general
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """,SYSTEM,auth,""", """,general,"""]
   Fields = [
     """({host}[\w\-\.]+)[\s\-]+\d+,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),[^,]*,SYSTEM,auth,""",

@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759
     """Source Process ID:\s*({src_process_id}[^\s]+)\s+New Handle Information:""",
 # target_handle_id is removed
     """Target Process ID:\s*({dest_process_id}[^\s<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

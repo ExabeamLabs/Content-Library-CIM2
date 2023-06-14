@@ -7,6 +7,7 @@ Name = microsoft-azuremon-sk4-app-activity-administrative
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """({user_upn}claims/upn)""",
     """eventName":"({event_name}[^"]+)""""
+    """"resultType":"({result}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

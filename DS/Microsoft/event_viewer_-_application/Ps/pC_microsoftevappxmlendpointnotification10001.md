@@ -16,7 +16,8 @@ s-xml-object-access-1 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({host}[^<>]+?)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<>]+?))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",
@@ -31,7 +32,6 @@ s-xml-object-access-1 = {
     """ThreadID\\*='({thread_id}[^']+)""",
     """File Name:\s*({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<\s]+?))))\s+\w+:""",
     """Hash:\s*((&lt;None&gt;)|({file_hash}[^\s]+))""",
-  ]
-  DupFields = [ "host->dest_host" 
+  
 }
 ```

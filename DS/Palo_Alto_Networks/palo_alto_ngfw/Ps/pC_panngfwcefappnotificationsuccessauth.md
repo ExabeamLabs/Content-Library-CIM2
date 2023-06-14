@@ -4,7 +4,7 @@
 Name = pan-ngfw-cef-app-notification-success-auth
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """CEF:0|Palo Alto Networks|""", """|SYSTEM|auth|""", """saml-client-redirect"""]
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",
@@ -12,7 +12,8 @@ Name = pan-ngfw-cef-app-notification-success-auth
     """Client '({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))' redirected to""",
     """act=({operation}saml-client-redirect)""",
     """msg=({additional_info}[^=]+)\s+(\w+=|$)""",
-    """fname=({authentication_profile}[^=]+)\s+(\w+=|$)"""
+    """fname=({authentication_profile}[^=]+)\s+(\w+=|$)""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
   ParserVersion = "v1.0.0"
 

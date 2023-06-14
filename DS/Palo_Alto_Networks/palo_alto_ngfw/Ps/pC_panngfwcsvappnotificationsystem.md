@@ -5,7 +5,7 @@ Name = pan-ngfw-csv-app-notification-system
   ParserVersion = v1.0.0
   Product = Palo Alto NGFW
   Vendor = Palo Alto Networks
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """,SYSTEM,""", """,0x0""" ]
   Fields = [
       """SYSTEM.+?({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
@@ -17,7 +17,8 @@ Name = pan-ngfw-csv-app-notification-system
       """SYSTEM,([^,]*,){9}({severity}[^,]+),""",
       """SYSTEM,(?:[^,]*,){10}"*({event_name}.+?)(?:\.*"|\.\s)""",
       """SYSTEM,([^,]*,){18}([^,]*,)?({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))"?$""",
-      """:\d\d:\d\d (-|({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+))))\s"""
+      """:\d\d:\d\d (-|({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+))))\s""",
+      """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     ]
 
 

@@ -1,4 +1,4 @@
-| Old Parser Name                               | New Parser Name                                                                          |
+| Old Parser Name                               | New-Scale Parser Name                                                                    |
 | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | mariadb-connect                               | mariadb-m-csv-database-login-success-connect                                             |
 | mariadb-connect-1                             | mariadb-m-csv-database-login-success-connect-1                                           |

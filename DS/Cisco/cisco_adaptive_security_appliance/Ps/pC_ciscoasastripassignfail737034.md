@@ -12,6 +12,7 @@ Name = cisco-asa-str-ip-assign-fail-737034
     """\sSession=({session_id}[^,]+)\s*""",
     """IPv(4|6) address:\s*({event_name}[^,]+?)\s*("*,|$)"""
   ]
+  DupFields = [ "event_name->failure_reason" ]
 
 
 }

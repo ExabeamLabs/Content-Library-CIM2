@@ -13,6 +13,7 @@ Name = microsoft-azuremon-sk4-database-query-mysqlauditlogs
     """"sql_text":"({db_query}.+?)"*\}\}\s+""",
     """"error_code":({error_code}\d+)""",
     """"thread_id":({thread_id}\d+)"""
+    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
   ]
 
 cef-azure-db-for-mysql = {
@@ -32,6 +33,6 @@ cef-azure-db-for-mysql = {
      """"operationName":"({action}[^"]+)""",
      """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
    ]
-   DupFields = ["action->operation","event_hub_namespace->host"
+   DupFields = ["action->operation","event_hub_namespace->host", "resource->object"
 }
 ```

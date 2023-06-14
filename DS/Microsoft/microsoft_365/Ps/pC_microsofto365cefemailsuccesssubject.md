@@ -11,8 +11,8 @@ Name = microsoft-o365-cef-email-success-subject
     """=Office 365""",
     """"MessageTraceId":"""",
     """"EventType":"""",
-    """"RecipientAddress":"""",
-    """"SenderAddress":"""",
+    """"RecipientAddress":""",
+    """"SenderAddress":""",
     """"Direction":"""",
     """"Subject":""""
   ]

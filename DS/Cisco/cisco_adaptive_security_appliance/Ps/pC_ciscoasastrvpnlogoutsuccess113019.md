@@ -16,7 +16,7 @@ Name = cisco-asa-str-vpn-logout-success-113019
      """Username[\s\t]+=[\s\t]+(.+?\\)?({email_address}[^,@]+@[^,@]+).+?IP[\s\t]+=[\s\t]+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """\sBytes xmt:\s*({bytes_out}\d+)""",
      """\sBytes rcv:\s*({bytes_in}\d+)""",
-     """\sDuration:\s*(({session_day}\d+)d )?({session_hour}\d+)h:({session_min}\d+)m:({session_sec}\d+)s""",
+     """\sDuration:\s*(({session_day}\d+)d )?({session_duration}({session_hour}\d+)h:({session_min}\d+)m:({session_sec}\d+)s)""",
      """%(FTD|ASA)(-\w+)?-({priority}\d+)-({event_code}\d+)""",
      """Group = (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({group_name}[^,]+)),"""
    ]

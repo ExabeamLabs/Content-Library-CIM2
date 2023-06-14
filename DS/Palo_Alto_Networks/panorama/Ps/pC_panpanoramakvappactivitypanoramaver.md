@@ -5,7 +5,7 @@ Name = pan-panorama-kv-app-activity-panoramaver
   Vendor = Palo Alto Networks
   Product = Panorama
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """,SYSTEM,""", """ PAN-OS """, """Panorama ver""" ]
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+\d+,({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+),""",
@@ -14,6 +14,8 @@ Name = pan-panorama-kv-app-activity-panoramaver
     """,SYSTEM,({protocol}[^,]+),""",
     """,SYSTEM,([^,]*,){4}({operation}[^,]+),""",
     """,({dest_host}[\w\-.]+)\s*$""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+    
   ]
 
 

@@ -3,6 +3,9 @@
 {
 Name = vmware-carbonblackceedr-sk4-process-create-success-procstart
   Conditions = [ """endpoint.event.procstart""", """"process_username":"""", """"event_origin":"EDR"""", """"childproc_username":"""" ]
+  Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields}[
+    """"parent_path":"({parent_process}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))""""    
+  ]
   ParserVersion = v1.0.0
 
 carbonblack-edr {

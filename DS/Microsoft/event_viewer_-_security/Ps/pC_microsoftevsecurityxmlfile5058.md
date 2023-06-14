@@ -6,7 +6,8 @@ Name = microsoft-evsecurity-xml-file-5058
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>5058</EventID>""", """<Message>Key file operation""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+)<"""
+    """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+)<""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 s-xml-object-access = {

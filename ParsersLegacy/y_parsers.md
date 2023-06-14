@@ -1,1 +1,1 @@
-| Old Parser Name | New Parser Name || --------------- | --------------- |
+| Old Parser Name | New-Scale Parser Name || --------------- | --------------------- |

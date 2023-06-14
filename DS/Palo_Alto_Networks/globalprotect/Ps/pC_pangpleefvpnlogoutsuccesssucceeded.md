@@ -5,7 +5,7 @@ Name = pan-gp-leef-vpn-logout-success-succeeded
   ParserVersion = v1.0.0
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [
 """LEEF:""",
 """globalprotect""",
@@ -18,7 +18,8 @@ Name = pan-gp-leef-vpn-logout-success-succeeded
     """User name:\s*({email_address}[^@\s]+@[^\s,]+),""",
     """DeviceName =({host}[\w\-.]+)""",
     """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
-    """:\d\d:\d\d (-|({host}[\w.-]+))\s"""
+    """:\d\d:\d\d (-|({host}[\w.-]+))\s""",
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]
 
 

@@ -4,6 +4,9 @@
 Name = google-workspace-sk4-app-activity-success-mobile
   ParserVersion = v1.0.0
   Conditions = [ """destinationServiceName =Google Apps""", """"applicationName":"mobile"""", """"uniqueQualifier":""" ]
+  Fields = ${GoogleParsersTemplates.cef-google-app-activity.Fields} [
+  """"name":"OS_VERSION","value":"({os_version}[^"]+)""""
+  ]
 
 cef-google-app-activity = {
   Vendor = Google

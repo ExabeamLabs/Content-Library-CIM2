@@ -4,7 +4,7 @@
 Name = amazon-awscloudtrail-json-role-assume-success-assumerole
   Vendor = Amazon
   Product = AWS CloudTrail
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = """yyyy-MM-dd'T'HH:mm:ssZ"""
   Conditions = [ """AwsApiCall""", """"eventName":"AssumeRole"""" ]
   Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
       """"userIdentity":\{("[^,]+,)*"type"\\?:\s*\\?"({user_type}[^"]+?)\\?"""",
@@ -34,12 +34,12 @@ Name = amazon-awscloudtrail-json-role-assume-success-assumerole
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({session_arn}[^"]+)\\?""""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["role->account"]
+  DupFields = ["role->account","assumedRoleId->role_id"]
 
 aws-cloudtrail-user-template = {
     Fields = [
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[^\\\/@=]+?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
-      """"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
+      """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/([^\/"]+\/)(AssumeRoleSession|((?![\w\-\.]{30,})(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)))\\?"""",
       """"sourceIdentity\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[^"]+?)(@({domain}[^@"]+))?)\\?"""",
       """"userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,50}:({email_address}[^"]+?@[^@"]+)\\?"\s*[,\]\}]""",

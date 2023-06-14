@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-group-member-add-success-4732
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>4732</EventID>""", """'TargetSid'>""" ]
+  Conditions = [ """<EventID>4732</EventID>""", """TargetSid""", """<Data Name""", """</Data>""" ]
 
 s-xml-windows-member = {
   Vendor = Microsoft
@@ -12,9 +12,10 @@ s-xml-windows-member = {
   Fields = [
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=.+?,({user_ou}OU.+?DC=[\w-]+))</Data>""",
-    """<Data Name(\\)?=('|")MemberSid('|")>({account_id}(?=[^\\<]+\\)({sid_domain}[^\\]+)\\({user_sid}[^\s]+)|(?:[^\s\<]+))</Data>""",
+    """<Data Name(\\)?=('|")MemberSid('|")>({account_id}(?=[^\\<]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Data Name(\\)?=('|")TargetUserName('|")>(?=\w)({group_name}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetDomainName('|")>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
@@ -32,7 +33,6 @@ s-xml-windows-member = {
     """<Execution ProcessID(\\)?=('|")({process_id}\d+)""",
     """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
     """<Message>({event_name}[^:=<.]+)\."""
-  ]
-  DupFields = [ "host->dest_host" 
+  
 }
 ```

@@ -1,4 +1,4 @@
-| Old Parser Name                         | New Parser Name                                                                            |
+| Old Parser Name                         | New-Scale Parser Name                                                                      |
 | --------------------------------------- | ------------------------------------------------------------------------------------------ |
 | gallagher-failed-physical-access        | gallagher-ac-csv-physical-location-access-fail-nozoneprivilege                             |
 | gallagher-physical-access               | gallagher-ac-csv-physical-location-access-success-dooraccessgranted                        |

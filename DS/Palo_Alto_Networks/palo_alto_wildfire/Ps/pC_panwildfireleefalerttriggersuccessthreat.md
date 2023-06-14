@@ -4,7 +4,7 @@
 Name = pan-wildfire-leef-alert-trigger-success-threat
   Vendor = Palo Alto Networks
   Product = Palo Alto WildFire
-  TimeFormat = "yyyy-MM-dd HH:mm:ss" 
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = ["""LEEF:1.0|Palo Alto Networks""", """cat=THREAT|subtype=wildfire""" ]
   Fields = [
     """\s({host}[\w\.-]+)\s+LEEF:""",
