@@ -10,11 +10,11 @@ Name = fireeye-networksecurity-xml-alert-trigger-success-webmps
              """<occurred>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
              """ fenotify-({alert_id}\d+)""",
              """<alert id="({alert_id}[^"]+)""",
-             """<src vlan=\".+\">\s*<ip>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+             """<src vlan=\".+\">\s*<ip>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
              """<src .+?<host>({src_host}[^<]+)""",
              """xsi:schemaLocation=.+?name="({alert_type}[^"]+)".*severity="({alert_severity}[^"]+)"""",
              """<malware name="({alert_name}[^"]+)"""",
-             """<dst>.+?<ip>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?</ip""",
+             """<dst>.+?<ip>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?</ip""",
         ]
   SOAR {
     IncidentType = "malware"

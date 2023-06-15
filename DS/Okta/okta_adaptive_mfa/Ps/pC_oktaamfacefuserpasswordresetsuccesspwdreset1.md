@@ -25,7 +25,7 @@ json-okta-auth = {
     """"city":"({location_city}[^",]+)""",
     """"state":"({location_state}[^",]+)""",
     """"country":"({location_country}[^",]+)""",
-    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"rawUserAgent"+\s*:\s*"+((?i)unknown|({user_agent}[^"]+))"""",
     """"action"+:.+?"+message"+:"+({operation}({event_name}[^",]+))"""
     """"displayMessage"\s*:\s*"({operation}({event_name}[^",]+))""",
@@ -53,7 +53,7 @@ json-okta-auth = {
     Fields = [
       """\d+:\d+ ({host}[^\s]+) \{""",
     """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"action":\s*\{.*?"objectType":\s*"({operation}[^"]+)".+?\}""",
     """"action":\s*\{.*?"objectType":\s*"[^"]*?({result}error)".+?\}""",
     """"categories":\s*\["({operation}[^"]+)"""",

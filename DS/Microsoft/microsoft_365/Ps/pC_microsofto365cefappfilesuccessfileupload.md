@@ -7,8 +7,8 @@ Name = microsoft-o365-cef-app-file-success-fileupload
   Conditions= [ """destinationServiceName =Office 365""", """"FileUploaded""" ]
    Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
     """"SourceFileName":"({src_file_name}[^"]+)"""",
-    """filePath=\{"ObjectUrl":"({file_path}({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}[^"]+)))?)"""",
-    """"ObjectId":"({file_url}({file_path}({file_dir}[^"]+\/)({file_name}[^"]+?(\.({file_ext}[^"]+))?)?))"""",
+    """filePath=\{"ObjectUrl":"({file_path}({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}[^"\\\/\.]+)))?)"""",
+    """"ObjectId":"({file_url}({file_path}({file_dir}[^"]+\/)({file_name}[^"]+?(\.({file_ext}[^"\\\/\.]+))?)?))"""",
     """"SourceRelativeUrl":"({src_file_path}[^"]+)"""",
     """"SourceFileExtension":"({src_file_ext}[^"]+)"""",
     """"FileSizeBytes":({bytes}\d+)"""

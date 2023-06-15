@@ -12,7 +12,7 @@ Name = silverfort-s-cef-app-login-adminconsole
     """suser=(({email_address}[^@]+@({email_domain}[^\s]+))|({user}.+?))\ssntdom=""",
     """sntdom=({domain}[^\s]+)""",
     """shost=(n\/a|({src_host}[^\s]+))""",
-    """src=(n\/a|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """src=(n\/a|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """dhost=(n\/a|({dest_host}[^\s]+))""",
     """app=(n\/a|({app}[^\s]+))""",
     """cs2=({action}[^\s]+)""",

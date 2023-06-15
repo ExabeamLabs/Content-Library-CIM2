@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-411-1
   Fields = ${MicrosoftParserTemplates.q-adfs-auth.Fields}[
     """Token Type:\s*({auth_method}.+?)\s*Client IP:""",
     """Exception details:\s*({additional_info}.{1,250})""",
-    """({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*Error message:""",
+    """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*Error message:""",
     """Error message:\s*({failure_reason}.+?)\s*Exception details:""",
   ]
   DupFields = [ "account->user" ]
@@ -24,8 +24,8 @@ q-adfs-auth = {
     """\sDomain=({account_domain}.+?)(\s+\w+=|\s*$)""",
     """\sMessage=({event_name}[^=\.]+)""",
     """<IpAddress>({additional_info}[^<]+)</IpAddress>""",
-    """<IpAddress>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</IpAddress>""",
-    """({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</IpAddress>""",
+    """<IpAddress>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</IpAddress>""",
+    """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</IpAddress>""",
     """<ClaimsProvider>(?:N\/A|({domain}[^<]+))</ClaimsProvider>""",
     """<UserId>(({domain}[^<\\]+)\\+)?({user}(?!N\/A)[^<\\]+)</UserId>""",
     """<FailureType>(?:None|({failure_reason}[^<]+))</FailureType>""",

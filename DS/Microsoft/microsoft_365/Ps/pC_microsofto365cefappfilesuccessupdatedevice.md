@@ -6,7 +6,8 @@ Name = microsoft-o365-cef-app-file-success-updatedevice
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Update device""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"targetResources":[^\}]+?"displayName":"\s*({object}[^",]+?)\s*""""
+    """"targetResources":[^\}]+?"displayName":"\s*({object}[^",]+?)\s*"""",
+    """"DeviceOSType\\?":\\?"({os}[^"]+?)\\?""""
   ]
 
 cef-microsoft-app-activity = {

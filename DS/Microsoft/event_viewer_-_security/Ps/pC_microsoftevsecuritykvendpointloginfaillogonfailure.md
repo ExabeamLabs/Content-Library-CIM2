@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-logonfailure
     """Workstation Name:\s*({src_host}[^\s]+)\s*Caller User Name:.*?Source Network Address:\s*-\s+""",
     """Caller User Name:\s*(?:-|({src_user}.+?))\s*Caller Domain:""",
     """Caller Domain:\s*({src_domain}.+?)\s*Caller Logon ID:\s*\([^,]+,({login_id}[^\)]+)""",
-    """Source Network Address:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """Source Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   DupFields = ["event_code->result_code"]
 

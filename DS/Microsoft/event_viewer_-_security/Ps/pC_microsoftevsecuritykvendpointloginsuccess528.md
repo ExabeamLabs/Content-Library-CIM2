@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-528
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s)""",
     """({event_code}528)""",
     """User Name\s*:\s*({user}.+?)\s+Domain:\s+({domain}[^\s]+)""",
-    """Source Network Address\s*:\s*(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
+    """Source Network Address\s*:\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
     """Workstation Name\s*:\s*({src_host_windows}[^\s]+)\s*""",
     """Workstation Name\s*:\s*({src_host}[^\s]+).*?Source Network Address:\s*-\s+""",
     """Logon Process\s*:\s*({auth_process}.+?)\s+Authentication Package\s*:\s*({auth_package}[^\s]+)""",

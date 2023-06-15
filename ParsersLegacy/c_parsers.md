@@ -544,6 +544,7 @@
 | cef-defender-atp-process-created-1                       | microsoft-defenderep-sk4-http-request-browserlaunched                                |
 | cef-defender-atp-process-created-failed                  | microsoft-defenderep-sk4-alert-trigger-callblocked                                   |
 | cef-defender-atp-process-created-failed-1                | microsoft-defenderep-cef-process-create-fail-exploitguardnonmicrosoftsignedblocked   |
+| cef-defender-atp-process-invokewebrequest                | microsoft-defenderep-sk4-process-create-success-processcreated                       |
 | cef-defender-atp-registry                                | microsoft-defenderep-sk4-registry-modify-advancedhunting                             |
 | cef-defender-atp-remote-access                           | microsoft-defenderep-cef-endpoint-login-network                                      |
 | cef-defender-atp-remote-logon                            | microsoft-defenderep-cef-endpoint-login-remoteinteractive                            |
@@ -1423,6 +1424,14 @@
 | cef-sentinelone-security-alert-4                         | sentinelone-singularityp-cef-process-create-success-scheduledtask                    |
 | cef-sentinelone-security-alert-5                         | sentinelone-singularityp-cef-alert-trigger-success-agentoperation                    |
 | cef-sentinelone-security-alert-6                         | sentinelone-singularityp-cef-alert-trigger-success-classification                    |
+| cef-sentinelone-vigilance-account-creation               | sentinelone-v-cef-user-create-success-newuseradded                                   |
+| cef-sentinelone-vigilance-app-activity                   | sentinelone-v-cef-app-activity-success-userdeleted                                   |
+| cef-sentinelone-vigilance-app-activity-1                 | sentinelone-v-cef-app-activity-success-usermodified                                  |
+| cef-sentinelone-vigilance-app-activity-2                 | sentinelone-v-cef-app-activity-success-usercreatedrole                               |
+| cef-sentinelone-vigilance-app-login                      | sentinelone-v-cef-app-login-success-newconsole                                       |
+| cef-sentinelone-vigilance-failed-app-login               | sentinelone-v-cef-app-login-login-failedconsole                                      |
+| cef-sentinelone-vigilance-security-alert                 | sentinelone-v-cef-alert-trigger-success-activethreat                                 |
+| cef-sentinelone-vigilance-security-alert-1               | sentinelone-v-cef-alert-trigger-success-threatdetected                               |
 | cef-servicenow-auth-1                                    | servicenow-s-sk4-app-authentication-success-sessionestablished                       |
 | cef-servicenow-auth-2                                    | servicenow-s-sk4-app-authentication-success-externalauthenticationsucceeded          |
 | cef-servicenow-file-operation-2                          | servicenow-s-cef-file-syscreated                                                     |

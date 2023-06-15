@@ -12,7 +12,7 @@ Name = varonis-dsp-leef-alert-trigger-success-varonis
     """devTime=({time}\w+\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
     """accountName =({user}[^=]+)\s+(\w+=|$)""",
     """domain=(|({domain}[^=]+))\s+(\w+=|$)""",
-    """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+(\w+=|$)""",
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+(\w+=|$)""",
     """Event_Type=({event_name}[^=]+)\s+(\w+=|$)""",
     """Event_Status=({action}[^=]+)\s+(\w+=|$)""",
     """cat=({alert_type}[^=]+?)\s+(\w+=|$)""",

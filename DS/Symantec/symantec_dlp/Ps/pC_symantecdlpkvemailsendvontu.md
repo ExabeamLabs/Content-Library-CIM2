@@ -22,7 +22,7 @@ Fields = [
   """\|subject=(?=\s*FTP\s*)\s*({protocol}FTP)\s*({file_name}[^|]+)"""
   """\|(dst|duser)=(?:N\/A|({target}[^|]+))"""
   """\|(dst|duser)=(?=\w+:\/)({protocol}.+?):\/+"""
-  """\|(dst|duser)=({account}[^@]+)@({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:({dest_port}\d+))?"""
+  """\|(dst|duser)=({account}[^@]+)@({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:({dest_port}\d+))?"""
   """\|(dst|duser)=(?=[^\s@]+@(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))({email_recipients}[^|]+)"""
   """\|(dst|duser)=(?=[^\s@]+@(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))({dest_email_address}[^|,]+)"""
   """\|endpoint=(?:N\/A|({src_host}[^$|\s]+))"""

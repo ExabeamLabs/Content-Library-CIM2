@@ -8,7 +8,7 @@ Name = microsoft-windows-kv-dhcp-session-success-assign
   TimeFormat = "dd/MM/yyyy:HH:mm:ss z"
   Conditions = [ """WindowsDHCP""", """Description=Assign""" ]
   Fields = [
-    """IP Address=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """IP Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """Host Name =({dest_host}[^\s]+)"""
     """"UtcTime"="({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d \w+)""""
   ]

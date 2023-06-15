@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4625-3
       """\s*Logon Failed:.+?Account Domain:\s*(?=\w)({domain}.+?)[\s;]*Failure Information""",
       """\s*Sub Status:\s*({result_code}.+?)[\s;]*Process Information:""",
       """Workstation Name:\s+({src_host_windows}[^\s]+)\s+Source Network""",
-      """Source Network Address:\s+(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:"""
+      """Source Network Address:\s+(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:"""
       """Key Length:\s*({key_length}\d+)"""
     ]
     DupFields = [ 

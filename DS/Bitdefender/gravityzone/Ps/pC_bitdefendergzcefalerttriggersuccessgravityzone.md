@@ -12,7 +12,7 @@ Name = bitdefender-gz-cef-alert-trigger-success-gravityzone
     """CEF:0\|Bitdefender\|GravityZone\|.*?\|\d+\|({operation}[^\|]+)\|"""
     """\d\d:\d\d:\d\d ({host}[\w\-.]+) \w+: CEF:""",
     """dvchost=({dest_host}.*?)\s\w+=""",
-    """dvc=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """BitdefenderGZAttackType=({alert_type}.*?)\s\w+=""",
     """BitdefenderGZMalwareName =({alert_name}.*?)\s\w+=""",
     """act=({action}.*?)\s\w+=""",

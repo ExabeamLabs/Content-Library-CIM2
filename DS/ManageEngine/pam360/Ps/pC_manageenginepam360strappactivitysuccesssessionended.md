@@ -6,8 +6,8 @@ Name = manageengine-pam360-str-app-activity-success-sessionended
   Conditions= [ """Session_Ended""", """Success""", """RDP_initiated_from_""", """has_stopped""" ]
   Fields = ${ManageEngineParserTemplates.pam360-app-activity.Fields}[
     """({operation}Session_Ended)""",
-    """RDP_initiated_from_PAM360_to_({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """ResourceAudit:({user}[^:]+):({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """RDP_initiated_from_PAM360_to_({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """ResourceAudit:({user}[^:]+):({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """({app}PAM360)"""
  ]
 

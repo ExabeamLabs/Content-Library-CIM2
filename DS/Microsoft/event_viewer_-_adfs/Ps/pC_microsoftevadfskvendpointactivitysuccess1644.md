@@ -11,7 +11,7 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s+EvntSLog""",
     """({event_code}1644)""",
     """({event_name}A client issued a search operation with the following options)""",
-    """Client:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?):({src_port}\d+)\s""",
+    """Client:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?):({src_port}\d+)\s""",
     """Filter:\s*({filter}.*?)\s+Search scope:""",
     """Search scope:\s*({search_scope}.*?)\s+Attribute selection:""",
     """Attribute selection:\s*\[?({attribute_selection}[^\]]*?)\]?\s+Server controls:""",

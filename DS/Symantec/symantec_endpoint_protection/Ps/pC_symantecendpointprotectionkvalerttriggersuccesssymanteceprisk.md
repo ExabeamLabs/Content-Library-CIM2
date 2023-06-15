@@ -16,7 +16,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-symanteceprisk
     """,\s*User( Name)?:\s*(none|({user}[^,]+))""",
     """,\s*Local Host IP:\s*(0.0.0.0|({local_host_ip}[^,]+))""",
     """,\s*Local Host MAC:\s*({local_host_mac}[^,]+)""",
-    """,\s*Remote Host IP:\s*(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+    """,\s*Remote Host IP:\s*(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """,\s*Remote Host MAC:\s*({dest_mac}[^,]+)""",
     """,\s*Occurrences:\s*({occurrences}[^,]+)""",
     """,\s*Application:\s*({process_path}({process_dir}[^,]*?[\\\/]+)({process_name}[^,\\\/]+)),""",

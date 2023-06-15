@@ -10,7 +10,7 @@ Conditions = [ """"type":"response"""", """"auth":{""", """"operation":"""", """
 Fields = [
     """"username":"(hmac-[^"]+|({user}[^"]+))""",
     """"time"+:({time}\d{13})""",
-    """"remote_address"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"remote_address"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"operation"+:"+({operation}[^"]+?)",""",
     """"path"+:"+({path}[^"]+?)",""",
     """"type"+:"(hmac-[^"]+|({category}[^"]+?))",""",

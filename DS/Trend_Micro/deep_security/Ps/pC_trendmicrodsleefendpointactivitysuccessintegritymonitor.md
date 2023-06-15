@@ -10,7 +10,7 @@ Name = trendmicro-ds-leef-endpoint-activity-success-integritymonitor
       """\Wcat=({alert_type}.+?)\s*(\w+=|$)""",
       """\Wname=({alert_name}.+?)\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
-      """\Wdvc(host)?=({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s*(\w+=|$)""",
+      """\Wdvc(host)?=({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s*(\w+=|$)""",
       """\Wact=({action}.+?)\s*(\w+=|$)""",
       """\Wmsg=({additional_info}.+?)\s*(\w+=|$)""",
       """\WfilePath=({file_path}(|({file_dir}.*?))[\\\/]*({file_name}[^\\\/]+?))\s*(\w+=|$)""",

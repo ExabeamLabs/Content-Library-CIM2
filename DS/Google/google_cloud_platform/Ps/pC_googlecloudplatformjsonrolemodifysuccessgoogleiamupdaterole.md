@@ -22,7 +22,7 @@ gcp-cloudaudit-json = {
       """"status":.+"code":\s*({result_code}\d+)""",
       """"status":.+"message":\s*({failure_reason}[^\\},]+)""",
       """"principalEmail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))"""",
-      """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
       """"methodName":\s*"({operation}[^"]+)""",
       """"resourceName":\s*"({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))"""",

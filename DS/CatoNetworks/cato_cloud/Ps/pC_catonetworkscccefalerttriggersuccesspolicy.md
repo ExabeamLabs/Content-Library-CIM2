@@ -14,7 +14,7 @@ Name = catonetworks-cc-cef-alert-trigger-success-policy
     """\Wmsg=({alert_name}.+?)\s+(\w+=|$)""",
     """\WinternalType=({alert_type}.+?)\s+(\w+=|$)""",
     """\WflexString2=({alert_type}.+?)\s+(\w+=|$)""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wdpt=({dest_port}\d+)""",
     """\Wclient_port=({src_port}\d+)""",
     """\Wdhost=({dest_host}.+?)\s+(\w+=|$)""",

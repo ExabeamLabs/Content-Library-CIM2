@@ -18,7 +18,7 @@ Name = microsoft-defenderep-kv-alert-trigger-success-systemcenterep
     """((?i)ClassificationSeverity"?:\s*|severity=)"+({alert_severity}[^"]+)""",
     """((?i)ClassificationCategory"?:\s*|category=)"+({alert_type}[^"]+)""",
     """\sfile_path="+({malware_url}[^",]+)""",
-    """(SrcAddress: |src=)"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """(SrcAddress: |src=)"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """((?i)TargetProcess)"?(:|=)\s*"+({process_path}[^"]+\\({process_name}[^"]+))""",
   ]
   DupFields = ["host->dest_host"]

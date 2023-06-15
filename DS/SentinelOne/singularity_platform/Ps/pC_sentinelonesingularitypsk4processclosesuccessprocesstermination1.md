@@ -33,11 +33,11 @@ sentinelone-activity {
       """\smd5:\s*[\\\/]?"+({hash_md5}[^"\\]+)""",
       """\spid:\s*({process_id}\d+)""",
       """path:\s+[\\\/]?"+({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))[\\\/]*"""",
-      """destinationAddress\s.*?address:\s*[\\\/]?"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """destinationAddress\s.*?address:\s*[\\\/]?"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """destinationAddress\s.*?port:\s*({dest_port}\d+)""",
       """\sstatus:\s*({result}\w+)""",
       """(sourceAddress|\slocal)\s.*?port:\s*({src_port}\d{1,5})""",
-      """(sourceAddress|\slocal)\s.*?address:\s*[\\\/]?"+(0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?""",
+      """(sourceAddress|\slocal)\s.*?address:\s*[\\\/]?"+(0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?""",
       """sha1:\s*"*({hash_sha1}[^"]+)"""",
       """sizeBytes:\s*({bytes}\d+)""",
       """commandLine:\s*"({process_command_line}[^\{]+?)"\\n\s"""

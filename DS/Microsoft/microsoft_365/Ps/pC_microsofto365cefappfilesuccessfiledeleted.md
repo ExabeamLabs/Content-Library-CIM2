@@ -9,7 +9,7 @@ Name = microsoft-o365-cef-app-file-success-filedeleted
     """"ParentFolder":[^\}]+?"Path":"\\*({object}[^"]+)"""",
     """"DestFolder":[^\}]+?"Path":"\\*({object}[^"]+)"""",
     """\srequest=({result}[^\s]+)\s""",
-    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"Operation":"({operation}[^"]+)"""",
     """LogonUserSid":"({user_sid}[^"]+)"""",
     """Subject":"\s*({email_subject}[^"]+?)\s*"""",

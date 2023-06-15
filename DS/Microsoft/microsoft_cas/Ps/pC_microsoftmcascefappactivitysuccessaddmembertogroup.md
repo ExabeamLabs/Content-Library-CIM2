@@ -21,7 +21,7 @@ cef-azure-onedrive-app-activity = {
     """\WdestinationServiceName =({app}.+?)\s+(\w+=|$)""",
     """\Wsuser=({user}[^@\s]+)\s+(\w+=|$)""",
     """\Wsuser=({email_address}[^@\s]+@({email_domain}[^@\s]+))\s+(\w+=|$)""",
-    """\Wc6a1=\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """\Wc6a1=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """\Wmsg=({additional_info}.*?)\s+(\w+=|$)""",
     """\Wmsg=.*?\s+folder\s+(\([^\)]*\):\s*)?({object}.*?)\s+(\w+=|$)""",
     """\WrequestClientApplication=(|({user_agent}.*?))\s+(\w+=|$)""",

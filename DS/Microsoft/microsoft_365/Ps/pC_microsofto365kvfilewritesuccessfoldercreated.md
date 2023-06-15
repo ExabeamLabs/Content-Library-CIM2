@@ -24,7 +24,7 @@ logrhythm-o365-file-operation = {
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",
     """OBJECT=({object}[^=]+?)\s+\w+=""",
     """\sFILENAME=({file_name}[^=]+?(\.({file_ext}[^\s\=\.]+))?)\s+\w+=""",
-    """SIP=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
     """ITEMTYPE=({file_type}[^=]+?)\s+\w+="""
     ]
@@ -58,7 +58,7 @@ azure-app-activity-skyfromation= {
     """"+correlationId"+:"+({correlation_id}[^"]+)""",
     """"+description"+:"+({additional_info}[^",]+)""",
     """"+httpRequest".+?clientRequestId":"({user_id}[^"]+)""",
-    """"+httpRequest".+?clientIpAddress"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"+httpRequest".+?clientIpAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"+httpRequest".+?method"+:"+({method}[^"]+)""",
     """"+properties.+?statusCode"+:"+({result}[^"]+)""",
     """"+properties.+?serviceRequestId"+:"+({service_request_id}[^"]+)""",

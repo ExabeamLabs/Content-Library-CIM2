@@ -15,7 +15,7 @@ Name = rsa-dlp-kv-alert-trigger-success-glba
     """userEmail=({email_address}[^\s]+)""",
     """action=({result}.+?)\s+\w+=""",
     """usage=({alert_type}.+?)\s+\w+=""",
-    """usageIp=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """usageIp=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """usageApplication=({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))\s+\w+="""
   ]
   ParserVersion = "v1.0.0"

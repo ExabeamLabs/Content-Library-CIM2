@@ -6,7 +6,7 @@ Name = microsoft-azuremon-sk4-http-request-success-applicationgateways
   Conditions = [ """destinationServiceName =Azure""", """"Category":"ApplicationGatewayFirewallLog"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"APPLICATIONGATEWAYS"""" ]
   Fields = ${LMSMSParsersTemplates.azure-ad-activity-1.Fields}[
     """"Message":"({additional_info}[^"]+)"""",
-    """"clientIP_s":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"clientIP_s":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
    ]
 
 azure-ad-activity-1 = {
@@ -20,7 +20,7 @@ azure-ad-activity-1 = {
      """"Result":"({result}[^",]+)"""",
      """"Category":"({category}[^"]+)"""",
      """"UserId":"({user}[^"]+)"""",
-     """"CallerIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+     """"CallerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """"Resource":"({src_host}[^"]+)"""",
      """"TenantId":"({tenant_id}[^"]+)""",
      """"_ResourceId":"({resource_id}[^"]+)"""

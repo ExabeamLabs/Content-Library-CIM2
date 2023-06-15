@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-json-share-access-success-5140-3
       """"ShareLocalPath":"[\\?]*(({share_path}(({d_parent}.+?)\\)?(|({d_name}[^\\]+?)))\\?)"""",
       """"SubjectUserName":"({user}[^"]+)"""",
       """"SubjectDomainName":"({domain}[^"]+)"""",
-      """"IpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """({access}Read)""",
       """"ShareName":"([\\*]+)?({share_name}[^"]+)"""",
       """"outcome":"({result}\w+)"""",

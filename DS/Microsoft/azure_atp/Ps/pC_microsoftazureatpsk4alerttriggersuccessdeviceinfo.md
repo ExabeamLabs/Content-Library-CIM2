@@ -15,7 +15,7 @@ Name = microsoft-azureatp-sk4-alert-trigger-success-deviceinfo
   """Sid\\":\\"({user_sid}[^"]+)\\""""
   """UserName\\":\\"({user}[^"]+)\\""""
   """"DomainName\\":\\"+({domain}[^"]+)\\"""",
-  """"PublicIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"PublicIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"tenantId":\s"({tenant_id}[^",]+)""""
   """"DeviceCategory":"({device_category}[^"]+)""""
   """"DeviceId":"({device_id}[^"]+)""""

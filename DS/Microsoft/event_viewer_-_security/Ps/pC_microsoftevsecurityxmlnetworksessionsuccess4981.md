@@ -22,9 +22,9 @@ Name = microsoft-evsecurity-xml-network-session-success-4981
 # remote_hash is removed
 # remote_mm_issue_ca is removed
 # remote_mm_root_ca is removed
-    """<Data Name\\*='LocalAddress'>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """<Data Name\\*='LocalAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """<Data Name\\*='LocalKeyModPort'>({src_port}\d+)""",
-    """<Data Name\\*='RemoteAddress'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """<Data Name\\*='RemoteAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """<Data Name\\*='RemoteKeyModPort'>({dest_port}\d+)""",
     """<Data Name\\*='MMLifetime'>({duration}[^<]+)""",
     """<Keywords>({action}[^<]+)"""

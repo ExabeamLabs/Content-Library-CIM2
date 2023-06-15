@@ -12,7 +12,7 @@ rsa-system-events = {
   Fields = [
     """({host}[\w\-\.]+)\s+\d+\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\s+\S+\s+SINGLEPOINT\s+\d+\s+({event_name}[^\s]+)\s""",
     """USER_?NAME="({user}[^"\s]+)"""",
-    """SOURCE-IP-ADDRESS="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SOURCE-IP-ADDRESS="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 # remote_ip is removed
     """STATUS="({result}[^"]+)"""",
     """SESSION_ID="({session_id}[^"]+)"""",

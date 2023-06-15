@@ -12,7 +12,7 @@ Name = cisco-airespace-cef-alert-trigger-success-networkbased
     """\|Cisco\|([^\|]*\|){3}({alert_name}[^\|]+)\|(Unknown|({alert_severity}[^\|]+))""",
     """\|Cisco\|([^\|]*\|){2}(({alert_type}[^\|\d]+)|({event_code}\d+))\s*\|""",
     """eventId=({alert_id}\d+)""",
-    """src=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """src=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """categoryOutcome=(\/)?({result}[^=]+?)\s+\w+=""",
     """categorySignificance=(\/)?({category_significance}[^=\/]+?)\s+\w+=""",
     """categoryBehavior=(\/)?({category_behavior}[^=]+?)\s+\w+=""",

@@ -10,7 +10,7 @@ Name = fortinet-fortiweb-kv-http-session-threatweight
   Fields = [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+(\+|-)\d\d:\d\d)""",
     """http_host=(none|({web_domain}[^\s]+))""",
-    """src_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dst_port=({dest_port}\d{1,5})""",
     """src_port=({src_port}\d{1,5})""",
     """http_agent=(none|-|({user_agent}[^"]+?))\s+http_refer=""",

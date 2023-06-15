@@ -4,8 +4,8 @@
 Name = microsoft-evsecurity-json-endpoint-login-success-4624-1
   Conditions = [ """"EVENT_NUMBER":"4624"""", """"REMARKS":"An account was successfully logged on."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-json-events.Fields}[
-    """"CLIENT_HOST_NAME":"(-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^"]+))"""",
-    """"CLIENT_IP_ADDRESS":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"CLIENT_HOST_NAME":"(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^"]+))"""",
+    """"CLIENT_IP_ADDRESS":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"SOURCE":"(-|({dest_host}[^"]+))"""".
     """"USER_SAM_ACCOUNT_NAME":"(null|({account}[^"]+))"""".
     """"KEY_LENGTH":"({key_length}\d+)"""",

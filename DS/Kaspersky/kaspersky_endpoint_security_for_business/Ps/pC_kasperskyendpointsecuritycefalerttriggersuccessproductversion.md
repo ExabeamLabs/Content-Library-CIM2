@@ -15,10 +15,10 @@ Name = kaspersky-endpointsecurity-cef-alert-trigger-success-productversion
     """rt=({time}\d+)\s""",
     """Fecha de lanzamiento de la base de datos:\s*({time}[^\\]+(a.\s*m.|p.\s*m.))""",
     """dhost=({dest_host}[^\s]+)\s*dst=""",
-    """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """cs6=({protocol}[^\s"\{\}]+)""",
     """Aplicación\\+Nombre:\s*({app}[^\\]+)""",
-    """cs4=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*cs4Label=AttackerIPv4""",
+    """cs4=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*cs4Label=AttackerIPv4""",
     """cs7=({src_port}\d+)\s*cs7Label""",
     """cs8=({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*cs8Label=""",
     """cs5=({alert_name}.*?)\scs5Label="""

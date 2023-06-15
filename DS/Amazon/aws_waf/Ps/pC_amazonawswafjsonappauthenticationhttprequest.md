@@ -15,7 +15,7 @@ aws-web-activity-event = {
       """"terminatingRuleId"+:"+({rule_id}[^"]+)"""",
       """"terminatingRuleType"+:"+({rule}[^"]+)"""",
       """"action"+:"+({action}[^"]+)"""",
-      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"httpMethod"+:"+({method}[^"]+)"""",
       """"name"+:"+(?i)Referer"+,"+value"+:"+({referrer}[^"]+)"""",
       """"name"+:"+(?i)User-Agent"+,"+value"+:"+({user_agent}[^"]+)"""",

@@ -18,7 +18,7 @@ o365-dlp-email-out = {
     """"CreationTime\\*"+:[\s\\]*"+({time}[^"\\]+)""",
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
     """"ResultStatus\\*"+:[\s\\]*"+({result}[^"\\]+)""",
-    """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"UserId\\*"+:[\s\\]*"+({email_address}[^"\\@]+@[^"\\@]+)""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
     """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
@@ -30,7 +30,7 @@ o365-dlp-email-out = {
     """src-account-name":"({account_name}[^"]+)""",
     """"SizeInBytes":({bytes}\d+)"""
   ]
-  DupFields = [ "alert_name->alert_type" ]
+  DupFields = [ "alert_name->alert_type", "email_address->src_email_address" ]
  },
 
 cef-azure-app-activity-1 = {
@@ -48,13 +48,13 @@ Fields = [
 """\Woutcome=({result}[^\s]+)\s+(\w+=|$)"""
 """CEF:([^\|]*\|){2}({app}[^\|]+)"""
 """destinationServiceName =({app}[^=]+?)\s+(\w+=|$)"""
-"""src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\"description\":\"({additional_info}[^\"]+?)\s*\""""
 """\"SourceAccountDisplayName\",\"value\":\"({full_name}({first_name}[^\s\"]+)\s({last_name}[^\s\"]+))\""""
 """\"SourceAccountUpnName\",\"value\":\"({email_address}[^@\"]+@({email_domain}[^\"]+))\""""
 """\"SourceComputerDnsName\",\"value\":\"({src_host}[^\"]+)\""""
 """\"DestinationComputerDnsName\",\"value\":\"({dest_host}[^\"]+)\""""
-"""\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
+"""\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
 
 }

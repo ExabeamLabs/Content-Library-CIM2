@@ -13,7 +13,7 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"city":"((?i)null|({location_city}[^",]+))""",
     """"state":"((?i)null|({location_state}[^",]+))""",
     """"country":"((?i)null|({location_country}[^",]+))""",
-    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"rawUserAgent"+\s*:\s*"+((?i)unknown|({user_agent}[^",]+))""",
     """"browser"+\s*:\s*"+((?i)unknown|({browser}[^",]+))""",
     """"os"+\s*:\s*"+((?i)unknown|({os}[^",]+))""",

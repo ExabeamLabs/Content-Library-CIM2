@@ -17,7 +17,7 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
    """"httpMethod":"({method}[^"]+)"""",
    """"requestUri":"({url}[^:\\\/\s,"]+:[\\\/]+[^\/]+(\/|({uri_path}\/[^\?"\s]*))?({uri_query}\?[^"\s]*)?)""""
    """"requestUri":".*?({web_domain}[^\/\.\s]+(?i)(\.(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ai|ms|mx|))+)[\\\/\s:"]""",
-   """"clientIp":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+   """"clientIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
    """"clientPort":"({src_port}\d+)"""",
    """"httpStatusCode":"({http_response_code}\d+)""",
    """"requestBytes":"({bytes_in}\d+)"""",

@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4695
     """<Data Name\\*='FailureReason'>({result_code}[^<]+)<\/Data>""",
     """Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """Data Name\\*='SubjectUserName'>({user}[^<]+)<\/Data>""",
-    """Data Name\\*='Ipaddress'>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<\/Data>""",
+    """Data Name\\*='Ipaddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<\/Data>""",
     """Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>"""
     """({event_name}Unprotection of auditable protected data was attempted)"""
   ]

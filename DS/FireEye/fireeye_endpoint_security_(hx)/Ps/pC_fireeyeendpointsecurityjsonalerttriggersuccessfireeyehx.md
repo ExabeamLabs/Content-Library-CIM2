@@ -10,7 +10,7 @@ Name = fireeye-endpointsecurity-json-alert-trigger-success-fireeyehx
     """"@timestamp":"({time}\d\d\d\d\-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"deviceIP":"({host}[A-Fa-f:\d.]+)""",
     """"deviceHostname":"({host}[\w\-.]+)""",
-    """"srcIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"srcIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"malwarePath":"({malware_url}[^"]+)""",
     """"userID":"(({domain}[^"\\\s]+)\\+)?({user}[^"\\\s]+)""",
     """"srcOS":"({os}[^"]+)""",

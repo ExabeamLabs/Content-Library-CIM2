@@ -9,7 +9,7 @@ Name = avinetworks-a-str-app-login-success-loginsuccess
   Fields = [
     """At\s({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
     """User\s({user}[^\s]+)""",
-    """from\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """from\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """event\s({event_name}USER_LOGIN)""",
     """login\s\(({result}Success)\)""",
     """object\s({object}[^\s]+)""",

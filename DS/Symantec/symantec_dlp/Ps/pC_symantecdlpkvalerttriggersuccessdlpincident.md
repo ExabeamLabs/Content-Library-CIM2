@@ -15,13 +15,13 @@ Name = symantec-dlp-kv-alert-trigger-success-dlpincident
     """\|\incident_type="({alert_type}[^"]+)""",
     """\|\ssender="(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({os}\w+):\/+({domain}[^\/]+)\/({user}[^"]+))"""",
     """\|\sprotocol="({protocol}[^"]+)"""",
-    """\|\srecipient="(((({account}[^@]+)@)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)|(N/A|(?i)Unknown|({target}[^"]+)))"""",
+    """\|\srecipient="(((({account}[^@]+)@)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)|(N/A|(?i)Unknown|({target}[^"]+)))"""",
     """\|\sBusiness_Unit="({additional_info}[^"]+)"""",
     """\|\sRR_Action="({action}[^"]+)""",
     """\|\smatch_count="({match_count}\d+)""",
     """\|\sfilename="(N/A|({file_path}({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\\/"]+?)))\s*"""",
     """\|\sEP_Machine="({src_host}[^"]+)""",
-    """\|\sEP_IP="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\|\sEP_IP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   SOAR {
     IncidentType = "dlp"

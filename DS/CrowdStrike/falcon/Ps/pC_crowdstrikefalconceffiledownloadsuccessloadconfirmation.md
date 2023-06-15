@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-cef-file-download-success-loadconfirmation
 """"event_simpleName":"LFODownloadConfirmation""""
 ]
 Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
-"""\"+aip\"+:\"+({aip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\"+aip\"+:\"+({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """DownloadPort\"+:\"+({dest_port}\d+)"""
 """DownloadServer\"+:\"+({dest_host}[^\"]+)"""
 """\"ConfigStateHash\":\"({old_hash}[^\"]+)"""
@@ -35,7 +35,7 @@ Fields = [
 """"name":"({event_name}[^"]+)""""
 """UserName":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[^"\s]+))""""
 """"ContextProcessId":"({process_guid}[^"]+)""""
-""""aip":"({aip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"Size":"({bytes}\d+)""""
 
 }

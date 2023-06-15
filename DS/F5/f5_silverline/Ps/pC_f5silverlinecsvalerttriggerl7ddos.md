@@ -10,7 +10,7 @@ Name = f5-silverline-csv-alert-trigger-l7ddos
   Fields = [
     """type\s*=\s*({alert_type}l7ddos)""",
     """action=({action}[^,]+)""",
-    """client_ip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """client_ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """reason=({alert_name}[^,]+?)\s*$""",
     ]
 

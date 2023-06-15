@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-user-privilege-use-success-4673-1
   Fields = [
     """({event_name}A privileged service was called)""",
     """__li_source_path="({host}[^"]+)"""",
-    """__li_source_path="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """__li_source_path="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """({event_code}4673)""",
     """(K|k)eywords="({result}[^"]+)"""",
     """Process Name:\s+(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))\s+Service""",

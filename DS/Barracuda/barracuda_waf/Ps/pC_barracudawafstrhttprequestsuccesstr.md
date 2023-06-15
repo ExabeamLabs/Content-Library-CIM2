@@ -12,7 +12,7 @@ Name = barracuda-waf-str-http-request-success-tr
 # log_type_code is removed
 # unit_name is removed
 # service_ip is removed
-      """ barracuda TR ([^\s]+\s+){2}({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)""",
+      """ barracuda TR ([^\s]+\s+){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)""",
       """ barracuda TR ([^\s]+\s+){4}"(?:-|({login_id}[^"]+))"""",
 # certificate_user is removed
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}(?:-|({method}[^\s]+))""",
@@ -26,7 +26,7 @@ Name = barracuda-waf-str-http-request-success-tr
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){6}(?:-|({bytes_in}\d+))""",
 # cache_hit is removed
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){8}(?:-|({time_taken}\d+))""",
-      """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){9}(?:-|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+      """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){9}(?:-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){10}(?:-|({dest_port}\d+))""",
 # server_time is removed
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"(?:-|({session_id}[^"]+))"""",

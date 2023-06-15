@@ -16,8 +16,8 @@ Name = microsoft-m365auditlogs-kv-email-send-emailsend
     """cs6=.*?"RecipientAddress":"({dest_email_address}[^"\s,;]+)""",
     """cs6=.*?"Size":"?({bytes}\d+)""",
     """cs6=.*?"Status":"({result}[^"]+)"""",
-    """cs6=.*?"ToIP":"?(?:null|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
-    """cs6=.*?"FromIP":"?(?:null|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """cs6=.*?"ToIP":"?(?:null|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+    """cs6=.*?"FromIP":"?(?:null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """cs6=.*?"EventType":"({alert_type}[^"]+)"""",
     """cs6=.*?"MessageTraceId":"({message_id}[^"]+)"""",
   ]

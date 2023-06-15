@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
   """dhost=({dest_host}[^\s]+)\s*dst="""
-  """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """cs5=({task_name}.+?)\s\w+=.+?cs5Label=TaskName"""
   """cs5=({group_name}.+?)\s\w+=.+?cs5Label=SrcAdmGroupName"""
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""

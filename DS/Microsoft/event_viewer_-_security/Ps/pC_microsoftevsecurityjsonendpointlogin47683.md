@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4768-3
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)""",
     """TargetUserName\\?"+:\\?"(?:-|(?i)(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|({user}[^\\]+))\\?"""",
-    """IpAddress\\?"+:\\?"(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\\?"""",
+    """IpAddress\\?"+:\\?"(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\\?"""",
     """Status\\?"+:\\?"({result_code}[\w\-]+)\\?"""",
     """TargetDomainName\\?"+:\\?"(?:-|({domain}[^\s\\]+?))\\?"""",
     """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?""""

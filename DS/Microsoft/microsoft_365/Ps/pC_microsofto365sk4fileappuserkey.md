@@ -18,7 +18,7 @@ o365-file-app-activity = {
       """"Id":\s*"({object_id}[^"]+)"""",
       """"UserKey":\s*"([^@]+@[^"]+|(({domain}[^\\]+)[\\]+({user}[^"]+))|(NOT-FOUND|([a-f\d]+\-){4}[a-f\d]+|({=user}[^"]+)))"""",
       """"RecordType":\s*({object_type}[^,]+),""",
-      """"ClientIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"ClientIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"SourceFileName":\s*"({src_file_name}[^"]+)"""",
       """"SourceRelativeUrl":\s*"({src_file_path}[^"]+)"""",
       """"SourceFileExtension":\s*"({src_file_ext}[^"]+)"""",

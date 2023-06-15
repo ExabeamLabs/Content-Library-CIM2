@@ -10,7 +10,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-detecte
   Fields = [
   """événement\s:\s({time}\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2})"""
   """SymantecServer:\s({event_name}[^,]+),Adresse IP :"""
-  """Adresse IP\s:\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """Adresse IP\s:\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """Nom du risque\s:\s({alert_name}[^,]+)"""
   """Chemin de fichier :\s({process_path}(({process_dir}\w+:[^,]+)[\\]+)?({process_name}[^\\.]+\.[^\"\\,:]+))"""
   """Action réelle\s:\s({action}[^,]+)"""

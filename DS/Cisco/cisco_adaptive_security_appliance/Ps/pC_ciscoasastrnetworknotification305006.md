@@ -12,7 +12,7 @@ Name = cisco-asa-str-network-notification-305006
     """({time}\w+ \d+ \d+ \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)""",
     """%ASA-({priority}\d+)""",
     """({event_code}305006)""",
-    """({event_name}regular translation creation failed) for ({protocol}\w+) src ({src_interface}\S+?)\s*:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({src_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))(\(({domain}[^\\\/\s]+)[\\\/]({src_host}[^\\\/\s]+)\))? dst ({dest_interface}\S+?)\s*:\s*(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({dest_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?))"""
+    """({event_name}regular translation creation failed) for ({protocol}\w+) src ({src_interface}\S+?)\s*:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({src_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))(\(({domain}[^\\\/\s]+)[\\\/]({src_host}[^\\\/\s]+)\))? dst ({dest_interface}\S+?)\s*:\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({dest_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?))"""
   ]
 
 

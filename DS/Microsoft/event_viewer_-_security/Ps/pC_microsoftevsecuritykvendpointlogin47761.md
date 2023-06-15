@@ -14,9 +14,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776-1
       """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """({event_code}4776)""",
       """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
-      """Logon (?:a|A)ccount(:|=)[\s\\\\t]*(({email_address}[^@\s]+?@[^\s]+?\.[^\s]+?)|(({user}[^@\s,;=\\]+)(?:@({email_domain}[^\s.;,@=]+).*?)?))[\\rnt]*Source Workstation(:|=)([\s\\]+|(\s*\\*((({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?)|({dest_host}.+?))[\s;]*))Error Code(:|=)""",
+      """Logon (?:a|A)ccount(:|=)[\s\\\\t]*(({email_address}[^@\s]+?@[^\s]+?\.[^\s]+?)|(({user}[^@\s,;=\\]+)(?:@({email_domain}[^\s.;,@=]+).*?)?))[\\rnt]*Source Workstation(:|=)([\s\\]+|(\s*\\*((({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?)|({dest_host}.+?))[\s;]*))Error Code(:|=)""",
       """Error Code(:|=)\s*(\\+t)?({result_code}[\w\-]+)""",
-      """Source Workstation(:|=)[\s\\\\t]+((({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?)|({src_host}[^\s]+?))[\s\\\\n\;]*Error Code(:|=)""",
+      """Source Workstation(:|=)[\s\\\\t]+((({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?)|({src_host}[^\s]+?))[\s\\\\n\;]*Error Code(:|=)""",
     ],
     DupFields = ["host->dest_nost"]
   

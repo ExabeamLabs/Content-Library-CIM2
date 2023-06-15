@@ -9,9 +9,9 @@ Name = microsoft-evbferf-xml-network-notification-success-2003
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Data Name\\*='Protocol'>({protocol}[^<]+)""",
     """<Data Name\\*='ConnectionUsedId'>({connection_id}[^<]+)""",
-    """<Data Name\\*='LocalIPAddress'>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """<Data Name\\*='LocalIPAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """<Data Name\\*='RemotePort'>({dest_port}\d+)""",
-    """<Data Name\\*='RemoteIPAddress'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """<Data Name\\*='RemoteIPAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """<Data Name\\*='RemotePort'>({dest_port}\d+)""",
     """<System>.*?Guid='\{({process_guid}[^}]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

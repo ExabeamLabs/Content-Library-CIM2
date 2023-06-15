@@ -12,7 +12,7 @@ Name = netskope-sc-cef-alert-trigger-success-dlp
     """({alert_type}DLP)""",
     """dlpFile=({file_name}[^=]+?)\s\w+=""",
     """dlpIncidentId=({alert_id}\d+?)\s""",
-    """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """fsize=({bytes}\d+)\s"""
     """requestClientApplication=(null|({app}[^=]+?))\s\w+=""",
     """md5=({md5}[^=]+?)\s\w+=""",

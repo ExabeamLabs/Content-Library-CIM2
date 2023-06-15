@@ -4,8 +4,8 @@
 Name = microsoft-evsecurity-json-file-delete-success-4663-1
   Conditions = [ """"EVENT_NUMBER":"4663"""", """"REMARKS":"An object was deleted."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-json-events.Fields}[
-    """"CLIENT_HOST_NAME":"(-|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^"]+))"""",
-    """"CLIENT_IP_ADDRESS":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"CLIENT_HOST_NAME":"(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^"]+))"""",
+    """"CLIENT_IP_ADDRESS":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"SOURCE":"(-|({src_host}[^"]+))"""".
     """"OBJECT_NAME":"({file_path}({file_dir}[^"]+)\\+({file_name}[^"]+))""",
     """"FILE_NAME":"({file_name}[^"]+?(\.({file_ext}[^\."]+))?)"""",

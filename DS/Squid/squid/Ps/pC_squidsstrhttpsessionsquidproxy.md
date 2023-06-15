@@ -9,7 +9,7 @@ Name = squid-s-str-http-session-squidproxy
   Conditions = [ """] SquidProxy """ ]
   Fields = [
     """(-|({host}[a-fA-F\d:\.]+))\s\S+\s\S+\s\[({time}\d\d\/\w{3}\/\d\d\d\d:\d\d:\d\d:\d\d\s[+-]\d{4})\]\sSquidProxy""",
-    """SquidProxy\s\S+\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """SquidProxy\s\S+\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """SquidProxy\s(\S+\s){2}"({method}[^\s]+)\s""",
     """SquidProxy\s(\S+\s){2}"\S+\s\S+\s({protocol}[^"\/]+)""",
     """SquidProxy\s(\S+\s){2}"[^"]+"\s({http_response_code}\d{1,3})\s""",

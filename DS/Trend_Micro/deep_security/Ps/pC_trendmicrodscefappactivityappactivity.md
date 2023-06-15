@@ -9,8 +9,8 @@ Name = trendmicro-ds-cef-app-activity-appactivity
   Conditions = [ """CEF:""", """|Trend Micro|""", """|Deep Security""", """TrendMicroDsTenant=""", """TrendMicroDsTenantId=""" ]
   Fields = [
     """({host}[\w\-.]+) CEF:([^\|]*\|){5}({event_name}[^\|]+)\|""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wtarget=({dest_host}[\w\-.]+)""",
     """\Wproto=({protocol}[^=]+?)\s+(\w+=|$)""",
     """\Wspt=({src_port}\d+)""",
@@ -18,7 +18,7 @@ Name = trendmicro-ds-cef-app-activity-appactivity
     """\Wsmac=({src_mac}[^=]+?)\s+(\w+=|$)""",
     """\Wdmac=({dest_mac}[^=]+?)\s+(\w+=|$)""",
     """msg=({additional_info}[^=]+?)\s*\w+=""",
-    """target=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
+    """target=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
     """\scs1=({additional_info}[^=]+?)\s*\w+=""",
     """Application:\s+AUDIT_({result}[^(]+)""",
     """Login succeeded for user\s+'(({domain}[^\\]+)\\\\)?(SYSTEM|({user}[^']+))""",

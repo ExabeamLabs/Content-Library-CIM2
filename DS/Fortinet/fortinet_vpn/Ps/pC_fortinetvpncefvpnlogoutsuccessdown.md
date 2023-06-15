@@ -14,7 +14,7 @@ Name = fortinet-vpn-cef-vpn-logout-success-down
     """({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),[^,]*,({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """date=({time}\d\d\d\d-\d\d-\d\d time=\d\d:\d\d:\d\d([+-]\d\d:\d\d)?)""",
     """\Wdevname="+({host}[\w\-.]+)""",
-    """\Wremip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wremip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wtunnelip=(\(null\)|({src_translated_ip}[A-Fa-f:\d.]+))""",
     """\Wuser="(.+?\\\\)?(?:N\/A|({user}[^\s@"]+))"""",
     """\Wuser="N\/A|({email_address}[^\s@"]+@[^\s@"]+)"""",

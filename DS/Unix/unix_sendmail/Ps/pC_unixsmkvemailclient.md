@@ -14,7 +14,7 @@ Name = unix-sm-kv-email-client
   Fields = [
     """\d{2}:\d{2}:\d{2} ({host}[\w.\-]+) \S+ \[.+?\-({alert_id}\w+)\]""",
     """\smsg_direction=({direction}[^,]+)""",
-    """\sclient_ip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sclient_ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """client_hostname=({dest_host}[\w\-.]+),"""
   ]
 

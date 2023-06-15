@@ -9,9 +9,9 @@ Name = cisco-ac-kv-network-session-success-nvzflow
   Conditions = [ """ pn=""", """ ppn=""", """fv=nvzFlow_v3""" ]
   Fields = [
     """\sfet='*(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d\d:\d\d:\d\d \d+)""",
-    """\ssa="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssa="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\ssa="({host}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})""",
-    """\sda="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sda="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\ssp=({src_port}\d+)""",
     """\sdp=({dest_port}\d+)""",
     """\sibc=({bytes_in}\d+)""",

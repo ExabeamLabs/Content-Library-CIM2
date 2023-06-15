@@ -3,9 +3,11 @@
 {
 Name = cisco-asa-str-network-notification-bgp
   ParserVersion = v1.0.0
+  TimeFormat = "MMM dd yyyy HH:mm:ss.SSS z"
   Conditions = [ """%BGP""" ]
   Fields = ${CiscoParsersTemplates.cisco-system-info.Fields} [
-    """({host}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s(pdt|PDT):"""
+    """\W({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d\.\d{1,3}\s\w{3})""",
+    """({host}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s(pdt|PDT):""",
     """({event_code}%BGP-[^:]+)""",
     """({protocol}BGP)""",
 # neighbor_ip is removed

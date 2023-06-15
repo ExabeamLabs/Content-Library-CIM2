@@ -10,7 +10,7 @@ Name = unix-unix-cef-user-switch-success-sessionopen
   Fields = [
     """\srt=({time}\d{13})""",
     """\sduser=({user}.+?)\s+\w+=""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sdhost=({dest_host}[^\s]+)""",
     """session opened for user ({account}.+?) by""",
     """session opened for user.+?by ({user}[^(]+)""",

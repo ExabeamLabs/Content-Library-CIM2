@@ -16,7 +16,7 @@ Name = cisco-ac-str-vpn-login-success-722055
       """User\s+<(?![^\s]+@[^\s]+)({user}[^@>\s]+)(?:@[^>]+)?>""",
       """User\s+<({full_name}[^,@]+\s\w+)>""",
       """User\s+<({email_address}[^@>]+@[^@>]+)>""",
-      """ IP <({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))>""",
+      """ IP <({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))>""",
       """Group\s+<({realm}.+?)>""",
       """Cisco AnyConnect VPN Agent for ({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(X|x)11|(W|w)indows|(L|l)inux|(M|m)acintosh|(D|d)arwin)"""
    ]

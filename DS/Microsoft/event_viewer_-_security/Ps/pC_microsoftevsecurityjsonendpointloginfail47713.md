@@ -4,8 +4,8 @@
 Name = microsoft-evsecurity-json-endpoint-login-fail-4771-3
   Conditions = [ """"EVENT_NUMBER":"4771"""", """"REMARKS":"Kerberos pre-authentication failed."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-json-events.Fields}[
-    """"CLIENT_HOST_NAME":"(-|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^"]+))"""",
-    """"CLIENT_IP_ADDRESS":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"CLIENT_HOST_NAME":"(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^"]+))"""",
+    """"CLIENT_IP_ADDRESS":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"SOURCE":"(-|({src_host}[^"]+))"""".
     """"RECORD_NUMBER":"({event_id}[^"]+)""""
   ]

@@ -19,7 +19,7 @@ Name = forcepoint-dlp-cef-email-send-success-smtp
     """\Wcat=({alert_name}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
     """\WsourceServiceName =({alert_type}.+?)\s+(on |\w+=)""",
     """\WloginName =(?:N\/A|(({domain}[^\\,]+)\\+)?({user}[^\\\s,]+))(\s\-\s|\s+[\w\.]+=|$)""",
-    """\WsourceIp=(?:N\/A|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\WsourceIp=(?:N\/A|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\WseverityType=({alert_severity}[^\s]+)""",
     """\WsourceHost=(?:N\/A|({src_host}[\w\-.]+))""",
     """\WdestinationHosts=(?:N\/A|(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))""",

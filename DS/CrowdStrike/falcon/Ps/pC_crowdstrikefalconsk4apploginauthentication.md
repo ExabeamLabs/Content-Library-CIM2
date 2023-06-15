@@ -14,7 +14,7 @@ json-crowdstrike-app-login = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Fields = [
     """\Wsuser=(|({user}.+?))(\s+\w+=|\s*$)""",
-    """"UserIp":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"UserIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"Success":({result}\w+)""",
     """"ServiceName":"({service_name}[^"]+)""",
     """"UserId":"({user_id}[^"]+)""",

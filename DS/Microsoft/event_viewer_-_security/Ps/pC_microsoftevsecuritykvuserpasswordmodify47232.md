@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-user-password-modify-4723-2
   Fields = [
     """({event_name}An attempt was made to change an account's password)""",
     """__li_source_path="({host}[^"]+)"""",
-    """__li_source_path="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """__li_source_path="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """({event_code}4723)""",
     """Subject.+?Security ID:\s+({user_sid}.+?)\s+Account Name""",
     """Subject.+?Account Name:\s+({user}.+?)\s+Account Domain""",

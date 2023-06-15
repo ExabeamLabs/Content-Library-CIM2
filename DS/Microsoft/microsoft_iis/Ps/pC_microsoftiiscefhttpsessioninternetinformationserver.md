@@ -12,7 +12,7 @@ Name = microsoft-iis-cef-http-session-internetinformationserver
     """\sdvchost=({host}.+?)(\s+\w+=|\s*$)""",
     """\sdeviceSeverity=({http_response_code}\d+)(\s+\w+=|\s*$)""",
     """\sshost=({src_host}.+?)(\s+\w+=|\s*$)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\ssuser=(({email_address}[^=@]+@[^=@]+?)|(({domain}[^=\\\/]+)[\\\/]+)?({user}[^=]+?))(\s+\w+=|\s*$)""",
     """\sdpt=({dest_port}\d+)""",
     """\srequest=({uri_path}[^=\?]+?)({uri_query}\?.*?)?(\s+\w+=|\s*$)""",

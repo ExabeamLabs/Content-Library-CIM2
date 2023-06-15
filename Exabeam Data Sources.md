@@ -210,7 +210,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | SecurityExpert | [SecurityExpert](DS/SecurityExpert/securityexpert/ds_securityexpert_securityexpert.md)<br>              |
 | Semperis       | [Semperis DSP](DS/Semperis/semperis_dsp/ds_semperis_semperis_dsp.md)<br>          |
 | Sensormatik    | [Sensormatik](DS/Sensormatik/sensormatik/ds_sensormatik_sensormatik.md)<br>       |
-| SentinelOne    | [Event Viewer - Sentinelone](DS/SentinelOne/event_viewer_-_sentinelone/ds_sentinelone_event_viewer_-_sentinelone.md)<br>[Singularity Platform](DS/SentinelOne/singularity_platform/ds_sentinelone_singularity_platform.md)<br>              |
+| SentinelOne    | [Event Viewer - Sentinelone](DS/SentinelOne/event_viewer_-_sentinelone/ds_sentinelone_event_viewer_-_sentinelone.md)<br>[Singularity Platform](DS/SentinelOne/singularity_platform/ds_sentinelone_singularity_platform.md)<br>[Vigilance](DS/SentinelOne/vigilance/ds_sentinelone_vigilance.md)<br>           |
 | ServiceNow     | [ServiceNow](DS/ServiceNow/servicenow/ds_servicenow_servicenow.md)<br>            |
 | SFTP           | [SFTP](DS/SFTP/sftp/ds_sftp_sftp.md)<br>                    |
 | Shibboleth     | [Shibboleth](DS/Shibboleth/shibboleth/ds_shibboleth_shibboleth.md)<br>            |

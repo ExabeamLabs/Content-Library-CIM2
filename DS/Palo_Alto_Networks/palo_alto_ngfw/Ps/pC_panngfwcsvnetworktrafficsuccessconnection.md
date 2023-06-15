@@ -13,7 +13,7 @@ Name = pan-ngfw-csv-network-traffic-success-connection
     """({event_category}THREAT)""",
     """THREAT,url,[^,]+,({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d),""",
     """THREAT,[^,]+,[^,]+,({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z),""",
-    """THREAT,url,([^,]+,){2}({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,({src_translated_ip}[A-Fa-f\d:.]+),({dest_translated_ip}[A-Fa-f\d:.]+),""",
+    """THREAT,url,([^,]+,){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,({src_translated_ip}[A-Fa-f\d:.]+),({dest_translated_ip}[A-Fa-f\d:.]+),""",
     """THREAT,url,([^,]*,){26}(\\?"+)?(\w+:\/{2})?(www\.)?({web_domain}[^,\\?:"]+?)[\\\/\s:"]"""
     """THREAT,([^,]*,){7}({rule}[^,]+?)\s*,""",
     """THREAT,([^,]*,){8}(({email_address}[^@,]+@[^,\.]+\.[^,]+)|(({domain}[^,\\]+?)[\\]{1,2})?({user}[^,\\\/]+))"""

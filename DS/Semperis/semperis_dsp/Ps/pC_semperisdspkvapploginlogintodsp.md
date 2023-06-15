@@ -12,7 +12,7 @@ Name = semperis-dsp-kv-app-login-logintodsp
     """Result:\s*({result}[\S]+)""",
     """Trustee Name:\s*((({domain}[^\\:]+?)|(NT AUTHORITY))\\+)?(({user}[^:\s]+)|(SYSTEM))""",
     """Product:\s*({app}DSP)""",
-    """Source:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """Source:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   ParserVersion = "v1.0.0"
 

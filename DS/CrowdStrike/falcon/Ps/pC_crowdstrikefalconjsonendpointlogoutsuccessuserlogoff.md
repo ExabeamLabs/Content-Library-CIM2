@@ -12,7 +12,7 @@ Name = crowdstrike-falcon-json-endpoint-logout-success-userlogoff
     """"event_simpleName":"({event_name}[^"]+)"""",
     """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({linked_service_account}OVService[^"]+)|({user_sid}S-[^"]+)|({user}[\w\-\.]+\$?))""""
     """"LogonType":"({login_type}\d+)"""
-    """"aip":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"aip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"LogonDomain":"({domain}[^"]+)"""",
     """"AuthenticationPackage":"({auth_package}[^"]+)"""",
     """"UserSid":"({user_sid}[^"]+)""",

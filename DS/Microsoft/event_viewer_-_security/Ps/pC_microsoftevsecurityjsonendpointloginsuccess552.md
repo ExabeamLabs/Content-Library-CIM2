@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-json-endpoint-login-success-552
     """Target Logon GUID:\s*(?:-|\{({account_login_guid}[^}]+)\})\s*Target Server Name:""",
     """Target Server Name:\s*({dest_host}.+?)\s*Target Server Info:""",
     """Target Server Info:\s*({dest_service_name}.+?)\s*Caller Process ID:""",
-    """Source Network Address:\s+(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+    """Source Network Address:\s+(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
   ]
 
 

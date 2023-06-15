@@ -24,7 +24,7 @@ Name = vmware-idm-json-app-logout-success-logout
     """"actorUserName\\*":\s*\\*"(?:Not Available|({full_name}\w+(?:\s+\w+)+)|({user}[^\\]+))\\*"""",
     """"uuid\\*":\s*\\*"({user_uid}[^\\]+)\\*"""",
     """"actorUuid\\*":\s*\\*"({suid}[^\\]+)\\*"""",
-    """"sourceIp\\*":\s*\\*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*"""",
+    """"sourceIp\\*":\s*\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*"""",
     """"authMethods\\*":\s*\\*"({auth_method}[^\\]+)\\*"""",
     """"redirectUrl\\*":\s*\\*"({redirectUrl}[^\\]+)\\*"""",
     """"failureMessage\\*":\s*\\*"({failure_reason}[^\\]+)\\*"""",

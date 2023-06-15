@@ -13,7 +13,7 @@ Name = sophos-ep-leef-alert-trigger-success-datacontrol
           """ReportingName =({alert_name}.+?)\s+(\w+=|$)""",
           """EventID=({alert_id}\d+)""",
           """usrName =[^\\]*\\({user}.+?)\s+(\w+=|$)""",
-          """src=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+          """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
           """domain=({domain}.+?)\s+(\w+=|$)""",
           """FileName =({file_name}.+?)\s+(\w+=|$)""",
           """FileSize=({bytes}\d+)""",

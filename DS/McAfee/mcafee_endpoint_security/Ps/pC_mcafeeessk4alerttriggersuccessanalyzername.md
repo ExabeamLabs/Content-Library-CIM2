@@ -10,8 +10,8 @@ Name = mcafee-es-sk4-alert-trigger-success-analyzername
   Fields = [
     """"receivedutc":\{[^\}]+?"value":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""",
     """"analyzerhostname":\{[^\}]+?"value":"({host}[^"]+)"""",
-    """"sourceipv6":\{[^\}]+?"value":"\/?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"sourceipv4":\{[^\}]+?"value":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"sourceipv6":\{[^\}]+?"value":"\/?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"sourceipv4":\{[^\}]+?"value":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"threatseverity":\{[^\}]+?"value":({alert_severity}\d{1,5})\}""",
     """"threatactiontaken":\{[^\}]+?"value":"(none|({action}[^"]+))"""",
     """"threatname":\{[^\}]+?"value":"(\_|({alert_name}[^"]+))"""",

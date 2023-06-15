@@ -17,7 +17,7 @@ Name = vmware-carbonblack-mix-alert-trigger-success-threat
     """summary"+:\s*"+({additional_info}[^"]+)"""",
     """eventDescription"+:\s*"+({additional_info}[^"]+)"""",
     """deviceType"+:\s*"+({os}[^"]+)"""",
-    """externalIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """externalIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """applicationName":\s"({process_name}[^"]+)""",
   ]
   ParserVersion = "v1.0.0"

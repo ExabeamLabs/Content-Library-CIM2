@@ -13,7 +13,7 @@ Name = microsoft-o365-sk4-app-login-fail-snowflake
     """"conditionalAccessStatus":"({result}[^"]{,2000})"""",
     """"userDisplayName":"({full_name}[^"]+)"""",
     """"userPrincipalName":"({email_address}[^@"]+@[^"]+)"""",
-    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"countryOrRegion":"({location_country}[^"]+)"""",
     """"city":"({location_city}[^"]+)"""",
     """"state":"({location_state}[^"]+)"""",

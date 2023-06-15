@@ -11,7 +11,7 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """\Wcat=({threat_category}[^=]+?)\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
       """\WdevTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
-      """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """threatType=({alert_type}[^=]+?)\s*(\w+=|$)""",
       """\|ESET\|(?:[^\|]+\|){2}({alert_type}[^\|]+)""",
       """threatName =({alert_name}[^=]+?)\s*(\w+=|$)""",

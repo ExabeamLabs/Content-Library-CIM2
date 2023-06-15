@@ -24,7 +24,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4648-2
     """account_whose_credentials_were_used.account_domain":"({account_domain}[^"]+)""",
     """account_whose_credentials_were_used.account_name":"({account}[^"]+)""",
     """account_whose_credentials_were_used.logon_guid":"({account_login_guid}[^"]+)""",
-    """network_information.network_address:({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """network_information.network_address:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 	]
 	ParserVersion = "v1.0.0"
 

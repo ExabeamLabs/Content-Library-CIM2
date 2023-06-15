@@ -13,7 +13,7 @@ Name = symantec-dlp-kv-alert-trigger-success-dlpalert
       """({additional_info}DLP ALERT|DLP ALERT[^:]+?)\s+Application Name:""",
       """\sApplication Name:\s+({app}[^:]+?)\s*Endpoint Machine:"""
       """\WEndpoint Machine:\s+(?:N\/A|({src_host}[^\s]+))""",
-      """\sMachine IP:\s+(?:N\/A|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+      """\sMachine IP:\s+(?:N\/A|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
       """\sFile Name:\s+(?:N\/A|({file_name}[^:]+?))\s*Machine IP:""",
       """\WSeverity:\s+({alert_severity}[^\s]+)""",
       """\sIncident ID:\s+({alert_id}\d+)""",

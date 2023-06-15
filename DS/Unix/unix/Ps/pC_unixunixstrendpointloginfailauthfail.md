@@ -10,7 +10,7 @@ Name = unix-unix-str-endpoint-login-fail-authfail
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
     """\d\d:\d\d:\d\d \d\d\d\d ({host}[^\s]+)""",
     """({event_name}SSHS_LOG)""",
-    """Authentication failed for ({user}[^\s]+) from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """Authentication failed for ({user}[^\s]+) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """because of ({failure_reason}[^.]+)\s+"""
   ]
   ParserVersion = "v1.0.0"

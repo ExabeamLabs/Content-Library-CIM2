@@ -558,6 +558,7 @@
 | dummy-new-parser-555               | sentinelone-singularityp-json-endpoint-login-success-logins                        |
 | dummy-new-parser-556               | microsoft-defenderep-json-process-thread-create-success-remotethreadapicall        |
 | dummy-new-parser-557               | cloudflare-waf-json-http-session-firewallmatchesactions                            |
+| dummy-new-parser-558               | google-workspace-json-rule-trigger-success-dlp                                     |
 | dummy-new-parser-56                | microsoft-iis-str-http-session-optionsews                                          |
 | dummy-new-parser-560               | microsoft-defenderep-json-process-memory-allocate-success-ntallocatevirtualmemory  |
 | dummy-new-parser-561               | microsoft-defenderep-json-http-request-success-browserlaunchedtoopenurl            |

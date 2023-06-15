@@ -61,7 +61,7 @@ ${OktaParserTemplates.q-okta-app-login}{
   Conditions = [ """|OKTA|OKTA Identity Provider|""","""|Application Access|""","""msg=User performed single sign on to app"""]
   Fields = [
 	"""start=({time}\d\d\d\d\-\d+\-\d+T\d+:\d+:\d+:\d+)""",
-	"""src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+	"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 	"""instance=({host}[^,]+)""",
     """duid=({user}[^,]+)""",
     """duid=[^@,]+@({domain}[^,.]+)""",
@@ -85,7 +85,7 @@ ${OktaParserTemplates.q-okta-app-login}{
     """wd_task":"({operation}[^"]+?)"""",
     """wd_target":"({object}[^"]+?)"""",
     """wd_useragent":"({user_agent}[^"]+?)"""",
-    """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
    ]
    DupFields = [ "full_name->user" ]
    ParserVersion = v1.0.0
@@ -98,7 +98,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Fields = [
 """\d+:\d+ ({host}[^\s]+) \{"""
 """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-""""ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"action":\s*\{.*?"objectType":\s*"({operation}[^"]+)".+?\}"""
 """"action":\s*\{.*?"objectType":\s*"[^"]*?({result}error)".+?\}"""
 """"categories":\s*\["({operation}[^"]+)""""
@@ -146,7 +146,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Fields = [
   """\d+:\d+ ({host}[^\s]+) \{"""
   """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-  """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"action":\s*\{.*?"objectType":\s*"({operation}[^"]+)".+?\}"""
   """"action":\s*\{.*?"objectType":\s*"[^"]*?({result}error)".+?\}"""
   """"categories":\s*\["({operation}[^"]+)""""
@@ -207,7 +207,7 @@ Fields = [
   """wd_task":"({operation}[^"]+?)""""
   """wd_target":"({object}[^"]+?)""""
   """wd_useragent":"({user_agent}[^"]+?)""""
-  """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -219,7 +219,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Fields = [
   """\d+:\d+ ({host}[^\s]+) \{"""
   """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-  """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"ipAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"action":\s*\{.*?"objectType":\s*"({operation}[^"]+)".+?\}"""
   """"action":\s*\{.*?"objectType":\s*"[^"]*?({result}error)".+?\}"""
   """"categories":\s*\["({operation}[^"]+)""""
@@ -259,28 +259,9 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 }
-]
-#============================================== End of OktaParsers section ==================================================================
-
-#============================================== Start of OktaParsersDL section ===================================================================
-OktaParsersDL = [
-
-{
-Name = okta-amfa-json-user-password-forget-recovery
-Vendor = Okta
-Product = Okta Adaptive MFA
-ParserVersion = "v1.0.0"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-Conditions = [ """"credentials": {"provider":""", """"type": "ACTIVE_DIRECTORY"""", """"status": "RECOVERY"""" ]
-Fields = [
-""""employeeNumber":\s*"({account_id}[^"]+)"""",
-""""status":\s*"({event_name}[^"]+)"""",
-""""title":\s*"({group_name}[^"]+)"""",
-""""department":\s*"({group_type}[^"]+)"""",
-""""created":\s*"({time}[^"]+)"""",
-""""displayName"+:\s*"+({domain}[^\s\\"]+)\\+({user}[^\s"]+)"""
-""""samAccountName":\s*"({user}[^"]+)"""",
-""""email":\s*"({email_address}[^@"\s]+@({email_domain}[^@"\s]+))""""
-
+${OktaParserTemplates.s-okta-app-login}{
+  Name = okta-amfa-json-app-login-success-signon
+  ParserVersion = v1.0.0
+  Conditions = [ """"eventType":"policy.evaluate_sign_on"""" 
 }
 ```

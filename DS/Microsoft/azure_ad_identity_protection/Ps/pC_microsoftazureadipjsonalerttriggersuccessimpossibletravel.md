@@ -15,7 +15,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-impossibletravel
      """"description":\s*"({additional_info}[^"]+)"""",
      """"eventDateTime":\s*"({time}[^"]+)"""",
      """"accountName":\s*"(({full_name}[^"\s]+\s[^"]+)|({user}[^"]+))"""",
-     """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+     """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[^\s"@]+)(@[^"]+)?))"""",
 
      """"domainName"+:\s*"+({domain}[^"]+)"""",

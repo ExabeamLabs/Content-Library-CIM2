@@ -29,7 +29,7 @@ Fields = [
 """"ItemName":"({email_subject}[^"]+)""",
 """Sender":"({src_email_address}[^"]+)""",
 """"Receivers":\[({email_recipients}"({dest_email_address}[^",]+)[^\]]+?)\],"""",
-""""ClientIP"+:"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+""""ClientIP"+:"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """UserAgent":\s*"({user_agent}[^"]+)"""",
 """DatasetName"*:\s*"*({data_set_name}[^"]+)""",
 """Workload"*:\s*"*({resource}[^"]+)"*""",

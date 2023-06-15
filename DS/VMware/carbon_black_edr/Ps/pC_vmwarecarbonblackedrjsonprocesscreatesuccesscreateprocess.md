@@ -8,7 +8,7 @@ Name = vmware-carbonblackedr-json-process-create-success-createprocess
   Conditions = [ """destinationServiceName =CB Defense""", """threatIndicators":""", """processDetails":""", """"eventType":"CREATE_PROCESS""""]
   Fields = [
     """"eventTime":({time}\d{13})""",
-    """"deviceIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"deviceIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"deviceName":"(({domain}[^\\\s"]+)\\+)?({src_host}[^\\\s"]+)"""",
     """"email":"(({domain}[^\\\s"]+)\\+)?({user}[^"\\]+)"""",
     """"eventType":"({alert_name}[^"]+)"""",

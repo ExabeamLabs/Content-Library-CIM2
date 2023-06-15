@@ -12,7 +12,7 @@ Name = trendmicro-officescan-cef-file-write-success-passed
     """\sdvchost=({host}[^\s]+)""",
     """\scs4=({user}.+?)\s+(\w+=|$)""",
     """({operation}File Copy)""",
-    """\ssrc=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\ssrc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sshost=({dest_host}.+?)\s+(\w+=|$)""",
     """\sfname=({file_name}.+?(\.({file_ext}[^.\s]+))?)\s+(\w+=|$)""",
     """\sfilePath=({file_dir}.+?)\s+(\w+=|$)""",

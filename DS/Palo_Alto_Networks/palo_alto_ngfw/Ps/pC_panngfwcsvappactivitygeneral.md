@@ -10,7 +10,7 @@ Name = pan-ngfw-csv-app-activity-general
 # job_id is removed
     """User:\s*({user}[^\s"\.]+)""",
 # commit_description is removed
-    """({event_name}Failed password for root)\s+\w+\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+port\s+({src_port}\d+)\s+({user}[^"]+)"""
+    """({event_name}Failed password for root)\s+\w+\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+port\s+({src_port}\d+)\s+({user}[^"]+)"""
   ]
 
 pan-system-1 {
@@ -19,8 +19,8 @@ pan-system-1 {
     Fields = [
       """SYSTEM,([^,]+,){2}({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),""",
       """SYSTEM[^"]+?({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
-      """SYSTEM,("[^"]*",|[^,]*,){18}({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))""",
-      """:\d\d:\d\d\s+({host}(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s""",
+      """SYSTEM,("[^"]*",|[^,]*,){18}({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))""",
+      """:\d\d:\d\d\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s""",
       """,({asset_id}\d+),SYSTEM,""",
       """({event_category}SYSTEM)""",
       """SYSTEM,({event_subtype}[^,]+),""",

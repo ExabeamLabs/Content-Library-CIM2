@@ -9,7 +9,7 @@ Name = microsoft-windows-kv-endpoint-logout-success-23
     """({event_name}Remote Desktop Services: Session logoff succeeded)""",
     """\sUser:\s*(?:[^\\]+\\+)?(SYSTEM|({user}[^\s"]+))""",
     """\sSession ID:\s*({session_id}\d+)""",
-    """\sSource Network Address:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sSource Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
 
 windows-events-2 = {

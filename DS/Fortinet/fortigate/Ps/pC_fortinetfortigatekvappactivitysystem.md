@@ -17,7 +17,7 @@ Name = fortinet-fortigate-kv-app-activity-system
     """\sversion="({version}[^"]+?)"""",
     """\slevel="({alert_severity}[^"]+?)"""",
     """\slogdesc="({alert_name}[^"]+?)"""",
-    """\ssrcip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrcip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sport=({src_port}\d+)""",
     """\smsg="({additional_info}[^"]+?)"""",
   ]

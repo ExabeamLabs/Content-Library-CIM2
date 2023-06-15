@@ -13,12 +13,12 @@ cef-defender-atp-events = {
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"DeviceName":"({host}[^"]+)""""
       """"LogonType":"({login_type_text}[^"]+)"""",
-      """"AccountName":"({user}[^"]+)"""",
+      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[^"]+))"""",
       """"AccountDomain":"({domain}[^"]+)"""",
       """"InitiatingProcessFileName":"({process_name}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",
       """"ActionType":"({result}[^"]+)"""",
-      """"RemoteIP":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+      """"RemoteIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """"Protocol":"({protocol}[^"]+)"""",
       """LogonId":(null|({login_id}[^:]+?)),""",
       """InitiatingProcessFolderPath":"({process_path}[^"]+?)",""",
@@ -26,7 +26,9 @@ cef-defender-atp-events = {
       """InitiatingProcessCommandLine":"({process_command_line}[^<]+?)\s*","InitiatingProcess""",
       """InitiatingProcessId":({process_id}[^:]+?),""",
       """DeviceId":"({device_id}[^:]+?)",""",
-      """InitiatingProcessMD5":"({hash_md5}[^:]+?)","""
+      """InitiatingProcessMD5":"({hash_md5}[^:]+?)",""",
+      """"FailureReason":"({failure_reason}[^"]+)"""",
+      """"InitiatingProcessAccountName":"({account}[^"]+)""""
     ]
     DupFields = ["host->dest_host"
 }

@@ -14,7 +14,7 @@ Name = bitglass-casb-json-email-send-success-emailsend
     """"email":\s*"({email_user}[^"]+)"""",
     """"device":\s*"({os}[^"]+)"""",
     """"application":\s*"({app}[^"]+)"""",
-    """"ipaddress":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipaddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"filename":\s*"({file_name}[^"]+(\.({file_ext}[^."]+))?)",""",
     """"useragent":\s*"({user_agent}.+?)",""",
     """"emailfrom":\s*"({src_email_address}[^"]+)"""",

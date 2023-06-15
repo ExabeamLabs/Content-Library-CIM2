@@ -11,8 +11,8 @@ Conditions = [
 ]
 Fields = [
   """({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (AM|am|PM|pm))"""
-  """({protocol}UDP)\s+({operation}Snd)\s+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """Remote addr\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),\s*port\s*({dest_port}\d+)"""
+  """({protocol}UDP)\s+({operation}Snd)\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """Remote addr\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),\s*port\s*({dest_port}\d+)"""
   """XID\s+0x({query_id}[\da-fA-F]+)"""
   """QTYPE\s+({dns_query_type}\w+)"""
   """RCODE\s+[^(]*?\(({dns_response_code}[^(]+)\)"""

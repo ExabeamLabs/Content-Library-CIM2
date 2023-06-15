@@ -14,7 +14,7 @@ Name = mimecast-seg-cef-email-hold
   Fields = [
     """"date":"({time}\d+-\d+-\d+T\d+:\d+:\d+\+\d+)""",
     """dproc=({dproc}[^=]+?)\s+\w+=""",
-    """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"(?i)Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
     """"(recipientAddress|Recipient)":"({dest_email_address}>([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
@@ -27,7 +27,7 @@ Name = mimecast-seg-cef-email-hold
     """"(?:action|actions)":"({action}[^"]+)""",
     """"actionTriggered":"(none|({action}[^"]+))""",
     """"acc":"({user}[^"]+)""",
-    """"SourceIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"SourceIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"result":"({result}[^"]+)""",
     """"subject":"({email_subject}[^"]+)"""
     """"UrlCategory":"({category}[^"]+)"""

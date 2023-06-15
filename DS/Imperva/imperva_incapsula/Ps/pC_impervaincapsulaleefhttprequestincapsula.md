@@ -15,7 +15,7 @@ Name = imperva-incapsula-leef-http-request-incapsula
     """\WrequestClientApplication=({user_agent}.+?)\s+(\w+=|$)""",
     """\WrequestClientApplication=[^=]*?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident)""",
     """\WrequestClientApplication=[^=]*?({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wcs6=({app}.+?)\s+(\w+=|$)""",
     """\WcalCountryOrRegion=({country}.+?)\s+(\w+=|$)""",
     """\Wcicode=({city}.+?)\s+(\w+=|$)""",
@@ -28,7 +28,7 @@ Name = imperva-incapsula-leef-http-request-incapsula
     """\Wproto=({protocol}.+?)\s+(\w+=|$)""",
     """\Wcat=({action}.+?)\s+(\w+=|$)""",
     """\WdeviceExternalId=({external_id}.+?)\s+(\w+=|$)""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
 # xff_ip is removed
     """\Wcn1=({http_response_code}\d+)""",
     """\WdstPort=({dest_port}\d+)""",

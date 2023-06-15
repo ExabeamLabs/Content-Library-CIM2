@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-str-endpoint-notification-4627
     """New Logon:[^"]+?Logon ID:\s*({login_id}[^\s]+)""",
 # DL Fields are removed
     """Logon Type:\s*({login_type}\d+)""",
-    """sourceip="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """EVENT_TYPE="({result}[^"]+)""""
   ]
 

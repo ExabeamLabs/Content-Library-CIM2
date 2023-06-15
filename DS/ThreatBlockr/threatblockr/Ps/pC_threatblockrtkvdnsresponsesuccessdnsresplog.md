@@ -8,8 +8,8 @@ Name = threatblockr-t-kv-dns-response-success-dnsresplog
   Conditions = [ """ threatblockr """, """ dns_resp_log """, """, query_name=""", """, answer_value=""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\sthreatblockr""",
-    """\ssrc=(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+?))(,\s\w+=|\s*$)""",
-    """\sdst=(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+?))(,\s\w+=|\s*$)""",
+    """\ssrc=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+?))(,\s\w+=|\s*$)""",
+    """\sdst=(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+?))(,\s\w+=|\s*$)""",
     """\ssrc_port=({src_port}\d{1,5})""",
     """\sdst_port=({dest_port}\d{1,5})""",
     """\sproto=({protocol}[^=]+?)(,\s\w+=|\s*$)""",

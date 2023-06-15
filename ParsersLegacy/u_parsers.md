@@ -195,6 +195,7 @@
 | unix-system-info-unix                | unix-unix-str-endpoint-activity-success-unixid                  |
 | unix-system_info-18                  | unix-unix-sk4-endpoint-notification-proctitle                   |
 | unix-system_info-19                  | unix-unix-sk4-service-start-servicestart                        |
+| unix-ufw-network-connection          | unix-unix-str-network-traffic-fail-ufw                          |
 | unix-xinetd-info                     | unix-unix-str-app-activity-xinetd                               |
 | unix-xntpd-30                        | unix-unix-str-endpoint-time-modify-synchronized                 |
 | upm-account-switch                   | unix-privmgmt-str-user-switch-success-acceptedsu                |

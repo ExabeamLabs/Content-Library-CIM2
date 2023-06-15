@@ -503,6 +503,7 @@
 | s-okta-app-login-2                          | okta-amfa-json-endpoint-login-success-authenticateuser                         |
 | s-okta-app-login-3                          | okta-amfa-json-app-login-success-evaluatesignon-1                              |
 | s-okta-app-login-4                          | okta-amfa-json-app-login-success-oauth2signon                                  |
+| s-okta-app-login-5                          | okta-amfa-json-app-login-success-signon                                        |
 | s-okta-failed-app-login                     | okta-amfa-json-app-login-fail-signinfailure                                    |
 | s-okta-failed-login                         | okta-amfa-json-app-login-fail-userlogintookta                                  |
 | s-okta-failed-login-1                       | okta-amfa-json-app-login-fail-authenticateuserviainbounddelauth                |

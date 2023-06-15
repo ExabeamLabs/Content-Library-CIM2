@@ -10,7 +10,7 @@ Name = microsoft-o365-json-app-activity-success-updateinboxrules
     """"OriginatingServer":\s*"({host}[\w\-.]+)\s""",
     """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"ResultStatus":\s*"({result}[^"]+)"""",
-    """"ClientIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ClientIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"UserId":\s*"({email_address}[^@"]+@({domain}[^"]+))"""",
     """"ActionType(\\)?":(\\)?"({operation}[^"\\]+)(\\)?"""",
     """"Operation":\s*"({event_name}[^"]+)"""",

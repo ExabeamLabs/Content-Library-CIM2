@@ -13,7 +13,7 @@ Name = vmware-carbonblackappctrl-json-alert-trigger-success-processhashtype
     """EventType":\s+"({alert_type}[^"]+)""",
     """EventSubType":\s+"({alert_name}[^"]+)""",
     """HostName":\s+"(({web_domain}[^\\]+)\\+)?({src_host}[^"]+)""",
-    """HostIP":\s+"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """HostIP":\s+"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """Priority":\s+"({alert_severity}[^"]+)""",
     """ABId":\s+"({alert_id}[^"]+)""",
     """Message":\s+"({additional_info}[^"]+)""",

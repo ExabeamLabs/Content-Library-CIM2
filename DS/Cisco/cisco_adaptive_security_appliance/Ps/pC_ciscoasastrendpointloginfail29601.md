@@ -6,7 +6,10 @@ Name = cisco-asa-str-endpoint-login-fail-2960-1
   Conditions = [
 """%DOT1X-5-FAIL:"""
 """Authentication failed"""
-]
+  ]
+  Fields = ${CiscoParsersTemplates.cisco-2960-auth-events.Fields} [
+    """({failure_reason}Authentication[^"]+?)\s*"*$"""
+  ]
 
 cisco-2960-auth-events = {
   Vendor = "Cisco"

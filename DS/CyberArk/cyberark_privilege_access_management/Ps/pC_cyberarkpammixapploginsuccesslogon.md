@@ -12,7 +12,7 @@ Name = cyberark-pam-mix-app-login-success-logon
     """(LEEF|CEF):([^\|]*?\|){4}({event_code}\d+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """usrName =(({domain}[^\\=]+)(\\)+)?(({email_address}[^@"\.]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^=]+?))\s+\w+=""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sEventMessage=(\s+|({event_subtype}[^=]+?))\s+(\w+=|$)""",
     """\sSafe=(\s+|({safe_value}[^=]+?))\s+(\w+=|$)""",
     """\sGatewayStation=({gateway_station}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",

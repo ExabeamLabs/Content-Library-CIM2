@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-cef-user-privilege-use-success-esm
     """\|McAfee\|[^|]+?\|[^|]+?\|43-2630({event_code}\d+)(0|1)\|""",
     """\srt=({time}\d{13})\s+cnt""",
     """shost=({host}[^\s]+)""",
-    """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """sntdom=({domain}[^\s]+)""",
     """suser=({user}[^\s]+)""",
     """nitroPrivileges=({privileges}.+?)(\s+\w+=|"*\s*$)""",

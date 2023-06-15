@@ -17,7 +17,7 @@ Name = vmware-carbonblackceedr-sk4-network-session-success-edr
     """"+process_pid"+:\s*({process_id}\d+)""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+)\\({process_name}[^"]+))"""",
     """"+parent_path"+:"+({parent_process}({parent_process_dir}[^"]+)\\({parent_process_name}[^"]+))"""",
-    """"+local_ip"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+""",
+    """"+local_ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+""",
     """"+local_port"+:({src_port}\d+)""",
     """"+action"+:"+({result}[^"]+)"+""",
     """"+process_cmdline"+:"+\s*({process_cmd}[^"]+?)\s*"+""",

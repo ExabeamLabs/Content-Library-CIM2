@@ -14,7 +14,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"user_name":"({user}[^"]+)""",
       """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"md5":"(N\/A|({hash_md5}\w+))""",
-      """"local_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """"local_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"machine_domain":"({domain}[^"]+)""",
       """"filename":"({process_name}[^"]+)""",
       """"hostname":"({src_host}[^"]+)""",

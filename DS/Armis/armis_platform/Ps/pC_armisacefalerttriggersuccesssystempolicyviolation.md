@@ -14,7 +14,7 @@ Name = armis-a-cef-alert-trigger-success-systempolicyviolation
     """severity":"({alert_severity}[^"]+)""",
     """status":"({alert_status}[^"]+)""",
     """"deviceIds":\[({device_id_list}[^\]]+)""",
-    """"device_0_ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"device_0_ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"device_0_id":({device_id}\d+)""",
     """"device_0_name":"({device_name}[^"]+)""",
     """"device_0_category":"({device_category}[^"]+)""",

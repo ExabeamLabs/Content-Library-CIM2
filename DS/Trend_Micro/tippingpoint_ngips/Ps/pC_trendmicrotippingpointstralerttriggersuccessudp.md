@@ -14,7 +14,7 @@ Name = trendmicro-tippingpoint-str-alert-trigger-success-udp
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+udp(\s+[^\s]+){8}\s+({host}[^\s]+)""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+udp(\s+[^\s]+){10}\s+({time}\d{13})""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+udp(\s+[^\s]+){11}\s+({alert_id}\d+)""",
-    """udp\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)\s+({dest_ip}[a-fA-F\d.:]+)\s+({dest_port}\d+)"""
+    """udp\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)\s+({dest_ip}[a-fA-F\d.:]+)\s+({dest_port}\d+)"""
   ]
 
 tippingpoint-sms-alert-template = {

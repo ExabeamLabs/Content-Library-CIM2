@@ -16,7 +16,7 @@ Name = google-workspace-cef-app-activity-success-audit
   """"success":({result}true|false)""",
   """"rfc2822_message_id":"({message_id}[^",]+)"""",
   """"payload_size":({bytes}\d+)""",
-  """"client_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+  """"client_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
   """({app}Gmail|gmail)""",
   """"action_type":({action_type}\d+)"""
   """"service":"({service_name}[^"]+)"""

@@ -14,7 +14,7 @@ Name = workday-wd-json-app-login-success-startnewsession-1
     """wd_task":"({operation}[^"]+?)"""",
     """wd_target":"({object}[^"]+?)"""",
     """wd_useragent":"({user_agent}[^"]+?)"""",
-    """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """wd_ipaddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
    ]
    DupFields = [ "full_name->user" ]
    ParserVersion = v1.0.0

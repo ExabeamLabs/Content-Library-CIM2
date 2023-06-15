@@ -10,7 +10,7 @@ Name = microsoft-defenderep-json-network-notification-advancedhunting
   Fields = ${MicrosoftParserTemplates.json-defender-atp.Fields} [
     """operationName"+:\s*"+({operation}[^"]+)""",
     """DeviceId":"({device_id}[^"]+)"""",
-    """IPAddress\\?":\\?"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
+    """IPAddress\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
     """MacAddress":"({src_mac}[^"]+)"""",
   ]
 
@@ -23,8 +23,8 @@ json-defender-atp {
      """operationName":\s*"({operation}[^"]+)""",
      """category":\s*"({category}[^"]+)""",
      """RemotePort":({dest_port}\d+)""",
-     """RemoteIP":\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-     """LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """RemoteIP":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+     """LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """LocalPort":({src_port}\d+)""",
      """ActionType":\s*"({action}[^"]+)""",
      """DeviceName":\s*"({dest_host}({host}[^"\.]+)?[^"]+)""",

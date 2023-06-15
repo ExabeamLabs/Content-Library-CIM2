@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4965
   Product = Event Viewer - System
   Conditions = [ """<EventID>4965<""", """IPsec received a packet from a remote computer""", """Audit Failure""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
-    """<Data Name\\*='RemoteAddress'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?<""",
+    """<Data Name\\*='RemoteAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?<""",
     """({result}Audit Failure)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
@@ -34,7 +34,7 @@ s-xml-events = {
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",
-    """Client IP: ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """Client IP: ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """ThreadID(\\)?='({thread_id}\d+)"""
   
 }

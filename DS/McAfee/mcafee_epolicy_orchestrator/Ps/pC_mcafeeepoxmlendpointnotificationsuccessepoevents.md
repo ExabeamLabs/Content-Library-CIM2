@@ -12,7 +12,7 @@ Name = mcafee-epo-xml-endpoint-notification-success-epoevents
       """<MachineName>({src_host}[^<]+)""",
       """<InitiatorType>(N\/A|({event_name}[^<]+))""",
       """<RawMACAddress>({src_mac}[a-fA-F\d.:]+)""",
-      """<IPAddress>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """<IPAddress>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """<OSName>({os}[^<]+)""",
       """<UserName>({last_name}[^\\<,]+),\s*({first_name}[^<,]+)<""",
       """<UserName>(N\/A|((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?(SYSTEM|({user}[^<\\\s,]+)))<""",

@@ -13,7 +13,7 @@ Name = microsoft-o365-sk4-app-activity-success-newinboxrule
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
     """"Name":"ForwardTo".+?"Value":"(?:smtp:)?({target}[^"]+)""""
     """"ResultStatus":"({result}[^"]+)"""",
-    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({operation}New-InboxRule)"""
     """cs1=(\[\{"additional-properties"\:)?\{"({operation}[^"]+)""",
     """msg=({additional_info}.+?)\s\w+=""",

@@ -20,8 +20,9 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)""",
        """"InitiatingProcessId"+:({process_id}\d+)""",
        """operationName":\s*"({action}[^"]+)""",
-       """RegistryValueData"+:\s*"+(,|(\\")*({object}.+?))\s*"""",
-       """RegistryKey":\s*"(|({resource}[^"]+))"""",
+       """"RegistryKey":"({registry_path}({registry_key}[^"]+))"""",
+       """"RegistryValueName":"({registry_value}[^"]+)"""",
+       """"RegistryValueData":"({registry_details}[^"]+)""""
     ]
     DupFields = ["operation_type->event_name", "file_path->process_path", "file_dir->process_dir"]
 

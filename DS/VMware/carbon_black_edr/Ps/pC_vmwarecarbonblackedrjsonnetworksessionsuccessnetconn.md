@@ -15,8 +15,8 @@ Name = vmware-carbonblackedr-json-network-session-success-netconn
     """md5\":\"({hash_md5}[^\"]+)""",
     """\"pid\":({process_id}\d+)""",
     """\"process_guid\":\"({process_guid}[^\"]+)""",
-    """local_ip\":\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """remote_ip\":\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\"""",
+    """local_ip\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """remote_ip\":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\"""",
     """remote_port\":({dest_port}\d+)""",
     """domain\":\"({web_domain}[^\"]+)"""
 ] 
