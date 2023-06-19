@@ -574,7 +574,17 @@
 | dummy-new-parser-575               | microsoft-defenderep-json-scheduled-task-delete-success-scheduledtaskdeleted       |
 | dummy-new-parser-576               | microsoft-defenderep-json-alert-trigger-success-childprocessaudited                |
 | dummy-new-parser-58                | microsoft-iis-str-http-session-optionsmapi                                         |
+| dummy-new-parser-580               | microsoft-defenderep-json-script-execute-success-powershellcommand                 |
+| dummy-new-parser-581               | microsoft-defenderep-json-process-create-success-processcreatedusingwmiquery       |
+| dummy-new-parser-582               | microsoft-defenderep-json-scheduled_task-modify-success-scheduledtaskupdated       |
+| dummy-new-parser-583               | microsoft-defenderep-json-app-activity-success-clrunbackedmoduleloaded             |
+| dummy-new-parser-584               | microsoft-defenderep-json-process-pipe-create-success-namedpipeevent               |
+| dummy-new-parser-585               | microsoft-defenderep-json-endpoint-activity-success-deviceevents                   |
 | dummy-new-parser-59                | microsoft-iis-str-http-session-optionsmicrosoftserver                              |
+| dummy-new-parser-590               | microsoft-evsecurity-xml-endpoint-notification-success-5452                        |
+| dummy-new-parser-591               | microsoft-evsecurity-xml-endpoint-notification-success-4692                        |
+| dummy-new-parser-592               | microsoft-evsecurity-xml-endpoint-notification-success-4693                        |
+| dummy-new-parser-593               | microsoft-evsecurity-xml-endpoint-authentication-success-4651                      |
 | dummy-new-parser-6                 | cisco-fp-json-alert-trigger-success-malware                                        |
 | dummy-new-parser-60                | microsoft-iis-str-http-session-optionsoab                                          |
 | dummy-new-parser-61                | microsoft-iis-str-http-session-optionsowa                                          |

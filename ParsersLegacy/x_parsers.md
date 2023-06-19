@@ -189,6 +189,9 @@
 | xml-windows-event-6522               | "microsoft-evdnsserver-xml-network-notification-6522              |
 | xml-windows-event-7050               | "microsoft-evdnsserver-xml-dns-response-fail-7050                 |
 | xml-windows-events-1                 | "microsoft-windows-xml-app-activity-success-10036                 |
+| xml-windows-ntlm-logon-8001          | microsoft-evntlm-xml-endpoint-login-success-8001                  |
+| xml-windows-ntlm-logon-8002          | microsoft-evntlm-xml-endpoint-login-success-8002                  |
+| xml-windows-ntlm-logon-8003          | microsoft-evntlm-xml-endpoint-login-success-8003                  |
 | xml-windows-process-network-failed   | microsoft-evsystem-xml-network-session-fail-10028                 |
 | xml-windows-process-network-failed-1 | microsoft-evsystem-xml-network-session-fail-10028-1               |
 | xplan-csv-failed-physical-access-1   | xplan-x-csv-physical-location-access-fail-accessdenied            |

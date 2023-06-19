@@ -17,7 +17,6 @@ crowdstrike-process-info = {
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
-    """"name":\s*"({process_name}[^"]+)""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
     """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
     """src-account-name":"({account_name}[^"]+)""",

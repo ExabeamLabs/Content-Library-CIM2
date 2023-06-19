@@ -7,6 +7,7 @@ Name = juniper-ps-sk4-user-delete-success-accountmodified
   Fields = ${JuniperParsersTemplates.cef-pulsesecure-vpn-events.Fields} [
     """Removed username (({dest_domain}[^\\\.]+)\\)?({dest_user}[^\\\s]+)"""
   ]
+  DupFields = ["dest_user->account_name"]
 
 cef-pulsesecure-vpn-events = {
   Vendor = Ivanti

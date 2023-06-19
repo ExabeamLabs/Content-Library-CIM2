@@ -43,6 +43,8 @@ json-defender-atp {
      """"InitiatingProcessAccountDomain":\s*"({domain}[^"]+)""",
      """AccountUpn":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
      """SHA1":"({hash_sha1}[^"]+)"""",
+     """"InitiatingProcessVersionInfoInternalFileName":"({service_name}[^"]+)""",
+     """Description":"({additional_info}[^"]+)"""",
    ]
    DupFields = ["category->event_name"
 }

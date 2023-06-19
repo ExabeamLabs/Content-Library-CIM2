@@ -12,7 +12,6 @@ cef-cloud-system-info = {
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?Z)""",
     """destinationServiceName =({app}[^=]+?)\s+(\w+=|$)""",
-    """dproc=({process_name}[^=\[\]]+?)\s+(\w+=|$)""",
 # log_level is removed
     """"TenantId":"({tenant_id}[^"]+)""",
     """"Computer":"({host}[^"]+)""",
