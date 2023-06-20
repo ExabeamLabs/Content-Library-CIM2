@@ -21,7 +21,8 @@ Fields = [
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
 """<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[^<]+)</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
-  ]
+"""<Data Name ='TargetDomainName'>({host}[\w\-\.]+)</Data>"""
+]
 ParserVersion = "v1.0.0"
 
 

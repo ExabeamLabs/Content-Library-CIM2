@@ -17,6 +17,7 @@ sonicwall-firewall = {
   Product = Sonicwall
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
+    """time=(\\)?"({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d)"""
     """usr="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[^\\\s"]+))""",
     """\smsg="({additional_info}[^"]+?)\s*"""",
     """\sc=({category_id}\d+)""",

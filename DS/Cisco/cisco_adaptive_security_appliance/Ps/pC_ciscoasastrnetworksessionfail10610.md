@@ -17,8 +17,14 @@ Name = cisco-asa-str-network-session-fail-10610
     """\sfor user\s*'({user}.+?)'\s""",
     """\s({src_interface}[^\s\/]+)/(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))(\(({src_port}\d+)\))?\s+->\s+({dest_interface}[^\s\/]+)/(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?))(\(({dest_port}\d+)\))?""",
 """\shit-cnt\s+({hit_cnt}\d+)\s+(first hit|\d+)""", # interval is removed
+"""\s*outside\/({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\(({dest_port}\d+)\)"""
 # DL Field are removed
   ]
+DupFields = [
+"event_code->failure_code"
+"event_name->failure_reason"
+]
+
 
 
 }

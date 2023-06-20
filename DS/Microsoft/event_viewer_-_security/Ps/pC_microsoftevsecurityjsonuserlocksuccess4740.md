@@ -23,10 +23,12 @@ Fields = [
 """"TargetSid\\?":\\?"({user_sid}[^\\"]+)"""
 """"TargetUserName\\?":\\?"({user}[^\\"]+)"""
 """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
+""""TargetDomainName":"\\*({dest_domain}[^"]+)""""
 ]
 DupFields = [
 "host->dest_host"
 "src_domain->domain"
+"user->dest_user"
 ]
 ParserVersion = "v1.0.0"
 

@@ -22,9 +22,12 @@ Name = proofpoint-tap-cef-email-receive-fail-threatstatus
     """"fromArray":"({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)"""",
     """"threatStatus":"({status}[^"]+)""",
     """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+\.({file_ext}[^"]+))[^"]*?)",\s*"\w+":""",
-    """"recipient":\["({dest_email_address}[^<]+)"],"""
+    """"recipient":\["({dest_email_address}[^<]+)"],""",
+    """proto=({alert_name}[^=]+)\s""",
+    """msg=.*?\[({alert_source}[^\]]+)\]:""",
+    """msg=.*?name:\s*({alert_source}[^\]]+)\]"""
   ]
-  DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_type->alert_name","email_attachment->file_name","src_email_address->external_address","dest_email_address->email_address" ]
+  DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_name->alert_subject","email_attachment->file_name","src_email_address->external_address","dest_email_address->email_address" ]
 
 s-proofpoint-email-in-1 = {
   Vendor = Proofpoint

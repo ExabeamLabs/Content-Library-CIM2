@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-1
       """"SubjectUserName":"(-|SYSTEM|({user}[^"]+?))"""",
       """"SubjectDomainName":"(-|({domain}[^"]+?))""""
       """"ComputerName":"({host}[^"]+)"""
+      """"ParentProcessName":"({parent_process_path}({parent_process_dir}[^"]*?[\\\/]+)?({parent_process_name}[^"\\\/]+))""""
   ]
   DupFields = [ "host->dest_host" ]
 

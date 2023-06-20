@@ -21,8 +21,10 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
      """"domainName"+:\s*"+({domain}[^"]+)"""",
      """"logonLocation"+:\s*"+({location}[^"]+)""""
      """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
-     """status=({result}[^\s]+)"""
+     """status=({result}[^\s]+)""",
+     """msg=.*?\[({alert_source}[^\]]+)\]:"""
   ]
+  DupFields = [ "alert_name->alert_subject" ]
 
 
 }

@@ -580,11 +580,16 @@
 | dummy-new-parser-583               | microsoft-defenderep-json-app-activity-success-clrunbackedmoduleloaded             |
 | dummy-new-parser-584               | microsoft-defenderep-json-process-pipe-create-success-namedpipeevent               |
 | dummy-new-parser-585               | microsoft-defenderep-json-endpoint-activity-success-deviceevents                   |
+| dummy-new-parser-586               | microsoft-defenderep-json-peripheral_storage-remove-success-usbdriveunmounted      |
+| dummy-new-parser-587               | microsoft-defenderep-json-peripheral_storage-insert-success-usbdrivemounted        |
+| dummy-new-parser-588               | microsoft-defenderep-json-script-execute-success-scriptcontent                     |
+| dummy-new-parser-589               | microsoft-defenderep-json-alert-trigger-success-sensitivefileread                  |
 | dummy-new-parser-59                | microsoft-iis-str-http-session-optionsmicrosoftserver                              |
 | dummy-new-parser-590               | microsoft-evsecurity-xml-endpoint-notification-success-5452                        |
 | dummy-new-parser-591               | microsoft-evsecurity-xml-endpoint-notification-success-4692                        |
 | dummy-new-parser-592               | microsoft-evsecurity-xml-endpoint-notification-success-4693                        |
 | dummy-new-parser-593               | microsoft-evsecurity-xml-endpoint-authentication-success-4651                      |
+| dummy-new-parser-594               | microsoft-defenderep-json-process-memory-protect-success-ntprotectvirtualmemory    |
 | dummy-new-parser-6                 | cisco-fp-json-alert-trigger-success-malware                                        |
 | dummy-new-parser-60                | microsoft-iis-str-http-session-optionsoab                                          |
 | dummy-new-parser-61                | microsoft-iis-str-http-session-optionsowa                                          |
