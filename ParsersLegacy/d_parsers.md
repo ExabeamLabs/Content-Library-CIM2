@@ -592,6 +592,10 @@
 | dummy-new-parser-594               | microsoft-defenderep-json-process-memory-protect-success-ntprotectvirtualmemory    |
 | dummy-new-parser-6                 | cisco-fp-json-alert-trigger-success-malware                                        |
 | dummy-new-parser-60                | microsoft-iis-str-http-session-optionsoab                                          |
+| dummy-new-parser-600               | checkpoint-ngfw-kv-certificate-expire-success-trustpoint                           |
+| dummy-new-parser-601               | checkpoint-ngfw-kv-network-traffic-fail-aclmatch                                   |
+| dummy-new-parser-602               | checkpoint-ngfw-kv-network-notification-success-aci                                |
+| dummy-new-parser-603               | microsoft-defenderep-json-endpoint-notification-success-devicefilecertificateinfo  |
 | dummy-new-parser-61                | microsoft-iis-str-http-session-optionsowa                                          |
 | dummy-new-parser-62                | microsoft-iis-str-http-session-optionsrpc                                          |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |

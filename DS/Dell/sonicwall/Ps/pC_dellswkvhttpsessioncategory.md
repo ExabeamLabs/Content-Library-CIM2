@@ -4,13 +4,13 @@
 Name = dell-sw-kv-http-session-category
   ParserVersion = v1.0.0
   Conditions = [
-""" m=97 """,
-"""id=""",
-""" fw=""",
-""" c=1024 """,
-""" pri=""",
-""" src=""",
-""" dst="""
+    """ m=97 """,
+    """id=""",
+    """ fw=""",
+    """ c=1024 """,
+    """ pri=""",
+    """ src=""",
+    """ dst="""
   ]
   Fields = ${SonicwallParsersTemplates.sonicwall-firewall.Fields} [
     """Category="({category}[^"]+)""",

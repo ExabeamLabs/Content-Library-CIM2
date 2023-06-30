@@ -11,10 +11,9 @@ Name = sentinelone-singularityp-json-alert-trigger-success-dnsresolved
     """"src.process.pid":({process_id}\d+)""",
     """"src.process.cmdline":"({process_command_line}.+?)",""",
     """"event.dns.response":"({dns_response}[^"]+")""",
-    """"event.dns.request":"({dns_query}[^"]+")""",
-    """"event.category":"({alert_type}[^"]+)"""
+    """"event.dns.request":"({dns_query}[^"]+")"""
   ]
-  DupFields = [ "host->dest_host", "event_name->alert_name" ]
+  DupFields = [ "host->dest_host"]
 
 json-sentinelone-edr-events = {
     Vendor = SentinelOne

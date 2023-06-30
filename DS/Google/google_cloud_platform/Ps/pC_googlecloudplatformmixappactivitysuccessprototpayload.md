@@ -15,7 +15,6 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
     """"principalEmail":\s*"(?:({email_address}[^"@]+?@({email_domain}[^"@]+))|({user}[^":]+))"""",
     """"methodName":\s*"({operation}[^"]+)""",
-    """"resourceName":\s*"({resource}[^"]+?(\/({object}[^"\/]+))?)"""",
     """"serviceName":\s*"({app}[^"]+)""",
     """\sdproc=({app}[^=]+)\s\w+=""",
     """"bucket_name":"({bucket_name}[^",}]+)""""

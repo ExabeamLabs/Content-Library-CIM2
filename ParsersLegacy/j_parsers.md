@@ -323,10 +323,10 @@
 | json-sentinelone-registry-write-3               | sentinelone-singularityp-json-registry-modify-success-keysecuritychanges            |
 | json-sentinelone-security-alert                 | sentinelone-singularityp-json-alert-trigger-success-processachieved                 |
 | json-sentinelone-singularityp-alert             | sentinelone-singularityp-json-alert-trigger-success-ip                              |
-| json-sentinelone-singularityp-alert-1           | sentinelone-singularityp-json-alert-trigger-success-dnsresolved                     |
 | json-sentinelone-singularityp-alert-2           | sentinelone-singularityp-json-alert-trigger-success-indicators                      |
 | json-sentinelone-singularityp-alert-url         | sentinelone-singularityp-json-alert-trigger-success-url-1                           |
 | json-sentinelone-singularityp-dns-query         | sentinelone-singularityp-json-dns-request-fail-dnsunresolved                        |
+| json-sentinelone-singularityp-dns-query-2       | sentinelone-singularityp-json-alert-trigger-success-dnsresolved                     |
 | json-sentinelone-singularityp-file              | sentinelone-singularityp-json-file-edreventcategory                                 |
 | json-sentinelone-singularityp-process-created-1 | sentinelone-singularityp-json-process-create-success-process                        |
 | json-sentinelone-singularityp-process-network   | sentinelone-singularityp-json-network-session-success-iplisten                      |
