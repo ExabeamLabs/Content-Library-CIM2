@@ -5,7 +5,7 @@ Name = mcafee-atd-json-alert-trigger-success-dlpwindows
   ParserVersion = v1.0.0
   Vendor = McAfee
   Product = Advanced Threat Defense
-  TimeFormat = "MMM dd, YYYY HH:mm:ss a"
+  TimeFormat = "MMM dd, yyyy HH:mm:ss a"
   Conditions = ["""occurred_endpoint""" , """device_class_name""" , """DLP for Windows"""]
   Fields = [
     """"occurred_endpoint":"({time}\w+\s\d\d,\s\d\d\d\d\s\d+:\d\d:\d\d\s(am|AM|pm|PM))""",

@@ -5,7 +5,7 @@ Name = kaspersky-endpointsecurity-xml-alert-trigger-success-security
   Vendor = Kaspersky
   Product = Kaspersky Endpoint Security for Business
   ParserVersion = "v1.0.0"
-  TimeFormat = "YYYY-MM-dd HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
   Conditions = [ """Kaspersky Endpoint Security 10 for Windows""" ]
   Fields = [
     """Result:\s+({result}[^:]+)""",

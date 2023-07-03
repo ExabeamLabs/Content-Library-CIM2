@@ -5,7 +5,7 @@ Name = mcafee-atd-json-alert-trigger-success-threathandled
   ParserVersion = v1.0.0
   Vendor = McAfee
   Product = Advanced Threat Defense
-  TimeFormat = "YYYY-MM-dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [""""detecting_product_name":"MSME"""" , """threat_source_process_name""" , """threat_handled"""]
   Fields = [
     """event_generated_time":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",

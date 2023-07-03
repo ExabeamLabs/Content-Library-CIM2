@@ -13,6 +13,7 @@ Name = cisco-asa-str-ip-assign-fail-722041
     """\sUser\s+<(({domain}[^\\]+)\\)?({user}[^>]+)>""",
     """\sIP\s+<({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>""",
     """ Group\s+<({realm}.+?)>""",
+    """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d).*?%ASA-"""
   ]
 
 

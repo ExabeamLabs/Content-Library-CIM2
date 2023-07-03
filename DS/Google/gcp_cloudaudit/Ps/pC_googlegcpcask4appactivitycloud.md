@@ -20,7 +20,7 @@ Name = google-gcpca-sk4-app-activity-cloud
      """"permission":"({permission}[^"]+)""",
      """"granted":({result}[^,":\}]+)""",
      """requestClientApplication=\s*({app}[^=]+?)\s+\w+=""",
-     """suser=\s*(anonymous|({user}[^=]+?))\s+\w+=""",
+     """suser=\s*(anonymous|({email_address}[^@\s]+?@({email_domain}[^\s@\.]+?\.[^\s]+))|({user}[^=]+?))\s+\w+=""",
      """"region":"({region}[^"]+?)"""",
      """"severity":"({alert_severity}[^"]+?)"""" 
   ]

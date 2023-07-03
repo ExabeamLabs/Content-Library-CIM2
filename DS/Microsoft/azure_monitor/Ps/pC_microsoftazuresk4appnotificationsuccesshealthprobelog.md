@@ -4,7 +4,7 @@
 Name = microsoft-azure-sk4-app-notification-success-healthprobelog
   Vendor = Microsoft
   Product = Azure Monitor
-  TimeFormat = "YYYY-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Conditions = [ """destinationServiceName =Azure""", """"properties":{"""", """category":"FrontDoorHealthProbeLog""" ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)"""",

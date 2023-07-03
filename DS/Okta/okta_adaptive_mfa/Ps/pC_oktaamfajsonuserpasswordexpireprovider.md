@@ -12,7 +12,7 @@ Fields = [
 """"status":\s*"({event_name}[^"]+)"""",
 """"title":\s*"({group_name}[^"]+)"""",
 """"department":\s*"({group_type}[^"]+)"""",
-""""created":\s*"({time}[^"]+)"""",
+"""lastUpdated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)""",
 """"displayName"+:\s*"+({domain}[^\s\\"]+)\\+({user}[^\s"]+)"""
 """"samAccountName":\s*"({user}[^"]+)"""",
 """"email":\s*"({email_address}[^@"\s]+@({email_domain}[^@"\s]+))""""

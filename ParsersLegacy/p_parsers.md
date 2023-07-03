@@ -16,6 +16,7 @@
 | palo-alto-dlp-alert-1                    | pan-aperture-csv-alert-trigger-success-policyviolation                  |
 | palo-alto-file-operations                | pan-aperture-csv-file-success-activitymonitoring                        |
 | palo-alto-logout-1                       | pan-aperture-csv-app-logout-success-signout                             |
+| palo-alto-networks-firewall-connection   | pan-ngfw-csv-network-traffic-success-webbrowsing                        |
 | palo-alto-networks-leef-setip            | pan-gp-leef-vpn-login-success-globalprotect-6                           |
 | palo-alto-networks-leef-system-info      | pan-gp-leef-app-activity-system                                         |
 | palo-alto-networks-leef-vpn-login        | pan-gp-leef-vpn-login-success-userloginsucceeded                        |
