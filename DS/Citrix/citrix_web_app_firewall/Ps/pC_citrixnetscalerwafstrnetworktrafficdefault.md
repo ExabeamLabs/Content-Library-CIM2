@@ -19,7 +19,7 @@ Name = citrix-netscalerwaf-str-network-traffic-default
     """Destination\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)"""
     """Total_bytes_send\s({bytes_out}\d+)"""
     """Total_bytes_recv\s({bytes_in}\d+)"""
-    """\sUser\s({user}[^\s]+)\s"""
+    """\sUser\s(-|({email_address}[^@"\s]+@[^@"\s]+)|({user}[\w.-]+))\s"""
     """Errmsg\s*"({failure_reason}[^"]+?)("|$)"""
   ]
   DupFields = [ "event_name->operation" ]

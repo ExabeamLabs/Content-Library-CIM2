@@ -30,7 +30,7 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){5}(0.0.0.0|({src_translated_ip}(?!::)[a-fA-F\d.:]+))""",
      """TRAFFIC,([^,]*,){6}(0.0.0.0|({dest_translated_ip}(?!::)[a-fA-F\d.:]+))""",
      """TRAFFIC,([^,]*,){7}({rule}[^,]+?)\s*,""",
-     """TRAFFIC,([^,]*,){8}\s*((?:({src_domain}[^\s,\\]+)\\)?({src_user}[^\s,]+)),""",
+     """TRAFFIC,([^,]*,){8}\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({src_domain}[^\s,\\]+)\\)?({src_user}[^\s,]+))),""",
      """TRAFFIC,([^,]*,){9}\s*(?:({dest_domain}[^\s,\\]+)\\)?(({dest_email_address}[^@",\s]+@[^@",\s]+)|({dest_user}[^\s,]+)),"""
      """TRAFFIC,([^,]*,){10}(not-applicable|({network_app}[^,]+?))\s*,""",
      """TRAFFIC,([^,]*,){12}({src_network_zone}[^,]+?)\s*,""",

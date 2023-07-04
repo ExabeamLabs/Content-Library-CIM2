@@ -28,7 +28,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """"zone":"(-|({zone}[^"]+))""""
 """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""""
   ]
-  DupFields = [ "user_id->user_uid"]
+  DupFields = [ "user_id->user_uid", "account->dest_user"]
 
 
 }

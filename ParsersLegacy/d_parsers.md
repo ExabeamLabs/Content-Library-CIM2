@@ -503,6 +503,7 @@
 | dummy-new-parser-483               | amazon-awsguardduty-json-alert-trigger-success-sshbruteforce                       |
 | dummy-new-parser-484               | amazon-awsguardduty-json-database-login-success-rdssuccessfullogin                 |
 | dummy-new-parser-485               | amazon-awsguardduty-json-alert-trigger-success-execinkubesystempod                 |
+| dummy-new-parser-489               | zscaler-ia-kv-http-session-zscalerclient                                           |
 | dummy-new-parser-49                | oracle-pc-json-app-logout-success-sessiondeletesuccess                             |
 | dummy-new-parser-5                 | cisco-securenwanalytics-json-network-session-success-flow_id                       |
 | dummy-new-parser-50                | oracle-pc-json-app-login-fail-authenticationfailure                                |

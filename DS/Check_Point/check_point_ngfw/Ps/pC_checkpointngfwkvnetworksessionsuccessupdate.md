@@ -20,7 +20,7 @@ checkpoint-auth = {
   Fields = [
     """\Wtime:"({time}\d+)""",
     """\W({host}[\w\-.]+) CheckPoint""",
-    """\Wuser:"({user}[^"\s]+)"""",
+    """\Wuser:"(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w.-]+)))"""",
     """\Wuser:"({last_name}[^,]+),\s*({first_name}[\w\s]+\S)\s*\(({user}.+?)\)""",
     """\Wuser:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^\)]+))\)""",
     """\Wsrc:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
