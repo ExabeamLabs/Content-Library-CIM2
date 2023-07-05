@@ -9,7 +9,7 @@ The New-Scale Content Library is an online repository of knowledge and content t
 
 This library reflects the hierarchical framework of the Exabeam Common Information Model. The library is programmaticly generated  from the Exabeam content repository. As changes are made to the information model, or new content is added to the content repository, the New-Scale Content Library is automatically updated to provide fast and easy access &ast;.
  
- * If you are using earlier versions of Advanced Analytics, see the [Content Library](https://github.com/ExabeamLabs/Content-Doc).
+  &ast; If you are using earlier versions of Advanced Analytics, see the [Content Library](https://github.com/ExabeamLabs/Content-Doc).
 
 ## Content
 
