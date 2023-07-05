@@ -4,10 +4,11 @@
 Name = microsoft-o365-cef-app-file-success-displayname
   ParserVersion = v1.0.0
   Product = Microsoft 365
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """destinationServiceName =Office 365""", """"activityDisplayName":"""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """"result"+:"+({result}[^"]+)""",
+    """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """modifiedProperties"+:\[\{[^\}]+\
 cef-microsoft-app-activity = {
   Vendor = Microsoft
