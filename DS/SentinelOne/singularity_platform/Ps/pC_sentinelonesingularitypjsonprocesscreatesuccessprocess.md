@@ -10,8 +10,10 @@ Name = sentinelone-singularityp-json-process-create-success-process
     """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""",
     """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))"""",
     """"src.process.parent.image.path":"+\s*({parent_process}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
+    """process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))""""
     """"src.process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"""",
     """"src.process.pid":({process_id}\d+)""",
+    """process.cmdline":"[\\]*({process_command_line}.+?)","""
     """"src.process.cmdline":"({process_command_line}.+?)",""",
     """"src.process.parent.cmdline":"({parent_process_command_line}.+?)","""
   ]
