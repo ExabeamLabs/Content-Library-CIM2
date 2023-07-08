@@ -156,7 +156,10 @@
 | windows-xml-powershell-process-created-2 | "microsoft-evpowershell-xml-process-create-success-4103                         |
 | wininit-process-info-12                  | "windows-evsystem-xml-endpoint-notification-12                                  |
 | wiz-app-login                            | wiz-w-json-app-login-success-federatedauth                                      |
+| wiz-config-change                        | wiz-w-json-audit_policy-modify-success-settingsdeleted                          |
+| wiz-config-change-1                      | wiz-w-json-configuration-modify-success-rulecreated                             |
 | wiz-delete-user                          | wiz-w-csv-user-delete-success-deleteuser                                        |
+| wiz-network-alert                        | wiz-w-json-alert-trigger-success-ddosattack                                     |
 | wiz-system-info-1                        | wiz-w-mix-app-notification-success-finalizecicdscan                             |
 | wiz-system-info-10                       | wiz-w-csv-endpoint-notification-success-updateissue                             |
 | wiz-system-info-11                       | wiz-w-csv-endpoint-notification-success-updatesaml                              |
@@ -164,6 +167,8 @@
 | wiz-system-info-13                       | wiz-w-csv-endpoint-notification-success-requestconnector                        |
 | wiz-system-info-14                       | wiz-w-csv-endpoint-notification-success-updatecloudconfig                       |
 | wiz-system-info-15                       | wiz-w-csv-report-delete-success-deletereport                                    |
+| wiz-system-info-17                       | wiz-w-json-app-notification-success-devicemodified                              |
+| wiz-system-info-18                       | wiz-w-json-disk-read-success-diskexported                                       |
 | wiz-system-info-2                        | wiz-w-mix-app-notification-success-initiatedisk                                 |
 | wiz-system-info-3                        | wiz-w-csv-endpoint-notification-success-rerunreport                             |
 | wiz-system-info-4                        | wiz-w-csv-user-modify-success-updateuser                                        |
