@@ -16,6 +16,7 @@ Fields = [
 """({alert_type}({alert_name}graph-identity-protection-risk-detection))"""
 """"source":"(generic|({alert_source}({alert_type}[^"]+)))""""
 """"riskType":"(generic|({alert_name}[^"]+))""""
+""""id":"({alert_id}[^"]+)""""
 """"requestId":"({alert_id}[^"]+)""""
 """"riskLevel":"({alert_severity}[^"]+)""""
 """"riskType":"({threat_category}[^"]+)""""

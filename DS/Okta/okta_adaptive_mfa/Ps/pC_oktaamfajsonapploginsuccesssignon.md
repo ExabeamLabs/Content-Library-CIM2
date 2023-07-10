@@ -4,6 +4,10 @@
 Name = okta-amfa-json-app-login-success-signon
   ParserVersion = v1.0.0
   Conditions = [ """"eventType":"policy.evaluate_sign_on"""" ]
+  Fields = ${OktaParserTemplates.s-okta-app-login.Fields} [
+    """"displayMessage":"({additional_info}[^"]+)"""
+    """"eventType":"({operation}[^"]+)"""
+  ]
 
 s-okta-app-login = {
   Vendor = "Okta"
@@ -32,6 +36,7 @@ s-okta-app-login = {
     """"city":\s*"({location_city}[^"]+)""",
     """"state":\s*"({location_state}[^"]+)""",
     """"country":\s*"({location_country}[^"]+)"""
+    """"dtHash":"({hash_md5}[^"]+)"""
    ] 
     DupFields=["app->object"]
  },

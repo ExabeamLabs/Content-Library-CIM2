@@ -262,6 +262,10 @@ ParserVersion = "v1.0.0"
 ${OktaParserTemplates.s-okta-app-login}{
   Name = okta-amfa-json-app-login-success-signon
   ParserVersion = v1.0.0
-  Conditions = [ """"eventType":"policy.evaluate_sign_on"""" 
+  Conditions = [ """"eventType":"policy.evaluate_sign_on"""" ]
+  Fields = ${OktaParserTemplates.s-okta-app-login.Fields} [
+    """"displayMessage":"({additional_info}[^"]+)"""
+    """"eventType":"({operation}[^"]+)"""
+  
 }
 ```

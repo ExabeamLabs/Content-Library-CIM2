@@ -12,7 +12,7 @@ Name = secureauth-login-cef-app-activity-appactivity
   Fields = [
     """\WdeviceCustomDate1=({time}\d{13})""",
     """\Wdvc=({host}.+?)\s+(\w+=|$)""",
-    """\Wsuser=({user}[^\s]+)\s+(\w+=|$)""",
+    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^\s]+))\s+(\w+=|$)""",
     """\Wsrc=({dest_host}.+?)\s+(\w+=|$)""",
     """\WrequestClientApplication=({user_agent}.+?)\s+(\w+=|$)""",
     """\Wmsg=({event_name}.+?)\s+(\w+=|$)"""

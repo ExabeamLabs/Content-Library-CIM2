@@ -35,6 +35,7 @@ cef-microsoft-app-activity = {
     """"actionName":"({operation}[^"]+)""",
     """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
+    """"UserType":"*({user_type}[^,]+)"""
     ]
   DupFields = [ "object->resource" 
 }

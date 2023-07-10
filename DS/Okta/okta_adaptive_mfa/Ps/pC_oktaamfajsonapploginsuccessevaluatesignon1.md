@@ -8,6 +8,8 @@ Name = okta-amfa-json-app-login-success-evaluatesignon-1
     """"os":"({os}[^"]+)""""
     """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
     """"domain":"({domain}[^"]+)""""
+    """"displayMessage":"({additional_info}[^"]+)"""
+    """"eventType":"({operation}[^"]+)"""
   ]
 
 s-okta-app-login = {
@@ -37,6 +39,7 @@ s-okta-app-login = {
     """"city":\s*"({location_city}[^"]+)""",
     """"state":\s*"({location_state}[^"]+)""",
     """"country":\s*"({location_country}[^"]+)"""
+    """"dtHash":"({hash_md5}[^"]+)"""
    ] 
     DupFields=["app->object"]
  },
