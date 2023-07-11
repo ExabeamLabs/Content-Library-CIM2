@@ -6,7 +6,7 @@ Name = cisco-ie-cef-email-attachment
     Vendor = Cisco
     Product = IronPort Email
     TimeFormat = "epoch"
-    Conditions = [ """CEF""", """CISCO|IronPort""", """MID """, """ attachment """, """|Attachment file|""" ]
+    Conditions = [ """CEF""", """CISCO|IronPort""", """MID """, """ attachment """ ]
     Fields = [
 	  """\srt=({time}\d{13})""",
       """MID ({alert_id}\d+) attachment '({email_attachment}[^']+)'""",

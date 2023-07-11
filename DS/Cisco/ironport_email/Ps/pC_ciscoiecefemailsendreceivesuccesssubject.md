@@ -18,7 +18,6 @@ Fields = [
   """\ssuser=({src_email_address}[^\s]+)\s+(\w+=|$)"""
   """\sduser=({email_recipients}[^\s]+)\s+(\w+=|$)"""
   """\sduser=({dest_email_address}[^,\s]+)"""
-  """\scs6=({email_subject}.+?)\s+(\w+=|$)"""
   """\sout=({bytes}\d+)"""
   """\|CISCO\|([^\|]*\|){2}({alert_type}[^\|]+)"""
   """\|CISCO\|([^\|]*\|){3}({alert_name}[^\|]+)"""
