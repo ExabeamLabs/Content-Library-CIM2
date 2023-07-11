@@ -1,7 +1,8 @@
  Security Content c2206.2_97_63.5 (i63.5) Release Notes
 ===============================================
 
-These Release Notes document security content updates from content package c2206.2_63_4_adap (i63.3 & 163.4) to c2206.2_97_63.5 (i63.5) .
+These Release Notes document security content updates from content package c2206.2_63_4_adap (i63.3 & 163.4)
+to c2206.2_97_63.5 (i63.5).
 
 The security content updates listed below include changes to the following areas:
 
