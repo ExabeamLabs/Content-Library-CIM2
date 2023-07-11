@@ -2,7 +2,7 @@
 ===============================================
 
 These Release Notes document security content updates from content package c2206.2_63_4_adap to c2206.2_97_63.5.
-
+These Release Notes document security content updates from content package c2112.2 which is included with Advanced Analytics i62.3. The Release Notes show the updates to content as compared to the previous content package c2204.3 which was released in i62.2.
 The security content updates listed below include changes to the following areas:
 
 * [Parsers](#Parsers)
