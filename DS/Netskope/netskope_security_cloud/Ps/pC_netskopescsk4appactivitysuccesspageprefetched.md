@@ -17,6 +17,8 @@ Name = netskope-sc-sk4-app-activity-success-pageprefetched
     """\Wsuid=(?!\S+@\S+)({user}[^\s@]+)\s*(\w+=|$)"""
     """"activity":\s*"({operation}[^"]+)"""",
     """msg=({additional_info}[^=\.]+)""",
+    """"page":"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?)"""",
+    """"page":"(\w+:\/\/)?({web_domain}[^\\\/"]+)"""
   ]
 
 

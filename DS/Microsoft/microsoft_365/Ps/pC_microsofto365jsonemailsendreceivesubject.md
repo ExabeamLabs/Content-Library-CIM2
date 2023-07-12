@@ -10,11 +10,12 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"MessageTraceId":"""",
     """"SenderAddress":"""",
     """"RecipientAddress":"""",
-    """"Subject":""""
+    """"Subject":"""
   ]
   Fields = [
     """"StartDate":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """"StartDate":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
+    """"Date":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """"Subject":"\s*({email_subject}.+?)\s*"}""",
     """"Subject":"\s*({email_subject}.+?)\s*",""",
     """"Direction":"({direction}[^"]+)"""",

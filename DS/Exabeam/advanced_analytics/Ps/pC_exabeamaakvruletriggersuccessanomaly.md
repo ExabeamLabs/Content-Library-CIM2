@@ -5,13 +5,14 @@ Name = exabeam-aa-kv-rule-trigger-success-anomaly
     ParserVersion = v1.0.0
     Vendor = Exabeam
     Product = Advanced Analytics
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "epoch"
     log_timeFormat = "epoch"
     event_timeFormat = "epoch"
     incident_creation_timeFormat = "epoch"
+    trigger_timeFormat = "epoch"
     Conditions = ["""exabeam-analytics-master""", """base_risk_score="""", """alert_source="anomaly"""", """trigger_type="""", """rule_name="""]
     Fields = [
-      """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s"""
+      """\sincident_creation_time="({time}\d{13})"""",
       """\salert_source="({alert_source}anomaly)""""
       """\sid="({container_id}[^"]+)"""",
       """\sscore="({original_risk_score}\d+)"""",
@@ -36,10 +37,11 @@ Name = exabeam-aa-kv-rule-trigger-success-anomaly
       """\ssrc_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """\ssrc_host="({src_host}[^"]+)"""",
       """\slabels="({asset_labels}[^"]+)"""",
-      """\sincident_creation_time="({incident_creation_time}\d{13})"""",
       """\ssource_event_id="({event_id}[^"]+)"""",
       """\ssession_id="({session_id}[^"]+)""""
+      """\sscore="({rule_severity}\d+)"""", 
     ]
+    DupFields = [ "time -> incident_creation_time", "time -> trigger_time" ]
   
 
 }

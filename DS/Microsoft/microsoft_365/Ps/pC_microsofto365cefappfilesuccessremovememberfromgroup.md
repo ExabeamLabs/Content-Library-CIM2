@@ -26,11 +26,12 @@ cef-microsoft-app-activity = {
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
     """"((?i)callerIpAddress|CIp)":"({src_ip}((\d{1,3}\.){3}\d{1,3}|[A-Fa-f\d]+:[a-fA-F\d:]+))(:({src_port}\d+))?"""",
+    """\"userPrincipalName\":\"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^@"]+)@({domain}[^"]+))""",
     """claims\/(name|upn)":\s*"({email_address}[^@]+@[^"]+)""",
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
-    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
     """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
@@ -38,6 +39,8 @@ cef-microsoft-app-activity = {
     """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,]+)"""
+    """"operationType":"({operation_type}[^"]+)"""
+    """"loggedByService":"({service_name}[^"]+)""""
     ]
   DupFields = [ "object->resource" 
 }
