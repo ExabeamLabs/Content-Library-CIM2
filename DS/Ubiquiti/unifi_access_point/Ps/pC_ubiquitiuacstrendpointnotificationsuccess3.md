@@ -9,9 +9,11 @@ Name = ubiquiti-uac-str-endpoint-notification-success-3
   Conditions = [ """,UAP-AC""", """wevent""" ]
   Fields = [
     """:\d\d:\d\d\s+({host}[\w.-]+)""",
+    """\d\d:\d\d [^\s]+\s({src_mac}[^\s,]+)""",
     """wevent\[\d+\]:({additional_info}[^"]+)""",
-    """({device_name}UAP-AC)"""
+    """({device_name}UAP-AC.+?)\-({firmware_version}\d+\.\d+[^\s:]+)""",
   ]
+  DupFields = [ "device_name->product_name" ]
 
 
 }

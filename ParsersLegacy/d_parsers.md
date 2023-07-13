@@ -597,6 +597,10 @@
 | dummy-new-parser-601               | checkpoint-ngfw-kv-network-traffic-fail-aclmatch                                   |
 | dummy-new-parser-602               | checkpoint-ngfw-kv-network-notification-success-aci                                |
 | dummy-new-parser-603               | microsoft-defenderep-json-endpoint-notification-success-devicefilecertificateinfo  |
+| dummy-new-parser-604               | salesforce-sf-sk4-report-execute-success-report                                    |
+| dummy-new-parser-605               | salesforce-sf-sk4-report-export-success-reportexported                             |
+| dummy-new-parser-606               | salesforce-sf-sk4-app-activity-success-resouceviewed                               |
+| dummy-new-parser-607               | salesforce-sf-sk4-file-read-success-resourceviewed                                 |
 | dummy-new-parser-61                | microsoft-iis-str-http-session-optionsowa                                          |
 | dummy-new-parser-62                | microsoft-iis-str-http-session-optionsrpc                                          |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |

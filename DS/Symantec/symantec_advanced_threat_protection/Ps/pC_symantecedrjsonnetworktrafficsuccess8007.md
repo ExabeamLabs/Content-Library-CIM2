@@ -9,9 +9,10 @@ Name = symantec-edr-json-network-traffic-success-8007
     """"direction_id":({direction}\d)""",
     """"dst_port":({dest_port}\d+)""",
     """"bytes_upload":({bytes_out}\d+)""",
-    """dest_ip":\[?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """dst_ip":\[?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """src_ip":\[?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"type_id":({event_code}8007)"""
+    """"type_id":({event_code}8007)""",
+    """"size":({bytes}\d+)"""
   ]
 
 symantec-parser-template = {
