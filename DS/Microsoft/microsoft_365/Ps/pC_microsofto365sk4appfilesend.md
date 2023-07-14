@@ -44,8 +44,10 @@ o365-activity-template = {
     """Workload"*:\s*"*({resource}[^"]+)"""",
     """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
     """Recipients":\[?"({target}[^\s,;@"]+@({dest_domain}[^\s;,"]+))""",
-    """"ResultStatus":\s*"({result}Success|Succeeded|Failed|Failure)"""
-    """"DeviceProperties":\s*\[\{[^\]]+?(("Value":\s*"({src_host}[^"]+)",\s*"Name":\s*"DisplayName")|("Name":\s*"DisplayName",\s*"Value":\s*"({=src_host}[^"]+)"))\},"""
+    """"ResultStatus":\s*"({result}Success|Succeeded|Failed|Failure)""",
+    """"DeviceProperties":\s*\[\{[^\]]+?(("Value":\s*"({src_host}[^"]+)",\s*"Name":\s*"DisplayName")|("Name":\s*"DisplayName",\s*"Value":\s*"({=src_host}[^"]+)"))\},""",
+    """"os":"({os}[^"]+)"""",
+    """"(browser|BrowserName)":"({browser}[^"]+)""""
   ]
   DupFields = ["operation->event_name"
 }

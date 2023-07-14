@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-endpoint-4624
       """Workstation Name:\s+({src_host_windows}[^\s]+)\s+Source Network"""
       """Workstation Name:\s+({src_host_windows}[^\s]+)\s+Source Network""",
       """Key Length:\s*({key_length}\d+)"""
+      """\sNetwork Account Name:\s*({user}[\w\.\-]{1,40}\$?)@({domain}[^\s]+)"""
     ]
     DupFields = [ "dest_host->host" ]
   

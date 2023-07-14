@@ -10,7 +10,6 @@ microsoft-dns-renew-jp-1 = {
   Vendor = Microsoft
   Product = Windows
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-
   Fields = [
     """({time}\d\d/\d\d/\d\d,\d\d:\d\d:\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)[\+\-]\d+:\d+\s+({host}[\w\-.]+)\s+\[""",

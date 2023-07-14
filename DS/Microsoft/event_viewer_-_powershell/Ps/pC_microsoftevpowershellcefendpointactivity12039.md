@@ -74,7 +74,6 @@ microsoft-windows-cef-powershell = {
         """CEF[^|]+\|([^|]*\|){2}({device_version}[^|]+)""",
         """CEF[^|]+\|([^|]*\|){3}({class_id}[^|]+)""",
         """CEF[^|]+\|([^|]*\|){4}({event_name}.+?)\s*\|(Unknown|({alert_severity}[^|]+?))\|\s*(\w+=|$)""",
-
   
 }
 ```

@@ -10,8 +10,8 @@ Name = microsoft-o365-mix-app-login-success-teamssessionstarted
   Fields = [
     """"CreationTime":"({time}\d+\-\d+\-\d+T\d+:\d+:\d+)"""",
     """"Workload":"({app}[^"]+)"""",
-    """"UserId":"({email_address}[^@]+@({email_domain}[^"]+))"""",
-    """\Wsuser=({email_address}[^@]+@({email_domain}[^\s]+))\s+(\w+=|$)""",
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+""",
+    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?)""",
     """"Operation":"({operation}[^"]+)"""",
     """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"ObjectId":"(Unknown \(Unknown\)|({object}[^"]+))""""

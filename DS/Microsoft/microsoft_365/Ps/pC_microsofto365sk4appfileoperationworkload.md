@@ -22,7 +22,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
     """"ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}[^"\\]*?))\s*"""",
     """"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)""",
-    """"UserAgent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*",""",
+    """"(U|u)serAgent\\*"+:[\s\\]*"(|({user_agent}[\s\S]*?))\\*",""",
     """\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}""",
     """"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\
 

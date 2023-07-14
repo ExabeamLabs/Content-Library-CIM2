@@ -27,7 +27,8 @@ raw-pan-vpn-event  = {
     """GLOBALPROTECT,([^,]*,){15}({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})""",
     """GLOBALPROTECT,([^,]*,){19}"*(|({device_type}[^=]+?))"*\s*,""",
     """GLOBALPROTECT,([^,]*,){10}({src_host}[\w\-\.]+)""",
-    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
+    """,(success|failure),[^,]*?,({session_duration}\d+),"""
   ]
   DupFields = [ "user->src_user" ]  
 },

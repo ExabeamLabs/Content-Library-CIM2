@@ -6,7 +6,8 @@ Name = microsoft-evsecurity-xml-log-disable-1100
   Product = Event Viewer - Security
   Conditions = [ """<EventID>1100<""", """The event logging service has shut down""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Provider Name\\*=('|")({log_name}[^']+)('|")"""
   ]
 
 s-xml-events = {
@@ -33,7 +34,7 @@ s-xml-events = {
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",
     """Client IP: ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """ThreadID(\\)?='({thread_id}\d+)"""
+    """ThreadID(\\)?=('|")({thread_id}\d+)"""
   
 }
 ```

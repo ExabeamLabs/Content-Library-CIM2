@@ -6,7 +6,7 @@ Name = pan-ngfw-csv-network-traffic-success-webbrowsing
   Product = Palo Alto NGFW
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd yyyy HH:mm:ss"
-  Conditions = [ """,DECRYPTION,""", """,web-browsing,""" ]
+  Conditions = [ """,DECRYPTION,""" ]
   Fields = [
    """:\d\d:\d\d\s+({host}[\w\-\.]+)\s"""
    """({event_category}DECRYPTION)""" 
@@ -15,7 +15,7 @@ Name = pan-ngfw-csv-network-traffic-success-webbrowsing
    """,DECRYPTION,([^,]*,){20}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),(?:[^,]*,){3}(?:|({protocol}[^,]+)),({result}[^,]+),"""
    """DECRYPTION,([^,]*,){39}({policy_name}[^,]+),"""
    """DECRYPTION,([^,]*,){92}({src_host}[\w\-\.]+),"""
-   """({operation}web-browsing)"""
+   """,DECRYPTION,([^,]*,){10}({app}[^,]+),"""
    """,DECRYPTION,([^,]*,){7}({rule}[^,]+),"""
    """,DECRYPTION,([^,]*,){12}({src_network_zone}[^,]+),({dest_network_zone}[^,]+),"""
   ]

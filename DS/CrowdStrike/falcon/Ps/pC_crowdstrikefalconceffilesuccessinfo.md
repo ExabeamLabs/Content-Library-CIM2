@@ -18,13 +18,13 @@ Fields = [
 """\"event_simpleName\":\"({event_code}[^\"]+)"""
 """\"aid\":\"({aid}[^\"]+)"""
 """\"(ImageFileName|TargetFileName)\":\"({file_path}[^\"]+)"""
-"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({file_name}[^\\\/\"]+\.({file_ext}[^\\\/\"\.\-\_]+))"""
+"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({file_name}[^\\\/\"]+(\.({file_ext}[^\\\/\"\.\-\_]+))?)""""
 """\"UserName\":\"({user}[^\"]+?)\""""
 """\"aip\":\"({aip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"ClientComputerName\":\"({src_host}[^\"]+)"""
 """\"id\":\"({alert_id}[\w-]+?)\""""
 """\"name\":\"({alert_name}[^\"]+?)\""""
-"""\"File({access}Delete|Open|Rename)"""
+"""\"File({operation}Delete|Open|Rename)"""
 ]
 
 

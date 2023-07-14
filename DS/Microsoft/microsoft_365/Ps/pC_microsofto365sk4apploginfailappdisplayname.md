@@ -23,9 +23,11 @@ Fields = [
     """"createdDateTime":"({time}[^"]+)""",
     """"countryOrRegion":"({country_code}[^"]+)""",
     """"additionalDetails":"({additional_info}[^"]+)""",
+    """"deviceInformation":"(|({src_host}[\w\-.]+?));(|({os}[^;]+?));(|({browser}[^"]+?));?"""",
     """"operatingSystem":"({os}[^"]+)""",
     """"browser":"({browser}[^"]+)""",
-    """login-({result}failed)"""
+    """login-({result}failed)""",
+    """"signinErrorCode":({failure_code}\d+)"""
   ]
 
 

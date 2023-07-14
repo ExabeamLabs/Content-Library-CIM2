@@ -11,6 +11,7 @@ Name = microsoft-o365-cef-app-file-success-memberadded
     """"Workload"+:"+({app}[^"]+)"""
     """"Key"+:"+ClientName"+,"+Value"+:"+({client_name}[^"]+)"""
     """"UPN"+:"+(({dest_email_address}[^@\s"]+?@[^@\s"]+?)|({dest_user}[^@",\s]+))""""
+    """"Key":"OsName","Value":"({os}[^"]+)""""
 ]
 
 cef-microsoft-app-activity = {

@@ -20,6 +20,7 @@ cef-defender-atp.Fields} [
     """MD5"+:"+({hash_md5}[^"]+)""",
     """"SHA1"+:(null|"+({hash_sha1}[^",]+)"+),""",
     """"SHA256"+:(null|"+({hash_sha256}[^",]+)"+),"""
+    """"InitiatingProcessAccountName"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
   
 }
 ```

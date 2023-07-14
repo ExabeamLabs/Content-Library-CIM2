@@ -22,7 +22,9 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """Object:\s*[^$]+Object Name:(-|({object_name}[^\s]+))""",
     """Process:\s*Process ID:\s*({process_id}[^\s]+)""",
     """Process:\s*([^$]+?)Process Name:\s*({process_path}(?:({process_dir}.+?)[\\\/]+)?({process_name}[^\s\\\/]+))\s+Permissions Change:""",
-    """<Data Name =('|")SubjectUserName('|")>({user}[^<]+)<"""
+    """<Data Name =('|")SubjectUserName('|")>({user}[^<]+)<""",
+    """Permissions Change:[\s\S]*?({attribute}[^<]+?)\s*<""",
+    """Permissions Change:[\s\S]*?New Security Descriptor:[^\S<]*({permissions}[^<]+?)\s*<"""
   ]
   DupFields = ["process_name -> file_name"]
 

@@ -9,7 +9,7 @@ Name = microsoft-rras-kv-authentication-success-authsuccess
   Conditions = [ """RoutingDomainID-""", """CoID= {""", """has connected and has been successfully authenticated""" ]
   Fields = [
     """CoID=\{({session_id}[^\{\}]+?)\}""",
-    """:\s*The user (({domain}[^\\\/]+?)[\\\/]+)?({user}[^\\\/]+?) has connected""",
+    """:\s*The user (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_doamin}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?)) has connected""",
     ]
 
 

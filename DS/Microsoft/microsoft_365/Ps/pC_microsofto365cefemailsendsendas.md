@@ -19,7 +19,7 @@ o365-dlp-email-out = {
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
     """"ResultStatus\\*"+:[\s\\]*"+({result}[^"\\]+)""",
     """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"UserId\\*"+:[\s\\]*"+({email_address}[^"\\@]+@[^"\\@]+)""",
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_id}[^"]+)))"+""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
     """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"SendOnBehalfOfUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",

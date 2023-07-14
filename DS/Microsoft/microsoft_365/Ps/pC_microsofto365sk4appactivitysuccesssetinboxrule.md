@@ -19,7 +19,7 @@ Name = microsoft-o365-sk4-app-activity-success-setinboxrule
     """UserId":"({email_address}[^"\\]+@({domain}[^"]+)[^"]+)"""",
     """UserId":"(\\.+)?\/({full_name}[^,\\"]+)\\"\s*on behalf""",
     """UserId":"(\\.+)?\/({last_name}[^,]+),\s*({first_name}[^\\"]+)\\"\s*on behalf""",
-    """UserId":"({email_address}[^"\\]+@({domain}[^"]+)[^"]+)"""",
+    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
     """destinationServiceName =({app}.+?)\s*filePath"""
     """({app}Office 365)"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)""",

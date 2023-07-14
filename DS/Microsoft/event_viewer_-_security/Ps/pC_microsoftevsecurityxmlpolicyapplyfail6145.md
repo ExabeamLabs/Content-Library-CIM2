@@ -19,7 +19,9 @@ Name = microsoft-evsecurity-xml-policy-apply-fail-6145
     """<Keywords>({action}[^<]+)<\/Keywords>""",
     """<Opcode>({severity}[^<]+)<\/Opcode>""",
     """<Message>\s*({additional_info}[^<]+?)\s*<\/Message>""",
+    """<Data Name\\*='GPOList'>({policy_name}[^<]+)<"""
   ]
+  DupFields = [ "error_code->failure_code" ]
 
 
 }

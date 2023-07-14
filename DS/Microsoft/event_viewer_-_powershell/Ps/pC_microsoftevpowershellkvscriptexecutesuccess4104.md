@@ -29,6 +29,7 @@ Name = microsoft-evpowershell-kv-script-execute-success-4104
     """Creating Scriptblock text\s*\([^)]+\):\s*({scriptblock_text}.+?)\s*ScriptBlock ID:"""
     """providername="+({provider_name}[^"]+)""",
     """\Weventrecordid="+({event_id}\d+)"""",
+    """\susername=\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
   ]
 
 

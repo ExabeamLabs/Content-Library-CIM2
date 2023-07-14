@@ -110,7 +110,12 @@
 | dummy-new-github-parser-13         | github-g-json-app-authentication-success-businessssoresponse                       |
 | dummy-new-github-parser-14         | github-g-json-app-notification-success-packagespackageversionpublished             |
 | dummy-new-github-parser-15         | github-g-json-branch-create-success-pullrequestcreate                              |
+| dummy-new-github-parser-16         | github-g-sk4-repository-member-add-success-memberevent                             |
+| dummy-new-github-parser-17         | github-g-sk4-repository-delete-success-deleteevent                                 |
+| dummy-new-github-parser-18         | github-g-sk4-repository-create-success-createevent                                 |
+| dummy-new-github-parser-19         | github-g-sk4-repository-pull-success-pullrequestevent                              |
 | dummy-new-github-parser-2          | github-g-json-repository-pull-success-gitfetch                                     |
+| dummy-new-github-parser-20         | github-g-sk4-repository-push-success-pushevent                                     |
 | dummy-new-github-parser-3          | github-g-json-repository-push-success-gitpush                                      |
 | dummy-new-github-parser-4          | github-g-json-branch-modify-success-pullrequestmerge                               |
 | dummy-new-github-parser-5          | github-g-json-app-activity-success-preparedworkflowjob                             |

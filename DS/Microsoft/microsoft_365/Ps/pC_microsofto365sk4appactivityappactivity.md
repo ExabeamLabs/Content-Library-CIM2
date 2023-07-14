@@ -15,7 +15,7 @@ Name = microsoft-o365-sk4-app-activity-appactivity
     """\WsourceServiceName =({resource}.+?)\s+(\w+=|$)""",
     """"activityResultStatus":"({result}[^"]+)"""",
     """"targetResourceType":"({object_type}[^"]+)"""",
-    """"userPrincipalName":"(({email_address}[^@"]+?@[^"]+)|({user}[^"]+))"""",
+    """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"targets":\[\{.*?"objectId":"({object_id}[^"]+)"""",
     """"activityDateInMillis":({time}\d{13})""",
     """"targets":\[\{.*?"@odata.type":"({additional_info}[^"]+)"""",

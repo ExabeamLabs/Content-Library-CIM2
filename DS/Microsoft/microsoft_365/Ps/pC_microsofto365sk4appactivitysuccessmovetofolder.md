@@ -17,11 +17,11 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """additional_info="({additional_info}[^=]+?)(\s+\w+="|$)""",
     """msg=({additional_info}[^=]+?)\srequest=""",
     """user_email="({email_address}[^"@\s]+@({domain}[^"@\s]+))"""",
-    """UserId":"({email_address}[^"\\]+@({domain}[^"]+))""",
     """app="({app}[^"]+)"""",
     """destinationServiceName =({app}.+?)\sdevice""",
     """UserId":"(\\.+)?\/({full_name}[^,\\"]+)\\"\s*on behalf""",
     """UserId":"(\\.+)?\/({last_name}[^,]+),\s*({first_name}[^\\"]+)\\"\s*on behalf"""
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
     """"Name":"MoveToFolder","Value":"({object}[^"]+?)\s*""""
     """"ObjectId":"(Unknown|Not Available|({object}[^"]+?))\s*""""

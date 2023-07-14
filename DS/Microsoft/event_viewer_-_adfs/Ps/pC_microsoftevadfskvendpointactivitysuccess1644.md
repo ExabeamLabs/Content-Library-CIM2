@@ -26,7 +26,8 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
     """Dirty pages modified:\s*({dirty_pages_modified}\d+)""",
     """Search time \(ms\):\s*({search_time}\d+)""",
     """Attributes Preventing Optimization:\s*({attributes_preventing_optimization}.*?)\s+User:""",
-    """User:\s*(({domain}[^\\\s"]+)\\+)?\s*(CN\s*=|\s*)({user}[^\\\s",]+)"""
+    """User:\s*(({domain}[^\\\s"]+)\\+)?\s*(CN\s*=|\s*)(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """\sUser:\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s"""
   ]
 
 

@@ -16,7 +16,8 @@ Name = microsoft-o365-cef-app-activity-success-addmailboxpermission
      """Name":"AccessRights","Value":"({additional_info}[^"]*)"""",
      """destinationServiceName =(|({app}.+?))(\s+\w+=|\s*$)""",
      """ClientIP":"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]?(:\d{5})""",
-     """duser=([^=]+\/)?({object}.+?)(\s+\w+=|\s*$)"""
+     """duser=([^=]+\/)?({object}.+?)(\s+\w+=|\s*$)""",
+     """"OriginatingServer":"({src_host}[\w\-.]+)\s"""
    ]
 
 

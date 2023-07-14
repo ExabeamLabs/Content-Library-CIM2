@@ -26,6 +26,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | AVI Networks   | [Avi Networks Software Load Balancer](DS/AVI_Networks/avi_networks_software_load_balancer/ds_avi_networks_avi_networks_software_load_balancer.md)<br>                     |
 | Axway          | [Axway Gateway](DS/Axway/axway_gateway/ds_axway_axway_gateway.md)<br>             |
 | Azure AD Identity Protection         | [Azure AD Identity Protection](DS/Azure_AD_Identity_Protection/azure_ad_identity_protection/ds_azure_ad_identity_protection_azure_ad_identity_protection.md)<br>          |
+| Azure ATP      | [Azure ATP](DS/Azure_ATP/azure_atp/ds_azure_atp_azure_atp.md)<br>                 |
 | Azure Monitor  | [Azure Monitor](DS/Azure_Monitor/azure_monitor/ds_azure_monitor_azure_monitor.md)<br>                   |
 | Badge          | [Badge](DS/Badge/badge/ds_badge_badge.md)<br>               |
 | Banyan Security| [Banyan Security](DS/Banyan_Security/banyan_security/ds_banyan_security_banyan_security.md)<br>         |
