@@ -4,7 +4,7 @@ Product: Sysmon
 ---------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  698  |  141   |        133         |       8        |    8    |
+|  704  |  141   |        133         |       8        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

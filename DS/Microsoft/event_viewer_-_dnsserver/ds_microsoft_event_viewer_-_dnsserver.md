@@ -4,7 +4,7 @@ Product: Event Viewer - DNSServer
 ---------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  503  |   56   |        118         |       2        |    2    |
+|  509  |   56   |        118         |       2        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

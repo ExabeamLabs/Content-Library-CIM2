@@ -4,7 +4,7 @@ Product: F5 Advanced Web Application Firewall
 ---------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  607  |   99   |        122         |       6        |    6    |
+|  613  |   99   |        122         |       6        |    6    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

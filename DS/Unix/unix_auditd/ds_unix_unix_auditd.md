@@ -4,7 +4,7 @@ Product: Unix Auditd
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  649  |  116   |        130         |       12       |   12    |
+|  655  |  116   |        130         |       12       |   12    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

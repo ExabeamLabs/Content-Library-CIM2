@@ -4,7 +4,7 @@ Product: Cisco Adaptive Security Appliance
 ------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  829  |  195   |        145         |       15       |   15    |
+|  835  |  195   |        145         |       15       |   15    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

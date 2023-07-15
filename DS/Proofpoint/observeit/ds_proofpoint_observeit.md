@@ -4,7 +4,7 @@ Product: ObserveIT
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  588  |  100   |        124         |       3        |    3    |
+|  594  |  100   |        124         |       3        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

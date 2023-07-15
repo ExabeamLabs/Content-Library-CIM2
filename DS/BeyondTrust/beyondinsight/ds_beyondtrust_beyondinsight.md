@@ -4,7 +4,7 @@ Product: BeyondInsight
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  600  |   95   |        123         |       11       |   11    |
+|  606  |   95   |        123         |       11       |   11    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

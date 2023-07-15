@@ -4,7 +4,7 @@ Product: Carbon Black CES
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  678  |  137   |        127         |       7        |    7    |
+|  684  |  137   |        127         |       7        |    7    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

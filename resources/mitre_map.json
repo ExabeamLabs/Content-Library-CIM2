@@ -773,9 +773,9 @@
             "score": 4
         }, 
         {
-            "comment": "24 rules", 
+            "comment": "28 rules", 
             "techniqueID": "T1218.005", 
-            "score": 24
+            "score": 28
         }, 
         {
             "comment": "16 rules", 
@@ -783,9 +783,9 @@
             "score": 16
         }, 
         {
-            "comment": "2 rules", 
+            "comment": "4 rules", 
             "techniqueID": "T1218.007", 
-            "score": 2
+            "score": 4
         }, 
         {
             "comment": "2 rules", 
@@ -793,9 +793,9 @@
             "score": 2
         }, 
         {
-            "comment": "2 rules", 
+            "comment": "4 rules", 
             "techniqueID": "T1218.008", 
-            "score": 2
+            "score": 4
         }, 
         {
             "comment": "43 rules", 
@@ -988,9 +988,9 @@
             "score": 25
         }, 
         {
-            "comment": "116 rules", 
+            "comment": "124 rules", 
             "techniqueID": "T1218", 
-            "score": 116
+            "score": 124
         }, 
         {
             "comment": "45 rules", 

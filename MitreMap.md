@@ -113,9 +113,9 @@ MITRE ATT&CK® Framework for Enterprise
 | T1218.002 | [Signed Binary Proxy Execution: Control Panel](https://attack.mitre.org/techniques/T1218/002)<br><br>                                                     | 4     |
 | T1218.003 | [Signed Binary Proxy Execution: CMSTP](https://attack.mitre.org/techniques/T1218/003)<br><br>                                                             | 4     |
 | T1218.004 | [Signed Binary Proxy Execution: InstallUtil](https://attack.mitre.org/techniques/T1218/004)<br><br>                                                       | 13    |
-| T1218.005 | [T1218.005](https://attack.mitre.org/techniques/T1218/005)<br><br>                                                                                        | 21    |
-| T1218.007 | [Signed Binary Proxy Execution: Msiexec](https://attack.mitre.org/techniques/T1218/007)<br><br>                                                           | 2     |
-| T1218.008 | [T1218.008](https://attack.mitre.org/techniques/T1218/008)<br><br>                                                                                        | 2     |
+| T1218.005 | [T1218.005](https://attack.mitre.org/techniques/T1218/005)<br><br>                                                                                        | 23    |
+| T1218.007 | [Signed Binary Proxy Execution: Msiexec](https://attack.mitre.org/techniques/T1218/007)<br><br>                                                           | 4     |
+| T1218.008 | [T1218.008](https://attack.mitre.org/techniques/T1218/008)<br><br>                                                                                        | 4     |
 | T1218.009 | [Signed Binary Proxy Execution: Regsvcs/Regasm](https://attack.mitre.org/techniques/T1218/009)<br><br>                                                    | 2     |
 | T1218.010 | [Signed Binary Proxy Execution: Regsvr32](https://attack.mitre.org/techniques/T1218/010)<br><br>                                                          | 15    |
 | T1218.011 | [Signed Binary Proxy Execution: Rundll32](https://attack.mitre.org/techniques/T1218/011)<br><br>                                                          | 24    |

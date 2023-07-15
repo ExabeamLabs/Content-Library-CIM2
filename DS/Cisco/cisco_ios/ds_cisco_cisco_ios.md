@@ -4,7 +4,7 @@ Product: Cisco IOS
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  588  |   85   |        125         |       5        |    5    |
+|  594  |   85   |        125         |       5        |    5    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

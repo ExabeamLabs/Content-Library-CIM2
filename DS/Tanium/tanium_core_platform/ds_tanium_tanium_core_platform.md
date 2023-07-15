@@ -4,7 +4,7 @@ Product: Tanium Core Platform
 -----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  551  |   79   |        122         |       4        |    4    |
+|  557  |   79   |        122         |       4        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

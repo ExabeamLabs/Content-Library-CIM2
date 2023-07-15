@@ -4,7 +4,7 @@ Product: Event Viewer - Application
 -----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  559  |   82   |        121         |       3        |    3    |
+|  565  |   82   |        121         |       3        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

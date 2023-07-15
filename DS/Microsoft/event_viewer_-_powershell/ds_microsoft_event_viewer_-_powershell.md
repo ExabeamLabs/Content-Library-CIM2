@@ -4,7 +4,7 @@ Product: Event Viewer - PowerShell
 ----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  559  |   82   |        121         |       2        |    2    |
+|  565  |   82   |        121         |       2        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
