@@ -8,6 +8,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4770-1
   Conditions = [ """MSWinEventLog""", """4770 Microsoft-Windows-Security-Auditing""", """A Kerberos service ticket was renewed""" ]
   Fields = [
     """({event_name}A Kerberos service ticket was renewed)""",
+    """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\w{3}\s\d{2}\s\d{2}:\d{2}:\d{2}\s\d{4})""",
     """({event_code}4770)""",
     """(Information|Audit Success|Success Audit)\s+({host}[\w.\-]+)\s+""",

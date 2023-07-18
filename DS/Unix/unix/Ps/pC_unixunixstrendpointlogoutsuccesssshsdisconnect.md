@@ -7,7 +7,7 @@ Name = unix-unix-str-endpoint-logout-success-sshsdisconnect
   Fields = ${DLUnixParsersTemplates.unix-events-1.Fields}[
     """({event_name}SSHS_DISCONNECT)""",
     """IP: ({src_ip}[a-fA-F:\d\.]+)\)""",
-    """SSH user (\(null\)|({user}[^\s]+))""",
+    """SSH user (\(null\)|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
   ]
 
 unix-events-1 = {

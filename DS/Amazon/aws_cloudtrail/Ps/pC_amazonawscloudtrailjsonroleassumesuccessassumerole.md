@@ -13,7 +13,7 @@ Name = amazon-awscloudtrail-json-role-assume-success-assumerole
       """"userIdentity":\{("[^,]+,)*"principalId\\?"+\s*:\s*\\?"+?({principal_id}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"attributes":\{("[^,]+,)*"mfaAuthenticated"\\?:\s*\\?"({mfa}[^"]+?)\\?"""",
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({assumed_role_arn}[^"]+)\\?""""
-      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
+      """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ))"+\s*[,\]\}]""",
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"+\s*[,\]\}]""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"+\s*[,\]\}]""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
@@ -28,13 +28,13 @@ Name = amazon-awscloudtrail-json-role-assume-success-assumerole
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
       """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
       """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?""""
-      """"+requestParameters[^\}]*?roleArn\\?"+:\s*\\?"({role_arn}[^"]+\/({role}[^"]+))\\?"+""",
+      """"+requestParameters[^\}]*?roleArn\\?"+:\s*\\?"({role_arn}[^"]+\/({role_name}[^"]+))\\?"+""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
       """"+responseElements":\{"credentials":\{("[^,]+,)*"expiration\\?":\s*\\?"({session_expiration}[^"]+?)\\?"""", 
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({session_arn}[^"]+)\\?""""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["role->account","assumedRoleId->role_id"]
+  DupFields = ["role_name->account","assumedRoleId->role_id"]
 
 aws-cloudtrail-user-template = {
     Fields = [

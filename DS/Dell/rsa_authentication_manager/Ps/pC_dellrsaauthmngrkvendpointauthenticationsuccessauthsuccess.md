@@ -14,7 +14,7 @@ syslog-rsa-auth {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Fields = [
     """({host}[\w\-.]+) \d+ ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ) \S+ SINGLEPOINT""",
-    """USERNAME="(unknown|({user}[^\s"]+))""",
+    """USERNAME="(unknown|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
     """RESULT="({result}[^"]+)""",
     """authenticationType="?({auth_method}[^",]+)""",
     """UserAgent=({user_agent}[^"=,]+)""",

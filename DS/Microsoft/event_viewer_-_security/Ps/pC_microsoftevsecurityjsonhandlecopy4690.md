@@ -5,11 +5,11 @@ Name = microsoft-evsecurity-json-handle-copy-4690
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "epoch_sec"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"EventID":4690""", """An attempt was made to duplicate a handle to an object""" ]
   Fields = [
     """"EventTime":({time}\d{10})""",
-    """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",    
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}An attempt was made to duplicate a handle to an object)"""

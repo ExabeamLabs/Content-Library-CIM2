@@ -11,8 +11,8 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-2
     """({event_name}An attempt was made to register a security event source)""",
     """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))"""
     """({event_code}4904)""",
     """\sAccount Name:\s*(|-|({user}.+?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}.+?))\s*Process:""",

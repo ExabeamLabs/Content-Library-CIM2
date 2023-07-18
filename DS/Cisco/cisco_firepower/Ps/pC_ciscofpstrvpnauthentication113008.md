@@ -13,7 +13,7 @@ Name = cisco-fp-str-vpn-authentication-113008
     """({time}\d+ \w+ \d+ \d+:\d+:\d+)"""
     """%FTD-\w+?-?({priority}\d+)-({event_code}\d+)"""
     """-113008:\s+({event_name}AAA transaction status ACCEPT)"""
-    """ user\s*=? ({user}[^\s]+)"""
+    """ user\s*=? (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\-\.]{1,40}))"""
     ]
 
 

@@ -5,7 +5,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "yyyy:MM:dd-HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
 """session opened for user""",
 """(uid=""",
@@ -14,7 +14,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
   ]
   Fields = [
 """(::ffff:)?({host}[\w\-.]+)\s+pam_unix""",
-"""({time}\d+-\d+-\d+T\d+:\d+:\d+[\+\-]\d+:\d+)""",
+"""({time}\d+-\d+-\d+T\d+:\d+:\d+)((\.\d+)?[\+\-]\d+:\d+)""",
 """session opened for user ({account}.+?) by""",
 """\(uid=({user_id}\d+)\)""",
 """(::ffff:)?({host}[\w.\-]+) sshd ({login_id}\d+) authpriv""",

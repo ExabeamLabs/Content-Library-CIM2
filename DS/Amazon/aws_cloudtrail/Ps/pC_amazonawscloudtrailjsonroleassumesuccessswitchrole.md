@@ -5,12 +5,12 @@ Name = amazon-awscloudtrail-json-role-assume-success-switchrole
   TimeFormat = """yyyy-MM-dd'T'HH:mm:ssZ"""
   Conditions = [ """AwsConsoleSignIn""", """"eventName":"SwitchRole"""" ]
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
-  """"+additionalEventData":\{("[^,]+,)*"RedirectTo\\?"+:\s*\\?"({url}[^"]+\/({role}[^"]+))\\?"+""",
+  """"+additionalEventData":\{("[^,]+,)*"RedirectTo\\?"+:\s*\\?"({url}[^"]+\/({role_name}[^"]+))\\?"+""",
   """"+additionalEventData":\{("[^,]+,)*"SwitchTo\\?":\s*\\?"({role_arn}[^"]+?)\\?"""",
   """"+additionalEventData":\{("[^,]+,)*"SwitchFrom\\?":\s*\\?"({source_role}[^"]+?)\\?"""",
   ]
   ParserVersion = v1.0.0
-  DupFields = ["role->account"]
+  DupFields = ["role_name->account"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon

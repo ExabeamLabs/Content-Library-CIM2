@@ -18,7 +18,7 @@ Name = microsoft-evpowershell-kv-script-execute-success-4104
     """({event_code}4104)""",
     """AccountName":"(SYSTEM|({user}[^"]+))"""",
     """Domain":"(NT AUTHORITY|({domain}[^"]+))"""",
-    """Microsoft-Windows-PowerShell\s+(SYSTEM|NETWORK SERVICE|({user}.+?))\s+User""",
+    """Microsoft-Windows-PowerShell\s+(SYSTEM|NETWORK SERVICE|({user}[\w\.-]{1,40}))\s+User""",
     """ComputerName:\s*({host}[\w.-]+)""",
     """TimeStamp:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """User:\s*({user}.+?)\s*\w+:""",

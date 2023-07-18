@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """4656""", """A handle to an object was requested""", """Computer""" ]
   Fields = [
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4656\s""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)\s(AM|PM|am|pm)""",
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A handle to an object was requested)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*({user}\S+)\s+Account Domain:""",

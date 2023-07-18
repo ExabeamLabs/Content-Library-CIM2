@@ -11,7 +11,7 @@ Name = sigsci-sigsci-kv-app-activity-authenticate
     """Peer MAC Address:"""
   ]
   Fields = [
-    """Subject:\s*Security ID:\s*({user}[^\s\/]+)\/*({domain}[^\s]+)?""",
+    """Subject:\s*Security ID:\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\/*({domain}[^\s]+)?""",
     """Account Name:\s*\s*(-|({account_name}[^\s]+))""",
     """Account Domain:\s*\s*(-|({account_domain}[^\s]+))""",
     """Logon ID:\s*\s*({login_id}[^\s]+)""",

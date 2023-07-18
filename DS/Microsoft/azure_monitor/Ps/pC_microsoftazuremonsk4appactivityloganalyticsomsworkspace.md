@@ -8,9 +8,9 @@ Name = microsoft-azuremon-sk4-app-activity-loganalyticsomsworkspace
 
 cef-cloud-system-info = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
-    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?Z)""",
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """destinationServiceName =({app}[^=]+?)\s+(\w+=|$)""",
 # log_level is removed
     """"TenantId":"({tenant_id}[^"]+)""",

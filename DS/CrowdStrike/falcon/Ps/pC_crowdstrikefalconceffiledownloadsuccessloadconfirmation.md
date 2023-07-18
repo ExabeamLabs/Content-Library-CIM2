@@ -33,7 +33,7 @@ Fields = [
 """src-account-name":"({account_name}[^"]+)"""
 """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
 """"name":"({event_name}[^"]+)""""
-"""UserName":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[^"\s]+))""""
+""""UserName":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
 """"ContextProcessId":"({process_guid}[^"]+)""""
 """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"Size":"({bytes}\d+)""""

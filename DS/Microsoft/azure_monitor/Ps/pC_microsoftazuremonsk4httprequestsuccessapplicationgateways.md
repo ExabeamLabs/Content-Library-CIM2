@@ -12,9 +12,9 @@ Name = microsoft-azuremon-sk4-http-request-success-applicationgateways
 azure-ad-activity-1 = {
    Vendor = Microsoft
    Product = Azure Monitor
-   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
    Fields = [
-     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
+     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
      """"userPrincipalName(\\)?":(\\)?"({email_address}[^"\\]+)""",
      """"OperationName":"({operation}[^"]+)"""",
      """"Result":"({result}[^",]+)"""",

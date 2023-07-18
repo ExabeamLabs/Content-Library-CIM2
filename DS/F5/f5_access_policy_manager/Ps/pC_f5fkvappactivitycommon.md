@@ -33,6 +33,7 @@ Name = f5-f-kv-app-activity-common
    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d+:\d+\s({vpn_server}[^\s]+)"""
    """hostname' set to '({src_host}[\w\-.]+)""",
    """"timestamp":"({time}\d{10})"""
+   """attr.userPrincipalName' set to '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
  ]
   DupFields = [ "vpn_server->realm" ]
 

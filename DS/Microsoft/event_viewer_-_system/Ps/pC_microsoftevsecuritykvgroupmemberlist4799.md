@@ -4,14 +4,16 @@
 Name = microsoft-evsecurity-kv-group-member-list-4799
   Vendor = Microsoft
   Product = Event Viewer - System
-  TimeFormat = "MMM dd HH:mm:ss yyyy"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = "v1.0.0"
   Conditions = [ """4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = [
+    """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
     """({event_code}4799)""",
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|({host}[\w\-.]+))""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A security-enabled local group membership was enumerated)""",
     """Subject:\s*[^"]+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
     """Subject:\s*[^"]+?Account Name:\s*(-|({user}[^\s]+))""",

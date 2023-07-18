@@ -5,11 +5,12 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-4672-4
   Vendor = Microsoft
   Product = Event Viewer - Security 
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"EventID":4672""", """Special privileges assigned to new logon""", """"Microsoft-Windows-Security-Auditing"""" ]
   Fields = [
     """({event_name}Special privileges assigned to new logon)""",
 	  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_code}4672)""",
     """"ComputerName":"({host}[^"]+)"""",
     """Account Name:\s*(\\t|\\r|\\n)*({user}.+?)\s*(\\t|\\r|\\n)*Account Domain""",

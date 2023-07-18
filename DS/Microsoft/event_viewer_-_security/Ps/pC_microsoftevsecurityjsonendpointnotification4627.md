@@ -5,13 +5,13 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
   Vendor = Microsoft
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"EventID":4627,""", """Group membership information""" ]
   Fields = [
     """({event_name}Group membership information)""",
     """({event_code}4627)""",
     """"Hostname"+:"+({host}[^",]+)""",
-    """"EventTime"+:\s*"+({time}[^",]+)""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"SubjectUserSid"+:"+(SYSTEM|NT AUTHORITY|\\NULL SID|({user_sid}[^"]+))""",
     """"SubjectUserName"+:"+(-|({account_name}[^"]+))""",
     """"SubjectDomainName"+:"+(-|({account_domain}[^"]+))""",

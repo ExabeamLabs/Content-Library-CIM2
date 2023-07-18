@@ -16,7 +16,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """"aip":\s*"({aip}[a-fA-F:\d.]+)"""",
     """"LogonType":"({login_type}\d+)"""",
     """"name":"({event_name}[^"]+)"""",
-    """"LogonDomain":"({domain}[^"]+)"""",
+    """"LogonDomain":"\s*({domain}[^"]+)"""",
     """"ClientComputerName":"({src_host}[\w\-\.]+)"""",
     """"RemoteAddressIP4":"({dest_ip}[A-Fa-f:\d\.]+)""""
   ]

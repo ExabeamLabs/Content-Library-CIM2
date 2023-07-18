@@ -5,12 +5,12 @@ Name = microsoft-evsecurity-json-endpoint-notification-4985
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
-  TimeFormat = "MMM dd HH:mm:ss yyyy"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = ["""The state of a transaction has changed""", """"EventID":4985"""]
   Fields = [
     """({event_name}The state of a transaction has changed)""",
     """({event_code}4985)""",
-    """"EventTime":"({time}\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Hostname":"({host}[^"]+)"""",
     """"SeverityValue":"({severity}[^,]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",

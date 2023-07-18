@@ -8,7 +8,7 @@ Name = dell-rsaauthmngr-kv-endpoint-authentication-userstepup
   Conditions = [ """ SINGLEPOINT """, """ USER_STEPUP_AUTHN """, """REQUEST_CONTEXT_ID="""" ]
   Fields = [
     """({host}[\w\-.]+) \d+ ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ) \S+ SINGLEPOINT""",
-    """USERNAME="({user}[^\s"]+)""",
+    """USERNAME="(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     """APP_NAME="({app}[^"]+)""",
     """SENSITIVITY_LEVEL="({sensitivity_level}[^"]+)""",
     """TENANT="({tenant}[^"]+)""",

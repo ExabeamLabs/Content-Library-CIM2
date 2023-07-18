@@ -8,7 +8,7 @@ Name = amazon-awscloudtrail-json-role-assume-renewrole
   ParserVersion = "v1.0.0"
   Conditions = [ """AwsConsoleSignIn""", """"eventName":"RenewRole"""" ] 
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
-  """"+additionalEventData.+?RoleRenewed\\?"+:\s*\\?"({role_arn}[^"]+\/({role}[^\\"]+))\\?"+""",
+  """"+additionalEventData.+?RoleRenewed\\?"+:\s*\\?"({role_arn}[^"]+\/({role_name}[^\\"]+))\\?"+""",
   """"+additionalEventData.+?RedirectTo\\?"+:\s*\\?"({url}[^"]+)\\?"+""",
   ]
 

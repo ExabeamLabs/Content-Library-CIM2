@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """({event_code}4688)""",
     """ComputerName =({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s"""
     """(Success Audit|information)\s+({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))"""
-    """Process Name:\s*({process_path}({process_dir}[^"]+?[\\]*)?)?({process_name}[^\\\/";]+)[\s\\n;]*Token Elevation Type:""",
+    """Process Name:\s*({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/;\s\n]+))[\s\\n;]*Token Elevation Type:""",
     """Target Subject:.+?Account Name:((\\)*(\\r|\\t|\\n))*\s*(-|SYSTEM|({dest_user}[^\\\s]+))((\\)*(\\r|\\t|\\n))*\s*""",
     """Creator Subject:.+?Account Name:\s*(-|SYSTEM|({user}[^\s]+?))\s""",
     """Account Domain:((\\)*(\\t|\\r|\\n))*\s*(-|({domain}[^\s]+?))[\\n\s;]*((\\)*(\\t|\\r|\\n))*Logon ID:""",

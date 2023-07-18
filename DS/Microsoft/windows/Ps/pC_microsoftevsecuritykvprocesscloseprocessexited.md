@@ -4,8 +4,9 @@
 Name = microsoft-evsecurity-kv-process-close-processexited
   ParserVersion = v1.0.0
   Conditions = [ """A process has exited""" ]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
-    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)"""",
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Computer":"({host}[^"]+)"""",
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
     """\d+\s+({host}[^\s]+)\sMSWinEventLog""",

@@ -14,7 +14,7 @@ Name = unix-unix-kv-process-create-success-command
     """({time}\w+ \d+ \d\d:\d\d:\d\d)\s*:\s*({user}[^:]+?)\s*:""",
     """"agent_hostname":"(::ffff:)?({host}[^"]+)"""",
     """\d\d:\d\d:\d\d (::ffff:)?({host}[\w.\-]+)""",
-    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d\d:\d\d) (::ffff:)?({host}[\w.\-]+)\s""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)((\.\d+)?(\+|-)\d\d:\d\d) (::ffff:)?({host}[\w.\-]+)\s""",
     """timestamp":"({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}Z?)""",
     """; USER=({account}[^;]+?)\s*;""",
     """; COMMAND=({process_command_line}[^;]+?)\s*(;|$|")""",

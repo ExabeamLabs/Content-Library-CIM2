@@ -10,7 +10,7 @@ Name = cisco-asa-str-process-create-success-111008
   Fields = [
     """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)""",
     """%ASA\-({priority}\d+)\-({event_code}\d+)""",
-    """User\s+'(({domain}[^\\']+)\\+)?({user}[^']+)'""",
+    """User\s+'(({domain}[^\\']+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\-\.]{1,40}))'""",
     """({event_name}executed)\s+the\s+'({process_command_line}[^']+)\s*'"""
   ]
 

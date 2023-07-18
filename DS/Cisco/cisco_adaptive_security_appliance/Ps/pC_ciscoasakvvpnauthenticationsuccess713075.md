@@ -13,7 +13,7 @@ cisco-events-1 = {
   Fields = [
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """Session=({session_id}\S+),""",
-    """User(=|\s)<?({user}[^,>]+)""",
+    """User(=|\s)<?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\-\.]{1,40}))([\>,]+)?\s""",
     """\sGroup\s*<({group_name}[^>]+)>"""
   
 }

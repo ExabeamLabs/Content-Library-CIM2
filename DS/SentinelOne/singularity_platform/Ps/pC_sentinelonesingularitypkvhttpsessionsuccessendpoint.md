@@ -29,7 +29,7 @@ sentinelone-activity {
       """\\nagent_version:\s*"+({user_agent}[^"]+)""",
       """\ssizeBytes:\s*({bytes}\d+)""",
       """user\s*\{[^\}]+?sid:[^"]*?"+({user_sid}[^"\\]+)""",
-      """user\s*\{\\n\s+name:\s+[\\\/]?"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))""",
+      """user\s*\{(\\n|\\t|\\t)*\s+name:\s+[\\\/]?"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-]{1,40}\$?)))"""",
       """"app-username":"((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))\s*"""",
       """\ssha256:\s*[\\\/]?"+({hash_sha256}[^"\\]+)""",
       """\smd5:\s*[\\\/]?"+({hash_md5}[^"\\]+)""",

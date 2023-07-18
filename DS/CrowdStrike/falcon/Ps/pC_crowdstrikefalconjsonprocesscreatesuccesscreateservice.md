@@ -13,7 +13,7 @@ Name = crowdstrike-falcon-json-process-create-success-createservice
     """"timestamp":\s*"*({time}\d{13})"""",
     """"ServiceImagePath":"(|({process_path}({process_dir}(?:(\w+:\\+)?[^:"]+?)?[\\\/])?({process_name}[^"\\\s]+?)))(\s|")""",
     """"ServiceDisplayName":"({service_name}[^"]+)""",
-    """"UserName":"({user}[^"\s]+)"""",
+    """"UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"ServiceDescription":"({additional_info}[^"]+)"""
     """"aid":"({aid}[^"]+)""",	
     """"event_simpleName":"({event_code}CreateService)"""",

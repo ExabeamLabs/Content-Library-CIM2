@@ -5,7 +5,7 @@ Name = microsoft-o365-sk4-app-login-fail-appdisplayname
   Vendor = Microsoft
   Product = Microsoft 365
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
 """"appDisplayName":"""
 """failed to login"""
@@ -20,7 +20,7 @@ Fields = [
     """"city":"({location_city}[^"]+)""",
     """"state":"({location_state}[^"]+)""",
     """"failureReason":"({failure_reason}[^"]+)""",
-    """"createdDateTime":"({time}[^"]+)""",
+    """"(created|signin)DateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"countryOrRegion":"({country_code}[^"]+)""",
     """"additionalDetails":"({additional_info}[^"]+)""",
     """"deviceInformation":"(|({src_host}[\w\-.]+?));(|({os}[^;]+?));(|({browser}[^"]+?));?"""",

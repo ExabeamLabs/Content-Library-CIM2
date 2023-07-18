@@ -5,7 +5,7 @@ Name = zscaler-ia-cef-http-session-spriv
   ParserVersion = v1.0.0
   Vendor = Zscaler
   Product = Zscaler Internet Access
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [
 """|Zscaler|NSSWeblog|""",
 """requestClientApplication=""",

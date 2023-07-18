@@ -5,7 +5,7 @@ Name = trendmicro-tippingpoint-str-alert-trigger-success-tcp-1
   ParserVersion = v1.0.0
   Product = TippingPoint NGIPS
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """00000001-0001-0001-0001-""","\ttcp\t" ]
+  Conditions = [ """00000001-0001-0001-0001-""","""\ttcp\t""" ]
   Fields = ${TippingPointParserTemplates.tippingpoint-sms-alert-template.Fields} [
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+({protocol}tcp)""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+tcp(\s+[^\s]+){4}\s+({hit_cnt}\d+)\s+""",

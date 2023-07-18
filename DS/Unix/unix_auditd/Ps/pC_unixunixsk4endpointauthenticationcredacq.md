@@ -17,7 +17,7 @@ unix-template-dl = {
       """CEF:([^\|]*\|){4}({additional_info}[^\|]+)""",
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=({user}[^\s]+)""",
+      """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     
 }
 ```

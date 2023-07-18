@@ -4,7 +4,11 @@
 Name = microsoft-evsecurity-xml-group-modify-success-4735
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [ """<Message>A security-enabled local group was changed""", """<EventID>4735</EventID>""" ]
+  Fields = ${DLWindowsParsersTemplates.windows-events-1.Fields}[
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+  ]
 
 windows-events-1 = {
   Vendor = Microsoft

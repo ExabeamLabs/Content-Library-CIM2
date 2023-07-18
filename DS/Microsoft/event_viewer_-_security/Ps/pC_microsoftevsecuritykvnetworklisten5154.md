@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-kv-network-listen-5154
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MMM dd HH:mm:ss yyyy"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """5154""", """The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections""" ]
   Fields = [
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
+        """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
         """({event_code}5154)""",
         """({event_name}The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections)""",
