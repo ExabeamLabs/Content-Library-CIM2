@@ -25,7 +25,7 @@ Name = netskope-sc-json-network-traffic-traffictype
     """\"+src_country\"+:\s*\"+({country_code}[^\",]+)""",
     """\"srcip\":\s*\"({src_translated_ip}[A-Fa-f:\d.]+)\"""",
     """\"+dstip\"+:\s*\"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\"policy\": \"({alert_name}[^\",]+)""",
+    """"policy":\s*"({alert_name}[^",]+)""",
     """\"+browser\"+:\s*\"+({browser}[^\",]+)""",
     """\"+useragent\"+:\s*\"+({user_agent}[^\"]+)"""
   ]

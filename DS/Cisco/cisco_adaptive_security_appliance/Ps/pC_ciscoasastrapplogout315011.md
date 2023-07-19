@@ -8,7 +8,8 @@ Name = cisco-asa-str-app-logout-315011
   TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """-315011""", """%ASA-""" ]
   Fields = [
-    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d):\s*%ASA-({priority}\d+)""",
+    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
+    """%ASA-({priority}\d+)""",
     """({event_code}315011)""",
     """({event_name}disconnected by SSH server)""",
 # trust_point is removed

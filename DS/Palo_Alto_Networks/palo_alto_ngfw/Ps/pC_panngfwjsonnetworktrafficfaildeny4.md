@@ -1,10 +1,10 @@
 #### Parser Content
 ```Java
 {
-Name = pan-ngfw-json-alert-trigger-success-file
-  Conditions = [ """"LogType":"THREAT"""", """"SubType":"file"""", """"Action":""" ]
+Name = pan-ngfw-json-network-traffic-fail-deny-4
+  Conditions = [ """"LogType":"TRAFFIC"""", """"Subtype":"end"""", """"Action":"deny"""" ]
   Fields = ${PaloAltoParsersTemplates.paloalto-vpn.Fields}[
-    """"Action":"({action}[^"]+)"""",
+    """"Action":"({result}[^"]+)"""",
     """"NATSource":"({src_translated_ip}[a-fA-F\d:.]+)""",
     """"NATDestination":"({dest_translated_ip}[a-fA-F\d:.]+)""",
     """"NATSourcePort":({src_translated_port}\d+)""",
@@ -12,10 +12,7 @@ Name = pan-ngfw-json-alert-trigger-success-file
     """"Bytes":({bytes}\d+),""",
     """"BytesSent":({bytes_out}\d+),""",
     """"BytesReceived":({bytes_in}\d+),""",
-    """"URLCategory":"({category}[^"]+)"""",
-    """"Rule":"({alert_name}[^"]+)""",
-    """"VendorSeverity":"({alert_severity}[^"]+)""",
-    """"LogType":"({alert_type}[^"]+)"""
+    """"URLCategory":"({category}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

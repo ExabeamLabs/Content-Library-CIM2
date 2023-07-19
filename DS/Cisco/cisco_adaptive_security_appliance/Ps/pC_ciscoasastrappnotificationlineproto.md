@@ -4,10 +4,12 @@
 Name = cisco-asa-str-app-notification-lineproto
   ParserVersion = v1.0.0
   Product = Cisco Adaptive Security Appliance
+  TimeFormat = "MMM dd yyyy HH:mm:ss.SSS"
   Conditions = [ """%LINEPROTO-""", """UPDOWN:""" ]
   Fields = ${DLCiscoParsersTemplates.cisco-system-info.Fields} [
     """({event_code}%LINEPROTO-[^:]+)""",
     """\-UPDOWN:\s*({event_name}[^:=]+?)(\s\w+[:=.]|\s*$)"""
+    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d.\d\d\d)"""
   ]
 
 cisco-system-info = {

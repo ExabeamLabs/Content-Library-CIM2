@@ -2,7 +2,7 @@
 ```Java
 {
 Name = pan-ngfw-json-network-traffic-fail-deny-1
-  Conditions = [ """"LogType":"TRAFFIC"""", """"Subtype":"deny"""", """"LogSetting":"CDL"""" ]
+  Conditions = [ """"LogType":"TRAFFIC"""", """"Subtype":"deny"""", """"Action":"""" ]
   Fields = ${PaloAltoParsersTemplates.paloalto-vpn.Fields}[
     """"Action":"({result}[^"]+)"""",
     """"NATSource":"({src_translated_ip}[a-fA-F\d:.]+)""",

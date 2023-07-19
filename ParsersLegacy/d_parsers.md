@@ -116,6 +116,9 @@
 | dummy-new-github-parser-19         | github-g-sk4-repository-pull-success-pullrequestevent                              |
 | dummy-new-github-parser-2          | github-g-json-repository-pull-success-gitfetch                                     |
 | dummy-new-github-parser-20         | github-g-sk4-repository-push-success-pushevent                                     |
+| dummy-new-github-parser-21         | github-g-json-app-activity-success-apirequest                                      |
+| dummy-new-github-parser-22         | github-g-json-repository-member-add-success-teamaddmember                          |
+| dummy-new-github-parser-23         | github-g-json-app-activity-success-issuecommentupdate                              |
 | dummy-new-github-parser-3          | github-g-json-repository-push-success-gitpush                                      |
 | dummy-new-github-parser-4          | github-g-json-branch-modify-success-pullrequestmerge                               |
 | dummy-new-github-parser-5          | github-g-json-app-activity-success-preparedworkflowjob                             |
@@ -579,6 +582,7 @@
 | dummy-new-parser-574               | microsoft-defenderep-json-process-open-success-apicall                             |
 | dummy-new-parser-575               | microsoft-defenderep-json-scheduled-task-delete-success-scheduledtaskdeleted       |
 | dummy-new-parser-576               | microsoft-defenderep-json-alert-trigger-success-childprocessaudited                |
+| dummy-new-parser-577               | microsoft-nsgflowlogs-sk4-network-traffic-success-nsgflowvents                     |
 | dummy-new-parser-58                | microsoft-iis-str-http-session-optionsmapi                                         |
 | dummy-new-parser-580               | microsoft-defenderep-json-script-execute-success-powershellcommand                 |
 | dummy-new-parser-581               | microsoft-defenderep-json-process-create-success-processcreatedusingwmiquery       |
@@ -606,7 +610,10 @@
 | dummy-new-parser-605               | salesforce-sf-sk4-report-export-success-reportexported                             |
 | dummy-new-parser-606               | salesforce-sf-sk4-app-activity-success-resouceviewed                               |
 | dummy-new-parser-607               | salesforce-sf-sk4-file-read-success-resourceviewed                                 |
+| dummy-new-parser-608               | pan-ngfw-json-network-traffic-fail-deny-2                                          |
+| dummy-new-parser-609               | pan-ngfw-json-network-traffic-fail-deny-3                                          |
 | dummy-new-parser-61                | microsoft-iis-str-http-session-optionsowa                                          |
+| dummy-new-parser-610               | pan-ngfw-json-network-traffic-fail-deny-4                                          |
 | dummy-new-parser-62                | microsoft-iis-str-http-session-optionsrpc                                          |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |
 | dummy-new-parser-64                | microsoft-iis-str-http-session-getautodiscover                                     |
