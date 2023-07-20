@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-kv-process-close-processexited
     """Logon ID:\s*({login_id}[^\s]+)""",
     """Process ID:\s*({process_id}[^\s]+)""",
     """"ProcessName":"({process_path}(({process_dir}[^"]+?)\\+)?({process_name}[^"\\]+))"""",
-    """Account Name:\s*({user}[^\s]+)""",
+    """Account Name:\s*[\\t\\r\\n]*({user}[\w\.\-]{1,40}\$?)""",
     """Exit Status:\s*({result}[^\s"]+)"""
   ]
 

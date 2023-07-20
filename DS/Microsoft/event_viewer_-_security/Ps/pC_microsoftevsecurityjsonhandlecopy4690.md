@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}An attempt was made to duplicate a handle to an object)"""
-    """"SubjectUserName":"({user}[^"]+)""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",

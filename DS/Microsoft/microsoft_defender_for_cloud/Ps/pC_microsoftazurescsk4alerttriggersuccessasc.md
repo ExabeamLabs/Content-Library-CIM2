@@ -13,7 +13,7 @@ Fields = [
 """"category":"({alert_type}[^"]+)"""
 """"logonIp":({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"netBiosName":"(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9]+:[A-Fa-f0-9:]+))|({src_host}[\w\-.]+))"""
-"""domainName":((?i)null|({domain}"[^,]+))"""
+"""domainName":"((?i)null|({domain}[^,]+?))\s*""""
 """"description":"({additional_info}[^"]+)"""
 """"severity":"({alert_severity}[^"]+)"""
 """"id":"({alert_id}[^"]+)"""

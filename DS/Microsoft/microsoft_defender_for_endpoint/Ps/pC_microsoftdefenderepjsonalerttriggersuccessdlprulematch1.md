@@ -15,7 +15,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """"Actions":\s*\["({result}[^"]+)"""",
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
-    """"From":\s*"({email_address}[^@"]+@[^@"]+\.[^@"]+)"""",
+    """"From":\s*"\s*\|?\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)""",
     """"To":\s*\["(({dest_email_address}[^@\]"]+@[^\.\]"]+\.[^\]"]+)|({target}[^\]"]+))"\]""",
     """"To":\s*\[({target}[^\]]+)\]""",
     """src-account-name":"({account_name}[^"]+)""",

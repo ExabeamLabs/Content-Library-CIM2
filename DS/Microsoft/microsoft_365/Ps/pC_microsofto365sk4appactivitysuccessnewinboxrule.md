@@ -21,7 +21,7 @@ Name = microsoft-o365-sk4-app-activity-success-newinboxrule
     """user_email="({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
     """"Value":"(?:smtp:)?.+?@({dest_domain}[^"]+)"""",
     """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
-    """"UserId":"({user}[\w\.\-]{1,40}\$?@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?(@({domain}[^"]+))?))\s*"""",
     """destinationServiceName =({app}.+?)\s*filePath""",
     """({app}Office 365)"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
