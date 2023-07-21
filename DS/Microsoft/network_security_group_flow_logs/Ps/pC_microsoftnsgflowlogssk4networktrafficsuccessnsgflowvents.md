@@ -14,7 +14,7 @@ Name = microsoft-nsgflowlogs-sk4-network-traffic-success-nsgflowvents
 		"""\WrequestClientApplication=(|({app}.+?))(\s+\w+=|\s*$)"""	
 		"""category\":\"({operation}[^"]+)"""
 		""""operationName":"({operation}[^"]+)""""
-		"""rule":"({ruleName}[^"\\]+)"""
+		"""rule":"({rule}[^"\\]+)"""
 		"""\Wdproc=({event_name}({category}[^,;\=]+)[^\=]*?)\s+(\w+=|$)"""
 		""""mac":\s*"({src_mac}[^"]+)"""
   ]

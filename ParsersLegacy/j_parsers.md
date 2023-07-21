@@ -267,6 +267,7 @@
 | json-netskope-app-activity-18                   | netskope-sc-json-app-activity-success-share                                         |
 | json-netskope-app-login                         | netskope-sc-json-app-login-success-loginsuccessful                                  |
 | json-netskope-failed-app-login                  | netskope-sc-json-app-login-fail-loginfailed                                         |
+| json-nozomi-guardian-security-alert             | nozomi-guardian-json-alert-trigger-success-n2os                                     |
 | json-o365-activity-2                            | microsoft-m365auditlogs-json-app-activity-appactivity                               |
 | json-o365-activity-3                            | microsoft-o365-sk4-file-app-userkey                                                 |
 | json-o365-app-login                             | microsoft-o365-sk4-app-login-success-loggedin                                       |
