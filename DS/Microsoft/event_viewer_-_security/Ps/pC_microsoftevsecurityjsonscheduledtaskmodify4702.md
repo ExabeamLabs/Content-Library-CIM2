@@ -5,10 +5,10 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"EventID":4702""", """A scheduled task was updated""",""""TaskName":"""" ]
   Fields = [
-    """"EventTime":\s*"?({time}[^",]+)""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}A scheduled task was updated)""",

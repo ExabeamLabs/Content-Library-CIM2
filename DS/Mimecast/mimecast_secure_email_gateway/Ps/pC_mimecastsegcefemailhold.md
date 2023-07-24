@@ -26,7 +26,6 @@ Name = mimecast-seg-cef-email-hold
     """"fileHash":"({hash_md5}[^"]+)""",
     """"(?:action|actions)":"({action}[^"]+)""",
     """"actionTriggered":"(none|({action}[^"]+))""",
-    """"acc":"({user}[^"]+)""",
     """"SourceIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"result":"({result}[^"]+)""",
     """"subject":"({email_subject}[^"]+)"""

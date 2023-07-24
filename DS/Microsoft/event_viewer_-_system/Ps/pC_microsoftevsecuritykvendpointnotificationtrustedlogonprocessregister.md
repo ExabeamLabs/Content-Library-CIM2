@@ -8,6 +8,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-trustedlogonprocessregister
     TimeFormat = "MMM dd HH:mm:ss yyyy"
     Conditions = [ """Microsoft-Windows-Security-Auditing""", """A trusted logon process has been registered""" ]
     Fields = [
+      """"TimeCreated":"\/Date\(({time}\d{13})"""
       """DetectTime=({time}\d\d\d\d-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2})""",
       """({time}\w{3}\s\d{2}\s\d{2}:\d{2}:\d{2}\s\d{4})""",
       """({event_code}4611)""",

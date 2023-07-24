@@ -102,6 +102,7 @@
 | dummy-new-auth0-parser-7           | auth0-a-json-app-login-success-changeemail                                         |
 | dummy-new-auth0-parser-8           | auth0-a-json-user-password-modify-success-changepassword                           |
 | dummy-new-auth0-parser-9           | auth0-a-json-user-delete-success-userdeletion                                      |
+| dummy-new-aws-parser               | amazon-awscloudtrail-json-file-write-success-objectcreated                         |
 | dummy-new-cloudflare-parser        | cloudflare-waf-json-http-session-firewall                                          |
 | dummy-new-event-6                  | cisco-securenwanalytics-json-network-session-success-serviceid                     |
 | dummy-new-github-parser-1          | github-g-json-repository-create-success-gitclone                                   |
@@ -648,6 +649,15 @@
 | dummy-new-parser-664               | microsoft-evapp-str-endpoint-notification-1530                                     |
 | dummy-new-parser-67                | microsoft-iis-str-http-session-getews-1                                            |
 | dummy-new-parser-68                | microsoft-iis-str-http-session-getmapi                                             |
+| dummy-new-parser-680               | microsoft-evsystem-str-service-state-modify-7036-4                                 |
+| dummy-new-parser-681               | microsoft-evsystem-str-endpoint-notification-16                                    |
+| dummy-new-parser-682               | microsoft-evsystem-str-service-state-modify-7040                                   |
+| dummy-new-parser-683               | microsoft-windows-str-endpoint-notification-success-98                             |
+| dummy-new-parser-684               | microsoft-evsecurity-str-scheduled-task-delete-4699                                |
+| dummy-new-parser-686               | microsoft-evsecurity-str-service-create-success-4622                               |
+| dummy-new-parser-687               | microsoft-evsystem-str-endpoint-login-success-7001                                 |
+| dummy-new-parser-688               | microsoft-evsystem-str-policy-apply-1500                                           |
+| dummy-new-parser-689               | microsoft-evsecurity-str-share-create-success-5142                                 |
 | dummy-new-parser-69                | microsoft-iis-str-http-session-getmicrosoftserver                                  |
 | dummy-new-parser-7                 | exabeam-audit-json-alert-case-success                                              |
 | dummy-new-parser-70                | microsoft-iis-str-http-session-getoab                                              |

@@ -5,14 +5,14 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-2
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """An attempt was made to register a security event source""", """4904""" ]
   Fields = [
     """({event_name}An attempt was made to register a security event source)""",
     """<Computer>(::ffff:)?({dest_host}({host}[^<]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
-    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))"""
     """({event_code}4904)""",
     """\sAccount Name:\s*(|-|({user}.+?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}.+?))\s*Process:""",

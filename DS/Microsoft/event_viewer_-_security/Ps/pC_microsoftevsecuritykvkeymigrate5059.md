@@ -3,10 +3,12 @@
 {
 Name = microsoft-evsecurity-kv-key-migrate-5059
   ParserVersion = v1.0.0
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Product = Event Viewer - Security
   Conditions = [ """5059""", """Key migration operation""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9})-\d\d:\d\d\s[^\s]+""",
+    """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({host}[^\s]+)\sMicrosoft-Windows-Security-Auditing""",
     """EventID="*({event_code}\d+)""",
     """({event_name}Key migration operation)""",

@@ -5,10 +5,10 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = Event Viewer - DFS-Replication
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [  """>1102</EventID>""", """<TimeCreated SystemTime"""    ]
   Fields = [
-    """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)""",
+    """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^:<\.]+)""",

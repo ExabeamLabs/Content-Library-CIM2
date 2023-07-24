@@ -4,7 +4,7 @@
 Name = proofpoint-tappod-leef-email-resolvestatus
 Vendor = Proofpoint
 Product = Proofpoint Email Protection
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """"from""""
   """"rcpts""""
@@ -15,7 +15,7 @@ Conditions = [
   """"resolveStatus""""
 ]
 Fields = [
-  """"ts"+:\s*"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}[\+\-]\d{1,4})"""
+  """"ts"+:\s*"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """"host"+:\s*"+\[?({host}[\w\-.]+)\]?""""
   """"from"+:\s*"+({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
   """"rcpts"+:\s*\[({email_recipients}"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"*[^\]]*?)\]"""

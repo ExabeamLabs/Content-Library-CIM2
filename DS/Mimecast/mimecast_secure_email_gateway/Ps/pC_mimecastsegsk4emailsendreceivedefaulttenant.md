@@ -8,7 +8,6 @@ Name = mimecast-seg-sk4-email-send-receive-defaulttenant
   Conditions = [ """CEF:""", """destinationServiceName =Mimecast Email Security""", """dtz=default-tenant""", """request=""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) ([\w.\-]+) """,
-    """"acc":"({user}[^"]+)""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
     """"Dir":"({direction}[^"]+?)"""",
     """"Subject":"(|({email_subject}[^"]+?))([\\]+)?\s*"""",

@@ -5,10 +5,10 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
   Vendor = Microsoft
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>4718</EventID>""", """<Event xmln""", """Correlation ActivityID""" ]
   Fields = [
-    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name[^<>]+?AccessRemoved[^<>]+?>({access_type}[^<>]+?)</Data>""",

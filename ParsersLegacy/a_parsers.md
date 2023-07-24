@@ -192,6 +192,8 @@
 | arbor-network-fail                                    | arbor-a-str-network-traffic-fail-block                                            |
 | arista-networks-awake-security-alert                  | aristanetworks-as-cef-alert-trigger-success-deviceurlpath                         |
 | armis-alert-iot                                       | armis-a-cef-alert-trigger-success-systempolicyviolation                           |
+| armis-alert-iot-1                                     | armis-a-json-alert-trigger-success-systempolicyviolation                          |
+| armis-system-info                                     | armis-a-json-app-notification-success                                             |
 | aruba-controller-ap-protection                        | hp-arubawc-str-app-notification-success-4111                                      |
 | aruba-controller-assoc                                | hp-arubawc-str-network-traffic-4111                                               |
 | aruba-controller-blacklist                            | hp-arubawc-str-app-notification-success-4111-1                                    |

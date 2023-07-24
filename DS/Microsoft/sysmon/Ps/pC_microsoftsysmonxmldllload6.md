@@ -5,10 +5,10 @@ Name = microsoft-sysmon-xml-dll-load-6
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>6</EventID>""", """<EventRecordID>""" ]
   Fields = [
-    """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
+    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({dest_host}({host}[^<>]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",

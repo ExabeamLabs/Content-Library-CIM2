@@ -4,7 +4,7 @@
 Name = sentinelone-singularityp-cef-alert-trigger-threatclassification
     Vendor = SentinelOne
     Product = Singularity Platform
-    TimeFormat = "MMM dd yyyy HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Conditions = [ "CEF:", "|SentinelOne", "|threatClassification=", "|threatDetectingEngine=", "|threatClassifier=" ]
     Fields = [
       """CEF:([^\|]*\|){5}({alert_name}[^\|]+)""",
@@ -13,9 +13,9 @@ Name = sentinelone-singularityp-cef-alert-trigger-threatclassification
       """\WoriginatorName =({src_host}[^\|]+?)((\||\s+)\w+=|\s*$)""",
       """\WeventDesc=({alert_name}[^\|]+?)(\s+-\s+({src_host}[^\|]+?))?((\||\s+)\w+=|\s*$)""",
       """\WeventSeverity=({alert_severity}[^\|]+?)((\||\s+)\w+=|\s*$)""",
-      """\Wrt=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)""",
       """\Wrt=[^=\|]*?({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
       """\Wrt=({time}\w+, \d\d \w+ \d\d\d\d, \d\d:\d\d:\d\d \w+)""",
+      """\Wrt=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """\WfileHash=(N/A|({hash_md5}[^\|]+?))((\||\s+)\w+=|\s*$)""",
       """\WfilePath=(N/A|({file_path}[^\|]+?))((\||\s+)\w+=|\s*$)""",
       """\WfileName =({file_dir}[^\|]*?\\(({user}[^\\\|]+)\\Desktop\\)?)({file_name}[^\\\|]+?({file_ext}[^\\\|\.]+)?)((\||\s+)\w+=|\s*$)""",

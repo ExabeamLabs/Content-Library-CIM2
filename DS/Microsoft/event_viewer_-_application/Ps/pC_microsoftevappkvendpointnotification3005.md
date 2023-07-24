@@ -9,7 +9,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
   Conditions = [ """Event code: 3005""","""Process name:""","""Account name:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}\S+)\s({alert_severity}\S+)""",
-    """Event time:\s*({time}\d+\/\d+\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM|am|pm))""",
+    """Event time:\s*({time}\d+\/\d+\/\d\d\d\d\s\d+:\d\d:\d\d\s(AM|PM|am|pm))""",
     """Event code:\s*({event_code}\d+)""",
     """Event message:\s*({event_name}[^=]+?)\s*Event time:""",
     """Account name:\s*(({domain}[^\\]+)\\)?({user}[^\s]+)""",

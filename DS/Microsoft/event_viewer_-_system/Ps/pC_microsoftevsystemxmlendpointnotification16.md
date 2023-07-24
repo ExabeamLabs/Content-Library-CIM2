@@ -5,12 +5,12 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
   ParserVersion = "v1.0.0"
   Vendor = Microsoft
   Product = Event Viewer - System
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>16</EventID>""", """<Provider Name""","""'Microsoft-Windows-Kernel-General'""" ]
   Fields = [
     """<Computer>({host}[^<]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
+    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",
     """ProcessID\\*='({process_id}\d+)'""",
