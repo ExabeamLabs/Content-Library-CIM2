@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:EC2/SSHBruteForce,""" ]
+  Conditions = [ """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:EC2/SSHBruteForce,""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template-1 = {

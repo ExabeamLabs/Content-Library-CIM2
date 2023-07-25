@@ -3,7 +3,11 @@
 {
 Name = cisco-fp-kv-user-create-success-109201
   ParserVersion = "v1.0.0"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """%FTD-5-109201: """, """UAUTH:""" ]
+  Fields = ${DLLMSCiscoParsersTemplates.cisco-events-1.Fields} [
+  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
+  ]
 
 cisco-events-1 = {
   Vendor = Cisco

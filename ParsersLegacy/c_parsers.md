@@ -228,6 +228,7 @@
 | cef-atp-alert-9                                          | microsoft-atp-cef-alert-trigger-success-directoryservicesroguereplication            |
 | cef-attivo-network-connection                            | attivo-botsink-cef-network-traffic-success-networktrafficsuccess                     |
 | cef-attivo-security-alert                                | attivo-botsink-cef-alert-trigger-success-sshd                                        |
+| cef-aws-cloudtrail-activity                              | amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail                       |
 | cef-aws-cloudwatch-netflow-connection                    | amazon-awscloudwatch-cef-network-traffic-success-cloudwatch                          |
 | cef-aws-guardduty                                        | amazon-awsguardduty-cef-alert-trigger-success-catsecurity                            |
 | cef-aws-guardduty-discovery-alert                        | amazon-awsguardduty-sk4-alert-trigger-success-guardduty                              |
@@ -1199,6 +1200,8 @@
 | cef-pan-gp-app-activity-5                                | pan-ngfw-cef-app-activity-success-ipsec                                              |
 | cef-pan-gp-system-event                                  | pan-gp-cef-app-notification-success-panos                                            |
 | cef-pan-gp-system-event-1                                | pan-gp-cef-app-notification-success-hipmatch                                         |
+| cef-pan-gp-system-event-2                                | pan-gp-cef-app-notification-success-gatewayswitch                                    |
+| cef-pan-gp-system-event-3                                | pan-gp-cef-app-notification-success-gatewayagentmsg                                  |
 | cef-pan-gp-vpn-end                                       | pan-ngfw-cef-vpn-logout-success-logout                                               |
 | cef-pan-gp-vpn-login                                     | pan-ngfw-cef-vpn-login-prelogin                                                      |
 | cef-pan-gp-vpn-login-1                                   | pan-ngfw-cef-vpn-login-prelogin-1                                                    |
@@ -1429,9 +1432,11 @@
 | cef-sentinelone-vigilance-app-activity-1                 | sentinelone-v-cef-app-activity-success-usermodified                                  |
 | cef-sentinelone-vigilance-app-activity-2                 | sentinelone-v-cef-app-activity-success-usercreatedrole                               |
 | cef-sentinelone-vigilance-app-login                      | sentinelone-v-cef-app-login-success-newconsole                                       |
+| cef-sentinelone-vigilance-app-logout                     | sentinelone-v-cef-app-logout-success-newconsolelogout                                |
 | cef-sentinelone-vigilance-failed-app-login               | sentinelone-v-cef-app-login-login-failedconsole                                      |
 | cef-sentinelone-vigilance-security-alert                 | sentinelone-v-cef-alert-trigger-success-activethreat                                 |
 | cef-sentinelone-vigilance-security-alert-1               | sentinelone-v-cef-alert-trigger-success-threatdetected                               |
+| cef-sentinelone-vigilance-system-info                    | sentinelone-v-cef-app-activity-success-mgmt                                          |
 | cef-servicenow-auth-1                                    | servicenow-s-sk4-app-authentication-success-sessionestablished                       |
 | cef-servicenow-auth-2                                    | servicenow-s-sk4-app-authentication-success-externalauthenticationsucceeded          |
 | cef-servicenow-file-operation-2                          | servicenow-s-cef-file-syscreated                                                     |
@@ -2450,6 +2455,7 @@
 | cyberark-privileged-access                               | cyberark-epm-json-user-privilege-use-success-elevationrequest                        |
 | cyberark-process-alert                                   | cyberark-epm-str-alert-trigger-success-detected                                      |
 | cyberark-system-event                                    | cyberark-pam-kv-app-notification-moniterrecord                                       |
+| cyberark-system-info                                     | cyberark-pam-kv-app-notification-success-extradetails                                |
 | cylance-alert                                            | blackberry-protect-kv-alert-trigger-success-threat                                   |
 | cylance-alert-1                                          | blackberry-protect-kv-alert-trigger-success-scriptcontrol                            |
 | cylance-alert-2                                          | blackberry-protect-sk4-alert-trigger-success-cyclaneprotect                          |

@@ -112,6 +112,9 @@
 | adssp-event-password-change-1                         | manageengine-adssp-cef-user-password-modify-success-changepasswordsuccess-1       |
 | adssp-event-password-change-failed                    | manageengine-adssp-cef-user-password-modify-fail-changepassword                   |
 | adssp-event-password-change-failed-1                  | manageengine-adssp-cef-user-password-modify-fail-changepassword-1                 |
+| adssp-system-info                                     | manageengine-adssp-cef-user-password-reset-fail-notification                      |
+| adssp-system-info-1                                   | manageengine-adssp-cef-endpoint-notification-success-mailtoadmin                  |
+| adssp-system-info-2                                   | manageengine-adssp-cef-app-authentication-fail-identifyverification               |
 | airlock-appwhitelisting-app-activity                  | airlock-allowlisting-str-app-activity-success-fileactivity                        |
 | airlock-appwhitelisting-app-activity-1                | airlock-allowlisting-str-app-activity-success-serveractivity                      |
 | airlock-create-folder                                 | airlock-sah-kv-file-write-success-createfolder                                    |

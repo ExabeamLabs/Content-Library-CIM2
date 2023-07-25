@@ -5,7 +5,7 @@ Name = cisco-ac-str-vpn-login-success-113039
     ParserVersion = v1.0.0
     Vendor = Cisco
     Product = AnyConnect
-    TimeFormat = "MMM dd yyyy HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Conditions = [ """AnyConnect parent session started.""", """-113039""", """%FTD-""" ]
     Fields = [
       """({host}[^\s]+)\s+:\s+%FTD-""",

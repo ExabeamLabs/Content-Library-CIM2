@@ -90,6 +90,11 @@
 | dns-system-event-3                 | unix-unixnamed-str-app-notification-success-cname                                  |
 | dns-system-event-4                 | unix-unixnamed-str-app-notification-success-notify                                 |
 | dns-system-event-5                 | unix-unixnamed-str-app-activity-success-lameservers                                |
+| dummy-buildkite-parser-1           | buildkite-bk-json-app-notification-success-api                                     |
+| dummy-buildkite-parser-2           | buildkite-bk-json-app-notification-success-ui                                      |
+| dummy-buildkite-parser-3           | buildkite-bk-json-app-notification-success-webhook                                 |
+| dummy-buildkite-parser-4           | buildkite-bk-json-app-notification-success-schedule                                |
+| dummy-buildkite-parser-5           | buildkite-bk-json-app-notification-success-triggerjob                              |
 | dummy-new-auth0-parser             | auth0-a-json-endpoint-login-fail-invalidrequest-1                                  |
 | dummy-new-auth0-parser-1           | auth0-a-json-app-login-fail-apilimit                                               |
 | dummy-new-auth0-parser-10          | auth0-a-json-endpoint-login-success-exchange                                       |
@@ -413,7 +418,6 @@
 | dummy-new-parser-380               | amazon-awscloudtrail-sk4-user-token-create-success-tokenpost                       |
 | dummy-new-parser-381               | amazon-awscloudtrail-sk4-app-activity-success-backupjobstarted                     |
 | dummy-new-parser-382               | amazon-awscloudtrail-sk4-snapshot-create-success-sharedsnapshotvolumecreated       |
-| dummy-new-parser-383               | proofpoint-tappod-sk4-app-notification-success-dsnserviceunavailable               |
 | dummy-new-parser-384               | crowdstrike-falcon-json-app-notification-success-registerrawinputdevicesetw        |
 | dummy-new-parser-385               | crowdstrike-falcon-json-app-notification-success-processexeconsmbfile              |
 | dummy-new-parser-386               | crowdstrike-falcon-json-app-notification-success-kextload                          |
@@ -494,7 +498,7 @@
 | dummy-new-parser-466               | microsoft-evsecurity-cef-group-member-remove-success-4762                          |
 | dummy-new-parser-467               | microsoft-evsecurity-cef-ds-object-create-success-5137-1                           |
 | dummy-new-parser-468               | microsoft-evsecurity-cef-group-modify-success-4760                                 |
-| dummy-new-parser-469               | amazon-awsguardduty-json-alert-trigger-success-rootcredentialusage                 |
+| dummy-new-parser-469               | amazon-awsguardduty-json-alert-trigger-success-catchall                            |
 | dummy-new-parser-47                | oracle-pc-json-app-activity-success-authfactorinitiated                            |
 | dummy-new-parser-470               | microsoft-evsystem-kv-endpoint-activity-36886                                      |
 | dummy-new-parser-471               | microsoft-evsystem-kv-service-state-modify-7040                                    |
@@ -659,6 +663,14 @@
 | dummy-new-parser-688               | microsoft-evsystem-str-policy-apply-1500                                           |
 | dummy-new-parser-689               | microsoft-evsecurity-str-share-create-success-5142                                 |
 | dummy-new-parser-69                | microsoft-iis-str-http-session-getmicrosoftserver                                  |
+| dummy-new-parser-690               | microsoft-evsecurity-str-endpoint-time-modify-4616                                 |
+| dummy-new-parser-691               | microsoft-evsystem-str-endpoint-logout-success-7002                                |
+| dummy-new-parser-692               | microsoft-adfs-str-user-lock-success-512                                           |
+| dummy-new-parser-693               | microsoft-evsystem-str-endpoint-notification-1085                                  |
+| dummy-new-parser-694               | microsoft-evsystem-str-policy-apply-fail-1112                                      |
+| dummy-new-parser-695               | microsoft-evsecurity-str-dll-load-success-4614                                     |
+| dummy-new-parser-696               | microsoft-windows-str-configuration-load-success-4826                              |
+| dummy-new-parser-697               | microsoft-windows-str-dll-load-success-4610                                        |
 | dummy-new-parser-7                 | exabeam-audit-json-alert-case-success                                              |
 | dummy-new-parser-70                | microsoft-iis-str-http-session-getoab                                              |
 | dummy-new-parser-71                | microsoft-iis-str-http-session-getowa                                              |

@@ -7,8 +7,9 @@ Vendor: ManageEngine
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   1    |         1          |       1        |    1    |
+|   5   |   2    |         2          |       2        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |
-| aws-policy-write | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-AdminPolicy</b>: A critical policy with admin permissions was created in AWS<br> ↳ <b>AWS-UserCreatePolicyAdmin-Org-F</b>: First time this user created an administrative policy in AWS |  • <b>AWS-UserCreatePolicyAdmin-Org</b>: AWS users who created a critical policy |
+| app-activity     | <b>T1098.002 - Account Manipulation: Exchange Email Delegate Permissions</b><br> ↳ <b>EM-InB-Ex</b>: A user has been given mailbox permissions for an executive user<br> ↳ <b>EM-InB-Perm-N-F</b>: First time a user has given mailbox permissions on another mailbox that is not their own<br> ↳ <b>EM-InB-Perm-N-A</b>: Abnormal for user to give mailbox permissions |  • <b>EM-InB-Perm-N</b>: Models users who give mailbox permissions    |
+| aws-policy-write | <b>TA0004 - TA0004</b><br> ↳ <b>AWS-AdminPolicy</b>: A critical policy with admin permissions was created in AWS<br> ↳ <b>AWS-UserCreatePolicyAdmin-Org-F</b>: First time this user created an administrative policy in AWS    |  • <b>AWS-UserCreatePolicyAdmin-Org</b>: AWS users who created a critical policy |

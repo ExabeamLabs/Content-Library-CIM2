@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-guardduty-2
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Trojan:EC2/DGADomainRequest.B"""" ]
+  Conditions = [ """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Trojan:EC2/DGADomainRequest.B"""" ]
   ParserVersion = "v1.0.0"
   Fields = ${AwsGuardDutyParserTemplates.cef-aws-guardduty-security-alert-template.Fields} [
     """platform":[^=]+?"key":"Name","value":"({host}[^"]+)"(,|\}|\])"""

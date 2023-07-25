@@ -1,8 +1,8 @@
 #### Parser Content
 ```Java
 {
-Name = amazon-awsguardduty-json-alert-trigger-success-rootcredentialusage
-  Conditions = [ """"serviceName":"guardduty"""", """"type":"Policy:IAMUser/RootCredentialUsage"""" ]
+Name = amazon-awsguardduty-json-alert-trigger-success-catchall
+  Conditions = [ """"serviceName":"guardduty"""", """"type":""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template = {

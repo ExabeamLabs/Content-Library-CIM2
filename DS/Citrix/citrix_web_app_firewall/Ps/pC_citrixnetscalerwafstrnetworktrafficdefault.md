@@ -5,7 +5,7 @@ Name = citrix-netscalerwaf-str-network-traffic-default
   ParserVersion = v1.0.0
   Vendor = Citrix
   Product = Citrix Web App Firewall
-  TimeFormat = "MM/dd/yyyy:HH:mm:ss z"
+  TimeFormat = "dd/MM/yyyy:HH:mm:ss z"
   Conditions = [ """ : default""", """ Vserver""", """-PPE""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d:\d\d:\d\d:\d\d\s*GMT)\s({host}[^\s]+).*?:\sdefault\s({protocol}[^\s]+)\s({event_name}[^\s]+)"""

@@ -4,6 +4,7 @@
 | tanium-cloud-app-activity              | tanium-cpp-json-app-activity-success-packagespecaudit           |
 | tanium-cloud-app-activity-1            | tanium-cpp-json-app-activity-success-savedactionaudit           |
 | tanium-cloud-app-login                 | tanium-cpp-json-app-login-success-createobject                  |
+| tanium-cloud-app-logout                | tanium-cpp-json-app-logout-success-deleteobject                 |
 | tanium-cloud-failed-app-login          | tanium-cpp-json-app-login-fail-failedcreateobject               |
 | tanium-dns-response                    | tanium-cp-kv-dns-response-success-tanium                        |
 | tanium-file-delete                     | tanium-im-kv-file-delete-success-deletepath                     |

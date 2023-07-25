@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Discovery:IAMUser/AnomalousBehavior"""" ]
+  Conditions = [ """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Discovery:IAMUser/AnomalousBehavior"""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template = {

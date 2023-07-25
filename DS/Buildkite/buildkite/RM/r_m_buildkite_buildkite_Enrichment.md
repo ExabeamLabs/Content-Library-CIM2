@@ -1,8 +1,8 @@
 Rules by Product and UseCase
 ============================
-Vendor: Microsoft
+Vendor: Buildkite
 -----------------
-### Product: [Microsoft DHCP Log](../ds_microsoft_microsoft_dhcp_log.md)
+### Product: [Buildkite](../ds_buildkite_buildkite.md)
 ### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

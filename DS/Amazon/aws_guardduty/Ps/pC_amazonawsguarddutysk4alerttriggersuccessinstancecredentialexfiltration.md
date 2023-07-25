@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS,""" ]
+  Conditions = [ """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS,""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template-1 = {

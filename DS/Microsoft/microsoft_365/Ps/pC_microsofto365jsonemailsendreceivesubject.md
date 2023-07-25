@@ -30,7 +30,8 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"EventType":"({alert_type}[^"]+)"""",
     """"MessageTraceId":"({message_id}[^"]+)"""",
     """"triggered-by":\{"user-email":"({email_address}[^",]+)"""",
-    """Category\s+\[({category}[^\]]+)\]"""
+    """Category\s+\[({category}[^\]]+)\]""",
+    """"Action":"({action}[^"]+)"""
   ]
   DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user"]
  

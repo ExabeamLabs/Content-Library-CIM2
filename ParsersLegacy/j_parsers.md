@@ -134,6 +134,7 @@
 | json-6416                                       | microsoft-evsecurity-sk4-peripheral_storage-insert-success-6416                     |
 | json-8001                                       | microsoft-windows-sk4-app-notification-success-8001                                 |
 | json-alertlogic-network-alert                   | alertlogic-al-json-alert-trigger-success-ids                                        |
+| json-amazon-rds-database-operation              | amazon-ards-json-database-success-databaseactivity                                  |
 | json-auditd-account-switch                      | unix-unix-json-user-switch-success-userstart                                        |
 | json-auditd-process-creation                    | unix-unix-json-process-create-auditd                                                |
 | json-azure-ad-security-alert                    | microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation                    |
@@ -228,6 +229,7 @@
 | json-microsoft-app-activity-6                   | microsoft-o365-sk4-app-file-success-groupupdate                                     |
 | json-microsoft-app-activity-8                   | microsoft-o365-sk4-file-download-success-group                                      |
 | json-microsoft-app-activity-9                   | microsoft-o365-sk4-app-file-success-useradd                                         |
+| json-microsoft-defender-atp-system-event        | microsoft-defenderep-json-alert-trigger-success-incidentname                        |
 | json-microsoft-dns-query                        | microsoft-evdnsserver-json-dns-request-success-qname                                |
 | json-microsoft-mcas-anomaly                     | microsoft-mcas-json-alert-trigger-success-anomalydetection                          |
 | json-microsoft-mcas-anubis                      | microsoft-mcas-json-alert-trigger-success-alertanubisdetection                      |
@@ -262,6 +264,10 @@
 | json-microsoft-o365-file-alert                  | microsoft-m365auditlogs-json-alert-trigger-datagovernance                           |
 | json-microsoft-o365-file-alert-1                | microsoft-m365auditlogs-sk4-alert-trigger-datagovernance                            |
 | json-microsoft-scep-epp-alert                   | microsoft-defenderep-json-alert-trigger-success-trojanprocess                       |
+| json-microsoft-windows-dhcp-1                   | microsoft-mdhcplog-json-dns-record-create-fail-forwardrecord                        |
+| json-microsoft-windows-dhcp-2                   | microsoft-mdhcplog-json-dns-record-create-fail-ptrrecord                            |
+| json-microsoft-windows-dhcp-3                   | microsoft-mdhcplog-json-dns-record-modify-success-operational                       |
+| json-microsoft-windows-dhcp-info                | microsoft-mdhcplog-json-endpoint-notification-success-dhcpadminevents               |
 | json-mwg-web-activity                           | mcafee-wg-json-http-session-amwprobability                                          |
 | json-netskope-app-activity-17                   | netskope-sc-json-app-activity-success-upload                                        |
 | json-netskope-app-activity-18                   | netskope-sc-json-app-activity-success-share                                         |
@@ -299,6 +305,8 @@
 | json-pan-authentication-attempt                 | pan-gp-json-app-authentication-success-beforelogin                                  |
 | json-pan-authentication-attempt-1               | pan-gp-json-app-authentication-success-configuration                                |
 | json-pan-file-alert                             | pan-ngfw-json-alert-trigger-success-file                                            |
+| json-pan-gp-system-event                        | pan-gp-json-endpoint-notification-success-hostinfo                                  |
+| json-pan-gp-system-event-1                      | pan-gp-json-endpoint-notification-success-agentmsg                                  |
 | json-pan-system-general                         | pan-ngfw-json-app-activity-success-subtype                                          |
 | json-pan-system-hipmatch                        | pan-ngfw-json-alert-trigger-success-hipmatch                                        |
 | json-pan-system-userid                          | pan-ngfw-json-app-notification-success-userid                                       |

@@ -3,12 +3,14 @@
 {
 Name = cisco-asa-str-endpoint-login-fail-2960-1
   ParserVersion = "v1.0.0"
+  TimeFormat = "MMM dd yyyy HH:mm:ss.SSS"
   Conditions = [
 """%DOT1X-5-FAIL:"""
 """Authentication failed"""
   ]
   Fields = ${CiscoParsersTemplates.cisco-2960-auth-events.Fields} [
     """({failure_reason}Authentication[^"]+?)\s*"*$"""
+    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
   ]
 
 cisco-2960-auth-events = {

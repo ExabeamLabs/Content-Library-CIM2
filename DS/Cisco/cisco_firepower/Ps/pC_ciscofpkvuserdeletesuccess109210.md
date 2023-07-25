@@ -4,6 +4,10 @@
 Name = cisco-fp-kv-user-delete-success-109210
   ParserVersion = "v1.0.0"
   Conditions = [ """%FTD-5-109210: """, """UAUTH:""" ]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Fields = ${DLLMSCiscoParsersTemplates.cisco-events-1.Fields} [
+  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
+  ]
 
 cisco-events-1 = {
   Vendor = Cisco

@@ -3,7 +3,11 @@
 {
 Name = microsoft-defendercloud-cef-alert-trigger-success-datalossprevention
   ParserVersion = v1.0.0
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """CEF:""", """"category":""", """"DataLossPrevention"""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":""" ]
+  Fields = ${MicrosoftAzureParsersTemplates.cef-azure-alert.Fields} [
+  """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{2}Z)"""
+    ]
 
 cef-azure-alert = {
     Vendor = Microsoft

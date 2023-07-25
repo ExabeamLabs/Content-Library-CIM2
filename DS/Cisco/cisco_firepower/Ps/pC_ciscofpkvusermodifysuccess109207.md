@@ -3,7 +3,11 @@
 {
 Name = cisco-fp-kv-user-modify-success-109207
   ParserVersion = "v1.0.0"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """%FTD-5-109207: """ ]
+  Fields = ${DLLMSCiscoParsersTemplates.cisco-events-1.Fields} [
+  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
+  ]
 
 cisco-events-1 = {
   Vendor = Cisco

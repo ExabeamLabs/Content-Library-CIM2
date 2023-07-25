@@ -263,6 +263,9 @@
 | proofpoint-security-alert-1              | proofpoint-casb-json-alert-trigger-success-severity                     |
 | proofpoint-system-info                   | proofpoint-tappod-sk4-app-notification-success-hostnotfound             |
 | proofpoint-system-info-1                 | proofpoint-tappod-sk4-app-notification-success-userunknown              |
+| proofpoint-system-info-2                 | proofpoint-tappod-sk4-app-notification-success-dsnserviceunavailable    |
+| proofpoint-system-info-4                 | proofpoint-tappod-sk4-app-notification-success-localconfiguration       |
+| proofpoint-system-info-5                 | proofpoint-tappod-sk4-app-notification-success-dataformat               |
 | prowatch-badge-access                    | "honeywell-pw-xml-physical-location-access-evntdat                      |
 | prowatch-badge-access-1                  | honeywell-pw-json-physical-location-access-success-badgeno              |
 | prowatch-badge-access-3                  | honeywell-pw-csv-physical-location-access-success-exabeam               |

@@ -5,7 +5,7 @@ Name = cisco-asa-str-ip-assign-fail-722041
   ParserVersion = v1.0.0
   Vendor = Cisco
   Product = Cisco Adaptive Security Appliance
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """%ASA-""", """-722041""", """TunnelGroup """ ]
   Fields = [
     """\s.*?({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+%ASA-""",

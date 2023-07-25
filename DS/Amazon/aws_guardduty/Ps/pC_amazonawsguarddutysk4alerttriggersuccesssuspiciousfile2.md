@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-2
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """,ServiceName: guardduty,""", """,Type: Execution:EC2/SuspiciousFile,""" ]
+  Conditions = [ """,ServiceName: guardduty,""", """,Type: Execution:EC2/SuspiciousFile,""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template-1 = {

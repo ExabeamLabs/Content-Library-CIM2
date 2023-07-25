@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-rootcredentialusage
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Policy:IAMUser/RootCredentialUsage"""" ]
+  Conditions = [ """"awsApiCallAction":""", """"serviceName":"guardduty"""", """"type":"Policy:IAMUser/RootCredentialUsage"""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template = {

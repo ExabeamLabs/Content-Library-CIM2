@@ -2,10 +2,11 @@
 ```Java
 {
 Name = google-cloudplatform-json-endpoint-create-success-betacomputeinstancesinsert
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss"""
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":""", """compute.instances.insert"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
+    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """"source({source_resource_type}Snapshot)":\s*"({source_resource}[^"\\]+)"""",
     """"source({source_resource_type}Image)":\s*"({source_resource}[^"\\]+)"""",
     """"source({source_resource_type}Disk)":\s*"({source_resource}[^"\\]+)"""",

@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-torclient
-  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:EC2/TorClient,""" ]
+  Conditions = [ """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:EC2/TorClient,""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template-1 = {

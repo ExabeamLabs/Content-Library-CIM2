@@ -167,6 +167,7 @@
 | wiz-system-info-13                       | wiz-w-csv-endpoint-notification-success-requestconnector                        |
 | wiz-system-info-14                       | wiz-w-csv-endpoint-notification-success-updatecloudconfig                       |
 | wiz-system-info-15                       | wiz-w-csv-report-delete-success-deletereport                                    |
+| wiz-system-info-16                       | wiz-w-json-alert-trigger-success-issue                                          |
 | wiz-system-info-17                       | wiz-w-json-app-notification-success-devicemodified                              |
 | wiz-system-info-18                       | wiz-w-json-disk-read-success-diskexported                                       |
 | wiz-system-info-2                        | wiz-w-mix-app-notification-success-initiatedisk                                 |

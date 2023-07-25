@@ -14,6 +14,7 @@ Name = proofpoint-tappod-sk4-app-notification-success-hostnotfound
     """\Wdproc=({event_category}.+?)\s*(\w+=|$)"""
     """({app}Proofpoint)""",
     """({additional_info}host not found)"""
+    """({additional_info}DSN: Host unknown)"""
   ]
 
 
