@@ -13,7 +13,9 @@ Name = cisco-asa-str-vpn-login-success-113039
       """User\s+<((cn=({src_host}[^>,@]+))|({=src_host}[^.<@]+\.[^.>@]+\.[^>]*)|((({domain}[^\\\/>]+)[\\\/])?({user}[^@>]+?)))(>|,[^>]+?dc=({=domain}[^>,]+))""",
       """User\s+<({email_address}[^@>]+@[^@>]+)>""",
       """ IP <({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))>""",
-      """ Group\s+<({realm}.+?)>"""
+      """ Group\s+<({realm}.+?)>""",
+      """\sGroup\s*<({group_name}[^>]+)>"""
+      """\sUser\s*<({user}[\w\.\-]{1,40}\$?)>"""
     ]
     DupFields = [ "user->account"]
   

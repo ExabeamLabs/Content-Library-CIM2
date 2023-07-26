@@ -19,6 +19,8 @@ Name = cisco-asa-str-network-notification-success
     """(Teardown|Built) local-host ([^\s]+|INSIDE|Outside|outside):((::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({src_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|(::ffff:)?\(?({src_host}[^\)\s].+?)\)?)($|\s)"""
     """URL Server (::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) not responding""",
     """({protocol}ICMP|TCP|UDP)"""
+    """\sGroup\s*<({group_name}[^>]+)>"""
+    """\sUser\s*<({user}[\w\.\-]{1,40}\$?)>"""
   ]
 
 

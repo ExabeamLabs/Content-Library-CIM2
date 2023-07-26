@@ -16,7 +16,9 @@ Name = cisco-asa-str-vpn-login-success-722051
       """User[\s\t]+<(({domain}[^\\\/]+)[\\\/])?(?![^\s]+@[^\s]+)({user}[^>]+)>[\s\t]+IP[\s\t]+<({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>[\s\t]+(?:IPv4[\s\t])?Address[\s\t]+<({src_translated_ip}[^>]+)>"""
       """User[\s\t]+<({email_address}[^>@]+@[^>@]+)>[\s\t]+IP[\s\t]+<({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>[\s\t]+(?:IPv4[\s\t])?Address[\s\t]+<({src_translated_ip}[^>]+)>""",
       """%ASA-({priority}\d+)-({event_code}\d+)""",
-      """%FTD-({priority}\d+)-({event_code}\d+)"""
+      """%FTD-({priority}\d+)-({event_code}\d+)""",
+      """\sGroup\s*<({group_name}[^>]+)>"""
+      """\sUser\s*<({user}[\w\.\-]{1,40}\$?)>"""
     ]
   
 

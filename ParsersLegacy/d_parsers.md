@@ -109,6 +109,7 @@
 | dummy-new-auth0-parser-9           | auth0-a-json-user-delete-success-userdeletion                                      |
 | dummy-new-aws-parser               | amazon-awscloudtrail-json-file-write-success-objectcreated                         |
 | dummy-new-cloudflare-parser        | cloudflare-waf-json-http-session-firewall                                          |
+| dummy-new-defenderep-parser        | microsoft-defenderep-json-file-success-advancedhuntingdevicefileevents             |
 | dummy-new-event-6                  | cisco-securenwanalytics-json-network-session-success-serviceid                     |
 | dummy-new-github-parser-1          | github-g-json-repository-create-success-gitclone                                   |
 | dummy-new-github-parser-10         | github-g-json-app-activity-success-pullrequestreviewcommentcreate                  |
@@ -634,6 +635,8 @@
 | dummy-new-parser-621               | amazon-awscloudtrail-json-app-activity-success-getrolecredentials                  |
 | dummy-new-parser-622               | cisco-ise-kv-endpoint-login-success-61025                                          |
 | dummy-new-parser-623               | f5-bigip-str-network-traffic-fail-855                                              |
+| dummy-new-parser-624               | pan-ngfw-json-alert-trigger-success-threat-data                                    |
+| dummy-new-parser-625               | pan-ngfw-json-alert-trigger-success-threat-action                                  |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |
 | dummy-new-parser-64                | microsoft-iis-str-http-session-getautodiscover                                     |
 | dummy-new-parser-65                | microsoft-iis-str-http-session-getecp                                              |
