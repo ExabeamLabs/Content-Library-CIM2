@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-storageanalyticsevents
   Product = Azure Monitor
   Conditions= [ """destinationServiceName =Azure""", """"operationType":"""", """"serviceType":"""", """dproc=iaas-storage-analytics-events""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"ownerAccountName":"({user}[^"]+)"""",
+    """"ownerAccountName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"operationType":"({operation}[^"]+)"""",
     """"requestedObjectKey":"({object}[^"]+)"""",
     """"requestedObjectKey":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))""""

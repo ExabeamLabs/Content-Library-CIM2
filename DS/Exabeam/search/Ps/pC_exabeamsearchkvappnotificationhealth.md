@@ -6,7 +6,7 @@ Name = exabeam-search-kv-app-notification-health
     Conditions = [""" Exabeam """, """exabeam-analytics-health"""]
     Fields = ${ExabeamDlParserTemplates.exabeam-system-health-alert.Fields} [
       """limeSyslogImporterHealthID="({additional_info}.+?)\s*"\s"*""",
-      """user":"(Unknown|({user}[^"]+))"""
+      """user":"(Unknown|({user}[\w\.\-]{1,40}\$?))"""
     ]
   
 exabeam-system-health-alert {

@@ -141,6 +141,7 @@
 | dummy-new-juniper-parser-4         | juniper-ps-str-vpn-logout-success-sessiontimedout                                  |
 | dummy-new-juniper-parser-5         | juniper-ps-str-vpn-login-fail-loginfailed-1                                        |
 | dummy-new-juniper-parser-6         | pfsense-p-csv-network-traffic-fail-block-1                                         |
+| dummy-new-microsoft-parser         | microsoft-evsecurity-xml-policy-modify-4947                                        |
 | dummy-new-netowrk-parser           | claroty-ctd-cef-alert-trigger-success-network-hostscan                             |
 | dummy-new-netowrk-parser-1         | claroty-ctd-cef-alert-trigger-success-security-knownthreat                         |
 | dummy-new-netowrk-parser-2         | claroty-ctd-cef-alert-trigger-success-network-policyvoilation                      |
@@ -150,6 +151,7 @@
 | dummy-new-netowrk-parser-6         | claroty-ctd-cef-app-notification-baselinedeviation                                 |
 | dummy-new-netowrk-parser-7         | claroty-ctd-cef-alert-trigger-success-network-entityconfict                        |
 | dummy-new-netowrk-parser-8         | claroty-ctd-cef-app-notification-evetprotocol                                      |
+| dummy-new-pan-parser               | pan-ngfw-csv-app-notification-sdwan                                                |
 | dummy-new-parser                   | exabeam-cr-kv-rule-trigger-success-correlationrule                                 |
 | dummy-new-parser-1                 | exabeam-cr-kv-alert-trigger-success-correlationrule                                |
 | dummy-new-parser-10                | amazon-awsvpc-str-network-notification-success-skipdata                            |
@@ -637,6 +639,7 @@
 | dummy-new-parser-623               | f5-bigip-str-network-traffic-fail-855                                              |
 | dummy-new-parser-624               | pan-ngfw-json-alert-trigger-success-threat-data                                    |
 | dummy-new-parser-625               | pan-ngfw-json-alert-trigger-success-threat-action                                  |
+| dummy-new-parser-626               | pan-ngfw-json-endpoint-login-auth                                                  |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |
 | dummy-new-parser-64                | microsoft-iis-str-http-session-getautodiscover                                     |
 | dummy-new-parser-65                | microsoft-iis-str-http-session-getecp                                              |
@@ -676,6 +679,7 @@
 | dummy-new-parser-697               | microsoft-windows-str-dll-load-success-4610                                        |
 | dummy-new-parser-7                 | exabeam-audit-json-alert-case-success                                              |
 | dummy-new-parser-70                | microsoft-iis-str-http-session-getoab                                              |
+| dummy-new-parser-700               | zscaler-ia-str-http-session-dlpengine-2                                            |
 | dummy-new-parser-71                | microsoft-iis-str-http-session-getowa                                              |
 | dummy-new-parser-72                | microsoft-iis-str-http-session-getrpc                                              |
 | dummy-new-parser-73                | microsoft-iis-str-http-session-headapi                                             |

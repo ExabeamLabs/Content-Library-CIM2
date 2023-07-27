@@ -10,7 +10,7 @@ Name = symantec-atp-json-alert-trigger-8003006
     """"(start_)?time":({time}\d{13})""",
     """collector_device_name":"({host}[^"]+)"""",
     """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))"""",
-    """user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[^"]+))"""",
+    """user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))"""",
     """user_domain":"(NT AUTHORITY|({domain}[^"]+))"""",
     """"device_name":"({src_host}[^"]+)"""",
   """"device_os_name":"({os}[^",]+)"""",

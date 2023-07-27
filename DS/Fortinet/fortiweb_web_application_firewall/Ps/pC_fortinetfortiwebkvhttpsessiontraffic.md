@@ -18,7 +18,7 @@ Name = fortinet-fortiweb-kv-http-session-traffic
     """http_method=({method}[^=]+?)\s\w+=""",
     """http_request_bytes=({bytes_out}\d+)""",
     """http_response_bytes=({bytes_in}\d+)""",
-    """user_name="(Unknown|({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\)?({user}[^"]+))"""",
+    """user_name="(Unknown|({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\)?({user}[\w\.\-]{1,40}\$?))"""",
     """http_refer="(none|({referrer}[^"]+))""",
     """http_url="*(\w+:\/{2})?[^\/]+({uri_path}\/[^?\s"]+)?(\?({uri_query}[^"]+))?"""",
     """http_retcode=({http_response_code}\d+)"""

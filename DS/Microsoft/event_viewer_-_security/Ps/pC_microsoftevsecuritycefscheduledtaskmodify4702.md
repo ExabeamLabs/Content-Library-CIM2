@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-cef-scheduled-task-modify-4702
     """"event_id":({event_code}\d+)""",
     """"message":"({event_name}[^=]+?)\.?\\[nt]""",
     """"outcome":"({result}[^"]+)"""",
-    """"user":(\{[^=]*?"name":"({user}[^"]+)|"({=user}[^"]+))""",
+    """"user":(\{[^=]*?"name":"({user}[\w\.\-]{1,40}\$?)|"({=user}[^"]+))""",
     """"user":\{[^=]*?"id":"({user_sid}[^"]+)"""",
     """"user":\{[^=]*?"domain":"({domain}[^"]+)"""",
     """"TaskName":"({task_name}[^"]+)"""",

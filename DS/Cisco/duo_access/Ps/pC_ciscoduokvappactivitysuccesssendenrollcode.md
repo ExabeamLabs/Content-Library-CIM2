@@ -30,7 +30,7 @@ duo-app-activity-1 = {
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
     """"event-name":"({event_name}[^"]+)"""",
     """"action":"({operation}[^"]+)"""",
-    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[^"]+))"""",
+    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-]{1,40}\$?))"""",
     """"object":"({object}[^"]+)"""",
     """"src-application-name":"({app}[^"]+)"""",
   

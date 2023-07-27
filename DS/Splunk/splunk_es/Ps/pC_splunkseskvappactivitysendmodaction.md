@@ -16,7 +16,7 @@ Name = splunk-ses-kv-app-activity-sendmodaction
     """sid="({user_sid}[^"]+)"""",
 # rid is removed
     """app="({app}[^"]+)"""",
-    """user="({user}[^"]+)"""",
+    """user="({user}[\w\.\-]{1,40}\$?)"""",
    ]
 
 

@@ -12,7 +12,7 @@ cef-windows-dhcp-events = {
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)"""",
     """"Computer":"({host}[^"]+)"""",
-    """"UserName":"(({domain}[^"\\]+)\\+)?({user}[^"]+)"""",
+    """"UserName":"(({domain}[^"\\]+)\\+)?(({user}[\w\.\-]{1,40}\$?)"|({full_name}[^",]+))""",
     """"operation\\?">({event_name}[^<]+?)\s*<\/Data>""",
     """EventID":({event_code}\d+)""",
     """Name\\?="Errorvalue">({error_code}\d+)""",

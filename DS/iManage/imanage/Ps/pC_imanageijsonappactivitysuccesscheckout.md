@@ -22,7 +22,7 @@ Fields = [
   """"docname":"(UNKNOWN|({object}[^"]+?))\s*""""
   """"client_code":"(UNKNOWN|({client_id}[^"]+))"""
   """"email":"({email_address}[^@"]+@[^"]+)""""
-  """"docuser":"({user}[^"]+)""""
+  """"docuser":"({user}[\w\.\-]{1,40}\$?)""""
   """"appname":"({app}[^"]+)""""
   """"docloc":"({file_path}({file_dir}([^"]+)?[\/\\])?({file_name}[^\/\\"]+))""""
 ]

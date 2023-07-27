@@ -23,7 +23,7 @@ Name = cisco-fp-json-alert-trigger-success-502
     """"fileName":.+?"data":\s+"({malware_file_name}[^"]+)"""",
     """"direction":\s+({direction}[^,]+),""",
     """"fileType":\s+"({file_type}[^"]+)"""",
-    """"user":\s+"(No Authentication Required|Unknown|({user}[^"]+))"""",
+    """"user":\s+"(No Authentication Required|Unknown|({user}[\w\.\-]{1,40}\$?))"""",
     """"disposition"+:\s+({result}\d+)""",
     """"disposition"+:\s+"+(N\/A|Unknown|({additional_info}[^"]+))"""",
     """"threatScore"+:\s+({alert_severity}\d+)""",

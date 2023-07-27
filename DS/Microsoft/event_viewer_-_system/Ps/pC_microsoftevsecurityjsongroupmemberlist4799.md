@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-json-group-member-list-4799
     """"SeverityValue":({severity}\d+)""",
     """"SeverityValue":"({severity}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"TargetUserName":"({group_name}[^"]+)"""",

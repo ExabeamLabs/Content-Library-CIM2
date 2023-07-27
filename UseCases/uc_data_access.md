@@ -464,6 +464,10 @@ Use Case: Data Access
 |                                    Product                                     | MITRE ATT&CK® TTP          | Content                                                                                                                            |
 |:------------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [Netwrix Auditor](../DS/Netwrix/netwrix_auditor/ds_netwrix_netwrix_auditor.md) | T1078 - Valid Accounts<br> | [<ul><li>6 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Netwrix/netwrix_auditor/RM/r_m_netwrix_netwrix_auditor_Data_Access.md) |
+### Vendor: NextDLP
+|                       Product                       | MITRE ATT&CK® TTP                                                  | Content                                                                                                            |
+|:---------------------------------------------------:| ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| [Reveal](../DS/NextDLP/reveal/ds_nextdlp_reveal.md) | T1078 - Valid Accounts<br>T1083 - File and Directory Discovery<br> | [<ul><li>43 Rules</li></ul><ul><li>24 Models</li></ul>](../DS/NextDLP/reveal/RM/r_m_nextdlp_reveal_Data_Access.md) |
 ### Vendor: Nortel Contivity
 |                                                     Product                                                     | MITRE ATT&CK® TTP       | Content                                                                                                                                                        |
 |:---------------------------------------------------------------------------------------------------------------:| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

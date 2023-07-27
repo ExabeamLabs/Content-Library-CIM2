@@ -17,7 +17,7 @@ json-crowdstrike-alert = {
     """"Technique":"({alert_type}[^"]+)"""",
     """"eventType":"({alert_type}[^"]+)"""",
     """"SourceAccountDomain":"({domain}[^"]+)"""",
-    """"SourceAccountName":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[^"]+))"""",
+    """"SourceAccountName":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"SourceAccountUpn":"({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
     """"SourceAccountObjectSid":"({user_sid}[^"]+)"""",
     """"SourceEndpointHostName":"({src_host}[^"]+)"""",

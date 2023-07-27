@@ -13,7 +13,7 @@ Name = okta-amfa-json-user-lock-success-lockedout
      """"department":\s*"({group_type}[^"]+)"""",
      """lastUpdated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
      """"displayName"+:\s*"+({domain}[^\s\\"]+)\\+({user}[^\s"]+)"""
-     """"samAccountName":\s*"({user}[^"]+)"""",
+     """"samAccountName":\s*"({user}[\w\.\-]{1,40}\$?)"""",
      """"email":\s*"({email_address}[^@"\s]+@({email_domain}[^@"\s]+))""""
   ]
   ParserVersion = "v1.0.0"

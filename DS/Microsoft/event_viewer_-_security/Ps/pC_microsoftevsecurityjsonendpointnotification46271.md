@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627-1
     """({event_name}The subject fields indicate the account on the local system which requested the logon)""",
     """"time":"({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))""",
     """"computer":"({host}[^"]+)""",
-    """"new_logon-AccountName":"({user}[^"]+)""",
+    """"new_logon-AccountName":"({user}[\w\.\-]{1,40}\$?)""",
     """"new_logon-AccountDomain":"({domain}[^"]+)""",
     """"new_logon-LogonID":"({login_id}[^"]+)""",
     """"new_logon-SecurityID":"({user_sid}[^"]+)""",

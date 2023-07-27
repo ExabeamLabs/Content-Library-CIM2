@@ -15,7 +15,7 @@ Name = microsoft-defenderep-kv-dll-load-eventhubbeat
       """"FileName":"+({file_name}[^"]+?(\.({file_ext}\w+))?)"""",
       """"FolderPath":"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
       """"InitiatingProcessAccountDomain":"({domain}[^"]+)""",
-      """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[^"]+))""",
+      """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
       """"InitiatingProcessAccountSid":"({user_sid}[^"]+)""",
       """"InitiatingProcessCommandLine":"\s*({process_command_line}.+?)\s*"\,""",
       """"InitiatingProcessFileName":"({process_name}[^"]+)""",

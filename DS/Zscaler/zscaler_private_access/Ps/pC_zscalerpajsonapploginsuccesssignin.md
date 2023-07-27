@@ -14,7 +14,7 @@ zscaler-audit-events = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Fields = [
       """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-      """"User":"(({email_address}[^"@]+@({email_domain}[^".]+\.[^"]+))|({user}[^"]+))"""",
+      """"User":"(({email_address}[^"@]+@({email_domain}[^".]+\.[^"]+))|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+))"""",
       """"ObjectName":"({object}[^",]+)""",
       """"ObjectType":"({object_type}[^",]+)""",
       """"SessionID":"({session_id}[^"]+)""",

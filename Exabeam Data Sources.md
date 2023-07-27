@@ -156,6 +156,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | NetMotion Wireless                   | [NetMotion Wireless](DS/NetMotion_Wireless/netmotion_wireless/ds_netmotion_wireless_netmotion_wireless.md)<br>                |
 | Netskope       | [Netskope Security Cloud](DS/Netskope/netskope_security_cloud/ds_netskope_netskope_security_cloud.md)<br>                     |
 | Netwrix        | [Netwrix Auditor](DS/Netwrix/netwrix_auditor/ds_netwrix_netwrix_auditor.md)<br>   |
+| NextDLP        | [NextDLP](DS/NextDLP/nextdlp/ds_nextdlp_nextdlp.md)<br>[Reveal](DS/NextDLP/reveal/ds_nextdlp_reveal.md)<br>                   |
 | NNT            | [NNT ChangeTracker](DS/NNT/nnt_changetracker/ds_nnt_nnt_changetracker.md)<br>     |
 | Nortel Contivity                     | [Nortel Contivity VPN](DS/Nortel_Contivity/nortel_contivity_vpn/ds_nortel_contivity_nortel_contivity_vpn.md)<br>              |
 | Novell         | [eDirectory](DS/Novell/edirectory/ds_novell_edirectory.md)<br>                    |

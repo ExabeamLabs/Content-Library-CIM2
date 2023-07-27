@@ -18,7 +18,7 @@ Name = cisco-ac-json-network-session-success-pph
         """"obc":\s*({bytes_out}\d+)""",
         """"pr":\s*({protocol}\d+)""",
         """"ct":\s*({connection_type}\d+)""",
-        """"pa":\s*"(({domain}[^\\]+)\\+)?({user}[^"]+)"""",
+        """"pa":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
         """"pn":\s"({process_name}[^,]+)"""",
         """"pid":\s*({process_id}\d+)""",
         """"ppn":\s"({parent_process_name}\s*[^,]+)"""",
@@ -28,7 +28,7 @@ Name = cisco-ac-json-network-session-success-pph
         """"fst":\s*({flow_start_time}\d{13})""",
         """"fet":\s*({flow_end_time}\d{13})""",
         """"udid":\s*"({udid}[^,]+)"""",
-        """"liuid":\s*"(({domain}[^\\]+)\\+)?({user}[^"]+)"""",
+        """"liuid":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
         """"ppath":\s*"({process_path}[^,]+)"""",
         """"pppath":\s*"({parent_process_path}[^,]+)""""
      ]

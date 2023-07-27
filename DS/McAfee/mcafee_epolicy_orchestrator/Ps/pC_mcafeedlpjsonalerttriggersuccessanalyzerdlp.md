@@ -16,7 +16,7 @@ Name = mcafee-dlp-json-alert-trigger-success-analyzerdlp
       """"sourcehostname":"({src_host}[^"]+?)"""",
       """"sourceprocessname":"({process_path}(({process_dir}[^"]*?)\\)?({process_name}[^"\\]*?))"""",
       """"threatactiontaken":"({result}[^"]+?)"""",
-      """"sourceusername":"(({domain}[^"\\\/]+?)[\\\/]+)?({user}[^"]+)""""
+      """"sourceusername":"(({domain}[^"\\\/]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)""""
     ]
     DupFields = [ "src_host->host" ]
   

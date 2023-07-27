@@ -59,7 +59,7 @@ ParserVersion = "v1.0.0"
     """"args":\["({process_command_line}[^"]+)""""
     """"md5":"({hash_md5}[^"]+)"""",
     """user.+?group":.+?id":"({user_id}\d+)"""",
-    """user.+?group":.+?name":"({user}[^"]+)""""
+    """user.+?group":.+?name":"({user}[\w\.\-]{1,40}\$?)""""
   ]
   DupFields = ["host->dest_host"]
   ParserVersion = "v1.0.0"
@@ -111,7 +111,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -151,7 +151,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -191,7 +191,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -231,7 +231,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -271,7 +271,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({dest_user}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -310,7 +310,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -350,7 +350,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -393,7 +393,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -432,7 +432,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -472,7 +472,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -537,7 +537,7 @@ ParserVersion = "v1.0.0"
   Conditions = [""""type":"syscall"""", """auditd"""]
   Fields = [
     """"@timestamp":"({time}[^"]+)""",
-    """"name_map":\{.*?"uid":"(|({user}[^"]+))"""",
+    """"name_map":\{.*?"uid":"(|({user}[\w\.\-]{1,40}\$?))"""",
     """"name_map":\{.*?"suid":"(|({account}[^"]+))"""",
     """"user":\{.*?"uid":"({user_id}\d+)"""",
     """"user":\{.*?"auid":"({account_id}\d+)"""",
@@ -608,7 +608,7 @@ ParserVersion = "v1.0.0"
     """MachineName:\s*"+({host}[\w\-.]+)""",
     """Command:\s*"+({process_command_line}[^"]+)""",
     """Command:\s*"+({process_path}({process_dir}[^\s"]*?)[\\\/]*({process_name}[^\\\/\s"]+))""",
-    """UserName:\s*"+({user}[^"]+)""",
+    """UserName:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     """UnixName:\s*"+({account}[^"]+)""",
     """ClientName:\s*"+(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^"]+))""",
   ]

@@ -21,6 +21,8 @@ Fields = [
   """\|Cisco\|([^\|]*\|){4}({alert_severity}[^\|]+)"""
   """deviceDirection=({direction}\d)"""
   """\Wact=({action}[^=]+?)\s*\w+="""
+  """msg='({email_subject}[^~]+?)'\s\w+?="""
+  """ESAAttachmentDetails=\{'({attachment}[^']+?)'"""
 ]
 ParserVersion = "v1.0.0"
 

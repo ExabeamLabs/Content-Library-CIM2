@@ -14,7 +14,7 @@ Name = mcafee-es-kv-file-write-success-monitor
         """ProcessInfo_FileName(=|:)\s*"({process_name}[^"]+)""",
         """EventType_LocalizationKey(=|:)\s*"({operation}[^"]+)"""",
         """TotalContentSize(=|:)\s*"({bytes}\d+)"""",
-        """UserName(=|:)\s*"(({domain}[^\\]+)\\)?({user}[^"]+)"""",
+        """UserName(=|:)\s*"(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""",
         """ReactionSet_DisplayName(=|:)\s*"({action}[^"]+)"""",
         """EventTypeDisplayName(=|:)\s*"({operation_details}[^"]+)"""",
     ]

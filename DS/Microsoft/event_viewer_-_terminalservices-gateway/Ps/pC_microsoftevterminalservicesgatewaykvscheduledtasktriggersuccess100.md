@@ -6,7 +6,7 @@ Name = microsoft-evterminalservicesgateway-kv-scheduled-task-trigger-success-100
   Product = Event Viewer - TerminalServices-Gateway
   Conditions = [ """eventid="100"""", """Microsoft-Windows-TaskScheduler""" ]
   Fields = ${WindowsParsersTemplates.windows-events-2.Fields}[
-    """task for user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[^"]+))""",
+    """task for user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """({event_name}Task Scheduler started)""",
   ]
 

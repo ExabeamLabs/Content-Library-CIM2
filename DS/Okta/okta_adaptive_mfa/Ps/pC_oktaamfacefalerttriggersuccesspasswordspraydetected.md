@@ -14,7 +14,7 @@ Name = okta-amfa-cef-alert-trigger-success-passwordspraydetected
     """"legacyEventType"\s*:\s*"({alert_name}[^"]+)""",
     """cat=({alert_type}[^\s]+)"""
     """"actor":\s*[^\]]*?"displayName"\s*:\s*"(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))"""",
-    """"actor":[^\]]*?"alternateId"\s*:\s*"(?:({email_address}[^"@]+@({domain}[^"]+))|({user}[^"]+))"""",
+    """"actor":[^\]]*?"alternateId"\s*:\s*"(?:({email_address}[^"@]+@({domain}[^"]+))|({user}[\w\.\-]{1,40}\$?))"""",
     """"client":[^\]]*?"rawUserAgent"\s*:\s*"({user_agent}[^"]+)""",
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"outcome":[^\]]*?"result"\s*:\s*"FAILURE","reason":"({failure_reason}[^"]+)""",

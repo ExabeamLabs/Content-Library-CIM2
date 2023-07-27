@@ -8,8 +8,8 @@ Name = microsoft-evsecurity-sk4-handle-request-success-4656-1
   Conditions = [ """"EVENT_NUMBER":"4656"""", """"REMARKS":"A handle to an object was requested."""" ]
   Fields = [
     """"TIME_GENERATED":"({time}\d{10})"""".
-    """"CALLER_USER_NAME":"(-|({user}[^"]+))"""".
-    """"USERNAME":"({user}[^"]+)"""".
+    """"CALLER_USER_NAME":"(-|({user}[\w\.\-]{1,40}\$?))"""".
+    """"USERNAME":"({user}[\w\.\-]{1,40}\$?)"""".
     """"LOGON_TYPE":"({login_type}\d+)"""".
     """"REMARKS":"({event_name}[^"]+)"""".
     """"EVENT_NUMBER":"({event_code}\d+)"""".

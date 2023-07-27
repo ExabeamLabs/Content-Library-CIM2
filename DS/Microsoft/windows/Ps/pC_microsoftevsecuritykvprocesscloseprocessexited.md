@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-process-close-processexited
     """"EventID":({event_code}\d{1,5})""",
     """Security ID:\s*({user_sid}[^\s]+)""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """Account Name:\s*({src_host}[^\s]+)""",
     """Account Domain:\s*({domain}[^:]+?)\s+Logon ID:""",
     """Logon ID:\s*({login_id}[^\s]+)""",

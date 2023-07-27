@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-576
     """"record_number"\s*:\s*"({event_id}\d+)"""",
     """"user"\s*:\s*\{.*?"identifier"\s*:\s*"({user_sid}[^"]+)"""",
     """"user"\s*:\s*\{.*?"domain":"({domain}[^"]+)"""",
-    """"user"\s*:\s*\{.*?"name":"({user}[^"]+)"""",
+    """"user"\s*:\s*\{.*?"name":"({user}[\w\.\-]{1,40}\$?)"""",
     """"(param4|Privileges)"\s*:\s*"({privileges}[^"]+)"""",
     """"(param3|LogonID|logon_id)"\s*:\s*"(-|({login_id}.+?))\s*"""",
     """"(param3|LogonID|logon_id)"\s*:\s*"\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))"""",

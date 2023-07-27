@@ -12,7 +12,7 @@ Name = symantec-wss-json-http-session-queryresponse
     """"DomainID":"({web_domain}[^"]+)""",
     """"User_Agent":"({user_agent}[^"]+)""",
     """"CommandID":"({method}[^"]+)""",
-    """"UserIDSrc":"({user}[^"]+)""",
+    """"UserIDSrc":"({user}[\w\.\-]{1,40}\$?)""",
     """"Response_Code":"({http_response_code}\d+)""",
     """"Category":"({category}[^"]+)""",
     """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

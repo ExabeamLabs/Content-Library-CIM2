@@ -21,7 +21,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"agentLastLoggedInUserName":"({last_loggedin_user}[^"]+)"""",
      """"processUser":"(({process_domain}[^\\"]+)\\{1,200})?({process_user}[^"]+)",""",
      """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[^=\s]+?)(\s+\w+=|\s*$)""",
-     """username":"(({domain}[^\\"]+)\\{1,200})?({user}[^"]+)",""",
+     """username":"(({domain}[^\\"]+)\\{1,200})?({user}[\w\.\-]{1,40}\$?)",""",
      """"rank":({alert_severity}\d+)""",
      """"mitigationReport":({additional_info}\{.{1,400}?\}\}),""",
      """"fileContentHash":"({hash_md5}[^"]+)"""",

@@ -25,7 +25,7 @@ checkpoint-firewall-4 = {
     """\Wsrc_machine_name="({src_host}[^"@]+)@({domain}[^"]+)""",
     """\Wdst_machine_name="({dest_host}[^"]+)""",
     """\Wdst_machine_name="({dest_host}[^"@]+)@({domain}[^"]+)""",
-    """\W(user|dst_user_name)="({user}[^"]+)""",
+    """\W(user|dst_user_name)="({user}[\w\.\-]{1,40}\$?)""",
     """\W(user|dst_user_name)="({full_name}[^"\(]+?)\s*\(({user}[^\)]+)""",
   ]
   DupFields = [ "action->event_name" 

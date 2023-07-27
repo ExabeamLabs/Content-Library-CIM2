@@ -17,7 +17,7 @@ Name = sentinelone-singularityp-cef-process-create-success-processcreation
     """parent[^\n]*?path:\s*\\?"+\s*({parent_process}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))\\*"[^\n]*commandLine:\s*\\?"+\s*({parent_process_command_line}[^\{]+?)"\\n?""",
     """\sparent[^\}]+?value:\s"*({parent_process_guid}[^"]+)"""
   ]
-  DupFields = ["host->src_host", "parent_process->parent_process_path"]
+  DupFields = ["host->dest_host", "parent_process->parent_process_path"]
 
 sentinelone-activity {
     Vendor = SentinelOne

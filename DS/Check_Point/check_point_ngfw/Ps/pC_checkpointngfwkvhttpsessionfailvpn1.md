@@ -9,7 +9,7 @@ Name = checkpoint-ngfw-kv-http-session-fail-vpn1
   Conditions = [ """ProductName ="""", """VPN-1 & FireWall-1""" ]
   Fields = [
     """ProductName ="({product_name}VPN-1 & FireWall-1)"""",
-    """user="({user}[^"]+)"""",
+    """user="({user}[\w\.\-]{1,40}\$?)"""",
     """\Wxlatesrc="({src_translated_ip}[a-fA-F0-9.:]+)"""",
     """(\d{2}:){2}\d{2}(\+|\-){1,2}\d{1,2}:\d{2}\s+({host}[A-Fa-f0-9.:]+)\s""",
     """({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}(\+|\-){1,2}\d{1,2}:\d{2})\s+({host}[A-Fa-f0-9.:]+)\s""",

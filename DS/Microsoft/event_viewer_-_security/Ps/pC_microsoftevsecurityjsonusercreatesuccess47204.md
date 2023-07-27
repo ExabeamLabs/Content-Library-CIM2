@@ -13,7 +13,7 @@ Fields = [
   """"MachineName":"({host}[^."]+)"""
   """"TimeGenerated":"({time}[^"]*)"""
   """"InstanceId":"({event_code}[^"]+)"""
-  """"4":"({user}[^"]+)"""
+  """"4":"({user}[\w\.\-]{1,40}\$?)"""
   """"5":"({domain}[^"]+)"""
   """"6":"({login_id}[^"]+)"""
   """"2":"({account_id}[^"]+)"""

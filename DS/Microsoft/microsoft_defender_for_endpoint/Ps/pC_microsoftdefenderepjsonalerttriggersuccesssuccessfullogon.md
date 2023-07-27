@@ -24,7 +24,7 @@ defender-atp-security-alert-events = {
       """"category":"({alert_type}[^"]+)"""",
       """"description":"({additional_info}[^\n]+?)\s*","""",
       """userPrincipalName":"({email_address}[^@"]+@[^@"]+)"""",
-      """accountName":"({user}[^"]+)""",
+      """accountName":"({user}[\w\.\-]{1,40}\$?)""",
       """domainName":"({domain}[^"]+)"""
     
 }

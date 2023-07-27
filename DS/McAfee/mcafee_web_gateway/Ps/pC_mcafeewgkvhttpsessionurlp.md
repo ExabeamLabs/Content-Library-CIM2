@@ -11,7 +11,7 @@ Name = mcafee-wg-kv-http-session-urlp
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+mwg:""",
     """\Wstatus="({http_response_code}\d+)""",
     """\Wsrcip="(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
-    """\Wuser="(-|({user}[^"]+))"""",
+    """\Wuser="(-|({user}[\w\.\-]{1,40}\$?))"""",
     """\Wdst_ip="(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""",
     """\Wurlp="(-|({dest_port}\d+))""",
     """\Wproto="(-|({protocol}[^"]+))"""",

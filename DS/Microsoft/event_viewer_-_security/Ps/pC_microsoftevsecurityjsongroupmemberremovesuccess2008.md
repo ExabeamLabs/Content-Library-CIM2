@@ -32,7 +32,7 @@ Name = microsoft-evsecurity-json-group-member-remove-success-2008
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
     """"+SubjectDomainName"+:"+({domain}[^"]+)""",
     """"user"+:"+(SYSTEM|-|({user}[^@"]+))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[^"]+))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
 	  """({event_name}A member was removed from a security-enabled)""",

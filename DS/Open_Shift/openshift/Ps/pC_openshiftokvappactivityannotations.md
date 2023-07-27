@@ -13,7 +13,7 @@ Name = openshift-o-kv-app-activity-annotations
   Fields =[
     """"*uid"*=>"*({user_id}[^"]+)""",
     """sourceIPs:\["*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"*username"+=>"*({user}[^"]+)""",
+    """"*username"+=>"*({user}[\w\.\-]{1,40}\$?)""",
     """"*groups"+=>\["*({group_name}[^"]+)""",
     """"*authorization.k8s.io\/decision"+=>"*({action}[^\s"]+)"+""",
     """hostname:({host}[^\s]+)""",

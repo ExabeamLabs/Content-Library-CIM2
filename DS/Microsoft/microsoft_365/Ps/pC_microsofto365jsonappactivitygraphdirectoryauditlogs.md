@@ -10,7 +10,7 @@ Name = microsoft-o365-json-app-activity-graphdirectoryauditlogs
  Fields = [
    """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",
    """"activityDisplayName":"({operation}[^"]+)""",
-   """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+))"""",
+   """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
    """"category":"({category}[^"]+)""",
    """"destinationServiceName":"({app}[^"]+)""",
    """"result":"({result}[^"]+)""",

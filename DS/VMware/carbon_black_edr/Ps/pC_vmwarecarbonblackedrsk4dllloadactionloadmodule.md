@@ -9,7 +9,7 @@ Name = vmware-carbonblackedr-sk4-dll-load-actionloadmodule
   Conditions = [ """endpoint.event.moduleload""", """"process_username":"""", """"event_origin":"EDR"""", """"modload_name":"""", """"action":"ACTION_LOAD_MODULE"""" ]
   Fields = [
     """"+process_cmdline"+:"+\s*({process_command_line}.+?)\s*"+""",
-    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+))"+""",
+    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:"+({host}[^"]+)"+""",
     """"+sensor_action"+:"+({action}[^"]+)"+""",

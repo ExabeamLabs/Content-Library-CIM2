@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
     """"Severity":"({severity}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"ProcessID":({process_id}\d+)""",

@@ -9,7 +9,7 @@ Name = citrix-cvapps-json-app-activity-adminaction
   Conditions = [ """"event":"admin-action"""", """"system":"Citrix-XenApp"""", """"adminmachineip":"""", """"adminaccountname":"""" ]
   Fields = [
     """"starttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
-    """"username":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\+)?({user}[^"]+))"""",
+    """"username":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""",
     """"text":"({additional_info}[^"]+)",""",
     """"adminaccountname":"(({account_domain}[^\\"]+)\\+)?({account_name}[^"]+)",""",
     """({event_name}admin-action)"""

@@ -13,7 +13,7 @@ Name = mcafee-nsp-json-alert-trigger-success-threatsource
     """"detecting_product_host_name":"({host}[^"]+)"""",
     """"threat_source_ip_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"threat_target_ip_address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"threat_source_user_name":"({domain}[^\\]+)\\+({user}[^"]+)"""",
+    """"threat_source_user_name":"({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)"""",
     """"threat_severity":"({alert_severity}[^"]+)"""",
     """"threat_source_process_name":"\w+:\\+([^\\"]+\\+)+({process_name}[^"]+)"""",
     """"signature_name_host_ips":"({alert_name}[^"]+)"""",

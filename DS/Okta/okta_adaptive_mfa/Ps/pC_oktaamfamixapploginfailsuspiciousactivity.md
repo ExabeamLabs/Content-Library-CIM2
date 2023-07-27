@@ -15,7 +15,7 @@ Name = okta-amfa-mix-app-login-fail-suspiciousactivity
       """\{[^\{]+?displayName":\s*"({app}[^"]+?)\s*"[^\}\{]+AppInstance""",
       """({alert_name}Suspicious Activity)[^=]+?objectType":\s*"({alert_type}[^"]+)"""",
       """message":\s*"({additional_info}[^"]+)"""",
-      """message"*:\s*"*[^"]+?user:\s*(({email_address}[^"@]+@[^"@]+)|({user}[^"]+))""",
+      """message"*:\s*"*[^"]+?user:\s*(({email_address}[^"@]+@[^"@]+)|({user}[\w\.\-]{1,40}\$?))""",
       """suser=((?i)(anonymous|system)|({email_address}[^@\s]+@({domain}[^\s@]+))|(({=domain}[^\\\s]+)\\+)?({user}[^\s]+))""",
       """({operation}(?i)(Sign-in Failed))""",
       """({result}Failed)""",

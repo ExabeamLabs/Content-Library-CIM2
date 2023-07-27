@@ -8,7 +8,7 @@ Name = vmware-carbonblackceedr-sk4-network-session-success-edr
   Conditions = [ """"event_origin":"EDR"""", """"type":"endpoint.event.netconn_proxy"""", """"process_path":""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """"+process_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[^"]+))"+""",
+    """"+process_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?))"+""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+reason"+:\s*"+({additional_info}[^"]+?)"+""",
     """"+device_os"+:\s*"+({os}[^"]+?)"+""",

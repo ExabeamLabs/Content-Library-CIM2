@@ -44,7 +44,7 @@ json-windows-events-1 = {
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
     """"+SubjectDomainName"+:"+({domain}[^"]+)""",
     """"user"+:"+(SYSTEM|-|({user}[^@"]+))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[^"]+))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""

@@ -13,7 +13,7 @@ Fields = [
 """destinationServiceName =({app}[^=]+?)\s\w+=""",
 """"+Action"+:"+({event_name}[^"]+)"+""",
 """"Username"+:"+({email_address}[^@"]+@[^\."]+\.[^"]+)""",
-""""Username"+:"+API:\s*({user}[^"]+)""",
+""""Username"+:"+API:\s*({user}[\w\.\-]{1,40}\$?)""",
 """"+Action"+:"+({action}[^"]+)"+""",
 """"+Data"+:"+({additional_info}[^"\}]+)""",
 """fname=({file_name}[^=]+?)\s+[\w]+=""",

@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-sk4-ds-object-create-success-5137
   """"SubjectLogonId":"({login_id}[^"]+)""""
   """"ManagementGroupName":"({group_name}[^"]+)""""
   """"SourceSystem":"({app}[^"]+)""""
-  """"SubjectUserName":"({user}[^"]+)""""
+  """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""""
   """"SubjectDomainName":"({domain}[^"]+)""""
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"TenantId":"({tenant_id}[^"]+)""""

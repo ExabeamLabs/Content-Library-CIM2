@@ -17,7 +17,7 @@ Name = zeek-zeek-json-network-notification-actionlog
     """"proto":"({protocol}[^"]+)""",
     """"msg":"({additional_info}[^"]+)""",
 # peer is removed
-    """"sub":"({user}[^"]+)""",
+    """"sub":"({user}[\w\.\-]{1,40}\$?)""",
     """emailAddress=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
   ]
 

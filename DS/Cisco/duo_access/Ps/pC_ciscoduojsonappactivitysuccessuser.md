@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """object":"({object}[^"]+)""""
   """timestamp":({time}\d{10})"""
-  """username":"({user}[^"]+)""""
+  """username":"({user}[\w\.\-]{1,40}\$?)""""
   """action":"({operation}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"

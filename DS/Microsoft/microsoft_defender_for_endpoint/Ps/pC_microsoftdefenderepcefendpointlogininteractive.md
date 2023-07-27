@@ -13,7 +13,7 @@ cef-defender-atp-events = {
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"DeviceName":"({host}[^"]+)""""
       """"LogonType":"({login_type_text}[^"]+)"""",
-      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[^"]+))"""",
+      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
       """"AccountDomain":"({domain}[^"]+)"""",
       """"InitiatingProcessFileName":"({process_name}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",

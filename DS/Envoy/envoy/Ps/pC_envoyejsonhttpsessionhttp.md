@@ -8,7 +8,7 @@ Name = envoy-e-json-http-session-http
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [""""request":""",""""response":""",""""downstreamLocalAddress":""",""""downstreamDirectRemoteAddress":"""]
   Fields = [
-    """"user":"({user}[^"]+)"""",
+    """"user":"({user}[\w\.\-]{1,40}\$?)"""",
     """"requestMethod":"({method}[^"]+)"""",
     """"requestBodyBytes":"({bytes_in}\d+)"""",
     """"responseBodyBytes":"({bytes_out}\d+)"""",

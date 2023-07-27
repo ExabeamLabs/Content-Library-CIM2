@@ -10,7 +10,7 @@ Name = unix-auditbeat-json-file-create-success-file
   Fields = [
     """timestamp":"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""",
     """"host":.+?name":"({host}[^"]+)"""",
-    """"owner":"({user}[^"]+)"""",
+    """"owner":"({user}[\w\.\-]{1,40}\$?)"""",
     """"path":"({file_path}[^"]+)"""",
     """"size":({bytes}\d+)""",
     """"action":\["({action}[^"]+)""""

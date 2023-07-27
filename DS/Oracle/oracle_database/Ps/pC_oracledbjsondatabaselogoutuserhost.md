@@ -8,7 +8,7 @@ Name = oracle-db-json-database-logout-userhost
   TimeFormat ="yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """action_name""", """LOGOFF""", """os_username""", """userhost""" ]
   Fields=[
-    """"os_username":"({user}[^"]+)"""
+    """"os_username":"({user}[\w\.\-]{1,40}\$?)"""
     """"username":"({db_user}[^"]+)"""
     """"action_name":"({operation}[^"]+)""",
     """"sessionid":"({session_id}[^"]+)""",

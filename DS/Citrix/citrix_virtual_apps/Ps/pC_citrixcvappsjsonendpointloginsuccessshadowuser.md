@@ -8,7 +8,7 @@ Name = citrix-cvapps-json-endpoint-login-success-shadowuser
   Conditions = [ """"text":"Shadow user""", """"event":"admin-action"""", """"system":"Citrix-XenApp""""]
   Fields = [
     """"starttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
-    """"username":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\+)?({user}[^"]+))"""",
+    """"username":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""",
     """({event_name}admin-action)""",
     """"text":"({additional_info}[^"]+)",""",
     """"adminaccountname":"(({account_domain}[^\\"]+)\\+)?({account_name}[^"]+)","""

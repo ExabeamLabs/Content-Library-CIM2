@@ -19,7 +19,7 @@ Name = crowdstrike-falcon-sk4-app-notification-mbcsfdrv2
     """"City":"({location_city}[^"]+)"""",
     """"Version":"({os_version}[^"]+)"""",
 # cid is removed
-    """"UserName":"({user}[^"]+)""",
+    """"UserName":"({user}[\w\.\-]{1,40}\$?)""",
     """AccountType":"({user_type}[^"]+)""",
     """UserSid_readable":"({user_sid}[^"]+)""",
     """LastLoggedOnHost":"({src_host}[^"]+)"""

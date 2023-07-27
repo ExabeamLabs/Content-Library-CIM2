@@ -8,7 +8,7 @@ Name = vmware-carbonblack-mix-alert-trigger-success-threat
   Conditions = [ """"threatInfo":""", """"indicators":""", """"summary":""", """"ruleName":""", """"incidentId":""", """"THREAT"""" ]
   Fields = [
     """eventTime"+:\s*({time}\d{13})""",
-    """email"+:\s*"+(({email_address}[^@"]+@[^"]+)|((({domain}[^\"]+?)\\+)?({user}[^"]+)))"""",
+    """email"+:\s*"+(({email_address}[^@"]+@[^"]+)|((({domain}[^\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?)))"""",
     """deviceName"+:\s*"+([^\\"]+\\+)?({src_host}[^"]+)"""",
     """ruleName"+:\s*"+(Confer - )?({alert_name}[^"]+)"""",
     """type"+:\s*"+({alert_type}[^"]+)"""",

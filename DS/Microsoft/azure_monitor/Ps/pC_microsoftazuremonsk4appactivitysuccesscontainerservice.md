@@ -11,7 +11,7 @@ Name = microsoft-azuremon-sk4-app-activity-success-containerservice
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({service_name}Microsoft.ContainerService)""",
     """"Microsoft.ContainerService\/({operation}[^"]+)""",
-    """"user":\{"username":"({user}[^"]+)"""",
+    """"user":\{"username":"({user}[\w\.\-]{1,40}\$?)"""",
     """"sourceIPs":\["({src_ip}[^"]+)""",
     """"userAgent":"({user_agent}[^"]+)""",
     """"operation":"({action}[^"]+)"""",

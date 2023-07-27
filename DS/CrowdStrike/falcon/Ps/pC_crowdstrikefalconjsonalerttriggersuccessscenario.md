@@ -11,7 +11,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"technique":"({alert_type}[^"]+)""",
       """"severity":({alert_severity}\d+)""",
       """"detection_id":"({alert_id}[^"]+)""",
-      """"user_name":"({user}[^"]+)""",
+      """"user_name":"({user}[\w\.\-]{1,40}\$?)""",
       """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"md5":"(N\/A|({hash_md5}\w+))""",
       """"local_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

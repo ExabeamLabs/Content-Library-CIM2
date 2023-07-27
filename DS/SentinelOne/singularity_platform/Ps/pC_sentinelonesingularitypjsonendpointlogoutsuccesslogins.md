@@ -13,7 +13,7 @@ Name = sentinelone-singularityp-json-endpoint-logout-success-logins
     """"event.id":"({event_id}[^"]+)""",
     """event.name":"({operation_type}[^"]+)""",
     """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))""",
-    """"event.login.userName":"({user}[^"]+)"""
+    """"event.login.userName":"({user}[\w\.\-]{1,40}\$?)"""
   ]
   DupFields = [ "host->dest_host"]
 

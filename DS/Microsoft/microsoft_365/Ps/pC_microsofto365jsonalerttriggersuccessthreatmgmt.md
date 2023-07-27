@@ -16,7 +16,7 @@ Name = microsoft-o365-json-alert-trigger-success-threatmgmt
     """"category":"({alert_type}[^"]+)"""",
     """"description":"({additional_info}[^\n]+?)\s*","""",
     """userPrincipalName":"({email_address}[^@"]+@[^@"]+)"""",
-    """accountName":"({user}[^"]+)""",
+    """accountName":"({user}[\w\.\-]{1,40}\$?)""",
     """domainName":"({domain}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"

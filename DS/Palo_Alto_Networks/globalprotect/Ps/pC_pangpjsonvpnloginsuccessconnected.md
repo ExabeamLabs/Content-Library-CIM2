@@ -15,7 +15,7 @@ Name = pan-gp-json-vpn-login-success-connected
   """"EventStatus":"({result}[^"]+)""""
   """"EndpointDeviceName":"({src_host}[\w\-\.]+)""""
   """"SourceRegion":"({src_country}[^"]+)""""
-  """"(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+))""""
+  """"(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
   """"EndpointOSType":"({os}[^"]+)""""
   """"EventIDValue":"({event_name}[^"]+)""""
   """"AuthMethod":"?((?i)null|({auth_method}[^,"]+))"""

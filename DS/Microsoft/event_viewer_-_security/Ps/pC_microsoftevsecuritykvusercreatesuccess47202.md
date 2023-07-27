@@ -14,7 +14,7 @@ Fields = [
   """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)"""
   """EventID="+({event_code}[^"]+)""""
   """EventRecordID="+({event_id}[^"]+)""""
-  """SubjectUserName ="+({user}[^"]+)""""
+  """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)""""
   """SubjectUserSid="+({user_sid}[^"]+)""""
   """SubjectDomainName ="+({domain}[^"]+)""""
   """SubjectLogonId="+({login_id}[^"]+)""""

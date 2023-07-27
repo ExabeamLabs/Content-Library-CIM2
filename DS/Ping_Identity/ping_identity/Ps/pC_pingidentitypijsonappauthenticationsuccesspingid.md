@@ -9,7 +9,7 @@ Name = pingidentity-pi-json-app-authentication-success-pingid
   Conditions = [""""source": "PINGID"""",""""type": "user"""",""""status": "SUCCESS"""",""""message":""",""""resources":""",""""client":"""]
   Fields = [
     """"recorded":\s+"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
-    """"name":\s"(({email_address}[^"@\s]+@[^"]+)|({user}[^"]+))"""",
+    """"name":\s"(({email_address}[^"@\s]+@[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"status":\s*"({result}SUCCESS)""",
     """"message":\s+"({additional_info}[^}]+?)"\s*\}""",
     """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""

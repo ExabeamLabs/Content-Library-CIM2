@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """"SubjectDomainName"+:"+(-|({account_domain}[^"]+))""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
     """"TargetUserSid"+:"+(SYSTEM|ANONYMOUS|({user_sid}[^",]+))""",
-    """"TargetUserName"+:"+(SYSTEM|ANONYMOUS|({user}[^"]+))""",
+    """"TargetUserName"+:"+(SYSTEM|ANONYMOUS|({user}[\w\.\-]{1,40}\$?))""",
     """"TargetDomainName"+:"+(NT AUTHORITY|({domain}[^"]+))""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",

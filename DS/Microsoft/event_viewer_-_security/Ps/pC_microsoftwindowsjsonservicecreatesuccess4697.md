@@ -13,7 +13,7 @@ Name = microsoft-windows-json-service-create-success-4697
     """"hostname":"({host}[^"]+)"""",
     """"keywords":[\["]*({result}[^"\]]+)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"ServiceName":"({service_name}[^"]+)"""",

@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """"EventID":({event_code}\d+)""",
     """({event_name}A scheduled task was updated)""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
-    """"SubjectUserName":"({user}[^"]+)""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"TaskName":"({task_name}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",

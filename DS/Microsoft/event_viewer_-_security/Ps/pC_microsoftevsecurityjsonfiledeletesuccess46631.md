@@ -22,8 +22,8 @@ ad-audit-json-events = {
   TimeFormat = "epoch_sec"
   Fields = [
     """"TIME_GENERATED":"({time}\d{10})"""".
-    """"CALLER_USER_NAME":"(-|({user}[^"]+))"""".
-    """"USERNAME":"({user}[^"]+)"""".
+    """"CALLER_USER_NAME":"(-|({user}[\w\.\-]{1,40}\$?))"""".
+    """"USERNAME":"({user}[\w\.\-]{1,40}\$?)"""".
     """"LOGON_TYPE":"({login_type}\d+)"""".
     """"REMARKS":"({event_name}[^"]+)"""".
     """"EVENT_NUMBER":"({event_code}\d+)"""".

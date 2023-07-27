@@ -9,7 +9,7 @@ Name = crowdstrike-falcon-json-file-write-success-written
   Conditions = [ """"destinationServiceName":"CrowdStrike"""" ,""""IsOnRemovableDisk":"1"""", """"event_simpleName":""", """Written"""" ]
   Fields = [
     """"timestamp":"({time}\d{13})"""",
-    """"UserName":"({user}[^"]+)"""",
+    """"UserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"name":"({event_name}[^"]+)"""",
     """"event_simpleName":"({event_code}[^"]+)"""",

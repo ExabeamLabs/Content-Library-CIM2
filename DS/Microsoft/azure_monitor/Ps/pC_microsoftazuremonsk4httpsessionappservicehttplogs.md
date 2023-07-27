@@ -27,7 +27,7 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
     """"SPort":"({src_port}\d+)"""",
     """"CsUriQuery":"(-|({uri_query}[^"]+))"""",
     """"CsBytes":({bytes_in}\d+),""",
-    """"CsUsername":"(-|({user}[^"]+))"""",
+    """"CsUsername":"(-|({user}[\w\.\-]{1,40}\$?))"""",
     """"Referer":"(-|({referrer}[^"]+))"""",
     """"ScBytes":({bytes_out}\d+),""",
     """"ScStatus":({http_response_code}\d+),""",

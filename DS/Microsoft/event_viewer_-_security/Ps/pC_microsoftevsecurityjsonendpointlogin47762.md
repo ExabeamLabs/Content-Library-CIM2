@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-2
     """"computer":"(?!(?:[A-Fa-f:\d.]+))[^."]+\.({domain}[^"]+)""",
     """"source_workstation":"({src_host}[^"]+)""",
     """"error_code":"({result_code}[^"]+)""",
-    """"logon_account":"({user}[^"]+)""",
+    """"logon_account":"({user}[\w\.\-]{1,40}\$?)""",
     """"event_id":"({event_code}\d+)""",
     """"The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
   ]

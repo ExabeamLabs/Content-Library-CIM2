@@ -9,7 +9,7 @@ Name = microsoft-azuremfa-csv-user-modify-added
   Conditions = [ """pfsvc: User""", """added new User Mobile App Device"""]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
-    """pfsvc: User "({user}[^"]+)""",
+    """pfsvc: User "({user}[\w\.\-]{1,40}\$?)""",
     """({event_name}added new User Mobile App Device)"""
   ]
 

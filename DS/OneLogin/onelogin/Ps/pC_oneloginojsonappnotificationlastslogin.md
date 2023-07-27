@@ -8,7 +8,7 @@ Name = onelogin-o-json-app-notification-lastslogin
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"distinguished_name":""", """"last_login":""", """"password_changed_at":""", """"invalid_login_attempts":""" ]
   Fields = [
-    """"samaccountname":\s*"({user}[^"]+)""",
+    """"samaccountname":\s*"({user}[\w\.\-]{1,40}\$?)""",
     """"(userprincipalname|email|username)":\s*"({email_address}[^"]+)""",
     """"company":\s*"({company}[^"]+?)\s*""",
     """"employeeID":\s*"({employee_id}[^"]+)""",

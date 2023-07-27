@@ -15,7 +15,7 @@ Name = pan-prisma-json-alert-trigger-success-prismacloud
     """"source":"({app}[^"]+)"""",
     """"url":"({url}[^"]+)"""",
     """"policyId":"({policy_id}[^"]+)"""",
-    """"accountName":"({user}[^"]+)"""",
+    """"accountName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"alertRuleName":"({alert_type}[^"]+)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
   ]

@@ -22,7 +22,7 @@ Name = zscaler-ia-json-http-session-transactionsize
     """"useragent":"(Unknown|({user_agent}[^"]+))"""",
     """"clientip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"status":"({result_code}\d{1,3})"""",
-    """"user":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[^"]+)))"""",
+    """"user":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""",
     """"url":"({url}(\w{1,5}:\/\/)?[^"\/\?]+({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)"""",
     """"hostname":"({web_domain}[^"]+)"""",
     """"appname":"({app}[^"]+)"""",

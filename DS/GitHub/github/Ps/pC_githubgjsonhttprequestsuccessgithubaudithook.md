@@ -10,7 +10,7 @@ Name = github-g-json-http-request-success-githubaudithook
   Fields = [
     """"start":({time}\d{13}),""",
     """({host}\S+)\s+github_audit:""",
-    """"+actor"+:"+({user}[^"]+)""",
+    """"+actor"+:"+({user}[\w\.\-]{1,40}\$?)""",
     """"+action"+:"+({operation}[^"]+)""",
     """"+repo"+:"+({resource}[^"]+)""",
     """({object}"+hook_id"+:[^,]+)""",

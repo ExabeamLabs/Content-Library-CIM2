@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-json-file-5058
     """"+KeyFilePath"+:"+({file_path}[^"]+)"+"""
     """"SubjectLogonId"+:"+({login_id}[^"]+)"""",
     """"SubjectUserSid"+:"+({user_sid}[^"]+)"""",
-    """"SubjectUserName"+:"+({user}[^"]+)"""",
+    """"SubjectUserName"+:"+({user}[\w\.\-]{1,40}\$?)"""",
     """"Operation"+:"+({operation}[^"]+)"""",
   ]
   DupFields = [ "host->dest_host" ]

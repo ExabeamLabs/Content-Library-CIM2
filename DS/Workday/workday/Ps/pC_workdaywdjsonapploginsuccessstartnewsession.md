@@ -10,7 +10,7 @@ Name = workday-wd-json-app-login-success-startnewsession
     """"userAgent":\s*"({user_agent}[^"]+)""",
     """"requestTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"deviceType":\s*"({device_type}[^"]+)""",
-    """"systemAccount":\s*"({user}[^"]+)""",
+    """"systemAccount":\s*"({user}[\w\.\-]{1,40}\$?)""",
     """({app}(W|w)orkday)"""
     """"tenantHost":\s*"({host}[^"]+)""",
     """"activityAction":\s*"({additional_info}[^"]+)""",

@@ -12,7 +12,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """category"+:\s*"+({operation}[^"]+)""",
        """ActionType"+:\s*"+({operation_type}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}({host}[^"\.]+)?[^"]+)""",
-       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[^"]+))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",

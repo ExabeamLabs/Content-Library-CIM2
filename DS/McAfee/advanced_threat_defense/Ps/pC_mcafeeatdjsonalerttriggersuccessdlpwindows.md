@@ -17,7 +17,7 @@ Name = mcafee-atd-json-alert-trigger-success-dlpwindows
     """"actual_action":"({result}[^"]+)"""",
     """"total_content_size_kb":"({bytes}[\d.]+)"""",
     """total_content_size_({bytes_unit}[^"]+)":"\d""",
-    """"user_name":"({user}[^"]+)"""",
+    """"user_name":"({user}[\w\.\-]{1,40}\$?)"""",
     """"user_groups":"({additional_info}[^"]+)"""",
     """"incident_id":"({alert_id}[^"]+)"""",
     """"destination":"({target}[^"]+)"""",

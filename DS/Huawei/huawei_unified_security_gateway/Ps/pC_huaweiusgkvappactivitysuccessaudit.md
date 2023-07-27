@@ -10,7 +10,7 @@ Name = huawei-usg-kv-app-activity-success-audit
     """\sDstIp=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sSrcPort=({src_port}\d+)""",
     """\sDstPort=({dest_port}\d+)""",
-    """\sUser="(?!\d+\.\d+\.\d+\.\d+)(?:unknown|({email_address}[^@"]+@[^@"]+)|({user}[^"]+))"""",
+    """\sUser="(?!\d+\.\d+\.\d+\.\d+)(?:unknown|({email_address}[^@"]+@[^@"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """\sProtocol=({protocol}[^,]+)""",
     """\sApplication="({app}[^"]+)""",
 # audit_type is removed

@@ -8,7 +8,7 @@ Name = adminbyrequest-a-json-user-privilege-use-success-runasadmin
   Conditions = [ """"type":"Run As Admin"""" , """"elevatedApplications":""", """"approvedBy":""", """"traceNo":"""" ]
   Fields = [
     """"requestTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
-    """"user":[^=]+?"account":"(({domain}[^\\]+)\\+)?({user}[^"]+)""",
+    """"user":[^=]+?"account":"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """"user":[^=]+?"email":"({email_address}[^@"]+@[^\."]+\.[^"]+)""",
     """"user":[^=]+?"fullName":"({full_name}[^"]+)""",
     """"computer":[^=]+?"name":"({host}[^"]+)""",

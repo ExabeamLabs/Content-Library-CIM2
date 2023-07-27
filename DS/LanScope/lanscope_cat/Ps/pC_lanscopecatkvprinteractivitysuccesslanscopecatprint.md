@@ -13,7 +13,7 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)\s+({host}\S+)\s+LanScopeCat\s+\-"""
   """\sEvent="({operation}[^"]+)"""
   """\sAgent="({dest_host}[^"]+)"""
-  """\sLogonUser="({user}[^"]+)"""
+  """\sLogonUser="({user}[\w\.\-]{1,40}\$?)"""
   """\sPrinter="({printer_name}[^"]+)"""
   """\sDocument="({object}[^"]+)"""
   """\sNumOfPrintedPages="({num_pages}\d+)"""

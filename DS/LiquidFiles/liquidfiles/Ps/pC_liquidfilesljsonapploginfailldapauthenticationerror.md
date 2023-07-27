@@ -13,7 +13,7 @@ Name = liquidfiles-l-json-app-login-fail-ldapauthenticationerror
       """"user_id":"(n/a|({user}[^"]+?))"""",
       """"message":"({event_name}[^:"]+)""",
       """({app}liquidfiles)""",
-      """"username":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[^"]+))"""",
+      """"username":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     ]
     ParserVersion = v1.0.0
   

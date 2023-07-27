@@ -19,7 +19,7 @@ Name = aws-waf-json-http-session-httprequest
     """"httpVersion":"({protocol}[^"]+)"""",
     """"httpMethod":"({method}[^"]+)"""",
     """"name":"accept","value":"({mime}[^"]+)"""",
-    """"AccountName":"({user}[^"]+)""""
+    """"AccountName":"({user}[\w\.\-]{1,40}\$?)""""
   ]
 
 

@@ -24,7 +24,7 @@ json-netskope-alert = {
     """"alert_type":"({alert_type}[^"]+)"""",
     """"useragent":"({user_agent}[^"]+)"""",
     """"protocol":"({protocol}[^"]+)"""",
-    """"user":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+))""",
+    """"user":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     """"severity":"(unknown|({alert_severity}[^"]+))"""",
     """"numbytes":({bytes}\d+)""",
     """"page":"({web_domain}[^\\\/"]+)""",

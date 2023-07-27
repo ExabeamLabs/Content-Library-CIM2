@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Hostname"*:"*({host}[^"]+)""",
     """"SubjectUserSid"*:"*(SYSTEM|({user_sid}[^"]+))""",
-    """"SubjectUserName"*:"*(SYSTEM|({user}[^"]+))""",
+    """"SubjectUserName"*:"*(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """"SubjectDomainName"*:"*({domain}[^"]+)""",
     """"SubjectLogonId"*:"*({login_id}[^"]+)""",
     """"ProcessID"*:({process_id}[^,"]+)""",

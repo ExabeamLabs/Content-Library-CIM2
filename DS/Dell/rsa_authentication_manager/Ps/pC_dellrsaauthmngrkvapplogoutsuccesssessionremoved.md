@@ -9,7 +9,7 @@ Name = dell-rsaauthmngr-kv-app-logout-success-sessionremoved
   Fields = [
     """({host}[\w\-.]+) \d+ ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ) \S+ SINGLEPOINT""",
     """USER_AGENT="(N\/A|({user_agent}[^"]+))""",
-    """USERNAME="(N\/A|({user}[^"]+))""",
+    """USERNAME="(N\/A|({user}[\w\.\-]{1,40}\$?))""",
 # remote_ip is removed
     """SESSION_ID="(N\/A|({session_id}[^"]+))""",
     """REASON="(N\/A|({result_reason}[^"]+))""",

@@ -8,7 +8,7 @@ Name = unix-unix-json-process-create-auditd
   Conditions = [""""type":"syscall"""", """auditd"""]
   Fields = [
     """"@timestamp":"({time}[^"]+)""",
-    """"name_map":\{.*?"uid":"(|({user}[^"]+))"""",
+    """"name_map":\{.*?"uid":"(|({user}[\w\.\-]{1,40}\$?))"""",
     """"name_map":\{.*?"suid":"(|({account}[^"]+))"""",
     """"user":\{.*?"uid":"({user_id}\d+)"""",
     """"user":\{.*?"auid":"({account_id}\d+)"""",

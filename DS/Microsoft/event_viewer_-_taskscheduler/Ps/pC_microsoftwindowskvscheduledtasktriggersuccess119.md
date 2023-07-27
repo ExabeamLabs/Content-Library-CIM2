@@ -7,7 +7,7 @@ Name = microsoft-windows-kv-scheduled-task-trigger-success-119
   Conditions = [ """eventid="119"""", """Microsoft-Windows-TaskScheduler""" ]
   Fields = ${WindowsParsersTemplates.windows-events-2.Fields}[
     """({event_name}Task Scheduler launched)""",
-    """to user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[^"]+))""",
+    """to user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
   ]
 
 windows-events-2 = {

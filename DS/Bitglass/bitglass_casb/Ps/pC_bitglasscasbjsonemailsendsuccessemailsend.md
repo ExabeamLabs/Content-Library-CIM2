@@ -10,7 +10,7 @@ Name = bitglass-casb-json-email-send-success-emailsend
   Fields = [
     """"time":\s*"({time}\d+ \w+ \d\d\d\d \d\d:\d\d:\d\d)""",
     """"instancename":\s*"({host}[^"]+)"""",
-    """"user":\s*"({user}[^"]+)"""",
+    """"user":\s*"(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+))"""",
     """"email":\s*"({email_user}[^"]+)"""",
     """"device":\s*"({os}[^"]+)"""",
     """"application":\s*"({app}[^"]+)"""",

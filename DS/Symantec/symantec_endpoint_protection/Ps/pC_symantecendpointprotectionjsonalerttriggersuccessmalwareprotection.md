@@ -18,7 +18,7 @@ json-symantec-endpoint-protection = {
     Fields = [
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"message":"\s*({additional_info}[^"]+)""",
-      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[^"]+)""",
+      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[\w\.\-]{1,40}\$?)""",
       """"uuid":"({user_uid}[^"]+)""",
       """"destinationServiceName":"({app}[^"]+)""",
       """"session_id":"({session_id}[^"]+)""",

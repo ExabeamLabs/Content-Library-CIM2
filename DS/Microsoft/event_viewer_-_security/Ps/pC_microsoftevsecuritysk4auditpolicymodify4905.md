@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4905
     """"HostName":"({host}[^"]+)"""",
     """({event_code}4905)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",

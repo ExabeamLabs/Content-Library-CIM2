@@ -15,7 +15,7 @@ Name = fireeye-endpointsecurity-json-alert-trigger-success-processevent
        """"hostname":\s*"({host}[^"]+)""",
        """"processEvent/md5":\s*"({hash_md5}[^"]+)""",
        """"processEvent/process":\s*"({process_name}[^"]+)""",
-       """"processEvent/username":\s*"(({domain}[^"\\\/]+)[\\\/]+)?({user}[^"]+)"""
+       """"processEvent/username":\s*"(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""
        """"event_type":\s*"({alert_name}[^"]+)"""
     ]
     DupFields = ["alert_name->alert_type"]

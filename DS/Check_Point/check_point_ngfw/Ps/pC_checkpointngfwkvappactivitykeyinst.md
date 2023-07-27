@@ -26,7 +26,7 @@ checkpoint-firewall-3 = {
     """\Wdst_machine_name="({dest_host}[^"]+)""",
     """\Wdst_machine_name="({dest_host}[^"@]+)@({domain}[^"]+)""",
     """\Wdst_user_name="({user}[^"\(]+?)\s*(\(|")""",
-    """\Wuser="({user}[^"]+)""",
+    """\Wuser="({user}[\w\.\-]{1,40}\$?)""",
   ]
   DupFields = [ "action->event_name" 
 }

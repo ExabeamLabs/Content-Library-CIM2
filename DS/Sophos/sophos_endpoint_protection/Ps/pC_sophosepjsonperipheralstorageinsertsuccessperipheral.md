@@ -11,9 +11,8 @@ Name = sophos-ep-json-peripheral-storage-insert-success-peripheral
     """"name":\s*"({operation}[^":]+):\s({device_type}[^"]+)""",
     """"name":\s*"({operation_details}[^"]+)""",
     """"dhost":\s*"({src_host}[^"]+)""",
-    """"suser":\s*"(?:n\/a|({full_name}[^"\\,]+))"""",
+    """"suser":\s*"(?:n\/a|({full_name}[^"\\]+))"""",
     """"suser":\s*"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\\\s]+))""",
-    """"suser":\s*"(?:n\/a|({user}[^"]+))"""",
     """"suser":\s*"(({domain}[^\\",]+)\\+)?({user}[^",\\\/\s]+)"""",
     """"id":\s*"({device_id}[^"]+)""",
   ]

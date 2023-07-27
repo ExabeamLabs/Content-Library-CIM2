@@ -6,7 +6,7 @@ Name = microsoft-windows-kv-scheduled-task-finish-success-102
   ParserVersion = "v1.0.0"
   Conditions = [ """eventid="102"""", """Microsoft-Windows-TaskScheduler""" ]
   Fields = ${WindowsParsersTemplates.windows-events-2.Fields}[
-    """task for user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[^"]+))""",
+    """task for user\s*(?:[^\\]+\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """({event_name}Task Scheduler successfully finished)""",
   ]
 

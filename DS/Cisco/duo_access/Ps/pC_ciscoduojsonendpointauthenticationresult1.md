@@ -20,7 +20,7 @@ Name = cisco-duo-json-endpoint-authentication-result-1
     """"browser_version":"({browser_version}[^"]+)"""",
     """"email":"({email_address}[^@"]+@[^"]+)"""",
     """"factor":"(?:n\/a|({auth_method}[^"]+))"""",
-    """"user":[^\}]+?"name":"({user}[^"]+)""""
+    """"user":[^\}]+?"name":"({user}[\w\.\-]{1,40}\$?)""""
     """"new_enrollment"\s*:\s*({new_enrollment}true|false)""",
     """"application".+?"name":\s*"({service_name}[^"]+)"""
     """"location":.+?"country":\s*"({src_country}[^"]+)"""

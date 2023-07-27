@@ -17,7 +17,7 @@ Name = unix-auditbeat-json-process-create-fail-processerror
     """"ppid":({parent_process_id}\d+)""",
     """"message":"({failure_reason}[^"]+)"""",
     """user.+?group":.+?id":"({user_id}\d+)"""",
-    """user.+?group":.+?name":"({user}[^"]+)""""
+    """user.+?group":.+?name":"({user}[\w\.\-]{1,40}\$?)""""
   ]
   DupFields = ["host->dest_host"]
 

@@ -11,7 +11,7 @@ Name = trendmicro-officescan-kv-alert-trigger-success-logdevicecontrol
     """({host}\S+) WFBSS-SVC-AC""",
     """\d+ ({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d) \d+\.\d+\.\d+\.\d+""",
     """Device name="({src_host}[^"]+)""",
-    """User="({user}[^"]+)""",
+    """User="({user}[\w\.\-]{1,40}\$?)""",
     """Subject="({file_path}.+?\\({file_name}[^\\"]+))"""",
     """\[({alert_type}[^@]+)""",
   ]

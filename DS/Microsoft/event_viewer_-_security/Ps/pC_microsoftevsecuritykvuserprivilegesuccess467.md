@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-user-privilege-success-467
       """"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """EventID="+({event_code}[^"]+)"""",
       """Keywords="+({result}[^"]+)"""",
-      """SubjectUserName ="+({user}[^"]+)"""",
+      """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)"""",
       """SubjectDomainName ="+({domain}[^"]+)"""",
       """SubjectLogonId="+({login_id}[^"]+)"""",
       """ProcessName ="+(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^"]+)))"+,""",

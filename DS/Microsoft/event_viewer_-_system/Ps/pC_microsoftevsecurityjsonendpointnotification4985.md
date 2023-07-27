@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4985
     """"Hostname":"({host}[^"]+)"""",
     """"SeverityValue":"({severity}[^,]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[^"]+)"""",
+    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"TargetDomainName":"({group_domain}[^"]+)"""",

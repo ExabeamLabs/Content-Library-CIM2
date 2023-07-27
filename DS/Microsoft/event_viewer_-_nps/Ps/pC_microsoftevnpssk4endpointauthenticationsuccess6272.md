@@ -13,7 +13,7 @@ Name = microsoft-evnps-sk4-endpoint-authentication-success-6272
     """"AuthenticationServer":"({auth_server}[^"]+)"""",
     """"CallingStationID":"({src_mac}[^"]+)"""",
     """"FullyQualifiedSubjectMachineName":"(-|({user_type}[^"]+))"""",
-    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({email_address}[^@"]+@[^"]+)|(({email_domain}[^\\"]+)\\+)?({user}[^"]+))"""",
+    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({email_address}[^@"]+@[^"]+)|(({email_domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""",
   ]
 
 json-windows-events-3 = {

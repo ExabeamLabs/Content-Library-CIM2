@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-csv-endpoint-notification-success-4611
       """EventID="+({event_code}[^"]+)"""",
       """EventRecordID="+({event_id}[^"]+)"""",
       """LogonProcessName ="+({auth_process}[^"]+)"""",
-      """SubjectUserName ="+(?=\w)({user}[^"]+)"""",
+      """SubjectUserName ="+(?=\w)({user}[\w\.\-]{1,40}\$?)"""",
       """SubjectUserSid="+({user_sid}[^"]+)"""",
       """SubjectDomainName ="+(?=\w)({domain}[^"]+)"""",
       """SubjectLogonId="+({login_id}[^"]+)""""

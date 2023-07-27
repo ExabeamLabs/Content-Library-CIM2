@@ -25,7 +25,7 @@ Name = amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3
     """UnauthorizedAccess:EC2\/SSHBruteForce[^=]+?"availabilityZone":"({availability_zone}[^"]+)""",
     """"principalId":"({principal_id}[^"]+)""",
     """Recon:IAMUser\/UserPermissions[^\}\]]*"principalId":"({principal_id}[^"]+)""",
-    """"userName":"(({email_address}[^@"]+@[^"]+)|({user}[^"]+))""",
+    """"userName":"(({email_address}[^@"]+@[^"]+)|({user}[\w\.\-]{1,40}\$?))""",
     """"s3BucketDetails":[^\}\]]*"name":"({s3_bucket_name}[^"]+)""",
     """securityGroups":[^"]+"groupName":"({group_name}[^"]+)"""
   ]

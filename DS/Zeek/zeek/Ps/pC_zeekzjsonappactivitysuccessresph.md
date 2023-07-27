@@ -6,7 +6,7 @@ Name = zeek-z-json-app-activity-success-resph
   ParserVersion = v1.0.0
   Conditions = [ """"id.orig_h""", """"id.resp_h""", """"command":""", """"user""", """"reply_code""" ]
   Fields = ${ZeekParsersTemplates.json-bro-activity.Fields}[
-    """"user":\s*"((?i)<unknown>|({user}[^"]+))""",
+    """"user":\s*"((?i)<unknown>|({user}[\w\.\-]{1,40}\$?))""",
     """"password":\s*"({password}[^"]+)""",
     """"command":\s*"({operation}[^"]+)""",
     """"reply_code":\s*({trans_id}\d+)""",

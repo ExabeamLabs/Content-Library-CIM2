@@ -14,7 +14,7 @@ Name = microsoft-m365auditlogs-sk4-alert-trigger-adminrelatedactivityalert
     """"category":"({alert_type}[^"]+)"""",
     """"severity":"({alert_severity}[^"]+)"""",
     """"userPrincipalName":"({user}[^@"]+)@({domain}[^"]+)"""",
-    """"accountName":"({user}[^"]+)"""",
+    """"accountName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"domainName":"({domain}[^"]+)"""",
     """"description":"({event_name}[^"]+)"""",
     """"comments":\["+({additional_info}[^\]]+?)"+\]"""

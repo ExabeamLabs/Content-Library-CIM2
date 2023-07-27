@@ -15,8 +15,8 @@ tanium-operations-1 = {
   Fields = [
 	""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)"""",
 	""""hostname":"({host}[\w\-.]+)"""",
-	""""login__user_name":"({user}[^"]+)"""",
-  """"process__login__user_name":"({user}[^"]+)"""",
+	""""login__user_name":"({user}[\w\.\-]{1,40}\$?)"""",
+  """"process__login__user_name":"({user}[\w\.\-]{1,40}\$?)"""",
 	""""event":"({event_name}[^"]+)"""",
 	""""file__md5":"({hash_md5}[^"]+)"""",
 	""""parent_pid":({process_id}\d+)""",

@@ -8,7 +8,7 @@ Name = microsoft-o365-json-alert-trigger-success-graphidentity
   Conditions = [ """"destinationServiceName":"Office 365"""", """"detectedDateTime":"""", """"dproc":"graph-identity-protection-risk-detection"""" ]
   Fields = [
     """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",
-    """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+))"""",
+    """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"tokenIssuerType":"({token_issuer_type}[^"]+)""",
     """({alert_type}({alert_name}graph-identity-protection-risk-detection))""",
     """"riskLevel":"({alert_severity}[^"]+)""",

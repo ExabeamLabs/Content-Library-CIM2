@@ -18,7 +18,7 @@ Name = vmware-carbonblackappctrl-json-alert-trigger-success-processhashtype
     """ABId":\s+"({alert_id}[^"]+)""",
     """Message":\s+"({additional_info}[^"]+)""",
     """PathName":\s+"({url}[^"]+)""",
-    """UserName":\s+"({user}[^"]+)""",
+    """UserName":\s+"({user}[\w\.\-]{1,40}\$?)""",
     """c:\\+users\\+({user}[^"\\]+)""",
   ]
 

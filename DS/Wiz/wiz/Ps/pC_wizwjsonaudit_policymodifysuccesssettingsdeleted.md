@@ -9,7 +9,7 @@ Name = wiz-w-json-audit_policy-modify-success-settingsdeleted
  Fields = [
    """"timestamp":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d{1,7}Z)"""
    """"IP":"({src_ip}[a-fA-F\d.:]+)"""
-   """actor":.*?"name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+))""""
+   """actor":.*?"name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
    """"eventURL":"({url}[^"]+)"""
    """({app}wiz)"""
    """ruleName:\s*({rule}[^,]+?)\s*","""

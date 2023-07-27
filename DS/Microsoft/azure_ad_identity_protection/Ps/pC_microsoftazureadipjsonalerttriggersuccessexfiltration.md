@@ -13,7 +13,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
     """"category":\s*"({alert_type}[^"]+)"""",
     """"description":\s*"({additional_info}[^"]+)"""",
     """"createdDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
-    """"accountName":\s*"(({full_name}[^"\s]+\s[^"]+)|({user}[^"]+))"""",
+    """"accountName":\s*"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^\s"@]+)(@[^"]+)?)"""",
     """"domainName":\s*"({domain}[^"]+)"""",
     """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",

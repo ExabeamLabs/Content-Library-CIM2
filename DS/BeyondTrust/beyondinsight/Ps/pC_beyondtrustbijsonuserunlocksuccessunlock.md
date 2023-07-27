@@ -13,7 +13,7 @@ json-beyondtrust-activity = {
     """"eventdate":"({time}\w\w\w\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
     """"sourcehost":"({host}[\w\-\.]+)""",
     """"sourceip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """"user":"(({domain}[^\\\/]+)\\+)?(Internal process|({user}[^"]+))""",
+    """"user":"(({domain}[^\\\/]+)\\+)?(Internal process|({user}[\w\.\-]{1,40}\$?))""",
     """"operation":"({operation}[^"]+)""",
     """"failed":"({result}\d)""",
     """"ipaddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",

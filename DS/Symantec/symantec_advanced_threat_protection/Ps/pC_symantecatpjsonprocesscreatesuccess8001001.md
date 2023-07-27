@@ -10,7 +10,7 @@ Name = symantec-atp-json-process-create-success-8001001
     """"(start_)?time":({time}\d{13})""",
     """collector_device_name":"({host}[^"]+)"""",
     """"path":"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))"""",
-    """user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[^"]+))"""",
+    """user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))"""",
     """user_domain":"(NT AUTHORITY|({domain}[^"]+))"""",
     """"device_name":"({src_host}[^"]+)"""",
     """"message":"({additional_info}[^"]+)"""",
