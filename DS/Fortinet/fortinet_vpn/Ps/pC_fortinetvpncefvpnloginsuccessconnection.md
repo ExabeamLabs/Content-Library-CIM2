@@ -5,7 +5,7 @@ Name = fortinet-vpn-cef-vpn-login-success-connection
   ParserVersion = v1.0.0
   Vendor = Fortinet
   Product = Fortinet VPN
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd' time='HH:mm:ss"
   Conditions = [ 
 """IPsec connection status change""" 
 """tunnel-up"""
@@ -18,6 +18,7 @@ Name = fortinet-vpn-cef-vpn-login-success-connection
     """tunnel_?ip=(?:N\/A|({src_translated_ip}[^\s,]+))[\s,]""",
     """xauth_?user="+(?:N\/A|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
     """(\s|,)group="+(?:N\/A|({realm}[^"]+))"""
+    """({time}\d\d\d\d-\d\d-\d\d\s+time=\d\d:\d\d:\d\d)"""
   ]
   DupFields = ["user->account"]
 

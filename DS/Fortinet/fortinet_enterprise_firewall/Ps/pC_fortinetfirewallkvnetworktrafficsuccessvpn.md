@@ -5,14 +5,14 @@ Name = fortinet-firewall-kv-network-traffic-success-vpn
   Vendor = Fortinet
   Product = Fortinet Enterprise Firewall
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd 'time='HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd 'time='HH:mm:ss"
   Conditions = [ 
 """type="event""""
 """subtype="vpn""""
 ]
   Fields = [
     """devname=\"*({host}[\w\-.]+)""",
-    """date=({time}\d\d\d\d-\d\d-\d\d time=\d\d:\d\d:\d\d([+-]\d\d:\d\d)?)""",
+    """date=({time}\d\d\d\d-\d\d-\d\d time=\d\d:\d\d:\d\d)""",
     """\slevel=\"*({severity}[^\s"]*)\"*""",
     """\smsg=\"*({additional_info}[^"]*)\"*""",
     """\saction=\"*({action}[^\s"]*)\"*""",

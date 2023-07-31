@@ -4,7 +4,7 @@
 Name = kaspersky-endpointsecurity-cef-alert-trigger-success-productversion
   Vendor = Kaspersky
   Product = Kaspersky Endpoint Security for Business
-  TimeFormat =  "MM/dd/yyyy HH:mm:ss"
+  TimeFormat =  "epoch"
   Conditions = [ """CEF""","""|KasperskyLab|SecurityCenter|""","""cs3Label=ProductVersion""" ]
   Fields = [
     """Usuario:\s*({domain}[^\\]+)\\+({user}[^\s]+)""",
@@ -12,7 +12,7 @@ Name = kaspersky-endpointsecurity-cef-alert-trigger-success-productversion
     """Resultado\\+Descripción:\s*({action}[^\\]+)""",
     """nObjeto:\s*({malware_url}[^\\]+)""",
     """Objeto\\+Adicional:\s*(\s|({additional_info}[^\\]+))""",
-    """rt=({time}\d+)\s""",
+    """rt=({time}\d{13})\s""",
     """Fecha de lanzamiento de la base de datos:\s*({time}[^\\]+(a.\s*m.|p.\s*m.))""",
     """dhost=({dest_host}[^\s]+)\s*dst=""",
     """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""

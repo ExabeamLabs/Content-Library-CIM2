@@ -15,6 +15,7 @@ Name = juniper-ps-str-vpn-login-success-login-1
     """\]\s+([\w\s]+?::)?({user}[^\s\\]+?)(@({domain}[^\(]+))?\(({realm}[^\)]+)?"""
     """({os}iOS|Android|BlackBerry|iPhone OS|Windows Phone|BeOS|(?:W|w)indows\s+\d{1,2}|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)"""
     """\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\].+?\[({resource}[^\]]+)\]"""
+    """PulseSecure:\s-\s-\s-\s*({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s"""
   ]
 
 

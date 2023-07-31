@@ -8,8 +8,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4911
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='SubjectUserName'>({user}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*='ObjectType'>({object_type}[^<]+)""",
-    """<Data Name\\*='ObjectName'>({object}[^<]+)""",
+    """<Data Name\\*='ObjectType'>({object_type}File)</Data><Data Name\\*='ObjectName'>(-|({file_path}({file_dir}[^<]*?)({file_name}[^<\\\/]+?(\.({file_ext}[^<\\\/\.]+?))?)))<""",
     """<Data Name\\*='OldSd'>({old_attribute}[^<]+)""",
     """<Data Name\\*='NewSd'>({new_attribute}[^<]+)""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",

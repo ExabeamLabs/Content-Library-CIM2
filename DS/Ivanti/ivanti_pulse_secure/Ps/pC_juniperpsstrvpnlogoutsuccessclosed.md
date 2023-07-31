@@ -21,6 +21,7 @@ Name = juniper-ps-str-vpn-logout-success-closed
     """\safter\s+({session_duration}\d+)\s+seconds""",
     """\swith\s+({bytes_in}\d+)\s+bytes read""",
     """\sand\s+({bytes_out}\d+)\s+bytes written"""
+    """PulseSecure:\s-\s-\s-\s*({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s"""
   ]
 
 

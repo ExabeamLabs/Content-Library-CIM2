@@ -19,6 +19,7 @@ Name = juniper-ps-str-vpn-login-success-resume
     """\s(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-\.]+))\s+(Juniper|PulseSecure):""",
     """\- \[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\s+([\w\s]+?::)?(({email_address}[^@\s\(]+@[^\.\s\(]+\.[^\s\(]+)|(({domain}[^\\]+)\\)?({user}[^\(]+))\(({realm}[^\)]+)?\)(\[({resource}[^\]]+)\])?""",
     """({event_code}Session resumed)""",
+    """Pulse-Secure\/\d+.\d+.\d+.\d+\s*\(({os}[^\)]+)\)"""
   ]
   DupFields = [ "user->account" ]
 

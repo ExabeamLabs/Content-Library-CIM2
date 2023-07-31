@@ -30,7 +30,10 @@ s-nac-logon = {
     """DestinationIPAddress=(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """, NetworkDeviceGroups=Location#All Locations#({location}[^,]+)"""
     """(?i)(MacAddress)=({src_mac}[^,\s]+),"""
-    """NAS-IP-Address=({nas_ip_address}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """NAS-IP-Address=({nas_ip_address}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """FailureReason=({failure_reason}[^,]+?),"""
+    """\sProtocol=({protocol}[^,]+),"""
+    """DestinationPort=({dest_port}\d+),"""
  
 }
 ```
