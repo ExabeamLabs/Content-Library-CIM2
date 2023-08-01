@@ -113,6 +113,10 @@ Use Case: Cryptomining
 |                                   Product                                   | MITRE ATT&CK® TTP              | Content                                                                                                       |
 |:---------------------------------------------------------------------------:| ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | [Junos OS](../DS/Juniper_Networks/junos_os/ds_juniper_networks_junos_os.md) | T1496 - Resource Hijacking<br> | [<ul><li>2 Rules</li></ul>](../DS/Juniper_Networks/junos_os/RM/r_m_juniper_networks_junos_os_Cryptomining.md) |
+### Vendor: Kasada
+|                      Product                      | MITRE ATT&CK® TTP                                                                       | Content                                                                               |
+|:-------------------------------------------------:| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| [Kasada](../DS/Kasada/kasada/ds_kasada_kasada.md) | T1071.001 - Application Layer Protocol: Web Protocols<br>T1496 - Resource Hijacking<br> | [<ul><li>2 Rules</li></ul>](../DS/Kasada/kasada/RM/r_m_kasada_kasada_Cryptomining.md) |
 ### Vendor: LanScope
 |                                 Product                                 | MITRE ATT&CK® TTP                                                                       | Content                                                                                               |
 |:-----------------------------------------------------------------------:| --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |

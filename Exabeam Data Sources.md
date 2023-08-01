@@ -120,6 +120,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Ivanti         | [Ivanti Pulse Secure](DS/Ivanti/ivanti_pulse_secure/ds_ivanti_ivanti_pulse_secure.md)<br>               |
 | jSONAR         | [SonarG](DS/jSONAR/sonarg/ds_jsonar_sonarg.md)<br>          |
 | Juniper Networks                     | [Juniper Advanced Threat Protection](DS/Juniper_Networks/juniper_advanced_threat_protection/ds_juniper_networks_juniper_advanced_threat_protection.md)<br>[Juniper SRX Series](DS/Juniper_Networks/juniper_srx_series/ds_juniper_networks_juniper_srx_series.md)<br>[Junos OS](DS/Juniper_Networks/junos_os/ds_juniper_networks_junos_os.md)<br>          |
+| Kasada         | [Kasada](DS/Kasada/kasada/ds_kasada_kasada.md)<br>          |
 | Kaspersky      | [Kaspersky AV](DS/Kaspersky/kaspersky_av/ds_kaspersky_kaspersky_av.md)<br>[Kaspersky Endpoint Security for Business](DS/Kaspersky/kaspersky_endpoint_security_for_business/ds_kaspersky_kaspersky_endpoint_security_for_business.md)<br>    |
 | Kemp           | [Kemp LoadMaster](DS/Kemp/kemp_loadmaster/ds_kemp_kemp_loadmaster.md)<br>         |
 | Kiteworks      | [Kiteworks](DS/Kiteworks/kiteworks/ds_kiteworks_kiteworks.md)<br>                 |

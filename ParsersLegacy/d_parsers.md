@@ -90,6 +90,8 @@
 | dns-system-event-3                 | unix-unixnamed-str-app-notification-success-cname                                  |
 | dns-system-event-4                 | unix-unixnamed-str-app-notification-success-notify                                 |
 | dns-system-event-5                 | unix-unixnamed-str-app-activity-success-lameservers                                |
+| dummy-ards-parser                  | amazon-ards-json-app-notification-success-configurationitemchangenotification      |
+| dummy-ards-parser-1                | amazon-ards-json-app-notification-success-configurationitemstatus                  |
 | dummy-buildkite-parser-1           | buildkite-bk-json-app-notification-success-api                                     |
 | dummy-buildkite-parser-2           | buildkite-bk-json-app-notification-success-ui                                      |
 | dummy-buildkite-parser-3           | buildkite-bk-json-app-notification-success-webhook                                 |
@@ -640,6 +642,7 @@
 | dummy-new-parser-624               | pan-ngfw-json-alert-trigger-success-threat-data                                    |
 | dummy-new-parser-625               | pan-ngfw-json-alert-trigger-success-threat-action                                  |
 | dummy-new-parser-626               | pan-ngfw-json-endpoint-login-auth                                                  |
+| dummy-new-parser-627               | pan-ngfw-json-network-traffic-gtp                                                  |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |
 | dummy-new-parser-64                | microsoft-iis-str-http-session-getautodiscover                                     |
 | dummy-new-parser-65                | microsoft-iis-str-http-session-getecp                                              |
@@ -681,6 +684,9 @@
 | dummy-new-parser-70                | microsoft-iis-str-http-session-getoab                                              |
 | dummy-new-parser-700               | zscaler-ia-str-http-session-dlpengine-2                                            |
 | dummy-new-parser-71                | microsoft-iis-str-http-session-getowa                                              |
+| dummy-new-parser-711               | microsoft-evsystem-xml-endpoint-logout-success-7002                                |
+| dummy-new-parser-712               | microsoft-evsecurity-xml-password-read-5379-2                                      |
+| dummy-new-parser-713               | microsoft-evsystem-xml-policy-apply-1502                                           |
 | dummy-new-parser-72                | microsoft-iis-str-http-session-getrpc                                              |
 | dummy-new-parser-73                | microsoft-iis-str-http-session-headapi                                             |
 | dummy-new-parser-74                | microsoft-iis-str-http-session-headautodiscover                                    |
@@ -711,6 +717,7 @@
 | dummy-new-parser-97                | microsoft-iis-str-http-session-postews-1                                           |
 | dummy-new-parser-98                | microsoft-iis-str-http-session-postmapi                                            |
 | dummy-new-parser-99                | microsoft-iis-str-http-session-postmicrosoftserver                                 |
+| dummy-parser-rds-1                 | amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin          |
 | duo-app-activity                   | cisco-duo-json-app-activity-success-user                                           |
 | duo-app-activity-1                 | cisco-duo-sk4-app-activity-success-app-userupdate                                  |
 | duo-app-activity-10                | cisco-duo-json-app-activity-success-admindelete                                    |

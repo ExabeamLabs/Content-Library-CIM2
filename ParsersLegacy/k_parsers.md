@@ -1,5 +1,6 @@
 | Old Parser Name              | New-Scale Parser Name                                                       |
 | ---------------------------- | --------------------------------------------------------------------------- |
+| kaspersky-es-alert           | kaspersky-endpointsecurity-kv-alert-trigger-success-alerttrigger            |
 | kaspersky-es-alert-1         | kaspersky-endpointsecurity-kv-alert-trigger-success-kes                     |
 | kaspersky-es-alert-2         | kaspersky-endpointsecurity-kv-alert-trigger-success-wsee                    |
 | kaspersky-network-alert      | kaspersky-endpointsecurity-kv-alert-trigger-success-networkthreatprotection |
