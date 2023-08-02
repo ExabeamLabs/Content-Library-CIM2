@@ -20,9 +20,9 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-2
     """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<]+))</Data>""",
-    """<Data Name\\*=('|")ProcessName('|")>(-|({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({process_name}[^\\\/<>]+?)))</Data>"""
+    """<Data Name\\*=('|")ProcessName('|")>(-|({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({process_name}[^\\\/<>]+?(\.({file_ext}[^\\\/\.<]+)))))</Data>"""
   ]
-  DupFields = ["process_name -> file_name"]
+  DupFields = ["process_name -> file_name", "process_path -> file_path", "process_dir -> file_dir"]
 
 
 }

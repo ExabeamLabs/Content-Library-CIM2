@@ -10,6 +10,7 @@ Name = okta-amfa-json-app-login-success-evaluatesignon-1
     """"domain":"({domain}[^"]+)""""
     """"displayMessage":"({additional_info}[^"]+)"""
     """"eventType":"({operation}[^"]+)"""
+    """"deviceFingerprint":\s*"({fingerprint}[^"]+)""""
   ]
 
 s-okta-app-login = {
@@ -40,6 +41,9 @@ s-okta-app-login = {
     """"state":\s*"({location_state}[^"]+)""",
     """"country":\s*"({location_country}[^"]+)"""
     """"dtHash":"({hash_md5}[^"]+)"""
+    """"os":\s*"((?i)unknown|({os}[^"]+))""""
+    """"browser":\s*"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"domain":\s*"(null|({domain}[^"\\}]+))""""
    ] 
     DupFields=["app->object"]
  },

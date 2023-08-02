@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-group-member-add-4761-1
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)"""
+    """<Data Name(\\)?='MemberName'>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>"""
   ]
 
 

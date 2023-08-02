@@ -29,6 +29,8 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
     """<Data Name(\\)?=('|")ParentProcessName('|")>({parent_process}({parent_process_dir}[^<]+[\\\/]+)?({parent_process_name}[^<]+))<\/Data>""",
     """Creator Process Name:\s*({parent_process_path}[^\s]+)\s*""",
     """<Data Name(\\)?=('|")NewProcessName('|")>({dest_process_path}({dest_process_dir}(?:[^<>]+)?[\\\/])?({dest_process_name}[^\\\/<>]+))<"""
+    """<Data Name(\\)?=('|")NewProcessId('|")>({parent_process_id}[^<]+)<"""
+    """New Process Name:\s*({parent_process_path}[^\s]+)\s*"""
   ]
   DupFields = [ "process_guid->process_id" ]
 

@@ -35,6 +35,7 @@ Name = microsoft-evsecurity-json-mul-network-session-success-5156
     """"Protocol\\*":\\*\s*"({ms_protocol_num}\d+)"""
     """"LayerName\\*":\\*"({layer_name}[^\\"]+)"""
   ]
+  DupFields = [ "ms_protocol_num->protocol" ]
 
 
 }

@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-policy-apply-6144-1
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
     """ThreadID(\\)?='({thread_id}\d+)""",
     """Provider Name\\*='({provider_name}[^\']+)"""
+    """Controllers Policy\{({policy_name}[^}\s]+)\}\s*"""
   ]
 
 

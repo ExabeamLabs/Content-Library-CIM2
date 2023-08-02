@@ -12,7 +12,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
     """Event time:\s*({time}\d+\/\d+\/\d\d\d\d\s\d+:\d\d:\d\d\s(AM|PM|am|pm))""",
     """Event code:\s*({event_code}\d+)""",
     """Event message:\s*({event_name}[^=]+?)\s*Event time:""",
-    """Account name:\s*(({domain}[^\\]+)\\)?({user}[^\s]+)""",
+    """Account name:\s*(({domain}[^\\]+)\\+)?({user}[^\s]+)""",
     """Process ID:\s({process_id}\d+)""",
     """Process name:\s+({process_name}[^=]+?)\s+Account name:""",
 # application_path is removed

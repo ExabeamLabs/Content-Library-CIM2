@@ -13,7 +13,7 @@ Name = sophos-ep-json-peripheral-storage-insert-success-peripheral
     """"dhost":\s*"({src_host}[^"]+)""",
     """"suser":\s*"(?:n\/a|({full_name}[^"\\]+))"""",
     """"suser":\s*"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\\\s]+))""",
-    """"suser":\s*"(({domain}[^\\",]+)\\+)?({user}[^",\\\/\s]+)"""",
+    """"suser":\s*"(({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """"id":\s*"({device_id}[^"]+)""",
   ]
   ParserVersion = "v1.0.0"

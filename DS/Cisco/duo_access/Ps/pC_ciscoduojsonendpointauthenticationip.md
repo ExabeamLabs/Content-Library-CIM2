@@ -11,7 +11,7 @@ Name = cisco-duo-json-endpoint-authentication-ip
     """"timestamp":\s*({time}\d{10})""",
     """"device":\s*"*(null\}?|({device_name}[^",]+))"""",
     """"+ip"+:\s"+(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
-    """"username"\s*:\s*"(?:({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"username"\s*:\s*"(?:({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """"factor"\s*:\s*"(?:n\/a|({auth_method}[^"]+))"""",
     """"os"\s*:\s*"({os}[^"]+)"""",
     """"os_version"\s*:\s*"({os_version}[^"]+)"""",

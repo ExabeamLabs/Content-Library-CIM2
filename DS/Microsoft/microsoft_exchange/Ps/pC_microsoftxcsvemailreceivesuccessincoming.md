@@ -18,7 +18,7 @@ Name = microsoft-x-csv-email-receive-success-incoming
     """,({email_recipients}({dest_email_address}[^\s@;,"]+@[^\.,;]+\.[^\s@;,"]+)[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,""",
     """,\s*({email_subject}[^,]*?)\s*,(?:[^",]+?,|,){3}Incoming,""",
     ""","\s*({email_subject}[^"]+?)\s*",(?:[^",]+?,|,){3}Incoming,""",
-    """,(MicrosoftExchange[^,]+?|({src_email_address}[^\s,;@"']+@[^\.,;]+\.[^\s;,"'@]+)),(?:<>|({return_path}[^,]+?)),(?:[^",]+?,|,)Incoming,"""
+    """,(MicrosoftExchange[^,]+?|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)),(?:<>|({return_path}[^,]+?)),(?:[^",]+?,|,)Incoming,"""
   ]
   DupFields = ["dest_email_address->orig_user", "src_email_address->external_address"]
 

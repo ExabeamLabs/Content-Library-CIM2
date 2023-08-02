@@ -643,6 +643,7 @@
 | dummy-new-parser-625               | pan-ngfw-json-alert-trigger-success-threat-action                                  |
 | dummy-new-parser-626               | pan-ngfw-json-endpoint-login-auth                                                  |
 | dummy-new-parser-627               | pan-ngfw-json-network-traffic-gtp                                                  |
+| dummy-new-parser-628               | pan-ngfw-json-network-notification-success-iptag                                   |
 | dummy-new-parser-63                | microsoft-iis-str-http-session-getapi                                              |
 | dummy-new-parser-64                | microsoft-iis-str-http-session-getautodiscover                                     |
 | dummy-new-parser-65                | microsoft-iis-str-http-session-getecp                                              |

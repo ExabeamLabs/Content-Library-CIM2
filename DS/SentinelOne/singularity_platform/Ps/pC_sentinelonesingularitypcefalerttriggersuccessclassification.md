@@ -26,8 +26,8 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"mitigationReport":({additional_info}\{.{1,400}?\}\}),""",
      """"fileContentHash":"({hash_md5}[^"]+)"""",
      """"id":"({alert_id}\d+)"""",
-     """"action":"quarantine".*?"status":"({quarantine_status}\w+)"""",
-     """"action":"kill".*?"status":"({kill_status}\w+)"""",
+     """"action":"({action}quarantine)".*?"status":"({quarantine_status}\w+)"""",
+     """"action":"({action1}kill)".*?"status":"({kill_status}\w+)"""",
      """"mitigationStatus":"({result}[^"]+)"""",
      """"threatId":"({alert_id}\d+)"""",
      """"mitigationMode":"({mitigation_mode}[^"]+)"""",
@@ -36,7 +36,8 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"incidentStatus":"({incident_status}[^"]+)"""",
      """"analystVerdict":"({verdict}[^"]+)"""",
      """"groupName":"({group_name}[^"]+)"""",
-     """msg=.*?Alert Detected by\s*\[({alert_source}[^\]]+)\]"""
+     """msg=.*?Alert Detected by\s*\[({alert_source}[^\]]+)\]""",
+     """"confidenceLevel":"({category}[^"]+)"""
   ]
    SOAR {
     IncidentType = "malware"

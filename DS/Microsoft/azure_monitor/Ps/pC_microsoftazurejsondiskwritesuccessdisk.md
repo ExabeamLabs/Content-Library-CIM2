@@ -8,7 +8,7 @@ Name = microsoft-azure-json-disk-write-success-disk
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """"+responseBody"+:\s*"+\{[^\}\{]+"+name\\?"+:\s*\\?"+({resource_name}[^"]+)\\"+""",
     """"+responseBody"+:\s*"+\{[^\}\{]+"+location\\?"+:\s*\\?"+({region}[^"]+)\\"+""",
-    """"+responseBody"+:\s*"+\{[^\}\{]+"+managedBy\\?"+:\s*\\?"+({dest_host}[^"]+)\\"+""",
+    """"+responseBody"+:\s*"+\{[^\}\{]+"+managedBy\\?"+:\s*\\?"+({dest_host}[\w\-.]+)\\"+""",
     """"+properties\\?"+:[^\}]+"+osType\\?"+:\s*\\?"+({os_type}[^"]+)\\"+""",
     """"+creationData\\?"+:[^\}]+"+createOption\\?"+:\s*\\?"+({source_resource_type}[^"]+)\\"+""",
     """"+imageReference\\?"+:[^\}]+"+id\\?"+:\s*\\?"+({source_resource}[^"]+)\\"+""",

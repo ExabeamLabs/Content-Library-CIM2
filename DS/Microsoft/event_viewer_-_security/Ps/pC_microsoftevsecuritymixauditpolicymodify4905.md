@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """An attempt was made to unregister a security event source""", """4905""" ]
   Fields = [
     """({event_name}An attempt was made to unregister a security event source)""",
@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
     """\sProcess ID:\s*(|-|({process_id}.+?))\s*Process Name:\s*(|-|({process_path}({process_dir}.*?)({process_name}[^\\\/]+?)))\s*Event Source:""",
 # src_id is removed
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)"""
   ]
 
 

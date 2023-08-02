@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-kv-audit-policy-modify-4907
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """4907""", """Auditing settings on object were changed""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s+EvntSLog""",
+    """(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)"""
     """({event_code}4907)""",
     """({event_name}Auditing settings on object were changed)""",
     """Security ID:\s*(?!NT AUTHORITY)(({account_domain}[^\\\/:]+?)[\\\/]+)?({account}[^\s:]+?)(?<!SYSTEM)\s+"""

@@ -19,7 +19,7 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """"UserName":\s*"((LOCAL SERVICE|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))))"""",
     """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\-\.]+\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
-    """"ImageFileName":\s*"[\\\?]+(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
+    """"ImageFileName":\s*"[\\\?]+(|({parent_process_path}({parent_process_dir}[^"]*?)(\\+({parent_process_name}[^"\\]+?))?))""""
     """"aid":\s*"({aid}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)"""
     """"InterfaceGuid":"({process_guid}[^"]+)""""

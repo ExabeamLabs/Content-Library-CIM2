@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-network-traffic-fail-5152
     """({event_name}The Windows Filtering Platform has blocked a packet)""",
     """Direction:[\s\S]*?({direction}[^\s]+)""",
     """<Data Name(\\)?='Application'>(-|({process_path}({process_dir}([^<]+)?[\\\/])?({process_name}[^\\\/]+?)))<"""
+    """<Data Name\\*='Direction'>({direction}(Inbound|Outbound))</Data>"""
     ]
 
 

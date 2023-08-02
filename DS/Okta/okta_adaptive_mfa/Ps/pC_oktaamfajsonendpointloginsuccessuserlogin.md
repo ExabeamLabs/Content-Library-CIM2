@@ -7,6 +7,8 @@ Name = okta-amfa-json-endpoint-login-success-userlogin
     """({app}Okta)""",
     """({event_name}User login to Okta)""",
     """({operation}core.user_auth.login_success)""",
+    """"domain":\s*"(null|({domain}[^"\\}]+))""""
+    """geographicalContext":\s*\{"(Unknown|({location}[^=\\}]+))"""
   ]
   ParserVersion = "v1.0.0"
 
@@ -38,6 +40,9 @@ s-okta-app-login = {
     """"state":\s*"({location_state}[^"]+)""",
     """"country":\s*"({location_country}[^"]+)"""
     """"dtHash":"({hash_md5}[^"]+)"""
+    """"os":\s*"((?i)unknown|({os}[^"]+))""""
+    """"browser":\s*"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"domain":\s*"(null|({domain}[^"\\}]+))""""
    ] 
     DupFields=["app->object"]
  },

@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-group-create-success-4727-1
   Vendor = Microsoft
   Product = Event Viewer - System
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>4727</EventID>""" ,"""Security Group Management""" ,"""<Execution ProcessID""" ]
   Fields = [

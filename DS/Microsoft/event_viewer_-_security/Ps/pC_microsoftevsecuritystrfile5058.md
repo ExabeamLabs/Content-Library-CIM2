@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-str-file-5058
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+)\S+\s({host}[^\s]+)"""
+    """File Path:\s*({file_path}.+?)\s+Operation:"""
   ]
 
 raw-object-access = {
