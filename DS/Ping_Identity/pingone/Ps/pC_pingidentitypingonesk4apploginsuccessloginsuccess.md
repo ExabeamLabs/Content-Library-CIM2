@@ -11,7 +11,7 @@ Name = pingidentity-pingone-sk4-app-login-success-loginsuccess
     """cat=({category}[^\s]+)"""
     """request=({result}[^\s]+)""",
     """requestClientApplication=({app}.*?)\s\w+=""",
-    """suser=({user}[^\s]+)""",
+    """suser=({user}[\w\.\-]{1,40}\$?)""",
     """flexString2=({auth_method}.*?)\s\w+="""
   ]
   ParserVersion = "v1.0.0"

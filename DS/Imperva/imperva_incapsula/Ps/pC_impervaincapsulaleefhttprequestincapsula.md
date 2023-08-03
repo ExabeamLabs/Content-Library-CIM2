@@ -21,7 +21,7 @@ Name = imperva-incapsula-leef-http-request-incapsula
     """\Wcicode=({city}.+?)\s+(\w+=|$)""",
     """\Wcs7=({latitude}.+?)\s+(\w+=|$)""",
     """\Wcs8=({longitude}.+?)\s+(\w+=|$)""",
-    """\WCustomer=({user}.+?)\s+(\w+=|$)""",
+    """\WCustomer=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
 # protocol_version is removed
     """\Wurl=(-|({url}(({protocol}[^:\\\/\s]+):[\\\/]+)?({web_domain}[^\\\/\s:]+)(:\d+)?({uri_path}\/[^\?"]*?)?({uri_query}\?[^"\s]*?)?))\s+(\w+=|$)""",
     """\WrequestMethod=({method}.+?)\s+(\w+=|$)""",

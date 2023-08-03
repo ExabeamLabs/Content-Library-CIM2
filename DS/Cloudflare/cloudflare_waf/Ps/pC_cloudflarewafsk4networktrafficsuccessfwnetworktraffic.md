@@ -10,7 +10,7 @@ Name = cloudflare-waf-sk4-network-traffic-success-fwnetworktraffic
   Fields = [
     """ext__occurred_at_=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """"action":"({operation}[^"]+)"""",
-    """suser=({user}[^\s]+)\s""",
+    """suser=({user}[\w\.\-]{1,40}\$?)\s""",
     """"ua":"({user_agent}[^"]*?)"""",
     """"country":"({country_code}[^"]*?)"""",
     """deviceInboundInterface=({src_interface}.*?)\s*\w+=""",

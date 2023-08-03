@@ -15,7 +15,7 @@ Name = mcafee-es-cef-alert-trigger-success-virusscan
       """\sdst=(?:0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
       """\sfname=({malware_url}.+?\\+({malware_file_name}[^\\]+?))\s+(\w+=|$)""",
       """\smsg=({additional_info}.+?)\s+(\w+=|$)""",
-      """\sduser=(({domain}[^=\\]+)\\+)?({user}.+?)\s+(\w+=|$)""",
+      """\sduser=(({domain}[^=\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
       """\sdntdom=(?:\(none\)|({domain}[^\s]+))""",
       """\sexternalId=({alert_id}\d+)""",
       """\|McAfee\|VirusScan[^|]+?\|[^|]+?\|[^|]+?\|({alert_name}[^.|]+)""",

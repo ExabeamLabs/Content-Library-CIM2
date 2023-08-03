@@ -28,6 +28,7 @@ cef-crowdstrike-app-activity-temp-dl = {
     """"aip":\s*"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"name":\s*"({alert_type}[^"]+)"""
     """"ClientComputerName":\s*"({src_host}[^"]+)"""
+    """"event_platform":"({os}[^"]+)""""
   
 }
 ```

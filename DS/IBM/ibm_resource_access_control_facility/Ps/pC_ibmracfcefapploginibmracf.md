@@ -14,7 +14,7 @@ Name = ibm-racf-cef-app-login-ibmracf
     """\WcategoryOutcome=(|/({result}.+?))(\s+\w+=|\s*$)""",
     """\Wshost=(|({src_host}.+?))(\s+\w+=|\s*$)""",
     """\Wdhost=(|({host}.+?))(\s+\w+=|\s*$)""",
-    """\Wsuser=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\Wsuser=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\Wsuid=(|({user_id}.+?))(\s+\w+=|\s*$)""",
     """\Wsproc=(Null|({process_name}.+?))(\s+\w+=|\s*$)""",
     """\Wfname=(|({object}.+?))(\s+\w+=|\s*$)""",

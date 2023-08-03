@@ -28,7 +28,7 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
    """Namespace:\s*({event_hub_namespace}\S+)""",
    """EventHub name:\s*({event_hub_name}.+?)\s*\]""",
    """"category":"({category}[^"]+)""",
-   """suser=(anonymous|({user}.+?))\s+\w+=""",
+   """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
    """"resourceId":"({object}[^"]+)""",
    """"operationName":"({operation}[^"]+)""",
    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""

@@ -20,7 +20,7 @@ Name = google-workspace-cef-app-activity-success-audit
   """({app}Gmail|gmail)""",
   """"action_type":({action_type}\d+)"""
   """"service":"({service_name}[^"]+)"""
-  """suser=(anonymous|({email_address}[^@=\s]+@[^\.=\s]+\.[^=\s]+)|({user}[^\s]+))""",
+  """suser=(anonymous|({email_address}[^@=\s]+@[^\.=\s]+\.[^=\s]+)|({user}[\w\.\-]{1,40}\$?))""",
   """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
   ]
   DupFields = [ "src_email_address->email_address" ]

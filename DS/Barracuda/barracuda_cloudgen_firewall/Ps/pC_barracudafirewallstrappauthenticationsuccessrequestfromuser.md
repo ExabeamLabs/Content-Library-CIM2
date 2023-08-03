@@ -5,7 +5,7 @@ Name = barracuda-firewall-str-app-authentication-success-requestfromuser
   ParserVersion = v1.0.0
   Conditions = [ """Session PHS: Authentication request from user""", """VPN""" ]
   Fields = ${BarracudaParserTemplates.barracuda-vpn-auth-attempt.Fields} [
-    """request from user (({email_address}[^@\s\(]+@[^\s\(@]+)|({user}[^\s]+))""",
+    """request from user (({email_address}[^@\s\(]+@[^\s\(@]+)|({user}[\w\.\-]{1,40}\$?))""",
     """({event_name}Authentication request from user)""",
   ]
 

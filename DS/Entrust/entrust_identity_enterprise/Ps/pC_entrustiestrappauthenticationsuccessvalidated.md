@@ -9,7 +9,7 @@ Name = entrust-ie-str-app-authentication-success-validated
   Conditions = [ """ [AuthenticationManager:authenticateGeneric:user] """ , """ validated""" ]
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
-    """ \[({event_name}AuthenticationManager:authenticateGeneric:user)\] (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))\s""",
+    """ \[({event_name}AuthenticationManager:authenticateGeneric:user)\] (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\s""",
   ]
 
 

@@ -11,7 +11,7 @@ Name = microsoft-evpowershell-str-network-listen-53504
     """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\sMSWinEventLog""",
     """({event_code}53504)""",
-    """Microsoft-Windows-PowerShell\s+(NETWORK SERVICE|({user}.+?))\s+User""",
+    """Microsoft-Windows-PowerShell\s+(NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))\s+User""",
     """({event_name}Windows PowerShell has started an IPC listening thread)""",
     """process:\s*({process_id}\d+)""",
     """({process_name}PowerShell)""",

@@ -28,7 +28,7 @@ Fields = [
 """"file_path":"({malware_file_name}[^"]+)"""
 """"object":"({object}[^"]+)"""
 """"breach_id":"\s*({alert_id}[^"]+)""""
-"""duser=({user}[^\s]+)"""
+"""duser=({user}[\w\.\-]{1,40}\$?)"""
 """"organization_unit":"({user_ou}[^"]+)""""
 """"shared_with":"({shared_with_at}[^"]+)""""
 """"site":"({site_at}[^"]+)""""

@@ -13,7 +13,7 @@ Name = infowatch-dlp-cef-file-write-success-externaldevice
     """\Wshost=({src_host}.+?)(\s+[\w\.]+=|\s*$)""",
     """\Wact=({result}.+?)(\s+[\w\.]+=|\s*$)""",
     """\Wsntdom=({user}[^@]+?)@({domain}[^@]+?)(\s+[\w\.]+=|\s*$)""",
-    """\Wsuser=({user}.+?)(\s+[\w\.]+=|\s*$)""",
+    """\Wsuser=({user}[\w\.\-]{1,40}\$?)(\s+[\w\.]+=|\s*$)""",
     """\Wfname=({file_name}.+?(?:\.({file_ext}[^\.]+?))?)(\s+[\w\.]+=|\s*$)""",
     """\WfilePath=({file_path}({file_dir}[^=]*?[\\\/]+)?[^\\\/]+?)(\s+[\w\.]+=|\s*$)""",
     """\Wdvc=({host}.+?)(\s+[\w\.]+=|\s*$)""",

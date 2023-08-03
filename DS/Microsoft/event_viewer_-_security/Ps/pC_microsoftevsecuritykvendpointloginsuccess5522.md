@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-552-2
 	  """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*((?i)AM|PM))\s*LogName =""",
     """ComputerName =({host}[^\s]+)\s*User=""",
     """({event_code}552)""",
-    """User=({user}[^\s]+)\s*Sid=""",
+    """User=({user}[\w\.\-]{1,40}\$?)\s*Sid=""",
 	  """Sid=({user_sid}[^\s]+)\sSidType=""",
 	  """RecordNumber=({event_id}\d+)\s*"""
   ]

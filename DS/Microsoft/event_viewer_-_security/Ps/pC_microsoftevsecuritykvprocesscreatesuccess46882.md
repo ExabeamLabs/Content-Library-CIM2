@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-process-create-success-4688-2
     """Computer(Name)? = "+({host}[^"]+)"""",
     """EventCode = ({event_code}\d+)""",
     """TimeGenerated = "({time}[\d]+)\.\d\d\d""",
-    """Account Name:\s+(?:|({user}.+?))\s+Account Domain:\s+(?:|({domain}.+?))\s+Logon ID:""",
+    """Account Name:\s+(?:|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:\s+(?:|({domain}.+?))\s+Logon ID:""",
     """New Process Name:\s+(?:|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/\s]+)))\s+Token Elevation Type:""",
     """New Process Name:\s+(?:|({path}.+?))\s+Token Elevation Type:"""
     """Logon ID:\s+({login_id}[^\s]+)\s+Process""",

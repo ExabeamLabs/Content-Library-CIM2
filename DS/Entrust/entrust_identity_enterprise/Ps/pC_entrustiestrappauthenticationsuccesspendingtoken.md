@@ -10,7 +10,7 @@ Name = entrust-ie-str-app-authentication-success-pendingtoken
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
 # module is removed
-    """({event_description}User (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+)) authenticated with pending token\.)""",
+    """({event_description}User (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)) authenticated with pending token\.)""",
   ]
 
 

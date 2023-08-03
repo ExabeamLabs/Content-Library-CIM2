@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-csv-user-password-reset-success-4724-1
      """(?!\d+)({host}[\w\-.]+),([^,]*,)?アカウントのパスワードのリセットが試行されました。""",
      """ComputerName =({computer_name}[\w.\-]+)""",
      """EventCode=({event_code}\d+)""",
-     """サブジェクト:.+?アカウント名:\s+({user}.+?)\s+アカウント ドメイン:\s+({domain}.+?)\s+ログオン ID:""",
+     """サブジェクト:.+?アカウント名:\s+({user}[\w\.\-]{1,40}\$?)\s+アカウント ドメイン:\s+({domain}.+?)\s+ログオン ID:""",
      """ログオン ID:\s+({login_id}[^\s]+)""",
      """ターゲット アカウント:.+?セキュリティ ID:\s+({user_sid}.+?)\s+アカウント名:\s+(?=\w)({dest_user}.+?)\s+アカウント ドメイン:\s+({dest_domain}.*?)\s*$"""
    ]

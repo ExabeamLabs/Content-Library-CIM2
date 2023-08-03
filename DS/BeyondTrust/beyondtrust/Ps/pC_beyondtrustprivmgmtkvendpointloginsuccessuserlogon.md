@@ -9,7 +9,7 @@ Name = beyondtrust-privmgmt-kv-endpoint-login-success-userlogon
     Fields = [
       """ComputerName =({host}[^\s]+)""",
       """Message=({operation_type}.+?)\s+Command Line:""",
-      """User Name:\s*(?:[A-F\d\-]{36}|({user}.+?))\s+User Domain SID:""",
+      """User Name:\s*(?:[A-F\d\-]{36}|({user}[\w\.\-]{1,40}\$?))\s+User Domain SID:""",
       """User Domain Name:\s*({domain}.*?)\s+User Domain Name""",
       """User SID:\s*({user_sid}.*?)\s+User Name""",
       """Administrator:\s*({admin}.*?)\s+Power User""",

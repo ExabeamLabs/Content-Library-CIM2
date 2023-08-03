@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-user-create-success-4720-3
      """(?!\d+)({host}[\w\-.]+),([^,]*,)?ユーザー アカウントが作成されました。""",
      """ComputerName =({computer_name}[\w.\-]+)""",
      """EventCode=({event_code}\w+)""",
-     """サブジェクト:.+?アカウント名:\s+({user}.+?)\s+アカウント ドメイン:\s+({domain}[^\s]+).+?ログオ
+     """サブジェクト:.+?アカウント名:\s+({user}[\w\.\-]{1,40}\$?)\s+アカウント ドメイン:\s+({domain}[^\s]+).+?ログオ
 ン ID:\s+({login_id}[^\s]+)""",
      """新しいアカウント:.+?セキュリティ ID:\s+({account_id}[^\s]+)\s+アカウント名:\s+({account_name}.+?)\s+アカウント ドメイン:\s+({account_domain}[^\s]+)"""
    ]

@@ -14,8 +14,8 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """([^\|]*\|){5}({operation}[^\|]+)""",
     """\WdestinationServiceName =({app}.+?)\s+(\w+=|$)""",
-    """\Wsuser=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}.+?))(\s+[\S]+=|\s*$)""",
-    """\Wsuid=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}.+?))(\s+[\S]+=|\s*$)""",
+    """\Wsuser=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
+    """\Wsuid=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """"CsHost":"({app}[^:",]+)""",
     """"Result":"({action}[^"]+)"""",
     """"resourceId":"({resource}[^"]+)"""",

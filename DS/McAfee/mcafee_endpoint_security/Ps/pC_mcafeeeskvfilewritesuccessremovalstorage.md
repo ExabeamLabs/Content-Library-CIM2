@@ -13,7 +13,7 @@ Name = mcafee-es-kv-file-write-success-removalstorage
       """\sshost=({src_host}[^\s]+)""",
       """\snitroObject_Type=({operation}.+?)\s[^\s]+?=""",
       """\snitroThreat_Name =({operation_details}.+?)\s[^\s]+?=""",
-      """\sduser=([^\\=]+?\\)?({user}.+?)\s[^\s]+?=""",
+      """\sduser=([^\\=]+?\\)?({user}[\w\.\-]{1,40}\$?)\s[^\s]+?=""",
       """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """\snitroProcess_Name =({process_path}({process_dir}(?:[^=]+)?[\\\/])?({process_name}[^\\\/=]+))\s[^\s]+="""
     ]

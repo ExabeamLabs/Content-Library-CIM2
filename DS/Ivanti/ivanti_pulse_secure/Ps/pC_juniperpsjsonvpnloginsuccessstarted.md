@@ -21,7 +21,7 @@ Name = juniper-ps-json-vpn-login-success-started
       """\srealm=[\\"]*({realm}.+?)[\\"]*(\s+\w+=|\s*")""",
       """\sroles=[\\"]*({roles}.+?)[\\"]*(\s+\w+=|\s*")""",
       """\svpn=[\\"]*({vpn}.+?)[\\"]*(\s+\w+=|\s*")""",
-      """user=({user}.+?)(\s+\w+=|\s*")"""
+      """user=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*")"""
       """\sfw=({firewall}[a-fA-F\d.:]+)"""
       """\stype=({vpn_type}[^=]+?)(\s+\w+=|\s*$)"""
     ]

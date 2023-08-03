@@ -15,7 +15,7 @@ Fields = [
   """DLP_EM:\s*({host}[^\s]+)"""
   """Incident\s*:*\s*"({alert_name}[^"]+)"""
   """Severity=({alert_severity}[^\s]+)"""
-  """User=(({domain}[^\\]+)\\)?({user}.+?)\s+\w+="""
+  """User=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\s+\w+="""
   """Policy=({alert_type}.+?)\s+\w+="""
   """userEmail=({src_email_address}[^\s]+)"""
   """sessionEmailMailto=({email_recipients}.+?)\s+\w+="""

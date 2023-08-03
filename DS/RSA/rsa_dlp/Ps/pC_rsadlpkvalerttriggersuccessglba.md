@@ -8,7 +8,7 @@ Name = rsa-dlp-kv-alert-trigger-success-glba
   Conditions = [ """DLP_EM:""", """usage=""", """usageApplication=""" ]
   Fields = [
     """DLP_EM:\s*({host}[^\s]+)""",
-    """User=(({domain}[^\\]+)\\)?({user}.+?)\s+\w+=""",
+    """User=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """Incident\s*:*\s*"({alert_name}[^"]+)""",
     """Severity=({alert_severity}[^\s]+)""",
     """Policy=({alert_type}.+?)\s+\w+=""",

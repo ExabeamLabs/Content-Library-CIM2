@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-handle-request-success-4659
     """<?Computer>?(Name)?\s*=?\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({host}[\w.\-]+))""",
     """\Wdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",
-    """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}.+?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}.+?))\s*Object:""",
+    """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}.+?))\s*Object:""",
     """\sObject:.+?Object Server:\s*(|-|({object_server}.+?))\s*Object Type:\s*(|-|({object_type}.+?))\s*Object Name:\s*(|-|({object}.+?))\s*Handle ID:\s*(|-|({object_id}.+?))\s*Process Information:\s*(|-|(.+?))\s*Process ID:\s*(|-|({process_id}.+?))\s*Access Request Information:""", # process_info is removed
   ]
   DupFields = [ "host->dest_host" ]

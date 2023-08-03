@@ -33,6 +33,7 @@ crowdstrike-auth-activity = {
     """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
+    """"event_platform\\?":\\?"({os}[^"]+?)\\?""""
   ]
   DupFields = ["event_name->event_code", "falcon_host_link->additional_info", "file_dir->directory", "file_name->process_name"
 }

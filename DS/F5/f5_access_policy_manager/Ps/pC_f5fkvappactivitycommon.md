@@ -14,7 +14,7 @@ Name = f5-f-kv-app-activity-common
    """domain' set to '({domain}[^\\\/\s'"]+)'""",
    """sAMAccountName =({account}[^\s'"\)]+)\)' ({result}\S+)""",
    """ Username '({account}[^\s'"]+)""",
-   """ AD agent:\s*({user}[^\s]+).+? authenticate with '({account}[^\s'"]+)' ({result}\S+)""",
+   """ AD agent:\s*({user}[\w\.\-]{1,40}\$?).+? authenticate with '({account}[^\s'"]+)' ({result}\S+)""",
    """ authentication with '({account}[^\s']+)""",
    """ bytes in:\s*({bytes_in}\d+)""",
    """ bytes out:\s*({bytes_out}\d+)""",

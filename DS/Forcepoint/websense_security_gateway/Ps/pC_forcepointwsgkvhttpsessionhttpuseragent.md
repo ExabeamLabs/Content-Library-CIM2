@@ -28,7 +28,7 @@ Name = forcepoint-wsg-kv-http-session-httpuseragent
       """\scategory=({category_id}.+?)\s+user""",
       """\shttp_content_type=(?:-|({mime}.+?))\s+http_""",
       """\shttp_proxy_status_code=({http_response_code}\d+)""",
-      """\WloginID=(-|({user}[^\s]+))""",
+      """\WloginID=(-|({user}[\w\.\-]{1,40}\$?))""",
     ]
         ParserVersion = "v1.0.0"
   

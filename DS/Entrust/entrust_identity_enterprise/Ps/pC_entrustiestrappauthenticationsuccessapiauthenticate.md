@@ -9,7 +9,7 @@ Name = entrust-ie-str-app-authentication-success-apiauthenticate
   Conditions = [ """ [IG.SYSTEM.AuthenticationManagement.API] authenticate """ ]
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
-    """ \[({event_name}IG.SYSTEM.AuthenticationManagement.API)\] authenticate (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))\s""",
+    """ \[({event_name}IG.SYSTEM.AuthenticationManagement.API)\] authenticate (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\s""",
   ]
 
 

@@ -12,7 +12,7 @@ Name = imperva-securesphere-cef-http-request-servergroup
     """cs1=({server_group}[^\s]+)""",
     """cs2=({service_name}[^\s]+)""",
 # mx_ip is removed
-    """duser=({user}[^\s]+)""",
+    """duser=({user}[\w\.\-]{1,40}\$?)""",
     """deviceExternalId=({external_id}[^\s]+)""",
     """cs3=({app}[^\s]+)""",
     """requestClientApplication=({app}[^=]+?)\s(\w+=|$)""",

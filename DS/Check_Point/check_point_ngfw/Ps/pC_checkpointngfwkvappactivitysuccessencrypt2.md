@@ -22,7 +22,7 @@ raw-checkpoint-firewall = {
     """\Wproto:\s*(|({protocol}.+?));""",
     """\Wrule:\s*(|({rule}.+?));""",
     """\Wrule_name:\s*(|({rule}.+?));""",
-    """\Wuser:\s*(|({user}.+?));""",
+    """\Wuser:\s*(|({user}[\w\.\-]{1,40}\$?)|({full_name}[^";]+));""",
     """\Wuser:\s*({full_name}.+?)\s*\(({account}.+?)\)""",
     """\Wsrc_machine_name:\s*({email_address}[^;]+@[^;]+?);""",
     """\Wpolicy_name=\s*(|({policy_name}.+?))[;\]]""",

@@ -8,7 +8,7 @@ Name = cloudfare-waf-sk4-alert-trigger-success-firewall
   Conditions = [ """CEF:""", """destinationServiceName =cloudflare""",""""kind":"firewall""""]
   Fields = [
     """ext__occurred_at_=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
-    """suser=({user}.+?)\s\w+=""",
+    """suser=({user}[\w\.\-]{1,40}\$?)\s\w+=""",
     """shost=({host}[^\s]+)""",
     """act=({alert_type}.+?)\s\w+=""",
     """cat=({alert_name}.+?)\s\w+=""",

@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-5136-1
     """\Wdvchost=({host}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wdntdom=({domain}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-    """\Wduser=({user}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
+    """\Wduser=({user}[\w\.\-]{1,40}\$?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\Wduid=({login_id}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\WcategoryOutcome=\/?({result}.+?)\s+(\w+=|$)""",
     """\Wcs5=(|({object_class}.+?))(\s+(\w+|\w+\.\w+)=|\s*$)""",

@@ -15,7 +15,7 @@ Name = crowdstrike-falcon-sk4-app-notification-mbcsfdrv2
     """"Time":"({time}\d{10}).\d{10}""",
     """"Timezone":"({zone}[^"]+)"""",
     """"ComputerName":"({src_host}[^"]+)"""",
-    """suser=(system|({user}[^\s]+))""",
+    """suser=(system|({user}[\w\.\-]{1,40}\$?))""",
     """"City":"({location_city}[^"]+)"""",
     """"Version":"({os_version}[^"]+)"""",
 # cid is removed

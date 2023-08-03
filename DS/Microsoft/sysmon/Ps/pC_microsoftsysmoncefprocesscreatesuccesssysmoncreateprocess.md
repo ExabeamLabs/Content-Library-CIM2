@@ -15,7 +15,7 @@ Name = microsoft-sysmon-cef-process-create-success-sysmoncreateprocess
     """\WeventId=({event_code}\d+)""",
     """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
     """\Wdntdom=(NT AUTHORITY|({domain}\S+))""",
-    """\Wduser=(SYSTEM|LOCAL|NETWORK SERVICE|({user}[^\s]+))""",
+    """\Wduser=(SYSTEM|LOCAL|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
     """\Wsproc=({parent_process}({parent_process_dir}.*?)({parent_process_name}[^\\]+?))\s+(\w+=|$)""",
     """\Wdproc=(SYSTEM|FINANS|({process_path}({process_dir}.*?)({process_name}[^\\]+?)))\s+(\w+=|$)""",
     """\Wcs4=\{({parent_process_guid}[^\}]+)""",

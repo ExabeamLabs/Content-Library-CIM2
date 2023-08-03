@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-share-access-5145-9
       """\d{2}:\d{2}:\d{2} ({dest_host}[\w.\-]+)\s""",
       """({event_code}5145)""",
       """\s安全性識別碼:\s*({user_sid}\S+)\s""",
-      """\s帳戶名稱:\s*({user}[^\s]+)""",
+      """\s帳戶名稱:\s*({user}[\w\.\-]{1,40}\$?)""",
       """\s帳戶網域:\s*({domain}[^\s]+)""",
       """\s登入識別碼:\s*({login_id}[^\s]+)""",
       """\s物件類型:\s*({file_type}[^\s]+)""",

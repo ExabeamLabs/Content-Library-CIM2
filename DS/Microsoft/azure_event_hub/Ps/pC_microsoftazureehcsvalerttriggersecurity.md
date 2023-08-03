@@ -6,7 +6,7 @@ Name = microsoft-azureeh-csv-alert-trigger-security
   Product = Azure Event Hub
   Conditions = [ """destinationServiceName =Azure""", """"category":"Security""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """\W(ext_properties_eventProperties_userName|ext_properties_eventProperties_accountsUsedOnFailedSignInToHostAttempts_1_)=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\W(ext_properties_eventProperties_userName|ext_properties_eventProperties_accountsUsedOnFailedSignInToHostAttempts_1_)=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """"properties".*?"eventProperties".*?"accountsUsedOnFailedSignInToHostAttempts":\[?"({user}[\w\.\-]{1,40}\$?)"""",
     """"properties".*?"eventProperties".*?"userName":"({user}[\w\.\-]{1,40}\$?)"""",
     """\Wext_properties_eventProperties_compromisedEntity=(|({user_upn}.+?))(\s+\w+=|\s*$)""",

@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4625-4
    """Sujeto:[^=]+?\s*Dominio de cuenta:\s*(-|({src_domain}[^:;]+?))[\s;]*Id. de inicio de sesión:""",
    """Tipo de inicio de sesión:\s*({login_type}\d+)""",
    """Cuenta con error de inicio de sesión:\s*[^=]+\s*Id. de seguridad:\s*(?:\/?NULL SID|({user_sid}[^\s]+))\s*Nombre de cuenta:""",
-   """Nombre de cuenta:\s*({user}[^\s]+)\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*Información de error:""",
+   """Nombre de cuenta:\s*({user}[\w\.\-]{1,40}\$?)\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*Información de error:""",
    """Estado:\s*(?:[^\s]+)\s*Subestado:\s*({result_code}[^\s]+)\s*Información de proceso:""",
    """Nombre de estación de trabajo:\s*({src_host_windows}[^\s]+)\s*Dirección de red de origen:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*Puerto de orig""",
   ]

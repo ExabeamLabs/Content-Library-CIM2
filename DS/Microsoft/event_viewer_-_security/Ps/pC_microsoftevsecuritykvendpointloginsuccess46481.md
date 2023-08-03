@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4648-1
     """__li_source_path="({host}[^"]+)"""",
     """({event_code}4648)""",
     """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """Subject:.+?Account\sName:\s+(?:-|({user}.+?))\s+Account\sDomain:\s+(?:-|({domain}[^\s]+))\s+Logon\sID:\s+({login_id}[^\s]+)\s+""",
+    """Subject:.+?Account\sName:\s+(?:-|({user}[\w\.\-]{1,40}\$?))\s+Account\sDomain:\s+(?:-|({domain}[^\s]+))\s+Logon\sID:\s+({login_id}[^\s]+)\s+""",
     """Used:\s+Account\sName:\s+({dest_user}[^\s]+)\s+Account\sDomain:\s+({dest_domain}[^\s]+)\s+"""
     """Target\sServer\sName:\s+({dest_host}[^\s]+)""",
     """Process ID:\s+({process_id}\w+)\s+Process Name:""",

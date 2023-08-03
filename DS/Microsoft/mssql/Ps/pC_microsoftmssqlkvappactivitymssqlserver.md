@@ -31,7 +31,7 @@ microsoft-sql-events {
     """\starget_database_principal_name:({target}[^\s]+)""",
     """\starget_server_principal_name:([^\\]+\\)?({dest_user}[^\s]+)\starget_server_principal_sid:""",
     """\sdatabase_principal_name:([^\\]+\\)?({db_user}[^\s]+)\starget_server_principal_name:""",
-    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[^\s]+))\sserver_principal_sid:""",
+    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[\w\.\-]{1,40}\$?))\sserver_principal_sid:""",
 # server_principal_id is removed
 # db_principal_id is removed
 # target_server_principal_id is removed

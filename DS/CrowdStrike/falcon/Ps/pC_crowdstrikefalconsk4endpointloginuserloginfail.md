@@ -19,6 +19,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """"LogonDomain":"\s*({domain}[^\"]+?)\s*"""",
     """"ClientComputerName":"({src_host}[\w\-\.]+)"""",
     """"RemoteAddressIP4":"({dest_ip}[A-Fa-f:\d\.]+)""""
+    """"event_platform":"({os}[^"]+)""""
   ]
   DupFields = ["aip->src_ip"]
   ParserVersion = "v1.0.0"

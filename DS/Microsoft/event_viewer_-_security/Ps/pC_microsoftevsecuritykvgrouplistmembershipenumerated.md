@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",
     """({event_name}A user's local group membership was enumerated)""",
-    """\sSubject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}.+?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*User:""",
+    """\sSubject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*User:""",
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
     """Process Name:\s+(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^\\\/]*?)))\s*(<|$|User:)""",

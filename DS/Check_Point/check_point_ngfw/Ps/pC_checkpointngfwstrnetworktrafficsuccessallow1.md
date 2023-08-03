@@ -17,7 +17,7 @@ Name = checkpoint-ngfw-str-network-traffic-success-allow-1
     """\Wproto:\s*(|({protocol}.+?));""",
     """\Wrule:\s*(|({rule}.+?));""",
     """\Wrule_name:\s*(|({rule}.+?));""",
-    """\Wuser:\s*(|({user}.+?));""",
+    """\Wuser:\s*(|({user}[\w\.\-]{1,40}\$?));""",
     """\Wuser:\s*({full_name}.+?)\s*\(({account}.+?)\)""",
     """\Wsrc_machine_name:\s*({email_address}.+?);""",
     """\Wxlatesrc:\s*(|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}));""",

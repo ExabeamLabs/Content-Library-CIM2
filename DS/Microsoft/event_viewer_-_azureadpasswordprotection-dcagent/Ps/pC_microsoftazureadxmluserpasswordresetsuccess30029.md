@@ -19,7 +19,7 @@ account-password-activity = {
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
     """<Message>({event_name}[^.<]+)""",
-    """UserName:\s*({user}[^\s]+)""",
+    """UserName:\s*({user}[\w\.\-]{1,40}\$?)""",
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Keywords>({result}[^<]+)</Keywords>""",

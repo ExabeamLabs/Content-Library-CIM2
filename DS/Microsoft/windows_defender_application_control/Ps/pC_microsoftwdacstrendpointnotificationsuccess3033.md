@@ -10,7 +10,7 @@ Name = microsoft-wdac-str-endpoint-notification-success-3033
     """\s({host}[\w\-.]+)\s+MSWinEventLog""",
     """\s({time}\w{3}\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})""",
     """({event_code}3033)""",
-    """Microsoft-Windows-CodeIntegrity\s+(N\/A|SYSTEM|LOCAL|NETWORK|({user}[^\s]+))\s""",
+    """Microsoft-Windows-CodeIntegrity\s+(N\/A|SYSTEM|LOCAL|NETWORK|({user}[\w\.\-]{1,40}\$?))\s""",
     """a process\s\(({process_path}({process_dir}[^"]*?)({process_name}[^\\\)]+?))\)\s""",
     """({additional_info}Code Integrity determined[^<>]+\.)\s+({alert_id}\d+)"""
   ]

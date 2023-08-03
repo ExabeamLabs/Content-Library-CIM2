@@ -10,7 +10,7 @@ Name = microsoft-defenderep-kv-alert-trigger-success-1116-1
  Fields = [
    """ComputerName =({host}[^\s]+)""",
    """EventCode=({event_code}\d+)""",
-   """User:\s*(NT AUTHORITY|({domain}[^\\]+))(\\)?(SYSTEM|({user}[^\s]+))""",
+   """User:\s*(NT AUTHORITY|({domain}[^\\]+))(\\)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
    """Sid=({user_sid}[^\s]+)""",
    """Message=({additional_info}[^\.]+)\.""",
    """Name:\s*({alert_name}[^\s]+)""",

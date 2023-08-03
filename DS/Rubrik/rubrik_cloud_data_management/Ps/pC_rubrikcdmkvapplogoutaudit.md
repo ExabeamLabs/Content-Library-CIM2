@@ -5,7 +5,7 @@ Name = rubrik-cdm-kv-app-logout-audit
   ParserVersion = "v1.0.0"
   Conditions = [ """eventType="Audit"""", """ logged out """, """ Rubrik [""", """clusterName ="""", """ eventName ="""", """ nodeIpAddress="""  ]
   Fields = ${DLRubrikParsersTemplates.rubrik-system-info.Fields}[
-    """tracerId="\S+\s({user}[^\s]+)[^=]+logged out"""
+    """tracerId="\S+\s({user}[\w\.\-]{1,40}\$?)[^=]+logged out"""
   ]
 
 rubrik-system-info = {

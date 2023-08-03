@@ -26,7 +26,7 @@ cef-onapsis-activity = {
       """\Wreason=(None|({failure_reason}.+?))(\s+\w+=|\s*$)""",
       """\WrequestClientApplication=(None|({app}.+?))(\s+\w+=|\s*$)""",
       """\Wshost=(None|({src_host}.+?))(\s+\w+=|\s*$)""",
-      """\Wsuser=(None|({user}.+?))(\s*TAG:|\s+\w+=|\s*$)""",
+      """\Wsuser=(None|({user}[\w\.\-]{1,40}\$?))""",
       """\WTAG:\s*({tag}.+?)(\s*\w+=|\s*$)""",
     
 }

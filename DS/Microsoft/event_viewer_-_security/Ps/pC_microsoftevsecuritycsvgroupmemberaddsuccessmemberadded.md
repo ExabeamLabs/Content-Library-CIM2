@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-csv-group-member-add-success-memberadded
       """ComputerName =({host}[\w.\-]+)""",
       """EventCode=({event_code}[\w]+)""",
       """セキュリティが有効な({group_type}[^\s]+) グループにメンバーが追加されました。""",
-      """サブジェクト:.+?アカウント名:\s+({user}[^\s]+)""",
+      """サブジェクト:.+?アカウント名:\s+({user}[\w\.\-]{1,40}\$?)""",
       """アカウント ドメイン:\s+({domain}[^\s]+)""",
       """ログオン ID:\s+({login_id}[^\s]+)\s+""",
       """メンバー:\s+セキュリティ ID:\s+({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}.+?)|(?:.+?))\s+アカウント名:""",

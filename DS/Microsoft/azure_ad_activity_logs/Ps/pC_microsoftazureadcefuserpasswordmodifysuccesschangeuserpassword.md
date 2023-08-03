@@ -10,7 +10,7 @@ Name = microsoft-azuread-cef-user-password-modify-success-changeuserpassword
     """\Wrt=({time}\d{13})""",
     """\Wact=({event_code}.+?)\s*(\w+=|$)""",
     """\Woutcome=({result}.+?)\s*(\w+=|$)""",
-    """\Wsuid=(?!\S+@\S+)({user}[^\s]+)\s*(\w+=|$)""",
+    """\Wsuid=(?!\S+@\S+)({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
     """\Wsuid=({email_address}({user}[^\s@]+)@[^\s]+)\s*(\w+=|$)""",
     """\Wcs5=.+?\|/Target/ID:"({dest_user}[^"]+)"""
   ]

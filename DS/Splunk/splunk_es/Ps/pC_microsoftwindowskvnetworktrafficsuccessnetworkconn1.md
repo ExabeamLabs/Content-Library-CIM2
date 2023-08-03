@@ -19,7 +19,7 @@ Name = microsoft-windows-kv-network-traffic-success-networkconn-1
     """LocalAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+""",
     """LocalPort=({src_port}\d+)\s*RemoteHostName =""",
     """UserSid=(unknown|({user_sid}.+?))\s*UserId=""",
-    """UserName ="*(unknown|((nt authority|({domain}[^\\\/]+))[\\\/])?([Ss]ystem|localsystem|network service|({user}.+?)))"*\s*UserSid=""",
+    """UserName ="*(unknown|((nt authority|({domain}[^\\\/]+))[\\\/])?([Ss]ystem|localsystem|network service|({user}[\w\.\-]{1,40}\$?)))"*\s*UserSid=""",
     """UserId=({user_id}.+?)\s*HeaderSizeBytes=""",
   ]
 

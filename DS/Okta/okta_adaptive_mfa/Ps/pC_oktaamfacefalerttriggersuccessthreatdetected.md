@@ -5,7 +5,7 @@ Name = okta-amfa-cef-alert-trigger-success-threatdetected
   ParserVersion = v1.0.0
   Conditions = [ """"security.threat.detected"""", """destinationServiceName =Okta"""]
   Fields = ${OktaParserTemplates.json-okta-auth.Fields}[
-    """suser=(anonymous|({user}[^\s]+))"""
+    """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))"""
     """"severity"+:"+({alert_severity}[^",]+)""",
     """({alert_type}application-action)"""
   ]

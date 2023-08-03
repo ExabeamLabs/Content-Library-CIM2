@@ -23,7 +23,7 @@ Name = trendmicro-ds-cef-network-traffic-fail-idsdeny
     """dpt=({dest_port}\d+)"""
     """spt=({src_port}\d+)"""
     """cs1=({additional_info}.+?)\s\w+=""",
-    """suser=(NT AUTHORITY\\+SYSTEM|({user}[^\s]+))""",
+    """suser=(NT AUTHORITY\\+SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """fileHash=({file_hash}[^\s]+)""",
     """cs3=({hash_md5}[^\s]+)""",
     """cs2=({hash_sha1}[^\s]+)""",

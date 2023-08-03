@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-trustedlogonprocessregister
       """Logon ID:\s*({login_id}[^:]+?)\s*Logon Process Name:\s*({process_name}[^,\s"]+)""",
       """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))""",
       """Subject:Security ID=({user_sid}\S+)""",
-      """Subject:Account Name =({user}[^\s]+)\sSubject:""",
+      """Subject:Account Name =({user}[\w\.\-]{1,40}\$?)\sSubject:""",
       """Subject:Account Domain=({domain}[^\s]+)\sSubject:""",
       """Subject:Logon ID=({login_id}[^\s]+)\s""",
       """Logon Process Name =({process_name}\S+)"""

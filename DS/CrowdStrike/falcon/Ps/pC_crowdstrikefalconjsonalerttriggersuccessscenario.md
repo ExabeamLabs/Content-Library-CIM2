@@ -36,6 +36,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"(?i)Rooting"+:\s*({rooting}true|false)""",
       """"(?i)Inddet_Mask"+:\s*({inddet_mask}true|false)""",
       """"(?i)Indicator"+:\s*({indicator}true|false)"""
+      """"platform_name":"({os}[^"]+)""""
     ]
     DupFields = [ "src_host->host" ]
  ParserVersion = "v1.0.0"

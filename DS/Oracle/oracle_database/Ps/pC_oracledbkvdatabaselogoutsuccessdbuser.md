@@ -11,7 +11,7 @@ Name = oracle-db-kv-database-logout-success-dbuser
     """\sLOGOFF_TIME=({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))""",
 # audit_type is removed
     """\sSTATEMENT_TYPE=(|({result_reason}.+?))(\s+\w+=|\s*$)""",
-    """\sOS_USER=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\sOS_USER=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\sDB_USER=(|({db_user}.+?))(\s+\w+=|\s*$)""",
     """\sUHOST=(|({host}.+?))(\s+\w+=|\s*$)""",
     """\sOBJECT_SCHEMA=(|({db_schema}.+?))(\s+\w+=|\s*$)""",

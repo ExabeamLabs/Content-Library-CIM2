@@ -10,7 +10,7 @@ Name = symantec-dlp-kv-peripheral-storage-insert-success-devicewas
     """(\s|,)({dest_host}[^,\s]+),Device Manager Message""",
     """,Local: (0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """Begin:\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """User:\s+({user}.+?),Domain""",
+    """User:\s+({user}[\w\.\-]{1,40}\$?),Domain""",
     """(?i)({operation}device was allowed successfully)""",
     """Domain:\s+({domain}[^,]+),""",
     """\[class\]:(?:\?|({device_type}.+?))\s+\[guid\]:""",

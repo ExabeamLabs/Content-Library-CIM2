@@ -9,7 +9,7 @@ Name = ovirt-o-str-app-logout-success-successfullyloggedout
   Conditions = [ """INFO""", """ovirt""", """successfully logged out""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
-    """User (?:({email_address}[^\s@]+@[^\s@]+)\S*|({user}[^\s]+)) successfully logged out""",
+    """User (?:({email_address}[^\s@]+@[^\s@]+)\S*|({user}[\w\.\-]{1,40}\$?)) successfully logged out""",
   ]
 
 

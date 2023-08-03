@@ -10,7 +10,7 @@ Name = entrust-ie-str-space-delimited-app-authentication-fail-foruser
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
     """({event_description}An invalid response was specified for the token with serial number .+)""",
-    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))\.""",
+    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\.""",
 
   ]
 

@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)""",
-    """Subject:\s*([^"]+?)Account Name:\s*(-|({user}[^\s]+))""",
+    """Subject:\s*([^"]+?)Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
     """Subject:\s*([^"]+?)Account Domain:\s*(-|({domain}[^\s]+))""",
     """Subject:\s*([^"]+?)Logon ID:\s*({login_id}[^\s]+)""",
     """Object:\s*.+?Object Server:\s*({object_server}[^\s]+)""",

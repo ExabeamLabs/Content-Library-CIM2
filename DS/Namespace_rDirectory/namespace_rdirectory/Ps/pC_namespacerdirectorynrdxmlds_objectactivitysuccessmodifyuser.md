@@ -10,7 +10,7 @@ Name = namespacerdirectory-nrd-xml-ds_object-activity-success-modifyuser
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """Modified by:({user}.+?)\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
+    """Modified by:(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",\(]+))\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
     """Credentials:({account_domain}[^\\]+)\\+([^\s.]+\.)*({account}[^\s.]+)""",
     """rdirectoryModify.+?\(.+?\)\[({attribute}[^\]]+)""",
     """rdirectoryModify.+?\(.+?\)\[.+?\]\s*Add:({new_attribute}.+?)(\s*To:|<)""",

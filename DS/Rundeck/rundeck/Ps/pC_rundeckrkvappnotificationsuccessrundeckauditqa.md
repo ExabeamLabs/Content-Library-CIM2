@@ -9,7 +9,7 @@ Name = rundeck-r-kv-app-notification-success-rundeckauditqa
   Conditions = [ """ RundeckAuditQA: """, """ - Evaluating Decision for: """ ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
-    """Username:({user}[^\s]+)""",
+    """Username:({user}[\w\.\-]{1,40}\$?)""",
     """Group:({group_name}[^>]+)>""",
     """action<({operation}[^>]+)>""",
     """evaluations:({additional_info}.+?)\s*$""",

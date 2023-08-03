@@ -19,7 +19,7 @@ cef-ad-fs-audit = {
     """\sdeviceSeverity=({result}\w+)""",
     """\scs5=({email_address}[^@=\s]+@[^@=\s\-]+)""",
     """\scs5=({domain}[^\\=]+)\\+({user}[^\\=]+?)(\s+[\w\.]+=|\s*$)""",
-    """\sduser=(NETWORK SERVICE|({user}.+?))(\s+[\w\.]+=|\s*$)""",
+    """\sduser=(NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))(\s+[\w\.]+=|\s*$)""",
     """CEF:([^\|]*\|){5}({failure_reason}[^\|]+).*Audit_failure""",
     """Audit_failure.*\scs5=[^=\-]*?-(|({failure_reason}.+?))(\s+[\w\.]+=|\s*$)""",
   

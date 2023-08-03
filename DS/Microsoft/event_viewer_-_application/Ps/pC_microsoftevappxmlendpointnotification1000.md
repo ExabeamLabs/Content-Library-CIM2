@@ -28,7 +28,7 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[^\s]+)""",
+    """User Name:\s*({user}[\w\.\-]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",

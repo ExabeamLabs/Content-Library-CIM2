@@ -13,7 +13,7 @@ logrhythm-o365-file-operation = {
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[^\s@]+)(@({domain}[^\s]+))?)\s+\w+=""",
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
-    """USER=({domain}[^\\\s]+)\\({user}[^\s]+)""",
+    """USER=({domain}[^\\\s]+)\\({user}[\w\.\-]{1,40}\$?)""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",
     """OBJECT=({object}[^=]+?)\s+\w+=""",

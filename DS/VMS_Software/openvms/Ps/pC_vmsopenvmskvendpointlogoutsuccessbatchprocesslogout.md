@@ -15,7 +15,7 @@ openvms-logout = {
   TimeFormat = "dd-MMM-yyyy HH:mm:ss.SS"
   Fields = [
     """Event time:\s+({time}\d\d-\w+-\d\d\d\d\s+\d\d:\d\d:\d\d\.\d\d)""",
-    """Username:\s+({user}[^\s]+)\s+(\w+|$)""",
+    """Username:\s+({user}[\w\.\-]{1,40}\$?)\s+(\w+|$)""",
     """PID:\s+({process_id}[\w]+)\s+(\w+|$)""",
     """Process name:\s+({process_name}[^\s]+)\s+(\w+|$)""",                                            
 }

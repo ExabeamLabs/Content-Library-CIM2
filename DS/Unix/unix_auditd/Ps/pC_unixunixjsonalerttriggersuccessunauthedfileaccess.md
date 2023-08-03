@@ -566,7 +566,7 @@ Conditions = [
 ]
 Fields = [
 """({time}\w+ \d+ \d\d:\d\d:\d\d)\s+({host}\S+)\s+\S+\s+\S+\(dsepam:auth\)"""
-"""\suser=({user}.+?)(\s+\w+=|\s*$)"""
+"""\suser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -660,7 +660,7 @@ ${UnixParsersTemplates.cef-unix-template-1}{
     """\shostname\\=(?:\?|(src_host)\S+)""",
     """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sshost=({src_host}\S+)""",
-    """\sduser=({user}.+?)\s+\w+=""",
+    """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """\sact=({auth}\S.+?)\s+\w+=""",
     """\sdproc=({auth_process}\S.+?)\s+\w+=""",
     """({event_code}ssh)""",

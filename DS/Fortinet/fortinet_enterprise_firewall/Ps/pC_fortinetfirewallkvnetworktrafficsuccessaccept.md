@@ -30,7 +30,7 @@ Name = fortinet-firewall-kv-network-traffic-success-accept
     """\ssrcport=({src_port}\d+)""",
     """\sdstport=({dest_port}\d+)""",
     """\ssrccountry=\"?({src_country}.+?)\"?\s+(\w+=|$)""",
-    """\suser=\"?({user}.+?)\"?\s+(\w+=|$)""",
+    """\suser=\"?({user}[\w\.\-]{1,40}\$?)\"?\s+(\w+=|$)""",
     """\stransport=({src_translated_port}\d+)""",
     """\stransip=({src_translated_ip}[a-fA-F\d.:]+)""",
     """\smsg=\"*({additional_info}[^\s"]*)\"*""",

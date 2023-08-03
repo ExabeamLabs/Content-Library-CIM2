@@ -17,7 +17,7 @@ cef-mcafee-epo-alert = {
     """\sdst=(?:0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\sfname=({malware_url}.+?)\s+(\w+=)""",
     """\sfname=({malware_url}[^=]+?\\+({malware_file_name}[^\\=]+?))\s+\w+=""",
-    """\sduser=(SYSTEM|N\/A|(({domain}[^=\\]+)\\+)?({user}.+?))\s+(\w+=|$)""",
+    """\sduser=(SYSTEM|N\/A|(({domain}[^=\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",
     """\sdntdom=(?:\(none\)|({domain}[^\s]+))""",
     """\seventId=({alert_id}\d+)""",
     """\sexternalId=({alert_id}\d+)""",

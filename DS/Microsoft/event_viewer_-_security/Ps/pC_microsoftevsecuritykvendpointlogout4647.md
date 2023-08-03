@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4647
     """<?Computer>?(Name)?\s*=?\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({host}[\w.\-]+))""",
     """\Wdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",
-    """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}.+?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s""",
+    """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s""",
     """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[^\\\s"]+)""",
     """"TargetLogonId":"({login_id}[^\\\s"]+)""",
     """"TargetUserSid":"({user_sid}[^\\\s"]+)""",

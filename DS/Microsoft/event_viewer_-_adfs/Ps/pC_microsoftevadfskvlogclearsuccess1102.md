@@ -16,7 +16,7 @@ Fields = [
   """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\mobd:\d\d (AM|PM|am|pm))""",
 	"""({event_name}The Federation Service authorized a request to one of the REST endpoints)"""
 	"""\WEventCode=({event_code}\d+)""",
-	"""User=(NULL|NOT_TRANSLATED|({user}[^\s]+))"""
+	"""User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
 	"""ComputerName =({host}[\w\-.]+)""",
 	"""\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",
 	"""RecordNumber=({event_id}\w+)\s*""",

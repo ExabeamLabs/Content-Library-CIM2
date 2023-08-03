@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-user-password-read-5379-1
   TimeFormat = "MM/dd/yyyy HH:mm:ss a"
   Conditions = [  """ EventCode=5379 """,""" ComputerName =""" ]
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
-    """Account Name:\s*(LOCAL SERVICE|({user}[^\s]+))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}[^\s]+))\s+Logon ID:""",
   ]
 

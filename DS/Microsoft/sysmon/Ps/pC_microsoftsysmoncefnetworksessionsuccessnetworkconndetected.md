@@ -26,7 +26,7 @@ Fields = [
   """\Wdpt=({dest_port}\d+)"""
   """\Wcs3=((NT AUTHORITY|({domain}[^\s\\]+))\\+)?(NETWORK SERVICE|LOCAL|SYSTEM|({user}[^\s\\]+))"""
   """\Wdntdom=(NT AUTHORITY|({domain}\S+))"""
-  """\Wduser=(SYSTEM|LOCAL|NETWORK SERVICE|({user}[^\s]+))"""
+  """\Wduser=(SYSTEM|LOCAL|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))"""
   """\Wdproc=(SYSTEM|FINANS|({process_path}({process_dir}.*?)({process_name}[^\\]+?)))\s+(\w+=|$)"""
   """\Wcs6=\{({process_guid}[^\}]+)"""
   """\Wdpid=({process_id}\d+)"""

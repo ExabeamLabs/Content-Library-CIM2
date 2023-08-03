@@ -13,7 +13,7 @@ Name = pan-wildfire-leef-app-logout-loggedout
     """\|msg="*({event_name}[^\|"]+)""",
     """\|Severity=({alert_severity}[^\|]+)""",
 # flags is removed
-    """User\s+({user}[^\s]+)""",
+    """User\s+({user}[\w\.\-]{1,40}\$?)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     ]
 

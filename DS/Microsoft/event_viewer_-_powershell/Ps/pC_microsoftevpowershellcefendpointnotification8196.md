@@ -66,7 +66,7 @@ microsoft-windows-cef-powershell = {
         """\sspt=({src_port}\d+)""",
 # src is removed
         """\ssuid=(N\/A|-|({user_uid}.+?))\s*\w+=""",
-        """\ssuser=(N\/A|-|({user}.+?))\s*\w+=""",
+        """\ssuser=(N\/A|-|({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
         """\stime_reopen='({time}[^']+)'""",
         """\stype=({event_category}.+?)\s*\w+="""
         """CEF[^|]+\|({device_vendor}[^|]+)""",

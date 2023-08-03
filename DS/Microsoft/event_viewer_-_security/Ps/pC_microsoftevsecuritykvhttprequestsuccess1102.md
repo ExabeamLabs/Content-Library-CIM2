@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-http-request-success-1102
     """({event_name}The Federation Service authorized a request to one of the REST endpoints)""",
     """EventIDCode=({event_code}\d+)""",
     """Computer=({host}[\w\-.]+)""",
-    """User=(|({user}[^\s]+))\s""",
+    """User=(|({user}[\w\.\-]{1,40}\$?))\s""",
     """Domain=(|({domain}[^\s]+))\s""",
     """EventType=(|({event_category}[^\s]+))\s""",
     """EventCategory=({operation_type}\S+)""",

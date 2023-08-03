@@ -11,7 +11,7 @@ Name = microsoft-mssql-kv-database-login-success-impersonate
     """\srt=({time}\d{13})""",
     """\sdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\sdvchost=({host}[^\s]+)""",
-    """\sduser=({user}.+?)\s+\w+=""",
+    """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """\sdntdom=({domain}.+?)\s+\w+=""",
     """\sfname=(?:({domain}[^\\]+)\\+)?({account}.+?)\s+\w+=""",
     """\ssourceServiceName =(?: |({service_name}.+?))\s+\w+=""",

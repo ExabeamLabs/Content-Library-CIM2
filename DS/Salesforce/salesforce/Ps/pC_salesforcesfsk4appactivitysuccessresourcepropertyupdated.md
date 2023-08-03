@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ) \S+ """
   """([^\|]*\|){5}({operation}[^\|]+)"""
-  """\Wsuser=({user}.+?)\s+(\w+=|$)"""
+  """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
   """\Wsuser=({email_address}[^@\s;]+?@[^@\s;]+)\s*(\w+=|$)"""
   """\Wfname=({object}.+?)\s+(\w+=|$)"""
   """\Wcs1=\{({new_value}[^\}]+)"""

@@ -9,7 +9,7 @@ Name = entrust-ie-str-app-authentication-success-igradiusapiauthenticate
   Conditions = [ """ [IG.SYSTEM.IGRadius.API] Authenticate """ , """ response for user """ ]
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
-    """ response for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))""",
+    """ response for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))""",
     """\[({event_name}IG.SYSTEM.IGRadius.API)\] ({event_description}Authenticate .+)"""
   ]
 

@@ -25,6 +25,7 @@ Fields = [
 """\"id\":\"({alert_id}[\w-]+?)\""""
 """\"name\":\"({alert_name}[^\"]+?)\""""
 """\"File({operation}Delete|Open|Rename)"""
+""""event_platform":"({os}[^"]+)""""
 ]
 DupFields = [ "operation->access" ]
 

@@ -19,7 +19,7 @@ Name = imperva-securesphere-cef-database-logout-securespherelogout
     """\Wcs3=(|({service_name}.+?))(\s+\w+=|\s*$)""",
     """\Wcs4=(|({app}.+?))(\s+\w+=|\s*$)""",
 # user_authenticated is removed
-    """\Wcs11=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\Wcs11=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\Wcs12=(({domain}[^\\\s]+)\\+)?({host}[\w\-.]+)""",
     """\Wcs13=(|({db_name}.+?))(\s+\w+=|\s*$)""",
     """\Wcs14=(|({db_schema}.+?))(\s+\w+=|\s*$)"""

@@ -7,7 +7,7 @@ Name = kaspersky-endpointsecurity-cef-alert-trigger-success-productversion
   TimeFormat =  "epoch"
   Conditions = [ """CEF""","""|KasperskyLab|SecurityCenter|""","""cs3Label=ProductVersion""" ]
   Fields = [
-    """Usuario:\s*({domain}[^\\]+)\\+({user}[^\s]+)""",
+    """Usuario:\s*({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)""",
     """Componente:\s*({product_name}[^\\]+)""",
     """Resultado\\+Descripción:\s*({action}[^\\]+)""",
     """nObjeto:\s*({malware_url}[^\\]+)""",

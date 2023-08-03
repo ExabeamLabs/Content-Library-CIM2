@@ -24,7 +24,7 @@ Name = trendmicro-officescan-cef-email-send-success-controlmanager
     """\|Trend Micro\|([^|]+\|){2}({alert_type}[^|]+)""",
     """\Wfname=({email_attachment}.+?)\s+\w+=""",
     """\Wfname=[^=]+?(\.({file_ext}[^\s;\.\(\)]+))\s*(\(.*\))?\s+(\w+=|$)""",
-    """\Wsuser=({user}.+?)\s+\w+=""",
+    """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """\WfilePath=({file_path}.+?)\s+\w+=""",
     """\Wdhost=({src_host}[\w\-.]+)""",
     """\Wdst=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

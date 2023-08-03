@@ -30,7 +30,7 @@ eset-activity = {
       """\Wuser=({user}[^\s=]+?)\s*(\w+=|$)""",
       """processName =({process_path}({process_dir}(?:(\w+:)*([\\\/]+[^=\\\/"]+)+)?[\\\/]+)({process_name}[^=\,\\\/]+?))\s*(\w+=|$)""",
       """proto=({protocol}[^\s]+)""",
-      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[^\s]+)'.""",
+      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[\w\.\-]{1,40}\$?)'.""",
       """accountName =(NT AUTHORITY\\+|({domain}[^\\]+?)\\+)?(SYSTEM|({user}[^=\s]+?))\s*(\w+=|$)"""
     
 }

@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A security-enabled local group membership was enumerated)""",
     """Subject:\s*[^"]+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
-    """Subject:\s*[^"]+?Account Name:\s*(-|({user}[^\s]+))""",
+    """Subject:\s*[^"]+?Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
     """Subject:\s*[^"]+?Account Domain:\s*(-|({domain}[^\s]+))""",
     """Subject:\s*[^"]+?Logon ID:\s*({login_id}[^\s]+)""",
     """Group:\s*[^"]+?Security ID:\s+({group_id}[^\s]+)""",

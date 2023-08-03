@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-str-policy-apply-fail-6145
         """({event_code}6145)""",
         """({event_name}One or more errors occured while processing security policy in the group policy objects)""",
         """Error Code:\s*({error_code}\d+)""",
-        """Mapped Name:\s*({user}[^\s]+)""",
+        """Mapped Name:\s*({user}[\w\.\-]{1,40}\$?)""",
   ]
 
 

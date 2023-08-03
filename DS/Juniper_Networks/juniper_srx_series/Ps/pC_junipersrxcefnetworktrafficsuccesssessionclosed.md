@@ -19,7 +19,7 @@ Name = juniper-srx-cef-network-traffic-success-sessionclosed
     """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sdestinationTranslatedAddress=({dest_translated_ip}[a-fA-F\d.:]+)""",
     """\sdpt=({dest_port}\d+)""",
-    """\sduser=(|N\/A|({user}.+?))(\s+\w+=|\s*$)""",
+    """\sduser=(|N\/A|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\sdvc=(|({host}.+?))(\s+\w+=|\s*$)""",
     """\sdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",
     """\sreason=(|({failure_reason}.+?))(\s+\w+=|\s*$)""",

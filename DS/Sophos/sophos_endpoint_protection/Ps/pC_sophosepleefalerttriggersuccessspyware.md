@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """EventID=({alert_id}[\d]+)"""
   """devTime=({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})"""
-  """usrName =[^\\]*\\({user}.+?)\s+(\w+=|$)"""
+  """usrName =[^\\]*\\({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
   """LEEF:[^|]*\|Sophos\|Enterprise Console\|[^|]*\|({alert_name}[^|]*)\|"""
   """ReportingName =({alert_type}.+?)\s+(\w+=|$)"""
   """ComputerName =({src_host}.+?)\s+(\w+=|$)"""

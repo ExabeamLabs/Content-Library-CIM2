@@ -24,7 +24,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
     """<EventID Qualifiers=[^>]+>({event_code}\d+)""",
     """<Keyword>({result}Audit.+?)</Keyword>""",
     """<Message>[^<>]*?Reason:\s*({result_reason}[^.]+?)\."""
-    """\sserver_principal_name:(({domain}[^\\]+)\\)?({user}[^\s]+)\sserver_principal_sid""",
+    """\sserver_principal_name:(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\sserver_principal_sid""",
     """database_name:({db_name}[^\s]+)""",
     """\Wserver_principal_name:(({domain}[^\\\/]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",
     """\Waction_id:({db_operation}[^\s]+)""",

@@ -6,7 +6,7 @@ Name = microsoft-evpowershell-cef-script-execute-fail-4100
   Product = Event Viewer - PowerShell
   Conditions = [ """CEF: """, """|Microsoft|PowerShell|""", """|Microsoft-Windows-PowerShell:4100|""" ]
   Fields = ${DLWindowsParsersTemplates.microsoft-windows-cef-powershell.Fields} [
-    """\sduser=(SYSTEM|({user}[^\s]+))\s""",
+    """\sduser=(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s""",
     """\sahost=({host}[^\s]+)\s""",
     """\sad.ProcessID=({process_id}[^\s]+)\s""",
     """\sad.Ведущее_,приложение=({process_command_line}.+?)\sad""",
@@ -73,7 +73,7 @@ microsoft-windows-cef-powershell = {
         """\sspt=({src_port}\d+)""",
 # src is removed
         """\ssuid=(N\/A|-|({user_uid}.+?))\s*\w+=""",
-        """\ssuser=(N\/A|-|({user}.+?))\s*\w+=""",
+        """\ssuser=(N\/A|-|({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
         """\stime_reopen='({time}[^']+)'""",
         """\stype=({event_category}.+?)\s*\w+="""
         """CEF[^|]+\|({device_vendor}[^|]+)""",

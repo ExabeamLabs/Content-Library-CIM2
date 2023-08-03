@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-str-share-create-success-5142
    """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
    """\s({event_code}5142)\s""",
    """({event_name}A network share object was added)""",
-   """Account Name:\s*({user}[^\s]+)\s*""",
+   """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*""",
    """Account Domain:\s*({domain}[^\s]+)\s*""",
    """Share Name:\s*\\\\\*\\({share_name}.+?)\s+Share Path:\s(\s+|({share_path}.+?))\s\s""",
    """({result}\S+)\sAudit"""

@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-user-privilege-assign-success-4672
    """({event_code}4672)""",
    """\s({host}[^\s]+)\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
    """Keywords=({result}[^=]+?)\s*TaskCategory=""",
-   """Nombre de cuenta:\s*(-|SYSTEM|({user}[^\s]+))\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*""",
+   """Nombre de cuenta:\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*""",
    """Id. de inicio de sesión:\s*({login_id}[^\s]+)\s*Privilegios:\s*({privileges}[^\:]+?)?\s*$""",
   ]
   DupFields = ["host->dest_host"]

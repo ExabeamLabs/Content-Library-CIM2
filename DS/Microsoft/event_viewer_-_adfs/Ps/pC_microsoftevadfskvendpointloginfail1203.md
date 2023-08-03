@@ -26,7 +26,7 @@ windows-events-6 = {
 	"""RecordNumber=({event_id}\w+)\s*""",
 	"""Message=({additional_info}[^:\.]+?)(:|\.)""",
 	"""EventType=(|({event_category}[^\s]+))\s""",
-	"""User=(NULL|NOT_TRANSLATED|({user}[^\s]+))""",
+	"""User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))""",
 	"""Sid=({user_sid}[^\s]+?)\sSidType"""
 	"""<ClaimsProvider>(?:N\/A|({domain}[^<]+))</ClaimsProvider>"""
 	""":({service_name}[^:>]+)</RelyingParty>"""

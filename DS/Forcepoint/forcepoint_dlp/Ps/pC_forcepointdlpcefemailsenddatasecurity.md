@@ -11,8 +11,8 @@ Conditions = [
   """sourceServiceName ="""
 ]
 Fields = [
-  """\ssuser=({user}.+?)\s+(\w+=|$)"""
-  """\sloginName =(({domain}[^\\]+)\\+)?({user}.+?)\s+(\w+=|$)"""
+  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\sloginName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
   """sourceServiceName =(SMTP|Endpoint Email).+?suser=([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
   """sourceServiceName =(SMTP|Endpoint Email).+?loginName =([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
   """\sduser=\\*(({dest_domain}[^\\]+)\\+)?({target}.+?)\s+fname=.+?sourceServiceName =(?!(SMTP|Endpoint Email))""" 

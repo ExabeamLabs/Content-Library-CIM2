@@ -6,7 +6,7 @@ Name = google-workspace-sk4-app-activity-success-drive
   Conditions = [ """"applicationName":""", """"drive"""", """"uniqueQualifier":"""", """"name":"storage_usage_update"""" ]
   Fields = ${DLGoogleParsersTemplates.google-app-activity.Fields}[
     """"intValue":"({storage_usage_in_bytes}\d+)","name":"storage_usage_in_bytes""",
-    """suser=({user}[^\s]+)\s+[\w=]+""",
+    """suser=({user}[\w\.\-]{1,40}\$?)\s+[\w=]+""",
     """"applicationName":"({app}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"

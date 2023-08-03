@@ -29,7 +29,7 @@ Fields = [
 """"SourceFileName":\s*"({src_file_dir}[^"]+\\+)?({src_file_name}[^\\"]+)"""
 """"TargetFileName":\s*"({file_path}[^"]+)"""
 """"TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_]{1,10}?)))?)\s*""""
-"""suser=(system|({user}[^\s]+))"""
+"""suser=(system|({user}[\w\.\-]{1,40}\$?))"""
 """src-account-name":"({account_name}[^"]+)"""
 """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
 """"name":"({event_name}[^"]+)""""
@@ -37,6 +37,7 @@ Fields = [
 """"ContextProcessId":"({process_guid}[^"]+)""""
 """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"Size":"({bytes}\d+)""""
+""""event_platform":"({os}[^"]+)""""
 
 }
 ```
