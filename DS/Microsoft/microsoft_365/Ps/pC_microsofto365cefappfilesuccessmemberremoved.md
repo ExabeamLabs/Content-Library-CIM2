@@ -5,6 +5,9 @@ Name = microsoft-o365-cef-app-file-success-memberremoved
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"MemberRemoved""" ]
+  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
+    """"Key":"OsName","Value":"({os}[^"]+)""""
+  ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

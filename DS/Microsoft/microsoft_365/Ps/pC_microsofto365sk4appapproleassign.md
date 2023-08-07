@@ -40,7 +40,7 @@ o365-activity-template = {
     """"Subject":"\s*({additional_info}[^"]+?)\s*"""",
     """"trc":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """src-account-name":"({account_name}[^"]+)""",
-    """OriginatingServer":"({additional_info}[^\s"]+)""",
+    """"OriginatingServer":"({src_host}[\w\-.]+?)\s*\(""",
     """Workload"*:\s*"*({resource}[^"]+)"""",
     """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
     """Recipients":\[?"({target}[^\s,;@"]+@({dest_domain}[^\s;,"]+))""",

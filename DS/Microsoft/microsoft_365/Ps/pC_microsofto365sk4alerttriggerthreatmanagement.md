@@ -10,7 +10,7 @@ Name = microsoft-o365-sk4-alert-trigger-threatmanagement
   Fields = ${MicrosoftParserTemplates.json-microsoft-security-events.Fields}[
     """msg=.*?Alert Detected by \[?({alert_source}[^\]:]+)\]?:?"""
   ]
-  Dupfields = [ "alert_name->alert_subject" ]
+  Dupfields = [ "alert_name->alert_subject", "domain->top_domain" ]
 
 json-microsoft-security-events = {
      Vendor = Microsoft

@@ -54,14 +54,14 @@ o365-dlp-email-out = {
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
     """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
     """"SendOnBehalfOfUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
-    """"Attachments\\*"+:[\s\\]*"+\s*({email_attachments}[^\n]+?)\s*\\?","Id"""",
+    """"Attachments\\*"+:[\s\\]*"+\s*({email_attachments}[^\n]+?)\s*\\?","\w+":""",
     """"Attachments\\*"+:[\s\\]*"+\s*({email_attachment}[^"\\;]+)\s*""",
     """"Subject\\*"+:[\s\\]*"+\s*({email_subject}[^"]+?)\s*\\?"""",
     """"ClientInfoString\\*"+:[\s\\]*"+Client\\*=({alert_name}[^"\\;]+)""",
     """src-account-name":"({account_name}[^"]+)""",
     """"SizeInBytes":({bytes}\d+)"""
   ]
-  DupFields = [ "alert_name->alert_type", "email_address->src_email_address" ]
+  DupFields = [ "alert_name->alert_type", "email_address->src_email_address", "email_attachments->attachment" ]
  },
 
 cef-azure-app-activity-1 = {

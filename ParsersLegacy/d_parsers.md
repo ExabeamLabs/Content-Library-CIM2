@@ -718,6 +718,7 @@
 | dummy-new-parser-97                | microsoft-iis-str-http-session-postews-1                                           |
 | dummy-new-parser-98                | microsoft-iis-str-http-session-postmapi                                            |
 | dummy-new-parser-99                | microsoft-iis-str-http-session-postmicrosoftserver                                 |
+| dummy-new-windows-parser           | microsoft-mssql-json-database-activity-success-dbactivity                          |
 | dummy-parser-rds-1                 | amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin          |
 | duo-app-activity                   | cisco-duo-json-app-activity-success-user                                           |
 | duo-app-activity-1                 | cisco-duo-sk4-app-activity-success-app-userupdate                                  |

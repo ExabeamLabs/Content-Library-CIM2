@@ -15,6 +15,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"BrowserType.*?Value":"({browser}[^"]+)"""",
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
+    """"ObjectId":"({object_id}[^"]+?)""""
   ]
   DupFields = [ "error_code->failure_code" ]
 

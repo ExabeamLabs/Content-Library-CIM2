@@ -19,8 +19,10 @@ Name = microsoft-o365-sk4-app-activity-success-sentmailbox
     """msg=({additional_info}[^=]+?)\s\w+=""",
     """"Value":"(?:smtp:)?[^@]+?@({dest_domain}[^;"]+)"""",
     """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\\"]+)\\+)({user}[\w\.\-]+)|({=user}[\w\.\-"]+)(@({=domain}[^"]+))?)""",
-    """destinationServiceName =({app}[^=]+?)\s*filePath"""
-    """({app}Office 365)"""
+    """destinationServiceName =({app}[^=]+?)\s*filePath""",
+    """({app}Office 365)""",
+    """"OriginatingServer":"({src_host}[\w\-.]+?)\s*\(""",
+    """"ObjectId":"({object_id}[^"]+)""""
   ]
   DupFields = ["domain->email_domain"]
 

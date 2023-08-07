@@ -32,6 +32,7 @@ Fields = [
 DupFields = [
 "dest_email_address->target"
 "alert_name->event_name"
+"alert_name->alert_subject"
 ]
 ParserVersion = "v1.0.0"
 
