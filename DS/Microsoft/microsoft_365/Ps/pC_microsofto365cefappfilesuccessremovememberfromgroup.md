@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-removememberfromgroup
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Remove member from group""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"targetResources":[^\}]+?"displayName":"({object}[^"]+)""""
+    """"targetResources":[^\}]+?"displayName":"({target}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {

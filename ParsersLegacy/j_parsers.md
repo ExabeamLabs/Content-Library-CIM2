@@ -273,6 +273,14 @@
 | json-netskope-app-activity-18                   | netskope-sc-json-app-activity-success-share                                         |
 | json-netskope-app-login                         | netskope-sc-json-app-login-success-loginsuccessful                                  |
 | json-netskope-failed-app-login                  | netskope-sc-json-app-login-fail-loginfailed                                         |
+| json-netskope-iot-network-alert                 | netskope-iot-json-alert-trigger-success-suspiciousactivitydetected                  |
+| json-netskope-iot-network-alert-1               | netskope-iot-json-alert-trigger-success-safenetwork                                 |
+| json-netskope-iot-network-alert-2               | netskope-iot-json-alert-trigger-success-miscactivity                                |
+| json-netskope-iot-network-alert-3               | netskope-iot-json-alert-trigger-success-privacyviolation                            |
+| json-netskope-iot-network-alert-4               | netskope-iot-json-alert-trigger-success-useractivitydetected                        |
+| json-netskope-iot-network-alert-5               | netskope-iot-json-alert-trigger-success-userprivillege                              |
+| json-netskope-iot-network-alert-6               | netskope-iot-json-alert-trigger-success-administratorprivilagegain                  |
+| json-netskope-iot-network-alert-7               | netskope-iot-json-alert-trigger-success-potentiallybadtraffic                       |
 | json-nozomi-guardian-security-alert             | nozomi-guardian-json-alert-trigger-success-n2os                                     |
 | json-o365-activity-2                            | microsoft-m365auditlogs-json-app-activity-appactivity                               |
 | json-o365-activity-3                            | microsoft-o365-sk4-file-app-userkey                                                 |

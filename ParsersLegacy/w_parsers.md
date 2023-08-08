@@ -1,5 +1,12 @@
 | Old Parser Name                          | New-Scale Parser Name                                                           |
 | ---------------------------------------- | ------------------------------------------------------------------------------- |
+| watchguard-dummy-parser-1                | watchguard-w-leef-network-traffic-iprequest                                     |
+| watchguard-dummy-parser-2                | watchguard-w-leef-network-traffic-success-proxyallow                            |
+| watchguard-dummy-parser-3                | watchguard-w-leef-http-traffic-fail-proxydeny                                   |
+| watchguard-dummy-parser-4                | watchguard-w-leef-network-traffic-ddos                                          |
+| watchguard-dummy-parser-5                | watchguard-w-leef-network-traffic-ipsdetected                                   |
+| watchguard-dummy-parser-6                | watchguard-w-leef-network-traffic-policy                                        |
+| watchguard-event-1                       | watchguard-w-kv-network-traffic-firewall                                        |
 | watchguard-event-2                       | watchguard-w-kv-network-traffic-firewall-1                                      |
 | watchguard-event-3                       | watchguard-w-kv-network-traffic-firewall-2                                      |
 | watchguard-system-info                   | watchguard-w-str-app-notification-appinfo                                       |

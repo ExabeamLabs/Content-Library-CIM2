@@ -155,7 +155,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | NetApp         | [NetApp](DS/NetApp/netapp/ds_netapp_netapp.md)<br>          |
 | NetIQ          | [Micro Focus NetIQ Identity Manager](DS/NetIQ/micro_focus_netiq_identity_manager/ds_netiq_micro_focus_netiq_identity_manager.md)<br>                |
 | NetMotion Wireless                   | [NetMotion Wireless](DS/NetMotion_Wireless/netmotion_wireless/ds_netmotion_wireless_netmotion_wireless.md)<br>                |
-| Netskope       | [Netskope Security Cloud](DS/Netskope/netskope_security_cloud/ds_netskope_netskope_security_cloud.md)<br>                     |
+| Netskope       | [Netskope IoT Security](DS/Netskope/netskope_iot_security/ds_netskope_netskope_iot_security.md)<br>[Netskope Security Cloud](DS/Netskope/netskope_security_cloud/ds_netskope_netskope_security_cloud.md)<br>          |
 | Netwrix        | [Netwrix Auditor](DS/Netwrix/netwrix_auditor/ds_netwrix_netwrix_auditor.md)<br>   |
 | NextDLP        | [NextDLP](DS/NextDLP/nextdlp/ds_nextdlp_nextdlp.md)<br>[Reveal](DS/NextDLP/reveal/ds_nextdlp_reveal.md)<br>                   |
 | NNT            | [NNT ChangeTracker](DS/NNT/nnt_changetracker/ds_nnt_nnt_changetracker.md)<br>     |

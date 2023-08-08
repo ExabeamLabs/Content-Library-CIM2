@@ -9,9 +9,9 @@ Name = netskope-sc-json-alert-trigger-success-dlp-1
     """"dlp_rule_severity":"({alert_severity}[^"]+)""",
     """"dlp_incident_id":({alert_id}\d+)""",
     """"identifying-hash":\{"hash-type":"SHA256"[^\}]+?"hash-value":\s*"({hash_sha256}[^"]+)"""",
-    """"md5":\s*"({hash_md5}[^"]+)""""
+    """"md5":\s*"({hash_md5}[^"]+)"""",
+    """"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"object_type":\s*"File""""
   ]
-  DupFields = ["object->file_name" ]
   ParserVersion = v1.0.0
 
 cef-netskope-activity = {
@@ -25,7 +25,10 @@ cef-netskope-activity = {
 """"app":\s*"\[?({app}[^\"\]]+)"""
 """"User Name\s*":"({full_name}[^\"]+)"""
 """"srcip":\s*"({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
-""""object":\s*"(\s+\"|(\s*(Unknown Unknown|unknown|Unknown|null|({object}[^\"]+?))\s*\"))"""
+""""object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"activity":\s*"File\w+""""
+""""object_type":\s*"(File|Folder)"[^\}]*?"object":\s*"\s*({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
+""""object_type":\s*"User"[^\}]*?"object":\s*"(unknown|(({email_address}[^\s@\"]+@[^\s@\"]+\.[^\s@\"]+?)|(({domain}[^\s\"@\\\/]+)[\\\/]+)?({user}[^\s\"@\\\/:]+)))\\?""""
+""""object_type":\s*"(?!(File|Folder|User))[^"]+"[^\}]*?"object":\s*"(Unknown Unknown|unknown|Unknown|null|({object}[^"]+?))\s*""""
 """"user":\s*"(unknown|(({email_address}[^\s@\"]+@[^\s@\"]+\.[^\s@\"]+?)|(({domain}[^\s\"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^\s\"@\\\/:]+))))\\?""""
 """"access_method":\s*"({auth_method}[^\"]+)"""
 """"logintype":\s*"({auth_method}[^\"]+)"""

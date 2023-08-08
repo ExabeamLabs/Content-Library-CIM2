@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-memberadded
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"MemberAdded""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"UPN":"({object}[^"]+)""",
+    """"UPN":"({user_upn}[^"]+)""",
     """"TeamName"+:"+({group_name}[^"]+)""",
     """"Workload"+:"+({app}[^"]+)"""
     """"Key"+:"+ClientName"+,"+Value"+:"+({client_name}[^"]+)"""

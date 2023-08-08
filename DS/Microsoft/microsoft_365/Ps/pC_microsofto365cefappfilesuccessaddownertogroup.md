@@ -7,7 +7,7 @@ Name = microsoft-o365-cef-app-file-success-addownertogroup
   Conditions= [ """destinationServiceName =Office 365""", """"Add owner to group""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
     """sourceServiceName =({app}[^=]+?)\s+(\w+=|$)""",
-    """"targetResources":[^\}]+?"displayName":"\s*({object}[^"]+?)\s*""""
+    """"targetResources":[^\}]+?"displayName":"\s*({target}[^"]+?)\s*""""
   ]
 
 cef-microsoft-app-activity = {

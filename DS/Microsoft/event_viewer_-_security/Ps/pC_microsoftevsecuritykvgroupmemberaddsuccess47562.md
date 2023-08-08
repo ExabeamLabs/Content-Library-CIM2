@@ -13,7 +13,6 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Computer>({dest_host}({host}[^<]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?='MemberName'>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
-    """<Data Name(\\)?='MemberSid'>({account_id}(?=[^\\<]+\\)({sid_domain}[^\\]+)\\({user_sid}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Data Name(\\)?='TargetUserName'>(?=\w)({group_name}[^<]+)</Data>""",
     """<Data Name(\\)?='TargetDomainName'>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?='TargetSid'>({group_id}[^<]+)</Data>""",
@@ -31,7 +30,8 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Execution ProcessID(\\)?='({process_id}\d+)""",
     """<Security UserID(\\)?='({user_sid}[^']+)""",
     """<Data Name(\\)?='RemoteMachineAccount'>({dest_host}[^<]+)"""
-    """<Data Name ='MemberName('>|":")CN\\?=({member}[^>]+)<\/Data>"""
+    """<Data Name ='MemberName('>|":")CN\\?=({member}[^>]+)<\/Data>""",
+    """<Data Name(\\)?='MemberSid'>({account_id}(?=[^\\<]+\\)({domain}[^\\]+)\\({user}[^\s]+)|(?:[^\s\<]+))</Data>""",
       ]
 
 

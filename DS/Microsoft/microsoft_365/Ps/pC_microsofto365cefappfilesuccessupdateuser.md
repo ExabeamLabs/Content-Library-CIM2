@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-updateuser
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Update user""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"targetResources":[^\}]+"userPrincipalName":"({object}[^"]+)""""
+    """"targetResources":[^\}]+"userPrincipalName":"({target}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {

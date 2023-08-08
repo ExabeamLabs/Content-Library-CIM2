@@ -6,11 +6,10 @@ Name = microsoft-o365-cef-app-file-success-filemodified
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"FileModified""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"ObjectId":"({file_path}({file_dir}[^"]+\/)({file_name}[^"]+?(\.({file_ext}[^"]+))?)?)"""",
     """"SourceFileExtension":"({src_file_ext}[^"]+)"""",
     """"SourceRelativeUrl":"({src_file_path}[^"]+)"""",
-    """"SourceRelativeUrl":"({file_path}({file_dir}([^"]+)?[\/\\])?[^"]+)"""
-		""""FileSizeBytes":({bytes}\d+)"""
+    """"SourceRelativeUrl":"({file_path}({file_dir}([^"]+)?[\/\\])?[^"]+)""",
+    """"FileSizeBytes":({bytes}\d+)"""
   ]
   DupFields = [ "src_file_path->src_file_dir","src_file_ext->file_ext" ]
 

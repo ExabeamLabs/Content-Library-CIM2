@@ -5,9 +5,6 @@ Name = microsoft-o365-cef-app-file-success-refreshdataset
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"RefreshDataset""" ]
-  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-     """"ObjectId":"({object}[^"]+)"""
-  ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

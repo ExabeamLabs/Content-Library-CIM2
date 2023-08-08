@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-groupupload
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""",""""Update group""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"targetResources":[^\}]+?"displayName":"\s*({object}[^"]+?)\s*""""
+    """"targetResources":[^\}]+?"displayName":"\s*({target}[^"]+?)\s*""""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)""""
   ]
 
