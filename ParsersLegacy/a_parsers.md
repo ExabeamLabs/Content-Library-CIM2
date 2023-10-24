@@ -3,7 +3,6 @@
 | abnormal-security-alert                               | abnormalsecurity-as-json-alert-trigger-success-attacktype                         |
 | absolute-app-activity                                 | absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated      |
 | absolute-app-activity-1                               | absolute-siemconnector-cef-app-activity-success-devicelocationupdated             |
-| absolute-app-activity-2                               | absolute-siemconnector-kv-app-notification-success-unprotected                    |
 | absolute-app-login                                    | absolute-siemconnector-cef-app-login-success-loggedin                             |
 | accelion-dlp-alert                                    | accellion-kw-json-alert-trigger-success-httpincident                              |
 | accelion-kite-app-3                                   | accellion-kw-json-file-upload-success-addfile                                     |
@@ -101,20 +100,6 @@
 | admanager-activity                                    | microsoft-ad-kv-app-group-admp                                                    |
 | adminbyrequest-privileged-access                      | adminbyrequest-a-json-user-privilege-use-success-adminsession                     |
 | adminbyrequest-privileged-object-access               | adminbyrequest-a-json-user-privilege-use-success-runasadmin                       |
-| adssp-event-account-unlock                            | manageengine-adssp-cef-user-unlock-success-unlockaccountsuccess                   |
-| adssp-event-account-unlock-1                          | manageengine-adssp-cef-user-unlock-success-selfunlocksuccess                      |
-| adssp-event-app-activity                              | manageengine-adssp-cef-app-activity-success-unlockaccountattempt                  |
-| adssp-event-app-activity-1                            | manageengine-adssp-cef-app-activity-success-selfunlock                            |
-| adssp-event-app-activity-2                            | manageengine-adssp-cef-app-activity-success-enrollment                            |
-| adssp-event-app-login                                 | manageengine-adssp-cef-app-login-success-passwordloginsuccess                     |
-| adssp-event-failed-app-login                          | manageengine-adssp-cef-app-login-fail-passwordlogin                               |
-| adssp-event-password-change                           | manageengine-adssp-cef-user-password-modify-success-changepasswordsuccess         |
-| adssp-event-password-change-1                         | manageengine-adssp-cef-user-password-modify-success-changepasswordsuccess-1       |
-| adssp-event-password-change-failed                    | manageengine-adssp-cef-user-password-modify-fail-changepassword                   |
-| adssp-event-password-change-failed-1                  | manageengine-adssp-cef-user-password-modify-fail-changepassword-1                 |
-| adssp-system-info                                     | manageengine-adssp-cef-user-password-reset-fail-notification                      |
-| adssp-system-info-1                                   | manageengine-adssp-cef-endpoint-notification-success-mailtoadmin                  |
-| adssp-system-info-2                                   | manageengine-adssp-cef-app-authentication-fail-identifyverification               |
 | airlock-appwhitelisting-app-activity                  | airlock-allowlisting-str-app-activity-success-fileactivity                        |
 | airlock-appwhitelisting-app-activity-1                | airlock-allowlisting-str-app-activity-success-serveractivity                      |
 | airlock-create-folder                                 | airlock-sah-kv-file-write-success-createfolder                                    |
@@ -171,8 +156,6 @@
 | amazon-rds-database-login                             | amazon-ards-sk4-database-login-success-connectionauthorized                       |
 | amazon-rds-database-operation                         | amazon-rds-str-database-query-modify-success-auditevent                           |
 | amazon-rds-database-operation-1                       | amazon-rds-str-database-query-modify-success-auditevent-1                         |
-| amazon-rds-system-info-1                              | amazon-rds-json-app-notification-auditevent                                       |
-| amazon-rds-system-info-2                              | amazon-rds-json-app-notification-auditevent-1                                     |
 | anywhere365-app-activity                              | anywhere365-a-kv-app-activity-success-callreceive                                 |
 | anywhere365-app-activity-1                            | anywhere365-a-kv-app-activity-success-ucccall                                     |
 | anywhere365-app-activity-2                            | anywhere365-a-kv-app-activity-success-newconference                               |
@@ -195,8 +178,6 @@
 | arbor-network-fail                                    | arbor-a-str-network-traffic-fail-block                                            |
 | arista-networks-awake-security-alert                  | aristanetworks-as-cef-alert-trigger-success-deviceurlpath                         |
 | armis-alert-iot                                       | armis-a-cef-alert-trigger-success-systempolicyviolation                           |
-| armis-alert-iot-1                                     | armis-a-json-alert-trigger-success-systempolicyviolation                          |
-| armis-system-info                                     | armis-a-json-app-notification-success                                             |
 | aruba-controller-ap-protection                        | hp-arubawc-str-app-notification-success-4111                                      |
 | aruba-controller-assoc                                | hp-arubawc-str-network-traffic-4111                                               |
 | aruba-controller-blacklist                            | hp-arubawc-str-app-notification-success-4111-1                                    |
@@ -342,7 +323,6 @@
 | aws-getconsolescreenshot-json                         | amazon-awscloudtrail-json-app-activity-getscreenshot                              |
 | aws-getobject-json                                    | amazon-awscloudtrail-json-file-read-getobject                                     |
 | aws-getpassworddata-json                              | amazon-awscloudtrail-json-key-read-getpassword                                    |
-| aws-inspector-system-info                             | amazon-awsguardduty-sk4-alert-trigger-success-inspector                           |
 | aws-listattachedgrouppolicies-json                    | amazon-awscloudtrail-json-policy-list-success-grouppolicies                       |
 | aws-listattachedrolepolicies-json                     | amazon-awscloudtrail-json-policy-list-success-rolepolicies                        |
 | aws-listattacheduserpolicies-json                     | amazon-awscloudtrail-json-policy-list-success-userpolicies                        |
@@ -413,7 +393,6 @@
 | azure-atp-security-alert-5                            | microsoft-azureatp-json-alert-trigger-success-remoteexecutionsecurityalert-1      |
 | azure-atp-security-alert-6                            | microsoft-azureatp-json-alert-trigger-success-netlogonbypasssecurityalert-1       |
 | azure-atp-security-alert-7                            | microsoft-azure-sk4-alert-trigger-success-aatp                                    |
-| azure-atp-security-alert-8                            | microsoft-azureatp-json-alert-trigger-success-enumeratesessions                   |
 | azure-blob-activity1                                  | microsoft-azure-json-file-success-1                                               |
 | azure-blob-activity2                                  | microsoft-azure-json-file-success-2                                               |
 | azure-cloud-system-info                               | microsoft-azuremon-json-app-activity-success-sourcesystem                         |

@@ -58,7 +58,6 @@
 | f5-vpn-auth-failed-1                        | f5-bigip-kv-endpoint-login-fail-accessdenied                       |
 | f5-vpn-cert-user                            | f5-bigip-str-vpn-success-sessionsslcert                            |
 | f5-vpn-login-failed                         | f5-apm-str-vpn-login-fail-01490106                                 |
-| f5-vpn-os                                   | f5-bigip-str-vpn-login-success-platform                            |
 | f5-vpn-password-change-failed               | f5-bigip-kv-user-password-modify-fail-changerejected               |
 | f5-vpn-policy                               | f5-apm-str-vpn-success-01490102                                    |
 | f5-vpn-session-data                         | f5-apm-str-vpn-logout-success-01490521                             |
@@ -66,7 +65,6 @@
 | f5-vpn-session-end-1                        | f5-bigip-kv-vpn-logout-success-closed                              |
 | f5-vpn-session-start                        | f5-bigip-mix-vpn-login-success-01490500                            |
 | f5-vpn-session-start-1                      | f5-bigip-kv-vpn-login-success-started                              |
-| f5-vpn-srchost                              | f5-bigip-str-vpn-login-success-hostname                            |
 | f5-vpn-start-custom                         | f5-apm-str-vpn-success-allow                                       |
 | f5-vpn-user                                 | f5-apm-mix-vpn-success-01490                                       |
 | f5-vpn-user-agent                           | f5-apm-str-vpn-success-01490506                                    |
@@ -148,11 +146,6 @@
 | fortinet-network-connection-1               | fortinet-fortigate-cef-network-traffic-success-trafficdns          |
 | fortinet-network-connection-2               | fortinet-fortigate-cef-network-traffic-success-trafficipconn       |
 | fortinet-network-connection-3               | fortinet-fortigate-cef-network-traffic-success-forward             |
-| fortinet-network-info                       | fortinet-fortigate-cef-app-activity-success-router                 |
-| fortinet-network-info-1                     | fortinet-fortigate-cef-app-activity-success-system                 |
-| fortinet-network-info-2                     | fortinet-fortigate-cef-app-activity-success-connector              |
-| fortinet-network-info-3                     | fortinet-fortigate-cef-app-activity-success-ha                     |
-| fortinet-network-info-4                     | fortinet-fortigate-cef-app-activity-success-vpn                    |
 | fortinet-security-alert                     | fortinet-utm-kv-alert-trigger-success-virus                        |
 | fortinet-security-alert-1                   | fortinet-utm-kv-alert-trigger-virus                                |
 | fortinet-security-alert-2                   | fortinet-utm-kv-alert-trigger-success-anomaly                      |

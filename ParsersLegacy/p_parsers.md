@@ -16,7 +16,6 @@
 | palo-alto-dlp-alert-1                    | pan-aperture-csv-alert-trigger-success-policyviolation                  |
 | palo-alto-file-operations                | pan-aperture-csv-file-success-activitymonitoring                        |
 | palo-alto-logout-1                       | pan-aperture-csv-app-logout-success-signout                             |
-| palo-alto-networks-firewall-connection   | pan-ngfw-csv-network-traffic-success-webbrowsing                        |
 | palo-alto-networks-leef-setip            | pan-gp-leef-vpn-login-success-globalprotect-6                           |
 | palo-alto-networks-leef-system-info      | pan-gp-leef-app-activity-system                                         |
 | palo-alto-networks-leef-vpn-login        | pan-gp-leef-vpn-login-success-userloginsucceeded                        |
@@ -104,17 +103,15 @@
 | pan-cef-alert-5                          | pan-wildfire-cef-alert-trigger-success-compliantrequest                 |
 | pan-cef-alert-6                          | pan-wildfire-cef-alert-trigger-success-threat                           |
 | pan-cef-alert-7                          | pan-wildfire-cef-alert-trigger-success-lsardeleteaccess                 |
-| pan-config-change                        | "pan-ngfw-csv-configuration-modify-success-config                       |
+| pan-config-change                        | pan-ngfw-csv-configuration-modify-success-config                        |
 | pan-data-alert                           | pan-ngfw-csv-alert-trigger-success-data                                 |
 | pan-failed-vpn-login                     | pan-ngfw-json-vpn-login-fail-failure                                    |
 | pan-file-alert                           | pan-ngfw-json-alert-trigger-success-threatalert                         |
 | pan-flood-alert                          | pan-ngfw-csv-alert-trigger-success-flood                                |
 | pan-fw-packet-logs                       | pan-ngfw-kv-network-traffic-success-packetlog                           |
-| pan-gp-app-activity                      | pan-gp-json-app-activity-success-tunnel                                 |
 | pan-leef-network-alert                   | pan-ngfw-leef-alert-trigger-success-syslogintegration                   |
 | pan-logout                               | pan-ngfw-csv-app-logout-logout                                          |
 | pan-ngfw-system-auth                     | pan-ngfw-csv-app-authentication-success-general                         |
-| pan-ngfw-system-info                     | pan-ngfw-csv-network-notification-success-general                       |
 | pan-packet-network-connection            | pan-ngfw-csv-network-traffic-packet                                     |
 | pan-proxy                                | pan-ngfw-csv-http-session-9999                                          |
 | pan-remote-logon                         | pan-ngfw-csv-endpoint-login-success-system                              |
@@ -263,9 +260,6 @@
 | proofpoint-security-alert-1              | proofpoint-casb-json-alert-trigger-success-severity                     |
 | proofpoint-system-info                   | proofpoint-tappod-sk4-app-notification-success-hostnotfound             |
 | proofpoint-system-info-1                 | proofpoint-tappod-sk4-app-notification-success-userunknown              |
-| proofpoint-system-info-2                 | proofpoint-tappod-sk4-app-notification-success-dsnserviceunavailable    |
-| proofpoint-system-info-4                 | proofpoint-tappod-sk4-app-notification-success-localconfiguration       |
-| proofpoint-system-info-5                 | proofpoint-tappod-sk4-app-notification-success-dataformat               |
 | prowatch-badge-access                    | "honeywell-pw-xml-physical-location-access-evntdat                      |
 | prowatch-badge-access-1                  | honeywell-pw-json-physical-location-access-success-badgeno              |
 | prowatch-badge-access-3                  | honeywell-pw-csv-physical-location-access-success-exabeam               |

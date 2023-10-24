@@ -22,8 +22,6 @@
 | q-adfs-auth-successful-1             | microsoft-evsecurity-mix-endpoint-login-success-1200                     |
 | q-aruba-failed-nac-logon             | hp-arubacpm-kv-radius-traffic-fail-authfailed-2                          |
 | q-aruba-failed-nac-logon-1           | hp-arubacpm-kv-radius-traffic-fail-authfailed                            |
-| q-aruba-failed-nac-logon-2           | hp-arubacpm-kv-radius-traffic-fail-authenticationfailed                  |
-| q-aruba-failed-nac-logon-3           | hp-arubacpm-kv-radius-traffic-fail-sessionreuseerror                     |
 | q-aruba-nac-logon-1                  | hp-arubacpm-kv-endpoint-login-success-logguestaccess                     |
 | q-aruba-nac-logon-2                  | hp-arubacpm-kv-endpoint-login-success-loggedinuser                       |
 | q-aruba-nac-logon-3                  | hp-arubacpm-kv-radius-traffic-success-radiusaccounting                   |
@@ -31,7 +29,6 @@
 | q-aruba-nac-logon-5                  | hp-arubacpm-kv-radius-traffic-success-loggedinusers                      |
 | q-aruba-nac-logon-6                  | hp-arubacpm-kv-radius-traffic-success-guest                              |
 | q-aruba-nac-logon-7                  | hp-arubacpm-kv-endpoint-login-success-authenticated                      |
-| q-aruba-nac-logon-8                  | hp-arubacpm-kv-radius-traffic-success-radiusacc                          |
 | q-asa-6-113039-vpn-start             | cisco-asa-str-vpn-login-success-113039                                   |
 | q-asa-722037-vpn-end                 | cisco-asa-str-vpn-logout-success-722037                                  |
 | q-beyondtrust-process-created        | beyondtrust-powerbroker-str-process-create-success-messageforwarded      |

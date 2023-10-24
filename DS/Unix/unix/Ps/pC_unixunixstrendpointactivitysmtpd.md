@@ -1,0 +1,18 @@
+#### Parser Content
+```Java
+{
+Name = unix-unix-str-endpoint-activity-smtpd
+  Vendor = Unix
+  Product = Unix
+  ParserVersion = v1.0.0
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [ """postfix/smtpd["""]
+  Fields = [
+    """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[\w\-.]+)\s""",
+    """\d\d:\d\d:\d\d\s(::ffff:)?(({dest_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))|({dest_host}[\w\-.]+))\s*(::ffff:)?({host}[^\s]+)?\s*postfix""",
+    """\s*({additional_info}postfix.+?)\s*$""",
+  ]
+
+
+}
+```

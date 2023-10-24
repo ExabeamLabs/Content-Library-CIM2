@@ -15,7 +15,6 @@
 | hp-aruba-clearpass-info-4            | hp-arubacpm-str-app-notification-8904                       |
 | hp-aruba-clearpass-info-5            | hp-arubacpm-str-app-activity-5691                           |
 | hp-aruba-clearpass-info-6            | hp-arubacpm-str-app-notification-5688                       |
-| hp-aruba-logout                      | hp-arubawc-str-endpoint-logout-success-loggedout            |
 | hp-aruba-switch-info                 | hp-arubaos-str-port-block-00435                             |
 | hp-aruba-switch-info-1               | hp-arubaos-str-port-disable-00077                           |
 | hp-aruba-switch-info-10              | hp-arubaos-str-configuration-modify-success-04695           |
@@ -43,8 +42,6 @@
 | hp-aruba-switch-info-7               | hp-arubaos-str-endpoint-logout-success-03363                |
 | hp-aruba-switch-info-8               | hp-arubaos-str-endpoint-notification-success-04693          |
 | hp-aruba-switch-info-9               | hp-arubaos-str-endpoint-notification-success-04694          |
-| hp-aruba-system-info                 | hp-amm-kv-vpn-authentication-success-param                  |
-| hp-aruba-system-info-1               | hp-amm-kv-vpn-logout-success-params                         |
 | hp-ilo-app-login-1                   | hp-hpilo-str-app-login-success-browserlogin                 |
 | hp-ilo-app-login-2                   | "hp-hpilo-str-app-login-success-xmllogin                    |
 | hp-ilo-app-logout-1                  | hp-hpilo-str-app-logout-success-browserlogout               |

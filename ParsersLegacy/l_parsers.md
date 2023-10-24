@@ -47,16 +47,13 @@
 | leap-app-activity-3                               | leap-l-csv-app-activity-success-tuaudit                                                |
 | leap-audit                                        | leap-l-csv-app-activity-success-leapaudit                                              |
 | leef-appsense-process-alert                       | appsense-am-leef-alert-trigger-success-appsenseapplicationmanager                      |
-| leef-aruba-app-activity                           | hp-arubacpm-leef-app-activity-success                                                  |
 | leef-aruba-app-login                              | hp-arubacpm-leef-app-login-success-loggedin                                            |
 | leef-aruba-nac-logon                              | hp-arubacpm-mix-radius-traffic-clearpass                                               |
-| leef-aruba-system-event                           | hp-arubacpm-leef-app-notification-success                                              |
 | leef-beyondtrust-account-password-change-failed   | beyondtrust-bi-leef-user-password-modify-fail-changecancelled                          |
 | leef-beyondtrust-account-password-change-failed-1 | beyondtrust-bi-leef-user-password-modify-fail-changefailed                             |
 | leef-beyondtrust-app-activity                     | beyondtrust-bi-leef-app-activity-success-system                                        |
 | leef-beyondtrust-app-activity-1                   | beyondtrust-bi-leef-app-activity-success-turnedoff                                     |
 | leef-beyondtrust-app-activity-10                  | beyondtrust-bi-leef-app-activity-success-managed                                       |
-| leef-beyondtrust-app-activity-11                  | beyondtrust-bi-leef-app-activity-success-change                                        |
 | leef-beyondtrust-app-activity-2                   | beyondtrust-bi-leef-app-activity-success-passwordreset                                 |
 | leef-beyondtrust-app-activity-3                   | beyondtrust-bi-leef-app-activity-success-releasepasswordreset                          |
 | leef-beyondtrust-app-activity-4                   | beyondtrust-bi-leef-app-activity-success-passwordexpired                               |
@@ -70,8 +67,6 @@
 | leef-beyondtrust-failed-app-login                 | beyondtrust-bi-leef-app-login-fail-loginfailure                                        |
 | leef-beyondtrust-failed-logon                     | beyondtrust-bi-leef-app-login-fail-connectfailure                                      |
 | leef-beyondtrust-failed-logon-1                   | beyondtrust-bi-leef-app-login-fail-failedtologon                                       |
-| leef-beyondtrust-logout                           | beyondtrust-bi-leef-app-logout-success-logout                                          |
-| leef-beyondtrust-system-info                      | beyondtrust-bi-leef-app-notification-success-sessionmonitoring                         |
 | leef-bit9-security-alert                          | vmware-carbonblackedr-leef-alert-trigger-success-securityplatform                      |
 | leef-broadcom-system-info                         | broadcom-zos-leef-network-traffic-success-mvsb                                         |
 | leef-carbonblack-file-alert                       | vmware-carbonblackedr-leef-alert-trigger-success-huntingapt28                          |
