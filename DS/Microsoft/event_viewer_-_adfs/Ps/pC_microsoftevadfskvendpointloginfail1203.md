@@ -17,9 +17,9 @@ Fields = ${WindowsParsersTemplates.windows-events-6.Fields}[
 windows-events-6 = {
   Vendor = Microsoft
   Product = Event Viewer - ADFS
-  TimeFormat = "dd-MM-yyyy HH:mm:ss"
+  TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "dd-MM-yyyy HH:mm:ss"]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
 	"""\WEventCode=({event_code}\d+)""",
 	"""ComputerName =({host}[\w\-.]+)""",
 	"""\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",
@@ -38,7 +38,7 @@ windows-events-6 = {
 	"""(<|&lt;)ProxyServer(&gt;|>)(N\/A|({proxy_server}.+?))(&lt;|<)\/ProxyServer(&gt;|>)""",
 	"""(<|&lt;)UserAgentString(&gt;|>)(N\/A|({user_agent}.+?))(<|&lt;)\/UserAgentString(&gt;|>)""",
 	"""(<|&lt;)Endpoint(&gt;|>)(N\/A|({endpoint}.+?))(<|&lt;)\/Endpoint(&gt;|>)""",
-	"""(<|&lt;)UserId(&gt;|>)(N\/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\&]+)\\+)?({user}[^\\&]+))(<|&lt;)\/UserId(&gt;|>)""",
+	"""(<|&lt;)UserId(&gt;|>)(N\/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\&]+)\\+)?({user}[\w\.\-]{1,40}\$?))(<|&lt;)\/UserId(&gt;|>)""",
 	"""(<|&lt;)FailureType(&gt;|>)(None|({failure_reason}.+?))(<|&lt;)\/FailureType(&gt;|>)""",
 	"""(<|&lt;)ErrorCode(&gt;|>)(N\/A|({error_code}.+?))(<|&lt;)\/ErrorCode(&gt;|>)""",
 	"""(<|&lt;)RelyingParty(&gt;|>)(N\/A|({relying_party}.+?))(<|&lt;)\/RelyingParty(&gt;|>)""",

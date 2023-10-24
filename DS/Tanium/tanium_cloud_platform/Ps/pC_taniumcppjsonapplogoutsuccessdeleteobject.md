@@ -9,7 +9,7 @@ Name = tanium-cpp-json-app-logout-success-deleteobject
   Fields = [
     """"creation_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
     """"type_name":"({operation}[^"]+)"""",
-    """"details":"User:\s(System User|({email_address}[^"@;]+@[^";\.]+\.[^";]+)|({user}[^;"]+))""",
+    """"details":"User:\s(System User|({email_address}[^"@;]+@[^";\.]+\.[^";]+)|({user}[\w\.\-]{1,40}\$?))""",
     """"details":"[^"]*?Session ID:\s({session_id}\d+)""",
     """"domain":"(<\[)?({domain}[^>\]"]+)(\]>)?"""",
     """"audit_type":"({audit_type}[^"]+)""""

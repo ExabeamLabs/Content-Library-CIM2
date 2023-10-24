@@ -6,9 +6,12 @@ Name = sentinelone-singularityp-cef-process-create-success-processcreation
   TimeFormat = "epoch"
   Conditions = 
     [ 
-      """dproc=Deep Visibility Endpoint"""
-      """destinationServiceName =SentinelOne"""
-      """processCreation {""" 
+      """timestamp {"""
+      """millisecondsSinceEpoch: """
+      """trueContext {"""
+      """isRedirectedCommandProcessor: """
+      """processCreation {"""
+      """process {"""
     ]
   Fields = ${SentinelOneParsersTemplates.sentinelone-activity.Fields} [
     """\smillisecondsSinceEpoch:\s*({time}\d{13})""",
@@ -38,7 +41,7 @@ sentinelone-activity {
       """\ssizeBytes:\s*({bytes}\d+)""",
       """user\s*\{[^\}]+?sid:[^"]*?"+({user_sid}[^"\\]+)""",
       """user\s*\{(\\n|\\t|\\t)*\s+name:\s+[\\\/]?"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-]{1,40}\$?)))"""",
-      """"app-username":"((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))\s*"""",
+      """"app-username":"((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s*"""",
       """\ssha256:\s*[\\\/]?"+({hash_sha256}[^"\\]+)""",
       """\smd5:\s*[\\\/]?"+({hash_md5}[^"\\]+)""",
       """\spid:\s*({process_id}\d+)""",

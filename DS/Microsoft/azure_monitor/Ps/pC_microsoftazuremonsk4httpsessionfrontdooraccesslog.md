@@ -7,7 +7,7 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   ParserVersion = v1.0.0
   Conditions = [
-    """destinationServiceName =Azure""",
+    """"resourceId"""",
     """"category":"FrontdoorAccessLog"""",
     """"httpMethod":""""
   ]
@@ -31,7 +31,7 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
    """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
    """"resourceId":"({object}[^"]+)""",
    """"operationName":"({operation}[^"]+)""",
-   """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
+   """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
   ]
    DupFields=["event_hub_namespace->host", "object->resource"]
 

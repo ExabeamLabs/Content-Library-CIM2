@@ -4,7 +4,7 @@
 Name = beyondtrust-passwordsafe-json-app-login-success-beyondinsight
   Vendor = BeyondTrust
   Product = BeyondInsight
-  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy HH:mm:ss a","M/dd/yyyy HH:mm:ss a"]
   Conditions = [ """"vendor":"BeyondTrust"""", """"eventname":"Login"""", """"category":"PMM Login"""", """"product":"BeyondInsight"""", """"systemname":"PMM Login"""" ]
   Fields = [
     """"host":"({host}[^"]+)"""",

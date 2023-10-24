@@ -18,6 +18,7 @@ Name = microsoft-evsystem-xml-service-start-6005
     """ThreadID\\*='({thread_id}[^']+)""",
     """ProcessID\\*='({process_id}\d+)""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
+    """<Provider Name =('|")({service_name}[^'"]+)('|")"""
   ]
 
 

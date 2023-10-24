@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
     """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Client IP: ({src_ip}[a-fA-F:\.\d]+)""",

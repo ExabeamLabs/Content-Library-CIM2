@@ -28,7 +28,7 @@ beyondtrust-pi-app-activity = {
       """\ssEventID=\\?"({operation}[^"]+?)\\?""""
       """\ssOriginatingApplicationName =\\?"({app}[^"\\]+?)\\?""""
       """dwAppSpecificEventID=\\?"({event_code}\d+)"""
-      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[^"\\]+?)\\?""""
+      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\\?""""
       """\ssOriginatingSystem=\\?"({src_host}[^"\\]+?)\\?""""
       """"sAccountName\\?"\svalue=\\?"({account}[^"\\]+)\\?""""
       """key=\\?"AccountToElevate\\?"\svalue=\\?"(({account_domain}[^\\]+)\\+)?({account}[^"\\]+?)\\?""""

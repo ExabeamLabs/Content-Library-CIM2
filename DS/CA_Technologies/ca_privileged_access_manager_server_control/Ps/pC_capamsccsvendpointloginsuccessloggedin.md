@@ -16,7 +16,7 @@ pam-authentication = {
       """\screated\s*=\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """\sUser\s*:\s*CN=({full_name}[^,]+),\s*({user_ou}.+?),\s*Transaction:""",
       """\sUser\s*:\s*({email_address}[^,@]+@[^,]+)""",
-      """\sUser\s*:\s*(?:unknown|({user}[^@=,]+)),\s*Transaction:""",
+      """\sUser\s*:\s*(?:unknown|({user}[\w\.\-]{1,40}\$?)),\s*Transaction:""",
       """\sUser Group\s*:\s*CN=({group_name}[^,]+),\s*({group_ou}.+?),\s*Port:""",
       """\sNat\/Proxy IP\s*:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\sDetails:[^;]*:\s+({event_name}[^;]+?)\s*(;|$)""",

@@ -12,7 +12,7 @@ Name = google-gcpca-sk4-app-activity-cloud
      """"callerIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """"serviceName":"({app}[^"]+)""",
      """"methodName":"({operation}[^"]+)""",
-     """"principalEmail":"(({email_address}[^@\s"]+?@({email_domain}[^\s@"]+?))|({user}[^\s"]+?))"""",
+     """"principalEmail":"(({email_address}[^@\s"]+?@({email_domain}[^\s@"]+?))|({user}[\w\.\-]{1,40}\$?))"""",
      """"callerSuppliedUserAgent":"({user_agent}[^"]+)""",
      """"resource"[^=]*?project_id":"({account}[^"]+)""",
      """"resource"[^=]*?"type":"({resource_type}[^"]+)""",
@@ -20,7 +20,7 @@ Name = google-gcpca-sk4-app-activity-cloud
      """"permission":"({permission}[^"]+)""",
      """"granted":({result}[^,":\}]+)""",
      """requestClientApplication=\s*({app}[^=]+?)\s+\w+=""",
-     """suser=\s*(anonymous|({email_address}[^@\s]+?@({email_domain}[^\s@\.]+?\.[^\s]+))|({user}[^=]+?))\s+\w+=""",
+     """suser=\s*(anonymous|({email_address}[^@\s]+?@({email_domain}[^\s@\.]+?\.[^\s]+))|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
      """"region":"({region}[^"]+?)"""",
      """"severity":"({alert_severity}[^"]+?)"""" 
   ]

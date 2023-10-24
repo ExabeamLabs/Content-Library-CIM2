@@ -7,13 +7,13 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = v1.0.0
   Conditions = [
-    """destinationServiceName =Azure dproc=EventHub""",
+    """"resourceId":""",
     """"category":"AppServiceHTTPLogs""""
   ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """([^\|]*\|){5}({operation}[^\|]+)""",
-    """\WdestinationServiceName =({app}.+?)\s+(\w+=|$)""",
+    """destinationServiceName =({app}.+?)\s+(\w+=|$)""",
     """\Wsuser=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """\Wsuid=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """"CsHost":"({app}[^:",]+)""",

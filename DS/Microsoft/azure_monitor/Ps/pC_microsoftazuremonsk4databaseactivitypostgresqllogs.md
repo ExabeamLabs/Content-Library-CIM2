@@ -28,7 +28,7 @@ Name = microsoft-azuremon-sk4-database-activity-postgresqllogs
      """cipher\\=({cipher}[^,]+)""",
      """"+domain"+:"+({domain}[^"]+)"""
      """"resourceId":\s*"({object}[^"]{1,249})"""
-     """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
+     """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
      """"operationName":"({operation}[^"]+)"""
   ]
   DupFields= ["event_hub_namespace->host", "object->resource" , "db_operation->additional_info"]

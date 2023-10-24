@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4793-1
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Data Name\\*='Workstation'>([A-Fa-f:\d.]+|-|({src_host_windows}[^<]+?))\s*<""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>"""	
   ]

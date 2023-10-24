@@ -4,7 +4,7 @@
 Name = hp-arubacpm-str-app-activity-5691
   ParserVersion = v1.0.0
   Product = Aruba ClearPass Policy Manager
-  TimeFormat = "EEE MMM dd HH:mm:ss yyyy"
+  TimeFormat = ["EEE MMM dd HH:mm:ss yyyy","MMM dd HH:mm:ss yyyy"]
   Conditions = [ """cli[5691]:""", """wsc:""" ]
   Fields = ${DLArubaParsersTemplates.aruba-clearpass-info.Fields}[
     """({event_code}cli\[5691\])""",

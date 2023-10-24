@@ -4,7 +4,7 @@
 Name = forcepoint-wsg-kv-http-session-httpuseragent
     Vendor = Forcepoint
     Product = Websense Security Gateway
-    TimeFormat = "yyyy-MM-dd HH:mm:ss"
+    TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
     Conditions = [ "vendor=Forcepoint","""http_user_agent=""","""http_proxy_status_code="""]
     Fields = [
       """({time}\d+-\d+-\d+T\d+:\d+:\d+[\+\-]\d+:\d+)""",

@@ -15,7 +15,8 @@ Name = crowdstrike-falcon-sk4-app-activity-success-resetapiclientsecret
     """"UserId":"({email_address}[^@]+@[^.]+\.[^"]+)"""",
     """"Success":({result}[^,"]+),""",
     """"ServiceName":"({service_name}[^"]+)"""",
-    """"AuditKeyValues":\[({additional_info}[^]]+)"""
+    """"AuditKeyValues":\[({additional_info}[^]]+)""",
+    """"cid":"({cid}[^"]+)"""
   ]
 
 

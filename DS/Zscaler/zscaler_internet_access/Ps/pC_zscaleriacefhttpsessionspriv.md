@@ -21,9 +21,9 @@ Name = zscaler-ia-cef-http-session-spriv
     """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
     """([^\|]*\|){5}({action}[^\|]+)""",
     """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
-    """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[^=\s]+?))\s*(\w+=|$)""",
+    """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
     """\slogin=({email_address}[^@\s]+@[^@\s]+)\s\w+=""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[^\s@]+)))""",
+    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-]{1,40}\$?)))""",
     """\|({severity}\d+)\|act=""",
     """proto=({protocol}[^\s]+)""",
     """\seurl=({url}[^\s\/\?]+({uri_path}\/[^\?\s]+)?({uri_query}\?[^\s]+)?)""",
@@ -54,7 +54,7 @@ Name = zscaler-ia-cef-http-session-spriv
     """ZscalerNSSWeblogDLPDictionaries=(None|({web_log_dict}[^=]+?))\s*([\w.]+=|$)""",
     """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)"""
   ]
-  DupFields = ["ransomware_name->threat_category", "risk_level->suspicious_content"]
+  DupFields = ["ransomware_name->threat_category", "risk_level->suspicious_content" ,"host->dest_host"]
 
 
 }

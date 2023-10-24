@@ -3,7 +3,7 @@
 {
 Name = crowdstrike-falcon-json-app-notification-success-processexeconsmbfile
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"CrowdStrike"""", """"event_simpleName":"ProcessExecOnSMBFile"""", """"event_platform":"""" ]
+  Conditions = [ """"aid":""", """"aip":""", """"event_simpleName":"ProcessExecOnSMBFile"""", """"event_platform":"""" ]
 
 crowdstrike-json-app-notification = {
   Vendor = CrowdStrike
@@ -13,7 +13,7 @@ crowdstrike-json-app-notification = {
     """"eventCreationTime":({time}\d{13})""",
     """"timestamp":\s*"*({time}\d{13})""",
     """"aid":\s*"({aid}[^"]+)""",
-    """"UserName":\s*"({user}[^"]+?)""""
+    """"UserName":\s*"({user}[\w\.\-]{1,40}\$?)""""
     """"aip":\s*"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"name":\s*"({alert_type}[^"]+)"""
     """"ClientComputerName":\s*"({src_host}[^"]+)"""

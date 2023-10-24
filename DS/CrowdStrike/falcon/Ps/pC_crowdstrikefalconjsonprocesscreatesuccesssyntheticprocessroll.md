@@ -2,7 +2,7 @@
 ```Java
 {
 Name = crowdstrike-falcon-json-process-create-success-syntheticprocessroll
-  Conditions = [ """"event_simpleName\":\"SyntheticProcessRollup2\"""", """"@timestamp"""" ]
+  Conditions = [ """"event_simpleName\":\"SyntheticProcessRollup2\"""", """\"aip\"""", """\"aid\"""" ]
   Fields = ${CrowdStrikeParsersTemplates.crowdstrike-auth-activity.Fields} [
          """"ImageFileName\\*":\\*"({process_path}[^"]+(\/|\\)({process_name}[^"\\]+))\\*"\S"""
   ]
@@ -29,7 +29,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""

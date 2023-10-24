@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-sk4-alert-trigger-success-idpdetection
   ParserVersion = "v1.0.0"
   Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """destinationServiceName =CrowdStrike""" ]
-
+  
 json-crowdstrike-alert = {
   Vendor = CrowdStrike
   Product = Falcon

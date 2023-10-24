@@ -18,13 +18,14 @@ Fields = [
 """\"event_simpleName\":\"({event_code}[^\"]+)"""
 """\"aid\":\"({aid}[^\"]+)"""
 """\"(ImageFileName|TargetFileName)\":\"({file_path}[^\"]+)"""
-"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({file_name}[^\\\/\"]+(\.({file_ext}[^\\\/\"\.\-\_]+))?)""""
-"""\"UserName\":\"({user}[^\"]+?)\""""
+"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_]{1,10}?)))?)\s*""""
+"""\"UserName\":\"({user}[\w\.\-]{1,40}\$?)\""""
 """\"aip\":\"({aip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"ClientComputerName\":\"({src_host}[^\"]+)"""
 """\"id\":\"({alert_id}[\w-]+?)\""""
 """\"name\":\"({alert_name}[^\"]+?)\""""
 """\"File({operation}Delete|Open|Rename)"""
+""""cid":"({cid}[^"]+)"""
 """"event_platform":"({os}[^"]+)""""
 ]
 DupFields = [ "operation->access" ]

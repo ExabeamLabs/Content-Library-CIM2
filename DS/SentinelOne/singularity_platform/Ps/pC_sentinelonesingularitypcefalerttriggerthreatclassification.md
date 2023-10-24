@@ -18,7 +18,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-threatclassification
       """\Wrt=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """\WfileHash=(N/A|({hash_md5}[^\|]+?))((\||\s+)\w+=|\s*$)""",
       """\WfilePath=(N/A|({file_path}[^\|]+?))((\||\s+)\w+=|\s*$)""",
-      """\WfileName =({file_dir}[^\|]*?\\(({user}[^\\\|]+)\\Desktop\\)?)({file_name}[^\\\|]+?({file_ext}[^\\\|\.]+)?)((\||\s+)\w+=|\s*$)""",
+      """\WfileName =({file_dir}[^\|]*?\\(({user}[\w\.\-]{1,40}\$?)\\Desktop\\)?)({file_name}[^\\\|]+?({file_ext}[^\\\|\.]+)?)((\||\s+)\w+=|\s*$)""",
       """\WthreatClassification=({alert_name}[^\|]+?)((\||\s+)\w+=|\s*$)""",
       """\WthreatID=({alert_id}[^\|]+?)((\||\s+)\w+=|\s*$)""",
       """\WsourceNetworkState=({src_net_status}[^\|]+?)((\||\s+)\w+=|\s*$)""",

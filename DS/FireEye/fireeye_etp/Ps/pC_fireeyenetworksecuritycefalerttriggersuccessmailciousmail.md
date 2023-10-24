@@ -15,7 +15,7 @@ Name = fireeye-networksecurity-cef-alert-trigger-success-mailciousmail
     """\Wsuser=({src_user}[^@\s]+)""",
     """\Wduser=({dest_user}[^@\s]+)""",
     """\Wduser=({email_address}[^@\s,]+@[^@\s,]+)""",
-    """\Wduser=({user}[^@\s,]+)""",
+    """\Wduser=({user}[\w\.\-]{1,40}\$?)""",
     """\Wcs1=({alert_name}[^=]+?)(\s+\w+=|\s*$)""",
     """\Wact=({action}[^=]+?)(\s+\w+=|\s*$)""",
     """\Wcs3=({email_subject}[^=]+?)(\s+\w+=|\s*$)"""

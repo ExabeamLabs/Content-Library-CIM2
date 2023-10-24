@@ -4,7 +4,7 @@
 Name = microsoft-azuremon-sk4-database-list-readfeed
   ParserVersion = v1.0.0
   Conditions=[
-    """destinationServiceName =Azure""",
+    """"resourceId":""",
     """"category":"DataPlaneRequests"""",
     """MICROSOFT.DOCUMENTDB""",
     """"operationName":"ReadFeed""""

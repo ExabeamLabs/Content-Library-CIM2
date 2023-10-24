@@ -3,7 +3,7 @@
 {
 Name = osquery-o-json-app-activity-success-removed
   ParserVersion = "v1.0.0"
-  Conditions = [ """"calendarTime":""",""""action":"removed"""",""""decorations":""",""""hostname":"""" ]
+  Conditions = [ """"calendarTime":""",""""action":"removed"""",""""decorations":""",""""hostIdentifier":"""" ]
 
 osquery-app-activity = {
   Vendor = Osquery

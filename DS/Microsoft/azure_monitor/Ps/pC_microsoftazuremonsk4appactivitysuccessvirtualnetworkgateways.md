@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-activity-success-virtualnetworkgateways
   ParserVersion = "v1.0.0"
-  Conditions = [ """destinationServiceName =Azure""", """"Category":"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"VIRTUALNETWORKGATEWAYS"""" ]
+  Conditions = [ """ResourceId":""", """"Category":"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"VIRTUALNETWORKGATEWAYS"""" ]
   Fields = ${LMSMSParsersTemplates.azure-ad-activity-1.Fields}[
     """"Message":"({additional_info}[^"]+)""""
    ]

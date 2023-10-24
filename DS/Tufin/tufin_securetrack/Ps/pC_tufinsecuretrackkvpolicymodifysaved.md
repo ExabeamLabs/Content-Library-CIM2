@@ -10,7 +10,7 @@ Name = tufin-securetrack-kv-policy-modify-saved
  Fields =[
    """timestamp:\s+({time}\d+-\d+-\d+ \d+:\d+:\d+.\d+)""",
    """Policy (Saved|Fetched):\s+revision\s+(\d+)\s+on\s+({dest_host}[^\s;]+);""", #dl field removed
-   """last modified by\s+({user}[^\s,]+),""",
+   """last modified by\s+({user}[\w\.\-]{1,40}\$?),""",
    """ELM,.+?>({event_name}[^:]+:)\s+"""
    ]
 

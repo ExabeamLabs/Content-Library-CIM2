@@ -22,7 +22,7 @@ Name = bitdefender-gz-cef-alert-trigger-success-gravityzone
     """BitdefenderGZDetectionLevel=({alert_severity}.*?)\s\w+=""",
     """suid=({suid}.*?)\s\w+=""",
     """suser=({user}[\w\.\-]{1,40}\$?)""",
-    """suser=({user}[^@]+)@({domain}[^"\s]+)""",
+    """suser=({user}[\w\.\-]{1,40}\$?)@({domain}[^"\s]+)""",
     """BitdefenderGZApplicationControlType=({protocol}[^\s]+)\s({method}[^=]+)=({url}.*?)\s\w+=""",
     """BitdefenderGZFwProtocolId=({protocol}.*?)\s\w+=""",
     """BitdefenderGZExploitType=({alert_type}.*?)\s\w+=""",

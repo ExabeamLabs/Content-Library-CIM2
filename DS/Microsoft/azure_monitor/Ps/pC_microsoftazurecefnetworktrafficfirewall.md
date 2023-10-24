@@ -6,10 +6,7 @@ Name = microsoft-azure-cef-network-traffic-firewall
    ParserVersion = v1.0.0
    Vendor = Microsoft
    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-   Conditions = [
-     """"category":"ApplicationGatewayFirewallLog"""",
-     """destinationServiceName =Azure"""
-   ]
+   Conditions = [""""category":"ApplicationGatewayFirewallLog"""",""""resourceId":""" ]
    Fields = [
      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z [\w\-.]+ """
      """\"time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
@@ -40,7 +37,7 @@ Name = microsoft-azure-cef-network-traffic-firewall
      """\"transactionId\":\"({transaction_id}[^\"]+)"""
      """\"file\":\"({file_path}({file_dir}[^\/\"]+)\/({file_name}[^\"]+))"""
      """\WrequestClientApplication=(|({app}.+?))(\s+\w+=|\s*$)"""
-     """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
+     """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
      """originalHost":"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}.+?[^\\]))""""
      """category\":\"({operation}[^"]+)"""
      """type\":\"({action}[^"]+)"""

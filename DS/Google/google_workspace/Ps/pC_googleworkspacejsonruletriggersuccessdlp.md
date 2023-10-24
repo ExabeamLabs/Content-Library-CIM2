@@ -10,7 +10,7 @@ Name = google-workspace-json-rule-trigger-success-dlp
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"profileId":"({user_id}\d+)""",
-    """"actor":\{.*?"email"\s*:\s*"({email_address}({user}[^@"]+)@[^"]+)"""",
+    """"actor":\{.*?"email"\s*:\s*"({email_address}({user}[\w\.\-]{1,40}\$?)@[^"]+)"""",
     """"name".*?"data_source".*?"value":"({app}[^"]+)"""",
 	""""resource_id".*?"value":"({resource_id}[^"]+)"""",
 	""""rule_name".*?"value":"({rule}[^"]+)"""",

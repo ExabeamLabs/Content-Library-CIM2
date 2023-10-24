@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4985
 # new_state is removed
 # resource_manager is removed
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
 # transation_id is removed
@@ -35,7 +35,7 @@ s-xml-events = {
     """<Data Name\\*=('|")TargetProcessName('|")>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?=('|")ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",

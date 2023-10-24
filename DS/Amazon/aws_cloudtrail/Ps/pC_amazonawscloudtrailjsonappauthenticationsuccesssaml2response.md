@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-authentication-success-saml2response
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"SAML2Response_POST"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"SAML2Response_POST"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"serviceAccountId":"({service_id}[^"]+)"""",
     """"userPoolDomain":"({domain}[^"]+)"""",

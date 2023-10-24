@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-notification-gatewaylogs
   ParserVersion = "v1.0.0"
-  Conditions = [ """destinationServiceName =Azure""", """"Category":"GatewayLogs"""", """"Url":"""" ]
+  Conditions = [ """ResourceId"""", """"Category":"GatewayLogs"""", """"Url":"""" ]
   Fields = ${LMSMSParsersTemplates.azure-ad-activity-1.Fields}[
     """"Method":"({method}[^"]+)"""",
     """"ResponseCode":({http_response_code}\d+)""",

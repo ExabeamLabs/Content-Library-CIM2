@@ -17,10 +17,10 @@ exchange-dlp-email-alert = {
     """([^,]*,){4}\s*({dest_host}[\w\-.]+)\s*,""",
     """,({log_source}SMTP|AGENT|ROUTING|DSN)""",
     """,({event_code}HADISCARD|HARECEIVE|AGENTINFO|RECEIVE|HAREDIRECT|SEND|SUPPRESSED|RESOLVE|TRANSFER|BADMAIL|EXPAND|DROP|DSN|REDIRECT)""",
-    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_domain}[^\]\s"\\,;\|>]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)[\s>]*,""",
+    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)[\s>]*,""",
     """,\s*({email_subject}[^,]+?)["\s]*,([^,]*,){3}(Incoming|Originating),""",
     """,\s*"({email_subject}[^"]+?)\s*",([^,]*,){3}(Incoming|Originating),""",
-    """,[<\s]*({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
+    """,[<\s]*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
 # transport_traffic_type is removed
   
 }

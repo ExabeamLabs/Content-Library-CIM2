@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-authentication-success-userauth
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"UserAuthentication"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"UserAuthentication"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"UserAuthentication":"({result}[^"]+)"""",
     """"LoginTo":"({url}[^"]+)""""

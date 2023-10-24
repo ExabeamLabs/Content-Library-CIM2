@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-database-query-success-querydb
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"QueryDatabase"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"QueryDatabase"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"serviceEventDetails":.*?databaseType":"({db_name}[^"]+)".*?"dataSourceId":"({db_id}[^"]+)"""",
 	  """"queryId":"({query_id}[^"]+)""""

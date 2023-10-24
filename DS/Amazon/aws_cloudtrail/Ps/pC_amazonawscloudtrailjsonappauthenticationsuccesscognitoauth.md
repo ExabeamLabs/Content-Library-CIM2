@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-authentication-success-cognitoauth
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"CognitoAuthentication"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"CognitoAuthentication"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"serviceAccountId":"({service_id}[^"]+)"""",
 	  """"response_type":\[?"({response_type}[^"]+)"\]?""",

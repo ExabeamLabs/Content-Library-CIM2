@@ -3,12 +3,12 @@
 {
 Name = microsoft-azuremon-sk4-app-notification-resourcehealth-1
   Product = Azure Monitor
-  Conditions = [ """destinationServiceName =Azure""", """Microsoft.Resourcehealth""", """dproc=Activity Log""" ]
+  Conditions = [ """"resourceId":""", """Microsoft.Resourcehealth""", """"operationName":""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
 	""""operationName":\s*\{[^\}]*?"localizedValue":\s*"({operation}[^"]+)"""",
 	"""request=({result}[^=\s]+)\s+\w+=""",
 	"""sourceServiceName =\s*({service_name}[^=]+)\s+\w+=""",
-	"""suser=(Azure Security Center|({user}[^=]+))\s+\w+=""",
+	"""suser=(Azure Security Center|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
 	"""\srequestClientApplication=({app}[^=]+)\s+\w+="""
 	""""correlationId":"({correlation_id}[^"]+)"""
 	""""category":\s*\{[^\}]*?"localizedValue":\s*"({category}[^"]+)""""
@@ -28,6 +28,7 @@ cef-microsoft-app-activity = {
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"resourceId":\s*"({object}[^"]+)""",
+    """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -36,14 +37,18 @@ cef-microsoft-app-activity = {
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
-    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
-    """"userAgent":"({user_agent}[^"]+)"""",
+    """"(?i)userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
+    """(?i)userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,]+)"""
+    """"Platform":"({os}[^"]+)""""
+    """"OriginatingServer":"({src_host}({host}\w+))\s*(\([^\)]+?\))?(\\r\\n)?""""
+    """"ClientInfoString":"({user_agent}[^"]+)","""
+    """"BrowserName":"({browser}[^"]+)"""
     ]
   DupFields = [ "object->resource" 
 }

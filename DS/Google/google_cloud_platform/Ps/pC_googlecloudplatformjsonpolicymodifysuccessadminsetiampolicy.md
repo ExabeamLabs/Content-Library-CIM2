@@ -2,7 +2,7 @@
 ```Java
 {
 Name = google-cloudplatform-json-policy-modify-success-adminsetiampolicy
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"google.iam.admin""", """SetIAMPolicy"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[

@@ -20,7 +20,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"fileExtensionType":(\s*"None|null|\s*"+(Unknown|({file_type}[^"]+))")""",
      """"agentLastLoggedInUserName":"({last_loggedin_user}[^"]+)"""",
      """"processUser":"(({process_domain}[^\\"]+)\\{1,200})?({process_user}[^"]+)",""",
-     """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[^=\s]+?)(\s+\w+=|\s*$)""",
+     """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
      """username":"(({domain}[^\\"]+)\\{1,200})?({user}[\w\.\-]{1,40}\$?)",""",
      """"rank":({alert_severity}\d+)""",
      """"mitigationReport":({additional_info}\{.{1,400}?\}\}),""",
@@ -37,7 +37,12 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"analystVerdict":"({verdict}[^"]+)"""",
      """"groupName":"({group_name}[^"]+)"""",
      """msg=.*?Alert Detected by\s*\[({alert_source}[^\]]+)\]""",
-     """"confidenceLevel":"({category}[^"]+)"""
+     """"confidenceLevel":"({category}[^"]+)""",
+     """"filePath":\s*"({malware_url}[^",]+)""",
+     """"threatName":\s*"({alert_name}[^",]+)"""",
+     """"sha1":"({hash_sha1}[^",]+)""",
+     """"externalIp":\s*\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+     """"fileSize":({bytes}\d+)"""
   ]
    SOAR {
     IncidentType = "malware"

@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-activity-success-userinfo
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"UserInfo_GET"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"UserInfo_GET"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"userPoolDomain":"({domain}[^"]+)"""",
     """"userPoolId":"({user_id}[^"]+)"""",

@@ -6,7 +6,7 @@ Name = microsoft-azureadsignin-cef-app-login-success-signin
   Vendor = Microsoft
   Product = Azure AD Sign-In Logs 
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """CEF:""", """destinationServiceName =Azure""", """"OperationName":"User Risk Detection"""", """"Activity":"signin"""", """"RiskDetail":"aiConfirmedSigninSafe"""" ]
+  Conditions = [  """"OperationName":"User Risk Detection"""", """"Activity":"signin"""", """"RiskDetail":"aiConfirmedSigninSafe"""" ]
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
 	"""destinationServiceName =({app}Azure)""",

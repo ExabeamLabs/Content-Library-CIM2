@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-group-list-4798-1
     """Status Code:\s*({result}.+?)\s*<""",
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
-    """Process Name:\s+(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^\\\/]*?)))\s*<""",
+    """Process Name:\s*(-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))("|,|<|$)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
@@ -32,7 +32,7 @@ s-xml-events = {
     """<Data Name\\*=('|")TargetProcessName('|")>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?=('|")ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",

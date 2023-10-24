@@ -14,7 +14,7 @@ Name = cylance-protect-kv-endpoint-activity-device
     """Device Name: ({src_host}[^,]+)""",
     """IP Address: \(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """MAC Address: \(({src_mac}[^\),]+)""",
-    """Logged On Users: \((({domain}[^\\\/\)]+)[\\\/]+)?({user}[^\\\/\)\s,]+)""",
+    """Logged On Users: \((({domain}[^\\\/\)]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)""",
     """OS: ({os}[^,]+)""",
     """Zone Names: \(({zone}[^\),]+)""",
   ]

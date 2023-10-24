@@ -2,6 +2,7 @@
 ```Java
 {
 Name = microsoft-iis-str-http-session-patchapi
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """ PATCH /api""" ]
   ParserVersion = "v1.0.0"
 

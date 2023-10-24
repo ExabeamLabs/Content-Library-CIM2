@@ -14,7 +14,7 @@ Fields = [
 """Message=({failure_reason}[^\s]+)\s"""
 """HostName =({host}[\w.-]+)\t*"""
 """\sUserName =(-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
-"""\sUserName =(-|([^@"\s]+@[^@"\s]+)|(({domain}[^\s]+?)[\\]+)?({user}[\w.-]+))"""
+"""\sUserName =(-|([^@"\s]+@[^@"\s]+)|(({domain}[^\s]+?)[\\]+)?({user}[\w\.\-]{1,40}\$?))"""
 """({app}BeyondInsight)"""
 ]
 

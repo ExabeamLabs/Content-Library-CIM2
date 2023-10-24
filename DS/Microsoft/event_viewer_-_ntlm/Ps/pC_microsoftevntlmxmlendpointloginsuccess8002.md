@@ -12,7 +12,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8002
     """<Computer>({host}[^<]+?)<\/Computer>"""
     """Security UserID='({user_sid}[^'\/>]+)"""
     """({event_code}8002)"""
-    """<Data Name ='ClientUserName'>(\((?i)NULL\)|({user}[^<>][\w\.\-]+\$?))<\/Data>"""
+    """<Data Name ='ClientUserName'>(\((?i)NULL\)|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
     """<Data Name ='ClientDomainName'>(\((?i)NULL\)|({domain}[^<]+))<"""
     """({event_name}NTLM server blocked)"""
     """<Message>({additional_info}[^<]+)<"""

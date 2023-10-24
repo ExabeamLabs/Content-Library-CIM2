@@ -21,7 +21,8 @@ aws-web-activity-event = {
       """"name"+:"+(?i)User-Agent"+,"+value"+:"+({user_agent}[^"]+)"""",
       """"name"+:"+(?i)user-agent"+,"+value"+:"+(?:-|Mozilla\/[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|iPhone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)[^=]+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))""",
       """"uri"+:"+(/+|({uri_path}[^"]+))"""",
-      """"responseCodeSent":"?(null|({http_response_code}\d+))"""
+      """"responseCodeSent":"?(null|({http_response_code}\d+))""",
+      """"webaclId":"arn:aws:waf([^:]+:){2}({account_id}\d+):"""
 # http_source_id is removed
     
 }

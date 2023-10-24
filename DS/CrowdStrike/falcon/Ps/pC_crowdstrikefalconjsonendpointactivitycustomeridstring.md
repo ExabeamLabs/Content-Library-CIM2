@@ -3,7 +3,7 @@
 {
 Name = crowdstrike-falcon-json-endpoint-activity-customeridstring
   ParserVersion = "v1.0.0"
-  Conditions = [ """"eid":""", """"CustomerIdString":""", """"destinationServiceName":"CrowdStrike"""", """"EventType":"Event_ExternalApiEvent"""" ]
+  Conditions = [ """"eid":""", """"CustomerIdString":""", """"EventType":"Event_ExternalApiEvent"""" ]
 
 json-crowdstrike-endpoint-activity = {
   Vendor = CrowdStrike

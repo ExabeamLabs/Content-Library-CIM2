@@ -21,17 +21,17 @@ Fields = [
   """event-id=({result}\w+)"""
   """\tinternal-message-id=(?:|({alert_id}.+?))\t[\w\-]+="""
   """recipient-address=({email_recipients}\S+)"""
-  """recipient-address=({dest_email_address}[^\s;@]+@[^@\s;]+)"""
+  """recipient-address=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """total-bytes=({bytes}\d+)"""
   """recipient-count=({num_recipients}\d+)"""
   """message-subject="*({email_subject}.+?)"*\s+((\w+-)*\w+=|$)"""
-  """sender-address=({src_email_address}\S+)"""
+  """sender-address=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """directionality=({direction}\w+)"""
 ]
 DupFields = [
   "alert_name->alert_type"
   "dest_email_address->external_address"
-  "src_email_address->user"
+  "src_email_address->email_address"
   "src_email_address->orig_user"
 ]
 ParserVersion = "v1.0.0"

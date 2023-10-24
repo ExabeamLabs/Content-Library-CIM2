@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-activity-success-networksecuritygroups
   ParserVersion = "v1.0.0"
-  Conditions = [ """destinationServiceName =Azure""", """"Category":"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"NETWORKSECURITYGROUPS"""" ]
+  Conditions = [ """"ResourceId":""", """"Category":"""", """"ResourceProvider":"MICROSOFT.NETWORK"""", """"ResourceType":"NETWORKSECURITYGROUPS"""" ]
 
 azure-ad-activity-1 = {
    Vendor = Microsoft

@@ -17,6 +17,8 @@ Name = crowdstrike-falcon-sk4-app-notification-fdr
     """"TargetFileName":"({file_name}[^"]+)"""",
     """"DownloadPath":"({file_path}[^"]+)"""",
     """"DomainName":"({domain}[^"]+)"""",
+    """"cid":"({cid}[^"]+)"""
+    """"event_platform":"({os}[^"]+)""""
   ]
   DupFields = ["host->dest_host"]
 

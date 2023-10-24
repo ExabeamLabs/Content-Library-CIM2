@@ -5,7 +5,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Application
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """Event code: 3005""","""Process name:""","""Account name:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}\S+)\s({alert_severity}\S+)""",

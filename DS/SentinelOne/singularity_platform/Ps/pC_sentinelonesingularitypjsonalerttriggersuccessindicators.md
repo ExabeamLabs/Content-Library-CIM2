@@ -31,6 +31,9 @@ json-sentinelone-edr-events = {
       """"endpoint.os":"({os}[^"]+)""",
       """"event\.category":"({additional_info}[^"]+)"""",
       """"endpoint\.type":"({host_type}[^"]+)"""
+      """"src\.process\.pid":({process_id}\d+)""",
+      """"src\.process\.cmdline":"({process_command_line}.+?)",""",
+      """"account\.id":"({account_id}[^"]+)""",
     
 }
 ```

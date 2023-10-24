@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-app-login-authentication
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch"
-  Conditions = [ """"destinationServiceName":"CrowdStrike"""", """"ServiceName":"Crowdstrike Authentication"""" ]
+  Conditions = [ """AuthActivityAuditEvent""", """"ServiceName":"Crowdstrike Authentication"""" ]
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-app-login.Fields}[
     """"destinationServiceName":"(|({app}.+?))"(\s+\w+=|\s*$)?""",
     """"eventCreationTime":({time}\d{13}),"""

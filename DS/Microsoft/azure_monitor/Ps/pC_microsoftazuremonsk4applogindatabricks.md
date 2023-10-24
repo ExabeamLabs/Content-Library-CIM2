@@ -2,7 +2,7 @@
 ```Java
 {
 Name = microsoft-azuremon-sk4-app-login-databricks
-  Conditions= [ """destinationServiceName =Azure""", """operationName":"Microsoft.Databricks/ssh/login""" ]
+  Conditions= [ """"resourceId":""", """operationName":"Microsoft.Databricks/ssh/login""" ]
   ParserVersion = "v1.0.0"
 
 cef-microsoft-app-activity = {

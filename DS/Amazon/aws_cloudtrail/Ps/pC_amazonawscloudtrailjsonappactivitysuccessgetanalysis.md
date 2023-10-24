@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-activity-success-getanalysis
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"GetAnalysis"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"GetAnalysis"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"analysisId":"({object_id}[^"]+)"""",
     """"analysisName":"({object_name}[^"]+)""""

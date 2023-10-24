@@ -7,7 +7,7 @@ Name = microsoft-azuremon-sk4-http-request-frontdoorwebapplicationfirewalllog
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   ParserVersion = v1.0.0
   Conditions = [
-    """destinationServiceName =Azure""",
+    """"resourceId":""",
     """"category":"FrontdoorWebApplicationFirewallLog"""",
     """"action":"Allow""""
   ]
@@ -17,7 +17,7 @@ Name = microsoft-azuremon-sk4-http-request-frontdoorwebapplicationfirewalllog
     """"clientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"clientPort":"({src_port}\d+)""""
     """"resourceId":"({object}[^"]+)"""
-    """"resourceId":"\/([^\/]*\/){7}({dest_host}[^"]+)""",
+    """"resourceId":"\/([^\/]*\/){7}({dest_host}[\w\-.]+)""",
     """"ruleName":"({alert_name}[^"]+)""",
     """"category":"({alert_type}[^"]+)""",
     """"action":"({action}[^"]+)""""
@@ -26,7 +26,7 @@ Name = microsoft-azuremon-sk4-http-request-frontdoorwebapplicationfirewalllog
     """Namespace:\s*({event_hub_namespace}\S+)""",
     """EventHub name:\s*({event_hub_name}[^\]\s]+)\s*\]""",
     """"operationName":"({operation}[^"]+)""",
-    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
     """category":"({category}[^"]+)""""
 # policy_mode is removed
   ]

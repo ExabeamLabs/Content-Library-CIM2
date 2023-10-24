@@ -4,9 +4,10 @@
 Name = crowdstrike-falcon-json-file-delete-success-executabledeleted
   ParserVersion = v1.0.0  
   Product = Falcon
-  Conditions = [ """"event_simpleName\":\"ExecutableDeleted\"""", """"@timestamp"""" ]
+  Conditions = [ """"event_simpleName\":\"ExecutableDeleted\"""", """\"aip\"""", """\"aid\"""" ]
   Fields = ${CrowdStrikeParsersTemplates.crowdstrike-auth-activity.Fields} [
   """"event_simpleName\\*"+:\\*"+({event_code}[^"\\]+)""",
+  
   ]
 
 crowdstrike-auth-activity = {
@@ -30,7 +31,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""

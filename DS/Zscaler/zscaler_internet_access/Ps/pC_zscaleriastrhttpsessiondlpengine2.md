@@ -40,7 +40,7 @@ s-zscaler-web-activity = {
     """\s(respCode|status)=({http_response_code}\d+)""",
     """\sclientpublicIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sClientIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\suser=({domain}[\w.\-]+)->({user}[^=]+?)(\s+\w+=|\s*$)""",
+    """\suser=({domain}[\w.\-]+)->({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
     """\suser=(?![^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
     """\suser=(?=[^\s]+@[^\s]+)({email_address}[^\s@]+@[^\s@]+)\s*(\w+=|$)""",
     """\surl=(?:None|({url}[^\s]+))\s*(\w+=|$)""",

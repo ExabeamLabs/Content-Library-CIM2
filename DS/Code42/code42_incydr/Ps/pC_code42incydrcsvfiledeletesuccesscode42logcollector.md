@@ -4,7 +4,7 @@
 Name = code42-incydr-csv-file-delete-success-code42logcollector
   Vendor = Code42
   Product = Code42 Incydr
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
   time_createdFormat = ["yyyy-MM-dd HH:mm:ss"]
   time_modifiedFormat = ["yyyy-MM-dd HH:mm:ss"]
   ParserVersion = "v1.0.0"

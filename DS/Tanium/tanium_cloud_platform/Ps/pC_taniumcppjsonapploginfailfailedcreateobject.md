@@ -13,9 +13,9 @@ tanium-cloud-app-events = {
   Product = Tanium Cloud Platform
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
-    """"creation_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
+    """"creation_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"type_name":"({operation}[^"]+)"""",
-    """"details":"User:\s(System User|({email_address}[^"@;]+@[^";\.]+\.[^";]+)|({user}[^;"]+))""",
+    """"details":"User:\s(System User|({email_address}[^"@;]+@[^";\.]+\.[^";]+)|({user}[\w\.\-]{1,40}\$?))""",
     """"details":"[^"]*?Session ID:\s({session_id}\d+)""",
     """"domain":"(<\[)?({domain}[^>\]"]+)(\]>)?"""",
     """"audit_type":"({audit_type}[^"]+)""""

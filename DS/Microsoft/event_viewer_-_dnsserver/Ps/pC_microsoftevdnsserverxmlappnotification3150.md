@@ -12,7 +12,7 @@ windows-events-4 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-    """"Computer":"({host}({dest_host}[\w\-\.]+))"""",
+    """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",

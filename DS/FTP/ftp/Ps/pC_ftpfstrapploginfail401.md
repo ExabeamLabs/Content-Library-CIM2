@@ -10,7 +10,7 @@ Name = ftp-f-str-app-login-fail-401
   Fields = [
     """({host}[\w\.-]+)\s+(\S+\s+){2}\[\d+\]""",
     """({src_ip}\S+)\s+(\S+\s+){2}\[\d+\]""",
-    """(-|(({domain}\S+)[\/\\])?({user}\S+))\s+\[\d+\]""",
+    """(-|(({domain}\S+)[\/\\])?({user}[\w\.\-]{1,40}\$?))\s+\[\d+\]""",
     """\]pass\s+(\S+\s+){2}({result}\d+)""",
   ]
   DupFields = [ "host->dest_host" ]

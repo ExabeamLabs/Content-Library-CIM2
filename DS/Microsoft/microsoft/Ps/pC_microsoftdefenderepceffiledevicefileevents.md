@@ -6,7 +6,7 @@ Name = microsoft-defenderep-cef-file-devicefileevents
   Conditions = [""""FolderPath"""", """requestClientApplication=""", """AdvancedHunting-DeviceFileEvents"""]
   Fields = ${MicrosoftParserTemplates.cef-defender-atp.Fields} [
     """"FolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
-    """DeviceName"+:\s*"+({dest_host}({host}[^"\.]+)?[^"]+)""",
+    """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
     """MD5"+:"+({hash_md5}[^"]+)""",
     """"SHA1"+:(null|"+({hash_sha1}[^",]+)"+),""",
     """"SHA256"+:(null|"+({hash_sha256}[^",]+)"+),"""
@@ -26,7 +26,7 @@ cef-defender-atp {
        """LocalIP"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
        """LocalPort"+:({src_port}\d+)""",
        """ActionType"+:\s*"+({result}[^"]+)""",
-       """DeviceName"+:\s*"+({dest_host}({host}[^"\.]+)?[^"]+)""",
+       """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
        """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
@@ -43,6 +43,8 @@ cef-defender-atp {
        """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)""",
        """"InitiatingProcessId"+:({process_id}\d+)""",
        """"tenantId":"({tenant_id}[^",]+)""",
+       """"SHA1":"({hash_sha1}[^"]+)"""",
+       """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)""""
      ]
      DupFields = ["category->event_name"
 }

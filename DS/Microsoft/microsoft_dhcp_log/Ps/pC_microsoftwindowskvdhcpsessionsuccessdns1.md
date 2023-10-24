@@ -14,7 +14,7 @@ microsoft-dns-renew-jp = {
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)[\+\-]\d+:\d+\s+({host}[\w\-.]+)\s+\[""",
     """({time}\d+\/\d+\/\d+,\d+:\d+:\d+[\+\-]\d+:\d+)""",
     """<Identifier>({host}[^<]+)<\/Identifier>""",
-    """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_host}[^,]+),(|({dest_mac}[^,]+))?,"""
+    """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_host}[\w\-.]+),(|({dest_mac}[^,]+))?,"""
   ]
   DupFields = [ "dest_host->user" 
 }

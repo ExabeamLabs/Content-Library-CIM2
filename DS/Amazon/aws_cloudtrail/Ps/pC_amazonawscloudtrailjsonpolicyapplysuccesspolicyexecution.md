@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-policy-apply-success-policyexecution
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"PolicyExecutionEvent"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"PolicyExecutionEvent"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"policyId":"({policy_id}[^"]+)"""",
 	  """"description":"({rule_description}[^"]+)"""",

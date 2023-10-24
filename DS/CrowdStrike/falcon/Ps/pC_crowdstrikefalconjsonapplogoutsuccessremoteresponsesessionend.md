@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-app-logout-success-remoteresponsesessionend
   TimeFormat = "epoch"
   ParserVersion = v1.0.0
-  Conditions = [""""destinationServiceName":"CrowdStrike"""", """"eventType":"RemoteResponseSessionEndEvent"""", """"UserName":"""]
+  Conditions = [ """"aid":""", """"aip":""", """"eventType":"RemoteResponseSessionEndEvent"""", """"UserName":"""]
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-app-logout.Fields}[
     """"eventCreationTime":\s*({time}\d{13})""",    
     """"destinationServiceName":"({app}CrowdStrike)""""
@@ -21,7 +21,7 @@ json-crowdstrike-app-logout = {
     """"timestamp":"({time}[^",]\d{10})"""",
     """"SessionId":"({session_id}[^",]+)"""",
     """"UserName":\s*"({email_address}[^"@]+@[^"@]+)"""",
-    """"UserName":\s*"({user}[\w\.\-]+\$?)""",
+    """"UserName":\s*"({user}[\w\.\-]{1,40}\$?)""",
     """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"ServiceName":\s*"({app}[^"]+)""",
     """"Success":\s*({result}[^",}]+)""",

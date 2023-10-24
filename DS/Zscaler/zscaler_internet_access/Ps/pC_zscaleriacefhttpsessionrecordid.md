@@ -16,8 +16,8 @@ Name = zscaler-ia-cef-http-session-recordid
   ]
   Fields = [
     """HOST\|({host}[^\|]+)""",
-    """CONTENTTYPE\|([^\|]*\|){2}(NA|({user}[^\|]+?))\|(NA|({host}[\w\-.]+))""",
-    """LOGINNAME\|(({email_address}[^\|]+@[^\|]+)|({user}[^\|\s]+))\|""",
+    """CONTENTTYPE\|([^\|]*\|){2}(NA|({user}[\w\.\-]{1,40}\$?))\|(NA|({host}[\w\-.]+))""",
+    """LOGINNAME\|(({email_address}[^\|]+@[^\|]+)|({user}[\w\.\-]{1,40}\$?))\|""",
     """REASON\|({proxy_action}[^\|]+)""",
     """ACTION\|({action}[^\|]+)""",
     """REQMETHOD\|(NA|({method}[^\|]+))""",

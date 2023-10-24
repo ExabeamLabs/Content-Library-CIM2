@@ -2,7 +2,7 @@
 ```Java
 {
 Name = crowdstrike-falcon-json-process-create-success-deliverlocalfxtocloud
-  Conditions = [ """"event_simpleName":"DeliverLocalFXToCloud"""", """"destinationServiceName":"CrowdStrike"""" ]
+  Conditions = [ """"event_simpleName":"DeliverLocalFXToCloud"""", """"aid":""", """"aip":""" ]
   ParserVersion = "v1.0.0"
 
 crowdstrike-process-info-1 = {
@@ -17,7 +17,7 @@ crowdstrike-process-info-1 = {
     """"event_simpleName":\s*"({event_name}[^"]+)""",
     """"name":\s*"({process_name}[^"]+)""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",
     """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",

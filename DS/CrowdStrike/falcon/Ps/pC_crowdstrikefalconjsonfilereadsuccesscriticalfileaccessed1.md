@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-file-read-success-criticalfileaccessed-1
   ParserVersion = v1.0.0  
   Product = Falcon
-  Conditions = [ """"event_simpleName\":\"CriticalFileAccessed\"""", """"@timestamp"""" ]
+  Conditions = [ """"event_simpleName\":\"CriticalFileAccessed\"""", """\"aip\"""", """\"aid\"""" ]
 
 crowdstrike-auth-activity = {
   Vendor = CrowdStrike
@@ -27,7 +27,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""

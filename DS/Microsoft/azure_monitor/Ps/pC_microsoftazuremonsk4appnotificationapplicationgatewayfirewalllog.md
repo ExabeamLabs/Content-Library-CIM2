@@ -7,7 +7,7 @@ Name = microsoft-azuremon-sk4-app-notification-applicationgatewayfirewalllog
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   ParserVersion = v1.0.0
   Conditions = [
-    """destinationServiceName =Custom Application""",
+    """"resourceId":""",
     """"category": "ApplicationGatewayFirewallLog"""",
     """MICROSOFT.NETWORK""",
     """APPLICATIONGATEWAYS"""

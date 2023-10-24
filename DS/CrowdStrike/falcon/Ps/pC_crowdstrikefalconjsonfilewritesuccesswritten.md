@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-json-file-write-success-written
   Product = Falcon
   ParserVersion = v1.0.0
   TimeFormat = "epoch"
-  Conditions = [ """"destinationServiceName":"CrowdStrike"""" ,""""IsOnRemovableDisk":"1"""", """"event_simpleName":""", """Written"""" ]
+  Conditions = [ """"aip":""", """"aid":""", """"IsOnRemovableDisk":"1"""", """"event_simpleName":""", """Written"""" ]
   Fields = [
     """"timestamp":"({time}\d{13})"""",
     """"UserName":"({user}[\w\.\-]{1,40}\$?)"""",
@@ -21,6 +21,7 @@ Name = crowdstrike-falcon-json-file-write-success-written
     """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
     """"ContextProcessId":"({process_guid}[^"]+)""""
     """"ShareAccess":"({access}[^"]+)""""
+    """"event_platform":"({os}[^"]+)""""
   ]
   DupFields = [ "device_id->service_type" ]
 

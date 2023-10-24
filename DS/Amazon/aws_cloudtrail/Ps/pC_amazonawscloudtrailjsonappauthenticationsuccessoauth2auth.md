@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-authentication-success-oauth2auth
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"OAuth2_Authorize_GET"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"OAuth2_Authorize_GET"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"status":({result_code}\d+)""",
     """"serviceAccountId":"({service_id}[^"]+)"""",

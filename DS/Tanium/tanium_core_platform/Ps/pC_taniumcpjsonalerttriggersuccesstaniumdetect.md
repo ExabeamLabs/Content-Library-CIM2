@@ -9,10 +9,10 @@ Name = tanium-cp-json-alert-trigger-success-taniumdetect
     Conditions = [ """TaniumDetect""", """Timestamp""", """Computer Name""", """Computer IP""" ]
     Fields = [
       """"Timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""",
-      """"User Name":"({user}[^",]+?)"""",
-      """"User Id":"({user}[^",]+?)"""",
+      """"User Name":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"User Id":"({user}[\w\.\-]{1,40}\$?)"""",
       """"User Domain":"({domain}[^",]+?)"""",
-      """"user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[^"]+?))\\*"""",
+      """"user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[\w\.\-]{1,40}\$?))\\*"""",
       """"Priority":"({alert_severity}[^",]+)"""",
       """"Event Name":"({alert_name}[^",]+)"""",
       """"Event Name":"({alert_type}[^",]+)"""",

@@ -8,7 +8,7 @@ Name = sap-sf-mix-app-authentication-success-authenticate
 sap-successfactors-activity = {
     Vendor = SAP
     Product = SuccessFactors
-    TimeFormat = "yyyy-MM-dd'T'HH.mm.ss.sssZ"
+    TimeFormat = "yyyy-MM-dd'T'HH.mm.ss.SSSZ"
     Fields = [
       """"Time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d\.\d\d\.\d\d\.\d\d\dZ)"""",
       """"Host":\s*"({host}[\w.-]+)"""",

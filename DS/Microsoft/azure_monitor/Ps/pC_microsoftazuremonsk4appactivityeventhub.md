@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-activity-eventhub
   Product = Azure Monitor
-  Conditions = [ """destinationServiceName =Azure""", """"category":"GatewayLogs"""", """EventHub""" ]
+  Conditions = [ """"resourceId":""", """"category":"GatewayLogs"""", """EventHub""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """method":"({method}[^"]+)"""",
     """responseCode":({result_code}\d+)""",
@@ -29,6 +29,7 @@ cef-microsoft-app-activity = {
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"resourceId":\s*"({object}[^"]+)""",
+    """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -37,14 +38,18 @@ cef-microsoft-app-activity = {
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
-    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
-    """"userAgent":"({user_agent}[^"]+)"""",
+    """"(?i)userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
+    """(?i)userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,]+)"""
+    """"Platform":"({os}[^"]+)""""
+    """"OriginatingServer":"({src_host}({host}\w+))\s*(\([^\)]+?\))?(\\r\\n)?""""
+    """"ClientInfoString":"({user_agent}[^"]+)","""
+    """"BrowserName":"({browser}[^"]+)"""
     ]
   DupFields = [ "object->resource" 
 }

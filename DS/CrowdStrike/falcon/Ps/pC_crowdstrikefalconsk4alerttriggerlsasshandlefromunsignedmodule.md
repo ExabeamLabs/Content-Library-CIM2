@@ -26,8 +26,12 @@ Name = crowdstrike-falcon-sk4-alert-trigger-lsasshandlefromunsignedmodule
     """"ContextProcessId":\s*"({process_guid}[^"]+)""",
 # target_process_guid is removed
     """"name":\s*"({alert_name}[^",]+)"""",
-    """"event_platform":\s*"({os}[^",]+)""""
+    """"event_platform":\s*"({os}[^",]+)"""",
+    """"cid":"({cid}[^"]+)"""
   ]
+  DupFields = [
+"alert_name->alert_subject"
+]
 
 
 }

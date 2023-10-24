@@ -36,7 +36,8 @@ google-app-activity = {
     """"name":"status","value":"({object}[^"]+)"""",
     """"name":"client_id","value":"({object}[^"]+)"""",
     """"id":\{({additional_info}[^\}]+)\}"""
-    """suser=(?=[^\s]+@[^\s]+)({user}[^\s@]+)@({domain}[^\s@]+)\s+(\w+=|$)"""
+    """suser=(?=[^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?)@({domain}[^\s@]+)\s+(\w+=|$)""",
+    """msg=({more_info}[^=]+)\s+\w+="""
   
 }
 ```

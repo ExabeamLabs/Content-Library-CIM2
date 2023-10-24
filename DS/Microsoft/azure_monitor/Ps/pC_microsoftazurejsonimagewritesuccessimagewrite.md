@@ -3,7 +3,6 @@
 {
 Name = microsoft-azure-json-image-write-success-imagewrite
   ParserVersion = v1.0.0
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """value":"Microsoft.Compute/images/write""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """"+responseBody"+:\s*"+\{[^\}\{]+"+name\\?"+:\s*\\?"+({resource_name}[^"]+)\\"+""",
@@ -15,7 +14,7 @@ Name = microsoft-azure-json-image-write-success-imagewrite
 azure-activity-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Fields = [
       """"+eventTimestamp"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+authorization"+:[^\}]+scope"+:\s*"+({authorization_scope}[^"]+)""", 

@@ -16,7 +16,7 @@ Name = sentinelone-singularityp-json-alert-trigger-success-url-1
     """process\.name":"({process_name}[^"]+)""",
     """"endpoint\.os":"({os}[^"]+)"""
     """"agent\.version":\s*"+({user_agent}[^"]+)""""
-    """"src\.process\.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))"""
+    """"src\.process\.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"""
     """"src\.process\.image\.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""
     """"src\.process\.image\.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""
     """"src\.process\.image\.md5":\s*\\?"+({hash_md5}[^"\\]+)"""

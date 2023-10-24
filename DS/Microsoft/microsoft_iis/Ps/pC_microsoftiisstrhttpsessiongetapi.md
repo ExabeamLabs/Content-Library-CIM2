@@ -2,7 +2,7 @@
 ```Java
 {
 Name = microsoft-iis-str-http-session-getapi
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec", "MMM dd yyyy HH:mm:ss"]
   Conditions = [ """ GET /api""" ]
   Fields = ${IISParsersTemplates.iis-web-activity.Fields} [
     """"timestamp":"({time}\d{10})"""

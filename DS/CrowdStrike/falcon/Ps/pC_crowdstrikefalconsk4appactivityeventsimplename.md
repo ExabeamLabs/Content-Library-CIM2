@@ -14,10 +14,11 @@ Name = crowdstrike-falcon-sk4-app-activity-eventsimplename
     """"aid":\s*"({aid}[^"]+)""",
     """"UserSid":"({user_sid}[^"]+)"""",
     """"UserPrincipal":\s*"(?:[^"@]+@)?({domain}[^"]+)""",
-    """"UserPrincipal":"({user}[^@"]+)@({domain}[^"]+)""""
+    """"UserPrincipal":"({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+)""""
     """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
     """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
     """"event_platform":"({os}[^"]+)""""
+    """"cid":"({cid}[^"]+)"""
   ]
 
 crowdstrike-process-info = {

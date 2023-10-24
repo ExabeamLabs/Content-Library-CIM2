@@ -6,7 +6,7 @@ Name = microsoft-azuread-sk4-alert-trigger-success-riskyuser
   Vendor = "Microsoft"
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = ["""CEF:""", """destinationServiceName =Azure""", """"Type":"AADRiskyUsers"""", """"OperationName":"Risky user"""" ]
+  Conditions = [""""CorrelationId":""", """"Type":"AADRiskyUsers"""", """"OperationName":"Risky user"""" ]
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""",
     """destinationServiceName =({app}Azure)""",

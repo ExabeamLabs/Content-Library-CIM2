@@ -15,13 +15,13 @@ Name = microsoft-evsecurity-xml-group-modify-success-4735-1
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Execution ProcessID(\\)?='({process_id}\d+)' ThreadID(\\)?='({thread_id}\d+)'""",
     """<EventRecordID>({event_id}\d+)""",
-    """<Data Name(\\)?='TargetSid'>({group_id}[^<]+)""",
-    """<Data Name(\\)?='TargetUserName'>({group_name}[^<]+)""",
-    """<Data Name(\\)?='TargetDomainName'>({group_domain}[^<]+)""",
-    """<Data Name(\\)?='SubjectUserSid'>({user_sid}[^<]+)""",
-    """<Data Name(\\)?='SubjectUserName'>({user}[^<]+)""",
-    """<Data Name(\\)?='SubjectDomainName'>({domain}[^<]+)""",
-    """<Data Name(\\)?='SubjectLogonId'>({login_id}[^<]+)""",
+    """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)""",
+    """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)""",
+    """<Data Name(\\)?=('|")TargetDomainName('|")>({group_domain}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
   ]
 
 

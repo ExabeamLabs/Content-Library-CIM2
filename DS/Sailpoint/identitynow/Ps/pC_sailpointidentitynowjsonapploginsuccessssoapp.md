@@ -22,8 +22,8 @@ s-sailpoint-activity = {
     """"source":\s*"((\d+)|(unknown|Not Available)|(({last_name}[^,"]+),\s*({first_name}[^"]+)))"""",
     """"target":\s*"((unknown|Not Available)|({full_name}[^\s",]+\s+[^"]+))"""",
     """"source":\s*"((unknown|Not Available)|({full_name}[^\s",]+\s+[^"]+))"""",
-    """"target":\s*"((unknown|Not Available)|({user}[^\s,"]+))"""",
-    """"source":\s*"((unknown|Not Available)|({user}[^\s,"]+))"""",
+    """"target":\s*"((unknown|Not Available)|({user}[\w\.\-]{1,40}\$?))"""",
+    """"source":\s*"((unknown|Not Available)|({user}[\w\.\-]{1,40}\$?))"""",
     """"id":\s*"({fingerprint}[^"]+)",""",
     """"type":\s*"((NONE)|({event_subtype}[^"]+))""""
   

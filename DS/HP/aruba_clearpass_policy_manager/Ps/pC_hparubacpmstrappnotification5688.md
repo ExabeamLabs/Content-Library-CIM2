@@ -4,7 +4,7 @@
 Name = hp-arubacpm-str-app-notification-5688
   ParserVersion = v1.0.0
   Product = Aruba ClearPass Policy Manager
-  TimeFormat = "EEE MMM dd HH:mm:ss yyyy"
+  TimeFormat = ["EEE MMM dd HH:mm:ss yyyy","MMM dd HH:mm:ss yyyy"]
   Conditions = [ """awc[5688]:""", """wsc:""" ]
   Fields = ${DLArubaParsersTemplates.aruba-clearpass-info.Fields}[
     """awc\[5688\]:\s*({additional_info}[^"\$]+?)\s*("|$)""",

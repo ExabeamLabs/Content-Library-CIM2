@@ -4,7 +4,7 @@
 Name = google-cloudplatform-json-app-activity-success-googleapismethodname
   Vendor = Google
   Product = Google Cloud Platform
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ"]
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """methodName""" ] 
   Fields = [

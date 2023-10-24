@@ -9,9 +9,9 @@ Name = microsoft-evsystem-xml-endpoint-stop-1074
   Conditions = [ """<System><Provider""", """<EventID Qualifiers""", """>1074</EventID>""", """<Computer>""", """Shutdown Type:""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
-    """<Computer>({host}({dest_host}[\w\-]+)[^<]*)</Computer>""",
+    """<Computer>({host}({dest_host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*='param7'>(({domain}[^\\<]+?)\\)?({user}[^<]+)</Data>""",
+    """<Data Name\\*='param7'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-]{1,40}\$?)</Data>""",
     """({event_code}1074)</EventID>""",
     """<Message>The process [^<]+ has ({event_name}[^<]+?)\s+[\w\-]+\s+on behalf of user""",
 # shutdown_type is removed

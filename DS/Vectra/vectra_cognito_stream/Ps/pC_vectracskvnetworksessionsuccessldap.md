@@ -16,7 +16,7 @@ Name = vectra-cs-kv-network-session-success-ldap
     """orig_hostname="+({src_host}[^"]+)"+"""
     """resp_hostname="+(null|((IP-)*({dest_host}[^"]+)))""",
     """result_code="+({result}[^"]+)"+""",
-    """uid="*({user}[^"\s]+)"""
+    """uid="*({user}[\w\.\-]{1,40}\$?)"""
   ]
 
 

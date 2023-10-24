@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-group-modify-success-4737
   Conditions = [ """A security-enabled global group was changed""", """4737""" ]
   Fields = [
     """({event_name}A security-enabled global group was changed)""",
-    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({event_code}4737)""",

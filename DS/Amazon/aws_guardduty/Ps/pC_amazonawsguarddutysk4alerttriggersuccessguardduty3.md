@@ -8,9 +8,9 @@ Name = amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3
   Conditions = [ """"source":"aws.guardduty"""", """"detail-type":"GuardDuty Finding"""" ]
   Fields = [
     """"createdAt":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """suser=(?:(?i)anonymous|({user}[^=]+?))\s+\w+=""",
+    """suser=(?:(?i)anonymous|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
     """"severity":({alert_severity}\d+)""",
-    """"title":"({alert_name}[^"]+)""",
+    """"title":"(({alert_name}[^"]+?(instance|bucket|database))(\s[^"\s]+?)?|({=alert_name}[^"]+?))"""",
     """"description":"({additional_info}[^"]+)""",
     """"type":"({alert_type}[^"]+)""",
     """"resource":[^=]+?privateIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

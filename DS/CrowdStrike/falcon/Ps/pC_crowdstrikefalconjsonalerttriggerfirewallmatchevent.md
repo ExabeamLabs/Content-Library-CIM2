@@ -3,7 +3,7 @@
 {
 Name = crowdstrike-falcon-json-alert-trigger-firewallmatchevent
   ParserVersion = "v1.0.0"
-  Conditions = [ """"offset":""", """"destinationServiceName":"CrowdStrike"""", """"eventType":"FirewallMatchEvent"""", """"RuleName"""" ]
+  Conditions = [ """"offset":""", """"eventType":"FirewallMatchEvent"""", """"RuleName"""" ]
 
 json-crowdstrike-alert-1 = {
   Vendor = CrowdStrike

@@ -8,12 +8,12 @@ Name = mulesoft-m-kv-http-request-entrytime
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = ["""snb-mule-api""", """"Source System":""", """Entry Time"""]
   Fields = [
-    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}).*?\s+({host}[^\s]+)\s""",
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}).*?\s+({host}[\w\-.]+)\s""",
     """"Entry Time":\s*("|\|)(NA|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}))""",
     """"Method":\s*"({method}[^"]+)""",
     """"host":\s*"({web_domain}[^"]+)""",
-    """"Target System":\s*"(NA|({dest_host}[^"]+))""",
-    """"Source System":\s*"(NA|({src_host}[^"]+))""",
+    """"Target System":\s*"(NA|({dest_host}[\w\-.]+))"""",
+    """"Source System":\s*"(NA|({src_host}[\w\-.]+))"""",
     """"Request path":\s*"({uri_path}[^"]+)""",
     """"Service Name":\s*"({category}[^"]+)""",
     """"Response Status Code":\s*({result_code}\d+)""",

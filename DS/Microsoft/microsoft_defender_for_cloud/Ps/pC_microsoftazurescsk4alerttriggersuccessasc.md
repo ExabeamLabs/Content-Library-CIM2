@@ -5,7 +5,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-asc
 Vendor = Microsoft
 Product = Microsoft Defender for Cloud
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-Conditions = [ """CEF:""", """destinationServiceName =Azure""", """cat=security-alert""", """"category":""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":"ASC"""" ]
+Conditions = [ """"status":"newAlert"""", """"category":""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":"ASC"""" ]
 Fields = [
 """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}Z)"""
 """act=({action}[^\s]+)"""

@@ -3,7 +3,7 @@
 {
 Name = bitdefender-gz-sk4-alert-trigger-success-avc
   ParserVersion = v1.0.0
-  Conditions = [ """CEF:""", """destinationServiceName =Custom Application""", """"module":"avc"""", """Bitdefender""" ]
+  Conditions = [ """"module":"avc"""", """"product_installed":""", """"computer_fqdn":""" ]
 
 gravityzone-security-alert = {
     Vendor = Bitdefender
@@ -13,8 +13,8 @@ gravityzone-security-alert = {
     Fields = [
       """"(timestamp|date|last_blocked|created)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"(attack_type(s)?|aph_type|exploit_type)":\[?"({alert_type}[^"]+)""",
-      """"user":\{[^\}]*?"name":"(({email_address}[^"@]+@[^"@\.]+\.[^"]+)|({user}[^"@]+)(@({domain}[^@"\.]+))?)"""",
-      """"username":"(({domain}[^"\\]+)\\+)?({user}[^\\"]+)"""",
+      """"user":\{[^\}]*?"name":"(({email_address}[^"@]+@[^"@\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"\.]+))?)"""",
+      """"username":"(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
       """"user_sid":"({user_sid}[^"]+)"""",
       """"computer_name":"({host}[^"]+)""",
       """"computer_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

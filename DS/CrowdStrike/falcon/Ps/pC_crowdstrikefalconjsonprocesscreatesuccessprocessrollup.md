@@ -17,7 +17,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"aid":\s*"({aid}[^"]+)""",
     """"CommandLine":\s*"\s*({process_command_line}[^\n]+?)\s*"?,"""",
-    """"ImageFileName":\s*"({parent_process_path}({parent_process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
+    """"ImageFileName":\s*"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
     """"MD5HashData":\s*"({hash_md5}[^"]+)""",
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"TargetProcessId":\s*"({process_id}[^"]+)""",
@@ -31,8 +31,10 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"GrandParentBaseFileName":"({grandparent_process_name}[^"]+)"""",
     """"event_platform":\s*"({os}[^"]+)"""
     """"IntegrityLevel":"({process_integrity}[^"]+)""""
+    """"cid":"({cid}[^"]+)"""
+    """\sUSER\\?=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?)(@({domain}[^"@]+?))?)(\s\w+\\?=|")"""
   ]
- DupFields = [ "parent_process_dir->process_path_directory", "parent_process->parent_process_name", "process_command_line->parent_process_command_line" ]
+  DupFields = ["process_path->dest_process_path","process_dir->dest_process_dir","process_name->dest_process_name","process_command_line->dest_process_command_line"]
 
 
 }

@@ -17,7 +17,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Data Name\\*='FailureReason'>({result_code}[^<]+)<\/Data>""",
     """Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
-    """Data Name\\*='SubjectUserName'>({user}[^<]+)<\/Data>""",
+    """Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
     """Data Name\\*='Ipaddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<\/Data>""",
     """Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>"""
   ]

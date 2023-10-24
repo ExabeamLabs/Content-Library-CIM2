@@ -6,7 +6,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-securityalert
   Vendor = Microsoft
   Product = Microsoft Defender for Cloud
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """"ProductName":"Azure Security Center"""", """destinationServiceName =Azure""", """dproc=Log Analytics OMS Workspace""", """"Type":"SecurityAlert"""" ]
+  Conditions = [ """"ProductName":"Azure Security Center"""", """"Type":"SecurityAlert"""" ]
   Fields=[
     """"AlertName":"({alert_name}[^"]+)""",
     """"AlertSeverity":"({alert_severity}[^"]+)""",

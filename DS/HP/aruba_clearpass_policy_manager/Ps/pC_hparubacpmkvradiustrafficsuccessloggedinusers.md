@@ -12,7 +12,7 @@ q-aruba-nac-logon = {
   Fields = [
     """Common\.Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+)?[\+\-]\d+)""",
     """\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d,\d+ ({host}[\w\-.]+)""",
-    """Common\.Username=(?:({user_type}host)/)?(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[^\\\s,@]+))""",
+    """Common\.Username=(?:({user_type}host)/)?(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[\w\.\-]{1,40}\$?))""",
     """Common\.Username=({email_address}[^\\\s,@]+@[^\\\s,@]+)""",
     """Common\.Service=({network}[^,]+)""",
     """Common\.Host-MAC-Address=({src_mac}\w+)""",

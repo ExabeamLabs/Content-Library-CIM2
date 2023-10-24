@@ -4,7 +4,7 @@
 Name = microsoft-azuremon-cef-database-delete-dataplanerequests
   Product = Azure Monitor
   ParserVersion = "v1.0.0"
-  Conditions=[ """destinationServiceName =Azure""", """"category":"DataPlaneRequests"""", """MICROSOFT.DOCUMENTDB""", """"operationName":"Delete"""" ]
+  Conditions=[ """"resourceId":""", """"category":"DataPlaneRequests"""", """MICROSOFT.DOCUMENTDB""", """"operationName":"Delete"""" ]
 
 cef-azure-event-hub-cosmosdb = {
   Vendor = Microsoft

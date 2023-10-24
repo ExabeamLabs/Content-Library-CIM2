@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-logout-success-logout
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"Logout"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"Logout"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"serviceAccountId":"({service_id}[^"]+)"""",
 	  """"client_id":\[?"({client_id}[^"]+)"\]?""",

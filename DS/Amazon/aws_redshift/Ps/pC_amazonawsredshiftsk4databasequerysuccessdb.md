@@ -8,6 +8,7 @@ Name = amazon-awsredshift-sk4-database-query-success-db
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """ Redshift """, """[ db""", """ LOG:""", """pid""", """xid""" ]
   Fields = [
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s[^\s]+\s""",
     """db\\=({db_name}[^=]+?)\s+\w+\\=""",
     """LOG:\s*(|({db_query}.+?))\s*$""",

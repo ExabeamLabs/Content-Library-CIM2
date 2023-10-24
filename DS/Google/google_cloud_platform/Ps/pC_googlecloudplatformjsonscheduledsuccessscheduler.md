@@ -4,10 +4,10 @@
 Name = google-cloudplatform-json-scheduled-success-scheduler
   Vendor = Google
   Product = Google Cloud Platform
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """"type":"cloud_scheduler_job"""","""dproc=Cloud PubSub"""]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"
+  Conditions = [ """"type":"cloud_scheduler_job"""","""google.cloud.scheduler.logging"""]
   Fields = [
-    """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """"service_name":"({service_name}[^"]+)"""",
     """destinationServiceName =({app}[^=]+?)\s\w+=""",
 	  """"@type":".+?({event_name}scheduler[^"]+)"""",

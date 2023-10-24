@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-notification-resourcehealth
   Product = Azure Monitor
-  Conditions = [ """destinationServiceName =Azure""", """"category":"ResourceHealth"""" ]
+  Conditions = [ """"resourceId":""", """"category":"ResourceHealth"""" ]
   ParserVersion = "v1.0.0"
 
 cef-microsoft-app-activity = {

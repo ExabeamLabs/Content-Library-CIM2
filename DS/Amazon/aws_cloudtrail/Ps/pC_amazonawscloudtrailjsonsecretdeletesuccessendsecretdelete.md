@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-secret-delete-success-endsecretdelete
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"EndSecretVersionDelete"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"EndSecretVersionDelete"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"ARN":"({user_arn}[^"]+)""""
   ]

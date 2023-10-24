@@ -3,7 +3,7 @@
 {
 Name = osquery-o-json-app-activity-success-snapshot
   ParserVersion = "v1.0.0"
-  Conditions = [ """"calendarTime":""",""""action":"snapshot"""",""""decorations":""",""""hostname":"""" ]
+  Conditions = [ """"calendarTime":""",""""action":"snapshot"""",""""decorations":""",""""hostIdentifier":"""" ]
      Fields = ${OSqueryParsersTemplates.osquery-app-activity.Fields}[
      """"query":"\s*({db_query}.+?)\s*","""
   ]

@@ -14,7 +14,7 @@ s-xml-object-access-1 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({dest_host}({host}[^<>]+?))<\/Computer>""",
+    """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",

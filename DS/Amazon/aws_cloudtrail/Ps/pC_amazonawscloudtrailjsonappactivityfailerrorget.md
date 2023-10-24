@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-activity-fail-errorget
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"Error_GET"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"Error_GET"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
 	  """"serviceAccountId":"({service_id}[^"]+)"""",
 	  """"errorCode":"({failure_code}[^"]+)"""",

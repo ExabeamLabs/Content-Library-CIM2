@@ -9,7 +9,7 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalytics
   start_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
   end_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
   processing_end_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
-  Conditions = [ """"ProductName":"Azure Sentinel"""", """destinationServiceName =Azure""", """dproc=Log Analytics OMS Workspace""" ]
+  Conditions = [ """"ProductName":"Azure Sentinel"""", """"VendorName":"Microsoft"""", """"AlertSeverity":"""", """"Type":"SecurityAlert"""" ]
   Fields=[
     """"+AlertName"+:"+({alert_name}[^"]+)""",
     """"+AlertSeverity"+:"+({alert_severity}[^"]+)""",
@@ -27,7 +27,7 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalytics
     """"Command Line\\*"+:\s*\\*"+\\*"+({process_command_line}.*?)\\+"""",
     """"User SID\\*"+:\s*\\*"+({user_sid}.*?)\\"""",
     """"Account Logon Id\\*"+:\s*\\*"+({login_id}[^"]+)\\""",
-    """"Account\\":\s*\\"+({domain}[^\\]*?)\\{1,25}({user}[^"]*?)\\",""",
+    """"Account\\":\s*\\"+({domain}[^\\]*?)\\{1,25}({user}[\w\.\-]{1,40}\$?)\\",""",
     """"ActionTaken\\":\s*\\"+({action}.*?)\\*"""",
     """"DnsDomain\\":\s*\\"+(\s*|({dns_domain}.*?))\\*"""",
     """"NTDomain\\":\s*\\"+(\s*|({nt_domain}.*?))\\*"""",

@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-endpoint-login-userlogin
   Vendor = CrowdStrike
   Product = Falcon
-  Conditions = [ """"event_simpleName\":\"UserLogon\"""", """"@timestamp"""" ]
+  Conditions = [ """"event_simpleName\":\"UserLogon\"""", """\"aip\"""", """\"aid\"""" ]
   Fields = ${CrowdStrikeParsersTemplates.crowdstrike-auth-activity.Fields} [
     """"LogonType\\*"+:\\*"+({login_type}\d+)""",
     """"LogonDomain\\*"+:\\*"+({domain}[^"\\]+)""",
@@ -33,7 +33,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""

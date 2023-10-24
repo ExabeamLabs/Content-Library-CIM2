@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-database-login-connectionlog
   Product = Azure Monitor
-  Conditions = [ """destinationServiceName =Azure""", """"category":"MySqlAuditLogs"""", """"event_class":"connection_log"""" ]
+  Conditions = [ """"category":"MySqlAuditLogs"""", """"event_class":"connection_log"""" ]
   Fields = ${MicrosoftParserTemplates.cef-azure-db-for-mysql.Fields}[
     """"db":"({db_name}[^",]+)""",
     """"connection_id":({connection_id}\d+)"""
@@ -16,7 +16,7 @@ cef-azure-db-for-mysql = {
    Fields = [
      """"LogicalServerName":"({host}[^",]+)""",
      """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
-     """"user":"({user}[\w\-]+)""",
+     """"user":"({user}[\w\.\-]{1,40}\$?)""",
      """"resourceId":"({resource}[^",]+)""",
      """"event_subclass":"({action}[^",]+)""",
      """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -41,7 +41,7 @@ s-mssql-database-login = {
     """\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",
     """succeeded\\?:({result}[^:\s\\]+)""",
     """event_time:({time}\d+\-\d+\-\d+ \d+:\d+:\d+\.\d{3})""",
-    """\WUser=({user}[^\s]+?)(\s+\w+=|\s*$)""",
+    """\WUser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
     """\WSid=({user_sid}[^\s]+?)(\s+\w+=|\s*$)""",
     """\Wserver_principal_name:(({domain}[^\\\/]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",
     """server_principal_sid:({db_user_sid}[^\s\\]+)""",
@@ -66,7 +66,7 @@ s-mssql-database-login = {
        """LocalIP"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
        """LocalPort"+:({src_port}\d+)""",
        """ActionType"+:\s*"+({result}[^"]+)""",
-       """DeviceName"+:\s*"+({dest_host}[^"]+)""",
+       """DeviceName"+:\s*"+({dest_host}[\w\-.]+)""",
        """InitiatingProcessAccountName"+:\s*"+((?i)SYSTEM|(?i)network service|({user}[\w\.\-]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",

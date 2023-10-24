@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-group-create-success-4727
   Conditions = [ """A security-enabled global group was created""", """4727""" ]
   Fields = [
     """({event_name}A security-enabled global group was created)""",
-    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({event_code}4727)""",

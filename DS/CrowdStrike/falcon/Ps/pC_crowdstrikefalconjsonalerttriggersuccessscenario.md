@@ -35,7 +35,8 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"(?i)Kill_SubProcess"+:\s*({kill_sub_process}true|false)""",
       """"(?i)Rooting"+:\s*({rooting}true|false)""",
       """"(?i)Inddet_Mask"+:\s*({inddet_mask}true|false)""",
-      """"(?i)Indicator"+:\s*({indicator}true|false)"""
+      """"(?i)Indicator"+:\s*({indicator}true|false)""",
+      """"cid":"({cid}[^"]+)"""
       """"platform_name":"({os}[^"]+)""""
     ]
     DupFields = [ "src_host->host" ]

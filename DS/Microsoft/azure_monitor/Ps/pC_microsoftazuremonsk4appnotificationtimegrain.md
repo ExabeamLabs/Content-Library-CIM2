@@ -4,7 +4,7 @@
 Name = microsoft-azuremon-sk4-app-notification-timegrain
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """destinationServiceName =Azure""", """"metricName":""", """"timeGrain":""", """EventHub""" ]
+  Conditions = [ """"resourceId":""", """"metricName":""", """"timeGrain":""", """EventHub""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   ]

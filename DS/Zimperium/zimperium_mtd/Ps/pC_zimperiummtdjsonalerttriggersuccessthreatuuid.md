@@ -5,7 +5,7 @@ Name = zimperium-mtd-json-alert-trigger-success-threatuuid
   Vendor = Zimperium
   Product = Zimperium MTD
   ParserVersion = "v1.0.0"
-  TimeFormat = "dd mm yyyy HH:mm:ss z"
+  TimeFormat = "dd MM yyyy HH:mm:ss z"
   Conditions = [ """"zapp_instance_id":""",""""threat_type":""",""""threat_uuid":""",""""device_info":""" ]
   Fields = [
   """eventtimestamp":\s"({time}\d\d\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d\s\w{1,3})"""

@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-endpoint-notification-success-scheduledreport
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch"
-  Conditions = [ """"offset":""", """"destinationServiceName":"CrowdStrike"""", """"eventType":"ScheduledReportNotificationEvent"""", """"ReportName"""" ]
+  Conditions = [ """"offset":""", """"eventType":"ScheduledReportNotificationEvent"""", """"ReportName"""" ]
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-alert-1.Fields} [
     """"ReportName":"({additional_info}[^"]+)""""
     """"(?i)UserId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",

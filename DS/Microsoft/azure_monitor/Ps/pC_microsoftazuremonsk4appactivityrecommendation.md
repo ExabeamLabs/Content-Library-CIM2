@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-activity-recommendation
   Product = Azure Monitor
-  Conditions = [ """destinationServiceName =Azure""", """"category":"Recommendation"""" ]
+  Conditions = [ """"resourceId":""", """"category":"Recommendation"""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
 # azure_event_hub_name is removed
 # azure_impact_level is removed

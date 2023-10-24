@@ -12,7 +12,7 @@ Name = microsoft-evapplocker-cef-endpoint-notification-8002
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Computer":"({host}[^"]+)""",
     """"EventID":"?({event_code}\d+)""",
-    """"Account":"(({domain}[^\\"]+)\\+)?({user}[^\\"]+)""",
+    """"Account":"(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """<TargetLogonId>({login_id}.+?)</TargetLogonId>""",
     """"TargetLogonId":"({login_id}[^"]+)""",
     """"TargetUserSid":"({user_sid}[^"]+)""",

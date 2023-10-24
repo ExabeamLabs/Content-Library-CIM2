@@ -13,7 +13,7 @@ Name = microsoft-evsystem-xml-process-create-success-5861
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
+    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """({process_name}WMI)""",

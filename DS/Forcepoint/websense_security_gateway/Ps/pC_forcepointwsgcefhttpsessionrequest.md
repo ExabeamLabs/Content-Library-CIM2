@@ -43,7 +43,7 @@ Name = forcepoint-wsg-cef-http-session-request
     """\scs3=(?:-|({mime}[^=]+?))(\s+\w+=|;)""",
     """suser=(-|({last_name}[^,]+),\s({first_name}([A-Za-z]+){1}(\s\w){0,1}))\s""",
     """suser=\w+:\/+([^\s]+)?\s*((CN|OU)\\+=[^,]+,){1,2}DC\\=[^,]+,DC\\=[^\/]+\/({full_name}({last_name}[^\\]+)\\+,\s*({first_name}[^=]*?))\s\w+=""",
-    """loginID=(-|({user}[^\s=]+?))\s\w+="""
+    """loginID=(-|({user}[\w\.\-]{1,40}\$?))"""
   ]
 
 

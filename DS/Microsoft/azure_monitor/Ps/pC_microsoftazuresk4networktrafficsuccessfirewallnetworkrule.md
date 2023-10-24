@@ -5,7 +5,7 @@ Name = microsoft-azure-sk4-network-traffic-success-firewallnetworkrule
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions = [ """destinationServiceName =Azure""", """"category":"AzureFirewallNetworkRule"""", """"resourceId":"""", """dproc=EventHub""", """Action: Allow""" ]
+  Conditions = [""""category":"AzureFirewallNetworkRule"""", """"resourceId":"""", """Action: Allow""" ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""",
     """"resourceId":"({resource_id}[^"]+)"""",

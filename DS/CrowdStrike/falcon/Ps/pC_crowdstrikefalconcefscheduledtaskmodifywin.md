@@ -9,6 +9,7 @@ Name = crowdstrike-falcon-cef-scheduled-task-modify-win
     """"TaskExecCommand":\s*"({file_path}[^"]+)""",
     """"TaskExecCommand":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
     """"TaskExecArguments":\s*"\s*({additional_info}[^"]+?)\s*""""
+    """"cid":"({cid}[^"]+)"""
 
   ]
 

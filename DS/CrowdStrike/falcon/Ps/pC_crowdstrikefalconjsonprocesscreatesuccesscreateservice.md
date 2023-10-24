@@ -18,9 +18,10 @@ Name = crowdstrike-falcon-json-process-create-success-createservice
     """"aid":"({aid}[^"]+)""",	
     """"event_simpleName":"({event_code}CreateService)"""",
     """"CommandLine":"({process_command_line}[^"]+)","""",
-    """"event_platform":"({os}[^"]+)"""
+    """"event_platform":"({os}[^"]+)""",
+    """"cid":"({cid}[^"]+)"""
   ]
-  DupFields = [ "service_name->process_path_directory" ]  
+  DupFields = [ "service_name->process_path_directory", "process_path->dest_process_path","process_dir->dest_process_dir","process_name->dest_process_name","process_command_line->dest_process_command_line" ]  
 
 
 }

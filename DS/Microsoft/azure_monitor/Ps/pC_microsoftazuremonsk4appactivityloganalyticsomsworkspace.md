@@ -20,7 +20,7 @@ cef-cloud-system-info = {
 # src_system is removed
     """"(?i)Type":"({event_category}[^"]+)""",
     """"Computer":"({computer_name}[^"]+)""",
-    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[^"\\\/]+)"""",
+    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
 # mg is removed
     """"ManagementGroupName":"({group_name}[^"]+)""",
     """"_ResourceId":"({resource_id}[^"]+)""",
@@ -45,7 +45,9 @@ cef-cloud-system-info = {
     """"RiskScore"+:\s*"+({alert_severity}[^",]+)""",
     """"Process":"({process_name}[^"]+)""",
     """"OSName":"({os}[^"]+)""""
+    """"OperationName":"({operation}[^"]+)""""
   ]
+  DupFields = [ "resource_id->object"]
  
 }
 ```

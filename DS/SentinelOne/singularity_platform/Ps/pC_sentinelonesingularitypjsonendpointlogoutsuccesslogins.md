@@ -12,7 +12,7 @@ Name = sentinelone-singularityp-json-endpoint-logout-success-logins
     """"src.process.cmdline":"({process_command_line}.+?)",""",
     """"event.id":"({event_id}[^"]+)""",
     """event.name":"({operation_type}[^"]+)""",
-    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))""",
+    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))""",
     """"event.login.userName":"({user}[\w\.\-]{1,40}\$?)"""
   ]
   DupFields = [ "host->dest_host"]
@@ -30,6 +30,9 @@ json-sentinelone-edr-events = {
       """"endpoint.os":"({os}[^"]+)""",
       """"event\.category":"({additional_info}[^"]+)"""",
       """"endpoint\.type":"({host_type}[^"]+)"""
+      """"src\.process\.pid":({process_id}\d+)""",
+      """"src\.process\.cmdline":"({process_command_line}.+?)",""",
+      """"account\.id":"({account_id}[^"]+)""",
     
 }
 ```

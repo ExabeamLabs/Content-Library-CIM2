@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-sk4-app-activity-fdritemsexplorer
   Vendor = CrowdStrike
   Product = Falcon
   TimeFormat = "epoch_sec"
-  Conditions = [ """destinationServiceName":"CrowdStrike""" , """dproc":"FDR Items explorer""" ]
+  Conditions = [ """FalconGroupingTags""", """aid""", """"event_platform":""" ]
   Fields = [
     """"Time":"({time}\d{10})""",
     """"MD5HashData":\s*"({hash_md5}[A-Fa-f:\d.]+)""",

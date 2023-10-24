@@ -4,7 +4,7 @@
 Name = microsoft-azure-cef-database-query-success-event
 ParserVersion = v1.0.0
 Conditions = [
-"""destinationServiceName =Azure"""
+""""resourceId":"""
 """"category":"SQLSecurityAuditEvents""""
 """"database_name":""""
 ]
@@ -30,7 +30,7 @@ Fields = [
 """\Wact=({operation}[^=]+)\s+(\w+=|$)"""
 """([^\|]*\|){5}({operation}[^\|]+)"""
 """\WflexString1=({operation}[^=]+)\s+(\w+=|$)"""
-"""\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
+"""destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
 """\Wfname=({object}[^=]+)\s+(\w+=|$)"""
 """\Wmsg=({additional_info}[^=]+)\s+(\w+=|$)"""
 """\Wduser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""

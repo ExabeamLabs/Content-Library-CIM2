@@ -2,7 +2,7 @@
 ```Java
 {
 Name = google-cloudplatform-json-file-permission-modify-success-storageobjectsupdatepolicydelta
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"storage.objects.update"""", """policyDelta"""]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[

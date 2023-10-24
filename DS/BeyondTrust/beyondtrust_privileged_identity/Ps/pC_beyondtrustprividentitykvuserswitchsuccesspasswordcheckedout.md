@@ -3,7 +3,7 @@
 {
 Name = beyondtrust-prividentity-kv-user-switch-success-passwordcheckedout
 Fields = ${LiebsoftParserTemplates.beyondtrust-pi-app-activity.Fields}[
-  """sLoginName =\\?"(({domain}[^\\]+)\\+)?({user}[^\\"]+)\\?"""",
+  """sLoginName =\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\\?"""",
   """sMessage=\\?"checked-out password for\s*\([^\)]*\)'(({account_domain}[^\\']+)\\+)?({account}[^\\\s']+)"""
   """"\ssEventID=\\?"({operation}[^"]+?)\\""""
 ]
@@ -30,7 +30,7 @@ beyondtrust-pi-app-activity = {
       """\ssEventID=\\?"({operation}[^"]+?)\\?""""
       """\ssOriginatingApplicationName =\\?"({app}[^"\\]+?)\\?""""
       """dwAppSpecificEventID=\\?"({event_code}\d+)"""
-      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[^"\\]+?)\\?""""
+      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\\?""""
       """\ssOriginatingSystem=\\?"({src_host}[^"\\]+?)\\?""""
       """"sAccountName\\?"\svalue=\\?"({account}[^"\\]+)\\?""""
       """key=\\?"AccountToElevate\\?"\svalue=\\?"(({account_domain}[^\\]+)\\+)?({account}[^"\\]+?)\\?""""

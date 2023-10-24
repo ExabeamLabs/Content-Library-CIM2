@@ -34,7 +34,8 @@ Name = exabeam-aa-kv-alert-trigger-exaanalyticsmaster
       # incident_end_time is removed
       """\sstatus="({incident_status}[^"]+)""""
       """\ssource="({log_source}[^"]+)"""",
-      """user="({user}[\w\.\-]{1,40})""""
+      """user="({user}[\w\.\-]{1,40}\$?)""""
+      """action="({action}[^"]+)""""
     ]
   
 

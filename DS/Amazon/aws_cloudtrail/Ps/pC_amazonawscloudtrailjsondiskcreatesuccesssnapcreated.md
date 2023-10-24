@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-disk-create-success-snapcreated
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"SharedSnapshotVolumeCreated"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"SharedSnapshotVolumeCreated"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"snapshotId":"({resource_id}[^"]+)""""
   ]

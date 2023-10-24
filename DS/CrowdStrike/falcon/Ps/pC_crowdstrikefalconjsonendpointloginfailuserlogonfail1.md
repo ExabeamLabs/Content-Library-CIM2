@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-endpoint-login-fail-userlogonfail-1
   Vendor = CrowdStrike
   Product = Falcon
-  Conditions = [ """"event_simpleName\":\"UserLogonFailed\"""", """"@timestamp"""" ]
+  Conditions = [ """"event_simpleName\":\"UserLogonFailed\"""", """\"aip\"""", """\"aid\"""" ]
   ParserVersion = "v1.0.0"
 
 crowdstrike-auth-activity = {
@@ -28,7 +28,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""

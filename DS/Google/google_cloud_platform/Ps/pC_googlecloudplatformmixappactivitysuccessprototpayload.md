@@ -13,7 +13,7 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"serviceName":"({service_name}[^"]+)"""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
-    """"principalEmail":\s*"(?:({email_address}[^"@]+?@({email_domain}[^"@]+))|({user}[^":]+))"""",
+    """"principalEmail":\s*"(?:({email_address}[^"@]+?@({email_domain}[^"@]+))|({user}[\w\.\-]{1,40}\$?))"""",
     """"methodName":\s*"({operation}[^"]+)""",
     """"serviceName":\s*"({app}[^"]+)""",
     """\sdproc=({app}[^=]+)\s\w+=""",

@@ -13,7 +13,7 @@ Name = jsonar-sonarg-leef-database-login-success-logout
     """Server IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """Server Host Name =({service_name}[^\s]+)""",
     """Client IP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """OS User=(null|((({domain}[^\\=]+?)\\)?({user}[^=]+?)))\s+Server""",
+    """OS User=(null|((({domain}[^\\=]+?)\\)?({user}[\w\.\-]{1,40}\$?)))\s+Server""",
     """Session Activity Type=({event_name}[^=]+?)\s+Server IP="""
   ]
   ParserVersion = "v1.0.0"

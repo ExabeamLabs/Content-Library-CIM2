@@ -11,7 +11,7 @@ leef-crowdstrike-alert = {
     TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Fields = [
       """\sdevTime=({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
-      """\susrName =({user}[^=@]+?)(@({domain}[^@]+?))?\s*(\w+=|$)""",
+      """\susrName =({user}[\w\.\-]{1,40}\$?)(@({domain}[^@]+?))?\s*(\w+=|$)""",
       """\sdomain=({domain}.+?)\s*(\w+=|$)""",
       """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

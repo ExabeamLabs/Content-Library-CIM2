@@ -6,7 +6,7 @@ Vendor = Microsoft
 Product = Microsoft Defender for Cloud
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
-  """dproc=Graph Security Alerts"""
+  """"vendor":"Microsoft""""
   """"provider":"ASC""""
   """"category":"ARM_UnusedAccountPersistence""""
   """PREVIEW - Suspicious management session using an inactive account detected"""

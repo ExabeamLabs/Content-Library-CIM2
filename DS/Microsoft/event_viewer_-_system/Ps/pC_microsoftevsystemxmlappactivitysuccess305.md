@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-app-activity-success-305
   Vendor = Microsoft
   Product = Event Viewer - System
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   Conditions = [ """<EventID>305<""", """Automatic registration failed at authentication phase""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{1,10}Z)'/>""",

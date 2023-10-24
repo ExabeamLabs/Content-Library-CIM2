@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-group-member-list-4799
   Vendor = Microsoft
   Product = Event Viewer - System
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy"]
   ParserVersion = "v1.0.0"
   Conditions = [ """4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = [

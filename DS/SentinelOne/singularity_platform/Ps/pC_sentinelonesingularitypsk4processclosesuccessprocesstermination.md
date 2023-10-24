@@ -4,7 +4,7 @@
 Name = sentinelone-singularityp-sk4-process-close-success-processtermination
   Product = Singularity Platform
   ParserVersion = v1.0.0
-  Conditions = [ """dproc=Deep Visibility Endpoint""", """destinationServiceName =SentinelOne""", """processTermination {""" ]
+  Conditions = [ """timestamp {""", """millisecondsSinceEpoch: """, """trueContext {""", """isRedirectedCommandProcessor: """, """processTermination {""", """target {""" ]
   Fields = ${DLSentinelOneParsersTemplates.sentinelone-activity.Fields} [
     """({event_name}processTermination)""",
     """parent.*?path:\s*\\?"+\s*({parent_process}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))\\*".*commandLine:\s*\\?"+\s*({parent_process_command_line}.+?)"\\n?""",
@@ -30,7 +30,7 @@ sentinelone-activity {
       """\ssizeBytes:\s*({bytes}\d+)""",
       """user\s*\{[^\}]+?sid:[^"]*?"+({user_sid}[^"\\]+)""",
       """user\s*\{(\\n|\\t|\\t)*\s+name:\s+[\\\/]?"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-]{1,40}\$?)))"""",
-      """"app-username":"((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))\s*"""",
+      """"app-username":"((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s*"""",
       """\ssha256:\s*[\\\/]?"+({hash_sha256}[^"\\]+)""",
       """\smd5:\s*[\\\/]?"+({hash_md5}[^"\\]+)""",
       """\spid:\s*({process_id}\d+)""",

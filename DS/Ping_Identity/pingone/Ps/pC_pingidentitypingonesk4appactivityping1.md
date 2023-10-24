@@ -21,7 +21,7 @@ Name = pingidentity-pingone-sk4-app-activity-ping-1
     """Country:\s({country}.*?)\s*(\\n)*New Device""",
     """Mobile OS Version:\s({os}.*?)\s*(\\n)*Device Model""",
     """Device Model:\s(N\/A|({device_name}.*?))\s*(\\n)*Device Lock""",
-    """"actors":\[\{"type":"user","name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+?))""""
+    """"actors":\[\{"type":"user","name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
     """dproc=({process_name}[^\s]+)"""
     """flexString2=({result}[^\s]+)"""
   ]

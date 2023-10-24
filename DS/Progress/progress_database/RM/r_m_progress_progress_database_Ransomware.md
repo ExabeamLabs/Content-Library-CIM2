@@ -9,6 +9,6 @@ Vendor: Progress
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   1   |   0    |         1          |       1        |    1    |
 
-| Event Type    | Rules    | Models |
+| Event Type   | Rules    | Models |
 | ---- | ---- | ------ |
-| authentication-successful | <b>T1078 - Valid Accounts</b><br> ↳ <b>Auth-Ransomware-Shost</b>: User authentication or login from a known ransomware IP |        |
+| remote-logon | <b>T1078 - Valid Accounts</b><br> ↳ <b>Auth-Ransomware-Shost</b>: User authentication or login from a known ransomware IP |        |

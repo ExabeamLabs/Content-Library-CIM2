@@ -17,7 +17,7 @@ crowdstrike-process-info = {
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",
     """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
@@ -25,7 +25,8 @@ crowdstrike-process-info = {
     """"LocalPort":"({src_port}\d+)"""",
     """"RemotePort":"({dest_port}\d+)"""",
     """"aid":"({aid}[^"]+)"""",
-    """"aip":"({aip}[^"]+)""""
+    """"aip":"({aip}[^"]+)"""",
+    """"cid":"({cid}[^"]+)"""
   
 }
 ```

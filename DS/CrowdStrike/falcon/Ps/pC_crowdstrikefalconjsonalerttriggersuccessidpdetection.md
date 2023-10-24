@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-json-alert-trigger-success-idpdetection
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch"
-  Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """"destinationServiceName":"CrowdStrike"""" ]
+  Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """"FalconHostLink":""" ]
   Fields = ${CrowdStrikeParsersTemplates.json-crowdstrike-alert.Fields} [
   """"SourceAccountDomain":"({top_domain}[^"]+)""""
   """"eventCreationTime":({time}\d{13}),"""

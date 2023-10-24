@@ -5,7 +5,7 @@ Name = sentinelone-singularityp-cef-process-create-success-process
   Product = Singularity Platform
   Conditions = [ """CEF:""", """|Security|SentinelOne|""", """|process|""" ]
   Fields = ${SentinelOneParsersTemplates.cef-sentinelone-security-alert.Fields}[
-    """\suser:(|(({domain}[^\\\/]+)[\\\/]+)?(SYSTEM|({user}[^\\\/"]+?)))(\s+\w+:|\s*$)""",
+    """\suser:(|(({domain}[^\\\/]+)[\\\/]+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?)))(\s+\w+:|\s*$)""",
     """\sprocessCmd:"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+?))\s*"""",
     """\ssha256:(|({hash_sha256}.+?))(\s+\w+:|\s*$)""",
     """parentProcessName:({parent_process_name}[^:"]+?)\s+\w+:""",

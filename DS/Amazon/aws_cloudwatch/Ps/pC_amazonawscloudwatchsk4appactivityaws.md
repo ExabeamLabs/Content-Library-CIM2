@@ -18,7 +18,7 @@ Name = amazon-awscloudwatch-sk4-app-activity-aws
     # src_system is removed
     """"(?i)Type":"({event_category}[^"]+)""",
     """"Computer":"({computer_name}[^"]+)""",
-    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[^"\\\/]+)"""",
+    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
     # mg is removed
     """"ManagementGroupName":"({group_name}[^"]+)""",
     """"_ResourceId":"({resource_id}[^"]+)""",

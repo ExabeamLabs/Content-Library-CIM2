@@ -4,7 +4,7 @@
 Name = amazon-route53-json-dns-request-success-dnsquery
  Vendor = Amazon
  Product = Amazon Route 53
- TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+ TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
  ParserVersion = v1.0.0
  Conditions = [""""rcode":""", """"srcids":""",  """"query_name":""", """"query_timestamp":""", """"query_class":""" ]
  Fields = [

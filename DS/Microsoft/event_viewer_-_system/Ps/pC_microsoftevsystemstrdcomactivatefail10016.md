@@ -11,7 +11,7 @@ Name = microsoft-evsystem-str-dcom-activate-fail-10016
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
     """({event_code}18453)""",
-    """user (N\/A|(({domain}[^\\']+)\\+)?({user}[^\s']+))""",
+    """user (N\/A|(({domain}[^\\']+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
     """\WCLSID\s*\{({cls_id}[^}\s]+)\}\s*""",
     """APPID\s+\{({app_id}[^\}]+)\}\s+""",
     """({event_name}This security permission can be modified using the Component Services administrative tool)"""

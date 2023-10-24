@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-processblock
   Product = Falcon
   ParserVersion = v1.0.0
   TimeFormat = "epoch"
-  Conditions = [ """"event_simpleName":"ProcessBlocked"""", """"destinationServiceName":"CrowdStrike"""" ]
+  Conditions = [ """"event_simpleName":"ProcessBlocked"""", """"aip"""", """"aid"""" ]
   Fields = [
     """timestamp":"({time}\d{13})"""
     """"event_simpleName":"({event_name}[^"]+)"""",

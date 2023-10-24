@@ -5,7 +5,7 @@ Name = pingidentity-pingone-sk4-app-login-fail-loginfailed
   Vendor = Ping Identity
   Product = PingOne
   TimeFormat = "epoch"
-  Conditions = [ """destinationServiceName =Ping""", """|login-failed|"""]
+  Conditions = [ """destinationServiceName =Ping""", """|login-failed|""" ]
   Fields = [
     """end=({time}\d{13})""",
     """cat=({category}[^\s]+)"""

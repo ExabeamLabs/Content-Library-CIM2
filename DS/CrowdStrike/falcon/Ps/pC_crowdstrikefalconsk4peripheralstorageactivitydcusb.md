@@ -10,6 +10,7 @@ Name = crowdstrike-falcon-sk4-peripheral-storage-activity-dcusb
   """"DeviceInstanceId":"({device_id}[^"]+)"""
   """"DevicePropertyDeviceDescription":"({device_type}[^"]+?)\s*""""
   """"event_platform":"({os}[^"]+)""""
+  """"cid":"({cid}[^"]+)"""
   ]
 
 cef-crowdstrike-app-activity-temp-dl = {

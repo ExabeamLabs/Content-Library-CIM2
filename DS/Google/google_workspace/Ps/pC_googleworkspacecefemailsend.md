@@ -7,14 +7,15 @@ Name = google-workspace-cef-email-send
   Product = Google Workspace
   TimeFormat = "epoch"
   Conditions = [ 
-"""destinationServiceName =Google Apps""" 
+""""source":"""
+""""destination":"""
 """act=send""" 
-"""dproc=Gmail""" 
+""""service":"gmail-ui"""" 
 ]
   Fields = [
      """"timestamp_usec":({time}\d{13})""",
-     """"destination":\[\{"address[":]*({dest_email_address}[^",]+)"""",
-     """"source":\{"address":"({src_email_address}[^",]+)""",
+     """"destination":\[\{"address[":]*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+     """"source":\{"address":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
      """"subject":"({email_subject}[^",]+)"""",
      """"selector":"({action}[^",]+)""",
      """"success":({result}true|false)""",

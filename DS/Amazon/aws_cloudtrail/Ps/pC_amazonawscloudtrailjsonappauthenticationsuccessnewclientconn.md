@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-authentication-success-newclientconn
   ParserVersion = v1.0.0
-  Conditions = [ """"destinationServiceName":"AWS"""", """"dproc":"CloudTrail"""", """"eventName":"NewClientConnection"""", """"eventType":"AwsServiceEvent"""" ]
+  Conditions = [ """"eventName":"NewClientConnection"""", """"eventType":"AwsServiceEvent"""" ]
   Fields = ${DLAwsParserTemplates.aws-cloudtrail-json-1.Fields}[
     """"sourceIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 	  """"permissions":\{?"({permissions}[^\}]+)\}?""",

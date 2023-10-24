@@ -12,7 +12,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8003
     """<Computer>({host}[^<]+?)<\/Computer>"""
     """Security UserID='({user_sid}[^'\/>]+)"""
     """({event_code}8003)"""
-    """<EventData><Data Name ='UserName'>({user}[\w\.\-]+\$?)<\/Data>"""
+    """<EventData><Data Name ='UserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>"""
     """<Data Name ='DomainName'>({domain}[^<]+)<"""
     """({event_name}NTLM server blocked in the domain audit)"""
     """<Message>({additional_info}[^<]+)<"""

@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
     """ThreadID\\*='({thread_id}[^']+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({group_domain}[^<>]+?)<\Data>""",
