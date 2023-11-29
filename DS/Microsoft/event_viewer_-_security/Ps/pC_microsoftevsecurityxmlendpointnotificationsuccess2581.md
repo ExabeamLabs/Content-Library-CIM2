@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-success-2581
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>2581</EventID>""", """appears to be malfunctioning and will be reinitialized""", """Microsoft-SharePoint Products-SharePoint Server Search""" ]
+  Conditions = [ """<EventID>2581</EventID>""", """<TimeCreated SystemTime""", """<Provider>Microsoft-SharePoint Products-SharePoint Server Search""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='string0'>({additional_info}[^<]+)<""",
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",

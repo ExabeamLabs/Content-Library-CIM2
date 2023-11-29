@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-handle-request-4659
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = ["""A handle to an object was requested with intent to delete""", """>4659<""", """Microsoft-Windows-Security-Auditing"""]
+  Conditions = ["""<Task>""", """>4659<""", """Microsoft-Windows-Security-Auditing"""]
   Fields = [
     """({event_name}A handle to an object was requested with intent to delete)""",
     """({event_code}4659)""",

@@ -16,7 +16,7 @@ Fields = [
 """ComputerName =({host}[\w\-.]+)"""
 """Account Name(:|=)\s*((\\)[rnt])*({user}[\w\.\-]{1,40}\$?)((\\)[rnt])*\s*((\\)[rnt])*(Account|Subject)"""
 """Security ID(:|=)\s*({user_sid}[^\s]+)"""
-"""Account Domain(:|=)\s*({domain}[^\s]+)"""
+"""Account Domain(:|=)(\\*(r|n|t|\s))*({domain}[^\s\\]+)?(\\*(r|n|t|\s))*"""
 """Logon ID(:|=)\s*({login_id}[^\s]+)"""
 """Directory Service:\s*Name(:|=)\s*({service_name}[^\s]+)\s*.*?Type(:|=)\s*({service_type}.*?Services)"""
 """GUID(:|=)\s*\{({guid}[^\}]+)"""

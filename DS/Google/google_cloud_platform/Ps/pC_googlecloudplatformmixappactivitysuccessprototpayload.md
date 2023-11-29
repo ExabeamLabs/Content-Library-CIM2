@@ -27,7 +27,9 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"resource"+:[^\}]*labels[^\}]*"+project_id"+:\s*"+({project_id}[^"\\\/\}]+)"+"""
     """"status":.+"code":\s*({result_code}\d+)""",
-    """"status":.+"message":\s*"?({failure_reason}[^
+    """"status":.+"message":\s*"?({failure_reason}[^},]+)""""
+  ]
+
 
 }
 ```

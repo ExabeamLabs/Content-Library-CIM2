@@ -4,7 +4,7 @@
 Name = "pan-gp-csv-endpoint-authentication-fail-authfail"
   Vendor = "Palo Alto Networks"
   Product = "GlobalProtect"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
   Conditions = [
 """,SYSTEM,auth,""",
 """,auth-fail,"""

@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-app-authentication-fail-1203-1
   ParserVersion = "v1.0.0"
-  Conditions = [ """(EventID 1203)""", """MSWinEventLog""", """AD FS Auditing""" ]
+  Conditions = [ """(EventID 1203)""", """<NetworkLocation>""", """<AuthProtocol>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
     """({event_name}The Federation Service failed to validate a new credential)"""
   ]

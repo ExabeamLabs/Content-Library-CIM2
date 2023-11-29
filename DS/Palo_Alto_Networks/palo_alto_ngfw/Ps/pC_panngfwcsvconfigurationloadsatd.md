@@ -8,7 +8,7 @@ Name = pan-ngfw-csv-configuration-load-satd
 
 pan-system-1 {
     Vendor = Palo Alto Networks
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","MMM dd yyyy HH:mm:ss","yyyy/MM/dd HH:mm:ss"]
     Fields = [
       """SYSTEM,([^,]+,){2}({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),""",
       """SYSTEM[^"]+?({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",

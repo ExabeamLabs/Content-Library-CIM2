@@ -8,7 +8,7 @@ Name = "pan-gp-leef-vpn-login-success-gatewayuser"
 q-pan-vpn-parser = {
   Vendor = "Palo Alto Networks"
   Product = "GlobalProtect"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
   Fields = [
     """User name:\s+({user}[\w\.\-]{1,40}\$?)\.?(\s|,|"|$)""",
     """User name:\s+({email_address}[^@\s]+@[^\s,]+),""",

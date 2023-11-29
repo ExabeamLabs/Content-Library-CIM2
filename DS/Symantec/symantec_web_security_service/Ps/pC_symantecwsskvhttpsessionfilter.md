@@ -4,7 +4,7 @@
 Name = "symantec-wss-kv-http-session-filter"
 Vendor = "Symantec"
 Product = "Symantec Web Security Service"
-TimeFormat = "dd/MM/yyyy:HH:mm:ss z"
+TimeFormat = ["dd/MM/yyyy:HH:mm:ss z","dd/MM/yyyy:HH:mm:ss Z"]
 Conditions = [
 """filter-result="""
 """cs-host="""

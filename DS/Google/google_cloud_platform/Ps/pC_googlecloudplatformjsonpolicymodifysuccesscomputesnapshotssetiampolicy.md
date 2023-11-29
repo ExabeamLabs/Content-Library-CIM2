@@ -6,7 +6,9 @@ Name = google-cloudplatform-json-policy-modify-success-computesnapshotssetiampol
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":""", """compute.snapshots.setIamPolicy"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
-    """"policy"+:[^\}]+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\
+    """"policy"+:[^\}]+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+)""",
+  ]
+
 gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform

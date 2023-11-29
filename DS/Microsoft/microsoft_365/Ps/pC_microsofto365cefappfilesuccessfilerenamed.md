@@ -9,7 +9,6 @@ Name = microsoft-o365-cef-app-file-success-filerenamed
     """"ObjectId":"({src_file_path}({src_file_dir}[^"]+[\\\/])({src_file_name}[^"]+?(\.({src_file_ext}[^\\\."]+))?))"""",
     """filePath=\{"ObjectUrl":"({src_file_path}({src_file_dir}[^"]+\/)?({src_file_name}[^"]+(\.({src_file_ext}[^"]+))?)?)"""",
     """"SourceFileExtension":"({src_file_ext}\w+)"""",
-    """"SourceRelativeUrl":"({src_file_path}({src_file_dir}([^"]+)?[\/\\])?[^"]+)""",
     """"FileSizeBytes":({bytes}\d+)""",
     """"DestinationRelativeUrl":"({file_path}[^"]+)"""",
     """"DestinationFileName":"(({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))"""",

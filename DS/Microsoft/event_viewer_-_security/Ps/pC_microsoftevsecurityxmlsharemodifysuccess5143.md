@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-share-modify-success-5143
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>5143""", """>A network share object was modified""", """<Data Name""","""'SubjectUserSid'"""]
+  Conditions = [ """<EventID>5143""", """<Data Name""","""'SubjectUserSid'"""]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)'""",
     """<Computer>({host}[\w\-.]{1,20000})<""",

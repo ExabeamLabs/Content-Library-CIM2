@@ -4,7 +4,7 @@
 Name = sentinelone-singularityp-cef-alert-trigger-threatclassification
     Vendor = SentinelOne
     Product = Singularity Platform
-    TimeFormat = "yyyy-MM-dd HH:mm:ss"
+    TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd yyyy HH:mm:ss"]
     Conditions = [ "CEF:", "|SentinelOne", "|threatClassification=", "|threatDetectingEngine=", "|threatClassifier=" ]
     Fields = [
       """CEF:([^\|]*\|){5}({alert_name}[^\|]+)""",

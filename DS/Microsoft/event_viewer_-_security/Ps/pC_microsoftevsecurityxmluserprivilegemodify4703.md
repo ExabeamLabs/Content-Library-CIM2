@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-user-privilege-modify-4703
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>4703<""", """A token right was adjusted""" ]
+  Conditions = [ """<EventID>4703<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """Target Account:.*?Account Name:\s*(|({dest_user}.+?))\s*Account Domain:\s*(|({dest_domain}.+?))\s*Logon ID:""",
     """Process Name:\s*({process_path}({process_dir}.*?[\\\/]+)?({process_name}[^\\\/]+?))\s*Enabled Privileges:""",

@@ -15,7 +15,12 @@ Name = amazon-awsguardduty-sk4-alert-trigger-success-guardduty
     """Region:\s*({region}[^:]+?),\w+?:""",
     """Description:\s*({additional_info}[^:]+?),\w+?:""",
     """AccountId:\s*({account_id}[^:]+?),\w+?:"""
-    """Resource:[^}]+PrincipalId:\s*([^
+    """Resource:[^}]+PrincipalId:\s*([^},]+?(:({email_address}[^@]+@[^},]+))?),UserName:\s*({user}[\w\.\-]{1,40}\$?),UserType:\s*({user_type}[^},]+)""",
+    """ResourceType:\s*({resource_type}[^},]+)""",
+    """S3BucketDetails:\s*\[\{Arn:\s*({object}[^,]+),Name:""",
+  ]
+  ParserVersion = "v1.0.0"
+
 
 }
 ```

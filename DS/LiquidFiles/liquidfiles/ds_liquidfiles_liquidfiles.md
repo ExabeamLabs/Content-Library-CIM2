@@ -4,7 +4,7 @@ Product: LiquidFiles
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  50   |   17   |         7          |       5        |    5    |
+|  49   |   17   |         7          |       3        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -13,8 +13,9 @@ Product: LiquidFiles
 |    [Data Access](../../../UseCases/uc_data_access.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> failed-app-login<br> ↳[liquidfiles-l-json-app-login-fail-ldapauthenticationerror](Ps/pC_liquidfilesljsonapploginfailldapauthenticationerror.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>6 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_liquidfiles_liquidfiles_Data_Access.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> failed-app-login<br> ↳[liquidfiles-l-json-app-login-fail-ldapauthenticationerror](Ps/pC_liquidfilesljsonapploginfailldapauthenticationerror.md)<br> | T1078 - Valid Accounts<br>T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_liquidfiles_liquidfiles_Lateral_Movement.md)    |
 |    [Malware](../../../UseCases/uc_malware.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> dns-query<br> ↳[liquidfiles-l-json-alert-trigger-success-forbidden](Ps/pC_liquidfilesljsonalerttriggersuccessforbidden.md)<br>    | T1071 - Application Layer Protocol<br>T1078 - Valid Accounts<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>T1583.001 - T1583.001<br> | [<ul><li>4 Rules</li></ul>](RM/r_m_liquidfiles_liquidfiles_Malware.md)    |
+|    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> failed-app-login<br> ↳[liquidfiles-l-json-app-login-fail-ldapauthenticationerror](Ps/pC_liquidfilesljsonapploginfailldapauthenticationerror.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_liquidfiles_liquidfiles_Privilege_Abuse.md)    |
+|    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> failed-app-login<br> ↳[liquidfiles-l-json-app-login-fail-ldapauthenticationerror](Ps/pC_liquidfilesljsonapploginfailldapauthenticationerror.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_liquidfiles_liquidfiles_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  app-login<br> ↳[liquidfiles-l-json-app-login-success-ldapauthentication](Ps/pC_liquidfilesljsonapploginsuccessldapauthentication.md)<br><br> failed-app-login<br> ↳[liquidfiles-l-json-app-login-fail-ldapauthenticationerror](Ps/pC_liquidfilesljsonapploginfailldapauthenticationerror.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_liquidfiles_liquidfiles_Ransomware.md)    |
-[Next Page -->>](2_ds_liquidfiles_liquidfiles.md)
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

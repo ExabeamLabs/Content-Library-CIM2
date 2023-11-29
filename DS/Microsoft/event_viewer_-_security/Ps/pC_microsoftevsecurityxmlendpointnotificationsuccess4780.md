@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-success-4780
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4780</EventID>""", """<Message>The ACL was set on accounts which are members of administrators groups""" ]
+  Conditions = [ """<EventID>4780</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",

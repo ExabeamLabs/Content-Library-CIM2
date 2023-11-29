@@ -11,7 +11,7 @@ Name = qush-r-json-radius-traffic-success-wifi
 qush-reveal-events = {
     Vendor = QUSH
     Product = Reveal
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
     Fields = [
       """"agent_hostname"+:"+({host}[^"]+)"""",
       """"timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",

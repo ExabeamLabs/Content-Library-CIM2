@@ -4,7 +4,7 @@
 Name = "microsoft-sysmon-xml-process-create-success-processcreate-2"
 Vendor = "Microsoft"
 Product = "Sysmon"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd HH:mm:ss.SSS"]
 Conditions = [
 """<Provider Name"""
 """'Microsoft-Windows-Sysmon'""",

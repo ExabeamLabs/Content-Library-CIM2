@@ -8,8 +8,7 @@ Name = mimecast-seg-cef-email-send-receive-rcpt
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ 
 """"acc":""""
-""""MsgId":""""
-""""Cphr":""""
+""""MsgId":"""
 """"aCode":"""" 
 """"Dir":""""
 """"Sender":""""

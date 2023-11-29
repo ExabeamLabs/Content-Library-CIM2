@@ -10,7 +10,7 @@ json-netskope-activity = {
   Vendor = Netskope
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
-  
+
   Fields = [
     """"timestamp":({time}\d{10})""",
 	""""user":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",

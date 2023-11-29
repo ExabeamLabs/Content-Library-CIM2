@@ -4,7 +4,7 @@
 Name = "code42-incydr-sk4-email-send-success-emailed"
 Vendor = "Code42"
 Product = "Code42 Incydr"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss:SSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss:SSZ"
 Conditions = [
   """"fileCategoryByExtension""""
   """"eventType":"EMAILED""""

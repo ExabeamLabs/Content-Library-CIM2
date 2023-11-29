@@ -4,13 +4,13 @@ Product: Synology NAS
 ---------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  15   |   4    |         6          |       1        |    1    |
+|  13   |   3    |         5          |       1        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
 | [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1187 - Forced Authentication<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_synology_nas_synology_nas_Compromised_Credentials.md)    |
-|        [Lateral Movement](../../../UseCases/uc_lateral_movement.md)        |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1021.002 - Remote Services: SMB/Windows Admin Shares<br>    | [<ul><li>8 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_synology_nas_synology_nas_Lateral_Movement.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1569 - System Services<br>T1569.002 - T1569.002<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_synology_nas_synology_nas_Malware.md)    |
+|        [Lateral Movement](../../../UseCases/uc_lateral_movement.md)        |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1021.002 - Remote Services: SMB/Windows Admin Shares<br>    | [<ul><li>6 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_synology_nas_synology_nas_Lateral_Movement.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1569.002 - T1569.002<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_synology_nas_synology_nas_Malware.md)    |
 |    [Privilege Escalation](../../../UseCases/uc_privilege_escalation.md)    |  share-access<br> ↳[synologynas-s-kv-share-access-success-fileevent](Ps/pC_synologynasskvshareaccesssuccessfileevent.md)<br> ↳[synologynas-s-str-share-access-success-connection](Ps/pC_synologynassstrshareaccesssuccessconnection.md)<br> | T1021.002 - Remote Services: SMB/Windows Admin Shares<br>T1087 - Account Discovery<br>T1484 - Group Policy Modification<br> | [<ul><li>5 Rules</li></ul>](RM/r_m_synology_nas_synology_nas_Privilege_Escalation.md)    |
 
 MITRE ATT&CK® Framework for Enterprise

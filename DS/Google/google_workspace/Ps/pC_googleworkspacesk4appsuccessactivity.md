@@ -35,6 +35,8 @@ cef-google-app-activity = {
     """"id":\{({additional_info}[^\}]+)\}"""
     """suser=(?=[^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?)@({domain}[^\s@]+)\s+(\w+=|$)""",
     """msg=({more_info}[^=]+)\s+\w+="""
+    """"name":"ROLE_NAME","value":"({role_name}[^",\}]+)"""
+    """"name":"PRIVILEGE_NAME","value":"({privileges}[^",\}]+)"""
   
 }
 ```

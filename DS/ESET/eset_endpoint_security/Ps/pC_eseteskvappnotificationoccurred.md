@@ -12,7 +12,11 @@ Name = eset-es-kv-app-notification-occurred
     """Target=({dest_host}[^|]+)""",
     """HardwareDetection=({device_facility}[^|]+)\|""",
     """Notification=({additional_info}[^|]+?)\s*$""",
-    """Time=({time}\d{1,2}\/\d{1,2}\/\d{2,4
+    """Time=({time}\d{1,2}\/\d{1,2}\/\d{2,4}, \d{1,2}:\d{1,2}:\d{1,2} (am|AM|pm|PM))""",
+    """Category:\s*({alert_name}[^:]+?)\s+Monitored static group:"""
+  ]
+  ParserVersion = "v1.0.0"
+
 
 }
 ```

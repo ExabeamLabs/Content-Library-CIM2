@@ -5,7 +5,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
   Conditions = [
 """session opened for user""",
 """(uid=""",

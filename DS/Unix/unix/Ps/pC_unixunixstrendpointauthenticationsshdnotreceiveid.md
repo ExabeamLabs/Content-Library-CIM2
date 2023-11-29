@@ -4,7 +4,7 @@
 Name = "unix-unix-str-endpoint-authentication-sshdnotreceiveid"
   Vendor = "Unix"
   Product = "Unix"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [ 
     """sshd["""
     """Did not receive identification string from"""

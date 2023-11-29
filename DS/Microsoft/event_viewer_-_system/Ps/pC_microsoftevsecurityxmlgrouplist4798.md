@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-group-list-4798
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
-  Conditions = [ """<EventID>4798<""", """A user's local group membership was enumerated""", """<Data Name\=""", """TargetUserName""" ]
+  Conditions = [ """<EventID>4798<""", """Microsoft-Windows-Security-Auditing""", """<Data Name\=""", """TargetUserName""" ]
   Fields = ${DLWindowsParsersTemplates.windows-events-3.Fields}[
     """({event_name}A user's local group membership was enumerated)""",
   ]

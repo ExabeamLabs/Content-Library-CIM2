@@ -4,7 +4,7 @@
 Name = "microsoft-windows-json-dns-request-success-windns"
 Vendor = "Microsoft"
 Product = "Microsoft DNS Log"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = ["MM/dd/yyyy HH:mm:ss a", "MM/dd/yyyy hh:mm:ss a"]
 Conditions = [
 """@timestamp":"""
 """"log_type":"win_dns""""

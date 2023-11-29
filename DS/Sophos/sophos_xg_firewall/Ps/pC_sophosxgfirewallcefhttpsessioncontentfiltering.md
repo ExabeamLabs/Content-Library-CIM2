@@ -4,7 +4,7 @@
 Name = "sophos-xgfirewall-cef-http-session-contentfiltering"
 Vendor = "Sophos"
 Product = "Sophos XG Firewall"
-TimeFormat = "epoch"
+TimeFormat = ["epoch","yyyy-MM-dd' time='HH:mm:ss"]
 Conditions = [
 """log_type="Content Filtering""""
 """ url=""""

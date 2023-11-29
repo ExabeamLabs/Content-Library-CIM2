@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-log-disable-1100
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>1100<""", """The event logging service has shut down""" ]
+  Conditions = [ """<EventID>1100<""", """Microsoft-Windows-Eventlog""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Provider Name\\*=('|")({log_name}[^'"]+)('|")"""

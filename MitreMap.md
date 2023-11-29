@@ -64,10 +64,10 @@ MITRE ATT&CK® Framework for Enterprise
 | T1071.004 | [Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004)<br><br>                                                                  | 1     |
 | T1072     | [Software Deployment Tools](https://attack.mitre.org/techniques/T1072)<br><br>                                                                            | 1     |
 | T1074     | [Data Staged](https://attack.mitre.org/techniques/T1074)<br><br>                                                                                          | 4     |
-| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 182   |
+| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 179   |
 | T1078.002 | [T1078.002](https://attack.mitre.org/techniques/T1078/002)<br><br>                                                                                        | 10    |
 | T1078.003 | [Valid Accounts: Local Accounts](https://attack.mitre.org/techniques/T1078/003)<br><br>                                                                   | 7     |
-| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 27    |
+| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 22    |
 | T1082     | [System Information Discovery](https://attack.mitre.org/techniques/T1082)<br><br>                                                                         | 5     |
 | T1083     | [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)<br><br>                                                                         | 25    |
 | T1087     | [Account Discovery](https://attack.mitre.org/techniques/T1087)<br><br>                                                                                    | 4     |
@@ -75,9 +75,9 @@ MITRE ATT&CK® Framework for Enterprise
 | T1087.002 | [Account Discovery: Domain Account](https://attack.mitre.org/techniques/T1087/002)<br><br>                                                                | 4     |
 | T1087.004 | [T1087.004](https://attack.mitre.org/techniques/T1087/004)<br><br>                                                                                        | 1     |
 | T1090     | [Proxy](https://attack.mitre.org/techniques/T1090)<br><br>                                                                                                | 1     |
-| T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 12    |
+| T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 11    |
 | T1091     | [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)<br><br>                                                                  | 13    |
-| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 37    |
+| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 33    |
 | T1098.002 | [Account Manipulation: Exchange Email Delegate Permissions](https://attack.mitre.org/techniques/T1098/002)<br><br>                                        | 4     |
 | T1102     | [Web Service](https://attack.mitre.org/techniques/T1102)<br><br>                                                                                          | 1     |
 | T1105     | [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)<br><br>                                                                                | 3     |

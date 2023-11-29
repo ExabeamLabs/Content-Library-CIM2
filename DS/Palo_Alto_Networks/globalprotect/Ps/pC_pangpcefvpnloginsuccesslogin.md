@@ -4,7 +4,7 @@
 Name = pan-gp-cef-vpn-login-success-login
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"]
   Conditions = [ """CEF:0|Palo Alto Networks|""", """|USERID|login|""" ]
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",

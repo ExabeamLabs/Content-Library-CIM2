@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-authentication-success-4651
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4651<""", """<Message>An IPsec main mode security association was established""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>4651<""", """<TimeCreated SystemTime""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='LocalMMPrincipalName'>({src_host}[^<]+)""",
     """<Data Name\\*='RemoteMMPrincipalName'>({dest_host}[\w\-.]+)""",

@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-5031
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<EventID>5031<""", """Windows Firewall blocked an application from accepting incoming connections on the network""" ]
+  Conditions = [ """<EventID>5031<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<EventID>({event_code}\d+)""",
     """({event_name}Windows Firewall blocked an application from accepting incoming connections on the network.)""",

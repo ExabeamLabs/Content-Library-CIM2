@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-process-token-assign-4696
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>4696<""", """A primary token was assigned to process""" ]
+  Conditions = [ """<EventID>4696<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

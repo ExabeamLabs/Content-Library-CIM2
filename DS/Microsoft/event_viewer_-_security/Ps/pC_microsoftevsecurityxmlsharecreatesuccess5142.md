@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-share-create-success-5142
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """Microsoft Windows""", """A network share object was added""", """Provider Name""","""Microsoft-Windows-Security-Auditing""", """<EventID>5142</EventID>""" ]
+  Conditions = [ """Microsoft Windows""", """Provider Name""","""Microsoft-Windows-Security-Auditing""", """<EventID>5142</EventID>""" ]
   Fields = [
     """<TimeCreated\s{1,100}SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,100}Z)""",
     """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",

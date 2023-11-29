@@ -4,12 +4,13 @@
 Name = "pan-wildfire-csv-alert-trigger-success-correlationalert"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto WildFire"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
 Conditions = [
   """,CORRELATION,"""
 ]
 Fields = [
   """\d\d:\d\d:\d\d(\.\d+Z)? ({host}[\w\-.]+)"""
+  """\s*({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z)"""
   """,CORRELATION,([^,]*,){2}({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)"""
   """,CORRELATION,([^,]*,){4}(|(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)),"""
   """,CORRELATION,([^,]*,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

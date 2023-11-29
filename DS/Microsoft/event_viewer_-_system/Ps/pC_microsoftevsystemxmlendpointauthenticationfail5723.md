@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-endpoint-authentication-fail-5723
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
-  Conditions = [ """>5723</EventID>""", """The session setup from computer""", """ failed because the security database does not contain """ ]
+  Conditions = [ """>5723</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

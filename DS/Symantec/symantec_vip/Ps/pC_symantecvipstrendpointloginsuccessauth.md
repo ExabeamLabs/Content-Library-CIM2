@@ -4,7 +4,7 @@
 Name = "symantec-vip-str-endpoint-login-success-auth"
 Vendor = "Symantec"
 Product = "Symantec VIP"
-TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS z"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS z","yyyy-MM-dd HH:mm:ss.SSS Z"]
 Conditions = [
 """text=Authentication Success for user"""
 """StatusMessage: Success"""

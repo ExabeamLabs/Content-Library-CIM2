@@ -16,6 +16,16 @@ Name = microsoft-evsecurity-kv-user-modify-4717
     """Account Modified:.*?Account Name:\s*(|(({dest_domain}\S[^\\\/]*?)?[\\\/]+)?({dest_user}[^\\\/]+?))\s*Access Granted:""",
     """Access Granted:.*?Access Right:\s*({access_type}.+?)\s*("|<|$)"""
   ]
+}, 
+
+${WindowsParsersTemplates.windows-defender-1}{
+  Name = microsoft-defenderep-kv-endpoint-scan-updated
+  ParserVersion = v1.0.0
+  Product = Microsoft Defender for Endpoint
+  Conditions = [ """Microsoft-Windows-Windows Defender/Operational""", """Windows Defender signature version has been updated"""]
+  Fields = ${WindowsParsersTemplates.windows-defender-1.Fields}[
+    """({event_name}Windows Defender signature version has been updated)"""
+    ]
 
 
 }

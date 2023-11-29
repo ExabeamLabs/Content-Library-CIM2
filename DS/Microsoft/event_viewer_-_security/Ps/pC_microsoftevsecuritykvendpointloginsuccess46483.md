@@ -28,7 +28,7 @@ Fields = [
   """Subject(:|=)[^\"]+?Logon ID(:|=)\s*({login_id}[^=:]+?)[\s;]*Logon GUID(:|=)""",
   """Subject(:|=)[^\"]+?Logon GUID(:|=)\s*\{({user_login_guid}[^}]+)\}[\s;]*Account Whose""",
   """Used(:|=);?\s*Account Name(:|=)\s*({dest_user}[^\s;@]+?)(@({dest_domain}[^\s;]+?))?[\s;]*Account Domain(:|=)""",
-  """Used(:|=)[^\"]+?Account Domain(:|=)\s*((?i)(NULL)|({dest_domain}[^\s;]+?))[\s;]*Logon GUID(:|=)""",
+  """Used(:|=)[^\"]+?Account Domain(:|=)\s*((?i)(NULL)|({dest_domain}[^\s;]+?))(\\r|\\n|\\t)*[\s;]*Logon GUID(:|=)""",
   """Used(:|=)[^\"]+?Logon GUID(:|=)\s*\{({account_login_guid}[^\s;]+?)\}[\s;]*Target Server(:|=)""",
   """Target Server Name(:|=)\s*({dest_host}[\w\-.]+?)(:\S+)?[\s;]*Additional Information(:|=)""",
   """Additional Information(:|=)\s*({dest_service_name}[^=:]+?)[\s;]*Process Information(:|=)""",

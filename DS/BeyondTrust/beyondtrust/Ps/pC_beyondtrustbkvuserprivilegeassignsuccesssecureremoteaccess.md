@@ -14,9 +14,9 @@ Conditions = [
 Fields = [
   """sessionId=({session_id}[^\|]+)"""
   """deviceHost=({host}[^\|]+)"""
-  """dstUser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
-  """srcUser=({src_user}[\w\.\-]{1,40}\$?)\|"""
-  """srcUser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\|\w+="""
+  """dstUser=({dest_user}[^\|]+)"""
+  """srcUser=({src_user}[^\|]+)"""
+  """srcUser=({email_address}[^@]+@[^\.]+\.[^\|]+)\|\w+="""
   """sessionOwner=({full_name}[^\|]+)"""
   """\|BeyondTrust\|Secure Remote Access\|(?:[^\|]+\|){2}({event_name}[^\|]+)\|"""
   """srcHost=({src_host}[^\|]+)"""

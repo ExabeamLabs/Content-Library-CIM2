@@ -11,7 +11,7 @@ Name = pan-ngfw-cef-network-traffic-trafficend
 cef-palo-alto-network-event = {
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"]
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",
     """rt=({time}\w{3}\s\d{2}\s\d{4}\s(\d{2}:){2}\d{2})\s""",

@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
 """reqaction=({result}[^\s]+)"""
-"""datetime=\w+\s({time}\w+\s+\d+\s\d+:\d+:\d+\s\d+)"""
+"""datetime=({time}\w{1,3}\s\w{1,3}\s{1,5}\d{1,2}\s\d\d:\d\d:\d\d\s\d{4})"""
 """user=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))\s"""
 """dns_reqtype=({dns_query_type}[^\s]+)"""
 """durationms=({duration}\d+)"""

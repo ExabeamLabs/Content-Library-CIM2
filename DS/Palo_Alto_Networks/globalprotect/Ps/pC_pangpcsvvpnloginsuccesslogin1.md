@@ -5,7 +5,7 @@ Name = pan-gp-csv-vpn-login-success-login-1
   ParserVersion = v1.0.0
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
   Conditions = [
 """,vpn-client,globalprotect,""",
 """,USERID,login,"""

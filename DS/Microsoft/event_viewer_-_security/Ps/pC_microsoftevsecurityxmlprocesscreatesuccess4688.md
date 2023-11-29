@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
     """({event_code}4688)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+?)<""",
     """<Data Name(\\)?=('|")SubjectUserName('|")>(-|LOCAL SERVICE|({full_name}[^<\s]+\s[^<]+)|({user}[\w\.\-]{1,40}\$?))<""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|NT AUTHORITY|({domain}[^<]+?))<""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|NT AUTHORITY|NT-AUTORITÄT|({domain}[^<]+?))<""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+?)<""",
     """<Data Name(\\)?=('|")NewProcessId('|")>({process_guid}[x\da-f]+)<""",
     """<Data Name(\\)?=('|")NewProcessName('|")>({process_path}({process_dir}(?:[^<>]+)?[\\\/])?({process_name}[^\\\/<>]+))<""",

@@ -4,7 +4,7 @@
 Name = symantec-dlp-kv-email-send-incident
 Vendor = "Symantec"
 Product = "Symantec DLP"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd, yyyy hh:mm:ss a"]
 occured_timeFormat = ["MMM dd, yyyy HH:mm:ss a"]
 Conditions = [
   """incident_id=""""
@@ -36,8 +36,8 @@ Fields = [
   """[\s,]recipients="+\s*({protocol}\w+):\/\/"""
   """,\sprotocol="+(?:N\/A|({protocol}[^",]+?))\s*"*,"""
   """[\s,]subject="+(?:N\/A|({additional_info}(?:[^",]|"")+?))\s*"*,"""
-  """,\sfile_name="+(?:N\/A|({file_name}[^",]+?))\s*"*,"""
-  """,\sattachment_filename="+(?:N\/A|({file_name}[^.",]+?(?:\.({file_ext}[^",]+?))?))\s*"*,"""
+  """,\sfile_name="+(?:N\/A|({file_name}[^",]+?\.({file_ext}[^"]+)))\s*"*,"""
+  """,\sattachment_filename="(([^"]+\\)?({file_name}[^"]+\.({file_ext}[a-zA-Z]{2,})))\s*","""
   """,\sendpoint_machine="+(?:N\/A|({device_id}[^",]+?))\s*"*,\s"""
   """\sZID="+({user}[\w\.\-]{1,40}\$?)"*,"""
 ]

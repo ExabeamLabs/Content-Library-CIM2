@@ -15,7 +15,7 @@ Fields = [
 """\"event_simpleName\":\s*\"({event_code}[^\"]+)"""
 """\"aid\":\s*\"({aid}[^\"]+)"""
 """\"TargetFileName\":\s*\"({file_path}[^\"]+)"""
-""""TargetFileName":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?\s*({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\.]+)))?))"""",
+""""TargetFileName":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?\s*({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\._]+)))?))"""",
 """({file_type}Directory)"""
 """suser=(system|({user}[\w\.\-]{1,40}\$?))"""
 """src-account-name\":\"({account_name}[^\"]+)""",

@@ -8,7 +8,7 @@ Name = sentinelone-v-cef-alert-trigger-success-activethreat
 sentinelone-vigilance-alerts {
     Vendor = SentinelOne
     Product = Vigilance
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSS","yyyy-MM-dd HH:mm:ss.SSSSSS"]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d),\d{1,5}(\s+\S+){2}\s+CEF:""",
       """\srt=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d{1,6})\s""",

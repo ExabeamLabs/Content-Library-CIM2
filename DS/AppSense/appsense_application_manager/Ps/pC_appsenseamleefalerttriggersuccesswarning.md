@@ -4,7 +4,7 @@
 Name = "appsense-am-leef-alert-trigger-success-warning"
 Vendor = "AppSense"
 Product = "AppSense Application Manager"
-TimeFormat = ["MM/dd/yyyy hh:mm:ss a","M/dd/yyyy hh:mm:ss a"]
+TimeFormat = "MM/dd/yyyy hh:mm:ss a"
 Conditions = [
 """AppSense Application Manager"""
 """SourceName ="""

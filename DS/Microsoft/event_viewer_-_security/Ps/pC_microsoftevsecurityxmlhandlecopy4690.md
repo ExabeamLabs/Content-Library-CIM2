@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-handle-copy-4690
   ParserVersion = v1.0.0
   Product = "Event Viewer - Security"
-  Conditions = [ """<EventID>4690</EventID>""", """<Message>An attempt was made to duplicate a handle to an object""" ]
+  Conditions = [ """<EventID>4690</EventID>""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

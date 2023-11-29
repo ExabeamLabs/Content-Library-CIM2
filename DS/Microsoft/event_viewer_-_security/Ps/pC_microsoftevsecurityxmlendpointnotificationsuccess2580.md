@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-success-2580
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>2580</EventID>""", """is not responding and a recovery action will be attempted""", """Microsoft-SharePoint Products-SharePoint Server Search""" ]
+  Conditions = [ """<EventID>2580</EventID>""", """<TimeCreated SystemTime""", """<Provider>Microsoft-SharePoint Products-SharePoint Server Search""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='string0'>({additional_info}[^<]+)<""",
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",

@@ -9,7 +9,7 @@ Name = exabeam-audit-json-alert-case-success
     Conditions = [""""activity_type":""", """"application":""", """"subject":""", """"outcome":""", """"operation":"""]
     Fields = [
       """"application":"({app}[^"]+)"""",
-      """"subject":"({alert_subject}.+?)","""",
+      """"subject":"({additional_info}.+?)","""",
       """"object_name":"({object_name}.+?)",""",
       """"object_id":"({object_id}[^"]+)"""",
       """"activity_type":"({operation_type}[^"]+)"""",

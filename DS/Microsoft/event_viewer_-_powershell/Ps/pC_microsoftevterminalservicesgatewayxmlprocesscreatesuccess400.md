@@ -7,7 +7,6 @@ Product = "Event Viewer - PowerShell"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
 """>Windows PowerShell<"""
-"""<Message>Engine state is changed from None to Available"""
 """Engine Lifecycle"""
 """>400</EventID>"""
 ]

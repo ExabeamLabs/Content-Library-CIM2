@@ -5,7 +5,7 @@ Name = cisco-ise-kv-endpoint-login-fail-loginfailed
   ParserVersion = "v1.0.0"
   Vendor = Cisco
   Product = Cisco ISE
-  TimeFormat = ["HH:mm:ss 'CT' EEE MMM d yyyy","HH:mm:ss 'UTC' EEE MMM d yyyy"]
+  TimeFormat = ["HH:mm:ss 'CT' EEE MMM dd yyyy","HH:mm:ss Z EEE MMM dd yyyy"]
   Conditions = [ """LOGIN_FAILED:""", """Login failed [user:""", """[Source:""", """[localport: """]
   Fields = [
     """at ({time}\d\d:\d\d:\d\d\s(CT|UTC|EDT)\s\w+\s\w+\s\d+\s\d\d\d\d)""",

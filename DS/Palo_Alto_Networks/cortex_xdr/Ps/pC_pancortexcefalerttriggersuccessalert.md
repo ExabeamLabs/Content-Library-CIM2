@@ -4,13 +4,14 @@
 Name = "pan-cortex-cef-alert-trigger-success-alert"
   Vendor = "Palo Alto Networks"
   Product = "Cortex XDR"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [
     """Palo Alto Networks|Cortex XDR"""
     """|Alert|"""
   ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{6})?Z)"""
     """CEF:[^|]+?\|([^\|]+\|){4}({alert_name}[^\|]+)"""
     """\WexternalId=({alert_id}.+?)\s+"""
     """\Wcat=({alert_type}.*?)\s+"""

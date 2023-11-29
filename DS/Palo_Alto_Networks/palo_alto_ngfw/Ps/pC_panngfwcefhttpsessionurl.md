@@ -4,7 +4,7 @@
 Name = "pan-ngfw-cef-http-session-url"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = "epoch"
+TimeFormat = ["epoch", "MMM dd yyyy HH:mm:ss"]
 Conditions = [
 """|Palo Alto Networks|PAN-OS|"""
 """|url|THREAT|"""

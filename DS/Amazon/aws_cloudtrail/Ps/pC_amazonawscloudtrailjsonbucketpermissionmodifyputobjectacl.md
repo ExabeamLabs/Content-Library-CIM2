@@ -10,7 +10,18 @@ Name = amazon-awscloudtrail-json-bucket-permission-modify-putobjectacl
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
   """"+requestParameters.+?bucketName\\?":\s*\\?"({bucket_name}[^"]+?)\\?"""",
   """"+requestParameters.+?Host\\?":\s*\\?"({bucket_host}[^"]+?)\\?"""",
-  """"+AccessControlList"+:\s*\{[^\[]*({acl_content}"+Grant"+.+\])(?:\\n)?\s*\
+  """"+AccessControlList"+:\s*\{[^\[]*({acl_content}"+Grant"+.+\])(?:\\n)?\s*\},""",
+  """"+Grantee.+?type\\?":\s*\{?\[?"({allowed_user_types}[^\]\},]+)"\]?\}?""",
+  """"+Grantee.+?ID\\?":\s*\{?\[?"({allowed_ids}[^\]\},]+)"\]?\}?""",
+  """"+Grantee.+?URI\\?":\s*\{?\[?"({allowed_uris}[^\]\},]+)"\]?\}?""",
+  """"+Grantee.+?Permission\\?":\s*\{?\[?"({allowed_permissions}[^\]\},]+)"\]?\}?""",
+  """"+Owner.+?ID\\?":\s*\{?\[?({owner_id}[^\]\},]+)\]?\}?""",
+  """"+requestParameters.+?key\\?":\s*\\?"({file_path}[^"]+?)\\?"""",
+  """"+resources.+?Bucket.+?(?:ARN|arn)\\?":\s*\\?"({bucket_arn}[^"]+?)\\?"""",
+  """"+resources.+?Object.+?(?:ARN|arn)\\?":\s*\\?"({file_arn}[^"]+?)\\?"""",
+  ]
+  DupFields = ["result->failure_code"]
+
 aws-cloudtrail-json = {
     Vendor = Amazon
     Product = AWS CloudTrail
@@ -21,7 +32,7 @@ aws-cloudtrail-json = {
       """"userIdentity":\{("[^,]+,)*"accountId\\?"+\s*:\s*\\?"+?({aws_account}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"principalId\\?"+\s*:\s*\\?"+?({principal_id}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"attributes":\{("[^,]+,)*"mfaAuthenticated"\\?:\s*\\?"({mfa}[^"]+?)\\?"""",
-      """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({assumed_role_arn}[^"]+)\\?""""
+      """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({role_arn}[^"]+)\\?""""
       # """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
       """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ?))"+\s*[,\]\}]""",
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"+\s*[,\]\}]""",
@@ -36,8 +47,8 @@ aws-cloudtrail-json = {
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
-      """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
-      """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?"""",
+      """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({role_id}[^"]+?)\\?"""",
+      """"credentials":\{"accessKeyId":"({key_id}[^"]+?)\\?"""",
       #AWS CloudTrail user regexes
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[\w\.\-]{1,40}\$?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
       """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)\\?"""",

@@ -21,6 +21,7 @@ Fields = [
   """"UserAgent":"({user_agent}[^"]+)""""
   """"BrowserName":"({browser}[^"]+)""""
   """"Platform":"(NotSpecified|({os}[^"]+))""""
+  """"AuthenticationType":"({auth_type}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

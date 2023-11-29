@@ -9,7 +9,19 @@ Name = microsoft-o365-cef-app-file-success-displayname
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """"result"+:"+({result}[^"]+)""",
     """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """modifiedProperties"+:\[\{[^\}]+\
+    """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\"+({object}[^\\"]+?)\s*\\?"""",
+    """"targetResources"+:\[[^\]]+?"+displayName"+:"+({target}[^"]+?)\s*"""",
+    """"category"+:"+({additional_info}[^"]+)""",
+    """"key":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
+    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"userPrincipalName":"({email_address}[^"@\s]+@[^,"@\s]+\.[^,"@\s]+)""",
+    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
+    """"DeviceOSType".*?newValue":"\[?\\?"({os}[^"\\]+)\\?"\]?"""
+    """"Device OS.*?value":"({os}[^"]+)""""
+    """\"key\":\"User-Agent\",\"value\":\"({user_agent}[^\"]+)\""""
+    """"value":"({os}[^"]+)","key":"Device OS"""
+  ]
+
 cef-microsoft-app-activity = {
   Vendor = Microsoft
   Product = Azure Monitor

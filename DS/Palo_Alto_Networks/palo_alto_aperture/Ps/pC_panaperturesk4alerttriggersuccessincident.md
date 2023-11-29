@@ -8,6 +8,7 @@ Name = pan-aperture-sk4-alert-trigger-success-incident
     Conditions = [ """"incident"""", """"cloud_app_instance"""", """"item_owner":""", """"item_creator_email":""" ]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z""",
+      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""
       """\Wpolicy_rule_name\s*=\s*"({alert_name}[^"]+)"""",
       """\Witem_type\s*=\s*"({item_type}[^"]+)"""",
       """\Witem_name\s*=\s*"({item_name}[^"]+?)\s*"""",

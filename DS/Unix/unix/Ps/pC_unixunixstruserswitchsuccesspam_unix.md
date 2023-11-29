@@ -5,7 +5,7 @@ Name = unix-unix-str-user-switch-success-pam_unix
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","MMM dd yyyy HH:mm:ss"]
   Conditions = [
 """pam_unix(""",
 """session opened for user"""
@@ -20,7 +20,7 @@ Name = unix-unix-str-user-switch-success-pam_unix
 """session opened for user ({account}.+?) by""",
 """\(uid\\?=({user_id}\d+)\)""",
 """session opened for user \S+ by (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\(""",
-""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   ]
   DupFields = [ "host->dest_host", "user_id->user_uid"]
 

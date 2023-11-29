@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-certificate-create-success-4887
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4887</EventID>""", """<Message>Certificate Services approved a certificate request and issued a certificate""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>4887</EventID>""", """<Data Name =""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
     """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-]{1,40}\$?)<""",

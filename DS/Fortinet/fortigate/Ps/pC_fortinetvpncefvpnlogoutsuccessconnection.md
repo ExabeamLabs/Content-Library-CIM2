@@ -5,7 +5,9 @@ Name = fortinet-vpn-cef-vpn-logout-success-connection
   ParserVersion = v1.0.0
   Vendor = Fortinet
   Product = FortiGate
-  TimeFormat = "yyyy-MM-dd' time='HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd' time='HH:mm:ss","yyyy-MM-dd',time='HH:mm:ss"]
+  time_createdFormat = ["yyyy-MM-dd HH:mm:ss"]
+  time_modifiedFormat = ["yyyy-MM-dd HH:mm:ss"]
   Conditions = [ 
 """IPsec connection status change"""
 """tunnel-down"""

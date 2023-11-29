@@ -4,14 +4,13 @@
 Name = "microsoft-evsecurity-xml-endpoint-lock-success-4800"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss"]
 Conditions = [
 """<EventID>4800"""
-"""TargetUserName""",
-"""<Data Name""",
-"""</Data>"""
+"""TargetUserName"""
 ]
 Fields = [
+  """<EventTime>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
 """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)"""
 """<Computer>({dest_host}({host}[\w\-.]+))"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -21,7 +20,17 @@ Fields = [
 """Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)"""
 """Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)"""
 """Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""
+"""<Hostname>({dest_host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
+"""<ProcessID>({process_id}\d+)<"""
+"""<Category>({category}[^\<]+)<"""
+"""<Severity>({alert_severity}[^\<]+)<""",
+"""<TargetLogonId>({login_id}[^\<]+)<""",
+"""<TargetUserName>({user}[\w\.\-]{1,40}\$?)<""",
+"""<TargetDomainName>({dest_domain}[^\<]+)<""",
+"""<RecordNumber>({event_id}\d+)<""",
+"""<TargetUserSid>({user_sid}[^\<]+)<"""
 ]
+DupFields = ["dest_host->host"]
 ParserVersion = "v1.0.0"
 
 

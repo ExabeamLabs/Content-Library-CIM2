@@ -6,7 +6,9 @@ Name = microsoft-o365-sk4-app-file-success-userdelete
   ParserVersion = v1.0.0
   Conditions= [ """"activityType":"User"""", """"activityOperationType":"Delete"""", """"targetResourceType":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
-    """modifiedProperties"+:\[\{[^\}]+\
+    """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\*"+({object}[^\\"]+)"""
+  ]
+
 json-microsoft-app-activity = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"

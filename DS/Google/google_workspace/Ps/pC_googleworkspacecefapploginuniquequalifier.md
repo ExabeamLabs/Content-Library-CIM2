@@ -33,7 +33,6 @@ Fields = [
     """"name":"client_id","value":"({object}[^"]+)"""",
     """"id":\{({additional_info}[^\}]+)\}""",
 	  """"actor":\{"email":"({object}[^"]+)""""
-    """"events"[\\n\s]*:[^\]]*?"name"[\\n\s]*:[\\n\s]*"login_type"[\\n\s]*,[\\n\s]*"value"[\\n\s]*:[\\n\s]*"({login_type_text}[^"]+?)""""
 ]
 
 

@@ -5,16 +5,17 @@ Name = mimecast-seg-cef-email-inbound
   ParserVersion = v1.0.0
   Vendor = Mimecast
   Product = Mimecast Secure Email Gateway
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ 
 """"aCode":""""
 """"acc":""""
 """"Route":"In"""
 """"MsgId":""""
-""""Subject":""""
+""""Subject":"""
 ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) ([\w.\-]+) """,
+    """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"(?i)Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
     """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",

@@ -4,12 +4,12 @@ Product: RUID
 -------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   5    |         3          |       1        |    1    |
+|  12   |   5    |         3          |       1        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br> | [<ul><li>11 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_ruid_ruid_Abnormal_Authentication_&_Access.md) |
-|          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br> | [<ul><li>7 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_ruid_ruid_Compromised_Credentials.md)    |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br> | [<ul><li>8 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_ruid_ruid_Abnormal_Authentication_&_Access.md) |
+|          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_ruid_ruid_Compromised_Credentials.md)          |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ruid_ruid_Lateral_Movement.md)    |
 |    [Malware](../../../UseCases/uc_malware.md)    |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ruid_ruid_Malware.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  authentication-successful<br> ↳[ruid-r-cef-endpoint-login-success-bca](Ps/pC_ruidrcefendpointloginsuccessbca.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ruid_ruid_Ransomware.md)    |

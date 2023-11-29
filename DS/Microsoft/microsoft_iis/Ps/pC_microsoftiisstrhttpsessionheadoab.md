@@ -8,7 +8,7 @@ Name = microsoft-iis-str-http-session-headoab
 iis-web-activity = {
   Vendor = "Microsoft"
   Product = "Microsoft IIS"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss"]
   Fields = [
     """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)\s+"""
     """({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})\s({dest_ip}[\da-fA-F.:]+)\s({method}[^\s]+)\s""",

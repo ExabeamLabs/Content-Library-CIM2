@@ -32,7 +32,7 @@ Fields = [
   """\Wsproc=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """\WfilePermission=(|({permission_type}.+?))(\s+\w+=|\s*$)"""
   """\Wduser=(|({action_performer}[^=]+?))(\s+\w+=|\s*$)"""
-  """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?)"""
+  """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?))"""
   """\Wsuser=(|({affected_user}[^@\s]+@[^=]+?))(\s+\w+=|\s*$)"""
   """src-account-name\":\"({account_name}[^\"]+)"""
   """"FileSizeBytes\\*"+:\s*({bytes}\d+)"""

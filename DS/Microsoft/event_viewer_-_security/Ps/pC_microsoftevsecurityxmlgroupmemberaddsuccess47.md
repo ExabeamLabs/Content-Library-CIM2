@@ -7,7 +7,9 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-47"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
     """>47"""
-    """>A member was added to a security-enabled""" 
+    """Microsoft-Windows-Security-Auditing"""
+    """<Task>Security Group Management<"""
+    """>A member was added to a security-enabled"""
   ]
   Fields = [
       """({event_name}A member was added to a security-enabled [\w\s]+ group)""",

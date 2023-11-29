@@ -4,7 +4,7 @@
 Name = sophos-ep-kv-alert-trigger-success-virus
 Vendor = Sophos
 Product = Sophos Endpoint Protection
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","yyyy-MM-dd HH:mm:ss"]
 Conditions = [
   """EventType=Virus"""
   """ReportingName ="""

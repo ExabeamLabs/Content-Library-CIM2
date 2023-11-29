@@ -4,7 +4,7 @@
 Name = pan-ngfw-cef-app-notification-success-auth
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"]
   Conditions = [ """CEF:0|Palo Alto Networks|""", """|SYSTEM|auth|""", """saml-client-redirect"""]
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",

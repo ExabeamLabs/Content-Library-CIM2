@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-network-listen-5154
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<EventID>5154<""", """The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections""" ]
+  Conditions = [ """<EventID>5154<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<EventID>({event_code}\d+)""",
     """({event_name}The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections.)""",

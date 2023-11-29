@@ -14,7 +14,7 @@ Name = forcepoint-dlp-cef-alert-trigger-success-forcepointdlp
     """({host}[\w\-.]+)\s+CEF:""",
     """\Wact=({action}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
     """\Wduser=(N\/A|({target}[^\s;]+))""",
-    """\sduser=({url}(\w+:\/+)?({web_domain}[^\\\/]+)[^\s]+)\s+\w+=""",
+    """\sduser=({url}(\w+:\/+)?({web_domain}[a-zA-z0-9.\-_]+(\.[a-zA-Z]{2,})?)?)\s+\w+=""",
     """\Wfname=(N\/A|.*?[\/\\]*({file_name}[^\\\/=]+?))\s+\- [\d.]+ """,
     """\Wfname=(N\/A|.*? - ({bytes}[\d.]+)\s+({bytes_unit}[^\s;]+))""",
     """\Wfname=(N\/A|.*? - ({bytes_val}[\d.]+\s+[^\s;]+))""",

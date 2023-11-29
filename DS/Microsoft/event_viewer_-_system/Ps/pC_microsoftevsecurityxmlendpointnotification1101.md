@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-1101
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>1101</EventID>""", """Audit events have been dropped by the transport""" ]
+  Conditions = [ """<EventID>1101</EventID>""", """Microsoft-Windows-Eventlog""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

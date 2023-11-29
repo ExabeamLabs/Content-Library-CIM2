@@ -8,7 +8,8 @@ Name = microsoft-evsecurity-xml-app-notification-success-5056
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [
   """<EventID>5056</EventID>""",
-  """A cryptographic self test was performed"""
+  """SubjectUserSid""",
+  """SubjectUserName"""
   ]
   Fields = [
   """<EventID>({event_code}[^<]+)<\/EventID>"""

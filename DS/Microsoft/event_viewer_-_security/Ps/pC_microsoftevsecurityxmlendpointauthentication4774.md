@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-4774
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>4774</EventID>""", """<Task>Credential Validation""", """An account was mapped for logon""" ]
+  Conditions = [ """<EventID>4774</EventID>""", """<Task>Credential Validation""", """Provider Name""" ]
   Fields = [
     """({event_name}An account was mapped for logon)""",
     """<TimeCreated SystemTime\\*='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",

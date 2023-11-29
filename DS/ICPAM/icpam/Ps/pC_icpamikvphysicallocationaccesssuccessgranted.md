@@ -4,7 +4,7 @@
 Name = "icpam-i-kv-physical-location-access-success-granted"
 Vendor = "ICPAM"
 Product = "ICPAM"
-TimeFormat = ["MM/dd/yyyy HH:mm:ss","M/dd/yyyy HH:mm:ss"]
+TimeFormat = "MM/dd/yyyy HH:mm:ss"
 Conditions = [
   """[Connected Physical Access Manager]"""
   """Trigger:"""

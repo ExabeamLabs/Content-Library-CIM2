@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-success-5452
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>5452<""", """<Message>An IPsec quick mode security association ended""",   	"""Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>5452<""", """TunnelId""",   	"""Microsoft-Windows-Security-Auditing""" ]
 
 xml-windows-events = {
   Vendor = Microsoft

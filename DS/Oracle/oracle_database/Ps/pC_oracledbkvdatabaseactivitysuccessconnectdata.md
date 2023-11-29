@@ -4,7 +4,7 @@
 Name = "oracle-db-kv-database-activity-success-connectdata"
 Vendor = "Oracle"
 Product = "Oracle Database"
-TimeFormat = "dd-MM-yyyy HH:mm:ss"
+TimeFormat = "dd-MMM-yyyy HH:mm:ss"
 Conditions = [
   """CONNECT_DATA="""
   """SERVICE_NAME="""

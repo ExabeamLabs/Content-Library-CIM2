@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-4793
     """\sAccount Name:\s*({account}[^\s]+)""",
     """\sAccount Domain:\s*({domain}.+?)\s*Logon ID:""",
     """\sLogon ID:\s*({login_id}[^\s]+)""",
-    """\sAdditional Information:\s*({domain}.+?)\s*Provided Account Name""",
+    """\sAdditional Information:\s*([^:]+:\s*)?({domain}.+?)\s*Provided Account Name""",
     """\sStatus Code:\s*({action}.+?)\s*$""",
   ]
 

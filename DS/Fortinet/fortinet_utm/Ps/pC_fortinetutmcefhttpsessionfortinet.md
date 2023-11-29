@@ -4,7 +4,7 @@
 Name = "fortinet-utm-cef-http-session-fortinet"
 Vendor = "Fortinet"
 Product = "Fortinet UTM"
-TimeFormat = "yyyy-MM-dd' time\\='HH:mm:ss"
+TimeFormat = "yyyy-MM-dd 'time='HH:mm:ss"
 Conditions = [
 """CEF:0|Fortinet|Fortigate|"""
 """|utm: webfilter|"""

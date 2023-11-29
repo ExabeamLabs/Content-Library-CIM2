@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsystem-xml-endpoint-password-modify-5823
   ParserVersion = v1.0.0
-  Conditions = [ """>5823</EventID>""", """The system successfully changed its password on the domain controller""" ]
+  Conditions = [ """>5823</EventID>""", """<TimeCreated SystemTime""" ]
 
 windows-events-5 = {
   Vendor = Microsoft

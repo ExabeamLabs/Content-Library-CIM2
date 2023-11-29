@@ -21,10 +21,12 @@ Name = netskope-sc-json-app-activity-success-sessionbegin
     """"url": "({additional_info}[^"]+)""""
     """"browser": "(unknown|({user_agent}[^"]+))"""",
   ]
-   DupFields=["file_name->object_value",
+   DupFields=[
+     "file_name->object_value",
      "additional_info->file_dir",
-     "operation->access"]
-     ParserVersion = "v1.0.0"
+     "operation->access"
+   ]
+   ParserVersion = "v1.0.0"
 
 
 }

@@ -5,7 +5,7 @@ Name = vmware-carbonblackappctrl-kv-process-create-success-allowed
     ParserVersion = v1.0.0
     Vendor = VMware
     Product = Carbon Black App Control
-    TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS","MM/dd/yyyy hh:mm:ss a"]
     Conditions = [ """Cb Protection event:""" , """subtype="Execution allowed""" , """ process=""" ]
     Fields = [
     """({host}[\w.\-]+)\s(\-\s)+Cb Protection event:"""

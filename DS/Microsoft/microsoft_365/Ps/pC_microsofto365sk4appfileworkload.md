@@ -34,8 +34,7 @@ Fields = [
 """SourceRelativeUrl":"({dest_process_path}[^"]+?)\s*"""",
 """SiteUrl":"({url}[^"]+)"""",
 """"MailboxPrimaryAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-""""Key":"OsName".*?Value":"({os}[^"]+)""""
-""""Value":"({os}[^"]+)","Key":"OsName""""
+"""("Value":"({os}[^"]+)",)?"Key":"OsName"(,"Value":"({=os}[^"]+)")?"""
 ]
 
 

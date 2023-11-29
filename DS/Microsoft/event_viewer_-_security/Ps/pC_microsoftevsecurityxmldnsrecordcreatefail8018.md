@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-dns-record-create-fail-8018
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>8018</EventID>""", """The system failed to register host""" ]
+  Conditions = [ """<EventID>8018</EventID>""", """<Provider Name =""" ]
 
 windows-events-5 = {
   Vendor = Microsoft

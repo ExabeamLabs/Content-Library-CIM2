@@ -4,7 +4,7 @@
 Name = "pan-magnifier-cef-alert-trigger-success-lightcyber"
   Vendor = "Palo Alto Networks"
   Product = "Prisma Cloud"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss"]
   Conditions = [
   """|LightCyber|Magna|"""
   ]

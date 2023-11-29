@@ -5,7 +5,7 @@ Name = microsoft-windows-str-dns-request-success-packetu
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Microsoft DNS Log
-  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy HH:mm:ss a", "MM/dd/yyyy HH:mm:ss"]
   Conditions = [ 
 """ PACKET """,
 """   U ["""

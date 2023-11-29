@@ -8,7 +8,7 @@ Product = Event Viewer - Security
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
 Conditions = [
 """<EventID>4705</EventID>""",
-"""A user right was removed"""
+"""Microsoft-Windows-Security-Auditing"""
 ]
 Fields = [
 """<EventID>({event_code}[^<]+)<\/EventID>"""

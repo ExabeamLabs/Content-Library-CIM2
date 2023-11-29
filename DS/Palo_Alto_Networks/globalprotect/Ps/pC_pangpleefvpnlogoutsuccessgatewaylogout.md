@@ -8,7 +8,7 @@ Name = pan-gp-leef-vpn-logout-success-gatewaylogout
 leef-pan-vpn-event = {
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
   Fields = [
     """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d\s({host}[\w\-.]+)""",
     """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)""",

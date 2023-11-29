@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-policy-apply-fail-6145
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>6145</EventID>""", """<Message>One or more errors occured while processing security policy in the group policy objects""" ]
+  Conditions = [ """<EventID>6145</EventID>""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<EventID>({event_code}\d+)""",
     """({event_name}One or more errors occured while processing security policy in the group policy objects)""",

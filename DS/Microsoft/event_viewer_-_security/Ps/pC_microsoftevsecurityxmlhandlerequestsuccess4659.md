@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-handle-request-success-4659
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>4659</EventID>""", """Open Object with Delete Intent""", """NetApp-Security-Auditing""" ]
+  Conditions = [ """<EventID>4659</EventID>""", """<EventName>Open Object with Delete Intent""", """NetApp-Security-Auditing""" ]
   Fields = [
     """TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({event_name}Open Object with Delete Intent)""",

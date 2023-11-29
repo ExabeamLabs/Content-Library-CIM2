@@ -29,7 +29,7 @@ Fields = [
 """"aid":\s*"({aid}[^"]+)"""
 """"SourceFileName":\s*"({src_file_dir}[^"]+\\+)?({src_file_name}[^\\"]+)"""
 """"TargetFileName":\s*"({file_path}[^"]+)"""
-""""TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_]{1,10}?)))?)\s*""""
+""""TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_\$]{1,10}?)))?)\s*""""
 """suser=(system|({user}[\w\.\-]{1,40}\$?))"""
 """src-account-name":"({account_name}[^"]+)"""
 """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""

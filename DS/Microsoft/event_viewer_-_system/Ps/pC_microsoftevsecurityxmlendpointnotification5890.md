@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-5890
   Product = Event Viewer - System
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>5890<""", """An object was added to the COM+ Catalog""" ]
+  Conditions = [ """<EventID>5890<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

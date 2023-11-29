@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-activity-success-4691
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4691</EventID>""", """<Message>Indirect access to an object was requested""" ]
+  Conditions = [ """<EventID>4691</EventID>""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",

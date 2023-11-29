@@ -6,7 +6,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
   Vendor = SentinelOne
   Product = Singularity Platform
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-  Conditions = [ """"classification":"""", """"threatName":"""", """"mitigationStatus":""", """"engines":"""]
+  Conditions = [ """"classification":""", """"threatName":"""", """"mitigationStatus":""", """"engines":"""]
   Fields = [
      """"createdAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
      """"updatedAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",

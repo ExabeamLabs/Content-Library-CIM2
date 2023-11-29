@@ -10,7 +10,6 @@ Name = "netskope-sc-cef-file-write-success-rename"
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
     """"to_object":"({file_name}[^"]+)""""
     """"from_object":"({src_file_name}[^"]+)""""
-    """"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"""
   ]
   ParserVersion = "v1.0.0"
 
@@ -25,10 +24,6 @@ cef-netskope-activity = {
     """"app":\s*"\[?({app}[^\"\]]+)"""
     """"User Name\s*":\s*"({full_name}[^\"]+)"""
     """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-    """"object":\s*"\s*({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"object_type":\s*"(File|Image)""""
-    """"object":\s*"\s*({folder_name}[^"]+)"[^\}]*?"object_type":\s*"Folder""""
-    """"object":\s*"(unknown|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\s\"@\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))\\?"[^\}]*?"object_type":\s*"User""""
-    """"object":\s*"(Unknown Unknown|unknown|Unknown|null|\s*({object}[^"]+?))\s*"[^\}]*?"object_type":\s*"(?!(File|Image|Folder|User))({object_type}[^"]+)""""
     """"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"activity":\s*"File\w+""""
     """"object_type":\s*"(File|Image)"[^\}]*?"object":\s*"\s*({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
     """"object_type":\s*"Folder"[^\}]*?"object":\s*"\s*({folder_name}[^"]+)""""
@@ -49,9 +44,6 @@ cef-netskope-activity = {
     """"dstport\":"\s*({dest_port}\d+)""""
     """"action":\s*"({action}[^"]+)"""
     """"referer":\s*"({referrer}[^"]+)""""
-    """"useragent":"({user_agent}[^"]+)""""
-  """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-    """"activity":\s*"File\w+"[^\}]*?"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
   ]
   DupFields = [ "file_type->mime" 
 }

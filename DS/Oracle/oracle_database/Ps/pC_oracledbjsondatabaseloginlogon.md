@@ -4,7 +4,7 @@
 Name = "oracle-db-json-database-login-logon"
 Vendor = "Oracle"
 Product = "Oracle Database"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
 """"os_username"""
 """"dbid"""
@@ -18,6 +18,7 @@ Fields = [
 """"terminal\\?"+:\\?"+({terminal}[^"\\]+)"""
 """"+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """"+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
+""""+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""
 """"username\\?"+:\\?"+({db_user}[^"\\]+)"""
 """"os_username\\?"+:\\?"+({user}[\w\.\-]{1,40}\$?)"""
 """PROTOCOL=({protocol}\w+)"""

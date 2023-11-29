@@ -6,14 +6,12 @@ Vendor = "Mimecast"
 Product = "Mimecast Secure Email Gateway"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
 Conditions = [
-  """"acc":""""
+  """destinationServiceName =Mimecast Email Security"""
   """"sender":""""
   """"recipient":""""
   """"msgid":""""
   """"reason":""""
   """"urlCategory":""""
-  """"route":""""
-  """"action":""""
 ]
 Fields = [
   """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)""""

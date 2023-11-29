@@ -6,7 +6,14 @@ Name = microsoft-o365-cef-app-file-success-addmembertorole
   Product = Microsoft 365
   Conditions= [ """"Workload":""", """":"Add member to role""", """"UserKey":""" ]
    Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-     """(?i)modifiedProperties"+:\[\{[^\}]+\
+     """(?i)modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+(?i)newValue"+:"+\\"+({object}[^\\"]+)"""
+     """"ObjectId":"({object}[^"]+)"""
+     """({event_name}Add member to role)"""
+     """"Workload":"({resource}[^"]+)"""
+     """"ServiceObjectType":"({role_name}[^",\}]+)"""
+     """"Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+  ]
+
 cef-microsoft-app-activity = {
   Vendor = Microsoft
   Product = Azure Monitor

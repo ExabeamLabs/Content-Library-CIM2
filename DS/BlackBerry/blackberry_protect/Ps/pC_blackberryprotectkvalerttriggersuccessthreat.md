@@ -4,7 +4,7 @@
 Name = "blackberry-protect-kv-alert-trigger-success-threat"
 Vendor = "BlackBerry"
 Product = "BlackBerry Protect"
-TimeFormat = ["MM/dd/yyyy HH:mm:ss a","M/dd/yyyy HH:mm:ss a"]
+TimeFormat = "MM/dd/yyyy HH:mm:ss a"
 Conditions = [
 """Event Type: Threat"""
 """Is Running: """

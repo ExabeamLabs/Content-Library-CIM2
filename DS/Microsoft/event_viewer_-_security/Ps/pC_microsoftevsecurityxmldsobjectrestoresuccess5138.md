@@ -7,7 +7,7 @@ Product = "Event Viewer - Security"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """<EventID>5138<"""
-  """A directory service object was undeleted."""
+  """<Provider Name ="""
 ]
 Fields = [
   """({event_name}A directory service object was undeleted)"""

@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-group-delete-4730
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
-  Conditions = [ """<Message>A security-enabled global group was deleted""", """<EventID>4730</EventID>""" ]
+  Conditions = [ """Microsoft-Windows-Security-Auditing""", """<EventID>4730</EventID>""" ]
 
 windows-events-1 = {
   Vendor = Microsoft

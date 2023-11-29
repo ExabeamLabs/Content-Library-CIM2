@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
   """"viewed":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)""""
-  """"viewer":"\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""
+  """"viewer":"({email_address}[^"]+?)""""
   """({app}Mimecast Email Security)"""
   """({operation}Archive Message View Logs)"""
   """"subject":"({object}[^"]+?)""""

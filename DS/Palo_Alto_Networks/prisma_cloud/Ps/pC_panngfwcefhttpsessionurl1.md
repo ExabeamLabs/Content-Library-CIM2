@@ -4,7 +4,7 @@
 Name = pan-ngfw-cef-http-session-url-1
   Vendor = "Palo Alto Networks"
   Product = "Prisma Cloud"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"]
   Conditions = [ """CEF:""", """|Palo Alto Networks|LF|""", """|THREAT|url|""" ]
   Fields = [
     """\srt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)\s""",

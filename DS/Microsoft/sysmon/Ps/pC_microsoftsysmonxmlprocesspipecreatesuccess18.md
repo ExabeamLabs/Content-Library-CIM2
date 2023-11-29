@@ -5,7 +5,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-success-18
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd HH:mm:ss.SSS"]
   Conditions = [ """<EventID>18</EventID>""", """'Microsoft-Windows-Sysmon'""", """<Data Name ='PipeName'>"""]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""

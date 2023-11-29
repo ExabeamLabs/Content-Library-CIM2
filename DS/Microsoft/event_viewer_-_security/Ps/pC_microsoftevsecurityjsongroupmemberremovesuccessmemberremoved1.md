@@ -25,7 +25,7 @@ Fields = [
 """Member:\s*Security ID\s*:\s*({dest_user_sid}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({account_id}[^\\\s]+)|(?:.*?))\s*Account Name:"""
 """Account Name\s*:\s*(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
 """Group\s*:\s*Security ID\s*:\s*({group_id}[^\s]+)\s*"""
-"""Group:.+?(Group|Account) Name\s*:\s*({group_name}.+?)?\s*(Group|Account) Domain\s*:\s*({group_domain}[^\s]+)\s*"""
+"""Group:.+?(Group|Account) Name\s*:(\\*(r|n|t|\s))*({group_name}.+?)?(\\*(r|n|t|\s))*(Group|Account) Domain\s*:(\\*(r|n|t))*({group_domain}.+?)?(\\*(r|n|t|\s))*Additional Information:"""
 ]
 DupFields = [
 "host->dest_host"

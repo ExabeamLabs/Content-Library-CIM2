@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-app-authentication-fail-1201
   ParserVersion = "v1.0.0"
-  Conditions = [ """(EventID 1201)""", """MSWinEventLog""", """AD FS Auditing""" ]
+  Conditions = [ """(EventID 1201)""", """<NetworkLocation>""", """<FailureType>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
     """({event_name}The Federation Service failed to issue a valid token)"""
   ]

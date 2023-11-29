@@ -17,7 +17,7 @@ Name = "delinea-centrifyas-kv-endpoint-login-fail-trustedpath"
 """\|({event_name}Trusted path\s+[^\|]*)\|"""
 """status=({result}.+?)\s+(\w+=|$)"""
 """pid=({process_id}\d+)"""
-"""server=(({protocol}[^\\\/\s]+)[\\\/]+)?({dest_host}[\w\-.]+?)(@({dest_domain}[^\\\/\s]+))?\s+(\w+=|$)"""
+"""server=(({protocol}[^\\\/\s]+)[\\\/]+)?({dest_host}[^\\\/\s]+?)\s+(\w+=|$)"""
 """reason=:?\s*({failure_reason}.+?)\s+(\w+=|$)"""
    ]
 

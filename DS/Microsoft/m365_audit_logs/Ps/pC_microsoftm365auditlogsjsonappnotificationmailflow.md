@@ -6,7 +6,7 @@ Name = microsoft-m365auditlogs-json-app-notification-mailflow
   Vendor = Microsoft
   Product = M365 Audit Logs
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """"category": "MailFlow"""", """"title": """, """"vendor": "Microsoft"""", """"provider": "Office 365 Security and Compliance"""" ]
+  Conditions = [ """"category":""", """"MailFlow"""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":""", """"Office 365 Security and Compliance"""" ]
 
 json-microsoft-security-events = {
      Vendor = Microsoft

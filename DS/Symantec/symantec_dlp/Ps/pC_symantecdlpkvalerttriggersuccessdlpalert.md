@@ -4,7 +4,7 @@
 Name = symantec-dlp-kv-alert-trigger-success-dlpalert
     Vendor = Symantec
     Product = Symantec DLP
-    TimeFormat = "dd MMM yyyy HH:mm:ss.a"
+    TimeFormat = ["dd MMM yyyy HH:mm:ss.a","dd MMM yyyy hh:mm:ss a"]
     Conditions = [ """Policy Violated: """, """Endpoint Machine: """, """DLP ALERT""", """Application Name: """, """Incident ID: """ ]
     Fields = [
       """\d\d:\d\d:\d\d\s+({host}[^\s]+)"""

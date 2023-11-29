@@ -27,7 +27,6 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """Subject:.+?Security ID:\s+({user_sid}[^\s]+).+?Account Name:\s+({user}[\w\.\-]{1,40}\$?).+?Account Domain:\s+({domain}[\w\-\.]+).+?Logon ID:\s+({login_id}[\w\-\.]+).*?New Account""",
 """New Account:.+?Security ID:\s+({account_id}[^\s]+)\s+Account Name:\s+({account_name}[\w.'\-]+).+?Account Domain:\s+({account_domain}[\w.\-]+)""",
 """Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-]{1,40}\$?)\s*.+?Account Domain:\s*(\\t|\\r|\\n)*({domain}[\w\-\.]+).+?Logon ID:\s*(\\t|\\r|\\n)*({login_id}[\w\-\.]+).+?Account Name:\s*(\\t|\\r|\\n)*({account_name}[\w\-\.]+).+?Account Domain:\s*(\\t|\\r|\\n)*({account_domain}[\w\.\-]+).+?Attributes"""
-"""Enabled.*?'({user_type}[^']+)"""
   ]
   DupFields = ["host->dest_host" , "account_name->dest_user"]
 

@@ -5,7 +5,7 @@ Name = oracle-db-json-database-logout-userhost
   Vendor = Oracle
   Product = Oracle Database
   ParserVersion = "v1.0.0"
-  TimeFormat ="yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [ """action_name""", """LOGOFF""", """os_username""", """userhost""" ]
   Fields=[
     """"os_username":"({user}[\w\.\-]{1,40}\$?)"""
@@ -16,6 +16,7 @@ Name = oracle-db-json-database-logout-userhost
     """"os_process":"({process_id}[^"]+)""",
     """"+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """"+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
+    """"+timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""
     """"exa_jdbc_database":"({db_name}[^"]+)""",
     """"priv_used":"({additional_info}[^"]+)"""",
     """"exa_jdbc_type":"({app}[^"]+)"""",

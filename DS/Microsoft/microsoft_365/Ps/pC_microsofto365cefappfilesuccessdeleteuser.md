@@ -6,7 +6,9 @@ Name = microsoft-o365-cef-app-file-success-deleteuser
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Delete user""" ]
    Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-     """modifiedProperties"+:\[\{[^\}]+\
+     """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\"+({object}[^\\"]+)"""
+  ]
+
 cef-microsoft-app-activity = {
   Vendor = Microsoft
   Product = Azure Monitor

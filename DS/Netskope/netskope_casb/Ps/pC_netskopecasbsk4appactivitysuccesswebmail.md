@@ -3,13 +3,13 @@
 {
 Name = netskope-casb-sk4-app-activity-success-webmail
   Vendor = Netskope
-  Product = Netskope CASB 
+  Product = Netskope CASB
   TimeFormat = "epoch_sec"
   ParserVersion = v1.0.0
   Conditions = [ """"organization_unit":"""" ,""""access_method":"""",""""aggregated_user":"""",""""app_session_id":""",""""appcategory":"Webmail""""]
   Fields = [
     """"timestamp":({time}\d{10})""",
-    """requestClientApplication=({app}.+?)\s+(\w+=|$)""", 
+    """requestClientApplication=({app}.+?)\s+(\w+=|$)""",
     """"category":"({additional_info}[^"]+)""",
     """"user":"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """"access_method":\s*"({auth_method}[^\"]+)""",

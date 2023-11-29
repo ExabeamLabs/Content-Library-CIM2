@@ -26,9 +26,6 @@ Name = "darktrace-darktrace-cef-alert-trigger-success-darktrace"
    """\|({alert_severity}\d+)\|external"""
    """dvchost=[^\s]+?\s({email_address}[^\s@]+\@({email_domain}[^\s]+))?"""
    """"subject":"({email_subject}.+?)","\w+":""""
-   """"from":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
-   """"actions":\["({action}[^"]+)""""
-   """"recipients":\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)[^\]]*)"\]"""
 ]
 ParserVersion = "v1.0.0"
 

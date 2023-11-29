@@ -6,8 +6,8 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
   Product = "Event Viewer - Security"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [
-    """Security ID:"""
-    """Logon ID:"""
+    """Provider Name"""
+    """TargetUserName"""
     """A member was removed from a security-enabled"""
     """<EventID>"""
   ]

@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-link-create-4664
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>4664<""", """An attempt was made to create a hard link""" ]
+  Conditions = [ """<EventID>4664<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",

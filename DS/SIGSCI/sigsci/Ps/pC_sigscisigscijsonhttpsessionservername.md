@@ -4,7 +4,7 @@
 Name = "sigsci-sigsci-json-http-session-servername"
 Vendor = "SIGSCI"
 Product = "SIGSCI"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+TimeFormat = "yyyy-MM-dd'T'HH:ss:SSZ"
 Conditions = [
 """"serverHostName"=""""
 """"remoteHostname"=""""

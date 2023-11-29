@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-authentication-fail-4822
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>4822<""", """authentication failed because the account was a member of the """ ]
+  Conditions = [ """<EventID>4822<""", """Provider Name""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Keyword>({result}.+?)<\/Keyword>""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Device Name:""",

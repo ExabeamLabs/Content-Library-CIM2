@@ -38,7 +38,7 @@ Name = netskope-sc-json-alert-trigger-success-alertname
   ]
   DupFields = [
 "alert_name"->"alert_subject"
-]
+  ]
 
 
 }

@@ -4,7 +4,7 @@
 Name = "pan-wildfire-csv-alert-trigger-success-wildfirevirus"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto WildFire"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
 Conditions = [
   """,THREAT,wildfire-virus,"""
 ]

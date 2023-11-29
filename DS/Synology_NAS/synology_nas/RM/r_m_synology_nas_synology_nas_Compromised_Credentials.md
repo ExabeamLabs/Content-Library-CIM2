@@ -11,4 +11,4 @@ Vendor: Synology NAS
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |
-| share-access | <b>T1187 - Forced Authentication</b><br> ↳ <b>A-SA-SCF-Share</b>: A SCF file was created on a network share on this asset. |        |
+| share-access | <b>T1187 - Forced Authentication</b><br> ↳ <b>SA-SCF-Share</b>: A SCF file was created on a network share. |        |

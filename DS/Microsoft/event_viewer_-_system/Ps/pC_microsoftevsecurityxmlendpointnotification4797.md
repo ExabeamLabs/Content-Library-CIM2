@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-4797
   Product = Event Viewer - System
   ParserVersion = v1.0.0
-  Conditions = [ """An attempt was made to query the existence of a blank password for an account""", """<EventID>4797<""" ]
+  Conditions = [ """Microsoft-Windows-Security-Auditing""", """<EventID>4797<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

@@ -8,6 +8,7 @@ Name = pan-aperture-sk4-alert-trigger-success-policyviolation
     Conditions = [ """"policy_violation"""", """cloud_app_instance""" ]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z""",
+      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""
       """\Wpolicy_rule_name\s*=\s*"({alert_name}[^"]+)"""",
       """\Witem_type\s*=\s*"({item_type}[^"]+)"""",
       """\Witem_type\s*=\s*"user"(\s*\w+\s*=\s*"[^"]*")*\s*item_name\s*=\s*"(Unknown|({email_address}[^"]+))"""",

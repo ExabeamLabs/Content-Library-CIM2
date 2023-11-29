@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-group-create-4754
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<Message>A security-enabled universal group was created""", """<EventID>4754</EventID>""" ]
+  Conditions = [ """Microsoft-Windows-Security-Auditing""", """<EventID>4754</EventID>""" ]
   Fields = [
     """<Message>({event_name}[^\.:]+?)\.""",
     """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",

@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-certificate-request-success-4886
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4886</EventID>""", """<Message>Certificate Services received a certificate request""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>4886</EventID>""", """<Provider>""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
     """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-]{1,40}\$?)<""",

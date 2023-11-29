@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-success-4692
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4692<""", """<Message>Backup of data protection master key was attempted""","""Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>4692<""", """<Task>""","""Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",

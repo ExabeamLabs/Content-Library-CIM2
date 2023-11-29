@@ -38,7 +38,7 @@ Name = netskope-sc-sk4-alert-trigger-success-alertypedlp
     """"_id":"({alert_id}[^"]+)""",
     """"category":"({threat_category}[^"]+)""",
     """"md5":"({hash_md5}[^"\s]+)"""",
-    """"dlp_rule_severity":"({alert_severity}[^"]+)""",    
+    """"dlp_rule_severity":"({alert_severity}[^"]+)""",
     """"alert_type":"({alert_type}[^"]+)""",
     """"policy":"({additional_info}[^"]+)""",
     """"action":"({action}[^"]+)""",

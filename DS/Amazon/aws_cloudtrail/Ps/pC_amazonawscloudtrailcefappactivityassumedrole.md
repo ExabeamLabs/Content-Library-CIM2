@@ -40,7 +40,20 @@ Name = amazon-awscloudtrail-cef-app-activity-assumedrole
     """"userIdentity".*?"sessionContext".*?"sessionIssuer".*?"type":"({operation}[^"]+)"""",
     """\WflexString1=(|({operation}[^=]+?))(\s+\w+=|\s*$)""",
     """"+userName"+\s*:\s*"+?(|({target}[^"]+?))"+\s*[,\]\}]""",
-    """"requestParameters":\{"userName":"({target}[^"]+)"\
+    """"requestParameters":\{"userName":"({target}[^"]+)"\},""",
+    """"sessionIssuer"\s*:\s*[^@]*?"arn":"[^"]*?role/({role}[^"\\\/]+)""",
+    """requestParameters"+:.+?"+instanceId"+:"+({request_id}[^"]+)","attribute":"({request_action}[^"]+)"""",
+    """\sresource:\s+({additional_info}[^\s"]+)(\s|")""",
+    """"responseElements":[^@]+?"name":"({object_name}[^"]+)"""",
+    """"responseElements":[^@]+?"s3BucketName":"({object}[^"]+)"""",
+    """"responseElements":[^@]+?"s3KeyPrefix":"({object_key_prefix}[^"]+)"""",
+    """"responseElements":[^@]+?"snsTopicName":"({sns_topic_name}[^"]+)"""",
+    """"awsRegion":"({region}[^"]+)"""",
+    """\srequestClientApplication=({app}[^\s]+)\s""",
+    """"policyName":"({policy_name}[^"]+)"""",
+    """"configRuleName":"({rule}[^"]+)""""
+  ]
+
 aws-cloudtrail-user-template = {
     Fields = [
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[\w\.\-]{1,40}\$?)(@[^=]+?)?)(\s+\w+=|\s*$)""",

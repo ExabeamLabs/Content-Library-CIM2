@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-group-delete-success-4758
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
-  Conditions = [ """<Message>A security-enabled universal group was deleted""", """<EventID>4758</EventID>""" ]
+  Conditions = [ """TimeCreated SystemTime""", """<EventID>4758</EventID>""" ]
 
 windows-events-1 = {
   Vendor = Microsoft

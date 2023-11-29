@@ -4,7 +4,7 @@
 Name = "exabeam-search-kv-alert-trigger-success-alertscount"
     Vendor = "Exabeam"
     Product = "Advanced Analytics"
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
     end_timeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Conditions = [
       """score="""

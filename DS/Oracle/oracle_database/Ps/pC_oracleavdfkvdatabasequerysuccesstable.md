@@ -111,7 +111,7 @@ Product = "Oracle Database"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Fields = [
 """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""""
-""""userhost":"(({domain}[^"]+)[\\]+)?({src_host}[^"]+)""""
+""""userhost":"(({domain}[^\\]+)[\\]+)?({src_host}[^"]+)""""
 """"os_username":"({user}[\w\.\-]{1,40}\$?)""""
 """"username":"({db_user}[^"]+)""""
 """"db_name":"({db_name}[^"]+)""""

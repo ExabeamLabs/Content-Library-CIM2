@@ -5,7 +5,6 @@ Name = infoblox-bddi-str-configuration-modify-zoneapplied
 	ParserVersion = v1.0.0
     Vendor = Infoblox
     Product = BloxOne DDI
-    expiry_timeFormat = "epoch_sec"
     TimeFormat = "dd-MMM-yyyy HH:mm:ss.SSS"
     Conditions = [ """named[""", """: zone""" , """applied"""]
     Fields = [

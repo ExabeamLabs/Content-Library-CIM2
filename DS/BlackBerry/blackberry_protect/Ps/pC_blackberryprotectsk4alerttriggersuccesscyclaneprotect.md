@@ -27,13 +27,12 @@ Fields = [
 """"md5":"({hash_md5}[^"]+)"""
 """"name":"({file_name}[^"]+)""""
 """"sha256":"({file_hash}[^"]+)""""
-""""file_size":\s*({bytes}\d+),"""
+""""file_size": ({bytes}\d+),"""
 ]
 DupFields = [
 "alert_type->alert_name"
 "file_name->name_at"
 "file_hash->hash_sha256_at"
-"device_name->alert_source"
 ]
 ParserVersion = "v1.0.0"
 

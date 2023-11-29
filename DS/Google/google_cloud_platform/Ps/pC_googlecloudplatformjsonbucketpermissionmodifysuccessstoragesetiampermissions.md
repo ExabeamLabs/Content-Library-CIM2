@@ -6,7 +6,13 @@ Name = google-cloudplatform-json-bucket-permission-modify-success-storagesetiamp
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"storage.setIamPermissions"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
-    """"bindingDeltas"+:\s*\[\s*({policy_delta}.+)\s*\],?[\s\]\
+    """"bindingDeltas"+:\s*\[\s*({policy_delta}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
+    """"action"+:\s*"+ADD"+,\s*"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group|):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
+    """"action"+:\s*"+ADD"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group|):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+""",
+    """"action"+:\s*"+REMOVE"+,\s*"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group|):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
+    """"action"+:\s*"+REMOVE"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group|):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+""",
+  ]
+
 gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform

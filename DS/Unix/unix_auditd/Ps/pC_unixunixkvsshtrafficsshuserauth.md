@@ -4,7 +4,7 @@
 Name = "unix-unix-kv-ssh-traffic-sshuserauth"
   Vendor = "Unix"
   Product = "Unix Auditd"
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec","MM/dd/yyyy HH:mm:ss"]
   Conditions = [
     """type=USER_AUTH"""
     """PAM:authentication"""

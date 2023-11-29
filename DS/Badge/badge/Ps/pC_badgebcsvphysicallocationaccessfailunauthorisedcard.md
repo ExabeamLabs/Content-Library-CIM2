@@ -4,7 +4,7 @@
 Name = "badge-b-csv-physical-location-access-fail-unauthorisedcard"
 Vendor = "Badge"
 Product = "Badge"
-TimeFormat = ["dd/MM/yyyy HH:mm:ss a","dd/M/yyyy HH:mm:ss a"]
+TimeFormat = "dd/MM/yyyy HH:mm:ss a"
 Conditions = [
 """"Access Denied""""
 """"Unauthorised Card""""

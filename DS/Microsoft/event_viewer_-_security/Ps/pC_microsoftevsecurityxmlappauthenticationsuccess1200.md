@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-app-authentication-success-1200
   ParserVersion = "v1.0.0"
-  Conditions = [ """(EventID 1200)""", """MSWinEventLog""", """AD FS Auditing""" ]
+  Conditions = [ """(EventID 1200)""", """<AuthProtocol>""", """<NetworkLocation>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
     """({event_name}The Federation Service issued a valid token)"""
   ]

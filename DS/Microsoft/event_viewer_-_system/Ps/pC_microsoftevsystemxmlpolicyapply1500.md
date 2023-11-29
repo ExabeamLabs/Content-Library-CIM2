@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-policy-apply-1500
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>1500</EventID>""", """The Group Policy settings for the computer were processed successfully""" ]
+  Conditions = [ """<EventID>1500</EventID>""", """Microsoft-Windows-GroupPolicy""" ]
   Fields = [
     """({event_name}The Group Policy settings for the computer were processed successfully)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",

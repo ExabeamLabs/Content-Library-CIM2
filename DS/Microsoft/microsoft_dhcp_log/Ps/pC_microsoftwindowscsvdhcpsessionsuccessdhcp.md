@@ -4,7 +4,7 @@
 Name = microsoft-windows-csv-dhcp-session-success-dhcp
   ParserVersion = v1.0.0
   Product = Microsoft DHCP Log
-  TimeFormat = "MM/dd/yy,HH:mm:ssZ"
+  TimeFormat = ["MM/dd/yy,HH:mm:ssZ", "MM/dd/yy,HH:mm:ss"]
   Conditions = [ """,更新,""" ]
 
 microsoft-dns-renew-jp = {

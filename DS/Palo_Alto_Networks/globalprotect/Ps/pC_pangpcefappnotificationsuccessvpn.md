@@ -4,7 +4,7 @@
 Name = pan-gp-cef-app-notification-success-vpn
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"]
   Conditions = ["""CEF:0|Palo Alto Networks|""", """|SYSTEM|vpn|""", ]
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",

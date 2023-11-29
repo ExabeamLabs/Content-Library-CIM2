@@ -4,7 +4,7 @@
 Name = "pan-cortex-mix-alert-trigger-success-xdr"
 Vendor = "Palo Alto Networks"
 Product = "Cortex XDR"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
 """CEF:"""
 """|Palo Alto Networks|Cortex XDR|"""

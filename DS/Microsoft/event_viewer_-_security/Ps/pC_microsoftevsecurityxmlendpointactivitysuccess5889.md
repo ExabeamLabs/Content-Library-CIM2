@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-activity-success-5889
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>5889<""", """An object was deleted from the COM+ Catalog""" ]
+  Conditions = [ """<EventID>5889<""", """<Data Name =""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

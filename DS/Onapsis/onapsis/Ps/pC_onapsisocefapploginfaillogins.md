@@ -379,12 +379,12 @@ ${GravityzoneParsersTemplates.gravityzone-security-alert}{
     """ cat=({alert_name}[^\s]+) """,
     """ suser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """ act=({action}.+?)\s+\w+=""",
-    """ dvc=({host}[\w\-.]+) """,
+    """ dvc=({host}.+?) """,
     """ agt=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? """,
     """ act=({alert_name}.+?)\s+\w+=""",
     """ cat=({alert_type}.+?)\s+\w+=""",
     """ cs1=({additional_info}.+?)\s+\w+=""",
-    """ cs3=\{({src_host}[\w\-.]+?)\}\s+\w+=""",
+    """ cs3=\{({src_host}.+?)\}\s+\w+=""",
   ]
   ParserVersion = "v1.0.0"
 },
@@ -633,6 +633,7 @@ Conditions = [
 ]
 Fields = [
   """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2})"""
+  """({time}\w+\s+\d{1,2}\s+\d{1,2}\:\d{1,2}\:\d{1,2})"""
   """\s+({host}[^\s]+)\s+({event_code}%\d*SYSTEM-3-LOGIN_FAIL):\s+Log-in ({result}failed) for user '({user}[\w\.\-]{1,40}\$?)'\s+from '({protocol}[^']+)\'"""
 ]
 DupFields = [
@@ -793,8 +794,8 @@ Fields = [
 """\scs3=(\[unknown\]|({db_user}.+?))\s*\w+="""
 """\scs4=((\[unknown\])|({db_name}.+?))\s*\w+="""
 """\scs6=\s*({additional_info}.+?)\s*\w+="""
-"""\sshost=({src_host}[\w\-.]+?)\s*\w+="""
-"""\sdvc=({host}[\w\-.]+)"""
+"""\sshost=({src_host}.+?)\s*\w+="""
+"""\sdvc=({host}[A-Fa-f:\d.]+)"""
 """\sdvchost=({host}[\w\-.]+)"""
 """CEF[^\|]+\|([^\|]*\|){4}({event_name}.+?)\s*\|"""
 """\sdtz=({dtz}.+?)\s*\w+="""

@@ -26,10 +26,12 @@ paloalto-vpn-event = {
 cef-palo-alto-networks-firewall = {
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "epoch"
+  TimeFormat = ["epoch", "MMM dd yyyy HH:mm:ss z", "MMM dd yyyy HH:mm:ss", "yyyy/MM/dd HH:mm:ss"]
   Fields = [
     """\sdvchost=({host}.+?)\s+(\w+=|$)""",
-    """\Wrt=({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+\s+\w+)""",
+    """\Wrt=({time}\d+\/\d+\/+\d+\s+\d+:\d+:\d+)"""
+    """\Wrt=({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+)\s+\w+""",
+    """\Wrt=({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+\s+\w+)\s+\w+(:|=)""",
     """\srt=({time}\d{13})\s+(\w+=|$)""",
     """\sduser=(?=[^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?)@({domain}[^\s@]+)\s+(\w+=|$)""",
     """\sduser=(?!\S+@\S+)(({domain}[^\\\s]+)?\\+)?(|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",

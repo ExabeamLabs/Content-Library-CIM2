@@ -16,7 +16,7 @@ Fields = [
   """({event_code}4673)""",
   """Process Name:\s*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Service Request Information:""",
   """Account Name:\s*({user}[\w\.\-]{1,40}\$?)(\\[srnt])*\s*Account Domain:""",
-  """Account Domain:\s*({domain}[^:]+?)\s*Logon ID:""",
+  """Account Domain:\s*({domain}[^:]+?)(\\[nrt])*\s*Logon ID:""",
   """Logon ID:\s*({login_id}[^:]+?)\s*Service:""",
   """Server:\s*({object_server}[^:]+?)\s*Service Name:""",
   """Privileges:\s*({privileges}[^$]+?)(\s*$|\s+\d+|\\?"|,|;|\s*(xml=)?<)""",

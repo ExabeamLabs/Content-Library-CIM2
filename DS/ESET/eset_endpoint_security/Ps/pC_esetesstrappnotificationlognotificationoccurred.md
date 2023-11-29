@@ -11,7 +11,9 @@ Name = eset-es-str-app-notification-lognotificationoccurred
     """ComputerName =({host}[^|]+)\|""",
     """HardwareDetection=({device_facility}[^|]+)\|""",
     """Notification=({action}.+?)\s*$""",
-    """({time}\w+ \d{1,2
+    """({time}\w+ \d{1,2}, \d{2,4}, \d{1,2}:\d{1,2}:\d{1,2} (am|AM|pm|PM))""",
+  ]
+
 
 }
 ```

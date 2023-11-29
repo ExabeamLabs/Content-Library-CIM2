@@ -4,7 +4,7 @@
 Name = "beyondtrust-b-json-user-privilege-assign-success-28693"
 Vendor = "BeyondTrust"
 Product = "BeyondInsight"
-TimeFormat = ["MM/dd/yyyy HH:mm:ss a","M/dd/yyyy HH:mm:ss a"]
+TimeFormat = "MM/dd/yyyy HH:mm:ss a"
 Conditions = [
   """EventName":"28693"""
   """EventTypeID":"28693"""

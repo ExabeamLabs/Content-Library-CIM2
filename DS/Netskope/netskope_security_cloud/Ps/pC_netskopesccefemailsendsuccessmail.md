@@ -6,12 +6,12 @@ Name = netskope-sc-cef-email-send-success-mail
   Vendor = Netskope
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
-  Conditions = [ 
-""""type":""""
-""""ccl":"""
-""""object_type":"Mail""""
-""""activity":"Send"""" 
-]
+  Conditions = [
+    """"type":""""
+    """"ccl":"""
+    """"object_type":"Mail""""
+    """"activity":"Send""""
+  ]
   Fields = [
     """"hostname":\s*"({src_host}[^"]+)"""",
     """"timestamp":\s*({time}\d{10})""",
@@ -39,7 +39,6 @@ Name = netskope-sc-cef-email-send-success-mail
     """"site":"({site_at}[^"]+)""""
     """"referer":"({referrer}[^"]+)"""",
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
-
   ]
   DupFields = [ "src_email_address->from_user_at" ]
 

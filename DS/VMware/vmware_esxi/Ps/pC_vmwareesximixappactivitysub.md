@@ -16,7 +16,10 @@ Name = vmware-esxi-mix-app-activity-sub
     """({additional_info}(POST|CONNECT|BEGIN|GET|PUT|DELETE|HEAD|PATCH|OPTIONS) [^\s]+)""",
     """Originator@6876[^\]]+\]\s*({additional_info}[^\}\}]+?)\s*$"""
     """GetUserInfoInternal\s*\(?(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))\s*,\s\w+\)"""
-    """subject=\{Name:\s({user}[\w\-\.]+\$?);\sDomain:({domain}[^\
+    """subject=\{Name:\s({user}[\w\-\.]+\$?);\sDomain:({domain}[^\},]+)"""
+    """Auth\]: User\s*(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))\s*""""
+  ]
+
 
 }
 ```

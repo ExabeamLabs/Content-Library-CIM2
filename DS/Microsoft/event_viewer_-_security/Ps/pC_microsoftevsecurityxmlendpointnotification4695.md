@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4695
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>4695</EventID>""", """Unprotection of auditable protected data was attempted.""" ]
+  Conditions = [ """<EventID>4695</EventID>""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<Computer>({host}[^<]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

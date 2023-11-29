@@ -11,6 +11,27 @@ Name = amazon-awscloudtrail-json-group-member-add-addusertogroup
   """"+requestParameters.+?groupName\\?":\s*\\?"({group_name}[^"]+?)\\?"""",
   """"+requestParameters.+?userName\\?":\s*\\?"({identity}[^"]+?)\\?"""",
   ]
+},  
+
+{
+  Name = amazon-awscloudtrail-json-endpoint-create-runinstances
+  Vendor = Amazon
+  Product = AWS CloudTrail
+  ParserVersion = "v1.0.0"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """AwsApiCall""", """"eventName":"RunInstances"""" ] 
+  Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
+  """"+requestParameters.+?imageId\\?":\s*\\?"({source_resource}[^"]+?)\\?"""",
+  """"+requestParameters.+?keyName\\?":\s*\\?"({key_name}[^"]+?)\\?"""",
+  """"+requestParameters.+?instanceType\\?":\s*\\?"({instance_type}[^"]+?)\\?"""",
+  """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
+  """"+responseElements.+?instanceId\\?":\s*\\?"({resource_id}[^"]+?)\\?"""",
+  """"+responseElements.+?privateDnsName\\?":\s*\\?"({new_host}[^"]+?)\\?"""",
+  """"+responseElements.+?availabilityZone\\?":\s*\\?"({availabilty_zone}[^"]+?)\\?"""",
+  """"+responseElements.+?privateIpAddress\\?":\s*\\?"({new_ip}[^"]+?)\\?"""",
+  """"+responseElements.+?groupName\\?":\s*\\?"({security_group}[^"]+?)\\?"""",
+  ]
+  DupFields = ["result->failure_code"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -22,7 +43,7 @@ aws-cloudtrail-json = {
       """"userIdentity":\{("[^,]+,)*"accountId\\?"+\s*:\s*\\?"+?({aws_account}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"principalId\\?"+\s*:\s*\\?"+?({principal_id}[^"]+?)\\?"+\s*[,\]\}]""",
       """"userIdentity":\{("[^,]+,)*"attributes":\{("[^,]+,)*"mfaAuthenticated"\\?:\s*\\?"({mfa}[^"]+?)\\?"""",
-      """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({assumed_role_arn}[^"]+)\\?""""
+      """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({role_arn}[^"]+)\\?""""
       # """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z?)"+\s*[,\]\}]""",
       """"eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ?))"+\s*[,\]\}]""",
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"+\s*[,\]\}]""",
@@ -37,8 +58,8 @@ aws-cloudtrail-json = {
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
-      """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
-      """"credentials":\{"accessKeyId":"({accessKeyId}[^"]+?)\\?"""",
+      """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({role_id}[^"]+?)\\?"""",
+      """"credentials":\{"accessKeyId":"({key_id}[^"]+?)\\?"""",
       #AWS CloudTrail user regexes
       """\Wsuser=[^=]*?(({email_address}[^@=\s\/:]+@[^=\.\s\/:]+\.[^\s=\/:]+?)|({user}[\w\.\-]{1,40}\$?)(@[^=]+?)?)(\s+\w+=|\s*$)""",
       """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({email_address}[^"@]+@[^"\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)\\?"""",

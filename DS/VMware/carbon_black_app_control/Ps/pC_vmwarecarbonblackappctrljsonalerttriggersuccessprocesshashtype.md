@@ -5,10 +5,10 @@ Name = vmware-carbonblackappctrl-json-alert-trigger-success-processhashtype
   ParserVersion = v1.0.0
   Vendor = VMware
   Product = Carbon Black App Control
-  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy HH:mm:ss a","M/dd/yyyy hh:mm:ss a"]
   Conditions = [ """"Bit9Server"""", """"ProcessHashType"""" ]
   Fields = [
-    """Timestamp":\s+"({time}[^"]+)""",
+    """"Timestamp":\s*"({time}\d{1,2}\/\d{2}\/\d{4}\s\d{2}:\d{2}:\d{2}\s(am|AM|pm|PM))""",
     """Bit9Server":\s+"({host}[^"]+)""",
     """EventType":\s+"({alert_type}[^"]+)""",
     """EventSubType":\s+"({alert_name}[^"]+)""",

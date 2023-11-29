@@ -46,7 +46,7 @@ cef-netskope-activity = {
     """"action":\s*"({action}[^"]+)"""
     """"referer":\s*"({referrer}[^"]+)""""
     """"useragent":"({user_agent}[^"]+)""""
-  """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """"activity":\s*"File\w+"[^\}]*?"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
   ]
   DupFields = [ "file_type->mime" 

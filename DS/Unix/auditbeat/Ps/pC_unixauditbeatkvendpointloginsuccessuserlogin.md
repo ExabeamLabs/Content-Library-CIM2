@@ -18,7 +18,7 @@ Fields = [
 """"action":"({event_name}[^"]+)""""
 """"outcome":"({result}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
-""""domain":"({domain}[^"]+)""""
+""""domain":"(({user}[\w\.\-]{1,40}\$?)@)?({domain}[^"]+)""""
 ]
 DupFields = [
 "host->dest_host"

@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-activity-success-4911
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4911</EventID>""", """Resource attributes of the object were changed""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """<EventID>4911</EventID>""", """<Data Name =""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",

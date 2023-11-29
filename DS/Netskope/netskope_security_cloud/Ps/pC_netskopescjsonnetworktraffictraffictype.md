@@ -6,10 +6,10 @@ Name = netskope-sc-json-network-traffic-traffictype
   Vendor = "Netskope"
   Product = "Netskope Security Cloud"
   TimeFormat = "epoch_sec"
-  Conditions = [ 
+  Conditions = [
 """"bypass_traffic":"""
 """"traffic_type":"""
-""""userkey":""" 
+""""userkey":"""
 ]
   Fields = [
     """\"+bypass_reason\"+:\s*\"+({action}[^\",]+)""",

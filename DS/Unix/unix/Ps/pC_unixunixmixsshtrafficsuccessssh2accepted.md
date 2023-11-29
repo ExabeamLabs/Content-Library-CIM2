@@ -4,7 +4,7 @@
 Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
   Vendor = "Unix"
   Product = "Unix"
-  TimeFormat = "yyyy/MM/dd HH:mm:ss"
+  TimeFormat = ["yyyy/MM/dd HH:mm:ss","yyyy MMM dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [
     """ ssh2"""
     """Accepted """
@@ -33,6 +33,7 @@ Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
     """\d\d\d\d\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\w+>\s+<(::ffff:)?({dest_host}[\w\-.]+)"""
     """\"computer_name\":\"(::ffff:)?({host}({dest_host}[\w\-.]+))\"""",
     """\sfrom[^:]+?\sport\s({src_port}\d+)"""
+    """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""""
   ]
   DupFields = [
     "dest_host->original_dest_host"

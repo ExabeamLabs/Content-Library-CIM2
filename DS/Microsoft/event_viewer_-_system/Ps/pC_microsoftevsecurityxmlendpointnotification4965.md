@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-endpoint-notification-4965
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
-  Conditions = [ """<EventID>4965<""", """IPsec received a packet from a remote computer""", """Audit Failure""" ]
+  Conditions = [ """<EventID>4965<""", """<Task>IPsec Driver""", """Audit Failure""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Data Name\\*='RemoteAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?<""",
     """({result}Audit Failure)""",

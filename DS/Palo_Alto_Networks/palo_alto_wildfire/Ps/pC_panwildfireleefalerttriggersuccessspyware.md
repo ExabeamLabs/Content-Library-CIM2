@@ -11,7 +11,7 @@ Name = pan-wildfire-leef-alert-trigger-success-spyware
 leef-pan-alert = {
   Vendor = Palo Alto Networks
   Product = Palo Alto WildFire
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
   Fields = [
     """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
     """({host}[\w\.-]+)(\s+|,"+)LEEF:""",

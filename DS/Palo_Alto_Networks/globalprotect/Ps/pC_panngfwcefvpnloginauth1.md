@@ -8,7 +8,7 @@ Name = pan-ngfw-cef-vpn-login-auth-1
 paloalto-globalprotect-template = {
     Vendor = Palo Alto Networks
     Product = GlobalProtect
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
     Fields = [
       """\s({host}[\w\-.]+?)\sCEF:""",
       """PanOSLogTimeStamp=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)""",

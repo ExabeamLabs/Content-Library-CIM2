@@ -4,7 +4,7 @@
 Name = "blackberry-protect-kv-alert-trigger-success-scriptcontrol"
 Vendor = "BlackBerry"
 Product = "BlackBerry Protect"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS","yyyy-MM-dd HH:mm:ss.SSS"]
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
 Conditions = [
 """CylancePROTECT"""
 """Event Type: ScriptControl"""

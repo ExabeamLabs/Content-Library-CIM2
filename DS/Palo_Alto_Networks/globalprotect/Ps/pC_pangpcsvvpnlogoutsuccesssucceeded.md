@@ -5,7 +5,7 @@ Name = pan-gp-csv-vpn-logout-success-succeeded
   ParserVersion = v1.0.0
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
   Conditions = [
 """globalprotect""",
 """user logout succeeded""",

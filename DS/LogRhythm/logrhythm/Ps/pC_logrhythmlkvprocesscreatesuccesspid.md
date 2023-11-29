@@ -4,7 +4,7 @@
 Name = "logrhythm-l-kv-process-create-success-pid"
 Vendor = "LogRhythm"
 Product = "LogRhythm"
-TimeFormat = ["MM/dd/yyyy HH:mm:ss","M/dd/yyyy HH:mm:ss"]
+TimeFormat = "MM/dd/yyyy HH:mm:ss"
 Conditions = [
 """ TIMESTAMP="""
 """ PNAME="""

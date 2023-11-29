@@ -21,8 +21,8 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"event_type_name":"({operation}[^"]+)"""",
     """"event_type_description":"({additional_info}[^"]+)"""",
     """"user_id":({user_id}\d+)""",
-    """suser=(({user_id}\d+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
-    """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """suser=(({user_id}\d+)|({email_address}[^@\s]+@[^\s\.]+\.[^\s]+))""",
+    """duser=({dest_user}[^@\s]+@[^\s\.]+\.[^\s]+)"""
   ]
   DupFields = ["user_id->account"]
 

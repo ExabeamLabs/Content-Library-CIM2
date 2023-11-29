@@ -9,7 +9,6 @@ Conditions = [
 """<EventID>4622<"""
 """<Provider Name"""
 """Microsoft-Windows-Security-Auditing"""
-"""A security package has been loaded by the Local Security Authority"""
 ]
 Fields = [
 """({event_code}4622)"""

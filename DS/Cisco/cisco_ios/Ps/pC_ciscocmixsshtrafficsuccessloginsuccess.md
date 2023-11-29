@@ -4,7 +4,7 @@
 Name = "cisco-c-mix-ssh-traffic-success-loginsuccess"
 Vendor = "Cisco"
 Product = "Cisco IOS"
-TimeFormat = ["HH:mm:ss Z EEE MMM dd yyyy","HH:mm:ss 'UTC' EEE MMM dd yyyy"]
+TimeFormat = ["HH:mm:ss Z EEE MMM dd yyyy"]
 Conditions = [
   """-LOGIN_SUCCESS:"""
 ]

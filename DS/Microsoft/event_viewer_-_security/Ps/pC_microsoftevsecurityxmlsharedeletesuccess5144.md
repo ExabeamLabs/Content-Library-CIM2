@@ -6,7 +6,7 @@ Name = "microsoft-evsecurity-xml-share-delete-success-5144"
   Product = "Event Viewer - Security"
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions = [ """<EventID>5144</EventID>""", """Microsoft-Windows-Security-Auditing""", """<Data Name""", """A network share object was deleted""" ]
+  Conditions = [ """<EventID>5144</EventID>""", """Microsoft-Windows-Security-Auditing""", """<Data Name""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({event_name}A network share object was deleted)""",

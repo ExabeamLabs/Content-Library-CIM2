@@ -4,7 +4,7 @@
 Name = pan-tesm-mix-alert-trigger-success-trapsagent
   Vendor = Palo Alto Networks
   Product = Traps Endpoint Security Manager
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","MMM dd yyyy HH:mm:ss"]
   Conditions = [ """|Palo Alto Networks|Traps Agent|""","""Prevention Key:""" ]
   Fields = [
     """\d\d:\d\d:\d\d ({host}[^\s]+)\sCEF""",
