@@ -110,9 +110,9 @@ Use Case: Brute Force Attack
 | [RSA Authentication Manager](../DS/RSA/rsa_authentication_manager/ds_rsa_rsa_authentication_manager.md) | T1110 - Brute Force<br> | [<ul><li>1 Rules</li></ul>](../DS/RSA/rsa_authentication_manager/RM/r_m_rsa_rsa_authentication_manager_Brute_Force_Attack.md) |
 |                             [SecurID](../DS/RSA/securid/ds_rsa_securid.md)                              | T1110 - Brute Force<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/RSA/securid/RM/r_m_rsa_securid_Brute_Force_Attack.md)             |
 ### Vendor: SAP
-|              Product               | MITRE ATT&CK® TTP                                                                                        | Content                                                                          |
-|:----------------------------------:| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [SAP](../DS/SAP/sap/ds_sap_sap.md) | T1021.001 - Remote Services: Remote Desktop Protocol<br>T1110 - Brute Force<br>T1110.003 - T1110.003<br> | [<ul><li>10 Rules</li></ul>](../DS/SAP/sap/RM/r_m_sap_sap_Brute_Force_Attack.md) |
+|              Product               | MITRE ATT&CK® TTP       | Content                                                                         |
+|:----------------------------------:| ----------------------- | ------------------------------------------------------------------------------- |
+| [SAP](../DS/SAP/sap/ds_sap_sap.md) | T1110 - Brute Force<br> | [<ul><li>1 Rules</li></ul>](../DS/SAP/sap/RM/r_m_sap_sap_Brute_Force_Attack.md) |
 ### Vendor: SecureNet
 |                             Product                              | MITRE ATT&CK® TTP       | Content                                                                                                                           |
 |:----------------------------------------------------------------:| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -134,3 +134,7 @@ Use Case: Brute Force Attack
 |                 Product                 | MITRE ATT&CK® TTP                                                                                        | Content                                                                             |
 |:---------------------------------------:| -------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Zeek](../DS/Zeek/zeek/ds_zeek_zeek.md) | T1021.001 - Remote Services: Remote Desktop Protocol<br>T1110 - Brute Force<br>T1110.003 - T1110.003<br> | [<ul><li>9 Rules</li></ul>](../DS/Zeek/zeek/RM/r_m_zeek_zeek_Brute_Force_Attack.md) |
+### Vendor: 
+|       Product       | MITRE ATT&CK® TTP                                                                                        | Content                                                             |
+|:-------------------:| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| [](../DS///ds__.md) | T1021.001 - Remote Services: Remote Desktop Protocol<br>T1110 - Brute Force<br>T1110.003 - T1110.003<br> | [<ul><li>9 Rules</li></ul>](../DS///RM/r_m___Brute_Force_Attack.md) |

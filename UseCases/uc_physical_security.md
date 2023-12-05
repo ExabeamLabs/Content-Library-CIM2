@@ -80,10 +80,10 @@ Use Case: Physical Security
 |                                            Product                                             | MITRE ATT&CK® TTP                    | Content                                                                                                                                                    |
 |:----------------------------------------------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [GlobalProtect](../DS/Palo_Alto_Networks/globalprotect/ds_palo_alto_networks_globalprotect.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Palo_Alto_Networks/globalprotect/RM/r_m_palo_alto_networks_globalprotect_Physical_Security.md) |
-### Vendor: RS2
-|                                  Product                                  | MITRE ATT&CK® TTP          | Content                                                                                                                            |
-|:-------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| [RS2 Technologies](../DS/RS2/rs2_technologies/ds_rs2_rs2_technologies.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/RS2/rs2_technologies/RM/r_m_rs2_rs2_technologies_Physical_Security.md) |
+### Vendor: RS2 Technologies
+|                                               Product                                               | MITRE ATT&CK® TTP          | Content                                                                                                                                                      |
+|:---------------------------------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [RS2 Technologies](../DS/RS2_Technologies/rs2_technologies/ds_rs2_technologies_rs2_technologies.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/RS2_Technologies/rs2_technologies/RM/r_m_rs2_technologies_rs2_technologies_Physical_Security.md) |
 ### Vendor: SecureNet
 |                             Product                              | MITRE ATT&CK® TTP                    | Content                                                                                                                          |
 |:----------------------------------------------------------------:| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,6 +108,7 @@ Use Case: Physical Security
 |                        Product                        | MITRE ATT&CK® TTP          | Content                                                                                                                |
 |:-----------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | [Megaflex](../DS/Visma/megaflex/ds_visma_megaflex.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Visma/megaflex/RM/r_m_visma_megaflex_Physical_Security.md) |
+### Vendor: 
 ### Vendor: xPLAN
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |
 |:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
