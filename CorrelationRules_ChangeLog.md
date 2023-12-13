@@ -1,7 +1,7 @@
  Security Content c2304.1_63.6 Changelog
 ========================================
 
-This Changelog document  includes updates to Correlation Rules  from content package c2206.2_97_63.5 to c2304.1_63.6.
+This Changelog document  includes updates to Correlation Rules  from content package c2206.2_63_4_adap to c2304.1_63.6.
 * This log lists updates to the available correlation rules. It includes the name of the rule that changed, the date of the change, and a description of the modification.
 
 Correlation Rules
