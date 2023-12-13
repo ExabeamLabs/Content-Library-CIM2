@@ -1,4 +1,4 @@
- Security Content c2304.1_63.6 Release Notes
+ _Security Content c2304.1_63.6 Release Notes
 ============================================
 
 These Release Notes document security content updates from content package c2206.2_97_63.5 to c2304.1_63.6.
@@ -23,595 +23,595 @@ Parsers
 * [Deprecated](#Deprecated-Parsers)
 
 #### New Parsers
-* [a-avi-str-endpoint-notification-success-centrallicenserefreshsuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-centrallicenserefreshsuccess)
+* [a-avi-str-endpoint-notification-success-centrallicenserefreshsuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-centrallicenserefreshsuccess)
 
-* [a-avi-str-endpoint-notification-success-controllerservicefailure](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-controllerservicefailure)
+* [a-avi-str-endpoint-notification-success-controllerservicefailure](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-controllerservicefailure)
 
-* [a-avi-str-endpoint-notification-success-ipreputationdbsyncfailure](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-ipreputationdbsyncfailure)
+* [a-avi-str-endpoint-notification-success-ipreputationdbsyncfailure](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-ipreputationdbsyncfailure)
 
-* [a-avi-str-endpoint-notification-success-ipreputationdbsyncsuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-ipreputationdbsyncsuccess)
+* [a-avi-str-endpoint-notification-success-ipreputationdbsyncsuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-ipreputationdbsyncsuccess)
 
-* [a-avi-str-endpoint-notification-success-licenseadditionnotif](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-licenseadditionnotif)
+* [a-avi-str-endpoint-notification-success-licenseadditionnotif](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-licenseadditionnotif)
 
-* [a-avi-str-endpoint-notification-success-sediscontinuoustimechange](https://github.com/ExabeamLabs/Content-Doc/search?q=a-avi-str-endpoint-notification-success-sediscontinuoustimechange)
+* [a-avi-str-endpoint-notification-success-sediscontinuoustimechange](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=a-avi-str-endpoint-notification-success-sediscontinuoustimechange)
 
-* [absolute-siemconnector-cef-app-activity-success-devicelocationupdated](https://github.com/ExabeamLabs/Content-Doc/search?q=absolute-siemconnector-cef-app-activity-success-devicelocationupdated)
+* [absolute-siemconnector-cef-app-activity-success-devicelocationupdated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=absolute-siemconnector-cef-app-activity-success-devicelocationupdated)
 
-* [absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated](https://github.com/ExabeamLabs/Content-Doc/search?q=absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated)
+* [absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=absolute-siemconnector-cef-app-activity-success-deviceuserinformationupdated)
 
-* [absolute-siemconnector-cef-app-login-success-loggedin](https://github.com/ExabeamLabs/Content-Doc/search?q=absolute-siemconnector-cef-app-login-success-loggedin)
+* [absolute-siemconnector-cef-app-login-success-loggedin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=absolute-siemconnector-cef-app-login-success-loggedin)
 
-* [absolute-siemconnector-kv-app-notification-success-unprotected](https://github.com/ExabeamLabs/Content-Doc/search?q=absolute-siemconnector-kv-app-notification-success-unprotected)
+* [absolute-siemconnector-kv-app-notification-success-unprotected](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=absolute-siemconnector-kv-app-notification-success-unprotected)
 
-* [accellion-kw-json-app-activity-success-networksettings](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-json-app-activity-success-networksettings)
+* [accellion-kw-json-app-activity-success-networksettings](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-json-app-activity-success-networksettings)
 
-* [accellion-kw-kv-app-activity-success-createddraft](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-createddraft)
+* [accellion-kw-kv-app-activity-success-createddraft](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-createddraft)
 
-* [accellion-kw-kv-app-activity-success-draftchanged](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-draftchanged)
+* [accellion-kw-kv-app-activity-success-draftchanged](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-draftchanged)
 
-* [accellion-kw-kv-app-activity-success-requestedafile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-requestedafile)
+* [accellion-kw-kv-app-activity-success-requestedafile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-requestedafile)
 
-* [accellion-kw-kv-app-activity-success-userdeleted](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-userdeleted)
+* [accellion-kw-kv-app-activity-success-userdeleted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-userdeleted)
 
-* [accellion-kw-kv-app-activity-success-userprofile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-userprofile)
+* [accellion-kw-kv-app-activity-success-userprofile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-userprofile)
 
-* [accellion-kw-kv-app-activity-success-viewedemailsubject](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-activity-success-viewedemailsubject)
+* [accellion-kw-kv-app-activity-success-viewedemailsubject](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-activity-success-viewedemailsubject)
 
-* [accellion-kw-kv-app-login-fail-userlogin](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-login-fail-userlogin)
+* [accellion-kw-kv-app-login-fail-userlogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-login-fail-userlogin)
 
-* [accellion-kw-kv-app-logout-success-userloggedout](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-app-logout-success-userloggedout)
+* [accellion-kw-kv-app-logout-success-userloggedout](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-app-logout-success-userloggedout)
 
-* [accellion-kw-kv-email-send-success-draftcreated](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-email-send-success-draftcreated)
+* [accellion-kw-kv-email-send-success-draftcreated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-email-send-success-draftcreated)
 
-* [accellion-kw-kv-email-send-success-withfiles](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-email-send-success-withfiles)
+* [accellion-kw-kv-email-send-success-withfiles](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-email-send-success-withfiles)
 
-* [accellion-kw-kv-file-delete-success-deletedfolder](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-delete-success-deletedfolder)
+* [accellion-kw-kv-file-delete-success-deletedfolder](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-delete-success-deletedfolder)
 
-* [accellion-kw-kv-file-download-success-downloaded](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-download-success-downloaded)
+* [accellion-kw-kv-file-download-success-downloaded](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-download-success-downloaded)
 
-* [accellion-kw-kv-file-download-success-downloadedarchive](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-download-success-downloadedarchive)
+* [accellion-kw-kv-file-download-success-downloadedarchive](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-download-success-downloadedarchive)
 
-* [accellion-kw-kv-file-download-success-downloadedfile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-download-success-downloadedfile)
+* [accellion-kw-kv-file-download-success-downloadedfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-download-success-downloadedfile)
 
-* [accellion-kw-kv-file-permission-modify-success-addednewpermission](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-permission-modify-success-addednewpermission)
+* [accellion-kw-kv-file-permission-modify-success-addednewpermission](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-permission-modify-success-addednewpermission)
 
-* [accellion-kw-kv-file-read-success-viewedfile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-read-success-viewedfile)
+* [accellion-kw-kv-file-read-success-viewedfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-read-success-viewedfile)
 
-* [accellion-kw-kv-file-read-success-viewfile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-read-success-viewfile)
+* [accellion-kw-kv-file-read-success-viewfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-read-success-viewfile)
 
-* [accellion-kw-kv-file-upload-success-uploadedfile](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-upload-success-uploadedfile)
+* [accellion-kw-kv-file-upload-success-uploadedfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-upload-success-uploadedfile)
 
-* [accellion-kw-kv-file-write-success-createdfolder](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-file-write-success-createdfolder)
+* [accellion-kw-kv-file-write-success-createdfolder](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-file-write-success-createdfolder)
 
-* [accellion-kw-kv-group-member-add-adduser](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-group-member-add-adduser)
+* [accellion-kw-kv-group-member-add-adduser](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-group-member-add-adduser)
 
-* [accellion-kw-kv-user-lock-success-useraccountlocked](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-user-lock-success-useraccountlocked)
+* [accellion-kw-kv-user-lock-success-useraccountlocked](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-user-lock-success-useraccountlocked)
 
-* [accellion-kw-kv-user-password-modify-success-resetpassword](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-user-password-modify-success-resetpassword)
+* [accellion-kw-kv-user-password-modify-success-resetpassword](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-user-password-modify-success-resetpassword)
 
-* [accellion-kw-kv-user-unlock-success-reactivateuser](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-user-unlock-success-reactivateuser)
+* [accellion-kw-kv-user-unlock-success-reactivateuser](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-user-unlock-success-reactivateuser)
 
-* [accellion-kw-kv-user-unlock-success-useraccountunlocked](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-kv-user-unlock-success-useraccountunlocked)
+* [accellion-kw-kv-user-unlock-success-useraccountunlocked](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-kv-user-unlock-success-useraccountunlocked)
 
-* [accellion-kw-mix-app-login-success-loggedin](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-mix-app-login-success-loggedin)
+* [accellion-kw-mix-app-login-success-loggedin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-mix-app-login-success-loggedin)
 
-* [accellion-kw-str-app-login-success-sessionstarted](https://github.com/ExabeamLabs/Content-Doc/search?q=accellion-kw-str-app-login-success-sessionstarted)
+* [accellion-kw-str-app-login-success-sessionstarted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=accellion-kw-str-app-login-success-sessionstarted)
 
-* [adminbyrequest-a-json-user-privilege-use-success-adminsession](https://github.com/ExabeamLabs/Content-Doc/search?q=adminbyrequest-a-json-user-privilege-use-success-adminsession)
+* [adminbyrequest-a-json-user-privilege-use-success-adminsession](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=adminbyrequest-a-json-user-privilege-use-success-adminsession)
 
-* [adminbyrequest-a-json-user-privilege-use-success-runasadmin](https://github.com/ExabeamLabs/Content-Doc/search?q=adminbyrequest-a-json-user-privilege-use-success-runasadmin)
+* [adminbyrequest-a-json-user-privilege-use-success-runasadmin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=adminbyrequest-a-json-user-privilege-use-success-runasadmin)
 
-* [airlock-allowlisting-json-app-activity-success-fileactivity](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-allowlisting-json-app-activity-success-fileactivity)
+* [airlock-allowlisting-json-app-activity-success-fileactivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-allowlisting-json-app-activity-success-fileactivity)
 
-* [airlock-allowlisting-json-app-activity-success-serveractivity](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-allowlisting-json-app-activity-success-serveractivity)
+* [airlock-allowlisting-json-app-activity-success-serveractivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-allowlisting-json-app-activity-success-serveractivity)
 
-* [airlock-allowlisting-str-app-activity-success-fileactivity](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-allowlisting-str-app-activity-success-fileactivity)
+* [airlock-allowlisting-str-app-activity-success-fileactivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-allowlisting-str-app-activity-success-fileactivity)
 
-* [airlock-allowlisting-str-app-activity-success-serveractivity](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-allowlisting-str-app-activity-success-serveractivity)
+* [airlock-allowlisting-str-app-activity-success-serveractivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-allowlisting-str-app-activity-success-serveractivity)
 
-* [airlock-sah-json-network-traffic-connectiontrace](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-json-network-traffic-connectiontrace)
+* [airlock-sah-json-network-traffic-connectiontrace](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-json-network-traffic-connectiontrace)
 
-* [airlock-sah-json-network-traffic-networktraffic](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-json-network-traffic-networktraffic)
+* [airlock-sah-json-network-traffic-networktraffic](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-json-network-traffic-networktraffic)
 
-* [airlock-sah-kv-app-login-fail-loginfailed](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-app-login-fail-loginfailed)
+* [airlock-sah-kv-app-login-fail-loginfailed](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-app-login-fail-loginfailed)
 
-* [airlock-sah-kv-app-login-success-loginsuccessful](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-app-login-success-loginsuccessful)
+* [airlock-sah-kv-app-login-success-loginsuccessful](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-app-login-success-loginsuccessful)
 
-* [airlock-sah-kv-file-delete-success-deletefile](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-file-delete-success-deletefile)
+* [airlock-sah-kv-file-delete-success-deletefile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-file-delete-success-deletefile)
 
-* [airlock-sah-kv-file-download-success-download](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-file-download-success-download)
+* [airlock-sah-kv-file-download-success-download](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-file-download-success-download)
 
-* [airlock-sah-kv-file-upload-success-upload](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-file-upload-success-upload)
+* [airlock-sah-kv-file-upload-success-upload](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-file-upload-success-upload)
 
-* [airlock-sah-kv-file-write-success-createfolder](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-file-write-success-createfolder)
+* [airlock-sah-kv-file-write-success-createfolder](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-file-write-success-createfolder)
 
-* [airlock-sah-kv-file-write-success-renamefolder](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-file-write-success-renamefolder)
+* [airlock-sah-kv-file-write-success-renamefolder](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-file-write-success-renamefolder)
 
-* [airlock-sah-kv-network-traffic-success-connectionsuccessful](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-kv-network-traffic-success-connectionsuccessful)
+* [airlock-sah-kv-network-traffic-success-connectionsuccessful](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-kv-network-traffic-success-connectionsuccessful)
 
-* [airlock-sah-str-app-notification-webrequests](https://github.com/ExabeamLabs/Content-Doc/search?q=airlock-sah-str-app-notification-webrequests)
+* [airlock-sah-str-app-notification-webrequests](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=airlock-sah-str-app-notification-webrequests)
 
-* [akamai-ca-json-http-session-webactivity](https://github.com/ExabeamLabs/Content-Doc/search?q=akamai-ca-json-http-session-webactivity)
+* [akamai-ca-json-http-session-webactivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=akamai-ca-json-http-session-webactivity)
 
-* [akamai-siem-cef-alert-trigger-success-alerttriggerd](https://github.com/ExabeamLabs/Content-Doc/search?q=akamai-siem-cef-alert-trigger-success-alerttriggerd)
+* [akamai-siem-cef-alert-trigger-success-alerttriggerd](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=akamai-siem-cef-alert-trigger-success-alerttriggerd)
 
-* [akamai-siem-cef-network-notification-success-rule](https://github.com/ExabeamLabs/Content-Doc/search?q=akamai-siem-cef-network-notification-success-rule)
+* [akamai-siem-cef-network-notification-success-rule](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=akamai-siem-cef-network-notification-success-rule)
 
-* [algosec-fa-cef-app-notification-msg](https://github.com/ExabeamLabs/Content-Doc/search?q=algosec-fa-cef-app-notification-msg)
+* [algosec-fa-cef-app-notification-msg](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=algosec-fa-cef-app-notification-msg)
 
-* [amazon-ards-json-app-notification-success-configurationitemchangenotification](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-ards-json-app-notification-success-configurationitemchangenotification)
+* [amazon-ards-json-app-notification-success-configurationitemchangenotification](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-ards-json-app-notification-success-configurationitemchangenotification)
 
-* [amazon-ards-json-app-notification-success-configurationitemstatus](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-ards-json-app-notification-success-configurationitemstatus)
+* [amazon-ards-json-app-notification-success-configurationitemstatus](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-ards-json-app-notification-success-configurationitemstatus)
 
-* [amazon-ards-json-database-success-databaseactivity](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-ards-json-database-success-databaseactivity)
+* [amazon-ards-json-database-success-databaseactivity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-ards-json-database-success-databaseactivity)
 
-* [amazon-ards-sk4-database-login-success-connectionauthorized](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-ards-sk4-database-login-success-connectionauthorized)
+* [amazon-ards-sk4-database-login-success-connectionauthorized](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-ards-sk4-database-login-success-connectionauthorized)
 
-* [amazon-awscloudtrail-cef-app-activity-assumedrole](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-cef-app-activity-assumedrole)
+* [amazon-awscloudtrail-cef-app-activity-assumedrole](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-cef-app-activity-assumedrole)
 
-* [amazon-awscloudtrail-cef-app-activity-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-cef-app-activity-awsapicall)
+* [amazon-awscloudtrail-cef-app-activity-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-cef-app-activity-awsapicall)
 
-* [amazon-awscloudtrail-json-app-activity-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-awsapicall)
+* [amazon-awscloudtrail-json-app-activity-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-awsapicall)
 
-* [amazon-awscloudtrail-json-app-activity-fail-errorget](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-fail-errorget)
+* [amazon-awscloudtrail-json-app-activity-fail-errorget](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-fail-errorget)
 
-* [amazon-awscloudtrail-json-app-activity-getscreenshot](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-getscreenshot)
+* [amazon-awscloudtrail-json-app-activity-getscreenshot](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-getscreenshot)
 
-* [amazon-awscloudtrail-json-app-activity-loginprofile](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-loginprofile)
+* [amazon-awscloudtrail-json-app-activity-loginprofile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-loginprofile)
 
-* [amazon-awscloudtrail-json-app-activity-sendcommand](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-sendcommand)
+* [amazon-awscloudtrail-json-app-activity-sendcommand](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-sendcommand)
 
-* [amazon-awscloudtrail-json-app-activity-success-cloudtraildigest](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-success-cloudtraildigest)
+* [amazon-awscloudtrail-json-app-activity-success-cloudtraildigest](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-success-cloudtraildigest)
 
-* [amazon-awscloudtrail-json-app-activity-success-createlogstream](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-success-createlogstream)
+* [amazon-awscloudtrail-json-app-activity-success-createlogstream](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-success-createlogstream)
 
-* [amazon-awscloudtrail-json-app-activity-success-getanalysis](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-success-getanalysis)
+* [amazon-awscloudtrail-json-app-activity-success-getanalysis](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-success-getanalysis)
 
-* [amazon-awscloudtrail-json-app-activity-success-getrolecredentials](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-success-getrolecredentials)
+* [amazon-awscloudtrail-json-app-activity-success-getrolecredentials](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-success-getrolecredentials)
 
-* [amazon-awscloudtrail-json-app-activity-success-userinfo](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-success-userinfo)
+* [amazon-awscloudtrail-json-app-activity-success-userinfo](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-success-userinfo)
 
-* [amazon-awscloudtrail-json-app-activity-updateprofile](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-activity-updateprofile)
+* [amazon-awscloudtrail-json-app-activity-updateprofile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-activity-updateprofile)
 
-* [amazon-awscloudtrail-json-app-authentication-success-cognitoauth](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-authentication-success-cognitoauth)
+* [amazon-awscloudtrail-json-app-authentication-success-cognitoauth](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-authentication-success-cognitoauth)
 
-* [amazon-awscloudtrail-json-app-authentication-success-newclientconn](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-authentication-success-newclientconn)
+* [amazon-awscloudtrail-json-app-authentication-success-newclientconn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-authentication-success-newclientconn)
 
-* [amazon-awscloudtrail-json-app-authentication-success-oauth2auth](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-authentication-success-oauth2auth)
+* [amazon-awscloudtrail-json-app-authentication-success-oauth2auth](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-authentication-success-oauth2auth)
 
-* [amazon-awscloudtrail-json-app-authentication-success-saml2response](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-authentication-success-saml2response)
+* [amazon-awscloudtrail-json-app-authentication-success-saml2response](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-authentication-success-saml2response)
 
-* [amazon-awscloudtrail-json-app-authentication-success-userauth](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-authentication-success-userauth)
+* [amazon-awscloudtrail-json-app-authentication-success-userauth](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-authentication-success-userauth)
 
-* [amazon-awscloudtrail-json-app-logout-success-logout](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-logout-success-logout)
+* [amazon-awscloudtrail-json-app-logout-success-logout](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-logout-success-logout)
 
-* [amazon-awscloudtrail-json-app-notification-success-digests3object](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-notification-success-digests3object)
+* [amazon-awscloudtrail-json-app-notification-success-digests3object](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-notification-success-digests3object)
 
-* [amazon-awscloudtrail-json-app-success-activityauthentication](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-app-success-activityauthentication)
+* [amazon-awscloudtrail-json-app-success-activityauthentication](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-app-success-activityauthentication)
 
-* [amazon-awscloudtrail-json-aws-login-consolelogin](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-aws-login-consolelogin)
+* [amazon-awscloudtrail-json-aws-login-consolelogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-aws-login-consolelogin)
 
-* [amazon-awscloudtrail-json-bucket-accessblock-modify-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-accessblock-modify-awsapicall)
+* [amazon-awscloudtrail-json-bucket-accessblock-modify-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-accessblock-modify-awsapicall)
 
-* [amazon-awscloudtrail-json-bucket-create-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-create-awsapicall)
+* [amazon-awscloudtrail-json-bucket-create-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-create-awsapicall)
 
-* [amazon-awscloudtrail-json-bucket-list-success-listbucket](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-list-success-listbucket)
+* [amazon-awscloudtrail-json-bucket-list-success-listbucket](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-list-success-listbucket)
 
-* [amazon-awscloudtrail-json-bucket-permission-modify-putbucketacl](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putbucketacl)
+* [amazon-awscloudtrail-json-bucket-permission-modify-putbucketacl](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putbucketacl)
 
-* [amazon-awscloudtrail-json-bucket-permission-modify-putbucketcors](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putbucketcors)
+* [amazon-awscloudtrail-json-bucket-permission-modify-putbucketcors](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putbucketcors)
 
-* [amazon-awscloudtrail-json-bucket-permission-modify-putobjectacl](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putobjectacl)
+* [amazon-awscloudtrail-json-bucket-permission-modify-putobjectacl](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-permission-modify-putobjectacl)
 
-* [amazon-awscloudtrail-json-bucket-policy-modify-putbucketpolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-bucket-policy-modify-putbucketpolicy)
+* [amazon-awscloudtrail-json-bucket-policy-modify-putbucketpolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-bucket-policy-modify-putbucketpolicy)
 
-* [amazon-awscloudtrail-json-configuration-modify-success-putcomplianceitems](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-configuration-modify-success-putcomplianceitems)
+* [amazon-awscloudtrail-json-configuration-modify-success-putcomplianceitems](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-configuration-modify-success-putcomplianceitems)
 
-* [amazon-awscloudtrail-json-configuration-modify-success-putinventory](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-configuration-modify-success-putinventory)
+* [amazon-awscloudtrail-json-configuration-modify-success-putinventory](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-configuration-modify-success-putinventory)
 
-* [amazon-awscloudtrail-json-configuration-modify-success-updateinstanceassociationstatus](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-configuration-modify-success-updateinstanceassociationstatus)
+* [amazon-awscloudtrail-json-configuration-modify-success-updateinstanceassociationstatus](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-configuration-modify-success-updateinstanceassociationstatus)
 
-* [amazon-awscloudtrail-json-configuration-modify-success-updatestack](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-configuration-modify-success-updatestack)
+* [amazon-awscloudtrail-json-configuration-modify-success-updatestack](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-configuration-modify-success-updatestack)
 
-* [amazon-awscloudtrail-json-database-query-success-querydb](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-database-query-success-querydb)
+* [amazon-awscloudtrail-json-database-query-success-querydb](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-database-query-success-querydb)
 
-* [amazon-awscloudtrail-json-disk-attach-attachvolume](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-disk-attach-attachvolume)
+* [amazon-awscloudtrail-json-disk-attach-attachvolume](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-disk-attach-attachvolume)
 
-* [amazon-awscloudtrail-json-disk-create-createvolume](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-disk-create-createvolume)
+* [amazon-awscloudtrail-json-disk-create-createvolume](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-disk-create-createvolume)
 
-* [amazon-awscloudtrail-json-disk-create-success-snapcreated](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-disk-create-success-snapcreated)
+* [amazon-awscloudtrail-json-disk-create-success-snapcreated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-disk-create-success-snapcreated)
 
-* [amazon-awscloudtrail-json-disk-modify-modifyvolume](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-disk-modify-modifyvolume)
+* [amazon-awscloudtrail-json-disk-modify-modifyvolume](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-disk-modify-modifyvolume)
 
-* [amazon-awscloudtrail-json-endpoint-create-runinstances](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-endpoint-create-runinstances)
+* [amazon-awscloudtrail-json-endpoint-create-runinstances](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-endpoint-create-runinstances)
 
-* [amazon-awscloudtrail-json-endpoint-login-sendsshkey](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-endpoint-login-sendsshkey)
+* [amazon-awscloudtrail-json-endpoint-login-sendsshkey](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-endpoint-login-sendsshkey)
 
-* [amazon-awscloudtrail-json-endpoint-modify-instanceattribute](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-endpoint-modify-instanceattribute)
+* [amazon-awscloudtrail-json-endpoint-modify-instanceattribute](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-endpoint-modify-instanceattribute)
 
-* [amazon-awscloudtrail-json-endpoint-notification-success-awscloudtrailinsight](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-endpoint-notification-success-awscloudtrailinsight)
+* [amazon-awscloudtrail-json-endpoint-notification-success-awscloudtrailinsight](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-endpoint-notification-success-awscloudtrailinsight)
 
-* [amazon-awscloudtrail-json-file-copy-copyobject](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-file-copy-copyobject)
+* [amazon-awscloudtrail-json-file-copy-copyobject](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-file-copy-copyobject)
 
-* [amazon-awscloudtrail-json-file-read-getobject](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-file-read-getobject)
+* [amazon-awscloudtrail-json-file-read-getobject](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-file-read-getobject)
 
-* [amazon-awscloudtrail-json-file-write-putobject](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-file-write-putobject)
+* [amazon-awscloudtrail-json-file-write-putobject](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-file-write-putobject)
 
-* [amazon-awscloudtrail-json-file-write-success-objectcreated](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-file-write-success-objectcreated)
+* [amazon-awscloudtrail-json-file-write-success-objectcreated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-file-write-success-objectcreated)
 
-* [amazon-awscloudtrail-json-function-write-createfunction](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-function-write-createfunction)
+* [amazon-awscloudtrail-json-function-write-createfunction](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-function-write-createfunction)
 
-* [amazon-awscloudtrail-json-function-write-updateconfiguration](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-function-write-updateconfiguration)
+* [amazon-awscloudtrail-json-function-write-updateconfiguration](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-function-write-updateconfiguration)
 
-* [amazon-awscloudtrail-json-function-write-updatefunction](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-function-write-updatefunction)
+* [amazon-awscloudtrail-json-function-write-updatefunction](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-function-write-updatefunction)
 
-* [amazon-awscloudtrail-json-group-member-add-addusertogroup](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-group-member-add-addusertogroup)
+* [amazon-awscloudtrail-json-group-member-add-addusertogroup](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-group-member-add-addusertogroup)
 
-* [amazon-awscloudtrail-json-group-policy-attach-success-attachgrouppolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-group-policy-attach-success-attachgrouppolicy)
+* [amazon-awscloudtrail-json-group-policy-attach-success-attachgrouppolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-group-policy-attach-success-attachgrouppolicy)
 
-* [amazon-awscloudtrail-json-image-create-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-image-create-awsapicall)
+* [amazon-awscloudtrail-json-image-create-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-image-create-awsapicall)
 
-* [amazon-awscloudtrail-json-image-modify-imageattribute](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-image-modify-imageattribute)
+* [amazon-awscloudtrail-json-image-modify-imageattribute](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-image-modify-imageattribute)
 
-* [amazon-awscloudtrail-json-key-read-getpassword](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-key-read-getpassword)
+* [amazon-awscloudtrail-json-key-read-getpassword](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-key-read-getpassword)
 
-* [amazon-awscloudtrail-json-key-write-createkeypair](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-key-write-createkeypair)
+* [amazon-awscloudtrail-json-key-write-createkeypair](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-key-write-createkeypair)
 
-* [amazon-awscloudtrail-json-policy-apply-success-policyexecution](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-apply-success-policyexecution)
+* [amazon-awscloudtrail-json-policy-apply-success-policyexecution](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-apply-success-policyexecution)
 
-* [amazon-awscloudtrail-json-policy-create-success-createpolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-create-success-createpolicy)
+* [amazon-awscloudtrail-json-policy-create-success-createpolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-create-success-createpolicy)
 
-* [amazon-awscloudtrail-json-policy-create-success-putgrouppolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-create-success-putgrouppolicy)
+* [amazon-awscloudtrail-json-policy-create-success-putgrouppolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-create-success-putgrouppolicy)
 
-* [amazon-awscloudtrail-json-policy-create-success-putrolepolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-create-success-putrolepolicy)
+* [amazon-awscloudtrail-json-policy-create-success-putrolepolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-create-success-putrolepolicy)
 
-* [amazon-awscloudtrail-json-policy-create-success-putuserpolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-create-success-putuserpolicy)
+* [amazon-awscloudtrail-json-policy-create-success-putuserpolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-create-success-putuserpolicy)
 
-* [amazon-awscloudtrail-json-policy-list-success-grouppolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-grouppolicies)
+* [amazon-awscloudtrail-json-policy-list-success-grouppolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-grouppolicies)
 
-* [amazon-awscloudtrail-json-policy-list-success-listgrouppolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-listgrouppolicies)
+* [amazon-awscloudtrail-json-policy-list-success-listgrouppolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-listgrouppolicies)
 
-* [amazon-awscloudtrail-json-policy-list-success-listrolepolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-listrolepolicies)
+* [amazon-awscloudtrail-json-policy-list-success-listrolepolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-listrolepolicies)
 
-* [amazon-awscloudtrail-json-policy-list-success-listuserpolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-listuserpolicies)
+* [amazon-awscloudtrail-json-policy-list-success-listuserpolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-listuserpolicies)
 
-* [amazon-awscloudtrail-json-policy-list-success-rolepolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-rolepolicies)
+* [amazon-awscloudtrail-json-policy-list-success-rolepolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-rolepolicies)
 
-* [amazon-awscloudtrail-json-policy-list-success-userpolicies](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-list-success-userpolicies)
+* [amazon-awscloudtrail-json-policy-list-success-userpolicies](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-list-success-userpolicies)
 
-* [amazon-awscloudtrail-json-policy-modify-success-createpolicyversion](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-modify-success-createpolicyversion)
+* [amazon-awscloudtrail-json-policy-modify-success-createpolicyversion](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-modify-success-createpolicyversion)
 
-* [amazon-awscloudtrail-json-policy-modify-success-setpolicyversion](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-modify-success-setpolicyversion)
+* [amazon-awscloudtrail-json-policy-modify-success-setpolicyversion](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-modify-success-setpolicyversion)
 
-* [amazon-awscloudtrail-json-policy-modify-success-updateassumerolepolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-policy-modify-success-updateassumerolepolicy)
+* [amazon-awscloudtrail-json-policy-modify-success-updateassumerolepolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-policy-modify-success-updateassumerolepolicy)
 
-* [amazon-awscloudtrail-json-role-assume-renewrole](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-role-assume-renewrole)
+* [amazon-awscloudtrail-json-role-assume-renewrole](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-role-assume-renewrole)
 
-* [amazon-awscloudtrail-json-role-assume-success-assumerole](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-role-assume-success-assumerole)
+* [amazon-awscloudtrail-json-role-assume-success-assumerole](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-role-assume-success-assumerole)
 
-* [amazon-awscloudtrail-json-role-assume-success-switchrole](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-role-assume-success-switchrole)
+* [amazon-awscloudtrail-json-role-assume-success-switchrole](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-role-assume-success-switchrole)
 
-* [amazon-awscloudtrail-json-role-create-success-createrole](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-role-create-success-createrole)
+* [amazon-awscloudtrail-json-role-create-success-createrole](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-role-create-success-createrole)
 
-* [amazon-awscloudtrail-json-role-policy-attach-success-attachrolepolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-role-policy-attach-success-attachrolepolicy)
+* [amazon-awscloudtrail-json-role-policy-attach-success-attachrolepolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-role-policy-attach-success-attachrolepolicy)
 
-* [amazon-awscloudtrail-json-secret-delete-success-endsecretdelete](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-secret-delete-success-endsecretdelete)
+* [amazon-awscloudtrail-json-secret-delete-success-endsecretdelete](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-secret-delete-success-endsecretdelete)
 
-* [amazon-awscloudtrail-json-secret-delete-success-secretvdelete](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-secret-delete-success-secretvdelete)
+* [amazon-awscloudtrail-json-secret-delete-success-secretvdelete](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-secret-delete-success-secretvdelete)
 
-* [amazon-awscloudtrail-json-snapshot-create-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-snapshot-create-awsapicall)
+* [amazon-awscloudtrail-json-snapshot-create-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-snapshot-create-awsapicall)
 
-* [amazon-awscloudtrail-json-snapshot-modify-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-snapshot-modify-awsapicall)
+* [amazon-awscloudtrail-json-snapshot-modify-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-snapshot-modify-awsapicall)
 
-* [amazon-awscloudtrail-json-user-create-awsapicall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-user-create-awsapicall)
+* [amazon-awscloudtrail-json-user-create-awsapicall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-user-create-awsapicall)
 
-* [amazon-awscloudtrail-json-user-create-creategroup](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-user-create-creategroup)
+* [amazon-awscloudtrail-json-user-create-creategroup](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-user-create-creategroup)
 
-* [amazon-awscloudtrail-json-user-key-create-createaccesskey](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-user-key-create-createaccesskey)
+* [amazon-awscloudtrail-json-user-key-create-createaccesskey](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-user-key-create-createaccesskey)
 
-* [amazon-awscloudtrail-json-user-policy-attach-success-attachuserpolicy](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-json-user-policy-attach-success-attachuserpolicy)
+* [amazon-awscloudtrail-json-user-policy-attach-success-attachuserpolicy](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-json-user-policy-attach-success-attachuserpolicy)
 
-* [amazon-awscloudtrail-sk4-app-activity-success-backupjobstarted](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-app-activity-success-backupjobstarted)
+* [amazon-awscloudtrail-sk4-app-activity-success-backupjobstarted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-app-activity-success-backupjobstarted)
 
-* [amazon-awscloudtrail-sk4-app-activity-success-redshift](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-app-activity-success-redshift)
+* [amazon-awscloudtrail-sk4-app-activity-success-redshift](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-app-activity-success-redshift)
 
-* [amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail)
+* [amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail)
 
-* [amazon-awscloudtrail-sk4-snapshot-create-success-sharedsnapshotvolumecreated](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-snapshot-create-success-sharedsnapshotvolumecreated)
+* [amazon-awscloudtrail-sk4-snapshot-create-success-sharedsnapshotvolumecreated](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-snapshot-create-success-sharedsnapshotvolumecreated)
 
-* [amazon-awscloudtrail-sk4-user-create-createmembers](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-user-create-createmembers)
+* [amazon-awscloudtrail-sk4-user-create-createmembers](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-user-create-createmembers)
 
-* [amazon-awscloudtrail-sk4-user-token-create-success-tokenpost](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudtrail-sk4-user-token-create-success-tokenpost)
+* [amazon-awscloudtrail-sk4-user-token-create-success-tokenpost](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudtrail-sk4-user-token-create-success-tokenpost)
 
-* [amazon-awscloudwatch-sk4-app-activity-aws](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudwatch-sk4-app-activity-aws)
+* [amazon-awscloudwatch-sk4-app-activity-aws](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudwatch-sk4-app-activity-aws)
 
-* [amazon-awscloudwatch-sk4-network-traffic-success-awsflowlogs](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudwatch-sk4-network-traffic-success-awsflowlogs)
+* [amazon-awscloudwatch-sk4-network-traffic-success-awsflowlogs](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudwatch-sk4-network-traffic-success-awsflowlogs)
 
-* [amazon-awscloudwatch-sk4-network-traffic-success-awss3bucket](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awscloudwatch-sk4-network-traffic-success-awss3bucket)
+* [amazon-awscloudwatch-sk4-network-traffic-success-awss3bucket](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awscloudwatch-sk4-network-traffic-success-awss3bucket)
 
-* [amazon-awsguardduty-cef-alert-trigger-success-catsecurity](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-cef-alert-trigger-success-catsecurity)
+* [amazon-awsguardduty-cef-alert-trigger-success-catsecurity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-cef-alert-trigger-success-catsecurity)
 
-* [amazon-awsguardduty-json-alert-trigger-success-catchall](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-alert-trigger-success-catchall)
+* [amazon-awsguardduty-json-alert-trigger-success-catchall](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-alert-trigger-success-catchall)
 
-* [amazon-awsguardduty-json-alert-trigger-success-execinkubesystempod](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-alert-trigger-success-execinkubesystempod)
+* [amazon-awsguardduty-json-alert-trigger-success-execinkubesystempod](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-alert-trigger-success-execinkubesystempod)
 
-* [amazon-awsguardduty-json-alert-trigger-success-guardduty-portprobeunprotectedport](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-alert-trigger-success-guardduty-portprobeunprotectedport)
+* [amazon-awsguardduty-json-alert-trigger-success-guardduty-portprobeunprotectedport](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-alert-trigger-success-guardduty-portprobeunprotectedport)
 
-* [amazon-awsguardduty-json-alert-trigger-success-sshbruteforce](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-alert-trigger-success-sshbruteforce)
+* [amazon-awsguardduty-json-alert-trigger-success-sshbruteforce](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-alert-trigger-success-sshbruteforce)
 
-* [amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin)
+* [amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-database-login-fail-maliciousipcallerfailedlogin)
 
-* [amazon-awsguardduty-json-database-login-success-rdssuccessfullogin](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-json-database-login-success-rdssuccessfullogin)
+* [amazon-awsguardduty-json-database-login-success-rdssuccessfullogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-json-database-login-success-rdssuccessfullogin)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior-1)
+* [amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior-1)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior)
+* [amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-anomalousbehavior)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-bucketblockpublicaccessdisabled](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-bucketblockpublicaccessdisabled)
+* [amazon-awsguardduty-sk4-alert-trigger-success-bucketblockpublicaccessdisabled](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-bucketblockpublicaccessdisabled)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-1)
+* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-1)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-2](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-2)
+* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-2](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-2)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3)
+* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-3)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-4](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-4)
+* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty-4](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty-4)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty)
+* [amazon-awsguardduty-sk4-alert-trigger-success-guardduty](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-guardduty)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-inspector](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-inspector)
+* [amazon-awsguardduty-sk4-alert-trigger-success-inspector](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-inspector)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration)
+* [amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-1)
+* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-1)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-2](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-2)
+* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-2](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-2)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-3](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-3)
+* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-3](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile-3)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile)
+* [amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-maliciousfile)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-reconportscan](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-reconportscan)
+* [amazon-awsguardduty-sk4-alert-trigger-success-reconportscan](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-reconportscan)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-rootcredentialusage](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-rootcredentialusage)
+* [amazon-awsguardduty-sk4-alert-trigger-success-rootcredentialusage](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-rootcredentialusage)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce-1)
+* [amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce-1)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce)
+* [amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-sshbruteforce)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-1)
+* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-1)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-2](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-2)
+* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-2](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-2)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-3](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-3)
+* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-3](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile-3)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile)
+* [amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-suspiciousfile)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-torclient](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-torclient)
+* [amazon-awsguardduty-sk4-alert-trigger-success-torclient](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-torclient)
 
-* [amazon-awsguardduty-sk4-alert-trigger-success-toripcaller](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsguardduty-sk4-alert-trigger-success-toripcaller)
+* [amazon-awsguardduty-sk4-alert-trigger-success-toripcaller](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsguardduty-sk4-alert-trigger-success-toripcaller)
 
-* [amazon-awsredshift-sk4-database-query-success-db](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsredshift-sk4-database-query-success-db)
+* [amazon-awsredshift-sk4-database-query-success-db](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsredshift-sk4-database-query-success-db)
 
-* [amazon-awsssm-mix-app-notification-success-start](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsssm-mix-app-notification-success-start)
+* [amazon-awsssm-mix-app-notification-success-start](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsssm-mix-app-notification-success-start)
 
-* [amazon-awsssm-mix-app-notification-success-stop](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awsssm-mix-app-notification-success-stop)
+* [amazon-awsssm-mix-app-notification-success-stop](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awsssm-mix-app-notification-success-stop)
 
-* [amazon-awswaf-json-app-authentication-httprequest](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awswaf-json-app-authentication-httprequest)
+* [amazon-awswaf-json-app-authentication-httprequest](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awswaf-json-app-authentication-httprequest)
 
-* [amazon-awswaf-sk4-http-request-httprequest](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-awswaf-sk4-http-request-httprequest)
+* [amazon-awswaf-sk4-http-request-httprequest](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-awswaf-sk4-http-request-httprequest)
 
-* [amazon-eks-json-app-notification-success-kube](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-eks-json-app-notification-success-kube)
+* [amazon-eks-json-app-notification-success-kube](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-eks-json-app-notification-success-kube)
 
-* [amazon-rds-json-app-notification-auditevent-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-rds-json-app-notification-auditevent-1)
+* [amazon-rds-json-app-notification-auditevent-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-rds-json-app-notification-auditevent-1)
 
-* [amazon-rds-json-app-notification-auditevent](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-rds-json-app-notification-auditevent)
+* [amazon-rds-json-app-notification-auditevent](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-rds-json-app-notification-auditevent)
 
-* [amazon-rds-str-database-query-modify-success-auditevent-1](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-rds-str-database-query-modify-success-auditevent-1)
+* [amazon-rds-str-database-query-modify-success-auditevent-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-rds-str-database-query-modify-success-auditevent-1)
 
-* [amazon-rds-str-database-query-modify-success-auditevent](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-rds-str-database-query-modify-success-auditevent)
+* [amazon-rds-str-database-query-modify-success-auditevent](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-rds-str-database-query-modify-success-auditevent)
 
-* [amazon-route53-json-dns-request-success-dnsquery](https://github.com/ExabeamLabs/Content-Doc/search?q=amazon-route53-json-dns-request-success-dnsquery)
+* [amazon-route53-json-dns-request-success-dnsquery](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amazon-route53-json-dns-request-success-dnsquery)
 
-* [amd-p-csv-network-notification-success-flowdelete](https://github.com/ExabeamLabs/Content-Doc/search?q=amd-p-csv-network-notification-success-flowdelete)
+* [amd-p-csv-network-notification-success-flowdelete](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amd-p-csv-network-notification-success-flowdelete)
 
-* [amd-p-csv-network-session-flowcreate](https://github.com/ExabeamLabs/Content-Doc/search?q=amd-p-csv-network-session-flowcreate)
+* [amd-p-csv-network-session-flowcreate](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=amd-p-csv-network-session-flowcreate)
 
-* [apache-cassandradb-kv-database-login-success-auth](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-cassandradb-kv-database-login-success-auth)
+* [apache-cassandradb-kv-database-login-success-auth](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-cassandradb-kv-database-login-success-auth)
 
-* [apache-guacamole-kv-http-session-success-client](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-guacamole-kv-http-session-success-client)
+* [apache-guacamole-kv-http-session-success-client](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-guacamole-kv-http-session-success-client)
 
-* [apache-guacamole-str-app-authentication-fail-authenticatethelockeduser](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-guacamole-str-app-authentication-fail-authenticatethelockeduser)
+* [apache-guacamole-str-app-authentication-fail-authenticatethelockeduser](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-guacamole-str-app-authentication-fail-authenticatethelockeduser)
 
-* [apache-subversion-mix-app-activity-get](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-get)
+* [apache-subversion-mix-app-activity-get](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-get)
 
-* [apache-subversion-mix-app-activity-headsvn-1](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-headsvn-1)
+* [apache-subversion-mix-app-activity-headsvn-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-headsvn-1)
 
-* [apache-subversion-mix-app-activity-headsvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-headsvn)
+* [apache-subversion-mix-app-activity-headsvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-headsvn)
 
-* [apache-subversion-mix-app-activity-optionssvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-optionssvn)
+* [apache-subversion-mix-app-activity-optionssvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-optionssvn)
 
-* [apache-subversion-mix-app-activity-postsvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-postsvn)
+* [apache-subversion-mix-app-activity-postsvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-postsvn)
 
-* [apache-subversion-mix-app-activity-proppatchsvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-proppatchsvn)
+* [apache-subversion-mix-app-activity-proppatchsvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-proppatchsvn)
 
-* [apache-subversion-mix-app-activity-putsvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-putsvn)
+* [apache-subversion-mix-app-activity-putsvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-putsvn)
 
-* [apache-subversion-mix-app-activity-reportsvn](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-subversion-mix-app-activity-reportsvn)
+* [apache-subversion-mix-app-activity-reportsvn](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-subversion-mix-app-activity-reportsvn)
 
-* [apache-tomcat-str-app-notification-tomcatcatalina](https://github.com/ExabeamLabs/Content-Doc/search?q=apache-tomcat-str-app-notification-tomcatcatalina)
+* [apache-tomcat-str-app-notification-tomcatcatalina](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apache-tomcat-str-app-notification-tomcatcatalina)
 
-* [apc-a-kv-email-receive-fail-reject](https://github.com/ExabeamLabs/Content-Doc/search?q=apc-a-kv-email-receive-fail-reject)
+* [apc-a-kv-email-receive-fail-reject](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apc-a-kv-email-receive-fail-reject)
 
-* [apc-a-kv-email-receive-success-accept](https://github.com/ExabeamLabs/Content-Doc/search?q=apc-a-kv-email-receive-success-accept)
+* [apc-a-kv-email-receive-success-accept](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apc-a-kv-email-receive-success-accept)
 
-* [apc-a-kv-endpoint-login-fail-smtpauthfail](https://github.com/ExabeamLabs/Content-Doc/search?q=apc-a-kv-endpoint-login-fail-smtpauthfail)
+* [apc-a-kv-endpoint-login-fail-smtpauthfail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apc-a-kv-endpoint-login-fail-smtpauthfail)
 
-* [apc-a-str-app-login-fail-invalidcredentials](https://github.com/ExabeamLabs/Content-Doc/search?q=apc-a-str-app-login-fail-invalidcredentials)
+* [apc-a-str-app-login-fail-invalidcredentials](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apc-a-str-app-login-fail-invalidcredentials)
 
-* [apc-a-str-app-logout-success-loggedout](https://github.com/ExabeamLabs/Content-Doc/search?q=apc-a-str-app-logout-success-loggedout)
+* [apc-a-str-app-logout-success-loggedout](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=apc-a-str-app-logout-success-loggedout)
 
-* [aristanetworks-as-cef-alert-trigger-success-deviceurlpath](https://github.com/ExabeamLabs/Content-Doc/search?q=aristanetworks-as-cef-alert-trigger-success-deviceurlpath)
+* [aristanetworks-as-cef-alert-trigger-success-deviceurlpath](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=aristanetworks-as-cef-alert-trigger-success-deviceurlpath)
 
-* [armis-a-cef-alert-trigger-success-systempolicyviolation](https://github.com/ExabeamLabs/Content-Doc/search?q=armis-a-cef-alert-trigger-success-systempolicyviolation)
+* [armis-a-cef-alert-trigger-success-systempolicyviolation](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armis-a-cef-alert-trigger-success-systempolicyviolation)
 
-* [armis-a-json-alert-trigger-success-systempolicyviolation](https://github.com/ExabeamLabs/Content-Doc/search?q=armis-a-json-alert-trigger-success-systempolicyviolation)
+* [armis-a-json-alert-trigger-success-systempolicyviolation](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armis-a-json-alert-trigger-success-systempolicyviolation)
 
-* [armis-a-json-app-notification-success](https://github.com/ExabeamLabs/Content-Doc/search?q=armis-a-json-app-notification-success)
+* [armis-a-json-app-notification-success](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armis-a-json-app-notification-success)
 
-* [armorblox-ab-json-email-abuse](https://github.com/ExabeamLabs/Content-Doc/search?q=armorblox-ab-json-email-abuse)
+* [armorblox-ab-json-email-abuse](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armorblox-ab-json-email-abuse)
 
-* [armorblox-ab-json-email-graymail](https://github.com/ExabeamLabs/Content-Doc/search?q=armorblox-ab-json-email-graymail)
+* [armorblox-ab-json-email-graymail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armorblox-ab-json-email-graymail)
 
-* [armorblox-ab-json-email-threat](https://github.com/ExabeamLabs/Content-Doc/search?q=armorblox-ab-json-email-threat)
+* [armorblox-ab-json-email-threat](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=armorblox-ab-json-email-threat)
 
-* [assetview-av-csv-peripheral-storage-insert-success-15031](https://github.com/ExabeamLabs/Content-Doc/search?q=assetview-av-csv-peripheral-storage-insert-success-15031)
+* [assetview-av-csv-peripheral-storage-insert-success-15031](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=assetview-av-csv-peripheral-storage-insert-success-15031)
 
-* [assetview-av-str-alert-trigger-success-35131](https://github.com/ExabeamLabs/Content-Doc/search?q=assetview-av-str-alert-trigger-success-35131)
+* [assetview-av-str-alert-trigger-success-35131](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=assetview-av-str-alert-trigger-success-35131)
 
-* [assetview-av-str-file-write-success-10001](https://github.com/ExabeamLabs/Content-Doc/search?q=assetview-av-str-file-write-success-10001)
+* [assetview-av-str-file-write-success-10001](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=assetview-av-str-file-write-success-10001)
 
-* [atlassian-bitbucket-json-app-activity-success-diffsuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-diffsuccess)
+* [atlassian-bitbucket-json-app-activity-success-diffsuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-diffsuccess)
 
-* [atlassian-bitbucket-json-app-activity-success-filterused](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-filterused)
+* [atlassian-bitbucket-json-app-activity-success-filterused](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-filterused)
 
-* [atlassian-bitbucket-json-app-activity-success-prapprove](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-prapprove)
+* [atlassian-bitbucket-json-app-activity-success-prapprove](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-prapprove)
 
-* [atlassian-bitbucket-json-app-activity-success-prcommented](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-prcommented)
+* [atlassian-bitbucket-json-app-activity-success-prcommented](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-prcommented)
 
-* [atlassian-bitbucket-json-app-activity-success-prcommentreply](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-prcommentreply)
+* [atlassian-bitbucket-json-app-activity-success-prcommentreply](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-prcommentreply)
 
-* [atlassian-bitbucket-json-app-activity-success-repowatcheradd](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-activity-success-repowatcheradd)
+* [atlassian-bitbucket-json-app-activity-success-repowatcheradd](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-activity-success-repowatcheradd)
 
-* [atlassian-bitbucket-json-app-authentication-fail-failrepoaccess](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-authentication-fail-failrepoaccess)
+* [atlassian-bitbucket-json-app-authentication-fail-failrepoaccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-authentication-fail-failrepoaccess)
 
-* [atlassian-bitbucket-json-app-authentication-success-repoaccess](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-app-authentication-success-repoaccess)
+* [atlassian-bitbucket-json-app-authentication-success-repoaccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-app-authentication-success-repoaccess)
 
-* [atlassian-bitbucket-json-branch-create-success-branchcreate](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-branch-create-success-branchcreate)
+* [atlassian-bitbucket-json-branch-create-success-branchcreate](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-branch-create-success-branchcreate)
 
-* [atlassian-bitbucket-json-branch-modify-fail-prmergefail](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-branch-modify-fail-prmergefail)
+* [atlassian-bitbucket-json-branch-modify-fail-prmergefail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-branch-modify-fail-prmergefail)
 
-* [atlassian-bitbucket-json-branch-modify-success-prmerged](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-branch-modify-success-prmerged)
+* [atlassian-bitbucket-json-branch-modify-success-prmerged](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-branch-modify-success-prmerged)
 
-* [atlassian-bitbucket-json-configuration-modify-success-hooksettingchange](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-configuration-modify-success-hooksettingchange)
+* [atlassian-bitbucket-json-configuration-modify-success-hooksettingchange](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-configuration-modify-success-hooksettingchange)
 
-* [atlassian-bitbucket-json-repository-create-success-repoclone](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-repository-create-success-repoclone)
+* [atlassian-bitbucket-json-repository-create-success-repoclone](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-repository-create-success-repoclone)
 
-* [atlassian-bitbucket-json-repository-pull-success-repopull](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-repository-pull-success-repopull)
+* [atlassian-bitbucket-json-repository-pull-success-repopull](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-repository-pull-success-repopull)
 
-* [atlassian-bitbucket-json-repository-push-success-repopush](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-repository-push-success-repopush)
+* [atlassian-bitbucket-json-repository-push-success-repopush](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-repository-push-success-repopush)
 
-* [atlassian-bitbucket-json-repository-read-success-readrepo](https://github.com/ExabeamLabs/Content-Doc/search?q=atlassian-bitbucket-json-repository-read-success-readrepo)
+* [atlassian-bitbucket-json-repository-read-success-readrepo](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=atlassian-bitbucket-json-repository-read-success-readrepo)
 
-* [attivo-botsink-cef-network-traffic-success-networktrafficsuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=attivo-botsink-cef-network-traffic-success-networktrafficsuccess)
+* [attivo-botsink-cef-network-traffic-success-networktrafficsuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=attivo-botsink-cef-network-traffic-success-networktrafficsuccess)
 
-* [auth0-a-json-app-authentication-fail-warning](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-authentication-fail-warning)
+* [auth0-a-json-app-authentication-fail-warning](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-authentication-fail-warning)
 
-* [auth0-a-json-app-authentication-success-startauth](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-authentication-success-startauth)
+* [auth0-a-json-app-authentication-success-startauth](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-authentication-success-startauth)
 
-* [auth0-a-json-app-login-fail-apilimit](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-fail-apilimit)
+* [auth0-a-json-app-login-fail-apilimit](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-fail-apilimit)
 
-* [auth0-a-json-app-login-fail-limitwc](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-fail-limitwc)
+* [auth0-a-json-app-login-fail-limitwc](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-fail-limitwc)
 
-* [auth0-a-json-app-login-success-changeemail](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-changeemail)
+* [auth0-a-json-app-login-success-changeemail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-changeemail)
 
-* [auth0-a-json-app-login-success-s](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-s)
+* [auth0-a-json-app-login-success-s](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-s)
 
-* [auth0-a-json-app-login-success-seacft](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-seacft)
+* [auth0-a-json-app-login-success-seacft](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-seacft)
 
-* [auth0-a-json-app-login-success-seccft](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-seccft)
+* [auth0-a-json-app-login-success-seccft](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-seccft)
 
-* [auth0-a-json-app-login-success-ss](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-ss)
+* [auth0-a-json-app-login-success-ss](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-ss)
 
-* [auth0-a-json-app-login-success-ssa](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-login-success-ssa)
+* [auth0-a-json-app-login-success-ssa](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-login-success-ssa)
 
-* [auth0-a-json-app-logout-fail-flo](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-logout-fail-flo)
+* [auth0-a-json-app-logout-fail-flo](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-logout-fail-flo)
 
-* [auth0-a-json-app-logout-success-slo](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-app-logout-success-slo)
+* [auth0-a-json-app-logout-success-slo](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-app-logout-success-slo)
 
-* [auth0-a-json-endpoint-login-fail-fp](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-endpoint-login-fail-fp)
+* [auth0-a-json-endpoint-login-fail-fp](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-endpoint-login-fail-fp)
 
-* [auth0-a-json-endpoint-login-success-exchange](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-endpoint-login-success-exchange)
+* [auth0-a-json-endpoint-login-success-exchange](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-endpoint-login-success-exchange)
 
-* [auth0-a-json-endpoint-login-success-verification](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-endpoint-login-success-verification)
+* [auth0-a-json-endpoint-login-success-verification](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-endpoint-login-success-verification)
 
-* [auth0-a-json-user-delete-success-userdeletion](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-user-delete-success-userdeletion)
+* [auth0-a-json-user-delete-success-userdeletion](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-user-delete-success-userdeletion)
 
-* [auth0-a-json-user-password-modify-fail-fcp](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-user-password-modify-fail-fcp)
+* [auth0-a-json-user-password-modify-fail-fcp](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-user-password-modify-fail-fcp)
 
-* [auth0-a-json-user-password-modify-success-changepassword](https://github.com/ExabeamLabs/Content-Doc/search?q=auth0-a-json-user-password-modify-success-changepassword)
+* [auth0-a-json-user-password-modify-success-changepassword](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=auth0-a-json-user-password-modify-success-changepassword)
 
-* [avaya-ers-str-endpoint-activity-success-ssh](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-activity-success-ssh)
+* [avaya-ers-str-endpoint-activity-success-ssh](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-activity-success-ssh)
 
-* [avaya-ers-str-endpoint-login-fail-disallowed](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-login-fail-disallowed)
+* [avaya-ers-str-endpoint-login-fail-disallowed](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-login-fail-disallowed)
 
-* [avaya-ers-str-endpoint-login-fail-intruderip](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-login-fail-intruderip)
+* [avaya-ers-str-endpoint-login-fail-intruderip](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-login-fail-intruderip)
 
-* [avaya-ers-str-endpoint-login-fail-unauthorized](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-login-fail-unauthorized)
+* [avaya-ers-str-endpoint-login-fail-unauthorized](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-login-fail-unauthorized)
 
-* [avaya-ers-str-endpoint-logout-success-connectionclosed](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-logout-success-connectionclosed)
+* [avaya-ers-str-endpoint-logout-success-connectionclosed](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-logout-success-connectionclosed)
 
-* [avaya-ers-str-endpoint-logout-success-sessionclosed](https://github.com/ExabeamLabs/Content-Doc/search?q=avaya-ers-str-endpoint-logout-success-sessionclosed)
+* [avaya-ers-str-endpoint-logout-success-sessionclosed](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avaya-ers-str-endpoint-logout-success-sessionclosed)
 
-* [avinetworks-a-str-app-login-success-loginsuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=avinetworks-a-str-app-login-success-loginsuccess)
+* [avinetworks-a-str-app-login-success-loginsuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avinetworks-a-str-app-login-success-loginsuccess)
 
-* [avinetworks-lb-str-endpoint-logout-userlogout](https://github.com/ExabeamLabs/Content-Doc/search?q=avinetworks-lb-str-endpoint-logout-userlogout)
+* [avinetworks-lb-str-endpoint-logout-userlogout](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=avinetworks-lb-str-endpoint-logout-userlogout)
 
-* [aws-waf-json-http-session-httprequest](https://github.com/ExabeamLabs/Content-Doc/search?q=aws-waf-json-http-session-httprequest)
+* [aws-waf-json-http-session-httprequest](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=aws-waf-json-http-session-httprequest)
 
-* [axway-gateway-str-endpoint-login-success-successfullogin](https://github.com/ExabeamLabs/Content-Doc/search?q=axway-gateway-str-endpoint-login-success-successfullogin)
+* [axway-gateway-str-endpoint-login-success-successfullogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=axway-gateway-str-endpoint-login-success-successfullogin)
 
-* [badge-b-csv-physical-location-access-success-cardadmitted](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-csv-physical-location-access-success-cardadmitted)
+* [badge-b-csv-physical-location-access-success-cardadmitted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-csv-physical-location-access-success-cardadmitted)
 
-* [badge-b-csv-physical-location-access-success-cardexitgranted](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-csv-physical-location-access-success-cardexitgranted)
+* [badge-b-csv-physical-location-access-success-cardexitgranted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-csv-physical-location-access-success-cardexitgranted)
 
-* [badge-b-csv-physical-location-access-success-dooraccessgranted](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-csv-physical-location-access-success-dooraccessgranted)
+* [badge-b-csv-physical-location-access-success-dooraccessgranted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-csv-physical-location-access-success-dooraccessgranted)
 
-* [badge-b-csv-physical-location-access-success-ocardadmitted](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-csv-physical-location-access-success-ocardadmitted)
+* [badge-b-csv-physical-location-access-success-ocardadmitted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-csv-physical-location-access-success-ocardadmitted)
 
-* [badge-b-json-physical-location-access-accessdescription](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-json-physical-location-access-accessdescription)
+* [badge-b-json-physical-location-access-accessdescription](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-json-physical-location-access-accessdescription)
 
-* [badge-b-kv-physical-location-access-accessevent](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-kv-physical-location-access-accessevent)
+* [badge-b-kv-physical-location-access-accessevent](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-kv-physical-location-access-accessevent)
 
-* [badge-b-kv-physical-location-access-success-accesssuccess](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-kv-physical-location-access-success-accesssuccess)
+* [badge-b-kv-physical-location-access-success-accesssuccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-kv-physical-location-access-success-accesssuccess)
 
-* [badge-b-kv-physical-location-access-success-badgevalid](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-kv-physical-location-access-success-badgevalid)
+* [badge-b-kv-physical-location-access-success-badgevalid](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-kv-physical-location-access-success-badgevalid)
 
-* [badge-b-kv-physical-location-access-success-cardadmitted](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-kv-physical-location-access-success-cardadmitted)
+* [badge-b-kv-physical-location-access-success-cardadmitted](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-kv-physical-location-access-success-cardadmitted)
 
-* [badge-b-kv-physical-location-access-success-physicallocationaccess](https://github.com/ExabeamLabs/Content-Doc/search?q=badge-b-kv-physical-location-access-success-physicallocationaccess)
+* [badge-b-kv-physical-location-access-success-physicallocationaccess](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=badge-b-kv-physical-location-access-success-physicallocationaccess)
 
-* [banyansecurity-bnn-json-app-authentication-success-accessauthorized](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-authentication-success-accessauthorized)
+* [banyansecurity-bnn-json-app-authentication-success-accessauthorized](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-authentication-success-accessauthorized)
 
-* [banyansecurity-bnn-json-app-authentication-success-identitygrant](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-authentication-success-identitygrant)
+* [banyansecurity-bnn-json-app-authentication-success-identitygrant](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-authentication-success-identitygrant)
 
-* [banyansecurity-bnn-json-app-login-success-adminlogin](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-login-success-adminlogin)
+* [banyansecurity-bnn-json-app-login-success-adminlogin](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-login-success-adminlogin)
 
-* [banyansecurity-bnn-json-app-notification-success-identity](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-notification-success-identity)
+* [banyansecurity-bnn-json-app-notification-success-identity](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-notification-success-identity)
 
-* [banyansecurity-bnn-json-app-notification-success-registration](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-notification-success-registration)
+* [banyansecurity-bnn-json-app-notification-success-registration](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-notification-success-registration)
 
-* [banyansecurity-bnn-json-app-notification-success-trustscoring](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-app-notification-success-trustscoring)
+* [banyansecurity-bnn-json-app-notification-success-trustscoring](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-app-notification-success-trustscoring)
 
-* [banyansecurity-bnn-json-endpoint-authentication-success-connectionauthorized](https://github.com/ExabeamLabs/Content-Doc/search?q=banyansecurity-bnn-json-endpoint-authentication-success-connectionauthorized)
+* [banyansecurity-bnn-json-endpoint-authentication-success-connectionauthorized](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=banyansecurity-bnn-json-endpoint-authentication-success-connectionauthorized)
 
-* [barracuda-esg-cef-app-activity-success-scan](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-cef-app-activity-success-scan)
+* [barracuda-esg-cef-app-activity-success-scan](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-cef-app-activity-success-scan)
 
-* [barracuda-esg-cef-email-receive-barracudanetworks](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-cef-email-receive-barracudanetworks)
+* [barracuda-esg-cef-email-receive-barracudanetworks](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-cef-email-receive-barracudanetworks)
 
-* [barracuda-esg-json-dlp-email-blocked](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-blocked)
+* [barracuda-esg-json-dlp-email-blocked](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-blocked)
 
-* [barracuda-esg-json-dlp-email-deferred](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-deferred)
+* [barracuda-esg-json-dlp-email-deferred](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-deferred)
 
-* [barracuda-esg-json-dlp-email-quarantined](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-quarantined)
+* [barracuda-esg-json-dlp-email-quarantined](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-quarantined)
 
-* [barracuda-esg-json-dlp-email-send-fail](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-send-fail)
+* [barracuda-esg-json-dlp-email-send-fail](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-send-fail)
 
-* [barracuda-esg-json-dlp-email-send-success-1](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-send-success-1)
+* [barracuda-esg-json-dlp-email-send-success-1](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-send-success-1)
 
-* [barracuda-esg-json-dlp-email-send-success](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-json-dlp-email-send-success)
+* [barracuda-esg-json-dlp-email-send-success](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-json-dlp-email-send-success)
 
-* [barracuda-esg-str-email-send-receive-scan](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-esg-str-email-send-receive-scan)
+* [barracuda-esg-str-email-send-receive-scan](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=barracuda-esg-str-email-send-receive-scan)
 
 * [barracuda-firewall-kv-network-traffic-networktraffic](https://github.com/ExabeamLabs/Content-Doc/search?q=barracuda-firewall-kv-network-traffic-networktraffic)
 
@@ -24405,6 +24405,6 @@ There are no updated rules in this release.
 
 * UW-UH-F &#8211; First asset for user in USB event
 
-* WEB-UU-Reputation &#8211; User attempted access to a url with bad reputation
+* WEB-UU-Reputation &#8211; User attempted access to a url with bad reputation_
 
 
