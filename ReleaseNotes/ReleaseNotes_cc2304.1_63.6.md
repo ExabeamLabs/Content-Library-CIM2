@@ -10,7 +10,7 @@ The security content updates listed below include changes to the following areas
 
 * [Rules](#Rules)
 
-In the lists below, each item represents a specific parser, model, or rule that has been added, updated, or deprecated. To facilitate finding every data source where the changed content items are referenced, a content library query has been created for each changed parser, model, or rule. To view the results of each query, click on the link for the relevant content item.
+In the lists below, each item represents a specific  model, or rule that has been added, updated, or deprecated. To facilitate finding every data source where the changed content items are referenced, a content library query has been created for each changed  model, or rule. To view the results of each query, click on the link for the relevant content item.
 
 
 
