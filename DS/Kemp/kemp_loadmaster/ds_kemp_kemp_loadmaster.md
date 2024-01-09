@@ -4,7 +4,7 @@ Product: Kemp LoadMaster
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  96   |   37   |         9          |       4        |    4    |
+|  96   |   37   |         9          |       4        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

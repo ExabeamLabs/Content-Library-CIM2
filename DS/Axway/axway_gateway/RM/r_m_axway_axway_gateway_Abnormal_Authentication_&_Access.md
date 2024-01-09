@@ -7,7 +7,7 @@ Vendor: Axway
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  29   |   14   |         5          |       1        |    1    |
+|  29   |   14   |         5          |       1        |    0    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

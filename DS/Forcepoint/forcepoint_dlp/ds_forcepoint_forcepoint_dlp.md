@@ -4,7 +4,7 @@ Product: Forcepoint DLP
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  85   |   40   |         9          |       6        |    6    |
+|  85   |   40   |         9          |       6        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

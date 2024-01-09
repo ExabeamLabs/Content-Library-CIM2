@@ -4,7 +4,7 @@ Product: Nozomi Networks Guardian
 ---------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  48   |   20   |         6          |       2        |    2    |
+|  48   |   20   |         6          |       2        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

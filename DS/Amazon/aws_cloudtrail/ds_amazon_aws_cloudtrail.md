@@ -4,7 +4,7 @@ Product: AWS CloudTrail
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  496  |  140   |        136         |       76       |   76    |
+|  496  |  140   |        136         |       76       |   44    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

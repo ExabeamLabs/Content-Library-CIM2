@@ -4,7 +4,7 @@ Product: Entrust Identity Enterprise
 ------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   3    |         3          |       1        |    1    |
+|   5   |   3    |         3          |       1        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

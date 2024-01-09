@@ -7,7 +7,7 @@ Vendor: Admin By Request
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  10   |   7    |         1          |       1        |    1    |
+|  10   |   7    |         1          |       1        |    0    |
 
 | Event Type        | Rules    | Models    |
 | ---- | ---- | ---- |

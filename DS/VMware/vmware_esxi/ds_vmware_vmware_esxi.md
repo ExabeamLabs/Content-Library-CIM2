@@ -4,7 +4,7 @@ Product: VMware ESXi
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  146  |   62   |         25         |       6        |    6    |
+|  146  |   62   |         25         |       6        |   39    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

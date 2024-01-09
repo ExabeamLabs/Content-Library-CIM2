@@ -7,7 +7,7 @@ Vendor: CA Technologies
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   31   |         9          |       3        |    3    |
+|  59   |   31   |         9          |       3        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

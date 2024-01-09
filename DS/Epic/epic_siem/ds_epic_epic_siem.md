@@ -4,7 +4,7 @@ Product: Epic SIEM
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  68   |   26   |         7          |       5        |    5    |
+|  68   |   26   |         7          |       5        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

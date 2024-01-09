@@ -4,7 +4,7 @@ Product: Forcepoint Next-Gen Firewall
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  61   |   23   |         7          |       3        |    3    |
+|  61   |   23   |         7          |       3        |   11    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

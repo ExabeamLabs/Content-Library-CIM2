@@ -7,7 +7,7 @@ Vendor: Vectra
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  110  |   56   |         16         |       8        |    8    |
+|  110  |   56   |         16         |       8        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Cylance PROTECT
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  53   |   20   |         10         |       3        |    3    |
+|  53   |   20   |         10         |       3        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

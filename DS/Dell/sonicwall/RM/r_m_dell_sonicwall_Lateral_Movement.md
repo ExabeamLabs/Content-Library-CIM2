@@ -7,7 +7,7 @@ Vendor: Dell
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   15   |         11         |       7        |    7    |
+|  45   |   15   |         11         |       7        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

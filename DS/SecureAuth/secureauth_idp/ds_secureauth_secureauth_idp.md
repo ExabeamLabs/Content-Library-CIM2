@@ -4,7 +4,7 @@ Product: SecureAuth IDP
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  92   |   37   |         10         |       5        |    5    |
+|  92   |   37   |         10         |       5        |   21    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

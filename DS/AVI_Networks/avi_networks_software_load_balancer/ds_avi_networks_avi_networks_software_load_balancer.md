@@ -4,7 +4,7 @@ Product: AVI Networks Software Load Balancer
 --------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   18   |         6          |       3        |    3    |
+|  45   |   18   |         6          |       3        |    5    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

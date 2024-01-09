@@ -4,7 +4,7 @@ Product: Barracuda Cloudgen Firewall
 ------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  193  |   71   |         25         |       7        |    7    |
+|  193  |   71   |         25         |       7        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

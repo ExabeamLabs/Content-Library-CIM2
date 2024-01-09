@@ -4,7 +4,7 @@ Product: OneLogin
 -----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  87   |   40   |         8          |       5        |    5    |
+|  87   |   40   |         8          |       5        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

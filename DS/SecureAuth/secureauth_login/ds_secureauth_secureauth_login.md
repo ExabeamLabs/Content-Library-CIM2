@@ -4,7 +4,7 @@ Product: SecureAuth Login
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  113  |   48   |         24         |       4        |    4    |
+|  113  |   48   |         24         |       4        |   12    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

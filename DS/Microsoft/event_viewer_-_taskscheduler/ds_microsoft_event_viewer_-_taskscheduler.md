@@ -4,7 +4,7 @@ Product: Event Viewer - TaskScheduler
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  58   |   26   |         5          |       1        |    1    |
+|  58   |   26   |         5          |       1        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

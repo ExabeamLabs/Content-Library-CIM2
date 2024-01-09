@@ -4,7 +4,7 @@ Product: Tanium Cloud Platform
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   33   |         9          |       4        |    4    |
+|  75   |   33   |         9          |       4        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

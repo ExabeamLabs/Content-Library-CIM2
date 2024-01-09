@@ -4,7 +4,7 @@ Product: IBM Resource Access Control Facility
 ---------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  77   |   31   |         7          |       5        |    5    |
+|  77   |   31   |         7          |       5        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

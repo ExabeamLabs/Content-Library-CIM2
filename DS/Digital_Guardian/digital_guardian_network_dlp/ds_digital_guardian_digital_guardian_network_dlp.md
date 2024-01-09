@@ -4,7 +4,7 @@ Product: Digital Guardian Network DLP
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  37   |   16   |         3          |       1        |    1    |
+|  37   |   16   |         3          |       1        |    7    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

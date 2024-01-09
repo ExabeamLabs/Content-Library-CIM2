@@ -4,7 +4,7 @@ Product: Vectra Cognito Stream
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  226  |   90   |         34         |       10       |   10    |
+|  226  |   90   |         34         |       10       |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

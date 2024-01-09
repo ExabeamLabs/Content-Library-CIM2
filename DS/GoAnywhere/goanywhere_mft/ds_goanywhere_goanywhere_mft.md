@@ -4,7 +4,7 @@ Product: GoAnywhere MFT
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  130  |   48   |         22         |       6        |    6    |
+|  130  |   48   |         22         |       6        |    9    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -7,7 +7,7 @@ Vendor: Damballa
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  23   |   9    |         4          |       1        |    1    |
+|  23   |   9    |         4          |       1        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

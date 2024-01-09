@@ -4,7 +4,7 @@ Product: SAP
 ------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  174  |   70   |         29         |       12       |   12    |
+|  174  |   70   |         29         |       12       |   24    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

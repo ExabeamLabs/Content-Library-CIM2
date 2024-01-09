@@ -4,7 +4,7 @@ Product: Cisco Unified Communications Manager
 ---------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  63   |   26   |         5          |       3        |    3    |
+|  63   |   26   |         5          |       3        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

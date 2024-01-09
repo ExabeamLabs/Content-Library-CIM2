@@ -4,7 +4,7 @@ Product: Active Directory Federation Services
 ---------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  88   |   32   |         16         |       3        |    3    |
+|  88   |   32   |         16         |       3        |   16    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

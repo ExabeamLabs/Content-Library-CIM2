@@ -4,7 +4,7 @@ Product: CyberArk Privilege Access Manager
 ------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  273  |  108   |         44         |       13       |   13    |
+|  273  |  108   |         44         |       13       |    7    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

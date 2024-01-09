@@ -4,7 +4,7 @@ Product: Rubrik Cloud Data Management
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  68   |   27   |         14         |       3        |    3    |
+|  68   |   27   |         14         |       3        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -7,7 +7,7 @@ Vendor: SentinelOne
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  117  |   35   |         25         |       11       |   11    |
+|  117  |   35   |         25         |       11       |   28    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

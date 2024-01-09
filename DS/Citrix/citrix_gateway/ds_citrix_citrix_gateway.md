@@ -4,7 +4,7 @@ Product: Citrix Gateway
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  444  |  108   |        132         |       9        |    9    |
+|  444  |  108   |        132         |       9        |   17    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

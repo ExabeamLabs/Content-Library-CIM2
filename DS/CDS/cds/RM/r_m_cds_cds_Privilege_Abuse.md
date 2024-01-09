@@ -7,7 +7,7 @@ Vendor: CDS
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  12   |   7    |         2          |       2        |    2    |
+|  12   |   7    |         2          |       2        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

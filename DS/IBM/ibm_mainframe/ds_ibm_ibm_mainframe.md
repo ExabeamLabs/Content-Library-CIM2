@@ -4,7 +4,7 @@ Product: IBM Mainframe
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  363  |   62   |        119         |       4        |    4    |
+|  363  |   62   |        119         |       4        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

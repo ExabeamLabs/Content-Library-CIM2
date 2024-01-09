@@ -7,7 +7,7 @@ Vendor: InfoWatch
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  19   |   6    |         6          |       2        |    2    |
+|  19   |   6    |         6          |       2        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

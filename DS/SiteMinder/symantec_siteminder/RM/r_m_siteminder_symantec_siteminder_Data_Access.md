@@ -7,7 +7,7 @@ Vendor: SiteMinder
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   4    |         1          |       1        |    1    |
+|   5   |   4    |         1          |       1        |    0    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

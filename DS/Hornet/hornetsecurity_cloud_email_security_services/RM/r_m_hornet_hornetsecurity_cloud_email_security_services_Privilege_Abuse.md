@@ -7,7 +7,7 @@ Vendor: Hornet
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         1          |       4        |    4    |
+|   1   |   0    |         1          |       4        |    1    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

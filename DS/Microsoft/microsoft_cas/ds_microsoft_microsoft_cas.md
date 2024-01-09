@@ -4,7 +4,7 @@ Product: Microsoft CAS
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  165  |   72   |         23         |       10       |   10    |
+|  165  |   72   |         23         |       10       |   43    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

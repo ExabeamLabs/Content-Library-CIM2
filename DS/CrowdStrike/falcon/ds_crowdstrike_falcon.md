@@ -4,7 +4,7 @@ Product: Falcon
 ---------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  620  |  161   |        139         |       26       |   26    |
+|  620  |  161   |        139         |       26       |   98    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

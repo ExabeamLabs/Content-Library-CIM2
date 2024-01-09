@@ -4,7 +4,7 @@ Product: Azure Monitor
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  263  |  115   |         39         |       34       |   34    |
+|  263  |  115   |         39         |       34       |   63    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

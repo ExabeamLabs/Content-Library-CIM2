@@ -4,7 +4,7 @@ Product: Netskope Security Cloud
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  397  |  162   |         50         |       19       |   19    |
+|  397  |  162   |         50         |       19       |   81    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

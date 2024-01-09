@@ -4,7 +4,7 @@ Product: BeyondTrust Privileged Identity
 ----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  99   |   46   |         11         |       8        |    8    |
+|  99   |   46   |         11         |       8        |   13    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

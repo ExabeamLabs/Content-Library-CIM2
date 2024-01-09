@@ -4,7 +4,7 @@ Product: Singularity Platform
 -----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  703  |  208   |        148         |       22       |   22    |
+|  703  |  208   |        148         |       22       |   44    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

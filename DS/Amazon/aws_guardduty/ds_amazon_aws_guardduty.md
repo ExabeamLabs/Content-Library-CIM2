@@ -4,7 +4,7 @@ Product: AWS GuardDuty
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  106  |   43   |         20         |       3        |    3    |
+|  106  |   43   |         20         |       3        |   23    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

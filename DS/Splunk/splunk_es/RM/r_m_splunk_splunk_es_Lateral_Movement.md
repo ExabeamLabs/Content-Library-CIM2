@@ -7,7 +7,7 @@ Vendor: Splunk
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   17   |         5          |       1        |    1    |
+|  39   |   17   |         5          |       1        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

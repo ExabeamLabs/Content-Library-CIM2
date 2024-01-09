@@ -4,7 +4,7 @@ Product: Aruba Wireless controller
 ----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   30   |         14         |       4        |    4    |
+|  75   |   30   |         14         |       4        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

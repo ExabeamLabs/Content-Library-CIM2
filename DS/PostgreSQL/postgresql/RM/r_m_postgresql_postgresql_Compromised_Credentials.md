@@ -7,7 +7,7 @@ Vendor: PostgreSQL
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  10   |   5    |         1          |       1        |    1    |
+|  10   |   5    |         1          |       1        |    0    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

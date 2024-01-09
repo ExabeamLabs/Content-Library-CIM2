@@ -4,7 +4,7 @@ Product: Cohesity DataPlatform
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  323  |   47   |        118         |       2        |    2    |
+|  323  |   47   |        118         |       2        |    5    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

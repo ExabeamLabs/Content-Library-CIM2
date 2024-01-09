@@ -4,7 +4,7 @@ Product: Imperva Incapsula
 --------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  80   |   30   |         16         |       3        |    3    |
+|  80   |   30   |         16         |       3        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

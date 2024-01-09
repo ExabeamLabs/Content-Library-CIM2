@@ -7,7 +7,7 @@ Vendor: Imprivata
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   4    |         1          |       2        |    2    |
+|   6   |   4    |         1          |       2        |    0    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

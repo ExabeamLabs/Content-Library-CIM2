@@ -4,7 +4,7 @@ Product: Oracle Database
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  111  |   55   |         16         |       4        |    4    |
+|  111  |   55   |         16         |       4        |   15    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

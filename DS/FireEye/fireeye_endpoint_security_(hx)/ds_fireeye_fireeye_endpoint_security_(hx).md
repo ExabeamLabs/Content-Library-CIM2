@@ -4,7 +4,7 @@ Product: FireEye Endpoint Security (HX)
 ---------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  73   |   27   |         8          |       3        |    3    |
+|  73   |   27   |         8          |       3        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

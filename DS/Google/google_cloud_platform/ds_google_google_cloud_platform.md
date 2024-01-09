@@ -4,7 +4,7 @@ Product: Google Cloud Platform
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  213  |  106   |         34         |       26       |   26    |
+|  213  |  106   |         34         |       26       |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

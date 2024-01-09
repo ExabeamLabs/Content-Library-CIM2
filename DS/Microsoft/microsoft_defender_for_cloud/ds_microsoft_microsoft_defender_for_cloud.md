@@ -4,7 +4,7 @@ Product: Microsoft Defender for Cloud
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  134  |   61   |         12         |       5        |    5    |
+|  134  |   61   |         12         |       5        |   24    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

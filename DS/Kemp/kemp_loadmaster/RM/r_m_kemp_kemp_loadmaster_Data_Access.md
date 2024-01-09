@@ -7,7 +7,7 @@ Vendor: Kemp
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  19   |   11   |         1          |       2        |    2    |
+|  19   |   11   |         1          |       2        |    0    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

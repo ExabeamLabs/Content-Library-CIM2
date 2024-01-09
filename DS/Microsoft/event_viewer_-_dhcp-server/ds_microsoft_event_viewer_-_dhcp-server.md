@@ -4,7 +4,7 @@ Product: Event Viewer - DHCP-Server
 -----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  77   |   31   |         7          |       4        |    4    |
+|  77   |   31   |         7          |       4        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

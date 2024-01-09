@@ -7,7 +7,7 @@ Vendor: IMSS
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   0    |         1          |       1        |    1    |
+|   2   |   0    |         1          |       1        |    4    |
 
 | Event Type     | Rules    | Models |
 | ---- | ---- | ------ |

@@ -4,7 +4,7 @@ Product: Event Viewer - DFS-Replication
 ---------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  25   |   6    |         5          |       3        |    3    |
+|  25   |   6    |         5          |       3        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

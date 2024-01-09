@@ -7,7 +7,7 @@ Vendor: Barracuda
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  68   |   35   |         9          |       4        |    4    |
+|  68   |   35   |         9          |       4        |   10    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Microsoft 365
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  536  |  137   |        130         |       18       |   18    |
+|  536  |  137   |        130         |       18       |   147   |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

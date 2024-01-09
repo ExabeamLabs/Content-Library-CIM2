@@ -4,7 +4,7 @@ Product: Password Manager Pro
 -----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  95   |   33   |         17         |       5        |    5    |
+|  95   |   33   |         17         |       5        |    9    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

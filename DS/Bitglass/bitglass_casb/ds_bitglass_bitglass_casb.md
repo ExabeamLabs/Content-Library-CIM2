@@ -4,7 +4,7 @@ Product: Bitglass CASB
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  115  |   52   |         13         |       5        |    5    |
+|  115  |   52   |         13         |       5        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

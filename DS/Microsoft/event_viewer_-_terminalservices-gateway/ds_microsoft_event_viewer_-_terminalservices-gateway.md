@@ -4,7 +4,7 @@ Product: Event Viewer - TerminalServices-Gateway
 ------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  61   |   26   |         6          |       2        |    2    |
+|  61   |   26   |         6          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

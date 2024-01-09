@@ -7,7 +7,7 @@ Vendor: Safend
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  43   |   21   |         5          |       3        |    3    |
+|  43   |   21   |         5          |       3        |    0    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

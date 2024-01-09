@@ -4,7 +4,7 @@ Product: Tanium Integrity Monitor
 ---------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  416  |   83   |        123         |       6        |    6    |
+|  416  |   83   |        123         |       6        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

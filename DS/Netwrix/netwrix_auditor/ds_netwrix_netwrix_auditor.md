@@ -4,7 +4,7 @@ Product: Netwrix Auditor
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  74   |   20   |         13         |       5        |    5    |
+|  74   |   20   |         13         |       5        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

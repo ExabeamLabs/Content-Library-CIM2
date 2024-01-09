@@ -4,7 +4,7 @@ Product: Kaspersky Endpoint Security for Business
 -------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  72   |   32   |         11         |       3        |    3    |
+|  72   |   32   |         11         |       3        |    7    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

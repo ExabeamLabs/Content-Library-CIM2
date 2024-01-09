@@ -7,7 +7,7 @@ Vendor: VMware
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  11   |   6    |         5          |       2        |    2    |
+|  11   |   6    |         5          |       2        |    1    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

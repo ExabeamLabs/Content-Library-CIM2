@@ -4,7 +4,7 @@ Product: Proofpoint Enterprise Protection
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  135  |   57   |         23         |       4        |    4    |
+|  135  |   57   |         23         |       4        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

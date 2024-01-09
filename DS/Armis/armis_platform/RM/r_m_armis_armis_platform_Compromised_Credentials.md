@@ -7,7 +7,7 @@ Vendor: Armis
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  26   |   9    |         4          |       2        |    2    |
+|  26   |   9    |         4          |       2        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

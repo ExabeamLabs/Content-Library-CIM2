@@ -7,7 +7,7 @@ Vendor: Infoblox
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   0    |         9          |       4        |    4    |
+|   5   |   0    |         9          |       4        |   33    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

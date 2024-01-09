@@ -7,7 +7,7 @@ Vendor: Semperis
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  35   |   17   |         6          |       4        |    4    |
+|  35   |   17   |         6          |       4        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Aruba ClearPass Policy Manager
 ---------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  64   |   25   |         11         |       5        |    5    |
+|  64   |   25   |         11         |       5        |   12    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

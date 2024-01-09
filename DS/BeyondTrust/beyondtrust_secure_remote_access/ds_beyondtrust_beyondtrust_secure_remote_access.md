@@ -4,7 +4,7 @@ Product: BeyondTrust Secure Remote Access
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  76   |   33   |         8          |       2        |    2    |
+|  76   |   33   |         8          |       2        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

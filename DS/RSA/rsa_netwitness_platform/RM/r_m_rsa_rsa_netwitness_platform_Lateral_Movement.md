@@ -7,7 +7,7 @@ Vendor: RSA
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  51   |   21   |         11         |       1        |    1    |
+|  51   |   21   |         11         |       1        |    0    |
 
 | Event Type         | Rules    | Models    |
 | ---- | ---- | ---- |

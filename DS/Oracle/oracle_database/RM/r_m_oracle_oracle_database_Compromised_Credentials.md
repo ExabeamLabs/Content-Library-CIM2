@@ -7,7 +7,7 @@ Vendor: Oracle
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  54   |   26   |         9          |       3        |    3    |
+|  54   |   26   |         9          |       3        |   10    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

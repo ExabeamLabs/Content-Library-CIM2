@@ -4,7 +4,7 @@ Product: Symantec Endpoint Protection
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  237  |   91   |         25         |       13       |   13    |
+|  237  |   91   |         25         |       13       |   39    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Event Viewer - ADFS
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  196  |   82   |         33         |       7        |    7    |
+|  196  |   82   |         33         |       7        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

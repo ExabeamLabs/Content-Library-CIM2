@@ -4,7 +4,7 @@ Product: Cisco Secure Endpoint
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  85   |   33   |         8          |       5        |    5    |
+|  85   |   33   |         8          |       5        |   24    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

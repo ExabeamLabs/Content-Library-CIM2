@@ -7,7 +7,7 @@ Vendor: Banyan Security
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  40   |   17   |         5          |       3        |    3    |
+|  40   |   17   |         5          |       3        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

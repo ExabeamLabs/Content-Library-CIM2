@@ -4,7 +4,7 @@ Product: CyberArk Endpoint Privilege Manager
 --------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  25   |   18   |         4          |       3        |    3    |
+|  25   |   18   |         4          |       3        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

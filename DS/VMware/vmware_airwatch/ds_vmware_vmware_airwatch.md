@@ -4,7 +4,7 @@ Product: VMware AirWatch
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  111  |   44   |         11         |       5        |    5    |
+|  111  |   44   |         11         |       5        |   19    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

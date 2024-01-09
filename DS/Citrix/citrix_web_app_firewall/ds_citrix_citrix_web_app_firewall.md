@@ -4,7 +4,7 @@ Product: Citrix Web App Firewall
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  139  |   50   |         18         |       4        |    4    |
+|  139  |   50   |         18         |       4        |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

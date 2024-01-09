@@ -4,7 +4,7 @@ Product: Citrix Virtual Apps
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  107  |   45   |         16         |       3        |    3    |
+|  107  |   45   |         16         |       3        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

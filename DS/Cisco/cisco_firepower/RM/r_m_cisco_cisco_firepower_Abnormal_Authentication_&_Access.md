@@ -7,7 +7,7 @@ Vendor: Cisco
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  40   |   15   |         4          |       9        |    9    |
+|  40   |   15   |         4          |       9        |   36    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

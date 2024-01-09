@@ -7,7 +7,7 @@ Vendor: Dtex Systems
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  14   |   5    |         5          |       3        |    3    |
+|  14   |   5    |         5          |       3        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Zeek
 -------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  426  |  155   |         62         |       23       |   23    |
+|  426  |  155   |         62         |       23       |   53    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

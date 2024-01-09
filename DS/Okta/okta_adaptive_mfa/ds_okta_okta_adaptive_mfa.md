@@ -4,7 +4,7 @@ Product: Okta Adaptive MFA
 --------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  223  |   93   |         26         |       13       |   13    |
+|  223  |   93   |         26         |       13       |   35    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

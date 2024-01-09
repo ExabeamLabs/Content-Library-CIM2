@@ -7,7 +7,7 @@ Vendor: Sybase
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  37   |   21   |         4          |       2        |    2    |
+|  37   |   21   |         4          |       2        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

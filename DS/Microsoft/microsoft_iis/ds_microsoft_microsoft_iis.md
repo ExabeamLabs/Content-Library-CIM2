@@ -4,7 +4,7 @@ Product: Microsoft IIS
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   27   |         15         |       2        |    2    |
+|  75   |   27   |         15         |       2        |   71    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

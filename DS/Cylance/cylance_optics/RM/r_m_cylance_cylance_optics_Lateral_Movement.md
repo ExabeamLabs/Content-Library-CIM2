@@ -7,7 +7,7 @@ Vendor: Cylance
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  43   |   19   |         6          |       2        |    2    |
+|  43   |   19   |         6          |       2        |    7    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

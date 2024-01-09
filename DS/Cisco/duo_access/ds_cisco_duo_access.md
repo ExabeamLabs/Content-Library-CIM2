@@ -4,7 +4,7 @@ Product: Duo Access
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  159  |   60   |         24         |       11       |   11    |
+|  159  |   60   |         24         |       11       |   27    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

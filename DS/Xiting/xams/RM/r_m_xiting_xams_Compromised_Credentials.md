@@ -7,7 +7,7 @@ Vendor: Xiting
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  28   |   16   |         3          |       2        |    2    |
+|  28   |   16   |         3          |       2        |    1    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

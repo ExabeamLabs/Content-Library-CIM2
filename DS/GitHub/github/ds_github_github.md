@@ -4,7 +4,7 @@ Product: GitHub
 ---------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  102  |   43   |         9          |       5        |    5    |
+|  102  |   43   |         9          |       5        |   37    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

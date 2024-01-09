@@ -4,7 +4,7 @@ Product: Skyhigh Networks CASB
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  135  |   57   |         18         |       7        |    7    |
+|  135  |   57   |         18         |       7        |   18    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

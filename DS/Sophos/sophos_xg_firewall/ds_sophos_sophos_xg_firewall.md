@@ -4,7 +4,7 @@ Product: Sophos XG Firewall
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  96   |   37   |         7          |       4        |    4    |
+|  96   |   37   |         7          |       4        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

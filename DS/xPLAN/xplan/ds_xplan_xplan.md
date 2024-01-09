@@ -4,7 +4,7 @@ Product: xPLAN
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  12   |   6    |         1          |       1        |    1    |
+|  12   |   6    |         1          |       1        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP          | Content    |
 |:----:| ---- | ---- | ---- |

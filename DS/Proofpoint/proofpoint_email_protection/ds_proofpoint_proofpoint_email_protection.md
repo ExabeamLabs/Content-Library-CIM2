@@ -4,7 +4,7 @@ Product: Proofpoint Email Protection
 ------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  146  |   68   |         19         |       7        |    7    |
+|  146  |   68   |         19         |       7        |   13    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

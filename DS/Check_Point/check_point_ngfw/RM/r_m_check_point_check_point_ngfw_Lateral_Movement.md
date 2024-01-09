@@ -7,7 +7,7 @@ Vendor: Check Point
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  103  |   37   |         15         |       13       |   13    |
+|  103  |   37   |         15         |       13       |   51    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

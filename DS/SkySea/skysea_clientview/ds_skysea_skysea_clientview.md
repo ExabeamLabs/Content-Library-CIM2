@@ -4,7 +4,7 @@ Product: SkySea ClientView
 --------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  568  |  148   |        137         |       12       |   12    |
+|  568  |  148   |        137         |       12       |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

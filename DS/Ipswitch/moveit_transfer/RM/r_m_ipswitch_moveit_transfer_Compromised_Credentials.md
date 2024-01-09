@@ -7,7 +7,7 @@ Vendor: Ipswitch
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   38   |         7          |       5        |    5    |
+|  75   |   38   |         7          |       5        |    4    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: OneWelcome Cloud Identity Platform
 -------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  353  |   57   |        120         |       6        |    6    |
+|  353  |   57   |        120         |       6        |   51    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Cisco Firepower
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  621  |  174   |        141         |       16       |   16    |
+|  621  |  174   |        141         |       16       |   61    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

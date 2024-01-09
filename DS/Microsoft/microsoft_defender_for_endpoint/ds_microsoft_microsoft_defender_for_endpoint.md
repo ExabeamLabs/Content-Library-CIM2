@@ -4,7 +4,7 @@ Product: Microsoft Defender for Endpoint
 ----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  606  |  163   |        137         |       18       |   18    |
+|  606  |  163   |        137         |       18       |   87    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

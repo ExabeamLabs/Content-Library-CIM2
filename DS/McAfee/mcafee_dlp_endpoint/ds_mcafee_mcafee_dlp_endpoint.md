@@ -4,7 +4,7 @@ Product: McAfee DLP Endpoint
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  56   |   27   |         9          |       5        |    5    |
+|  56   |   27   |         9          |       5        |   18    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

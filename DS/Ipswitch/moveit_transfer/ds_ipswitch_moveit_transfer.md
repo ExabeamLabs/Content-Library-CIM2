@@ -4,7 +4,7 @@ Product: MoveIt Transfer
 ------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  136  |   56   |         17         |       8        |    8    |
+|  136  |   56   |         17         |       8        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

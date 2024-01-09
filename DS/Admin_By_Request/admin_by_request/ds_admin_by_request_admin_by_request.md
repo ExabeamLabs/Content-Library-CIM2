@@ -4,7 +4,7 @@ Product: Admin By Request
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  20   |   15   |         2          |       2        |    2    |
+|  20   |   15   |         2          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP          | Content    |
 |:----:| ---- | ---- | ---- |

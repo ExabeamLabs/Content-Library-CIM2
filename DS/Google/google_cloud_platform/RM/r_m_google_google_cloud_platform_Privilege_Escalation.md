@@ -7,7 +7,7 @@ Vendor: Google
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  17   |   12   |         4          |       6        |    6    |
+|  17   |   12   |         4          |       6        |   12    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

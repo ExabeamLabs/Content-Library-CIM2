@@ -7,7 +7,7 @@ Vendor: Rubrik
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  20   |   8    |         4          |       1        |    1    |
+|  20   |   8    |         4          |       1        |    0    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

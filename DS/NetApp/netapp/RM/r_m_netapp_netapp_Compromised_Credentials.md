@@ -7,7 +7,7 @@ Vendor: NetApp
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   30   |         7          |       4        |    4    |
+|  59   |   30   |         7          |       4        |    2    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

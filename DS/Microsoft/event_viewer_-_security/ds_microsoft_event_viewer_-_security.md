@@ -4,7 +4,7 @@ Product: Event Viewer - Security
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  910  |  296   |        159         |       45       |   45    |
+|  910  |  296   |        159         |       45       |   602   |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

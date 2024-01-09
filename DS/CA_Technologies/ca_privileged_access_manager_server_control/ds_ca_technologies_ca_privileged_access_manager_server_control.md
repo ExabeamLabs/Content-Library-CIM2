@@ -4,7 +4,7 @@ Product: CA Privileged Access Manager Server Control
 ----------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  128  |   54   |         24         |       7        |    7    |
+|  128  |   54   |         24         |       7        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

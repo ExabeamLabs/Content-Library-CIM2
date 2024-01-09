@@ -4,7 +4,7 @@ Product: Palo Alto NGFW
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  452  |  196   |         57         |       18       |   18    |
+|  452  |  196   |         57         |       18       |   60    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

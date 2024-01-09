@@ -7,7 +7,7 @@ Vendor: McAfee
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  16   |   7    |         4          |       3        |    3    |
+|  16   |   7    |         4          |       3        |   26    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

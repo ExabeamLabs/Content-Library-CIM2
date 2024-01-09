@@ -4,7 +4,7 @@ Product: Azure AD Activity Logs
 -------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  116  |   47   |         14         |       8        |    8    |
+|  116  |   47   |         14         |       8        |   20    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

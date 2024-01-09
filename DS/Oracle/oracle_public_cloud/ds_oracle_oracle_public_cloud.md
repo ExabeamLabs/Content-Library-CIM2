@@ -4,7 +4,7 @@ Product: Oracle Public Cloud
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  202  |   77   |         25         |       12       |   12    |
+|  202  |   77   |         25         |       12       |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
