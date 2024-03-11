@@ -11,7 +11,7 @@ Name = netskope-sc-sk4-app-activity-adminauditlogs
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",
     """"category":"({additional_info}[^"]+)""",
-    """"user":"(unknown|({email_address}[^@"\s]+@[^@"\s]+\.[^@"\s]+)?|(({domain}[^"@\\\/\s]+)[\\\/]+)?|({user}[\w\.\-]{1,40}\$?))"""",
+    """"user":"(unknown|({email_address}[^@"\s]+@[^@"\s]+\.[^@"\s]+)?|(({domain}[^"@\\\/\s]+)[\\\/]+)?|({user}[^"\\\/\s]+))"""",
     """"audit_log_event":"({operation}[^"]+)""",
 # data_values is removed
 # supporting_data_type is removed

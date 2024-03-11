@@ -4,11 +4,11 @@ Product: McAfee DLP Prevent
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   17   |         3          |       2        |    0    |
+|  44   |   20   |         3          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[mcafee-dlp-cef-email-send-success-protectedcontent](Ps/pC_mcafeedlpcefemailsendsuccessprotectedcontent.md)<br><br> dlp-email-alert-out-failed<br> ↳[mcafee-dlp-cef-email-send-fail-dlpprevent](Ps/pC_mcafeedlpcefemailsendfaildlpprevent.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>34 Rules</li></ul><ul><li>16 Models</li></ul>](RM/r_m_mcafee_mcafee_dlp_prevent_Data_Leak.md)          |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[mcafee-dlp-cef-email-send-success-protectedcontent](Ps/pC_mcafeedlpcefemailsendsuccessprotectedcontent.md)<br><br> dlp-email-alert-out-failed<br> ↳[mcafee-dlp-cef-email-send-fail-dlpprevent](Ps/pC_mcafeedlpcefemailsendfaildlpprevent.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>39 Rules</li></ul><ul><li>19 Models</li></ul>](RM/r_m_mcafee_mcafee_dlp_prevent_Data_Leak.md)          |
 |    [Malware](../../../UseCases/uc_malware.md)    |  dlp-email-alert-out<br> ↳[mcafee-dlp-cef-email-send-success-protectedcontent](Ps/pC_mcafeedlpcefemailsendsuccessprotectedcontent.md)<br>    | T1190 - Exploit Public Fasing Application<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_mcafee_mcafee_dlp_prevent_Malware.md)    |
 |    [Phishing](../../../UseCases/uc_phishing.md)    |  dlp-email-alert-out<br> ↳[mcafee-dlp-cef-email-send-success-protectedcontent](Ps/pC_mcafeedlpcefemailsendsuccessprotectedcontent.md)<br>    | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_mcafee_mcafee_dlp_prevent_Phishing.md)    |
 |      [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)      |  dlp-email-alert-out<br> ↳[mcafee-dlp-cef-email-send-success-protectedcontent](Ps/pC_mcafeedlpcefemailsendsuccessprotectedcontent.md)<br><br> dlp-email-alert-out-failed<br> ↳[mcafee-dlp-cef-email-send-fail-dlpprevent](Ps/pC_mcafeedlpcefemailsendfaildlpprevent.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_mcafee_mcafee_dlp_prevent_Privilege_Abuse.md)    |

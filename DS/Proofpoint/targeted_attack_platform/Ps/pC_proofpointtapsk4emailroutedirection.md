@@ -21,7 +21,7 @@ Fields = [
   """"filter_verified_rcpts_s":"\[[^"]*"({dest_email_address}[^,]+?@[^,]+?)[\s\\"]+"""
   """"msg_header_subject_s":"\[\s*\\*"({email_subject}[^\]]+?)\\*"\s*\]",""""
   """"filter_routeDirection_s":"({direction}[^"]+)""""
-  """"filter_disposition_s":"({result}[^"]+)"""
+  """"filter_disposition_s":"({action}[^"]+)"""
   """"detectedName":\s*"({email_attachment}(?!text)[^"]+)"""
   """"filter_isMsgReinjected_b":[\s"]*({is_consolidated}\w+)[\s"]*,"""
   """"rule":\s*"({rule}[^"]+)""""

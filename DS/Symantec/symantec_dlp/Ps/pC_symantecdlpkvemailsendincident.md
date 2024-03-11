@@ -4,7 +4,7 @@
 Name = symantec-dlp-kv-email-send-incident
 Vendor = "Symantec"
 Product = "Symantec DLP"
-TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd, yyyy hh:mm:ss a"]
+TimeFormat = "yyyy-MM-dd HH:mm:ss"
 occured_timeFormat = ["MMM dd, yyyy HH:mm:ss a"]
 Conditions = [
   """incident_id=""""
@@ -26,20 +26,20 @@ Fields = [
   """[\s,]rules=(?:"+)?\s*({alert_type}[^="]+?)\s*(?:"+)?,\s\w+="""
   """[\s,]severity="+({alert_severity}[^"]+?)""""
   """[\s,]sender="+\s*({src_email_address}[^\s"@,]+@[^\s"@,]+?)""""
-  """,\sendpoint_username="+\s*(?:N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
-  """[\s,]sender="+\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """,\sendpoint_username="+\s*(?:N\/A|(({domain}[^\\]+)\\+)?({user}[^"\\]+))"""
+  """[\s,]sender="+\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """,\smachine_ip="+({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*",\s"""
-  """,\sdestination_ip="+(?:N\/A|null\s*|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s*"*,\s"""
+  """,\sdestination_ip="+(?:N\/A|null\s*|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s*"*,\s"""
   """[\s,]recipients="+\s*(?:N\/A|Unknown|({target}[^",]+?))"*,"""
   """[\s,]recipients="+\s*(N\/A|({email_recipients}(?:({dest_email_address}[^\s"@,]+@[^\s@",]+?))(?:\s*,\s*[^\s"@,]+@[^\s@",]+?\s*?)*)\s*"*,)"""
   """[\s,]recipients="+\s*(N\/A|({url}(\w+:\/+)?({web_domain}[^\\\/]+)[^\s]+)(?::|"|\/))"""
   """[\s,]recipients="+\s*({protocol}\w+):\/\/"""
   """,\sprotocol="+(?:N\/A|({protocol}[^",]+?))\s*"*,"""
   """[\s,]subject="+(?:N\/A|({additional_info}(?:[^",]|"")+?))\s*"*,"""
-  """,\sfile_name="+(?:N\/A|({file_name}[^",]+?\.({file_ext}[^"]+)))\s*"*,"""
-  """,\sattachment_filename="(([^"]+\\)?({file_name}[^"]+\.({file_ext}[a-zA-Z]{2,})))\s*","""
+  """,\sfile_name="+(?:N\/A|({file_name}[^",]+?))\s*"*,"""
+  """,\sattachment_filename="+(?:N\/A|({file_name}[^.",]+?(?:\.({file_ext}[^",]+?))?))\s*"*,"""
   """,\sendpoint_machine="+(?:N\/A|({device_id}[^",]+?))\s*"*,\s"""
-  """\sZID="+({user}[\w\.\-]{1,40}\$?)"*,"""
+  """\sZID="+({user}[^",\s]+?)"*,"""
 ]
 DupFields = [
   "additional_info->email_subject"

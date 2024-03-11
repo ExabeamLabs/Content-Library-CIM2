@@ -6,9 +6,8 @@ Vendor = Salesforce
 Product = Salesforce
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
- """Action\=changedprofileforuserstdtostd;"""
- """type\=SetupAuditTrail;"""
- """Display\="""
+  """flexString1=changedprofileforuserstdtostd"""
+  """destinationServiceName =Sales Cloud"""
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s+"""

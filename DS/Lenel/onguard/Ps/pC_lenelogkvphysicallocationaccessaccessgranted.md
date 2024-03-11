@@ -8,10 +8,10 @@ Name = lenel-og-kv-physical-location-access-accessgranted
     Conditions = ["""LOG_TIME_UTC=""","""EVENT_TIME_CT=""", """EVDESCR=""", """READERDESC=""", """MACHINE_NAME=""", """BUILDING_CODE="""]
     Fields = [
       """LOG_TIME_UTC=\\?"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
-      """LOG_HOST=\\?"({host}[^\\"]+)""",
+      """LOG_HOST=\\?"({host}[^\"]+)""",
       """CARDNUM="*({badge_id}[^=]+)\s\w+=""",
-      """USER=\\?"({user}[\w\.\-]{1,40}\$?)""",
-      """EVDESCR=\\?"({result}[^\\"]+)""",
+      """USER=\\?"({user}[^\\"]+)""",
+      """EVDESCR=\\?"({result}[^\"]+)""",
       """LASTNAME=\\?"({last_name}[^\\"]+)""",
       """FIRSTNAME=\\?"({first_name}[^\\"]*?)\s*\\""",
       """READERDESC=\\?"({location_door}[^\\"]+)""",

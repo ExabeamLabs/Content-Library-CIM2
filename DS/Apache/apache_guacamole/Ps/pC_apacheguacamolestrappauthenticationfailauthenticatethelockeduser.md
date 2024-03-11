@@ -9,7 +9,7 @@ Name = apache-guacamole-str-app-authentication-fail-authenticatethelockeduser
   Conditions = [ """realm.LockOutRealm.filterLockedAccounts""", """An attempt was made to authenticate the locked user ["""]
   Fields = [
     """({time}\d\d-\w\w\w-\d\d\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({event_name}An attempt was made to authenticate the locked user) \[({user}[\w\.\-]{1,40}\$?)\]"""
+    """({event_name}An attempt was made to authenticate the locked user) \[({user}[^\]]+?)\]"""
     ]
 
 

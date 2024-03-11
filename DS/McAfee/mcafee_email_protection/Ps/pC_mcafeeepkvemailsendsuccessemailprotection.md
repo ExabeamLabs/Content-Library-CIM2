@@ -7,7 +7,7 @@ Name = mcafee-ep-kv-email-send-success-emailprotection
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """OUTGOING_EMAIL""", """DLP: Email Protection""" ]
   Fields = [
-     """UserName ="({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)"""",
+     """UserName ="({domain}[^\\]+)\\({user}[^"]+)"""",
      """ComputerName ="({src_host}[^"]+)"""",
      """EMAIL_RECIPIENT.+?>({dest_email_address}[^<]+)<""",
      """EMAIL_SUBJECT.+?>({email_subject}[^<]+)<""",

@@ -10,7 +10,7 @@ Name = vmware-carbonblackedr-leef-process-create-success-sensor
   Fields = [
     """\Wtimestamp(":|=)({time}\d{10})""",
     """\Wtype(":"|=)({operation_type}[^"]+?)\s*("|\w+=|$)""",
-    """\Wusername(":"|=)(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """\Wusername(":"|=)(({domain}[^\\]+)\\+)?({user}[^"\s]+)""",
     """\Wcomputer_name(":"|=)({dest_host}[\w\-.]+)""",
     """\Wsensor_id(":|=)({sensor_id}\d+)""",
     """\Wmd5(":"|=)({hash_md5}[^"]+?)\s*("|\w+=|$)""",

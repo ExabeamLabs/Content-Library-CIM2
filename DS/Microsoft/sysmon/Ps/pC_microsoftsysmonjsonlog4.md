@@ -18,9 +18,9 @@ Name = microsoft-sysmon-json-log-4
     """UserID":"({user_sid}[^"]+)""",
     """State":"({state}[^"]+)""",
     """ProcessID":({process_id}\d+)""",
-    """AccountName":"((?i)SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """AccountName":"((?i)SYSTEM|({user}[^"]+))""",
     """State":"({state}[^"]+)""",
-    """"AccountName":"((?i)system|({user}[\w\.\-]{1,40}\$?))"""",
+    """"AccountName":"((?i)system|({user}[^"]+))"""",
     """"({log_name}Microsoft-Windows-Sysmon)"""
   ]
 

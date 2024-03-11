@@ -14,7 +14,7 @@ Fields = [
   """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)"""
   """EventID="+({event_code}[^"]+)""""
   """EventRecordID="+({event_id}[^"]+)""""
-  """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)""""
+  """SubjectUserName ="+({user}[^"]+)""""
   """SubjectUserSid="+({user_sid}[^"]+)""""
   """SubjectDomainName ="+({domain}[^"]+)""""
   """SubjectLogonId="+({login_id}[^"]+)""""
@@ -28,7 +28,6 @@ DupFields = [
   "host->dest_host"
   "account_name->dest_user"
   "account_domain->dest_domain"
-  "dest_user->account_name"
 ]
 ParserVersion = "v1.0.0"
 

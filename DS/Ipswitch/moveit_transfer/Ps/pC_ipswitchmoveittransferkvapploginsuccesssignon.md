@@ -12,7 +12,7 @@ Name = ipswitch-moveittransfer-kv-app-login-success-signon
     """\sdvchost=({host}[^\s]+)\s\w+=""",
     """\srt=({time}\d{13})""",
     """\ssuser=({account_id}.+?)\s(\w+=|$)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sshost=({src_host}[^\s]+)\s\w+=""",
     """requestClientApplication=({user_agent}.+?)\s\w+=""",
     """({app}MoveIt)"""

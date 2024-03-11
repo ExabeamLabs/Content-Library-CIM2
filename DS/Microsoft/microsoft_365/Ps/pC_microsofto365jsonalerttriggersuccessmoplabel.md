@@ -24,7 +24,7 @@ Fields = [
   """MessageID"*:\s*"*<?({message_id}[^"]+?)>?""""
   """Severity"*:\s*"*({alert_severity}[^"]+)""""
   """IncidentId"*:\s*"*({alert_id}[^"]+)""""
-  """Actions"*:\s*\["*({result}[^"\]]+?)\s*""""
+  """Actions"*:\s*\["*({action}[^"\]]+?)\s*""""
   """RuleName"*:\s*"*(|({alert_name}.+?[^"]))""""
   """FileName"*:\s*"*(|({file_name}.+?[^"]))""""
   """RecipientCount"*:\s*({recipient_count}\d+)"""

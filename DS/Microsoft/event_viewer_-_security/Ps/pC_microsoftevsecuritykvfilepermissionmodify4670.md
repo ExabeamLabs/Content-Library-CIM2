@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-file-permission-modify-4670
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))""",
     """Security ID:\s*(SYSTEM|({user_sid}[^\s]+))\s""",
-    """Account Name:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s""",
+    """Account Name:\s*(SYSTEM|({user}[^\s]+))\s""",
     """Account Domain:\s*({domain}[^\s]+)\s""",
     """Logon ID:\s*({login_id}[^\s]+)\s""",
     """Process ID:\s*({process_id}[^\s]+)\s""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-kv-file-permission-modify-4670
     """Object Name:\s*(-|({object}[^\s]+))\s""",
     """Permissions Change:\s*({attribute}[^\s].+?)\s+(User:|$)""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
-    """Permissions Change:[\s\S]*?New Security Descriptor:[^\S<]*({permissions}[^<]+?)(\s+|<)"""
   ]
   DupFields = ["process_name -> file_name"]
 

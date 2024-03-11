@@ -11,7 +11,7 @@ Name = cybereason-cr-json-alert-trigger-success-affectedusers
     """"creationTime":\s+"({time}\d{13})"""",
     """"detectionType":\s*"({alert_type}[^"]+)""",
     """"affectedMachines":\s*\{[^\}]+?"elementType":\s*"Machine"[^\}]+?"name":\s*"({dest_host}[^"]+)"""",
-    """"affectedUsers":\s*\{[^\}]+"elementType":\s*"User"[^\}]+"name":\s*"((nt service|nt instans|({domain}[^\\"]+))\\+)?(network service|system|({user}[\w\.\-]{1,40}\$?))"""",
+    """"affectedUsers":\s*\{[^\}]+"elementType":\s*"User"[^\}]+"name":\s*"((nt service|nt instans|({domain}[^\\"]+))\\+)?(network service|system|({user}[^"]+))"""",
     """'message':\s*'({additional_info}[^']+?)\s*'""",
     """"elementDisplayName":\s*\{[^\}]+"values":\s*\["+({additional_info}[^"]+)"""",
     """"malopActivityTypes":\s*"({threat_category}[^"]+)"""",

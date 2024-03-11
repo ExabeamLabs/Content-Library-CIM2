@@ -12,7 +12,7 @@ Name = semperis-dsp-str-ds-object-create-success-createobject
   """OriginatingServer\]\s({host}[\w\-.]+)"""
   """ObjectModificationType\]\s({event_name}[^\[]+?)\s+\["""
   """AttributeModificationType\]\s({operation_type}[^\[]+?)\s+\["""
-  """OriginatingUsers\]\s(NT AUTHORITY|({domain}[^\;]+))[\\]+(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+  """OriginatingUsers\]\s(NT AUTHORITY|({domain}[^\;]+))[\\]+(SYSTEM|({user}[^;]+))"""
   """OriginatingUserWorkstations\]\s({src_host}[\w\-.]+)"""
   """ClassName\]\s({object_class}[^\s]+)"""
   """DistinguishedName\]\s({object_dn}[^\[]+?)\s+\["""

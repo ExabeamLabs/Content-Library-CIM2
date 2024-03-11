@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-handle-request-success-4659
     """"Hostname":"({host}[^"]+)"""",
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """"SubjectUserSid":"({user_sid}[^"]+)""""
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[^"]+)"""",
     """"SubjectDomainName":"({domain}[^"]+)""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"ObjectServer":"({object_server}[^"]+)"""",

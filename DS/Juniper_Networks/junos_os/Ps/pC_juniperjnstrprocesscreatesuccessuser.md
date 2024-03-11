@@ -15,7 +15,7 @@ juniper-process-created = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """\s+\d+\s\d\d:\d\d:\d\d\s({host}[^\s]+)\s""",
-    """User '({user}[\w\.\-]{1,40}\$?)'""",
+    """User '({user}[^']+)'""",
     """ command '({process_command_line}[^']+?)\s*'""",
   
 }

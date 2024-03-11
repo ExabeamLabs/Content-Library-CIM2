@@ -10,10 +10,10 @@ Conditions = [
   """System Center Endpoint Protection"""
 ]
 Fields = [
-  """dest_name=({dest_host}[\w\-.]+)\s"""
+  """dest_name=({dest_host}[^\s]+)\s"""
   """action_time="({time}[^"]+)""""
   """alert_time="({time}[^"]+)""""
-  """user_id=({user}[\w\.\-]{1,40}\$?)\s+dest_ip=({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+"""
+  """user_id=({user}[\w\d]+)\s+dest_ip=({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+"""
   """severity=({alert_severity}[\w]+)\s+category=({alert_type}[^\s]+)\s+action"""
   """detection_id=({alert_id}[^\s]+)\s+"""
   """signature=({alert_name}[^\s]+)\s+"""

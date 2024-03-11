@@ -21,13 +21,7 @@ Name = dell-sw-kv-app-notification-success-firewall
 # unicast_packets_out is removed
 # broadcast_packets_out is removed
     """\sbytesTx=({bytes_out}\d+)""",
-    """\spri=({alert_severity}\d+)""",
-    """\sfw=({firewall}[a-fA-F\d.:]+)""",
-    """\sm=({message_id}\d+)""",
-    """\smsg="({alert_name}[^:"-]+?)\s*(:|"|-)"""
-    """\smsg="({additional_info}[^"]+?)\s*""""
   ]
-  DupFields = [ "message_id->alert_type" ]
 
 
 }

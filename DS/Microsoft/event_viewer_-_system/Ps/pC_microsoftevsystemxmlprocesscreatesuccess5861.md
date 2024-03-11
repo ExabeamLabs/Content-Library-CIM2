@@ -13,13 +13,13 @@ Name = microsoft-evsystem-xml-process-create-success-5861
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Security UserID\\*='({user_sid}[^']+)""",
+    """<Computer>({host}[^<]+)</Computer>""",
+    """<Security UserID='({user_sid}[^']+)""",
     """({process_name}WMI)""",
     """Query\s*=\s*"*({process_command_line}[^";]+)""",
     """Consumer:\s* instance of\s*({process_path}.+?)\s*\{"""
   ]
+  DupFields = [ "host->dest_host" ]
 
 
 }

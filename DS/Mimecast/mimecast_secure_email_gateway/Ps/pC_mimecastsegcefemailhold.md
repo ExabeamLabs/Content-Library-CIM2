@@ -14,11 +14,11 @@ Name = mimecast-seg-cef-email-hold
   Fields = [
     """"date":"({time}\d+-\d+-\d+T\d+:\d+:\d+\+\d+)""",
     """dproc=({dproc}[^=]+?)\s+\w+=""",
-    """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"(?i)Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-    """(senderAddress|Sender)":"(<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
+    """"(recipientAddress|Recipient)":"({dest_email_address}>([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """(senderAddress|Sender)":"(<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"(?i)Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
     """"fileName":"({email_attachment}[^"]+\.({file_ext}[^"]+))""",
@@ -26,7 +26,8 @@ Name = mimecast-seg-cef-email-hold
     """"fileHash":"({hash_md5}[^"]+)""",
     """"(?:action|actions)":"({action}[^"]+)""",
     """"actionTriggered":"(none|({action}[^"]+))""",
-    """"SourceIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"acc":"({user}[^"]+)""",
+    """"SourceIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"result":"({result}[^"]+)""",
     """"subject":"({email_subject}[^"]+)"""
     """"UrlCategory":"({category}[^"]+)"""

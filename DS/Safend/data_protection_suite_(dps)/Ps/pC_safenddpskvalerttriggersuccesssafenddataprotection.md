@@ -9,8 +9,8 @@ Name = safend-dps-kv-alert-trigger-success-safenddataprotection
   Conditions = [ """[Safend Data Protection]""", """ Client Alert details:""" ]
   Fields = [
     """Client GMT:\s+({time}\d+/\d+/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))""",
-    """Action:\s*({result}[^,]+)""",
-    """User:\s+({user}[\w\.\-]{1,40}\$?)(@({email_domain}[^@,.\s]+))?""",
+    """Action:\s*({action}[^,]+)""",
+    """User:\s+({user}[^@,\s]+)(@({email_domain}[^@,.\s]+))?""",
     """User:\s*({email_address}[^\s,]+)""",
     """Computer:\s*({host}[^,]+)""",
     """Operating System:\s*({os}[^,]+)""",

@@ -11,9 +11,9 @@ Name = fortinet-utm-kv-http-session-appctrl
     """\Wdate=({time}\d\d\d\d-\d\d-\d\d time\=\d\d:\d\d:\d\d)"""
     """\Wdevname="*({host}[\w.-]+)""""
     """\Wsubtype="*({event_subtype}[^\"]+?)\"*(\s+\w+=|\s*$)"""
-    """\Wuser="({user}[\w\.\-]{1,40}\$?)""""
-    """\Wsrcip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"""
-    """\Wdstip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s"""
+    """\Wuser="({user}[^\"]+?)""""
+    """\Wsrcip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"""
+    """\Wdstip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s"""
     """\Wapp="({app}[^\"]+)""""
     """\Waction="*({operation}[^\"]+?)"*(\s+\w+=|\s*$)"""
     """\Wmsg="({additional_info}[^\"]+)""""
@@ -24,8 +24,7 @@ Name = fortinet-utm-kv-http-session-appctrl
     """\Wservice="({protocol}[^\"]+)""""
     """\Wurl="({uri_path}[^\"]+)""""
     """\Wappcat="({category}[^\"]+)""""
-    """\Wsubtype="({event_name}[^\"]+)"""",
-    """\Wtz="?({tz}[+-]\d+)"""
+    """\Wsubtype="({event_name}[^\"]+)""""
    ]
   DupFields = [
     "operation->action"

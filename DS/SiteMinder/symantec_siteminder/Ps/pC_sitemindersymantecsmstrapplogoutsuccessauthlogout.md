@@ -7,7 +7,7 @@ Name = siteminder-symantecsm-str-app-logout-success-authlogout
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
   Conditions = [ """ AuthLogout """, """ [""", """] """" ]
   Fields = [
-    """:\s({result}[^:]+?)\s+({host}\S+)\s+\[({time}\d\d\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d (\+|\-)\d+)\] "\s*({user_ou}cn=({user}[\w\.\-]{1,40}\$?)[^"]*)"""",
+    """:\s({result}[^:]+?)\s+({host}\S+)\s+\[({time}\d\d\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d (\+|\-)\d+)\] "\s*({user_ou}cn=({user}[^,"]+)[^"]*)"""",
   ]
   ParserVersion = "v1.0.0"
 

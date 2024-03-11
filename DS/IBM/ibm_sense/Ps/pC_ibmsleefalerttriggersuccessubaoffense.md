@@ -8,7 +8,7 @@ Name = ibm-s-leef-alert-trigger-success-ubaoffense
   TimeFormat = "epoch"
   Conditions = [ """|IBM|Sense|""", """|UBA Offense - User crossed risk threshold|""" ]
   Fields = [
-    """usrName =({user}[\w\.\-]{1,40}\$?)""",
+    """usrName =({user}[^\s\\]+)""",
     """senseOffenseId=({alert_id}[^=\\]+?)(\\|")""",
     """senseOffenseScore=({sense_score}[\d\.]+)""",
     """startTime=({time}\d{13})""",

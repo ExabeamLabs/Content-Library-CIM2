@@ -7,7 +7,7 @@ Vendor: Zeek
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  11   |   2    |         7          |       7        |    9    |
+|  11   |   2    |         7          |       7        |    7    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -8,7 +8,6 @@ Name = microsoft-evapp-str-endpoint-notification-1202
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """1202""", """Security policies were propagated with warning""" ]
   Fields = [
-    """"TimeCreated":"\/Date\(({time}\d{13})"""
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
     """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
     """({event_code}1202)""",

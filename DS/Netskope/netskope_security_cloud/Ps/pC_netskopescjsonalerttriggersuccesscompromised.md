@@ -9,7 +9,7 @@ Name = netskope-sc-json-alert-trigger-success-compromised
   Conditions = [ """"alert_type":"Compromised Credential"""", """"alert":"yes"""", """"src-application-name":"Netskope"""", """"type":"breach"""", """"event-name":"security-threat-detected"""" ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
-    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"""",
+    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))"""",
     """"_id":"({alert_id}[^"]+)""",
     """"category":"(n\/a|({threat_category}[^"]+))""",
     """"alert_type":"({alert_name}[^"]+)"""",

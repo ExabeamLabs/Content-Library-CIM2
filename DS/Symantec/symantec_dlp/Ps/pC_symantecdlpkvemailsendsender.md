@@ -4,7 +4,7 @@
 Name = symantec-dlp-kv-email-send-sender
   Vendor = Symantec
   Product = Symantec DLP
-  TimeFormat = ["MMMM dd, yyyy HH:mm:ss a","MMM dd, yyyy hh:mm:ss a"]
+  TimeFormat = "MMMM dd, yyyy HH:mm:ss a"
   Conditions = [ """Policy_Violated:_""", """Subject:_""", """Email_Blocked:""", """Sender:_""", """Attachment:_""" ]
   Fields = [
     """Incident_Date:\_({time}\w+\s\d\d,\s\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s((?i)am|pm))"""

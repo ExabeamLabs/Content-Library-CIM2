@@ -26,10 +26,8 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """"Directionality":"({direction}[^",]+)"""",
     """"P2Sender":"([^@]+?\\=)?(({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))"""", 
     """"P1Sender":"([^@]+?\\=)?(({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))""""
-    """AttachmentData\\?"*:\s*({attachment}\[\{\\?"*FileName\\?"+:\s*\\?"+({file_name}[^"\\]+)?\\?"+\,.+?FileType\\?"+:\s*\\?"+({file_ext}[^"\\]+)?\\?"+\,.+?\])"""
-    """"DeliveryAction":"({action}[^"]+)""""
 ]
-  DupFields = [ "additional_info->email_subject" ]
+  DupFields = [ "dest_email_address->email_address","additional_info->email_subject" ]
  
 
 }

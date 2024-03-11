@@ -3,6 +3,7 @@
 {
 Name = microsoft-azure-json-user-role-assign-success-createroleassignment
   ParserVersion = v1.0.0
+  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """localizedValue":"Create role assignment""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """"+requestbody"+:[^\}]+"+Id\\?"+:\s*\\?"+({assignment_id}[^"]+)\\"+""",
@@ -14,7 +15,7 @@ Name = microsoft-azure-json-user-role-assign-success-createroleassignment
 azure-activity-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
     Fields = [
       """"+eventTimestamp"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+authorization"+:[^\}]+scope"+:\s*"+({authorization_scope}[^"]+)""", 

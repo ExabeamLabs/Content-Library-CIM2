@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-csv-user-privilege-use-success-4673
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Sensitive Privilege Use""",
     """({event_code}4673)""",
-    """SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
+    """SubjectUserName:({user}[^,]+),""",
     """SubjectDomainName:({domain}[^,]+),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """PrivilegeList:({privileges}[^:]+),\s+\w+:""",

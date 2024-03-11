@@ -12,8 +12,8 @@ Name = trendmicro-ds-cef-network-traffic-fail-idsdeny
     """proto=({protocol}.+?)(\s+\w+=|\s*$)""",
     """in=({bytes_in}\d+)""",
     """out=({bytes_out}\d+)""",
-    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dmac=({dest_mac}[^\s]+)""",
     """smac=({src_mac}[^\s]+)""",
     """dvchost=({dest_host}[^\s]+)""",
@@ -23,7 +23,7 @@ Name = trendmicro-ds-cef-network-traffic-fail-idsdeny
     """dpt=({dest_port}\d+)"""
     """spt=({src_port}\d+)"""
     """cs1=({additional_info}.+?)\s\w+=""",
-    """suser=(NT AUTHORITY\\+SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """suser=(NT AUTHORITY\\+SYSTEM|({user}[^\s]+))""",
     """fileHash=({file_hash}[^\s]+)""",
     """cs3=({hash_md5}[^\s]+)""",
     """cs2=({hash_sha1}[^\s]+)""",

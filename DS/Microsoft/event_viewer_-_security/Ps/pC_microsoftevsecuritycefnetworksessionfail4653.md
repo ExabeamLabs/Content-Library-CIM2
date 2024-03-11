@@ -15,8 +15,8 @@ Name = microsoft-evsecurity-cef-network-session-fail-4653
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({action}[^"]+?)\s*"""",
     """"failureReason":"({failure_reason}[^"]+?)[\s\\r\\n]*"""",
-    """"localAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """"remoteAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"localAddress":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"remoteAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"localKeyModPort":"({dest_port}\d+)""",
     """"remoteKeyModPort":"({src_port}\d+)""",
   ]

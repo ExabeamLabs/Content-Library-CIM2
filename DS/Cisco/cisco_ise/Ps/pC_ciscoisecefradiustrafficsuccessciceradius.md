@@ -12,7 +12,7 @@ Name = cisco-ise-cef-radius-traffic-success-ciceradius
     """({event_name}CISE_RADIUS_Accounting)""",
     """({time}\w+ \d+ \d\d:\d\d:\d\d)""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """duser=(?:({user_type}host)/)?(({domain}[^\\\s\/;,@]+)\\+)?({user}[\w\.\-]{1,40}\$?)(;|,|\s)""",
+    """duser=(?:({user_type}host)/)?(({domain}[^\\\s\/;,@]+)\\+)?({user}[^,;@\s\\\/]+)(;|,|\s)""",
     """User(-)?Name =({email_address}[^,;@\s]+@[^,;@\s]+)""",
 # acct_authentic is removed
 # acct_input_octets is removed

@@ -4,7 +4,7 @@ Product: Oracle Access Management
 ---------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  65   |   31   |         5          |       5        |    2    |
+|  66   |   31   |         5          |       5        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

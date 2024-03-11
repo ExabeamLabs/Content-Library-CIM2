@@ -15,7 +15,7 @@ seclore-file-operations = {
   Fields = [
     """"creation_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
     """"machine_name":"({host}[^"]+)?"""",
-    """"machine_ip1":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"machine_ip1":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"user_name":"({full_name}[^"]+)"""",
     """"user_email_id":"({email_address}[^\@]+\@[^"]+)"""",
     """"current_file_name":"({file_name}[^"]+)"""",

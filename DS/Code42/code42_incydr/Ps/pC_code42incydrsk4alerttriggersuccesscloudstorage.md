@@ -6,7 +6,7 @@ Name = code42-incydr-sk4-alert-trigger-success-cloudstorage
   Product = Code42 Incydr
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions= [ """"actor": """", """"OBSERVATION"""", """Unapproved Cloud Storage""" ]
+  Conditions= [ """"actor": """", """Code42""", """destinationServiceName =Custom Application""", """Unapproved Cloud Storage""" ]
   Fields = [
     """"observedAt":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """"ALERT_DETAILS"[^\}]+?"name":\s*"({alert_name}[^"]+)",\s*"description":\s*"({additional_info}[^"]+)",\s*"actor":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",

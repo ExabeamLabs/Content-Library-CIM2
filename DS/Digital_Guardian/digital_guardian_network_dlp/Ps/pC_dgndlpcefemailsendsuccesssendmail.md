@@ -17,7 +17,7 @@ Name = dg-ndlp-cef-email-send-success-sendmail
     """\sad\.DG__EmailSender=({src_email_address}[^\s@]+@[^\s@]+)""",
     """\sad\.DG__EmailRecipient=({email_recipients}[^\s@]+@[^\s@]+)""",
     """\sad\.DG__EmailSubject=({email_subject}.+?)\s+(ad\.\S+=|\w+=|$)""",
-    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?)\s+(ad\.\S+=|\w+=|$)""",
+    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[^=]+?)\s+(ad\.\S+=|\w+=|$)""",
     """\sfname=\s*(?:message body|({email_attachment}[^=]+?))\s+(ad\.\S+=|\w+=|$)"""
   ]
   DupFields = [ "user->email_user" ]

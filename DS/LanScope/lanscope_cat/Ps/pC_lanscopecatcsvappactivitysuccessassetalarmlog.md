@@ -8,7 +8,7 @@ Name = lanscope-cat-csv-app-activity-success-assetalarmlog
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ ""","資産アラームログ",""" ]
   Fields = [
-    ""","(|({host}[^"]+))","(|({user}[\w\.\-]{1,40}\$?))","({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)",("[^"]*",){7}"(|({operation}[^"\-]+?)\s*\-\s*({object}[^"]+))","""
+    ""","(|({host}[^"]+))","(|({user}[^"]+))","({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)",("[^"]*",){7}"(|({operation}[^"\-]+?)\s*\-\s*({object}[^"]+))","""
   ]
 
 

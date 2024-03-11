@@ -13,7 +13,7 @@ Name = vmware-carbonblackedr-sk4-process-create-success-redcanary
     """"host_name"+:"+({host}[^"]+)""",
     """"process_command_line"+:"+({process_command_line}[^"]+)"*,""",
     """"process_md5"+:"+({hash_md5}[^"]+)"*,""",
-    """"user_username"+:"+({user}[\w\.\-]{1,40}\$?)"*,""",
+    """"user_username"+:"+({user}[^"]+)"*,""",
     """"user_domain"+:"+({domain}[^"]+)"*,"""
     ]
     DupFields = ["host->dest_host"]

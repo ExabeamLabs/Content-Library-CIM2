@@ -4,7 +4,7 @@ Product: MariaDB
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  15   |   8    |         4          |       2        |    1    |
+|  16   |   8    |         4          |       2        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -12,6 +12,7 @@ Product: MariaDB
 |          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  database-login<br> ↳[mariadb-m-csv-database-login-success-connect-1](Ps/pC_mariadbmcsvdatabaseloginsuccessconnect1.md)<br> ↳[mariadb-m-csv-database-login-success-connect](Ps/pC_mariadbmcsvdatabaseloginsuccessconnect.md)<br> | T1213 - Data from Information Repositories<br>    | [<ul><li>10 Rules</li></ul><ul><li>5 Models</li></ul>](RM/r_m_mariadb_mariadb_Compromised_Credentials.md)         |
 |    [Data Access](../../../UseCases/uc_data_access.md)    |  database-login<br> ↳[mariadb-m-csv-database-login-success-connect-1](Ps/pC_mariadbmcsvdatabaseloginsuccessconnect1.md)<br> ↳[mariadb-m-csv-database-login-success-connect](Ps/pC_mariadbmcsvdatabaseloginsuccessconnect.md)<br> | T1213 - Data from Information Repositories<br>    | [<ul><li>10 Rules</li></ul><ul><li>5 Models</li></ul>](RM/r_m_mariadb_mariadb_Data_Access.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  authentication-failed<br> ↳[mariadb-m-str-database-logout-success-disconnect](Ps/pC_mariadbmstrdatabaselogoutsuccessdisconnect.md)<br>    | T1078 - Valid Accounts<br>T1090.003 - Proxy: Multi-hop Proxy<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_mariadb_mariadb_Lateral_Movement.md)    |
+|    [Malware](../../../UseCases/uc_malware.md)    |  authentication-failed<br> ↳[mariadb-m-str-database-logout-success-disconnect](Ps/pC_mariadbmstrdatabaselogoutsuccessdisconnect.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_mariadb_mariadb_Malware.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  authentication-failed<br> ↳[mariadb-m-str-database-logout-success-disconnect](Ps/pC_mariadbmstrdatabaselogoutsuccessdisconnect.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_mariadb_mariadb_Ransomware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise

@@ -15,11 +15,9 @@ Name = crowdstrike-falcon-sk4-alert-trigger-incidentsummaryevent
     """"FalconHostLink":"({link}[^"]+)"""",
     """"FineScore":({priority}[.\d]+)""",
     """suid=({user_id}\S+)""",
-    """suser=({user}[\w\.\-]{1,40}\$?)""",
-    """"State":"({result}[^"]+)""",
-    """"HostID":"({aid}[^"]+)"""",
+    """suser=({user}\S+)""",
+    """"State":"({result}[^"]+)"""
     """"event_platform":"({os}[^"]+)""""
-    """"cid":"({cid}[^"]+)"""
         ]
 
 

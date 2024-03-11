@@ -14,9 +14,9 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-528
     """Information\s+({host}[\w.\-]+)\s+""",
     """(?:Success|Audit)\s+\w+\s+({host}[^\s]+)""",
     """Security\s+(rn=)?({event_id}\d+)""",
-    """User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+\([^,\s]+[,\s]({login_id}[^\)]+)\)\s+Logon Type:\s+({login_type}\d+)\s+Logon Process:""",
+    """User Name:\s+({user}.+?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+\([^,\s]+[,\s]({login_id}[^\)]+)\)\s+Logon Type:\s+({login_type}\d+)\s+Logon Process:""",
     """Logon Process:\s+({auth_process}.+?)\s+Authentication Package:\s+({auth_package}[^\s]+)""",
-    """Source Network Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """Source Network Address:\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   DupFields = [ "host->dest_host" ]
 

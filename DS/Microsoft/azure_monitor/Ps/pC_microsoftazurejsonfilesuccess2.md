@@ -4,12 +4,13 @@
 Name = microsoft-azure-json-file-success-2
    Vendor = Microsoft
    ParserVersion = v1.0.0
+   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
    Conditions = [ """serviceType":"blob""", """operationName""" ] 
  
 azure-classicblob-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
     Fields = [
     """"+time"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
     """"+resourceId"+:\s*"+({resource}[^"]+)"+""",

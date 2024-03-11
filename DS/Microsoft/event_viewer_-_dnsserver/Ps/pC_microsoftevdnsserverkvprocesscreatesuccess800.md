@@ -8,7 +8,7 @@ Name = microsoft-evdnsserver-kv-process-create-success-800
   Conditions = [ """Windows PowerShell""", """CommandLine=""", """(EventID 800)""", """ScriptName =""", """PowerShell: [""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s({host}[^\s]+)\sPowerShell\[""",
-    """UserId=({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)""",
+    """UserId=({domain}[^\\]+)\\+({user}[^\s]+)""",
     """HostApplication=({powershell_image}[^=]+?)\s+\w+=""",
     """ScriptName =\s*({process_path}({process_dir}[^\s=]+?)({process_name}[^\\=]*?))\s+\w+=""",
     """CommandLine=\s*(|({process_command_line}.+?))\s+\w+:""",

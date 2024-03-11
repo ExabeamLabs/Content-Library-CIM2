@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
+    """TargetUserName\\?"+:\\?"+((({user}[^@\s\\]+?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
   DupFields = ["host->dest_host"]
 
@@ -19,9 +19,9 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[\w\-.]]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[^\\]+)""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

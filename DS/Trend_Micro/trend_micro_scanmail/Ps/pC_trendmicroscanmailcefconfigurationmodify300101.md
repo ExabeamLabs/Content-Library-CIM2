@@ -14,7 +14,7 @@ Name = trendmicro-scanmail-cef-configuration-modify-300101
     """CEF:([^\|]*\|){5}({category}[^|]+)""",
     """CEF:([^\|]*\|){4}({event_code}[^|]+)""",
     """({app}SMEX)""",
-    """suser=(({domain}[^\\;]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
+    """suser=(({domain}[^\\;]+)\\+)?({user}[^=\s]+)\s+\w+=""",
     """eventType=({operation}[^=]+)\s+\w+=""",
     """msg=({additional_info}[^=.]+)(\s+\w+=|\s*$)"""
     ]

@@ -15,9 +15,9 @@ clesarsense-app-activity = {
      """"path":"({object}[^"]+?)""""
      """"+method"+:"+({method}[^"]+)""",
      """"+statusCode"+:({result}\d+)""",
-     """"+userName"+:"+({user}[\w\.\-]{1,40}\$?)""",
+     """"+userName"+:"+({user}[^@"]+)""",
      """"+email"+:"+({email_address}[^@]+@({email_domain}[^"]+))""",
-     """"+host"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+."+tenantUuid""",
+     """"+host"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+."+tenantUuid""",
      """"+host"+:"+({host}[^"]+)"+,"+user-agent"+:"+({user_agent}[^"]+)"+.+result"+:"+({result}[^"]+)""",
      """"+type"+:"+({operation}[^"]+)""",
      """"+resource"+:"+({resource}\{[^}]+\})"""

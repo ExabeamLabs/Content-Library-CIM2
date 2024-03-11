@@ -11,13 +11,13 @@ Name = netskope-sc-json-app-activity-appactivity
     """"status"+:\s+"+({result}[^",]+)""",
 # device_classification_status is removed
 # user_groups is removed
-    """"username"+:\s+"+(({email_address}[^@]+@[^",]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """"username"+:\s+"+(({email_address}[^@]+@[^",]+)|({user}[^",]+))""",
 # user_source is removed
     """"device_id"+:\s+"+({device_id}F[^",]+)""",
     """"client_version"+:\s+"+({client_version}[^",]+)""",
     """"os"+:\s+"+({os}[^",]+)""",
     """"timestamp"+:\s+({time}\d{10})""",
-    """"actor"+:\s+"+(System|User|({user}[\w\.\-]{1,40}\$?))""",
+    """"actor"+:\s+"+(System|User|({user}[^",]+))""",
     """"os_version"+:\s+"+({os_version}[^",]+)""",
 # internal_id is removed
     """"device_model"+:\s+"+({device_model}[^",]+)""",

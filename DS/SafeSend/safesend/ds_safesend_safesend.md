@@ -4,11 +4,11 @@ Product: SafeSend
 -----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  37   |   16   |         3          |       1        |    0    |
+|  40   |   18   |         3          |       1        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[safesend-s-kv-email-send-success-emailexternal](Ps/pC_safesendskvemailsendsuccessemailexternal.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>32 Rules</li></ul><ul><li>15 Models</li></ul>](RM/r_m_safesend_safesend_Data_Leak.md)          |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[safesend-s-kv-email-send-success-emailexternal](Ps/pC_safesendskvemailsendsuccessemailexternal.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>35 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_safesend_safesend_Data_Leak.md)          |
 |    [Malware](../../../UseCases/uc_malware.md)    |  dlp-email-alert-out<br> ↳[safesend-s-kv-email-send-success-emailexternal](Ps/pC_safesendskvemailsendsuccessemailexternal.md)<br> | T1190 - Exploit Public Fasing Application<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_safesend_safesend_Malware.md)    |
 |    [Phishing](../../../UseCases/uc_phishing.md)    |  dlp-email-alert-out<br> ↳[safesend-s-kv-email-send-success-emailexternal](Ps/pC_safesendskvemailsendsuccessemailexternal.md)<br> | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_safesend_safesend_Phishing.md)    |
 |      [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)      |  dlp-email-alert-out<br> ↳[safesend-s-kv-email-send-success-emailexternal](Ps/pC_safesendskvemailsendsuccessemailexternal.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_safesend_safesend_Privilege_Abuse.md)    |

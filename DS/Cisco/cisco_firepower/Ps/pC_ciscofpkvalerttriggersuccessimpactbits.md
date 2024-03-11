@@ -13,10 +13,10 @@ Name = cisco-fp-kv-alert-trigger-success-impactbits
     """\W(msg|corr_rule)=\\?"?({alert_name}[^"\\=]+)\\?"?\s+\w+=""",
     """\W(class_desc|corr_policy)=\\?"?({alert_type}[^"\\=]+)\\?"?\s+\w+=""",
     """\Wpriority=({alert_severity}[^\s]+)""",
-    """\Wsrc_ip=(0|0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
-    """\Wdest_ip=(0|0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+    """\Wsrc_ip=(0|0.0.0.0|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\Wdest_ip=(0|0.0.0.0|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """\d\d:\d\d:\d\d\s+({host}[\w-]+)\s"""
-    """\suser=\\?"*(0|No Authentication Required|({user}[\w\.\-]{1,40}\$?))""",
+    """\suser=\\?"*(0|No Authentication Required|({user}[^\s"]+))""",
   ]
   SOAR {
     IncidentType = "generic"

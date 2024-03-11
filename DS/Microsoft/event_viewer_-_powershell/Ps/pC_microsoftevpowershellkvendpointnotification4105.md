@@ -22,7 +22,7 @@ windows-events-2 = {
    """"process_information.process_name"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
    """"process_information.process_id"+:"+({process_id}[^"]+)""",
    """"Computer"+:"+({host}[^"]+)""",
-   """"subject.account_name"+:"+(-|({email_address}({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
+   """"subject.account_name"+:"+(-|({email_address}({user}[^@]+)@({domain}[^"]+))|({=user}[^"]+))""",
    """"network_information.source_port"+:"+(-|({src_port}\d+))""",
    """"new_logon.account_domain"+:"+({domain}[^"]+)""",
    """"message"+:"+({additional_info}[^"]+)""",

@@ -8,7 +8,7 @@ Name = unix-unix-kv-endpoint-login-fail-authfailure
   Conditions = [ """(dsepam:auth):""", """authentication failure;""" ]
   Fields = [
     """({time}\w+ \d+ \d\d:\d\d:\d\d)\s+({host}\S+)\s+\S+\s+\S+\(dsepam:auth\)""",
-    """\suser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+    """\suser=({user}.+?)(\s+\w+=|\s*$)""",
   ]
   ParserVersion = "v1.0.0"
 

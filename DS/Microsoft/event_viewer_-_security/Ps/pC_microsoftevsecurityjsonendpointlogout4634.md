@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634
  Conditions = [ ""","EventID":""", ""","Account":"""", """An account was logged off""" ]
  Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[^"\\\/]+)"""",
     """({event_code}4634)""",
     """"Activity":"({event_name}[^"]+)""",
     """"Computer":"({host}[^"]+)""",

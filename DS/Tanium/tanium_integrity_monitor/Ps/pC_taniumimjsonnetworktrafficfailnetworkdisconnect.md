@@ -6,8 +6,8 @@ Name = tanium-im-json-network-traffic-fail-networkdisconnect
   Fields = ${TaniumParserTemplates.tanium-operations-1.Fields}[
     """"local_port":({src_port}\d+)""",
 	""""remote_port":({dest_port}\d+)""",
-	""""local_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-	""""remote_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+	""""local_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+	""""remote_ip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   ]
   ParserVersion = "v1.0.0"
 
@@ -18,8 +18,8 @@ tanium-operations-1 = {
   Fields = [
 	""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)"""",
 	""""hostname":"({host}[\w\-.]+)"""",
-	""""login__user_name":"({user}[\w\.\-]{1,40}\$?)"""",
-  """"process__login__user_name":"({user}[\w\.\-]{1,40}\$?)"""",
+	""""login__user_name":"({user}[^"]+)"""",
+  """"process__login__user_name":"({user}[^"]+)"""",
 	""""event":"({event_name}[^"]+)"""",
 	""""file__md5":"({hash_md5}[^"]+)"""",
 	""""parent_pid":({process_id}\d+)""",

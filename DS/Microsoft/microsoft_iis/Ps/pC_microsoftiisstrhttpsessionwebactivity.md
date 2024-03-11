@@ -10,9 +10,9 @@ Name = microsoft-iis-str-http-session-webactivity
   Fields = [
     """date\s({time}\d\d\d\d-\d\d-\d\d\stime\s\d\d:\d\d:\d\d)""",
     """\scs-host\s(-|({web_domain}[^\s]+))\s""",
-	"""\sc-ip\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
-    """\ss-ip\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
-    """\scs-username\s(-|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?))\s""",
+	"""\sc-ip\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
+    """\ss-ip\s({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
+    """\scs-username\s(-|(({domain}[^\\\s]+)\\+)?({user}[^\s\\]+))\s""",
     """\ss-port\s(-|({dest_port}\d{1,5}))\s""",
     """\scs-method\s({method}[^\s]+)\s""",
     """\ssc-status\s(-|({result_code}\d{1,5}))\s""",

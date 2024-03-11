@@ -16,7 +16,7 @@ aix-template= {
    """({operation}PROC_\w+)""",
    """filename\s+(:|=|)\s+(|(({file_path}[^@"]*\/)?({file_name}[^@"]*)))\s+(FILE_|PROC_)""",
    """(FILE_|PROC_)\w+\s+(|({process_command_line}[^\s]+?))\s+""",
-   """\sassh:\s*[^@"]*(FILE_|PROC_)\w+\s*[\w\-\.]+\s*({user}[\w\.\-]{1,40}\$?)""",
+   """\sassh:\s*[^@"]*(FILE_|PROC_)\w+\s*[\w\-\.]+\s*({user}[\w\-\.]+)""",
   ]
   
 

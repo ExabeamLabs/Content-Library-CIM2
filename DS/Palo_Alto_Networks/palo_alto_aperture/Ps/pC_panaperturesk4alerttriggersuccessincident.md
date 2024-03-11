@@ -4,29 +4,27 @@
 Name = pan-aperture-sk4-alert-trigger-success-incident
     Vendor = Palo Alto Networks
     Product = Palo Alto Aperture
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
     Conditions = [ """"incident"""", """"cloud_app_instance"""", """"item_owner":""", """"item_creator_email":""" ]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z""",
-      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""
       """\Wpolicy_rule_name\s*=\s*"({alert_name}[^"]+)"""",
       """\Witem_type\s*=\s*"({item_type}[^"]+)"""",
       """\Witem_name\s*=\s*"({item_name}[^"]+?)\s*"""",
       """\Witem_owner\s*=\s*"({first_name}[^",\s]+)\s+({last_name}[^",\s]+)"""",
       """\Witem_owner\s*=\s*"({last_name}[^",\s]+)\s*\,\s*({first_name}[^",\s]+)"""",
-      """\Witem_owner\s*=\s*"({user}[\w\.\-]{1,40}\$?)"""",
+      """\Witem_owner\s*=\s*"({user}[^",\s@]+)"""",
       """\Wcloud_app_instance\s*=\s*"({alert_type}[^"]+)"""",
       """"policy_rule_name":"({alert_name}[^"]+)""",
       """"item_type":"({item_type}[^"]+)""",
       """"item_name":"({item_name}[^"]+?)\s*"""",
       """"item_owner":"({first_name}[^",\s]+)\s+({last_name}[^",\s]+)"""",
-      """"item_owner":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"item_owner":"({user}[^",\s@]+)"""",
       """"cloud_app_instance":"({alert_type}[^"]+)""",
       """"item_creator":"(|({item_creator}[^"]+))"""",
       """"item_creator_email":"(|({email_address}[^\s",@]+\@[\w\.\-]+))"""",
       """"collaborators":"(|({collaborators}[^"]+))"""",
-      """"severity":({alert_severity}[\d.]+)""",
-      """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+      """"severity":({alert_severity}[\d.]+)"""
     ]
     SOAR {
     IncidentType = "dlp"

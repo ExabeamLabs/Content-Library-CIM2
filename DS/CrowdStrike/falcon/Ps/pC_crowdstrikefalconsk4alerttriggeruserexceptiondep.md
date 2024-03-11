@@ -16,17 +16,17 @@ crowdstrike-process-info = {
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
-    """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
+    """"name":\s*"({process_name}[^"]+)""",
+    """"id":\s*"({user_sid}[^"]+)""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
     """src-account-name":"({account_name}[^"]+)""",
-    """CommandLine":"({process_command_line}.+?)","\w+":"""",
-    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """CommandLine":"({process_command_line}[^"]+?)\s*"""",
+    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"LocalPort":"({src_port}\d+)"""",
     """"RemotePort":"({dest_port}\d+)"""",
     """"aid":"({aid}[^"]+)"""",
-    """"aip":"({aip}[^"]+)"""",
-    """"cid":"({cid}[^"]+)"""
+    """"aip":"({aip}[^"]+)""""
   
 }
 ```

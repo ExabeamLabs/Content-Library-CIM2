@@ -14,7 +14,7 @@ Fields = [
   """\WEventID=({event_code}\d+)"""
   """\WTimeGenerated=({time}\d{10})"""
   """\WSecurity ID:\s*(|({user_sid}.+?))\s+Account Name:"""
-  """\WAccount Name:\s*({user}[\w\.\-]{1,40}\$?)"""
+  """\WAccount Name:\s*({user}[^\s]+)"""
   """\WAccount Domain:\s*({domain}[^\s]+)"""
   """\WLogon ID:\s*({login_id}[^\s]+)"""
   """\WService Name:\s*(|({service_name}.+?))\s+Service File Name:"""

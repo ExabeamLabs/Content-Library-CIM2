@@ -9,9 +9,9 @@ Name = dg-ep-leef-process-create-success-applicationstart
   Fields = [
     """devTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """({host}[\w\-.]+) LEEF:""",
-    """accountName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
+    """accountName =(({domain}[^\\]+)\\+)?({user}[^\\\s]+?)\s*(\w+=|$)""",
     """IdentHostName =([^\\]+\\+)?({dest_host}[\w\-.]+?)\s*(\w+=|$)""",
-    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """SourceDirectory=({process_dir}.+?)\s*(\w+=|$)""",
     """SourceFile=({process_name}.+?)\s*(\w+=|$)""",
   ]

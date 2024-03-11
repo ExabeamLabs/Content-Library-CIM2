@@ -18,7 +18,7 @@ Name = unix-unix-kv-endpoint-login-success-httpd
 """ip=({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s"""
 """group=({group_name}[^\s\"]+)"""
 """auth=({auth_method}[^\s]+)"""
-"""\[(-|(({domain}[^\\\]]+)\\{1,25})?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))\]:\s*({event_name}Login_Allowed)"""
+"""\[(-|(({domain}[^\\\]]+)\\{1,25})?({user}[^\s\]]+))\]:\s*({event_name}Login_Allowed)"""
   ]
 
 

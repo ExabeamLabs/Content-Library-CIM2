@@ -4,13 +4,13 @@ Product: McAfee Enterprise Security Manager
 -------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  54   |   28   |         6          |       2        |    0    |
+|  59   |   28   |         6          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[mcafee-esm-csv-alert-trigger-success-mcafeensmopmnsmp3](Ps/pC_mcafeeesmcsvalerttriggersuccessmcafeensmopmnsmp3.md)<br>    | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Compromised_Credentials.md) |
-|       [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)       |  dlp-alert<br> ↳[mcafee-dlp-kv-alert-trigger-success-359](Ps/pC_mcafeedlpkvalerttriggersuccess359.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br>    | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Data_Exfiltration.md)      |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-alert<br> ↳[mcafee-dlp-kv-alert-trigger-success-359](Ps/pC_mcafeedlpkvalerttriggersuccess359.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br>    | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Data_Leak.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[mcafee-esm-csv-alert-trigger-success-mcafeensmopmnsmp3](Ps/pC_mcafeeesmcsvalerttriggersuccessmcafeensmopmnsmp3.md)<br>    | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>24 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Compromised_Credentials.md) |
+|       [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)       |  dlp-alert<br> ↳[mcafee-dlp-kv-alert-trigger-success-359](Ps/pC_mcafeedlpkvalerttriggersuccess359.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br>    | [<ul><li>31 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Data_Exfiltration.md)      |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-alert<br> ↳[mcafee-dlp-kv-alert-trigger-success-359](Ps/pC_mcafeedlpkvalerttriggersuccess359.md)<br>    | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br>    | [<ul><li>31 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Data_Leak.md)    |
 |    [Malware](../../../UseCases/uc_malware.md)    |  dlp-alert<br> ↳[mcafee-dlp-kv-alert-trigger-success-359](Ps/pC_mcafeedlpkvalerttriggersuccess359.md)<br><br> network-alert<br> ↳[mcafee-esm-csv-alert-trigger-success-mcafeensmopmnsmp3](Ps/pC_mcafeeesmcsvalerttriggersuccessmcafeensmopmnsmp3.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_mcafee_mcafee_enterprise_security_manager_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise

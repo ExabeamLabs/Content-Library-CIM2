@@ -8,7 +8,6 @@ Name = microsoft-evsecurity-str-policy-apply-4954
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """4954""","""Group Policy settings for Windows Firewall were changed, and the new settings were applied"""]
   Fields = [
-        """"TimeCreated":"\/Date\(({time}\d{13})"""
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
         """({event_code}4954)""",

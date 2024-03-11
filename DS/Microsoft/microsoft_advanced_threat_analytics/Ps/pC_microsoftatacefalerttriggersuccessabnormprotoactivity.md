@@ -16,8 +16,8 @@ Fields = [
   """\Wapp=({service_name}.+?)\s+(\w+=|$)"""
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
   """\Wmsg=[^=]+? from (?:({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+\w)) against (?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+\w))"""
-  """\Wmsg=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-]{1,40}\$?))\s+"""
-  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+  """\Wmsg=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}\w+))\s+"""
+  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[^\s]+))\s+(\w+=|$)"""
   """\Wshost=(?:({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

@@ -6,17 +6,16 @@ Name = microsoft-evsecurity-xml-endpoint-notification-5033-1
   Product = Event Viewer - System
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<EventID>5033<""" , """<Provider Name""","""'Microsoft-Windows-Security-Auditing'""" ,"""<Event xmlns""" ]
+  Conditions = [ """<EventID>5033<""" , """<Provider Name ='Microsoft-Windows-Security-Auditing'""" ,"""<Event xmlns""" ]
   Fields = [
-    """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Task>({sub_category}[^<]+)""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
+    """Provider Name ='({provider_name}[^\']+)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
-    """<Execution ProcessID\\*='({process_id}[^']+)""",
-    """ThreadID\\*='({thread_id}[^']+)""",
-    """Guid\\*='\{({process_guid}[^\'\}]+)""",
+    """<Execution ProcessID='({process_id}[^']+)""",
+    """ThreadID='({thread_id}[^']+)""",
+    """Guid='\{({process_guid}[^\'\}]+)""",
     """<Keywords>({result}[^<]+)"""
   ]
 

@@ -6,7 +6,7 @@ Name = netskope-sc-cef-app-logout-logoutsuccessful
   Vendor = Netskope
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
-  Conditions = [ """audit_log_event":"Logout Successful""" , """"type":"""", """destinationServiceName =Netskope""" ]
+  Conditions = [ """audit_log_event":"Logout Successful""" , """"type":"""", """destinationServiceName =Netskope"""]
   Fields = [
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",

@@ -5,7 +5,7 @@ Name = rubrik-cdm-kv-app-logout-audit
   ParserVersion = "v1.0.0"
   Conditions = [ """eventType="Audit"""", """ logged out """, """ Rubrik [""", """clusterName ="""", """ eventName ="""", """ nodeIpAddress="""  ]
   Fields = ${DLRubrikParsersTemplates.rubrik-system-info.Fields}[
-    """tracerId="\S+\s({user}[\w\.\-]{1,40}\$?)[^=]+logged out"""
+    """tracerId="\S+\s({user}[^\s]+)[^=]+logged out"""
   ]
 
 rubrik-system-info = {
@@ -15,7 +15,7 @@ rubrik-system-info = {
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
       """nodeId="({host}[^"]+)"""",
-      """nodeIpAddress="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+      """nodeIpAddress="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """eventName ="({event_name}[^"]+)"""",
       """status="({result}[^"]+)"""",
       """objectName ="(-|({object}[^"]+))"""",

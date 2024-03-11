@@ -10,8 +10,8 @@ Name = microsoft-m365auditlogs-sk4-app-activity-dlpclassification
   Fields = [
     """"CreationTime\\*"+:\\*\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """\WflexString1=({operation}.+?)\s+(\w+=|$)""",
-    """\Wsuser=(({email_address}[^\s@]+@[^\s@]+)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",
-    """"UserId":"(({email_address}[^\s@]+@[^\s@]+)|({user}[\w\.\-]{1,40}\$?))"+"""
+    """\Wsuser=(({email_address}[^\s@]+@[^\s@]+)|({user}[^\s]+?))\s+(\w+=|$)""",
+    """"UserId":"(({email_address}[^\s@]+@[^\s@]+)|({user}[^\s]+?))"+"""
     """"FileName":"({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""",
     """"FilePathUrl":"({file_path}({file_dir}[^"]*[\\\/]+)[^\\\/"]*)"""",
     """"FileOwner":"({last_name}[^",]+),\s*({first_name}[^",]+)"""",

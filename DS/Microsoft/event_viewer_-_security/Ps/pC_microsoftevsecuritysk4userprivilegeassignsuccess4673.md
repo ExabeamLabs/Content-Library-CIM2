@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-sk4-user-privilege-assign-success-4673
     """"ObjectServer"+:"+({object_server}[^"]+)""",
     """"ProcessName"+:"+({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))"""",
     """"ProcessId"+:"+({process_id}[^"]+)""",
-    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[\w\-.]+))""",
+    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[^"]+))""",
     """"SubjectUserName":"({dest_user}[^"]+)""""
   ]
 
@@ -34,8 +34,8 @@ json-windows-events-1 = {
     """"record_id"+:({event_id}\d+)""",
     """"task"+:"+({task_name}[^"]+)""",
     """"event_id"+:({event_code}\d+)""",
-    """"(?:winlog\.)?computer_name"+:"+({src_host}[\w\-.]+)""",
-    """"hostname"+:"+({host}[\w\-.]+)""",
+    """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
+    """"hostname"+:"+({host}[^"]+)""",
     """"action"+:"+({action}[^"]+)""",
     """"os":[^@]+?"name":"({os}[^"]+)""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
@@ -43,8 +43,8 @@ json-windows-events-1 = {
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
     """"+SubjectDomainName"+:"+({domain}[^"]+)""",
-    """"user"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
+    """"user"+:"+(SYSTEM|-|({user}[^@"]+))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[^"]+))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""
@@ -58,9 +58,9 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[\w\-.]]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[^\\]+)""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

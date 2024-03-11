@@ -9,8 +9,8 @@ Name = aws-waf-json-http-session-httprequest
   Conditions = [ """"action":"""", """"httpMethod":"""", """"uri":"""", """aws:waf""", """"httpRequest":""", """"name":"user-agent"""" ]
   Fields = [
     """"timestamp":({time}\d{13}),""",
-    """\s\d\d\s\d\d:\d\d:\d\d\s({host}[\w\-\.]+)""",
-    """"clientIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """\d\d\s\d\d:\d\d:\d\d\s({host}[\w\-\.]+)""",
+    """"clientIp":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"name":"user-agent","value":"({user_agent}[^"]+)"""",
     """"name":"host","value":"({web_domain}[^"]+)"""",
     """"uri":"({uri_path}[^"]+)"""",
@@ -19,8 +19,7 @@ Name = aws-waf-json-http-session-httprequest
     """"httpVersion":"({protocol}[^"]+)"""",
     """"httpMethod":"({method}[^"]+)"""",
     """"name":"accept","value":"({mime}[^"]+)"""",
-    """"AccountName":"({user}[\w\.\-]{1,40}\$?)"""",
-    """"webaclId":"arn:aws:waf([^:]+:){2}({account_id}\d+):"""
+    """"AccountName":"({user}[^"]+)""""
   ]
 
 

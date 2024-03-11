@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4634-2
     """"decoder.name":"({decoder_name}[^"]+)"""
     """({event_name}An account was logged off)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Account Name:\s*({user}\S+)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Logon Type:""",
     """Logon Type:\s*({login_type}\d+)""",

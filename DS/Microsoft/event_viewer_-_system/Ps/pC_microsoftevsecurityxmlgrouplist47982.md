@@ -16,7 +16,7 @@ json-xml-object-access = {
     """"Computer":"({host}[^"]+)""",
     """"EventID":"?({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetSid[^<>]+?>({dest_user_sid}[^<>]+?)</Data>""",

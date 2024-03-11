@@ -10,7 +10,7 @@ Name = namespacerdirectory-nrd-xml-group-member-add-success-memberadd
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """Modified by:(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",\(]+))\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
+    """Modified by:({user}.+?)\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
     """Credentials:({account_domain}[^\\]+)\\+([^\s.]+\.)*({account}[^\s.]+)""",
     """Group:({group_name}.+?)\s+\(({group_domain}[^\/)]+)""",
     """\[Member\]\s*Add:CN=({account_name}[^,]+)""",

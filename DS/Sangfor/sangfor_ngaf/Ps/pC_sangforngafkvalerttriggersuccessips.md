@@ -5,7 +5,7 @@ Name = sangfor-ngaf-kv-alert-trigger-success-ips
   Vendor = Sangfor
   Product = Sangfor NGAF
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """Log type: IPS,""", """<Identifier>""", """vulnerability name:""", """attack type:""" ]
+  Conditions = [ """type: IPS""", """<Identifier>ZC01_NTTDHK-FWL-002</Identifier>""" ]
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+[\+\-]\d+:\d+\s+({host}[\w\-.]+)""",
     """, policy name:\s*({policy_name}[^,]+)""",

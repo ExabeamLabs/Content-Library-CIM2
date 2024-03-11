@@ -15,7 +15,7 @@ Name = delinea-centrifyis-kv-process-create-success-suite
     """\d+\|\d+\|({event_name}.+?)\|\d""",
     """pid=({process_id}\d+)""",
     """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
-    """user=({user}[\w\.\-]{1,40}\$?)"""
+    """user=({user}[^\(\)\s\$]+)"""
     """status=({result}.+?)\s\w+=""",
     """parameters=({process_command_line}.+?)$"""
   ]

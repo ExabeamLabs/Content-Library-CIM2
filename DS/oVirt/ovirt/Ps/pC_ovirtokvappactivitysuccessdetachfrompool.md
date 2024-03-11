@@ -9,8 +9,8 @@ Name = ovirt-o-kv-app-activity-success-detachfrompool
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*?User(:)? ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
-    """EVENT_ID:.*? Storage Domain ({object}[^\s"]+) was detached from Data Center Exabeam by ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*?User(:)? ({user}[^\s\(\)"]+?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*? Storage Domain ({object}[^\s"]+) was detached from Data Center Exabeam by ({user}[^\s\(\)]+?)(\)|\s|\.\s|\.$)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

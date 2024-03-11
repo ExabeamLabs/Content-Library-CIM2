@@ -5,7 +5,7 @@ Name = cisco-fp-str-app-notification-210007
   Vendor = Cisco
   Product = Cisco Firepower
   ParserVersion = "v1.0.0"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd yyyy HH:mm:ss"]
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """%FTD-""", """-210007""", """ failed """, """ dynamic-pat """ ]
   Fields = [
     """({time}[a-zA-Z]{1,3} \d\d \d\d\d\d \d\d:\d\d:\d\d)""",

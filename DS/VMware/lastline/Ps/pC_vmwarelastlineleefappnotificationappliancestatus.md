@@ -13,7 +13,7 @@ Name = vmware-lastline-leef-app-notification-appliancestatus
     """deviceStatusLink=({additional_info}.+?)\s+(\w+=|$)""",
     """cat=({operation}.+?)\s+(\w+=|$)""",
     """sev=({log_severity}.+?)\s+(\w+=|$)""",
-    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """msg=({event_name}.+?)\s+(\w+=|$)""",
     """deviceType=({operation_type}.+?)\s+(\w+=|$)""",
     """ApplianceName =({sensor_id}.+?)\s+(\w+=|$)""",

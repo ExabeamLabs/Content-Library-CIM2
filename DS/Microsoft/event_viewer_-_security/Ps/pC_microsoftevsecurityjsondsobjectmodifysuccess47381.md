@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4738-1
   Fields = ${WazuhParserTemplates.wazuh-windows-template.Fields} [
     """({event_name}A user account was changed)""",
     """Security ID:\s*(|({user_sid}.+?))\s+Account Name:""",
-    """Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:\s*(|({domain}.+?))\s+Logon ID:\s*(|({login_id}.+?))\s+Target Account:""",
+    """Account Name:\s*(|({user}.+?))\s+Account Domain:\s*(|({domain}.+?))\s+Logon ID:\s*(|({login_id}.+?))\s+Target Account:""",
     """Target\sAccount.+?Security ID:\s*({target_sid}.+?)\s""",
     """Target\sAccount.+?Account Name:\s*({dest_user}.+?)\s""",
     """Target\sAccount.+?Account Domain:\s*({dest_domain}.+?)\s""",

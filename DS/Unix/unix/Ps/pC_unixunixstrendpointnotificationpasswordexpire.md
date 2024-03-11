@@ -8,7 +8,7 @@ Name = unix-unix-str-endpoint-notification-passwordexpire
   Conditions = [ """pam_unix(sshd:account): password for user""", """will expire in""" ]
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+sshd""",
-    """password for user ({user}[\w\.\-]{1,40}\$?)""",
+    """password for user ({user}[^\s]+)""",
     """pam_unix\(sshd:account\):\s*({event_name}[^$]*?)\s*$""",
     """({event_code}ssh)""",
   ]

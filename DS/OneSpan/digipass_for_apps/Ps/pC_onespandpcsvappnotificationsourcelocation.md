@@ -13,10 +13,10 @@ digipass-events1  = {
       """({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
       """\d\d\d,\s(Info|({result}[^,]+)),""",
       """Domain\s\["({domain}[^"]+)"""",
-      """User ID\s+\["({user}[\w\.\-]{1,40}\$?)"""",
+      """User ID\s+\["({user}[^"]+)"""",
       """Authentication,([^,]*,)\s({event_code}[^,]+),""",
       """Authentication,([^,]*,){2}\s*"({event_name}[^"]+)""",
-      """Source Location\s+\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """Source Location\s+\["({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """Application\s+\["({app}[^"]+)"""",
       """Policy ID\s+\["({auth_method}[^"]+)"""",
       """Protocol ID\s:\s*({protocol}[^},]+)"""

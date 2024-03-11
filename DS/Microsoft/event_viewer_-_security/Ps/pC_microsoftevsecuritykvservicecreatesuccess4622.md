@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-service-create-success-4622
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
   Conditions = [ """EventCode=4622""", """SourceName =Microsoft Windows security auditing""", """A security package has been loaded by the Local Security Authority""", """ComputerName =""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d \w\w)""",  

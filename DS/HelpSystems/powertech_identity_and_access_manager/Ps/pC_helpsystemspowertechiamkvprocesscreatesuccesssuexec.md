@@ -13,7 +13,7 @@ Name = helpsystems-powertechiam-kv-process-create-success-suexec
   Fields = [
     """clientTime="*({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)Z"*""",
     """\d\dZ\s+({host}[\w\-.]+)\s+suexec - suexec_ok""",
-    """user="*({user}[\w\.\-]{1,40}\$?)"""",
+    """user="*({user}[^"]+)"""",
     """touser="*({account}[^"]+)"""",
     """Successful suexec \(pid ({process_guid}\d+)\)""",
     """cmd="*({process_command_line}({path}({process_dir}(\/[^\/]+)*\/)({process_name}[^\/]+))\s*.*?)"+\] Successful suexec""",

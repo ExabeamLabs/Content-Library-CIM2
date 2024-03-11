@@ -7,7 +7,7 @@ Name = okta-amfa-json-app-login-fail-signinfailed
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """EventDetails":""", """Sign-in Failed""", """"DisplayName":"""]
   Fields = [
-      """"IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """"IPAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"user":"({email_address}[^@"\s]+?@[^@"\s]+)""",
       """"EventDetails":(\[|")({failure_reason}.*?)(\]|"),"\w+":"""
       """Sign-in Failed\s+-\s+({failure_reason}[^":,]+)""",

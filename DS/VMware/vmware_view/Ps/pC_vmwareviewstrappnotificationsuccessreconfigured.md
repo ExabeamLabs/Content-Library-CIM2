@@ -16,7 +16,7 @@ vmware-view-events = {
       """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+View""",
       """({app}View)""",
       """(?:M|m)achine\s+({dest_host}[\w\-.]+)""",
-      """(?:U|u)ser\s+(({domain}[^\\\s]+)\\+)?(({email_address}[^@\s]+@[^@\s]+)|({user}[\w\.\-]{1,40}\$?))"""
+      """(?:U|u)ser\s+(({domain}[^\\\s]+)\\+)?(({email_address}[^@\s]+@[^@\s]+)|({user}[^\s]+))"""
     
 }
 ```

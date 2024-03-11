@@ -10,11 +10,11 @@ Conditions = [
   """EventID="4725""""
 ]
 Fields = [
-  """Computer="+({dest_host}[\w\-.]+)""""
+  """Computer="+({dest_host}[^"]+)""""
   """EventID="+({event_code}[^"]+)""""
   """EventRecordID="+({event_id}[^"]+)""""
   """SubjectUserSid="+({user_sid}[^"]+)""""
-  """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)""""
+  """SubjectUserName ="+({user}[^"]+)""""
   """SubjectDomainName ="+({domain}[^"]+)""""
   """SubjectLogonId="+({login_id}[^"]+)""""
   """TargetSid="+({dest_user_sid}[^"]+)"""",

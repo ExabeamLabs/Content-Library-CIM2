@@ -6,7 +6,7 @@ Vendor = McAfee
 Product = Skyhigh Networks CASB
 ParserVersion = "v1.0.0"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
-Conditions = [ """CEF""", """McAfee""", """MVISION Cloud""", """|Dlp|Alert.Policy|"""]
+Conditions = [ """CEF:0|McAfee""", """MVISION Cloud""", """|Dlp|Alert.Policy|"""]
 Fields = [
 """\d\d:\d\d:\d\d\s({host}[^\s]+)\s+CEF:""",
 """riskSeverity=({alert_severity}[^\s]+)""",

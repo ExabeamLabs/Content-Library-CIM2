@@ -4,7 +4,7 @@
 Name = unix-unix-sk4-endpoint-authentication-credacq
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"type":"CRED_ACQ"""", """PAM:setcred""", """"logger.account":""", """"message":""" ]
+  Conditions = [ """"type":"CRED_ACQ"""", """PAM:setcred""", """Cloud Apps Security|""", """|audit-event|""" ]
 
 unix-template-dl = {
     Vendor = Unix
@@ -17,7 +17,7 @@ unix-template-dl = {
       """CEF:([^\|]*\|){4}({additional_info}[^\|]+)""",
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+      """\Wsuser=({user}[^\s]+)""",
     
 }
 ```

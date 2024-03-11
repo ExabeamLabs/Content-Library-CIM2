@@ -10,7 +10,7 @@ Name = cisco-secureemail-cef-email-receive-fail-secureemailgateway
     """suser=({src_email_address}[^\s]+)""",
     """\sduser=({email_recipients}[^\s]+)\s+(\w+=|$)""",
     """\sduser=({dest_email_address}[^,\s;]+)""",
-    """sourceAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """sourceAddress=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """sourceHostName =({src_host}[^\s]+)""",
     """msg='\s*({email_subject}[^']+')""",
     """ESAMID=({alert_id}\d+)""",

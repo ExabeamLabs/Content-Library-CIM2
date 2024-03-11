@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-json-file-read-success-4663-4
       """({event_code}4663)""",
       """"AccessMask":"({access_mask}[^"]+)""",
       """"AccessList":"({access}[^"]+?)\s*"""",
-      """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+      """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[^\\\s"]+)""",
       """"SubjectUserSid":"({user_sid}[^\s"]+)""",
       """"SubjectLogonId":"({login_id}[^\s"]+)""",
       """"ObjectName":"(-|({file_path}({file_dir}.*?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;]+?))?)))\s*"""",

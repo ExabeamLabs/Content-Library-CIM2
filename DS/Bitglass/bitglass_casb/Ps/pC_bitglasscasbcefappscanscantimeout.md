@@ -3,7 +3,7 @@
 {
 Name = bitglass-casb-cef-app-scan-scantimeout
   ParserVersion = v1.0.0
-  Conditions = [ """ api.bitglass.com """, """"action":"ScanTimeout"""" ]
+  Conditions = [ """destinationServiceName =Bitglass""", """"action":"ScanTimeout"""" ]
 
 cef-bitglass-system-info = {
   Vendor = Bitglass

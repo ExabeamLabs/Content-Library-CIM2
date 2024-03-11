@@ -9,7 +9,7 @@ Name = ovirt-o-kv-app-activity-success-updateinterface
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*?Interface nic1 \(({resource}[^\)]+)\) was updated for VM ({object}[^\s"]+?)\.\s{1,100}\(User: ({user}[\w\.\-]{1,40}\$?)""",
+    """EVENT_ID:.*?Interface nic1 \(({resource}[^\)]+)\) was updated for VM ({object}[^\s"]+?)\.\s{1,100}\(User: ({user}[^\s\(\)"]+)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

@@ -11,7 +11,7 @@ Name = sigsci-sigsci-kv-app-activity-authenticate
     """Peer MAC Address:"""
   ]
   Fields = [
-    """Subject:\s*Security ID:\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\/*({domain}[^\s]+)?""",
+    """Subject:\s*Security ID:\s*({user}[^\s\/]+)\/*({domain}[^\s]+)?""",
     """Account Name:\s*\s*(-|({account_name}[^\s]+))""",
     """Account Domain:\s*\s*(-|({account_domain}[^\s]+))""",
     """Logon ID:\s*\s*({login_id}[^\s]+)""",
@@ -19,7 +19,7 @@ Name = sigsci-sigsci-kv-app-activity-authenticate
 # interface_guid is removed
     """Local MAC Address:\s*({src_mac}[^\s]+)""",
 # peer_mac_address is removed
-    """Additional Information:\s*Reason Code:\s*({result_reason}.+?)\s*Error Code:"""
+    """Additional Information:\s*Reason Code:\s*({failure_reason}.+?)\s*Error Code:"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -10,7 +10,7 @@ Name = delinea-centrifyas-kv-app-authentication-success-54202
   Fields = [
     """:\d\d\s\w+\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
     """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)""",
-    """User=(NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))""",
+    """User=(NOT_TRANSLATED|({user}[^\s]+))""",
     """Sid=({user_sid}[^\s]+?)\sSidType""",
     """EventCode=({event_code}54202)""",
     """AUDIT_TRAIL\|Centrify Suite\|MFA\|[^=]+({event_name}MFA is offline)""",

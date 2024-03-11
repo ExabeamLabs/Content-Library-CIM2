@@ -12,6 +12,5 @@ ParserVersion = "v1.0.0"
 crowdstrike-auth-activity.Fields} [
   """"event_simpleName\\*"+:\\*"+({event_code}[^"\\]+)""",
   
-  
 }
 ```

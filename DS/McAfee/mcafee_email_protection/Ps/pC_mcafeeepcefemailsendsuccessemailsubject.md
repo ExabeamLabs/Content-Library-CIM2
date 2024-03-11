@@ -15,16 +15,16 @@ Fields = [
   """\sdvc=({host}[\d.]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\sshost=({src_host}[^\s]+)"""
-  """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\sdhost=({dest_host}[^\s]+)"""
-  """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\seventId=({alert_id}\d+)"""
   """\smsg=({alert_name}.+?)\s+\w+="""
   """CEF:([^|]+?\|){6}({alert_severity}[^|]+)"""
   """CEF:([^|]+?\|){5}({alert_type}[^|]+)"""
-  """\ssuser=(?:<>|<?({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+?))>?)\s+\w+="""
+  """\ssuser=(?:<>|<?({orig_user}.+?)>?)\s+\w+="""
   """\sduser=(?:<>|({recipients_unfixed}.+?))\s+\w+="""
-  """\sduser=({email_recipients}<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+?))>?(,[^=]*)?)\s+\w+="""
+  """\sduser=<?({dest_email_address}[^\s>,]+)"""
   """\sapp=({protocol}.+?)\s+\w+="""
   """\sdeviceDirection=({direction_code}\d+)"""
   """\scs6=({email_subject}.+?)\s+(?:cs6Label=email-subject|\w+=.*cs6Label=email-subject)"""
@@ -39,6 +39,7 @@ Fields = [
 ]
 DupFields = [
   "orig_user->src_email_address"
+  "orig_user->user"
 ]
 ParserVersion = "v1.0.0"
 

@@ -17,7 +17,7 @@ Name = mcafee-dlp-cef-alert-trigger-success-cloud
     """\WdeviceSeverity=({alert_severity}.+?)(\s+\w+=|\s*$)""",
     """\Wdhost=({src_host}[\w.\-]+)(\s+\w+=|\s*$)""",
     """\Wdst=({src_ip}[a-fA-F0-9.:]+)(\s+\w+=|\s*$)""",
-    """\Wduser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+    """\Wduser=({user}.+?)(\s+\w+=|\s*$)""",
     """\Wfname=({file_name}.+?)(\s+\w+=|\s*$)""",
     """\Wfsize=({bytes}\d+)""",
   ]

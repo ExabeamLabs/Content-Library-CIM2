@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-json-endpoint-login-680-1
     """({time}\w{3}\s\d{2}\s\d{2}:\d{2}:\d{2}\s\d{4})""",
     """({event_code}680)""",
     """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)(\s+|\s*,\s*)({host}[\w\.\-]+)""",
-    """Source Workstation:\s+(\\+)?({dest_host}[\w\-.]+)[^\s]*.+Error Code:\s+({result_code}[^\s]+)""",
-    """Logon (?:a|A)ccount:(?:\s+Source Workstation|\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))(?:@({domain}[^\s.]+).*?)?\s*Source Workstation)""",
+    """Source Workstation:\s+(\\+)?({dest_host}[^\s.]+)[^\s]*.+Error Code:\s+({result_code}[^\s]+)""",
+    """Logon (?:a|A)ccount:\s+({user}[^@]+?)(?:@({domain}[^\s]+))?\s+Source""",
     """(Information|Audit Success|Success Audit|Audit Failure|Failure Audit)\s+[^\s.]+\.({domain}[^\s.]+)""",
     """(?:Success|Audit)\s+\w+\s+[^\s.]+(\.({domain}[^\s.]+)[^\s]*)"""
   ]

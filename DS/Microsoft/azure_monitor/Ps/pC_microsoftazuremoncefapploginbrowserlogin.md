@@ -6,11 +6,11 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions= [ """"resourceId":""", """operationName":"Microsoft.Databricks/accounts/aadBrowserLogin""" ]
+  Conditions= [ """destinationServiceName =Azure""", """operationName":"Microsoft.Databricks/accounts/aadBrowserLogin""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
     """"Host":"({host}[^"]+)"""",
-    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
     """"message":"({additional_info}[^"]+)""",
     """"description":"({additional_info}[^"]+)""",
     """category":"({category}[^"]+)"""",

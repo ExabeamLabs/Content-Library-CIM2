@@ -1,10 +1,10 @@
 Vendor: AVI Networks
 ====================
-Product: AVI Networks Software Load Balancer
+Product: Avi Networks Software Load Balancer
 --------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   18   |         6          |       3        |    5    |
+|  44   |   18   |         6          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -14,8 +14,10 @@ Product: AVI Networks Software Load Balancer
 |    [Data Access](../../../UseCases/uc_data_access.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>5 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Data_Access.md)    |
 |    [Evasion](../../../UseCases/uc_evasion.md)    |  audit-log-clear<br> ↳[avinetworks-lb-str-endpoint-logout-userlogout](Ps/pC_avinetworkslbstrendpointlogoutuserlogout.md)<br>    | T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Evasion.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Lateral_Movement.md)    |
+|    [Malware](../../../UseCases/uc_malware.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Malware.md)    |
+|    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Privilege_Abuse.md)    |
+|    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  app-login<br> ↳[avinetworks-a-str-app-login-success-loginsuccess](Ps/pC_avinetworksastrapploginsuccessloginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avi_networks_avi_networks_software_load_balancer_Ransomware.md)    |
-[Next Page -->>](2_ds_avi_networks_avi_networks_software_load_balancer.md)
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

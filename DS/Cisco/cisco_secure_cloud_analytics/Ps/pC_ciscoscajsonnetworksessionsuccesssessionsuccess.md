@@ -22,8 +22,8 @@ Name = cisco-sca-json-network-session-success-sessionsuccess
         """"profile_tag":\s*"({additional_info}[^"]+)""""
         """"flags":\s*({tcp_flags}[^"]+)"""
 	""""device_id":\s*({device_id}\d+)"""
-	""""ipv6":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-	""""connected_ipv6":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+	""""ipv6":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+	""""connected_ipv6":\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
         """({bytes_unit}(?i)octets)"""
   ]
   DupFields = [ "flow_start_time->time" ]

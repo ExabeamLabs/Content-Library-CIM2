@@ -5,7 +5,7 @@ Name = ibm-mainframe-json-app-login-fail-passwordmissing
    Conditions = [ """"MFSOURCETYPE":"SYSLOG"""", """"MSGTXT":"""", """PASSWORD MISSING""" ]
    Fields = ${IBMParsersTemplates.ibm-mainframe-events.Fields}[
      """"MSGTXT":"[^"]+?\sF=({failure_reason}[^"=]+?)(\w+?=|")"""",
-     """"MSGTXT":"[^"]+?\sA=({user}[\w\.\-]{1,40}\$?)\sT=""""
+     """"MSGTXT":"[^"]+?\sA=({user}[^"\s=]+?)\sT=""""
    ]
    ParserVersion = "v1.0.0"
 

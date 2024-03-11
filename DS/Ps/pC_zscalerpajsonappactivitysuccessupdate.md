@@ -3,7 +3,7 @@
 {
 Name = zscaler-pa-json-app-activity-success-update
   ParserVersion = "v1.0.0"
-  Conditions = [ """"AuditOperationType":"Update"""", """"User":"""", """"ObjectType":""" ]
+  Conditions = [ """"User Audit Logs"""", """"AuditOperationType":"Update"""", """"User":"""", """"ObjectType":""" ]
   DupFields = [ "event_name->operation" ]
 
 

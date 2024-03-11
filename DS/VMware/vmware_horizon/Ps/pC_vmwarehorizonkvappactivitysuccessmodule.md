@@ -11,7 +11,7 @@ Name = vmware-horizon-kv-app-activity-success-module
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
     """EventType="*({event_name}[^"]+)"""
-    """UserDisplayName ="*(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """UserDisplayName ="*(({domain}[^\\"]+)\\+)?({user}[^\\"]+)"""",
     """SessionType="*({operation}[^"]+)""",
     """UserSID="*({user_sid}[^"]+)""",
     """Module="*({resource}[^"]+)""",

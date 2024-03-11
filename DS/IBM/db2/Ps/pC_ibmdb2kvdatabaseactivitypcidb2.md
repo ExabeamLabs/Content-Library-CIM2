@@ -17,7 +17,7 @@ Name = ibm-db2-kv-database-activity-pcidb2
     """cs1=({additional_info}.+?)\s+(\w+=|$)""",
     """cs3=({operation}.+?)\s+(\w+=|$)""",
     """filePath=({file_name}.+?)\s+(\w+=|$)""",
-    """duser=({user}[\w\.\-]{1,40}\$?)\s*\w+=""",
+    """duser=({user}.+?)\s*\w+=""",
     """({event_code}DB2_AU04)""",
     """({event_name}DB2Aud004_DML_On_System_Catalog_Object)""",
   ]

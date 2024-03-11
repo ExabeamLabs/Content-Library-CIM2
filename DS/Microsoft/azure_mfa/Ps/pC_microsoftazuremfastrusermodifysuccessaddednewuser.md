@@ -8,7 +8,7 @@ Name = microsoft-azuremfa-str-user-modify-success-addednewuser
   Conditions = [ """pfsvc: """, """User """, """added new user"""]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
-    """User "\[?({user}[\w\.\-]{1,40}\$?)\]?"""",
+    """User "\[?({user}[^"\]]+)\]?"""",
     """added new user "({dest_user}[^"]+)"""",
 ]
   ParserVersion = "v1.0.0"

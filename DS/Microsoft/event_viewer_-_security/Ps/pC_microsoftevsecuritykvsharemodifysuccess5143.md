@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-share-modify-success-5143
     """Microsoft-Windows-Security-Auditing\s+\S+\s+\S+\s+({result}[^\s]+\sAudit)""",
     """({event_name}A network share object was modified)""",
     """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """Account Name:\s+({user}[\w\.\-]{1,40}\$?)""",
+    """Account Name:\s+({user}[^\s]+)""",
     """Account Domain:\s+({domain}[^\s]+)""",
     """Logon ID:\s+({login_id}[^\s]+)""",
     """Share Information:\s+Object Type:\s+({file_type}[^:]+?)\s+Share Name:""",

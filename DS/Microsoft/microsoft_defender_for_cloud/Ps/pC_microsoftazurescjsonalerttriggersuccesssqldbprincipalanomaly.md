@@ -16,18 +16,11 @@ ParserVersion = "v1.0.0"
 
 cef-defender-atp-2.Fields} [
      """ProcessId":({process_id}\d+)""",
-     """InitiatingProcessFileName":\s*"({process_name}[^"]+)""",
-     """"FileName":"({file_name}[^"]+?(\.({file_ext}[^".]+))?)"""",
-     """"FolderPath":"({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
-     """DeviceName":\s*"({dest_host}[\w\-.]+)""",
+     """InitiatingProcessFileName":\s*"({parent_process}[^"]+)""",
+     """"FileName":\s*"({process_name}[^"]+)""",
+     """DeviceName":\s*"({dest_host}[^"]+)""",
      """ProcessCommandLine":\s*"({process_command_line}[^"]+)\s*""""
      """MD5":"({hash_md5}[^"]+)""",
-     """"InitiatingProcessMD5":"({hash_md5}[^"]+)"""",
-     """"SHA256":"({hash_sha256}[^",]+)",""",
-     """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
-     """"SHA1":"({hash_sha1}[^"]+)"""",
-     """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
-     """"InitiatingProcessParentFileName":"({parent_process}[^"]+)""""
  ]
  ParserVersion = "v1.0.0"
 },
@@ -45,7 +38,7 @@ Fields = [
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
   """\Wcs1=({malware_url}.+?)\s+(\w+=|$).+?cs1Label=url"""
   """\Wcs1Label=url.*?\Wcs1=({malware_url}.+?)\s+(\w+=|$)"""
-  """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s"""
+  """\Wsuser=({user}[^\s]+)\s"""
   """\Wcs2=({result}[^\s]+)"""
 ]
 Name = microsoft-azureatp-cef-alert-trigger-success-securityalert
@@ -70,7 +63,7 @@ Fields = [
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
   """\Wcs1=({malware_url}.+?)\s+(\w+=|$).+?cs1Label=url"""
   """\Wcs1Label=url.*?\Wcs1=({malware_url}.+?)\s+(\w+=|$)"""
-  """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s"""
+  """\Wsuser=({user}[^\s]+)\s"""
   """\Wcs2=({result}[^\s]+)"""
 ]
 Name = microsoft-azureatp-cef-alert-trigger-success-enumerationsecurityalert
@@ -84,7 +77,7 @@ ParserVersion = "v1.0.0"
 
 {
 Vendor = Microsoft
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
 Fields = [
   """"id":\s*"({alert_id}[^"]+)""""
   """"title":\s*"({alert_name}[^"]+)""""
@@ -92,17 +85,17 @@ Fields = [
   """"category":\s*"({alert_type}[^"]+)""""
   """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]"""
   """"sourceMaterials":\["({additional_info}[^"]+)"""",
-  """"eventDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""""
-  """"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[\w\.\-]{1,40}\$?))""""
-  """aadUserId[^}\]]+?"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[\w\.\-]{1,40}\$?))""""
-  """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-  """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-]{1,40}\$?)(@[^"]+)?))""""
+  """"eventDateTime":\s*"({time}[^"]+)""""
+  """"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[^\s"]+))""""
+  """aadUserId[^}\]]+?"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[^\s"]+))""""
+  """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[^\s"@]+)(@[^"]+)?))""""
   """"userPrincipalName":\s*"({user_upn}[^"]+?)""""
   """"domainName"+:\s*"+(-|({domain}[^"]+))""""
   """"domainName"+:\s*"+(-|({domain}[^"]+))[^}\]]+?userPrincipalName"""
   """"fqdn"+:\s*"+({src_host}[^"]+)""""
-  """"+hostStates"+:[^}\]]+?privateIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """"+hostStates"+:[^}\]]+?publicIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """"+hostStates"+:[^}\]]+?privateIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"+hostStates"+:[^}\]]+?publicIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """"description":\s*"An actor on\s*({src_host}\S+)\s*performed suspicious"""
   """"fileStates":[^]]+?"name":\s*"({file_name}[^."]+([\.\w]+)?)""""
   """"destinationServiceName":"({app}[^"]+)""""
@@ -131,7 +124,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """(\\n|\W)ComputerName =({host}[\w\-\.]+)\s*(\\n)?(\w+=|$)""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (?i)(AM|PM))""",
-    """(\\n|\W)Message=[^=]*?\Wuser\s*'\s*((({domain}[^\\]+)(\\)+))?({user}[\w\.\-]{1,40}\$?)'""",
+    """(\\n|\W)Message=[^=]*?\Wuser\s*'\s*((({domain}[^\\]+)(\\)+))?({user}[^\\]+?)'""",
     """(\\n|\W)SourceName =({service_name}[^=]+?)\s*(\\n)?(\w+=|$)""",
     """SourceName =({app}MSSQL)""",
     """\[CLIENT:\s+({src_ip}[a-fA-F\d:\.]+)\]""",

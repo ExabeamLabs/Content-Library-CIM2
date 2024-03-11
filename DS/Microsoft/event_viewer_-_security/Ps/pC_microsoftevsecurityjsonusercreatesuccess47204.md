@@ -10,10 +10,10 @@ Conditions = [
 ]
 Fields = [
   """({event_name}A user account was created)"""
-  """"MachineName":"({host}[\w\-.]+)"""
+  """"MachineName":"({host}[^."]+)"""
   """"TimeGenerated":"({time}[^"]*)"""
   """"InstanceId":"({event_code}[^"]+)"""
-  """"4":"({user}[\w\.\-]{1,40}\$?)"""
+  """"4":"({user}[^"]+)"""
   """"5":"({domain}[^"]+)"""
   """"6":"({login_id}[^"]+)"""
   """"2":"({account_id}[^"]+)"""
@@ -21,8 +21,7 @@ Fields = [
   """"1":"({account_domain}[^"]+)"""
 ]
 DupFields = [
-  "host->dest_host",
-  "account_name->dest_user"
+  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

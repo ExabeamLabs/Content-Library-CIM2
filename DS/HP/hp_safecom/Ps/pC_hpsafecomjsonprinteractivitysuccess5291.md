@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
   """"date_part":"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""
-  """"userid":"({user}[\w\.\-]{1,40}\$?)"""
+  """"userid":"({user}[^"]+)"""
   """"printer_name":"({printer_name}.+?)\s*""""
   """"pages_printed":({num_pages}\d+)"""
   """"document_details":"({object}.+?)\s*""""

@@ -9,7 +9,7 @@ Name = netskope-sc-sk4-alert-trigger-success-dlp
   Conditions = [ """destinationServiceName =Netskope""","""alert_type""","""DLP"""]
   Fields =[
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z),""",
-      """"dstip"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+      """"dstip"+:"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """"file_type"+:"+({file_type}[^"]+)"""",
       """"app"+:"+({app}[^"]+)"""",
       """"device"+:"+({device_type}[^"]+)"""",
@@ -18,8 +18,8 @@ Name = netskope-sc-sk4-alert-trigger-success-dlp
       """"policy"+:"+({alert_name}[^"]+)"""",
       """"action"+:"+({action}[^"]+)"""",
       """"referer"+:"+({referrer}[^"]+)"""",
-      """"user"+:"+({user}[\w\.\-]{1,40}\$?)"""",
-      """"srcip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"user"+:"+({user}[^"]+)"""",
+      """"srcip"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"category"+:"+({category}[^"]+)""""
       """"+activity"+:"+({operation}[^"]+)"+""",
       """"object"+:"+({file_name}[^"]+)"""",

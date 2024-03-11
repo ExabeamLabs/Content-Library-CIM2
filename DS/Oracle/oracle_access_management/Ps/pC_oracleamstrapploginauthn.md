@@ -13,7 +13,7 @@ Name = oracle-am-str-app-login-authn
     """([^\|]*\|){3}\s*({additional_info}[^\|]+?)\s*\|""",
     """([^\|]*\|){5}\s*({auth_method}[^\|]+?)\s*\|""",
     """([^\|]*\|){6}\s*({app}[^\|]+?)_LOGIN\s*\|""",
-    """([^\|]*\|){7}\s*uid=({user}[\w\.\-]{1,40}\$?)""",
+    """([^\|]*\|){7}\s*uid=({user}[^\|\s]+)""",
   ]
   ParserVersion = v1.0.0
 

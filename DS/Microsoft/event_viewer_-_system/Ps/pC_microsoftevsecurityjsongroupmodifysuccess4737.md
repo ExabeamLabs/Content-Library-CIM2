@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}A security-enabled global group was changed)""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"SubjectUserName":"({user}[^"]+)""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",

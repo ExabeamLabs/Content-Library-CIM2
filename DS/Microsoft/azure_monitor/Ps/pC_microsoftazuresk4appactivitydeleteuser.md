@@ -4,9 +4,6 @@
 Name = microsoft-azure-sk4-app-activity-deleteuser
   Conditions = [ """"ActivityDisplayName":"Delete user"""", """"OperationName":"Delete user"""", """"ActivityDateTime":"""", """"ResourceId":"""" ]
   ParserVersion = "v1.0.0"
-  Fields = ${MSParsersTemplates.azure-app-activity-2.Fields} [
-    """"ipAddress":"?(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"?"""
-  ]
 
 azure-app-activity-2 {
     Vendor = Microsoft
@@ -20,8 +17,8 @@ azure-app-activity-2 {
       """"value\\":\\"({user_agent}[^"]+?)\\?",\\"key\\":\\"User-Agent\\"""",
       """"key\\":\\"User-Agent\\",\\"value\\":\\"({user_agent}[^"]+?)\\?"""",
       """"InitiatedBy":"\{\\"user\\":\{[^\}]+"userPrincipalName\\":\\"({email_address}[^@"]+@[^\."]+\.[^"]+?)\\?"""",
-      """CallerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
-      """"InitiatedBy":"\{\\"user\\":\{[^\}]+"ipAddress\\":\\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\\?"""",
+      """CallerIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+      """"InitiatedBy":"\{\\"user\\":\{[^\}]+"ipAddress\\":\\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\\?"""",
       """"LoggedByService":"(Core Directory|({app}[^"]+))"""",
       """TargetResources":"\[[^|]+userPrincipalName\\":\\"(({dest_email_address}[^@"]+@[^"]+?)|({dest_user}[^"]+?))\\?"""",
       """destinationServiceName =({app}Azure)""",

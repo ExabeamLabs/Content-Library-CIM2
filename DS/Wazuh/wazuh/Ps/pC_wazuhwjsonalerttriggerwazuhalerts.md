@@ -24,7 +24,7 @@ Name = wazuh-w-json-alert-trigger-wazuhalerts
     """"type":"({alert_type}[^"]+)""""
     """"rule.level":({alert_severity}\d+),"""
   ]
-  DupFields = [ "data->event_name", "agent_name -> alert_source" , "data -> alert_name"]
+  DupFields = [ "data->event_name", "agent_name -> alert_source" , "event_name -> alert_name"]
 
 
 }

@@ -20,7 +20,7 @@ Name = unix-auditd-kv-user-switch-success-userrolechange
 """exe=\"({process_path}[^\"]*)\"""",
 """exe=\"({process_dir}.+\/)({process_name}.+?)\"""",
 """hostname=(({src_ip}(\d{1,3}\.){3}\d{1,3})|({src_host}[^\s\.]+))""",
-"""addr=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""addr=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """res=({result}[^\s'\"]+)"""
   ]
   DupFields = ["host->dest_host"]

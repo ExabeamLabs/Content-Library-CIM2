@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: AVI Networks
 --------------------
-### Product: [AVI Networks Software Load Balancer](../ds_avi_networks_avi_networks_software_load_balancer.md)
+### Product: [Avi Networks Software Load Balancer](../ds_avi_networks_avi_networks_software_load_balancer.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

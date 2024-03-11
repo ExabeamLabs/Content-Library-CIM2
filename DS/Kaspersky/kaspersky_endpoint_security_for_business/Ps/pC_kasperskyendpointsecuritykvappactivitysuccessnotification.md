@@ -9,7 +9,7 @@ Name = kaspersky-endpointsecurity-kv-app-activity-success-notification
   Conditions = [ """"GNRL_EV_FULLSCAN_STATUS_NOTIFICATION"""", """ WSEE|""", """ p1="""", """ hdn="""", """etdn="""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ) ({host}[\w\-.]+) WSEE\|""",
-    """hip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """hip="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """hdn="({src_host}[^"]+)""",
     """etdn="({alert_name}[^"]+)""",
     """et="({alert_type}[^"]+)""",

@@ -10,10 +10,10 @@ Name = infoblox-bddi-kv-app-logout-httpd
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """group=({group_name}.+?)\s+(\w+=|$)""",
 # trigger_event is removed
-    """\d\d\dZ\s*\[(({email_address}[^@\]]+@[^\.\]]+\.[^\]]+)|({user}[\w\.\-]{1,40}\$?))\]:"""
+    """\d\d\dZ\s*\[({user}[^\]:]+)\]:"""
   ]
 
 

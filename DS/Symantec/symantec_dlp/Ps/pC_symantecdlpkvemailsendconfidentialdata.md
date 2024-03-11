@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
   """\s({host}[^.\s]+)(\.\w+)*\s*(Message =)? ID:\s({alert_id}\d+)"""
-  """Sender:\s+({user}[\w\.\-]{1,40}\$?)"""
+  """Sender:\s+({user}[^@]+)"""
   """Sender:\s+({src_email_address}[^,]+)"""
   """Subject:\s+({email_subject}.+?),\s+Target:"""
   """Recipient:\s+({email_recipients}.+?),\s+Sender:"""

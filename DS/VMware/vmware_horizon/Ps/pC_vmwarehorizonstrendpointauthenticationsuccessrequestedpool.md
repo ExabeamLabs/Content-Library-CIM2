@@ -10,7 +10,7 @@ Name = vmware-horizon-str-endpoint-authentication-success-requestedpool
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """User\s+(({domain}[^\\\s]+)\\+)?({user}[^\\\s]+)""",
     """({event_name}({operation}requested Pool (nuvdmpool|melzerpool)(-gpu|-nu)?).*?)\s+$""",
     """({event_name}({operation}requested Pool [^,]+?)(,[^"]*?)?)[\s"]*$""",
     """ machine\s+({dest_host}[\w\-.]+)""",

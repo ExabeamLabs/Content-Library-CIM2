@@ -9,7 +9,7 @@ Name = beyondtrust-powerbroker-kv-user-privilege-use-success-elevation
   Fields = [
     """\d\d:\d\d:\d\d ({host}[\w\-.]+) CEF""",
     """\|rt=({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)""",
-    """BeyondTrustBeyondInsightUserName =(?: |({user}[\w\.\-]{1,40}\$?)\s+\w+=)""",
+    """BeyondTrustBeyondInsightUserName =(?: |({user}.+?)\s+\w+=)""",
     """BeyondTrustBeyondInsightPath=(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))\s+\w+=)""",
     """BeyondTrustBeyondInsightAssetName =(?: |({src_host}.+?)\s+\w+=)""",
     """BeyondTrustBeyondInsightUserType=(?: |({privileges}.+?)\s*$)""",

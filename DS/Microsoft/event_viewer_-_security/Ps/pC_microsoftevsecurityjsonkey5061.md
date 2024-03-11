@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-key-5061
     """"HostName":"({host}[^"]+)"""",
     """({event_code}5061)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[^"]+)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",

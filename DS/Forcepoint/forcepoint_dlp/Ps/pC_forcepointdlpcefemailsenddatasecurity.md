@@ -11,8 +11,8 @@ Conditions = [
   """sourceServiceName ="""
 ]
 Fields = [
-  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
-  """\sloginName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\ssuser=({user}.+?)\s+(\w+=|$)"""
+  """\sloginName =(({domain}[^\\]+)\\+)?({user}.+?)\s+(\w+=|$)"""
   """sourceServiceName =(SMTP|Endpoint Email).+?suser=([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
   """sourceServiceName =(SMTP|Endpoint Email).+?loginName =([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
   """\sduser=\\*(({dest_domain}[^\\]+)\\+)?({target}.+?)\s+fname=.+?sourceServiceName =(?!(SMTP|Endpoint Email))""" 
@@ -26,7 +26,7 @@ Fields = [
   """\|Websense\|([^|]+?\|){3}({alert_name}[^|]+)"""
   """\scat=({alert_name}[^;]+).*?\s+sourceService.+?analyzedBy"""
   """\|Websense\|([^|]+?\|){4}({alert_severity}[^|]+)"""
-  """\sact=({result}[^\s]*)"""
+  """\sact=({action}[^\s]*)"""
 ]
 ParserVersion = "v1.0.0"
 

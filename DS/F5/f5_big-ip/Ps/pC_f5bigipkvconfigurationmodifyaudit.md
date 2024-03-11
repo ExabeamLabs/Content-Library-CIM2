@@ -10,7 +10,7 @@ Name = f5-bigip-kv-configuration-modify-audit
   Fields = [
     """({host}[^\s]+)\snotice""",
     """pid=({event_code}\d+)""",
-    """user=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """user=({user}\S+)""",
     """cmd_data=({additional_info}.+?)\s+($|\w+=)""",
   ]
 

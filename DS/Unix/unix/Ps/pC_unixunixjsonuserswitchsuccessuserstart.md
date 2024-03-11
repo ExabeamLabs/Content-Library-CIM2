@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """"@timestamp":"({time}[^"]+)"""
-  """"name_map":\{.*?"uid":"(|({user}[\w\.\-]{1,40}\$?))""""
+  """"name_map":\{.*?"uid":"(|({user}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"pid":"({process_id}\d+)"""
   """"process":\{.*?"exe":"(|({process_command_line}({process_dir}[^"]+\/).*?))""""

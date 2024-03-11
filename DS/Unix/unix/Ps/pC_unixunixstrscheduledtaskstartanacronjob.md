@@ -10,7 +10,6 @@ Name = unix-unix-str-scheduled-task-start-anacronjob
   Fields = [
     """\d\d:\d\d:\d\d\s*({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})?\s*({host}\S+)\s+(({event_category}[^\s]+)\s+)?anacron""",
     """\]:\s*({additional_info}[^$]+?)\s*$"""
-    """Job (.|'|")({task_name}[^'"]+?)('|"|.)\s"""
   ]
 
 

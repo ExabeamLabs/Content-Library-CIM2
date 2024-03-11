@@ -13,10 +13,10 @@ Conditions = [
 Fields = [
 """({event_name}A user account was unlocked)"""
 """\"EventTime\":\s*\"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\""""
-"""\"Hostname\":\"({host}[\w\-.]+)"""
+"""\"Hostname\":\"({host}[^\"]+)"""
 """({event_code}4767)"""
 """\"SubjectUserSid\":\"({user_sid}[^\"]+)"""
-"""\"SubjectUserName\":\"({user}[\w\.\-]{1,40}\$?)"""
+"""\"SubjectUserName\":\"({user}[^\"]+)"""
 """\"SubjectDomainName\":\"({domain}[^\"]+)"""
 """\"SubjectLogonId\":\"({login_id}[^\"]+)"""
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""

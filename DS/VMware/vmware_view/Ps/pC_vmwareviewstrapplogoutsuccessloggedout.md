@@ -9,7 +9,7 @@ Name = vmware-view-str-app-logout-success-loggedout
   Conditions = [ """View User""", """ has logged out""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+View User""",
-    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[^\s]+)""",
     """({app}View)"""
    ]
 

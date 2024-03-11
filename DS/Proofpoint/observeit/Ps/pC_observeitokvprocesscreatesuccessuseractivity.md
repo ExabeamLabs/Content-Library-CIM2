@@ -13,10 +13,10 @@ Name = observeit-o-kv-process-create-success-useractivity
     """\sOS=({os}[^;]+?)\s*(;|"*\s*$)""",
     """\sServerName =({dest_host}[^;]+?)\s*(;|"*\s*$)""",
     """\sDomainName =({domain}[^;]+?)\s*(;|"*\s*$)""",
-    """\sUserName =(?:n\/a|({user}[\w\.\-]{1,40}\$?))\s*(;|"*\s*$)""",
-    """\sLoginName =({user}[\w\.\-]{1,40}\$?)\s*(;|"*\s*$)""",
+    """\sUserName =(?:n\/a|({user}[^;]+?))\s*(;|"*\s*$)""",
+    """\sLoginName =({user}[^;]+?)\s*(;|"*\s*$)""",
     """\sClientName =(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[^;]+?))\s*(;|"*\s*$)""",
-    """\sClientAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sClientAddress=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sProcessName =({process_name}[^;]+?)\s*(;|"*\s*$)""",
     """\sViewerURL=({additional_info}[^;]+?)\s*(;|"*\s*$)""",
   ]

@@ -10,7 +10,7 @@ Name = stealthbits-ssd-cef-alert-trigger-dcsync
     """threatTime=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\dZ)""",
     """computers=([^\\]+\\)?({host}[^;]+)""",
     """threatType=({alert_name}[^=]+)\s+\w+=""",
-    """users=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)""",
+    """users=(({domain}[^\\]+)\\)?({user}[^\s;]+)""",
   ]
   DupFields = [ "alert_name->alert_type" ]
   ParserVersion = "v1.0.0"

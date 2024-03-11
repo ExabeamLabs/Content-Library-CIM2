@@ -9,7 +9,7 @@ Name = unix-auditbeat-json-process-create-fail-processerror
   Conditions = [""""auditbeat"""",""""action":"process_error"""",""""category":["process""",""""pid":"""]
   Fields = [
     """timestamp":"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""",
-    """"host":.+?name":"({host}[\w\-.]+?)(@[^"]*)?"""",
+    """"host":.+?name":"({host}[^"]+)"""",
     """"action":"({event_name}[^"]+)"""",
     """"pid":({process_id}\d+)""",
     """"process".+?"executable":"({process_path}(({process_dir}[^"]*?)\/)?[^"\\\/]*?)"""",
@@ -17,7 +17,7 @@ Name = unix-auditbeat-json-process-create-fail-processerror
     """"ppid":({parent_process_id}\d+)""",
     """"message":"({failure_reason}[^"]+)"""",
     """user.+?group":.+?id":"({user_id}\d+)"""",
-    """user.+?group":.+?name":"({user}[\w\.\-]{1,40}\$?)""""
+    """user.+?group":.+?name":"({user}[^"]+)""""
   ]
   DupFields = ["host->dest_host"]
 

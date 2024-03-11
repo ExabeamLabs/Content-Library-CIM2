@@ -3,7 +3,7 @@
 {
 Name = bitglass-casb-sk4-app-activity-success-onedrive
   ParserVersion = v1.0.0
-  Conditions = [ """ api.bitglass.com """, """"filename":""", """"owner":""" ]
+  Conditions = [ """destinationServiceName =Bitglass""", """"filename":""", """"owner":""" ]
 
 cef-bitglass-system-info = {
   Vendor = Bitglass

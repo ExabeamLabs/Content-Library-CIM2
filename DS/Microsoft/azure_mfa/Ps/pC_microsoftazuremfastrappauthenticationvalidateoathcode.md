@@ -10,7 +10,7 @@ Name = microsoft-azuremfa-str-app-authentication-validate-oath-code
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
     """({event_code}validate_oath_code)""",
-    """validate_oath_code: user\s+"?(({email_address}[^"@]+@[^"\s]+)|(({domain}[^\\\s]+)\\)?({user}[\w\.\-]{1,40}\$?))""",
+    """validate_oath_code: user\s+"?(({email_address}[^"@]+@[^"\s]+)|(({domain}[^\\\s]+)\\)?({user}[^\s"]+))""",
     """({event_name}Fallback OATH Code Verified)""",
     """({additional_info}updated authentication result)"""
   ]

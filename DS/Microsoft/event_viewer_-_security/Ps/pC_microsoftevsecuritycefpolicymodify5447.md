@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-cef-policy-modify-5447
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))""",
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)""",
-    """Subject:.+?Account Name:\s*((NT AUTHORITY|({domain}[^\\\s]+))\\+)?(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Process Information:""",
+    """Subject:.+?Account Name:\s*((NT AUTHORITY|({domain}[^\\\s]+))\\+)?(LOCAL SERVICE|({user}[^\\\s]+))\s+Process Information:""",
 # change_type is removed
 # filter_id is removed
 # filter_name is removed

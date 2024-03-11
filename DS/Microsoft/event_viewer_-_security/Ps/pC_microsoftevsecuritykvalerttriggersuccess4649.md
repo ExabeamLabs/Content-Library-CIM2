@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-alert-trigger-success-4649
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
   Conditions = [ """EventCode=4649""", """Message=A replay attack was detected.""", """SourceName =Microsoft Windows security auditing""", """TaskCategory=Other Logon/Logoff Events""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-alert-trigger-success-4649
     """Keywords=({result}[^=]+?)\s+\w+=""",
     """Message=({event_name}[^:]+?)\s+\w+:""",
     """Subject:\s+Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
-    """Subject:.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)""",
+    """Subject:.+?Account Name:\s+({user}[^\s]+)""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Process ID:\s+({process_id}[^\s]+)""",

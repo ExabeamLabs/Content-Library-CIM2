@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-log-clear-success-auditlogclear
     """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+""",
     """({event_code}517)""",
     """({event_name}The audit log was cleared)""",
-    """\s+Client User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Client Domain""",
+    """\s+Client User Name:\s+({user}.+?)\s+Client Domain""",
     """\s+Client Domain:\s+({domain}[^\s]+)""",
     """\s+Client Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
   ]

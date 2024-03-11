@@ -7,7 +7,7 @@ Name = pan-gp-cef-app-activity-success-globalprotect
   Fields = ${PaloAltoParsersTemplates.raw-pan-vpn-event.Fields}[
     """,({app}GLOBALPROTECT),""",
     """GLOBALPROTECT,([^,]*,){10}({src_host}[\w\-.]+),"""
-    """GLOBALPROTECT,([^,]*,){19}"*({os}[^"\,]+)"""
+    """GLOBALPROTECT,([^,]*,){19}"*({os}[^"]+)"""
   ]
 
 

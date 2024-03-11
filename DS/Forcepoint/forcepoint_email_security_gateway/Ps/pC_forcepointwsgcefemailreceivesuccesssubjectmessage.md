@@ -16,15 +16,15 @@ Fields = [
   """dvc=({host}[a-fA-F:\d.]+)"""
   """dvchost=({host}[\w\-.]+)"""
   """rt=({time}\d{13})"""
-  """suser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-  """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """suser=({src_email_address}\S+)"""
+  """suser=({external_address}\S+)"""
+  """duser=({email_recipients}\S+)"""
   """msg=({email_subject}.+?)\s*(\w+=|$)"""
   """in=({bytes}\d+)"""
 ]
 DupFields = [
-  "src_email_address->email_address"
-  "src_email_address->external_address"
-  "dest_email_address->email_recipients"
+  "src_email_address->user"
+  "email_recipients->dest_email_address"
 ]
 ParserVersion = "v1.0.0"
 

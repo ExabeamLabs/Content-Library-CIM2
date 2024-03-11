@@ -5,7 +5,7 @@ Name = f5-vip-str-alert-trigger-monitorstatus
   ParserVersion = v1.0.0
   Vendor = F5
   Product = BIG-IP F5 LBR
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ notice mcpd[""", """: Pool """, """ monitor status """ ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)([^\/]+?): Pool [^\s]+?\/([^\s]+)""",

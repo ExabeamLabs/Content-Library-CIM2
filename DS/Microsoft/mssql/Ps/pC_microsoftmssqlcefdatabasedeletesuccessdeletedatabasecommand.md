@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """({host}[\w.\-]+)\s+CEF:([^\|]*\|){4}({event_code}[^\|]+)\|({event_name}[^\|]+)"""
   """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+)"""
-  """\Wduser=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+  """\Wduser=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[^=\\\/]+?))(\s+\w+=|\s*$)"""
   """\Wfname=(|({db_name}.+?))(\s+\w+=|\s*$)"""
   """\Wcs1=({db_operation}\w+)"""
   """\WdeviceExternalId=(|({dest_host}.+?))(\s+\w+=|\s*$)"""

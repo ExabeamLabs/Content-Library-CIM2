@@ -12,10 +12,10 @@ carbonblack-endpoint = {
     Fields = [
     """({time}\d+-\d+-\d+ \d+:\d+:\d+.\d\d\d)""",
     """"+process_cmdline"+:"+({process_command_line}[^"]+)"+""",
-    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))"+""",
+    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(SYSTEM|({user}[^",]+))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
-    """"+sensor_action"+:"+({result}[^"]+)"+""",
+    """"+sensor_action"+:"+({action}[^"]+)"+""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))"""",
     """"+action"+:"+({action}[^"]+)?"*""",
     """"+parent_cmdline"+:"+({parent_process_command_line}[^,]+"+)?"\,""",

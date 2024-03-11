@@ -13,13 +13,13 @@ Name = microsoft-evsecurity-cef-handle-close-success-handleclosed
     """\scategoryBehavior=(|({action}.+?))(\s+\w+=|\s*$)""",
     """\scategoryOutcome=(|/({action}.+?))(\s+\w+=|\s*$)""",
     """\scategoryObject=(|({object}.+?))(\s+\w+=|\s*$)""",
-    """\sdhost=(|({dest_host}[\w\-.]+?))(\s+\w+=|\s*$)""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\sduser=(|SYSTEM|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
+    """\sdhost=(|({dest_host}.+?))(\s+\w+=|\s*$)""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sduser=(|SYSTEM|({user}.+?))(\s+\w+=|\s*$)""",
     """Handle ID\\=({handle_id}\d+)""",
     """Process ID\\=({process_id}\d+)""",
     """Image File Name\\=({process_path}({process_dir}[^=&]*?[\\\/]+)?({process_name}[^=&\\\/]+?))&&User\\=""",
-    """User\\=(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """User\\=(SYSTEM|({user}[^=&]+))""",
     """ComputerName\\=({host}[\w.\-]+)""",
   ]
 

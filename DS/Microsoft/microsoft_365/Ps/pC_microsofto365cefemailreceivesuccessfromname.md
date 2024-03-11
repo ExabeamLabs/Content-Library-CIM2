@@ -15,19 +15,19 @@ Name = microsoft-o365-cef-email-receive-success-fromname
   ]
   Fields = [
     """\Wsuser=({src_email_address}[^@]+@[^@\s]+)""",
-    """\Wcs2=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
+    """\Wcs2=({dest_email_address}[^@]*@[^@=]+?)\s+(\w+=|$)""",
     """ToAddress\\=({to_address}.+?)(;\w+\\=|\s+\w+=|\s*$)""",
     """CcAddress\\=(?:null|({cc_address}.+?))(;\w+\\=|\s+\w+=|\s*$)""",
-    """\Wcs2=.*?"user-email":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """\Wcs2=.*?"user-email":"({dest_email_address}[^@"]+@[^"]+)""",
     """Subject\\=({email_subject}[^;]+?)(\s*\[\s*ref:.*?\])?\s*(;|\s+\w+=|\s+$)""",
-    """ToAddress\\=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """ToAddress\\=({dest_email_address}[^@;]+@({dest_email_domain}[^;\s]+))""",
     """LastModifiedDate\\=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)""",
     """\Wact=({alert_name}.+?)\s+(\w+=|$)""",
     """Id\\=({alert_id}[^;\s]+)""",
     """({direction}o)"""
-    """ValidatedFromAddress\\=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));"""
+    """ValidatedFromAddress\\=({src_email_address}[^@;]+@[^@\s;]+);"""
   ]
-  DupFields = [ "src_email_address->email_user","src_email_address->orig_user", "alert_name->alert_type", "to_address->email_recipients", "dest_email_address->external_address","src_email_address->email_address" ]
+  DupFields = [ "src_email_address->email_user","src_email_address->orig_user", "alert_name->alert_type", "to_address->email_recipients", "dest_email_address->external_address" ]
  
 
 }

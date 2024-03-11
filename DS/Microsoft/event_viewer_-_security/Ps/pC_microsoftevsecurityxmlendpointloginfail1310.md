@@ -6,21 +6,21 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
  Vendor = Microsoft
  Product = Event Viewer - Security
  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
- Conditions = [ """<EventID Qualifiers""","""'16640'>1310<""", """Failed NTLM Authentication"""]
+ Conditions = [ """<EventID Qualifiers='16640'>1310<""", """Failed NTLM Authentication"""]
  Fields = [
-   """<Provider Name\\*='({provider_name}[^']+)""",
-   """<EventID Qualifiers\\*='16640'>({event_code}[^<]+)""",
+   """<Provider Name ='({provider_name}[^']+)""",
+   """<EventID Qualifiers='16640'>({event_code}[^<]+)""",
    """<Keywords>({result}[^<]+)""",
-   """<TimeCreated SystemTime\\*='({time}.+?)'""",
+   """<TimeCreated SystemTime='({time}.+?)'""",
    """<EventRecordID>({event_id}[^<]+)""",
-   """<Computer>({dest_host}({host}[\w\-.]+))""",
-   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+   """<Computer>({host}[^<]+)""",
    """status=([^:]+:)({result_code}[^:]+):"""
-   """Failed NTLM Authentication for user:\s+'({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)""",
+   """Failed NTLM Authentication for user:\s+'({domain}[^\\]+)\\({user}[^']+)""",
    """<Message>({event_name}.+?)\s{0,100}<"""
    """status=([^:]+:){2}({failure_reason}.+?)\s<"""
    ]
    DupFields = [
+    "host->dest_host"
     "result_code->failure_code"
    ]
 

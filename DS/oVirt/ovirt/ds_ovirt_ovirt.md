@@ -4,7 +4,7 @@ Product: oVirt
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  80   |   40   |         7          |       3        |   36    |
+|  83   |   42   |         7          |       3        |   36    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

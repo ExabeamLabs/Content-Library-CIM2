@@ -12,7 +12,6 @@ Name = microsoft-azuremon-sk4-app-activity-alert
 # azure_alert_description is removed
 # azure_resource is removed
   ]
-  DupFields = [ "object->resource" ]
   ParserVersion = "v1.0.0"
 
 

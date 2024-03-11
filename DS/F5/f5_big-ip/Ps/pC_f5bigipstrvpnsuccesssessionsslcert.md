@@ -10,7 +10,7 @@ Name = f5-bigip-str-vpn-success-sessionsslcert
   Fields = [
     """(\s|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d)\s({host}[\w\-.]+)\s""",
     """:({session_id}[^:]+):\ssession.ssl.cert.subject""",
-    """CN=({user}[\w\.\-]{1,40}\$?)"""
+    """CN=({user}[\w\-.]+)"""
   ]
 
 

@@ -16,7 +16,7 @@ nsx-config-change-activity = {
       """occurred on object ({object}[^\s]+)""",
       """({result}success)""",
       """tenant\s({tenant}[\w\-\.]+)\s""",
-      """by user ({user}[\w\.\-]{1,40}\$?)"""
+      """by user ({user}[\w\-\.]+)"""
     
 }
 ```

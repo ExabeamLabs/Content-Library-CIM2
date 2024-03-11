@@ -8,9 +8,9 @@ Name = microsoft-sysmon-json-registry-12
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
   Conditions = [ """"EventID":12""", """Registry object added or deleted:""", """"SourceModuleType":"""" ]
   Fields = [
-    """"Hostname":"({host}[\w\-.]+)"""",
+    """"Hostname":"({host}[^",]+)"""",
     """"UtcTime":"({time}\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d\.\d+)"""",
-    """"AccountName":"(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
+    """"AccountName":"(SYSTEM|({user}[^",]+))"""",
     """"Domain":"(NT AUTHORITY|({domain}[^",]+))"""",
     """"UserID":"({user_sid}[^",]+)"""",
     """"Category":"({category}[^",]+)"""",

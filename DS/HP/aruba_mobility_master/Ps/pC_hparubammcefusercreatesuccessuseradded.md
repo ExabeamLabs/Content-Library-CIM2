@@ -11,7 +11,7 @@ Name = hp-arubamm-cef-user-create-success-useradded
 	  """deviceProcessName =({process_name}.+?)\s+(\w+=|$)""",
 	  """reason=({additional_info}[^"]+)""",
 	  """MAC\\*=({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})""",
-    """IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """IP=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   ]
 	ParserVersion = v1.0.0
 

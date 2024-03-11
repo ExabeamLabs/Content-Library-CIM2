@@ -9,7 +9,7 @@ Name = unix-unix-str-endpoint-activity-success-rgmanager
   Conditions = [ """rgmanager[""", """]: [""" ]
   Fields = [
     """\srgmanager\[\d+\]:\s*({additional_info}.+?)\s*$""",
-    """\d\d:\d\d:\d\d(\.\S+)?\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*({host}[^\s]+)\srgmanager""",
+    """\d\d:\d\d:\d\d(\.\S+)?\s({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*({host}[^\s]+)\srgmanager""",
   ]
 
 

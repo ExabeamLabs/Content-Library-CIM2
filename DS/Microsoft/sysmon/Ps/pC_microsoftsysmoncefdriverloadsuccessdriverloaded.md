@@ -21,7 +21,7 @@ Name = microsoft-sysmon-cef-driver-load-success-driverloaded
 # category_object is removed
 # category_custom_format_field is removed
     """\WdeviceSeverity=({device_severity}.+?)\s+(\w+=|$)""",
-    """\Wdproc=.+?USERS\\+({user}[\w\.\-]{1,40}\$?)""",
+    """\Wdproc=.+?USERS\\+({user}[^\s\\]+)""",
     """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
 # image_loaded is removed
     """\Wcs2=({signature}.+?)\s+(\w+=|$)""",

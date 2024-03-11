@@ -5,7 +5,7 @@ Name = microsoft-azure-json-key-success-keyvault
    Vendor = Microsoft
    Product = Azure Monitor
    ParserVersion = v1.0.0
-   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"""
+   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
    Conditions = [ """Type":"AzureDiagnostics""", """ResourceProvider":"MICROSOFT.KEYVAULT""", """OperationName""" ] 
    Fields = [
     """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",

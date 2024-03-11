@@ -4,7 +4,7 @@ Product: Kiteworks
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  152  |   61   |         20         |       14       |   14    |
+|  167  |   70   |         20         |       14       |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

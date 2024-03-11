@@ -13,8 +13,8 @@ Fields = [
   """EventID=({event_code}\d+)"""
   """({event_name}The workstation was unlocked)"""
   """TimeGenerated=({time}\d{10})"""
-  """Computer=({host}[\w\-.]+)"""
-  """Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain"""
+  """Computer=({host}[^\s]+)"""
+  """Account Name:\s+({user}.+?)\s+Account Domain"""
   """Account Domain:\s+({domain}.+?)\s+Logon ID"""
   """Logon ID:\s+({login_id}[^\s]+)"""
 ]

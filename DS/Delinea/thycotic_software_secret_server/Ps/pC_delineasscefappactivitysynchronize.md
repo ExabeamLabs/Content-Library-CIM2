@@ -11,8 +11,8 @@ Name = delinea-ss-cef-app-activity-synchronize
   ]
   Fields = [
     """rt=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
-    """Action:\s*\[({operation}[^\]]+)\]""",
-    """\ssuser=([^\\\s]+?\\)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s\w+="""
+    """msg=({operation}.+?)\s+\w+=""",
+    """suser=({user}.+?) \w+="""
   ]
   ParserVersion = "v1.0.0"
 

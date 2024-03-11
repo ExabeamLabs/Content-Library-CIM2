@@ -2,7 +2,7 @@
 ```Java
 {
 Name = sophos-ep-sk4-alert-trigger-success-userblocked
-  Conditions = [ """"type":"Event::Endpoint::DownloadReputationUserBlocked"""", """"group":"DOWNLOAD_REPUTATION"""", """"severity":"""", """"endpoint_type":""" ]
+  Conditions = [ """CEF:""", """"type":"Event::Endpoint::DownloadReputationUserBlocked"""", """"group":"DOWNLOAD_REPUTATION"""", """"severity":"""", """destinationServiceName =Sophos Central""" ]
   Fields=${SophosParsersTemplates.cef-sophos-security-alert-1.Fields}[
     """"type":"({alert_name}[^"]+)"""",
     """"group":"({alert_type}[^"]+)"""",
@@ -29,9 +29,9 @@ cef-sophos-security-alert-1 = {
     """"type":"({alert_type}Event::Endpoint::[^"]+)""",
     """"source":"(n\/a|({full_name}[^"\\\(\),]+))"""",
     """"source":"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\s\\]+))""",
-    """"source":"(n\/a|(([^\\\s"]*\s+[^\\"]*|({domain}[^\\"]+?))\\+)?({user}[\w\.\-]{1,40}\$?))"""",
-    """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-    """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
+    """"source":"(n\/a|(([^\\\s"]*\s+[^\\"]*|({domain}[^\\"]+?))\\+)?({user}[^\\\s"]+))"""",
+    """"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
     """"description":"({additional_info}[^:"]+:?([^"]+? at '({malware_url}[^"]+)')?)"""",
     """"descriptor":"({process_path}[^\s]+\\({process_name}[^"]+))"""",
   ]

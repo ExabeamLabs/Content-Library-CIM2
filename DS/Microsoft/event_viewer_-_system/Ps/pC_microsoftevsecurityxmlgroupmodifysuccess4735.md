@@ -5,9 +5,6 @@ Name = microsoft-evsecurity-xml-group-modify-success-4735
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   Conditions = [ """<Message>A security-enabled local group was changed""", """<EventID>4735</EventID>""" ]
-  Fields = ${DLWindowsParsersTemplates.windows-events-1.Fields}[
-    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  ]
 
 windows-events-1 = {
   Vendor = Microsoft
@@ -29,8 +26,8 @@ windows-events-1 = {
     """"record_id"+:({event_id}\d+)""",
     """"task"+:"+({task_name}[^"]+)""",
     """"event_id"+:({event_code}\d+)""",
-    """"(?:winlog\.)?computer_name"+:"+({src_host}[\w\-.]+)""",
-    """"hostname"+:"+({host}[\w\-.]+)""",
+    """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
+    """"hostname"+:"+({host}[^"]+)""",
     """"action"+:"+({action}[^"]+)""",
     """"os":[^@]+?"name":"({os}[^"]+)""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
@@ -38,8 +35,8 @@ windows-events-1 = {
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
     """"+SubjectDomainName"+:"+({domain}[^"]+)""",
-    """"user"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
+    """"user"+:"+(SYSTEM|-|({user}[^@"]+))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[^"]+))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""
@@ -53,9 +50,9 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[\w\-.]]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)""",
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}[^\\]+)""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

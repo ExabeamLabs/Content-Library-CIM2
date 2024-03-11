@@ -4,7 +4,7 @@
 Name = pan-ngfw-leef-network-traffic-success-allow
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
+TimeFormat = "yyyy/MM/dd HH:mm:ss"
 Conditions = [
   """LEEF:"""
   """|Palo Alto Networks|PAN-OS Syslog Integration|"""
@@ -21,7 +21,7 @@ Fields = [
   """\|srcPostNAT=(0\.0\.0\.0|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
   """\|dstPostNAT=(0\.0\.0\.0|({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
   """\|RuleName =({rule}[^\|]*?)\|"""
-  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[\w\.\-]{1,40}\$?)))\|"""
+  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[^\|\\]+)))\|"""
   """\|SourceUser=(|((({src_domain}[^\|\\]+)\\)?({src_user}[^\|\\]+)))\|"""
   """\|DestinationUser=(|((({dest_domain}[^\|\\]+)\\)?({dest_user}[^\|\\]+)))\|"""
   """\|Application=({network_app}[^\|]*?)\|"""
@@ -45,8 +45,7 @@ Fields = [
   """\|sequence=({sequence}\d+)\|"""
   """\|SessionEndReason=({result}[^\|]+)"""
   """\|action=({action}\w+)\|"""
-  """\|SourceLocation=({src_location}[^\|]+)\|""",
-  """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+  """\|SourceLocation=({src_location}[^\|]+)\|"""
 ]
 ParserVersion = "v1.0.0"
 

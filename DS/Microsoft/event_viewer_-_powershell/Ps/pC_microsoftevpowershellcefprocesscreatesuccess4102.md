@@ -8,7 +8,7 @@ Name = microsoft-evpowershell-cef-process-create-success-4102
   Conditions = [ """CEF: """, """|Microsoft|PowerShell|""", """|Microsoft-Windows-PowerShell:4102|""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """\sduser=(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s""",
+    """\sduser=(SYSTEM|({user}[^\s]+))\s""",
     """\sahost=({host}[^\s]+)\s""",
     """\sad.ProcessID=({process_id}[^\s]+)\s""",
     """\|Microsoft-Windows-PowerShell:4102\|({additional_info}[^|]+)\|""",

@@ -9,7 +9,7 @@ Name = beyondtrust-privmgmt-kv-process-create-success-processstarted
     Fields = [
       """ComputerName =({host}[^\s]+)""",
       """Message=({operation_type}.+?)\s+Command Line:""",
-      """User Name:\s*(?:[A-F\d\-]{36}|({user}[\w\.\-]{1,40}\$?))\s+User Domain SID:""",
+      """User Name:\s*(?:[A-F\d\-]{36}|({user}.+?))\s+User Domain SID:""",
       """User Domain Name:\s*({domain}.*?)\s+User Domain Name""",
       """User SID:\s*({user_sid}.*?)\s+User Name""",
       """Token:\s*({token}.*?)\s+Token Description:""",

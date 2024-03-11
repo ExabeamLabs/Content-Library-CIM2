@@ -9,15 +9,15 @@ Name = cisco-fp-kv-http-session-policy
   Conditions = [ """Policy: """, """ApplicationProtocol: HTTP""" ]
   Fields = [
     """\w+\s+\d+ \d\d:\d\d:\d\d ({host}[\w.\-]+)""",
-    """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s+({host}[\w\-.]+)?\s+"""
+    """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s+({host}[\w\-.]+)?\s+(\(|\%)""",
     """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
-    """SrcIP:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """DstIP:\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """SrcIP:\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """DstIP:\s+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """DstIP:\s+({web_domain}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """SrcPort:\s+({src_port}\d+)""",
     """DstPort:\s+({dest_port}\d+)""",
     """AccessControlRuleAction:\s+({action}[^,]+)""",
-    """User:\s+(Unknown|No Authentication Required|Not Found|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """User:\s+(Unknown|No Authentication Required|Not Found|(({domain}[^\\\s,]+)\\+)?({user}[^,\s]+))""",
     """UserAgent:\s+({user_agent}.+?),\s+Client:""",
     """Protocol:\s+({protocol}[^,]+)""",
     """InitiatorBytes:\s+({bytes_out}\d+)""",
@@ -32,9 +32,7 @@ Name = cisco-fp-kv-http-session-policy
     """Priority: ({priority}\d+),""",
     """AccessControlRuleName: ({rule}[^,]+),""",
     """ApplicationProtocol: ({app_protocol}[^,]+),""",
-    """IntrusionPolicy: ({alert_name}[^,]+),""",
-    """URI:\s+(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s]+)""",
-    """URI:\s+.*?({uri_query}\?[^\s",]+)""",
+    """IntrusionPolicy: ({alert_name}[^,]+),"""
   ]
 
 

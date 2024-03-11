@@ -14,9 +14,9 @@ Name = microsoft-azureadip-json-alert-trigger-success-impossibletravel
      """"category":\s*"({alert_type}[^"]+)"""",
      """"description":\s*"({additional_info}[^"]+)"""",
      """"eventDateTime":\s*"({time}[^"]+)"""",
-     """"accountName":\s*"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
-     """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-     """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-]{1,40}\$?)(@[^"]+)?))"""",
+     """"accountName":\s*"(({full_name}[^"\s]+\s[^"]+)|({user}[^"]+))"""",
+     """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+     """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[^\s"@]+)(@[^"]+)?))"""",
 
      """"domainName"+:\s*"+({domain}[^"]+)"""",
      """"logonLocation"+:\s*"+({location}[^"]+)""""

@@ -5,7 +5,7 @@ Name = vmware-airwatch-kv-endpoint-login-fail-loginfailed
   ParserVersion = "v1.0.0"
   Conditions = [ """AirWatch""", """Event Timestamp:""", """ConsoleEvent: AdminUserLoginAttemptFailed""" ]
   Fields = ${VMWareParsersTemplates.airwatch-app-activity.Fields}[
-    """({result}AdminUserLoginAttemptFailed)"""
+    """({action}AdminUserLoginAttemptFailed)"""
   ]
 
 airwatch-app-activity = {
@@ -15,7 +15,7 @@ airwatch-app-activity = {
     Fields = [
       """Timestamp: ({time}\w+\s\d+,\s\d{4}\s(\d{2}:){2}\d{2})""",
       """Event Type:\s*({event_name}[^=]+?)\s*User:""",
-      """User:\s*((({domain}[^\\]+?)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))\s*Event Source:"""
+      """User:\s*((({domain}[^\\]+?)\\+)?({user}[^:]+?))\s*Event Source:"""
     ]
      DupFields = ["event_name->operation"
 }

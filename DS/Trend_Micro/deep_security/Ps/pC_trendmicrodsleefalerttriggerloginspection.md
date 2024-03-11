@@ -13,7 +13,7 @@ Name = trendmicro-ds-leef-alert-trigger-loginspection
       """({event_code}1001)""",
       """({event_name}Windows System ArgumentsOutOfRange Error found)""",
       """sev=({alert_severity}\d+)""",
-      """cn1=({asset_id}\d+)""",
+      """cn1=({host_id}\d+)""",
       """cat=({alert_type}[^#]+)"""
 # appcrash_response is removed
 # problem_signature is removed

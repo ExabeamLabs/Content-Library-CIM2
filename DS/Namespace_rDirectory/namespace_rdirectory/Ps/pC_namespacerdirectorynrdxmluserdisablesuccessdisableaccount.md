@@ -10,7 +10,7 @@ Name = namespacerdirectory-nrd-xml-user-disable-success-disableaccount
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """Modified by:(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",\(]+))\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
+    """Modified by:({user}.+?)\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
     """Credentials:({account_domain}[^\\]+)\\+([^\s.]+\.)*({account}[^\s.]+)""",
     """account:({dest_user}.+?)\s+\(({dest_domain}[^\/)]+)"""
   ]

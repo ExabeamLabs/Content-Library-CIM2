@@ -9,7 +9,6 @@ Name = microsoft-evsystem-xml-alert-trigger-5827
   Conditions = [ """>5827</EventID>""", """NETLOGON""", """<EventData><Data>""" ]
   Fields = [
     """<Computer>({host}[^<\.]+)\.({domain}[^<]+)<""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime=(?:["']+)?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID[^>]+>({event_code}\d+)<""",
     """<Provider Name =(?:["']+)?({provider_name}[\w-]+)""",

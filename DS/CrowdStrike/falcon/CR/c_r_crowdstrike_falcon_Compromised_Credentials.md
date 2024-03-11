@@ -11,7 +11,3 @@ Vendor: CrowdStrike
 | Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
 | Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
 | Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |

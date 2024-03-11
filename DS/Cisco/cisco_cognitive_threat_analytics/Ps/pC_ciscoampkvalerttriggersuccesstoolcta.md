@@ -17,10 +17,10 @@ Fields = [
   """\sincidentTitle=({alert_name}\S.+?)\s+(\w+=|$)"""
   """\srisk=({alert_severity}\d+)"""
   """\sriskCategory=({alert_severity}\S.+?)\s+(\w+=|$)"""
-  """\scIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\ssIP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\scIP=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\ssIP=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\scsUrl=({malware_url}\S+)"""
-  """\scUsername=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\scUsername=({user}\S.+?)\s+(\w+=|$)"""
   """\sactivity=({additional_info}\S.+?)\s+(\w+=|$)"""
 ]
 DupFields = [

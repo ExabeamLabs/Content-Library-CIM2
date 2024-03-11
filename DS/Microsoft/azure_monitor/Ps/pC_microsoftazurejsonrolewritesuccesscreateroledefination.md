@@ -3,6 +3,7 @@
 {
 Name = microsoft-azure-json-role-write-success-createroledefination
   ParserVersion = v1.0.0
+  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """localizedValue":"Create or update custom role definition""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """"+requestbody"+:[^\}]+"+roleName\\?"+:\s*\\?"+({role}[^"]+)\\"+""",
@@ -17,7 +18,7 @@ Name = microsoft-azure-json-role-write-success-createroledefination
 azure-activity-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
     Fields = [
       """"+eventTimestamp"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+authorization"+:[^\}]+scope"+:\s*"+({authorization_scope}[^"]+)""", 

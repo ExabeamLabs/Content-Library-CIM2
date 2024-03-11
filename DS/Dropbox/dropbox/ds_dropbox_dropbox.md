@@ -4,7 +4,7 @@ Product: Dropbox
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  151  |   76   |         27         |       8        |    8    |
+|  163  |   84   |         27         |       8        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

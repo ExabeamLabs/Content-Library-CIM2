@@ -15,14 +15,13 @@ aws-web-activity-event = {
       """"terminatingRuleId"+:"+({rule_id}[^"]+)"""",
       """"terminatingRuleType"+:"+({rule}[^"]+)"""",
       """"action"+:"+({action}[^"]+)"""",
-      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"httpMethod"+:"+({method}[^"]+)"""",
       """"name"+:"+(?i)Referer"+,"+value"+:"+({referrer}[^"]+)"""",
       """"name"+:"+(?i)User-Agent"+,"+value"+:"+({user_agent}[^"]+)"""",
       """"name"+:"+(?i)user-agent"+,"+value"+:"+(?:-|Mozilla\/[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|iPhone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)[^=]+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))""",
       """"uri"+:"+(/+|({uri_path}[^"]+))"""",
-      """"responseCodeSent":"?(null|({http_response_code}\d+))""",
-      """"webaclId":"arn:aws:waf([^:]+:){2}({account_id}\d+):"""
+      """"responseCodeSent":"?(null|({http_response_code}\d+))"""
 # http_source_id is removed
     
 }

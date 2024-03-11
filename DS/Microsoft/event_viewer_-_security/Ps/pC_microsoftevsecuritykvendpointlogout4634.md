@@ -5,9 +5,10 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "epoch_sec", "MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy"]
+  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
   Conditions = [ """4634""", """An account was logged off""" ]
   Fields = [
+    """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d ((?i)am|pm))""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?((?i)am|pm|({host}[\w.\-]+))""",
     """\w+ \d+ \d\d:\d\d:\d\d (::ffff:)?((?i)am|pm|({host}[\w\-.]+))""",
@@ -16,11 +17,10 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """({event_code}4634)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\w+\s\d+\s\d+:\d+:\d+\s\d+)"""
-    """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
     """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?((?i)am|pm|({host}[\w\-.]+))"""
     """({event_name}An account was logged off)""",
     """Security ID:\s*(SYSTEM|({user_sid}\S+))\s+Account Name:""",
-    """Account Name:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(SYSTEM|({user}\S+))\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Logon Type:""",
     """Logon Type:\s*({login_type}\d+)""",

@@ -10,7 +10,7 @@ Name = unix-unix-str-endpoint-login-success-sshsconnect
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
     """\d\d:\d\d:\d\d \d\d\d\d ({host}[^\s]+)""",
     """({event_name}SSHS_CONNECT)""",
-    """SSHS_CONNECT: ({user}[\w\.\-]{1,40}\$?)""",
+    """SSHS_CONNECT: ({user}[^\s]+)""",
     """IP: ({src_ip}[a-fA-F:\d\.]+)\)"""
   ]
   DupFields = [ "host->dest_host" ]

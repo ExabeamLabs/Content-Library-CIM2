@@ -13,7 +13,7 @@ Name = unix-unix-str-user-switch-success-messageforwarded
   Fields = [
 """Message forwarded from (::ffff:)?({host}[^\s:]+)"""
 """({event_code}su)"""
-"""su: from ({user}[\w\.\-]{1,40}\$?) to ({account}\w+) at ({process_dir}.*?)\?*\s*$"""
+"""su: from ({user}\w+) to ({account}\w+) at ({process_dir}.*?)\?*\s*$"""
   ]
 
 

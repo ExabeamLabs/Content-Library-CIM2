@@ -14,9 +14,9 @@ Fields = [
   """categoryOutcome=\/?({result}[^=]+)\s\w+=""",
   """dproc=({process_path}({process_dir}[^=]+)\\({process_name}[^=]+))\s\w+=""",
   """dhost=({dest_host}[\w\-.]+)""",
-  """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+  """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
   """msg=({additional_info}[^=]+)\s\w+=""",
-  """duser=({user}[\w\.\-]{1,40}\$?)\s\w+=""",
+  """duser=({user}[^=]+)\s\w+=""",
   """dntdom=({domain}[^\s]+)""",
   """cs3=({process_id}[^=]+)\s\w+=""",
 ]

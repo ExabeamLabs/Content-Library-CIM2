@@ -11,7 +11,7 @@ Name = mcafee-es-cef-peripheral-storage-insert-success-deviceplug
           """\Wact=({action}.+?)(\s+\w+=|\s*$)""",
           """\Wmsg=({operation_details}.+?)(\s+\w+=|\s*$)""",
           """\Wrt=({time}\d{13})""",
-          """\Wsuser=(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+          """\Wsuser=(({domain}[^\\]+)\\+)?({user}[^\\]+)(\s+\w+=|\s*$)""",
           """\Wsntdom=({domain}.+?)(\s+\w+=|\s*$)""",
           """\Wshost=({host}.+?)(\s+\w+=|\s*$)""",
           """\WfilePath=({file_path}.*?[\\\/]*({file_name}[^\\\/]*?))(\s+\w+=|\s*$)""",

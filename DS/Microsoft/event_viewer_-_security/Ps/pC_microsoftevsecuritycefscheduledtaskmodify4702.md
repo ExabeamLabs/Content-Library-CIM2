@@ -5,16 +5,15 @@ Name = microsoft-evsecurity-cef-scheduled-task-modify-4702
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """4702""", """A scheduled task was updated""","""Task Name:""", """CEF:""" ]
   Fields = [
-    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"created":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """"created":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"(?:winlog\.)?computer_name":"({host}[^"]+)"""",
     """"event_id":({event_code}\d+)""",
     """"message":"({event_name}[^=]+?)\.?\\[nt]""",
     """"outcome":"({result}[^"]+)"""",
-    """"user":(\{[^=]*?"name":"({user}[\w\.\-]{1,40}\$?)|"({=user}[^"]+))""",
+    """"user":(\{[^=]*?"name":"({user}[^"]+)|"({=user}[^"]+))""",
     """"user":\{[^=]*?"id":"({user_sid}[^"]+)"""",
     """"user":\{[^=]*?"domain":"({domain}[^"]+)"""",
     """"TaskName":"({task_name}[^"]+)"""",

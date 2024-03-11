@@ -13,7 +13,7 @@ Name = cisco-pix-str-network-traffic-fail-106023
         """\ssrc\s+({src_interface}[^:]+):({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({src_port}\d+))?""",
         """({event_name}({result}Deny)\s+({protocol}\w+))"""
         """dst.+?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({dest_port}\d+))?""",
-        """ by access-group(\s+"+({access_group}[^\s"]+))?"""
+# acl is removed
  ]
 
 

@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-sk4-endpoint-logout-success-anaccountwasloggedoff
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({action}[^"]+?)\s*"""",
     """"targetUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*"""",
+    """"targetUserName":"({user}[^"\s]+?)\s*"""",
     """"targetDomainName":"({domain}[^"\s]+?)\s*"""",
     """"targetLogonId":"({login_id}[^"\s]+?)\s*"""",
     """"logonType":"({login_type}\d+)\s*""""

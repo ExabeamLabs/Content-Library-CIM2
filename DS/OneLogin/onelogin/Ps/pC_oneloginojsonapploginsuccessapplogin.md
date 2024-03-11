@@ -12,7 +12,7 @@ Name = onelogin-o-json-app-login-success-applogin
     """"app_name":\s*"\s*({app}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
     """"event_type_id":\s*({activity_code}\d+)""",
     """"user_name":\s*"({full_name}([^\\"]|(\\\\)*\\"|\\\\)+)"""",
-    """"ipaddr":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ipaddr":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"notes":\s*"({failure_reason}([^\\"]|(\\\\)*\\"|\\\\)+)"""",
     """"notes":\s*"({additional_info}([^\\"]|(\\\\)*\\"|\\\\)+)"""",
     """"custom_message":\s*"({additional_info}([^\\"]|(\\\\)*\\"|\\\\)+)"""",

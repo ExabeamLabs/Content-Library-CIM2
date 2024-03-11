@@ -9,7 +9,7 @@ Name = microsoft-evdhcpserver-csv-app-notification-success-deleted
   Conditions = [ """,Deleted,""" ]
   Fields = [
   """({event_code}\d+),({time}\d\d\/\d\d\/\d\d,\d\d:\d\d:\d\d)""",
-	"""\d\d:\d\d:\d\d,({event_name}[^,]+),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?,({src_host}[^,]+)?"""
+	"""\d\d:\d\d:\d\d,({event_name}[^,]+),({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?,({src_host}[^,]+)?"""
   ]
 
 

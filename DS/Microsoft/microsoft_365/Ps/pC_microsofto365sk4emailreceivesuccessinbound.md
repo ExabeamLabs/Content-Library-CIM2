@@ -16,7 +16,7 @@ Name = microsoft-o365-sk4-email-receive-success-inbound
     """"MessageSize":"?({bytes}\d+)""",
     """"EventType":"({alert_type}[^"]+)""""
   ]
-  DupFields = [ "alert_type->alert_name", "alert_type->action", "email_recipients->dest_email_address" ]
+  DupFields = [ "alert_type->alert_name", "alert_type->action" ]
 
 
 }

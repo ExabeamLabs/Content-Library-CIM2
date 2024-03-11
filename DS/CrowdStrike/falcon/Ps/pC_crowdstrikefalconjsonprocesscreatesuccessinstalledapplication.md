@@ -2,7 +2,7 @@
 ```Java
 {
 Name = crowdstrike-falcon-json-process-create-success-installedapplication
-  Conditions = [ """"event_simpleName":"InstalledApplication"""", """"aid":""", """"aip":""" ]
+  Conditions = [ """"event_simpleName":"InstalledApplication"""", """"destinationServiceName":"CrowdStrike"""" ]
   ParserVersion = "v1.0.0"
 
 crowdstrike-process-info-1 = {
@@ -16,17 +16,17 @@ crowdstrike-process-info-1 = {
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_name}[^"]+)""",
     """"name":\s*"({process_name}[^"]+)""",
-    """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
+    """"id":\s*"({user_sid}[^"]+)""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[^",]+))"""",
     """src-account-name":"({account_name}[^"]+)""",
-    """CommandLine":"({process_command_line}.+?)","\w+":"""",
-    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """CommandLine":"({process_command_line}[^"]+?)\s*"""",
+    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"LocalPort":"({src_port}\d+)"""",
     """"RemotePort":"({dest_port}\d+)"""",
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"aid":"({aid}[^"]+)"""",
-    """"aip\\*"+:\\*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"aip\\*"+:\\*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"MD5HashData":\s*"({hash_md5}[A-Fa-f:\d.]+)""",
     """"SHA256HashData\\*"+:\\*"+({hash_sha256}[^"\\]+)""",
     """"TargetProcessId\\*"+:\\*"+({process_id}[^"\\]+)""",

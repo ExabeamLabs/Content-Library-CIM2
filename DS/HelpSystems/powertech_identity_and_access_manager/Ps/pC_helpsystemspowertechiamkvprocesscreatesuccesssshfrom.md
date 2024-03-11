@@ -13,7 +13,7 @@ Name = helpsystems-powertechiam-kv-process-create-success-sshfrom
   Fields = [
     """clientTime="*({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)Z"*""",
     """\d\dZ\s+({host}[\w\-.]+)\s+sshd - ssh_runcmd""",
-    """user="*({user}[\w\.\-]{1,40}\$?)"""",
+    """user="*({user}[^"]+)"""",
     """touser="*({account}[^"]+)"""",
     """ssh from ({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) starting:""",
     """cmd="*({process_command_line}({path}({process_dir}(\/[^\/]+)*\/)({process_name}[^\/\s]+))\s*.*?)"+\] ssh from""",

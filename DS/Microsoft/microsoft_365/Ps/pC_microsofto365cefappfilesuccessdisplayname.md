@@ -4,22 +4,17 @@
 Name = microsoft-o365-cef-app-file-success-displayname
   ParserVersion = v1.0.0
   Product = Microsoft 365
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """destinationServiceName =Office 365""", """"activityDisplayName":"""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
     """"result"+:"+({result}[^"]+)""",
-    """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\"+({object}[^\\"]+?)\s*\\?"""",
     """"targetResources"+:\[[^\]]+?"+displayName"+:"+({target}[^"]+?)\s*"""",
     """"category"+:"+({additional_info}[^"]+)""",
     """"key":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
-    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"userPrincipalName":"({email_address}[^"@\s]+@[^,"@\s]+\.[^,"@\s]+)""",
-    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
-    """"DeviceOSType".*?newValue":"\[?\\?"({os}[^"\\]+)\\?"\]?"""
-    """"Device OS.*?value":"({os}[^"]+)""""
-    """\"key\":\"User-Agent\",\"value\":\"({user_agent}[^\"]+)\""""
-    """"value":"({os}[^"]+)","key":"Device OS"""
+    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {
@@ -35,7 +30,6 @@ cef-microsoft-app-activity = {
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"resourceId":\s*"({object}[^"]+)""",
-    """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -44,18 +38,13 @@ cef-microsoft-app-activity = {
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
-    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
-    """"(?i)userAgent":"({user_agent}[^"]+)"""",
+    """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
+    """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
-    """"UserType":"*({user_type}[^,]+)"""
-    """"Platform":"({os}[^"]+)""""
-    """"OriginatingServer":"({src_host}({host}\w+))\s*(\([^\)]+?\))?(\\r\\n)?""""
-    """"ClientInfoString":"({user_agent}[^"]+)","""
-    """"BrowserName":"({browser}[^"]+)"""
     ]
   DupFields = [ "object->resource" 
 }

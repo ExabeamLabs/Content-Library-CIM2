@@ -4,10 +4,9 @@
 Name = crowdstrike-falcon-json-file-delete-success-executabledeleted
   ParserVersion = v1.0.0  
   Product = Falcon
-  Conditions = [ """"event_simpleName\":\"ExecutableDeleted\"""", """\"aip\"""", """\"aid\"""" ]
+  Conditions = [ """"event_simpleName\":\"ExecutableDeleted\"""", """"@timestamp"""" ]
   Fields = ${CrowdStrikeParsersTemplates.crowdstrike-auth-activity.Fields} [
   """"event_simpleName\\*"+:\\*"+({event_code}[^"\\]+)""",
-  
   ]
 
 crowdstrike-auth-activity = {
@@ -15,11 +14,11 @@ crowdstrike-auth-activity = {
   Product = Falcon
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
-    """"@?timestamp\\*"+:\s*\\*"+({time}\d{10})""",
+    """"@?timestamp\\*"+:\s*\\*"+({time}[^"\\]\d{10})""",
     """"name\\*"+:\\*"+({name}[^"\\]+)""",
     """"event_simpleName\\*"+:\\*"+({event_name}[^"\\]+)""",
     """"event_platform\\*"+:\\*"+({os}[^"\\]+)""",
-    """"aip\\*"+:\\*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"aip\\*"+:\\*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"UserSid\\*"+:\\*"+({user_sid}[^"\\]+)""",
     """"SessionId\\*"+:\\*"+({session_id}[^"\\]+)""",
     """"MD5HashData\\*"+:\\*"+({hash_md5}[^"\\]+)""",
@@ -31,10 +30,9 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[^"\\\s]+))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
-    """"event_platform\\?":\\?"({os}[^"]+?)\\?""""
   ]
   DupFields = ["event_name->event_code", "falcon_host_link->additional_info", "file_dir->directory", "file_name->process_name"
 }

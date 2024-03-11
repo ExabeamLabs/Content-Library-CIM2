@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702
   Conditions = [ """4702""", """A scheduled task was updated""" ]
   Fields = [
     """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
-    """<TimeCreated SystemTime\\*=('|")({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
+    """<TimeCreated SystemTime='({time}\d\d-\d\d-\d\d\d\dT\d\d:\d\d:\d\d\.\d{3})""",
     """({event_code}4702)""",
     """({event_name}A scheduled task was updated)""",
     """"Computer":"({host}[^"]+)"""",
@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""""
     """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
     """<Keywords>({result}.+?)</Keywords>""",
-    """Security ID:\s*(|({user_sid}[^:]+?))\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:""",
+    """Security ID:\s*(|({user_sid}[^:]+?))\s*Account Name:\s*(|({user}[^:]+?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:""",
     """Task Name:\s*(|({task_name}.+?))\s*Task New Content:""",
     """(<|&lt;)UserId(>|&gt;)(?=\w)(({account_domain}[^\\<]*)\\+)?({account_name}[^<]+)(<|&lt;)/UserId(>|&gt;)""",
     """(<|&lt;)Settings(>|&gt;)\s*({additional_info}.+?)\s*(<|&lt;)/Settings(>|&gt;)""",

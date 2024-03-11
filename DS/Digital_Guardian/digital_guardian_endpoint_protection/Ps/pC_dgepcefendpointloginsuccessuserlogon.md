@@ -9,7 +9,7 @@ Name = dg-ep-cef-endpoint-login-success-userlogon
   Fields = [
     """\srt=({time}\d{13})""",
     """\sshost=(([^\/\\=]+)[\/\\]+)?({host}\S+)""",
-    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?)\s+(ad\.\S+=|\w+=|$)""",
+    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[^=]+?)\s+(ad\.\S+=|\w+=|$)""",
     """\ssproc=({process_name}.+?)\s+(ad\.\S+=|\w+=|$)""",
     """({event_code}User Logon)""",
   ]

@@ -2,19 +2,20 @@
 ```Java
 {
 Name = sentinelone-singularityp-json-scheduled_task-scheduledtask
+  Vendor = SentinelOne
+  Product = "Singularity Platform"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [""""dataSource.name":"SentinelOne"""", """"event.category":"scheduled_task"""", """"event.type":""""]
-  Fields = ${SentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
+  Fields = ${DLSentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
     """"agent.version":\s*"+({user_agent}[^"]+)"""",
-    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"""",
+    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^\\"]+))"""",
     """"src.process.image.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""",
     """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""",
     """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""",
     """"src.process.pid":\s*({process_id}\d+)""",
     """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*"""",
-    """"task.name":"({task_name}[^"]+)""",
-    """"src.process.parent.image.path":"\s*({parent_process}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
+    """"event\.category":"({additional_info}[^"]+)""""
   ]
-  DupFields = [ "host->dest_host"]
   ParserVersion = "v1.0.0"
 
 json-sentinelone-edr-events = {
@@ -24,15 +25,10 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({host}[^"]+)""",
+      """"endpoint\.name":"({dest_host}[^"]+)""",
       """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)""",
-      """"event\.category":"({additional_info}[^"]+)"""",
-      """"endpoint\.type":"({host_type}[^"]+)"""
-      """"src\.process\.pid":({process_id}\d+)""",
-      """"src\.process\.cmdline":"({process_command_line}.+?)",""",
-      """"account\.id":"({account_id}[^"]+)""",
+      """"endpoint.os":"({os}[^"]+)"""
     
 }
 ```

@@ -14,7 +14,7 @@ Name = dtexsystems-intercept-cef-process-create-success-processcreated
     """\WDevice_Name =(({domain}[^\\]+)\\+)?({host}[^\\\s]+)""",
     """"ProcessId":\s*"({process_id}\d+)"""",
     """\WProcess_Name =(?:\s*|({process_name}.+?)\s+)(\w+=|$)""",
-    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
+    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[^\\\s]+)\s""",
     """\WProcess_Parameters="({path}({process_path}({process_dir}(?:[^"]+)?[\\\/]+)?({process_name}[^\\\/\)"]+)))""",
     """\Wreason=({process_command_line}.+?)\s+(\w+=|$)""",
   ]

@@ -19,7 +19,6 @@ Name = postfix-postfix-kv-email-queue
     """\snrcpt=({num_recipients}\d+)""",
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"host(_name)?":"({host}[^"]+)"""
-    """\Wto=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|>]+)"""
   ]
 
 

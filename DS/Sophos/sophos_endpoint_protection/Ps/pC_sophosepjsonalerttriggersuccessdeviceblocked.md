@@ -15,8 +15,8 @@ Name = sophos-ep-json-alert-trigger-success-deviceblocked
     """"dhost":\s*"({src_host}[^"]+)""",
     """"severity":\s*"({alert_severity}[^"]+)""",
     """"suser":\s*"(?:n\/a|({full_name}[^"\\]+))"""",
-    """"suser":\s*"(?:n\/a|({user}[\w\.\-]{1,40}\$?))"""",
-    """"suser":\s*"(({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"suser":\s*"(?:n\/a|({user}[^",\\\s]+))"""",
+    """"suser":\s*"(({domain}[^\\",]+)\\+)?({user}[^",\\\/\s]+)"""",
     """"id":\s*"({alert_id}[^"]+)""",
   ]
 

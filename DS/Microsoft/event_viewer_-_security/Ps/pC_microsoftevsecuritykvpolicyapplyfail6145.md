@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-policy-apply-fail-6145
     """({event_name}One or more errors occured while processing security policy in the group policy objects)""",
     """EventIDCode=({event_code}\d+)""",
     """Computer=({host}[\w\-.]+)""",
-    """User=(|({user}[\w\.\-]{1,40}\$?))\s""",
+    """User=(|({user}[^\s]+))\s""",
     """Domain=(|({domain}[^\s]+))\s""",
     """EventType=(|({event_category}[^\s]+))\s""",
     """EventCategory=({operation_type}\S+)""",

@@ -10,8 +10,8 @@ Name = mcafee-wg-json-http-session-sha256
     Fields = [
                 """"timestamp":"\[({time}[^\]]+)""",
                 """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+mwg:""",
-                """"user":"(?:|({user}[\w\.\-]{1,40}\$?))"""",
-                """"src":"(?:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
+                """"user":"(?:|({user}[^"]+))"""",
+                """"src":"(?:|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
                 """"status":"(?:|({http_response_code}\d+))"""",
                 """"protocol":"(?:|({protocol}[^"]+))"""",
                 """"http_user_agent":"(?:|({user_agent}[^"]+))"""",
@@ -23,7 +23,7 @@ Name = mcafee-wg-json-http-session-sha256
                 """"bytes_out":"(?:|({bytes_out}\d+))"""",
                 """"cache_status":"(?:|({proxy_action}[^"]+))"""",
                 """"block_reason":"(?:|({failure_reason}[^"]+))"""",
-                """"dest":"(?:|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""",
+                """"dest":"(?:|({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""",
                 """"dest_port":"(?:|({dest_port}\d+))"""",
                 """"is_virus":"(?:|({malicious}[^"]+))"""",
                 """"content_type":"(?:|({mime}[^"]+))""""

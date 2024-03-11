@@ -9,7 +9,7 @@ Name = microsoft-evdnsserver-kv-process-create-success-800-2
   Fields = [
     """({host}[\w\-\.]+) PowerShell""",
     """({event_code}800)""",
-    """UserId=({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)\s+HostName""",
+    """UserId=({domain}[^\\]+)\\({user}[^\s]+?)\s+HostName""",
     """HostApplication=\s*({powershell_image}\S+?)\s+""",
     """CommandLine=\s*({process_command_line}\S[^<]+?)\s+(?:\{\s+)?Details:""",
     """CommandInvocation[^:]+:\s*"({command_invocation}[^"]+)"""",

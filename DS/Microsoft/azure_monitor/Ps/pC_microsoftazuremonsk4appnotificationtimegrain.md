@@ -3,11 +3,7 @@
 {
 Name = microsoft-azuremon-sk4-app-notification-timegrain
   Product = Azure Monitor
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """"resourceId":""", """"metricName":""", """"timeGrain":""", """EventHub""" ]
-  Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  ]
+  Conditions = [ """destinationServiceName =Azure""", """"metricName":""", """"timeGrain":""", """EventHub""" ]
   ParserVersion = "v1.0.0"
 
 cef-microsoft-app-activity = {
@@ -27,7 +23,7 @@ cef-microsoft-app-activity = {
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
-    """"((?i)callerIpAddress|CIp)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"((?i)callerIpAddress|CIp)":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """claims\/(name|upn)":\s*"({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""",
     """"email":"({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""",
     """({app}Databricks)""",

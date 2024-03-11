@@ -11,8 +11,7 @@ Name = f5-apm-str-vpn-login-fail-01490106
 ]
   Fields = [
     """@timestamp"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """\sprincipal name:\s*({user}[\w\.\-]{1,40}\$?)(@({domain}.+?))?(\.\s+|\s+)({failure_reason}[^\.]+)"""
-    """"\s*Error_Code="({failure_code}[^"]+)""""
+    """\sprincipal name:\s*({user}[^@\.]+)(@({domain}.+?))?\.\s+({failure_reason}[^\.]+)"""
   ]
 
 

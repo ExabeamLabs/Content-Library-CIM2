@@ -9,7 +9,7 @@ Name = unix-unix-str-group-member-add-success-useradd
   Conditions = [ """ useradd[""", """ group""", """]:""" ]
   Fields = [
     """\d\d:\d\d:\d\d(\.\S+)?\s({host}[\w\-.]+)\suseradd""",
-    """add\s'({user}[\w\.\-]{1,40}\$?)'""",
+    """add\s'({user}[^']+)'""",
     """\sgroup\s'({group_name}[^']+)'""",
     """new group: name=({group_name}[^,]+),""",
     """new group:[^$]+?GID=({group_id}\d+)""",

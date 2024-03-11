@@ -10,7 +10,7 @@ Name = vmware-horizon-str-app-authentication-view
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """user\s+(({domain}[^\\\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)""",
+    """user\s+(({domain}[^\\\s]+)[\\\/]+)?({user}[^\\\s]+)""",
     """({operation}SSO)""",
   ]
 

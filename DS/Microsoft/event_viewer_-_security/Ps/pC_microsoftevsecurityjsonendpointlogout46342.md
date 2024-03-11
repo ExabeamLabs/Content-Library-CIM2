@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Computer":"({host}[^"]+)"""",
     """"Keywords":"({result}[^"]+)""",
-    """"TargetUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"TargetUserName":"({user}[^"]+)"""",
     """"TargetLogonId":"({login_id}[^"]+)"""",
     """"TargetDomainName":"({domain}[^"]+)"""",
     """"TargetUserSid":"({user_sid}[^"]+)"""",

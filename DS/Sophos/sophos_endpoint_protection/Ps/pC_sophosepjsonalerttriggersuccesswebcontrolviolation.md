@@ -18,8 +18,8 @@ Fields = [
 """"severity":\s*"({alert_severity}[^"]+)"""
 """"(suser|source)":\s*"(n\/a|(({domain}[^\\"]+)\\+)?({full_name}[^\\\(\)\s",]+\s+[^\\\(\)",]+))""""
 """"(suser|source)":\s*"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\\\s]+))"""
-""""(suser|source)":\s*"(?:n\/a|({user}[\w\.\-]{1,40}\$?))""""
-""""(suser|source)":\s*"(({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?)""""
+""""(suser|source)":\s*"(?:n\/a|({user}[^",\\\s]+))""""
+""""(suser|source)":\s*"(({domain}[^\\",]+)\\+)?({user}[^",\\\/\s]+)""""
 """"id":\s*"({alert_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"

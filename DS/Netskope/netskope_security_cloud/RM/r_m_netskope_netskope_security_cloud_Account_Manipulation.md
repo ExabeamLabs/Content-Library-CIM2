@@ -7,7 +7,7 @@ Vendor: Netskope
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         1          |       1        |   53    |
+|   3   |   1    |         1          |       1        |   49    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

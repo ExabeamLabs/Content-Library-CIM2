@@ -12,7 +12,7 @@ Name = mysql-m-csv-database-query-success-query
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\S+\s+\S+\s+mysql-server_auditing:""",
     """({app}mysql)""",
     """mysql-server_auditing:\s*({db_name}[^,]+)\s*,""",
-    """mysql-server_auditing:\s*([^,]*,)\s*({user}[\w\.\-]{1,40}\$?)\s*,""",
+    """mysql-server_auditing:\s*([^,]*,)\s*({user}[^,]+)\s*,""",
     """mysql-server_auditing:\s*([^,]*,){2}\s*({src_host}[^,]+)\s*,""",
     """,QUERY,({db_schema}[^,]+),""",
     """,QUERY,[^,]*,'\s*({db_operation}\S+)""",

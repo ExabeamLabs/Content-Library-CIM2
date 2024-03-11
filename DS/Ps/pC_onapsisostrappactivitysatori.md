@@ -11,7 +11,7 @@ Name = onapsis-o-str-app-activity-satori
       """({host}onapcon)""",
       """onapcon\s({severity}[^\s]+)""",
 # compliance_job is removed
-      """owner=\s*"(u:)?({user}[\w\.\-]{1,40}\$?)""",
+      """owner=\s*"(u:)?({user}[^"]+)""",
       """\[satori.+?\]\s+\S+\s+({additional_info}.+?)[\s.]*$"""
 ]
 

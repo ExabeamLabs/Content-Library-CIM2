@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """lastUpdated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
-  """samAccountName":\s*"({user}[\w\.\-]{1,40}\$?)"""
+  """samAccountName":\s*"({user}[^"]+)"""
   """description":\s*"({operation}[^"]+)"""
   """label":\s*"({domain}[^"]+)"""
   """name".*?,\s*"id":\s*"({object}[^"]+)"""

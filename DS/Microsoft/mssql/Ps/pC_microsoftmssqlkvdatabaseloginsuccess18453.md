@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """\WComputerName =({host}[\w\-\.]+)\s*(\w+=|$)"""
   """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|am|PM|pm))\s*(\w+=|$)"""
-  """\WMessage=.*?\Wuser\s*'(({domain}[^\\]+)(\\)+)?({user}[\w\.\-]{1,40}\$?)'"""
+  """\WMessage=.*?\Wuser\s*'(({domain}[^\\]+)(\\)+)?({user}[^\\]+)'"""
   """\WSourceName =({service_name}.+?)\s*(\w+=|$)"""
   """\[CLIENT:\s+({src_ip}[a-fA-F\d:\.]+)\]"""
 ]

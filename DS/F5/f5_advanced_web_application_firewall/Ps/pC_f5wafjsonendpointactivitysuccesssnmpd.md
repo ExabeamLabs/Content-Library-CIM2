@@ -11,9 +11,9 @@ Name = f5-waf-json-endpoint-activity-success-snmpd
 f5-waf-activity = {
     Vendor = F5
     Product = F5 Advanced Web Application Firewall
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Fields = [
-      """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
+      """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"host":"(::ffff:)?({host}[^"]+})""",
       """\d\d:\d\d:\d\d ({host}\S+)? \w+ \w+\[""",
       """\ssshd\[\d+\]:\s*({additional_info}[^",]+)"""

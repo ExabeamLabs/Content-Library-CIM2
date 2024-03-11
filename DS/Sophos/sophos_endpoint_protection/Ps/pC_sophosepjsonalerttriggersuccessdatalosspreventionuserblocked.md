@@ -13,9 +13,9 @@ Name = sophos-ep-json-alert-trigger-success-datalosspreventionuserblocked
     """"type":\s*"({alert_type}[^"]+)""",
     """"dhost":\s*"({dest_host}[^"]+)""",
     """"severity":\s*"({alert_severity}[^"]+)""",
-    """"suser":\s*"(?:n\/a|({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?)""""
+    """"suser":\s*"(?:n\/a|({domain}[^\\",]+)\\+)?({user}[^",\\\/\s]+)""""
     """"id":\s*"({alert_id}[^"]+)""",
-    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
+    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[^\s\\]+)\s""",
     """"name".+?Rule names:\s*′({rule}[^′]+)""",
     """"name".+?User action:\s*({operation}.+?)\s+(\w+\s+\w+:)""",
     """"name".+?Application Name:\s+({app}.+?)\s+Data Control action:""",

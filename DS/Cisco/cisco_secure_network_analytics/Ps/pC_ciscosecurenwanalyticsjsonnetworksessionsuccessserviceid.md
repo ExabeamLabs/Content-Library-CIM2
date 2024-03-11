@@ -18,13 +18,13 @@ Name = cisco-securenwanalytics-json-network-session-success-serviceid
     """"service_id"+:\s*({service_id}\d+)"""
     """"endpoint1_bytes"+:\s*({bytes_out}\d+)"""
     """"app_id":\s*({app_id}\d+)"""
-    """"username"+:\s*"({user}[\w\.\-]{1,40}\$?)"""
+    """"username"+:\s*"({user}[^",]+)"""
     """"endpoint2_packets"+:({bytes_in}\d+)"""
-    """"endpoint1_ip_address"+:\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+    """"endpoint1_ip_address"+:\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
     """"endpoint2_mac_address"+:\s*"({src_mac}[^",]+)"""
-    """"endpoint1_ip_address"+:\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+    """"endpoint1_ip_address"+:\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
     """"endpoint1_mac_address"+:\s*"({dest_mac}[^",]+)"""
-    """"endpoint2_ip_address"+:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"endpoint2_ip_address"+:\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   ]
 
 

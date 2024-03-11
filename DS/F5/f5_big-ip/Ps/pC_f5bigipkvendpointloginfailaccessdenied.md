@@ -9,7 +9,7 @@ Name = f5-bigip-kv-endpoint-login-fail-accessdenied
   Conditions = [ """"VPN"""", """SECURID_AUTH_STATE_ACCESS_DENIED""" ]
   Fields = [
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(\+|-)\d{2}:\d{2})\s({host}[\w.-]+)""",
-    """authentication with '({user}[\w\.\-]{1,40}\$?)' failed""",
+    """authentication with '({user}[^']+)' failed""",
     """Error_Message="({event_name}[^\."]+)"""
   ]
 

@@ -4,7 +4,7 @@ Product: Azure
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  60   |   26   |         5          |       2        |    4    |
+|  64   |   28   |         5          |       2        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

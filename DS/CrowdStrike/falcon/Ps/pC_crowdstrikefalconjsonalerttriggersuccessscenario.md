@@ -11,14 +11,14 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"technique":"({alert_type}[^"]+)""",
       """"severity":({alert_severity}\d+)""",
       """"detection_id":"({alert_id}[^"]+)""",
-      """"user_name":"({user}[\w\.\-]{1,40}\$?)""",
+      """"user_name":"({user}[^"]+)""",
       """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"md5":"(N\/A|({hash_md5}\w+))""",
-      """"local_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """"local_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"machine_domain":"({domain}[^"]+)""",
       """"filename":"({process_name}[^"]+)""",
       """"hostname":"({src_host}[^"]+)""",
-      """"show_in_ui":.*?"status":"({result}[^"]+)""",
+      """"show_in_ui":.*?"status":"({action}[^"]+)""",
       """"cmdline":"({additional_info}.+?)\s*","""",
       """"tactic":"({category}[^"]+)""",
       """"((?i)SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,""",
@@ -35,9 +35,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-scenario
       """"(?i)Kill_SubProcess"+:\s*({kill_sub_process}true|false)""",
       """"(?i)Rooting"+:\s*({rooting}true|false)""",
       """"(?i)Inddet_Mask"+:\s*({inddet_mask}true|false)""",
-      """"(?i)Indicator"+:\s*({indicator}true|false)""",
-      """"cid":"({cid}[^"]+)"""
-      """"platform_name":"({os}[^"]+)""""
+      """"(?i)Indicator"+:\s*({indicator}true|false)"""
     ]
     DupFields = [ "src_host->host" ]
  ParserVersion = "v1.0.0"

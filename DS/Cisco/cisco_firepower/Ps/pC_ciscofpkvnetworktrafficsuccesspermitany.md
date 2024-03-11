@@ -11,9 +11,9 @@ Name = cisco-fp-kv-network-traffic-success-permitany
     """({host}[\w\-.]+)\s*%FTD-""",
     """%FTD-({priority}\d+)-({event_code}\d+)\\?""",
     """({event_name}Permit Any)""",
-    """AccessControlRuleAction="+({result}[^"]+)"+""",
-    """SrcIP="+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+""",
-    """DstIP="+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"+""",
+    """AccessControlRuleAction="+({action}[^"]+)"+""",
+    """SrcIP="+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"+""",
+    """DstIP="+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"+""",
     """SrcPort="+({src_port}\d+)"+""",
     """DstPort="+({dest_port}\d+)"+""",
     """\sProtocol="+({protocol}[^"]+)"+""",
@@ -28,9 +28,8 @@ Name = cisco-fp-kv-network-traffic-success-permitany
     """URL="+({url}[^"]+)"+""",
     """InitiatorPackets="+({initiator_packets}[^"]+)"+""",
     """ResponderPackets="+({responder_packets}\d+)"+""",
-    """User="+(No Authentication Required|({user}[\w\.\-]{1,40}\$?))"+""",
+    """User="+(No Authentication Required|({user}[^"]+))"+""",
   ]
-  DupFields = [ "result->action" ]
 
 
 }

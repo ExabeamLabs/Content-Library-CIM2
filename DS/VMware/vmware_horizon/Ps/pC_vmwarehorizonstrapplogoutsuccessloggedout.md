@@ -10,7 +10,7 @@ Name = vmware-horizon-str-app-logout-success-loggedout
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """User\s+(({domain}[^\\\s]+)\\+)?({user}[^\\\s]+)""",
   ]
 
 

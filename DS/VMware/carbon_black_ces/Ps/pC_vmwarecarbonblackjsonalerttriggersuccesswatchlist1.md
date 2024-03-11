@@ -12,7 +12,7 @@ Name = vmware-carbonblack-json-alert-trigger-success-watchlist-1
     """"+severity":\s*({alert_severity}[^,]+?),""",
     """"+category"+:\s*"+({category}[^"]+?)"+""",
     """"+threat_id"+:\s*"+({threat_id}[^"]+?)"+""",
-    """"+device_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?))"+""",
+    """"+device_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[^"]+))"+""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+threat_indicators":[^\}\]]*?"process_name"+:\s*"+({process_name}[^"]+?)"+""",
     """"+reason"+:\s*"+({additional_info}[^,]+?)"+,""",

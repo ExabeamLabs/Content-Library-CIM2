@@ -15,7 +15,7 @@ Name = cisco-ios-str-app-notification-success-isis
 cisco-system-info = {
   Vendor = "Cisco"
   Product = "Cisco Adaptive Security Appliance"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd yyyy HH:mm:ss.SS","yyyy MMM dd HH:mm:ss","MMM dd yyyy HH:mm:ss.SSS","epoch_sec"]
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
      """({time}\d+ \w+ \d+ \d+:\d+:\d+)\s+\w+:\s+\%""",
     """({event_code}%\w+\-[^:]+)""",

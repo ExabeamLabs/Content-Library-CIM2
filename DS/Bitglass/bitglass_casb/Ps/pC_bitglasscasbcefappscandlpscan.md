@@ -3,7 +3,7 @@
 {
 Name = bitglass-casb-cef-app-scan-dlpscan
   ParserVersion = v1.0.0
-  Conditions = [ """ api.bitglass.com """, """"action":"DLPScan"""" ]
+  Conditions = [ """destinationServiceName =Bitglass""", """"action":"DLPScan"""" ]
 
 cef-bitglass-system-info = {
   Vendor = Bitglass

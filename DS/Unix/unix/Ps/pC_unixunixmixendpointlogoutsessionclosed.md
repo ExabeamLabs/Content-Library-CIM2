@@ -12,9 +12,8 @@ Name = unix-unix-mix-endpoint-logout-sessionclosed
     """\w+\s+\d+\s+\d+:\d+:\d+\s+(::ffff:)?({host}[\w\-.]+)\s+""",
     """({event_code}[^\s:\[]+?)(\[[^\]]*\])?:\s*pam_unix""",
     """%FTD-({priority}\d+)-({event_code}\d+)""",
-    """(({event_name}session closed for user)\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
+    """(({event_name}session closed for user) ({user}[^"\s]+))""",
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

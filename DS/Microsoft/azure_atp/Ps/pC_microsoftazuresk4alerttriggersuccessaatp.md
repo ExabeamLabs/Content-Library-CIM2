@@ -4,11 +4,11 @@
 Name = microsoft-azure-sk4-alert-trigger-success-aatp
 Vendor = Microsoft
 Product = Azure ATP
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
 ParserVersion = "v1.0.0"
 Conditions = [ """CEF:""", """destinationServiceName =Azure""", """cat=security-alert""", """"category":""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":"Azure Advanced Threat Protection""" ]
 Fields = [
-  """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2})\.\d{1,7}Z"""
+  """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d{1,6}Z)"""
   """act=({action}[^\s]+)"""
   """"hostStates":\[\{"fqdn":"({host}[\w\-.]+)"""
   """"category":"({alert_type}[^"]+)"""
@@ -20,7 +20,7 @@ Fields = [
   """"id":"({alert_id}[^"]+)"""
   """"sourceMaterials":\["({malware_url}[^"]+)"""
   """"title":"({alert_name}[^"]+)"""
-  """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""
+  """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[^"]+)))"""
   """"userPrincipalName":"((?i)null|({email_user}[^\@"]+\@([^\."]+\.)*\w+))"""
   """"logonLocation":((?i)null|({src_location}[^"]+))"""
 ]

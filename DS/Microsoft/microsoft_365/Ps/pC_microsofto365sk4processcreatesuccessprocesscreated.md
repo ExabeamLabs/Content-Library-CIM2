@@ -8,7 +8,7 @@ Name = microsoft-o365-sk4-process-create-success-processcreated
   Conditions = [ """ProcessCreationEvents"""", """"ProcessCommandLine":""", """"ActionType":"ProcessCreated"""" ]
   Fields = [
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """"AccountName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"AccountName":"({user}[^"]+)""",
     """"AccountDomain":"({domain}[^"]+)""",
     """"ProcessId":({process_id}\d+)""",
     """"FileName":"({process_name}[^"]+)""",

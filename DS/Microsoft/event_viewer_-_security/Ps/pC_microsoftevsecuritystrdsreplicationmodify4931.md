@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-str-ds-replication-modify-4931
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
         """({event_code}4931)""",
         """({event_name}An Active Directory replica destination naming context was modified)""",
-        """Destination DRA:\s*({dest_host}[\w\-.]+)""",
+        """Destination DRA:\s*({dest_host}[^\s]+)""",
   ]
 
 

@@ -11,20 +11,19 @@ Conditions = [
 ]
 Fields = [
   """({event_name}A user account was created)"""
-  """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """"dst_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """"src_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"dst_ip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """"id":\d*({event_code}4720)"""
   """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
   """"DomainID":"({domain}[^"]+)"""
   """"HostID":"({host}[^"]+)"""
-  """"UserIDSrc":"({user}[\w\.\-]{1,40}\$?)"""
+  """"UserIDSrc":"({user}[^"]+)"""
   """"Security_ID":"({user_sid}[^"]+)"""
   """"Source_Logon_ID":"({login_id}[^"]+)"""
   """"UserIDDst":"({account_name}[^"]+)"""
   """"Event_Class":"({additional_info}[^"]+)"""
   """Enabled,({user_type}.*?)\s-\sEnabled"""
 ]
-DupFields = [ "account_name->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

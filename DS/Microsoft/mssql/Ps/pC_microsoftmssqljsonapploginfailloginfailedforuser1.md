@@ -13,7 +13,7 @@ Name = microsoft-mssql-json-app-login-fail-loginfailedforuser-1
     """({app}MSSQLSERVER)""",
     """"outcome":"({result}[^"]+)"""",
     """Reason:\s*({failure_reason}[^"\.\[]+)""",
-    """"message":"({event_name}Login failed for user) '(({domain}[^\\:']+?)\\+)?({user}[\w\.\-]{1,40}\$?)'""",
+    """"message":"({event_name}Login failed for user) '(({domain}[^\\:']+?)\\+)?({user}[^:\s']+)'""",
   ]
   DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"

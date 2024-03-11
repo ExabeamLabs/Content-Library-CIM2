@@ -8,9 +8,9 @@ Name = ibm-sbi-csv-app-activity-runtimestate
 sterling-integrator {
     Vendor = IBM
     Product = Sterling B2B Integrator
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
     Fields = [
-      """\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d)\+\d\d:\d\d\s+sterling""",
+      """\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\+\d\d:\d\d)\s+sterling""",
       """sterling(\s-){3}\s+({host}[^,]+)""",
       """sterling(?:\s-){3}\s+(?:[^,]+,)({sub_category}[^,]+)""",
       """sterling(?:\s-){3}\s+(?:[^,]+,){2}({object}[^,]+)""",

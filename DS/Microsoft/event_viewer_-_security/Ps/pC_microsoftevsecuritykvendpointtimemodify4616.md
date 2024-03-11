@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-endpoint-time-modify-4616
 	ParserVersion = "v1.0.0"
 	Vendor = Microsoft
 	Product = Event Viewer - Security
-	TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "dd-MM-yyyy HH:mm:ss"]
+	TimeFormat = "dd-MM-yyyy HH:mm:ss"
 	Conditions = [ 
   """Message=The system time was changed""", 
   """EventCode=4616""", 
@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-time-modify-4616
   """New Time:"""  
   ]
 	Fields = [
-		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
+		"""({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))""",
 		"""\WEventCode=({event_code}\d+)""",
 		"""ComputerName =({host}[\w\-.]+)""",
 		"""Keywords=({result}.+?)(\s+\w+=|\s*$)""",
@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-kv-endpoint-time-modify-4616
 		"""({event_name}The system time was changed)""",
 		"""EventType=(|({event_category}[^\s]+))\s""",
 		"""Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-		"""Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+		"""Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",
 		"""Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
 		"""Logon ID:\s*({login_id}\S+)\s+""",
 	]

@@ -9,8 +9,8 @@ Name = cisco-fp-kv-alert-trigger-success-sinkhole
   Fields = [
     """({host}[\w\-.]+)\s+SFIMS:""",
     """\WProtocol:\s*({protocol}[^,]+)\s*(,|$)""",
-    """\WSrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\WDstIP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\WSrcIP:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\WDstIP:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\WSrcPort:\s*({src_port}\d+)""",
     """\WDstPort:\s*({dest_port}\d+)""",
     """\WIngressZone:\s*({ingress_zone}[^,]+)\s*(,|$)""",
@@ -18,8 +18,8 @@ Name = cisco-fp-kv-alert-trigger-success-sinkhole
     """\WDE:\s*({engine_name}[^,]+)\s*(,|$)""",
     """\WRevision:\s*({revision}[^,]+)\s*(,|$)""",
     """\WPolicy:\s*({policy_name}[^,]+)\s*(,|$)"""
-    """\WAccessControlRuleAction:\s*({result}[^,]+)""",
-    """\WUserName:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """\WAccessControlRuleAction:\s*({action}[^,]+)""",
+    """\WUserName:\s*({user}[^,]+)""",
     """InitiatorBytes:\s*({bytes_in}\d+)""",
     """\WResponderBytes:\s*({bytes_out}\d+)""",
     """NAPPolicy:\s*({nap_policy}[^,]+)""",

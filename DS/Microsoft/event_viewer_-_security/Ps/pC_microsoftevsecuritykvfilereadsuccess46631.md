@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-1
     """(::ffff:)?({host}[\w.-]+)\s\d{1,3}\s\d\d\d\d-\d\d-\d\d""",
     """({event_code}4663)""",
     """SubjectUserSid:({user_sid}[^\s,]+),""",
-    """SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
+    """SubjectUserName:({user}[^\s,]+),""",
     """SubjectDomainName:({domain}[^:,]+?),""",
     """SubjectLogonId:({login_id}[^\s,]+),""",
     """ObjectServer:({object_server}[^\s,]+),""",

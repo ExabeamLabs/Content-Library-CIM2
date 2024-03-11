@@ -12,7 +12,7 @@ Name = lenel-og-kv-physical-location-access-success-accessgranted-1
       """\sFIRSTNAME:\s*"+({first_name}[^"]+)""",
       """\sEVDESCR:\s*"+({result}[^"]+)""",
       """\sCARDNUM:\s*"+({badge_id}\d+)""",
-      """\sEMPID:\s*"+({user}[\w\.\-]{1,40}\$?)""",
+      """\sEMPID:\s*"+({user}[^"]+)""",
       """\sREADERDESC:\s*"+({location_full}[^"]+)"""
     ]
     DupFields = [ "location_full->location_door" ]

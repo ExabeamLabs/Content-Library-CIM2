@@ -9,7 +9,7 @@ Name = microsoft-azuremfa-str-user-modify-changed
   Conditions = [ """ pfsvc: User """, """changed User """, """ value """ ]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
-    """pfsvc: User\s+"(({email_address}[^"@]+@[^"\s]+)|(NT AUTHORITY\\SYSTEM|(({domain}[^\\"]+)\\)?({user}[\w\.\-]{1,40}\$?)))"""",
+    """pfsvc: User\s+"(({email_address}[^"@]+@[^"\s]+)|(NT AUTHORITY\\SYSTEM|(({domain}[^\\"]+)\\)?({user}[^\s"]+)))"""",
     """pfsvc:\s({additional_info}[^.$]+)."""
     ]
 

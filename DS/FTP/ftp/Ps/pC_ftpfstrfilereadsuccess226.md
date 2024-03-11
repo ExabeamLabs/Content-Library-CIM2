@@ -11,7 +11,7 @@ Name = ftp-f-str-file-read-success-226
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) """,
     """({host}[\w\.-]+)\s+(\S+\s+){2}\[\d+\]""",
     """({src_ip}\S+)\s+(\S+\s+){2}\[\d+\]""",
-    """(-|(({domain}\S+)[\/\\])?({user}[\w\.\-]{1,40}\$?))\s+\[\d+\]""",
+    """(-|(({domain}\S+)[\/\\])?({user}\S+))\s+\[\d+\]""",
     """\]sent\s+(-|({file_name}\S+))\s""",
     """\]sent\s+(-|({file_path}({file_dir}\/(\S+\/)?)({file_name}\S+)))\s""",
     """\]sent\s+\/\S+\.({file_ext}[^\/\.\s]+)\s""",

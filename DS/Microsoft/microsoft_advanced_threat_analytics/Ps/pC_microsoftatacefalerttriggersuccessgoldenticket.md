@@ -15,7 +15,7 @@ Fields = [
   """\Wstart=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """\Wapp=({service_name}.+?)\s+(\w+=|$)"""
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
-  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[^\s]+))\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"
 

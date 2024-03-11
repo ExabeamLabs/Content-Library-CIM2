@@ -4,38 +4,37 @@
 Name = microsoft-evsecurity-xml-http-response-404
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """>404</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """>404</EventID>""", """<TimeCreated SystemTime=""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """Status Code:\s*({http_response_code}\d+)""",
-    """<EventData><Data>({instance_id}[^<]+)""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<EventData><Data>({instance_id}[^<]+)"""
  ]
 
 s-xml-events = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
-    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",
-    """<Message>Process ('|")?({process_name}[^\s'"]+)""",
-    """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
+    """<Message>Process '?({process_name}[^\s']+)""",
+    """<Security UserID(\\)?='({user_sid}[^']+)""",
 # update_path is removed
-    """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
+    """<Execution ProcessID(\\)?='({process_id}[^']+)""",
     """<EventID[^<]*?>({event_code}\d+)""",
     """<Keyword>({result}[^<]+)<""",
-    """<Data Name(\\)?=('|")ProcessName('|")>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name\\*=('|")TargetProcessName('|")>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
-    """<Data Name(\\)?=('|")ProcessId('|")>({process_id}[^<]+?)\s*<""",
+    """<Data Name(\\)?='ProcessName'>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name ='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
+    """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}\S+))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",
-    """Client IP: ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """ThreadID(\\)?=('|")({thread_id}\d+)"""
+    """Client IP: ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """ThreadID(\\)?='({thread_id}\d+)"""
   
 }
 ```

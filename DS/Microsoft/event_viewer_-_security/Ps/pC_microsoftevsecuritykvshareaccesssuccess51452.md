@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5145-2
     """\sアクセス:\s*({access}[^\s:]+)\s""",
     """\sMessage=({event_name}\S+)""",
     """\sセキュリティ ID:\s*({user_sid}[^:]+?)\s*アカウント名:""",
-    """\sアカウント名:\s*({user}[\w\.\-]{1,40}\$?)\s*アカウント ドメイン:""",
+    """\sアカウント名:\s*({user}[^:]+?)\s*アカウント ドメイン:""",
     """\sアカウント ドメイン:\s*({domain}[^:]+?)\s*ログオン ID:""",
     """\sログオン ID:\s*({login_id}\S+)""",
   ]

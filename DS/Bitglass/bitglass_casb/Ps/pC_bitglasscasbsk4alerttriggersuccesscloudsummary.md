@@ -14,7 +14,7 @@ Name = bitglass-casb-sk4-alert-trigger-success-cloudsummary
       """\sduser=({target}.+?)(\s+\w+=|\s*$)""",
       """\sduser=({object}.+?)(\s+\w+=|\s*$)""",
       """\ssuser=({email_address}[^@=]+@[^@=]+?)(\s+\w+=|\s*$)""",
-      """\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+      """\ssuser=({user}[^@]+?)(\s+\w+=|\s*$)""",
       """\sfname=\s*({additional_info}.+?)(\s+\w+=|\s*$)""",
       """\sfname=\s*({file_name}.+?(\.({file_ext}[^\.\s]+))?)\s+(\w+=|$)""",
       """\sfileType=({file_type}.+?)(\s+\w+=|\s*$)""",

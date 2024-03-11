@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-cef-process-create-success-4688-1
     """\Wdvchost=({host}[\w\-\.]+)\s*(\w+=|$)""",
     """\Wdst=({dest_ip}[a-fA-F:\.\d]+)\s*(\w+=|$)""",
     """({event_code}4688)""",
-    """\Wduser=(?:-|({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
+    """\Wduser=(?:-|({user}[^\s]+))\s*(\w+=|$)""",
     """\Wdntdom=(?:-|({domain}[^\s]+))\s*(\w+=|$)""",
     """\WdeviceNtDomain=(?:-|({domain}[^\s]+))\s*(\w+=|$)""",
     """\Wdproc=({process_path}({process_dir}(?:[^"]+?)?[\\\/])?({process_name}[^\\\/]+?))\s*(\w+=|$)""",
@@ -24,7 +24,7 @@ Name = microsoft-evsecurity-cef-process-create-success-4688-1
     """\Wcs4=({process_command_line}.+?)\s*(\w+=|$)""",
     """\Wcs5=({parent_process_guid}[^\s]+)\s*(\w+=|$)""",
   ]
-  DupFields = [ "process_guid->process_id" , "host->src_host" ]
+  DupFields = [ "host->dest_host", "process_guid->process_id" ]
   ParserVersion = "v1.0.0"
 
 

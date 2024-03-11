@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-sk4-share-delete-success-5144
   """"SubjectLogonId":"({login_id}[^"]+)""""
   """"Computer":"({host}[\w\-.]+)"""
   """"ShareName":"({share_name}[^"]+)""""
-  """"SubjectAccount":"(-|({domain}[\w\-.]+)([\\]+)?({user}[\w\.\-]{1,40}\$?))""""
+  """"SubjectAccount":"(-|({domain}[\w\-.]+)([\\]+)?({user}[^"]+))""""
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"ShareLocalPath":"({share_path}[^"]+)""""
   ]

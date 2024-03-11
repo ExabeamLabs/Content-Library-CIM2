@@ -10,7 +10,7 @@ Name = oracle-db-kv-database-logout-success-logoff
   Fields = [
     """sql\.EXTENDED_TIMESTAMP="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d.\d{6})"""",
     """sql\.USERHOST=({host}[^=]+?)\s*("|,|$)"""
-    """sql\.OS_USER=({user}[\w\.\-]{1,40}\$?)\s+[\w\.]+?=""",
+    """sql\.OS_USER=({user}[^=]+?)\s+[\w\.]+?=""",
     """sql\.DB_USER=({account}[^=]+?)\s+[\w\.]+?=""",
   ]
 

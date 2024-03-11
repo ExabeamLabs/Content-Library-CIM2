@@ -9,7 +9,7 @@ Name = fastenterprises-gt-csv-app-notification-accountmanagement
  Conditions = [ """,WEB.GENTAX,""", """,AccountManagement,""" ]
  Fields = [
    """({app}WEB\.GENTAX),({event_category}AccountManagement)""",
-   """AccountManagement,({category}[^,]+),({event_code}\d+),({account_id}[^,]+),({account}[^,]+),({user_id}[^,]+),({user}[\w\.\-]{1,40}\$?),({user_type}[^,]+),({operation}[^,]+),({additional_info}[^,]+?)\s*$"""
+   """AccountManagement,({category}[^,]+),({event_code}\d+),({account_id}[^,]+),({account}[^,]+),({user_id}[^,]+),({user}[^,]+),({user_type}[^,]+),({operation}[^,]+),({additional_info}[^,]+?)\s*$"""
  ]
  DupFields = [ "account->object" ]
 

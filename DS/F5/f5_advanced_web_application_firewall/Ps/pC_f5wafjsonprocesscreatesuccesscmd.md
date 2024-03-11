@@ -4,7 +4,7 @@
 Name = f5-waf-json-process-create-success-cmd
   Conditions = [ """"log_type":"WAF"""", """"log_vendor":"f5"""", """ CMD """, """]: (""" ]
   Fields = ${F5ParsersTemplates.f5-waf-activity.Fields} [
-    """\(({user}[\w\.\-]{1,40}\$?)\) CMD""",
+    """\(({user}[^\}\s]+)\) CMD""",
     """\sCMD \(\s*({process_command_line}[^\)]+)\)""",
     """\sCMD \(\s*[^\/]*?({process_path}({process_dir}\/[^\)]*?)({process_name}[^\/]*?[^\\]))((\\\\)*\s|\))"""
   ]
@@ -13,9 +13,9 @@ Name = f5-waf-json-process-create-success-cmd
 f5-waf-activity = {
     Vendor = F5
     Product = F5 Advanced Web Application Firewall
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Fields = [
-      """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
+      """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"host":"(::ffff:)?({host}[^"]+})""",
       """\d\d:\d\d:\d\d ({host}\S+)? \w+ \w+\[""",
       """\ssshd\[\d+\]:\s*({additional_info}[^",]+)"""

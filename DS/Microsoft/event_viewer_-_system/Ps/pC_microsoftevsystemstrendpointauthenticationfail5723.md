@@ -8,12 +8,11 @@ Name = microsoft-evsystem-str-endpoint-authentication-fail-5723
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """5723""", """The session setup from computer""", """failed because the security database does not contain""" ]
   Fields = [
-        """"TimeCreated":"\/Date\(({time}\d{13})"""
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
         """({event_code}5723)""",
         """({event_name}The session setup from computer.+?)\.""",
-        """trust account\s*'({user}[\w\.\-]{1,40}\$?)""",
+        """trust account\s*'({user}[^']+)""",
   ]
 
 

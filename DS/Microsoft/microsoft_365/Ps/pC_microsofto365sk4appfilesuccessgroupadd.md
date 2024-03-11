@@ -16,23 +16,19 @@ json-microsoft-app-activity = {
   Fields = [
     """"activityDate":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"activity":"({operation}[^"]+)"""",
-    """"(ipAddress|FromIP|ClientIP)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"(ipAddress|FromIP|ClientIP)":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"(UserId|userPrincipalName)":"({email_address}[^@]+@({email_domain}[^\.]+\.[^\]\s"\\,\|]+))",""",
     ""","value":"({email_address}[^@,]+@({email_domain}[^\.,]+\.[^\]\s",\|]+))"}]""",
-    """"activityResultStatus":"({result}[^"]+)"""",
+    """"activityResultStatus":"({status}[^"]+)"""",
     """"category":"({category}[^"]+)"""",
     """"source":"({log_source}[^"]+)"""",
     """"activityType":"({object_type}[^"]+)"""",
     """"objectId":"({object_id}[^"]+)"""",
     """"correlationId":"({connection_id}[^"]+)"""",
     """\WsourceServiceName =({app}[^=]+?)\s+(\w+=|$)"""
-    """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)"""
+    """\WdestinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)"""
     """\Wmsg=({additional_info}.*?)\s+(\w+=|$)""",
-    """"name":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
-    """"name":"DeviceOSType","value":"({os}[^"]+?)"""",
-    """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
-    """"userAgent":"({user_agent}[^"]+?)"""",
-    """"activityResultDescription":"({event_name}[^",]+)"""
+    """"name":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]""""
   ]
   DupFields = [ "object->resource" 
 }

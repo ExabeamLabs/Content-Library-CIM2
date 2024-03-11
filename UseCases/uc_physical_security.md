@@ -41,17 +41,13 @@ Use Case: Physical Security
 | [F5 Access Policy Manager](../DS/F5/f5_access_policy_manager/ds_f5_f5_access_policy_manager.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/F5/f5_access_policy_manager/RM/r_m_f5_f5_access_policy_manager_Physical_Security.md) |
 |                       [F5 BIG-IP](../DS/F5/f5_big-ip/ds_f5_f5_big-ip.md)                        | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/F5/f5_big-ip/RM/r_m_f5_f5_big-ip_Physical_Security.md)                               |
 ### Vendor: Fortinet
-|                            Product                             | MITRE ATT&CK® TTP                    | Content                                                                                                                        |
-|:--------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Physical_Security.md) |
+|                                 Product                                 | MITRE ATT&CK® TTP                    | Content                                                                                                                              |
+|:-----------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| [Fortinet VPN](../DS/Fortinet/fortinet_vpn/ds_fortinet_fortinet_vpn.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortinet_vpn/RM/r_m_fortinet_fortinet_vpn_Physical_Security.md) |
 ### Vendor: Generic Badge Access
 |                                                         Product                                                         | MITRE ATT&CK® TTP          | Content                                                                                                                                                                      |
 |:-----------------------------------------------------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Generic Badge Access](../DS/Generic_Badge_Access/generic_badge_access/ds_generic_badge_access_generic_badge_access.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Generic_Badge_Access/generic_badge_access/RM/r_m_generic_badge_access_generic_badge_access_Physical_Security.md) |
-### Vendor: Genetec
-|                                 Product                                  | MITRE ATT&CK® TTP          | Content                                                                                                                              |
-|:------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Genetec Badge](../DS/Genetec/genetec_badge/ds_genetec_genetec_badge.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Genetec/genetec_badge/RM/r_m_genetec_genetec_badge_Physical_Security.md) |
 ### Vendor: Honeywell
 |                                            Product                                             | MITRE ATT&CK® TTP          | Content                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -61,9 +57,9 @@ Use Case: Physical Security
 |:------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | [Identiv](../DS/Identiv/identiv/ds_identiv_identiv.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Identiv/identiv/RM/r_m_identiv_identiv_Physical_Security.md) |
 ### Vendor: Ivanti
-|                                         Product                                          | MITRE ATT&CK® TTP                    | Content                                                                                                                                        |
-|:----------------------------------------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Ivanti Pulse Secure](../DS/Ivanti/ivanti_pulse_secure/ds_ivanti_ivanti_pulse_secure.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Ivanti/ivanti_pulse_secure/RM/r_m_ivanti_ivanti_pulse_secure_Physical_Security.md) |
+|                               Product                               | MITRE ATT&CK® TTP                    | Content                                                                                                                          |
+|:-------------------------------------------------------------------:| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| [Pulse Secure](../DS/Ivanti/pulse_secure/ds_ivanti_pulse_secure.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Ivanti/pulse_secure/RM/r_m_ivanti_pulse_secure_Physical_Security.md) |
 ### Vendor: Juniper Networks
 |                                                  Product                                                  | MITRE ATT&CK® TTP                    | Content                                                                                                                                                          |
 |:---------------------------------------------------------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,6 +104,10 @@ Use Case: Physical Security
 |                        Product                        | MITRE ATT&CK® TTP          | Content                                                                                                                |
 |:-----------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | [Megaflex](../DS/Visma/megaflex/ds_visma_megaflex.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Visma/megaflex/RM/r_m_visma_megaflex_Physical_Security.md) |
+### Vendor: Zscaler
+|                                               Product                                               | MITRE ATT&CK® TTP                    | Content                                                                                                                                                |
+|:---------------------------------------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Zscaler Private Access](../DS/Zscaler/zscaler_private_access/ds_zscaler_zscaler_private_access.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Zscaler/zscaler_private_access/RM/r_m_zscaler_zscaler_private_access_Physical_Security.md) |
 ### Vendor: 
 ### Vendor: xPLAN
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |

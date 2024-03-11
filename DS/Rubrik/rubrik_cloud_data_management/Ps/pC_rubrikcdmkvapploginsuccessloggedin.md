@@ -10,16 +10,16 @@ Name = rubrik-cdm-kv-app-login-success-loggedin
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
       """nodeId="({host}[^"]+)"""",
-      """nodeIpAddress="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """nodeIpAddress="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 	   """eventName ="({event_name}[^"]+)"""",
       """status="({result}[^"]+)"""",
       """objectName ="(-|({object}[^"]+))"""",
       """objectType="({object_type}[^"]+)"""",
       """objectId="({object_id}[^"]+)"""",
       """eventSeverity="({alert_severity}[^"]+)"""",
-      """\]\s+({user}[\w\.\-]{1,40}\$?)\s(\([^\)]+\)\s)*in '[^\']+' logged in from""",
+      """\]\s+({user}[^(]+)\s(\([^\)]+\)\s)*in '[^\']+' logged in from""",
       """\(({user_ou}[^)]+)\) in '[^\']+' logged in from""",
-      """logged in from\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""                          
+      """logged in from\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""                          
     ]
     DupFields = [ "host->dest_host"]
   

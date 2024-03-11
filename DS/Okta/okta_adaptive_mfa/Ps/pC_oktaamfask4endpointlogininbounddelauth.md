@@ -13,7 +13,7 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"city":"((?i)null|({location_city}[^",]+))""",
     """"state":"((?i)null|({location_state}[^",]+))""",
     """"country":"((?i)null|({location_country}[^",]+))""",
-    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"rawUserAgent"+\s*:\s*"+((?i)unknown|({user_agent}[^",]+))""",
     """"browser"+\s*:\s*"+((?i)unknown|({browser}[^",]+))""",
     """"os"+\s*:\s*"+((?i)unknown|({os}[^",]+))""",
@@ -25,13 +25,13 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+((?i)unknown|({object}[^"]+[^\s]))"""",
     """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|(?i)unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
     """"actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
-    """request"+:.+?"+type"+:"+User"+,"+alternateId"+:(null|"+(system@okta\.com|(?:({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\\\/"]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?))))""",
-    """"actor"+:[^\]]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?)))"""",
+    """request"+:.+?"+type"+:"+User"+,"+alternateId"+:(null|"+(system@okta\.com|(?:({email_address}[^"@]+@({domain}[^"]+))|(({=domain}[^\\\/]+)[\/\\]+)?({user}[^"]+))))""",
+    """"actor"+:[^\]]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:({email_address}[^"@]+@({domain}[^"]+))|({user}[^"]+)))"""",
     """requestUri":\s*"({request_uri}[^"]+?)\s*"""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
   ]
-  DupFields = ["failure_reason->additional_info"]
+  DupFields = ["domain->email_domain","failure_reason->additional_info"]
   ParserVersion = "v1.0.0"
 
 

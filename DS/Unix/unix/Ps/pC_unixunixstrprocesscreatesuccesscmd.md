@@ -14,7 +14,8 @@ Name = unix-unix-str-process-create-success-cmd
     """\w{3}\s+\d+\s+\d\d:\d\d:\d\d\s+(::ffff:)?({host}[\w\-.]+)""",
     """\(({account}[^\)]+?)\) CMD""",
     """time:"({time}\d+)""",
-    """\sCMD \(\s*({process_command_line}.+?)\)($|\s|")""",
+    """\sCMD \(\s*({process_command_line}.+?)\s*\)""",
+    """\sCMD \(\s*[^\/]*?({process_path}({process_dir}\/[^\)]*?)({process_name}[^\/\s]*?[^\\\/])?)((\\\\)*\s|\))"""
   ]
   DupFields = [ "account->user" ]
 

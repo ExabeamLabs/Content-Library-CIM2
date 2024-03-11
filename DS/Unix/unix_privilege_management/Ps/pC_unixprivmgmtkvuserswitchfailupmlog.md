@@ -10,7 +10,7 @@ Name = unix-privmgmt-kv-user-switch-fail-upmlog
   Fields = [
     """({host}[\w\.\-]+)\s+upm-log end=({time}\d{10})""",
     """: rejected (({dest_user}root)|({process_name}.+?))\s+from """,
-    """ from ({user}[\w\.\-]{1,40}\$?)@(eth0\.)?({src_host}[^@\s]+)""",
+    """ from ({user}[^@\s]+)@(eth0\.)?({src_host}[^@\s]+)""",
   ]
 
 

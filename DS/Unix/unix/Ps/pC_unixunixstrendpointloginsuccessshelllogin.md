@@ -10,7 +10,7 @@ Name = unix-unix-str-endpoint-login-success-shelllogin
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
     """\d\d:\d\d:\d\d \d\d\d\d ({host}[^\s]+)""",
     """({event_name}SHELL_LOGIN)""",
-    """SHELL_LOGIN: ({user}[\w\.\-]{1,40}\$?)""",
+    """SHELL_LOGIN: ({user}[^\s]+)""",
     """logged in from ({src_ip}[a-fA-F:\d\.]+)\."""
   ]
   DupFields = [ "host->dest_host" ]

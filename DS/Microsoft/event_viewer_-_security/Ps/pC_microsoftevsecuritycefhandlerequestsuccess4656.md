@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-cef-handle-request-success-4656
     """"EventRecordID":"({event_id}[^"]+)"""",
     """"ThreadID":"({thread_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[^"]+)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"HandleId":"({handle_id}[^"]+)"""",

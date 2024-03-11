@@ -18,7 +18,7 @@ Name = mcafee-dlp-str-email-send-fail-dlponditions
         """(".*?"\||[^|]*\|){10}"({target}[^"]+)"""",
         """(".*?"\||[^|]*\|){10}"'?({external_address}[^@]+@[^'",]+)""",
         """(".*?"\||[^|]*\|){6}"?({alert_severity}\d+)(\||")""",
-        """(".*?"\||[^|]*\|){11}"?({domain}[^"\\\/]+)?[\\\/]*({user}[\w\.\-]{1,40}\$?)(\||")"""
+        """(".*?"\||[^|]*\|){11}"?({domain}[^"\\\/]+)?[\\\/]*({user}[^"\\\/]+)(\||")"""
       ]
       DupFields = [ "src_email_address->email_user" ]
 	  ParserVersion = "v1.0.0"

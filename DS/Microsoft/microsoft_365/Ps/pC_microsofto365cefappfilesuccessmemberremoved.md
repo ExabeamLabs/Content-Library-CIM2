@@ -4,10 +4,7 @@
 Name = microsoft-o365-cef-app-file-success-memberremoved
   ParserVersion = v1.0.0
   Product = Microsoft 365
-  Conditions= [ """"Operation":"MemberRemoved"""", """"Workload":""" ] 
-  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"Key":"OsName","Value":"({os}[^"]+)""""
-  ]
+  Conditions= [ """destinationServiceName =Office 365""", """"MemberRemoved""" ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft
@@ -22,7 +19,6 @@ cef-microsoft-app-activity = {
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"resourceId":\s*"({object}[^"]+)""",
-    """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -31,18 +27,13 @@ cef-microsoft-app-activity = {
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
-    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
-    """"(?i)userAgent":"({user_agent}[^"]+)"""",
+    """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
+    """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
-    """"UserType":"*({user_type}[^,]+)"""
-    """"Platform":"({os}[^"]+)""""
-    """"OriginatingServer":"({src_host}({host}\w+))\s*(\([^\)]+?\))?(\\r\\n)?""""
-    """"ClientInfoString":"({user_agent}[^"]+)","""
-    """"BrowserName":"({browser}[^"]+)"""
     ]
   DupFields = [ "object->resource" 
 }

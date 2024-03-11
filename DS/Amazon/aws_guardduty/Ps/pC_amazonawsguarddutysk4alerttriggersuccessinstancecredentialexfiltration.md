@@ -2,7 +2,7 @@
 ```Java
 {
 Name = amazon-awsguardduty-sk4-alert-trigger-success-instancecredentialexfiltration
-  Conditions = [ """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS,""" ]
+  Conditions = [ """CEF:""", """destinationServiceName =AWS""", """,ServiceName: guardduty,""", """,Type: UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration.InsideAWS,""" ]
   ParserVersion = "v1.0.0"
 
 cef-aws-guardduty-security-alert-template-1 = {
@@ -11,8 +11,8 @@ cef-aws-guardduty-security-alert-template-1 = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Fields = [
       """,CreatedAt:\s*({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ),""",
-      """,LocalIpDetails:[^\}]+IpAddressV4:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """,RemoteIpDetails:[^\]]+IpAddressV4:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """,LocalIpDetails:[^\}]+IpAddressV4:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """,RemoteIpDetails:[^\]]+IpAddressV4:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """,Title:\s*({event_name}[^:]+?)\.?,\w+:""",
       """,Type:\s*({alert_type}[^:]+):({alert_name}[^:]+?),\w+:""",
       """,Severity:\s*({alert_severity}[^,]+),""",
@@ -21,7 +21,7 @@ cef-aws-guardduty-security-alert-template-1 = {
       """AccountId:\s*({account_id}[^,]+),""",
       """ResourceType:\s*({resource_type}[^,\}]+)""",
       """,Arn:\s*({object}[^,]+),\w+:""",
-      """,UserName:\s*({user}[\w\.\-]{1,40}\$?)""",
+      """,UserName:\s*({user}[^,\}]+)""",
       """,UserType:\s*({user_type}[^,\}]+)"""
     
 }

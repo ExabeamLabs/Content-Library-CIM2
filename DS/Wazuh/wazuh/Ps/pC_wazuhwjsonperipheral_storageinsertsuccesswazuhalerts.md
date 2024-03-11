@@ -25,7 +25,7 @@ wazuh-catch-all-template {
       """"rule.id":"({rule_id}\d+)"""
       """"agent.name":"({agent_name}[^"]+)"""
       """"agent.id":"({agent_id}[^"]+)"""
-      """"data.srcip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """"data.srcip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
       """"data.status":"({result}[^"]+)"""
       """"data.data":"({data}[^"]+)"""
       """"predecoder.hostname":"({host}[^"]+)"""

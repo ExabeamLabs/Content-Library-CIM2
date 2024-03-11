@@ -12,7 +12,7 @@ Name = vormetric-v-cef-app-activity-appactivity
   Fields = [
     """\Wrt=({time}\d{13})""",
     """\Wdvchost=({host}[\w\-.]+)""",
-    """\Wsuser=({user}[\w\.\-]{1,40}\$?)""",
+    """\Wsuser=({user}[^\s]+)""",
     """\Wshost=({src_host}[^\s]+)""",
 # logger is removed
 # spid is removed

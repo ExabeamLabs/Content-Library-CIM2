@@ -4,12 +4,12 @@ Product: BlackBerry Protect
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  33   |   19   |         4          |       1        |    0    |
+|  35   |   19   |         4          |       1        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  dlp-alert<br> ↳[blackberry-protect-kv-alert-trigger-success-devicecontrol](Ps/pC_blackberryprotectkvalerttriggersuccessdevicecontrol.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_blackberry_blackberry_protect_Data_Exfiltration.md) |
-|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  dlp-alert<br> ↳[blackberry-protect-kv-alert-trigger-success-devicecontrol](Ps/pC_blackberryprotectkvalerttriggersuccessdevicecontrol.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_blackberry_blackberry_protect_Data_Leak.md)         |
+| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  dlp-alert<br> ↳[blackberry-protect-kv-alert-trigger-success-devicecontrol](Ps/pC_blackberryprotectkvalerttriggersuccessdevicecontrol.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>31 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_blackberry_blackberry_protect_Data_Exfiltration.md) |
+|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  dlp-alert<br> ↳[blackberry-protect-kv-alert-trigger-success-devicecontrol](Ps/pC_blackberryprotectkvalerttriggersuccessdevicecontrol.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>31 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_blackberry_blackberry_protect_Data_Leak.md)         |
 |    [Malware](../../../UseCases/uc_malware.md)    |  dlp-alert<br> ↳[blackberry-protect-kv-alert-trigger-success-devicecontrol](Ps/pC_blackberryprotectkvalerttriggersuccessdevicecontrol.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_blackberry_blackberry_protect_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise

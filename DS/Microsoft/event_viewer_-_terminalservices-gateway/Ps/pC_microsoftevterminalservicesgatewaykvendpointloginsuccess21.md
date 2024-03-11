@@ -7,9 +7,9 @@ Name = microsoft-evterminalservicesgateway-kv-endpoint-login-success-21
   Conditions = [ """eventid="21"""", """Microsoft-Windows-TerminalServices-LocalSessionManager""" ]
   Fields = ${WindowsParsersTemplates.windows-events-2.Fields}[
     """({event_name}Remote Desktop Services: Session logon succeeded)""",
-    """\sUser:\s*(?:[^\\]+\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """\sUser:\s*(?:[^\\]+\\+)?(SYSTEM|({user}[^\s"]+))""",
     """\sSession ID:\s*({session_id}\d+)""",
-    """\sSource Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sSource Network Address:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
 
 windows-events-2 = {
@@ -24,7 +24,7 @@ windows-events-2 = {
    """"process_information.process_name"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
    """"process_information.process_id"+:"+({process_id}[^"]+)""",
    """"Computer"+:"+({host}[^"]+)""",
-   """"subject.account_name"+:"+(-|({email_address}({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
+   """"subject.account_name"+:"+(-|({email_address}({user}[^@]+)@({domain}[^"]+))|({=user}[^"]+))""",
    """"network_information.source_port"+:"+(-|({src_port}\d+))""",
    """"new_logon.account_domain"+:"+({domain}[^"]+)""",
    """"message"+:"+({additional_info}[^"]+)""",

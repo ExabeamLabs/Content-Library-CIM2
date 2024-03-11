@@ -11,8 +11,8 @@ onewelcome-authentication-event = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Fields = [
       """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
-      """"account":"(?:-|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^"]+))?)"""",
-      """"clientip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"account":"(?:-|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[^"]+))"""",
+      """"clientip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"siemcode":"({event_code}\d+)"""",
       """"useragent":"({user_agent}[^"]+)"""",
       """"app":"({app}[^"]+)"""",
@@ -21,7 +21,7 @@ onewelcome-authentication-event = {
       """"result":"({result}[^"]+)"""",
       """"authres":"({result}[^"]+)"""",
       """"action":"({event_name}[^"]+)"""",
-      """"hdetail":"({additional_info}[^"]+)"""",
+      """"hdetail":"({event_name}[^"]+)"""",
       """"human":"({additional_info}[^"]+)"""",
     ]
     DupFields = [ "event_name->operation" 

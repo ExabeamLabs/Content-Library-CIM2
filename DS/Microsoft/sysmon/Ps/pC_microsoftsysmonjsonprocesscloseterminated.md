@@ -12,7 +12,7 @@ Name = microsoft-sysmon-json-process-close-terminated
     """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
     """"TargetFilename":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
     """"Domain":"(NT AUTHORITY|({domain}[^"]+))""",
-    """"AccountName":"((?i)SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """"AccountName":"((?i)SYSTEM|({user}[^"]+))""",
     """"SourceProcessId":"({process_id}\d+)""",
     """"SourceProcessGuid":"({process_guid}[^"]+)""",
     """"TargetProcessId":"({dest_process_id}\d+)""",

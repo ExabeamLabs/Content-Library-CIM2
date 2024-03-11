@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-user-privilege-modify-fail-4673-1
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)""",
       """({event_code}4763)""",
-      """summary_windows_4673_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[^:::]+))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[\w\.\-]{1,40}\$?))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({privileges}.+?))""""
+      """summary_windows_4673_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[^:::]+))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[^:::]+))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({privileges}.+?))""""
     ]
     DupFields=[ "host->dest_host" ]
   

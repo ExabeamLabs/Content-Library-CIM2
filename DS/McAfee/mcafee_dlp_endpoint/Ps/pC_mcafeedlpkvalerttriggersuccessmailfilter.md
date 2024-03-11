@@ -22,7 +22,7 @@ Name = mcafee-dlp-kv-alert-trigger-success-mailfilter
     """[=\s^]TargetFileName:\s"*\S+\|(Unknown filename|({file_name}[^"]+))""",
     """[=\s^]ThreatEventID:\s"*({alert_id}\d+)""",
     """[=\s^]ThreatSeverity:\s"*({alert_severity}[^"]+)""",
-    """[=\s^]ThreatActionTaken:\s"*({result}[^"]+)""",
+    """[=\s^]ThreatActionTaken:\s"*({action}[^"]+)""",
   ]
   ParserVersion = "v1.0.0"
 

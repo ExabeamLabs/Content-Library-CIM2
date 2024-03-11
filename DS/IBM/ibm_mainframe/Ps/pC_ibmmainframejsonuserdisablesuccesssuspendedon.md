@@ -5,7 +5,7 @@ Name = ibm-mainframe-json-user-disable-success-suspendedon
    Conditions = [ """"MFSOURCETYPE":"SYSLOG"""", """"MSGTXT":"""", """ was suspended on """ ]
    Fields = ${IBMParsersTemplates.ibm-mainframe-events.Fields}[
      """({event_name}suspended)""",
-     """"MSGTXT":"[^"]+?\sUserID ({user}[\w\.\-]{1,40}\$?)\sfor""""
+     """"MSGTXT":"[^"]+?\sUserID ({user}[^"\s]+)\sfor""""
    ]
    ParserVersion = "v1.0.0"
 

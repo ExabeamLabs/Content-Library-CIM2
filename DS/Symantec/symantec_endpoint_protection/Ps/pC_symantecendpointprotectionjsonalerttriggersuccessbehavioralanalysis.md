@@ -3,7 +3,7 @@
 {
 Name = symantec-endpointprotection-json-alert-trigger-success-behavioralanalysis
   ParserVersion = "v1.0.0"
-  Conditions = [ """"feature_name":"BEHAVIORAL_ANALYSIS"""", """"type":"HOST_PROCESS_DETECTION"""", """"product_name":"Symantec Endpoint """ ]
+  Conditions = [ """"feature_name":"BEHAVIORAL_ANALYSIS"""", """"type":"HOST_PROCESS_DETECTION"""", """"product_name":"Symantec Endpoint Security"""" ]
   Fields = ${SymantecParsersTemplates.json-symantec-endpoint-protection.Fields}[
     """"threat":.+?"name":"({alert_name}[^"]+)""",
     """"feature_name":"({alert_type}[^"]+)"""",
@@ -20,17 +20,16 @@ json-symantec-endpoint-protection = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
     Fields = [
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-      """"message":"\s*({additional_info}[^"]+)""",
-      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[\w\.\-]{1,40}\$?)""",
+      """"message":"({additional_info}[^"]+)""",
+      """"user_name":"({user}[^"]+)""",
       """"uuid":"({user_uid}[^"]+)""",
       """"destinationServiceName":"({app}[^"]+)""",
       """"session_id":"({session_id}[^"]+)""",
-      """"device_public_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"device_public_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"device_os_name":"({os}[^"]+)""",
       """"device_name":"({host}[\w\-.]+)""",
       """"device_domain":"({domain}[^"]+)""",
       """"rule_name":"({operation}[^"]+)"""
-    ]
-   DupFields = [ "host->src_host" 
+    
 }
 ```
