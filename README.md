@@ -23,7 +23,7 @@ This library reflects the hierarchical framework of the Exabeam Common Informati
 [Correlation Rule Templates](Exabeam%20Correlation%20Rules.md) – A list of prebuilt supported correlation rules with descriptions and use cases. 
 For a list of rule updates, see the [Correlation Rules Change Log](CorrelationRules_ChangeLog.md).
 
-For a list of parsers updates, see the [Exabeam Content Release Notes](https://community.exabeam.com/s/article/Exabeam-Content-Release-Notes-for-26-x-x) 🔒.
+For a list of parsers updates, see the [Exabeam Content Release Notes](https://community.exabeam.com/s/article/Exabeam-Content-Release-Notes-for-63-x-x) 🔒.
 
 [Platforms and Landscapes](https://github.com/ExabeamLabs/CIMLibrary/blob/main/Platforms_Landscapes.md) – A list of platforms listed by landscape (redirects to Common Information Model Library)
 
