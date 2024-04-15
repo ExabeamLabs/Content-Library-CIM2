@@ -1,0 +1,19 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evsecurity-json-endpoint-login-success-4648-2"
+Conditions = [
+"""A logon was attempted using explicit credentials"""
+"""Target Server Name"""
+"""computer_name"""
+"""event_id":4648"""
+]
+DupFields = [
+"host->dest_host"
+"src_host_windows->src_host"
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

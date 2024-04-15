@@ -1,0 +1,35 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evsecurity-xml-endpoint-login-success-4624-1"
+  Vendor = "Microsoft"
+  Product = "Event Viewer - Security"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Conditions = [
+  """<EventID>4624</EventID>"""
+  """<Data Name ="LogonType""""
+  ]
+  Fields = [
+  """SystemTime="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """({event_name}An account was successfully logged on)"""
+  """<Computer>([^<>]+?[\\\/]+)?({host}({dest_host}[\w\-]+)[^<]*)<"""
+  """<EventID>({event_code}[^<]+)<"""
+  """<Data Name ="LogonType">({login_type}\d+)<"""
+  """<Data Name ="TargetUserName">({user}[^<]+)<"""
+  """<Data Name ="TargetDomainName">(-|({domain}[^<]+))<"""
+  """<Data Name ="ProcessName">(?:-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<"""
+  """<Data Name ="IpAddress"[^<>]*?>(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)<"""
+  """<Data Name ="LogonProcessName">({auth_process}[^\s<]+)"""
+  """<Data Name ="AuthenticationPackageName">({auth_package}[^<]+)<"""
+  """<Data Name ="TargetLogonId">({login_id}[^<]+)<"""
+  """<Data Name ="TargetUserSid">({user_sid}[^<]+)<"""
+  """<Data Name ="WorkstationName">([A-Fa-f:\d.]+|-|({src_host_windows}[^<]+?))\s*<"""
+  """EventRecordID>({event_id}[^<]+)<"""
+  """<Data Name ="SubjectUserSid">({subject_sid}[^<]+)<"""
+  """<Data Name ="KeyLength">({key_length}\d+)<"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

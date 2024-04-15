@@ -7,7 +7,7 @@ Vendor: SunOne
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  42   |   26   |         2          |       2        |    0    |
+|  42   |   26   |         2          |       2        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

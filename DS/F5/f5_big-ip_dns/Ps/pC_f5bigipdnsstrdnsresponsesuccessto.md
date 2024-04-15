@@ -1,0 +1,30 @@
+#### Parser Content
+```Java
+{
+Name = "f5-bigipdns-str-dns-response-success-to"
+Vendor = "F5"
+Product = "F5 BIG-IP DNS"
+TimeFormat = "yyyy-MM-dd HH:mm:ss"
+Conditions = [
+""" qid """
+""" to """
+""" response:"""
+]
+Fields = [
+"""({time}\d\d\d\d-\d\d-\d\d (\d\d| \d):\d\d:\d\d)\s+({src_host}[\w\.-]+)\s+qid"""
+"""({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+qid"""
+"""\s({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+qid"""
+"""qid\s+({query_id}\d+)\s+to\s+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(#({dest_port}\d+))?:"""
+"""\[({dns_response_code}\S+)\s+({dns_response_flags}.+?)\]\s+response:"""
+"""response:\s*({dns_query}[^\s]+)\s?({response_ttl}\d+)\s+IN\s+({dns_query_type}[^\s]+)\s+({dns_response}[^\s]+);"""
+"""response:\s*({full_response}.+?)\s*$"""
+]
+DupFields = [
+"src_ip->host"
+"src_host->host"
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

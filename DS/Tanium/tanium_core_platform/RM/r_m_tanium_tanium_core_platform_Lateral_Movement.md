@@ -7,7 +7,7 @@ Vendor: Tanium
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  25   |   1    |         12         |       5        |    9    |
+|  25   |   1    |         12         |       5        |   13    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

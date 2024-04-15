@@ -7,7 +7,7 @@ Vendor: Proofpoint
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  84   |   40   |         11         |       3        |    3    |
+|  84   |   40   |         11         |       3        |    4    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

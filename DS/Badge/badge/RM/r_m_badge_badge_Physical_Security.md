@@ -7,7 +7,7 @@ Vendor: Badge
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   4    |         1          |       1        |    8    |
+|   9   |   4    |         1          |       1        |   13    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

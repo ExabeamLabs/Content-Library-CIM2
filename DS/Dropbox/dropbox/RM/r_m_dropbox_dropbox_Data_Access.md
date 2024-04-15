@@ -7,7 +7,7 @@ Vendor: Dropbox
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  56   |   33   |         3          |       7        |    8    |
+|  56   |   33   |         3          |       7        |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

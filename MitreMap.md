@@ -41,15 +41,15 @@ MITRE ATT&CK® Framework for Enterprise
 | T1049     | [System Network Connections Discovery](https://attack.mitre.org/techniques/T1049)<br><br>                                                                 | 4     |
 | T1052     | [Exfiltration Over Physical Medium](https://attack.mitre.org/techniques/T1052)<br><br>                                                                    | 5     |
 | T1052.001 | [Exfiltration Over Physical Medium: Exfiltration over USB](https://attack.mitre.org/techniques/T1052/001)<br><br>                                         | 17    |
-| T1053     | [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053)<br><br>                                                                                   | 2     |
+| T1053     | [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053)<br><br>                                                                                   | 3     |
 | T1053.002 | [Scheduled Task/Job: At (Windows)](https://attack.mitre.org/techniques/T1053/002)<br><br>                                                                 | 1     |
-| T1053.003 | [T1053.003](https://attack.mitre.org/techniques/T1053/003)<br><br>                                                                                        | 4     |
-| T1053.005 | [Scheduled Task/Job: Scheduled Task](https://attack.mitre.org/techniques/T1053/005)<br><br>                                                               | 5     |
+| T1053.003 | [T1053.003](https://attack.mitre.org/techniques/T1053/003)<br><br>                                                                                        | 5     |
+| T1053.005 | [Scheduled Task/Job: Scheduled Task](https://attack.mitre.org/techniques/T1053/005)<br><br>                                                               | 13    |
 | T1055     | [Process Injection](https://attack.mitre.org/techniques/T1055)<br><br>                                                                                    | 2     |
 | T1055.001 | [Process Injection: Dynamic-link Library Injection](https://attack.mitre.org/techniques/T1055/001)<br><br>                                                | 1     |
 | T1057     | [Process Discovery](https://attack.mitre.org/techniques/T1057)<br><br>                                                                                    | 4     |
 | T1059     | [Command and Scripting Interperter](https://attack.mitre.org/techniques/T1059)<br><br>                                                                    | 8     |
-| T1059.001 | [Command and Scripting Interperter: PowerShell](https://attack.mitre.org/techniques/T1059/001)<br><br>                                                    | 42    |
+| T1059.001 | [Command and Scripting Interperter: PowerShell](https://attack.mitre.org/techniques/T1059/001)<br><br>                                                    | 43    |
 | T1059.003 | [T1059.003](https://attack.mitre.org/techniques/T1059/003)<br><br>                                                                                        | 20    |
 | T1059.005 | [T1059.005](https://attack.mitre.org/techniques/T1059/005)<br><br>                                                                                        | 5     |
 | T1059.007 | [T1059.007](https://attack.mitre.org/techniques/T1059/007)<br><br>                                                                                        | 3     |
@@ -62,19 +62,19 @@ MITRE ATT&CK® Framework for Enterprise
 | T1071.002 | [Application Layer Protocol: File Transfer Protocols](https://attack.mitre.org/techniques/T1071/002)<br><br>                                              | 2     |
 | T1071.004 | [Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004)<br><br>                                                                  | 1     |
 | T1072     | [Software Deployment Tools](https://attack.mitre.org/techniques/T1072)<br><br>                                                                            | 1     |
-| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 184   |
+| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 187   |
 | T1078.002 | [T1078.002](https://attack.mitre.org/techniques/T1078/002)<br><br>                                                                                        | 10    |
 | T1078.003 | [Valid Accounts: Local Accounts](https://attack.mitre.org/techniques/T1078/003)<br><br>                                                                   | 7     |
-| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 9     |
+| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 14    |
 | T1082     | [System Information Discovery](https://attack.mitre.org/techniques/T1082)<br><br>                                                                         | 5     |
 | T1083     | [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)<br><br>                                                                         | 33    |
 | T1087     | [Account Discovery](https://attack.mitre.org/techniques/T1087)<br><br>                                                                                    | 4     |
 | T1087.001 | [Account Discovery: Local Account](https://attack.mitre.org/techniques/T1087/001)<br><br>                                                                 | 5     |
 | T1087.002 | [Account Discovery: Domain Account](https://attack.mitre.org/techniques/T1087/002)<br><br>                                                                | 4     |
 | T1090     | [Proxy](https://attack.mitre.org/techniques/T1090)<br><br>                                                                                                | 1     |
-| T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 11    |
+| T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 12    |
 | T1091     | [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)<br><br>                                                                  | 14    |
-| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 42    |
+| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 46    |
 | T1098.002 | [Account Manipulation: Exchange Email Delegate Permissions](https://attack.mitre.org/techniques/T1098/002)<br><br>                                        | 4     |
 | T1102     | [Web Service](https://attack.mitre.org/techniques/T1102)<br><br>                                                                                          | 1     |
 | T1105     | [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)<br><br>                                                                                | 3     |
@@ -174,7 +174,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1574.011 | [T1574.011](https://attack.mitre.org/techniques/T1574/011)<br><br>                                                                                        | 3     |
 | T1583.001 | [T1583.001](https://attack.mitre.org/techniques/T1583/001)<br><br>                                                                                        | 1     |
 | T1598.003 | [T1598.003](https://attack.mitre.org/techniques/T1598/003)<br><br>                                                                                        | 2     |
-| TA0002    | [TA0002](https://attack.mitre.org/techniques/TA0002)<br><br>                                                                                              | 52    |
+| TA0002    | [TA0002](https://attack.mitre.org/techniques/TA0002)<br><br>                                                                                              | 51    |
 | TA0008    | [TA0008](https://attack.mitre.org/techniques/TA0008)<br><br>                                                                                              | 4     |
 | TA0010    | [TA0010](https://attack.mitre.org/techniques/TA0010)<br><br>                                                                                              | 69    |
 | TA0011    | [TA0011](https://attack.mitre.org/techniques/TA0011)<br><br>                                                                                              | 73    |

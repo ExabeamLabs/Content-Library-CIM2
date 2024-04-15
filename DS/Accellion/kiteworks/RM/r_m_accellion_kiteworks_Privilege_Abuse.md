@@ -7,7 +7,7 @@ Vendor: Accellion
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  11   |   5    |         4          |       11       |   12    |
+|  11   |   5    |         4          |       11       |   14    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -7,7 +7,7 @@ Vendor: iManage
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   7   |   3    |         2          |       1        |    1    |
+|   7   |   3    |         2          |       1        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -1,0 +1,34 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evsecurity-xml-user-password-modify-4723"
+Vendor = "Microsoft"
+Product = "Event Viewer - Security"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+Conditions = [
+  """<EventID>4723</EventID>"""
+  """<Data Name ='PrivilegeList'>"""
+]
+Fields = [
+  """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """<Computer>({host}[^<]+)</Computer>"""
+  """<EventID>({event_code}[^<]+)</EventID>"""
+  """<Keywords>({result}[^<]+)</Keywords>"""
+  """<Keyword>({result}Audit\s[^<]+)</Keyword>"""
+  """<Data Name ='SubjectUserSid'>({user_sid}[^<]+)</Data>"""
+  """<Data Name ='SubjectUserName'>({user}[^<]+)</Data>"""
+  """<Data Name ='SubjectDomainName'>({domain}[^<]+)</Data>"""
+  """<Data Name ='SubjectLogonId'>({login_id}[^<]+)</Data>"""
+  """<Data Name ='TargetSid'>({dest_user_sid}[^<]+)</Data>"""
+  """<Data Name ='TargetUserName'>({dest_user}[^<]+)</Data>"""
+  """<Data Name ='TargetDomainName'>({dest_domain}[^<]+)</Data>"""
+  """({event_name}An attempt was made to change an account's password)"""
+]
+DupFields = [
+  "host->dest_host"
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

@@ -7,7 +7,7 @@ Vendor: OneLogin
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  13   |   9    |         2          |       4        |    1    |
+|  13   |   9    |         2          |       4        |    2    |
 
 | Event Type        | Rules    | Models    |
 | ---- | ---- | ---- |

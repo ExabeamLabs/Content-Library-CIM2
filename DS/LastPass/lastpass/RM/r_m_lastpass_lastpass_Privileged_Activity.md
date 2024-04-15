@@ -7,7 +7,7 @@ Vendor: LastPass
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   2    |         1          |       3        |    2    |
+|   3   |   2    |         1          |       3        |    4    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

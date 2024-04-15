@@ -7,7 +7,7 @@ Vendor: ServiceNow
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  55   |   31   |         2          |       5        |    1    |
+|  55   |   31   |         2          |       5        |    2    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

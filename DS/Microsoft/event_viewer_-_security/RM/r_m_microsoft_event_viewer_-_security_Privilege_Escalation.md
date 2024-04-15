@@ -7,7 +7,7 @@ Vendor: Microsoft
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  74   |   21   |         47         |       12       |   157   |
+|  74   |   21   |         47         |       12       |   334   |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -7,7 +7,7 @@ Vendor: Illumio
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  72   |   24   |         6          |       2        |    0    |
+|  72   |   24   |         6          |       2        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,11 +4,14 @@ Product: Splunk Stream
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   0   |   0    |         0          |       0        |    0    |
+|   5   |   0    |         3          |       2        |    0    |
 
-|  Use-Case  | Activity Types/Parsers | MITRE ATT&CK® TTP | Content    |
-|:----------:| ---- | ---- | ---- |
-| Enrichment |    |    | [](RM/r_m_splunk_splunk_stream_Enrichment.md) |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|:----:| ---- | ---- | ---- |
+| [Malware](../../../UseCases/uc_malware.md) |  dns-query<br> ↳[splunk-stream-json-dns-request-success-query](Ps/pC_splunkstreamjsondnsrequestsuccessquery.md)<br><br> dns-response<br> ↳[splunk-stream-json-dns-response-success-messagetype](Ps/pC_splunkstreamjsondnsresponsesuccessmessagetype.md)<br> | T1071 - Application Layer Protocol<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>T1583.001 - T1583.001<br> | [<ul><li>5 Rules</li></ul>](RM/r_m_splunk_splunk_stream_Malware.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------
+| Initial Access | Execution | Persistence | Privilege Escalation | Defense Evasion | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                                                                                                                                                                                                             | Exfiltration | Impact |
+| -------------- | --------- | ----------- | -------------------- | --------------- | ----------------- | --------- | ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------ |
+|                |           |             |                      |                 |                   |           |                  |            | [Dynamic Resolution](https://attack.mitre.org/techniques/T1568)<br><br>[Dynamic Resolution: Domain Generation Algorithms](https://attack.mitre.org/techniques/T1568/002)<br><br>[Application Layer Protocol](https://attack.mitre.org/techniques/T1071)<br><br> |              |        |

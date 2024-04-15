@@ -7,7 +7,7 @@ Vendor: Apache
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  42   |   26   |         2          |       1        |    7    |
+|  42   |   26   |         2          |       1        |    8    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

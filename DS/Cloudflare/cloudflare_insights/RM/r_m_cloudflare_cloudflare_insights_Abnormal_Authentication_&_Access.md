@@ -7,7 +7,7 @@ Vendor: Cloudflare
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  12   |   4    |         2          |       4        |    0    |
+|  12   |   4    |         2          |       4        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

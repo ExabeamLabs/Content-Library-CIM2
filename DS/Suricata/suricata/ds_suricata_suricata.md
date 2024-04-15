@@ -4,12 +4,12 @@ Product: Suricata
 -----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  28   |   11   |         3          |       1        |    0    |
+|  28   |   11   |         3          |       1        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[suricata-s-json-alert-trigger-success-suricata](Ps/pC_suricatasjsonalerttriggersuccesssuricata.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>24 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_suricata_suricata_Compromised_Credentials.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  network-alert<br> ↳[suricata-s-json-alert-trigger-success-suricata](Ps/pC_suricatasjsonalerttriggersuccesssuricata.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_suricata_suricata_Malware.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[suricata-ids-json-alert-trigger-success-signature](Ps/pC_suricataidsjsonalerttriggersuccesssignature.md)<br> ↳[suricata-s-json-alert-trigger-success-suricata](Ps/pC_suricatasjsonalerttriggersuccesssuricata.md)<br> ↳[suricata-s-json-alert-trigger-success-pdsuricata](Ps/pC_suricatasjsonalerttriggersuccesspdsuricata.md)<br> ↳[suricata-ids-str-alert-trigger-success-idsalert](Ps/pC_suricataidsstralerttriggersuccessidsalert.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>24 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_suricata_suricata_Compromised_Credentials.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  network-alert<br> ↳[suricata-ids-json-alert-trigger-success-signature](Ps/pC_suricataidsjsonalerttriggersuccesssignature.md)<br> ↳[suricata-s-json-alert-trigger-success-suricata](Ps/pC_suricatasjsonalerttriggersuccesssuricata.md)<br> ↳[suricata-s-json-alert-trigger-success-pdsuricata](Ps/pC_suricatasjsonalerttriggersuccesspdsuricata.md)<br> ↳[suricata-ids-str-alert-trigger-success-idsalert](Ps/pC_suricataidsstralerttriggersuccessidsalert.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_suricata_suricata_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

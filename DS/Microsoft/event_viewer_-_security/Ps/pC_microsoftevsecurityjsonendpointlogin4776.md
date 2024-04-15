@@ -1,0 +1,36 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evsecurity-json-endpoint-login-4776"
+  ParserVersion = "v1.0.0"
+  Vendor = "Microsoft"
+  Product = "Event Viewer - Security"
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [
+    """4776"""
+    """"PackageName":""""
+    """attempted to validate the credentials for an account"""
+  ]
+  Fields = [
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)""""
+    """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)"""
+    """"EventTime":({time}\d+)"""
+    """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
+    """"(Hostname|MachineName)":"({host}[^"]*)"""
+    """"Computer"+:"+({host}[^"]+)""""
+    """"Computer"+:"+({dest_host}[^"]+)""""
+    """({event_code}4776)"""
+    """"TargetUserName":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[^"]*))"""   
+    """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
+    """"(Hostname|MachineName)":"(?!(?:[A-Fa-f:\d.]+))[^."]*\.({domain}[^.]*)"""
+    """"TargetUserName":"[^"@]+(?:@({domain}[^"@\s]+)[^"]*)?"""
+    """"Status":"({result_code}[^"]*)"""
+    """"Workstation":"\\*({src_host}[^"]+)"""
+  ]
+  DupFields = [
+    "result_code->failure_code"
+  ]
+
+
+}
+```

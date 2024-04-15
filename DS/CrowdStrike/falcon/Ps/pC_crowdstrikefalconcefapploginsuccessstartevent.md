@@ -1,0 +1,36 @@
+#### Parser Content
+```Java
+{
+Name = "crowdstrike-falcon-cef-app-login-success-startevent"
+Vendor = "CrowdStrike"
+Product = "Falcon"
+TimeFormat = "epoch_sec"
+Conditions = [
+  """"eventType":"""
+  """"RemoteResponseSessionStartEvent""""
+  """UserName"""
+]
+Fields = [
+  """"eventCreationTime":\s*({time}\d{10})"""
+  """"timestamp":"({time}\d{10})""""
+  """"UTCTimestamp":({time}\d{10})"""
+  """"UserId":\s*"({email_address}[^"@]+@({email_domain}[^"@]+))""""
+  """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"ServiceName":\s*"({app}[^"]+)"""
+  """"Success":\s*({result}[^",}]+)"""
+  """"UserName":\s*"({email_address}[^"@]+@[^"@]+)""""
+  """"UserName":\s*"({user}[^"@]+)""""
+  """"HostnameField":\s*"({host}[^"@]+)""""
+  """destinationServiceName =({app}[^=]+)\s\w+="""
+  """({event_name}RemoteResponseSessionStartEvent)"""
+  """"SessionId":"({session_id}[^",]+)""""
+  """"(?i)EventType":\s*"({operation_details}[^",]+)""""
+]
+DupFields = [
+  "event_name->operation"
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```
