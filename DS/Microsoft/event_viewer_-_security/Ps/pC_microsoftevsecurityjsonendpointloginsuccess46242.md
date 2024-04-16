@@ -14,8 +14,8 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624-2"
   ]
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)"""
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?""""
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?""""
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?""""
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
@@ -28,13 +28,14 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624-2"
     """AuthenticationPackageName\\?"+:\\?"+({auth_package}[^\s\\]+)\\?""""
     """({event_name}An account was successfully logged on)"""
     """LogonType\\?"+:\\?"({login_type}\d+)\\?""""
-    """TargetUserName\\?"+:\\?"({user}[^\\]+)\\?""""
+    """TargetUserName\\?"+:\\?"({user}[\w\.\-]{1,40}\$?)\\?""""
     """TargetDomainName\\?"+:\\?"({domain}[^\s"\\]+)\\?""""
-    """IpAddress\\?"+:\\?"(?:-|(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\\?""""
+    """IpAddress\\?"+:\\?"(?:-|(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\\?""""
     """TargetUserSid\\?"+:\\?"({user_sid}[^\\]+)\\?""""
   ]
   DupFields = [
-    "host->dest_host"
+    "host->dest_host",
+    "src_host_windows->src_host"
   ]
 
 

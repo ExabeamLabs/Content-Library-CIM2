@@ -4,19 +4,20 @@
 Name = "microsoft-evsecurity-xml-scheduled-task-create-success-4698"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
 """4698"""
 """A scheduled task was created"""
 ]
 Fields = [
+"""({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
 """EventTime\":\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\""""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
 """({event_code}4698)"""
 """({event_name}A scheduled task was created)"""
-"""\sComputerName =(|({host}.+?))(\s+\w+=|\s*$)"""
+"""\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
-"""Security ID:\s*(|({user_sid}[^:]+?))\s*Account Name:\s*(|({user}[^:]+?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:"""
+"""Security ID:\s*(|({user_sid}[^:]+?))(\\[srnt])*\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))(\\[srnt])*\s*Account Domain:\s*(|({domain}[^:]+?))(\\[srnt])*\s*Logon ID:\s*(|({login_id}[^:]+?))(\\[srnt])*\s*Task Information:"""
 """Task Name:\s*(|({task_name}.+?))\s*Task Content:"""
 """<UserId>(?=\w)(({account_domain}[^\\<]*)\\)?({account_name}[^<]+)</UserId>"""
 """<Settings>\s*({additional_info}.+?)\s*</Settings>"""
@@ -26,8 +27,8 @@ Fields = [
 """<RegistrationInfo>.+?<Author>(?=\w)({author}[^<]+)</Author>"""
 """<RegistrationInfo>.+?<Description>(?=\w)({description}[^<]+)</Description>"""
 """<Command>\"?({process_path}({process_dir}(?:(\w+:)?[^:<\"]+)?[\\\/])?({process_name}[^<\"]+))"""
-"""<Arguments>(\"+)?({arg}[^<\"]+)"""
-"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}.+?)(\"|\s)"""
+"""<Arguments>(\"+)?({arg}[^<]+)"""
+"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""
 ]
 DupFields = [
 "host->dest_host"

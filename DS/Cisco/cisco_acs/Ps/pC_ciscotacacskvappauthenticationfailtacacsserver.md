@@ -12,7 +12,7 @@ Name = cisco-tacacs-kv-app-authentication-fail-tacacsserver
     """,\d{1,3}\s({host}[\w\-.]+)\s""",
     """Action=({result}[^,]+)""",
     """Description=({event_name}[^=]+)\s\w+=""",
-    """user=({user}[^\s;]+)"""
+    """user=({user}[\w\.\-]{1,40}\$?)"""
   ]
 
 

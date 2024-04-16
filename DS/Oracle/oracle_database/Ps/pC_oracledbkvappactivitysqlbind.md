@@ -6,15 +6,16 @@ Name = oracle-db-kv-app-activity-sqlbind
   Product = Oracle Database
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  ExtractionType = json
   Conditions = [ """"userhost":""",""""sqlbind":""",""""auditid":""" ]
   Fields = [
-    """"ntimestamp#":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
-    """"userhost":"({host}[\w\-.]+)"""",
-    """"userid":"({db_user}[^"]+)"""",
-    """"sessionid":"({session_id}[^"]+)"""",
-    """"dbid":"({db_id}[^"]+)"""",
+    """exa_json_path=$.ntimestamp#,exa_field_name=time"""
+    """exa_json_path=$.userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({host}[^"]+)"""
+    """exa_json_path=$.userid,exa_field_name=db_user""",
+    """exa_json_path=$.sessionid,exa_field_name=session_id""",
+    """exa_json_path=$.dbid,exa_field_name=db_id""",
 # action_code is removed
-    """"comment\$text":"({additional_info}[^"]+)""""
+    """exa_json_path=$.comment$text,exa_field_name=additional_info"""
   ]
   DupFields = [ "db_user->user" ]
 

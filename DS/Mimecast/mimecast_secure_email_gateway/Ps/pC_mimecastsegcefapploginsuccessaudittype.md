@@ -19,7 +19,7 @@ Fields = [
 """({result}(?i)success)"""
 """({app}Mimecast Email Security)"""
 """Application:\s*({service_name}[^,]+)"""
-"""\WIP:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\WIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\"user\":\"({email_address}[^\"]+)"""
 """\"user(A|a)gent\"\s*:\s*\"({user_agent}[^\"]+?)\"\s*[,\}\]]"""
 ]

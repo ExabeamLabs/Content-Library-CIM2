@@ -14,6 +14,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-hostalias
 # alias is removed
 # parent_record is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

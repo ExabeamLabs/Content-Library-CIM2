@@ -6,7 +6,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-logactivity
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"correlationId":"""", """"localizedValue":"""", """"Microsoft.Security"""", """"containerImage":"""", """dproc=Activity Log""" ]
+  Conditions = [ """"correlationId":"""", """"localizedValue":"""", """"Microsoft.Security"""", """"containerImage":"""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[^\s]+\s+""",
     """msg=({additional_info}.+?)\s+(\w+=|$)""",
@@ -15,7 +15,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-logactivity
     """"severity":"({alert_severity}[^"]+)""",
     """"eventName":\{"value":"({alert_name}[^"]+)"""",
     """sourceServiceName =\s*({service_name}.+?)\s+\w+""",
-    """suser=(Azure Security Center|({user}.+?))\s+\w+=""",
+    """suser=(Azure Security Center|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
     """intent":"\[\\"({alert_type}[^\\"]+)""",
  ]
 

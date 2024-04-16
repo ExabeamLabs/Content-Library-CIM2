@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-ds-object-modify-success-4742"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSS"]
 Conditions = [
 """A computer account was changed"""
 """4742"""
@@ -12,21 +12,22 @@ Conditions = [
 Fields = [
 """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
 """({event_name}A computer account was changed)"""
-""""agent_hostname":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[^"]+)))""""
-""""computer":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[^"]+)))"""",
-"""<Computer>(::ffff:)?((?i)(am|pm)|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^<]+)))</Computer>""",
-"""SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)"""
+""""agent_hostname":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))""""
+""""computer":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""",
+"""<Computer>(::ffff:)?((?i)(am|pm)|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))</Computer>""",
+""""ComputerName"+:"+({dest_host}({host}[\w\-\.]+))""""
+"""SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)"""
+""""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+"""\srt=({time}\d{13})""",
 """({event_code}4742)"""
-"""Subject:.+?\sAccount Name:\s*(|-|({user}[^:]+?))\s*Account Domain:\s*(|-|({domain}[^:]+?))\s*Logon ID:\s*(|-|({login_id}[^\s]+))\s*Computer Account That Was Changed:.*?\sAccount Name:\s*(|-|({dest_user}[^:]+?))\s*Account Domain:\s*(|-|({object_dn}[^:]+?))\s*Changed Attributes:"""
-"""\sComputer Account That Was Changed:.+?Account Name:\s*(::ffff:)?({src_host}[^$:]+?)\$"""
-"""\sUser Principal Name:\s*(|-|({attribute}.+?))\s*Home Directory:"""
-"""(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?((?i)(am|pm)|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))\s"""
-"""Message(":"|>)({additional_info}[^:]+?)\s*\w+:"""
-"""User Workstations:\s*(-|({src_host_windows}[^\\\s]+))\s*"""
-]
-DupFields = [
-"host->dest_host"
+"""Subject:.+?\s*Account Name:\s*(\\t|\\r|\\n)*(|-|(?i)ANONYMOUS LOGON|({user}[\w\.\-]{1,40}\$?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({domain}[^:]+?))(\\r|\\n|\\t)*\s*Logon ID:\s*(\\r|\\n|\\t)*(|-|({login_id}[^\s]+?))\s*(\\r|\\n|\\t)*Computer Account That Was Changed:.*?\s*Account Name:\s*(\\r|\\n|\\t)*(|-|({dest_user}[^:]+?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({ds_object_dn}[^:]+?))\s*(\\r|\\n|\\t)*Changed Attributes:"""
+"""\s*Computer Account That Was Changed:.+?Account Name:\s*(\\r|\\n|\\t)*(::ffff:)?({src_host}[^$:]+?)\$(\\r|\\n|\\t)*"""
+"""\s*User Principal Name:\s*(\\r|\\n|\\t)*(|-|({attribute}.+?))\s*(\\r|\\n|\\t)*Home Directory:"""
+"""(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?((?i)(am|pm|\d{4})|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))\s"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+"""Message(":"|>)({additional_info}[^:]+?)\s*(\\r|\\n|\\t)*\w+:"""
+"""User Workstations:\s*(\\r|\\n|\\t)*(-|({src_host_windows}[^\s]+?))(\\r|\\n|\\t)*Password Last Set:"""
 ]
 ParserVersion = "v1.0.0"
 

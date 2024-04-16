@@ -5,7 +5,7 @@ Name = microsoft-ata-cef-alert-trigger-monitoringalert
   ParserVersion = "v1.0.0"
   Vendor = Microsoft
   Product = Microsoft Advanced Threat Analytics
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [ """|Microsoft|ATA|""", """|GatewayOverloadedNetworkActivitiesMonitoringAlert|""", """CEF:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-][^\s]+)\s({host}[^\s]+)\sATA""",

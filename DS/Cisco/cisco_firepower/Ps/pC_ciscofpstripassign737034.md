@@ -9,6 +9,7 @@ Name = cisco-fp-str-ip-assign-737034
   Conditions = [ """-737034""", """%FTD-""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """\sSession=({session_id}[^,]+)\s*""",
     """IPv(4|6) address:\s*({event_name}.+?)(\s*"|\s*$)""",

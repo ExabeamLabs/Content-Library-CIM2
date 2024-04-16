@@ -7,11 +7,12 @@ Name = mimecast-seg-cef-email-send-receive-rcpt
   Product = Mimecast Secure Email Gateway
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ 
-"""destinationServiceName =Mimecast Email Security""" 
+""""acc":""""
+""""MsgId":"""
+""""aCode":"""" 
 """"Dir":""""
 """"Sender":""""
 """"Rcpt":""""
-"""dproc=""" 
 ]
   Fields = [
     """"acc":"({host}[^",]+)"""",
@@ -21,11 +22,12 @@ Name = mimecast-seg-cef-email-send-receive-rcpt
     """"Rcpt":"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^"]*)"""",
     """"Subject":"(|({email_subject}[^"]+?))\s*"""",
     """"Dir":"({direction}[^"]+?)"""",
-    """"IP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"IP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
     """"Sender":"(<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"MsgId":"<({message_id}[^"]+?)>""""
     """"Virus":"({alert_name}[^"]+)""""
+    """"Err":"({failure_reason}[^"]+)""""
   ]
 
 

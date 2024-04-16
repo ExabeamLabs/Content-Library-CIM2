@@ -9,10 +9,11 @@ Name = cisco-ise-kv-app-activity-tacacsaccounting
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\.\d+""",
     """({host}[^\s]+)\sCISE_TACACS_Accounting""",
-    """Device IP Address=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
-    """CmdAV=({operation}[^,]+)\s<cr>\s\],""",
+    """Device IP Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
+    """CmdAV=({command}[^,]+)\s],""",
     """Privilege-Level=({privileges}[^,]+),""",
     """({app}TACACS\+ Accounting)""",
+    """TACACS\+\s*({operation}Accounting with Command)"""
   ]
   ParserVersion = "v1.0.0"
 

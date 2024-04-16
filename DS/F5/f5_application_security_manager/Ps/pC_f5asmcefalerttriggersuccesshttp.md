@@ -15,11 +15,11 @@ Fields = [
   """rt=({time}\w+\s+\d\d\s+\d\d\d\d\s+\d\d:\d\d:\d\d)"""
   """dvc=({host}[A-Fa-f:\d.]+)"""
   """dvchost=({host}[\w\-.]+)"""
-  """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """spt=({src_port}\d+)"""
   """dpt=({dest_port}\d+)"""
-  """act=({action}[^\s]+)\s+(\w+=|$)"""
+  """act=({result}[^\s]+)\s+(\w+=|$)"""
   """cs4=(N/A|({alert_name}[^=]+))\s+(\w+=|$)"""
   """app=({protocol}[^=]+)\s+(\w+=|$)"""
   """request=({malware_url}[^\s]+)\s+(\w+=|$)"""
@@ -27,7 +27,7 @@ Fields = [
   """User-Agent:\s+({user_agent}[^\"]+?)\\r\\n"""
   """CEF:([^\|]+\|){4}(\d+\|)?({alert_type}[^\|]+)"""
   """CEF:([^\|]+\|){6}({alert_severity}\d+)"""
-  """"username":"({user}[^\"]+)""""
+  """"username":"({user}[\w\.\-]{1,40}\$?)""""
 ]
 SOAR {
   IncidentType = "malware"

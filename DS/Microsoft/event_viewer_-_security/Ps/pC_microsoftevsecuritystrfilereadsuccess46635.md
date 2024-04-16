@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-str-file-read-success-4663-5
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}4663),({host}[\w\-.]+)""",
     """サブジェクト:\s*\S+\s*ID:\s*({user_sid}\S+)""",
-    """アカウント名:\s*({user}[^\s]+)""",
+    """アカウント名:\s*({user}[\w\.\-]{1,40}\$?)""",
     """アカウント ドメイン:\s*({domain}[^\s]+)""",
     """ログオン ID:\s*({login_id}[^\s]+)""",
     """オブジェクトの種類:\s*({file_type}[^\s]+)""",

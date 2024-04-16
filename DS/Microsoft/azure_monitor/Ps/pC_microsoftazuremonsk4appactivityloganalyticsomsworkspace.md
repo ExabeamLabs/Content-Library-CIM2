@@ -8,11 +8,10 @@ Name = microsoft-azuremon-sk4-app-activity-loganalyticsomsworkspace
 
 cef-cloud-system-info = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
-    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?Z)""",
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """destinationServiceName =({app}[^=]+?)\s+(\w+=|$)""",
-    """dproc=({process_name}[^=]+?)\s+(\w+=|$)""",
 # log_level is removed
     """"TenantId":"({tenant_id}[^"]+)""",
     """"Computer":"({host}[^"]+)""",
@@ -21,7 +20,7 @@ cef-cloud-system-info = {
 # src_system is removed
     """"(?i)Type":"({event_category}[^"]+)""",
     """"Computer":"({computer_name}[^"]+)""",
-    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[^"\\\/]+)"""",
+    """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
 # mg is removed
     """"ManagementGroupName":"({group_name}[^"]+)""",
     """"_ResourceId":"({resource_id}[^"]+)""",
@@ -38,14 +37,18 @@ cef-cloud-system-info = {
 # full_log is removed
     """"\$table":"({table}[^"]+)""",
     """User Agent - ({user_agent}.+?)\s+\[""",
-    """"sourceIPs":\["({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"sourceIPs":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"userAgent":"({user_agent}[^"]+)"""",
     """"code":({response_code}\d+)""",
     """"AlertSeverity":"({alert_severity}[^",]+)""",
     """"AlertName":"({alert_name}[^",]+)""",
     """"RiskScore"+:\s*"+({alert_severity}[^",]+)""",
-    """"Process":"({process_name}[^"]+)"""
+    """"Process":"({process_name}[^"]+)""",
+    """"OSName":"({os}[^"]+)""""
+    """"OperationName":"({operation}[^"]+)""""
+    """"EventID":({event_code}\d+)"""
   ]
+  DupFields = [ "resource_id->object"]
  
 }
 ```

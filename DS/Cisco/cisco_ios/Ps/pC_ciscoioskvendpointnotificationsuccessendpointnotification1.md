@@ -4,11 +4,12 @@
 Name = cisco-ios-kv-endpoint-notification-success-endpointnotification-1
   Vendor = Cisco
   Product = Cisco IOS
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss"]
   Conditions = [ """ %CLIENT_ORCH_LOG-6-CLIENT_ADDED_TO_RUN_STATE: """ ]
   ParserVersion = "v1.0.0"
   Fields = [
-    """Username entry \(((host\/({src_host}[\w.-]+))|({email_address}[^@]+@[^)]+)|({user_id}\d+)|({user}[^)]+))\)\s""",
+    """({time}\w{3}\s\d\d\s(\d\d\d\d\s)?\d\d:\d\d:\d\d(\.\d\d\d)?)"""
+    """Username entry \(((host\/({src_host}[\w.-]+))|({email_address}[^@]+@[^)]+)|({user_id}\d+)|({user}[\w\.\-]{1,40}\$?))\)\s""",
     """for device with MAC:\s*({src_mac}[\S]+)""",
     """%({event_name}CLIENT_ORCH_LOG-6-CLIENT_ADDED_TO_RUN_STATE):"""
   ]

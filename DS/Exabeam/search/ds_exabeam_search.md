@@ -4,7 +4,7 @@ Product: Search
 ---------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  92   |   39   |         10         |       2        |    9    |
+|  92   |   39   |         10         |       2        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

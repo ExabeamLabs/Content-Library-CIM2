@@ -14,7 +14,7 @@ Fields = [
   """({event_name}Logon attempt)"""
   """EventCode = ({event_code}\d+)"""
   """TimeGenerated = "({time}[\d]+.\d\d\d)"""
-  """Logon account:\s+({user}[^@]+?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation:\s+({dest_host}[^\s]+)"""
+  """Logon account:\s+({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation:\s+({dest_host}[\w\-.]+)"""
   """Error Code:\s+({result_code}[\w\-]+)"""
 ]
 ParserVersion = "v1.0.0"

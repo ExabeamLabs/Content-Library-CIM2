@@ -8,11 +8,11 @@ Name = cloudfare-waf-sk4-alert-trigger-success-firewall
   Conditions = [ """CEF:""", """destinationServiceName =cloudflare""",""""kind":"firewall""""]
   Fields = [
     """ext__occurred_at_=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
-    """suser=({user}.+?)\s\w+=""",
+    """suser=({user}[\w\.\-]{1,40}\$?)\s\w+=""",
     """shost=({host}[^\s]+)""",
     """act=({alert_type}.+?)\s\w+=""",
     """cat=({alert_name}.+?)\s\w+=""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dhost=({dest_host}[^\s]+)""",
     """ext__proto=({protocol}.+?)\s\w+=""",
     """spt=({src_port}\d+)""",

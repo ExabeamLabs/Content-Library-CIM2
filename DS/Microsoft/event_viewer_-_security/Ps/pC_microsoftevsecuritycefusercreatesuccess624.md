@@ -14,15 +14,15 @@ Fields = [
 """({event_code}624)"""
 """\srt=({time}\d{13})"""
 """\ssntdom=({domain}[^\s]+)"""
-"""\ssuser=({user}.+?)\s+\w+="""
+"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
 """\ssuid=\([^,]+,({login_id}[^\)]+)"""
 """\sdntdom=({account_domain}.+?)\s+\w+="""
 """\sduser=({account_name}.+?)\s+\w+="""
 """\sdvchost=({host}[^\s]+)"""
+"""\sduser=(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}.+?))\s+\w+="""
 ]
 DupFields = [
 "host->dest_host"
-"account_name->dest_user"
 ]
 ParserVersion = "v1.0.0"
 

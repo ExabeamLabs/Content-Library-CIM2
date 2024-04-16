@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """created_at=\"+({time}[^\"]+)\""""
-"""created_by_login=\"+({user}[^\"@]+)"""
+"""created_by_login=\"+({user}[\w\.\-]{1,40}\$?)"""
 """accessible_by_login=\"+({object}[^\"@]+)"""
 """source_user_email=\"+({object}[^@]+)"""
 """({file_type}folder)"""
@@ -22,7 +22,7 @@ Fields = [
 """source_folder_name=\"+({file_name}[^\"]+)"""
 """source_parent_name=\"+({file_dir}[^\"]+)"""
 """additional_details_size=\"({bytes}\d+)"""
-"""ip_address=\"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""ip_address=\"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """event_type=\"+({access}[^\"]+)"""
 """created_by_login=\"({email_address}.*?@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch)))"""
 ]

@@ -8,6 +8,7 @@ Conditions = [
 """"id.resp_h"""
 """"server":"SSH"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 json-zeek-activity.Fields}[

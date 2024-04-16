@@ -11,7 +11,7 @@ Name = salesforce-sf-sk4-user-switch-success-access
   """Action\\?=({operation}[^;]+)""",
   """flexString2=({event_name}[^=]+)\s\w+="""
   """CreatedBy.Email\\?=({email_address}[^;@\s]+@[^\s;]+)"""
-  """CreatedBy.Name\\?=({user}[^;]+)"""
+  """CreatedBy.Name\\?=({user}[\w\.\-]{1,40}\$?)"""
   """suser=({account_name}[^\s]+)\s"""
   """({app}Sales Cloud)""",
   """Display\\?=({additional_info}[^"]+)"""

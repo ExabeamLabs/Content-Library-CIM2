@@ -13,7 +13,7 @@ Fields = [
   """\Wrt=({time}\d{13})"""
   """\Wshost=({src_host}[\w\-.]+)"""
   """\Wdhost=({dest_host}[\w\-.]+)"""
-  """\Wsuser=({user}[^\s]+)"""
+  """\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
   """\Wduser=({db_user}[^\s]+)"""
   """\Wcs3=({db_name}[^\s]+)"""
   """CEF:([^\|]*\|){5}({db_operation}[^\|]+)"""

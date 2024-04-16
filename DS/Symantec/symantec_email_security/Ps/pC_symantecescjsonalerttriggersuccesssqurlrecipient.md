@@ -2,18 +2,19 @@
 ```Java
 {
 Name = "symantec-esc-json-alert-trigger-success-squrlrecipient"
+ExtractionType = json
 Vendor = "Symantec"
 Product = "Symantec Email Security"
 TimeFormat = "epoch"
 Conditions = [ """"eventType": """", """"squrlClickerIp": """", """"squrlRecipient": """", """"severity": """", """"url": """" ]
 Fields = [
-""""timestamp_ms":\s*({time}\d{13})"""
-""""squrlRecipient":\s*\"({email_address}[^\"\s@;,]+@[^\"\s@;,]+)"""
-""""url":\s*\"({malware_url}[^\"]+)\""""
-""""severity":\s*\"({alert_severity}[^\"]+)\""""
-""""action":\s*\"({action}[^\"]+)\""""
-""""squrlClickerIp":\s*\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\""""
-""""eventType":\s*\"({alert_name}[^\"]+)\""""
+  """exa_json_path=$.meta.timestamp_ms,exa_field_name=time"""
+  """exa_json_path=$.clicktimeInfo.squrlRecipient,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """exa_json_path=$.clicktimeInfo.url,exa_field_name=malware_url"""
+  """exa_json_path=$.incident.severity,exa_field_name=alert_severity"""
+  """exa_json_path=$.incident.action,exa_field_name=action"""
+  """exa_json_path=$.clicktimeInfo.squrlClickerIp,exa_field_name=dest_ip"""
+  """exa_json_path=$.meta.eventType,exa_field_name=alert_name"""
 ]
 DupFields = [
 "alert_name->alert_type"

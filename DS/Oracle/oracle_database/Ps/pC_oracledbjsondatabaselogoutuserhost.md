@@ -5,21 +5,22 @@ Name = oracle-db-json-database-logout-userhost
   Vendor = Oracle
   Product = Oracle Database
   ParserVersion = "v1.0.0"
-  TimeFormat ="yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  ExtractionType = json
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.S", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [ """action_name""", """LOGOFF""", """os_username""", """userhost""" ]
   Fields=[
-    """"os_username":"({user}[^"]+)"""
-    """"username":"({db_user}[^"]+)"""
-    """"action_name":"({operation}[^"]+)""",
-    """"sessionid":"({session_id}[^"]+)""",
-    """"userhost":"(([^\\]+)[\\]+)?({host}[^"]+)"""",
-    """"os_process":"({process_id}[^"]+)""",
-    """timestamp":"({time}[^"]+)""",
-    """"exa_jdbc_database":"({db_name}[^"]+)""",
-    """"priv_used":"({additional_info}[^"]+)"""",
-    """"exa_jdbc_type":"({app}[^"]+)"""",
-    """"exa_jdbc_hostname":"({dest_host}[^"]+)"""",
-    """"exa_jdbc_port":"({dest_port}\d+)""""
+    """exa_json_path=$.os_username,exa_field_name=user"""
+    """exa_json_path=$.username,exa_field_name=db_user"""
+    """exa_json_path=$.action_name,exa_field_name=operation""",
+    """exa_json_path=$.sessionid,exa_field_name=session_id""",
+    """exa_json_path=$.userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({host}[^"]+)"""
+    """exa_json_path=$.os_process,exa_field_name=process_id""",
+    """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_json_path=$.exa_jdbc_database,exa_field_name=db_name""",
+    """exa_json_path=$.priv_used,exa_field_name=additional_info""",
+    """exa_json_path=$.exa_jdbc_type,exa_field_name=app""",
+    """exa_json_path=$.exa_jdbc_hostname,exa_field_name=dest_host""",
+    """exa_json_path=$.exa_jdbc_port,exa_field_name=dest_port"""
   ]
 
 

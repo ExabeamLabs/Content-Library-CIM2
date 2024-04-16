@@ -11,10 +11,10 @@ Conditions = [
   """sourceServiceName ="""
 ]
 Fields = [
-  """\ssuser=({user}.+?)\s+(\w+=|$)"""
-  """\sloginName =(({domain}[^\\]+)\\+)?({user}.+?)\s+(\w+=|$)"""
-  """sourceServiceName =(SMTP|Endpoint Email).+?suser=([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
-  """sourceServiceName =(SMTP|Endpoint Email).+?loginName =([^\\]+\\+)?({src_email_address}.+?)\s+(\w+=|$)"""
+  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\sloginName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """sourceServiceName =(SMTP|Endpoint Email).+?suser=([^\\]+\\+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
+  """sourceServiceName =(SMTP|Endpoint Email).+?loginName =([^\\]+\\+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
   """\sduser=\\*(({dest_domain}[^\\]+)\\+)?({target}.+?)\s+fname=.+?sourceServiceName =(?!(SMTP|Endpoint Email))""" 
   """\sduser=({email_recipients}.+?)\s+(\w+=|$).+?sourceServiceName =(SMTP|Endpoint Email)"""
   """\sfname=(N\/A|.*?[\/\\]*({file_name}[^\\\/]+))\s+\- [\d.]+ """
@@ -26,7 +26,7 @@ Fields = [
   """\|Websense\|([^|]+?\|){3}({alert_name}[^|]+)"""
   """\scat=({alert_name}[^;]+).*?\s+sourceService.+?analyzedBy"""
   """\|Websense\|([^|]+?\|){4}({alert_severity}[^|]+)"""
-  """\sact=({action}[^\s]*)"""
+  """\sact=({result}[^\s]*)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -7,7 +7,7 @@ Name = wazuh-w-json-peripheral_storage-remove-success-usbdevicedisconnected
   Vendor = Wazuh
   Conditions = [ """"rule.description":"USB device disconnected"""", """"type":"wazuh-alerts"""" ]
   Fields = [
-    """agent.labels.agent_hostname":"({src_host}[^"]+)"""",
+    """exa_regex=agent.labels.agent_hostname":"({src_host}[^"]+)"""",
   ]
 
 

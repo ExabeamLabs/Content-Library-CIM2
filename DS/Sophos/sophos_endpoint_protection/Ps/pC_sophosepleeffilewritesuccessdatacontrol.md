@@ -11,8 +11,8 @@ Name = sophos-ep-leef-file-write-success-datacontrol
     """devTime=({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})""",
     """ComputerName =({dest_host}.+?)\s+(\w+=|$)""",
     """LEEF:[^|]*\|Sophos\|Enterprise Console\|[^|]*\|({operation}[^|]*)\|""",
-    """usrName =[^\\]*\\({user}.+?)\s+(\w+=|$)""",
-    """src=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """usrName =[^\\]*\\({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """domain=({domain}.+?)\s+(\w+=|$)""",
     """FileName =({file_name}.+?)\s+(\w+=|$)""",
     """FileSize=({bytes}\d+)"""

@@ -19,8 +19,8 @@ Fields = [
 """cat=({category}[^\s]+)\s"""
 """deviceSeverity=({severity}[^\s]+)"""
 """({result}Success)"""
-"""ad.User=({user}[^\s]+)"""
-"""suser=({user}[^\s]+)"""
+"""ad.User=({user}[\w\.\-]{1,40}\$?)"""
+"""suser=({user}[\w\.\-]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -11,7 +11,7 @@ duo-app-activity = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """:\d\d\|({full_name}[^\|]*)\|(|({dest_user}[^\|]+))\|({operation}[^\|]+)\|""",
+    """:\d\d\|({full_name}[^\|]*)\|(|(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)))\|({operation}[^\|]+)\|""",
     """"email":\s*"({email_address}[^@"]+@({email_domain}[^"\s]+))"""",
     """({app}duo)"""
   

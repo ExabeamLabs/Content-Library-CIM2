@@ -27,6 +27,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-authzonecreate
 # use_import_from is removed
 # use_scavenging is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

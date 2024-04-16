@@ -10,6 +10,7 @@ Conditions = [
   """"query":""""
   """"qtype_name":""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 json-zeek-activity.Fields}[

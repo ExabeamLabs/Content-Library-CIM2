@@ -15,19 +15,21 @@ Fields = [
 """({event_code}4662)"""
 """\srt=({time}\d{13})"""
 """ahost=({host}[^\s]+)"""
-"""\sdhost=({dest_host}[^\s]+)"""
+"""\sdhost=({dest_host}[\w\-.]+)"""
 """\sdntdom=(-|({domain}[^\s]+))"""
-"""duser=(-|({user}[^\s]+))"""
+"""duser=(-|({user}[\w\.\-]{1,40}\$?))"""
 """\sduid=({login_id}[^\s]+)"""
-"""agt=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""originalAgentAddress=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""agt=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""originalAgentAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """amac=({src_mac}[^\s]+)"""
 """originalAgentMacAddress=({src_mac}[^\s]+)"""
-"""cs5=({object_type}[^=]+)\s\w+="""
-"""fname=({object}[^\s]+)"""
+"""cs5=({ds_object_type}[^=]+)\s\w+="""
+"""fname=({ds_object_name}[^\s]+)"""
 """ad\.Object:Object_,?Server=({ds_object_class}[^=]+?)\s*([^=\s]+=|$)"""
 """ad\.Operation:Operation_,?Type=({operation}[^=]+?)\s*([^=\s]+=|$)"""
+"""cs1=({access}[^=]+?)\s+\w+="""
 ]
+DupFields = [ "ds_object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

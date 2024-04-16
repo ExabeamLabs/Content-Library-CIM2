@@ -8,7 +8,7 @@ Name = symantec-s-sk4-app-activity-auditevent
     Conditions = [ """SymantecServer""", """|audit-event|""" ]
     Fields = [
       """Event time:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-      """\Wsuser=({user}.+?)\s+(\w+=|$)""",
+      """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
       """\WrequestClientApplication=({app}[^=]+?)\s+(\w+=|$)""",
       """([^\|]*\|){5}({operation}[^\|]+)""",
       """\WdestinationServiceName =({event_subtype}.+?)\s+(\w+=|$)""",

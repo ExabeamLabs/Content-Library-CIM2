@@ -1,0 +1,16 @@
+Rules by Product and UseCase
+============================
+Vendor: Ivanti
+--------------
+### Product: [Ivanti Pulse Secure](../ds_ivanti_ivanti_pulse_secure.md)
+### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
+
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  12   |   8    |         4          |       3        |   40    |
+
+| Event Type      | Rules    | Models    |
+| ---- | ---- | ---- |
+| account-deleted | <b>T1136 - Create Account</b><br> ↳ <b>A-ACCT-CR-DEL</b>: Account created and deleted on asset<br><br><b>T1531 - Account Access Removal</b><br> ↳ <b>AM-UA-AD-F</b>: First account deletion activity for user    |  • <b>AE-UA</b>: All activity for users    |
+| app-activity    | <b>T1098.002 - Account Manipulation: Exchange Email Delegate Permissions</b><br> ↳ <b>EM-InB-Ex</b>: A user has been given mailbox permissions for an executive user<br> ↳ <b>EM-InB-Perm-N-F</b>: First time a user has given mailbox permissions on another mailbox that is not their own<br> ↳ <b>EM-InB-Perm-N-A</b>: Abnormal for user to give mailbox permissions    |  • <b>EM-InB-Perm-N</b>: Models users who give mailbox permissions    |
+| vpn-logout      | <b>T1484 - Group Policy Modification</b><br> ↳ <b>FDS-Count</b>: Abnormal number of failed directory service events in the organization<br> ↳ <b>FDS-GCount</b>: Abnormal number of failed directory service events in the peer group<br> ↳ <b>FDS-UCount</b>: Abnormal number of failed directory service events in the user<br> ↳ <b>DS-Count</b>: Abnormal number of directory service events in the organization<br> ↳ <b>DS-GCount</b>: Abnormal number of directory service events in the peer group<br> ↳ <b>DS-UCount</b>: Abnormal number of directory service events in the user<br><br><b>T1098.002 - Account Manipulation: Exchange Email Delegate Permissions</b><br> ↳ <b>EM-InB-Perm-A</b>: Abnormal number of mailbox permission given by user. |  • <b>DS-UCount</b>: Count of directory service activity events in the user<br> • <b>DS-GCount</b>: Count of directory service activity events in the peer group<br> • <b>DS-Count</b>: Count of directory service activity events in the organization<br> • <b>FDS-UCount</b>: Count of failed directory service activity events in the user<br> • <b>FDS-GCount</b>: Count of failed directory service activity events in the peer group<br> • <b>FDS-Count</b>: Count of failed directory service activity events in the organization<br> • <b>EM-InB-Perm</b>: Models the number of mailbox permissions given by this user. |

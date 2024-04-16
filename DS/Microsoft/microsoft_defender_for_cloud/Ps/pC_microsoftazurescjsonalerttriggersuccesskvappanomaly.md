@@ -7,6 +7,7 @@ Conditions = [
 """"category":"""
 """"KV_AppAnomaly""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 leef-mssql-login.Fields} [
@@ -28,7 +29,7 @@ ParserVersion = "v1.0.0"
 Name = microsoft-mssql-kv-database-login-success-14
 Vendor = "Microsoft"
 Product = "MSSQL"
-TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss.SS"]
 Conditions = [
   """HostName ="""
   """DatabaseName ="""
@@ -39,7 +40,7 @@ Fields = [
   """HostName ="+({host}[^"]+)"""
   """StartTime="+({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d.\d+)"""
   """DatabaseName ="+({db_name}[^"]+)"""
-  """SessionLoginName ="+(({domain}[^\\"]+?)\\+({user}[^"]+)|({db_user}[^"]+))"""
+  """SessionLoginName ="+(({domain}[^\\"]+?)\\+({user}[\w\.\-]{1,40}\$?)|({db_user}[^"]+))"""
   """NTDomainName ="+({domain}[^"]+)"""
   """TextData="+({db_query}.+?)\s*""""
   """EventClass="+({event_code}\d+)"""
@@ -50,7 +51,7 @@ ParserVersion = "v1.0.0"
 
 ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
   Name = microsoft-windows-kv-dhcp-session-success-dns
-  Product = Windows
+  Product = Microsoft DHCP Log
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """,DNS の更新要求,""" ]
   ParserVersion = "v1.0.0"
@@ -58,7 +59,7 @@ ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
 
 ${MicrosoftParserTemplates.microsoft-dns-renew-jp}{
   Name = microsoft-windows-kv-dhcp-session-success-dns-1
-  Product = Windows
+  Product = Microsoft DHCP Log
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """,DNS の更新は成功しました,""" ]
   ParserVersion = "v1.0.0"
@@ -76,16 +77,17 @@ Conditions = [
 Fields = [
   """SystemTime='({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
   """<Computer>({host}[\w\-.]+)"""
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}6272)"""
-  """'SubjectUserName'>(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[^<]+)"""
+  """'SubjectUserName'>(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
   """'SubjectDomainName'>(?:-|({domain}[^\s\<]+))"""
-  """'FullyQualifiedSubjectUserName'>(({domain}[^\\]+)\\+)?(?:-|({user}[^\s\\\<]+))"""
+  """'FullyQualifiedSubjectUserName'>(({domain}[^\\]+)\\+)?(?:-|({user}[\w\.\-]{1,40}\$?))"""
   """'NASIdentifier'>(?:-|({location}[\w\-.]+))"""
   """'CallingStationID'>(?:-|({src_mac}[^\<]+))"""
   """'AuthenticationProvider'>(?:-|({auth_server}[^\<]+))"""
   """'FullyQualifiedSubjectMachineName'>(?:-|({user_type}.+?))(\/[^\/\s]+)?<"""
-  """'NASIPv6Address'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """'NASIPv4Address'>({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """'NASIPv6Address'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """'NASIPv4Address'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """'EAPType'>(?:-|({auth_type}[^\<]+))"""
   """'QuarantineState'>(?:-|({access_type}[^\<]+))"""
 ]
@@ -105,12 +107,12 @@ Conditions = [
 Fields = [
   """({host}[\w.\-]+)\s+CEF:"""
   """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+)"""
-  """\Wsuser=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[^=\\\/]+?))(\s+\w+=|\s*$)"""
-  """\WdeviceExternalId=(|({dest_host}.+?))(\s+\w+=|\s*$)"""
-  """\Wcs1=({failure_reason}[^;\.]+)"""
-  """Reason:\s*({failure_reason}[^;\.]+)"""
-  """<address>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</address>"""
-  """CLIENT:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\Wsuser=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+  """\WdeviceExternalId=(|({dest_host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+  """\Wcs1=({result_reason}[^;\.]+)"""
+  """Reason:\s*({result_reason}[^;\.]+)"""
+  """<address>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</address>"""
+  """CLIENT:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -129,7 +131,7 @@ Fields = [
   """\srt=({time}\d{13})"""
   """\sdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"""
   """\sdvchost=({host}[^\s]+)"""
-  """\sduser=({user}.+?)\s+\w+="""
+  """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
   """\sdntdom=({domain}[^\s]+)"""
   """\sdestinationZoneURI=({network}.+?)\s+\w+="""
 ]
@@ -159,7 +161,7 @@ Conditions = [
 ]
 Fields = [
   """\sinstance_name="({additional_info}[^"]+)"""
-  """\saccount_name="(({domain}[^\\\/"]+?)[\\\/]+)?({user}[^\\\/"]+?)\s*""""
+  """\saccount_name="(({domain}[^\\\/"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)\s*""""
   """\sclient_name="({src_host}[^"]+)"""
   """\sapplication_name="({app}[^"]+)"""
   """\sdatabase_name="({db_name}[^"]+)"""
@@ -172,7 +174,7 @@ ParserVersion = "v1.0.0"
 {
 Name = "microsoft-windows-cef-dhcp-session-success-dhcpserver"
 Vendor = "Microsoft"
-Product = "Windows"
+Product = "Event Viewer - DHCP-Server"
 TimeFormat = "epoch"
 Conditions = [
   """|Microsoft|DHCP|"""
@@ -182,8 +184,8 @@ Fields = [
   """\srt=({time}\d{13})"""
   """\sdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"""
   """\sdvchost=({host}[^\s]+)"""
-  """\sdhost=({dest_host}[^\s]+)"""
-  """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\sdhost=({dest_host}[\w\-.]+)"""
+  """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]
 DupFields = [
   "dest_host->user"
@@ -198,9 +200,10 @@ ParserVersion = "v1.0.0"
   TimeFormat = "MM/dd/yyyy,HH:mm:ss"
   Conditions = [ ""","IAS",""", """,13,"""]
   Fields = [
-    """"({host}[^\,]+)","IAS",({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d)""",
-    """\d\d:\d\d:\d\d,\d*,"({domain}[^\\]+)\\({user}[^"]+)",+?,"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?",.+?,"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","({src_host}[^"]+)"""",
-    """"({dest_host}[^"]+)",\d\d\/\d\d\/\d\d\d\d\s"""
+    """"({host}[^\,]+)","IAS""""
+    """,({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d)""",
+    """\d\d:\d\d:\d\d,\d*,"({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)",+?,"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?",.+?,"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","({src_host}[^"]+)"""",
+    """"({dest_host}[\w\-.]+)",\d\d\/\d\d\/\d\d\d\d\s"""
   ]
   ParserVersion = v1.0.0
 },
@@ -213,8 +216,8 @@ ParserVersion = "v1.0.0"
   Conditions = [ ""","IAS",""", """win_nps""" ]
   Fields = [
     """"({host}[^,"]+)","IAS",({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d)""",
-    """\d\d:\d\d:\d\d,\d*,("host\/({src_host}[^,"]+?)"|[,]*),("({domain}[^\\]+)\\+({user}[^"]+)"|[^,]*),([^,]*,){8}("({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"|[^,]*),""",
-    """({dest_host}[\w.\-]+)\s+\d\d\/\d\d\/\d\d\d\d\s"""
+    """\d\d:\d\d:\d\d,\d*,("host\/({src_host}[^,"]+?)"|[,]*),("({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)"|[^,]*),([^,]*,){8}("({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"|[^,]*),""",
+    """(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w.\-]+))\s+\d\d\/\d\d\/\d\d\d\d\s"""
   ]
   ParserVersion = v1.0.0
 },
@@ -227,8 +230,8 @@ ParserVersion = "v1.0.0"
   Conditions = [ ""","RAS",""", """win_nps""" ]
   Fields = [
     """"({host}[^,"]+)","RAS",({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d)""",
-    """\d\d:\d\d:\d\d,\d*,("({domain}[^\\]+)\\+({user}[^"]+)"|[^,]*),("({src_host}[^,"\\\/]+)[^"]*?({full_name}[^"\\\/]+)"|[,]*),([^,]*,){8}("({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"|[^,]*),""",
-    """({dest_host}[\w.\-]+)\s+\d\d\/\d\d\/\d\d\d\d\s"""
+    """\d\d:\d\d:\d\d,\d*,("({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)"|[^,]*),("({src_host}[^,"\\\/]+)[^"]*?({full_name}[^"\\\/]+)"|[,]*),([^,]*,){8}("({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"|[^,]*),""",
+    """(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w.\-]+))\s+\d\d\/\d\d\/\d\d\d\d\s"""
   ]
   ParserVersion = v1.0.0
 },
@@ -240,8 +243,8 @@ ParserVersion = "v1.0.0"
   TimeFormat = "MM/dd/yyyy,HH:mm:ss"
   Conditions = [ ""","IAS",""", """",2,"""" ]
   Fields = [
-    """({host}[^"]+)","IAS",({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d),(|({action}\d+)),(|"({user}[^"]+)"),([^,]*,){9}(|"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"),(|"({src_host}[^"]+)"),""",
-    """"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?",[^,]*,\s*$""",
+    """({host}[^"]+)","IAS",({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d),(|({result}\d+)),(|"({user}[\w\.\-]{1,40}\$?)"),([^,]*,){9}(|"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"),(|"({src_host}[^"]+)"),""",
+    """"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?",[^,]*,\s*$""",
   ]
   ParserVersion = v1.0.0
 },
@@ -257,13 +260,13 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was deleted)"""
-""""src_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-""""dst_ip":\"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+""""src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""dst_ip":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"id":\d*({event_code}4726)"""
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 """"DomainID":"({domain}[^\"]+)"""
-""""HostID":"({host}[^\"]+)"""
-""""UserIDSrc":"({user}[^\"]+)"""
+""""HostID":"({host}[\w\-.]+)"""
+""""UserIDSrc":"({user}[\w\.\-]{1,40}\$?)"""
 """"Security_ID":"({user_sid}[^\"]+)"""
 """"Source_Logon_ID":"({login_id}[^\"]+)"""
 """"UserIDDst":"({dest_user}[^\"]+)"""
@@ -291,11 +294,10 @@ Fields = [
 """CallerLogonId=\"+\([^,]+,({login_id}[^\)]+)\""""
 """CallerUserName =\"+({src_user}[^\"]+)\""""
 """TargetAccountID=\"+\%\{({user_sid}[^}]+)\}\""""
-"""TargetAccountName =\"+({user}[^\"]+)\""""
+"""TargetAccountName =\"+({user}[\w\.\-]{1,40}\$?)\""""
 """CallerMachineName =\"+({src_host}[^\"]+)\""""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"
@@ -311,10 +313,10 @@ Conditions = [
 """EventID="4726""""
 ]
 Fields = [
-"""Computer="+({dest_host}[^\"]+)""""
+"""Computer="+({dest_host}[\w\-.]+)""""
 """EventID="+({event_code}[^\"]+)""""
 """EventRecordID="+({event_id}[^\"]+)""""
-"""SubjectUserName ="+({user}[^\"]+)""""
+"""SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)""""
 """SubjectDomainName ="+({domain}[^\"]+)""""
 """SubjectLogonId="+({login_id}[^\"]+)""""
 """SubjectUserSid="+({user_sid}[^\"]+)""""
@@ -338,7 +340,7 @@ Conditions = [ """ADAuditPlus""", """EVENT_NUMBER = 4726""", """A user     acc
 Fields = [
 """TIME_GENERATED\s*=\s*({time}\d{10})""",
 """({host}[\w\-.]+) ADAuditPlus""",
-"""CALLER_USER_NAME\s*=\s*({user}[^\s\]]+)""",
+"""CALLER_USER_NAME\s*=\s*({user}[\w\.\-]{1,40}\$?)""",
 """CALLER_USER_DOMAIN\s*=\s*({domain}[^\s\]]+)""",
 """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
 """RECORD_NUMBER\s*=\s*({event_id}\d+)""",

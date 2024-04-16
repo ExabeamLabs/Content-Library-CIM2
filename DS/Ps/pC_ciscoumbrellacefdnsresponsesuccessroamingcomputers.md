@@ -3,7 +3,6 @@
 {
 Name = "cisco-umbrella-cef-dns-response-success-roamingcomputers"
 Conditions = [
-  """destinationServiceName =Cisco Umbrella"""
   """"queryType":""""
   """"responseCode":""""
   """"mostGranularIdentityType":"Roaming Computers""""

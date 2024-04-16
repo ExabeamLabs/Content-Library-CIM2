@@ -15,7 +15,7 @@ Name = dg-ep-kv-process-create-success-applicationfullname
     """\sParent_Application="\s*({parent_process_name}[^"]+?)\s*"""",
     """\sComputer_Type="({os}[^"]+)""",
     """\sMD5_Checksum="({hash_md5}[^"]+)""",
-    """\sUser_Name ="(({domain}[^"\\]+)\\+)?({user}[^\\"]+)""",
+    """\sUser_Name ="(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """\sProcess_File_Size="({bytes}\d+)""",
     """\sCommand_Line="\s*({process_command_line}.+?)\s*" \#\d+""",
   ]

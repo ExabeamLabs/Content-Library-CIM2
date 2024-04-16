@@ -8,7 +8,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [ """removed by""", """from group""", """user""", """gpasswd""" ]
 Fields = [
 """\d\d:\d\d:\d\d ({host}[\w.\-]+)\sgpasswd"""
-"""user ({account_name}.+?) removed by ({user}.+?) from group ({group_name}.+?)\s*$"""
+"""user ({account_name}.+?) removed by ({user}[\w\.\-]{1,40}\$?) from group ({group_name}.+?)\s*$"""
 ]
 DupFields = [
 "host->dest_host"

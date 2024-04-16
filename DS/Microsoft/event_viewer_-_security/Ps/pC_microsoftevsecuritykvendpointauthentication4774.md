@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-authentication-4774
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
         """({event_code}4774)""",
         """({event_name}An account was mapped for logon)""",
-        """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[^\s\\\/]+)""",
+        """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
         """Mapped Name:\s*({account}[^\s]+)""",
         """Authentication Package:\s*({auth_package}[^\s]+)""",
   ]

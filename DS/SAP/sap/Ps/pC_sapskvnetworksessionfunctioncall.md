@@ -12,7 +12,7 @@ sap-events = {
       Fields = [
         """({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)""",
         """Location:\s+({host}[^\s]+)""",
-        """User:\s*({user}[^\s]+)""",
+        """User:\s*({user}[\w\.\-]{1,40}\$?)""",
         """Descr:\s+({event_name}[^.]+)""",
         """- SAP:\s+({activity_id}[^\s]+)""",
         """({result}Successful|successful|failed|Failed)"""

@@ -17,6 +17,7 @@ Name = infoblox-bddi-kv-dns-record-modify-success-mxrecord
 # use_ttl is removed
 # new_priority is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

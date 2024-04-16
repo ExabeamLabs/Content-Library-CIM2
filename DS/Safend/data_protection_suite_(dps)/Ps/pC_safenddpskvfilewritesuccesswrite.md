@@ -10,7 +10,7 @@ Name = safend-dps-kv-file-write-success-write
   Fields = [
     """Client GMT:\s+({time}\d+/\d+/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))""",
     """Action:\s*({operation}[^,]+?)\s*$""",
-    """User:\s*({user}[^@,\s]+)(@({email_domain}[^@,.\s]+))?""",
+    """User:\s*({user}[\w\.\-]{1,40}\$?)(@({email_domain}[^@,.\s]+))?""",
     """User:\s*({email_address}[^,\s]+)""",
     """Computer:\s*({host}[^,]+)""",
     """Operating System:\s*({os}[^,]+)""",

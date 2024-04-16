@@ -5,17 +5,18 @@ Name = trendmicro-ds-cef-network-traffic-trendmicrodstenant
   ParserVersion = v1.0.0
   Vendor = Trend Micro
   Product = Deep Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","MMM dd HH:mm:ss"]
   Conditions = [
 """TrendMicroDsTenant""",
 """TrendMicroDsFrameType=IP"""
   ]
   Fields = [
+    """({time}\w+\s\d+\s\d+:\d+:\d+)\s({host}[\w\-.]+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """[\|\s]dvchost=({host}[^\|\s"]+)""",
-    """[\|\s]dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """[\|\s]dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """[\|\s]dpt=({dest_port}\d+)""",
-    """[\|\s]src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """[\|\s]src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """[\|\s]spt=({src_port}\d+)""",
     """[\|\s]proto=({protocol}[^\|\s]+?)[\s\|]""",
     """[\|\s]smac=({src_mac}[^\|\s]+)""",
@@ -23,6 +24,9 @@ Name = trendmicro-ds-cef-network-traffic-trendmicrodstenant
     """[\|\s]act=({operation}[^\|\s]+)""",
     """[\|\s]dmac=({dest_mac}[^\s\|]+?)[\s\|]""",
     """CEF:(\s*\d+)\|(([^\|]+)\|){4}({alert_name}[^\|]+)""",
+    """cat=({category}[^=]+?)\s*\w+=""",
+    """name=({alert_name}[^=]+?)\s*\w+=""",
+    """sev=({alert_severity}[^\s]+)"""
   ]
 
 

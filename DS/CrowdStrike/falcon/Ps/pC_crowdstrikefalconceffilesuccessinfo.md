@@ -10,21 +10,40 @@ Conditions = [
 """"event_simpleName":"File"""
 """Info""""
 ]
+ExtractionType = json
 Fields = [
-"""\"timestamp\":\s*\"*({time}\d{10})\""""
-"""\"UserIp\":\s*\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\"timestamp\":\s*\"*({time}\d{10})"""
+"""\"UserIp\":\s*\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\WdestinationServiceName =({app}.+?)\s+\w+="""
+""""destinationServiceName":"({app}.+?)"(\s+\w+=)?"""
 """\"event_simpleName\":\"({event_code}[^\"]+)"""
 """\"aid\":\"({aid}[^\"]+)"""
 """\"(ImageFileName|TargetFileName)\":\"({file_path}[^\"]+)"""
-"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({file_name}[^\\\/\"]+\.({file_ext}[^\\\/\"]+))"""
-"""\"UserName\":\"({user}[^\"]+?)\""""
+"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_]{1,10}?)))?)\s*""""
+"""\"UserName\":\"({user}[\w\.\-]{1,40}\$?)\""""
 """\"aip\":\"({aip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"ClientComputerName\":\"({src_host}[^\"]+)"""
 """\"id\":\"({alert_id}[\w-]+?)\""""
 """\"name\":\"({alert_name}[^\"]+?)\""""
-"""\"File({access}Delete|Open|Rename)"""
+"""\"File({operation}Delete|Open|Rename)"""
+""""cid":"({cid}[^"]+)"""
+""""event_platform":"({os}[^"]+)"""",
+""""OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
+"""exa_json_path=$..timestamp,exa_field_name=time""",
+"""exa_json_path=$..destinationServiceName,exa_field_name=app"""
+"""exa_json_path=$..event_simpleName,exa_field_name=event_code"""
+"""exa_json_path=$..aid,exa_field_name=aid""",
+"""exa_json_path=$..TargetFileName,exa_field_name=file_path"""
+"""exa_regex="(ImageFileName|TargetFileName)\":\"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_]{1,10}?)))?)\s*""""
+"""exa_json_path=$..aip,exa_field_name=aip""",
+"""exa_json_path=$..id,exa_field_name=alert_id""",
+"""exa_json_path=$..name,exa_field_name=alert_name""",
+"""exa_regex=File({operation}Delete|Open|Rename)""",
+"""exa_json_path=$..cid,exa_field_name=cid""",
+"""exa_json_path=$..event_platform,exa_field_name=os""",
+"""exa_json_path=$..OciContainerId,exa_field_name=container_id"""
 ]
+DupFields = [ "operation->access" ]
 
 
 }

@@ -9,8 +9,8 @@ Name = symantec-endpointprotection-json-app-activity-appactivity
   Fields = [
     """({host}[\w\-.]+)\s+SymantecServer:""",
     """SymantecServer:([^,]*,){2}({event_name}[^\.,]+?)\s*(<|$)""",
-    """,Domain:\s*({web_domain}[^,]+?),Admin:\s*({user}[^,]+?),({event_name}.+?)\s*(<|$)""",
-    """,Domain:\s*({web_domain}[^,\s]+),\s*({event_name}[^,]+),[^,]*,(|({user}[^,\s]+)),""",
+    """,Domain:\s*({web_domain}[^,]+?),Admin:\s*({user}[\w\.\-]{1,40}\$?),({event_name}.+?)\s*(<|$)""",
+    """,Domain:\s*({web_domain}[^,\s]+),\s*({event_name}[^,]+),[^,]*,(|({user}[\w\.\-]{1,40}\$?)),""",
   ]
   ParserVersion = "v1.0.0"
 

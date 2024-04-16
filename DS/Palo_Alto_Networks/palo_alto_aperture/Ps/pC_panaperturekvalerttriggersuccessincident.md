@@ -15,7 +15,8 @@ Fields = [
 """\d+:\d+Z,([^,]*,){3}\"?({email_address}[^@]+@[^\.]+[^,\"]+)"""
 """\"+({alert_name}[^\"]+)\"+,EXTERNAL,"""
 """,incident,\"?({alert_type}[^\",]+)"""
-"""incident,\"*({app}[^\",]+)\",({alert_severity}\d(\.\d)?)\"*,({alert_id}[\dA-Fa-f]+)\"*,[\dA-Fa-f]+\"*,\"*\s*({additional_info}[^,\s\"]+)\s*\"*,([^,]*,)"""
+"""incident,\"*({app}[^\",]+)\",({alert_severity}\d(\.\d)?)\"*,({alert_id}[\dA-Fa-f]+)\"*,[\dA-Fa-f]+\"*,\"*\s*({additional_info}[^,\s\"]+)\s*\"*,([^,]*,)""",
+"""((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]
 ParserVersion = "v1.0.0"
 

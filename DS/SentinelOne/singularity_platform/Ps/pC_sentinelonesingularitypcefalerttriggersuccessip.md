@@ -5,8 +5,8 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-ip
   Product = Singularity Platform
   Conditions = [ """CEF:""", """|Security|SentinelOne|""", """|ip|""" ]
   Fields = ${SentinelOneParsersTemplates.cef-sentinelone-security-alert.Fields}[
-    """dstIp:({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """srcIp:({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """dstIp:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """srcIp:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dstPort:({dest_port}\d+)""",
     """srcPort:({src_port}\d+)""",
   ]
@@ -20,7 +20,7 @@ cef-sentinelone-security-alert = {
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s+({host}\S+)""",
     """\seventType:(|({alert_type}.+?))(\s+\w+:|\s*$)""",
     """\sagentId:(|({agent_id}.+?))(\s+\w+:|\s*$)""",
-    """\sagentIp:({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sagentIp:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sagentName:(|({dest_host}.+?))(\s+\w+:|\s*$)""",
     """\sagentfileFullNameGroupId:(|({file_path}({file_dir}.*?[\\\/]+)?({file_name}[^\\\/]+?(\.({file_ext}\w+))?)))(\s+\w+:|\s*$)""",
     """\sprocessName:(|({process_name}.+?))(\s+\w+:|\s*$)""",

@@ -16,7 +16,7 @@ Fields = [
   """Last_Name:\s*\"*(|({last_name}.+?))\"+(\s+\w+:|\s*\"*$)"""
   """Event_Desc:\s*\"*(|({action}.+?))\"+(\s+\w+:|\s*\"*$)"""
   """Lnl_Emp_Id:\s*\"+(|({badge_id}.+?))\"+(\s+\w+:|\s*\"*$)"""
-  """\sEmp_Id:\s*\"+(|({user}.+?))\"+(\s+\w+:|\s*\"*$)"""
+  """\sEmp_Id:\s*\"+(|({user}[\w\.\-]{1,40}\$?))\"+(\s+\w+:|\s*\"*$)"""
   """Reader_Desc:\s*\"+(|({location_door}[^\"]+))\"+(\s+\w+:|\s*\"*$)"""
 ]
 ParserVersion = "v1.0.0"

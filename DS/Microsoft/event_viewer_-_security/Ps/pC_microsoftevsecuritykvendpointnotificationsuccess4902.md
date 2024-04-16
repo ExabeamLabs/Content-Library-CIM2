@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-endpoint-notification-success-4902
 	Vendor = Microsoft 
 	Product = Event Viewer - Security
-	TimeFormat = "dd-MM-yyyy HH:mm:ss"
+	TimeFormat = ["dd-MM-yyyy HH:mm:ss", "MM/dd/yyyy hh:mm:ss a"]
 	ParserVersion = "v1.0.0"
 	Conditions = [
 	"""EventCode=4902"""
@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-4902
 	"""The Per-user audit policy table was created"""
 	]
 	Fields = [
-		"""({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))""",
+		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
 		"""\WEventCode=({event_code}\d+)""",
 		"""ComputerName =({host}[\w\-.]+)""",
 		"""Keywords=({result}.+?)(\s+\w+=|\s*$)""",

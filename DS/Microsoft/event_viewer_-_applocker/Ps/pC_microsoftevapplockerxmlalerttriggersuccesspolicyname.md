@@ -11,10 +11,11 @@ Conditions = [
   """<Message>"""
 ]
 Fields = [
-  """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
+  """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   """<Computer>({host}.+?)</Computer>"""
-  """<Data Name ='User'>(({domain}[^\\<]+?)\\)?({user}.+?)</Data>"""
-  """<Security UserID='({user_sid}.+?)'/>"""
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  """<Data Name\\*='User'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-]{1,40}\$?)</Data>"""
+  """<Security UserID\\*='({user_sid}.+?)'/>"""
   """<Level>({alert_severity}[^"<]+)"""
   """<FilePath>({malware_url}[^"<]+)"""
   """<PolicyName>({alert_type}[^"<]+)"""

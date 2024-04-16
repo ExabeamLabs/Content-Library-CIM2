@@ -11,7 +11,7 @@ Name = zscaler-ia-json-network-traffic-success-internalreason
      """Host":\s*"({host}[^"]+)"""",
      """({time}\w{3}\s\d+\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
      """IPProtocol":\s*({protocol}[^"]+),"""
-     """ServerIP":\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+     """ServerIP":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
      """ConnectorPort":\s*({src_port}\d+),""",
      """ServerPort":\s*({dest_port}\d+),""",
      """Policy":\s*"\s*({policy_name}[^"]+)"""",
@@ -19,15 +19,15 @@ Name = zscaler-ia-json-network-traffic-success-internalreason
      """"LogTimestamp":\s*"({time}[^"]+)""""
      """"SessionID":\s*"({session_id}[^"]+)""""
      """"ConnectionID":\s*"({connection_id}[^"]+)""""
-     """"InternalReason":\s*"({reason}[^"]+)""""
-     """"Username":\s*"(({email_address}[^"@]+?@[^"]+)|({user}[^"]+))""""
+     """"InternalReason":\s*"({result_reason}[^"]+)""""
+     """"Username":\s*"(({email_address}[^"@]+?@[^"]+)|({user}[\w\.\-]{1,40}\$?))""""
      """"ServicePort":\s*"({dest_port}\d+)""""
-     """"ClientPublicIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+     """"ClientPublicIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
      """"ClientCountryCode":\s*"({src_country}[^"]+)""""
      """"ClientZEN":\s*"({zen_code}[^"]+)""""
      """"Connector":\s*"(0|({host}[^"]+))""""
      """"ConnectorZEN":\s*"({zen_con_code}[^"]+)""""
-     """"ConnectorIP":\s*"({host_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
+     """"ConnectorIP":\s*"({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
      """"Host":\s*"({dest_host}[^"]+)""""
      """"Application":\s*"({app}[^"]+)""""
      """"AppGroup":\s*"({app_group}[^"]+)""""

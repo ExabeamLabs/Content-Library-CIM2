@@ -4,21 +4,21 @@
 Name = kaspersky-endpointsecurity-cef-alert-trigger-success-productversion
   Vendor = Kaspersky
   Product = Kaspersky Endpoint Security for Business
-  TimeFormat =  "MM/dd/yyyy HH:mm:ss"
+  TimeFormat =  ["epoch","MM/dd/yyyy HH:mm:ss a"]
   Conditions = [ """CEF""","""|KasperskyLab|SecurityCenter|""","""cs3Label=ProductVersion""" ]
   Fields = [
-    """Usuario:\s*({domain}[^\\]+)\\+({user}[^\s]+)""",
+    """Usuario:\s*({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)""",
     """Componente:\s*({product_name}[^\\]+)""",
     """Resultado\\+Descripción:\s*({action}[^\\]+)""",
     """nObjeto:\s*({malware_url}[^\\]+)""",
     """Objeto\\+Adicional:\s*(\s|({additional_info}[^\\]+))""",
-    """rt=({time}\d+)\s""",
     """Fecha de lanzamiento de la base de datos:\s*({time}[^\\]+(a.\s*m.|p.\s*m.))""",
+    """rt=({time}\d{13})\s""",
     """dhost=({dest_host}[^\s]+)\s*dst=""",
-    """dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """cs6=({protocol}[^\s"\{\}]+)""",
     """Aplicación\\+Nombre:\s*({app}[^\\]+)""",
-    """cs4=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*cs4Label=AttackerIPv4""",
+    """cs4=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*cs4Label=AttackerIPv4""",
     """cs7=({src_port}\d+)\s*cs7Label""",
     """cs8=({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*cs8Label=""",
     """cs5=({alert_name}.*?)\scs5Label="""

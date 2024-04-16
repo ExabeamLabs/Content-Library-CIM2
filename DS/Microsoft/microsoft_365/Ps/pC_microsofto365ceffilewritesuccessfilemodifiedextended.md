@@ -15,14 +15,14 @@ logrhythm-o365-file-operation = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[^\s@]+)(@({domain}[^\s]+))?)\s+\w+=""",
+    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
-    """USER=({domain}[^\\\s]+)\\({user}[^\s]+)""",
+    """USER=({domain}[^\\\s]+)\\({user}[\w\.\-]{1,40}\$?)""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",
     """OBJECT=({object}[^=]+?)\s+\w+=""",
     """\sFILENAME=({file_name}[^=]+?(\.({file_ext}[^\s\=\.]+))?)\s+\w+=""",
-    """SIP=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
     """ITEMTYPE=({file_type}[^=]+?)\s+\w+="""
     ]
@@ -40,6 +40,7 @@ azure-app-activity-skyfromation= {
     """"+application-module"+:"+({app_module}[^"]+)""",
     """"+authorization"+:.+?action"+:"+({action}[^"]+)""",
     """"+authorization"+:.+?scope"+:"+({scope}[^"]+)""",
+    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))"""
     """"channels"+:"+({channels}[^"]+)""",
     """"claims".+?aud"+:"+({aud}[^"]+)""",
     """"claims".+?iss"+:"+({iss}[^"]+)""",
@@ -55,7 +56,7 @@ azure-app-activity-skyfromation= {
     """"+correlationId"+:"+({correlation_id}[^"]+)""",
     """"+description"+:"+({additional_info}[^",]+)""",
     """"+httpRequest".+?clientRequestId":"({user_id}[^"]+)""",
-    """"+httpRequest".+?clientIpAddress"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"+httpRequest".+?clientIpAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"+httpRequest".+?method"+:"+({method}[^"]+)""",
     """"+properties.+?statusCode"+:"+({result}[^"]+)""",
     """"+properties.+?serviceRequestId"+:"+({service_request_id}[^"]+)""",
@@ -72,7 +73,10 @@ azure-app-activity-skyfromation= {
     """"+src-account-id"+:"+({account_id}[^"]+)"""
     """"+src-endpoint"+:"+({endpoint}[^"]+)""",
     """operationName"+:\s*\{[^\}]*?"+localizedValue"+:\s*"+({operation}[^"]+)""",  
-
+    """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
+    """exa_json_path=$.operationName.localizedValue,exa_field_name=operation"""
+    """"(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
+    """"exa_regex=(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
 
 }
 ```

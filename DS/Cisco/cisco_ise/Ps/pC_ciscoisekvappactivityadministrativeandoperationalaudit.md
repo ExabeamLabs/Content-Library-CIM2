@@ -4,11 +4,11 @@
 Name = cisco-ise-kv-app-activity-administrativeandoperationalaudit
   Vendor = Cisco
   Product = Cisco ISE
-  TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS Z"
+  TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
   Conditions = [ """ CISE_Administrative_and_Operational_Audit """ ]
   Fields = [
     """(::ffff:)?({host}[^\s]+)\s*CISE_Administrative_and_Operational_Audit""",
-    """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d\s[+-]\d\d:\d\d)""",
+    """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)(\s[+-]\d\d:\d\d)?""",
 # config_version_id is removed
     """AdminInterface=({admin_interface}[^,]+)""",
 # operation_message_text is removed

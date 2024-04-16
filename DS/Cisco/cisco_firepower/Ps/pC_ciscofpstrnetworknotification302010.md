@@ -9,6 +9,7 @@ Name = cisco-fp-str-network-notification-302010
   Conditions = [ """-302010""", """%FTD-""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
   ]
 

@@ -14,12 +14,14 @@ Name = postfix-postfix-kv-email-queue
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}([+-]\d\d:\d\d)?)"""
     """({host}[\w.\-]+) postfix""",
-    """({message_id}[^\s"]+): from=<?((root@host.company.web.ds)|(\\u\d+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,\|>]+))(?<!local)(?<!loc)(?<!localdomain))>""",
+    """({message_id}[^\s"]+): from=<?((root@host.company.web.ds)|(\\u\d+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,\|>]+))(?<!local)(?<!loc)(?<!localdomain)|({src_user}[^@>]+)@({src_domain}[^@>]+))>""",
     """\ssize=({bytes}\d+)""",
     """\snrcpt=({num_recipients}\d+)""",
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"host(_name)?":"({host}[^"]+)"""
+    """\Wto=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
+  DupFields = [ "dest_email_address->email_recipients" ]
 
 
 }

@@ -10,9 +10,10 @@ Conditions = [
   """summary_windows_4771_data"""
 ]
 Fields = [
+  """search_time=({time}\d+)"""
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)"""
   """({event_code}4771)"""
-  """summary_windows_4771_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({host}[^:::]+)?:::({event_code}[^:::]+)?:::({user_sid}[^:::]+)?:::({domain}[^:::]+)?:::(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)?:::([^:::]+):::({result_code}[^:::]+)?:::({user}[^:::]+)?""""
+  """summary_windows_4771_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({host}[^:::]+)?:::({event_code}[^:::]+)?:::({user_sid}[^:::]+)?:::({domain}[^:::]+)?:::(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)?:::([^:::]+):::({result_code}[^:::]+)?:::({user}[\w\.\-]{1,40}\$?)?""""
 ]
 DupFields = [
   "host->dest_host"

@@ -6,11 +6,11 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions= [ """destinationServiceName =Azure""", """operationName":"Microsoft.Databricks/accounts/aadBrowserLogin""" ]
+  Conditions= [ """"resourceId":""", """operationName":"Microsoft.Databricks/accounts/aadBrowserLogin""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
     """"Host":"({host}[^"]+)"""",
-    """\WdestinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
     """"message":"({additional_info}[^"]+)""",
     """"description":"({additional_info}[^"]+)""",
     """category":"({category}[^"]+)"""",
@@ -21,7 +21,7 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
     """"((?i)callerIpAddress|CIp)":"({src_ip}((\d{1,3}\.){3}\d{1,3}|[A-Fa-f\d]+:[a-fA-F\d:]+))(:({src_port}\d+))?"""",
-    """claims\/(name|upn)":\s*"({email_address}[^@]+@[^"]+)""",
+    """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
@@ -29,7 +29,7 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
     """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({result_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """userId":"(({email_address}[^@"]+@[^"]+)|({user_id}[^"]+))""",
+    """userId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     ]
   DupFields = [ "object->resource" ]

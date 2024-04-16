@@ -15,6 +15,7 @@ Name = infoblox-bddi-kv-dns-record-create-httpd
 # host_record is removed
 # reserved_interface is removed
   ]
+  DupFields = ["operation->event_name"]
 
 
 }

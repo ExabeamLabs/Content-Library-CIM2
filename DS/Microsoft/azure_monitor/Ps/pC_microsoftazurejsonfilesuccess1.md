@@ -4,13 +4,13 @@
 Name = microsoft-azure-json-file-success-1
    Vendor = Microsoft
    ParserVersion = v1.0.0
-   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
    Conditions = [ """Type":"StorageBlobLogs""", """OperationName""" ] 
  
 azure-workspaceblob-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Fields = [
     """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
     """"+TenantId"+:\s*"+({tenant_id}[^"]+)"+""",

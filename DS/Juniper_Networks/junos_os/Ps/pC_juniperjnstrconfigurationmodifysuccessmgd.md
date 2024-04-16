@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """<\d+>\d+\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d(\+|\-)\d\d:\d\d)"""
   """({host}\S+)\s+mgd\s"""
-  """\sUser '({user}[^']+)' requested '({operation}[^']+)' """
+  """\sUser '({user}[\w\.\-]{1,40}\$?)' requested '({operation}[^']+)' """
 ]
 DupFields = [
   "host->dest_host"

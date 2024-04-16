@@ -14,7 +14,7 @@ Fields = [
 """\s+Name:\s*({alert_name}.*?)\s+ID:"""
 """\s+Category:\s*({alert_type}.*?)\s+Path:"""
 """\s+Severity:\s*({alert_severity}\w+?)\s+Category:"""
-"""\s+User:\s*(({domain}[^\\=]+)\\+)?({user}.+?)\s+Process Name:"""
+"""\s+User:\s*(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+Process Name:"""
 """\s+Process Name:\s*({process_path}({process_dir}(?:[^,]+)?[\\\/])?({process_name}[^\\\/,]+?))\s+Signature Version:"""
 """\s+Action:\s*({result}.*?)\s+Action Status:"""
 """\s+Path:\s*(file:_)?({file_path}.*?)\s+Detection Origin:"""

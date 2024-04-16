@@ -9,12 +9,12 @@ Name = microsoft-sysmon-json-file-write-success-2
   Conditions = [ """File creation time changed:""", """Microsoft-Windows-Sysmon""", """EventID":2""" ]
   Fields = [
     """"EventTime":"({time}\d+-\d+-\d+ \d+:\d+:\d+)""",
-    """"Hostname":"+({host}[^"]+)""",
+    """"Hostname":"+({host}[\w\-.]+)""",
     """"EventID":({event_code}2)""",
     """({event_name}File creation time changed)""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
     """"Domain":"(NT AUTHORITY|({domain}[^"]+))""",
-    """"AccountName":"(SYSTEM|({user}[^"]+))""",
+    """"AccountName":"(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """"UserID":"({user_sid}[^"]+)""",
     """"Keywords":({result}[^,"]+)""",
     """ProcessGuid:\s*\{({process_guid}[^\s\}]+)""",

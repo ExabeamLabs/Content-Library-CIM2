@@ -4,9 +4,10 @@
 Name = microsoft-evpowershell-cef-process-create-success-300
   Vendor = Microsoft
   Product = Event Viewer - PowerShell
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "epoch"]
   Conditions = [ """CEF: """, """|Microsoft|PowerShell|""", """PowerShell:300|""" ]
   Fields = [
+    """\Wrt=({time}\d{13})""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"UserId"":""({user_sid}.+?)"""",
     """"Computer"":""({host}.+?)"""",

@@ -12,11 +12,11 @@ Conditions = [
 Fields = [
 """Event Time:\s*({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))"""
 """\sActing Object:\s*({domain}[^\\\s]+)"""
-"""\sActing Object SAM Account Name:\s*({user}.+?)\s+File Server"""
-"""\sIP Address/Host:\s*(({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({dest_host}[^\s]+))"""
+"""\sActing Object SAM Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+File Server"""
+"""\sIP Address/Host:\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^\s]+))"""
 """\sEvent Type:\s*({access}.+?)\s*IP Address"""
 """\sAffected Object:\s*({file_name}.+?)\s*Event Type:"""
-"""\sAffected Object:\s*.*(?=\.)({file_ext}.+?)\s*Event Type:"""
+"""\sAffected Object:\s*.*(?=\.)(\.({file_ext}.+?))?\s*Event Type:"""
 """\sPath:\s*({file_path}.+?)\s*Affected Object:"""
 """\sPath:\s*({file_dir}.+?)\\[^\\]+\s+Affected Object:"""
 ]

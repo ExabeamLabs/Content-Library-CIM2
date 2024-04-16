@@ -10,9 +10,9 @@ Name = swift-s-cef-app-logout-success-signoff
       """\srt=({time}\d{13})""",
       """\Wdvc=({host}[A-Fa-f:\d.]+)""",
       """\Wdvchost=({host}[\w\-.]+)""",
-      """suid=({user}[^\s]+)""",
+      """suid=({user}[\w\.\-]{1,40}\$?)""",
       """({app}SWIFT)""",
-      """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """({operation}Signoff)""",
       """msg=({additional_info}.+?)\s*\.(\s*\w+=|\s*$)""",
       """dtz=({dtz}[^\s]+)"""

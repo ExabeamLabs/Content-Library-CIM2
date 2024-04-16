@@ -9,9 +9,11 @@ Name = cisco-ie-str-email-attachment
     Conditions = [ """MID """, """ attachment """ ]
     Fields = [
       """MID ({alert_id}\d+) attachment '({email_attachment}[^']+)'""",
-      """attachment '({email_attachment}[^']+\.({file_ext}[^']+))'"""
+      """attachment '({email_attachment}[^']+\.({file_ext}[^']+))'""",
+       ]
+    DupFields = [ "alert_id->message_id" 
+    "email_attachment->attachment" 
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

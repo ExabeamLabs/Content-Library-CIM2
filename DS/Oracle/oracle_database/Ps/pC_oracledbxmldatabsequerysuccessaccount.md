@@ -16,7 +16,7 @@ Conditions = [
 Fields = [
 """<Extended_Timestamp>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+\w)</Extended_Timestamp>"""
 """<DB_User>(\/|({db_user}.+?))</DB_User>"""
-"""<OS_User>({user}.+?)</OS_User>"""
+"""<OS_User>({user}[\w\.\-]{1,40}\$?)</OS_User>"""
 """<Userhost>({src_host}[^\<]+)</Userhost>"""
 """<OS_Process>({process_id}\d+)</OS_Process>"""
 """<Session_Id>({session_id}\d+)</Session_Id>"""

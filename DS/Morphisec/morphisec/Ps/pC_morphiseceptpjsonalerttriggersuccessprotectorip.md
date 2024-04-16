@@ -12,10 +12,10 @@ Conditions = [
 ]
 Fields = [
 """d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d ({host}[\w.\-]+) Morphisec"""
-""""Protector IP\":\[\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""Protector IP\":\[\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"Message\":\[\"({additional_info}[^\"]+)\""""
 """({alert_name}attack)"""
-""""Logged In UserName\":\[\"(({domain}[^\\\/\"]+)[\\\/])?({user}[^\\\/\"]+)\""""
+""""Logged In UserName\":\[\"(({domain}[^\\\/\"]+)[\\\/])?({user}[\w\.\-]{1,40}\$?)\""""
 """"Attacked Module\":\[\"({malware_url}[^\"]+)\""""
 """"Attack Time\":\[\"({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)"""
 """"Computer Name\":\[\"({src_host}[^\"]+)\""""

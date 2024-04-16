@@ -13,15 +13,13 @@ Conditions = [
 Fields = [
   """({event_name}Special privileges assigned to new logon)"""
   """\WSystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """<Computer>({host}[\w\-\.]+)</Computer>"""
-  """<Keywords>({action}[^<]+)</Keywords>"""
+  """<Computer>({dest_host}({host}[\w\-\.]+))</Computer>"""
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  """<Keywords>({result}[^<]+)</Keywords>"""
   """<EventID>({event_code}[^<]+)</EventID>"""
-  """\s*Account Name:\s*({user}.+?)\s*Account Domain:\s*({domain}[^\s]+)\s*Logon ID:"""
+  """\s*Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s*Logon ID:"""
   """\s*Logon ID:\s*({login_id}.+?)\s*Privileges:"""
   """\s*Privileges:\s*({privileges}.+?)</EventData>"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

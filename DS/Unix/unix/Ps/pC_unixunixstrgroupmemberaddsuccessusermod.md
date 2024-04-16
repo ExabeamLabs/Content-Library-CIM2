@@ -4,7 +4,7 @@
 Name = "unix-unix-str-group-member-add-success-usermod"
 Vendor = "Unix"
 Product = "Unix"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","MMM dd HH:mm:ss"]
 Conditions = [
 """to group"""
 """add"""
@@ -12,7 +12,9 @@ Conditions = [
 """]:"""
 ]
 Fields = [
-"""\d\d:\d\d:\d\d ({host}[\w.\-]+)\s*usermod"""
+"""({time}\w+\s\d+\s\d\d:\d\d:\d\d)? ({host}[\w.\-]+)\s*usermod"""
+"""\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-][^\s]+)""",
+"""(T|\s)\d\d:\d\d:\d\d(\.?\S+)? ({host}[\w.\-]+)(\s\S+)?\susermod\[""",
 """add \'({account_name}[^']+)\' to group \'({group_name}[^']+)\'"""
 ]
 DupFields = [

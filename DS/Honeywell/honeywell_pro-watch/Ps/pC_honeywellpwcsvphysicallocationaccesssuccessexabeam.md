@@ -4,7 +4,7 @@
 Name = "honeywell-pw-csv-physical-location-access-success-exabeam"
 Vendor = "Honeywell"
 Product = "Honeywell Pro-Watch"
-TimeFormat = "MM/dd/yyyy hh:mm:ss"
+TimeFormat = "MM/dd/yyyy HH:mm:ss"
 Conditions = [
   """prowatch:exabeam"""
   """ExaBeamTransaction"""

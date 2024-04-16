@@ -9,6 +9,7 @@ Conditions = [
 """admin_logged_in"""
 """event"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 

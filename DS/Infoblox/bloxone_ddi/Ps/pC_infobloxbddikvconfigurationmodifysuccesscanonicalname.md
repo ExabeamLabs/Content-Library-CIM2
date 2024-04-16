@@ -15,6 +15,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-canonicalname
 # fqdn is removed
 # comment is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

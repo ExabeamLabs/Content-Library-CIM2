@@ -15,7 +15,7 @@ Fields = [
 """Begin:\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """,File Delete,([^,]*,){3}\d+,"?(?: |({process_path}({process_dir}(?:[^,]+)?[\\\/])?({process_name}[^\\\/,]+?))),\d+,[^,]+,"?({file_path}.+?)"?,User""",
 """,File Delete,([^,]*,){3}\d+,[^,]*,\d+,[^,]+,.*/({file_name}.+?)"?,User"""
-"""User:\s+({user}.+?),Domain"""
+"""User:\s+({user}[\w\.\-]{1,40}\$?),Domain"""
 """({operation}File Delete)"""
 """Domain:\s+({domain}.+?),Action Type"""
 """File size \(bytes\):\s+({bytes}\d+)"""

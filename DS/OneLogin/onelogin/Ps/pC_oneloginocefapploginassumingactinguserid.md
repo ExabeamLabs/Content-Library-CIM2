@@ -13,7 +13,7 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"app_name":\s*"\s*({app}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
     """"event_type_id":\s*({activity_code}\d+)""",
     """"actor_user_name":"({full_name}[^"]+?)\s*"""",
-    """"ipaddr":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipaddr":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"notes":\s*"\s*({failure_reason}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
     """"notes":\s*"\s*({additional_info}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
     """"custom_message":\s*"\s*({additional_info}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
@@ -21,8 +21,8 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"event_type_name":"({operation}[^"]+)"""",
     """"event_type_description":"({additional_info}[^"]+)"""",
     """"user_id":({user_id}\d+)""",
-    """suser=(({user_id}\d+)|({email_address}[^@\s]+@[^\s\.]+\.[^\s]+))""",
-    """duser=({dest_user}[^@\s]+@[^\s\.]+\.[^\s]+)"""
+    """suser=(({user_id}\d+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
   DupFields = ["user_id->account"]
 

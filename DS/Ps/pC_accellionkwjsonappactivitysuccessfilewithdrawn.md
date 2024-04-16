@@ -12,6 +12,7 @@ Conditions = [
 DupFields = [
 "access->operation"
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 

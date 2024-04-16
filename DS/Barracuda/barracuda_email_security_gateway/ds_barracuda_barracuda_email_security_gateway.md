@@ -4,7 +4,7 @@ Product: Barracuda Email Security Gateway
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  83   |   37   |         5          |       5        |    4    |
+|  83   |   37   |         5          |       5        |    7    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

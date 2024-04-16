@@ -3,6 +3,7 @@
 {
 Name = "unix-unix-json-endpoint-login-fail-unabletonegotiate"
 Product = "Unix"
+ExtractionType = json
 Conditions = [
 """"ident":"sshd"""
 """fatal: Unable to negotiate"""

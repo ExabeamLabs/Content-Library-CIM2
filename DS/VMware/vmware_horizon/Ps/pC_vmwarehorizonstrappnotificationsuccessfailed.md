@@ -3,7 +3,7 @@
 {
 Name = vmware-horizon-str-app-notification-success-failed
   ParserVersion = "v1.0.0"
-  Vendor = VMware 
+  Vendor = VMware
   Product = VMware Horizon
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ View """ , """ Backup of server """, """ failed with Error: """ ]

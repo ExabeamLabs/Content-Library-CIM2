@@ -4,7 +4,7 @@
 Name = "mimecast-seg-kv-email-rcpt"
 Vendor = "Mimecast"
 Product = "Mimecast Secure Email Gateway"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss"]
 Conditions = [
 """|Dir="""
 """|Sender="""
@@ -12,6 +12,7 @@ Conditions = [
 ]
 Fields = [
   """datetime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\s*\d\d:\d\d[+-].+?)\|"""
+  """datetime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\s*\d\d:\d\d)"""
   """\|aCode=(|({alert_id}[^\|]+?))\|"""
   """\|Dir=(|({direction}[^\|]+?))\|"""
   """\|Act=(|({action}[^\|]+?))\|"""
@@ -20,14 +21,14 @@ Fields = [
   """\|Err=\\?(|({result}.+?))\\?\|"""
   """\|Error=\\?(|({result}.+?))\\?\|"""
   """\|RejInfo=\\?(|({result}.+?))\\?\|"""
-  """\|Sender=(|<>|({src_email_address}[A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\|"""
+  """\|Sender=(|<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\|"""
   """\|headerFrom=(|<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\|"""
   """\|Rcpt=(|<>|({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\|"""
   """\|Rcpt=(|<>|({email_recipients}\S+?))\|"""
   """\|Subject=\\?(|({email_subject}.+?))\s*\\?\|"""
   """\|Snt=({bytes}\d+)\|"""
   """\|SpamScore=({spam_score}\d+)"""
-  """\|IP=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\|IP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 

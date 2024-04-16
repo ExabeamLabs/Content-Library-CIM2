@@ -15,8 +15,8 @@ checkpoint-firewall-4 = {
     """\Wrule="({rule}[^"]+)""",
     """\Wrule_uid="({rule_uid}[^"]+)""",
     """\Wservice_id="({app_protocol}[^"]+)""",
-    """\Wsrc="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrc="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdst="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wproto="({protocol}[^"]+)""",
     """\Wpeer gateway="({src_translated_ip}[^"]+)""",
     """\Wservice="({dest_port}\d+)""",
@@ -25,8 +25,8 @@ checkpoint-firewall-4 = {
     """\Wsrc_machine_name="({src_host}[^"@]+)@({domain}[^"]+)""",
     """\Wdst_machine_name="({dest_host}[^"]+)""",
     """\Wdst_machine_name="({dest_host}[^"@]+)@({domain}[^"]+)""",
-    """\W(user|dst_user_name)="({user}[^"]+)""",
-    """\W(user|dst_user_name)="({full_name}[^"\(]+?)\s*\(({user}[^\)]+)""",
+    """\W(user|dst_user_name)="({user}[\w\.\-]{1,40}\$?)""",
+    """\W(user|dst_user_name)="({full_name}[^"\(]+?)\s*\(({user}[\w\.\-]{1,40}\$?)""",
   ]
   DupFields = [ "action->event_name" 
 }

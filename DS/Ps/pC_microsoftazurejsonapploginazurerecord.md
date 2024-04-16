@@ -22,12 +22,12 @@ cef-azure-event-hub-1.Fields}[
 ${MicrosoftAzureParsersTemplates.cef-azure-event-hub-1}{
   Name = microsoft-azure-sk4-alert-trigger-success-security
   ParserVersion = v1.0.0
-  Conditions = [ """"category":"Security"""", """"eventName"""", """EventHub""" ]
+  Conditions = [ """"category":"Security"""", """"eventName"""", """"operationName":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.cef-azure-event-hub-1.Fields}[
     """"compromisedHost":"({dest_host}[\w\-.]+)"""",
     """compromisedEntity":"({user_upn}[^"]+)"""",
-    """userName":"(({domain}[^\\"]+)\\+)?({user}[^"]+)"""",
-    """clientIPAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """userName":"(({domain}[^\\"]+)\\+)?(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"\(]+)\s*)""",
+    """clientIPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """severity":"({alert_severity}[^"]+)"""",
     """operationId":"({alert_id}[^"]+)"""",
     """category":"({azure_category}[^"]+)"""",

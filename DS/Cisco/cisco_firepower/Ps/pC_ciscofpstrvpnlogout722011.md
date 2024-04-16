@@ -9,9 +9,10 @@ Name = cisco-fp-str-vpn-logout-722011
   Conditions = [ """-722011""", """%FTD-""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """Group\s*<({group_name}[^>]+)""",
-    """User\s*<({user}[^@>\\]+)(?:@({domain}[^>]+))?>""",
+    """User\s*<({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^>]+))?>""",
     """IP <({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>"""
     ]
 

@@ -8,6 +8,7 @@ Conditions = [
 """product"""
 """"HX""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 

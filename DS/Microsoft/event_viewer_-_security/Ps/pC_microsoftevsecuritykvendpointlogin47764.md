@@ -10,9 +10,10 @@ Conditions = [
 """summary_windows_4776_data"""
 ]
 Fields = [
+"""search_time=({time}\d+)"""
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)"""
 """({event_code}4776)"""
-"""summary_windows_4776_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({host}[^:::]+)?:::({event_code}[^:::]+)?:::({dest_host}[^:::]+)?:::({result_code}[^:::]+)?:::({user}[^:::]+)?:::([^:::]+):::"""
+"""summary_windows_4776_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({host}[^:::]+)?:::({event_code}[^:::]+)?:::({dest_host}[\w\-.]+)?:::({result_code}[^:::]+)?:::({user}[\w\.\-]{1,40}\$?)?:::([^:::]+):::"""
 ]
 DupFields = [
   "result_code->failure_code"

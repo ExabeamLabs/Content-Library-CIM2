@@ -7,6 +7,7 @@ Conditions = [
 """"user_id""""
 """"client_id""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 

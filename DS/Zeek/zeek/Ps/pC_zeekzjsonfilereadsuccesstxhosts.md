@@ -8,19 +8,21 @@ Conditions = [
 """"tx_hosts":"""
 """"rx_hosts":"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
-sailpoint-iiq-events = {
-  Vendor = Sailpoint
-  Product = IdentityNow
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Fields = [
-    """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)"""",
-    """"ACCOUNT_NAME\\?":\\?"(({user_dn}(((CN|cn|uid)=[^"]+?),)?(({user_ou}(OU|ou)[^"]+?)?(DC|dc)=[\w-]+))|({account_id}[^"]+?)\\?")""",
-    """"TARGET\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[^"\s]+?))\\?"""",
-    """"SOURCE\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[^"\s]+?))\\?"""",
-    """"APPLICATION\\?":\\?"({app}[^"]+?)\\?"""",
-    """"ACTION\\?":\\?"({operation}[^"]+?)\\?""""
+json-bro-activity.Fields}[
+    """"helo":\s*"({helo}[^"]+)""",
+    """"mailfrom":\s*\"({user}[\w\.\-]{1,40}\$?)@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
+    """rcptto":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))".*?)\]""",
+    """"subject":\s*"({email_subject}[^"]+)""",
+    """"user_agent":\s*"({user_agent}[^"]+)""",
+    """exa_json_path=$.helo,exa_field_name=helo""",
+    """exa_json_path=$.mailfrom,exa_regex=({user}[\w\.\-]{1,40}\$?)@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """exa_json_path=$.rcptto[:1],exa_regex=({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))".*?)""",
+    """exa_regex=rcptto":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))".*?)\]""",
+    """exa_json_path=$.subject,exa_field_name=email_subject""",
+    """exa_json_path=$.user_agent,exa_field_name=user_agent"""
   
 }
 ```

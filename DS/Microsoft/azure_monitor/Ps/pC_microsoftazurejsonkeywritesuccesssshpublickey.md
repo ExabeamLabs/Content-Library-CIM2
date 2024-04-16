@@ -3,36 +3,35 @@
 {
 Name = microsoft-azure-json-key-write-success-sshpublickey
   ParserVersion = v1.0.0
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ""" 
   Conditions = [ """localizedValue":"Create or Update SSH Public Key""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
-    """"+responseBody"+:[^\}]+"+name\\?"+:\s*\\?"+({key_name}[^"]+)\\"+""",
+    """exa_json_path=$.properties.responseBody,exa_regex="name\\?"+:\s*\\?"+({key_name}[^"]+?)\\?""""
   ]
 
 azure-activity-json = {
     Vendor = Microsoft
     Product = Azure Monitor
-    TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+    ExtractionType = json
     Fields = [
-      """"+eventTimestamp"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
-      """"+authorization"+:[^\}]+scope"+:\s*"+({authorization_scope}[^"]+)""", 
-      """"+caller"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
-      """"+claims"+:[^\}]+ipaddr"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
-      """"+correlationId"+:\s*"+({correlation_id}[^"]+)""",
-      """"+eventName"+:[^\}]+value"+:\s*"+({operation_first}BeginRequest)"+""",
-      """"+eventName"+:[^\}]+value"+:\s*"+({operation_last}EndRequest)"+""",
-      """"+category"+:[^\}]+value"+:\s*"+({event_category}[^"]+)"+""",
-      """"+operationName"+:[^\}]+value"+:\s*"+({operation}[^"]+)"+""",
-      """"+operationName"+:[^\}]+localizedValue"+:\s*"+({operation_name}[^"]+)"+""",
-      """"+resourceGroupName"+:\s*"+({resource_group}[^"]+)"+""",
-      """"+resourceProviderName"+:[^\}]+value"+:\s*"+({service_name}[^"]+)"+""",
-      """"+resourceType"+:[^\}]+value"+:\s*"+({resource_type}[^"]+)"+""",
-      """"+resourceId"+:\s*"+({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"+""",
-      """"+status"+:[^\}]+value"+:\s*"+({status}[^"]+)"+""",
-      """"+subscriptionId"+:\s*"+({subscription_id}[^"]+)"+""",
-      """"+tenantId"+:\s*"+({tenant_id}[^"]+)"+""",
-      """"+properties[^\}]+statusMessage[^\}]+error[^\}]+code\\*"+:\s*\\+"+({result_code}[^\\]+)""",
-      """"+properties[^\}]+statusMessage[^\}]+error[^\}]+message\\*"+:\s*\\+"+({failure_reason}[^"]+)\\""",
+      """exa_json_path=$.eventTimestamp,exa_field_name=time""",
+      """exa_json_path=$.authorization.scope,exa_field_name=authorization_scope""",
+      """exa_json_path=$.caller,exa_regex=({email_address}[^"]+@({email_domain}[^"]+))""",
+      """exa_json_path=$.claims.ipaddr,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"""
+      """exa_json_path=$.correlationId,exa_field_name=correlation_id"""
+      """exa_json_path=$.eventName.value,exa_regex=({operation_first}BeginRequest)"""
+      """exa_json_path=$.eventName.value,exa_regex=({operation_last}EndRequest)"""
+      """exa_json_path=$.category.value,exa_field_name=event_category"""
+      """exa_json_path=$.operationName.value,exa_field_name=operation"""
+      """exa_json_path=$.operationName.localizedValue,exa_field_name=operation_name"""
+      """exa_json_path=$.resourceGroupName,exa_regex=({resource_group}[^"]+)"""
+      """exa_json_path=$.resourceProviderName.value,exa_field_name=service_name"""
+      """exa_json_path=$.resourceType.value,exa_field_name=resource_type"""
+      """exa_json_path=$.resourceId,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"""
+      """exa_json_path=$.status.value,exa_field_name=status"""
+      """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
+      """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
+      """exa_regex="resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""
       
 }
 ```

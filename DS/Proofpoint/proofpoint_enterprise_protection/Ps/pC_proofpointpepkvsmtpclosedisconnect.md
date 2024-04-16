@@ -11,8 +11,8 @@ proofpoint-dlp-log = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """"+host"+:"+({host}[^"]+)""",
-    """>({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """Original Address=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
+    """Original Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sx=({xid}[^\s]+)\s""",
 # mode is removed
     """cmd=(?:\s|({command}[^\s]+))\s""",
@@ -29,8 +29,8 @@ proofpoint-dlp-log = {
     """spamscore=({spam_score}[\d]+)\s""",
     """phishscore=({phishing_score}[\d]+)\s""",
     """malwarescore=({malware_score}[\d]+)\s""",
-    """value=({src_email_address}.*?@[^=]+?)\s+(\w+=|$)""",
-    """from=({src_email_address}[^\s]+?)("+|\s+\w+=)""",
+    """value=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
+    """from=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("+|\s+\w+=)""",
   
 }
 ```

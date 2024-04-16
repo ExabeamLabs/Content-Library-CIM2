@@ -9,6 +9,7 @@ Conditions = [
 """reset_password"""
 """event"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 q-kiteworks-file-activity.Fields}[

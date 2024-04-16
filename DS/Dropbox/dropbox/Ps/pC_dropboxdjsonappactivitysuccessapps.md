@@ -5,16 +5,17 @@ Name = dropbox-d-json-app-activity-success-apps
     Vendor = Dropbox
     Product = Dropbox
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    ExtractionType = json
     Conditions = [ """"event_category": "apps"""", """"info_dict":""", """"event_type_description":""" ]
     Fields = [
-      """"name":\s*"(?:N\/A|({full_name}[^"@,]+))"""",
-      """"name":\s*"(?:N\/A|(({domain}[^"@\\\s]+)\\+)?({user}[^"@\\\s]+))"""",
-      """"email":\s*"(?:N\/A|({email_address}[^@"\s]+@({email_domain}[^@"\s]+)))""",
-      """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\d:+-]+)"""",
-      """"event_type":\s*"({operation}[^"]+)"""",
-      """"event_type_description":\s*"({additional_info}[^"]+)"""",
-      """"ip_address":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """"info_dict":\s*\{[^\}]*?"name":\s*"({app}[^"]+)""""
+      """exa_json_path=$.name,exa_field_name=full_name"""
+      """exa_json_path=$.name,exa_regex=^(?:N\/A|(({domain}[^"@\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?))$"""
+      """exa_json_path=$..email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$.time,exa_field_name=time"""
+      """exa_json_path=$.event_type,exa_field_name=operation"""
+      """exa_json_path=$.event_type_description,exa_field_name=additional_info"""
+      """exa_json_path=$.ip_address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """exa_json_path=$.info_dict.name,exa_field_name=app"""
     ]
 	ParserVersion = "v1.0.0"
   

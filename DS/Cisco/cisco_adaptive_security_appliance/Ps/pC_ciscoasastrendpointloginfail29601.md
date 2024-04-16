@@ -6,13 +6,18 @@ Name = cisco-asa-str-endpoint-login-fail-2960-1
   Conditions = [
 """%DOT1X-5-FAIL:"""
 """Authentication failed"""
-]
+  ]
+  Fields = ${CiscoParsersTemplates.cisco-2960-auth-events.Fields} [
+    """({failure_reason}Authentication[^"]+?)\s*"*$"""
+    """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
+  ]
 
 cisco-2960-auth-events = {
   Vendor = "Cisco"
   Product = "Cisco Adaptive Security Appliance"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss"]
   Fields = [
+"""\s({time}\w+ \d+ \d+:\d+:\d+)"""
 """ for client \(({src_mac}[^\)]+)\) on Interface ({src_interface}\S+) """
 """%({event_code}\w+\-\d+\-({result}[^:]+))"""
 """({event_name}Authentication \w+)"""

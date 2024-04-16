@@ -13,7 +13,7 @@ Name = proofpoint-tappod-cef-email-send-receive-datarcpt
     """"+host"+:"+({host}[^"]+)""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"+"""
     """\sx=({xid}.+?)\s+(\w+=|$)""",
-    """\srcpt=({dest_email_address}[^@=]+?@.+?)\s+(\w+=|$)"""
+    """\srcpt=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
   ]
 
 

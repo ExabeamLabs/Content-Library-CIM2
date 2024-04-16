@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """({host}[\w.\-]+)\s+Oracle(\s+\S+){3}\s+({time}\d\d-\w+-\d\d\d\d \d\d:\d\d:\d\d)"""
-"""\(USER=({user}[^\)]+?)\)"""
+"""\(USER=({user}[\w\.\-]{1,40}\$?)\)"""
 """\(COMMAND=({command}[^\)]+?)\)"""
 """\(SERVICE=({service_name}[^\)]+?)\)"""
 """\(HOST=({dest_host}[^\)]+?)\)"""

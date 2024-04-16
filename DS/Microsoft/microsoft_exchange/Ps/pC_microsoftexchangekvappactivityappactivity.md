@@ -11,7 +11,7 @@ Conditions = [
   """Cmdlet=""""
 ]
 Fields = [
-  """\WUser="({email_address}[^@]+@({email_domain}[^"]+))""""
+  """\WUser="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """\WCmdlet="({operation}[^"]+)""""
   """\WServer="({dest_host}[^"]+)""""
   """\WParam="-Identity\s*'({resource}[^'"]+)"""

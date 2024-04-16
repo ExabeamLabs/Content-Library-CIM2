@@ -9,6 +9,7 @@ Conditions = [
 """type"""
 """zeek"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 json-zeek-activity.Fields}[

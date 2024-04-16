@@ -17,6 +17,7 @@ Name = "unix-unix-kv-endpoint-login-success-auid"
     """\sses=({session_id}\d+)"""
     """\sauid=({account_id}\d+)"""
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s"""
+    """type=({login_type_text}[^\s]+)"""
   ]
   ParserVersion = "v1.0.0"
 

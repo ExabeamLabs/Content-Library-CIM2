@@ -8,7 +8,7 @@ Name = cisco-asa-kv-vpn-logout-success-rsasalog
     Conditions = [ """Authen Session End:""", """rsa_sa_log""" ]
     Fields = [ 
       	       """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d):""",
-               """Authen Session End: user '({user}[^']+)'""" 
+               """Authen Session End: user '({user}[\w\.\-]{1,40}\$?)'""" 
 	]
 	ParserVersion = "v1.0.0"
   

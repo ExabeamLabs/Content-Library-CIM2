@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """"_insertion_epoch_timestamp"+:({time}\d+)"""
 """"timestamp":({time}\d{10})"""
-""""user":"(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))\""""
+""""user":"(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\""""
 """duser=({external_address}[^@<]+@?[^\s,>]+)"""
 """"app":"({process_path}[^"]+)"""
 """"type":"({alert_type}[^"]+)"""
@@ -28,10 +28,12 @@ Fields = [
 """"file_path":"({malware_file_name}[^"]+)"""
 """"object":"({object}[^"]+)"""
 """"breach_id":"\s*({alert_id}[^"]+)""""
-"""duser=({user}[^\s]+)"""
+"""duser=({user}[\w\.\-]{1,40}\$?)"""
 """"organization_unit":"({user_ou}[^"]+)""""
 """"shared_with":"({shared_with_at}[^"]+)""""
 """"site":"({site_at}[^"]+)""""
+""""file_size":\s*({bytes}\d+)"""
+"""msg=.*?\[({alert_source}[^\]]+)\]:"""
 ]
 DupFields = [
 "malware_url->url"

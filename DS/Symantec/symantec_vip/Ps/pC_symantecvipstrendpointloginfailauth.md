@@ -9,8 +9,8 @@ Conditions = [
 """StatusMessage: Authentication Failed"""
 ]
 Fields = [
-"""INFO.*?({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d\d\d \w+(\+|\-)\d+)\s*\"\s+\S+\s+({service_name}[^\":]+)"""
-"""for user \[({user}[^\]\s]+)"""
+"""INFO.*?({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d\d\d \w+)(\+|\-)\d+\s*\"\s+\S+\s+({service_name}[^\":]+)"""
+"""for user \[({user}[\w\.\-]{1,40}\$?)"""
 """({failure_reason}Authentication Failed)"""
 ]
 ParserVersion = "v1.0.0"

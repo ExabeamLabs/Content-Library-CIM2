@@ -4,10 +4,10 @@
 Name = mcafee-nsm-str-alert-trigger-success-attack
   Vendor = McAfee
   Product = McAfee Network Security Platform
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss"]
   Conditions = [ """ detected """, """ attack """, """(severity = """, """(result = """ ]
   Fields = [
-    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d),? (::ffff:)?({host}[\w\-.]+)""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)([+-]\d\d:\d\d)?,? (::ffff:)?({host}[\w\-.]+)""",
     """\s({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s\w+\s(::ffff:)?({host}[^\s]+)""",
     """ attack ({alert_type}[^\s:]+)""",
     """ attack ({alert_type}[^\s:]+):\s*({alert_name}.+?)\s*\(""",

@@ -11,17 +11,17 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was unlocked)"""
-"""SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""<Computer>({host}[\w\-.]+)</Computer>"""
+"""SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+"""<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<EventID>({event_code}\d+)</EventID>"""
-"""Subject:.+?Account Name:\s*({user}.+?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""
+"""Subject:[\s\S]*?Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""
 """Target Account:\s*Security ID:\s*({user_sid}.+?)\s*Account Name:\s*({dest_user}.+?)\s*Account Domain:\s*({dest_domain}[^=<]+)\s*<"""
-"""<Data Name ='SubjectLogonId'>\s*({login_id}.+?)\s*</Data>"""
-"""<Data Name ='SubjectUserSid'>\s*({user_sid}[^\s]+?)\s*</Data>"""
-"""<Data Name ='TargetSid'>\s*({dest_user_sid}.+?)</Data>\s*"""
-]
-DupFields = [
-"host->dest_host"
+"""<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>"""
+"""<Data Name\\*=('|")SubjectUserSid('|")>\s*({user_sid}[^\s]+?)\s*</Data>"""
+"""<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
+"""<Data Name ='SubjectUserName'>\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*</Data>"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

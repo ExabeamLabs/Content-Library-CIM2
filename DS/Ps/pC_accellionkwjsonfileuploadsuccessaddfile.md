@@ -9,6 +9,7 @@ Conditions = [
   """add_file""" 
   """event"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 

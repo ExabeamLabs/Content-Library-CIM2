@@ -6,20 +6,24 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4647-1
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>4647</EventID>""", """<Task>Logoff""", """<Provider Name ='Microsoft-Windows-Security-Auditing'""" ]
+  Conditions = [ """<EventID>4647</EventID>""", """<Task>""", """<Provider Name""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
-    """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
-    """Guid='\{({process_guid}[^\'\}]+)""",
-    """ThreadID(\\)?='({thread_id}\d+)""",
-    """Provider Name ='({provider_name}[^\']+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\}"]+)""",
+    """ThreadID(\\)?=('|")({thread_id}\d+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Execution ProcessID(\\)?='({process_id}[^']+)""",
-    """<Data Name ='TargetDomainName'>({dest_domain}[^<]+)<\/Data>""",
-    """<Data Name ='TargetUserName'>({dest_user}[^<]+)<\/Data>"""
+    """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
+    """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data>"""
+    """<Level>({run_level}[^<]+)<"""
    ]
 
 

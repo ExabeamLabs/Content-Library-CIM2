@@ -4,7 +4,7 @@ Product: Fortinet UTM
 ---------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  283  |  113   |         28         |       14       |    8    |
+|  283  |  113   |         28         |       14       |    9    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

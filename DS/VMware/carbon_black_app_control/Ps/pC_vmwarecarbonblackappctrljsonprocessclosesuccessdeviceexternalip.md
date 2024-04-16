@@ -10,7 +10,7 @@ Name = vmware-carbonblackappctrl-json-process-close-success-deviceexternalip
   Fields = [
     """({time}\d+-\d+-\d+ \d+:\d+:\d+.\d+)\sGMT""",
     """"+process_cmdline"+:"+\s*({process_command_line}[^"]+?)\s*"+""",
-    """"+device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"+""",
+    """"+device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:"+({host}[^"]+)"+""",
 # sensor_action is removed
@@ -25,7 +25,7 @@ Name = vmware-carbonblackappctrl-json-process-close-success-deviceexternalip
     """"device_id"+:"+({device_id}[^",]+)""",
     """"+device_os"+:"+({os}[^"]+)"+"""
     """"device_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+))"+""",
+    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+""",
   ]
   DupFields = ["event_category->operation_type"]
 

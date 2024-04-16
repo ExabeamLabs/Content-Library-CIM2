@@ -12,7 +12,7 @@ Name = hp-comware-str-app-notification-interface
       """ifAdminStatus\sis\s({result}\d+)""",
 # oper_status is removed
     ]
-  
+
 
 }
 ```

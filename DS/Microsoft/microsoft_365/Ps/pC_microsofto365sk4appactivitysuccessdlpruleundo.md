@@ -11,11 +11,11 @@ Conditions = [
 """"Operation":"DLPRuleUndo""""
 ]
 Fields = [
-""""CreationTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""""
+""""CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """"Workload":"({app}[^"]+)""""
 """"ObjectId":"<?({object}[^"]+?)>?""""
 """"Operation":"({operation}[^"]+)""""
-""""From":"({email_address}[^@"]+@({email_domain}[^"]+))""""
+""""From":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 """"FileOwner":"({full_name}[^\s\/"]+?\s+[^\/"]+?)""""
 """"Severity":"({alert_severity}[^"]+)""""
 """"IncidentId":"({alert_id}[^"]+)""""

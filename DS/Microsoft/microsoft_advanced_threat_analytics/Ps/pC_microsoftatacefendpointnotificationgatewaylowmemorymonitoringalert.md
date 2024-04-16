@@ -4,7 +4,7 @@
 Name = microsoft-ata-cef-endpoint-notification-gatewaylowmemorymonitoringalert
   Vendor = Microsoft
   Product = Microsoft Advanced Threat Analytics
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [ """|Microsoft|ATA|""", """|GatewayLowMemoryMonitoringAlert|""", """CEF:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-][^\s]+)\s({host}[^\s]+)\sATA""",

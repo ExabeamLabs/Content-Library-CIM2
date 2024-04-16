@@ -6,7 +6,7 @@ Vendor = "Microsoft"
 Product = "Microsoft 365"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
-"""destinationServiceName =Office 365"""
+"""riskLevel"""
 """"riskEventType":"AnonymousIpRiskEvent""""
 ]
 Fields = [

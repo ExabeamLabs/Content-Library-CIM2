@@ -6,14 +6,15 @@ Name = microsoft-evsecurity-xml-link-create-4664
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>4664<""", """An attempt was made to create a hard link""" ]
+  Conditions = [ """<EventID>4664<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """'SubjectUserSid'>({user_sid}[^'<\s]+)<""",
-    """'SubjectUserName'>({user}[^'<\s]+)<""",
+    """'SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<""",
     """'SubjectDomainName'>({domain}[^'<\s]+)<""",
     """'SubjectLogonId'>({login_id}[^'<\s]+)<""",
     """'FileName'>(|({file_path}({file_dir}[^"<]*?)[\\\/]*({file_name}[^\\\/"<]+?(\.({file_ext}[^\\\/\.\s"<]+))?)))<""",
@@ -21,6 +22,7 @@ Name = microsoft-evsecurity-xml-link-create-4664
     """'TransactionId'>\{?({transaction_id}[^'<\}]+)\}?<""",
     """<EventID>({event_code}\d+)""",
     """<Keyword>({result}.+?)</Keyword>""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

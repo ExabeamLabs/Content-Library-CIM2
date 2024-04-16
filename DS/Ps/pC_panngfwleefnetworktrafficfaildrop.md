@@ -5,7 +5,7 @@ Name = pan-ngfw-leef-network-traffic-fail-drop
 Conditions = [
   """LEEF:"""
   """|Palo Alto Networks|PAN-OS Syslog Integration|"""
-  """|Type=TRAFFIC|Subtype=drop|"""
+  """TRAFFIC|Subtype=drop|"""
 ]
 ParserVersion = "v1.0.0"
 

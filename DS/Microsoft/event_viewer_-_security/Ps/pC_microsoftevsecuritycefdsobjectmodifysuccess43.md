@@ -13,13 +13,13 @@ Name = microsoft-evsecurity-cef-ds-object-modify-success-43
     """shost=({host}[^\s]+)""",
     """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """sntdom=({domain}[^\s]+)""",
-    """suser=({user}[^\s]+)""",
-    """nitroUserIDSrc=({user}.+?)(\s+\w+=|"*\s*$)""",
+    """suser=({user}[\w\.\-]{1,40}\$?)""",
+    """nitroUserIDSrc=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|"*\s*$)""",
     """nitroSecurity_ID=({user_sid}.+?)(\s+\w+=|"*\s*$)""",
     """nitroSource_Logon_ID=({login_id}.+?)(\s+\w+=|"*\s*$)""",
-    """nitroObjectID=({object_dn}.+?)(\s+\w+=|"*\s*$)""",
-    """nitroObjectID=.*?({object_ou}(OU|ou).+?)(\s+\w+=|"*\s*$)""",
-    """nitroTarget_Class=({object_class}.+?)(\s+\w+=|"*\s*$)"""
+    """nitroObjectID=({ds_object_dn}.+?)(\s+\w+=|"*\s*$)""",
+    """nitroObjectID=.*?({ds_object_ou}(OU|ou).+?)?(\s+\w+=|"*\s*$)""",
+    """nitroTarget_Class=({ds_object_class}.+?)(\s+\w+=|"*\s*$)"""
   ]
   ParserVersion = "v1.0.0"
 

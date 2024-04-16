@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
   """({host}[\w\-.]+)\s+CEF:"""
-  """LOGINLDAPID=({user}[^\s]+)"""
+  """LOGINLDAPID=({user}[\w\.\-]{1,40}\$?)"""
   """workstationID=({dest_host}[\w\-.]+)"""
   """shost=({src_host}[\w\-.]+)"""
 ]

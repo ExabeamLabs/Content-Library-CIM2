@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-success-4624-1
       """Audit\s+({host}[\w\-.]+)\s+Logon""",
       """({event_code}4624)""",
       """LogonType:({login_type}\d+)""",
-      """TargetUserName:({user}[^,]+)""",
+      """TargetUserName:({user}[\w\.\-]{1,40}\$?)""",
       """TargetDomainName:({domain}[^,]+)""",
       """TargetLogonId:({login_id}[^,]+)""",
       """TargetUserSid:({user_sid}[^,]+)""",
@@ -22,9 +22,10 @@ Name = microsoft-evsecurity-kv-endpoint-success-4624-1
       """SubjectUserName:(-|({src_user}[^,]+))""",
       """KeyLength:(({key_length}\d+))""",
       """\sProcessName:(?:-|({process_path}({process_dir}[^,]*?[\\\/]+)?({process_name}[^,\\\/]+))),"""
-      """IpAddress:({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """IpAddress:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """IpPort:({src_port}\d+)"""
     ]
+    DupFields = [ "src_host_windows->src_host" ]
     ParserVersion = "v1.0.0"
   
 

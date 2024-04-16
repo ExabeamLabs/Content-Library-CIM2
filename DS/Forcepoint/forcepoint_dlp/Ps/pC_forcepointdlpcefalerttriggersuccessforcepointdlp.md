@@ -5,7 +5,7 @@ Name = forcepoint-dlp-cef-alert-trigger-success-forcepointdlp
   ParserVersion = v1.0.0
   Vendor = Forcepoint
   Product = Forcepoint DLP
-  TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS","yyyy-MM-dd HH:mm:ss.SS"]
   Conditions = [ """|Forcepoint|Forcepoint DLP|""", """sourceServiceName =""" ]
   Fields = [
     """timeStamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)""",
@@ -14,7 +14,7 @@ Name = forcepoint-dlp-cef-alert-trigger-success-forcepointdlp
     """({host}[\w\-.]+)\s+CEF:""",
     """\Wact=({action}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
     """\Wduser=(N\/A|({target}[^\s;]+))""",
-    """\sduser=({url}(\w+:\/+)?({web_domain}[^\\\/]+)[^\s]+)\s+\w+=""",
+    """\sduser=(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({url}(\w+:\/+)?({web_domain}[a-zA-z0-9.\-_]+(\.[a-zA-Z]{2,})?)?))\s+\w+=""",
     """\Wfname=(N\/A|.*?[\/\\]*({file_name}[^\\\/=]+?))\s+\- [\d.]+ """,
     """\Wfname=(N\/A|.*? - ({bytes}[\d.]+)\s+({bytes_unit}[^\s;]+))""",
     """\Wfname=(N\/A|.*? - ({bytes_val}[\d.]+\s+[^\s;]+))""",
@@ -22,12 +22,12 @@ Name = forcepoint-dlp-cef-alert-trigger-success-forcepointdlp
     """\Wcat=({alert_name}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
     """\WsourceServiceName =({alert_type}.+?)\s+(on |\w+=)""",
     """\WloginName =(N\/A|({full_name}[^@\(=\\]+?)\s*(\([^\)]+\)?)?(@({domain}[^@\s]+))?)(\s\-\s|\s+[\w\.]+=|$)""",
-    """\Wsuser=(({domain}[^\\\s,@=]+)\\+)?({user}[^\\\s,@=]+)\s+(\w+=|$)""",
-    """\WloginName =(?:N\/A|(({domain}[^\\,]+)\\+)?({user}[^\\\s,]+))(\s\-\s|\s+[\w\.]+=|$)""",
+    """\Wsuser=(({domain}[^\\\s,@=]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """\WloginName =(?:N\/A|(({domain}[^\\,]+)\\+)?({user}[\w\.\-]{1,40}\$?))(\s\-\s|\s+[\w\.]+=|$)""",
     """\Wsuser=(Executive Inquiry Mailbox|({full_name}[^\\\s,@=]+?\s+[^\\,@=]+?))\s+(\w+=|$)""",
     """\Wsuser=({last_name}[^\\,=]+?),\s+({first_name}[^\\,=]+?)\s+(\w+=|$)""",
     """\Wsuser=({email_address}[^\\\s,@=]+?@[^\\\s,@=]+?)\s+(\w+=|$)""",
-    """\WsourceIp=(?:N\/A|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\WsourceIp=(?:N\/A|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\WseverityType=({alert_severity}[^\s]+)""",
     """\WsourceHost=(?:N\/A|({src_host}[\w\-.]+))""",
     """\WdestinationHosts=(?:N\/A|(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))""",

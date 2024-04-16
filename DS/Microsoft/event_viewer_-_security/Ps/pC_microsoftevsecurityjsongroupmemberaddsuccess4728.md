@@ -12,8 +12,8 @@ Conditions = [
 ]
 Fields = [
 """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-"""(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)"""
-"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[^\\]+))\\?""""
+"""(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
+"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?""""
 """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
 """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?""""
 """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
@@ -32,7 +32,8 @@ Fields = [
 """TargetDomainName\\?"+:\\?"+({group_domain}[^\\]+)\\?""""
 ]
 DupFields = [
-"host->dest_host"
+"host->dest_host",
+"src_host_windows->src_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -9,7 +9,7 @@ Name = imperva-securesphere-cef-app-logout-success-userloggedout
   Conditions = [ """|Imperva Inc""", """|SecureSphere|""", """|User logged out|""" ]
   Fields = [
     """SecureSphere\|[^|]+?\|({operation}[^\|]+)\|({event_name}[^\|]+)\|({severity}[^\|]+)\|""",
-    """\ssuser=({user}[^=]+?)(\s+\w+=|\s*$)""",
+    """\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
     """\srt=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
   ]
 

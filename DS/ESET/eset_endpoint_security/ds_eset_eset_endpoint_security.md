@@ -4,7 +4,7 @@ Product: ESET Endpoint Security
 -------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  128  |   53   |         10         |       7        |    6    |
+|  128  |   53   |         10         |       7        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

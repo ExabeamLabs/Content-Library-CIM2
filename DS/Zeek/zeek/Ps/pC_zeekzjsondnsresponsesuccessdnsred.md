@@ -9,6 +9,7 @@ Conditions = [
   """"_path":"dns_red""""
   """"query":""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 json-zeek-activity.Fields}[

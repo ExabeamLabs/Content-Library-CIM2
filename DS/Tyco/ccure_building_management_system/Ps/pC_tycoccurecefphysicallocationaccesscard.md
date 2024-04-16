@@ -14,7 +14,7 @@ Fields = [
   """src=({host}[^\s]+)"""
   """({action}Card (Rejected|Admitted))"""
   """\|start=({time}\d{13})"""
-  """\ssuid=(?:Unknown|(({domain}[^\\]+)\\?)?({user}.+?))\s(\w+=|$)"""
+  """\ssuid=(?:Unknown|(({domain}[^\\]+)\\?)?({user}[\w\.\-]{1,40}\$?))\s(\w+=|$)"""
   """\ssuser=(?:|({full_name}.+?))\s(\w+=|$)"""
   """\scs1=(?:|({location_door}.+?))\s(\w+=|$)"""
   """\scs3=(?:|({location_city}.+?))\s(\w+=|$)"""

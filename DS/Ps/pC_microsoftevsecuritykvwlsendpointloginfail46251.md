@@ -13,7 +13,7 @@ json-windows-events-3.Fields}[
     """"ObjectType":"({file_type}[^"]+)""",
     """"ShareName":"[\\\*]*({share_name}[^"]+)""",
     """"ShareLocalPath":"(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)"""",
-    """"RelativeTargetName"+:"+({f_parent}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
+    """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
   ]
   DupFields = ["host->dest_host"

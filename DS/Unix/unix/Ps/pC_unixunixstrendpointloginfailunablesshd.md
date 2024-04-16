@@ -10,9 +10,9 @@ Name = "unix-unix-str-endpoint-login-fail-unablesshd"
     """]: Unable to negotiate """
   ]
   Fields = [
-    """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+"""
-    """Unable to negotiate with (({dest_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({dest_host}[^\s]+))"""
-    """ port ({src_port}\d+)({failure_reason}.*?)\""""
+    """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s+"""
+    """Unable to negotiate with (({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[^\s]+))"""
+    """ port ({src_port}\d+)(:\s+)?({failure_reason}.+?)\.\s"""
   ]
   ParserVersion = "v1.0.0"
 

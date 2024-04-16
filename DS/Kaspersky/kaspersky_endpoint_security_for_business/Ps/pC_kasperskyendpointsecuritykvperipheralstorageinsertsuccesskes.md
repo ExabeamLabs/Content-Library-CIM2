@@ -13,11 +13,11 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ) ({host}[\w\-.]+) KES\|"""
-  """hip="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """hip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """hdn="({dest_host}[^"]+)"""
   """Device type\/Bus type:\s*({device_type}[^"\\]+)"""
   """Device ID:\s*({device_id}.+)&\d+"""
-  """User:\s*(({domain}[^"\\]+)\\+)?({user}[^\\\s"]+)"""
+  """User:\s*(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
   """Result\\Decision:\s*({action}[^"\\]+)"""
   """Operation:\s*({operation}[^\\"]+)"""
   """etdn="({operation_details}[^"]+)"""

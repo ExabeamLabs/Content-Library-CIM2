@@ -3,7 +3,7 @@
 {
 Name = checkpoint-ngfw-cef-endpoint-login-success-identity-1
   ParserVersion = v1.0.0
-  Conditions = [ """CEF:""", """|Check Point|Identity Awareness|""", """act=Update""", """auth_status=Successful Login""" ]
+  Conditions = [ """CheckPoint""", """product:"""", """action:"Update"""", """product:"Identity Awareness"""", """auth_status:"Successful Login"""" ]
 
 cef-checkpoint-firewall = {
   Vendor = Check Point
@@ -20,16 +20,16 @@ cef-checkpoint-firewall = {
     """\Wconn_direction=(|({direction}.+?))(\s+\w+=|\s*$)""",
     """\Wapp=(|({protocol}.+?))(\s+\w+=|\s*$)""",
     """\Wcp_severity=(|({alert_severity}.+?))(\s+\w+=|\s*$)""",
-    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[^\)]+))""",
-    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[^\)]+))""",
+    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-]{1,40}\$?))""",
     """\Wshost=(|({src_host}[\w\-.]+?)(@({domain}[^\s@]+))?)(\s+\w+=|\s*$)""",
     """\Wsntdom=(|({domain}.+?))(\s+\w+=|\s*$)""",
     """\Wos_name=(|({os}.+?))(\s+\w+=|\s*$)""",
     """\WdestinationTranslatedAddress=(0\.0\.0\.0|({dest_translated_ip}[a-fA-F\d.:]+))""",
     """\WsourceTranslatedAddress=(0\.0\.0\.0|({src_translated_ip}[a-fA-F\d.:]+))""",
     """\Worigin=({origin_ip}[a-fA-F\d.:]+)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """dvc=({host}[a-fA-F\d.:]+)""",
     """ahost=({host}[^\s]+)""",
     """\Wspt=({src_port}\d+)""",

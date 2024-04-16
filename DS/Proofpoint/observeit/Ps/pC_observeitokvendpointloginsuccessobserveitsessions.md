@@ -15,9 +15,9 @@ Fields = [
   """\sSessionID=({session_id}[^;]+?)\s*(;|"*\s*$)"""
   """\sServerName =({dest_host}[^;]+?)\s*(;|"*\s*$)"""
   """\sDomainName =({domain}[^;]+?)\s*(;|"*\s*$)"""
-  """\sUserName =(?:n\/a|({user}[^;]+?))\s*(;|"*\s*$)"""
-  """\sLoginName =({user}[^;]+?)\s*(;|"*\s*$)"""
-  """\sClientAddress=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\sUserName =(?:n\/a|({user}[\w\.\-]{1,40}\$?))\s*(;|"*\s*$)"""
+  """\sLoginName =({user}[\w\.\-]{1,40}\$?)\s*(;|"*\s*$)"""
+  """\sClientAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\sViewerURL=({additional_info}[^;]+?)\s*(;|"*\s*$)"""
 ]
 ParserVersion = "v1.0.0"

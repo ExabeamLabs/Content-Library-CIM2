@@ -8,7 +8,7 @@ Name = symantec-dlp-kv-alert-trigger-success-dlphost
   Conditions = ["""protocol=""","""policy=""","""rules=""" ,"""file_name=""","""dlp_host=""" ]
   Fields = [
     """ocurred_on=({time}.+)\s(PM|AM|am|pm|Am|Pm), reported""",
-    """sender=(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(N\/A|({email_address}[^,]+))""",
+    """sender=(?!\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(N\/A|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
     """incident_id=({alert_id}\d+)""",
     """\sprotocol=({alert_type}[^,]+)""",
     """\spolicy=({alert_type}[^,]+)""",
@@ -18,8 +18,8 @@ Name = symantec-dlp-kv-alert-trigger-success-dlphost
     """blocked=({action}[^,]+)""",
     """recipients=({target}.+), severity=""",
     """file_name=({file_name}[^,]+)\s*""",
-    """endpoint_machine_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """endpoint_user_id=({domain}[^\\]+)\\({user}[^,]+)"""
+    """endpoint_machine_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """endpoint_user_id=({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)"""
    ]
    ParserVersion = "v1.0.0"
 

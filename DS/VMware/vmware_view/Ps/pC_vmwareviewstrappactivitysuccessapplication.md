@@ -9,7 +9,7 @@ Name = vmware-view-str-app-activity-success-application
   Conditions = [ """View User""", """requested Application""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+View User""",
-    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[^\s]+)""",
+    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
     """requested Application\s+({object}\w+)""",
     """({operation}requested Application)""",
     """({app}View)"""

@@ -4,7 +4,7 @@
 Name = "cisco-mma-cef-alert-trigger-success-classification"
 Vendor = "Cisco"
 Product = "Cisco Meraki MX appliance"
-TimeFormat = "epoch_sec"
+TimeFormat = ["epoch_sec","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
 Conditions = [
   """destinationServiceName =Cisco Meraki"""
   """security_events"""

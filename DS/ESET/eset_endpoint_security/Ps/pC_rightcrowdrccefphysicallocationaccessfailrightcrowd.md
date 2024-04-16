@@ -30,14 +30,14 @@ eset-activity.Fields}[
       """\Wcat=({threat_category}[^=]+?)\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
       """\WdevTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
-      """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """threatType=({alert_type}[^=]+?)\s*(\w+=|$)""",
       """\|ESET\|(?:[^\|]+\|){2}({alert_type}[^\|]+)""",
       """threatName =({alert_name}[^=]+?)\s*(\w+=|$)""",
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
       """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
-      """accountName =((({domain}[^\\=]+?)\\+)?({user}[^=]+?))\s*(\w+=|$)""",
+      """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
       """objectType=({object_type}[^=]+?)\s*(\w+=|$)""",
       """threatHandled=({threat_handled}\d+)""",
@@ -52,25 +52,25 @@ eset-activity.Fields}[
 
 {
   Name = tenable-t-json-alert-trigger-success-dcerpcservice
+  ExtractionType = json
   Vendor = Tenable.io
   Product = Tenable.io
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"scan":""", """"completed_at":""", """"synopsis":""",""""IO_address":""", """"asset_fqdn":""", """"publication_date":""" ]
   Fields = [
-    """started_at"+:\s+"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """asset_fqdn"+:\s*"+({host}[^"]+)""",
-    """"+ipv4"+:\s+"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"+severity"+:\s+"+({alert_severity}[^"]+)""",
-    """name"+:\s+"+({alert_name}[^"]+)""",
-    """"+description"+:\s+"+({additional_info}[^"]+?)"+""",
-    """cvss_base_score"+:\s+({cvss_base_score}[^,]+)""",
-    """cvss3_impact_score"+:\s+({original_risk_score}\d+)""",
-    """exploit_code_maturity"+:\s+"+({exploit_code_maturity}[^"]+)""",
-    """see_also"+:\s+\[({see_also}[^\]]+)\]""",
-    """cve"+:\s+\[({cve_id}[^\]]+)\]""",
-    """protocol"+:\s+"+({protocol}[^"]+)""",
-    """"state"+:\s+"+({action}[^"]+)""",
-    """"solution"+:\s+"+((?i)n\/a|({solution}[^"]+))"""
+    """exa_json_path=$.scan.started_at,exa_field_name=time"""
+    """exa_json_path=$.asset_fqdn,exa_field_name=host"""
+    """exa_json_path=$.ipv4,exa_field_name=src_ip"""
+    """exa_json_path=$.severity,exa_field_name=alert_severity"""
+    """exa_json_path=$.plugin.name,exa_field_name=alert_name"""
+    """exa_json_path=$.plugin.description,exa_field_name=additional_info"""
+    """exa_json_path=$.plugin.vpr..cvss3_impact_score,exa_field_name=original_risk_score"""
+    """exa_json_path=$.plugin.vpr..exploit_code_maturity,exa_field_name=exploit_code_maturity"""
+    """exa_json_path=$.plugin.see_also,exa_field_name=see_also"""
+    """exa_json_path=$.plugin.cve,exa_field_name=cve_id"""
+    """exa_json_path=$.port.protocol,exa_field_name=protocol"""
+    """exa_json_path=$.state,exa_field_name=action"""
+    """exa_json_path=$.plugin.solution,exa_field_name=solution"""
   ]
   ParserVersion = "v1.0.0"
 },
@@ -84,7 +84,7 @@ eset-activity.Fields}[
   Fields = [
     """started_at"+:\s*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"hostname"+:\s*"+({host}[^"]+)""",
-    """"+ipv4"+:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"+ipv4"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"+severity"+:\s*"+({alert_severity}[^"]+)""",
     """"name"+:\s*"+({alert_name}[^"]+)""",
     """"+description"+:\s*"+({additional_info}[^"]+?)"+""",
@@ -101,35 +101,12 @@ eset-activity.Fields}[
 },
 
 {
-  Name = sangfor-ngaf-kv-alert-trigger-success-ips
-  Vendor = Sangfor
-  Product = Sangfor NGAF
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """type: IPS""", """<Identifier>ZC01_NTTDHK-FWL-002</Identifier>""" ]
-  Fields = [
-    """\w+\s+\d+\s+\d+:\d+:\d+[\+\-]\d+:\d+\s+({host}[\w\-.]+)""",
-    """, policy name:\s*({policy_name}[^,]+)""",
-    """, vulnerability ID:\s*({alert_id}[^,]+)""",
-    """, vulnerability name:\s*({alert_name}[^,]+)""",
-    """, Src IP:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """, Src port:\s*({src_port}\d+)""",
-    """, dst IP:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """, Dst port:\s*({dest_port}\d+)""",
-    """, protocol:\s*({protocol}[^,]+)""",
-    """, attack type:\s*({alert_type}[^,]+)""",
-    """, threat level:\s*({alert_severity}[^,]+)""",
-    """, action:\s*({action}[^,\s]+)""",
-  ]
-  ParserVersion = "v1.0.0"
-},
-
-{
 Vendor = Netwrix
 Product = Netwrix Auditor
 TimeFormat = "MMM dd yyyy HH:mm:ss"
 Fields = [
   """start=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-  """suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[^\\\s]+)) """
+  """suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)) """
   """shost=(unknown|({src_host}[^\s]+))"""
   """({app}Netwrix)"""
   """msg=({additional_info}.+?)(\s\w+=|$)"""
@@ -155,12 +132,12 @@ Conditions = [
 Fields = [
   """dvc=({host}[^\s]+)"""
   """\srt=({time}\d{13})""" 
-  """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """act=({action}[^\s]+)"""
   """flexString1=({operation}[^\:]+):({result}\d+)"""
   """\|({alert_severity}[^\|]+)\|\s*event"""
-  """suser=(-|({src_email_address}[^\s]+))"""
-  """duser=(-|({dest_email_address}[^\s]+))"""
+  """suser=(-|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
+  """duser=(-|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
   """reason=({alert_name}\d+)"""
 ]
 ParserVersion = "v1.0.0"
@@ -181,15 +158,15 @@ Fields = [
   """\Wmsg=\[({email_subject}[^\]]+)"""
   """\Win=({bytes}\d+)"""
   """\Wrt=({time}\d{13})"""
-  """\WtrueSrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\WtrueSrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\Wdvc=(ConnectorIP|({host}[a-fA-F\d.:]+))"""
   """\Wdvchost=({host}[^\s]+)"""
   """\WmessageId=({alert_id}[^\s]+)"""
   """\|Forcepoint\|Email Security\|[^\|]*\|({alert_name}[^\|]*)\|({alert_type}[^\|]*)\|({alert_severity}[^\|]*)\|"""
-  """suser=({src_email_address}[^@=]+?@[^\s>]+?)(>)?(\s|\s*$)"""
-  """\Wsuser=\s*([^<]+<)?(<)?({src_email_address}[^@=>]+?@[^@=>]+?)(>)?(\s+\w+=|\s*$)"""
-  """duser=({dest_email_address}[^@=]+?@[^\s>]+?)(>)?(\s|\s*$)"""
-  """\Wduser=\s*([^<]+<)?(<)?({dest_email_address}[^@=>]+?@[^@=>]+?)(>)?(\s+\w+=|\s*$)"""
+  """suser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s|\s*$)"""
+  """\Wsuser=\s*([^<]+<)?(<)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s+\w+=|\s*$)"""
+  """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s|\s*$)"""
+  """\Wduser=\s*([^<]+<)?(<)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s+\w+=|\s*$)"""
   """ad.fnameAndfileHash=({email_attachments}[^|]+?)\s*\|\s*({file_hash}[^|\s]+)"""
   """ad.cc=\s*(Email_in_CC|({email_recipients}[^=]+))\s+[\w.\-]+="""
 ]
@@ -217,10 +194,10 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-    """from=({src_email_address}[^@\s]+?@[^\s]+)""",
-    """to=({dest_email_address}[^@\s]+?@[^\s]+)""",
+    """from=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """to=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """src_host=((?i)unknown|({src_host}[^\s]+))""",
-    """src_ip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dst_ip=(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))""",
     """attachments="[^0"]#({email_attachments}[^"]+)""",
     """subject="[ \s]*({email_subject}[^"]+?)[ \s]*"""",

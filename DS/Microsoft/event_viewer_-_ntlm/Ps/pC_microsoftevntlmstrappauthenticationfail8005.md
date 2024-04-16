@@ -11,7 +11,7 @@ Name = microsoft-evntlm-str-app-authentication-fail-8005
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s+EvntSLog""",
     """({event_code}8005)""",
     """Channel name:\s*({resource}.*?)\s+User name:""",
-    """User name:\s*(NULL|({user}[^\s]*?))\s+Domain name:""",
+    """User name:\s*(NULL|({user}[\w\.\-]{1,40}\$?))\s+Domain name:""",
     """Domain name:\s*(NULL|({domain}[^\s\(\)]*?))\s+Workstation name:""",
     """Workstation name:\s*\\?(NULL|({src_host}[\w\-.]+))\s+Secure Channel type:""",
 # channel_type is removed

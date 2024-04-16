@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
 """\sComputerName =({host}.+?)\s+\w+="""
-"""\sUser=(NOT_TRANSLATED|({user}.+?))\s+\w+="""
+"""\sUser=(NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))\s+\w+="""
 """Access ({action}.+?) for user ({email_address}[^\s@]+@[^\s@]+)"""
 """Azure MFA response:\s*({failure_reason}\w+)"""
 ]

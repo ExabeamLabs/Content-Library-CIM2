@@ -3,7 +3,7 @@
 {
 Name = "microsoft-o365-cef-user-password-modify-success-changeuserpassword"
 Conditions = [
-  """destinationServiceName =Office 365"""
+  """"AzureActiveDirectoryEventType":"""
   """"Operation":"Change user password"""
   """"ResultStatus":"""
 ]

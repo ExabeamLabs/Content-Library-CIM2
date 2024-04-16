@@ -7,6 +7,7 @@ Conditions = [
   """Microsoft-Windows-Security-Auditing"""
   """A user account was enabled"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 json-windows-events-1.Fields}[

@@ -7,7 +7,7 @@ Vendor: Auth0
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   21   |         12         |       6        |   13    |
+|  59   |   21   |         12         |       6        |   10    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

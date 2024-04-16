@@ -4,6 +4,7 @@
 Name = unix-unix-json-user-switch-success-wazuhalerts-1
 Product = "Unix"
 Vendor = "Unix"
+ExtractionType = json
 Conditions = [
   """"type":"wazuh-alerts""""
   """session opened for user"""

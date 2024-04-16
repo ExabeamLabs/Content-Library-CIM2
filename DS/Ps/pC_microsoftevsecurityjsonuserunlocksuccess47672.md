@@ -2,6 +2,7 @@
 ```Java
 {
 Name = "microsoft-evsecurity-json-user-unlock-success-4767-2"
+ExtractionType = json
 Conditions = [
 """A user account was unlocked"""
 """Account Name:"""

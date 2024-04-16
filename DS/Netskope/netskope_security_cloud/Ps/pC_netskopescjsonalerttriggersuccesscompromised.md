@@ -9,7 +9,7 @@ Name = netskope-sc-json-alert-trigger-success-compromised
   Conditions = [ """"alert_type":"Compromised Credential"""", """"alert":"yes"""", """"src-application-name":"Netskope"""", """"type":"breach"""", """"event-name":"security-threat-detected"""" ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
-    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))"""",
+    """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"""",
     """"_id":"({alert_id}[^"]+)""",
     """"category":"(n\/a|({threat_category}[^"]+))""",
     """"alert_type":"({alert_name}[^"]+)"""",
@@ -17,7 +17,7 @@ Name = netskope-sc-json-alert-trigger-success-compromised
     """"alert_name":"({additional_info}[^"]+)""",
     """"type":"({alert_type}[^"]+)""",
     """"breach_description":"({additional_info}[^"]+)"""",
-    """"target-users":\[\{"user-email":"({dest_email_address}[^"@]+@[^"\.]+\.[^"]+)""""
+    """"target-users":\[\{"user-email":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   ]
 
 

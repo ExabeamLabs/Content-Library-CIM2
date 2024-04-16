@@ -12,7 +12,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """\s({event_id}\w+-\w+-\w+-\w+-\w+)\s"""
-  """CallReceivedOnEndpoint:\s'sip:({dest_email_address}[^@]+[^\.]+\.[^,\s;']+)"""
+  """CallReceivedOnEndpoint:\s'sip:({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|']+))"""
 ]
 
 

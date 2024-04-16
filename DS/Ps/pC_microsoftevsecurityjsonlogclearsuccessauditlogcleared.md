@@ -2,14 +2,16 @@
 ```Java
 {
 Name = microsoft-evsecurity-json-log-clear-success-auditlogcleared
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
 Conditions = [
   """EventCode=1102"""
   """The audit log was cleared"""
 ]
-DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
-
+json-windows-events-1.Fields}[
+    """({event_name}A user account was disabled)""",
+    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[^"]+))""",
+  
 }
 ```

@@ -10,10 +10,10 @@ Conditions = [
 ]
 Fields = [
 """({event_name}An attempt was made to reset an account's password)"""
-""""MachineName":"({host}[^."]+)"""
+""""MachineName":"({host}[\w\-.]+)"""
 """"TimeGenerated":"({time}[^"]*)"""
 """"InstanceId":"({event_code}[^"]+)"""
-""""4":"({user}[^"]+)"""
+""""4":"({user}[\w\.\-]{1,40}\$?)"""
 """"5":"({domain}[^"]+)"""
 """"6":"({login_id}[^"]+)"""
 """"3":"({user_sid}[^"]+)"""

@@ -3,7 +3,7 @@
 {
 Name = vmware-nsx-str-configuration-modify-success-configdelete
  ParserVersion = "v1.0.0"
- Conditions= [ """Avi-Controller""", """event CONFIG_DELETE""" ,"""success""" ]
+ Conditions= [ """Avi-Controller""", """event CONFIG_DELETE""" ]
  
 nsx-config-change-activity = {
     Vendor = VMware
@@ -14,9 +14,9 @@ nsx-config-change-activity = {
       """event\s({operation}[^\s]+)""",
       """({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d.\d\d:\d\d)\sevent""",
       """occurred on object ({object}[^\s]+)""",
-      """({result}success)""",
+      """({result}(?i)success|failure)""",
       """tenant\s({tenant}[\w\-\.]+)\s""",
-      """by user ({user}[\w\-\.]+)"""
+      """by user ({user}[\w\.\-]{1,40}\$?)"""
     
 }
 ```

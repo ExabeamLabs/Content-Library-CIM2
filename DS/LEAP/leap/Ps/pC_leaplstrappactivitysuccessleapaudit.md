@@ -9,7 +9,7 @@ Conditions = [
 """|LEAPAUDIT|"""
 ]
 Fields = [
-"""({location}\w+)\|({app_code}({app}LEAPS)[^\|]*)\|LEAPAUDIT\|({time}\d{8}:\d\d\.\d\d\.\d\d)\|(|({user}[^\|]+))\|([^\|]*\|){2}(|({object_name}[^\|]+))\|(|({field_name}[^\|]+))\|(|({operation}[^\|]+))\|(|({additional_info}[^\|]*\|[^\|]*))\|(|({primary_key}[^\|]+))\|\s*(|({secondary_key}[^\|]+))\s*\|"""
+"""({location}\w+)\|({app_code}({app}LEAPS)[^\|]*)\|LEAPAUDIT\|({time}\d{8}:\d\d\.\d\d\.\d\d)\|(|({user}[\w\.\-]{1,40}\$?))\|([^\|]*\|){2}(|({object_name}[^\|]+))\|(|({field_name}[^\|]+))\|(|({operation}[^\|]+))\|(|({additional_info}[^\|]*\|[^\|]*))\|(|({primary_key}[^\|]+))\|\s*(|({secondary_key}[^\|]+))\s*\|"""
 ]
 ParserVersion = "v1.0.0"
 

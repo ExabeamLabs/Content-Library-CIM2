@@ -6,7 +6,7 @@ Name = unix-unix-kv-endpoint-activity-fail-shellcmdmatchfail
   Conditions = [ """SHELL_CMD_MATCHFAIL: """, """-User=""", """IPAddr=""" ]
   Fields = ${DLUnixParsersTemplates.unix-events-1.Fields}[
     """({event_name}SHELL_CMD_MATCHFAIL)""",
-    """User=({user}[^-]+)""",
+    """User=({user}[\w\.\-]{1,40}\$?)""",
     """IPAddr=({src_ip}[a-fA-F:\d\.]+);\s({additional_info}[^.]+)"""
   ]
 

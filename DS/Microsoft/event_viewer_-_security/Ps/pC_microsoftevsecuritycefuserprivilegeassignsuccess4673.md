@@ -10,9 +10,9 @@ Fields = [
   """({event_name}A privileged service was called)"""
   """\srt=({time}\d{13})""",
   """\sdeviceSeverity=({result}[^\s]+)""",
-  """\sdhost=({host}.+?)(\s+[^\s]+=|\s*$)""",
+  """\sdhost=({host}[\w\-.]+?)(\s+[^\s]+=|\s*$)""",
   """\sexternalId=({event_code}\d+)""",
-  """\sduser=({user}.+?)(\s+[^\s]+=|\s*$)""",
+  """\sduser=({user}[\w\.\-]{1,40}\$?)(\s+[^\s]+=|\s*$)""",
   """\sdntdom=({domain}.+?)(\s+[^\s]+=|\s*$)""",
   """\sad.Service:Server=({object_server}.+?)(\s+[^\s]+=|\s*$)""",
   """\sduid=({login_id}[^\s]+)""",

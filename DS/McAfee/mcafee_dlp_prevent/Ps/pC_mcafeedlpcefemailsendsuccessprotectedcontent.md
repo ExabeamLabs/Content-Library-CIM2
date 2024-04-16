@@ -17,17 +17,15 @@ Name = mcafee-dlp-cef-email-send-success-protectedcontent
       """(\s|\|)dhost=({dest_host}[^\s]+)""",
       """(\s|\|)src=({src_ip}(\d{1,3}\.){3}\d{1,3})""",
       """(\s|\|)shost=({src_host}[^\s]+)""",
-      """(\s|\|)suser=(?:<>|<?({src_email_address}[^\s>]+)>?)\s*(\w+=|$)""",
-      """(\s|\|)duser=({email_recipients}.*?)\s*(\w+=|$)""",
-      """(\s|\|)duser=<({external_address}[^@<]+@?[^\s,>]+)>""",
+      """(\s|\|)suser=(?:<>|<?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>?)\s*(\w+=|$)""",
+      """(\s|\|)duser=({email_recipients}<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>[^=]*?)\s*(\w+=|$)""",
       """(\s|\|)fsize=({bytes}\d+)""",
-      """\scs4=({email_attachment}.+?)\s*(\w+=|$)""",
+      """\scs4=({email_attachments}(({email_attachment}[^,=]+))?(\s*,[^=]*?)?)\s+(\w+=|$)""",
       """\scs6=({email_subject}.+?)\s*(\w+=|$)""",
       """\scn3=({num_recipients}\d+)""",
-      """\scn2=({num_attachments}\d+)""",
+      """\scn2=({attachment_count}\d+)""",
       """\sfilePath=(({file_path}[^\s]+\\)?({file_name}[^\s]+\.({file_ext}[^\s]+)))""",
     ]
-    DupFields = [ "src_email_address->user" ]
 	ParserVersion = "v1.0.0"
   }, 
 
@@ -46,15 +44,15 @@ Name = mcafee-dlp-cef-email-send-success-protectedcontent
       """(\s|\|)msg=(\s+|(({alert_name}.+?)\s*))(\w+=|$)""",
       """(\s|\|)src=({src_ip}(\d{1,3}\.){3}\d{1,3})""",
       """(\s|\|)shost=({src_host}[^\s]+)""",
-      """(\s|\|)suser=<?({src_email_address}[^\s@<>]+?@[^\s@<>]+)"""
-      """(\s|\|)duser=<?({dest_email_address}[^\s@<>]+?@[^\s@<>]+)"""
+      """(\s|\|)suser=<?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """(\s|\|)duser=<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))"""
       """(\s|\|)duser=(\s+|(({email_recipients}.+?)\s*))(\w+=|$)""",
       """(\s|\|)fsize=({bytes}\d+)""",
       """\scs4=(\s+|(({email_attachments}.+?)\s*))(\w+=|$)""",
       """\scs6=(\s+|(({email_subject}.+?)\s*))(\w+=|$)""",
       """\scn3=({num_recipients}\d+)"""
-      """(\s|\|)sMcAfeeDLPEmailSender=<?({src_email_address}[^\s@<>]+?@[^\s@<>]+)"""
-      """(\s|\|)sMcAfeeDLPEmailRecipients=<?({dest_email_address}[^\s@<>]+?@[^\s@<>]+)"""
+      """(\s|\|)sMcAfeeDLPEmailSender=<?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """(\s|\|)sMcAfeeDLPEmailRecipients=<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|\>]+\.[^\]\s"\\,;\|]+))"""
       """\sMcAfeeDLPEmailRecipients=(\s+|((email_recipients}.+?)\s*))(\w+=|$)"""
       """\sMcAfeeDLPHostDomainName =({domain}[\w\-\.]+?)\s*(\w+=|$)"""
       """\sMcAfeeDLPHostName =({host}[\w\-\.]+?)\s*(\w+=|$)"""

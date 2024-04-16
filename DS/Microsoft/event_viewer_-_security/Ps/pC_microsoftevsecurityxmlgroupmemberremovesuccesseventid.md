@@ -6,32 +6,35 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
   Product = "Event Viewer - Security"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [
-    """Security ID:"""
-    """Logon ID:"""
+    """Provider Name"""
+    """TargetUserName"""
     """A member was removed from a security-enabled"""
     """<EventID>"""
   ]
   Fields = [
       """({event_name}A member was removed from a security-enabled [\w\s]+ group)""",
-      """SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)\d+Z'""",
-      """<Computer>({host}[^<]+)""",
+      """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)\d+Z""",
+      """<Computer>({dest_host}({host}[\w\-.]+))""",
+      """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
       """<EventID>({event_code}[^<]+)""",
       """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group""",
-      """'MemberName'>(-|({user_dn}[^<]+))<""",
-      """'MemberSid'>({user_sid}[^<]+)""",
-      """'SubjectUserSid'>({user_sid}[^"\s<]+)<""",
-      """'SubjectUserName'>({user}[^"\s<]+)<""",
-      """'SubjectDomainName'>({domain}[^"\s<]+)<""",
-      """'SubjectLogonId'>({login_id}[^"\s<]+)<""",
+      """<Data Name =('|")MemberName('|")>(-|({user_dn}[^<]+))<""",
+      """<Data Name =('|")MemberSid('|")>({dest_user_sid}[^<]+)""",
+      """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
+      """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+      """<Data Name =('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+      """<Data Name =('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
       """CN=({account_id}.*?(?=\s*,OU))""",
       """OU=({user_ou}[^,]+)""",
-      """DC=({user_dn}[^,<]+)"""
-      """'TargetUserName'>({group_name}[^<]+)""",
-      """'TargetDomainName'>({group_domain}[^<]+)""",
-      """'TargetSid'>({group_id}[^<]+)"""
-  ]
+      """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)""",
+      """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)""",
+      """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
+      """<Data Name ="MemberName(">|":")CN\\?=({member}[^>]+)<\/Data>""",
+      """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
+      """<Level>({run_level}[^<]+)<"""
+      ]
   DupFields = [
-    "host->dest_host"
+    "user_dn->member"
    ]
   ParserVersion = "v1.0.0"
 

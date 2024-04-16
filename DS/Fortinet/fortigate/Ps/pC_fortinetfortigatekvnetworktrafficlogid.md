@@ -5,9 +5,10 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
   Vendor = "Fortinet"
   Product = "FortiGate"
   ParserVersion = "v1.0.0"
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec", "yyyy-MM-dd' time='HH:mm:ss"]
   Conditions = [ """ vd=""", """ devname=""", """ devid=""", """ logid=""", """ level=""" ]
   Fields = [
+    """date=({time}\d\d\d\d-\d\d-\d\d[\s,]*time=\d\d:\d\d:\d\d)""",
     """eventtime=({time}\d{10})""",
 # logtype is removed
     """\ssubtype="?({subtype}[^\s"]*)""",
@@ -17,8 +18,8 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\sdevid="+({device_id}[^"\s]*)""",
     """\saction="?({action}[^=]+?)"?\s+(\w+=|$)""",
     """\spolicyid=({policy_id}\d+)""",
-    """\sdstip=(::ffff:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\ssrcip=(::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sdstip=(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\ssrcip=(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\ssrcintf="?({src_interface}[^=]+?)"?\s+(\w+=|$)""",
     """\ssessionid=({session_id}[^\s]*)""",
     """\sservice="?({network_app}[^=]+?)"?\s+(\w+=|$)""",
@@ -35,7 +36,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\ssrccountry="?({src_country}[^=]+?)"?\s+(\w+=|$)""",
     """\srcvdpkt=({packets_in}\d+)""",
 # poluuid is removed
-    """\suser="?(N\/A|(?:host\/({src_host}[^"]+))|({email_address}[^@"=]+@[^\."=]+\.[^"=]+?)|({user}[^=]+?))"?\s+(\w+=|$)""",
+    """\suser="?\s*(N\/A|(?:host\/({src_host}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^="]+))?)\s*"?\s+(\w+=|$)""",
 # crscore is removed
 # crlevel is removed
 # craction is removed
@@ -44,12 +45,12 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\smsg="?({additional_info}[^=]+?),?"?\s+(\w+=|$)""",
     """\slogdesc="+({event_name}[^"]+)""",
     """\sstatus="+({result}[^"\s]*)""",
-    """\sreason="+({failure_reason}[^"]*)""",
+    """\sreason="+({result_reason}[^"\s]*)""",
     """\sauthproto="+({protocol}[^\("]*)""",
     """\stranport=({src_translated_port}\d+)""",
     """\stranip=(::ffff:)?({dest_translated_ip}[a-fA-F\d.:]+)""",
-    """\ssrcname=(::ffff:)?({src_host}[^\s]*)""",
-    """\ssrcmac=({src_mac}[^\s]*)""",
+    """\ssrcname="?(::ffff:)?({src_host}[\w\-.]+?)"?\s+\w+=""",
+    """\ssrcmac="?({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"?""",
     """\sosname=({os}[^\s]*)""",
     """\sosversion=({os_version}[^\s]*)""",
     """\sdevtype=({device_type}[^\s]*)""",
@@ -58,7 +59,11 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\sprofile="?({profile}[^=]+?)"?\s+(\w+=|$)""",
 # trigger is removed
     """\sdirection="?({direction}[^=]+?)"?\s+(\w+=|$)""",
-    """\sdevice="?({device_name}[^=]+?)"?\s+(\w+=|$)"""
+    """\sdevice="?({device_name}[^=]+?)"?\s+(\w+=|$)""",
+    """\Wtz="?({tz}[+-]\d+)"""
+  ]
+  DupFields = [
+    "bytes_in->bytes"
   ]
 
 

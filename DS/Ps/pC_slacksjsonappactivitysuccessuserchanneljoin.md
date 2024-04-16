@@ -8,9 +8,9 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-gcp-cloudaudit-json.Fields}[
-    """"addedPermissions"+:\s*\[({added_permissions}[^\\\/\]]+)\]""",
-    """"response"+:[^\]\[]+"+included_permissions"+:\s*\[({role_permissions}[^\\\/\]]+)\]""",
+pam-authentication.Fields}[
+    """({event_name}LDAP authentication failed)""",
+    """({failure_reason}The user entered an incorrect password.)""",
   
 }
 ```

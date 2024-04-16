@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
   """<EventID>4769</EventID>"""
   """A Kerberos service ticket was requested"""
@@ -13,16 +13,16 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   ]
   Fields = [
   """({event_name}A Kerberos service ticket was requested)"""
-  """TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)'\/>"""
-  """Computer>({host}[^<]+)<\/Computer"""
+  """TimeCreated SystemTime=('|")?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """Computer>({host}[\w\-.]+)<\/Computer"""
   """({event_code}4769)"""
-  """Account Name(:|=)\s*({user}[^@:\s;]+)(@({domain}[\w._\-]+))?[\s;]*Account Domain(:|=)"""
-  """Service Name(:|=)\s*({dest_host}[^\s;]+\$)[\s;]*Service ID"""
+  """Account Name(:|=)\s*({user}[\w\.\-]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*Account Domain(:|=)"""
+  """Service Name(:|=)\s*({dest_host}[\w\-\.]+\$)[\s;]*Service ID"""
   """Service Name(:|=)\s*({service_name}[^\s;]+)[\s;]*Service ID"""
-  """Client Address(:|=)\s*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """Failure Code(:|=)\s*({result_code}.+?)[\s;]*Transited Services(:|=)"""
-  """Ticket Options(:|=)\s*({ticket_options}.+?)[\s;]*Ticket Encryption Type(:|=)"""
-  """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}.+?)[\s;]*Failure Code(:|=)"""
+  """Client Address(:|=)\s*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """Failure Code(:|=)((\\)[rnt])*\s*({result_code}[^\s:;\\]+)((\\)[rnt])*\s*[\s;]*[\w\s]+(:|=)"""
+  """Ticket Options(:|=)\s*({ticket_options}[^\s;:]+)[\s;]*[\w\s]+(:|=)"""
+  """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}[^\s:;]+)[\s;]*[\w\s]+(:|=)"""
   ]
   DupFields = [
     "result_code->failure_code"

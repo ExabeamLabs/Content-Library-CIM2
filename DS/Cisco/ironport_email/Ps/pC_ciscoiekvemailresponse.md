@@ -9,8 +9,9 @@ Name = cisco-ie-kv-email-response
   Conditions = [ """ MID """, """Hostname=""" ]
   Fields = [
     """Hostname=({src_host}[\w.-]+)""",
-    """MID ({alert_id}\d+)"""
-  ]
+    """MID ({alert_id}\d+)""",
+    """<({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>"""
+    ]
 
 
 }

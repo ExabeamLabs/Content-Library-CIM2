@@ -10,6 +10,7 @@ Name = infoblox-bddi-kv-dns-record-create-set
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
+    """({event_name}Created ARecord)"""
 # name_server is removed
 # dns_view is removed
 # host_record is removed

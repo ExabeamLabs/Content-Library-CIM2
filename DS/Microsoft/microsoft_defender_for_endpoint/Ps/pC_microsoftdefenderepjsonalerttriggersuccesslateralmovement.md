@@ -2,7 +2,8 @@
 ```Java
 {
 Name = microsoft-defenderep-json-alert-trigger-success-lateralmovement
-Product = Microsoft Defender for Endpoint
+ExtractionType = json
+ParserVersion = "v1.0.0"
 Conditions = [
   """"category":"""
   """"LateralMovement""""
@@ -12,127 +13,77 @@ Conditions = [
   """"provider":"""
   """"Microsoft Defender ATP""""
 ]
-ParserVersion = "v1.0.0"
+Fields = ${MicrosoftParserTemplates.json-microsoft-security-events-1.Fields}[
+  """exa_regex="privateIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_regex="publicIpAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """exa_json_path=$.id,exa_field_name=alert_id"""
+  """exa_regex="domainName":\s*"({domain}[^"]+)",\s*"userPrincipalName"""
+  """exa_regex="fqdn":\s*"({src_host}[^"]+)"""
+]
 
-cef-defender-atp-2.Fields} [
-     """ProcessId":({process_id}\d+)""",
-     """InitiatingProcessFileName":\s*"({parent_process}[^"]+)""",
-     """"FileName":\s*"({process_name}[^"]+)""",
-     """DeviceName":\s*"({dest_host}[^"]+)""",
-     """ProcessCommandLine":\s*"({process_command_line}[^"]+)\s*""""
-     """MD5":"({hash_md5}[^"]+)""",
- ]
- ParserVersion = "v1.0.0"
-},
+json-microsoft-security-events-1 = {
+      Vendor = Microsoft
+      Product = Microsoft Defender for Endpoint
+      TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+      Fields = [
+      """"incidentId":\s*({alert_id}\d+)""",
+      """"alertId":\s*"({alert_id}[^"]+)"""",
+      """"title":\s*"({alert_name}[^"]+)"""",
+      """"severity":\s*"({alert_severity}[^"]+)"""",
+      """"category":\s*"({alert_type}[^"]+)"""",
+      """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]""",
+      """"creationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)""",
+      """"createdDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})""",
+      """"firstActivity":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
+      """"firstEventTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
+      """"accountName":\s*"((?i:-|SYSTEM)|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.-]{1,40}\$?))"""",
+      """aadUserId[^}\]]+?"accountName":\s*"((?i:-|SYSTEM)|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.-]{1,40}\$?))"""",
+      """"userPrincipalName":\s*"(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user}[\w.-]{1,40}\$?)(@[^"]+)?))"""",
+      """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
+      """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))"""",
+      """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))[^}\]]+?userPrincipalName""",
+      """"deviceDnsName":\s*"+({src_host}[\w.-]+)"""",
+      """"status":\s*"({result}[^",]+)"""",
+      """"threatFamilyName":\s*"({malware_family}[^"]+)"""",
+      """"entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
+      """"entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
+      """"entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
+      """"entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
+      """ipAddress\":\"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\""""
+      """exa_json_path=$.incidentId,exa_field_name=alert_id"""
+      """exa_json_path=$.alertId,exa_field_name=alert_id"""
+      """exa_json_path=$.title,exa_field_name=alert_name"""
+      """exa_json_path=$.severity,exa_field_name=alert_severity"""
+      """exa_json_path=$.category,exa_field_name=alert_type"""
+      """exa_json_path=$.description,exa_field_name=additional_info"""
+      """exa_regex="createdDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})"""
+      """exa_regex="firstActivity":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,7}?Z)"""
+      """exa_regex="firstEventTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""""
+      """exa_regex="accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.-]{1,40}\$?))""""
+      """exa_regex="aadUserId[^}\]]+?"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.-]{1,40}\$?))""""
+      """exa_regex="userPrincipalName":\s*"(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user}[\w.-]{1,40}\$?)(@[^"]+)?))""""
+      """exa_regex="userPrincipalName":\s*"({user_upn}[^"]+?)""""
+      """exa_regex="domainName":\s*"({domain}[^"]+)""""
+      """exa_regex="deviceDnsName":\s*"+({src_host}[\w.-]+)""""
+      """exa_json_path=$.status,exa_field_name=result"""
+      """exa_json_path=$.threatFamilyName,exa_field_name=malware_family"""
+      """exa_regex="ipAddress":\s*"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
+      """exa_regex="entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
+      """exa_regex="entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
+      """exa_regex="entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
+      """exa_regex="entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
+      ]
+ },
 
-{
-Vendor = Microsoft
-Product = Azure ATP
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-Fields = [
-  """CEF:?([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|"""
-  """\WexternalId=({alert_id}\d+)"""
-  """\Wstart=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """\Wapp=({service_name}.+?)\s+(\w+=|$)"""
-  """\Wshost=(({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[\w\-.]+))"""
-  """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
-  """\Wcs1=({malware_url}.+?)\s+(\w+=|$).+?cs1Label=url"""
-  """\Wcs1Label=url.*?\Wcs1=({malware_url}.+?)\s+(\w+=|$)"""
-  """\Wsuser=({user}[^\s]+)\s"""
-  """\Wcs2=({result}[^\s]+)"""
-]
-Name = microsoft-azureatp-cef-alert-trigger-success-securityalert
-Conditions = [
-  """CEF"""
-  """|Microsoft|Azure ATP|"""
-  """|SamrReconnaissanceSecurityAlert|"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Vendor = Microsoft
-Product = Azure ATP
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-Fields = [
-  """CEF:?([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|"""
-  """\WexternalId=({event_code}\d+)"""
-  """\Wstart=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """\Wapp=({service_name}.+?)\s+(\w+=|$)"""
-  """\Wshost=(({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[\w\-.]+))"""
-  """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
-  """\Wcs1=({malware_url}.+?)\s+(\w+=|$).+?cs1Label=url"""
-  """\Wcs1Label=url.*?\Wcs1=({malware_url}.+?)\s+(\w+=|$)"""
-  """\Wsuser=({user}[^\s]+)\s"""
-  """\Wcs2=({result}[^\s]+)"""
-]
-Name = microsoft-azureatp-cef-alert-trigger-success-enumerationsecurityalert
-Conditions = [
-  """CEF"""
-  """|Microsoft|Azure ATP|"""
-  """|AccountEnumerationSecurityAlert|"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Vendor = Microsoft
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-Fields = [
-  """"id":\s*"({alert_id}[^"]+)""""
-  """"title":\s*"({alert_name}[^"]+)""""
-  """"severity":\s*"({alert_severity}[^"]+)""""
-  """"category":\s*"({alert_type}[^"]+)""""
-  """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]"""
-  """"sourceMaterials":\["({additional_info}[^"]+)"""",
-  """"eventDateTime":\s*"({time}[^"]+)""""
-  """"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[^\s"]+))""""
-  """aadUserId[^}\]]+?"accountName":\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}[^"@]+@[^"]+)|({user}[^\s"]+))""""
-  """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-  """"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[^\s"@]+)(@[^"]+)?))""""
-  """"userPrincipalName":\s*"({user_upn}[^"]+?)""""
-  """"domainName"+:\s*"+(-|({domain}[^"]+))""""
-  """"domainName"+:\s*"+(-|({domain}[^"]+))[^}\]]+?userPrincipalName"""
-  """"fqdn"+:\s*"+({src_host}[^"]+)""""
-  """"+hostStates"+:[^}\]]+?privateIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """"+hostStates"+:[^}\]]+?publicIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """"description":\s*"An actor on\s*({src_host}\S+)\s*performed suspicious"""
-  """"fileStates":[^]]+?"name":\s*"({file_name}[^."]+([\.\w]+)?)""""
-  """"destinationServiceName":"({app}[^"]+)""""
-]
-Name = microsoft-defenderep-json-alert-trigger-success-lateralmovement
-Product = Microsoft Defender for Endpoint
-Conditions = [
-  """"category":"""
-  """"LateralMovement""""
-  """"title":"""
-  """"vendor":"""
-  """"Microsoft""""
-  """"provider":"""
-  """"Microsoft Defender ATP""""
-]
-ParserVersion = "v1.0.0"
-},
-  
-{
-  Name = microsoft-mssql-kv-app-login-fail-18456
-  ParserVersion = v1.0.0
+microsoft-dns-renew-jp = {
   Vendor = Microsoft
-  Product = MSSQL
-  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-  Conditions = [ """EventCode=18456""", """Keywords=Audit Failure""", """Login failed""" ]
   Fields = [
-    """(\\n|\W)ComputerName =({host}[\w\-\.]+)\s*(\\n)?(\w+=|$)""",
-    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (?i)(AM|PM))""",
-    """(\\n|\W)Message=[^=]*?\Wuser\s*'\s*((({domain}[^\\]+)(\\)+))?({user}[^\\]+?)'""",
-    """(\\n|\W)SourceName =({service_name}[^=]+?)\s*(\\n)?(\w+=|$)""",
-    """SourceName =({app}MSSQL)""",
-    """\[CLIENT:\s+({src_ip}[a-fA-F\d:\.]+)\]""",
-    """\WReason:\s*({failure_reason}[^:]+?)\s*\[""",
-    """source_hostname":"({src_host}[^"]+)""",
-    """EventCode=({event_code}\d+)""",
-    """({event_name}Login failed)""",
+    """({time}\d\d/\d\d/\d\d,\d\d:\d\d:\d\d),""",
+    """({time}\d+-\d+-\d+T\d+:\d+:\d+)[\+\-]\d+:\d+\s+({host}[\w\-.]+)\s+\[""",
+    """({time}\d+\/\d+\/\d+,\d+:\d+:\d+[\+\-]\d+:\d+)""",
+    """<Identifier>({host}[^<]+)<\/Identifier>""",
+    """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_host}[\w\-.]+),(|({dest_mac}[^,]+))?,"""
   ]
-  DupFields = [ "host->dest_host" 
+  DupFields = [ "dest_host->user" 
 }
 ```

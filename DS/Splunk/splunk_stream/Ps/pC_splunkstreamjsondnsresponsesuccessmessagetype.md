@@ -2,32 +2,34 @@
 ```Java
 {
 Name = "splunk-stream-json-dns-response-success-messagetype"
+ExtractionType = json
 Vendor = "Splunk"
 Product = "Splunk Stream"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
 Conditions = [
 """"reply_code":"""
 """:dns""""
-""""time_taken""""
 """"message_type""""
 ]
 Fields = [
-  """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})"""
-  """"bytes":({bytes}\d+)"""
-  """"dest_ip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """"dest_mac":"({dest_mac}[a-fA-F\d:]+)"""
-  """"dest_port":({dest_port}\d+)"""
-  """"src_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """"src_mac":"({src_mac}[a-fA-F\d:]+)"""
-  """"src_port":({src_port}\d+)"""
-  """"time_taken":({time_taken}\d+)"""
-  """"transport":"({protocol}[^"]+)"""
-  """"ttl":\[({response_ttl}\d+)"""
-  """"query":\["({dns_query}[^"]+)"""
-  """"query_type":\["({dns_query_type}[^"]+)"""
-  """"reply_code":"({dns_response_code}[^"]+)"""
-  """"host_addr":\["({host}[^"]+)"""
-  """"hostname":\["({host}[^"]+)"""
+  """exa_json_path=$.timestamp,exa_field_name=time"""
+  """exa_json_path=$.bytes,exa_field_name=bytes"""
+  """exa_json_path=$.bytes_in,exa_field_name=bytes_in"""
+  """exa_json_path=$.bytes_out,exa_field_name=bytes_out"""
+  """exa_json_path=$.dest_ip,exa_field_name=dest_ip"""
+  """exa_json_path=$.dest_mac,exa_field_name=dest_mac"""
+  """exa_json_path=$.dest_port,exa_field_name=dest_port"""
+  """exa_json_path=$.src_ip,exa_field_name=src_ip"""
+  """exa_json_path=$.src_mac,exa_field_name=src_mac"""
+  """exa_json_path=$.src_port,exa_field_name=src_port"""
+  """exa_json_path=$.time_taken,exa_field_name=time_taken"""
+  """exa_json_path=$.transport,exa_field_name=protocol"""
+  """exa_json_path=$.ttl.[0],exa_field_name=response_ttl"""
+  """exa_json_path=$.query,exa_field_name=dns_query"""
+  """exa_json_path=$.query_type,exa_field_name=dns_query_type"""
+  """exa_json_path=$.reply_code,exa_field_name=dns_response_code"""
+  """exa_json_path=$.host_addr,exa_field_name=host"""
+  """exa_json_path=$.hostname[0],exa_field_name=host"""
 ]
 ParserVersion = "v1.0.0"
 

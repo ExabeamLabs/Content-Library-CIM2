@@ -12,9 +12,10 @@ xml-windows-defender-av = {
    Fields = [
      """<EventID>({event_code}\d+)""",
      """<Computer>({host}[^<]+)""",
-     """UserID='({user_sid}[^']+)'""",
+     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+     """UserID\\*='({user_sid}[^']+)'""",
      """<Keywords>({result}[^<]+)<""",
-     """Guid='\{({provider_guid}[^}']+)"""
+     """Guid\\*='\{({provider_guid}[^}']+)"""
   
 }
 ```

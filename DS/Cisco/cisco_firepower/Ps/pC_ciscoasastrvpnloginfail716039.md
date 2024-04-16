@@ -11,8 +11,9 @@ Conditions = [
 """Authentication: rejected"""
 ]
 Fields = [
+"""\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
 """%FTD-({priority}\d)-({event_code}\d+)"""
-"""User\s<([\*]+|({user}[^>]+))>"""
+"""User\s<([\*]+|({user}[\w\.\-]{1,40}\$?))>"""
 """IP\s<({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>"""
 ]
 ParserVersion = "v1.0.0"

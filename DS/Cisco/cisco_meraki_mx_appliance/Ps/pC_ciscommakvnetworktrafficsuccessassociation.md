@@ -7,22 +7,22 @@ Name = "cisco-mma-kv-network-traffic-success-association"
   Product = "Cisco Meraki MX appliance"
   TimeFormat = "epoch_sec"
   Conditions = [
-""" events """
+""" events type"""
 """ type"""
 """ aid"""
   ]
   Fields = [
 """({time}\d{10})\.\d+\s+({host}[\w.\-]+)\s+events\s"""
 """\scs6=\d+\-\d+\-\d+T\d\d:\d\d:\d\d\.\d+Z\s+({host}[a-fA-F\d.:]+)"""
-"""\sclient_ip\\*='({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\sclient_ip\\*='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\sclient_mac\\*='({src_mac}[a-fA-F\d.:]+)"""
 """\stype\\*=(|({operation}.+?))(\s+\w+\\*=|\s*$)"""
 """\said\\*='({aid}[^']+)"""
 """\schannel\\*='({channel}[^']+)"""
 """\sduration\\*='({duration}[^']+)"""
-"""\sip_src\\*='({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\sip_src\\*='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\sdhcp_ip\\*='({dhcp_ip}[^']+)"""
-"""\sidentity\\*='(({email_address}[^@'\s]+@({email_domain}[^\s'.]+\.[^\s']+))|((({domain}[^'\s\\/]+)[\\/])?({user}[^']+)))'"""
+"""\sidentity\\*='(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))'"""
   ]
 
 

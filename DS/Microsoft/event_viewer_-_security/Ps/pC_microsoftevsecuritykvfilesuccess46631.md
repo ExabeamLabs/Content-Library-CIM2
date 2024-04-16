@@ -22,7 +22,7 @@ Fields = [
   """ACCESS_MASK\s*=\s*({access_mask}[^]]+?)\s*]"""
   """PROCESS_ID\s*=\s*(null|({process_id}[^]]+?))\s*\]"""
   """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]"""
-  """USERNAME\s*=\s*(({user}[^]]+?))\s*\]"""
+  """USERNAME\s*=\s*(({user}[\w\.\-]{1,40}\$?))\s*\]"""
   """USER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]"""
 ]
 DupFields = [

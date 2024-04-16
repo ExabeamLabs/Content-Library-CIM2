@@ -7,23 +7,25 @@ Product = "Event Viewer - Security"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   ""","EventID":"4771","""
-  """<Data Name ='TargetSid'>"""
+  """<Data Name"""
+  """TargetSid"""
   """Kerberos pre-authentication failed"""
 ]
 Fields = [
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """({event_code}4771)"""
   """"Activity":"({event_name}[^"]+)"""
-  """"Computer":"({host}[^"]+)""",
-  """<Computer>({host}[\w\-.]+)<""",
-  """<Data Name ='TargetSid'>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-  """<Data Name ='Status'>({result_code}[^<]+)</Data>"""
-  """<Data Name ='TargetUserName'>(?=\w)({user}[^<]+)</Data>"""
-  """<Data Name ='ServiceName'>\w+\/(?=\w)({domain}[^<]+)</Data>"""
-  """<Data Name ='IpAddress'>(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?</Data>"""
+  """"Computer":"({dest_host}({host}[\w\-.]+))""",
+  """<Computer>({dest_host}({host}[\w\-.]+))<""",
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
+  """<Data Name\\*=('|")Status('|")>({result_code}[^<]+)</Data>"""
+  """<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[\w\.\-]{1,40}\$?)</Data>"""
+  """<Data Name\\*=('|")ServiceName('|")>\w+\/(?=\w)({domain}[^<]+)</Data>"""
+  """<Data Name\\*=('|")IpAddress('|")>(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>"""
+  """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = [
-  "host->dest_host"
   "result_code->failure_code"
 ]
 ParserVersion = "v1.0.0"

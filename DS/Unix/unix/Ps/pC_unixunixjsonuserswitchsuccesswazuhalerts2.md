@@ -4,6 +4,7 @@
 Name = unix-unix-json-user-switch-success-wazuhalerts-2
 Product = "Unix"
 Vendor = "Unix"
+ExtractionType = json
 Conditions = [
   """"type":"wazuh-alerts""""
   """"rule.description":"User successfully changed UID.""""

@@ -13,7 +13,7 @@ Name = mcafee-sncasb-cef-app-logout-success-userloggedout
       """CEF:([^\|]+\|){5}({operation}[^\|\s]+)\|""",
       """\W(start|devTime)=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d+ \w+)""",
       """\WobjectName =(|({object}.+?))(\s+\w+=|\s*$)""",
-      """\WuserInfoEmail=(|({email_address}.+?))(\s+\w+=|\s*$)""",
+      """\WuserInfoEmail=(|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\s+\w+=|\s*$)""",
       """\WuserInfoFirstName =(|({first_name}.+?))(\s+\w+=|\s*$)""",
       """\WuserInfoLastName =(|({last_name}.+?))(\s+\w+=|\s*$)""",
     ]

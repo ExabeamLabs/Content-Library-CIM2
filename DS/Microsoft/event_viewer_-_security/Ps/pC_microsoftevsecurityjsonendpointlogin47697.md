@@ -12,18 +12,15 @@ Conditions = [
 """"enc-tkt-in-skey":"""
 ]
 Fields = [
-""""host":"(::1|({host}[a-fA-F:\d.]+))"""
-""""src_ip":"(::1|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
-""""dest_host":"({service_name}[^"]+)"""
+""""host":"(::1|(((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({host}[\w\-\.]+))""""
+""""src_ip":"(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+""""dest_host":"({service_name}(\w+\/)?({dest_host}[^"]+?)(@({dest_domain}[^"]+))?)""""
 """"time":({time}\d{13})"""
 """"result_code":"({result_code}[^"]+)"""
-""""user":(null|"({user}[^"]+))"""
-""""user":(null|"({email_address}({user}[^"@]+)@[^"]+))"""
+""""user":(null|"({user}[\w\.\-]{1,40}\$?))"""
+""""user":(null|"({email_address}({user}[\w\.\-]{1,40}\$?)@[^"]+))"""
 """"domain":"({domain}[^"]+)"""
 """"event_code":({event_code}\d+)"""
-]
-DupFields = [
-"service_name->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

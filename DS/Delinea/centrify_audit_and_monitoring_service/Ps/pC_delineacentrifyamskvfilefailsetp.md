@@ -4,14 +4,14 @@
 Name = "delinea-centrifyams-kv-file-fail-setp"
   Vendor = "Delinea"
   Product = "Centrify Audit and Monitoring Service"
-  TimeFormat = "epoch"
+  TimeFormat = "epoch_sec"
   Conditions = [
    """Centrify Suite|"""
    """|SFTP"""
   ]
   Fields = [
-    """utc=({time}\d{13})"""
-    """user=({user}[^\(\)\s\$]+)"""
+    """utc=({time}\d{10})"""
+    """user=({user}[\w\.\-]{1,40}\$?)"""
     """\d+\|\d+\|({event_name}.+?)\|\d"""
     """status=({result}.+?)\s\w+="""
     """pid=({process_id}\d+)"""

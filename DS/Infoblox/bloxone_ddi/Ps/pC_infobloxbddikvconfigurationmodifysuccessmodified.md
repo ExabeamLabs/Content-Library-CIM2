@@ -12,6 +12,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-modified
     """({operation}Modified ForwardZone)""",
 # forwardzone is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

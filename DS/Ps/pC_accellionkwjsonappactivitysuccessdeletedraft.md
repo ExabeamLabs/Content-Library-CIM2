@@ -9,6 +9,7 @@ Conditions = [
 """delete_draft"""
 """event"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 netwrix-app-activity-2.Fields}[

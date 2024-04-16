@@ -26,11 +26,11 @@ cef-sophos-security-alert-1.Fields}[
     """"location":"({src_host}[^"]+)""",
     """"name":\s*"({alert_name}.+?)\s+(\w+:)"""
     """"name":\s*"({additional_info}[^"]+)"""
-    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[^\s\\]+)\s""",
+    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
     """"name".+?Rule names:\s*′({rule}[^′]+)""",
     """"name".+?User action:\s*({operation}.+?)\s+(\w+\s+\w+:)""",
     """"name".+?Application Name:\s+({app}.+?)\s+Data Control action:""",
-    """"name".+?Data Control action:\s*({action}[^\s]+)\s""",
+    """"name".+?Data Control action:\s*({result}[^\s]+)\s""",
     """"name".+?File type:\s*({file_type}.+?)\s+File size:\s*({bytes}\d+)\s""",
     """"name".+?Source path:\s*({target}.+?)\s*(\w+\s+\w+:|")"""
   

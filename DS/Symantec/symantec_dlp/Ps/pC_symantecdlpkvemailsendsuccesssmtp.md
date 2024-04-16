@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """({host}[\w.\-]+)\s+incident_id="""
   """recipient=({email_recipients}[^,@]+@[^,]+),"""
-  """sender=({src_email_address}[^,]+),"""
+  """sender=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),"""
   """Subject=({email_subject}.+?)\s*,(\s+\w+=|\s*$)"""
   """blocked=({action}\w+)"""
   """Attachment_Filename=({email_attachments}.+?)\s*,(\s+\w+=|\s*$)"""

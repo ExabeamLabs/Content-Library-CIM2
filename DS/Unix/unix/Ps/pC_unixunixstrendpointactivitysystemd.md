@@ -10,7 +10,7 @@ Name = "unix-unix-str-endpoint-activity-systemd"
     """]: """
   ]
   Fields = [
-    """\d\d:\d\d:\d\d ({host}\S+)? systemd\["""
+    """\d\d:\d\d:\d\d\s*({host}[\w\-.]+)(\s\w+)?\s*(systemd\[|dmesg:)"""
     """\ssystemd(-logind)?\[\d+\]:\s*({additional_info}.+?)\s*$"""
   ]
   ParserVersion = "v1.0.0"

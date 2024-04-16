@@ -3,9 +3,12 @@
 {
 Name = "sentinelone-singularityp-sk4-dns-response-success-dns"
 Conditions = [
-"""dproc=Deep Visibility Endpoint"""
-"""destinationServiceName =SentinelOne"""
+"""timestamp {"""
+"""millisecondsSinceEpoch: """
+"""trueContext {"""
+"""isRedirectedCommandProcessor: """
 """dns {"""
+"""query: """
 """results:"""
 ]
 DupFields = [

@@ -18,6 +18,7 @@ Name = infoblox-bddi-kv-dns-record-create-success-exchanger
     """priority=({priority}\d+)""",
 # comment is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

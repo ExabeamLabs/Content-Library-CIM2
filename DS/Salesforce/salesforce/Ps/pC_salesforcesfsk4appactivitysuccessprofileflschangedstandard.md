@@ -12,8 +12,7 @@ Conditions = [
 Fields = [
 """CreatedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
 """CreatedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))"""
-"""suser=({user}.+?)\s+(\w+=|$)"""
-"""suser=({email_address}[^@\s]+?@[^@\s]+)\s*(\w+=|$)"""
+"""suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
 """Action\\=({operation}[^;]+)"""
 """Display\\=({additional_info}.+?)\s*(\w+=|$)"""
 """Display\\=Change.*?:\s*({object}[^:]+?)\s+was changed"""

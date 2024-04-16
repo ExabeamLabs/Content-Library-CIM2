@@ -11,7 +11,7 @@ Conditions = [
 Fields = [
   """([^\|]*\|){5}({action}[^\|]+)"""
   """\Wrt=({time}\d{13})"""
-  """\Wsuid=({user}[^\s]+)"""
+  """\Wsuid=({user}[\w\.\-]{1,40}\$?)"""
   """\Wcs2=({location_building}.+?)\s*(\w+=|$)"""
   """\Wcs5=(\s+|({first_name}.+?))\s*(\w+=|$)"""
   """\Wcs4=(\s+|({last_name}.+?))\s*(\w+=|$)"""

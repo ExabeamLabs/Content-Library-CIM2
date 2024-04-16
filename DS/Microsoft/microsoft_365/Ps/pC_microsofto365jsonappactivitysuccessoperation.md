@@ -12,9 +12,9 @@ Fields = [
   """\WsourceServiceName =({app}[^=]+?)\s+(\w+=|$)"""
   """ObjectId\"*:\s*\"*<?({object}[^\"]+?)>?\""""
   """Operation\"*:\s*\"*({operation}[^\"]+)\"*"""
-  """UserId\"*:\s*\"*({email_address}[^@]+@({email_domain}[^\"]+))\"*"""
-  """Sender\"*:\s*\"*({src_email_address}[^\"]+)\""""
-  """Receivers\"*:\s*\[\"*({dest_email_address}[^"\]]+)"""
+  """UserId\"*:\s*\"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\"*"""
+  """Sender\"*:\s*\"*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\""""
+  """Receivers\"*:\s*\[\"*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
 ]
 DupFields = [
   "src_email_address->email_address"

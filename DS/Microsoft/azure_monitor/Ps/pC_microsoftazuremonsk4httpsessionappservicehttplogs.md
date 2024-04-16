@@ -7,27 +7,27 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = v1.0.0
   Conditions = [
-    """destinationServiceName =Azure dproc=EventHub""",
+    """"resourceId":""",
     """"category":"AppServiceHTTPLogs""""
   ]
   Fields = [
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """([^\|]*\|){5}({operation}[^\|]+)""",
-    """\WdestinationServiceName =({app}.+?)\s+(\w+=|$)""",
-    """\Wsuser=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}.+?))(\s+[\S]+=|\s*$)""",
-    """\Wsuid=(anonymous|({email_address}[^@=]+@[^@=]+?)|({user}.+?))(\s+[\S]+=|\s*$)""",
+    """destinationServiceName =({app}.+?)\s+(\w+=|$)""",
+    """\Wsuser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
+    """\Wsuid=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """"CsHost":"({app}[^:",]+)""",
     """"Result":"({action}[^"]+)"""",
     """"resourceId":"({resource}[^"]+)"""",
     """"CsUriStem":"({uri_path}[^"]+)"""",
-    """"CIp":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"CIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"UserAgent":"(-|({user_agent}[^"]+))"""",
     """"category":"({category}[^"]+)"""",
     """"CsMethod":"({method}[^"]+)"""",
     """"SPort":"({src_port}\d+)"""",
     """"CsUriQuery":"(-|({uri_query}[^"]+))"""",
     """"CsBytes":({bytes_in}\d+),""",
-    """"CsUsername":"(-|({user}[^"]+))"""",
+    """"CsUsername":"(-|({user}[\w\.\-]{1,40}\$?))"""",
     """"Referer":"(-|({referrer}[^"]+))"""",
     """"ScBytes":({bytes_out}\d+),""",
     """"ScStatus":({http_response_code}\d+),""",

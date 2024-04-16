@@ -3,7 +3,6 @@
 {
 Name = "cisco-umbrella-cef-dns-response-success-networks"
 Conditions = [
-  """destinationServiceName =Cisco Umbrella"""
   """"queryType":""""
   """"responseCode":""""
   """"mostGranularIdentityType":"Networks""""

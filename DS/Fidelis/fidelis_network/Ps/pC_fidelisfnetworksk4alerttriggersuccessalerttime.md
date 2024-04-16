@@ -7,7 +7,7 @@ Product = "Fidelis Network"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
 """"ALERT_TIME":""""
-"""destinationServiceName =Fidelis"""
+""""FIDELIS_SCORE":""""
 """"ACTION":"alert""""
 ]
 Fields = [
@@ -32,7 +32,7 @@ Fields = [
 """"SEVERITY\":"({alert_severity}[^\"]+)\""""
 """"SESSION_ID\":"({session_id}[^\"]+)\""""
 """\smsg=({additional_info}.+)\soldFilePath="""
-""""APPLICATION_USER\":"(({email_address}[^@]+?@[^\"]+)|({user}[^\"]+?))\""""
+""""APPLICATION_USER\":"(({email_address}[^@]+?@[^\"]+)|({user}[\w\.\-]{1,40}\$?))\""""
 """"MD5":"({hash_md5}[^\"]+)\""""
 ]
 ParserVersion = "v1.0.0"

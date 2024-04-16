@@ -7,7 +7,7 @@ Vendor: Namespace rDirectory
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  84   |   39   |         7          |       5        |    5    |
+|  84   |   39   |         7          |       5        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

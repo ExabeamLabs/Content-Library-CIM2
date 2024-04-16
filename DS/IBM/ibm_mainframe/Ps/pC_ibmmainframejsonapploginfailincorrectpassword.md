@@ -2,10 +2,11 @@
 ```Java
 {
 Name = ibm-mainframe-json-app-login-fail-incorrectpassword
+   ExtractionType = json
    Conditions = [ """"MFSOURCETYPE":"SYSLOG"""", """"MSGTXT":"""", """INCORRECT PASSWORD""" ]
    Fields = ${IBMParsersTemplates.ibm-mainframe-events.Fields}[
-     """"MSGTXT":"[^"]+?\sF=({failure_reason}[^"=]+?)(\w+?=|")"""",
-     """"MSGTXT":"[^"]+?\sA=({user}[^"\s=]+?)\sT=""""
+     """exa_json_path=$.MSGTXT,exa_regex=^[^"]+?\sF=({failure_reason}[^"=]+?)(\w+?=|")"""
+     """exa_json_path=$.MSGTXT,exa_regex=^[^"]+?\sA=({user}[\w\.\-]{1,40}\$?)\sT="""
    ]
    ParserVersion = "v1.0.0"
 
@@ -13,11 +14,11 @@ ibm-mainframe-events {
     Vendor = IBM
     Product = IBM Mainframe
     TimeFormat = "yyyy-MM-dd HH:mm:ss.SS Z"
-    Fields = [ 
-      """"DATETIME":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d{2}\s(\+|\-)\d{4}?)"""",
-	  """"ACTION":"({severity}[^"]+?)"""", 
-      """"MSGNUM":"({event_code}[^"]+?)"""",
-      """"MSGTXT":"({additional_info}[^"]+?)"""" 
+    Fields = [
+      """exa_json_path=$.DATETIME,exa_field_name=time""",
+      """exa_json_path=$.ACTION,exa_field_name=severity""",
+      """exa_json_path=$.MSGNUM,exa_field_name=event_code""",
+      """exa_json_path=$.MSGTXT,exa_field_name=additional_info"""
     
 }
 ```

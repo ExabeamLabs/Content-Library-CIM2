@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-memberwasremoved"
     """({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\sMSWinEventLog""",
     """Information\s+({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s+""",
     """(?:Success|Audit)\s+\w+\s+({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))""",
-    """A member was removed from a security-enabled\s+({group_type}.+?)\s+group.+?Account Name:\s+({user}.+?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+Member:""",
+    """A member was removed from a security-enabled\s+({group_type}.+?)\s+group.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+Member:""",
     """Member:\s+Security ID:\s+({account_id}[^\s]+)\s+Account Name:\s*(-|({user_dn}CN=.+?OU.+?DC.+?))?\s*Group:\s+Security ID:\s+({group_id}[^\s]+)\s+(Group|Account) Name:\s*({group_name}.+?)?\s+(Group|Account) Domain:\s+({group_domain}.+?)\s+Additional""",
     """Member:.+?Account Name:\s*CN=.+?({user_ou}OU.+?DC.+?)\s+Group:""",
   ]

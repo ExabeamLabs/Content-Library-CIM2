@@ -2,7 +2,7 @@
 ```Java
 {
 Name = cisco-duo-sk4-app-activity-success-useradminupdate
-  Conditions = [ """"action":"admin_update"""", """"event-name":"user-updated"""", """app-username""", """"src-application-name":"DUO"""" ]
+  Conditions = [ """"action":""", """"admin_update"""", """object":""", """"username":""", """description":""" ]
   ParserVersion = "v1.0.0"
 } 
 
@@ -14,7 +14,7 @@ Name = cisco-duo-sk4-app-activity-success-useradminupdate
   Conditions = [ """API (IAM UI Admin API)""" ]
   Fields = [
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2})""",
-    """API \(({app}IAM UI Admin API)\)\|({user}[^\|]+)\|({operation}[^\|]+)\|""",
+    """API \(({app}IAM UI Admin API)\)\|({user}[\w\.\-]{1,40}\$?)\|({operation}[^\|]+)\|""",
     """"email":\s*"({email_address}[^@]+@[^.]+\.\w+?)"""",
     """"type":\s*"({object}[^"]+)""""
   ]

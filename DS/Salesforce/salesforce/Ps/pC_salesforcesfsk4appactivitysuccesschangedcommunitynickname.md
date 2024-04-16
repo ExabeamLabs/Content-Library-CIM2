@@ -4,8 +4,8 @@
 Name = "salesforce-sf-sk4-app-activity-success-changedcommunitynickname"
 Product = "Salesforce"
 Conditions = [
-"""flexString1=changedcommunitynickname"""
-"""destinationServiceName =Sales Cloud"""
+"""Action\=changedcommunitynickname;"""
+"""Sales Cloud"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -9,13 +9,14 @@ Name = microsoft-azuread-xml-user-password-reset-success-10015
   Conditions = [ """<EventID>10015</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""", """The reset password for the specified user was validated as compliant with the current Azure password policy""" ]
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
-    """<Data Name ='Data1'>({user}[^<]+)</Data>""",
-    """<Data Name ='Data2'>({full_name}[^<]+)</Data>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """<Data Name\\*='Data1'>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name\\*='Data2'>({full_name}[^<]+)</Data>""",
     """<EventID>({event_code}10015)</EventID>""",
     """({event_name}The reset password for the specified user was validated as compliant with the current Azure password policy)"""
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """Security UserID='({user_sid}[^']+)'""",
+    """Security UserID\\*='({user_sid}[^']+)'""",
     """<Message>({additional_info}[^<]+?)\s+</Message>"""
   ]
 

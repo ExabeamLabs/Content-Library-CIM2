@@ -9,10 +9,10 @@ TimeFormat = "MMM dd HH:mm:ss yyyy"
 Conditions = ["""The audit log was cleared""" ]
 Fields = [
 """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
-"""Hostname":"({host}[^"]+)""""
+"""Hostname":"({host}[\w\-.]+)""""
 """({event_code}1102)"""
 """({event_name}The audit log was cleared)"""
-"""\s+Account Name:\s*({user}[^:]+?)\s+Domain"""
+"""\s+Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Domain"""
 """\s+Domain Name:\s*({domain}[^\s]+)"""
 """\s+Logon ID:\s*({login_id}[^\s"]+)"""
 """ComputerName =({host}({src_host}[\w\-\.]+))"""

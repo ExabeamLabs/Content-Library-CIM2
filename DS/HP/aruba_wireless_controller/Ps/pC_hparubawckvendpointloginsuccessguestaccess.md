@@ -9,21 +9,19 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cef-ping-events-1 = {
-  Vendor = Ping Identity
-  Product = Ping Identity
-  TimeFormat = "MMM dd yyyy HH:mm:ss.SSS"
+q-aruba-nac-logon = {
+  Vendor = HP
+  Product = Aruba ClearPass Policy Manager
+  TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
   Fields = [
-    """\Wrt=({time}\w+\.? \d+ \d\d\d\d \d\d:\d\d:\d\d\.\d+)""",
-    """\Wdvchost=({host}[\w\-.]+)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wduid=({user}[^\s@\\\=]+?)[\\\=]*\s+(\w+=|$)""",
-    """\Wduid=({email_address}[^\s@]+@[^\s@]+)""",
-    """\Wcs2=(|({connection_id}[^=]+?))\s+(\w+=|$)""",
-    """\Wcs3=(|({protocol}[^=]+?))\s+(\w+=|$)""",
-    """\Wmsg=(|({result}[^=]+?))\s+(\w+=|$)""",
-    """\|Ping Identity\|PingFederate\|([^\|]*){3}\|({event_name}[^\|]+)""",
-    """cs6=(|({additional_info}[^"]+?))\s+(\w+=|$)""",
-  
+    """Common\.Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+)?[\+\-]\d+)""",
+    """\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d,\d+ ({host}[\w\-.]+)""",
+    """Common\.Username=(?:({user_type}host)/)?(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[\w\.\-]{1,40}\$?))""",
+    """Common\.Username=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """Common\.Service=({network}[^,]+)""",
+    """Common\.Host-MAC-Address=({src_mac}\w+)""",
+    """Common\.NAS-IP-Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  ]
+  DupFields = [ "host->auth_server" 
 }
 ```

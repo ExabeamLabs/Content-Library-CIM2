@@ -16,7 +16,7 @@ Name = ibm-db2-kv-database-activity-itsecurity
     """deviceProcessName =({process_name}.+?)\s+(\w+=|$)""",
     """cs1=({additional_info}.+?)\s+(\w+=|$)""",
     """filePath=({file_name}.+?)\s+(\w+=|$)""",
-    """duser=({user}.+?)\s*\w+=""",
+    """duser=({user}[\w\.\-]{1,40}\$?)\s*\w+=""",
     """({event_code}DB2_AU06)""",
     """({event_name}DB2Aud006_Privileged_User_Activity)""",
   ]

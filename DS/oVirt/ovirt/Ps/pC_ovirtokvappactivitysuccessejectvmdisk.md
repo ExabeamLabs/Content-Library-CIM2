@@ -9,7 +9,7 @@ Name = ovirt-o-kv-app-activity-success-ejectvmdisk
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*? CD was ejected from VM ({object}[^\s"]+) by ({user}[^\s\(\)]+?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*? CD was ejected from VM ({object}[^\s"]+) by ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

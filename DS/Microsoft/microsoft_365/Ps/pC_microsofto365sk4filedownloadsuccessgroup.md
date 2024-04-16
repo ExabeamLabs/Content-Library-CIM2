@@ -11,8 +11,14 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cef-microsoft-app-activity.Fields} [
-    """duser=((\w{1,5}:\w{1,5}:[^\#]*?)({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(Unknown|({user_sid}[^"\s\.]+))))"""
-  
+cef-microsoft-app-activity.Fields}[
+    """"SourceFileExtension":"({src_file_ext}[^"]+)"""",
+    """"SourceRelativeUrl":"({src_file_path}[^"]+)"""",
+    """"SourceRelativeUrl":"({file_path}({file_dir}([^"]+)?[\/\\])?[^"]+)""",
+    """"FileSizeBytes":({bytes}\d+)"""
+    """"Platform":\s*"({os}[^"]+)""""
+    """"ObjectId":"(Unknown|Not Available|({object}[^"]+?))\s*""""
+  ]
+  DupFields = [ "src_file_path->src_file_dir","src_file_ext->file_ext" 
 }
 ```

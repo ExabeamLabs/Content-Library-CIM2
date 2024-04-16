@@ -13,10 +13,10 @@ Name = zscaler-ia-kv-network-session-firewall
   ]
   Fields = [
     """({time}\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
-    """action=({action}[^\s]+)""",
-    """user=(\w+(\s\w+)?->\w+(\s\w+)?|({email_address}[^@]+@[^\s]*)|({user}[^\s]+))\s""",
-    """csip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """sdip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """action=({result}[^\s]+)""",
+    """user=((\w+[^=]+\->\w+[^=]+)|({email_address}[^@]+@[^\s]*)|({user}[\w\.\-]{1,40}\$?))\s""",
+    """csip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """sdip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """sdport=({dest_port}\d+)""",
     """csport=({src_port}\d+)""",
     """proto=({protocol}[^\s]+)""",
@@ -24,7 +24,7 @@ Name = zscaler-ia-kv-network-session-firewall
     """outbytes=({bytes_out}\d+)""",
     """department=({department}[^\=]+?)\s+\w+=""",
     """locationname=({location}[^\=]+?)\s+\w+=""",
-    """tsip=(0\.0\.0\.0|({tunnel_src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""",
+    """tsip=(0\.0\.0\.0|({tunnel_src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""",
     """tunsport=({tunnel_src_port}\d+)""",
     """tuntype=({tunnel_type}[^\s]+)""",
     """destcountry=((?i)Other|({dest_country}[^\=]+?)\s+\w+=)""",
@@ -34,6 +34,7 @@ Name = zscaler-ia-kv-network-session-firewall
     """deviceowner=(NA|({device_owner}[^\s]+))""",
     """rulelabel=({rule}.+?)\s*inbytes"""
 ]
+DupFields = [ "result->action" ]
 
 
 }

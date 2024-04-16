@@ -4,7 +4,7 @@ Product: Cisco Umbrella
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  135  |   47   |         17         |       4        |    6    |
+|  135  |   47   |         17         |       4        |    9    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

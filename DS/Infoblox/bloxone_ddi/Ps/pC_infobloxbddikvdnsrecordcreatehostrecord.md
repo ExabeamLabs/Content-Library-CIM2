@@ -18,6 +18,7 @@ Name = infoblox-bddi-kv-dns-record-create-hostrecord
 # fqdn is removed
 # comment is removed
   ]
+  DupFields = ["operation->event_name"]
 
 
 }

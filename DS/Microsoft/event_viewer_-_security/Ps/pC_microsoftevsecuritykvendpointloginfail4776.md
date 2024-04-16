@@ -15,11 +15,10 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4776
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
     """Error Code:\s*({result_code}[^\s"]+)\s*"?""",
     """Source Workstation:\s*({src_host}[^\s\<]+)\s*(<14>)?""",
-    """Logon Account:\s*(({email_address}[^<:@]+@[^\.]+\.[^<:]+)|({user}[^:<]+?))\s*(<14>)?Source Workstation:""",
+    """Logon Account:\s*(({email_address}[^<:@]+@[^\.]+\.[^<:]+)|({user}[\w\.\-]{1,40}\$?))\s*(<14>)?Source Workstation:""",
    ]
    DupFields = [
-    "result_code->failure_code",
-    "host->dest_host"
+    "result_code->failure_code"
    ]
 
 

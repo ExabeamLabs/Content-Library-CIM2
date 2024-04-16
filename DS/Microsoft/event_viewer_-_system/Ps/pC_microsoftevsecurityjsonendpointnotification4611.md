@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4611
       """"SubjectLogonId"+:"+({login_id}[^"]+)"""",
       """"LogonProcessName"+:"+({process_name}[^"]+)"""",
       """"SubjectUserSid"+:"+({user_sid}[^"]+)"""",
-      """"SubjectUserName"+:"+({user}[^"]+)"""",
+      """"SubjectUserName"+:"+({user}[\w\.\-]{1,40}\$?)"""",
       """({event_name}A trusted logon process has been registered with the Local Security Authority)"""
     ]
   

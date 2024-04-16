@@ -4,7 +4,7 @@ Product: IronPort Email
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  83   |   37   |         5          |       5        |   28    |
+|  83   |   37   |         5          |       5        |   34    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -15,13 +15,10 @@ Fields = [
 """EventRecordID="+({event_id}[^"]+)""""
 """CallerDomain="+({domain}[^"]+)""""
 """CallerLogonId="+\([^,]+,({login_id}[^\)]+)""""
-"""CallerUserName ="+({user}[^"]+)""""
+"""CallerUserName ="+({user}[\w\.\-]{1,40}\$?)""""
 """TargetAccountID="+\%\{({dest_user_sid}[^}]+)\}""""
 """TargetAccountName ="+({dest_user}[^"]+)""""
 """TargetDomain="+({dest_domain}[^"]+)""""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

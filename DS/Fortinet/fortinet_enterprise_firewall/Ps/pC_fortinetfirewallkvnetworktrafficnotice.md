@@ -16,13 +16,13 @@ Name = fortinet-firewall-kv-network-traffic-notice
   Fields = [
     """eventtime=({time}\d{10})""",
     """\Wdevname=\"?({host}[^\"]+?)\"?(\s+\w+=|\s*$)""",
-    """\Wsrcip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdstip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrcip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdstip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wsrcport=({src_port}\d+)""",
     """\Wdstport=({dest_port}\d+)""",
     """\Wdstintf=\"+({dest_interface}[^\"]+)""",
     """\Wsrcintf=\"+({src_interface}[^\"]+)""",
-    """\Wuser="+((?:host\/({src_host}[^"]+))|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[^"]+))""",
+    """\Wuser="\s*((?:host\/({src_host}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^"]+))?)\s*"""",
     """\Wsentbyte=({bytes_out}\d+)""",
     """\Wrcvdbyte=({bytes_in}\d+)""",
     """\Waction=\"*({action}[^\"]+?)\"*(\s+\w+=|\s*$)""",
@@ -33,8 +33,13 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\Wsrcintfrole=\"+(undefined|({src_interface_role}[^\"]+))\"+""",
     """\Wdstintfrole=\"+(undefined|({dest_interface_role}[^\"]+))\"+""",
     """\Wsrccountry="(Reserved|({src_country}[^"]+))"""",
-    """\Wdstcountry="(Reserved|({dest_country}[^"]+))""""
+    """\Wdstcountry="(Reserved|({dest_country}[^"]+))"""",
+    """\Wtype=\"+({event_category}[^"]+)""",
+    """\Wsubtype=\"({operation}[^"]+)""",
+    """\ssrcmac="?({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"?""",
+    """\Wtz="?({tz}[+-]\d+)"""
 ]
+ DupFields = [ "bytes_in->bytes"]
 
 
 }

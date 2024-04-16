@@ -15,7 +15,7 @@ Fields = [
   """\srt=({time}\d{13})"""
   """shost=({host}[^\s]+)"""
   """sntdom=({domain}[^\s]+)"""
-  """suser=({user}.+?)\s+\w+="""
+  """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
   """duser=({dest_user}.+?)\s+\w+="""
   """nitroSource_Logon_ID=({login_id}[^\s]+)"""
   """nitroSecurity_ID=({user_sid}[^\s]+)"""

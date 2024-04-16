@@ -7,8 +7,8 @@ Vendor: Zeek
 
 | Name    | Description    | Activity Type | MITRE Tactic      | Severity | Overlap with AA |
 | ---- | ---- | ---- | ---- | -------- | ---- |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
-| Vault file database access | User is trying to access the vault file database | file-read     | Credential Access | 2        | false    |
+| Passwd or Shadow file read. | Passwd or Shadow file was read. This file stores essential information about the users on the system. | file-read     | Credential Access | 2        | false    |
+| Passwd or Shadow file read. | Passwd or Shadow file was read. This file stores essential information about the users on the system. | file-read     | Credential Access | 2        | false    |
+| Passwd or Shadow file read. | Passwd or Shadow file was read. This file stores essential information about the users on the system. | file-read     | Credential Access | 2        | false    |
+| Passwd or Shadow file read. | Passwd or Shadow file was read. This file stores essential information about the users on the system. | file-read     | Credential Access | 2        | false    |
+| Passwd or Shadow file read. | Passwd or Shadow file was read. This file stores essential information about the users on the system. | file-read     | Credential Access | 2        | false    |

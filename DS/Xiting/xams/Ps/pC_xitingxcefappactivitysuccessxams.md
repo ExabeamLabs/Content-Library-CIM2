@@ -7,7 +7,7 @@ Name = xiting-x-cef-app-activity-success-xams
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """CEF:""", """|Xiting|XAMS|""", """"SID":""""]
   Fields = [
-    """"USERID":"({user}[^"]+)"""",
+    """"USERID":"({user}[\w\.\-]{1,40}\$?)"""",
     """({app}XAMS)""",
     """"MSG":"({additional_info}[^"]+)"""",
     """"INSTANCE":"({target}[^"]+)"""",

@@ -6,15 +6,15 @@ Name = github-g-json-repository-create-success-githubauditrepo
   Vendor = GitHub
   Product = GitHub
   TimeFormat = "epoch"
-  Conditions = [ """github_audit""", """action":"repo""" ]
+  Conditions = [ """github_audit""", """action":""", """"repo""" ]
   Fields = [
-    """"created_at":({time}\d+),""",
-    """"start":({time}\d{13}),""",
+    """"created_at":\s*({time}\d+),""",
+    """"start":\s*({time}\d{13}),""",
     """({host}\S+)\s+github_audit:""",
-    """"+actor"+:"+({user}[^"]+)""",
-    """"+action"+:"+({operation}[^"]+)""",
-    """"+actor_ip"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"+repo"+:"+({object}[^"]+)""",
+    """"+actor"+:\s*"+({user}[\w\.\-]{1,40}\$?)""",
+    """"+action"+:\s*"+({operation}[^"]+)""",
+    """"+actor_ip"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"+repo"+:\s*"+({object}[^"]+)""",
     """({app}github)"""
   ]
 

@@ -12,13 +12,14 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch
     """"SensitiveInformation":\s*\[\{[^\}]*?"Location":\s*"(|({additional_info}[^"]+))"(,|\})""",
     """"Severity":\s*"({alert_severity}[^"]+)"""",
     """"IncidentId":\s*"({alert_id}[^"]+)"""",
-    """"Actions":\s*\["({action}[^"]+)"""",
+    """"Actions":\s*\["({result}[^"]+)"""",
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
-    """"From":\s*"(({email_address}[^@"]+?@[^\."]+\.[^"]+)|({user}[^@"]+)@({domain}[^@"]+))""", 
-    """"To":\s*\["?({target}[^\]"]+?)"?\]"""
+    """"From":\s*"\s*\|?\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)""", 
+    """"To":\s*\["?({target}[^\]"]+?)"?\]""",
+    """"Workload":\s*"({alert_source}[^",]+)""""
+    """\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s"""
   ]
-  DupFields = [ "email_address->user" ]
   ParserVersion = "v1.0.0"
 
 

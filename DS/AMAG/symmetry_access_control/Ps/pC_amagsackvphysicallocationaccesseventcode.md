@@ -4,7 +4,7 @@
 Name = "amag-sac-kv-physical-location-access-eventcode"
 Vendor = "AMAG"
 Product = "Symmetry Access Control"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = ["MM/dd/yyyy HH:mm:ss a","M/dd/yyyy HH:mm:ss a"]
 Conditions = [
 """ Device: """
 """ EventCode: """

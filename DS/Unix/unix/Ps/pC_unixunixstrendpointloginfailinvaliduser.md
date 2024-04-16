@@ -4,15 +4,17 @@
 Name = "unix-unix-str-endpoint-login-fail-invaliduser"
   Vendor = "Unix"
   Product = "Unix"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ","MMM dd HH:mm:ss"]
   Conditions = [
     """ sshd["""
     """nvalid user """
   ]
   Fields = [
-    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """\s({host}[\w\.-]+):?\s+sshd\["""
-    """({failure_reason}(i|I)nvalid user)\s+(({domain}[^\s]+?)\\+)?(?:({email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|({user}[^@\s]+))(@({=domain}[^\s]+))?"""
+    """({time}\w+\s\d+\s\d+:\d+:\d+)(\s*({host}[\w\-.]+)(\s\w+)?\ssshd\[)?""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[-+]\d+:\d+)?\s*({host}[\w\-.]+)\s*sshd\[""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """\d\d.*?\s({host}[\w\-\.]+)(:|\s|\s\w+)\s*sshd\[\d+\]""",
+    """\s({failure_reason}(i|I)nvalid user) ((({domain}[^"\s]+?)\\+)?(?:({email_address}[^"@\s]+@[^"\.\s]+\.[^"\s]+)|({user}[\w\.\-]{1,40}\$?))?(@({=domain}[^"\s]+))? (from |\[preauth\]))?"""
     """\sfrom\s+(::[\w]+:)?(({src_ip}(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|::1))|({src_host}[\w\.\-]+))\s*"""
     """sshd\[({login_id}\d+)"""
     """({event_code}ssh)"""

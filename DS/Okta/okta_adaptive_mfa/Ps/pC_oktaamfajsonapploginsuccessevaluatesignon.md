@@ -8,11 +8,12 @@ Name = okta-amfa-json-app-login-success-evaluatesignon
   Conditions = [ """"eventType"""", """"policy.evaluate_sign_on"""", """policyType""" ]
   Fields = [
     """"published"+:"+({time}[^",]+)"+""",
-    """"+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|({email_address}[^@]+@({domain}[^\.]+\.[^",]+))|(unknown|({user}[^",]+)))"+,""",
+    """"+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}[^@]+@({email_domain}[^\.]+\.[^",]+))|(unknown|({=user}[\w\.\-]{1,40}\$?)))"+,""",
     """"+actor"+:\{[^\{\}]*?"+displayName"+:"+(Okta System|Okta Admin|unknown|({full_name}[^",]+))"+,""",
     """"policyType"+:"+({alert_type}[^",]+)""",
-    """"eventType"+:"+({operation}[^",]+)""",
-    """"+result"+:"+({action}[^",]+)"+,""",
+    """"eventType"+:"+({operation_details}[^",]+)""",
+    """"legacyEventType"+:"+({operation}[^",]+)""",
+    """"+result"+:"+({result}[^",]+)"+,""",
     """"reason"+:"+({additional_info}[^",]+)"+""",
     """"severity"+:"+({alert_severity}[^",]+)"+""",
     """"+userAgent"+:(null|"+({user_agent}[^",]+))"+""",

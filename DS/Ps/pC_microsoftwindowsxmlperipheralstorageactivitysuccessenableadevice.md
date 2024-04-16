@@ -3,7 +3,8 @@
 {
 Name = "microsoft-windows-xml-peripheral-storage-activity-success-enableadevice"
 Conditions = [
-"""A request was made to enable a device."""
+"""Microsoft-Windows-Security-Auditing"""
+"""<EventID>6421</EventID>"""
 ]
 ParserVersion = "v1.0.0"
 

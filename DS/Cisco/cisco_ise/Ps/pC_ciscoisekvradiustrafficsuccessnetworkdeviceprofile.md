@@ -10,7 +10,7 @@ Conditions = [
   """, NetworkDeviceProfileName ="""
 ]
 Fields = [
-  """,\s*AD-User-SamAccount-Name =({user}[^\s,]+)"""
+  """,\s*AD-User-SamAccount-Name =({user}[\w\.\-]{1,40}\$?)"""
   """,\s*AD-User-Resolved-Identities=({email_address}[^\s,@]+@[^\s,@]+)"""
   """,\s*AD-User-Join-Point=({domain}[^\s,]+)"""
   """,\s*AuthenticationStatus=({result}[^,]+)"""

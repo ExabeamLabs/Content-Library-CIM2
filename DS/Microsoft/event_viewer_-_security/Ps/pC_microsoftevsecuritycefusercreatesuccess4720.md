@@ -15,11 +15,11 @@ Name = "microsoft-evsecurity-cef-user-create-success-4720"
 """({event_code}4720)""",
 """\srt=({time}\d{13})""",
 """\ssntdom=({domain}[^\s]+)""",
-"""\ssuser=({user}.+?)\s+\w+=""",
+"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
 """\ssuid=({login_id}[^\s]+)""",
 """\sdntdom=({account_domain}[^\s]+)""",
 """\sduser=({account_name}.+?)\s+\w+=""",
-"""\sdvchost=({host}[^\s]+)""",
+"""\sdvchost=({host}[\w\-.]+)""",
 """ad.New_,Account:Security_,ID=({account_id}[^\s]+)"""
   ]
   DupFields = [ "host->dest_host","account_name->dest_user" ]

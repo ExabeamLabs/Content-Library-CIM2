@@ -19,7 +19,7 @@ Fields = [
 """\WFacilityID="({facility_id}[^"]+)"""
 """\WReaderID="({location_door_id}[^"]+)"""
 """\WTransactionType="({transaction_type}[^"]+)"""
-"""\WEmployeeNumber="({user}[^"]+)"""
+"""\WEmployeeNumber="({user}[\w\.\-]{1,40}\$?)"""
 """\WBadgeNumber="({badge_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"

@@ -11,7 +11,7 @@ Name = microsoft-o365-json-file-success-workload
     """,ItemType":"({file_type}[^,]+)""",
     """,Operation":"({operation}[^,]+)""",
     """,SourceRelativeUrl":"({file_dir}[^",]+)""",
-    """,ClientIP":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """,ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """,UserAgent":"({user_agent}[^,]+)""",
     """"SourceFileExtension":"({src_file_ext}[^,]+)""",
     """,SourceFileName":"({file_name}[^,]+)""",

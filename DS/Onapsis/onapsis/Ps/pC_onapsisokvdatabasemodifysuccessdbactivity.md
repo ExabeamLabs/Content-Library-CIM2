@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """<.*?>\w+ \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} ({host}[\w\.-]+?) ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-""", user_name=\s*({user}[^,]+?)\s*,"""
+""", user_name=\s*({user}[\w\.\-]{1,40}\$?)\s*,"""
 """, user_id=\s*({user_id}[^,]+?)\s*,"""
 """, action=\s*({db_operation}[^,]+?)\s*,"""
 """, db_table\s*=({table_name}[^,]+?)\s*,"""

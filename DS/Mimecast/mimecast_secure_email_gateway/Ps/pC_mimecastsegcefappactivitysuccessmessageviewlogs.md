@@ -14,11 +14,11 @@ Conditions = [
 ]
 Fields = [
   """"viewed":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)""""
-  """"viewer":"({email_address}[^"]+?)""""
+  """"viewer":"\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""
   """({app}Mimecast Email Security)"""
   """({operation}Archive Message View Logs)"""
   """"subject":"({object}[^"]+?)""""
-  """"to":"(({dest_email_address}[^"@]+@[^";]+)|({target}[^"]+)")""",
+  """"to":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({target}[^"]+)")""",
   """"from":"({log_source}[^"]+?)""""
   """"discoveryCase":({result}\w+)"""
   """"source":"({resource}[^"]+?)""""

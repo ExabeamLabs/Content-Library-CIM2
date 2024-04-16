@@ -12,9 +12,9 @@ Conditions = [
 """EventCode=54201"""
 ]
 Fields = [
-""":\d\d\s\w+\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
+""":\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
 """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)"""
-"""User=(NULL|NOT_TRANSLATED|({user}[^\s]+))"""
+"""User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
 """Sid=({user_sid}[^\s]+?)\sSidType"""
 """EventCode=({event_code}54201)"""
 """AUDIT_TRAIL\|Centrify Suite\|MFA\|[^=]+({event_name}MFA challenge failed)"""

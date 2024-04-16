@@ -7,7 +7,7 @@ Vendor: BeyondTrust
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  23   |   13   |         2          |       2        |    1    |
+|  23   |   13   |         2          |       2        |    2    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

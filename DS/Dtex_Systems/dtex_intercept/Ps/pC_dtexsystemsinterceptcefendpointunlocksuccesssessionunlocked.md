@@ -9,7 +9,7 @@ Name = "dtexsystems-intercept-cef-endpoint-unlock-success-sessionunlocked"
   Fields = [
     """\Wstart=({time}\d{13})""",
     """\WDevice_Name =(({domain}[^\\]+)\\+)?({host}[^\\\s]+)""",
-    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[^\\\s]+)\s""",
+    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
     """\|Dtex\|([^\|]*\|){2}(SessionActivity\|)?({event_code}[^\|]+)\|""",
   ]
   ParserVersion = "v1.0.0"

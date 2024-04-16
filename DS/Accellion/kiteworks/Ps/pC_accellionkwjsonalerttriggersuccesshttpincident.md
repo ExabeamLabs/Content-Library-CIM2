@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """, incident-reported-on=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d+)"""
 """policy-desc=({alert_name}[^,]+)"""
-""", Employee Code=({user}[^,]+)"""
+""", Employee Code=({user}[\w\.\-]{1,40}\$?)"""
 """, Sender Email=({email_address}[^,@]+@[^,@]+)"""
 """, attachment-name1=({file_name}[^,]+)"""
 """, attachment-size1=({bytes}\d+)"""
@@ -27,7 +27,7 @@ Fields = [
 """, incident-severity=({alert_severity}[^,]+)"""
 """, monitor-host=({host}[^,]+)"""
 """, recipient-url1=({malware_url}[^,]+)"""
-""", mail_status=({action}[^,]+)"""
+""", mail_status=({result}[^,]+)"""
 ]
 ParserVersion = "v1.0.0"
 

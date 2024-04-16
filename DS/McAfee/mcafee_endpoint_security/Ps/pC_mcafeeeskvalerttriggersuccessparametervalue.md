@@ -11,14 +11,14 @@ Name = mcafee-es-kv-alert-trigger-success-parametervalue
       """dvc_time="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """dvc_ip_long="({host_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
       """dvc_host="({host}.+?)",""",
-      """source_ip="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """source_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """event_id="({alert_id}\d+)""",
       """signature_name="({alert_name}.+?)",""",
       """category="({alert_type}.+?)",""",
       """signature_id="({signature_id}\d+)""",
       """severity="({alert_severity}\d+)""",
       """parameter_name="({additional_info}[^"]+)""",
-      """user="(({domain}[^\\]+)\\+)?(?: |({user}[^"]+))""",
+      """user="(({domain}[^\\]+)\\+)?(?: |({user}[\w\.\-]{1,40}\$?))""",
     ]
     SOAR {
         IncidentType = "malware"

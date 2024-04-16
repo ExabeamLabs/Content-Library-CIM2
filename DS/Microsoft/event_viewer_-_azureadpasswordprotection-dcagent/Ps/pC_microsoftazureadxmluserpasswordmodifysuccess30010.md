@@ -10,11 +10,12 @@ Name = microsoft-azuread-xml-user-password-modify-success-30010
   Fields = [
     """<EventID>({event_code}30010)</EventID>"""
     """<Computer>({host}[^<]+)</Computer>""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>({event_name}[^.<]+)""",
-    """UserName:\s*({user}[^\s]+)""",
+    """UserName:\s*({user}[\w\.\-]{1,40}\$?)""",
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
-    """Security UserID='({user_sid}[^']+)'""",
+    """Security UserID\\*='({user_sid}[^']+)'""",
     """<Keywords>({result}[^<]+)</Keywords>""",
   ]
 

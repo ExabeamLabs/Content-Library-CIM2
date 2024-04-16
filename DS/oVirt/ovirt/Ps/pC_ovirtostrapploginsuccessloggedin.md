@@ -9,7 +9,7 @@ Name = ovirt-o-str-app-login-success-loggedin
   Conditions = [ """EVENT_ID: USER_VDC_LOGIN""", """ovirt""", """logged in""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
-    """USER_VDC_LOGIN.+? User (?:({email_address}[^\s@]+@({email_domain}[^\s@]+))\S*|({user}[^\s]+)) connecting from '({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """USER_VDC_LOGIN.+? User (?:({email_address}[^\s@]+@({email_domain}[^\s@]+))\S*|({user}[\w\.\-]{1,40}\$?)) connecting from '({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({app}ovirt)"""
   ]
 

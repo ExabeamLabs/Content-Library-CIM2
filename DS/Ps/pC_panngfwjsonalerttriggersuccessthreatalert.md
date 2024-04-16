@@ -7,6 +7,7 @@ Conditions = [
 """"SubType":"file""""
 """"Action":"alert""""
 ]
+DupFields = [ "alert_name -> alert_subject" ]
 ParserVersion = "v1.0.0"
 
 

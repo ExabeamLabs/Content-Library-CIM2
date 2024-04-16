@@ -18,7 +18,7 @@ Fields = [
 """"severity":({alert_severity}[^",]+)"""
 """"file","name":"(|({file_path}({file_dir}[^"]*?)[\\\/]*({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\.\s"]+))?)))""""
 """"source-device":\{[^\{\}]*?"name":"({dest_host}[\w\-.]+)"""
-""""source-device":\{[^\{\}]*?"ip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+""""source-device":\{[^\{\}]*?"ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"source-device":\{[^\{\}]*?"mac-address":"({dest_mac}[^\s"]+)"""
 """"hash-value":"({hash_sha256}[^"]+)"""
 """"file_size":({bytes}\d+)"""

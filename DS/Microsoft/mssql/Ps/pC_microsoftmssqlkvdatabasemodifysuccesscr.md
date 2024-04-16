@@ -36,7 +36,7 @@ s-mssql-database-query-1 = {
       """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
       """\Wdproc=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
       """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
-      """\Wfname=.+?USERS\\+({user}[^\s\\]+)""",
+      """\Wfname=.+?USERS\\+({user}[\w\.\-]{1,40}\$?)""",
       """\Wfname=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
       """\Wcs6=\{({process_guid}[^\}]+)""",
       """\Wdpid=({process_id}\d+)""",

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """\Wrt=({time}\d{13})"""
 """\Wdvchost=\w+\/({host}[\w\-.]+)"""
-"""\WUser-Name:\s*(|({user}[^\s,]+)),"""
+"""\WUser-Name:\s*(|({user}[\w\.\-]{1,40}\$?)),"""
 """\WSession-ID:\s*(|({session_id}[^\s,]+)),"""
 """\WFramed-IP-Address:\s*(|({src_translated_ip}[A-Fa-f:\d.]+)),"""
 ]

@@ -11,11 +11,11 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)\s+({host}\S+)\s+TRANSMIT\[.*?\]:\s*({alert_id}[^:]+?)\s*:"""
-  """\sfrom=<({src_email_address}[^@]+?@.+?)>"""
+  """\sfrom=<({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>"""
   """\ssize=({bytes}\d+)"""
   """\snrcpts=({num_recipients}\d+)"""
   """\sproto=({protocol}[^,]+)"""
-  """\srelay=({dest_host}[\w\-.]+)\s*\[({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\srelay=({dest_host}[\w\-.]+)\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 

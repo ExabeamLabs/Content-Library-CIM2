@@ -10,7 +10,7 @@ Name = "cisco-ise-kv-app-notification-externalmdm"
 	]
   Fields = [
     """({host}\S+) ({event_name}CISE_External_MDM) (\S+\s+){3}({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
-    """UserName =({user}[^,]+?),"""
+    """UserName =(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
 # endpointmacaddress is removed
 # operatingsystem is removed
 # jailbroken is removed

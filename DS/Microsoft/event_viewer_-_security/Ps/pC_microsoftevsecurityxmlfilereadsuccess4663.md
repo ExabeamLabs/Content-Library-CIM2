@@ -13,10 +13,10 @@ Conditions = [
 ]
 Fields = [
   """"TimeGenerated"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """"Computer"+:"+({host}[^"]+)"""
+  """"Computer"+:"+({host}[\w\-.]+)"""
   """"EventID"+:({event_code}\d+)"""
   """<Data Name(\\)?=(\\)?"+SubjectUserSid(\\)?"+>(?:NONE_MAPPED|({user_sid}[^<]+))<\/Data>"""
-  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[^<]+))<\/Data>"""
+  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectDomainName(\\)?"+>(NT AUTHORITY|({domain}[^<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectLogonId(\\)?"+>({login_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectType(\\)?"+>({file_type}[^<]+)<\/Data>"""
@@ -24,6 +24,7 @@ Fields = [
   """<Data Name(\\)?=(\\)?"+ProcessName(\\)?"+>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/"<]+?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+AccessList(\\)?"+>({access}.+?)\s(\\t)*"""
   """AccessMask"+:"+({access_mask}[^"]+)"""
+  """<Level>({run_level}[^<]+)<"""
   """"Activity":"({event_name}[^"]+)""""
 ]
 DupFields = [

@@ -10,16 +10,13 @@ Conditions = [
 """Sales Cloud"""
 ]
 Fields = [
-"""destinationServiceName =({host}.+?)\s*(\w+=|$)"""
-"""CreatedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-"""CreatedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))"""
+"""destinationServiceName =({host}[\w\-.]+?)\s*(\w+=|$)"""
+"""(CreatedDate|CreateDate)\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
+"""CreatedBy\.Username\\=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+));"""
 """Action\\=({operation}[^;]+)"""
 """duser=({object}[^\\\s]+)"""
 """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
 """({app}Sales Cloud)"""
-]
-DupFields = [
-"email_address->user"
 ]
 ParserVersion = "v1.0.0"
 

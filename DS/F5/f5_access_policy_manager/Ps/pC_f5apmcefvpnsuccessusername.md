@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """\srt=({time}\d{13})"""
-"""\sduser=({user}.+?)(?:\s+[\w.]+=|\s*$)"""
+"""\sduser=({user}[\w\.\-]{1,40}\$?)(?:\s+[\w.]+=|\s*$)"""
 """\scs4=({session_id}.+?)(?:\s+[\w.]+=|\s*$)"""
 """\sdvc=({host}[a-fA-F\d.:]+)"""
 """\sdvchost=({host}.+?)(?:\s+[\w.]+=|\s*$)"""

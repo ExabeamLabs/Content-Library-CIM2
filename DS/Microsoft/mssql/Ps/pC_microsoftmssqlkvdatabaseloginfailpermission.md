@@ -20,9 +20,9 @@ Name = microsoft-mssql-kv-database-login-fail-permission
     """\saction_id:({db_operation}[^\s]+)"""
     """database_name:({db_name}[^\s]+)"""
     """\sdatabase_principal_name:([^\\]+\\)?({db_user}[^\s]+)\starget_server_principal_name:"""
-    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[^\s]+))\sserver_principal_sid:"""
+    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[\w\.\-]{1,40}\$?))\sserver_principal_sid:"""
     """Reason:\s({failure_reason}[^\.]+)"""
-    """server_instance_name:({dest_host}[^\s]+)"""
+    """server_instance_name:({dest_host}[\w\-.]+)"""
     """({event_name}LGIF)"""
     """statement:({additional_info}.+?)\sadditional_information:"""
   ]

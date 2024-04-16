@@ -7,9 +7,7 @@ Conditions = [
   """"type":"USER_START""""
   """res\=success"""
   """PAM:session_open"""
-  """Cloud Apps Security|"""
-  """|audit-event|"""
-]
+ ]
 ParserVersion = "v1.0.0"
 
 cef-unix-template.Fields}[

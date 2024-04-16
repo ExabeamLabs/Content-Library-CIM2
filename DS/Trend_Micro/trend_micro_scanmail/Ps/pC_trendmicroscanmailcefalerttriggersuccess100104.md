@@ -15,8 +15,8 @@ Name = trendmicro-scanmail-cef-alert-trigger-success-100104
     """CEF:([^\|]*\|){5}({alert_type}[^|]+)""",
     """CEF:([^\|]*\|){4}({event_code}[^|]+)""",
     """cat=((?i)Unknown|({alert_type}[^=,]+))(\s+,\S+)?\s+\w+=""",
-    """duser=({email_recipients}({dest_email_address}[^;]+)[^=]*?);?\s+\w+=""",
-    """suser=({src_email_address}[^\s;]+);?\s+\w+=""",
+    """duser=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^=]*?);?\s+\w+=""",
+    """suser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));?\s+\w+=""",
     """act=({action}[^\s=])\s+\w+=""",
     """policyReason=({malware_url}[^\s]+)""",
     """msg=({additional_info}[^=]+)\s+\w+="""

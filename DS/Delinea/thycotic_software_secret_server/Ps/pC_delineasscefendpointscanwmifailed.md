@@ -12,7 +12,7 @@ Name = "delinea-ss-cef-endpoint-scan-wmifailed"
   Fields = [
     """rt=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
     """ Computer: ({host}.+?) with user"""
-    """user: (({domain}[^\\\s]+)\\+)?({user}[^\\\s]+) """
+    """user: (({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?) """
     """msg=({operation}.+?) rt="""
   ]
   ParserVersion = "v1.0.0"

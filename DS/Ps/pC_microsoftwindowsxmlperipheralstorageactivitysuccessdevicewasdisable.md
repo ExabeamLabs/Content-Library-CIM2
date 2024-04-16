@@ -3,7 +3,8 @@
 {
 Name = "microsoft-windows-xml-peripheral-storage-activity-success-devicewasdisable"
 Conditions = [
-"""A device was disabled."""
+"""Microsoft-Windows-Security-Auditing"""
+"""<EventID>6420</EventID>"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -6,31 +6,39 @@ Name = netskope-sc-json-alert-trigger-success-alertname
   Product = Netskope Security Cloud
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch_sec"
+  ExtractionType = json
   Conditions = [ """"alert_type": """, """"alert": "yes"""", """"alert_name":"""]
   Fields = [
-    """"timestamp":\s*({time}\d{10})""",
-    """"hostname":\s*"({dest_host}[^"]+)""",
-    """"policy":\s*"({alert_name}[^"]+)"""",
-    """"alert_type":\s*"({alert_type}[^"]+)"""",
-    """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"url":\s*"({malware_url}[^"]+)"""",
-    """"alert_name":\s*"({alert_name}[^"]+)"""",
-    """"internal_id":\s*"({alert_id}[^"]+)"""",
-    """"category\s*":"({additional_info}[^"]+)""",
-    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"user"+:\s*"+(unknown|(({email_address}[^"@\\\/\s]+@({domain}[^.]+)[^"]+)))"""",
-    """"activity":\s*"({operation}[^"]+)""",
-    """"src_country":\s*"({country}[^"]+)""",
-    """"os":\s*"((U|u)nknown|({os}[^"]+))""",
-    """"browser":\s*"((U|u)nknown|({browser}[^"]+))""",
-    """"page":\s*"({web_domain}[^"//]+)""",
-    """"dst_location":\s*"(N/A|({location}[^"]+))""",
-    """"app":\s*"({app}[^"]+)""",
-    """"md5":\s*"({hash_md5}[^"]+)"""",
-    """"from_user":\s*"({from_user_at}[^"]+)"""",
-    """"file_path":\s*"({file_path_at}[^"]+)"""",
-    """"shared_with":\s*"({shared_with_at}[^"]+)"""",
-    """"site":\s*"({site_at}[^"]+)""""
+    """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_json_path=$.hostname,exa_field_name=dest_host"""
+    """exa_json_path=$.policy,exa_field_name=alert_name"""
+    """exa_json_path=$.alert_type,exa_field_name=alert_type"""
+    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.url,exa_field_name=malware_url"""
+    """exa_json_path=$.alert_name,exa_field_name=alert_name"""
+    """exa_json_path=$.internal_id,exa_field_name=alert_id"""
+    """exa_json_path=$.category,exa_field_name=additional_info"""
+    """exa_json_path=$.srcip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.user,exa_regex=(unknown|(({email_address}[^"@\\\/\s]+@({domain}[^.]+)[^"]+)))"""
+    """exa_json_path=$.activity,exa_field_name=operation"""
+    """exa_json_path=$.src_country,exa_field_name=country"""
+    """exa_json_path=$.os,exa_regex=((U|u)nknown|({os}[^"]+))"""
+    """exa_json_path=$.browser,exa_regex=((U|u)nknown|({browser}[^"]+))"""
+    """exa_regex="page":\s*"({web_domain}[^"\/]+)"""
+    """exa_json_path=$.dst_location,exa_field_name=location"""
+    """exa_json_path=$.app,exa_field_name=app"""
+    """exa_json_path=$.md5,exa_field_name=hash_md5"""
+    """exa_json_path=$.from_user,exa_field_name=from_user_at"""
+    """exa_json_path=$.file_path,exa_field_name=file_path_at"""
+    """exa_json_path=$.shared_with,exa_field_name=shared_with_at"""
+    """exa_json_path=$.site,exa_field_name=site_at"""
+    """exa_json_path=$.protocol,exa_field_name=protocol"""
+    """exa_json_path=$.domain,exa_field_name=top_domain"""
+    """exa_json_path=$.file_size,exa_field_name=bytes"""
+    """exa_json_path=$.domain,exa_field_name=domain"""
+  ]
+  DupFields = [
+"alert_name"->"alert_subject"
   ]
 
 

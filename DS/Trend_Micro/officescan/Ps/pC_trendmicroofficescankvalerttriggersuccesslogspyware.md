@@ -13,7 +13,7 @@ Fields = [
 """({host}\S+) WFBSS-SVC-AC"""
 """\d+ ({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d) \d+\.\d+\.\d+\.\d+"""
 """Device name="({src_host}[^"]+)"""
-"""User="({user}[^"]+)"""
+"""User="({user}[\w\.\-]{1,40}\$?)"""
 """Spyware="({alert_name}[^"]+)"""
 """Risk Level="({alert_severity}[^"]+)"""
 """Infected Resource="({malware_url}[^"]+)"""

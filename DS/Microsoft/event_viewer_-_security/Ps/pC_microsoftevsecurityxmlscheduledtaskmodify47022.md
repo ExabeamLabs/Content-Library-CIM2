@@ -9,13 +9,14 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
   Conditions = [ """<EventID>4702<""" ]
   Fields = [
     """<EventID>({event_code}\d+)""",
-    """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """<Data Name(\\)?='SubjectUserSid'>({user_sid}[^<]+)""",
-    """<Data Name(\\)?='SubjectUserName'>({user}[^<]+)""",
-    """<Data Name(\\)?='SubjectDomainName'>({domain}[^<]+)""",
-    """<Data Name(\\)?='SubjectLogonId'>({login_id}[^<]+)""",
-    """<Data Name(\\)?='TaskName'>({task_name}[^<]+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
+    """<Data Name(\\)?=('|")TaskName('|")>({task_name}[^<]+)""",
     """(<|&lt;)UserId(>|&gt;)(?=\w)(({account_domain}[^\\<]*)\\)?({account_name}[^<]+)(<|&lt;)/UserId(>|&gt;)""",
     """(<|&lt;)Settings(>|&gt;)\s*({additional_info}.+?)\s*(<|&lt;)/Settings(>|&gt;)""",
     """(<|&lt;)Triggers(>|&gt;)\s*({triggers}.+?)\s*(<|&lt;)/Triggers(>|&gt;)""",
@@ -24,6 +25,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """(<|&lt;)RegistrationInfo(>|&gt;).+?(<|&lt;)Description(>|&gt;)(?=\w)({event_name}.+?)(<|&lt;)/Description(>|&gt;)""",
     """(<|&lt;)Command(>|&gt;)"?({process_path}({process_dir}(?:(\w+:)?[^:<"]+?)?[\\\/]+)?({process_name}[^<"\\\/]+?))(<|&lt;)/Command(>|&gt;)""",
     """(<|&lt;)Arguments(>|&gt;)("+)?({arg}.+?)(<|&lt;)/Arguments(>|&gt;)"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

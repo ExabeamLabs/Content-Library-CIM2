@@ -4,8 +4,9 @@
 Name = "salesforce-sf-sk4-app-activity-success-useremailchangesent"
 Product = "Salesforce"
 Conditions = [
-"""flexString1=useremailchangesent"""
-"""destinationServiceName =Sales Cloud"""
+"""Action\=useremailchangesent"""
+"""type\=SetupAuditTrail"""
+"""Display\="""
 ]
 ParserVersion = "v1.0.0"
 

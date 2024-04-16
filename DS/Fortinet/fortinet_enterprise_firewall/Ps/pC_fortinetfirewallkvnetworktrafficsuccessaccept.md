@@ -19,8 +19,8 @@ Name = fortinet-firewall-kv-network-traffic-success-accept
     """\slevel=\"*({severity}[^\s"]*)\"*""",
    """\sdevname=\"*({host}[^\s"]*)\"*""",
     """\saction=\"*({action}[^\s"]*)\"*""",
-    """\sdstip=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\ssrcip=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sdstip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\ssrcip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\ssrcintf=\"?({src_interface}.+?)\"?\s+(\w+=|$)""",
     """\ssentbyte=({bytes_out}\d+)""",
     """\srcvdbyte=({bytes_in}\d+)""",
@@ -30,14 +30,15 @@ Name = fortinet-firewall-kv-network-traffic-success-accept
     """\ssrcport=({src_port}\d+)""",
     """\sdstport=({dest_port}\d+)""",
     """\ssrccountry=\"?({src_country}.+?)\"?\s+(\w+=|$)""",
-    """\suser=\"?({user}.+?)\"?\s+(\w+=|$)""",
+    """\suser=\"?({user}[\w\.\-]{1,40}\$?)\"?\s+(\w+=|$)""",
     """\stransport=({src_translated_port}\d+)""",
     """\stransip=({src_translated_ip}[a-fA-F\d.:]+)""",
     """\smsg=\"*({additional_info}[^\s"]*)\"*""",
     """\slogdesc=\"*({event_name}[^\s"]*)\"*""",
     """\stranport=({src_translated_port}\d+)""",
     """\stranip=({dest_translated_ip}[a-fA-F\d.:]+)""",
-    """\ssrcname=\"*({src_host}[^\s"]*)\"*"""
+    """\ssrcname=\"*({src_host}[^\s"]*)\"*""",
+    """\Wtz="?({tz}[+-]\d+)"""
   ]
 
 

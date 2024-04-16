@@ -2,28 +2,24 @@
 ```Java
 {
 Name = microsoft-sysmon-json-process-close-terminated
+  ExtractionType = json
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.SSS"]
   Conditions = [ """Microsoft-Windows-Sysmon""", """Process terminated:""", """"AccountName":"""" ]
   Fields = [
-    """"UtcTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
-    """"TargetFilename":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
-    """"Domain":"(NT AUTHORITY|({domain}[^"]+))""",
-    """"AccountName":"((?i)SYSTEM|({user}[^"]+))""",
-    """"SourceProcessId":"({process_id}\d+)""",
-    """"SourceProcessGuid":"({process_guid}[^"]+)""",
-    """"TargetProcessId":"({dest_process_id}\d+)""",
-# target_process_guid is removed
-    """"LogonId":"({login_id}[^"]+)""",
-    """"Hostname":"({host}[^"]+)""",
-    """"TargetImage":"({dest_process}({dest_process_dir}[^"]*?[\\\/]+)?({dest_process_name}[^"\\\/]+))"""",
-    """"EventID":({event_code}\d+)""",
-    """"ProcessGuid":"({process_guid}[^"]+)""",
-    """"ProcessID":({process_id}\d+)""",
-    """({log_name}Microsoft-Windows-Sysmon)"""
+    """exa_json_path=$.UtcTime,exa_field_name=time"""
+    """exa_regex="Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
+    """exa_json_path=$.Domain,exa_field_name=domain"""
+    """exa_json_path=$.AccountName,exa_field_name=user"""
+    """exa_json_path=$.AccountName,exa_field_name=user"""
+    """exa_json_path=$.Hostname,exa_field_name=host"""
+    """exa_json_path=$.EventID,exa_field_name=event_code"""
+    """exa_json_path=$.ProcessGuid,exa_field_name=process_guid"""
+    """exa_json_path=$.ProcessID,exa_field_name=process_id"""
+    """exa_regex=({log_name}Microsoft-Windows-Sysmon)"""
+
   ]
   DupFields = [ "host->dest_host" ]
 

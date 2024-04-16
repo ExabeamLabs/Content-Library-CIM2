@@ -12,11 +12,11 @@ Conditions = [
 Fields = [
 """ComputerName =({host}[^\s\n]+)"""
 """\sType=({alert_severity}[^\s\n]+)"""
-"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[^\s\n]+))"""
+"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
 """RecordNumber=({alert_id}\d+)"""
 """C\&C\s+({alert_name}.+?)\s+Compromised Host:"""
 """(Endpoint|Computer|Compromised Host):\s+({src_host}[^\s\n]+)"""
-"""IP Address:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""IP Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 DupFields = [
 "alert_name->alert_type"

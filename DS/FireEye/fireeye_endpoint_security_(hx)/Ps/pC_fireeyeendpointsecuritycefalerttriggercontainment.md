@@ -10,7 +10,7 @@ Name = fireeye-endpointsecurity-cef-alert-trigger-containment
   Fields = [
     """rt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
     """dvchost=({host}[^.\s]+)""",
-    """dst=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """dst=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dhost=({src_host}[^\s]+)""",
     """suser=({email_address}[^@\s]+@[^\s,]+)""",
     """msg=({additional_info}[^=]+)\s+\w+=""",

@@ -7,7 +7,7 @@ Name = badge-b-kv-physical-location-access-success-badgevalid
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
   Conditions = [ """"BADGE VALID""""]
   Fields = [
-    """AckTStamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)""",
+    """AckTStamp(=|: "+)({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)""",
     """Description:\s*"*({last_name}[^,"]+),\s+({first_name}[^,"]+)""",
     """Badge:\s*"*({badge_id}[^"]+)""",
     """Class:\s*"*({action}[^"]+)""",

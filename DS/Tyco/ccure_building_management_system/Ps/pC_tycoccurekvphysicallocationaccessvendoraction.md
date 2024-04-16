@@ -8,7 +8,7 @@ Name = tyco-ccure-kv-physical-location-access-vendoraction
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """vendor_action=""","""door_name=""","""reason_code=""" ]
   Fields = [
-    """message_time="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
+    """message_time=\\*"({time}\d+-\d+-\d+\s\d+:\d+:\d+)""",
     """door_name="({location_door}[^"]+)"""",
     """card_number="({badge_id}[^"]+)"""",
     """employee_id="({employee_id}[^"]+)"""",
@@ -17,7 +17,7 @@ Name = tyco-ccure-kv-physical-location-access-vendoraction
     """reason_code="({action}[^"]+)"""",
     """vendor_action="({result}[^"]+)"""",
     """description="({additional_info}[^"]+)"""",
-    """user="({user}[^"]+)""""
+    """user="({user}[\w\.\-]{1,40}\$?)""""
   ]
 
 

@@ -14,10 +14,10 @@ Conditions = [
 Fields = [
   """TimeGenerated"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """<Keywords>({result}.+?)</Keywords>"""
-  """Computer"+:"+({host}[^"]+)"""
+  """Computer"+:"+({host}[\w\-.]+)"""
   """({event_code}4674)"""
   """<Data Name(\\)?=(\\)?"+SubjectUserSid(\\)?"+>(?:NONE_MAPPED|({user_sid}[^<]+))"""
-  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[^<]+))<\/Data>"""
+  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectDomainName(\\)?"+>(NT AUTHORITY|({domain}[^<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectLogonId(\\)?"+>({login_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectServer(\\)?"+>(-|({object_server}[^<]+))"""

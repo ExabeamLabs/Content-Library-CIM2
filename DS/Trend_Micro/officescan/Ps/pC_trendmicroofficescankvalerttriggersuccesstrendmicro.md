@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """ComputerName =({host}[^\s\n]+)"""
 """\sType=({alert_severity}[^\s\n]+)"""
-"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[^\s\n]+))"""
+"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
 """RecordNumber=({alert_id}\d+)"""
 """Virus/Malware:\s({alert_name}.+?)\s+(Endpoint|Computer):"""
 """(Endpoint|Computer):\s+({src_host}[^\s\n]+)"""

@@ -14,10 +14,10 @@ Fields = [
       """"Resource":"({file_name}[^"]+)"""",
       """"id_s":"({file_path}({file_dir}(?:[^";]+)?[\/;])?({file_name}[^\/";]+)?)"""",
       """"SourceSystem":"({app}[^"]+)"""",
-      """"CallerIPAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"CallerIPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"ResultType":"({result}[^"]+)""",
       """"OperationName":"({event_name}[^"]+)"""",
-      """"identity_claim_unique_name_s":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[^"]+))"""",
+      """"identity_claim_unique_name_s":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
       """suser=({email_address}[^=@]+@[^\.]+\.[^\s=]+)"""
     ]
   

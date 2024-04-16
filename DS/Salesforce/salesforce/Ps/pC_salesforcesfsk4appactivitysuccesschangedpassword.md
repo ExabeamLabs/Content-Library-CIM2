@@ -11,13 +11,11 @@ Conditions = [
 ]
 Fields = [
 """CreatedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-"""CreatedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))"""
+"""CreatedBy\.Username\\=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+));"""
 """Action\\=({operation}[^;]+)"""
 """duser=({target}[^\\\s]+)"""
 """({app}Sales Cloud)"""
-]
-DupFields = [
-"email_address->user"
+"""CreatedBy\.Name\\?=({full_name}({first_name}[^\s]+)\s({last_name}[^;]+))"""
 ]
 ParserVersion = "v1.0.0"
 

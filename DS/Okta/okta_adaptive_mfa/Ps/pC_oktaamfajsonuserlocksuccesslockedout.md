@@ -4,17 +4,18 @@
 Name = okta-amfa-json-user-lock-success-lockedout
   Vendor = Okta
   Product = Okta Adaptive MFA
+  ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"credentials": {"provider":""", """"type": "ACTIVE_DIRECTORY"""", """"status": "LOCKED_OUT"""" ]
   Fields = [
-     """"employeeNumber":\s*"({account_id}[^"]+)"""",
-     """"status":\s*"({event_name}[^"]+)"""",
-     """"title":\s*"({group_name}[^"]+)"""",
-     """"department":\s*"({group_type}[^"]+)"""",
-     """"created":\s*"({time}[^"]+)"""",
-     """"displayName"+:\s*"+({domain}[^\s\\"]+)\\+({user}[^\s"]+)"""
-     """"samAccountName":\s*"({user}[^"]+)"""",
-     """"email":\s*"({email_address}[^@"\s]+@({email_domain}[^@"\s]+))""""
+    """exa_json_path=$.profile.employeeNumber,exa_field_name=account_id""",
+    """exa_json_path=$.status,exa_field_name=event_name""",
+    """exa_json_path=$.profile.title,exa_field_name=group_name""",
+    """exa_json_path=$.profile.department,exa_field_name=group_type""",
+    """exa_json_path=$.lastUpdated,exa_field_name=time""",
+    """exa_json_path=$.profile.displayName,exa_regex=({domain}[^\s\\"]+)\\+({user}[\w\.\-]{1,40}\$?)""",
+    """exa_json_path=$.profile.samAccountName,exa_regex=({user}[\w\.\-]{1,40}\$?)""",
+    """exa_json_path=$.profile.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
   ParserVersion = "v1.0.0"
 

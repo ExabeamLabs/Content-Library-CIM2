@@ -9,7 +9,7 @@ Name = "bitdefender-gz-json-app-notification-databsebackup"
   Conditions = [ """gravityzone:""", """"name":"Database Backup"""" ]
   Fields = [
     """"created":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)""",
-    """"user_name":"({email_address}[^"]+)""",
+    """"user_name":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 # backup_status is removed
     """"is_successful":({result}[^,]+)""",
     """"location":"({location}[^"]+)""",

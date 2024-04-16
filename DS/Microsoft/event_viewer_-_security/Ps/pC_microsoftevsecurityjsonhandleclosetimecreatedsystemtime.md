@@ -8,13 +8,13 @@ Name = microsoft-evsecurity-json-handle-close-timecreatedsystemtime
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """The handle to an object was closed""", """TimeCreated SystemTime""" ]
   Fields = [
-    """(?i)\w+ \d+ \d\d:\d\d:\d\d (am|pm|({host}[\w\-.]+))""",
+    """(?i)\w+ \d+ \d\d:\d\d:\d\d (am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4658\s""",
     """({event_code}4658)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """({event_name}The handle to an object was closed)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*({user}\S+)\s+Account Domain:""",
+    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Object:""",
     """Object Server:\s*({object_server}\S.*?)\s+Handle ID:""",

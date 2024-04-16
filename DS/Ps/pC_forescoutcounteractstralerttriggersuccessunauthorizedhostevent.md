@@ -7,8 +7,6 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cef-netskope-activity.Fields} [
-""""useragent":"({user_agent}[^"]+)""""
 
 }
 ```

@@ -5,14 +5,15 @@ Name = cisco-ise-cef-radius-traffic-success-ciceradius
   Vendor = Cisco
   Product = Cisco ISE
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS", "epoch_sec"]
   Conditions = ["""CISE_RADIUS_Accounting""", """CEF:0|Cisco|Cisco ISE|"""]
   Fields = [
     """dvchost=({host}\S+)"""
     """({event_name}CISE_RADIUS_Accounting)""",
+    """Timestamp=({time}\d{10})"""
     """({time}\w+ \d+ \d\d:\d\d:\d\d)""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """duser=(?:({user_type}host)/)?(({domain}[^\\\s\/;,@]+)\\+)?({user}[^,;@\s\\\/]+)(;|,|\s)""",
+    """duser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))))""",
     """User(-)?Name =({email_address}[^,;@\s]+@[^,;@\s]+)""",
 # acct_authentic is removed
 # acct_input_octets is removed

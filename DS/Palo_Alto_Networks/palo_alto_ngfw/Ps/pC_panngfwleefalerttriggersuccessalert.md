@@ -4,7 +4,7 @@
 Name = "pan-ngfw-leef-alert-trigger-success-alert"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = "yyyy/MM/dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
 Conditions = [
   """LEEF:"""
   """|Palo Alto Networks|PAN-OS Syslog Integration|"""
@@ -23,7 +23,7 @@ Fields = [
   """\|srcPostNAT=(0\.0\.0\.0|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
   """\|dstPostNAT=(0\.0\.0\.0|({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
   """\|RuleName =({rule}[^\|][^\|]+)"""
-  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[^\|\\]+)))\|"""
+  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[\w\.\-]{1,40}\$?)))\|"""
   """\|SourceUser=(|((({src_domain}[^\|\\]+)\\)?({src_user}[^\|\\]+)))\|"""
   """\|DestinationUser=(|((({dest_domain}[^\|\\]+)\\)?({dest_user}[^\|\\]+)))\|"""
   """\|Application=({network_app}[^\|]+)"""
@@ -44,7 +44,8 @@ Fields = [
   """\|Severity=({alert_severity}[^\|]+)\|"""
   """\|Direction=({direction}[\w-]+)\|"""
   """\|sequence=({sequence}\d+)\|"""
-  """\|action=({action}\w+)\|"""
+  """\|action=({action}\w+)\|""",
+  """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]
 DupFields = [
   "miscellaneous->malware_url"

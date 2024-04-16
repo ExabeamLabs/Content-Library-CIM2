@@ -15,9 +15,9 @@ Fields = [
 """FirstDetectedAt="({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """ThreatTypeName ="({alert_type}[^"]+)"""
 """ThreatName ="({alert_name}[^"]+)"""
-"""ActionTakenName ="({action}[^"]+)"""
-"""FullFilePath="C:\\Users\\({user}[^\\]+)"""
-"""UserName ="((NT AUTHORITY|({domain}[^\\\s"]+))\\+)?(SYSTEM|({user}[^\\\s"]+))"""
+"""ActionTakenName ="({result}[^"]+)"""
+"""FullFilePath="C:\\Users\\({user}[\w\.\-]{1,40}\$?)"""
+"""UserName ="((NT AUTHORITY|({domain}[^\\\s"]+))\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
 """ComputerName ="({src_host}[\w\-.]+)"""
 """FullFilePath="({malware_url}[^"]+?({malware_file_name}[^"\\]+))""""
 ]

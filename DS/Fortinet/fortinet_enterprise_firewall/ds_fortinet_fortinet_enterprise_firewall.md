@@ -4,7 +4,7 @@ Product: Fortinet Enterprise Firewall
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  164  |   61   |         17         |       5        |    3    |
+|  164  |   61   |         17         |       5        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

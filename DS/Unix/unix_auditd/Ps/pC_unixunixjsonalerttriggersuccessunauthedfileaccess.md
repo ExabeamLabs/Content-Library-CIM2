@@ -10,9 +10,9 @@ Conditions = [
 ParserVersion = "v1.0.0"
 
 unix-activity-json.Fields}[
-    """(I|i)nvalid user (({domain}[^\\:]+)\\+)?({user}[\w.'\-\\$]+)""",
-    """from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\s+from\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.jsonPayload.message,exa_regex=(I|i)nvalid user (({domain}[^\\:]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """exa_json_path=$.jsonPayload.message,exa_regex=from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.jsonPayload.message,exa_regex=\s+from\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
   ParserVersion = "v1.0.0"
 },
@@ -49,7 +49,7 @@ ParserVersion = "v1.0.0"
   Conditions = [""""auditbeat"""",""""action":"process_started"""",""""process":""",""""pid":"""]
   Fields = [
     """timestamp":"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""",
-    """"hostname":"({host}[^"]+)""""
+    """"hostname":"({host}[\w\-.]+?)(@[^"]*)?""""
     """"action":"({event_name}[^"]+)"""",
     """"pid":({process_id}\d+)""",
     """"process".+?"executable":"({process_path}(({process_dir}[^"]*?)\/)?[^"\\\/]*?)"""",
@@ -59,7 +59,7 @@ ParserVersion = "v1.0.0"
     """"args":\["({process_command_line}[^"]+)""""
     """"md5":"({hash_md5}[^"]+)"""",
     """user.+?group":.+?id":"({user_id}\d+)"""",
-    """user.+?group":.+?name":"({user}[^"]+)""""
+    """user.+?group":.+?name":"({user}[\w\.\-]{1,40}\$?)""""
   ]
   DupFields = ["host->dest_host"]
   ParserVersion = "v1.0.0"
@@ -71,7 +71,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?\"secondary\":\"(|({user}[^\"]+))\""""
+""""actor":\{.*?\"secondary\":\"(|({user}[\w\.\-]{1,40}\$?))\""""
 """"actor":\{.*?\"primary\":\"(|({account}[^\"]+))\""""
 """"user":\{.*?\"uid\":\"({user_id}\d+)\""""
 """"user":\{.*?\"gid\":\"({group_id}\d+)\""""
@@ -87,7 +87,7 @@ Fields = [
 """"event":\{.*?\"action\":\"(|({event_category}[^\"]+))\""""
 """"event":\{.*?\"category\":\"(|({event_subtype}[^\"]+))\""""
 """"event":\{.*?\"result\":\"(|({result}[^\"]+))\""""
-""""source":\{\"ip\":\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{\"ip\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?\"executable\":\"(|({service_name}[^\"]+))\""""
 """"file":\{.*?\"path\":\"(|({file_path}[^\"]+))\""""
 """"file":\{.*?\"owner\":\"(|({file_owner}[^\"]+))\""""
@@ -111,7 +111,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -127,7 +127,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -151,7 +151,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -167,7 +167,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -191,7 +191,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -207,7 +207,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -231,7 +231,7 @@ Product = Unix
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({account}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -247,7 +247,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -271,7 +271,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
   """"end":({time}\d{10})"""
-  """"actor":\{.*?"secondary":"(|({user}[^"]+))""""
+  """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
   """"actor":\{.*?"primary":"(|({dest_user}[^"]+))""""
   """"user":\{.*?"uid":"({user_id}\d+)""""
   """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -287,7 +287,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -310,7 +310,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -326,7 +326,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -350,7 +350,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -366,7 +366,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -393,7 +393,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -409,7 +409,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -432,7 +432,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -448,7 +448,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({src_file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -472,7 +472,7 @@ Product = "Unix"
 TimeFormat = "epoch_sec"
 Fields = [
 """"end":({time}\d{10})"""
-""""actor":\{.*?"secondary":"(|({user}[^"]+))""""
+""""actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
 """"actor":\{.*?"primary":"(|({account}[^"]+))""""
 """"user":\{.*?"uid":"({user_id}\d+)""""
 """"user":\{.*?"gid":"({group_id}\d+)""""
@@ -488,7 +488,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -510,22 +510,23 @@ ParserVersion = "v1.0.0"
 Name = "infoblox-bddi-str-dns-request-success-dnsquery"
 Vendor = "Infoblox"
 Product = "BloxOne DDI"
-TimeFormat = "dd-MMM-yyyy HH:mm:ss.SSS"
+TimeFormat = [ "dd-MMM-yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss" ]
 Conditions = [
 """: query: """
-"""named["""
+"""named"""
 ]
 Fields = [
-  """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)""",
+  """\d\d:\d\d:\d\d(\.\d+Z)? (::ffff:)?({host}\S+)""",
+  """({time}\w{3}\s+\d{1,2}\s+\d\d:\d\d:\d\d)""",
   """({time}\d\d-\w+-\d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-  """client\s*(::ffff:)?({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})#({src_port}\d+)(?:)""",
+  """\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))#({src_port}\d+)(?:)""",
   """query:\s*({dns_query}\S+)\s"""
   """\sIN\s({dns_query_type}\w{1,5})\s""",
   """\s+IN\s.+?\s+({dns_query_flags}[^\d\w].*?)\s""",
   """response:\s*({dns_response_code}[^\s]+)\s""",
-  """IN\s*.+?s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-  """ CNAME ({cname}[^;]+?)\.?;""",
-]
+  """\sIN\s+.+?\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(;|$|"|\.|\))""",
+  """ CNAME ({additional_info}[^;]+?)\.?;""",
+  ]
 ParserVersion = "v1.0.0"
 },
 
@@ -533,23 +534,24 @@ ParserVersion = "v1.0.0"
   Name = unix-unix-json-process-create-auditd
   Vendor = Unix
   Product = Unix
+  ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [""""type":"syscall"""", """auditd"""]
   Fields = [
-    """"@timestamp":"({time}[^"]+)""",
-    """"name_map":\{.*?"uid":"(|({user}[^"]+))"""",
-    """"name_map":\{.*?"suid":"(|({account}[^"]+))"""",
-    """"user":\{.*?"uid":"({user_id}\d+)"""",
-    """"user":\{.*?"auid":"({account_id}\d+)"""",
-    """"user":\{.*?"gid":"({group_id}\d+)"""",
-    """"pid":"({process_id}\d+)""",
-    """"ppid":"({parent_process_id}\d+)""",
-    """"process":\{.*?"name":"(|({process_name}[^"]+))"""",
-    """"process":\{.*?"exe":"(|({process_path}({process_dir}[^"]+\/).*?))"""",
-    """"process":\{.*?"args":\[({arg}[^\[\]]+?)\]""",
-    """"host":\{.*?"name":"(|({host}[^"]+))"""",
-    """"result":"({result}[^"]+)"""",
-    """"event":\{.*?"type":"(|({operation_type}[^"]+))""""
+    """exa_json_path=$.@timestamp,exa_field_name=time""",
+    """exa_json_path=$.user.name_map.uid,exa_field_name=user""",
+    """exa_json_path=$.user.name_map.suid,exa_field_name=account""",
+    """exa_json_path=$.user.uid,exa_field_name=user_id""",
+    """exa_json_path=$.user.auid,exa_field_name=account_id""",
+    """exa_json_path=$.user.gid,exa_field_name=group_id""",
+    """exa_json_path=$.process.pid,exa_field_name=process_id""",
+    """exa_json_path=$.process.ppid,exa_field_name=parent_process_id""",
+    """exa_json_path=$.process.name,exa_field_name=process_name""",
+    """exa_json_path=$.process,exa_regex=\{.*?"exe":"(|({process_path}({process_dir}[^"]+\/).*?))"""",
+    """exa_json_path=$.process.args,exa_field_name=arg""",
+    """exa_json_path=$.host.name,exa_field_name=host""",
+    """exa_json_path=$.auditd.result,exa_field_name=result""",
+    """exa_json_path=$.event.type,exa_field_name=operation_type""",
  ]
  DupFields = ["host->dest_host"]
  ParserVersion = "v1.0.0"
@@ -559,14 +561,14 @@ ParserVersion = "v1.0.0"
 Name = "unix-unix-kv-endpoint-authentication-success-dsepamauth"
 Vendor = "Unix"
 Product = "Unix"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","MMM dd HH:mm:ss"]
 Conditions = [
 """(dsepam:auth):"""
 """authentication success;"""
 ]
 Fields = [
 """({time}\w+ \d+ \d\d:\d\d:\d\d)\s+({host}\S+)\s+\S+\s+\S+\(dsepam:auth\)"""
-"""\suser=({user}.+?)(\s+\w+=|\s*$)"""
+"""\suser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -584,7 +586,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) """
 """({host}[\w\.-]+)\s+(\S+\s+){2}\[\d+\]"""
 """({src_ip}\S+)\s+(\S+\s+){2}\[\d+\]"""
-"""(-|(({domain}\S+)[\/\\])?({user}\S+))\s+\[\d+\]"""
+"""(-|(({domain}\S+)[\/\\])?({user}[\w\.\-]{1,40}\$?))\s+\[\d+\]"""
 """\]dele\s+(-|({file_name}\S+))\s"""
 """\]dele\s+(-|({file_path}({file_dir}\/(\S+\/)?)({file_name}\S+)))\s"""
 """\]dele\s+\/\S+\.({file_ext}[^\/\.\s]+)\s"""
@@ -608,7 +610,7 @@ ParserVersion = "v1.0.0"
     """MachineName:\s*"+({host}[\w\-.]+)""",
     """Command:\s*"+({process_command_line}[^"]+)""",
     """Command:\s*"+({process_path}({process_dir}[^\s"]*?)[\\\/]*({process_name}[^\\\/\s"]+))""",
-    """UserName:\s*"+({user}[^"]+)""",
+    """UserName:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     """UnixName:\s*"+({account}[^"]+)""",
     """ClientName:\s*"+(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^"]+))""",
   ]
@@ -628,7 +630,7 @@ ${UnixParsersTemplates.cef-unix-template-1}{
 
 ${UnixParsersTemplates.cef-unix-template-1}{
   Name = unix-unixauditd-cef-process-create-success-syscall
-  Conditions = [ """CEF""", """Unix|auditd""", """SYSCALL""" ]
+  Conditions = [ """CEF""", """Unix|auditd""", """|SYSCALL""" ]
   Fields = ${UnixParsersTemplates.cef-unix-template-1.Fields}[
     """CEF:([^\|]*\|){5}({event_name}[^\\\|]+)\|({result}[^\|]+)"""
   ]
@@ -656,11 +658,11 @@ ${UnixParsersTemplates.cef-unix-template-1}{
     """\soutcome=({result}.+?)\s+\w+=""",
     """\sdvc=({host}\S+)""",
     """\sdvchost=({host}\S+)""",
-    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\shostname\\=(?:\?|(src_host)\S+)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sshost=({src_host}\S+)""",
-    """\sduser=({user}.+?)\s+\w+=""",
+    """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """\sact=({auth}\S.+?)\s+\w+=""",
     """\sdproc=({auth_process}\S.+?)\s+\w+=""",
     """({event_code}ssh)""",

@@ -16,6 +16,7 @@ Name = infoblox-bddi-kv-dns-record-delete-dnsview
 # address is removed
 # remove_associated_ptr is removed
   ]
+  DupFields = ["operation->event_name"]
 
 
 }

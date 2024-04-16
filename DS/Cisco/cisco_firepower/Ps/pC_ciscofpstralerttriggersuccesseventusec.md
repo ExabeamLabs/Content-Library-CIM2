@@ -11,7 +11,8 @@ Conditions = [
 ]
 Fields = [
   """event_sec=({time}\d{10})"""
-  """\sevent_id=({alert_id}\d+)\s+.+?class=({alert_name}(6|12|13|17|21))\s+priority=({alert_severity}\d+)\s+src_addr=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+dst_addr=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
+  """\sevent_id=({alert_id}\d+)\s+.+?class=({alert_name}(6|12|13|17|21))\s+priority=({alert_severity}\d+)\s+src_addr=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+dst_addr=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]
 DupFields = [
   "alert_name->alert_type"

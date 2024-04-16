@@ -4,8 +4,8 @@
 Name = "salesforce-sf-sk4-app-activity-success-changedemail"
 Product = "Salesforce"
 Conditions = [
-"""flexString1=changedemail"""
-"""destinationServiceName =Sales Cloud"""
+"""Display\=Changed email"""
+"""type\=SetupAuditTrail"""
 ]
 ParserVersion = "v1.0.0"
 

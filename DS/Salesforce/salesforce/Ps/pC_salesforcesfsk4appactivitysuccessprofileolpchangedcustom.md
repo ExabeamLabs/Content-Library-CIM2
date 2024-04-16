@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """CreatedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-"""CreatedBy\.Username\\=({email_address}[^@]+({email_domain}[^\s;]+))"""
+"""CreatedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))"""
 """Action\\=({operation}[^;]+)"""
 """Display\\=({additional_info}.+?)\s*(\w+=|$)"""
 """Display\\=Changed profile ({object}.+?): ({resource}.+?) object"""

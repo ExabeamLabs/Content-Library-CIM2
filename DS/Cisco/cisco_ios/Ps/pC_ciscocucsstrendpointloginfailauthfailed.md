@@ -11,7 +11,7 @@ Name = cisco-cucs-str-endpoint-login-fail-authfailed
     """\s({host}[a-fA_F0-9.:]+)\s+:""",
     """\s({dest_ip}[a-fA_F0-9.:]+)\s+:"""
     """({time}\d{4}\s\w{3}\s\d{2}\s(\d{2}:){2}\d{2}\s\S+?):""",
-    """Authentication failed for User:\s+({user}\S+)\s""",
+    """Authentication failed for User:\s+({user}[\w\.\-]{1,40}\$?)\s""",
     """({event_name}Authentication failed for User):"""
   ]
 

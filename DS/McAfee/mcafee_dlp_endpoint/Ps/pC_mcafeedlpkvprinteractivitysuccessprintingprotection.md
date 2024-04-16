@@ -7,7 +7,7 @@ Name = mcafee-dlp-kv-printer-activity-success-printingprotection
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """OUTGOING_PRINTER""", """DLP: Printing Protection""" ]
   Fields = [
-     """UserName ="({domain}[^\\]+)\\({user}[^"]+)"""",
+     """UserName ="({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)"""",
      """ComputerName ="({src_host}[^"]+)"""",
      """FocusDisplay="({printer_name}[^"]+)"""",
      """XmlEvidence.+?FILE_NAME.+?>({object}[^<]+)<""",

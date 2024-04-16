@@ -14,9 +14,9 @@ Fields = [
   """\|McAfee\|[^|]+?\|[^|]+?\|43-21100({event_code}\d+)(0|1)\|"""
   """rt=({time}\d{13})"""
   """deviceTranslatedAddress=({host}[a-fA-F:\d.]+)"""
-  """shost=({dest_host}[^\s]+)"""
+  """shost=({dest_host}[\w\-.]+)"""
   """duser=({dest_user}[\w\-\.]+(?:\w+)?\$?)\s+suser"""
-  """suser=({user}[\w\-\.\s]+(?:\w+)?\$?)\s+nitroSource"""
+  """suser=({user}[\w\.\-]{1,40}\$?)\s+nitroSource"""
   """sntdom=({domain}.+?)\s+shost"""
   """nitroSource_Logon_ID=\([^,]+,({login_id}[^\)]+)"""
 ]

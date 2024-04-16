@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """autodatetime":"({time}[^"]+)"""
   """pdmobjecttypename":"({resource}[^"]+)"""
-  """pdmusername":"({user}[^"]+)"""
+  """pdmusername":"({user}[\w\.\-]{1,40}\$?)"""
   """pdmserverlocation":"({host}[^"]+)"""
   """pdmobjectsubtypename":"({object}[^"]+)"""
   """pdmobjectactionname":"({operation}[^"]+)"""

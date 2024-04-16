@@ -11,7 +11,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-watchlist
     """"+severity":\s*({alert_severity}[^,]+?),""",
     """"+category"+:\s*"+({category}[^"]+?)"+""",
     """"+threat_id"+:\s*"+({threat_id}[^"]+?)"+""",
-    """"+device_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\"]+?)\\+)?({user}[^"]+))"+""",
+    """"+device_username"+:\s*"+(({email_address}[^@,"]+@[^",]+)|(({domain}[^\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?))"+""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+threat_indicators":[^\}\]]*?"process_name"+:\s*"+({process_name}[^"]+?)"+""",
     """"+reason"+:\s*"+({additional_info}[^,]+?)"+,""",
@@ -27,7 +27,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-watchlist
     """"+report_id"+:\s*"+({alert_id}[^"]+?)"+""",
     """"process_name"+:"+({process_name}[^"]+)""",
     """"threat_cause_actor_name"+:"+({process_path}({process_dir}[^"]+)\\({process_name}[^"]+))"""",
-    """device_internal_ip"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """device_internal_ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -12,7 +12,7 @@ lumension-usb-activity = {
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d(:|-)\d\d(:|-)\d\dZ) (|({host}[\w\-.]+)) scomc.+?({operation}\S+) \[""",
     """User="({user_sid}[^"]+)""",
-    """UserName ="((NT AUTHORITY|({domain}[^"\\]+))\\+)?(SYSTEM|({user}[^\\\s"]+))""",
+    """UserName ="((NT AUTHORITY|({domain}[^"\\]+))\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
     """DeviceType="(Unknown|({device_type}[^"]+))""",
     """DeviceName ="({device_id}[^"]+)""",
     """Filename="({file_path}[^"]+)""",

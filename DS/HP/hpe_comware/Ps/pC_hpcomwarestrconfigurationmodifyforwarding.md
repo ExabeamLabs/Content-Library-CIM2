@@ -13,7 +13,7 @@ Name = hp-comware-str-configuration-modify-forwarding
 # port_name is removed
       """({event_name}port has been set to forwarding state)""",
     ]
-  
+
 
 }
 ```

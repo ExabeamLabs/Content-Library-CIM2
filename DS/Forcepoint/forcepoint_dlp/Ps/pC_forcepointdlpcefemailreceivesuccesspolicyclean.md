@@ -16,7 +16,7 @@ Fields = [
   """\Wdvc=({host}[\d.]+)"""
   """\Wdvchost=({host}[\w\-.]+)"""
   """\Win=({bytes}\d+)"""
-  """\Wduser=({dest_email_address}[^\s=,;]+)"""
+  """\Wduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """\WdeviceDirection=(|({direction}.+?))\s+(\w+=|$)"""
   """\WhybridSpamScore=({spam_score}[\+\-]\d+)"""
   """\Wact=({action}\d+)"""

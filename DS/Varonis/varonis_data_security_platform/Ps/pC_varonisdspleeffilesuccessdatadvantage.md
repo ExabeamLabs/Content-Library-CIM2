@@ -4,16 +4,16 @@
 Name = "varonis-dsp-leef-file-success-datadvantage"
 Vendor = "Varonis"
 Product = "Varonis Data Security Platform"
-TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+TimeFormat = ["MM/dd/yyyy hh:mm:ss a","M/dd/yyyy hh:mm:ss a","MMM dd yyyy HH:mm:ss"]
 Conditions = [
   """LEEF:"""
   """|Varonis|DatAdvantage|"""
 ]
 Fields = [
   """devTime=({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))"""
-  """accountName =({user}.+?)\s+(\w+=|$)"""
+  """accountName =({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
   """domain=(|({domain}.+?))\s+(\w+=|$)"""
-  """src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))\s+(\w+=|$)"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+(\w+=|$)"""
   """Event_Type=({access}.+?)\s+(\w+=|$)"""
   """Event_Status=({result}.+?)\s+(\w+=|$)"""
   """Affected_Object=(|({file_path}(({file_dir}[^=]+?)\\+)?({file_name}[^\\]+?(\.({file_ext}[^\.\s]+))?)))\s+(\w+=|$)"""
@@ -21,9 +21,10 @@ Fields = [
   """Affected_Object_Path=({file_dir}.+?)\\[^\\]+?\s+(\w+=|$)"""
   """cat=({category}[^=]+?)\s+(\w+=|$)"""
   """DatAdvantage\|[^\\]+?\|({alert_name}[^\\]+?)\|"""
-  """Device_Name =({src_host}[^=]+?)\s+(\w+=|$)"""
-  """accountName =({user}[^=]+?)\s+(\w+=|$)"""
-  """usrName =(({domain}[^\\]+)\\)?({user}[^=]+?)\s+(\w+=|$)"""
+  """Device_Name =({src_host}[\w\-.]+?)\s+(\w+=|$)"""
+  """accountName =({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """usrName =(({domain}[^\\]+)\\)?(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"=]+?))\s+(\w+=|$)"""
+  """devTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
 ]
 DupFields = [
   "access->event_code",

@@ -9,6 +9,6 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-
+cef-netskope-activity.DupFields}[ "operation->access" 
 }
 ```

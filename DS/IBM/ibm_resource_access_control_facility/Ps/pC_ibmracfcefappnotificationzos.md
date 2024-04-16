@@ -10,9 +10,9 @@ Name = ibm-racf-cef-app-notification-zos
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}\S+)""",
     """CEF:([^\|]*\|){4}({event_code}[^\|]+)\|({description}[^\|]+)\|""",
-    """\sduser=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\sduser=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\sduid=(|({user_id}.+?))(\s+\w+=|\s*$)""",
-    """\ssuser=(|({user}.+?))(\s+\w+=|\s*$)""",
+    """\ssuser=(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\sexternalID=(|({external_id}.+?))(\s+\w+=|\s*$)""",
     """\scat=(|({event_category}.+?))(\s+\w+=|\s*$)""",
     """\sfileId=(|({file_id}.+?))(\s+\w+=|\s*$)""",

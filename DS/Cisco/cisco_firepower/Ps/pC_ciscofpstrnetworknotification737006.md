@@ -9,6 +9,7 @@ Name = cisco-fp-str-network-notification-737006
   Conditions = [ """-737006""", """%FTD-""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """\sSession=({session_id}[^,]+)\s*""",
     """({event_name}Local pool request succeeded)""",

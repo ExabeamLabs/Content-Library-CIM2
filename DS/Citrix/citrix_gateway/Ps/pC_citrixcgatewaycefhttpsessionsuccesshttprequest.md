@@ -4,14 +4,14 @@
 Name = "citrix-cgateway-cef-http-session-success-httprequest"
 Vendor = "Citrix"
 Product = "Citrix Gateway"
-TimeFormat = "MM/dd/yyyy:HH:mm:ss"
+TimeFormat = ["MM/dd/yyyy:HH:mm:ss", "yyyy/MM/dd:HH:mm:ss"]
 Conditions = [
 """|SSLVPN"""
 """|HTTPREQUEST|"""
 ]
 Fields = [
-"""2020/04/06:03:06:13({time}\d\d\d\d\/\d\d\/\d\d:\d\d:\d\d:\d\d)"""
-"""User\s+({user}[^\s]+)"""
+"""({time}\d\d\d\d\/\d\d\/\d\d:\d\d:\d\d:\d\d)"""
+"""User\s+({user}[\w\.\-]{1,40}\$?)"""
 """Vserver\s+(127.0.0.1|({host}[^:\s]+))"""
 """SSO is ON\s*:\s*({method}[^\s]+)\s+({object}[^\-\s]+)"""
 """SessionId:\s+({session_id}\d+)"""

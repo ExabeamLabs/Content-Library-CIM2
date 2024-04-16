@@ -14,6 +14,7 @@ Name = infoblox-bddi-kv-dns-record-modify-success-cnamerecord
 # dns_view is removed
 # new_cname is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

@@ -10,7 +10,7 @@ Name = mcafee-es-csv-alert-trigger-success-epolicyorchestrator
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d\s+\d{1,2}:\d\d:\d\d (AM|PM|am|pm))(,[^,]*){5}ePOEvents""",
     """ePOEvents([^,]*,){13}["']*({host}[\w\-.]+)""",
-    """ePOEvents([^,]*,){33,34}["']*(({domain}[^\\\/"',]+?)\\)?({user}[^\\\/\s"',.]+)""",
+    """ePOEvents([^,]*,){33,34}["']*(({domain}[^\\\/"',]+?)\\)?({user}[\w\.\-]{1,40}\$?)""",
     """ePOEvents([^,]*,){36}["']*({threat_category}[^"',]+)""",
     """ePOEvents([^,]*,){46}["']*({alert_severity}[^"',]+)""",
     """ePOEvents([^,]*,){2}["']*({alert_name}[^"',]+)""",

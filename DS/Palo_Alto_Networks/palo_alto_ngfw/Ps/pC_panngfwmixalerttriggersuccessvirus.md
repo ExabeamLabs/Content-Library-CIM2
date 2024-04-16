@@ -4,7 +4,7 @@
 Name = "pan-ngfw-mix-alert-trigger-success-virus"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = "yyyy/MM/dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
 Conditions = [
   """,THREAT,virus,"""
 ]
@@ -13,7 +13,7 @@ Fields = [
   """({host}[\w\-\.]+)\s+\d+,[^,]*,[^,]*,THREAT,virus,"""
   """,THREAT,([^,]*.){55}({host}[^,]+),"""
   """,THREAT(,[^,]*){40},("[^"]*",)([^,]*,){3}("[^"]*",){5}([^,]*,){6}({host}[^,]+)."""
-  """THREAT,({alert_type}virus),\d+,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),([^,]*,){3}(({domain}[^\\,]+)\\)?(?:|({user}[^,]+)),(({dest_domain}[^\\,]+)\\)?(?:|({dest_user}[^,]+)),"""
+  """THREAT,({alert_type}virus),\d+,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),([^,]*,){3}(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((({domain}[^\\,]+)\\+)?(?:|({user}[\w\.\-]{1,40}\$?)))),(({dest_domain}[^\\,]+)\\+)?(?:|({dest_user}[^,]+)),"""
   """,THREAT,([^,]*,){26}({action}[^,]+),"""
   """,THREAT,([^,]*,){27}\\?"(|({malware_url}[^\s]+?))\\?","""
   """,THREAT,.+?,\\?"(|({file_name}[^\s]+?))\\?","""
@@ -24,7 +24,9 @@ Fields = [
   """THREAT,virus,.+?,\\?"[^"]*",([^,]*,){4}({alert_id}[^,]+),"""
   """,({alert_severity}(?i)(low|medium|high|critical|informational)),({direction}[^,]*),([^,]+,){3}({src_location}[^\d,]+)?"""
   """THREAT,virus,(("[^"]+?"|[^,]*),){64}({threat_category}[^,]+),"""
-  """,THREAT,([^,]*,){28}(\d+|({alert_name}[^\(,]+?))\(({alert_id}\d+)?"""
+  """,THREAT,([^,]*,){28}(\d+|({alert_name}[^\(,]+?))\(({alert_id}\d+)?""",
+  """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
+  """,THREAT,([^,]*,){10}({alert_source}[^,]+?),"""
 ]
 SOAR {
   IncidentType = "malware"

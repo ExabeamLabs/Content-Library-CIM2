@@ -4,21 +4,21 @@
 Name = symantec-dlp-leef-alert-email-modified
 Vendor = "Symantec"
 Product = "Symantec DLP"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss"]
 Conditions = [
   """LEEF:"""
   """|Symantec|DLP|"""
   """|subject="""
 ]
 Fields = [
+  """({time}\w+\s+\d+\s\d+:\d+:\d+)"""
   """\s({host}[\w.\-]+)\s+LEEF:"""
   """\|incidentID=({alert_id}\d+)"""
   """\|Symantec\|DLP\|({alert_severity}[^\|]+)\|"""
   """\|Symantec\|DLP\|[^|]+?\|({alert_name}[^|]+?)\s*\|"""
-  """\|usrName =(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({email_address}[^\|@]+@[^\|@]+)|(N/A|({user}[^\|]+)))"""
-  """\|suser=((NT AUTHORITY|({domain}[^\|\\\/]+))[\\\/]+)?(system|N/A|({user}[^\|\\\/]+))\|"""
-  """\|usrName =(N/A|({user}[^\|@]+))@"""
-  """\|usrName =(?=[\w.]+@[\w.])({src_email_address}[^\|]+)"""
+  """\|usrName =(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({email_address}[^\|@]+@[^\|@]+)|(N\/A|([^\\\|=]*\\)*({user}[\w\.\-]{1,40}\$?)))"""
+  """\|suser=((NT AUTHORITY|({domain}[^\|\\\/]+))[\\\/]+)?(system|N\/A|([^\\\|=]*\\)*({user}[\w\.\-]{1,40}\$?))\|"""
+  """\|usrName =(?=[\w.]+@[\w.])({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """\|duser=(?=[\w.]+@[\w.])({email_recipients}[^\|]+)"""
   """\|subject=\s*((?!SFTP|HTTP|FTP|TCP|N/A)({email_subject}[^\|]+?))\s*\|"""
   """\|rules=\s*({alert_type}[^\|]+?)\s*\|"""

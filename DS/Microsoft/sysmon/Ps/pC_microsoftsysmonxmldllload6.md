@@ -5,21 +5,22 @@ Name = microsoft-sysmon-xml-dll-load-6
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>6</EventID>""", """<EventRecordID>""" ]
   Fields = [
-    """<TimeCreated SystemTime='({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """({event_name}Driver loaded)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
-    """<Security UserID='({user_sid}.+?)'\/>""",
-    """<Data Name ='ImageLoaded'>({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<]+))))<\/Data>""",
-    """<Data Name ='Hashes'>[^<>]*?MD5=({hash_md5}[^,<]+)""",
+    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Data Name\\*='ImageLoaded'>({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<]+))))<\/Data>""",
+    """<Data Name\\*='Hashes'>[^<>]*?MD5=({hash_md5}[^,<]+)""",
     """({log_name}Microsoft-Windows-Sysmon)"""
   ]
-  DupFields = [ "host->dest_host", "event_name->operation" ]
+  DupFields = [ "event_name->operation" ]
 
 
 }

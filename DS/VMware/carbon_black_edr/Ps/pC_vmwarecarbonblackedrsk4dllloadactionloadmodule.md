@@ -9,7 +9,7 @@ Name = vmware-carbonblackedr-sk4-dll-load-actionloadmodule
   Conditions = [ """endpoint.event.moduleload""", """"process_username":"""", """"event_origin":"EDR"""", """"modload_name":"""", """"action":"ACTION_LOAD_MODULE"""" ]
   Fields = [
     """"+process_cmdline"+:"+\s*({process_command_line}.+?)\s*"+""",
-    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+))"+""",
+    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:"+({host}[^"]+)"+""",
     """"+sensor_action"+:"+({action}[^"]+)"+""",
@@ -22,7 +22,7 @@ Name = vmware-carbonblackedr-sk4-dll-load-actionloadmodule
     """"+alert_id"+:"+({alert_id}[^,]"+)?\,""",
     """"+type"+:"+({operation_type}[^"]+)"+""",
     """"device_id"+:"+({device_id}[^",]+)""",
-    """"device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"device_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
   ]
 

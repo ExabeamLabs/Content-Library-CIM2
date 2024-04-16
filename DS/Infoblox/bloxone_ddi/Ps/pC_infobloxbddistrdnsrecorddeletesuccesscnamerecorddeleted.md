@@ -13,6 +13,7 @@ Name = infoblox-bddi-str-dns-record-delete-success-cnamerecorddeleted
 # name_server is removed
 # dns_view is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

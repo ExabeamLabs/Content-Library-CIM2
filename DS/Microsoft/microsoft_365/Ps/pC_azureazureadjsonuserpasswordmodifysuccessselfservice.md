@@ -2,6 +2,7 @@
 ```Java
 {
 Name = "azure-azuread-json-user-password-modify-success-selfservice"
+ExtractionType = json
 Conditions = [
 """Microsoft.aadiam"""
 """Self-service password reset"""
@@ -9,48 +10,34 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-o365-activity-template = {
-  Vendor = Microsoft
-  Product = Microsoft 365
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Fields = [
-    """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """\sdvc=({host}\S+)""",
-    """\sdvchost=(Unknown|({host}[\w\-.]+))""",
-    """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
-    """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
-    """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
-    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[^"]+?))\\*"""",
-    """UserKey"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-    """"UserId\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?))))",""",
-    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
-    """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
-    """sourceServiceName =({app}[^=]+?)\s+(\w+=|$)""",
-    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
-    """"ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}[^"\\]*?))\s*"""",
-    """"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)""",
-    """"UserAgent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*",""",
-    """\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}""",
-    """"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},""",
-    """"Parameters"+:[\s\\]*\[({additional_info}[^=]+?)\s*\]""",
-    """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
-    """"AffectedItems"+:[\s\\]*\[({additional_info}[^=]+?)\s*\],""",
-    """"ClientIP\\*"+:[\s\\]*"+\[?((0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))|((0\.0\.0\.0|({=src_ip}[a-fA-F\d.:]+))\]?(:({=src_port}\d+))?))"""",
-    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|([^#]+#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[^"\s@]+?))))))\s""",
-    """"ClientIPAddress\\*"+:[\s\\]*"+\[?(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))?""",
-    """\sreason=(?:None|({failure_reason}[^\s]+))""",
-    """\{"Value": "(?:None|({failure_reason}[^"]+))", "Name": "MethodExecutionResult."\}""",
-    """"Path":"(\\+)?(\?+|({object}[^=]+?))\s*"""",
-    """"Subject":"\s*({additional_info}[^"]+?)\s*"""",
-    """"trc":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
-    """src-account-name":"({account_name}[^"]+)""",
-    """OriginatingServer":"({additional_info}[^\s"]+)""",
-    """Workload"*:\s*"*({resource}[^"]+)"""",
-    """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
-    """Recipients":\[?"({target}[^\s,;@"]+@({dest_domain}[^\s;,"]+))""",
-    """"ResultStatus":\s*"({result}Success|Succeeded|Failed|Failure)"""
-    """"DeviceProperties":\s*\[\{[^\]]+?(("Value":\s*"({src_host}[^"]+)",\s*"Name":\s*"DisplayName")|("Name":\s*"DisplayName",\s*"Value":\s*"({=src_host}[^"]+)"))\},"""
-  ]
-  DupFields = ["operation->event_name"
+o365-file-app-activity = {
+    Vendor = Microsoft
+    Product = Microsoft 365
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    Fields = [
+      """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+      """"Operation":\s*"({operation}[^"]+)""",
+      """"UserId":\s*"({email_address}[^:@]+@({email_domain}[^",]+\.[^",]+))",""",
+      """"Workload":\s*"({app}[^"]+)"""",
+      """"ObjectId":\s*"({object}[^"]+)""",
+      """"Id":\s*"({object_id}[^"]+)"""",
+      """"UserKey":\s*"([^@]+@[^"]+|(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))|(NOT-FOUND|([a-f\d]+\-){4}[a-f\d]+|({=user}[^"]+)))"""",
+      """"RecordType":\s*({object_type}[^,]+),""",
+      """"ClientIP":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?"""",
+      """"SourceFileName":\s*"({src_file_name}[^"]+)"""",
+      """"SourceRelativeUrl":\s*"({src_file_path}[^"]+)"""",
+      """"SourceFileExtension":\s*"({src_file_ext}[^"]+)"""",
+      """"UserAgent":\s*"({user_agent}[^"]+)""""
+      """"UserType":"*({user_type}[^,}"]+)"*"""
+      """exa_json_path=$.CreationTime,exa_field_name=time"""
+      """exa_json_path=$.Operation,exa_field_name=operation"""
+      """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$.Workload,exa_field_name=app"""
+      """exa_json_path=$.ObjectId,exa_field_name=object"""
+      """exa_json_path=$.Id,exa_field_name=object_id"""
+      """exa_json_path=$.UserKey,exa_regex=([^@]+@[^"]+|(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))|(NOT-FOUND|([a-f\d]+\-){4}[a-f\d]+|({=user}[^"]+)))"""
+      """exa_json_path=$.RecordType,exa_field_name=object_type"""
+      """exa_json_path=$.ClientIP,exa_field_name=src_ip"""
+
 }
 ```

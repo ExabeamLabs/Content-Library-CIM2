@@ -17,7 +17,7 @@ unix-logout = {
       """\d\d:\d\d:\d\d ({host}[^\s]+) [\w\/]+:""",
       """Listener=({dest_ip}[\da-fA-F:\.]+):({dest_port}\d+)""",
       """Client=({src_ip}[\da-fA-F:\.]+):({src_port}\d+)""",
-      """User=({user}[^>=]+?)>(<\w+=)?""",
+      """User=({user}[\w\.\-]{1,40}\$?)>(<\w+=)?""",
       """Host=({dest_host}[^,=]+?),\s+\w+=""",
       """SessionID=({session_id}\d+)""",
       """(FTPS?(\/SSL)?|SSH): ({event_name}[^<:]+)(:\s+({additional_info}[^<]+?))?\s+<""",

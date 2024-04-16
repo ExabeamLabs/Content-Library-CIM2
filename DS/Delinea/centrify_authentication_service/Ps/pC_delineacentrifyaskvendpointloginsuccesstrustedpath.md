@@ -12,12 +12,12 @@ Name = "delinea-centrifyas-kv-endpoint-login-success-trustedpath"
 ]
    Fields = [
 """utc=({time}\d{13})"""
-"""user=({user}[^\(\)\s@]+)\("""
-"""user=({user}[^\(\)\s@]+)@({domain}[^\(\)\s@]+)\s+(\w+=|$)"""
+"""user=({user}[\w\.\-]{1,40}\$?)\("""
+"""user=({user}[\w\.\-]{1,40}\$?)@({domain}[^\(\)\s@]+)\s+(\w+=|$)"""
 """\|({event_name}Trusted path\s+[^\|]*)\|"""
 """status=({result}.+?)\s+(\w+=|$)"""
 """pid=({process_id}\d+)"""
-"""server=(({protocol}[^\\\/\s]+)[\\\/]+)?({dest_host}[^\\\/\s]+?)\s+(\w+=|$)"""
+"""server=(({protocol}[^\\\/\s]+)[\\\/]+)?({dest_host}[\w\-.]+?)(@({dest_domain}[^\\\/\s]+))?\s*(\w+=|$|")"""
    ]
 
 

@@ -9,10 +9,10 @@ Name = pan-ngfw-kv-network-traffic-success-packetlog
     Conditions = [ """packet_log""", """as_name=""", """as_num=""", """direction=""" ]
     Fields = [
       """packet_log: ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}(-|\+)\d{4})"""
-      """\saction=({action}.*?)(,\s\w+=|$)"""
+      """\saction=({result}.*?)(,\s\w+=|$)"""
       """\sproto=({protocol}.*?)(,\s\w+=|$)"""
       """\sdirection=({direction}.*?)(,\s\w+=|$)"""
-      """\sreason=({additional_info}.*?)(,\s\w+=|$)"""
+      """\sreason=({result_reason}.*?)(,\s\w+=|$)"""
       """\ssrc=(({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))(,\s\w+=|$)"""
       """\sdst=(({dest_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?))(,\s\w+=|$)"""
       """\ssrc_port=({src_port}\d+)"""

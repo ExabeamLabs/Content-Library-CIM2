@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-mix-file-5058
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """"EventID":"5058"""", """<Data Name ='""" ]
+  Conditions = [ """"EventID":"5058"""", """<Data Name""" ]
 
 json-xml-object-access = {
   Vendor = Microsoft
@@ -16,11 +16,11 @@ json-xml-object-access = {
     """"Computer":"({host}[^"]+)""",
     """"EventID":"?({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetSid[^<>]+?>({dest_user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?TargetUserName[^<>]+?>({dest_user}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?TargetUserName[^<>]+?>(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({dest_domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetLogonId[^<>]+?>({dest_login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ProviderName[^<>]+?>({provider_name}[^<>]+?)</Data>""",
@@ -37,6 +37,7 @@ json-xml-object-access = {
     """<Data Name[^<>]+?KeyFilePath[^<>]+?>({file_path}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?Operation[^<>]+?>({operation}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ReturnCode[^<>]+?>({return_code}[^<>]+?)</Data>""",
+    """<Level>({run_level}[^<]+)<"""
   
 }
 ```

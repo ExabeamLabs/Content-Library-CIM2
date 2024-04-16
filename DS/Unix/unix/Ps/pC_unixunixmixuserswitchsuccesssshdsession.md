@@ -5,7 +5,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "yyyy:MM:dd-HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ","MMM dd HH:mm:ss"]
   Conditions = [
 """session opened for user""",
 """(uid=""",
@@ -13,8 +13,9 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """_unix"""
   ]
   Fields = [
+"""({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)?\s*({host}[\w\-.]+)\ssshd\[""",
 """(::ffff:)?({host}[\w\-.]+)\s+pam_unix""",
-"""({time}\d+-\d+-\d+T\d+:\d+:\d+[\+\-]\d+:\d+)""",
+"""({time}\d+-\d+-\d+T\d+:\d+:\d+)((\.\d+)?[\+\-]\d+:\d+)""",
 """session opened for user ({account}.+?) by""",
 """\(uid=({user_id}\d+)\)""",
 """(::ffff:)?({host}[\w.\-]+) sshd ({login_id}\d+) authpriv""",
@@ -24,8 +25,11 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """\"host\":\"(::ffff:)?({host}[^\"]+)""",
 """\"timestamp\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
 """\d\d:\d\d:\d\d (::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))\s+sshd\[""",
+""""project_id":"({project_id}[^"]+)""""
+""""zone":"(-|({zone}[^"]+))""""
+""""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""""
   ]
-  DupFields = [ "user_id->user_uid"]
+  DupFields = [ "user_id->user_uid", "account->dest_user"]
 
 
 }

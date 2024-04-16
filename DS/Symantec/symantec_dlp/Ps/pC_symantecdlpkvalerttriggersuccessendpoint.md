@@ -16,7 +16,7 @@ Name = symantec-dlp-kv-alert-trigger-success-endpoint
     """signature=({alert_name}[^,]*)""",
     """subject=({additional_info}[^,]*)""",
     """protocol=({alert_type}[^,]*),""",
-    """user=({email_address}[^,]+),"""
+    """user=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -13,9 +13,9 @@ Conditions = [
 ]
 Fields = [
   """"eventTime":({time}\d{13}),"""
-  """deviceIpAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """deviceIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"deviceName":"(({domain}[^\\]+)\\+)?({src_host}[^"]+?)""""
-  """"email":"(({domain}[^\\\s\"]+)\\+)?(HiveStreamingService|SYSTEM|({user}[^@\"]+))""""
+  """"email":"(({domain}[^\\\s\"]+)\\+)?(HiveStreamingService|SYSTEM|({user}[\w\.\-]{1,40}\$?))""""
   """"eventType":"({alert_name}[^"]+)""""
   """"applicationName":"({process_name}[^"]+)""""
   """"targetPriorityType":"({alert_severity}[^"]+)""""

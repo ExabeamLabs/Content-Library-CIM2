@@ -15,7 +15,7 @@ leef-digitalguardian-local-logon = {
   Fields = [
     """devTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """({host}[\w\-.]+) LEEF:""",
-    """accountName =(({domain}[^\\]+)\\+)?({user}[^\\\s]+?)\s*(\w+=|$)""",
+    """accountName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
     """IdentHostName =([^\\]+\\+)?({dest_host}[\w\-.]+?)\s*(\w+=|$)""",
     """Application=({process_name}.+?)\s*(\w+=|$)""",
     """({event_code}User Logon)""",

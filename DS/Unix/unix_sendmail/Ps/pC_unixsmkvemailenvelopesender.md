@@ -14,7 +14,7 @@ Name = unix-sm-kv-email-envelopesender
   Fields = [
     """\d{2}:\d{2}:\d{2} ({host}[\w.\-]+)""",
     """\sqid="({alert_id}[^"]+)""",
-    """\srecipients="({dest_email_address}[^"]+?@[^",;]+)""",
+    """\srecipients="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\srecipients="({email_recipients}[^"]+)""",
     """\ssubject="({email_subject}.+?)"(,\s|\s*$)""",
     """\smsg_direction=({direction}[^,]+)"""

@@ -7,11 +7,11 @@ Name = checkpoint-ngfw-kv-http-session-ifname
   TimeFormat = "epoch_sec"
   Conditions = [ """CheckPoint""", """product:"URL Filtering"""", """ifname:"""" ]
   Fields = [
-    """\Wtime:"({time}\d{10})""",
+    """\Wtime(:|=)"({time}\d{10})""",
     """\W({host}[\w\-.]+) CheckPoint""",
     """\Wuser:"({last_name}[^,]+),\s*({first_name}[\w\s]+\S)\s*\(({account}.+?)\)""",
-    """\Wsrc:"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst:"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrc:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdst:"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Waction:"({action}[^"]+)""",
     """\Ws_port:"({src_port}\d+)""",
     """\Wproto:"({protocol}[^"]+)""",
@@ -27,7 +27,7 @@ Name = checkpoint-ngfw-kv-http-session-ifname
     """\Worigin_sic_name:"CN=({origin_name}[^",]+)""",
     """\Wproduct:"({product_name}[^"]+)""",
     """\Wsrc_machine_name:"({src_host}[^"@]+)@({domain}[^"]+)""",
-    """\Wuser:"({user}[^"]+?)\s*"""",
+    """\Wuser:"(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"=]+?))\s*"""",
   ]
   ParserVersion = "v1.0.0"
 

@@ -8,7 +8,7 @@ Name = xiting-x-cef-app-login-success-erfolgreich
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """Login erfolgreich""", """CEF:""", """|Xiting|XAMS|""", """"USERID":"""" ]
   Fields = [
-    """"USERID":"({user}[^"]+)"""",
+    """"USERID":"({user}[\w\.\-]{1,40}\$?)"""",
     """({app}XAMS)""",
     """({event_name}Login erfolgreich)"""
     """"MSG":"({additional_info}[^"]+)""""

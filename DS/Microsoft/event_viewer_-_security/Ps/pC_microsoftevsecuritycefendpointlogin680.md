@@ -14,8 +14,8 @@ Fields = [
   """({event_name}Logon attempt)"""
   """\srt=({time}\d+)"""
   """ahost=({host}[^\s]+)"""
-  """suser=({user}.+?)\s+\w+="""
-  """dhost=({dest_host}.+?)\s+\w+="""
+  """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+  """dhost=({dest_host}[\w\-.]+?)\s+\w+="""
 ]
 ParserVersion = "v1.0.0"
 

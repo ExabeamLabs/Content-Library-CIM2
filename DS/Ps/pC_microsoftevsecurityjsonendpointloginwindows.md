@@ -7,6 +7,7 @@ Conditions = [
 """"type":"wazuh-alerts""""
 """"decoder.parent":"windows""""
 ]
+ExtractionType = json
 DupFields = [
   "result_code->failure_code",
   "host->dest_host"

@@ -22,7 +22,7 @@ Fields = [
   """(\s|\|)cs2=({alert_name}[^\s].+?)\s+(\w+=|$)"""
   """0\|F-Secure\|([^\|]+\|){2}({alert_type}[^\|:]+):"""
   """\WType:\s*({alert_type}[^\s]+)"""
-  """(\s|\|)suser=(({domain}[^\\=]+)[\\]+)?({user}[^\\\s]+)"""
+  """(\s|\|)suser=(({domain}[^\\=]+)[\\]+)?({user}[\w\.\-]{1,40}\$?)"""
   """(\s|\|)msg=({additional_info}[^\s].+?)\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

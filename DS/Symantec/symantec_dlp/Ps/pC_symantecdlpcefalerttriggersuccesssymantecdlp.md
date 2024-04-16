@@ -14,8 +14,8 @@ Fields = [
 """\srt=({time}\d{13})"""
 """\sdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"""
 """\sdvchost=({host}[\w.\-]+)"""
-"""\ssuser=(({domain}[^\\=]+)\\+)?({user}.+?)\s\w+="""
-"""\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\ssuser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s\w+="""
+"""\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\shost=({src_host}.+?)\s\w+="""
 """\W(externalId|INCIDENT_ID)=({alert_id}\d+)"""
 """\|Symantec\|DLP\|([^|]*\|){3}({alert_severity}[^|]+)\|"""
@@ -31,12 +31,13 @@ Fields = [
 """\smsg=(?:N\/A|({additional_info}.+?))\s\w+="""
 """\W(act|BLOCKED)=(?:None|({action}.+?))\s\w+="""
 """\WSENDER=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""
-"""\WSENDER=(N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|[^\s@]*?(({domain}[^\\\/\s@]+)[\\\/]+)?({user}[^\\\/\s@]+))\s+(\w+=|$)"""
+"""\WSENDER=(N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|[^\s@]*?(({domain}[^\\\/\s@]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
 """\WENDPOINT_MACHINE=({src_host}[\w\-.]+)\s+(\w+=|$)"""
 """\WPROTOCOL=(N\/A|({protocol}.+?))\s+(\w+=|$)"""
 ]
 DupFields = [
 "email_address->src_email_address"
+"alert_name->alert_subject" 
 ]
 SOAR {
   IncidentType = "dlp"

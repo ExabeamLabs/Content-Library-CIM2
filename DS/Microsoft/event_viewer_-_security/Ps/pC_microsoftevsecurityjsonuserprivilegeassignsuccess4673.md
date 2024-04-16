@@ -9,10 +9,10 @@ Conditions = [ """"EventID":4673""", """"SourceModuleType":""" ]
 Fields = [
   """({event_name}A privileged service was called)""",
   """"EventTime":\s*"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})"""",
-  """"Hostname":"({host}[^."]*)""",
+  """"Hostname":"({host}[\w\-.]*)""",
   """({event_code}4673)""",
   """"EventType":"({result}[^"]*)""",
-  """"SubjectUserName":"({user}[^"]*)""",
+  """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
   """"SubjectDomainName":"({domain}[^"]*)""",
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))",""",

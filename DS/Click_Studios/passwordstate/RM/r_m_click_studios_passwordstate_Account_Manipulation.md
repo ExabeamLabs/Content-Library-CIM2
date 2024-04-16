@@ -7,7 +7,7 @@ Vendor: Click Studios
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  27   |   13   |         2          |       4        |    3    |
+|  27   |   13   |         2          |       4        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

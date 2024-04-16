@@ -5,7 +5,7 @@ Name = hp-arubacpm-kv-app-notification-success-cppmsystemstat
   ParserVersion = v1.0.0
   Product = Aruba ClearPass Policy Manager
   Conditions = [ """ CPPM_System_Stat """, """swap_size_used=""", """slash_size_used=""" ]
-  Fields = ${DLArubaParsersTemplates.aruba-clearpass-info.Fields}[
+  Fields = ${DLHPEParsersTemplates.aruba-clearpass-info.Fields}[
 # swap_size_used is removed
 # slash_size_used is removed
 # swap_memory_avail is removed
@@ -22,7 +22,7 @@ aruba-clearpass-info = {
     """({time}\w+ \d+ \d+:\d+:\d+ \d+)\s*\d{1,3}\.\d{1,3}.\d{1,3}.\d{1,3}\s*\s*({host}[\w\.:\-]+)\s*<""",
     """({event_name}CPPM_[^\s]+)""",
     """mac_address=({src_mac}[^,]+)""",
-    """ip_address=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """ip_address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   
 }
 ```

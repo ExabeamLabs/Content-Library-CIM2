@@ -6,9 +6,9 @@ Name = dg-ndlp-kv-email-send-success-28
   Product = Digital Guardian Network DLP
   Conditions = [ """ Agent_Local_Time="""", """ User_Name ="""", """ Operation="28"""" ]
   Fields = ${DGParsersTemplates.digital-guardian-activity.Fields}[
-    """Email_Sender="({src_email_address}[^@]+@[^.]+\.[^"]+)"""",
+    """Email_Sender="({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """Email_Subject="\s*({email_subject}[^"]+?)\s*"""",
-    """Email_Recipient="(?i)(unknown|({dest_email_address}[^"@]+@[^\."]+\.[^"]+))""""
+    """Email_Recipient="(?i)(unknown|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
   ]
 
 digital-guardian-activity = {
@@ -19,7 +19,7 @@ digital-guardian-activity = {
     """Agent_Local_Time="({time}\d+\/\d+\/\d\d\d\d\s\d+:\d+:\d+\s(AM|PM|am|pm))""",
     """\w+\s\d\d\s\d\d:\d\d:\d\d\s*({host}[\w\-.]+)\s\w+=""",
     """\sComputer_Name ="(({domain}[^\\]+)?\\?({src_host}[^"]+))""",
-    """\sUser_Name ="(({domain}[^\\]+)?\\?({user}[^"]+))""",
+    """\sUser_Name ="(({domain}[^\\]+)?\\?({user}[\w\.\-]{1,40}\$?))""",
     """\sSource_Directory="({src_file_dir}[^=]+?)\s*"\s*\w+=""",
     """\sDestination_Directory="({file_dir}[^=]+?)\s*"\s*\w+=""",
     """\sDestination_File="({file_name}[^=]+?)\s*"\s*\w+=""",

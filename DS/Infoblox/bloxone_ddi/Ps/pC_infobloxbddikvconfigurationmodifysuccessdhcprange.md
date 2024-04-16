@@ -14,6 +14,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-dhcprange
 # new_start_address is removed
 # new_end_address is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

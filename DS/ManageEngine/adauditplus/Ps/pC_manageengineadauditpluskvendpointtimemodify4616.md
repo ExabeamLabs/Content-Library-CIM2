@@ -12,7 +12,7 @@ Name = manageengine-adauditplus-kv-endpoint-time-modify-4616
     """({host}[\w\-.]+) ADAuditPlus""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """({event_name}The system time was changed)""",
-    """\sACCOUNT_NAME\s*=\s*(({user}[^]]+?))\s*\]""",
+    """\sACCOUNT_NAME\s*=\s*(({user}[\w\.\-]{1,40}\$?))\s*\]""",
     """\sACCOUNT_DOMAIN\s*=\s*({domain}[^]]+?)\s*\]""",
     """\sPROCESS_ID\s*=\s*({process_id}[^]]+?)\s*\]""",
     """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]""",

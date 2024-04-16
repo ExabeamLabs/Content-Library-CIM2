@@ -33,6 +33,8 @@ Fields = [
     """"name":"client_id","value":"({object}[^"]+)"""",
     """"id":\{({additional_info}[^\}]+)\}""",
 	  """"actor":\{"email":"({object}[^"]+)""""
+    """"events"[\\n\s]*:[^\]]*?"name"[\\n\s]*:[\\n\s]*"login_type"[\\n\s]*,[\\n\s]*"value"[\\n\s]*:[\\n\s]*"({login_type_text}[^"]+?)""""
+    """"name":"email_forwarding_destination_address","value":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 ]
 
 

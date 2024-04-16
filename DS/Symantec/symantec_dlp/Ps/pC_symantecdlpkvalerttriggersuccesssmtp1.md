@@ -11,8 +11,8 @@ Name = symantec-dlp-kv-alert-trigger-success-smtp-1
       """\sPolicy_Violated="({alert_name}[^"]+)""",
       """\sProtocol="({protocol}[^"]+)""",
       """\sRecipient="({target}[^"]*)""",
-      """\sSender="({email_address}[^"]+)""",
-      """\sSeverity="({alert_severity}[^"]+)""",
+      """\sSender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+      """\sSeverity=\s*"({alert_severity}[^"]+)""",
       """\sSubject="({additional_info}[^"]+)""",
       """\sBlocked="({action}[^"]+)"""
     ]

@@ -12,9 +12,9 @@ Name = mcafee-esm-csv-alert-trigger-success-mcafeensmopmnsmp3
     """\Wproto=({protocol}.*?)\s+(\w+=|$)""",
     """\Wcat=({alert_type}.*?)\s+(\w+=|$)""",
     """\Wdpt=({dest_port}\d+)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wspt=({src_port}\d+)""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wshost=({src_host}.*?)\s+(\w+=|$)""",
     """\WnitroCategory=({threat_category}.*?)\s+(\w+=|$)""",
     """\Wsntdom=({domain}.*?)\s+(\w+=|$)"""

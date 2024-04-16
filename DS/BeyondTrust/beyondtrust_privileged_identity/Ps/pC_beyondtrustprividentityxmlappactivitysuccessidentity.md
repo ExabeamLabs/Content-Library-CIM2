@@ -15,7 +15,7 @@ Fields = [
 """dtPostTime="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """sEventID="({operation}[^"]+)"""
 """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
-""""AccountToElevate"\s+value="(({domain}[^\s\\]+)\\+)?({user}[^\s\\"]+)"""
+""""AccountToElevate"\s+value="(({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
 """group '({object}[^\']+)' on system """
 """"TargetSystem"\s+value="({dest_host}[^"]+)"""
 """OriginatingApplicationName ="({app}[^"]+)"""

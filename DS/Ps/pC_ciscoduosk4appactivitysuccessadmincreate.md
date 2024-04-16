@@ -2,7 +2,7 @@
 ```Java
 {
 Name = cisco-duo-sk4-app-activity-success-admincreate
-  Conditions = [ """"action":"admin_create"""", """"event-name":"user-added"""", """app-username""", """"src-application-name":"DUO"""" ]
+  Conditions = [ """"action":""", """"admin_create"""", """object":""", """"username":""", """description":""" ]
   ParserVersion = "v1.0.0"
 } 
 

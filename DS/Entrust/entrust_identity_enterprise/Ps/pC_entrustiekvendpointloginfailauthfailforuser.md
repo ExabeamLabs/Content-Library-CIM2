@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])"""
-""" user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))\. """
+""" user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\. """
 """({additional_info}Invalid response to a challenge.[^\.]+)"""
 ]
 ParserVersion = "v1.0.0"

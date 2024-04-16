@@ -5,7 +5,7 @@ Name = trendmicro-tippingpoint-str-alert-trigger-success-icmp
   ParserVersion = v1.0.0
   Product = TippingPoint NGIPS
   TimeFormat = "epoch"
-  Conditions = [ """00000001-0001-0001-0001-""","\ticmp\t" ]
+  Conditions = [ """00000001-0001-0001-0001-""", """ icmp """ ]
   Fields = ${TippingPointParserTemplates.tippingpoint-sms-alert-template.Fields} [
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+({protocol}icmp)""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+icmp(\s+[^\s]+){4}\s+({hit_cnt}\d+)\s+""",
@@ -14,7 +14,7 @@ Name = trendmicro-tippingpoint-str-alert-trigger-success-icmp
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+icmp(\s+[^\s]+){8}\s+({host}[^\s]+)""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+icmp(\s+[^\s]+){10}\s+({time}\d{13})""",
     """00000001-0001-0001-0001-00000\d+\s+.+?\s+\d+\s+icmp(\s+[^\s]+){11}\s+({alert_id}\d+)""",
-    """icmp\s+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)\s+({dest_ip}[a-fA-F\d.:]+)\s+({dest_port}\d+)"""
+    """icmp\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+({src_port}\d+)\s+({dest_ip}[a-fA-F\d.:]+)\s+({dest_port}\d+)"""
   ]
 
 tippingpoint-sms-alert-template = {

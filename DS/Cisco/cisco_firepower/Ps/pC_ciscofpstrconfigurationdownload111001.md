@@ -9,6 +9,7 @@ Name = cisco-fp-str-configuration-download-111001
   Conditions = [ """-111001""", """%FTD-""" ]
   Fields = [
     """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s*:\s*%FTD""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD\-({priority}\d+)\-({event_code}\d+)""",
     """%FTD\-\d+\-\d+:\s*({event_name}.*?)\s*("|$)""",
     ]

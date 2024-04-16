@@ -6,12 +6,13 @@ Conditions = [
 """"objectType"""
 """vidm"""
 """"organizationId"""
-""""SAML_REQUEST""""
+""""SAML_REQUEST\""""
 ]
 ParserVersion = "v1.0.0"
 
 airwatch-app-activity.Fields}[
-    """({action}AdminUserLoggedIn)"""
+    """Timestamp: ({time}\w+\s\d{1,2}\s\d+:\d+:\d+)"""
+    """({result}AdminUserLoggedIn)"""
   
 }
 ```

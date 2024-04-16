@@ -7,7 +7,7 @@ Name = servicenow-s-sk4-app-authentication-success-sessionestablished
   Product = ServiceNow
   Conditions = [ """destinationServiceName =ServiceNow""", """"name":"session.established"""" ]
   Fields = ${ServiceNowParsersTemplates.servicenow-auth-template.Fields}[
-    """"parm2":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"parm2":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   ]
 
 servicenow-auth-template = {
@@ -17,7 +17,7 @@ servicenow-auth-template = {
     Fields = [
       """"sys_created_on":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """destinationServiceName =({app}ServiceNow)""",
-      """"user(_name)?":"(({email_address}[^@"]+@[^.]+\.[^"]+)|({user}[^",]+))"""
+      """"user(_name)?":"(({email_address}[^@"]+@[^.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
       """"name":"({object}[^"]+)""",
       """"parm1":"\s*(|-|({resource}[^",]+?[^\\\s])\s*)","""
     

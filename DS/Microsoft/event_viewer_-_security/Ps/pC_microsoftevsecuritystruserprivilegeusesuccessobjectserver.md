@@ -9,9 +9,9 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [ """Microsoft-Windows-Security-Auditing""", """PrivilegeList:""", """4674""", """ObjectServer:""", """Sensitive Privilege Use""", """AccessMask:""", """HandleId:""" ]
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
-"""({host}[^\s]+)\s+Sensitive Privilege Use""",
+"""({host}[\w\-.]+)\s+Sensitive Privilege Use""",
 """({event_code}4674)""",
-"""SubjectUserName:({user}[^,]+),""",
+"""SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
 """SubjectDomainName:({domain}[^,]+),""",
 """SubjectLogonId:({login_id}[^,]+),""",
 """PrivilegeList:({privileges}[^:]+),\s+\w+:""",

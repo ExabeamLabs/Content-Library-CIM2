@@ -2,6 +2,7 @@
 ```Java
 {
 Name = "tanium-ep-json-alert-trigger-success-accountenumeration"
+ExtractionType = json
 Product = "Tanium Threat Response"
 Vendor = "Tanium"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -15,17 +16,17 @@ Conditions = [
 """"process""""
 ]
 Fields = [
-""""+Alert Id"+:"+({alert_id}[^"]+)"""
-""""+Timestamp"+:"+({time}[^"]+)"""
-""""+Computer Name"+:"+({host}[^".]+)"""
-""""+Computer IP"+:"+({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-""""+Intel Type"+:"+({alert_type}[^"]+)"""
-""""+Intel Name"+:"+({alert_name}[^"]+)"""
-""""properties"+:[^\]]+?fullpath"+:"+({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))""",
-""""properties\\?"+:[^\]]+?md5\\?"+:\\?"+({hash_md5}[^"]+?)\\?"""",
-""""properties\\?"+:[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","cwd""",
-""""user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[^"]+))"+\}\,"+source"+:"""
-""""os"+:"+({os}[^"]+)"""
+  """exa_json_path=$.['Alert Id'],exa_field_name=alert_id"""
+  """exa_json_path=$.Timestamp,exa_field_name=time"""
+  """exa_json_path=$.['Computer Name'],exa_field_name=host"""
+  """exa_json_path=$.['Computer IP'],exa_field_name=dest_ip"""
+  """exa_json_path=$.['Intel Type'],exa_field_name=alert_type"""
+  """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
+  """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
+  """exa_json_path=$.['Match Details'].match.properties.file.fullpath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
+  """exa_json_path=$.['Match Details'].match.properties.file.md5,exa_field_name=hash_md5"""
+  """exa_json_path=$.['Match Details'].match.properties,exa_regex=[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","cwd"""
+  """exa_regex="user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+\}\,"+source"+:"""
 ]
 DupFields = [
 "process_path->path"

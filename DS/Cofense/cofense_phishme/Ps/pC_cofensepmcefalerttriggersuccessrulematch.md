@@ -9,7 +9,7 @@ Name = cofense-pm-cef-alert-trigger-success-rulematch
   Fields = [
     """({alert_type}Rule Match)""",
     """\Wrt=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
-    """\Wduser=(|({email_address}.+?))(\s+\w+=|\s*$)""",
+    """\Wduser=(|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\s+\w+=|\s*$)""",
     """\Wsuser=(|({malware_url}.+?))(\s+\w+=|\s*$)""",
     """\Wcs2=(|({alert_name}.+?))(\s+\w+=|\s*$)""",
     """\Wcs4=(|({additional_info}.+?))(\s+\w+=|\s*$)""",

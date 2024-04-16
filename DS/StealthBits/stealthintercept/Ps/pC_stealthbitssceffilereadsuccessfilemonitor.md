@@ -14,7 +14,7 @@ Fields = [
 """\s+({host}[\w.\-]+)\s+CEF:"""
 """\Wrt=({time}\d+\-\d+\-\d+ \d+:\d+:\d+\.\d+)"""
 """\Wsntdom=({domain}[^\s]+)"""
-"""\Wsuser=(({domain}[^\\]+)\\)?({user}[^\s\\]+)"""
+"""\Wsuser=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
 """\Wsrc=(|({process_name}.+?))(\s+\w+=|\s*$)"""
 """\Wduser=(|({file_path}({file_dir}.+?)(\\({file_name}[^\\]+?))?))(\s+\w+=|\s*$)"""
 """\Wshost=(|({dest_host}.+?))(\s+\w+=|\s*$)"""

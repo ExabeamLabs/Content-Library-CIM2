@@ -15,7 +15,7 @@ Name = "zoom-z-sk4-app-login-success-signin"
     """\"type\":\"({operation}[^\"]+)\""""
     """\"email\":\"({email_address}[^\"]+)\""""
     """\Wmsg=({additional_info}.+?)(\s+\w+=|\s*$)"""
-    """\"ip_address\":\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))\""""
+    """\"ip_address\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\""""
     """\"client_type\"\s*:\s*\"({client_type}[^\"]+)\""""
     """\"version\"\s*:\s*\"({app_version}[^\"]+)\""""
   ]

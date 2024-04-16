@@ -8,20 +8,21 @@ Name = wazuh-w-json-endpoint-activity-success-wazuhalerts-1
 dl-wazuh-windows-template = {
     Vendor = Wazuh
     Product = Wazuh
+    ExtractionType = json
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Fields = [
-      """"data.id":"({event_code}\d+)""""
-      """"@timestamp":"({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-      """"data.dstuser":"(\(no user\)|({dest_user}[^"]+))"""
-      """"data.status":"({result}[^"]+)"""
-      """"location":"({log_location}[^"]+)"""
-      """"data.data":"({data}[^"]+)"""
-      """"path":"({log_path}[^"]+)"""
-      """"data.system_name":"({host}[^"]+)"""
-      """"agent.id":"({agent_id}\d+)"""
-      """"manager.name":"({wazuh_manager}[^"]+)"""
-      """"rule.description":"({description}[^"]+)"""
-      """"decoder.name":"({decoder_name}[^"]+)"""
+      """exa_regex="data.id":"({event_code}\d+)"""",
+      """exa_json_path=$.@timestamp,exa_field_name=time""",
+      """exa_json_path=$.['data.dstuser'],exa_regex=^(\(no user\)|({dest_user}[\w\.\-]{1,40}\$?))""",
+      """exa_json_path=$.['data.status'],exa_field_name=result""",
+      """exa_json_path=$.location,exa_field_name=log_location"""
+      """exa_json_path=$.['data.data'],exa_field_name=data""",
+      """exa_json_path=$.path,exa_field_name=log_path"""
+      """exa_json_path=$.['data.system_name'],exa_field_name=host"""
+      """exa_json_path=$.['agent.id'],exa_field_name=agent_id"""
+      """exa_json_path=$.['manager.name'],exa_field_name=wazuh_manager"""
+      """exa_json_path=$.['rule.description'],exa_field_name=description""",
+      """exa_json_path=$.['decoder.name'],exa_field_name=decoder_name"""
     
 }
 ```

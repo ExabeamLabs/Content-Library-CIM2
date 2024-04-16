@@ -18,7 +18,7 @@ Fields = [
   """"eventRecordID":"({event_id}\d+)"""
   """"severityValue":"({result}[^"]+?)\s*""""
   """"subjectUserSid":"({user_sid}[^"\s]+?)\s*""""
-  """"subjectUserName":"({user}[^"\s]+?)\s*""""
+  """"subjectUserName":"({user}[\w\.\-]{1,40}\$?)\s*""""
   """"subjectDomainName":"({domain}[^"\s]+?)\s*""""
   """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
   """"logonType":"({login_type}\d+?)\s*""""
@@ -26,7 +26,7 @@ Fields = [
   """"authenticationPackageName":"({auth_package}[^"]+?)\s*""""
   """"workstationName":"({src_host_windows}[^"]+?)\s*""""
   """"processName":"(?:-|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))\s*""""
-  """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"ipPort":"({src_port}\d+)"""
 ]
 DupFields = [

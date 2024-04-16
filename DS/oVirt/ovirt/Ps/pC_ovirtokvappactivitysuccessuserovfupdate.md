@@ -9,7 +9,7 @@ Name = ovirt-o-kv-app-activity-success-userovfupdate
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*? OVF_STORE for domain ({object}[^\s"]+) was updated by ({user}[^\s\(\)]+?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*? OVF_STORE for domain ({object}[^\s"]+) was updated by ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

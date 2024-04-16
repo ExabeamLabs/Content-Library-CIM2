@@ -6,8 +6,8 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
   """"type":"SYSCALL""""
   """success\=no"""
-  """Cloud Apps Security|"""
-  """|audit-event|"""
+  """"message":"""
+  """"logger.account":"""
 ]
 ParserVersion = "v1.0.0"
 

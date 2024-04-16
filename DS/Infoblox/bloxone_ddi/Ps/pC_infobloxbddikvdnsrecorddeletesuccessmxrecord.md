@@ -14,6 +14,7 @@ Name = infoblox-bddi-kv-dns-record-delete-success-mxrecord
 # dns_view is removed
 # exchanger is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

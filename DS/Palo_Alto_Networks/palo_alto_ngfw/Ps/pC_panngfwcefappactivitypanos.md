@@ -4,10 +4,11 @@
 Name = pan-ngfw-cef-app-activity-panos
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
-  TimeFormat = "MMM dd yyyy HH:mm:ss a"
+  TimeFormat = ["MMM dd yyyy HH:mm:ss z", "epoch"]
   Conditions = [ """CEF:""", """Palo Alto Networks|""", """|PAN-OS|""", """|SYSTEM|""" ]
   Fields = [
     """\Wrt=({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+\s+\w+)""",
+    """\Wrt=({time}\d{13})""",
     """\Wdvchost=({host}[\w\-.]+)""",
 # device_external_id is removed
 # module is removed

@@ -9,7 +9,7 @@ Name = ovirt-o-kv-app-activity-success-changedisk
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*? was inserted to VM ({object}[^\s"]+) by ({user}[^\s\(\)]+?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*? was inserted to VM ({object}[^\s"]+) by ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

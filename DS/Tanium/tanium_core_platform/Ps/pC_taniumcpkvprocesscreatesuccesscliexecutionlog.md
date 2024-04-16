@@ -10,7 +10,7 @@ Name = tanium-cp-kv-process-create-success-cliexecutionlog
     Fields = [
       """({operation_type}cli_execution)""",
     ]
-  
+
 
 }
 ```

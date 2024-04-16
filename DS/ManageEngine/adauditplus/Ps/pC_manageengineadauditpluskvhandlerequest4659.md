@@ -18,7 +18,7 @@ Name = manageengine-adauditplus-kv-handle-request-4659
     """\sACCESSES\s*=\s*({access}[^]]+?)\s*\]""",
     """\sPROCESS_ID\s*=\s*({process_id}[^]]+?)\s*\]""",
     """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]"""
-    """\sUSERNAME\s*=\s*(({user}[^]]+?))\s*\]""",
+    """\sUSERNAME\s*=\s*(({user}[\w\.\-]{1,40}\$?))\s*\]""",
     """\sUSER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]""",
   ]
   DupFields = [ "host->dest_host" ]

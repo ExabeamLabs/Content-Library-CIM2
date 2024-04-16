@@ -4,7 +4,7 @@
 Name = "sophos-safeguard-kv-app-activity-appactivity"
 Vendor = "Sophos"
 Product = "Sophos SafeGuard"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.SSS"]
 time_createdFormat = ["yyyy-MM-dd HH:mm:ss.SSS"]
 time_modifiedFormat = ["yyyy-MM-dd HH:mm:ss.SSS"]
 Conditions = [
@@ -21,7 +21,7 @@ Fields = [
   """EVT_MACHINE_NAME="({host}[^"]+)"""
   """EVT_MACHINE_DOMAIN="({domain}[^"]+)"""
   """EVT_MACHINE_GUID="({target_guid}[^"]+)"""
-  """EVT_USER_NAME="({user}[^"]+)"""
+  """EVT_USER_NAME="({user}[\w\.\-]{1,40}\$?)"""
   """EVT_USER_DOMAIN="({domain}[^"]+)"""
   """EVT_USER_GUID="({user_login_guid}[^"]+)"""
   """EVT_LOG_TIME="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""

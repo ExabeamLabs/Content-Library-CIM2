@@ -16,11 +16,10 @@ Fields = [
 """CallerLogonId=\"+\([^,]+,({login_id}[^\)]+)\""""
 """CallerUserName =\"+({src_user}[^\"]+)\""""
 """TargetAccountID=\"+\%\{({user_sid}[^}]+)\}\""""
-"""TargetAccountName =\"+({user}[^\"]+)\""""
+"""TargetAccountName =\"+({user}[\w\.\-]{1,40}\$?)\""""
 """CallerMachineName =\"+({src_host}[^\"]+)\""""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"

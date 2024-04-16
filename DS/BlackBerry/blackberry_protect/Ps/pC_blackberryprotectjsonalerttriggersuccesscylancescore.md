@@ -4,6 +4,7 @@
 Name = "blackberry-protect-json-alert-trigger-success-cylancescore"
 Vendor = "BlackBerry"
 Product = "BlackBerry Protect"
+ExtractionType = json
 TimeFormat = "M/d/yyyy H:mm:ss a"
 Conditions = [
 """"Cylance Score""""
@@ -11,14 +12,15 @@ Conditions = [
 """"Tenant""""
 ]
 Fields = [
-""""Access Time"+\s*:\s*"+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(AM|PM|am|pm))"+\s*[,\]\}]"""
-""""Device\s?Name"+\s*:\s*"+({host}([^"\\,]|(\\\\)*"|\\[^",])+)"+\s*[,\]\}]"""
-""""Classification"+\s*:\s*"+({alert_name}([^"\\,]|(\\\\)*"|\\[^"])+)"+\s*[,\]\}]"""
-""""File Owner"+\s*:\s*"+((N/A)|(({domain}[^\\]+)\\+({user}.+?)))"+\s*[,\]\}]"""
-""""File Status"+\s*:\s*"+({additional_info}([^"\\,]|(\\\\)*"|\\[^"])+)"+\s*[,\]\}]"""
-""""Cylance Score"+\s*:\s*"+({alert_severity}([^",\\]|(\\\\)*"|\\[^"])+)"+\s*[,\]\}]"""
-""""File Path"+\s*:\s*"+({malware_url}([^",\\]|(\\\\)*"|\\[^"])+)"+\s*[,\]\}]"""
-""""File Name":\s*"({file_name}[^,\\]+)"""
+"""exa_json_path=$.['Access Time'],exa_field_name=time"""
+"""exa_json_path=$.['Device Name'],exa_field_name=host"""
+"""exa_json_path=$.DeviceName,exa_field_name=host"""
+"""exa_json_path=$.Classification,exa_field_name=alert_name"""
+"""exa_json_path=$.['File Owner'],exa_regex=((N/A)|(({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)))""",
+"""exa_json_path=$.['File Status'],exa_field_name=additional_info"""
+"""exa_json_path=$.['Cylance Score'],exa_field_name=alert_severity"""
+"""exa_json_path=$.['File Path'],exa_field_name=malware_url"""
+"""exa_json_path=$.['File Name'],exa_field_name=file_name"""
 ]
 DupFields = [
 "alert_name->alert_type"

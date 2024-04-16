@@ -13,16 +13,16 @@ Name = "microsoft-evsecurity-json-user-create-success-4720"
   Fields = [
 """({event_name}A user account was created)""",
 """"EventTime":\s*"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})"""",
-""""Hostname":"({host}[^."]*)""",
+""""Hostname":"({host}[\w\-.]*)""",
 """({event_code}4720)""",
-""""SubjectUserName":"({user}[^\"]+)""",
+""""SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
 """"SubjectDomainName":"({domain}[^"]+)""",
 """"SubjectLogonId":"({login_id}[^"]+)"""
 """"TargetSid":"({account_id}[^"]+)""",
 """"TargetUserName":"({account_name}[^"]+)""",
 """"TargetDomainName":"({account_domain}[^"]+)"""
   ]
-  DupFields = [ "host->dest_host","account_name->dest_user" ]
+  DupFields = [ "host->dest_host" , "account_name->dest_user", "account_domain->dest_domain" ]
 
 
 }

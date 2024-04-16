@@ -1,0 +1,80 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evsecurity-json-ds-object-activity-success-4662-4"
+Conditions = [
+""""EventID":4662,"""
+"""An operation was performed on an object""",
+""""ProviderName":"Microsoft-Windows-Security-Auditing""""
+]
+ParserVersion = "v1.0.0"
+Vendor = "Microsoft"
+Product = "Event Viewer - Security"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+ExtractionType = json
+Fields = [
+""""TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
+"""\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s"""
+""""+created"+:"+({time}[^"]+)"""
+"""requestClientApplication=({app}[^=]+?)\s\w+="""
+"""({event_name}An account was logged off)"""
+""""keywords"+:\["+({result}[^"]+)"""
+""""pid"+:({process_id}\d+)"""
+"""thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
+""""TargetUserName"+:"+(None|({dest_user}[^"]+))"""
+""""TargetDomainName"+:"+({domain}[^"]+)"""
+""""TargetLogonId"+:"+({login_id}[^"]+)"""
+""""LogonType"+:"+({login_type}\d+)"""
+""""TargetUserSid"+:"+({user_sid}[^"<,]+)"""
+""""record_id"+:({event_id}\d+)"""
+""""task"+:"+({task_name}[^"]+)"""
+""""event_id"+:({event_code}\d+)"""
+""""(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)"""
+""""hostname"+:"+({host}[\w\-.]+)"""
+""""action"+:"+({action}[^"]+)"""
+""""os":[^@]+?"name":"({os}[^"]+)"""
+""""SubjectLogonId"+:"+({login_id}[^"]+)"""
+""""+activity_id"+:"+\{({activity_id}[^}]+)"""
+""""+ProviderName"+:"+({provider_name}[^"]+)"""
+""""+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
+""""+SubjectDomainName"+:"+({domain}[^"]+)"""
+""""user"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))"""
+""""+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))"""
+""""+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
+""""+SidHistory"+:"+(-|({sid_history}[^"]+))"""
+""""Keywords":"({result}[^"]+)"""
+""""Computer":"({host}[\w\-.]+)""""
+""""TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+"""({event_name}An operation was performed on an object)"""
+"""({event_code}4662)"""
+""""ObjectName":"({ds_object_name}[^"]+)""""
+""""ObjectServer":"({ds_object_class}[^"]+)""""
+""""ObjectType":"({ds_object_type}[^"]+)""""
+""""LogonID":"({login_id}[^"]+)""""
+""""OperationType":"({operation}[^"]+)""""
+""""AdditionalInfo":"(?:-|({additional_info}[^"]+))""""
+""""AccessList":"(\\[srnt])*(-|({access}[^:]+?))\s*(\\[srnt])*""""
+"""Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
+"""exa_regex="TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
+"""exa_regex=({event_name}An operation was performed on an object)"""
+"""exa_json_path=$.Properties.SubjectLogonId,exa_field_name=login_id"""
+"""exa_json_path=$.Properties.AccessList,exa_regex=({access}[^\s]+)"""
+"""exa_json_path=$.Properties.ObjectName,exa_field_name=ds_object_name"""
+"""exa_json_path=$.Properties.ObjectServer,exa_field_name=ds_object_class"""
+"""exa_json_path=$.Properties.OperationType,exa_field_name=operation"""
+"""exa_json_path=$.Properties.AdditionalInfo,exa_regex="(?:-|({additional_info}[^"]+))"""
+"""exa_json_path=$.Properties.SubjectUserName,exa_field_name=user"""
+"""exa_json_path=$.Properties.SubjectUserSid,exa_field_name=user_sid"""
+"""exa_json_path=$.ProviderName,exa_field_name=provider_name"""
+"""exa_regex=({event_code}4662)"""
+"""exa_json_path=$.Properties.ObjectType,exa_field_name=ds_object_type"""
+"""exa_json_path=$.Properties.SubjectDomainName,exa_field_name=domain"""
+"""exa_json_path=$.Hostname,exa_field_name=host"""
+]
+DupFields = [
+"host->dest_host","ds_object_name->object"
+]
+
+
+}
+```

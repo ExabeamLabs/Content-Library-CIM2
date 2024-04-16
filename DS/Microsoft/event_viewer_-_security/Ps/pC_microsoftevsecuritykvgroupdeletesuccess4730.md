@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-group-delete-success-4730
     """ACCOUNT_DOMAIN\s*=\s*({domain}[^]]+?)\s*\]""",
     """\sPROCESS_ID\s*=\s*(null|({process_id}[^]]+?))\s*\]""",
     """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]"""
-    """CALLER_USER_NAME\s*=\s*({user}[^]]+?)\s*\]""",
+    """CALLER_USER_NAME\s*=\s*({user}[\w\.\-]{1,40}\$?)\s*\]""",
     """CALLER_USER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]""",
   ]
   DupFields = [ "host->dest_host" ]

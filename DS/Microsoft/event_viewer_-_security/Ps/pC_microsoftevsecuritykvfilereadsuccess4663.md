@@ -4,15 +4,16 @@
 Name = microsoft-evsecurity-kv-file-read-success-4663
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss"]
   Conditions = [ """LogType="WLS"""", """EventID="4663"""" ]
   Fields = [
+    """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({event_name}An attempt was made to access an object)""",
     """Computer="+({host}[^"]+)"""",
     """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
     """EventRecordID="+({event_id}[^"]+)"""",
-    """SubjectUserName ="+({user}[^"]+)"""",
+    """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)"""",
     """SubjectUserSid="+({user_sid}[^"]+)"""",
     """SubjectDomainName ="+({domain}[^"]+)"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",

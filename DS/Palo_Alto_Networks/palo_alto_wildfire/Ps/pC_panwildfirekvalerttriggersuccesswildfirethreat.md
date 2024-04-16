@@ -2,7 +2,7 @@
 ```Java
 {
 Name = pan-wildfire-kv-alert-trigger-success-wildfirethreat
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """|Palo Alto Networks|PAN-OS|""","""wildfire|THREAT|""" ]
   ParserVersion = "v1.0.0"
 
@@ -16,16 +16,16 @@ pan-cef-alert = {
     """cat=(|({alert_name}.+?))(\s+\w+=|\s*$)""",
     """\Wproto=(|({protocol}.+?))(\s+\w+=|\s*$)""",
     """\Wapp=(|({process_name}.+?))(\s+\w+=|\s*$)""",
-    """\Wact=(|({action}.+?))(\s+\w+=|\s*$)""",
+    """\Wact=(|({result}.+?))(\s+\w+=|\s*$)""",
     """\sflexString2=({additional_info}[^\s]+)""",
     """\Wcs1=(|({additional_info}.+?))(\s+\w+=|\s*$)""",
     """\sexternalId=({alert_id}[^\s]+)""",
     """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+)""",
     """\srt=({time}\d{13})""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """duser=(({domain}[^\\=]+)\\+)?({user}[^\s@]+)(@({=domain}[^\s@=]+))?""",
-    """suser=(({domain}[^\\=]+)\\+)?({user}[^\s@]+)(@({=domain}[^\s@=]+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)(@({=domain}[^\s@=]+))?""",
+    """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)(@({=domain}[^\s@=]+))?""",
     """\ssourceTranslatedAddress=({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\sdestinationTranslatedAddress=({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\sdvchost=({host}[^\s]+)""",

@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-sk4-endpoint-4624
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  Conditions = [ """EventID': 4624""", """destinationServiceName =""" ]
+  Conditions = [ """EventID': 4624""", """'NetApp-Security-Auditing'""", """'LogonType'"""  ]
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [
     """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
@@ -20,12 +20,12 @@ netapp-json-windows-events = {
     """'Opcode':\s+({opcode}\d+)""",
     """'Keywords':\s+'({keywords}[^']+)""",
     """'Result':\s+'({result}[^']+)""",
-    """'Computer':\s+'({host}[^']+)""",
+    """'Computer':\s+'({host}[\w\-\.]+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
-    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'SubjectDomainName':\s+'({domain}[^']+)""",
-    """'SubjectUserName':\s+'({user}[^']+)""",
+    """'SubjectUserName':\s+'({user}[\w\.\-]{1,40}\$?)""",
     """'ObjectServer':\s+'({object_server}[^']+)""",
     """'ObjectType':\s+'({object_class}[^']+)""",
     """'HandleID':\s+'({handle_id}[^']+)""",

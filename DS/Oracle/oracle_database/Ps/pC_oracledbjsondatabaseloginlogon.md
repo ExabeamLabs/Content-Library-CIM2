@@ -4,30 +4,30 @@
 Name = "oracle-db-json-database-login-logon"
 Vendor = "Oracle"
 Product = "Oracle Database"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+ExtractionType = json
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.S", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
 """"os_username"""
 """"dbid"""
 """"LOGON"""
 ]
 Fields = [
-""""dbid\\?"+:\\?"+({db_id}[^"\\]+)"""
-"""HOST=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-""""userhost\\?"+:\\?"+({src_host}[^"\\]+)"""
-""""userhost"+:"+({domain}[^"\\]+)\\{1,2}({src_host}[^"\\]+)""""
-""""terminal\\?"+:\\?"+({terminal}[^"\\]+)"""
-""""timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-""""username\\?"+:\\?"+({db_user}[^"\\]+)"""
-""""os_username\\?"+:\\?"+({user}[^"\\]+)"""
-"""PROTOCOL=({protocol}\w+)"""
-""""returncode\\?"+:\\?"+({return_code}[^"\\]+)"""
-""""exa_jdbc_database":"({db_name}[^"]+)""""
-""""exa_jdbc_type":"({app}[^"]+)""""
-""""exa_jdbc_hostname":"({dest_host}[^"]+)""""
-""""exa_jdbc_port":"({dest_port}\d+)""""
+"""exa_json_path=$..dbid,exa_field_name=db_id"""
+"""exa_regex=HOST=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$..userhost,exa_field_name=src_host"""
+"""exa_json_path=$..userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({src_host}[^"]+)"""
+"""exa_json_path=$..terminal,exa_field_name=terminal"""
+"""exa_json_path=$..timestamp,exa_field_name=time"""
+"""exa_json_path=$..username,exa_field_name=db_user"""
+"""exa_json_path=$..os_username,exa_field_name=user"""
+"""exa_regex=PROTOCOL=({protocol}\w+)"""
+"""exa_json_path=$..returncode,exa_field_name=return_code"""
+"""exa_json_path=$..exa_jdbc_database,exa_field_name=db_name"""
+"""exa_json_path=$..exa_jdbc_type,exa_field_name=app"""
+"""exa_json_path=$..exa_jdbc_hostname,exa_field_name=dest_host"""
+"""exa_json_path=$..exa_jdbc_port,exa_field_name=dest_port"""
 ]
 DupFields = [
-"user->user"
 "db_user->account"
 ]
 ParserVersion = "v1.0.0"

@@ -6,7 +6,7 @@ Vendor = "Microsoft"
 Product = "Azure Monitor"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
-  """destinationServiceName =Azure"""
+  """ResourceId":"""
   """OperationName":"SecretSet"""
 ]
 Fields = [
@@ -14,10 +14,10 @@ Fields = [
   """"ResourceProvider\":\"({object}[^\"]+)"""
   """"ResourceId\":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+))\""""
   """"Resource\":\"({file_name}[^\"]+)\""""
-  """suser=((?i)anonymous|({user}[^\s]+))"""
+  """suser=((?i)anonymous|({user}[\w\.\-]{1,40}\$?))"""
   """devicePayloadId=.+\s+name\s+:\s+\[({host}[^\]]+)"""
   """fileType=({file_type}[^\s]+)"""
-  """"CallerIPAddress\":\"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\""""
+  """"CallerIPAddress\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\""""
   """"ResultType\":\"({result}[^\"]+)"""
   """requestClientApplication=({app}.+?)\s\w+="""
   """"OperationName\":\"({event_name}[^\"]+)\""""

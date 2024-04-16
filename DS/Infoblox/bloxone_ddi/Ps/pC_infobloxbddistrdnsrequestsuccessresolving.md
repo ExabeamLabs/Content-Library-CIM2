@@ -9,7 +9,7 @@ Name = infoblox-bddi-str-dns-request-successresolving
   Conditions = [ """]: success resolving """, """ (in """ ]
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
-    """]: success resolving '({dns_query}[^'\/]+?)\/({dns_query_type}[^']+)' \(in '(\.|({result}[^']+))'"""
+    """]: ({event_name}success resolving) '({dns_query}[^'\/]+?)\/({dns_query_type}[^']+)' \(in '(\.|({result}[^']+))'"""
   ]
 
 

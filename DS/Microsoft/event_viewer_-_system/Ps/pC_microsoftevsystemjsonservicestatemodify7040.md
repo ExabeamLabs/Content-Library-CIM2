@@ -16,7 +16,7 @@ Name = microsoft-evsystem-json-service-state-modify-7040
     """"ProcessID":({process_id}\d+)""",
     """"Channel":"({channel}[^"]+)"""",
     """"Domain":"((?i)NT AUTHORITY|NT-AUTORIT|({domain}[^"\\]+))""",
-    """"AccountName":"((?i)system|({user}[^"]+))"""",
+    """"AccountName":"((?i)system|({user}[\w\.\-]{1,40}\$?))"""",
     """"UserID":"({user_sid}[^"]+)"""",
     """"AccountType":"({user_type}[^"]+)"""",
     """"Message":"({additional_info}[^,]+)"""",

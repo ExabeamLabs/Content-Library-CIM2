@@ -4,6 +4,7 @@
 Name = "ossec-o-json-alert-trigger-success-anomalydetection"
 Vendor = "OSSEC"
 Product = "OSSEC"
+ExtractionType = json
 Conditions = [
 """"pg.alert_name":"Host-based anomaly detection event (rootcheck)."""
 """ossec"""

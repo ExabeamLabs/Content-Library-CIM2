@@ -16,6 +16,7 @@ Name = infoblox-bddi-str-dns-record-delete-deletedptrrecord
 # address is removed
 # dname is removed
   ]
+  DupFields = ["operation->event_name"]
 
 
 }

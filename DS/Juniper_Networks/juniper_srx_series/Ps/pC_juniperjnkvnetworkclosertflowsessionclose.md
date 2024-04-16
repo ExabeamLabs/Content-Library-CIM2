@@ -4,19 +4,19 @@
 Name = juniper-jn-kv-network-close-rtflowsessionclose
     Vendor = Juniper Networks
     Product = Juniper SRX Series
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Conditions = [ """RT_FLOW_SESSION_CLOSE""", """encrypted=""" ]
     Fields = [
        """encrypted="({additional_info}[^"]+)""",
-        """destination-address="({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+        """destination-address="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
         """destination-port="({dest_port}\d+)""",
         """RT_FLOW\s-\s({event_name}[^\s]+)\s\[""",
         """\s({host}[^\s]+)\sRT_FLOW""",
         """packet-incoming-interface="({src_interface}[^"]+)""",
-        """source-address="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+        """source-address="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
         """source-port="({src_port}\d+)""",
-        """\s\d+\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d).\d\d\dZ\s\S+\sRT_FLOW""",
-        """username="(?!N\/A)({user}[^"]+)"""",
+        """\s\d+\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d([-+]\d\d:\d\d)?Z?)\s\S+\sRT_FLOW""",
+        """username="(?!N\/A)({user}[\w\.\-]{1,40}\$?)"""",
         """protocol-id="({protocol}[^"]+)""",
         """destination-zone-name="({dest_network_zone}[^"]+)""",
         """reason="({miscellaneous}[^"]+)""",

@@ -7,7 +7,7 @@ Vendor: Open VPN
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  14   |   11   |         6          |       2        |    4    |
+|  14   |   11   |         6          |       2        |    7    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

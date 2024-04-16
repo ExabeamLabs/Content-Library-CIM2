@@ -8,8 +8,7 @@ Conditions = [
 """| objectclass : user |"""
 ]
 DupFields = [
-"host->src_host"
-]
+"host->src_host","dest_user->account_name"]
 ParserVersion = "v1.0.0"
 
 

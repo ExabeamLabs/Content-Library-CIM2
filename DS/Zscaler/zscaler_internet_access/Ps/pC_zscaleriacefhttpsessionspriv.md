@@ -5,7 +5,7 @@ Name = zscaler-ia-cef-http-session-spriv
   ParserVersion = v1.0.0
   Vendor = Zscaler
   Product = Zscaler Internet Access
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [
 """|Zscaler|NSSWeblog|""",
 """requestClientApplication=""",
@@ -17,13 +17,13 @@ Name = zscaler-ia-cef-http-session-spriv
     """\srt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """\d\d:\d\d:\d\d ({host}\S+) CEF:""",
     """\sdvchost=(NA|({host}[\w\-.]+))\s*(\w+=|$|")""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*(\w+=|$)""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*(\w+=|$)""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
     """([^\|]*\|){5}({action}[^\|]+)""",
     """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
-    """\ssuser=(NA|None|\$NULL|(?![^\s]+@[^\s]+)({user}[^=\s]+?))\s*(\w+=|$)""",
+    """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
     """\slogin=({email_address}[^@\s]+@[^@\s]+)\s\w+=""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|({user}[^\s@]+))""",
+    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-]{1,40}\$?)))""",
     """\|({severity}\d+)\|act=""",
     """proto=({protocol}[^\s]+)""",
     """\seurl=({url}[^\s\/\?]+({uri_path}\/[^\?\s]+)?({uri_query}\?[^\s]+)?)""",
@@ -32,7 +32,7 @@ Name = zscaler-ia-cef-http-session-spriv
     """\scs4=(None|({ransomware_name}[^=]+?))\s*(\w+=|$)""",
     """\srequest=({url}[^\s]+?)\s+(\w+=|$)""",
     """\srequest=(\w+:\/{2})?[^\/]+({uri_path}\/[^?\s]+)(\?\S+)?\s+(\w+=|$)""",
-    """\srequest=(\w+:\/+)?[^|\/:]+(:\d+)?[^|?]+({uri_query}\?[^\s]+)""",
+    """\srequest=[^=|?]+({uri_query}\?[^\s]+)\s""",
     """\srequest=(?:[^:?]+:\/+)?({web_domain}[^\/:\s]+)""",
     """\srequestMethod=(NA|({method}[^=]+?))\s*(\w+=|$)""",
     """\srequestClientApplication=([uU]nknown|({user_agent}[^=]+?))\s*(\w+=|$)""",
@@ -42,7 +42,7 @@ Name = zscaler-ia-cef-http-session-spriv
     """\sout=({bytes_out}\d+)""",
     """\sin=({bytes_in}\d+)""",
     """\scat=({category}[^=]+?)\s+\w+=""",
-    """\sfileType=(None|({mime}[^=]+?))\s*(\w+=|$)""",
+    """\scontenttype=(None|Other|({mime}[^=]+?))\s*(\w+=|$)""",
     """\soutcome=({http_response_code}\d+)""",
     """\sreason=({proxy_action}[^=]+?)\s*(\w+=|$)""",
     """\scs1=({department}[^=]+?)\s*(\w+=|$)""",
@@ -52,7 +52,14 @@ Name = zscaler-ia-cef-http-session-spriv
     """sourcehost=(NA|None|\$NULL|({src_host}[^=]+?))\s+destinationhost=""",
     """devicehostname=(NA|({src_host}[^\s"]+?))\s*(\w+=|$)""",
     """ZscalerNSSWeblogDLPDictionaries=(None|({web_log_dict}[^=]+?))\s*([\w.]+=|$)""",
-    """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)"""
+    """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)""",
+    """\sdhost=[^=]*?({top_domain}[^\.]+\.\w+)\s+\w+=""",
+    """\sspriv=({location}[^=]+?)\s\w+="""
+    """DownloadFileName =(NA|None|({src_file_name}[^=\s]+))\s+"""
+    """UploadFileName =(NA|None|({file_name}[^=\s]+))\s+"""
+    """dlpdict=(NA|None|({dlp_dict}[^=\s]+))\s+"""
+    """dlpengine=(NA|None|({dlp_engine}[^=\s]+))\s+"""
+    """dlprulename=(NA|None|({rule}[^=\s]+))"""
   ]
   DupFields = ["ransomware_name->threat_category", "risk_level->suspicious_content"]
 

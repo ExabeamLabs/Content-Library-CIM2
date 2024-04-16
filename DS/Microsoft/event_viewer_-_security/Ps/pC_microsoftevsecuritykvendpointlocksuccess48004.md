@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-endpoint-lock-success-4800-4
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = "MM/dd/yyyy hh:mm:ss a"
 Conditions = [
   """ EventCode=4800"""
   """The workstation was locked."""
@@ -14,7 +14,7 @@ Fields = [
   """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))\s+LogName ="""
   """({event_code}4800)"""
   """ComputerName =({host}[^\s]+)"""
-  """Account Name:\s+({user}.+?)\s+Account Domain:"""
+  """Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:"""
   """Account Domain:\s+({domain}.+?)\s+Logon ID:"""
   """Logon ID:\s+({login_id}[^\s]+)\s+Session"""
 ]

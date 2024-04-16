@@ -10,7 +10,7 @@ Name = rstudio-rserver-sk4-app-login-success-authlogin
   Fields = [
     """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """({event_name}auth_login)""",
-    """message":"({additional_info}[^,]+),\s\\?"({user}[^"\\]+)\\?""""
+    """message":"({additional_info}[^,]+),\s\\?"({user}[\w\.\-]{1,40}\$?)\\?""""
   ]
 
 

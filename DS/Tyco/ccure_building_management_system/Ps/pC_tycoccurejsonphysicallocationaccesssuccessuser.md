@@ -18,7 +18,7 @@ Conditions = [
 ]
 Fields = [
   """"transaction_time_gmt\":({time}\d{13})"""
-  """"user\":\s*\"({user}[^\"]+)"""
+  """"user\":\s*\"({user}[\w\.\-]{1,40}\$?)"""
   """"location_door\":({location_door}\d+)"""
   """"location_building\":\s*\"({location_building}[^\"]+)"""
   """"location_city\":\s*\"({location_city}[^\"]+)"""

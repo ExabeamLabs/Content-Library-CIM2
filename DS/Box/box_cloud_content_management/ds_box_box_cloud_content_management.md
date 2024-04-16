@@ -4,7 +4,7 @@ Product: Box Cloud Content Management
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  118  |   52   |         17         |       8        |    5    |
+|  118  |   52   |         17         |       8        |    6    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

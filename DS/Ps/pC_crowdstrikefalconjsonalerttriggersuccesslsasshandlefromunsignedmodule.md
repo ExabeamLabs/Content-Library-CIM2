@@ -3,8 +3,9 @@
 {
 Name = "crowdstrike-falcon-json-alert-trigger-success-lsasshandlefromunsignedmodule"
 Conditions = [
-""""event_simpleName\":\"LsassHandleFromUnsignedModule\"""", """"@timestamp""""
+""""event_simpleName\":\"LsassHandleFromUnsignedModule\"""", """\"aip\"""", """\"aid\""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 leef-crowdstrike-alert-t.Fields} [

@@ -11,20 +11,19 @@ Conditions = [
 """attempted to validate the credentials for an account"""
 ]
 Fields = [
-""""systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""""
+""""systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
 """"computer":"({host}[\w\-.]+)""""
 """"message":"({event_name}[^"]+?)\s*""""
 """"eventID":"({event_code}\d+)""""
 """"eventRecordID":"({event_id}\d+)""""
 """"severityValue":"({result}[^"]+?)\s*""""
-""""targetUserName":"({user}[^"\s@]+?)\s*""""
+""""targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*""""
 """"targetUserName":"({email_address}[^"\s@]+@[^"\s@]+?)\s*""""
 """"workstation":"({src_host}[^"\s]+?)\s*""""
 """"status":"({result_code}[^"]+?)\s*""""
 ]
 DupFields = [
-  "result_code->failure_code",
-  "host->dest_host"
+  "result_code->failure_code"
 ]
 ParserVersion = "v1.0.0"
 

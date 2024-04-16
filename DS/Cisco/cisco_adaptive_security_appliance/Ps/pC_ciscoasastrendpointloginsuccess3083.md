@@ -11,7 +11,7 @@ Conditions = [
 """aaa.c:3083"""
 ]
 Fields = [
-"""({additional_info}Authentication succeeded for admin user) '({user}[^']+)' on ({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""({additional_info}Authentication succeeded for admin user) '({user}[\w\.\-]{1,40}\$?)' on ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """%AAA-({priority}5)-({event_name}AAA_AUTH_ADMIN_USER)"""
 """aaa.c:({event_code}3083)"""
 ]

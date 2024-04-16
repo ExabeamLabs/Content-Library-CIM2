@@ -12,9 +12,10 @@ Name = "microsoft-nps-xml-radius-traffic-success-2"
 ]
   Fields = [
     """<Timestamp[^>]+>({time}\d+\/\d+\/\d+\s\d+:\d+:\d+\.\d+)<"""
-    """<Computer-Name[^>]+>({host}[^<]+)<"""
-    """Fully-Qualifed-User-Name[^>]+>[^>]*?[\\\/]+?({user}[^\\\/]*?)<"""
-    """<Client-IP-Address[^>]+>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """<Computer-Name[^>]+>({dest_host}({host}[\w\-.]+))<"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """Fully-Qualifed-User-Name[^>]+>[^>]*?[\\\/]+?({user}[\w\.\-]{1,40}\$?)<"""
+    """<Client-IP-Address[^>]+>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """<Authentication-Type[^>]+>({auth_type}[^<]+)<"""
     """Proxy-Policy-Name[^>]+>({additional_info}[^<]+)<"""
     """<Packet-Type.+?>({result}\d+)"""
@@ -23,7 +24,6 @@ Name = "microsoft-nps-xml-radius-traffic-success-2"
     """<NP-Policy-Name[^>]+>({network}[^<]+)<"""
   ]
   DupFields = [
-"host->dest_host"
 "result->event_code"
 ]
 ParserVersion = "v1.0.0"

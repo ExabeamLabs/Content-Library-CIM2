@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-audit-policy-modify-4907
     """({event_code}4907)""",
     """({event_name}Auditing settings on object were changed)""",
     """"SubjectUserSid"+:"+({user_sid}[^"]+)""",
-    """"SubjectUserName"+:"+({user}[^"]+)""",
+    """"SubjectUserName"+:"+({user}[\w\.\-]{1,40}\$?)""",
     """"SubjectDomainName"+:"+({domain}[^"]+)""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
     """"ObjectServer"+:"+({object_server}[^"]+)""",

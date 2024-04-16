@@ -21,9 +21,11 @@ Fields = [
 """"Severity":"({alert_severity}[^"]+)""""
 """"Name":"({alert_name}[^"]+)""""
 """"trc\\":\\"({email_address}[^"\s@]+@[^"\s@\\]+)\\""""
-""""AlertId":"({alert_id}[^"]+)""""
+""""AlertId":"({alert_id}[^"]+)"""",
+""""Source":"({alert_source}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
+DupFields = [ "alert_name->alert_subject" ]
 
 
 }

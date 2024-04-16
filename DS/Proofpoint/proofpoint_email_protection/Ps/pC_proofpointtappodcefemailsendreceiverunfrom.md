@@ -14,7 +14,7 @@ Name = proofpoint-tappod-cef-email-send-receive-runfrom
     """"+host"+:"+({host}[^"]+)""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"+"""
     """\sx=({xid}.+?)\s+(\w+=|$)""",
-    """\sheader.from=({src_email_address}.*?@[^"]+)"""
+    """\sheader.from=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 

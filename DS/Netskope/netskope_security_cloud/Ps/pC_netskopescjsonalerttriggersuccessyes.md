@@ -6,27 +6,30 @@ Name = netskope-sc-json-alert-trigger-success-yes
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
   ParserVersion = "v1.0.0"
+  ExtractionType = json
   Conditions = [ """"alert_type": "DLP"""", """"alert": "yes""""]
   Fields = [
-    """"timestamp": ({time}\d{10})""",
-    """"user": "(?![^\s]+@[^\s]+)({user}[^"\s]+)"""",
-    """"user": "(?=[^\s]+@[^\s]+)({email_address}[^"\s@]+@[^"\s@]+)"""",
-    """"policy": "({alert_name}[^"]+)"""",
-    """"alert_type": "({alert_type}[^"]+)"""",
-    """"dstip": "({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"url": "({target}[^"]+)"""",
-    """"shared_with": "({additional_info}[^"]+)"""",
-    """"alert_name": "({alert_name}[^"]+)"""",
-    """"internal_id": "({alert_id}[^"]+)"""",
-    """"dlp_rule_severity": "({alert_severity}[^"]+)"""",
-    """"dlp_file": "({file_name}[^"]+)"""",
-    """"file_path": "({file_path}[^"]+)"""",
-    """"file_size": ({bytes}\d+),""",
-    """"md5":\s*"({hash_md5}[^"]+)"""",
-    """"from_user":\s*"({from_user_at}[^"]+)"""",
-    """"site":\s*"({site_at}[^"]+)""""
+    """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$.policy,exa_field_name=alert_name"""
+    """exa_json_path=$.alert_type,exa_field_name=alert_type"""
+    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.url,exa_field_name=target"""
+    """exa_json_path=$.shared_with,exa_field_name=additional_info"""
+    """exa_json_path=$.alert_name,exa_field_name=alert_name"""
+    """exa_json_path=$.internal_id,exa_field_name=alert_id"""
+    """exa_json_path=$.dlp_rule_severity,exa_field_name=alert_severity"""
+    """exa_json_path=$.dlp_file,exa_field_name=file_name"""
+    """exa_json_path=$.file_path,exa_field_name=file_path"""
+    """exa_json_path=$.md5,exa_field_name=hash_md5"""
+    """exa_json_path=$.from_user,exa_field_name=from_user_at"""
+    """exa_json_path=$.site,exa_field_name=site_at"""
+    """exa_json_path=$.protocol,exa_field_name=protocol"""
+    """exa_json_path=$.domain,exa_field_name=web_domain"""
+    """exa_json_path=$.file_size,exa_field_name=bytes"""
+    """exa_json_path=$.object,exa_field_name=object"""
   ]
-  DupFields = [ "file_path->file_path_at", "additional_info->shared_with_at" ]
+  DupFields = [ "file_path->file_path_at", "additional_info->shared_with_at","alert_name"->"alert_subject" ]
 
 
 }

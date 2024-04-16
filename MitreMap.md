@@ -74,7 +74,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1090     | [Proxy](https://attack.mitre.org/techniques/T1090)<br><br>                                                                                                | 1     |
 | T1090.003 | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>                                                                           | 12    |
 | T1091     | [Replication Through Removable Media](https://attack.mitre.org/techniques/T1091)<br><br>                                                                  | 14    |
-| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 46    |
+| T1098     | [Account Manipulation](https://attack.mitre.org/techniques/T1098)<br><br>                                                                                 | 45    |
 | T1098.002 | [Account Manipulation: Exchange Email Delegate Permissions](https://attack.mitre.org/techniques/T1098/002)<br><br>                                        | 4     |
 | T1102     | [Web Service](https://attack.mitre.org/techniques/T1102)<br><br>                                                                                          | 1     |
 | T1105     | [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)<br><br>                                                                                | 3     |
@@ -105,7 +105,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1204.001 | [T1204.001](https://attack.mitre.org/techniques/T1204/001)<br><br>                                                                                        | 1     |
 | T1204.002 | [T1204.002](https://attack.mitre.org/techniques/T1204/002)<br><br>                                                                                        | 3     |
 | T1207     | [Rogue Domain Controller](https://attack.mitre.org/techniques/T1207)<br><br>                                                                              | 6     |
-| T1210     | [Exploitation of Remote Services](https://attack.mitre.org/techniques/T1210)<br><br>                                                                      | 11    |
+| T1210     | [Exploitation of Remote Services](https://attack.mitre.org/techniques/T1210)<br><br>                                                                      | 12    |
 | T1213     | [Data from Information Repositories](https://attack.mitre.org/techniques/T1213)<br><br>                                                                   | 37    |
 | T1218     | [Signed Binary Proxy Execution](https://attack.mitre.org/techniques/T1218)<br><br>                                                                        | 7     |
 | T1218.001 | [Signed Binary Proxy Execution: Compiled HTML File](https://attack.mitre.org/techniques/T1218/001)<br><br>                                                | 2     |

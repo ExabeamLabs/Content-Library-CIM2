@@ -7,7 +7,7 @@ Vendor: Exabeam
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  67   |   35   |         5          |       2        |    9    |
+|  67   |   35   |         5          |       2        |    8    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

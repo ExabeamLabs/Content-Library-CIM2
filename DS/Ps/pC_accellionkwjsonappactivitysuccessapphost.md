@@ -9,6 +9,7 @@ Conditions = [
 """created_draft"""
 """event"""
 ]
+ExtractionType = json
 DupFields = [
 "access->operation"
 ]

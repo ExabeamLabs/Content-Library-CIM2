@@ -4,7 +4,7 @@
 Name = unix-unix-sk4-endpoint-notification-proctitle
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"type":"PROCTITLE"""", """"proctitle""", """Cloud Apps Security|""", """|audit-event|""" ]
+  Conditions = [ """"type":"PROCTITLE"""", """"proctitle""", """"logger.account":""", """"message":""" ]
   Fields = ${DLUnixParsersTemplates.unix-template-dl.Fields}[
 # proctitle is removed
     """message":"({event_name}[^"]+)""""
@@ -21,7 +21,7 @@ unix-template-dl = {
       """CEF:([^\|]*\|){4}({additional_info}[^\|]+)""",
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=({user}[^\s]+)""",
+      """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
     
 }
 ```

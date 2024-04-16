@@ -5,8 +5,9 @@ Name = "unix-unix-cef-endpoint-login-success-login"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
   """"type":"LOGIN""""
-  """Cloud Apps Security|"""
-  """|audit-event|"""
+  """res\="""
+  """tty\="""
+  """old-ses\="""
 ]
 ParserVersion = "v1.0.0"
 

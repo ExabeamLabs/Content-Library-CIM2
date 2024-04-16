@@ -13,10 +13,10 @@ Conditions = [
 Fields = [
   """({host}[\w.\-]+)\s+CEF:"""
   """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+)"""
-  """\W(d|s)user=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[^=\\\/]+?))(\s+\w+=|\s*$)"""
-  """\WdeviceExternalId=(|({dest_host}.+?))(\s+\w+=|\s*$)"""
+  """\W(d|s)user=(n/a|(({domain}[^=\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+  """\WdeviceExternalId=(|({dest_host}[\w\-.]+?))(\s+\w+=|\s*$)"""
   """network protocol:\s*({protocol}[^;]+)"""
-  """<address>({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</address>"""
+  """<address>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</address>"""
 ]
 ParserVersion = "v1.0.0"
 

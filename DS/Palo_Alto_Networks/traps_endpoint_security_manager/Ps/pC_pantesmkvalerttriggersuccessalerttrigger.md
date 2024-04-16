@@ -4,7 +4,7 @@
 Name = pan-tesm-kv-alert-trigger-success-alerttrigger
 Vendor = Palo Alto Networks
 Product = Traps Endpoint Security Manager
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
   """Palo[Alto] TrapsAgent:"""
   """event from Computer:"""
@@ -12,12 +12,13 @@ Conditions = [
 ]
 Fields = [
   """\w+ \d\d \d\d:\d\d:\d\d ({host}[^\s]+)\s*Palo"""
-  """User: (({domain}[^\\]+)\\)?({user}[^,]+)"""
+  """User: (({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
   """eventID=({alert_name}[^\s]+) \w+="""
   """Module Name: ({alert_type}[^,]+),"""
   """sev=({alert_severity}\d+)"""
   """Prevention Key: ({alert_id}[^\s]+) \w+="""
-  """Process Name: ({malware_url}[^,]+),"""
+  """Process Name: ({malware_url}[^,]+),""",
+  """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]
 SOAR {
   IncidentType = "malware"

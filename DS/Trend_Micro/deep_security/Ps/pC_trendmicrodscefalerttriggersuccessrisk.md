@@ -15,7 +15,7 @@ Fields = [
 """CEF:([^\|]*\|){4}({alert_id}\d+)"""
 """\Wdvchost=({src_host}.+?)(\s+\w+=|\s*$)"""
 """\Wcs3=({malware_url}.+?)(\s+\w+=|\s*$)"""
-"""\Wact=({action}.+?)(\s+\w+=|\s*$)"""
+"""\Wact=({result}.+?)(\s+\w+=|\s*$)"""
 """({alert_type}Malware)"""
 ]
 ParserVersion = "v1.0.0"

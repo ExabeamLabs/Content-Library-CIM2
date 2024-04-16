@@ -1,6 +1,6 @@
 Vendor: Check Point
 ===================
-Product: Check point vSEC Virtual Edition
+Product: Check Point vSEC Virtual Edition
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

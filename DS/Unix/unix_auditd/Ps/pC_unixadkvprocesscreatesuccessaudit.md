@@ -12,13 +12,14 @@ Name = unix-ad-kv-process-create-success-audit
 """ cmd="""
   ]
   Fields = [
-    """({host}[\w\-.]+)\s*tag_audit_log:""",
+    """\d\d:\d\d:\d\d ({host}[\w\-.]+)\s*(tag_audit_log:|audisp-syslog)""",
     """msg=audit\(({time}\d{10})""",
     """ uid=({user_id}[^\s]+)""",
     """auid=({account_id}[^\s]+)""",
     """pid=({process_id}[^\s]+)""",
     """cmd="?({process_path}[^"]*?)\s*("|\w+=|$)""",
-    """res=({result}[^\s'"]+)"""
+    """res=({result}[^\s'"]+)""",
+    """cmd=({process_command_line}[^=]+?)\s*\w+="""
   ]
 
 

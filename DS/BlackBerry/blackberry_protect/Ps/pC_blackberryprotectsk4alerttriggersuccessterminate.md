@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """created":"({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-""""user_name":"({user}[^"]+)""""
+""""user_name":"({user}[\w\.\-]{1,40}\$?)""""
 """"process_id":({process_id}\d+)"""
 """"image_name":"({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))""""
 """"file_hash_id":"({hash_sha256}[^"]+)""""
@@ -25,10 +25,13 @@ Fields = [
 """"agent_event_id":"({alert_id}[^"]+)""""
 """"file_hash_id":"({file_hash}[^"]+)""""
 """\sfname=([^=]*\\)?({file_name}[^\.]+\.({file_ext}[^\\:\s.]+)?)\s+\w+="""
+"""msg.+?\[({alert_source}[^]]+)"""
+"""\s*Category\s*\[({alert_type}[^\]]+)[^\|]*"""
 ]
 DupFields = [
 "file_hash->hash_sha256_at"
 "file_name->name_at"
+"alert_name"->"alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

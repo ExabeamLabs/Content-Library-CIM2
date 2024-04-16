@@ -4,7 +4,7 @@
 Name = "unix-unix-kv-ssh-traffic-sshuserauth"
   Vendor = "Unix"
   Product = "Unix Auditd"
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec","MM/dd/yyyy HH:mm:ss"]
   Conditions = [
     """type=USER_AUTH"""
     """PAM:authentication"""
@@ -15,7 +15,7 @@ Name = "unix-unix-kv-ssh-traffic-sshuserauth"
     """msg=audit\(({time}\d{10})"""
     """\saddr=(?:\?|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^\s]+))\s"""
     """\d\d:\d\d:\d\d(\.\S+)?\s(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+)))\s"""
-    """acct=\\?"*(\?|({user}[^"=]+?))\\?\s*(\w+=|")"""
+    """acct=\\?"*(\?|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))\\?\s*(\w+=|")"""
     """\sres=({result}[^']+)\'"""
     """\sses=\sses=({session_id}\S+?)\s*(\w+=|")"""
     """({event_code}ssh)"""

@@ -15,10 +15,11 @@ Conditions = [
 Fields = [
 """"published"+:"+({time}[^",]+)"+"""
 """({app}(?i)Okta)"""
-""""+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|({email_address}[^@]+@({domain}[^\.]+\.[^",]+))|(unknown|({user}[^",]+)))"+,"""
+""""+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}[^@]+@({email_domain}[^\.]+\.[^",]+))|(unknown|({=user}[\w\.\-]{1,40}\$?)))"+,"""
 """"+actor"+:\{[^\{\}]*?"+displayName"+:"+(Okta System|Okta Admin|(unknown|({full_name}[^",]+)))"+,"""
 """"policyType"+:"+({alert_type}[^",]+)"""
-""""eventType"+:"+({operation}[^",]+)"""
+""""eventType"+:"+({operation_details}[^",]+)"""
+""""legacyEventType"+:"+({operation}[^",]+)"""
 """"+result"+:"+({result}[^"]+)""""
 """"reason"+:"+({additional_info}[^",]+)"+"""
 """"severity"+:"+({alert_severity}[^",]+)"+"""
@@ -30,7 +31,7 @@ Fields = [
 """"country"+:"+({location_country}[^",]+)"""
 """"type"+:"+AppInstance"+[^\}\]]*"displayName"+:"+({app}[^"]+?)\s*""""
 """"outcome"+:[^\]]*?"+result"+:"+({result}[^",]+)""""
-""""client"+:[^\]]*?"+ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""client"+:[^\]]*?"+ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"client"+:[^\]]*?"+rawUserAgent"+:"+((?i)unknown|({user_agent}[^"]+?))""""
 """"target"+:\[\{[^\}\]]+"+type"+:"+({object_type}[^",]+)""""
 ]

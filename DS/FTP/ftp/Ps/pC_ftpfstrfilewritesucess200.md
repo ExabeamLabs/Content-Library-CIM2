@@ -11,7 +11,7 @@ Name = ftp-f-str-file-write-sucess-200
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) """,
     """({host}[\w\.-]+)\s+(\S+\s+){2}\[\d+\]""",
     """({src_ip}\S+)\s+(\S+\s+){2}\[\d+\]""",
-    """(-|(({domain}\S+)[\/\\])?({user}\S+))\s+\[\d+\]""",
+    """(-|(({domain}\S+)[\/\\])?({user}[\w\.\-]{1,40}\$?))\s+\[\d+\]""",
     """\]created\s+(-|({file_name}\S+))\s""",
     """\]created\s+(-|({file_path}({file_dir}\/(\S+\/)?)({file_name}\S+)))\s""",
     """\]created\s+\/\S+\.({file_ext}[^\/\.\s]+)\s""",

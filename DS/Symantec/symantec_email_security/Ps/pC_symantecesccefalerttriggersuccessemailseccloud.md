@@ -17,7 +17,7 @@ Name = symantec-esc-cef-alert-trigger-success-emailseccloud
     """requestContext=({target}.+?)\s*\w+=""",
     """requestClientApplication=({app}.+?)\s*\w+=""",
     """"headerTo":\[({email_recipients}[^\]]+)\],""",
-    """"headerTo":\["({dest_email_address}[^"]+)"""",
+    """"headerTo":\["({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"subject":"({email_subject}[^"]+)",""",
     """"messageSize":({bytes}\d+)""",
   ]

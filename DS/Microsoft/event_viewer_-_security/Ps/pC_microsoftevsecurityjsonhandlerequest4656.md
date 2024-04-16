@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"EventTime"+:\s*"+({time}[^",]+)""",
     """"Hostname"+:"+({host}[^",]+)""",
     """"SubjectUserSid"+:"+({user_sid}[^",]+)"""",
-    """"SubjectUserName"+:"+({user}[^",]+)"""",
+    """"SubjectUserName"+:"+({user}[\w\.\-]{1,40}\$?)"""",
     """"SubjectDomainName"+:"+({domain}[^",]+)"""",
     """"SubjectLogonId"+:"+({login_id}[^",]+)"""",
     """"TransactionId"+:"+({transaction_id}[^",]+)"""",
@@ -27,7 +27,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"ObjectName"+:"+(Unknown|({object}[^",]+))"""",
     """"ObjectServer"+:"+({object_server}[^",]+)"""",
     """"HandleId"+:"+({object_id}[^",]+)"""",
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""
+    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
   DupFields = [ "host->dest_host", "access->privileges" ]
 

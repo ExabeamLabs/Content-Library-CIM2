@@ -12,6 +12,7 @@ Conditions = [
 Fields = [
   """\w+\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[a-fA-F\d.:]+|[\w.\-]+)\s*\d+:"""
   """<\d+>\w+ \d+ \d+:\d+:\d+ ({host}[\w.\-]+)"""
+  """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
   """({alert_type}PSECURE_VIOLATION):\s*({alert_name}[^,]+?),"""
   """caused by MAC address ({src_mac}[a-fA-F\d.:]+) on port ({src_interface}[^\.]+)"""
 ]

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """\d+:\d+:\d+(.\d+)?\s({host}[^\s]+)"""
-"""remoteuser-({user}[^,\s]+)"""
+"""remoteuser-({user}[\w\.\-]{1,40}\$?)"""
 """info\].+?\s({additional_info}.+?)\s*$"""
 ]
 ParserVersion = "v1.0.0"

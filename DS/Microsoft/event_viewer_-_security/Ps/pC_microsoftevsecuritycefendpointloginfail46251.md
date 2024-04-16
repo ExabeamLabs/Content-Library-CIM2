@@ -18,19 +18,20 @@ Name = microsoft-evsecurity-cef-endpoint-login-fail-4625-1
     """"subStatus":"({result_code}[^"]+?)\s*"""",
     """"failureReason":"({failure_reason}[^"]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"targetUserName":"({user}[^"\s]+?)\s*"""",
+    """"targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*"""",
     """"targetDomainName":"({domain}[^"\s]+?)\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*"""",
     """"logonType":"({login_type}\d+?)\s*"""",
     """"logonProcessName":"({auth_process}[^"]+?)\s*"""",
     """"authenticationPackageName":"({auth_package}[^"]+?)\s*"""",
     """"workstationName":"({src_host_windows}[^"]+?)\s*"""",
-    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"ipPort":"({src_port}\d+)""",
   ]
   DupFields = [ 
     "host->dest_host" 
-    "result_code->failure_code"
+    "result_code->failure_code",
+    "src_host_windows->src_host"
   ]
 
 

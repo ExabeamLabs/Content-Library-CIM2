@@ -12,7 +12,7 @@ Name = ibm-mainframe-json-app-logout-success-loggedoff
      """"MSGNUM":"({event_code}[^"]+?)"""",
      """"MSGTXT":"({additional_info}[^"]+?)"""",
      """({event_name}LOGGED OFF)""",
-     """"MSGTXT":"[^"\s]+?\s({user}[^"\s]+)\s\S+?\sLOGGED OFF"""
+     """"MSGTXT":"[^"\s]+?\s({user}[\w\.\-]{1,40}\$?)\s\S+?\sLOGGED OFF"""
      """"MSGTXT":"({additional_info}[^"]+?)""""
    ]
    DupFields = ["event_name->operation"]

@@ -14,9 +14,9 @@ Fields = [
   """\|McAfee\|[^|]+?\|[^|]+?\|43-21100({event_code}\d+)(0|1)\|"""
   """\srt=({time}\d{13})"""
   """shost=({host}[^\s]+)"""
-  """src=(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
+  """src=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
   """sntdom=({domain}[^\s]+)"""
-  """suser=({user}.+?)\s+nitro[\w]+="""
+  """suser=({user}[\w\.\-]{1,40}\$?)\s+nitro[\w]+="""
   """nitroLogon_Type=({login_type}\d+)"""
   """nitroDestination_Logon_ID=\([^,]+,({login_id}[^\)]+)"""
 ]

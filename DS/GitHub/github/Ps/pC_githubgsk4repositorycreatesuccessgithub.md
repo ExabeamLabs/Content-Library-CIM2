@@ -6,10 +6,10 @@ Name = github-g-sk4-repository-create-success-github
   Vendor = GitHub
   Product = GitHub
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """CEF:""", """destinationServiceName =GitHub""" ]
+  Conditions = [ """CEF:""", """destinationServiceName =GitHub""", """"type":"""" ]
   Fields = [
     """"created_at":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
-    """"display_login":"({user}[^"]+)"""",
+    """"display_login":"({user}[\w\.\-]{1,40}\$?)"""",
     """"type":"({operation}[^"]+?)(?:Event|)"""",
     """\WrequestClientApplication=({app}[^=]+?)\s*(\w+=|$)""",
     """"repo":[^}]+?"name":"({resource}[^"]+)"""",

@@ -10,7 +10,7 @@ Conditions = [
   """"audit-event""""
 ]
 DupFields = [
-  "host->dest_host"
+  "host->dest_host", "src_host_windows->src_host" 
 ]
 ParserVersion = "v1.0.0"
 

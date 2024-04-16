@@ -5,27 +5,24 @@ Name = pan-ngfw-json-alert-trigger-success-resetserver
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  ExtractionType = json
   Conditions = [ """"LogType":"THREAT"""", """"Subtype":"virus"""", """"Action":"reset-server"""" ]
   Fields = [
-    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """"host":"({host}[^"]+)"""",
-    """"DeviceName":"({host}[^"\s]+)"""",
-    """"PrivateIPv(4|6)":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"PublicIPv(4|6)":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """"Source(Address|IP)":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"DestinationAddress":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """"(Source)?User(Name)?":"((na|NA|({domain}[^"\\]+))\\+)?(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[^"]+))"""",
-    """"SourcePort":({src_port}\d+)""",
-    """"DestinationPort":({dest_port}\d+)""",
-    """"Protocol":"({protocol}[^"]+)"""",
-    """"LogType":"({event_category}[^"]+)"""",
-    """"Action":"({action}[^"]+)"""",
-    """"VendorSeverity":"({alert_severity}[^"]+)"""",
-    """"ThreatCategory":"({threat_category}[^"]+)"""",
-    """"Subtype":"({alert_type}[^"]+)"""",
-    """"ThreatID":"({alert_name}[^"\(]+)(\(({alert_id}\d+)\))?""",
-    """"FileName":"({additional_info}[^"]+)""""
-    """"FileName":"({file_name}[^"]+)""""
+  """exa_json_path=$.event.TimeGenerated,exa_field_name=time"""
+  """exa_json_path=$.event.DeviceName,exa_field_name=host"""
+  """exa_json_path=$.event.PrivateIPv4,exa_regex=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.PrivateIPv6,exa_regex=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.PublicIPv4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.PublicIPv6,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.LogType,exa_field_name=app"""
+  """exa_json_path=$.event.EventStatus,exa_field_name=result"""
+  """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
+  """exa_json_path=$.event.SourceRegion,exa_field_name=src_country,exa_match_expr=!Contains(toLower($.SourceRegion),"null")"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
+  """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
+  """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method,exa_match_expr=!Contains(toLower($.EventIDValue),"null")"""
+  """exa_json_path=$.event.Description,exa_regex=({additional_info}[^"]+:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""" 
   ]
   ParserVersion = "v1.0.0"
 

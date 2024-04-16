@@ -19,8 +19,8 @@ leef-checkpoint-firewall = {
     """\Wservice=({dest_port}\d+)""",
     """\Wifdir=({direction}.+?)(\s+\w+:?=|\s*$)""",
     """\Wifname=({src_interface}.+?)(\s+\w+:?=|\s*$)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Winzone=({inzone}.+?)(\s+\w+:?=|\s*$)""",
     """\Woutzone=({outzone}.+?)(\s+\w+:?=|\s*$)""",
     """\Wproto=({protocol}.+?)(\s+\w+:?=|\s*$)""",
@@ -33,11 +33,13 @@ leef-checkpoint-firewall = {
     """\Wpeer_gateway=({peer_gateway}.+?)(\s+\w+:?=|\s*$)""",
     """\Wsrc_machine_name=({src_host}[^@=]+?)(@({domain}.+?))?(\s+\w+:?=|\s*$)""",
     """\Wdst_machine_name=({dest_host}[^@=]+?)(@({domain}.+?))?(\s+\w+:?=|\s*$)""",
-    """\Wdst_user_name=({full_name}.+?)\s*\(\s*({user}.+?)\s*\)""",
-    """\Wsrc_user_name=({full_name}.+?)\s*\(\s*({user}.+?)\s*\)""",
-    """\WusrName =({full_name}.+?)\s*\(\s*({user}.+?)\s*\)""",
+    """\Wdst_user_name=({full_name}.+?)\s*\(\s*({user}[\w\.\-]{1,40}\$?)\s*\)""",
+    """\Wsrc_user_name=({full_name}.+?)\s*\(\s*({user}[\w\.\-]{1,40}\$?)\s*\)""",
+    """\WusrName =({full_name}.+?)\s*\(\s*({user}[\w\.\-]{1,40}\$?)\s*\)""",
     """LEEF:([^\|]*\|){2}({product_name}[^\|]+)\|[^\|]*\|({action}[^\|]+)""",
     """\Wrule_action=({action}.+?)(\s+\w+=|\s*$)""",
+    """\WdestinationDnsDomain=(?:|({url}.+?))(\s+\w+=|\s*$)""",
+    """\Wappi_name=({web_domain}.+?)(\s+\w+=|\s*$)""",
   
 }
 ```

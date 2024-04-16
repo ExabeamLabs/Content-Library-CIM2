@@ -7,7 +7,7 @@ Vendor: SecureAuth
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   31   |         9          |       3        |   15    |
+|  59   |   31   |         9          |       3        |   14    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

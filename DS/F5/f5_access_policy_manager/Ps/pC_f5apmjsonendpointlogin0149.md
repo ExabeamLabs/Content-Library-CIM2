@@ -8,9 +8,9 @@ Name = "f5-apm-json-endpoint-login-0149"
   Conditions = [ """"Login":""", """"failure_reason":"""", """"auth_method":"""", """"session_id":"""", """0149""", """:5:""" ]
   Fields = [
     """>\w+ \d\d \d\d:\d\d:\d\d ({host}[\w.\-]+)""",
-    """"result":"({action}[^"]+)""",
-    """"user":"({user}[^"]+)""",
-    """"src_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"result":"({result}[^"]+)""",
+    """"user":"({user}[\w\.\-]{1,40}\$?)""",
+    """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"failure_reason":"({failure_reason}[^"]+)""",
     """"auth_method":"({auth_method}[^"]+)""",
     """"dst_host":"({dest_host}[^"]+)""",

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """\sraw_g_hostname="+({dest_host}[^"]+)"+,"""
   """\sraw_event_id="+({operation}[^"]+)"+,"""
-  """\sraw_ntuser="+(?:({domain}\w+)\\)?({user}[^"]+?)""""
+  """\sraw_ntuser="+(?:({domain}\w+)\\)?({user}[\w\.\-]{1,40}\$?)""""
   """\sraw_aduser="+(?=\w)({user_dn}.+?)""""
   """\|devicename=({device_id}[^,\|]+)"""
   """\|devicename=([^,]+),\s+({device_type}[^,;]+),\s+"""

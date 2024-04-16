@@ -14,7 +14,7 @@ Fields = [
 """\w+ \d+ \d\d:\d\d:\d\d\s+({host}[\w\-.]+)"""
 """,(0.0.0.0|({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^,]*)),([^,]*,){2}File Read"""
 """Rule:[^\|]*\|\s*({operation_details}[^,]+)"""
-"""User:\s*(SYSTEM|({user}[^\s,]+))"""
+"""User:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
 """Domain:\s*({domain}[^,]+)"""
 """,File Read,([^,]*,){3}\d+,"?(?: |({process_path}({process_dir}(?:[^,"]+)?[\\\/])?({process_name}[^\\\/,"]+?))),\d+,[^,]+,"?({file_path}[^"]*?)"?\s*,User"""
 """,File Read,([^,]*,){3}\d+,[^,]*,\d+,[^,]+,.*/(|({file_name}[^"]*?))"?\s*,User"""

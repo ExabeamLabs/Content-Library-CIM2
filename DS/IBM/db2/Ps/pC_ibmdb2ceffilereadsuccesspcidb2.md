@@ -23,7 +23,7 @@ Fields = [
 """cs1=({additional_info}.+?)\s+(\w+=|$)"""
 """cs3=({operation}.+?)\s+(\w+=|$)"""
 """filePath=({file_name}.+?)\s+(\w+=|$)"""
-"""duser=({user}.+?)\s*\w+="""
+"""duser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
 ]
 DupFields = [
 "file_name->object"

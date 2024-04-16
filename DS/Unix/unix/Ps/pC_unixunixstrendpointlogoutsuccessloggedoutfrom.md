@@ -6,7 +6,7 @@ Name = unix-unix-str-endpoint-logout-success-loggedoutfrom
   Conditions = [ """logged out from """, """SHELL_LOGOUT: """ ]
   Fields = ${DLUnixParsersTemplates.unix-events-1.Fields}[
     """({event_name}SHELL_LOGOUT)""",
-    """SHELL_LOGOUT: ({user}[^\s]+)""",
+    """SHELL_LOGOUT: ({user}[\w\.\-]{1,40}\$?)""",
     """logged out from ({src_ip}[a-fA-F\d:\.]+)\.""",
   ]
 

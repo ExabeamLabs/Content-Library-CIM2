@@ -21,7 +21,7 @@ Fields = [
   """AUTHOR_NAME:\s*"+({full_name}[^"]+)"+"""
   """CLIENT_ID:\s*"+({client_id}[^"]+)"+"""
   """CLIENT_NAME:\s*"+({client_name}[^"]+)"+"""
-  """TYPIST_ID:\s*"+({user}[^"]+)"+"""
+  """TYPIST_ID:\s*"+({user}[\w\.\-]{1,40}\$?)"+"""
 ]
 ParserVersion = "v1.0.0"
 

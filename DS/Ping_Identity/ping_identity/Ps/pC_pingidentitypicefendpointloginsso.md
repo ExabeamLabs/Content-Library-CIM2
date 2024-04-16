@@ -12,7 +12,7 @@ Name = pingidentity-pi-cef-endpoint-login-sso
     """\Wcs3=\(({role}[^=:]+?):({protocol}[^=:]+?)\)""",
     """\Wresponsetime=({response_size}\d+)""",
     """\Wduid=(|({email_subject}.+?))(\s+\w+=|\s*$)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wmsg=(|({result}.+?))(\s+\w+=|\s*$)""",
     """\Wcs1=(|({app}.+?))(\s+\w+=|\s*$)""",
     """\Wcs2=(|({connection_id}.+?))(\s+\w+=|\s*$)""",
@@ -21,7 +21,7 @@ Name = pingidentity-pi-cef-endpoint-login-sso
     """\WexternalId=(|tid:({tracking_id}.+?))(\s+\w+=|\s*$)""",
     """\Wcs5=(|({local_user_id}.+?))(\s+\w+=|\s*$)""",
     """\Wcs6=(|({attributes}.+?))(\s+\w+=|\s*$)""",
-    """\WSAML_SUBJECT\\=(|({email_address}[^=@]+?@[^=@]+?),?|({user}.+?))(\s+\w+\\=|\s*$)""",
+    """\WSAML_SUBJECT\\=(|({email_address}[^=@]+?@[^=@]+?),?|({user}[\w\.\-]{1,40}\$?))(\s+\w+\\=|\s*$)""",
   ]
   ParserVersion = "v1.0.0"
   DupFields = [ "auth_method->operation" ]

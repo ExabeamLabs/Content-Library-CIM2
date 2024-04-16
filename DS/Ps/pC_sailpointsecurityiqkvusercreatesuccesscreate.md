@@ -10,7 +10,8 @@ Conditions = [
 DupFields = [
   "host->dest_host"
   "domain->account_used_domain"
-  "user->account"
+  "user->account",
+  "account_name->dest_user"
 ]
 ParserVersion = "v1.0.0"
 

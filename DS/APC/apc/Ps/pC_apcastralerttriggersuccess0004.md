@@ -11,10 +11,7 @@ Conditions = [
 """ 0x0004"""
 ]
 Fields = [
-"""(<\d+>)?(\w+\s+\d+\s+\d\d:\d\d:\d\d)\s+({host}[\w.\-]+)\s+(System:\s*)?({alert_name}Detected an ({alert_type}unauthorized user) attempting to access .*? from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\.?\s+"""
-]
-DupFields = [
-"host->dest_host"
+"""(<\d+>)?(\w+\s+\d+\s+\d\d:\d\d:\d\d)\s+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))\s+(System:\s*)?({alert_name}Detected an ({alert_type}unauthorized user) attempting to access .*? from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\.?\s+"""
 ]
 ParserVersion = "v1.0.0"
 

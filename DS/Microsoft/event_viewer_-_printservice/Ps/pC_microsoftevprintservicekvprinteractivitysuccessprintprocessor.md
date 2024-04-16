@@ -12,12 +12,12 @@ Conditions = [
 ]
 Fields = [
 """\ssubmitted_time="({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)"""
-"""\smachine="+\\*(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^"]+))\s*"+\s*\w+="""
-"""\suser="({user}[^"]+)""""
+"""\smachine="+\\*(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^"]+))\s*"+\s*\w+="""
+"""\suser="({user}[\w\.\-]{1,40}\$?)""""
 """\sstatus="([^,]+,)*({operation}[^"]+)""""
 """\sstatus="([^,],)*({operation}[^,]+),error"""
 """\sstatus="({additional_info}[^"]+)""""
-"""({action}error)"""
+"""({result}error)"""
 """\sprinter="({printer_name}[^"]+)""""
 """\sdocument="+\s*({object}.+?)\s*"+"""
 """\ssize_bytes=({bytes}\d+)"""

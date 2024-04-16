@@ -5,17 +5,16 @@ Name = unix-unix-str-process-create-success-cmd
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd HH:mm:ss"]
   Conditions = [
 """ CMD """,
 """]: ("""
   ]
   Fields = [
-    """\w{3}\s+\d+\s+\d\d:\d\d:\d\d\s+(::ffff:)?({host}[\w\-.]+)""",
+    """({time}\w{3}\s+\d+\s+\d\d:\d\d:\d\d)\s+(::ffff:)?({host}[\w\-.]+)""",
     """\(({account}[^\)]+?)\) CMD""",
     """time:"({time}\d+)""",
-    """\sCMD \(\s*({process_command_line}.+?)\s*\)""",
-    """\sCMD \(\s*[^\/]*?({process_path}({process_dir}\/[^\)]*?)({process_name}[^\/\s]*?[^\\\/])?)((\\\\)*\s|\))"""
+    """\sCMD \(\s*({process_command_line}.+?)\)($|\s|")""",
   ]
   DupFields = [ "account->user" ]
 

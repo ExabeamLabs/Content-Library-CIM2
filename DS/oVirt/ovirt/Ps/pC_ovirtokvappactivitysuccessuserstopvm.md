@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt"""
   """EVENT_ID:\s*({operation}[^\(\)]+)"""
-  """EVENT_ID:.*? VM ({object}[^\s"]+) powered off by ({user}[^\s\(\)]+?) \(({resource}[^\)]+)"""
+  """EVENT_ID:.*? VM ({object}[^\s"]+) powered off by ({user}[\w\.\-]{1,40}\$?) \(({resource}[^\)]+)"""
   """({app}ovirt)"""
 ]
 ParserVersion = "v1.0.0"

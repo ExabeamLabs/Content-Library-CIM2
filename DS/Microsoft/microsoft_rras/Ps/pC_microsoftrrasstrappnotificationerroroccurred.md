@@ -9,7 +9,7 @@ Name = microsoft-rras-str-app-notification-erroroccurred
   Conditions = [ """CoId= {""", """The following error occurred""" ]
   Fields = [
     """CoId=\{({session_id}[^\{\}]+?)\}""",
-    """\WUserName:\s*(<|&lt;)({user}[^<>]+?)(>|&gt;)""",
+    """\WUserName:\s*(<|&lt;)(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"=]+))(>|&gt;)""",
     """\WSpecifically,\s*({failure_reason}[^\.]+)""",
   ]
 

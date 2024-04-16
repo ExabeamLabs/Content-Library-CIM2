@@ -11,7 +11,7 @@ Name = mcafee-es-kv-endpoint-notification-windowserror
     """"@timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"host"*:"*({host}[^"]+)""",
     """"groups"*:\[({groups}[^\]]+)""",
-    """"dstuser"*:"*\(?(no user|({user}[^"\)]+))""",
+    """"dstuser"*:"*\(?(no user|({user}[\w\.\-]{1,40}\$?))""",
     """"status"*:"*({result}[^"]+)""",
     """"data"*:\{[^\{\}]*?"id"*:"*({error_code}[^"]+)"*""",
     """"system_name"*:"*({dest_host}[^"]+)""",

@@ -9,8 +9,6 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-airwatch-app-activity.Fields}[
-    """({action}AdminUserLoggedIn)"""
-  
+
 }
 ```

@@ -9,9 +9,10 @@ Name = "cisco-fp-str-vpn-logout-success-722028"
   Conditions = [ """-722028""", """%FTD-""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s({host}[^\s]+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """Group\s*<({group_name}[^>]+)""",
-    """User\s*<({user}[^@>\\]+)(?:@({domain}[^>]+))?>""",
+    """User\s*<({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^>]+))?>""",
   ]
 
 

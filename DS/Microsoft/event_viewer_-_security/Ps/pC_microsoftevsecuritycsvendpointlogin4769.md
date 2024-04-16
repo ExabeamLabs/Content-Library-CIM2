@@ -11,14 +11,14 @@ Name = microsoft-evsecurity-csv-endpoint-login-4769
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Service Ticket Operations""",
     """({event_code}4769)""",
-    """TargetUserName:({user}[^@]+)@({domain}[^,]+),""",
+    """TargetUserName:({user}[\w\.\-]{1,40}\$?)@({domain}[^,]+),""",
     """TargetDomainName:({domain}[^,]+),""",
-    """ServiceName:({dest_host}[^,\s\\]+)""",
+    """ServiceName:({src_host}[\w\-.]+\$)""",
     """TicketOptions:({ticket_options}[^,]+),""",
     """TicketEncryptionType:({ticket_encryption_type}[^,]+),""",
     """Status:({result_code}[^,]+),""",
-    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
-    """({action}(Success|Failure) Audit)"""
+    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
+    """({result}(Success|Failure) Audit)"""
   ]
 
 

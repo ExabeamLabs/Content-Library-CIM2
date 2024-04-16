@@ -2,30 +2,29 @@
 ```Java
 {
 Name = "microsoft-sysmon-json-process-create-success-createremotethread"
+ExtractionType = json
 Vendor = "Microsoft"
 Product = "Sysmon"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd HH:mm:ss.SSS"]
 Conditions = [
 """Microsoft-Windows-Sysmon""",
 """CreateRemoteThread detected:""",
 """"TargetImage":""""
 ]
 Fields = [
-    """"UtcTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """"(Source)?Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
-    """"TargetFilename":"({dest_process}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+?(\.({dest_process_ext}\w+))?))"""",
-    """"Domain":"(NT AUTHORITY|({domain}[^"]+))""",
-    """"AccountName":"(SYSTEM|({user}[^"]+))""",
-    """"SourceProcessId":"({process_id}\d+)""",
-    """"SourceProcessGuid":"({process_guid}[^"]+)""",
-    """"TargetProcessId":"({dest_process_id}\d+)""",
-    """"TargetProcessGuid":"({dest_process_id}[^"]+)""",
-    """"LogonId":"({login_id}[^"]+)""",
-    """"Hostname":"({host}[^"]+)""",
-    """"TargetImage":"({dest_process}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+))"""",
-    """"EventID":({event_code}\d+)""",
-    """"SourceImage":"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
-    """"Category":"({event_name}[^"]+)""",
+  """exa_json_path=$.UtcTime,exa_field_name=time"""
+  """exa_json_path=$.EventTime,exa_field_name=time"""
+  """exa_json_path=$.SourceImage,exa_regex=({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))""""
+  """exa_json_path=$.Domain,exa_regex=({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""
+  """exa_json_path=$.AccountName,exa_regex=(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.SourceProcessId,exa_field_name=process_id"""
+  """exa_json_path=$.TargetProcessId,exa_field_name=dest_process_id"""
+  """exa_json_path=$.TargetProcessGuid,exa_field_name=dest_process_id"""
+  """exa_json_path=$.Hostname,exa_field_name=host"""
+  """exa_json_path=$.LogonId,exa_field_name=login_id"""
+  """exa_json_path=$.TargetImage,exa_regex=({dest_process}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+))""""
+  """exa_json_path=$.EventID,exa_field_name=event_code"""
+  """exa_json_path=$.Category,exa_field_name=event_name"""
 ]
 DupFields = [  "host->src_host", "dest_process->dest_process_path" ]
 ParserVersion = "v1.0.0"

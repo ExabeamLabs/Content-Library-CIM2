@@ -8,15 +8,17 @@ Name = microsoft-evsecurity-xml-ds-replication-stop-4933-1
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>4933</EventID>""", """DestinationDRA""" , """<Data Name"""]
   Fields = [
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)""",
-    """<Execution ProcessID='({process_id}\d+)""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
-    """<Data Name ='DestinationDRA'>.+?CN=({dest_dra}[^<]+)""",
-    """<Data Name ='SourceDRA'>({src_dra}[^<]+)<""",
-    """<Data Name ='SessionID'>({session_id}\d+)<"""
+    """<Data Name\\*='DestinationDRA'>.+?CN=({dest_dra}[^<]+)""",
+    """<Data Name\\*='SourceDRA'>({src_dra}[^<]+)<""",
+    """<Data Name\\*='SessionID'>({session_id}\d+)<""",
+    """<Level>({run_level}[^<]+)<"""
    ]
 
 

@@ -5,7 +5,7 @@ Name = microsoft-evsystem-str-ssl-start-fail-36874
   Vendor = Microsoft
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss"]
   Conditions = [ """(36874)""", """connection request was received from a remote client application""" ]
   Fields = [
     """({event_code}36874)""",

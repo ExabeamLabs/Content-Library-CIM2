@@ -13,6 +13,7 @@ Name = infoblox-bddi-str-configuration-modify-success-forwardzone
 # forwardzone is removed
 # dns_view is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

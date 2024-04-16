@@ -11,7 +11,7 @@ Conditions = [
 Fields = [
 """decrypt,([^,]*,){33}({time}[^,]+)"""
 """decrypt,([^,]*?,){3}({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"""
-"""decrypt,([^,]*?,){40}({user}[^,]+)"""
+"""decrypt,([^,]*?,){40}({user}[\w\.\-]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

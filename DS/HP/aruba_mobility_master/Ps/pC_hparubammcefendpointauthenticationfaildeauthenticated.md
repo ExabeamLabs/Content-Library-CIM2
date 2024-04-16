@@ -8,9 +8,9 @@ Name = hp-arubamm-cef-endpoint-authentication-fail-deauthenticated
   Conditions = [ """CEF:""", """|Aruba|""", """|SystemEvent|""", """deauthenticated:""" ]
   Fields = [
     """dvchost=({host}[^\s]+)""",
-	  """deviceProcessName =({process_name}.+?)\s+(\w+=|$)""",
-	  """\Wmsg=(|({additional_info}.+?))("|$)""",
-	  """MAC\\*=({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})""",
+    """deviceProcessName =({process_name}.+?)\s+(\w+=|$)""",
+    """\Wmsg=(|({additional_info}.+?))("|$)""",
+    """MAC\\*=({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})""",
   ]
 	ParserVersion = v1.0.0
 

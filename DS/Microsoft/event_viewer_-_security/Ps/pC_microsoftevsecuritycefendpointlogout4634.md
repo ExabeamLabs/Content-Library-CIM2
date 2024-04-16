@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-cef-endpoint-logout-4634
   Fields = [
     """<TimeCreated SystemTime\\='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})""",
     """<Computer>({host}[^<>]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}[^<>]+)</Keywords>""",
     """<Data Name\\='(Caller)?ProcessName'>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<""",
     """<Data Name\\='(Caller)?ProcessId'>({process_id}[^<]+?)\s*<""",
@@ -21,7 +22,7 @@ Name = microsoft-evsecurity-cef-endpoint-logout-4634
     """<Data Name\\='TargetUserSid'>({dest_user_sid}[^<]+)<""",
     """<Data Name\\='TargetLogonId'>({dest_login_id}[^<]+)<"""
     """<Data Name\\='SubjectUserSid'>(-|({user_sid}[^<>]+))<""",
-    """<Data Name\\='SubjectUserName'>(-|({user}[^<>]+))<""",
+    """<Data Name\\='SubjectUserName'>(-|({user}[\w\.\-]{1,40}\$?))<""",
     """<Data Name\\='SubjectDomainName'>(-|({domain}[^<>]+))<""",
     """<Data Name\\='SubjectLogonId'>(-|({login_id}[^<>]+))<""",
     """({event_name}An account was logged off)"""

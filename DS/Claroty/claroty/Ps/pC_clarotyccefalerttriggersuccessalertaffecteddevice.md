@@ -20,7 +20,7 @@ Name = claroty-c-cef-alert-trigger-success-alertaffecteddevice
        """\sdevice_type=({device_type}.*?)(?=(?:\s|\||,|;)[\w.-]+=)""",
        """\sdevice_os=({device_os}.*?)(?=(?:\s|\||,|;)[\w.-]+=)""",
        """\sdevice_site_name=({device_site_name}[^\s]*)""",
-       """\sdevice_ip_list=\['({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))[\s',\]]""",
+       """\sdevice_ip_list=\['({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?[\s',\]]""",
        """\|alert_affected_device\|({alert_severity}\d+)\|""",
        """\s alert_category=({alert_type}[^\s]*)"""
     ]

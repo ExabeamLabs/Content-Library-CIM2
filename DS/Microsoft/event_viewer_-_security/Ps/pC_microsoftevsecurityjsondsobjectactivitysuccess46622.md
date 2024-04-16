@@ -5,31 +5,26 @@ Name = "microsoft-evsecurity-json-ds-object-activity-success-4662-2"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-Conditions = [
-"""@timestamp":"""
-"""An operation was performed on an object"""
-"""ObjectName"""
-"""computer_name"""
-]
+ExtractionType = json
+Conditions = [ """"event_id":4662""", """An operation was performed on an object""", """"ObjectName":""", """"computer_name":""" ]
 Fields = [
-"""({event_name}An operation was performed on an object)"""
-""""@timestamp"\s*:\s*"({time}.+?)""""
-""""(?:winlog\.)?computer_name"\s*:\s*"({host}.+?)""""
-"""ObjectServer":"({object_class}.+?)""""
-"""ObjectName":"({object}[^"]+)""""
-"""ObjectType":"({object_type}.+?)""""
-"""SubjectUserName":"({user}.+?)""""
-"""SubjectLogonId":"({login_id}[^"]+)""""
-"""SubjectDomainName":"({domain}[^"]+)""""
-"""OperationType":"({action}[^"]+)""""
-"""Properties":"({properties}[^"]+)""""
-""""AdditionalInfo"{1,20}:"{1,20}(-|({attribute}[^"]+))""""
-""""keywords":\["({result}[^"]+)"\]"""
-"""({event_code}4662)"""
+"""exa_json_path=$.message,exa_regex=({event_name}An operation was performed on an object)""",
+"""exa_json_path=$.@timestamp,exa_field_name=time""",
+"""exa_json_path=$.computer_name,exa_regex=^({host}[\w\-.]+?)$""",
+"""exa_json_path=$.event_data.ObjectServer,exa_field_name=ds_object_class""",
+"""exa_json_path=$.event_data.ObjectName,exa_field_name=ds_object_name""",
+"""exa_json_path=$.event_data.ObjectType,exa_field_name=ds_object_type""",
+"""exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id""",
+"""exa_json_path=$.event_data.SubjectDomainName,exa_field_name=domain""",
+"""exa_json_path=$.event_data.OperationType,exa_field_name=action""",
+"""exa_json_path=$.event_data.Properties,exa_field_name=properties""",
+"""exa_json_path=$.event_data.AdditionalInfo,exa_field_name=attribute,exa_match_expr=!InList($.event_data.AdditionalInfo,"-")""",
+"""exa_regex="keywords"+:\["+({result}[^"]+)""",
+"""exa_json_path=$.event_id,exa_field_name=event_code""",
+"""exa_json_path=$.event_data.AccessList,exa_field_name=access"""
 ]
-DupFields = [
-"host->dest_host"
-]
+DupFields = [ "host->dest_host", "ds_object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

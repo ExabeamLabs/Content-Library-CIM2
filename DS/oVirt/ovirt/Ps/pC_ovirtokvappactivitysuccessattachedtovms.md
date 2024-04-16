@@ -9,7 +9,7 @@ Name = ovirt-o-kv-app-activity-success-attachedtovms
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*? Disk ({object}[^\s"]+).*? was successfully removed from domain ({resource}[^\s]+) \(User ({user}[^\s\(\)]+)""",
+    """EVENT_ID:.*? Disk ({object}[^\s"]+).*? was successfully removed from domain ({resource}[^\s]+) \(User ({user}[\w\.\-]{1,40}\$?)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

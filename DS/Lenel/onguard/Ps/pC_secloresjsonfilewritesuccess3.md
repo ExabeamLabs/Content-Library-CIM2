@@ -2,6 +2,7 @@
 ```Java
 {
 Name = seclore-s-json-file-write-success-3
+ExtractionType = json
 Conditions = [
   """"machine_name""""
   """"activity":"""

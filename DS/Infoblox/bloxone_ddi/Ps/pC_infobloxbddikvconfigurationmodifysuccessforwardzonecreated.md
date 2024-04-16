@@ -22,6 +22,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-forwardzonecreated
 # ns_group is removed
 # ns_group_external is removed
   ]
+  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

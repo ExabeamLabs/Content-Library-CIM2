@@ -15,11 +15,11 @@ Fields = [
 """deviceProcessName =({host}[\w\-.]+)"""
 """act=({alert_name}.+?)\s+(\w+=|$)"""
 """cat=({category}.+?)\s+(\w+=|$)"""
-"""cs2=({action}.+?)\s+(\w+=|$)"""
+"""cs2=({result}.+?)\s+(\w+=|$)"""
 """shost=({dest_host}[\w\-.]+)\s+(\w+=|$)"""
 """deviceProcessName =({process_name}.+?)\s+(\w+=|$)"""
 """cs1=({additional_info}.+?)\s+(\w+=|$)"""
-"""duser=({user}.+?)\s*\w+="""
+"""duser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
 ]
 DupFields = [
 "alert_name->alert_type"

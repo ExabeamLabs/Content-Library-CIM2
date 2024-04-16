@@ -24,7 +24,7 @@ Fields = [
 """cs1=({additional_info}.+?)\s+(\w+=|$)"""
 """cn1=({failure_reason}[^:,]+?)(:[^=]*?)?\s+(\w+=|$)"""
 """cs3=({access}.+?)\s+(\w+=|$)"""
-"""duser=({user}.+?)\s*\w+="""
+"""duser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
 """({event_code}DB2_AU07)"""
 ]
 ParserVersion = "v1.0.0"

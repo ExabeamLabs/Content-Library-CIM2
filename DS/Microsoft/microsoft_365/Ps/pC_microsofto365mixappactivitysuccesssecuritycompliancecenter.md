@@ -2,9 +2,10 @@
 ```Java
 {
 Name = "microsoft-o365-mix-app-activity-success-securitycompliancecenter"
+ExtractionType = json
 Vendor = "Microsoft"
 Product = "Microsoft 365"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
   """SecurityComplianceCenter"""
   """Workload"""
@@ -13,6 +14,7 @@ Conditions = [
 Fields = [
   """"CreationTime":"({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d\.\d\d\d)""""
   """CreationTime"*:\s*"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """CreationTime"*:\s*"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""
   """Operation"*:\s*"+({operation}[^"]+)"*"""
   """destinationServiceName =({app}[^=]+?)\s+\w+="""
   """Workload"*:\s*"*({app}[^"]+)"""
@@ -23,7 +25,24 @@ Fields = [
   """"user-email":"({email_address}[^",@]+@[^",\.]+\.[^",]+)"""
   """"ResultStatus":"({result}[^"]+)"""
   """"src-account-name":"({account}[^"]+)"""
-  """"UserId":"(NOT-FOUND|(\w+\-){4}\w+|({email_address}[^@",]+@[^",]+)|({user}[^"\s]+))""""
+  """"UserType":"*({user_type}[^,}"]+)"*"""
+  """"UserId":"(NOT-FOUND|SecurityComplianceAlerts|SecurityComplianceInsights|(\w+\-){4}\w+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""""
+  """exa_json_path=$.CreationTime,exa_field_name=time"""
+  """exa_regex=CreationTime":"({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d\.\d\d\d)""""
+  """exa_regex="CreationTime"*:\s*"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """exa_regex=CreationTime"*:\s*"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""
+  """exa_regex=Operation"*:\s*"+({operation}[^"]+)"*"""
+  """exa_json_path=$.Operation,exa_field_name=operation"""
+  """exa_regex=destinationServiceName =({app}[^=]+?)\s+\w+="""
+  """exa_json_path=$.Workload,exa_field_name=app"""
+  """exa_regex"Workload"*:\s*"*({app}[^"]+)"""
+  """exa_json_path=$.properties.['Workload'],exa_field_name=app"""
+  """exa_regex="f3u\\?":\\?"({email_address}[^@"]+@[^",\.]+\.[^",]+?)\\?""""
+  """exa_regex=trc\\*"+:\\*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+  """exa_json_path=$.app-user-displayname,exa_field_name=full_name"""
+  """exa_json_path=$.ResultStatus,exa_field_name=result"""
+  """exa_regex="src-account-name":"({account}[^"]+)"""
+  """exa_regex="UserId":"(NOT-FOUND|SecurityComplianceAlerts|SecurityComplianceInsights|(\w+\-){4}\w+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""""
 ]
 ParserVersion = "v1.0.0"
 

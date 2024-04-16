@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """Client GMT:\s+({time}\d+/\d+/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
 """Action:\s*({operation}[^,]+?)\s*$"""
-"""User:\s*({user}[^@,\s]+)(@({domain}[^@,.\s]+))?"""
+"""User:\s*({user}[\w\.\-]{1,40}\$?)(@({domain}[^@,.\s]+))?"""
 """User:\s*({email_address}[^,\s]+)"""
 """Computer:\s*({host}[^,]+)"""
 """Operating System:\s*({os}[^,]+)"""
@@ -30,7 +30,7 @@ Fields = [
 ]
 Fields = [
   """Action:\s*({operation}[^,]+)"""
-  """User:\s*({email_address}[^,]+)"""
+  """User:\s*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """Computer:\s*({host}[^,]+)"""
   """Operating System:\s*({os}[^,]+)"""
   """Device Type:\s*({device_type}[^,]+)"""

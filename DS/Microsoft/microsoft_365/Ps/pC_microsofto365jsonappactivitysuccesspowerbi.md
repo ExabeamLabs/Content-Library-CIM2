@@ -2,29 +2,27 @@
 ```Java
 {
 Name = "microsoft-o365-json-app-activity-success-powerbi"
+ExtractionType = json
 Vendor = "Microsoft"
 Product = "Microsoft 365"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """Workload"""
-  """PowerBI"""
+  """"PowerBI""""
   """WorkspaceId"""
 ]
 Fields = [
-  """"*CreationTime"*:\s*"*({time}\d+-\d+-\d+T\d+:\d+:\d+)"*"""
-  """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[\w\-.]+\s+"""
-  """destinationServiceName =({app}.*?)\s*deviceInboundInterface"""
-  """Workload"*:\s*"*({app}[^"]+)"*"""
-  """"ObjectId"*:\s*"*(null|({object}[^"]+))"*""",
-  """"Operation"*:\s*"*({operation}[^"]+)"*""",
-  """UserId"*:\s*"*({email_address}[^@]+@({email_domain}[^"]+))"*"""
-  """"userPrincipalName":"({email_address}[^"@\s]+@({email_domain}[^"@\s]+))""""
-  """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-  """"ClientIP"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """UserAgent"*:\s*"*({user_agent}[^"]+)"*,"""
-  """DatasetName"*:\s*"*({data_set_name}[^"]+)"""
-  """Workload"*:\s*"*({resource}[^"]+)"*"""
-  """"IsSuccess":\s*({result}[\w]+)"""
+  """exa_json_path=$.CreationTime,exa_field_name=time"""
+  """exa_json_path=$.Workload,exa_field_name=app"""
+  """exa_json_path=$.ObjectId,exa_field_name=object"""
+  """exa_json_path=$.Operation,exa_field_name=operation"""
+  """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """exa_json_path=$.ClientIP,exa_field_name=src_ip"""
+  """exa_json_path=$.ipAddress,exa_field_name=src_ip"""
+  """exa_json_path=$.UserAgent,exa_field_name=user_agent"""
+  """exa_regex="DatasetName":\s*"({data_set_name}[^"]+)"""
+  """exa_json_path=$.Workload,exa_field_name=resource"""
+  """exa_json_path=$.IsSuccess,exa_field_name=result"""
 ]
 ParserVersion = "v1.0.0"
 

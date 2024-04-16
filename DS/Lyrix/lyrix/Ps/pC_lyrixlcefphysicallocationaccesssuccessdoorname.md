@@ -18,7 +18,7 @@ Fields = [
   """\Wcs3=({direction}.+?)\s+(\w+=|$)"""
   """\Wcs2=({location_door}.+?)\s+(\w+=|$)"""
   """\Wcs1=({location_building}.+?)\s+(\w+=|$)"""
-  """\Wsuser=({user}[^\s]+)"""
+  """\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
   """\Wsuid=({full_name}.+?)\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

@@ -7,7 +7,7 @@ Vendor: FireEye
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         4          |       3        |    8    |
+|   3   |   0    |         4          |       3        |    9    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

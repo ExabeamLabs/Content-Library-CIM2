@@ -9,7 +9,7 @@ Conditions = [
 """) Successful Duo login for """
 ]
 Fields = [
-"""\) Successful Duo login for \'(({domain}[^\\]+)\\)?({user}[^']+)"""
+"""\) Successful Duo login for \'(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
 """\d\d:\d\d \(({session_id}\d+)\)"""
 ]
 ParserVersion = "v1.0.0"

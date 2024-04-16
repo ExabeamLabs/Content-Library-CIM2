@@ -6,19 +6,21 @@ Name = microsoft-evsystem-xml-service-start-6005
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """>6005<""", """The Event log service was started""" ]
+  Conditions = [ """>6005<""", """<TimeCreated SystemTime""" ]
   Fields = [
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventRecordID>({event_id}\d+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Keywords>({result}.+?)</Keywords>""",
-    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<EventID[^<]*?>({event_code}\d+)""",
-    """ThreadID='({thread_id}[^']+)""",
-    """ProcessID='({process_id}\d+)""",
+    """ThreadID\\*='({thread_id}[^']+)""",
+    """ProcessID\\*='({process_id}\d+)""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
+    """<Provider Name =('|")({service_name}[^'"]+)('|")"""
+    """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

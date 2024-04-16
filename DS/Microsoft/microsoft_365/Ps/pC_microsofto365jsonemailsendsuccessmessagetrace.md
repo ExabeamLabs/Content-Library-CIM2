@@ -8,13 +8,13 @@ Name = microsoft-o365-json-email-send-success-messagetrace
   Conditions = [ """office365""", """"d:FromIP"""", """"d:Organization"""", """"d:Subject"""", """MessageTrace""" ]
   Fields = [
     """"d:Received":.+?#text":\s*"({time}[^"]+)"""", 
-    """"d:SenderAddress":\s*"({src_email_address}[^"]+)"""",
-    """"d:RecipientAddress":\s*"({dest_email_address}[^"]+)"""",
+    """"d:SenderAddress":\s*"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"d:RecipientAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"d:Subject"":\s*"({email_subject}[^"]+)"""",
     """"d:Organization":\s*""({email_domain}[^"]+)"""",
     """"d:StartDate":.+?#text"":\s*"({time_started}[^"]+)"""",
     """"d:EndDate":.+?#text"":\s*"({time_ended}[^"]+)"""",
-    """"d:FromIP":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"d:FromIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"d:Size":.+?#text":\s*""({bytes}\d+)"""",
     """"d:Status":\s*"({result}[^"]+)"""",
   ]

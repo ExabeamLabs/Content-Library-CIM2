@@ -15,18 +15,15 @@ Fields = [
   """\sexternalId=({event_code}\d+)"""
   """\srt=({time}\d{13})"""
   """\sdvc=({host}[a-fA-F:\d.]+)"""
-  """\sdvchost=({host}[^\s]+)"""
-  """\ssuser=({user}.+?)\s+\w+="""
+  """\sdvchost=({host}[\w\-.]+)"""
+  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
   """\sduser=({dest_user}.+?)\s+\w+="""
   """Security_,ID=({user_sid}[^\s]+?)(\s|\||$)"""
   """\ssntdom=({domain}.+?)\s\w+="""
   """\sdeviceSeverity=({result}.+?)\s\w+="""
   """\sdntdom=({dest_domain}.+?)\s\w+="""
   """\sduid=({login_id}[^\s]+)"""
-  """\sdvc=(?:-|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
-]
-DupFields = [
-  "host->dest_host"
+  """\sdvc=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
 ]
 ParserVersion = "v1.0.0"
 

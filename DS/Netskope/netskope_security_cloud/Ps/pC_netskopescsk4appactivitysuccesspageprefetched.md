@@ -11,11 +11,18 @@ Name = netskope-sc-sk4-app-activity-success-pageprefetched
     """"timestamp":\s*({time}\d{10})""",
     """requestClientApplication=({app}[^=]+?)\s+(\w+=|$)""",
     """"app":\s*"\[?({app}[^"\]]+)""",
-    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"object":\s*"(\s+"|(\s*(Unknown Unknown|unknown|Unknown|null|({object}[^"]+?))\s*"))""",
-    """"user":\s*"(unknown|(({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)|(({domain}[^\s"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[^\s"@\\\/]+))))"""",
+    """"user":\s*"(unknown|(({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)|(({domain}[^\s"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-]{1,40}\$?))))"""",
     """"activity":\s*"({operation}[^"]+)"""",
     """msg=({additional_info}[^=\.]+)""",
+    """"page":"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?)"""",
+    """"page":"(\w+:\/\/)?({web_domain}[^\\\/"]+)"""
+    """"browser":"(unknown|({browser}[^"]+))"""",
+    """"os":"(unknown|({os}[^"]+))""""
+    """"useragent":"({user_agent}[^"]+)"""",
+    """"access_method":"({auth_method}[^",]+)""",
+    """"alert":"({alert_status}[^",]+)"""
   ]
 
 

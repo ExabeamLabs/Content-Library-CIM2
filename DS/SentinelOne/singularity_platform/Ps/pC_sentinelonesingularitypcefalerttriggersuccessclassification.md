@@ -6,13 +6,13 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
   Vendor = SentinelOne
   Product = Singularity Platform
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-  Conditions = [ """"classification":"""", """"threatName":"""", """"mitigationStatus":""", """"engines":"""]
+  Conditions = [ """"classification":""", """"threatName":"""", """"mitigationStatus":""", """"engines":"""]
   Fields = [
      """"createdAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
      """"updatedAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
-     """"classification":\s*"({alert_name}({alert_type}[^"]+))""",
      """"title":\s*"({alert_name}[^"]+)""",
-     """"agentIp(V4|V6)?":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+     """"classification":\s*"({alert_name}({alert_type}[^"]+))""",
+     """"agentIp(V4|V6)?":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """"fileDisplayName":\s*"({file_name}[^"]+)""",
      """"filePath":\s*"({file_path}[^"]+)""", 
      """"agentDomain":\s*"(unknown|({src_domain}[^"]+))""",
@@ -20,22 +20,31 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"fileExtensionType":(\s*"None|null|\s*"+(Unknown|({file_type}[^"]+))")""",
      """"agentLastLoggedInUserName":"({last_loggedin_user}[^"]+)"""",
      """"processUser":"(({process_domain}[^\\"]+)\\{1,200})?({process_user}[^"]+)",""",
-     """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[^=\s]+?)(\s+\w+=|\s*$)""",
-     """username":"(({domain}[^\\"]+)\\{1,200})?({user}[^"]+)",""",
+     """\Wsuser=(({domain}[^\\\/=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+     """username":"(({domain}[^\\"]+)\\{1,200})?({user}[\w\.\-]{1,40}\$?)",""",
      """"rank":({alert_severity}\d+)""",
      """"mitigationReport":({additional_info}\{.{1,400}?\}\}),""",
      """"fileContentHash":"({hash_md5}[^"]+)"""",
      """"id":"({alert_id}\d+)"""",
-     """"action":"quarantine".*?"status":"({quarantine_status}\w+)"""",
-     """"action":"kill".*?"status":"({kill_status}\w+)"""",
+     """"action":"({action}quarantine)".*?"status":"({quarantine_status}\w+)"""",
+     """"action":"({action}kill)".*?"status":"({kill_status}\w+)"""",
      """"mitigationStatus":"({result}[^"]+)"""",
      """"threatId":"({alert_id}\d+)"""",
+     """"agentDetectionInfo".*?"siteName":"({site_name}[^"]+)"""",
+     """"threatInfo".*?"originatorProcess":"({src_process_name}[^"]+)"""",
+     """"agentDetectionInfo".*?"agentMitigationMode":"({mitigation_mode}[^"]+)"""",
      """"mitigationMode":"({mitigation_mode}[^"]+)"""",
      """"agentMachineType":"({host_type}[^"]+)"""",
      """"agentOsType":"({os}[^"]+)"""",
      """"incidentStatus":"({incident_status}[^"]+)"""",
      """"analystVerdict":"({verdict}[^"]+)"""",
-     """"groupName":"({group_name}[^"]+)""""
+     """"groupName":"({group_name}[^"]+)"""",
+     """msg=.*?Alert Detected by\s*\[({alert_source}[^\]]+)\]""",
+     """"confidenceLevel":"({category}[^"]+)""",
+     """"filePath":\s*"({malware_url}[^",]+)""",
+     """"sha1":"({hash_sha1}[^",]+)""",
+     """"externalIp":\s*\"({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_translated_port}\d+))?"""",
+     """"fileSize":({bytes}\d+)"""
   ]
    SOAR {
     IncidentType = "malware"

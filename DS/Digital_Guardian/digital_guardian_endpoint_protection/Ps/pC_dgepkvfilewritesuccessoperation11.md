@@ -9,7 +9,7 @@ Name = "dg-ep-kv-file-write-success-operation11"
 	"""Agent_Local_Time="({time}\d+\/\d+\/\d\d\d\d\s\d+:\d+:\d+\s(AM|PM|am|pm))""",
 	"""\w+\s\d\d\s\d\d:\d\d:\d\d\s*({host}[\w\-.]+)\s\w+=""",
 	"""\sComputer_Name ="(({domain}[^\\]+)?\\?({src_host}[^"]+))""",
-	"""\sUser_Name ="(({domain}[^\\]+)?\\?({user}[^"]+))""",
+	"""\sUser_Name ="(({domain}[^\\]+)?\\?({user}[\w\.\-]{1,40}\$?))""",
 	"""\sSource_Directory="({src_file_dir}[^=]+?)\s*"\s*\w+=""",
 	"""\sDestination_Directory="({file_dir}[^=]+?)\s*"\s*\w+=""",
 	"""\sDestination_File="({file_name}[^=]+?)\s*"\s*\w+=""",

@@ -4,26 +4,35 @@
 Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "epoch_sec"]
   Conditions = [
     """A Kerberos service ticket was requested"""
     """Account Name"""
-    """Microsoft-Windows-Security-Auditing"""
+    """Microsoft-Windows-Security-Auditing""",
+    """4769 """
   ]
   Fields = [
     """({event_name}A Kerberos service ticket was requested)"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))"""
-    """(::ffff:)?({host}[^\s\/]+)\/Microsoft-Windows-Security-Auditing \(4769\)"""
+    """TimeGenerated=({time}\d{10})"""
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*[a-zA-Z]+"""
+    """(::ffff:)?({host}[\w\-\.]+)\/Microsoft-Windows-Security-Auditing \(4769\)"""
+    """"ComputerName":"({host}[\w\-\.]+)"""
     """({event_code}4769)"""
-    """Account Name(:|=)\s*({user}[^@:\s;]+)(@({domain}[\w._\-]+))?[\s;]*Account Domain(:|=)"""
-    """Service Name(:|=)\s*(::ffff:)?({dest_host}[^\s;]+\$)[\s;]*Service ID"""
-    """Service Name(:|=)\s*({service_name}[^\s;]+)[\s;]*Service ID"""
-    """Client Address(:|=)\s*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-\.]+?))\s"""
-    """Failure Code(:|=)\s*({result_code}.+?)[\s;]*Transited Services(:|=)"""
-    """Ticket Options(:|=)\s*({ticket_options}.+?)[\s;]*Ticket Encryption Type(:|=)"""
-    """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}.+?)[\s;]*Failure Code(:|=)"""
+    """Account Name(:|=)\s*(\\r|\\n|\\t)*({user}[\w\.\-]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*(\\r|\\n|\\t)*Account Domain(:|=)"""
+    """Service Name(:|=)\s*(\\r|\\n|\\t)*(::ffff:)?({dest_host}[\w\-.]+\$)[\s;]*(\\r|\\n|\\t)*Service ID"""
+    """Service Name(:|=)\s*(\\r|\\n|\\t)*({service_name}[^\s;]+?)[\s;]*(\\r|\\n|\\t)*Service ID"""
+    """Client Address(:|=)\s*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-\.]+?))\s"""
+    """Failure Code(:|=)\s*(\\r|\\n|\\t)*({result_code}.+?)[\s;]*(\\r|\\n|\\t)*Transited Services(:|=)"""
+    """Ticket Options(:|=)\s*(\\r|\\n|\\t)*({ticket_options}.+?)[\s;]*(\\r|\\n|\\t)*Ticket Encryption Type(:|=)"""
+    """Ticket Encryption Type(:|=)\s*(\\r|\\n|\\t)*({ticket_encryption_type}.+?)(\\r|\\n\\t)*[\s;]*Failure Code(:|=)"""
+    """Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"""
+    """Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
+    """\sComputer(Name)?=({host}[\w\-\.]+)([^\s]*\s|;)"""
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """Microsoft-Windows-Security-Auditing.+?Success Audit ({host}[\w\-\.]+)"""
   ]
   DupFields = [
     "result_code->failure_code"

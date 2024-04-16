@@ -10,9 +10,9 @@ Name = mcafee-sncasb-cef-file-download-success-anomalousaccesslocation
     Fields = [
       """\d\d:\d\d:\d\d\s({host}[\w.\-]+)\s+CEF""",
       """end=({time}\w{3} \d+ \d+ \d\d:\d\d:\d\d\.\d{3} \w{3})""",
-      """suser=(N\/A|system:anonymous|({email_address}[^@=]+?@[^@=]+?)|({user}[^\s=]+?))\s""",
+      """suser=(N\/A|system:anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))\s""",
       """({event_name}File downloaded)""",
-      """cs4=\[({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\]"""
+      """cs4=\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\]"""
 	]
 
 

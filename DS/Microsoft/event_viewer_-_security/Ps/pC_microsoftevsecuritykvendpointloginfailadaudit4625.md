@@ -13,9 +13,9 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4625"
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})"""
     """({host}[\w\-.]+) ADAuditPlus"""
-    """USERNAME\s*=\s*({user}[^\s\]]+)"""
-    """CLIENT_IP_ADDRESS\s*=\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-    """CLIENT_HOST_NAME\s*=\s*({dest_host}[\w\-.]+)"""
+    """\s(USERNAME|USER)\s*=\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """CLIENT_IP_ADDRESS\s*=\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """CLIENT_HOST_NAME\s*=\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))"""
     """DOMAIN\s*=\s*({domain}[^\\\/\s]+)"""
     """SOURCE\s*=\s*({src_host_windows}[\w\-.]+)"""
     """RECORD_NUMBER\s*=\s*({event_id}\d+)"""
@@ -28,9 +28,10 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4625"
     """CALLER_PROCESS_NAME\s*=\s*(|null|-|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]"""
     """CALLER_USER_NAME\s*=\s*(-|({src_user}[^\s]+))"""
     """CALLER_USER_DOMAIN\s*=\s*(-|({src_domain}[^\s]+))"""
-    """FAILURE_STATUS\s*=\s*({failure_code}[^\s]+)"""
-    """FAILURE_SUB_STATUS\s*=\s*({failure_code}[^\s]+)"""
+    """FAILURE_STATUS\s*=\s*({result_code}[^\s]+)"""
+    """FAILURE_SUB_STATUS\s*=\s*({result_code}[^\s]+)"""
   ]
+  DupFields = [ "src_host_windows->src_host" ]
 
 
 }

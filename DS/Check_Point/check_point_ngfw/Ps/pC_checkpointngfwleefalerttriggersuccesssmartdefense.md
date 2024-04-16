@@ -26,8 +26,8 @@ Fields = [
 """\Wprotection_id=({protection_id}.+?)(\s+\w+:?=|\s*$)"""
 """\Wprotection_type=({protection_type}.+?)(\s+\w+:?=|\s*$)"""
 """\Wifdir=({direction}.+?)(\s+\w+:?=|\s*$)"""
-"""\Wsrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\Wdst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\Wproto=({protocol}.+?)(\s+\w+:?=|\s*$)"""
 """\Wrule=({rule_count}\d+)(\s+\w+:?=|\s*$)"""
 """\Wrule_name=({rule}.+?)(\s+\w+:?=|\s*$)"""
@@ -35,17 +35,19 @@ Fields = [
 """\Wloguid=\{({log_uid}.+?)\}"""
 """\Wsrc_machine_name=({src_host}[^@=]+?)(@({domain}.+?))?(\s+\w+:?=|\s*$)"""
 """\Wdst_machine_name=({dest_host}[^@=]+?)(@({domain}.+?))?(\s+\w+:?=|\s*$)"""
-"""\Wdst_user_name=({full_name}.+?)\s*\(({user}.+?)\)"""
-"""\Wsrc_user_name=({full_name}.+?)\s*\(({user}.+?)\)"""
-"""\WusrName =({full_name}.+?)\s*\(({user}.+?)\)"""
+"""\Wdst_user_name=({full_name}.+?)\s*\(({user}[\w\.\-]{1,40}\$?)\)"""
+"""\Wsrc_user_name=({full_name}.+?)\s*\(({user}[\w\.\-]{1,40}\$?)\)"""
+"""\WusrName =({full_name}.+?)\s*\(({user}[\w\.\-]{1,40}\$?)\)"""
 """LEEF:([^\|]*\|){2}({product_name}[^\|]+)"""
 """\Wsignature=({event_name}.+?)(\s+\w+:?=|\s*$)"""
 """\Wsmartdefense_profile=({smartdefense_profile}.+?)(\s+\w+:?=|\s*$)"""
 """\Wurl=({ips_url}.+?)(\s+\w+:?=|\s*$)"""
 """\Wresource_probing=({ips_desc}.+?)(\s+\w+:?=|\s*$)"""
+"""\scat=({alert_source}.+?)(\s+\w+:?=|\s*$)"""
 ]
 DupFields = [
 "event_name->protection_name"
+"attack_info->alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

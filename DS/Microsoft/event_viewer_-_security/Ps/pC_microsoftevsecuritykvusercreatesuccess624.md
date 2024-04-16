@@ -12,16 +12,18 @@ Conditions = [
 """New Account Name:"""
 ]
 Fields = [
+"""TimeGenerated=({time}\d{10})"""
 """({event_name}User Account Created)"""
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """({event_code}624)"""
 """({host}[^\/\s]+)\/Security \(624\)"""
-"""Computer=({host}[^\s]+)"""
+"""Computer=({host}[\w\-.]+)"""
 """New Account Name:\s+({account_name}.+?)\s+New Domain:\s+({account_domain}[^\s]+)\s+New Account ID:\s+(%\{)?({account_id}[^\s\}]+)"""
-"""Caller User Name:\s+({user}.+?)\s+Caller Domain:\s+({domain}[^\s]+)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
+"""Caller User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+({domain}[^\s]+)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
 ]
 DupFields = [
-"host->dest_host"
+"host->dest_host",
+"account_name->dest_user"
 ]
 ParserVersion = "v1.0.0"
 

@@ -6,12 +6,14 @@ Conditions = [
 """"objectType"""
 """vidm"""
 """"organizationId"""
-""""OneTimeAccessToken""""
+""""OneTimeAccessToken\""""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 airwatch-app-activity.Fields}[
-    """({action}AdminUserLoggedIn)"""
+    """Timestamp: ({time}\w+\s\d{1,2}\s\d+:\d+:\d+)"""
+    """({result}AdminUserLoggedIn)"""
   
 }
 ```

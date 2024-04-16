@@ -18,7 +18,7 @@ cef-unix-template-1.Fields}[
 
 ${UnixParsersTemplates.cef-unix-template-1}{
   Name = unix-unixauditd-cef-process-create-success-syscall
-  Conditions = [ """CEF""", """Unix|auditd""", """SYSCALL""" ]
+  Conditions = [ """CEF""", """Unix|auditd""", """|SYSCALL""" ]
   Fields = ${UnixParsersTemplates.cef-unix-template-1.Fields}[
     """CEF:([^\|]*\|){5}({event_name}[^\\\|]+)\|({result}[^\|]+)"""
   ]
@@ -46,11 +46,11 @@ ${UnixParsersTemplates.cef-unix-template-1}{
     """\soutcome=({result}.+?)\s+\w+=""",
     """\sdvc=({host}\S+)""",
     """\sdvchost=({host}\S+)""",
-    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\shostname\\=(?:\?|(src_host)\S+)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sshost=({src_host}\S+)""",
-    """\sduser=({user}.+?)\s+\w+=""",
+    """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
     """\sact=({auth}\S.+?)\s+\w+=""",
     """\sdproc=({auth_process}\S.+?)\s+\w+=""",
     """({event_code}ssh)""",

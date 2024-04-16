@@ -10,9 +10,10 @@ Conditions = [
 """summary_windows_4648_data"""
 ]
 Fields = [
+"""search_time=({time}\d+)"""
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)"""
-"""({event_code}4748)"""
-"""summary_windows_4648_data="{1,20}\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[^:::]+))?:::(-|({event_code}[^:::]+))?:::(-|({user_sid}[^:::]+))?:::(-|({user}[^:::]+))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({account}[^:::]+))?:::(-|({account_domain}[^:::]+))?:::(-|({dest_host}[^:::]+))?:::(-|({process_id}[^:::]+))?:::({process_path}({process_dir}(?:.+?)?[\\\/])?({process_name}[^\\\/:::]+))?:::"""
+"""({event_code}4648)"""
+"""summary_windows_4648_data="{1,20}\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[^:::]+))?:::(-|({event_code}[^:::]+))?:::(-|({user_sid}[^:::]+))?:::(-|({user}[\w\.\-]{1,40}\$?))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({account}[^:::]+))?:::(-|({account_domain}[^:::]+))?:::(-|({dest_host}[\w\-.]+))?:::(-|({process_id}[^:::]+))?:::({process_path}({process_dir}(?:.+?)?[\\\/])?({process_name}[^\\\/:::]+))?:::"""
 ]
 ParserVersion = "v1.0.0"
 

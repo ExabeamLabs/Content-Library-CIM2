@@ -3,7 +3,6 @@
 {
 Name = nnt-ct-cef-app-notification-912
   ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """|NNT|ChangeTracker Gen 7|""", """|912|Device Offline|""" ]
   Fields = ${NNTParsersTemplates.nnt-ct-event.Fields}[
   ]
@@ -11,8 +10,9 @@ Name = nnt-ct-cef-app-notification-912
 nnt-ct-event = {
     Vendor = NNT
     Product = NNT ChangeTracker
-    TimeFormat = "MMM dd yyyy HH:mm:ss"
+    TimeFormat = ["MMM dd yyyy HH:mm:ss", "MMM dd HH:mm:ss"]
     Fields = [
+      """({time}\w+\s+\d+ \d+:\d+:\d+)"""
       """rt=({time}\w+\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
       """src=({host}[\w\-.]+)\s""",
       """CEF:([^|]*\|){4}({event_code}\d+)""",

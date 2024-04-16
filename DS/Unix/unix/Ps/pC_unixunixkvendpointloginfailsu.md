@@ -12,7 +12,7 @@ Name = "unix-unix-kv-endpoint-login-fail-su"
   Fields = [
 """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+su:"""
 """\Wruser=({account}[^\s]+)"""
-"""\Wuser=({user}[^\s]+)"""
+"""\Wuser=({user}[\w\.\-]{1,40}\$?)"""
 """({result}failure)"""
   ]
   ParserVersion = "v1.0.0"

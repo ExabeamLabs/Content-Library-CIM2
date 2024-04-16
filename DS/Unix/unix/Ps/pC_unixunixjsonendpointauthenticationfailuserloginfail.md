@@ -4,6 +4,7 @@
 Name = "unix-unix-json-endpoint-authentication-fail-userloginfail"
 Product = "Unix"
 Vendor = "Unix"
+ExtractionType = json
 Conditions = [
 """"type":"wazuh-alerts""""
 """"rule.description":"PAM: User login failed.""""

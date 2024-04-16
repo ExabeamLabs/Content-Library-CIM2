@@ -12,10 +12,10 @@ Conditions = [
 Fields = [
   """"logging_device_ip ":"({host}[^"]+)""""
   """\Wrt=({time}\d{13})"""
-  """"sender_ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"sender_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"header_subject":"({email_subject}[^"]+)"""
-  """"smtp_to":\[({email_recipients}"({dest_email_address}[^"@]+@[^"@]+).*?)\]"""
-  """\Wsuser=({src_email_address}[^=@]+@[^\s]+)"""
+  """"smtp_to":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)).*?)\]"""
+  """\Wsuser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """"size":"?({bytes}\d+)"""
   """\Wsuser=({email_address}\S+)"""
   """"dkim":"({action}[^"]+)"""

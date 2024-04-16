@@ -12,7 +12,7 @@ Fields = [
 """TimeGenerated=({time}\d{10})"""
 """EventIDCode=({event_code}\d+)"""
 """\s+Computer=({host}[\w.\-]+)"""
-"""Message=.+?\s({user}[^\s]+)\s({domain}[^\s]+)\s({login_id}[^\s]+)\s\{([^\}]+)\}\s({dest_user}[^\s]+)\s({dest_domain}[^\s]+)\s\{.*?\}\s({dest_service_name}[^\s]+)\w.*?\s.*?\s({process_path}[^\s]+)\\({process_name}[^\s]+)"""
+"""Message=.+?\s({user}[\w\.\-]{1,40}\$?)\s({domain}[^\s]+)\s({login_id}[^\s]+)\s\{([^\}]+)\}\s({dest_user}[^\s]+)\s({dest_domain}[^\s]+)\s\{.*?\}\s({dest_service_name}[^\s]+)\w.*?\s.*?\s({process_path}[^\s]+)\\({process_name}[^\s]+)"""
 ]
 DupFields = [
 "host->dest_host"

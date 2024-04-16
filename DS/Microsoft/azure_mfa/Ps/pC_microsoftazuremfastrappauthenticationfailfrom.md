@@ -9,8 +9,8 @@ Name = microsoft-azuremfa-str-app-authentication-fail-from
   Conditions = [ """ pfsvc: Pfauth not performed for user""", """' from """ ]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
-    """user\s+'(({email_address}[^'@]+@[^'\s]+)|(({domain}[^\\\s']+)\\)?({user}[^\s']+))""",
-    """' from ({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """user\s+'(({email_address}[^'@]+@[^'\s]+)|(({domain}[^\\\s']+)\\)?({user}[\w\.\-]{1,40}\$?))""",
+    """' from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({event_name}Pfauth not performed for user)"""
     ]
 

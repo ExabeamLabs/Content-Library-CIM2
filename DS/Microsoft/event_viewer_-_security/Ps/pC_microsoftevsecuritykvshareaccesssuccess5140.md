@@ -19,12 +19,13 @@ Fields = [
   """\WLOGON_ID\s*=\s*(null|({login_id}[^\]]+?))\s*\]""",
   """\WDOMAIN\s*=\s*(null|({domain}[^\s\]]+?))\s*\]""",
   """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/\"\]]+?)))\s*\]""",
-  """\WUSERNAME\s*=\s*(null|({user}[^\]\s]+?))\s*\]""",
+  """\WUSERNAME\s*=\s*(null|({user}[\w\.\-]{1,40}\$?))\s*\]""",
   """\WRECORD_NUMBER\s*=\s*(null|({event_id}\d+))""",
   """\WUSER_SID\s*=\s*(null|({user_sid}[^\s\]]+))""",
   """\WFORMAT_MESSAGE\s*=\s*(null|({additional_info}.+?))\s*\]""",
   """\WACCESSES\s*=\s*(null|({access}[^\]]+?))\s*\]""",
   """\WUNC_NAME\s*=\s*(?:[\\?*]*)(|null|({share_name}[^\]]+?))\s*\]"""
+  """Source Port(=|:)\s*({src_port}\d+)"""
 ]
 DupFields = [
   "host->dest_host"

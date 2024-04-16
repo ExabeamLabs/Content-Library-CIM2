@@ -12,10 +12,11 @@ Conditions = [
 ]
 Fields = [
   """({host}[\w\.-]+)\s+SFIMS:""",
+  """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
   """"host\":\"({host}[^\"]+)""",
   """Protocol:\s*({protocol}[^,]+)""",
-  """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-  """DstIP:\s*({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+  """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+  """DstIP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   """SrcPort:\s*({src_port}\d+)""",
   """DstPort:\s*({dest_port}\d+)""",
   """IngressInterface:\s*({ingress_interface}[^,]+)""",
@@ -26,7 +27,7 @@ Fields = [
   """ConnectType:\s*({connection_type}[^,]+)""",
   """AccessControlRuleName:\s*({rule}[^,]+)""",
   """AccessControlRuleAction:\s*({result}[^,]+)""",
-  """UserName:\s*(No Authentication Required|({user}[^,]+))""",
+  """UserName:\s*(No Authentication Required|({user}[\w\.\-]{1,40}\$?))""",
   """UserAgent:\s*({user_agent}.+?), Client:""",
   """ApplicationProtocol:\s*({app_protocol}[^,]+)""",
   """WebApplication:\s*({web_application}[^,]+)""",

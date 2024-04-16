@@ -6,7 +6,7 @@ Name = vmware-carbonblackedr-sk4-app-authentication-success-loginname
   Product = Carbon Black EDR
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"Login in successfully through SAML 2.0"""", """destinationServiceName =Carbon Black Cloud""", """"description":"""", """"loginName":"""" ]
+  Conditions = [ """"Login in successfully through SAML 2.0"""", """"description":"""", """"loginName":"""",""""verbose":""" ]
   Fields = [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
     """"description":"({event_name}[^"]+)"""",

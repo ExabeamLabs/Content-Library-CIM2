@@ -13,7 +13,7 @@ Fields = [
 """"\s*DOCNUM:\s*\"+({file_name}[^\"\s]+)\"+"""
 """"\s*ACTIVITY:\s*\"+({alert_type}[^\"\s]+)\"+"""
 """"\s*ACTIVITY_DATETIME:\s*\"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d)"""
-""""\s*DOCUSER:\s*\"+({user}[^\":]+)\"+"""
+""""\s*DOCUSER:\s*\"+({user}[\w\.\-]{1,40}\$?)\"+"""
 """"\s*APPNAME:\s*\"+({app}[^\":]+)\"+"""
 """"\s*LOCATION:\s*\"+({host}[^\":]+)\"+"""
 ]

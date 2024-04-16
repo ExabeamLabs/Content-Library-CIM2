@@ -16,7 +16,7 @@ Fields = [
   """destinationServiceName =({app}[^=]+?)\s+\w+="""
   """dproc=({operation}[^\s]+)"""
   """"RecipientEmail":"({target}[^"]+)""""
-  """"CreatorEmail":"({email_address}[^@"]+@({email_domain}[^@"]+))""""
+  """"CreatorEmail":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 ]
 ParserVersion = "v1.0.0"
 

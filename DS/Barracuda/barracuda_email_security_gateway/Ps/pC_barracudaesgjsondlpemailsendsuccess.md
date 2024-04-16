@@ -15,7 +15,7 @@ barracuda-dlp-email{
       """"action":"({action}[^"]+)""""
       """"src_ip":"({src_ip}[A-Fa-f:\d.]+)""""
       """"delivered":"({result}[^"]+)""""
-      """"email":"({dest_email_address}[^@"]+@[^"]+)"""
+      """"email":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """"env_from":"({src_email_address}[^@"]+@[^"]+)"""
       """"subject":"({email_subject}[^"]+?)\s*""""
       """"size":({bytes}\d+),"""

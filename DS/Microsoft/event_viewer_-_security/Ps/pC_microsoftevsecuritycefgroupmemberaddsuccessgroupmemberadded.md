@@ -17,7 +17,7 @@ Fields = [
 """\|Security Enabled ({group_type}\w+)"""
 """\srt=({time}\d{13})"""
 """\ssntdom=({domain}[^\s]+)"""
-"""\ssuser=({user}.+?)\s+\w+="""
+"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
 """\ssuid=\([^,]+,({login_id}[^\)]+)"""
 """\sdntdom=({group_domain}[^\s]+)"""
 """duser=({group_name}.+?)\s+\w+="""

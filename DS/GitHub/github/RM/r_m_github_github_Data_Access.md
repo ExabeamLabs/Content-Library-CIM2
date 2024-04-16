@@ -7,7 +7,7 @@ Vendor: GitHub
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  23   |   13   |         1          |       3        |   11    |
+|  23   |   13   |         1          |       3        |   37    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

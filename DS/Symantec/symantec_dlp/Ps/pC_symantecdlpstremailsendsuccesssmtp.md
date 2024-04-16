@@ -14,9 +14,9 @@ Name = symantec-dlp-str-email-send-success-smtp
       """ポリシー名:({alert_name}[^,]+)""",
       """件名:\s*({email_subject}[^,]+?)\s*,""",
       """遮断:({action}[^,]+)""",
-      """受信者:({dest_email_address}[^,@]+?@[^,@]+)""",
+      """受信者:({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """重大度:({alert_severity}[^,]+)""",
-      """送信者:({src_email_address}[^,@]+?@[^,@]+)""",
+      """送信者:({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """添付ファイル名:\s*(N/A|({email_attachments}(Unknown|({email_attachment}[^,@\s]+))[^,]*?))\s*,""",
       """一致件数:\s*({number_of_violations}\d+)""",
     ]

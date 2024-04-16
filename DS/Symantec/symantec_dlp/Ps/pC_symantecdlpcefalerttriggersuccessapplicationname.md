@@ -18,8 +18,8 @@ Name = symantec-dlp-cef-alert-trigger-success-applicationname
       """\WRECIPIENTS=(N\/A|({target}[^=]+))\s\w+=""",
       """\WRECIPIENTS=(N\/A|({recipients}[^@]+@[^=]+))\s\w+=""",
       """\WSUBJECT=+\s*(N\/A|({email_subject}[^=]+))\s\w+=""",
-      """\WATTACHMENT_FILENAME=\s*(N\/A|({file_name}[^=]+?))\s*\w+=""",
-      """\WSENDER=((WinNT:\/+({domain}[^\/]+)\/({user}[^=]+))|({email_address}[^@]+@[^=]+))\s\w+=""",
+      """\WATTACHMENT_FILENAME=\s*(N\/A|({file_dir}[^=]+[\\\/])?({file_name}[^\s]+(\.({file_ext}[^\s]+))?))\s*\w+=""",
+      """\WSENDER=((WinNT:\/+({domain}[^\/]+)\/({user}[\w\.\-]{1,40}\$?))|({email_address}[^@]+@[^=]+))\s\w+=""",
     ]
     DupFields = [ "email_subject->additional_info" , "email_address->src_email_address"]
     SOAR {

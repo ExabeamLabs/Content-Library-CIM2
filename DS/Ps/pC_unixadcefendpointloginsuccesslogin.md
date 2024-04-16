@@ -5,7 +5,7 @@ Name = "unix-ad-cef-endpoint-login-success-login"
 Conditions = [
 """CEF"""
 """Unix|auditd"""
-"""LOGIN"""
+"""|LOGIN"""
 ]
 ParserVersion = "v1.0.0"
 

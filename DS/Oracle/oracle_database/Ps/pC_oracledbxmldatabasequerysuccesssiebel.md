@@ -13,7 +13,7 @@ Fields = [
   """<Extended_Timestamp>({time}\d\d\d\d-\d\d-\d\dT\d\d(:\d\d:\d\d.\d+\w+)?)"""
   """<Userhost>({src_host}[^<]+)</Userhost>"""
   """<DB_User>(\/|({db_user}[^<]+))</DB_User>"""
-  """<OS_User>({user}[^<]+)</OS_User>"""
+  """<OS_User>({user}[\w\.\-]{1,40}\$?)</OS_User>"""
   """<DBID>({db_id}\d+)</DBID>"""
   """<Object_Schema>({db_name}[^<]+)</Object_Schema>"""
   """<Object_Name>({table_name}[^<]+)</Object_Name>"""

@@ -9,7 +9,7 @@ Name = vectra-cd-kv-app-notification-account
   Conditions = [ """vectra_standard_account""", """: ACCOUNT """, """account@"""]
   Fields = [
         """({host}[\w.\-]+)\s+vectra_standard_account""",
-        """\saccountName ="({email_address}({user}[^"@]+)[^"]*?)"""",
+        """\saccountName ="({email_address}({user}[\w\.\-]{1,40}\$?)[^"]*?)"""",
         """\sthreat="({object}[^"]+)""",
         """\scategory="({event_name}[^"]+)""",
         """\sUTCTime="({time}\d{10})"""

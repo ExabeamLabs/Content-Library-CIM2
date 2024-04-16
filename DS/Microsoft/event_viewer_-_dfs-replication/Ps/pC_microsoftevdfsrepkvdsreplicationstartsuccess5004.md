@@ -10,7 +10,7 @@ Name = microsoft-evdfsrep-kv-ds-replication-start-success-5004
 windows-system-info-2 = {
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
-  TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s((?i)AM|PM))""",
     """ComputerName =({host}[\w\-.]+)""",

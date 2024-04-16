@@ -18,7 +18,7 @@ Name = microsoft-sysmon-json-driver-load-6
     """"UserID":"({user_sid}[^"]+)""",
     """"ImageLoaded":"({file_path}(({file_dir}(?:[^"]+)?)[\\\/]+)?({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\."]+))))""",
     """"Hashes":"MD5=({hash_md5}[^,"]+)""",
-    """"AccountName":"((?i)(SYSTEM)|({user}[^"]+))"""
+    """"AccountName":"((?i)(SYSTEM)|({user}[\w\.\-]{1,40}\$?))"""
  ]
   DupFields = [ "host->dest_host", "event_name->operation" ]
 

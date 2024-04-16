@@ -23,7 +23,7 @@ cef-atp-alert = {
     """\Wmsg=({additional_info}.+?)\s+(\w+=|$)""",
     """\Wcs1=({url}.+?)\s+(\w+=|$).+?cs1Label=url""",
     """\Wcs1Label=url.*?\Wcs1=({url}.+?)\s+(\w+=|$)""",
-    """\Wsuser=({user}[^\s]+)\s""",
+    """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s""",
     """\Wcs2=({result}[^\s]+)""",
   
 }

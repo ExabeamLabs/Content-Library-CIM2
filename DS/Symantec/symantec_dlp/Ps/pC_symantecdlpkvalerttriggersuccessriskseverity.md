@@ -12,7 +12,7 @@ Name = symantec-dlp-kv-alert-trigger-success-riskseverity
     """\[CA Name: Detection Server\], \[CA value:\s*({host}[\w\-.]+)""",
     """\[CA Name: First Name\], \[CA value:\s*(|({first_name}[^\]]+?))\s*\]""",
     """\[CA Name: Last Name\], \[CA value:\s*({last_name}[^\]]+)""",
-    """\[CA Name: Account Name\], \[CA value:\s*({user}[^\]\s]+)""",
+    """\[CA Name: Account Name\], \[CA value:\s*({user}[\w\.\-]{1,40}\$?)""",
     """\[CA Name: Email\], \[CA value:\s*({email_address}[^\]\s@]+@[^\]\s@]+)""",
     """\[CA Name: Risk Severity\], \[CA value:\s*(|({alert_severity}[^\]]+?))\s*\]""",
     """, violatedPolicyRuleName:\s*({alert_name}[^\],]+?)\s*,""",

@@ -10,9 +10,10 @@ Conditions = [
 """summary_windows_4674_data"""
 ]
 Fields = [
+"""search_time=({time}\d+)"""
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)"""
 """({event_code}4764)"""
-"""summary_windows_4674_data=\"+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[^:::]+))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_path}.+?))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[^:::]+))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({object_type}[^:::]+))?:::(-|({object}.+?))?:::(-|({access}[^:::]+))?:::(-|({privileges}[^:::]+))?:::"""
+"""summary_windows_4674_data=\"+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[\w\-.]+))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_path}.+?))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[\w\.\-]{1,40}\$?))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({object_type}[^:::]+))?:::(-|({object}.+?))?:::(-|({access}[^:::]+))?:::(-|({privileges}[^:::]+))?:::"""
 ]
 DupFields = [
 "host->dest_host"

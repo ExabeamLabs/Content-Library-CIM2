@@ -9,8 +9,8 @@ Name = ovirt-o-kv-app-activity-success-userstoppedvm
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt""",
     """EVENT_ID:\s*({operation}[^\(\)]+)""",
-    """EVENT_ID:.*?User(:)? ({user}[^\s\(\)"]+?)(\)|\s|\.\s|\.$)""",
-    """EVENT_ID:.*? VM ({object}[^\s"]+) was powered off ungracefully by ({user}[^\s\(\)]+) \(Host: ({resource}[^\)]+)""",
+    """EVENT_ID:.*?User(:)? ({user}[\w\.\-]{1,40}\$?)(\)|\s|\.\s|\.$)""",
+    """EVENT_ID:.*? VM ({object}[^\s"]+) was powered off ungracefully by ({user}[\w\.\-]{1,40}\$?) \(Host: ({resource}[^\)]+)""",
     """({app}ovirt)"""
   ]
   ParserVersion = "v1.0.0"

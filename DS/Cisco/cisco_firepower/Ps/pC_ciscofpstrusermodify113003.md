@@ -9,9 +9,10 @@ Name = cisco-fp-str-user-modify-113003
   Conditions = [ """%FTD-auth-6-113003:""" ]
   Fields = [
     """({time}\d+ \w+ \d+ \d+:\d+:\d+)""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-\w+?-?({priority}\d+)-({event_code}\d+)""",
     """-113003:\s+({event_name}AAA group policy)""",
-    """for user ({user}[^\s]+)"""
+    """for user (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
     ]
 
 

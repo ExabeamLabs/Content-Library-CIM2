@@ -5,7 +5,7 @@ Name = sentinelone-singularityp-json-dll-load-success-module
   ParserVersion = "v1.0.0"
   Conditions = [ """"dataSource.name":"SentinelOne"""", """"i.scheme":"edr"""", """"event.category":"module"""", """"event.type":""" ]
   Fields = ${DLSentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
-    """"src\.process\.parent\.image\.path":"+\s*({parent_process}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
+    """"src\.process\.parent\.image\.path":"+\s*({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
     """"src\.process\.image\.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"""",
     """"src\.process\.pid":({process_id}\d+)""",
     """"src\.process\.cmdline":"({process_command_line}.+?)",""",
@@ -13,6 +13,7 @@ Name = sentinelone-singularityp-json-dll-load-success-module
     """"module.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
     """"module.sha1":"\s*"*({hash_sha1}[^"]+)"""
   ]
+  DupFields = [ "host->dest_host"]
 
 json-sentinelone-edr-events = {
     Vendor = SentinelOne
@@ -21,10 +22,27 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({dest_host}[^"]+)""",
-      """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
+      """"endpoint\.name":"({host}[^"]+)""",
+      """"task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)"""
+      """"endpoint.os":"({os}[^"]+)""",
+      """"event\.category":"({additional_info}[^"]+)"""",
+      """"endpoint\.type":"({host_type}[^"]+)"""
+      """"src\.process\.pid":({process_id}\d+)""",
+      """"src\.process\.cmdline":"({process_command_line}.+?)",""",
+      """"account\.id":"({account_id}[^"]+)""",
+
+      """exa_json_path=$.timestamp,exa_field_name=time""",
+      """exa_json_path=$.['event.type'],exa_field_name=event_name""",
+      """exa_json_path=$.['endpoint.name'],exa_field_name=host""",
+      """exa_json_path=$.['task.path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))$""",
+      """exa_json_path=$.['src.process.name'],exa_field_name=process_name""",
+      """exa_json_path=$.['endpoint.os'],exa_field_name=os""",
+      """exa_json_path=$.['event.category'],exa_field_name=additional_info""",
+      """exa_json_path=$.['endpoint.type'],exa_field_name=host_type""",
+      """exa_json_path=$.['src.process.pid'],exa_field_name=process_id""",
+      """exa_json_path=$.['src.process.cmdline'],exa_field_name=process_command_line""",
+      """exa_json_path=$.['account.id'],exa_field_name=account_id"""
     
 }
 ```

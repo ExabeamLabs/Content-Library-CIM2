@@ -11,6 +11,7 @@ Conditions = [
 """res=success"""
 ]
 Fields = [
+"""\s*({host}[\w\-.]+)\saudisp-syslog"""
 """msg=audit\(({time}\d{10})\.\d{3}"""
 """\sacct=\"({account_name}[^\"]+)\""""
 """\sauid=\"?({account_id}\d+)"""

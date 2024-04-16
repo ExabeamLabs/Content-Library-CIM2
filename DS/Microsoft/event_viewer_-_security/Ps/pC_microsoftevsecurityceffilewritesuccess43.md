@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-cef-file-write-success-43
       """\srt=({time}\d{13})""",
       """shost=({host}[^\s]+)""",
       """sntdom=({domain}[^\s]+)""",
-      """suser=({user}.+?)\s+\w+=""",
+      """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
       """nitroDestination_Filename=({file_path}.+?)\s+\w+=""",
       """nitroDestination_Filename=.*\\({file_name}(?:[^\\:]+(?=\.))({file_ext}\.[^\\:\s]+)?|[^\\:\s]+)\s+\w+=""",
       """nitroDestination_Filename=({file_dir}.+?)\\(?:[^\\]+?)\s+\w+=""",

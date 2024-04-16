@@ -18,13 +18,13 @@ Fields = [
 """"hostname":"({host}[^"]+)""""
 """"userDisplayName\\*":\\*"({full_name}[^"]+?)\\*""""
 """"entityType\\*":\\*"({file_type}[^"]+?)\\*""""
-""""userName\\*":\\*"({user}[^"]+?)\\*""""
+""""userName\\*":\\*"({user}[\w\.\-]{1,40}\$?)\\*""""
 """"domain\\*":\\*"({domain}[^"]+?)\\*""""
 """"extension\\*":\\*"({file_ext}[^"]+?)\\*""""
 """"entityName\\*":\\*"({file_name}[^"]+?)\\*""""
 """"entityPath\\*":\\*"({file_path}({file_dir}[^"]*?)[\\\/]*[^\/"]+?)\\*""""
 """"activityType\\*":\\*"({access}[^"]+?)\\*""""
-""""host\\*":\\*"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))\\*""""
+""""host\\*":\\*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\\*""""
 ]
 DupFields = [
 "access->operation"

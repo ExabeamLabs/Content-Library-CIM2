@@ -16,8 +16,8 @@ Fields = [
 """,dv_number="({object}[^"]+)"""
 """,incident_state="({resource}[^"]+)"""
 """,dv_assignment_group="({additional_info}[^"]+)"""
-""",sys_created_by="({user}[^"]+)"""
-""",dv_assigned_to="(|({user}[^"]+))"""
+""",sys_created_by="({user}[\w\.\-]{1,40}\$?)"""
+""",dv_assigned_to="(|({user}[\w\.\-]{1,40}\$?))"""
 """({app}ServiceNow)"""
 ]
 ParserVersion = "v1.0.0"

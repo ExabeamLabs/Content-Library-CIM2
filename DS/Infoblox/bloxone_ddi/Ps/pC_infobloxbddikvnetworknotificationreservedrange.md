@@ -23,6 +23,7 @@ Name = infoblox-bddi-kv-network-notification-reservedrange
 # use_member_enable_discovery is removed
 # parent is removed
   ]
+  DupFields = ["operation->event_name"]
 
 
 }

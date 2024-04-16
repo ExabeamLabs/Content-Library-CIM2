@@ -9,8 +9,9 @@ Name = cisco-asa-str-dns-response-success-746014
   Conditions = [ """%FTD-""", """-746014""", """ address """, """ obsolete""" ]
   Fields = [
     """({time}\w+\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)\s({host}[\w\-.]+)\s:\s*%FTD-""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d)-({event_code}[^:]+)""",
-    """\]\s({dns_response}({dns_query}.+?) address[^=]+?({dns_response_code}obsolete))""",
+    """\]\s({dns_response}({dns_query}.+?) address[^=]+?obsolete)""",
 ]
 
 

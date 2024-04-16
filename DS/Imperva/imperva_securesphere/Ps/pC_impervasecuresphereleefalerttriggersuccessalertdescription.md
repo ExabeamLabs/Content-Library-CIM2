@@ -4,7 +4,7 @@
 Name = "imperva-securesphere-leef-alert-trigger-success-alertdescription"
 Vendor = "Imperva"
 Product = "Imperva SecureSphere"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd HH:mm:ss","EEE MMM dd HH:mm:ss zzz yyyy"]
 Conditions = [
 """|Imperva|SecureSphere|"""
 """|Alert ID="""
@@ -16,9 +16,9 @@ Fields = [
 """(\s|\|)devTime=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """(\s|\|)Alert ID=({alert_id}\d+)"""
 """(\s|\|)Alert type=({alert_type}[^\|]+)"""
-"""(\s|\|)src=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""(\s|\|)dst=({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-"""(\s|\|)usrName ="*({user}[^\s\|"]+)"""
+"""(\s|\|)src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""(\s|\|)dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""(\s|\|)usrName ="*({user}[\w\.\-]{1,40}\$?)"""
 """(\s|\|)Application name=({app}[^\|]+)"""
 """(\s|\|)Alert Description=({additional_info}[^\|]+)"""
 """(\s|\|)Severity=({alert_severity}[^\|]+)"""

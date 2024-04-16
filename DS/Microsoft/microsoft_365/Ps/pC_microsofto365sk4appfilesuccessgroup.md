@@ -8,7 +8,7 @@ Name = microsoft-o365-sk4-app-file-success-group
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
     """"targetResources":[^\}]+?"displayName":"\s*({object}[^"]+?)\s*"""",
     """\sfname=\s*(N\/A|({object}[^=]+?))\s*(\w+=|$)""",
-    """duser=(({dest_email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|({dest_user}[^\s]+))"""
+    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s]+))"""
   ]
 
 json-microsoft-app-activity = {
@@ -17,19 +17,23 @@ json-microsoft-app-activity = {
   Fields = [
     """"activityDate":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"activity":"({operation}[^"]+)"""",
-    """"(ipAddress|FromIP|ClientIP)":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"(ipAddress|FromIP|ClientIP)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"(UserId|userPrincipalName)":"({email_address}[^@]+@({email_domain}[^\.]+\.[^\]\s"\\,\|]+))",""",
     ""","value":"({email_address}[^@,]+@({email_domain}[^\.,]+\.[^\]\s",\|]+))"}]""",
-    """"activityResultStatus":"({status}[^"]+)"""",
+    """"activityResultStatus":"({result}[^"]+)"""",
     """"category":"({category}[^"]+)"""",
     """"source":"({log_source}[^"]+)"""",
     """"activityType":"({object_type}[^"]+)"""",
     """"objectId":"({object_id}[^"]+)"""",
     """"correlationId":"({connection_id}[^"]+)"""",
     """\WsourceServiceName =({app}[^=]+?)\s+(\w+=|$)"""
-    """\WdestinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)"""
+    """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)"""
     """\Wmsg=({additional_info}.*?)\s+(\w+=|$)""",
-    """"name":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]""""
+    """"name":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
+    """"name":"DeviceOSType","value":"({os}[^"]+?)"""",
+    """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
+    """"userAgent":"({user_agent}[^"]+?)"""",
+    """"activityResultDescription":"({event_name}[^",]+)"""
   ]
   DupFields = [ "object->resource" 
 }

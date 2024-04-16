@@ -12,13 +12,13 @@ Name = unix-auditd-kv-user-switch-success-sessionopen
 """res=success"""
   ]
   Fields = [
-"""({host}[\w\-.]+)\s*tag_audit_log:""",
+"""\d\d:\d\d:\d\d ({host}[\w\-.]+)\s*(tag_audit_log(:|\s*)|audisp-syslog\[)""",
 """msg=audit\(({time}\d+)\.\d{3}""",
 """\sacct=\"({account}[^\"]+)\"""",
 """\sauid=\"?({account_id}\d+)""",
 """\suid=({user_id}\d+)""",
 """\sses=({session_id}\d+)""",
-"""UID=\"*({user}[^\"]+)""",
+"""\W+UID=\"*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"\sAUID="""",
   ]
   DupFields = [ "host->dest_host" ]
 

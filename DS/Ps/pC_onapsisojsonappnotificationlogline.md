@@ -5,13 +5,14 @@ Name = onapsis-o-json-app-notification-logline
     Vendor=Onapsis
     Product=Onapsis 
     ParserVersion = "v1.0.0"
+    ExtractionType = json
     TimeFormat="yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
     Conditions=[ """"appliances_states":""", """"job_type":""", """"logline":"""  ]
     Fields=[
-      """"dev_time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)""",
-# appliance_state is removed
-      """"event_id":\s*"({event_name}[^"]+)""",
-# job_type is removed
+      """exa_json_path=$.dev_time,exa_field_name=time""",
+      # appliance_state is removed
+      """exa_json_path=$.event_id,exa_field_name=event_name""",
+      # job_type is removed
      ]
 
 

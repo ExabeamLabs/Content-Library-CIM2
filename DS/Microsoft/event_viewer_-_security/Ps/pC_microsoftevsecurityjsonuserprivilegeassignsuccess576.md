@@ -6,23 +6,26 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-576
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"Special privileges assigned to new logon""", """"event_id":576""", """"@timestamp""""]
+  ExtractionType = json
+  Conditions = [ """"Special privileges assigned to new logon""", """"event_id":576,"""]
   Fields = [
-    """({event_name}Special privileges assigned to new logon)""",
-    """"@timestamp"\s*:\s*"({time}[^"]+)"""",
-    """"(?:winlog\.)?computer_name"\s*:\s*"({host}[\w\-\.]+)""",
-    """({event_code}576)""",
-    """({ownership_privilege}SeTakeOwnershipPrivilege)""",
-    """({environment_privilege}SeSystemEnvironmentPrivilege)""",
-    """({debug_privilege}SeDebugPrivilege)""",
-    """({tcb_privilege}SeTcbPrivilege)""",
-    """"record_number"\s*:\s*"({event_id}\d+)"""",
-    """"user"\s*:\s*\{.*?"identifier"\s*:\s*"({user_sid}[^"]+)"""",
-    """"user"\s*:\s*\{.*?"domain":"({domain}[^"]+)"""",
-    """"user"\s*:\s*\{.*?"name":"({user}[^"]+)"""",
-    """"(param4|Privileges)"\s*:\s*"({privileges}[^"]+)"""",
-    """"(param3|LogonID|logon_id)"\s*:\s*"(-|({login_id}.+?))\s*"""",
-    """"(param3|LogonID|logon_id)"\s*:\s*"\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))"""",
+    """exa_json_path=$.message,exa_regex=({event_name}Special privileges assigned to new logon)""",
+    """exa_json_path=$.@timestamp,exa_field_name=time""",
+    """exa_json_path=$.computer_name,exa_regex=^({host}[\w\-\.]+)$""",
+    """exa_json_path=$.event_id,exa_field_name=event_code""",
+    """exa_json_path=$.message,exa_regex=({ownership_privilege}SeTakeOwnershipPrivilege)""",
+    """exa_json_path=$.message,exa_regex=({environment_privilege}SeSystemEnvironmentPrivilege)""",
+    """exa_json_path=$.message,exa_regex=({debug_privilege}SeDebugPrivilege)""",
+    """exa_json_path=$.message,exa_regex=({tcb_privilege}SeTcbPrivilege)""",
+    """exa_json_path=$.record_number,exa_field_name=event_id""",
+    """exa_json_path=$.user.identifier,exa_field_name=user_sid""",
+    """exa_json_path=$.user.domain,exa_field_name=domain""",
+    """exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$..param4,exa_field_name=privileges""",
+    """exa_json_path=$..Privileges,exa_field_name=privileges""",
+    """exa_json_path=$..param3,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))""",
+    """exa_json_path=$..LogonID,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))""",
+    """exa_json_path=$..logon_id,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))"""
   ]
   DupFields = ["host->dest_host"]
 

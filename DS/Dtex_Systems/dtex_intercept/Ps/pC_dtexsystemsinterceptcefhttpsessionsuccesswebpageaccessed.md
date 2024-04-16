@@ -18,7 +18,7 @@ Name = dtexsystems-intercept-cef-http-session-success-webpageaccessed
     """Website_Query=(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s]+)""",
     """Website_Query=(?:-|(?=(?)(?:[^?]+({uri_query}\?[^\s"]+))))""",
     """Website_Query=(?:[^:]+:\/+)({web_domain}[^\/:\s]+)""",
-    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[^\\\s]+)\s""",
+    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
     """([^\|]*\|){5}({action}[^\|]+)""",
   ]
   DupFields = [ "host->src_host" ]

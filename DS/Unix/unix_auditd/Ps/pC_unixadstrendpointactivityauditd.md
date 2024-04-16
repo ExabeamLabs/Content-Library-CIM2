@@ -7,7 +7,7 @@ Name = unix-ad-str-endpoint-activity-auditd
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """auditd[""", """]: """ ]
   Fields = [
-    """\d\d:\d\d:\d\d ({host}\S+)? auditd\[""",
+    """\d\d:\d\d:\d\d ({host}[\w\-.]+).+?auditd""",
     """\sauditd\[\d+\]:\s*({additional_info}.+?)\s*$"""
   ]
   ParserVersion = "v1.0.0"

@@ -5,7 +5,7 @@ Name = microsoft-azure-json-key-success-keyvault
    Vendor = Microsoft
    Product = Azure Monitor
    ParserVersion = v1.0.0
-   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+   TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"""
    Conditions = [ """Type":"AzureDiagnostics""", """ResourceProvider":"MICROSOFT.KEYVAULT""", """OperationName""" ] 
    Fields = [
     """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
@@ -30,6 +30,7 @@ Name = microsoft-azure-json-key-success-keyvault
     """"+clientInfo_s"+:\s*"+({user_agent}[^"]+)"+""",
     """"+identity_claim_upn_s"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
     """"+keyProperties_type_s"+:\s*"+({key_type}[^"]+)"+""",
+    """"+(R|r)esourceId"+:"+({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""
     ]
     DupFields = [ "operation->operation_name", "resource_name->keyvault"]
  

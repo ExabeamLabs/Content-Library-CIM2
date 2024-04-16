@@ -11,7 +11,7 @@ Name = entrust-ie-str-app-activity-success-igsystem
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
 # module is removed
     """\[IG.SYSTEM.[^\]]+?\] ({event_description}.+)""",
-    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[^\s]+))\.?""",
+    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\.?""",
   ]
 
 

@@ -11,12 +11,12 @@ splunk-digitalguardian-dlp-email-out = {
   TimeFormat = "MM/dd/yyyy HH:mm:ss a"
   Fields = [
     """(Agent_UTC_Time|Server_UTC_Timestamp)="({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))"""",
-    """Computer_Name ="([^\/\"]+[\\\/])?({host}[^"]+)"""",
-    """Email_Sender="(?:|({src_email_address}[^"]+))"""",
-    """Email_Address="(?:|({src_email_address}[^"]+))"""",
-    """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[^"]+))"""",
+    """Computer_Name ="([^\/\\"]+[\/\\]+)?({host}[\w\-.]+)"""",
+    """Email_Sender="(?:|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
+    """Email_Address="(?:|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
+    """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?))"""",
     """Domain_Name ="(?:|({domain}[^"]+))"""",
-    """Email_Recipient="([^"]+\-)?({email_recipients}({dest_email_address}[^"@\s;,]+@[^"@\s;,]+[^"]*))"""",
+    """Email_Recipient="([^"]+\-)?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
     """Destination_File="(?:|({file_name}[^"]+))"""",
     """Destination_File="(?:|message body|({email_attachment}[^"]+))"""",
     """Destination_File_Extension="(?:|({extension}[^"]+))"""",

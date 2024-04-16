@@ -4,6 +4,7 @@
 Name = "paxton-net2door-json-physical-location-access-peripheralname"
 Vendor = "Paxton"
 Product = "NET2DOOR"
+ExtractionType = json
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
 """"eventtypedescription""""
@@ -11,15 +12,16 @@ Conditions = [
 """"peripheralname""""
 ]
 Fields = [
-""""eventtime"*:"*({time}[^"]+)"*(,|$)"""
-""""peripheralname"*:"*({location_city}.+?)\s*\-\s*({location_building}.+?)\s*(\(|\-|")"""
-""""peripheralname"*:"*([^\-]+)\-([^\-]+)\-\s*(\s*|({location_door}.+?))(\s*\-)?\s*(IN|OUT)"""
-""""eventtypedescription"*:"*({action}[^",]+)"*(,|$)"""
-""""eventtypedescription"*:"*([^\-]+\-\s*({result_reason}[^",]+))"*(,|$)"""
-""""username"*:"*(?:({last_name}[^,]+),\s*({first_name}[^",]+))"*(,|$)"""
-""""cardnumber"*:"*({badge_id}\d+)"""
-""""userid"*:"*({employee_id}[^",]+)"*(,|$)"""
-"""\(({direction}[^\)]+)\)"""
+  """exa_json_path=$.eventtime,exa_field_name=time"""
+  """exa_json_path=$.peripheralname,exa_regex="*({location_city}.+?)\s*\-\s*({location_building}.+?)\s*(\(|\-|")"""
+  """exa_json_path=$.peripheralname,exa_regex="*([^\-]+)\-([^\-]+)\-\s*(\s*|({location_door}.+?))(\s*\-)?\s*(IN|OUT)"""
+  """exa_json_path=$.eventtypedescription,exa_field_name=action"""
+  """exa_json_path=$.eventtypedescription,exa_regex="*([^\-]+\-\s*({result_reason}[^",]+))"*(,|$)"""
+  """exa_json_path=$.username,exa_regex="*(?:({last_name}[^,]+),\s*({first_name}[^",]+))"*(,|$)"""
+  """exa_json_path=$.cardnumber,exa_field_name=badge_id"""
+  """exa_json_path=$.userid,exa_field_name=employee_id"""
+  """exa_json_path=$.eventtime,exa_field_name=time"""
+  """exa_regex=\(({direction}[^\)]+)\)"""
 ]
 ParserVersion = "v1.0.0"
 

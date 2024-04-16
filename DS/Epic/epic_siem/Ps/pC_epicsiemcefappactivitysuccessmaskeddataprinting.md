@@ -17,7 +17,7 @@ cef-epic-app-activity = {
   """shost=({src_host}[\w\-.]+)"""
   """flag=({additional_info}.+?)\s+(\w+=|$)"""
   """MASKMODE=({result}.+?)\s+(\w+=|$)"""
-  """PREVUSER=({user}[^\s,]+)"""
+  """PREVUSER=({user}[\w\.\-]{1,40}\$?)"""
   """NEWUSER=({account}[^\s,]+)"""
   
 }

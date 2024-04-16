@@ -10,9 +10,9 @@ Conditions = [ """"message"":""Sign-out successful""", """"published"":""""" ]
 Fields = [
 """"published"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
 """"message"+:"+({event_name}.+?)\s*(\.|\[|")""",
-""""ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+""""ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """"displayName"+:"+({full_name}[^"]+)",[^\{\}]*?"objectType"+:"+User"""",
-""""login"+:"+({email_address}[^"@]+@[^"@]+)[^\{\}]*?"objectType"+:"+User"""",
+""""login"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\{\}]*?"objectType"+:"+User"""",
 """"id"+:"+({user_agent}[^"]+)",[^\{\}]*?"objectType"+:"+Client"""",
 """"displayName"+:"+(UNKNOWN|({browser}[^"]+))",[^\{\}]*?"objectType"+:"+Client"""",
 """({app}Okta)""",

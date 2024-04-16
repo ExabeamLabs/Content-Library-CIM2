@@ -8,6 +8,7 @@ Conditions = [
   """error: connect_to"""
   """failed"""
 ]
+ExtractionType = json
 ParserVersion = "v1.0.0"
 
 cef-unix-template.Fields}[

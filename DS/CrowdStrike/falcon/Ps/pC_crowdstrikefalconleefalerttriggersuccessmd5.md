@@ -12,7 +12,7 @@ Conditions = [
 """CrowdStrike-MD5"""
 ]
 Fields = [
-"""srcPreNAT=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""srcPreNAT=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """({event_name}CrowdStrike Detection)"""
 """({alert_name}Suspicious Activity)"""
 """CrowdStrike-Severity=({alert_severity}[^\s]+)"""
@@ -22,7 +22,7 @@ Fields = [
 """CrowdStrike-FileName =({process_name}[^\=]+?)(\s+CrowdStrike-SensorId)"""
 """CrowdStrike-ComputerName =({src_host}[^\s]+)"""
 """CrowdStrike-IOCValue=({file_hash}[^\s]+)"""
-"""CrowdStrike-UserName =(N/A|({user}[^\s]+))"""
+"""CrowdStrike-UserName =(N/A|({user}[\w\.\-]{1,40}\$?))"""
 """CrowdStrike-ProcessId=({process_guid}\d+)"""
 """CrowdStrike-FalconHostLink=({falcon_host_link}[^\s]+)"""
 """CrowdStrike-MD5=({hash_md5}[^\s]+)"""

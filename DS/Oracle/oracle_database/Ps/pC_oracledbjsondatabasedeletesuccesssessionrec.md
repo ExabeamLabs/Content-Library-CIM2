@@ -2,6 +2,7 @@
 ```Java
 {
 Name = "oracle-db-json-database-delete-success-sessionrec"
+ExtractionType = json
 Conditions = [
 """"action_name":"SESSION REC""""
 """"ses_actions":"---S------------""""
@@ -31,8 +32,8 @@ Fields = [
   """USERHOST="({src_host}[^"]+)"""
   """RETURNCODE="({result}[^"]+)"""
   """Client address.+?\(PROTOCOL=({protocol}[^\)]+)"""
-  """Client address.+?\(HOST=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """SPARE1="({user}[^"]+)"""
+  """Client address.+?\(HOST=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """SPARE1="({user}[\w\.\-]{1,40}\$?)"""
 ]
 DupFields = [
   "db_user->account"
@@ -55,14 +56,14 @@ Conditions = [
 Fields = [
   """<Extended_Timestamp>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+\w)</Extended_Timestamp>"""
   """<DB_User>(\/|({db_user}.+?))</DB_User>"""
-  """<OS_User>({user}.+?)</OS_User>"""
+  """<OS_User>({user}[\w\.\-]{1,40}\$?)</OS_User>"""
   """<Userhost>({src_host}[^\<]+)</Userhost>"""
   """<OS_Process>({process_id}\d+)</OS_Process>"""
   """<Session_Id>({session_id}\d+)</Session_Id>"""
   """<Returncode>({result}.+?)</Returncode>"""
   """<DBID>({db_name}.+?)</DBID>"""
   """PROTOCOL=({protocol}[^\)]+)"""
-  """HOST=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """HOST=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """PORT=({src_port}\d+)"""
 ]
 DupFields = [
@@ -95,7 +96,7 @@ Fields = [
 """\Wrt=({time}\d{13})"""
 """\Wshost=({src_host}[\w\-.]+)"""
 """\Wdhost=({dest_host}[\w\-.]+)"""
-"""\Wsuser=({user}[^\s]+)"""
+"""\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
 """\Wduser=({db_user}[^\s]+)"""
 """\Wcs3=({db_name}[^\s]+)"""
 """CEF:([^\|]*\|){5}({db_operation}[^\|]+)"""
@@ -111,29 +112,30 @@ Vendor = "Oracle"
 Product = "Oracle Database"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Fields = [
-"""timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""""
-""""userhost":"(({domain}[^"]+)[\\]+)?({src_host}[^"]+)""""
-""""os_username":"({user}[^"]+)""""
-""""username":"({db_user}[^"]+)""""
-""""db_name":"({db_name}[^"]+)""""
-""""action_name":"({db_operation}[^"]+)""""
-""""sessionid":"({session_id}[^"]+)""""
-""""priv_used":"({additional_info}[^"]+)""""
-""""exa_jdbc_hostname":"({dest_host}[^"]+)""""
-""""exa_jdbc_database":"({db_name}[^"]+)""""
-"""({db_operation}---S------------)"""
-"""({event_name}SESSION REC)"""
-""""obj_name":"({db_object}[^"]+)""""
-""""exa_jdbc_type":"({app}[^"]+)""""
-""""exa_jdbc_port":"({dest_port}\d+)""""
-""""returncode":"({return_code}[^"]+)""""
-""""terminal":"({terminal}[^"]+)""""
+"""exa_json_path=$.timestamp,exa_field_name=time"""
+"""exa_json_path=$.userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({src_host}[^"]+)"""
+"""exa_json_path=$.os_username,exa_field_name=user"""
+"""exa_json_path=$.username,exa_field_name=db_user"""
+"""exa_json_path=$.db_name,exa_field_name=db_name"""
+"""exa_json_path=$.sessionid,exa_field_name=session_id"""
+"""exa_json_path=$.priv_used,exa_field_name=additional_info"""
+"""exa_json_path=$.exa_jdbc_hostname,exa_field_name=dest_host"""
+"""exa_json_path=$.exa_jdbc_database,exa_field_name=db_name"""
+"""exa_regex=({db_operation}---S------------)"""
+"""exa_json_path=$.action_name,exa_field_name=db_operation""""
+"""exa_regex=({event_name}SESSION REC)"""
+"""exa_json_path=$.obj_name,exa_field_name=db_object"""
+"""exa_json_path=$.exa_jdbc_type,exa_field_name=app"""
+"""exa_json_path=$.exa_jdbc_port,exa_field_name=dest_port"""
+"""exa_json_path=$.returncode,exa_field_name=return_code"""
+"""exa_json_path=$.terminal,exa_field_name=terminal"""
 ]
 DupFields = [
 "user->user"
 "db_user->account"
 ]
 Name = "oracle-db-json-database-delete-success-sessionrec"
+ExtractionType = json
 Conditions = [
 """"action_name":"SESSION REC""""
 """"ses_actions":"---S------------""""
@@ -161,9 +163,9 @@ Fields = [
 """EVENT_TIME="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
 """SECURED_TARGET_NAME="({host}[^-]+)-({db_name}[^"]+)""""
 """USER_NAME="(unknown_username|({db_user}[^"]+))""""
-"""OSUSER_NAME="(({domain}[^\\]+)\\)?((?i)system|unknown_osusername|({user}[^"]+))""""
+"""OSUSER_NAME="(({domain}[^\\]+)\\)?((?i)system|unknown_osusername|({user}[\w\.\-]{1,40}\$?))""""
 """CLIENT_HOST_NAME="({src_host}[^"]+)""""
-"""CLIENT_IP="({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+"""CLIENT_IP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """EVENT_NAME="({event_name}[^"]+)""""
 """RECORD_ID="({event_code}[^"]+)""""
 """SECURED_TARGET_TYPE="({app}[^"]+)""""
@@ -194,6 +196,7 @@ ${OracleParsersTemplates.oracle-db-template-2} {
 Name = "oracle-db-json-database-query-success-grantrole"
 Vendor = "Oracle"
 Product = "Oracle Database"
+ExtractionType = json
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
 """"os_username"""
@@ -202,19 +205,17 @@ Conditions = [
 """"GRANT ROLE"""
 ]
 Fields = [
-    """"dbid\\"+:\\"+({db_id}[^"\\]+)""",
-    """"sql_text\\"+:\\"+({db_query}[^"\\]+)""",
-    """HOST=({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"userhost\\"+:\\"+({src_host}[^"\\]+)""",
-    """"terminal\\"+:\\"+({terminal}[^"\\]+)""",
-    """"timestamp\\"+:\\"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """"username\\"+:\\"+({db_user}[^"\\]+)""",
-    """"os_username\\"+:\\"+({user}[^"\\]+)""",
-    """"action_name\\"+:\\"+({db_operation}[^"\\]+)"""
+    """exa_json_path=$..dbid,exa_field_name=db_id""",
+    """exa_json_path=$..sql_text,exa_field_name=db_query""",
+    """exa_json_path=$..userhost,exa_field_name=src_host""",
+    """exa_json_path=$..terminal,exa_field_name=terminal""",
+    """exa_json_path=$..timestamp,exa_field_name=time""",
+    """exa_json_path=$..username,exa_field_name=db_user""",
+    """exa_json_path=$..os_username,exa_field_name=user""",
+    """exa_json_path=$..action_name,exa_field_name=db_operation"""
 ]
 DupFields = [
 "db_id->db_name"
-"user->user"
 "db_user->account"
 ]
 ParserVersion = "v1.0.0"
@@ -224,24 +225,22 @@ ParserVersion = "v1.0.0"
 Name = "oracle-db-json-database-query-success-oraclefga"
 Vendor = "Oracle"
 Product = "Oracle Database"
+ExtractionType = json
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
 """"OracleFGA""""
 """"sqlText":"""
 ]
 Fields = [
-""""objName":"({db_object}[^"]+)"""
-""""sqlText":"({db_query}.*?)",""""
-""""objSchema":"({db_schema}[^"]+)"""
-""""@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-""""srcHostname":"(({domain}[^"\\\/]+)[\\\/]+)?({src_host}[^"]+)"""
-""""action":"({db_operation}[^"]+)"""
-""""instanceName":"({db_name}[^"]+)"""
-""""suUserID":"({user}[^"]+)"""
-""""userID":"({db_user}[^"]+)"""
-]
-DupFields = [
-"user->user"
+"""exa_json_path=$.objName,exa_field_name=db_object"""
+"""exa_json_path=$.sqlText,exa_field_name=db_query"""
+"""exa_json_path=$.objSchema,exa_field_name=db_schema"""
+"""exa_json_path=$.@timestamp,exa_field_name=time"""
+"""exa_json_path=$.srcHostname,exa_field_name=domain"""
+"""exa_json_path=$.action,exa_field_name=db_operation"""
+"""exa_json_path=$.instanceName,exa_field_name=db_name"""
+"""exa_json_path=$.suUserID,exa_field_name=user"""
+"""exa_json_path=$.userID,exa_field_name=db_user"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -268,13 +267,14 @@ ${OracleParsersTemplates.oracle-db-template-2} {
     Name = oracle-db-str-database-query-success-sysdba
     Vendor = Oracle
     Product = Oracle Database
-    TimeFormat = "MMM dd HH:mm:ss yyyy z"
+    TimeFormat = ["MMM dd HH:mm:ss yyyy z","yyyy-MM-dd'T'HH:mm:ss.SSSSSS"]
     ParserVersion = "v1.0.0" 
     Conditions = [ """CLIENT USER:""", """PRIVILEGE :""", """ACTION :""", """'SYSDBA'""" ]
     Fields = [
+      """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+)[-|+]\d+:\d\d\s*({host}[\w\-.]+)""",
       """\s({time}\w{3} \d\d \d\d:\d\d:\d\d \d\d\d\d [+-]\d\d:\d\d)""",
       """ACTION\s+:\[\d+\]\s+'\s*({db_query}({db_operation}\w+).*?)\s*'([\w\s]+\w+\s*:|$)""",
-      """\sCLIENT USER:\[\d+\]\s*'({user}[^']+)'""",
+      """\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-]{1,40}\$?)'""",
       """\sDBID:\[\d+\]\s*'(|({db_name}[^']+))'""",
       """\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\\/\s]+))'""",
       """\sPRIVILEGE :\[\d+\]\s*'({privilege}[^']+)'""",
@@ -295,9 +295,9 @@ Conditions = [
 ]
 Fields = [
   """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""""
-  """"sourceAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"sourceAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"sourcePort":({src_port}\d+)"""
-  """"destinationAddress":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+  """"destinationAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   """"destinationPort":({dest_port}\d+)"""
   """"action":"({result}[^"]+)""""
   """"bytesOut":({bytes_out}\d+)"""
@@ -317,7 +317,7 @@ ParserVersion = "v1.0.0"
      """({host}[\w\-.]+)\s+(?:journal:)?\s+Oracle Unified Audit""",
      """DBID:\s*"+({db_name}\d+)""",
      """DBUSER:\s*"+({db_user}[^":]+)""",
-     """CURUSER:\s*"+({user}[^":]+)""",
+     """CURUSER:\s*"+({user}[\w\.\-]{1,40}\$?)""",
      """ACTION:"({db_operation}100)"""",
      """RETCODE:"({return_code}\d+)""""
     ]
@@ -326,6 +326,6 @@ ParserVersion = "v1.0.0"
  ${OracleParsersTemplates.oracle-public-cloud-events}{
   Name = oracle-pc-json-app-activity-success-appaccess
   ParserVersion = "v1.0.0"
-  Conditions = [ """"ssoIdentityProvider":"UserNamePassword"""",""""eventId":"sso.app.access.success"""",""""serviceName":"SSO"""" 
+  Conditions = [ """"ssoIdentityProvider":"""",""""eventId":"sso.app.access.success"""",""""serviceName":"SSO"""" 
 }
 ```

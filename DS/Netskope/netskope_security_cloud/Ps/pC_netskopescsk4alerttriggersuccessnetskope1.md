@@ -6,12 +6,12 @@ Name = netskope-sc-sk4-alert-trigger-success-netskope-1
   Product = Netskope Security Cloud
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch_sec"
-  Conditions = [ """"alert_type":"""", """destinationServiceName =Netskope""", """"ns_detection_name":"""",  ]
+  Conditions = [ """"alert_type":"""", """"ccl":""", """"ns_detection_name":"""", """"alert":"yes"""" ]
   Fields = [
     """"timestamp":({time}\d{10})""",
-    """"user":"(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[^"@\\\/\s]+))"""",
+    """"user":"(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"""",
     """"app":"({process_path}[^"]+)""",
-    """"dstip":"({dest_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"malware_id":"({alert_id}[^"]+)""",
     """"category":"({threat_category}[^"]+)""",
     """"ns_detection_name":"({alert_name}[^"]+)""",

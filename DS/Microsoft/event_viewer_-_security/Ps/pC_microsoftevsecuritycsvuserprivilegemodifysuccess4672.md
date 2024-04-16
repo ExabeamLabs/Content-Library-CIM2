@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-csv-user-privilege-modify-success-4672
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Special Logon""",
     """({event_code}4672)""",
-    """SubjectUserName:({user}[^,]+),""",
+    """SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
     """SubjectDomainName:({domain}[^,]+),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """PrivilegeList:({privileges}[^\d]+?)\s\d+""",

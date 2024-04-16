@@ -15,7 +15,7 @@ Fields = [
   """\Wrt=({time}\d{13})"""
   """\Wcs1=({alert_name}.+?)\s+(\w+=|$)"""
   """\Wduser=({email_address}[^@=]+[^\.]+\.[^=]+)\s+(\w+=|$)"""
-  """\Wsuser=({user}.+?)\s+(\w+=|$)"""
+  """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
   """\Wact=({result}.+?)\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

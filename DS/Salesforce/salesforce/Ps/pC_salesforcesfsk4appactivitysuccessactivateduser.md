@@ -4,8 +4,9 @@
 Name = "salesforce-sf-sk4-app-activity-success-activateduser"
 Product = "Salesforce"
 Conditions = [
-"""flexString1=activateduser"""
-"""destinationServiceName =Sales Cloud"""
+"""Action\=activateduser"""
+"""type\=SetupAuditTrail"""
+"""Display\="""
 ]
 ParserVersion = "v1.0.0"
 

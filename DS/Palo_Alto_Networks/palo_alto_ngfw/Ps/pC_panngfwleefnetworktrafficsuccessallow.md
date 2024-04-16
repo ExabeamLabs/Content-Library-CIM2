@@ -4,7 +4,7 @@
 Name = pan-ngfw-leef-network-traffic-success-allow
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
-TimeFormat = "yyyy/MM/dd HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
 Conditions = [
   """LEEF:"""
   """|Palo Alto Networks|PAN-OS Syslog Integration|"""
@@ -12,22 +12,19 @@ Conditions = [
 ]
 Fields = [
   """\s({host}[\w\.-]+)\s+LEEF:"""
-  """\|devTime=({time}\w{3}\s+\d+ \d\d\d\d \d\d:\d\d:\d\d)"""
   """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)"""
   """\|Type=({event_category}\w+)\|"""
   """\|Subtype=({subtype}\w+)\|"""
-  """\|src=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\|"""
-  """\|dst=({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\|"""
-  """\|srcPostNAT=(0\.0\.0\.0|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
-  """\|dstPostNAT=(0\.0\.0\.0|({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))\|"""
+  """\|src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\|"""
+  """\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\|"""
+  """\|srcPostNAT=(0\.0\.0\.0|({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))\|"""
+  """\|dstPostNAT=(0\.0\.0\.0|({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))\|"""
   """\|RuleName =({rule}[^\|]*?)\|"""
-  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[^\|\\]+)))\|"""
+  """\|usrName =(|((({domain}[^\|\\]+)\\)?({user}[\w\.\-]{1,40}\$?)))\|"""
   """\|SourceUser=(|((({src_domain}[^\|\\]+)\\)?({src_user}[^\|\\]+)))\|"""
   """\|DestinationUser=(|((({dest_domain}[^\|\\]+)\\)?({dest_user}[^\|\\]+)))\|"""
-  """\|Application=({network_app}[^\|]*?)\|"""
-  """\|SourceZone=({src_network_zone}[^\|]*?)\|"""
-  """\|DestinationZone=({dest_network_zone}[^\|]*?)\|"""
-  """\|LogForwardingProfile=({profile}[^\|]*?)\|"""
+  """\|SourceZone=({src_network_zone}[^\|]+)\|"""
+  """\|DestinationZone=({dest_network_zone}[^\|]+)\|"""
   """\|srcPort=(0|({src_port}\d+))\|"""
   """\|dstPort=(0|({dest_port}\d+))\|"""
   """\|srcPostNATPort=(0|({src_translated_port}\d+))\|"""
@@ -36,16 +33,12 @@ Fields = [
   """\|totalBytes=({bytes}[\d.]+)\|"""
   """\|srcBytes=({bytes_out}[\d.]+)\|"""
   """\|dstBytes=({bytes_in}[\d.]+)\|"""
-  """\|Miscellaneous="(|({miscellaneous}[^=]+?))("|\s*$)"""
   """\|URLCategory=({category}[^\|]+)"""
-  """\|Miscellaneous="(|({miscellaneous}.+?))("|\s*$)"""
-  """\|URLCategory=({category}[^\|]*)\|"""
-  """\|Severity=({severity}informational)\|"""
   """\|Direction=({direction}[\w-]+)\|"""
-  """\|sequence=({sequence}\d+)\|"""
-  """\|SessionEndReason=({result}[^\|]+)"""
+  """\|SessionEndReason=({result_reason}[^\|]+)"""
   """\|action=({action}\w+)\|"""
-  """\|SourceLocation=({src_location}[^\|]+)\|"""
+  """\|SourceLocation=({src_location}[^\|]+)\|""",
+  """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]
 ParserVersion = "v1.0.0"
 

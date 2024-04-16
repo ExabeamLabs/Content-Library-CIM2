@@ -4,6 +4,7 @@
 Name = "unix-unix-json-endpoint-login-fail-passwordcheckfailed"
 Product = "Unix"
 Vendor = "Unix"
+ExtractionType = json
 Conditions = [
 """"type":"wazuh-alerts""""
 """"rule.description":"unix_chkpwd: Password check failed.""""

@@ -17,8 +17,8 @@ Fields = [
 """"name":"({operation_details}({operation}Peripheral allowed):\s*({device_type}[^"]+))""",
 """"source":"(n\/a|({full_name}[^"\\\(\),]+))"""",
 """"source":"(n\/a|({last_name}[^",\s]+),\s*({first_name}[^,"\s]+))""",
-""""source":"(n\/a|(({domain}[^\\"]+)(\\){1,20}))?({user}[^\\\s"]+)"""",
-""""ip":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""source":"(n\/a|(({domain}[^\\"]+)(\\){1,20}))?({user}[\w\.\-]{1,40}\$?)"""",
+""""ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 ]
 ParserVersion = "v1.0.0"
 

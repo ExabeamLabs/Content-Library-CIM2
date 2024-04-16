@@ -3,7 +3,7 @@
 {
 Name = bitglass-casb-cef-app-scan-dlpscan
   ParserVersion = v1.0.0
-  Conditions = [ """destinationServiceName =Bitglass""", """"action":"DLPScan"""" ]
+  Conditions = [ """ api.bitglass.com """, """"action":"DLPScan"""" ]
 
 cef-bitglass-system-info = {
   Vendor = Bitglass
@@ -13,7 +13,7 @@ cef-bitglass-system-info = {
     """"time":"({time}\d+\s+\w+\s+\d+\s+\d+:\d+:\d+)""",
     """"application":"({app}[^"]+)"""",
     """"filename":"\s*({file_name}[^"]+?(\.({file_ext}[^\.\s"]+))?)\s*"""",
-    """"owner":"({email_address}[^"]+)""",
+    """"owner":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"status":"({event_category}[^"]+)""",
     """"folder":"\s*({folder_name}[^"]+?)\s*"""",
     """"filelink":"({file_url}[^"]+)""",

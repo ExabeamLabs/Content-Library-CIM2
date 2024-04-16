@@ -3,7 +3,7 @@
 {
 Name = "cisco-iws-csv-http-session-tcp"
 Product = "IronPort Web Security"
-TimeFormat = "dd/MM/yyyy:HH:mm:ss Z"
+TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
 Conditions = [
 """IronPort-Web:"""
 """ TCP_"""

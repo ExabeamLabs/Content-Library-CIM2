@@ -20,7 +20,7 @@ Fields = [
 """"IncidentId":\s*"({alert_id}[^"]+)""""
 """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()"""
 """"FileName":\s*"(|({file_name}[^"]+))"(,|\})"""
-""""FileFrom":"({email_address}[^@]+@[^"]+)""""
+""""FileFrom":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 """"FileOwner":"({full_name}[^\s\/"]+?\s+[^\/"]+?)\/({domain}[^"]+?)""""
 ]
 ParserVersion = "v1.0.0"

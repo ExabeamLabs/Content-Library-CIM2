@@ -2,7 +2,7 @@ Rules by Product and UseCase
 ============================
 Vendor: Check Point
 -------------------
-### Product: [Check point vSEC Virtual Edition](../ds_check_point_check_point_vsec_virtual_edition.md)
+### Product: [Check Point vSEC Virtual Edition](../ds_check_point_check_point_vsec_virtual_edition.md)
 ### Use-Case: [Abnormal Authentication & Access](../../../../UseCases/uc_abnormal_authentication_&_access.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

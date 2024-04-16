@@ -3,9 +3,12 @@
 {
 Name = "sentinelone-singularityp-cef-dns-request-success-ndns"
 Conditions = [
-"""dproc=Deep Visibility Endpoint"""
-"""destinationServiceName =SentinelOne"""
-"""ndns {"""
+"""timestamp {"""
+"""millisecondsSinceEpoch: """
+"""trueContext {"""
+"""isRedirectedCommandProcessor: """
+"""dns {"""
+"""query: """
 ]
 DupFields = [
 "host->src_host"

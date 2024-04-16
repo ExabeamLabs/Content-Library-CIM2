@@ -23,9 +23,9 @@ Name = symantec-endpointprotection-kv-network-traffic-fail-rule
     """({protocol}[^,\s]+),({direction}Inbound|Outbound)""",
     """Begin:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """,\s*Application:\s*({process_path}({process_dir}[^,]*?[\\\/]+)({process_name}[^,\\\/]+)),"""
-    """User Name:\s*(SYSTEM|none|NETWORK|LOCAL|({user}[^\s,]+))""",
+    """User Name:\s*(SYSTEM|none|NETWORK|LOCAL|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
     """Rule:\s+(?:|({rule}[^,]+)),""",
-    """Domain Name:\s*({domain}[^,]+)""",
+    """Domain Name:\s({domain}[^,]+)\s*,""",
     """Action:\s*({action}[^\s,]+)""",
     """SHA-256:\s*({hash_sha256}[^\s,]+)""",
     """MD-5:\s*({hash_md5}[^\s,]+)""",

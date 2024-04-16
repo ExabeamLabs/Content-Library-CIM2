@@ -2,6 +2,7 @@
 ```Java
 {
 Name = "honeywell-pw-xml-physical-location-access-evntdat"
+ExtractionType = json
 Product = "Honeywell Pro-Watch"
 Conditions = [
   """"evnt_dat":""""

@@ -8,10 +8,10 @@ Name = mimecast-seg-sk4-app-activity-success-auditevents
   Conditions = [ """"auditType":""", """destinationServiceName =Mimecast Email Security""", """dproc=Audit Events""", """"category":""" ]
   Fields = [
     """"eventTime":"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}(\+|-)\d+?)"""",
-    """user":"(|({email_address}[^@"]+@({email_domain}[^@"]+))|({user}[^",]+?))"""",
+    """"user":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^,"]+)[^"]*)?)"""",
     """"eventInfo":"({additional_info}[^"]*?)("|\s*$)""",
     """Application:\s*({app}[^",=:]+?)("|,|\s\S+=|\s\S+:)""",
-    """\sIP:\s*({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))\s""",
+    """\sIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
     """"category":"({category}[^",\}]+?)"""",
     """"auditType":"({operation}[^",]+?)""""
   ]
