@@ -8,7 +8,7 @@ Expected values are based on content summery data provided with the content conf
 
 Latest Content Library Run: Tue 16 April 
 
-Repo: 
+Populated based on: 
     
     https://github.com/Exabeam/exa_security_nextgen (master)
         * cim2
