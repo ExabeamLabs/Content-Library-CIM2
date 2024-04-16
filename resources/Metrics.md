@@ -11,11 +11,12 @@ Latest Content Library Run: Tue 16 April
 Repo: 
     
     https://github.com/Exabeam/exa_security_nextgen (master)
-        *exa_security_nextgen/tree/master/cim2
-        * exa_security_nextgen/config/default
+        * cim2
+        * config/default
     
     https://github.com/Exabeam/exa_security (master)
-
+        * martini/config/default
+        
 
 
 Rules
