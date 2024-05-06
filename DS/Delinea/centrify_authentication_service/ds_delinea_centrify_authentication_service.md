@@ -4,7 +4,7 @@ Product: Centrify Authentication Service
 ----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  132  |   47   |         20         |       6        |   11    |
+|  114  |   39   |         20         |       6        |   11    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

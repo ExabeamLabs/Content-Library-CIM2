@@ -15,7 +15,6 @@ Name = microsoft-evsecurity-kv-user-privilege-assign-success-4672
    """Nombre de cuenta:\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*""",
    """Id. de inicio de sesión:\s*({login_id}[^\s]+)\s*Privilegios:\s*({privileges}[^\:]+?)?\s*$""",
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

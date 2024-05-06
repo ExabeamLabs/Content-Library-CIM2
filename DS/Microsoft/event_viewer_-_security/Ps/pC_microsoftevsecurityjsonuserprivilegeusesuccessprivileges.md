@@ -20,10 +20,7 @@ Fields = [
   """"subject-AccountDomain\":\"({domain}[^\"]+)"""
   """"subject-SecurityID\":\"({user_sid}[^\"]+)"""
   """"event_id\":\"({event_code}\d+)"""
-  """"computer\":\"({host}[\w\-.]+)"""
-]
-DupFields = [
-  "host->dest_host"
+  """"computer\":\"({host}({src_host}[\w\-.]+))"""
 ]
 ParserVersion = "v1.0.0"
 

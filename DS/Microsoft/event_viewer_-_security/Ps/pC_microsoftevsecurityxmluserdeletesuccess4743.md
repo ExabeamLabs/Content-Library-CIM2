@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A computer account was deleted)"""
-"""<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
+"""<Computer>({host}[\w\-.]+)</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)"""
 """({event_code}4743)"""
@@ -19,7 +19,7 @@ Fields = [
 """\sTarget Computer:[^=]+?Account Name:\s*({src_host}[^$:]+?)\$"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = [ "host-> dest_host", "dest_user->account_name"]
+DupFields = [ "dest_user->account_name"]
 ParserVersion = "v1.0.0"
 
 

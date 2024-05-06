@@ -15,7 +15,7 @@ Name = amazon-awsguardduty-sk4-alert-trigger-success-guardduty
     """Region:\s*({region}[^:]+?),\w+?:""",
     """Description:\s*({additional_info}[^:]+?),\w+?:""",
     """AccountId:\s*({account_id}[^:]+?),\w+?:"""
-    """Resource:[^}]+PrincipalId:\s*([^},]+?(:({email_address}[^@]+@[^},]+))?),UserName:\s*({user}[\w\.\-]{1,40}\$?),UserType:\s*({user_type}[^},]+)""",
+    """Resource:[^}]+PrincipalId:\s*([^},]+?(:({aws_email_address}({email_address}[^@]+@[^},]+)))?),UserName:\s*({aws_user}({user}[\w\.\-]{1,40}\$?)),UserType:\s*({user_type}[^},]+)""",
     """ResourceType:\s*({resource_type}[^},]+)""",
     """S3BucketDetails:\s*\[\{Arn:\s*({object}[^,]+),Name:""",
   ]

@@ -36,7 +36,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625"
     """"SubjectUserSid\\?":\\?"({subject_sid}[^"\\]+)"""
     """Subject(:|=).+?Account Name(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_user}[^\s@]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Account Domain(:|=)"""
     """Subject(:|=).+?Account Domain(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_domain}[^:;]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Logon ID(:|=)"""
-    """Account Name:((\\)[rnt])*(-|({account}.+?))((\\)[rnt])*Account Domain"""
+    """Account Name:((?-i)\\+[rnt])*(-|({account}.+?))((?-i)\\+[rnt])*Account Domain"""
     """"FailureReason":"({failure_reason}[^"]+)""""
     """exa_regex=({event_name}An account failed to log on)"""
     """exa_regex="TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
@@ -60,7 +60,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625"
     """exa_regex="SubjectUserSid\\?":\\?"({subject_sid}[^"\\]+)"""
     """exa_regex=Subject(:|=).+?Account Name(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_user}[^\s@]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Account Domain(:|=)"""
     """exa_regex=Subject(:|=).+?Account Domain(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_domain}[^:;]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Logon ID(:|=)"""
-    """exa_regex=Account Name:((\\)[rnt])*(-|({account}.+?))((\\)[rnt])*Account Domain"""
+    """exa_regex=Account Name:((?-i)\\+[rnt])*(-|({account}.+?))((?-i)\\+[rnt])*Account Domain"""
     """exa_regex="FailureReason":"({failure_reason}[^"]+)""""
   ]
   DupFields = [

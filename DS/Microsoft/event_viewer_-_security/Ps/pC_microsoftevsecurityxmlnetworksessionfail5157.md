@@ -24,7 +24,7 @@ Name = "microsoft-evsecurity-xml-network-session-fail-5157"
     """<Computer>({src_host}[\w\-.]+)<\/Computer>[\s\S]+?Direction['"]+>({direction}Outbound)""",
     """<Computer>({dest_host}[\w\-.]+)<\/Computer>[\s\S]+?Direction['"]+>({direction}Inbound)""",
     """<Computer>({src_host}[\w\-.]+)</Computer>[\s\S]+?Direction:\s*({direction}Outbound)""",
-    """<Computer>({dest_host}[\w\-.]+)</Computer>[\s\S]+?Direction:((\\)[rnt])*\s*({direction}Inbound)""",
+    """<Computer>({dest_host}[\w\-.]+)</Computer>[\s\S]+?Direction:((?-i)\\+[rnt])*\s*({direction}Inbound)""",
     """<Data Name(\\)?=['"]+LayerName['"]+>({layer_name}[^<]+)"""
     """Layer Name:\s+({layer_name}[^:]+?)\s+Layer Run-Time ID:"""
     """<Message>({failure_reason}.+?)\s*(:|\.)"""

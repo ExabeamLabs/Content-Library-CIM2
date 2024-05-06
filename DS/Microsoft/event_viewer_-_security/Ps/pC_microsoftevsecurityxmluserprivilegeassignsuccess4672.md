@@ -9,7 +9,7 @@ Conditions = [ """<EventID>4672</EventID>""", """SubjectUserName""" ]
 Fields = [
   """<EventTime>({time}[^\<]+)<""",
   """<TimeCreated SystemTime(\\\/)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  """<Computer>({host}({dest_host}[\w\-.]+))</Computer>""",
+  """<Computer>({host}({src_host}[\w\-.]+))</Computer>""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<Keywords>({result}[^<]+)</Keywords>""",
   """<Keywords><Keyword>({result}[^<]+)</Keyword></Keywords>""",
@@ -21,11 +21,8 @@ Fields = [
   """({event_name}Special privileges assigned to new logon)""",
   """<Data Name(\\\/)?=('|")PrivilegeList('|")>({privileges}[^<]+)</Data>""",
   """<Data Name(\\\/)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-  """<Hostname>({dest_host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
+  """<Hostname>({host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
   """<Level>({run_level}[^<]+)<"""
-]
-DupFields = [
-"dest_host->host"
 ]
 ParserVersion = "v1.0.0"
 

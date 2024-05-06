@@ -21,9 +21,6 @@ Fields = [
 """\sdvchost=({host}[^\s]+)"""
 """\sduser=(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}.+?))\s+\w+="""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was locked out)"""
-"""\W__li_source_path=\"({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\.-]+)))\""""
+"""\W__li_source_path=\"({host}[\w\.-]+)\""""
 """({event_code}4740)"""
 """\Weventrecordid=\"({event_id}\d+)\""""
 """Subject:.+?Account Name:\s+({src_user}.+?)\s+Account Domain:\s+(?=\w)({src_domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""

@@ -3,12 +3,13 @@
 {
 Name = microsoft-azure-json-image-write-success-imagewrite
   ParserVersion = v1.0.0
-  Conditions = [ """value":"Microsoft.Compute/images/write""" ]
+  Conditions = [ """"value":"Microsoft.Compute/images/write""", """"operationName":""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """exa_json_path=$.properties.responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
     """exa_json_path=$.properties.responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
     """exa_json_path=$.properties.responseBody,exa_regex="osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
     """exa_json_path=$.properties.responseBody,exa_regex="blobUri\\?"+:\s*\\?"+({source_resource}[^"]+)\\?""""
+    """"eventTimestamp":"({time}\d{4}\-\d{1,2}\-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+Z)"""
   ]
 
 azure-activity-json = {

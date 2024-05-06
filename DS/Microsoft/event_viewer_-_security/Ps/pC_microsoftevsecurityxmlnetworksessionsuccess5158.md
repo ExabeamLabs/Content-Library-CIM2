@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-network-session-success-5158
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'/>""",
     """({event_code}5158)""",
-    """<Computer>({dest_host}({host}[\w\-.]+?))</Computer>""",
+    """<Computer>({src_host}({host}[\w\-.]+?))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*='ProcessId'>({process_id}[^<>]+)</Data>""",
     """<Data Name\\*='Application'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))</Data>""",

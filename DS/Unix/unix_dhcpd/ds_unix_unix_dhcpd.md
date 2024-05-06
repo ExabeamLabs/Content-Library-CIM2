@@ -4,7 +4,7 @@ Product: Unix dhcpd
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  69   |   29   |         9          |       4        |   11    |
+|  66   |   27   |         9          |       4        |   11    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -12,6 +12,9 @@ Product: Unix dhcpd
 |    [Account Manipulation](../../../UseCases/uc_account_manipulation.md)    |  account-password-change<br> ↳[unix-dhcpd-str-dhcp-discoverdhcpd](Ps/pC_unixdhcpdstrdhcpdiscoverdhcpd.md)<br> ↳[unix-dhcpd-str-dhcp-discover-nofreeleases](Ps/pC_unixdhcpdstrdhcpdiscovernofreeleases.md)<br> ↳[unix-dhcpd-csv-dns-record-delete-fail-notdeleted](Ps/pC_unixdhcpdcsvdnsrecorddeletefailnotdeleted.md)<br> ↳[unix-dhcpd-str-dhcp-acknowledge-dhcpack](Ps/pC_unixdhcpdstrdhcpacknowledgedhcpack.md)<br> ↳[unix-dhcpd-str-app-notification-balancingpool](Ps/pC_unixdhcpdstrappnotificationbalancingpool.md)<br> ↳[unix-dhcpd-str-app-notification-reuselease](Ps/pC_unixdhcpdstrappnotificationreuselease.md)<br> ↳[unix-dhcpd-str-app-notification-balancedpool](Ps/pC_unixdhcpdstrappnotificationbalancedpool.md)<br><br> app-activity<br> ↳[unix-dhcpd-str-dhcp-traffic-dhcpd](Ps/pC_unixdhcpdstrdhcptrafficdhcpd.md)<br> ↳[unix-dhcpd-csv-dhcp-traffic-release](Ps/pC_unixdhcpdcsvdhcptrafficrelease.md)<br> ↳[unix-dhcpd-str-dhcp-traffic-dhcpnak](Ps/pC_unixdhcpdstrdhcptrafficdhcpnak.md)<br> ↳[unix-dhcpd-str-dhcp-traffic-dhcprelease](Ps/pC_unixdhcpdstrdhcptrafficdhcprelease.md)<br> ↳[unix-dhcpd-csv-dhcp-traffic-expired](Ps/pC_unixdhcpdcsvdhcptrafficexpired.md)<br> ↳[unix-dhcpd-str-dhcp-traffic-dhcpinform](Ps/pC_unixdhcpdstrdhcptrafficdhcpinform.md)<br>    | T1098 - Account Manipulation<br>T1098.002 - Account Manipulation: Exchange Email Delegate Permissions<br> | [<ul><li>4 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_unix_unix_dhcpd_Account_Manipulation.md)    |
 |    [Audit Tampering](../../../UseCases/uc_audit_tampering.md)    |  audit-log-clear<br> ↳[unix-dhcpd-mix-dhcp-offer-dhcpoffer](Ps/pC_unixdhcpdmixdhcpofferdhcpoffer.md)<br>    | T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>T1562.002 - T1562.002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_unix_unix_dhcpd_Audit_Tampering.md)    |
 |    [Evasion](../../../UseCases/uc_evasion.md)    |  audit-log-clear<br> ↳[unix-dhcpd-mix-dhcp-offer-dhcpoffer](Ps/pC_unixdhcpdmixdhcpofferdhcpoffer.md)<br>    | T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_unix_unix_dhcpd_Evasion.md)    |
+|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  app-login<br> ↳[unix-unixdhcpd-str-endpoint-notification-parameter](Ps/pC_unixunixdhcpdstrendpointnotificationparameter.md)<br>    | T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_unix_unix_dhcpd_Lateral_Movement.md)    |
+|    [Malware](../../../UseCases/uc_malware.md)    |  app-login<br> ↳[unix-unixdhcpd-str-endpoint-notification-parameter](Ps/pC_unixunixdhcpdstrendpointnotificationparameter.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_unix_unix_dhcpd_Malware.md)    |
+|    [Ransomware](../../../UseCases/uc_ransomware.md)    |  app-login<br> ↳[unix-unixdhcpd-str-endpoint-notification-parameter](Ps/pC_unixunixdhcpdstrendpointnotificationparameter.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_unix_unix_dhcpd_Ransomware.md)    |
 [Next Page -->>](2_ds_unix_unix_dhcpd.md)
 
 MITRE ATT&CK® Framework for Enterprise

@@ -4,7 +4,7 @@ Product: EMC Isilon
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  136  |   52   |         26         |       7        |    4    |
+|  110  |   39   |         26         |       7        |    4    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

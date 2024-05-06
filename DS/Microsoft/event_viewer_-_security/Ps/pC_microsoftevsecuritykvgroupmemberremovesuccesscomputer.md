@@ -17,8 +17,8 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
       """"agent_hostname":"({host}[\w\-.]+)"""",
       """"computer":"({host}[\w\-.]+)"""",
-      """(?i)Computer_name(\\")?:(\\")?({host}[\w\-\.]+)"""
-      """(?i)(success|audit)\s+\w+\s+({host}[\w\-.]+)""",
+      """(?i)Computer_name(\\*")?:(\\*")?({host}[\w\-\.]+)"""
+      """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
       """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)""",
       """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing""",
       """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group""",
@@ -41,13 +41,14 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"task"+:"+({task_name}[^"]+)"""
       """"event_id\\?"+:({event_code}\d+)"""
       """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)"""
-      """"hostname"+:"+({host}[^"]+)"""
+      """"(?i)Hostname\\*"+:\\*"+({host}[\w\-.]+)"""
       """"keywords"+:\["+({result}[^"]+)"""
       """"pid"+:({process_id}\d+)"""
       """"os":[^@]+?"name":"({os}[^"]+)"""
       """"+activity_id"+:"+\{({activity_id}[^}]+)"""
       """"action"+:"+({action}[^"]+)"""
       """"+MemberSid\\?"+:\\?"+({account_id}[^"\\]+)"""
+      """ComputerName =({host}[\w\-.]+)"""
   ]
   DupFields = [
     "host->dest_host"

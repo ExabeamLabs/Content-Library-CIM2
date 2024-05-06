@@ -11,10 +11,10 @@ Name = microsoft-evapp-xml-configuration-modify-16028
 
 s-xml-events = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
-    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({host}[^<>]+)<""",
+    """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
+    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

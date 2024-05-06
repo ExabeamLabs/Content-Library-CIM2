@@ -28,7 +28,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """outcome":[^\]]*?"result":\s*"?(null|({outcome_result_at}[^\"]+))"?,"reason":\s*"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
     """destinationServiceName =({app}[^=]+?)\s*\w+=""",
     """({app}(?i)Okta|Microsoft Office 365)""",
     """"type":\s*"AppInstance"[^\}\]]*"displayName":\s*"({app}[^"]+?)\s*"""",
@@ -66,7 +66,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$.request.ipChain[:1].ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_regex="outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)""",
     """exa_regex="outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """exa_regex="outcome":[^\]]*?"result":\s*"?(null|({outcome_result_at}[^\"]+))"?,"reason":\s*"?(null|({outcome_reason_at}[^"]+))""",
+    """exa_regex="outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
     """exa_json_path=$.actor.displayName,exa_field_name=full_name,exa_match_expr=Contains($.actor.type,"User")""",
     """exa_json_path=$.actor.displayName,exa_field_name=app,exa_match_expr=Contains($.actor.type,"PublicClientApp")""",
     """exa_json_path=$.actor.alternateId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
@@ -88,7 +88,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="domain"+:"+(null|\.|({domain}[^"\/]+))""",
     """exa_regex=({app}(?i)Okta|Microsoft Office 365)""",
   ]
-  DupFields = ["outcome_reason_at->additional_info","operation->alert_name"]
+  DupFields = ["result_reason->additional_info","operation->alert_name"]
 
 
 }

@@ -25,7 +25,6 @@ Fields = [
 """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"

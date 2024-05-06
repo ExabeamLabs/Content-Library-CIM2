@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was unlocked)"""
-"""<Computer>({dest_host}({host}[\w\-.]+?))</Computer>"""
+"""<Computer>({host}[\w\-.]+?)</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>"""

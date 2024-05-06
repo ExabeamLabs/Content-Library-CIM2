@@ -31,7 +31,7 @@ Fields = [
 """"location".+?"city\":\"({location_city}[^\",]+)"""
 """"location".+?"state\":\"({location_state}[^\",]+)"""
 """"location".+?"countryOrRegion\":\"({country_code}[^\",]+)"""
-"""deviceDetail\".+?"displayName\":\"({src_host}[^\",]+?)\$?\s*\""""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 """conditionalAccessStatus\":\"(notApplied|({status}[^\",]+))\""""
 """\"clientAppUsed\":\"({object}[^\",]+)"""
 """\"resourceDisplayName\":\"({resource}[^\",]+)"""
@@ -40,7 +40,7 @@ Fields = [
 """userId\":\"({user_id}[^\"]+)"""
 """\"appId\":\"({app_id}[^\"]+)"""
 """\"deviceDetail\".+?"deviceId\":\"({device_id}[^\"]+)"""
-"""\"deviceDetail\":\{[^\}]+?\"displayName\":\"({device_name}[^\"]+?)\$?""""
+"""\"deviceDetail\":\{[^\}]*?\"displayName\":\"({device_name}[^\"]+?)\$?""""
 """\"deviceDetail\":\{[^\}]+?\"operatingSystem\":\"({os}[^\"]+)"""
 """\"deviceDetail\":\{[^\}]+?\"trustType\":\"({trust_type}[^\"]+)"""
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
@@ -48,7 +48,7 @@ Fields = [
 """"browser":"(|({browser}[^"]+))"""",
 """"riskState":"({action}[^"]+)"""
 ]
-DupFields = ["error_code->failure_code","device_name->src_host"]
+DupFields = ["error_code->failure_code"]
 ParserVersion = "v1.0.0"
 
 

@@ -19,7 +19,7 @@ Name = okta-amfa-cef-alert-trigger-success-passwordspraydetected
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"outcome":[^\]]*?"result"\s*:\s*"FAILURE","reason":"({failure_reason}[^"]+)""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"target":.+?"displayName"\s*:\s*"({object}[^"]+[^\s])"""",
     """"target":.+?"type"\s*:\s*"({object_type}[^"]+)"""",
     """({app}OKTA)""",

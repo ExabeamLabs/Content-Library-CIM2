@@ -4,14 +4,13 @@ Product: Alteon
 ---------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  20   |   7    |         5          |       2        |    1    |
+|  18   |   7    |         5          |       2        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
 | [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  authentication-failed<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br>    | T1133 - External Remote Services<br>    | [<ul><li>3 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_radware_alteon_Abnormal_Authentication_&_Access.md) |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  usb-insert<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br> | T1052.001 - Exfiltration Over Physical Medium: Exfiltration over USB<br>T1091 - Replication Through Removable Media<br> | [<ul><li>14 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_radware_alteon_Data_Leak.md)    |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  usb-insert<br> ↳[radware-alteon-str-app-notification-accessattempted](Ps/pC_radwarealteonstrappnotificationaccessattempted.md)<br> ↳[radware-alteon-str-app-notification-notsynchronized](Ps/pC_radwarealteonstrappnotificationnotsynchronized.md)<br> | T1052.001 - Exfiltration Over Physical Medium: Exfiltration over USB<br>T1091 - Replication Through Removable Media<br> | [<ul><li>13 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_radware_alteon_Data_Leak.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  authentication-failed<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br>    | T1078 - Valid Accounts<br>T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Lateral_Movement.md)    |
-|    [Malware](../../../UseCases/uc_malware.md)    |  authentication-failed<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Malware.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  authentication-failed<br> ↳[radware-alteon-str-app-login-fail-fromhost](Ps/pC_radwarealteonstrapploginfailfromhost.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_radware_alteon_Ransomware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise

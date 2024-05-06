@@ -4,6 +4,10 @@
 Name = fireeye-endpointsecurity-cef-alert-trigger-success-iochitfound
   ParserVersion = "v1.0.0"
   Conditions = [ """|fireeye|HX|""", """ categoryTupleDescription=""", """|IOC Hit Found|""" ]
+  Fields = ${FireEyeParsersTemplates.s-fireeye-hx-alert.Fields}[
+    """cs4Label=IOC Name.*?cs4=({alert_name}[^=]+?)\s\w+?="""
+    """cs4=({alert_name}[^=]+?)\s.*?cs4Label=IOC Name"""
+  ]
 
 s-fireeye-hx-alert = {
     Vendor = FireEye
@@ -15,7 +19,7 @@ s-fireeye-hx-alert = {
       """\|fireeye\|([^\|]*\|){2}({alert_type}.+?)\|""",
       """\|fireeye\|([^\|]*\|){3}({alert_name}.+?)\|""",
       """\|fireeye\|([^\|]*\|){4}({alert_severity}.+?)\|""",
-      """cs4=({alert_name}.+?)\s+(\w+=.+?\s+)""",
+      """cs4=({alert_name}.+?)\s+\w+=""",
       """\WexternalId=({alert_id}\d+)""",
       """\Wdntdom=(?:NA|({domain}.+?))(\s+\w+=|\s*$)""",
       """\Wdst=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

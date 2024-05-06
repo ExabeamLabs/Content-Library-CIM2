@@ -9,23 +9,22 @@ Conditions = [
 """Account That Was Locked Out"""
 ]
 Fields = [
-"""hostname=({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+)),\s*\w+="""
-""""agent_hostname":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))""""
-"""computer":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))""""
+"""hostname=({host}[\w.\-]+),\s*\w+="""
+""""agent_hostname":"({host}[\w.\-]+)""""
+"""computer":"({host}[\w.\-]+)""""
 """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({host}[\w\-.]+)\s"""
-"""<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s"""
 """({event_name}A user account was locked out)"""
 """TimeGenerated=({time}\d{10})"""
 """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_code}4740)"""
-"""(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s"""
-"""({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))"""
-"""(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\/Microsoft-Windows-Security-Auditing \(4740\)"""
-""""dhn":"(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^-"]+))"""
-"""Computer : (::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))"""
-"""Computer(\w+)?["\s]*(:|=)\s*"?(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))("|\s)"""
-""""system_name":"(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))""""
+"""(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(::ffff:)?({host}[\w.\-]+)\s"""
+"""({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}[\w.\-]+)"""
+"""(::ffff:)?({host}[\w.\-]+)\/Microsoft-Windows-Security-Auditing \(4740\)"""
+""""dhn":"(::ffff:)?({host}[^-"]+)"""
+"""Computer : (::ffff:)?({host}[\w.\-]+)"""
+"""Computer(\w+)?["\s]*(:|=)\s*"?(::ffff:)?({host}[\w.\-]+)("|\s)"""
+""""system_name":"(::ffff:)?({host}[\w.\-]+)""""
 """Security,?(\srn=|\s+)?({event_id}\d+)"""
 """Subject:.+?Account Name:(\\t|\\r|\\n|\s)*({src_user}[^:]+?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*(?=\w)({src_domain}[^:]+?)(\\t|\\r|\\n|\s)*Logon ID:(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*"""
 """Locked Out:\s+Security ID:\s*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Account Name:\s*(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Additional""",
@@ -39,7 +38,6 @@ Fields = [
 """\W__li_source_path="({host}[\w\.-]+)"""",
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"

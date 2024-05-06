@@ -27,9 +27,6 @@ Fields = [
 """\WACCOUNT_NAME\s*=\s*(null|({src_user}[^\s]+))"""
 """\WACCOUNT_DOMAIN\s*=\s*(null|({src_domain}[^\s]+))"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

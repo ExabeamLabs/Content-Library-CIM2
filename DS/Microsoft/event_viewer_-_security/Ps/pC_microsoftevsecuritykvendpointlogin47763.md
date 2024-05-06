@@ -29,7 +29,7 @@ windows-events-wls= {
     """SubjectUserName ="+(-|({user}[\w\.\-]{1,40}\$?))"""",
     """ObjectServer="+({object_server}[^"]+)"""",
     """ProcessId="+({process_id}[^"]+)"""",
-    """Computer="+({dest_host}[\w\-.]+)"""",
+    """Computer="+({host}[\w\-.]+)"""",
     """TargetDomainName ="+(-|({dest_domain}[^"]+))"""",
     """TargetUserName ="+(-|({dest_user}[^"]+))"""",
     """TargetLogonId="+({dest_user_sid}[^"]+)"""",
@@ -45,7 +45,6 @@ windows-events-wls= {
     """KeyLength="({key_length}\d+)"""",
     """AuthenticationPackageName ="({auth_package}[^"]+)"""",
     """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
-    ]
-    DupFields = [ "dest_host->host" 
+    
 }
 ```

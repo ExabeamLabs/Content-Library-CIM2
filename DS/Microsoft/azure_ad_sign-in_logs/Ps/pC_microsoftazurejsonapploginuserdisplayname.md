@@ -29,6 +29,7 @@ Fields = [
 """authenticationMethod"*:"*({auth_method}[^"]+)""""
 """"+location"+:(\{"+geoCoordinates"+:\{\}\}|({additional_info}\{.*?\}))"""
 """"+result"+:"+({result}[^"]+)"+"""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 ]
 ParserVersion = "v1.0.0"
 

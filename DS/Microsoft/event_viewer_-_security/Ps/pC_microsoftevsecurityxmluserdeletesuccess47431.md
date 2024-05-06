@@ -9,7 +9,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
 Conditions = [ """<EventID>4743</EventID>"""  ,"""<Provider Name""","""'Microsoft-Windows-Security-Auditing"""]
 Fields = [
   """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-  """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+  """<Computer>({host}[\w\-.]+)</Computer>""",
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
   """<EventID>({event_code}\d+)""",

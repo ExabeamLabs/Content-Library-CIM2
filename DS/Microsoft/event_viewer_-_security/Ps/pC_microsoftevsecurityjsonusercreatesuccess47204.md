@@ -21,7 +21,6 @@ Fields = [
   """"1":"({account_domain}[^"]+)"""
 ]
 DupFields = [
-  "host->dest_host",
   "account_name->dest_user"
 ]
 ParserVersion = "v1.0.0"

@@ -4,7 +4,7 @@ Product: RSA Authentication Manager
 -----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  49   |   17   |         5          |       5        |   18    |
+|  48   |   17   |         5          |       5        |   18    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

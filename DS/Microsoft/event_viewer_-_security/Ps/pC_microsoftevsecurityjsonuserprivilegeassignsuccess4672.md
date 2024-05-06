@@ -10,7 +10,7 @@ Fields = [
   """({event_name}Special privileges assigned to new logon)""",
   """"EventReceivedTime":\s*({time}\d+)""",
   """"created":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  """"Computer":"({host}[\w\-.]+)"""",
+  """"Computer":"({host}({src_host}[\w\-.]+))"""",
   """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """"(Hostname|MachineName)":"({host}[\w\-.]*)""",
@@ -21,9 +21,6 @@ Fields = [
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"PrivilegeList":"(-|({privileges}[^"]*))""",
   """"Keywords":"({result}[^\"]+)"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

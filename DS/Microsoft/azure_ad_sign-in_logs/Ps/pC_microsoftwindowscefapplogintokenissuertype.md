@@ -32,7 +32,7 @@ Fields = [
 """"resourceId":\s*"({resource}[^"]+)""""
 """"(app|resource)DisplayName":\s*"({resource}[^"]+)""""
 """"resultType":\s*"({error_code}\d+)""""
-"""deviceDetail":\s*\{[^\}]+?displayName":\s*"({src_host}[\w\-.]+)""""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 """userId":\s*"({user_id}[^"]+)""""
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """"riskLevelAggregated":\s*"(none|({severity}[^"]+))""""
@@ -53,7 +53,7 @@ Fields = [
 """exa_regex="countryOrRegion":"({country_code}[^"]+)"""",
 """exa_json_path=$.properties.appDisplayName,exa_field_name=resource""",
 """exa_json_path=$.resultType,exa_field_name=error_code""",
-"""exa_regex=deviceDetail":\{[^\}]+?displayName":"({src_host}[^"]+)""""
+"""exa_regex=deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 """exa_json_path=$.properties.userId,exa_field_name=user_id""",
 """exa_regex="riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """exa_json_path=$.category,exa_field_name=category"""

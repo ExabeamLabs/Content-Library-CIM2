@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-4672-3
       """"Privileges":"({privileges}[^"]+)"""
       """({event_code}4672)"""
     ]
-    DupFields = [ "host->dest_host" ]
   
 
 }

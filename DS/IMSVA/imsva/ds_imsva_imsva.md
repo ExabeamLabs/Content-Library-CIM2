@@ -4,11 +4,11 @@ Product: IMSVA
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  40   |   18   |         3          |       3        |    0    |
+|  37   |   16   |         3          |       3        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[imsva-i-str-email-send-success-queuedas](Ps/pC_imsvaistremailsendsuccessqueuedas.md)<br>    | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>35 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_imsva_imsva_Data_Leak.md)          |
+|    [Data Leak](../../../UseCases/uc_data_leak.md)    |  dlp-email-alert-out<br> ↳[imsva-i-str-email-send-success-queuedas](Ps/pC_imsvaistremailsendsuccessqueuedas.md)<br>    | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>32 Rules</li></ul><ul><li>15 Models</li></ul>](RM/r_m_imsva_imsva_Data_Leak.md)          |
 |    [Malware](../../../UseCases/uc_malware.md)    |  dlp-email-alert-in<br> ↳[imsva-i-str-email-receive-success-sent](Ps/pC_imsvaistremailreceivesuccesssent.md)<br><br> dlp-email-alert-out<br> ↳[imsva-i-str-email-send-success-queuedas](Ps/pC_imsvaistremailsendsuccessqueuedas.md)<br>    | T1190 - Exploit Public Fasing Application<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_imsva_imsva_Malware.md)    |
 |    [Phishing](../../../UseCases/uc_phishing.md)    |  dlp-email-alert-out<br> ↳[imsva-i-str-email-send-success-queuedas](Ps/pC_imsvaistremailsendsuccessqueuedas.md)<br>    | T1048.003 - Exfiltration Over Alternative Protocol: Exfiltration Over Unencrypted/Obfuscated Non-C2 Protocol<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_imsva_imsva_Phishing.md)    |
 |      [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)      |  dlp-email-alert-in<br> ↳[imsva-i-str-email-receive-success-sent](Ps/pC_imsvaistremailreceivesuccesssent.md)<br><br> dlp-email-alert-in-failed<br> ↳[imsva-i-str-email-receive-fail-quarantinetransac](Ps/pC_imsvaistremailreceivefailquarantinetransac.md)<br><br> dlp-email-alert-out<br> ↳[imsva-i-str-email-send-success-queuedas](Ps/pC_imsvaistremailsendsuccessqueuedas.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_imsva_imsva_Privilege_Abuse.md)    |

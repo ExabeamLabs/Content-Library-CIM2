@@ -30,7 +30,7 @@ Fields = [
   """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:"""
   """Access Check Results:\s*({result}-)\s"""
   """Access Check Results:.*({result}Granted|Denied)\s+by"""
-  """Source Port(=|:)\s*[\\rnt]*({src_port}\d+)"""
+  """Source Port(=|:)\s*((?-i)\\+[rnt])*({src_port}\d+)"""
 ]
 DupFields = [
   "host->dest_host"

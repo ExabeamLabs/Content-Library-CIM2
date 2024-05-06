@@ -4,7 +4,7 @@ Product: Event Viewer - AzureADPasswordProtection-DCAgent
 ---------------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  105  |   32   |         25         |       8        |   14    |
+|  97   |   27   |         25         |       8        |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

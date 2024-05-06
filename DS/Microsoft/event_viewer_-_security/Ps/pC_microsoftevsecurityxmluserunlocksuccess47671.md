@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({event_name}A user account was unlocked)"""
 """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
+"""<Computer>({host}[\w\-.]+)</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<EventID>({event_code}\d+)</EventID>"""
 """Subject:[\s\S]*?Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""

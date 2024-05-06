@@ -4,7 +4,7 @@ Product: Salesforce
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  174  |   77   |         16         |       8        |   52    |
+|  159  |   68   |         16         |       8        |   52    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

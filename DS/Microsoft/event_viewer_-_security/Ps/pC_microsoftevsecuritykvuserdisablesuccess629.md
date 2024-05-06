@@ -21,9 +21,6 @@ Fields = [
 """Target Account Name:\s+({dest_user}.+?)\s+Target Domain:\s+({dest_domain}.+?)\s+Target Account ID:.*?({dest_user_sid}[\w\-\d]+)\}?\s+Caller User Name"""
 """Caller User Name:\s+(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+(?=\w)({domain}.+?)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

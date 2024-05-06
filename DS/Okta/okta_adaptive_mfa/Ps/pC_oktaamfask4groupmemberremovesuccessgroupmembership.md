@@ -19,7 +19,7 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """"eventType":"({operation_details}({event_code}[^"]+))"""",
     """"result":"({result}[^"]t+)""""
     """"legacyEventType":\s*"({operation}[^"]+)""""
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))"""
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))"""
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""
     """"os":\s*"({os}[^"]+)""""
     """exa_json_path=$.published,exa_field_name=time""",
@@ -34,7 +34,7 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """exa_json_path=$.eventType,exa_field_name=event_code""",
     """exa_json_path=$.legacyEventType,exa_field_name=operation,exa_match_expr=!Contains($.legacyEventType,"null")""",
     """exa_json_path=$.outcome.result,exa_field_name=result""",
-    """exa_regex=outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))"""
+    """exa_regex=outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))"""
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",
     """exa_json_path=$.client.userAgent.os,exa_field_name=os"""
   ]

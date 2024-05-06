@@ -34,6 +34,7 @@ json-sentinelone-edr-events = {
     Vendor = SentinelOne
     Product = "Singularity Platform"
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    ExtractionType = json
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
@@ -46,18 +47,17 @@ json-sentinelone-edr-events = {
       """"src\.process\.pid":({process_id}\d+)""",
       """"src\.process\.cmdline":"({process_command_line}.+?)",""",
       """"account\.id":"({account_id}[^"]+)""",
-
-      """exa_json_path=$.timestamp,exa_field_name=time""",
-      """exa_json_path=$.['event.type'],exa_field_name=event_name""",
-      """exa_json_path=$.['endpoint.name'],exa_field_name=host""",
-      """exa_json_path=$.['task.path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))$""",
-      """exa_json_path=$.['src.process.name'],exa_field_name=process_name""",
-      """exa_json_path=$.['endpoint.os'],exa_field_name=os""",
-      """exa_json_path=$.['event.category'],exa_field_name=additional_info""",
-      """exa_json_path=$.['endpoint.type'],exa_field_name=host_type""",
-      """exa_json_path=$.['src.process.pid'],exa_field_name=process_id""",
-      """exa_json_path=$.['src.process.cmdline'],exa_field_name=process_command_line""",
-      """exa_json_path=$.['account.id'],exa_field_name=account_id"""
+      """exa_json_path=$..timestamp,exa_field_name=time""",
+      """exa_json_path=$..['event.type'],exa_field_name=event_name""",
+      """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
+      """exa_regex="task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
+      """exa_json_path=$..['src.process.name'],exa_field_name=process_name""",
+      """exa_json_path=$..['endpoint.os'],exa_field_name=os""",
+      """exa_json_path=$..['event.category'],exa_field_name=additional_info""",
+      """exa_json_path=$..['endpoint.type'],exa_field_name=host_type""",
+      """exa_json_path=$..['src.process.pid'],exa_field_name=process_id""",
+      """exa_json_path=$..['src.process.cmdline'],exa_field_name=process_command_line""",
+      """exa_json_path=$..['account.id'],exa_field_name=account_id"""
     
 }
 ```

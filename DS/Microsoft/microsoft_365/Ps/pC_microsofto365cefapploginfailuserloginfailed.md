@@ -10,6 +10,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"LogonError":"({failure_reason}[^"]+)""",
     """"Operation":"UserLogin({result}[^"]+)""",
     """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
+    """"Operation":"({operation}[^"]+)""",
     """"ErrorNumber":"({error_code}\d+)"""",
     """"OS.*?Value":"({os}[^"]+)|"Value":"({=os}[^"]+)","Name":"OS"""",
     """"BrowserType.*?Value":"({browser}[^"]+)|"Value":"({=browser}[^"]+)","Name":"BrowserType"""",

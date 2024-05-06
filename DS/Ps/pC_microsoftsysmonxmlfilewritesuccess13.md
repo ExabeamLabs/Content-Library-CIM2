@@ -5,13 +5,13 @@ Name = "microsoft-sysmon-xml-file-write-success-13"
 Conditions = [
   """<EventID>13</EventID>"""
   """<Provider Name"""
-  """'Microsoft-Windows-Sysmon'"""
+  """<Execution ProcessID="""
 ]
 ParserVersion = "v1.0.0"
 
 json-windows-events-1.Fields}[
     """({event_name}A user account was disabled)""",
-    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[^"]+))""",
+    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({host}[^"]+))""",
   
 }
 ```

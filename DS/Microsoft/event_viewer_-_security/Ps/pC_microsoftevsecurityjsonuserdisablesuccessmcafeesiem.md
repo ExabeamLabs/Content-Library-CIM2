@@ -22,9 +22,6 @@ Fields = [
   """"Source_Logon_ID":"({login_id}[^"]+)"""
   """"UserIDDst":"({dest_user}[^"]+)"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

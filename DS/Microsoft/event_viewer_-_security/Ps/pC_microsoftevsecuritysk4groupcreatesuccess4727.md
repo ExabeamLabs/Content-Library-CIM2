@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-sk4-group-create-success-4727
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
     """({event_name}A security-enabled global group was created)""",
 # sam_account_name is removed
-    """tGroup Name:(\\[trn])+({group_name}[^:]+?)\\[trn]"""
+    """tGroup Name:((?-i)\\+[rnt])*({group_name}[^:\\",]+)((?-i)\\+[rnt])*"""
 
   ]
 

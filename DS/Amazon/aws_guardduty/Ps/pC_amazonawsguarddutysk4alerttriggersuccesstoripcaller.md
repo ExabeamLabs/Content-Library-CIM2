@@ -20,16 +20,16 @@ json-aws-guardduty-security-alert-template = {
       """"description":\s*"({additional_info}[^"]+?)"""",
       """"accountId":\s*"({account_id}[^"]+?)","""
       """domain":"({domain}[^"]+)"""",
-      """resource":[^}]+principalId":\s*"([^},]+?(:({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?)"""",
-      """resource":[^}]+"userName":\s*"({user}[\w\.-]{1,99}\$?)"""",
+      """resource":[^}]+principalId":\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"""",
+      """resource":[^}]+"userName":\s*"({aws_user}({user}[\w\.-]{1,99}\$?))"""",
       """resource":[^}]+"userType":\s*"({user_type}[^},]+?)"""",
-      """key":"PrincipalId","value":"([^:]+:)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """key":"PrincipalId","value":"([^:]+:)?({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
       """"resourceType":\s*"({resource_type}[^"]+)"""",
       """s3BucketDetails:\s*\[\{Arn:\s*({object}[^,]+),Name:""",
       """"service".*?"action".*?"portProbeAction".*?"portProbeDetails".*?"localPortDetails".*?"port":"({dest_port}\d+)"""",
       """"instanceId":"({instance_id}[^"]+)"""",
       """"city":\{"cityName":"((?i)UNKNOWN|({location_city}[^"]+))""""
-      """\ssuser=(|Anonymous|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",
+      """\ssuser=(|Anonymous|({aws_user}({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$))""",
       """"service".*?"action".*?"networkConnectionAction.*?({result}"blocked":"*(false|true))"""
       """"accountId":"({aws_account}\d+)"""
       """\srequestClientApplication=({app}\S+)""",
@@ -39,8 +39,8 @@ json-aws-guardduty-security-alert-template = {
       """"service".*?"action".*?"portProbeAction".*?"portProbeDetails".*?"localPortDetails".*?"port":"({dest_port}\d+)"""",
       """"service".*?"action".*?"networkConnectionAction".*?"localPortDetails".*?"port":({dest_port}\d+)"""
       """"id":"({alert_id}[^"]+?)"""",
-      """"userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
-      """"key":"ProductOwner","value":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+      """"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""""
+      """"key":"ProductOwner","value":"({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
       """"accessKeyId":"({key_id}[^"]+?)""""
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
       """exa_json_path=$.updatedAt,exa_field_name=time"""
@@ -54,7 +54,7 @@ json-aws-guardduty-security-alert-template = {
       """exa_json_path=$.region,exa_field_name=region""",
       """exa_json_path=$.resource.accessKeyDetails.userType,exa_field_name=user_type"""
       """exa_json_path=$.readOnly,exa_field_name=readonly""",
-      """exa_regex="userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+      """exa_regex="userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""",
       """exa_json_path=$.eventName,exa_field_name=event_name""",
       """exa_json_path=$.destinationServiceName,exa_field_name=app""",
       """exa_json_path=$.userAgent,exa_field_name=user_agent""",

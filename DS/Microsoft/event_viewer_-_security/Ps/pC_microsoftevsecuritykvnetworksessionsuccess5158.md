@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-network-session-success-5158
     """Protocol:\s*({ms_protocol_num}\d+)"""
     """Layer Name:\s*({layer_name}.*?)\s*Layer Run-Time ID"""
   ]
-  DupFields = [ "host->dest_host", "ms_protocol_num->protocol" ]
+  DupFields = [ "host->src_host", "ms_protocol_num->protocol" ]
 
 
 }

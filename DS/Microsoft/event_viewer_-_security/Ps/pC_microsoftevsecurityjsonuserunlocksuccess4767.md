@@ -35,9 +35,6 @@ Fields = [
 """exa_json_path=$.TargetUserName,exa_field_name=dest_user"""
 """exa_json_path=$.TargetSid,exa_field_name=dest_user_sid"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

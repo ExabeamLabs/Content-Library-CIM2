@@ -21,7 +21,6 @@ Fields = [
 """"1":"({src_host}[^\"]*)"""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"

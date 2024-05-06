@@ -11,7 +11,7 @@ amazon-system-info = {
       TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
       Fields = [
         """"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s""",
-        """\):({user}[\w\.\-]{1,40}\$?)@""",
+        """\):({aws_user}({user}[\w\.\-]{1,40}\$?))@""",
         """table\s*\\?"({table_name}[^\\"]+)"""
       ]
     

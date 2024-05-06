@@ -13,12 +13,12 @@ Conditions = [
 Fields = [
   """({event_name}Special privileges assigned to new logon)"""
   """\scategoryOutcome=(|/({result}.+?))(\s+\w+=|\s*$)"""
-  """\"(?:winlog\.)?computer_name\\*\":\\*\"({dest_host}({host}[\w\-.]+))"""
+  """\"(?:winlog\.)?computer_name\\*\":\\*\"({src_host}({host}[\w\-.]+))"""
   """@timestamp\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """Type\s*=\s*\"({result}[^\";]+)\""""
   """Keywords=({result}.+?);?\s*(\w+=)"""
-  """<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
-  """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+))"""
+  """<Computer>({src_host}({host}[\w\-.]+))</Computer>"""
+  """Computer(\w+)?[\"\s]*(:|=)\s*\"?({src_host}({host}[\w\-.]+))"""
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}4672)"""
   """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",

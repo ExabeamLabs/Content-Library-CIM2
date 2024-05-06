@@ -92,7 +92,8 @@ paloalto-vpn = {
     """exa_json_path=$.event.Application,exa_field_name=network_app"""
     """exa_json_path=$.event.FromZone,exa_field_name=src_network_zone"""
     """exa_json_path=$.event.ToZone,exa_field_name=dest_network_zone"""
-
+    """exa_json_path=$.Rule,exa_field_name=rule"""
+    """exa_json_path=$.ThreatName,exa_field_name=alert_name"""
   
 }
 ```

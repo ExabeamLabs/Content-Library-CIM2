@@ -28,7 +28,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-success-4776-2"
     """Computer_name\s*:\s*({host}[\w\-.]+)"""
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """Source Workstation(:|=)([\s\\]+|(\s*\\*((({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?)|({src_host}.+?))[\s;]*))Error Code(:|=)"""
-    """Logon Account:\s*((\\)[rnt])*({account}[^\s].+?)\s*(\\r\s)?Source Workstation:"""
+    """Logon Account:\s*((?-i)\\+[rnt])*({account}[^\s].+?)\s*(\\r\s)?Source Workstation:"""
     """Source Workstation:\s*({src_host}[^\s]+?)\s(\\r\s)?Error Code:"""
     """Computer(Name)?\s*(:|=)\s*[^.\s]+(\.({domain}[^\s]+))?"""
   ]

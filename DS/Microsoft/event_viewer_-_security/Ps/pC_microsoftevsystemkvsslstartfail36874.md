@@ -14,11 +14,11 @@ Name = microsoft-evsystem-kv-ssl-start-fail-36874
 windows-events = {
   Vendor = Microsoft
   Product = Windows
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)('|")""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",

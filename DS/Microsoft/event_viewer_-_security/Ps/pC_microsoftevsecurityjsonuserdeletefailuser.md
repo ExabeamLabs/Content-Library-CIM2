@@ -23,7 +23,6 @@ Fields = [
 """"UserIDDst":"({user}[\w\.\-]{1,40}\$?)"""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 ]
 ParserVersion = "v1.0.0"

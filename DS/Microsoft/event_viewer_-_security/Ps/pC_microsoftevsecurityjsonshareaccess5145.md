@@ -20,14 +20,14 @@ Fields = [
 """TimeGenerated=({time}\d{10})"""
 """Microsoft-Windows-Security-Auditing.+?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)"""
-"""Logon ID:\s*((\\)[rnt])*({login_id}\S+?)((\\)[rnt])*\s*Network Information:"""
-"""Account Name:\s*((\\)[rnt])*({user}[\w\.\-]{1,40}\$?)((\\)[rnt])*\s*Account Domain:"""
-"""Account Domain:\s*((\\)[rnt])*({domain}\S+?)((\\)[rnt])*\s*Logon ID:"""
-"""Object Type:\s*((\\)[rnt])*({file_type}.+?)((\\)[rnt])*\s*Source Address:"""
-"""Source Address:\s*((\\)[rnt])*(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)((\\)[rnt])*\s*Source Port:"""
-"""Share Name:\s*((\\)[rnt])*(?:\\\\\*\\)?\s*({share_name}.+?)((\\)[rnt])*\s*Share Path:""",
-"""Share Path:\s*((\\)[rnt])*(?:[\\\?]+)?(?:\s*|\s*({share_path}\s*(({d_parent}.+?)\\)?\s*(|({d_name}[^\\]*?)))\\?)((\\)[rnt])*\s*Relative Target Name:""",
-"""Relative Target Name:\s*((\\)[rnt])*\\?(?:\s*|(?:({file_dir}.+?)\\)?\s*(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.\s\\]+?))?))(?:\\HEAD|:.+?|\\|\s|((\\)[rnt])*)\s*)Access Request Information:""",
+"""Logon ID:\s*((?-i)\\+[rnt])*({login_id}\S+?)((?-i)\\+[rnt])*\s*Network Information:"""
+"""Account Name:\s*((?-i)\\+[rnt])*({user}[\w\.\-]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:"""
+"""Account Domain:\s*((?-i)\\+[rnt])*({domain}\S+?)((?-i)\\+[rnt])*\s*Logon ID:"""
+"""Object Type:\s*((?-i)\\+[rnt])*({file_type}.+?)((?-i)\\+[rnt])*\s*Source Address:"""
+"""Source Address:\s*((?-i)\\+[rnt])*(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)((?-i)\\+[rnt])*\s*Source Port:"""
+"""Share Name:\s*((?-i)\\+[rnt])*(?:\\\\\*\\)?\s*({share_name}.+?)((?-i)\\+[rnt])*\s*Share Path:""",
+"""Share Path:\s*((?-i)\\+[rnt])*(?:[\\\?]+)?(?:\s*|\s*({share_path}\s*(({d_parent}.+?)\\)?\s*(|({d_name}[^\\]*?)))\\?)((?-i)\\+[rnt])*\s*Relative Target Name:""",
+"""Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}.+?)\\)?\s*(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.\s\\]+?))?))(?:\\HEAD|:.+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:""",
 """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:"""
 """Access Check Results:\s*({result}-)\s"""
 """Access Check Results:.*({result}Granted|Denied)\s+by"""

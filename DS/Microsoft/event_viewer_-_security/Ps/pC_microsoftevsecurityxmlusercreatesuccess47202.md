@@ -11,7 +11,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720-2"
   ]
   Fields = [
 """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-"""<Computer>({dest_host}({host}[\w\-.]+))<""",
+"""<Computer>({host}[\w\-.]+)<""",
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """({event_code}4720)""",
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({account_id}[^<]+))<""",

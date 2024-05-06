@@ -29,7 +29,7 @@ Fields = [
 """"+identity"+:"+({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?""""
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """"+location"+:(\{"+geoCoordinates"+:\{\}\}|({additional_info}\{.*?\}))"""
-"""deviceDetail":\{[^\}]+?displayName":"({src_host}[\w\-.]+)""""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 """"resourceId":\s*"({resource}[^"]+)""""
 """"(app|resource)DisplayName":"({resource}[^"]+)""""
 """"resultType":\s*"({error_code}\d+)""""
@@ -73,7 +73,7 @@ Fields = [
 """exa_json_path=$.properties.riskLevelAggregated,exa_field_name=severity,exa_match_expr=!Contains($.properties.riskLevelAggregated,"none")""",
 """exa_regex="riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes"""",
 """exa_regex="location":(\{"geoCoordinates":\{\}\}|({additional_info}\{.*?\}))""",
-"""exa_regex=deviceDetail":\{[^\}]+?displayName":"({src_host}[^"]+)"""",
+"""exa_regex=deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\"""",
 """exa_regex=TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""",
 """exa_regex="resourceId":\s*"({resource}[^"]+)"""",
 """exa_regex="(app|resource)DisplayName":"({resource}[^"]+)"""",

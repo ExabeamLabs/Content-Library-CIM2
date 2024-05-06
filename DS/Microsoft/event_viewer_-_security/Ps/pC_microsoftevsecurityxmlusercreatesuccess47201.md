@@ -13,7 +13,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720-1"
   Fields = [
     """({event_name}A user account was created)""",
     """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+    """<Computer>({host}[\w\-.]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """Subject:.+?Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*New Account:""",

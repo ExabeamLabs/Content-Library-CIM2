@@ -41,7 +41,7 @@ s-okta-app-login = {
     """"actor":\s*\{[^\{\}]*?"alternateId":\s*"(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({=user}[\w\.\-]{1,40}\$?))"""",
     """"userName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"outcome":\s*\{[^\{\}]*?"result":\s*"({result}[^"]+)""",
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"displayMessage":\s*"({operation}[^"]+)"""",
     """"displayMessage"\s*:\s*"((?i)null|({event_name}[^",]+))""",
     """"city":\s*"({location_city}[^"]+)""",
@@ -79,8 +79,8 @@ s-okta-app-login = {
     """exa_json_path=$.eventType,exa_field_name=operation_details""",
     """exa_json_path=$.legacyEventType,exa_field_name=operation""",
     """exa_json_path=$.debugContext.debugData.dtHash,exa_field_name=hash_sha256""",
-    """exa_json_path=$.outcome.result,exa_field_name=outcome_result_at,exa_match_expr=!Contains(toLower($.outcome.result),"null")"""
-    """exa_json_path=$.outcome.reason,exa_field_name=outcome_reason_at,exa_match_expr=!Contains(toLower($.outcome.reason),"null")"""
+    """exa_json_path=$.outcome.result,exa_field_name=result,exa_match_expr=!Contains(toLower($.outcome.result),"null")"""
+    """exa_json_path=$.outcome.reason,exa_field_name=result_reason,exa_match_expr=!Contains(toLower($.outcome.reason),"null")"""
     """exa_json_path=$.displayMessage,exa_field_name=event_name"""
    ] 
  },
@@ -116,7 +116,7 @@ s-okta-app-login = {
     """"login":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""""
     """requestUri":\s*"({request_uri}[^"]+?)\s*"""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
     """"dtHash":"({hash_sha256}[^"]+)""""
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""
@@ -144,7 +144,7 @@ s-okta-app-login = {
     """exa_regex="actor"+:[^\}]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\.\-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*))|({=user}[\w\.\-]{1,40}\$?)))"""",
     """exa_json_path=$.debugContext.debugData.requestUri,exa_field_name=request_uri""",
     """exa_json_path=$.outcome.result,exa_field_name=result""",
-    """exa_regex="outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """exa_regex="outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """exa_json_path=$.target[1:].detailEntry.methodTypeUsed,exa_field_name=auth_method""",
     """exa_json_path=$.debugContext.debugData.dtHash,exa_field_name=hash_sha256""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",

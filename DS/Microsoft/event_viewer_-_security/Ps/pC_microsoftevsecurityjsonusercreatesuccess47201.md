@@ -61,7 +61,6 @@ Fields = [
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))$"""
 ]
-DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
 

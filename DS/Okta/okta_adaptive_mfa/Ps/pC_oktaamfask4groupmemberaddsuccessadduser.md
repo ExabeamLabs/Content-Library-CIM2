@@ -22,7 +22,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """"target(s)?":[^\]]+?"displayName":"({member}[^",]+)[^\]\}]+?("type":"User")?"""
     """"eventType":\s*"({operation_details}[^"]+)""""
     """"legacyEventType":\s*"({operation}[^"]+)""""
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""
     """"os":\s*"({os}[^"]+)""""
     """"displayMessage"\s*:\s*"((?i)null|({event_name}[^",]+))"""
@@ -33,7 +33,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """exa_json_path=$.target[1:].displayName,exa_field_name=member,exa_match_expr=Contains($.target.type,"User")""",
     """exa_json_path=$.eventType,exa_field_name=operation_details""",
     """exa_json_path=$.legacyEventType,exa_field_name=operation,exa_match_expr=!Contains($.legacyEventType,"null")""",
-    """exa_regex="outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """exa_regex="outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",
     """exa_json_path=$.client.userAgent.os,exa_field_name=os""",
     """exa_json_path=$.displayMessage,exa_field_name=event_name"""

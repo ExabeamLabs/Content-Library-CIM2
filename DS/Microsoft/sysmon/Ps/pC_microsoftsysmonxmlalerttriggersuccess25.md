@@ -5,10 +5,10 @@ Name = microsoft-sysmon-xml-alert-trigger-success-25
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<Provider Name""","""'Microsoft-Windows-Sysmon'""", """<EventID>25</EventID>""", """<Data Name ='Image'>""","""Process Tampering""" ]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  Conditions = [ """<Provider Name""", """<EventID>25</EventID>""" ]
   Fields = [
-    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
     """<Computer>({dest_host}({host}[\w\-.]+))""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}25)""",

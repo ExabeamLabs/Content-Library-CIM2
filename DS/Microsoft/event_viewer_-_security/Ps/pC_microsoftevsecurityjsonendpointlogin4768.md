@@ -27,7 +27,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768"
     """"TicketEncryptionType":"({ticket_encryption_type}[^"]+)"""
     """"ServiceName":"({service_name}[^"]+)""",
     """"PreAuthType":"({auth_type}[^"]+)"""",
-    """Account Name:((\\)[rnt])*\s*({account}.+?)((\\)[rnt])*Supplied Realm"""
+    """Account Name:((?-i)\\+[rnt])*\s*({account}.+?)((?-i)\\+[rnt])*Supplied Realm"""
     """exa_json_path=$.EventTime,exa_field_name=time"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
@@ -40,7 +40,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768"
     """exa_json_path=$.TicketEncryptionType,exa_field_name=ticket_encryption_type"""
     """exa_json_path=$.ServiceName,exa_field_name=service_name"""
     """exa_json_path=$.PreAuthType,exa_field_name=auth_type"""
-    """exa_regex=Account Name:((\\)[rnt])*\s*({account}.+?)((\\)[rnt])*Supplied Realm"""
+    """exa_regex=Account Name:((?-i)\\+[rnt])*\s*({account}.+?)((?-i)\\+[rnt])*Supplied Realm"""
     """exa_regex=({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""
   ]
 

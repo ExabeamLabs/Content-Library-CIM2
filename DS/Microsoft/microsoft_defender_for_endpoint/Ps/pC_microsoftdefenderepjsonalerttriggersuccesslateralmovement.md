@@ -56,6 +56,7 @@ json-microsoft-security-events-1 = {
       """exa_json_path=$.severity,exa_field_name=alert_severity"""
       """exa_json_path=$.category,exa_field_name=alert_type"""
       """exa_json_path=$.description,exa_field_name=additional_info"""
+      """exa_json_path=$.createdDateTime,exa_field_name=time""",
       """exa_regex="createdDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})"""
       """exa_regex="firstActivity":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,7}?Z)"""
       """exa_regex="firstEventTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""""

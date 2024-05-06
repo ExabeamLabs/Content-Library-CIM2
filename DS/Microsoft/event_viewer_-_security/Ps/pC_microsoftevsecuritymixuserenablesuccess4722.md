@@ -25,7 +25,7 @@ Fields = [
 """({event_code}4722)"""
 """Security(,|\srn=|\s+)({event_id}\d+)"""
 """\"TargetAccount\":\"(({dest_domain}[^\\\s\"]+)\\+)?({dest_user}[^\\\s\"]+)"""
-"""Account Name:\s*\\?({user}[\w\.\-]{1,40}\$?)[\\rnt]*\s*Account Domain:\s*({domain}[^\s\\]+).+?Logon ID:\s*({login_id}[^\\\s]+)[\\rnt]*\s*Target.+?Account Name:\s*({dest_user}[^\\\s]+)[\\rnt]*\s*Account Domain:\s*({dest_domain}[^\s\"]+)"""
+"""Account Name:\s*\\?({user}[\w\.\-]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:\s*({domain}[^\s\\]+).+?Logon ID:\s*({login_id}[^\\\s]+)((?-i)\\+[rnt])*\s*Target.+?Account Name:\s*({dest_user}[^\\\s]+)((?-i)\\+[rnt])*\s*Account Domain:\s*({dest_domain}[^\s\"]+)"""
 """Account Name:(\\t|\\r|\\n|\s)*({user}[\w\.\-]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*({domain}[^\s"\\]+)(\\t|\\r|\\n|\s)*Logon ID:(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*Target.+?Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*({dest_domain}[^\s\\"]+)(\\t|\\r|\\n|\s)*"""
 """\"Account\":\"(({domain}[^\\\s\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
 """\"SubjectLogonId\":\"({login_id}[^\s\"]+)"""

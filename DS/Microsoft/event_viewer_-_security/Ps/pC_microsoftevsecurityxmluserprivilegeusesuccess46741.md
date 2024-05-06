@@ -23,13 +23,13 @@ Fields = [
   """<Data Name[\\\/]*=('|")ObjectServer('|")>(-|({object_server}[^<]+?))</Data>"""
   """<Data Name[\\\/]*=('|")PrivilegeList('|")>({privileges}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")ProcessName('|")>({process_path}({process_dir}[^<]*?)({process_name}[^\\<]+?))</Data>"""
-  """Object Type:\s*[\\rnt]*(?:-|({object_type}[^:]+?))[\\rnt\s]*Object Name:""",
-  """Desired Access:\s*[\\rnt]*({access}[^:]+?)[\\rnt\s]*Privileges:"""
+  """Object Type:\s*((?-i)\\+[rnt])*(?:-|({object_type}[^:]+?))[\\rnt\s]*Object Name:""",
+  """Desired Access:\s*((?-i)\\+[rnt])*({access}[^:]+?)[\\rnt\s]*Privileges:"""
   """({event_name}An operation was attempted on a privileged object)"""
-  """Object Name:\s*[\\rnt]*(?:|-|({object}[^<>]+?))[\\rnt\s]*Object Handle""",
-  """Logon ID:\s*[\\rnt]*({login_id}[^:]+?)[\\rnt\s]*Object:""",
-  """Account Domain:\s*((\\)[rnt])*({domain}[^:]+?)((\\)[rnt])*\s*Logon ID:"""
-  """Creator Process ID:((\\)[rnt])*({process_id}.+?)((\\)[rnt])*Creator"""
+  """Object Name:\s*((?-i)\\+[rnt])*(?:|-|({object}[^<>]+?))[\\rnt\s]*Object Handle""",
+  """Logon ID:\s*((?-i)\\+[rnt])*({login_id}[^:]+?)[\\rnt\s]*Object:""",
+  """Account Domain:\s*((?-i)\\+[rnt])*({domain}[^:]+?)((?-i)\\+[rnt])*\s*Logon ID:"""
+  """Creator Process ID:((?-i)\\+[rnt])*({process_id}.+?)((?-i)\\+[rnt])*Creator"""
   """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"

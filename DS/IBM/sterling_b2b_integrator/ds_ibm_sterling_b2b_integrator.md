@@ -4,7 +4,7 @@ Product: Sterling B2B Integrator
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  147  |   56   |         20         |       3        |   10    |
+|  128  |   48   |         20         |       3        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

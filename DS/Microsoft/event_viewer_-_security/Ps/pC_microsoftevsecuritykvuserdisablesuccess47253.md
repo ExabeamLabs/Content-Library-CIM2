@@ -20,9 +20,6 @@ Fields = [
   """nitroSource_Logon_ID=({login_id}[^\s]+)"""
   """nitroSecurity_ID=({user_sid}[^\s]+)"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

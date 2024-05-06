@@ -20,7 +20,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   """Service Name(:|=)\s*({dest_host}[\w\-\.]+\$)[\s;]*Service ID"""
   """Service Name(:|=)\s*({service_name}[^\s;]+)[\s;]*Service ID"""
   """Client Address(:|=)\s*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """Failure Code(:|=)((\\)[rnt])*\s*({result_code}[^\s:;\\]+)((\\)[rnt])*\s*[\s;]*[\w\s]+(:|=)"""
+  """Failure Code(:|=)((?-i)\\+[rnt])*\s*({result_code}[^\s:;\\]+)((?-i)\\+[rnt])*\s*[\s;]*[\w\s]+(:|=)"""
   """Ticket Options(:|=)\s*({ticket_options}[^\s;:]+)[\s;]*[\w\s]+(:|=)"""
   """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}[^\s:;]+)[\s;]*[\w\s]+(:|=)"""
   ]

@@ -22,7 +22,7 @@ Name = "microsoft-evsecurity-kv-user-delete-fail-4743"
     """Target Computer:.+?Account Domain:\s+({dest_domain}[^:]+?)\s+Additional Information:""",
     """Privileges:\s+(-|({privileges}.+?))\s*(\w+=|$)"""
   ]
-  DupFields = [ "host->dest_host","dest_user->account_name"]
+  DupFields = [ "dest_user->account_name"]
 
 
 }

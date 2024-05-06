@@ -21,10 +21,10 @@ Fields = [
 """"riskLevel":"({alert_severity}[^"]+)""""
 """"riskType":"({threat_category}[^"]+)""""
 """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-""""f3u":"({email_address}[^"@\s]+@({email_domain}[^"@\s.]+\.[^"@\s]+))""""
+""""f3u\\*"*:\\*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
 """\ssuser=({email_address}[^@]+@[^\s]+)\s"""
 """"userDisplayName":"({full_name}[^"]+?)\s*""""
-""""userPrincipalName":"({email_address}[^"@\s]+@[^"@\s]+)""""
+""""userPrincipalName":"({user}[\w\.\-]{1,40}\$?)@({domain}[^"\s]+)""""
 """msg=({additional_info}[^=]+?)\s+(\w+=|$)"""
 """activity":"({operation}[^"]+)"""
 """"userAgent\\?",[^,]*?"Value\\?":\\?"(|({user_agent}[^"\\]+?))\s*\\?"""",
@@ -37,7 +37,7 @@ Fields = [
 """"Name":"({alert_name}[^"]+)"""
 """request=({result}[^=]+?)\s*\w+="""
 """"Severity":"({alert_severity}[^"]+)"""
-""""sev":"({alert_severity}[^"]+)"""
+""""sev\\*":\\*"({alert_severity}[^"\\]+)"""
 """"riskLevel":"({alert_severity}[^"]+)"""
 """"AlertType":"({alert_type}[^"]+)"""
 """"tsd\\*"+:\\*"+({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
@@ -52,6 +52,9 @@ Fields = [
 """"Id":"({alert_id}[^"]+)""""
 """"riskEventType":"({alert_name}[^"]+)"""
 """"riskState":"({action}[^"]+)"""
+""""op\\*"*:\\*"*({operation}[^",\\\s]+)"""
+""""wl\\*"*:\\*"*({app}[^",\\\s]+)"""
+""""von\\*"*:\\*"*({alert_subject}[^",\\]+)"""
 ]
 DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = "v1.0.0"

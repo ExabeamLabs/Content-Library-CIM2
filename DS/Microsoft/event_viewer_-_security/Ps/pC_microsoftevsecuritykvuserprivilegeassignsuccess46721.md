@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-user-privilege-assign-success-4672-1
       """({event_code}4672)""",
       """({event_name}Special privileges assigned to new logon)""",
       """DetectTime=({time}\d+-\d+-\d+\s\d+:\d+:\d+)""",
-      """ComputerName =({host}[\w\-.]+)\s+\w+=""",
+      """ComputerName =({host}({src_host}[\w\-.]+))\s+\w+=""",
       """EventType=({result}\w.+?)\s*\w+=""",
       """Account Name =\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))[\s;]+""",
       """User=(?:(?i)null|({user}[\w\.\-]{1,40}\$?))\s+""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-kv-user-privilege-assign-success-4672-1
       """Logon ID=\s*({login_id}[^\s\=]+)\s+""",
       """EventSource=({log_source}[^\s\=]+)\s*\w+="""
    ]
-    DupFields = ["host->dest_host"]
  
 
 }

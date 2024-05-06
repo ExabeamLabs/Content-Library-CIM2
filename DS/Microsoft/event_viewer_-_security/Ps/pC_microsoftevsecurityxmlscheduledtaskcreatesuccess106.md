@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-create-success-106
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>106<""", """<Provider>Microsoft-Windows-TaskScheduler<""", """<Task>Task registered<""" ]
+  Conditions = [ """<EventID>106<""", """Microsoft-Windows-TaskScheduler""", """TaskRegisteredEvent""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)('|")""",
     """<Computer>({host}({dest_host}[\w\-\.]+))<""",

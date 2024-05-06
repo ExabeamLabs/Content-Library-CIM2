@@ -17,6 +17,9 @@ Conditions = [ """"Operation":"AlertTriggered"""", """"AlertType":""", """AlertI
    """requestClientApplication=({app}.*?)\s\w+=""",
    """"Source":"({log_source}[^"]+)"""
    """"Workload":\s*"({alert_source}[^",]+)""""
+   """"op\\*"*:\\*"*({operation}[^",\\\s]+)"""
+   """"wl\\*"*:\\*"*({app}[^",\\\s]+)"""
+   """"von\\*"*:\\*"*({alert_subject}[^",\\]+)"""
   ]
   DupFields = ["alert_name->alert_subject"]
   ParserVersion = "v1.0.0"

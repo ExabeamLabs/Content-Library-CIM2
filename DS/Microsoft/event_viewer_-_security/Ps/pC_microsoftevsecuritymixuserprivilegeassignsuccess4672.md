@@ -7,25 +7,24 @@ Product = "Event Viewer - Security"
 TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS", "MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [ """Special privileges assigned to new logon""", """Privileges""" ]
 Fields = [
-  """\d\d:\d\d:\d\d(\+|-)\d\d:\d\d ({dest_host}({host}[\w\-.]+))""",
-  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({dest_host}({host}[\w\-.]+))\s""",
-  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
-  """"host":"(::ffff:)?({dest_host}({host}[\w\-.]+))"""",
+  """\d\d:\d\d:\d\d(\+|-)\d\d:\d\d ({host}[\w\-.]+)""",
+  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({host}[\w\-.]+)\s""",
+  """"host":"(::ffff:)?({host}[\w\-.]+)"""",
   """({event_name}Special privileges assigned to new logon)""",
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z?)"""
   """TimeGenerated=({time}\d{10})"""
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-  """(::ffff:)?(({dest_host}({host}[\w\-.]+))\s+)?({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
+  """(::ffff:)?(({host}[\w\-.]+)\s+)?({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
   """\scategoryOutcome=(|/({result}[^=]+?))(\s+\w+=|\s*$)""",
   """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-  """({result}(?i)(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({dest_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
-  """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({dest_host}({host}[\w\-.]+))""",
-  """(::ffff:)?({dest_host}({host}[\w\-.]+))\/Microsoft-Windows-Security-Auditing \(4672\)""",
-  """"dhn":"(::ffff:)?({dest_host}({host}[\w\-.]+))""",
+  """({result}(?i)(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
+  """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}[\w\-.]+)""",
+  """(::ffff:)?({host}[\w\-.]+)\/Microsoft-Windows-Security-Auditing \(4672\)""",
+  """"dhn":"(::ffff:)?({host}[\w\-.]+)""",
   """Type\s*=\s*"({result}[^";]+)"""",
   """Keywords=({result}[^=]+?);?\s*(\w+=)""",
-  """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",
-  """Computer(\w+)?["\s]*(:|=)\s*"?(::ffff:)?({dest_host}({host}[\w\-.]+))""",
+  """<Computer>(::ffff:)?({src_host}({host}[\w\-.]+))</Computer>""",
+  """Computer(\w+)?["\s]*(:|=)\s*"?(::ffff:)?({src_host}({host}[\w\-.]+))""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}4672)""",
   """Account Name(:|=)\s*(-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))(\\r|\\n|\\t)*[\s;]*Account Domain(:|=)""",

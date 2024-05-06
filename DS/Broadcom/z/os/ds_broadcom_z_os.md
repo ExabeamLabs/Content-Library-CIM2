@@ -4,7 +4,7 @@ Product: z/OS
 -------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   8   |   3    |         3          |       1        |    0    |
+|   7   |   3    |         3          |       1        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -12,7 +12,6 @@ Product: z/OS
 |          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Compromised_Credentials.md)    |
 |    [Data Access](../../../UseCases/uc_data_access.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Data_Access.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>T1090.003 - Proxy: Multi-hop Proxy<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Lateral_Movement.md)    |
-|    [Malware](../../../UseCases/uc_malware.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Malware.md)    |
 |    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Privilege_Abuse.md)    |
 |    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  failed-app-login<br> ↳[broadcom-zos-leef-network-traffic-success-mvsb](Ps/pC_broadcomzosleefnetworktrafficsuccessmvsb.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_broadcom_z_os_Ransomware.md)    |

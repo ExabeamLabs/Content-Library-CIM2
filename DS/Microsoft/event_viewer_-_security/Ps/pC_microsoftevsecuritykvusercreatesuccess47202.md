@@ -26,7 +26,6 @@ Fields = [
   """ProviderGuid="+({process_guid}[^"]+)""""
 ]
 DupFields = [
-  "host->dest_host"
   "account_name->dest_user"
   "account_domain->dest_domain"
   "dest_user->account_name"

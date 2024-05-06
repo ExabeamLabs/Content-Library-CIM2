@@ -27,9 +27,6 @@ Fields = [
 """FORMAT_MESSAGE\s*=\s*(null|-|({additional_info}[^.\]]+))(\.)?\s+\]"""
 """Category\s*=\s*({category}[^\s]+)"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

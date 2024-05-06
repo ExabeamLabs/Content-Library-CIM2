@@ -4,7 +4,7 @@ Product: Auth0
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  154  |   56   |         23         |       8        |   10    |
+|  135  |   48   |         23         |       8        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

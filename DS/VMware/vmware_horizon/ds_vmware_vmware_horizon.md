@@ -4,7 +4,7 @@ Product: VMware Horizon
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  103  |   41   |         16         |       4        |   12    |
+|  85   |   33   |         16         |       4        |   12    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

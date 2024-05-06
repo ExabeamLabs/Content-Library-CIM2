@@ -21,7 +21,7 @@ Conditions = [ """\"source\":\"aws.guardduty\"""", """\"detail-type\":\"GuardDut
     """"country\\?":\{\\?"countryName\\?":\\?"({country_name}[^"\\]+)""",
     """"city\\?":\{\\?"cityName\\":\\"((?i)UNKNOWN|({location_city}[^"\\]+))""",
     """"principalId\\?":\\?"({principal_id}[^"\\]+)\\?"""",
-    """"userName\\?":\\?"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """"userName\\?":\\?"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""",
     """"s3BucketDetails\\?":[^\}\]]*"name\\?":\\?"({s3_bucket_name}[^"\\]+)""",
     """securityGroups\\?":[^"]+"groupName\\?":\\?"({group_name}[^"\\]+)"""
   ]

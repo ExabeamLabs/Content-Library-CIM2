@@ -3,6 +3,7 @@
 {
 Name = proofpoint-tap-cef-email-receive-fail-threatstatus
   ParserVersion = v1.0.0
+  log_timeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [
 """CEF:""",
 """destinationServiceName =Proofpoint""",
@@ -27,6 +28,9 @@ Name = proofpoint-tap-cef-email-receive-fail-threatstatus
     """msg=.*?\[({alert_source}[^\]]+)\]:""",
     """msg=.*?name:\s*({alert_source}[^\]]+)\]"""
     """"userAgent":"({user_agent}[^"]+)""""
+    """"clickTime":"({log_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
+    """"clickIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """"completelyRewritten":\s*({alert_status}(?i)true|false)"""
   ]
   DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_name->alert_subject","email_attachment->file_name","src_email_address->external_address","dest_email_address->email_address" ]
 

@@ -31,7 +31,6 @@ Fields = [
 """(\\+t)+'({user_type}[^']+)'\s*-\s*Enabled"""
 ]
 DupFields = [
-"host->dest_host",
 "account_name->dest_user",
 "src_host_windows->src_host"
 ]

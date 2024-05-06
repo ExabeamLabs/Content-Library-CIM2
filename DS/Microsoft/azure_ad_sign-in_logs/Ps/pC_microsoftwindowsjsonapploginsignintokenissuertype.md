@@ -32,7 +32,7 @@ Fields = [
 """"conditionalAccessStatus":\s*"({result}[^"]+)"""",
 """"tokenIssuerType":\s*"({app}[^"]+)"""",
 """"countryOrRegion":"({country_code}[^"]+)"""",
-"""deviceDetail":\{[^\}]+?displayName":"({src_host}[^"]+)""""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 ]
 DupFields = ["operation->event_name"]
 ParserVersion = "v1.0.0"

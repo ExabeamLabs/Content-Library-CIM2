@@ -29,7 +29,7 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"actor"+:[^\]]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({=user}[\w\.\-]{1,40}\$?)))"""",
     """requestUri":\s*"({request_uri}[^"]+?)\s*"""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))"""
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))"""
   ]
   DupFields = ["failure_reason->additional_info"]
   ParserVersion = "v1.0.0"

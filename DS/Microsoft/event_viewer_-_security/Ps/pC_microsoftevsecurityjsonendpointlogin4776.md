@@ -27,7 +27,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"TargetUserName":"[^"@]+(?:@({domain}[^"@\s]+)[^"]*)?"""
     """"Status":"({result_code}[^"]*)"""
     """"Workstation":"\\*({src_host}[^"]+)"""
-    """Logon Account:((\\)[rnt])*({account}.+?)((\\)[rnt])*Source Workstation"""
+    """Logon Account:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Source Workstation"""
     """"eventRecordID":"({event_id}\d+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
   ]

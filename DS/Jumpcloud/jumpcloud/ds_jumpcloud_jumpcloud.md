@@ -4,7 +4,7 @@ Product: Jumpcloud
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  47   |   17   |         4          |       2        |    0    |
+|  46   |   17   |         4          |       2        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
@@ -12,7 +12,7 @@ Product: Jumpcloud
 |          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>T1133 - External Remote Services<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>28 Rules</li></ul><ul><li>16 Models</li></ul>](RM/r_m_jumpcloud_jumpcloud_Compromised_Credentials.md)         |
 |    [Data Access](../../../UseCases/uc_data_access.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>6 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_jumpcloud_jumpcloud_Data_Access.md)    |
 |    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>T1090.003 - Proxy: Multi-hop Proxy<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Lateral_Movement.md)    |
-|    [Malware](../../../UseCases/uc_malware.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Malware.md)    |
+|    [Malware](../../../UseCases/uc_malware.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br>    | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Malware.md)    |
 |    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Privilege_Abuse.md)    |
 |    [Privileged Activity](../../../UseCases/uc_privileged_activity.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Privileged_Activity.md)    |
 |    [Ransomware](../../../UseCases/uc_ransomware.md)    |  app-login<br> ↳[jumpcloud-jc-str-app-login-success](Ps/pC_jumpcloudjcstrapploginsuccess.md)<br><br> failed-app-login<br> ↳[jumpcloud-jc-str-app-login-fail](Ps/pC_jumpcloudjcstrapploginfail.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_jumpcloud_jumpcloud_Ransomware.md)    |

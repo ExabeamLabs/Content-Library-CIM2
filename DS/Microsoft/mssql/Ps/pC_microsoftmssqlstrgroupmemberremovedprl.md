@@ -22,7 +22,7 @@ Name = microsoft-mssql-str-group-member-remove-dprl
     """object_id:({object_id}[^\\\s]+)""",
     """target_database_principal_name:({target}[^\\\s]+)""",
     """\starget_server_principal_name:([^\\]+\\)?({dest_user}[^\s]+)\starget_server_principal_sid:""",
-	"""target_server_principal_name:([^\\]+\\+)?({dest_user}[^\s]+)\\+[rnt]+target_server_principal_sid:"""
+	"""target_server_principal_name:([^\\]+\\+)?({dest_user}[^\s]+)((?-i)\\+[rnt])+?target_server_principal_sid:"""
     """\sdatabase_principal_name:([^\\]+\\)?({db_user}[^\s]+)\starget_server_principal_name:""",
     """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[\w\.\-]{1,40}\$?))\sserver_principal_sid:""",
 	"""server_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\\\)?((?i)system|({user}[\w\.\-]{1,40}\$?))[rnt\\]*server_principal_sid:"""

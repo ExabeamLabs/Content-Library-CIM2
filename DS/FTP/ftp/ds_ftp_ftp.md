@@ -4,7 +4,7 @@ Product: FTP
 ------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  125  |   52   |         17         |       8        |   18    |
+|  113  |   45   |         17         |       8        |   18    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

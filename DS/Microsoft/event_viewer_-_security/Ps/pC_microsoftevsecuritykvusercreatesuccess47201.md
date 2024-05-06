@@ -18,7 +18,7 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
 """({event_code}4720)""",
 """Hostname\":\"({host}[\w\-.]+)\"""",
-""""ComputerName":"({dest_host}[\w\-.]+)""",
+""""ComputerName":"({host}[\w\-.]+)""",
 """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)(,|\s+)ComputerName =({host}[\w.\-]+)""",
 """({host}[^\/\s]+)\/Microsoft-Windows-Security-Auditing \(4720\)""",
 """\"dhn\":\"({host}[^-\"]+)""",
@@ -31,7 +31,7 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-]{1,40}\$?)\s*.+?Account Domain:\s*(\\t|\\r|\\n)*({domain}[\w\-\.]+).+?Logon ID:\s*(\\t|\\r|\\n)*({login_id}[\w\-\.]+).+?Account Name:\s*(\\t|\\r|\\n)*({account_name}[\w\-\.]+).+?Account Domain:\s*(\\t|\\r|\\n)*({account_domain}[\w\.\-]+).+?Attributes"""
 """(Enabled.+?|Account Control:)\s*'({user_type}.*?)'\s-\sEnabled"""
   ]
-  DupFields = ["host->dest_host" , "account_name->dest_user"]
+  DupFields = ["account_name->dest_user"]
 
 
 }

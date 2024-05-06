@@ -22,7 +22,7 @@ Name = "microsoft-evsecurity-json-user-create-success-4720"
 """"TargetUserName":"({account_name}[^"]+)""",
 """"TargetDomainName":"({account_domain}[^"]+)"""
   ]
-  DupFields = [ "host->dest_host" , "account_name->dest_user", "account_domain->dest_domain" ]
+  DupFields = [ "account_name->dest_user", "account_domain->dest_domain" ]
 
 
 }

@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-kv-user-lock-success-4740-3
     """Subject:Account Domain=({src_domain}[^\s]+)""",
     """Subject:Logon ID=({login_id}[^\s\"]+)"""
   ]
-  DupFields = [ "host->dest_host", "src_domain->domain" ]
+  DupFields = [ "src_domain->domain" ]
   ParserVersion = "v1.0.0"
 
 

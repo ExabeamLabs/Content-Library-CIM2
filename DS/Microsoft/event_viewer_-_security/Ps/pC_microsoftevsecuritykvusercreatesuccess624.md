@@ -22,7 +22,6 @@ Fields = [
 """Caller User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+({domain}[^\s]+)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
 ]
 DupFields = [
-"host->dest_host",
 "account_name->dest_user"
 ]
 ParserVersion = "v1.0.0"

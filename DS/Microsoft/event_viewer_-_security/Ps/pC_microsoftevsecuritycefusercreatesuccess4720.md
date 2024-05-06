@@ -22,7 +22,7 @@ Name = "microsoft-evsecurity-cef-user-create-success-4720"
 """\sdvchost=({host}[\w\-.]+)""",
 """ad.New_,Account:Security_,ID=({account_id}[^\s]+)"""
   ]
-  DupFields = [ "host->dest_host","account_name->dest_user" ]
+  DupFields = [ "account_name->dest_user" ]
 
 
 }

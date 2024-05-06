@@ -29,7 +29,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """"TicketOptions\\?":\\?"({ticket_options}[^"\\]*)"""
     """"TicketEncryptionType\\?":\\?"({ticket_encryption_type}[^"\\]*)"""
     """"IpAddress\\?":\\?"(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?""""
-    """Account Name:((\\)[rnt])*({account}.+?)((\\)[rnt])*Account Domain"""
+    """Account Name:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Account Domain"""
     """exa_regex=({event_name}A Kerberos service ticket was renewed)""",
     """exa_json_path=$.EventTime,exa_field_name=time""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
@@ -46,7 +46,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """exa_json_path=$..TicketOptions,exa_field_name=ticket_options""",
     """exa_json_path=$..TicketEncryptionType,exa_field_name=ticket_encryption_type""",
     """exa_json_path=$..IpAddress,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?$""",
-    """exa_regex=Account Name:((\\)[rnt])*({account}.+?)((\\)[rnt])*Account Domain"""
+    """exa_regex=Account Name:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Account Domain"""
   ]
 
 

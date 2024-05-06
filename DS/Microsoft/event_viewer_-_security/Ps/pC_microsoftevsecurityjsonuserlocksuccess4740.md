@@ -15,7 +15,7 @@ Fields = [
   """({event_name}A user account was locked out)"""
   """"TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """"EventTime\\?":\s*\\?"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\""""
-  """computer":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))""""
+  """computer":"({host}[\w.\-]+)""""
   """"Hostname\\?":\\?"({host}[\w\-.]+)"""
   """"ComputerName\\?":\\?"({host}[\w\-\.]+)"""
   """({event_code}4740)"""
@@ -31,7 +31,7 @@ Fields = [
   """exa_regex=({event_name}A user account was locked out)""",
   """exa_json_path=$.TimeGenerated,exa_field_name=time"""
   """exa_json_path=$.EventTime,exa_field_name=time"""
-  """exa_json_path=$.computer,exa_regex=((({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)|({dest_host}[\w.\-]+))"""
+  """exa_json_path=$.computer,exa_field_name=host"""
   """exa_json_path=$.Hostname,exa_field_name=host"""
   """exa_json_path=$.ComputerName,exa_field_name=host"""
   """exa_regex=({event_code}4740)"""
@@ -46,7 +46,6 @@ Fields = [
   """exa_json_path=$.TargetDomainName,exa_regex=\\*({dest_domain}[^"]+)$"""
 ]
 DupFields = [
-"host->dest_host"
 "src_domain->domain"
 "user->dest_user"
 ]

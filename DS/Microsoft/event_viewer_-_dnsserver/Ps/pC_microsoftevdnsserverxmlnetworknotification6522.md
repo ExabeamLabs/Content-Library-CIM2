@@ -4,7 +4,7 @@
 Name = microsoft-evdnsserver-xml-network-notification-6522
   ParserVersion = "v1.0.0"
   Product = Event Viewer - DNSServer
-  Conditions = [ """>6522</EventID>""", """DNS_EVENT_ZONE_TRANSFER_IN_PROGRESS""", """<Provider>Microsoft-Windows-DNS-Server-Service</Provider>""", """<Channel>DNS Server</Channel>""" ]
+  Conditions = [ """>6522</EventID>""", """DNS_EVENT_ZONE_TRANSFER_IN_PROGRESS""", """Microsoft-Windows-DNS-Server-Service""", """<Channel>DNS Server</Channel>""" ]
 
 windows-events-4 = {
   Vendor = Microsoft

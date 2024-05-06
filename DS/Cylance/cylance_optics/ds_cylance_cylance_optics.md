@@ -4,7 +4,7 @@ Product: Cylance OPTICS
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  133  |   52   |         13         |       4        |    8    |
+|  123  |   48   |         13         |       4        |    8    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

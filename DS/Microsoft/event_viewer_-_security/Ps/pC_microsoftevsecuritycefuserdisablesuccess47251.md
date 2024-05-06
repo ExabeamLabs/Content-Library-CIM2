@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-cef-user-disable-success-4725-1
   Conditions = [""""event_id":4725""", """"provider_name":"Microsoft-Windows-Security-Auditing""", """A user account was disabled""", """ cs6="""]
   Fields = ${WindowsParsersTemplates.json-windows-events-1.Fields}[
     """({event_name}A user account was disabled)""",
-    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[^"]+))""",
+    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({host}[^"]+))""",
   ]
 
 json-windows-events-1 = {

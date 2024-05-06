@@ -44,7 +44,7 @@ s-xml-object-access = {
     """File Path:\s*({file_path}.+?)\s+Operation:""",
     """Operation:\s*({operation}[^:]+?)\s+Return Code:""",
     """Return Code:\s*({return_code}.+?)<\/Message>""",
-    """Group:\s*(|-|({group_name}.+?))\s*Security ID:\s*(|-|({group_id}.+?))\s*Group Name:((\\)[rnt])*\s*(|-|({=group_name}.+?))((\\)[rnt])*\s*Group Domain:\s*(|-|({group_domain}.+?))\s""",
+    """Group:\s*(|-|({group_name}.+?))\s*Security ID:\s*(|-|({group_id}.+?))\s*Group Name:((?-i)\\+[rnt])*\s*(|-|({=group_name}.+?))((?-i)\\+[rnt])*\s*Group Domain:\s*(|-|({group_domain}.+?))\s""",
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""

@@ -40,6 +40,7 @@ Fields = [
 """\"signinErrorCode\":({error_code}\d+)"""
 """"deviceInformation":"(|({src_host}[\w\-.]+?));(|({os}[^;]+?));(|({browser}[^"]+?));?""""
 """country(OrRegion)?":"({country_code}[^",]+)"""
+"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
 ]
 ParserVersion = "v1.0.0"
 

@@ -14,12 +14,14 @@ Name = airlock-allowlisting-json-app-activity-success-fileactivity
     """exa_json_path=$.path,exa_field_name=file_dir""",
     """exa_json_path=$.filename,exa_regex=({file_name}[^\"\\\/]+?(\.({file_ext}[^\.\"]+)))""",
     """exa_regex=({event_name}FileActivityMessage)""",
+    """exa_json_path=$.event,exa_field_name=operation""",
     """exa_json_path=$.sha256,exa_field_name=hash_sha256""",
     """exa_json_path=$.md5,exa_field_name=hash_md5""",
     """exa_json_path=$.parentprocess,exa_field_name=process_name""",
     """exa_json_path=$.commandline,exa_field_name=process_command_line""",
+    """exa_json_path=$.group,exa_field_name=group_name""",
+    """exa_json_path=$.execution_type,exa_field_name=event_name"""
   ]
-  DupFields = ["event_name->operation"]
   ParserVersion = "v1.0.0"
 
 

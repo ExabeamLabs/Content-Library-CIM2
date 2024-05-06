@@ -20,13 +20,12 @@ Fields = [
   """({event_name}The Windows Filtering Platform has permitted a bind to a local port)"""
   """Process ID:\s*({process_id}\d+)"""
   """Application Name:.+?\s*(({process_path}(({process_dir}[^"\/:]*)\\)?({process_name}[^":]+?)))\s*Network Information:"""
-  """Source Address:\s*(0\.0\.0\.0|(::ffff:)?({dest_ip}(?!::)[a-fA-F:\d.]+))?.*?\s*Source Port:\s*({dest_port}\d*)"""
+  """Source Address:\s*(0\.0\.0\.0|(::ffff:)?({src_ip}(?!::)[a-fA-F:\d.]+))?.*?\s*Source Port:\s*({src_port}\d*)"""
   """Protocol:\s*({ms_protocol_num}\d*)"""
   """Layer Name:\s*({layer_name}.*?)\s*Layer Run-Time ID"""
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
 ]
 DupFields = [
-  "host->dest_host", "ms_protocol_num->protocol"
+  "host->src_host", "ms_protocol_num->protocol"
 ]
 ParserVersion = "v1.0.0"
 

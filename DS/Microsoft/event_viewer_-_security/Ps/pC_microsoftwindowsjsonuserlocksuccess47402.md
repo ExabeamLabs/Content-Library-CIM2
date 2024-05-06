@@ -12,7 +12,7 @@ Name = microsoft-windows-json-user-lock-success-4740-2
     """TargetUserName\\?"+:\\?"({user}[\w\.\-]{1,40}\$?)\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
   ]
-  DupFields=[ "host->dest_host", "src_domain->domain" ]
+  DupFields=[ "src_domain->domain" ]
 
 json-windows-events-2 = {
   Vendor = Microsoft

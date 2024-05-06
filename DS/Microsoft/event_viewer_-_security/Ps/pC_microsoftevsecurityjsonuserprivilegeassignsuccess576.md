@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-576
   Fields = [
     """exa_json_path=$.message,exa_regex=({event_name}Special privileges assigned to new logon)""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
-    """exa_json_path=$.computer_name,exa_regex=^({host}[\w\-\.]+)$""",
+    """exa_json_path=$.computer_name,exa_regex=^({host}({src_host}[\w\-\.]+))$""",
     """exa_json_path=$.event_id,exa_field_name=event_code""",
     """exa_json_path=$.message,exa_regex=({ownership_privilege}SeTakeOwnershipPrivilege)""",
     """exa_json_path=$.message,exa_regex=({environment_privilege}SeSystemEnvironmentPrivilege)""",
@@ -27,7 +27,6 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-576
     """exa_json_path=$..LogonID,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))""",
     """exa_json_path=$..logon_id,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))"""
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

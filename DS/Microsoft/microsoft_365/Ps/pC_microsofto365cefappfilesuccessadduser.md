@@ -6,6 +6,8 @@ Name = microsoft-o365-cef-app-file-success-adduser
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Add user""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
+    """"initiatedBy":.*?"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w.-]{1,40})(@({domain}[^"]+))?)""""
+    """"targetResources":.*?"userPrincipalName":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""",
     """"targetResources":[^\}]+"userPrincipalName":"({target}[^"]+)""""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)""""
     """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s"""
@@ -17,13 +19,14 @@ cef-microsoft-app-activity = {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """"Host":"({host}[^"]+)"""",
     """"message":"({additional_info}[^"]+)""",
     """"description":"({additional_info}[^"]+)""",
     """category":"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """"resourceId":\s*"({object}[^"]+)""",
+    """resourceId":\s*"({object}[^"]+)""",
     """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
@@ -45,7 +48,7 @@ cef-microsoft-app-activity = {
     """"OriginatingServer":"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?""""
     """"ClientInfoString":"({user_agent}[^"]+)","""
     """"BrowserName":"({browser}[^"]+)"""
-    """"ClientIPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
+    """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
   ]

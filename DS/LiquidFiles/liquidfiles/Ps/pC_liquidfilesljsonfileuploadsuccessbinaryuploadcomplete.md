@@ -17,6 +17,7 @@ Fields = [
 """"message":"({event_name}[^:"]+)"""
 """({app}liquidfiles)"""
 """"username":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))""""
+""""user_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 ]
 ParserVersion = "v1.0.0"
 

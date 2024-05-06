@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-xml-network-traffic-fail-5152
     """<Data Name(\\)?='Application'>(-|({process_path}({process_dir}([^<]+)?[\\\/])?({process_name}[^\\\/]+?)))<"""
     """<Data Name\\*='Direction'>({direction}(Inbound|Outbound))</Data>"""
     """<Message>({failure_reason}.+?)\s*(:|\.)"""
-    """Direction:((\\)[rnt])*\s*({direction}Outbound|Inbound)"""
+    """Direction:((?-i)\\+[rnt])*\s*({direction}Outbound|Inbound)"""
     """<Computer>({dest_host}[\w\-.]+)</Computer>"""
     """<Level>({run_level}[^<]+)<"""
     ]

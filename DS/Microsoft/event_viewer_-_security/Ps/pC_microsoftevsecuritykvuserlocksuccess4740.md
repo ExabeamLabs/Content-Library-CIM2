@@ -22,9 +22,6 @@ Fields = [
 """ACCOUNT_NAME\s*=\s*({src_user}[^\s\|]+)"""
 """ACCOUNT_DOMAIN\s*=\s*(null|({src_domain}[^\s\|]+))"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

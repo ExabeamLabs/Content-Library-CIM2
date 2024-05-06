@@ -24,8 +24,8 @@ Name = microsoft-evsecurity-xml-network-session-success-5156
     """<Data Name\\*='DestPort'>({dest_port}\d+)<\/Data>""",
     """<Data Name\\*='Protocol'>({protocol}[^<>]+)<\/Data>""",
     """<RenderingInfo[^$]+?<Task>({operation_type}}[^<>]+)</Task>[^$]*?</RenderingInfo>""",
-    """<Computer>({src_host}[^<>]+)</Computer>[^$]+?Direction:((\\)[rnt])*\s*({direction}Outbound)""",
-    """<Computer>({dest_host}[\w\-.]+)</Computer>[^$]+?Direction:((\\)[rnt])*\s*({direction}Inbound)""",
+    """<Computer>({src_host}[^<>]+)</Computer>[^$]+?Direction:((?-i)\\+[rnt])*\s*({direction}Outbound)""",
+    """<Computer>({dest_host}[\w\-.]+)</Computer>[^$]+?Direction:((?-i)\\+[rnt])*\s*({direction}Inbound)""",
     """Layer Name:\s*({layer_name}[^:]+?)(\\[rn]|\s)"""
     """<Level>({run_level}[^<]+)<"""
   ]

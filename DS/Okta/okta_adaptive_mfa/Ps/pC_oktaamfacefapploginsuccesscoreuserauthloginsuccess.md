@@ -57,7 +57,7 @@ json-okta-auth = {
     """"login":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""""
     """requestUri":\s*"({request_uri}[^"]+?)\s*"""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
-    """outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
     """"dtHash":"({hash_sha256}[^"]+)""""
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""
@@ -85,7 +85,7 @@ json-okta-auth = {
     """exa_regex="actor"+:[^\}]*?"+type"+:"+User"+,"+alternateId"+\s*:\s*"+(system@okta\.com|(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\.\-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*))|({=user}[\w\.\-]{1,40}\$?)))"""",
     """exa_json_path=$.debugContext.debugData.requestUri,exa_field_name=request_uri""",
     """exa_json_path=$.outcome.result,exa_field_name=result""",
-    """exa_regex="outcome":[^\]]*?"result":"?(null|({outcome_result_at}[^\"]+))"?,"reason":"?(null|({outcome_reason_at}[^"]+))""",
+    """exa_regex="outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """exa_json_path=$.target[1:].detailEntry.methodTypeUsed,exa_field_name=auth_method""",
     """exa_json_path=$.debugContext.debugData.dtHash,exa_field_name=hash_sha256""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",

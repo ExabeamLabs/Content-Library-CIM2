@@ -4,7 +4,7 @@ Product: Azure AD Sign-In Logs
 ------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  71   |   28   |         6          |       5        |   10    |
+|  67   |   26   |         6          |       5        |   10    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -5,12 +5,12 @@ Name = microsoft-sysmon-xml-process-pipe-create-success-18
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd HH:mm:ss.SSS"]
-  Conditions = [ """<EventID>18</EventID>""", """'Microsoft-Windows-Sysmon'""", """<Data Name ='PipeName'>"""]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  Conditions = [ """<EventID>18</EventID>""", """<Provider Name =""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """<Data Name\\*='UtcTime'>({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d+)<\/Data>""",
-    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<Computer>({host}[\w\-.]+)<\/Computer>""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Data Name\\*='ProcessId'>({process_id}\d+)<\/Data>""",
 # pipe_name is removed

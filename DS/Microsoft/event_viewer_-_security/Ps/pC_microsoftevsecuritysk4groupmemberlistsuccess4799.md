@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-sk4-group-member-list-success-4799
   Conditions = [ """"event_id":4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
     """({event_name}A security-enabled local group membership was enumerated)""",
-    """tGroup Name:(\\[trn])+({group_name}[^:]+?)\\[trn]"""
+    """tGroup Name:((?-i)\\+[rnt])*({group_name}[^:\\",]+)((?-i)\\+[rnt])*"""
   ]
 
 json-windows-events-2 = {
