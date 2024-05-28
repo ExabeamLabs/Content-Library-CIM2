@@ -2,16 +2,18 @@
 ```Java
 {
 Name = google-cloudplatform-json-policy-modify-success-googleapissetiampolicy
-  TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ" ]
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"SetIamPolicy"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
     """exa_regex="response"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
     """exa_regex="bindingDeltas"+:\s*\[\s*({policy_delta}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+)""",
-    """exa_regex="action"+:\s*"+ADD"+,\s*"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group|):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
-    """exa_regex="action"+:\s*"+ADD"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group|):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+""",
-    """exa_regex="action"+:\s*"+REMOVE"+,\s*"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group|):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
-    """exa_regex="action"+:\s*"+REMOVE"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group|):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+""",
+    """exa_regex="action"+:\s*"+ADD"+,\s*"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
+    """exa_regex="action"+:\s*"+ADD"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+""",
+    """exa_regex="action"+:\s*"+REMOVE"+,\s*"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
+    """exa_regex="action"+:\s*"+REMOVE"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+""",
+    """exa_regex="policyDelta":[^\}]+"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)","action":"ADD"""",
+    """exa_regex="policyDelta":[^\}]+"+role"+:\s*"+({removed_role}[^",]+\/({removed_role_name}[^",]+))"+,\s*"+member"+:\s*"+({removed_member_type}user|serviceAccount|group):?({removed_member}[^"@,]+@({removed_member_domain}[^@"]+)|[^"@,]+)","action":"REMOVE"""",
     """exa_json_path=$.protoPayload.serviceData.policyDelta.bindingDeltas[0].action,exa_field_name=action"""
   ]
 

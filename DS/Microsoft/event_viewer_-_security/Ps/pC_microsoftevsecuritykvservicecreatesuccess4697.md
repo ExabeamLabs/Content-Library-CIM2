@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-kv-service-create-success-4697"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd HH:mm:ss yyyy", "epoch"]
+TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd HH:mm:ss yyyy", "epoch", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
 """4697"""
 """A service was installed in the system"""
@@ -14,6 +14,7 @@ Fields = [
 """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
+"""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """({event_code}4697)"""
 """({event_name}A service was installed in the system)"""
 """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""

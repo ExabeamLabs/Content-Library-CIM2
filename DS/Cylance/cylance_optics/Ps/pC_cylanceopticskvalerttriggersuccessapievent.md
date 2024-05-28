@@ -32,8 +32,9 @@ kv-cylance-optics-events = {
     """Operation:\s*({operation}[^\s]+)"""
     """Instigating Process Owner:\s*({process_owner}[^,]+)"""
     """Target File Path:\s({dest_path}[^,]+)"""
+    """Description:\s*({alert_name}[^,]+),"""
   ]
-      DupFields = [ "event_category->alert_type", "event_name->alert_name" ]
+      DupFields = [ "event_category->alert_type" ]
 
 
 }

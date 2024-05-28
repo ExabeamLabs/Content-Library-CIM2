@@ -27,6 +27,7 @@ json-github-actions = {
       """"operation_type":\s*"({operation_type}[^"]+)""",
       """({app}(?i)github)""",
       """"key":\s*"({key_name}[^"]+)"""",
+      """"external_identity_nameid":"({dest_user}[\w\.\-]{1,40}\$?)"""",
       """exa_json_path=$..['@timestamp'],exa_field_name=time""",
       """exa_json_path=$..action,exa_field_name=operation""",
       """exa_json_path=$..transport_protocol_name,exa_field_name=protocol""",
@@ -47,7 +48,8 @@ json-github-actions = {
       """exa_json_path=$.user,exa_regex=({user}[\w\.\-]{1,40}\$?)""",
       """exa_json_path=$.operation_type,exa_field_name=operation_type""",
       """exa_json_path=$.key,exa_field_name=key_name""",
-      """exa_regex=({app}(?i)github)"""
+      """exa_regex=({app}(?i)github)""",
+      """exa_json_path=$.external_identity_nameid,exa_regex=({dest_user}[\w\.\-]{1,40}\$?)"""
     
 }
 ```

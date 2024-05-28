@@ -13,7 +13,7 @@ Name = sentinelone-s-cef-http-session-success-visibility
   ]
   Fields = ${SentinelOneParsersTemplates.sentinelone-activity.Fields} [
     """method:\s*"+({method}[^"]+)"""
-    """url:\s*"+({url}(({protocol}[^:\\\/\s,"]+):\/*)?({web_domain}[^\\\/\s:,"\?]+)(:({dest_port}\d+))?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?)"""
+    """url:\s*"+({url}(({protocol}[^:\\\/\s,"]+):\/*)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^\\\/\s:,"\?]+))({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?)"""
 ]
 
 sentinelone-activity {

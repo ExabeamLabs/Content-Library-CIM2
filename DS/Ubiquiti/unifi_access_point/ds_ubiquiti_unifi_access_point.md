@@ -4,16 +4,11 @@ Product: Unifi Access Point
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   0    |         2          |       1        |    2    |
+|   0   |   0    |         0          |       0        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
-|:----:| ---- | ---- | ---- |
-|    [Malware](../../../UseCases/uc_malware.md)    |  dlp-email-alert-in<br> ↳[ubiquiti-uac-str-endpoint-notification-success-3](Ps/pC_ubiquitiuacstrendpointnotificationsuccess3.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-1](Ps/pC_ubiquitiuacstrendpointnotificationsuccess1.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-2](Ps/pC_ubiquitiuacstrendpointnotificationsuccess2.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success](Ps/pC_ubiquitiuacstrendpointnotificationsuccess.md)<br> | T1190 - Exploit Public Fasing Application<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_ubiquiti_unifi_access_point_Malware.md)    |
-|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  dlp-email-alert-in<br> ↳[ubiquiti-uac-str-endpoint-notification-success-3](Ps/pC_ubiquitiuacstrendpointnotificationsuccess3.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-1](Ps/pC_ubiquitiuacstrendpointnotificationsuccess1.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-2](Ps/pC_ubiquitiuacstrendpointnotificationsuccess2.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success](Ps/pC_ubiquitiuacstrendpointnotificationsuccess.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ubiquiti_unifi_access_point_Privilege_Abuse.md)     |
-| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  dlp-email-alert-in<br> ↳[ubiquiti-uac-str-endpoint-notification-success-3](Ps/pC_ubiquitiuacstrendpointnotificationsuccess3.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-1](Ps/pC_ubiquitiuacstrendpointnotificationsuccess1.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success-2](Ps/pC_ubiquitiuacstrendpointnotificationsuccess2.md)<br> ↳[ubiquiti-uac-str-endpoint-notification-success](Ps/pC_ubiquitiuacstrendpointnotificationsuccess.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ubiquiti_unifi_access_point_Privileged_Activity.md) |
+|  Use-Case  | Activity Types/Parsers | MITRE ATT&CK® TTP | Content    |
+|:----------:| ---- | ---- | ---- |
+| Enrichment |    |    | [](RM/r_m_ubiquiti_unifi_access_point_Enrichment.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------
-| Initial Access                                                                                                                                            | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control | Exfiltration | Impact |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------- | ------------ | ------ |
-| [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            |                     |              |        |

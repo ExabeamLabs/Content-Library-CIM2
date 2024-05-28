@@ -12,7 +12,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Adaxes               | [Adaxes](DS/Adaxes/adaxes/ds_adaxes_adaxes.md)<br>|
 | Admin By Request     | [Admin By Request](DS/Admin_By_Request/admin_by_request/ds_admin_by_request_admin_by_request.md)<br>                |
 | Airlock              | [Airlock Allowlisting](DS/Airlock/airlock_allowlisting/ds_airlock_airlock_allowlisting.md)<br>[Airlock Security Access Hub](DS/Airlock/airlock_security_access_hub/ds_airlock_airlock_security_access_hub.md)<br>                 |
-| Akamai               | [Akamai SIEM](DS/Akamai/akamai_siem/ds_akamai_akamai_siem.md)<br>[Cloud Akamai](DS/Akamai/cloud_akamai/ds_akamai_cloud_akamai.md)<br>     |
+| Akamai               | [Akamai Guardicore](DS/Akamai/akamai_guardicore/ds_akamai_akamai_guardicore.md)<br>[Akamai SIEM](DS/Akamai/akamai_siem/ds_akamai_akamai_siem.md)<br>[Cloud Akamai](DS/Akamai/cloud_akamai/ds_akamai_cloud_akamai.md)<br>          |
 | Alert Logic          | [Alert Logic Managed Detection and Response](DS/Alert_Logic/alert_logic_managed_detection_and_response/ds_alert_logic_alert_logic_managed_detection_and_response.md)<br>              |
 | AlgoSec              | [AlgoSec Firewall Analyzer](DS/AlgoSec/algosec_firewall_analyzer/ds_algosec_algosec_firewall_analyzer.md)<br>       |
 | AMAG                 | [Symmetry Access Control](DS/AMAG/symmetry_access_control/ds_amag_symmetry_access_control.md)<br>                   |
@@ -100,7 +100,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Fast Enterprises     | [Fast Enterprises GenTax](DS/Fast_Enterprises/fast_enterprises_gentax/ds_fast_enterprises_fast_enterprises_gentax.md)<br>                 |
 | Fidelis              | [Fidelis Network](DS/Fidelis/fidelis_network/ds_fidelis_fidelis_network.md)<br>[Fidelis XPS](DS/Fidelis/fidelis_xps/ds_fidelis_fidelis_xps.md)<br>              |
 | FileAuditor          | [FileAuditor](DS/FileAuditor/fileauditor/ds_fileauditor_fileauditor.md)<br>                   |
-| FireEye              | [FireEye CMS](DS/FireEye/fireeye_cms/ds_fireeye_fireeye_cms.md)<br>[FireEye Email MPS](DS/FireEye/fireeye_email_mps/ds_fireeye_fireeye_email_mps.md)<br>[FireEye Endpoint Security (HX)](DS/FireEye/fireeye_endpoint_security_(hx)/ds_fireeye_fireeye_endpoint_security_(hx).md)<br>[FireEye ETP](DS/FireEye/fireeye_etp/ds_fireeye_fireeye_etp.md)<br>[FireEye Helix](DS/FireEye/fireeye_helix/ds_fireeye_fireeye_helix.md)<br>[FireEye Web MPS](DS/FireEye/fireeye_web_mps/ds_fireeye_fireeye_web_mps.md)<br>                 |
+| FireEye              | [FireEye CMS](DS/FireEye/fireeye_cms/ds_fireeye_fireeye_cms.md)<br>[FireEye Email MPS](DS/FireEye/fireeye_email_mps/ds_fireeye_fireeye_email_mps.md)<br>[FireEye Endpoint Security (HX)](DS/FireEye/fireeye_endpoint_security_(hx)/ds_fireeye_fireeye_endpoint_security_(hx).md)<br>[FireEye ETP](DS/FireEye/fireeye_etp/ds_fireeye_fireeye_etp.md)<br>[FireEye Helix](DS/FireEye/fireeye_helix/ds_fireeye_fireeye_helix.md)<br>[FireEye Network Security (NX)](DS/FireEye/fireeye_network_security_(nx)/ds_fireeye_fireeye_network_security_(nx).md)<br>[FireEye Web MPS](DS/FireEye/fireeye_web_mps/ds_fireeye_fireeye_web_mps.md)<br>      |
 | FireMon              | [FireMon](DS/FireMon/firemon/ds_firemon_firemon.md)<br>                 |
 | Forcepoint           | [Forcepoint CASB](DS/Forcepoint/forcepoint_casb/ds_forcepoint_forcepoint_casb.md)<br>[Forcepoint DLP](DS/Forcepoint/forcepoint_dlp/ds_forcepoint_forcepoint_dlp.md)<br>[Forcepoint Email Security](DS/Forcepoint/forcepoint_email_security/ds_forcepoint_forcepoint_email_security.md)<br>[Forcepoint Email Security Gateway](DS/Forcepoint/forcepoint_email_security_gateway/ds_forcepoint_forcepoint_email_security_gateway.md)<br>[Forcepoint Insider Threat](DS/Forcepoint/forcepoint_insider_threat/ds_forcepoint_forcepoint_insider_threat.md)<br>[Forcepoint Next-Gen Firewall](DS/Forcepoint/forcepoint_next-gen_firewall/ds_forcepoint_forcepoint_next-gen_firewall.md)<br>[Websense Security Gateway](DS/Forcepoint/websense_security_gateway/ds_forcepoint_websense_security_gateway.md)<br> |
 | Forescout            | [EyeInspect](DS/Forescout/eyeinspect/ds_forescout_eyeinspect.md)<br>[Forescout CounterACT](DS/Forescout/forescout_counteract/ds_forescout_forescout_counteract.md)<br>                |
@@ -186,7 +186,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Namespace rDirectory | [Namespace rDirectory](DS/Namespace_rDirectory/namespace_rdirectory/ds_namespace_rdirectory_namespace_rdirectory.md)<br>                  |
 | Nasuni               | [Nasuni](DS/Nasuni/nasuni/ds_nasuni_nasuni.md)<br>|
 | NCP                  | [NCP](DS/NCP/ncp/ds_ncp_ncp.md)<br>               |
-| NetApp               | [NetApp](DS/NetApp/netapp/ds_netapp_netapp.md)<br>|
+| NetApp               | [NetApp](DS/NetApp/netapp/ds_netapp_netapp.md)<br>[NetApp Ontap](DS/NetApp/netapp_ontap/ds_netapp_netapp_ontap.md)<br>                    |
 | NetDocs              | [NetDocs](DS/NetDocs/netdocs/ds_netdocs_netdocs.md)<br>                 |
 | NetIQ                | [Micro Focus NetIQ Identity Manager](DS/NetIQ/micro_focus_netiq_identity_manager/ds_netiq_micro_focus_netiq_identity_manager.md)<br>      |
 | NetMotion Wireless   | [NetMotion Wireless](DS/NetMotion_Wireless/netmotion_wireless/ds_netmotion_wireless_netmotion_wireless.md)<br>      |
@@ -230,6 +230,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Postfix              | [Postfix](DS/Postfix/postfix/ds_postfix_postfix.md)<br>                 |
 | PostgreSQL           | [PostgreSQL](DS/PostgreSQL/postgresql/ds_postgresql_postgresql.md)<br>  |
 | PostScript           | [PostScript](DS/PostScript/postscript/ds_postscript_postscript.md)<br>  |
+| PowerDNS             | [PowerDNS Recursor](DS/PowerDNS/powerdns_recursor/ds_powerdns_powerdns_recursor.md)<br>       |
 | PowerSentry          | [PowerSentry](DS/PowerSentry/powersentry/ds_powersentry_powersentry.md)<br>                   |
 | Procad               | [Pro.File DMS](DS/Procad/pro.file_dms/ds_procad_pro.file_dms.md)<br>    |
 | Progress             | [Progress Database](DS/Progress/progress_database/ds_progress_progress_database.md)<br>       |
@@ -301,7 +302,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | Synology NAS         | [Synology NAS](DS/Synology_NAS/synology_nas/ds_synology_nas_synology_nas.md)<br>              |
 | Sysdig               | [Sysdig Monitor](DS/Sysdig/sysdig_monitor/ds_sysdig_sysdig_monitor.md)<br>                    |
 | Tanium               | [Tanium Cloud Platform](DS/Tanium/tanium_cloud_platform/ds_tanium_tanium_cloud_platform.md)<br>[Tanium Core Platform](DS/Tanium/tanium_core_platform/ds_tanium_tanium_core_platform.md)<br>[Tanium Integrity Monitor](DS/Tanium/tanium_integrity_monitor/ds_tanium_tanium_integrity_monitor.md)<br>[Tanium Threat Response](DS/Tanium/tanium_threat_response/ds_tanium_tanium_threat_response.md)<br>             |
-| Tenable.io           | [Tenable.io](DS/Tenable.io/tenable.io/ds_tenable.io_tenable.io.md)<br>  |
+| Tenable              | [Tenable Vulnerability Management](DS/Tenable/tenable_vulnerability_management/ds_tenable_tenable_vulnerability_management.md)<br>[Tenable Web App Scanning](DS/Tenable/tenable_web_app_scanning/ds_tenable_tenable_web_app_scanning.md)<br>            |
 | Teradata             | [Teradata RDBMS](DS/Teradata/teradata_rdbms/ds_teradata_teradata_rdbms.md)<br>                |
 | Tessian              | [Tessian Cloud Email Security](DS/Tessian/tessian_cloud_email_security/ds_tessian_tessian_cloud_email_security.md)<br>                    |
 | Thales Group         | [Gemalto MFA](DS/Thales_Group/gemalto_mfa/ds_thales_group_gemalto_mfa.md)<br>                 |

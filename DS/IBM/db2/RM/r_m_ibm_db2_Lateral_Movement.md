@@ -7,7 +7,7 @@ Vendor: IBM
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  30   |   12   |         10         |       3        |    3    |
+|  30   |   12   |         10         |       3        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -19,7 +19,7 @@ Name = cisco-secureemail-json-email-send-receive-esamid
     """exa_json_path=$.ESAStatus,exa_field_name=action""",
     """exa_json_path=$.act,exa_field_name=action""",
     """exa_json_path=$.ESAMsgSize,exa_field_name=bytes""",
-    """exa_json_path=$.ESAAttachmentDetails,exa_field_name=email_attachment""",
+    """exa_json_path=$.ESAAttachmentDetails,exa_regex='({email_attachment}[^'"]*(\.({file_ext}[^"']+)))""",
     """exa_json_path=$.deviceDirection,exa_field_name=direction""",
     """exa_json_path=$.cs4,exa_field_name=message_id""",
     """exa_json_path=$.sourceHostName,exa_regex=^({src_host}[\w\-.]+)$""",

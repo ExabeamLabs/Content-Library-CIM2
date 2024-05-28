@@ -14,6 +14,7 @@ Name = forcepoint-dlp-cef-email-violationtriggers
     """action="({action}[^"]+)"""",
     """direction="({direction}[^"]+)"""",
     """fileNames="(None|({email_attachments}({attachment}[^;"]+)[^"]*))"""",
+    """fileNames="[^"=\-;]*(\.({file_ext}[\w+]+))\s*-\s*\d+"""
     """fileSize="({bytes}\d+)"""",
     """incidentID="({alert_id}[^"]+)"""",
     """operationType="(None|({operation}[^"]+))"""",

@@ -26,9 +26,6 @@ Fields = [
   """"ProcessName":"({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))""""
   """Access Request Information:[rnt\\]*Accesses:[rnt\\]*({access}[^:]+?)[rnt\\]*Access Mask:[rnt\\]*({access_mask}\w+)"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

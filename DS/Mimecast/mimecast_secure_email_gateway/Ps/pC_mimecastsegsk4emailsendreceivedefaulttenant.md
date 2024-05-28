@@ -4,7 +4,7 @@
 Name = mimecast-seg-sk4-email-send-receive-defaulttenant
   Vendor = Mimecast
   Product = Mimecast Secure Email Gateway
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSZ" , "yyyy-MM-dd'T'HH:mm:ssZ" ]
   Conditions = [ """"acc":""", """"Delivered":""", """"Dir":"""", """"MsgId":"""", """"Subject":"""", """"Sender":"""", """"aCode":"""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) ([\w.\-]+) """,
@@ -15,10 +15,13 @@ Name = mimecast-seg-sk4-email-send-receive-defaulttenant
     """request=({result}[^\s]+)""",
     """requestClientApplication=({user_agent}.+?)\s\w+=""",
     """suser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """"Rcpt":"({recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^"]*)"""",
+    """"Rcpt":"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^"]*)"""",
     """"Rcpt":"({external_address}[^\s@;,]+@[^\s@;,"]+)""" 
     """senders:\s*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """"Error":"({failure_reason}[^"]+)"""
+    """"Delivered":"({result}[^"]+)""""
+    """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)""""
+
   ]
   ParserVersion = v1.0.0
 

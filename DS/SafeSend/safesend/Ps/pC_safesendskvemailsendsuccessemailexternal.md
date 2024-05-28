@@ -18,7 +18,6 @@ Name = safesend-s-kv-email-send-success-emailexternal
     """\Wexternal_recipients="({email_recipients}[^"]*?<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))[^"]*)"""",
     """\Wattachments="(|({email_attachments}[^"]+))""",
   ]
-  DupFields = [ "dest_email_address->external_address" ]
   ParserVersion = "v1.0.0"
 
 

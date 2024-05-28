@@ -7,7 +7,7 @@ Vendor: Cynet
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   20   |         5          |       3        |    0    |
+|  45   |   20   |         5          |       3        |    1    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

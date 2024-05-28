@@ -4,7 +4,7 @@ Product: Palo Alto Aperture
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  164  |   72   |         22         |       9        |    6    |
+|  164  |   72   |         22         |       8        |    5    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

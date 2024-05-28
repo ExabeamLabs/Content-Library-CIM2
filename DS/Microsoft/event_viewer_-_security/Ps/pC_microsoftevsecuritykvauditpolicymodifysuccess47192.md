@@ -19,10 +19,7 @@ Fields = [
   """\s+Category:\s+({audit_category}.+?)\s+Subcategory:"""
   """\s+Subcategory:\s+({sub_category}.+?)\s+Subcategory GUID:"""
   """\s+Changes:\s+({policy_name}.+?)\s*(\w+:|$)"""
-  """\s+Computer=({host}[\w.\-]+)"""
-]
-DupFields = [
-  "host->dest_host"
+  """\s+Computer=({src_host}({host}[\w.\-]+))"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -4,12 +4,12 @@ Product: Attack Analytics
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  25   |   11   |         3          |       1        |    1    |
+|  25   |   11   |         3          |       1        |    0    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_imperva_attack_analytics_Compromised_Credentials.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  network-alert<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_imperva_attack_analytics_Malware.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  network-alert<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_imperva_attack_analytics_Compromised_Credentials.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  network-alert<br> ↳[imperva-attackanalytics-cef-alert-trigger-success-attackanalytics](Ps/pC_impervaattackanalyticscefalerttriggersuccessattackanalytics.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_imperva_attack_analytics_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

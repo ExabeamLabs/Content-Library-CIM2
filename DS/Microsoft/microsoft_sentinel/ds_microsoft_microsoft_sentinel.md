@@ -4,7 +4,7 @@ Product: Microsoft Sentinel
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  454  |  101   |        121         |       7        |    5    |
+|  436  |   92   |        121         |       6        |    3    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

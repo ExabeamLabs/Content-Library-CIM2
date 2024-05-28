@@ -18,7 +18,7 @@ Name = microsoft-nps-sk4-endpoint-authentication-fail-6273
 json-windows-events-3 = {
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
     """"Computer":"({host}[^"]+)"""",

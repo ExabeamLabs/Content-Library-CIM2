@@ -28,6 +28,7 @@ json-github-actions-1 = {
       """exa_json_path=$.application_name,exa_field_name=app"""
       """exa_json_path=$.status_code,exa_field_name=status_code"""
       """exa_json_path=$.key,exa_field_name=key_name"""
+      """exa_json_path=$.external_identity_nameid,exa_regex=({dest_user}[\w\.\-]{1,40}\$?)"""
     
 }
 ```

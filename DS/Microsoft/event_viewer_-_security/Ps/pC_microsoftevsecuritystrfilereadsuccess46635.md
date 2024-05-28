@@ -19,7 +19,6 @@ Name = microsoft-evsecurity-str-file-read-success-4663-5
     """プロセス名:\s*({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/"]+?))\s*アクセス要求情報:""",
     """アクセス:\s*({access}.+?)\s*アクセス マスク:""",
   ]
-  DupFields = [ "host->dest_host"]
 
 
 }

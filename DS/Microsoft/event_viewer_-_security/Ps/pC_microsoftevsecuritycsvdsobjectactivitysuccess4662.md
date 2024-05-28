@@ -28,7 +28,7 @@ Name = microsoft-evsecurity-csv-ds-object-activity-success-4662
     """"(An operation was performed on an object)",("[^"]+",){10}"[\\ntr-]*({attribute}[^"]+?)[trn\s\\]*(<\/Message>|")""",
     """"(An operation was performed on an object)",("[^"]+",){12}"({result}[^"]+)"""
   ]
-  DupFields = ["host->dest_host","ds_object_name->object"]
+  DupFields = ["ds_object_name->object"]
   ParserVersion = "v1.0.0"
 
 

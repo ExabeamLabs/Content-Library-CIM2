@@ -4,7 +4,7 @@
 Name = microsoft-azure-json-file-success-2
    Vendor = Microsoft
    ParserVersion = v1.0.0
-   Conditions = [ """serviceType":"blob""", """operationName""" ] 
+   Conditions = [ """serviceType":""", """"blob""", """"operationName":""", """"category":""" ]
  
 azure-classicblob-json = {
     Vendor = Microsoft

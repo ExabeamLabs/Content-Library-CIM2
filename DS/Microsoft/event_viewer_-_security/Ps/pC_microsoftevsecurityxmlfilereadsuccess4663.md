@@ -28,7 +28,7 @@ Fields = [
   """"Activity":"({event_name}[^"]+)""""
 ]
 DupFields = [
-  "host->dest_host"
+  "host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

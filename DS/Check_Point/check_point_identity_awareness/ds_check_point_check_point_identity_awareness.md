@@ -4,7 +4,7 @@ Product: Check Point Identity Awareness
 ---------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  150  |   71   |         19         |       5        |    3    |
+|  150  |   71   |         19         |       5        |    2    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

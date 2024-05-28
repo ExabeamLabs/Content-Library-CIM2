@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-json-audit-policy-modify-4907
     """"HandleId"+:"+({handle_id}[^"]+)""",
     """"ProcessId"+:"+({process_id}[^"]+)""",
     """"ProcessName"+:"+({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))""""
+    """New Security Descriptor:(\\t|\\r|\\n)*[^\S<]*({audit_policy_name}[^<"]+?)(\s+|<|")"""
   ]
 
 

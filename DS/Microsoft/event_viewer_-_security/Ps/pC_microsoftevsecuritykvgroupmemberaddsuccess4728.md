@@ -23,7 +23,6 @@ jp-member-added = {
     """グループ:.+?グループ名:\s+({group_name}.+?)?\s+グループ ドメイン:""",
     """グループ:.+?グループ ドメイン:\s+({group_domain}[^\s]+)""",
     """セキュリティが有効な({group_type}[^\s]+)\s+グループにメンバーが追加されました。""",
-  ]
-  DupFields = [ "host->dest_host" 
+  
 }
 ```

@@ -22,7 +22,7 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """"SenderIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"SHA256":"({hash_md5}[^"]+)"""",
     """"Verdict":"({verdict}[^"]+)"""",
-    """"Subject":"\s*({additional_info}[^,"]+?)[\s\t]*"(,|$)"""",
+    """"Subject":"\s*({email_subject}[^"]+?)\s*",""",
     """"Directionality":"({direction}[^",]+)"""",
     """"P2Sender":"((([^@]+?\\=)+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))"""",
     """"P1Sender":"((([^@]+?\\=)+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))""""
@@ -31,7 +31,7 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
 ]
-  DupFields = [ "additional_info->email_subject" ]
+  DupFields = [ "email_subject->additional_info" ]
  
 
 }

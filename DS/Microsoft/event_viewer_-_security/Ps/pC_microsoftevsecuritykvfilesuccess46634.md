@@ -15,8 +15,8 @@ Fields = [
   """(?i)(((audit|success)( |_)(success|audit))|information)[\s,]({dest_host}({host}[\w\-.]+))\s+.*Subject:"""
   """({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))"""
   """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-  """<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
-  """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+?))("|\s|;)"""
+  """<Computer>({src_host}({host}[\w\-.]+))</Computer>"""
+  """Computer(\w+)?["\s]*(:|=)\s*"?({src_host}({host}[\w\-.]+?))("|\s|;)"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4663)"""
   """Subject(:|=).*?Security ID(:|=)\s*({user_sid}.+?)[\s;]*Account Name(:|=)\s*({user}[\w\.\-]{1,40}\$?)[\s;]*Account Domain(:|=)\s*(NT AUTHORITY|({domain}.+?))[\s;]*Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*Object(:|=)"""

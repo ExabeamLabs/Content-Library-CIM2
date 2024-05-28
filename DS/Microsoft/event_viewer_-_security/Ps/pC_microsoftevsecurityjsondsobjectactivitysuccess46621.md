@@ -10,9 +10,10 @@ ExtractionType = json
 ParserVersion = "v1.0.0"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss" ]
 Fields = [
 """exa_json_path=$.TimeCreated,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+"""exa_json_path=$.TimeCreated,exa_field_name=time""",
 """exa_json_path=$.Message,exa_regex=({event_name}An operation was performed on an object)""",
 """exa_json_path=$.Keywords,exa_field_name=result""",
 """exa_json_path=$..ProcessID,exa_field_name=process_id""",
@@ -35,7 +36,7 @@ Fields = [
 """exa_regex=Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
 DupFields = [
-"host->dest_host","ds_object_name->object"
+"ds_object_name->object"
 ]
 
 

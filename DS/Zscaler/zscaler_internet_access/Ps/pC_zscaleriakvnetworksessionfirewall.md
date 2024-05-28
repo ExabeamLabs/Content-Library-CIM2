@@ -33,6 +33,7 @@ Name = zscaler-ia-kv-network-session-firewall
     """ipcat=(Miscellaneous or Unknown|({ip_category}[^\=]+?)\s+\w+=)""",
     """deviceowner=(NA|({device_owner}[^\s]+))""",
     """rulelabel=({rule}.+?)\s*inbytes"""
+    """\snwapp=({network_app}[^=]+?)\s+\w+="""
 ]
 DupFields = [ "result->action" ]
 

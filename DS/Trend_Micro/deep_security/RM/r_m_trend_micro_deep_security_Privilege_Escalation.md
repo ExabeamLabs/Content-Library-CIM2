@@ -7,7 +7,7 @@ Vendor: Trend Micro
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  47   |   8    |         42         |       3        |    3    |
+|  47   |   8    |         42         |       3        |    1    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

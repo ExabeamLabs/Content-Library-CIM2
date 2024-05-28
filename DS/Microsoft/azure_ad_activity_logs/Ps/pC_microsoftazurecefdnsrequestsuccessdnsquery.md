@@ -58,7 +58,7 @@ o365-dlp-email-out = {
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
   ]
-  DupFields = [ "alert_name->alert_type", "email_address->src_email_address", "email_attachments->attachment" ]
+  DupFields = [ "alert_name->alert_type", "email_address->src_email_address"  ]
  },
 
 cef-azure-app-activity-1 = {

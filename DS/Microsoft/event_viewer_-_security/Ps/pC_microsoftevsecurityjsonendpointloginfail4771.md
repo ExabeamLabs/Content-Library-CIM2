@@ -25,7 +25,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """"(TargetSid|TargetDomainName)\\*":\\*"({user_sid}[^"\\]*)"""
     """<Data Name ="TargetUserName">({user}[\w\.\-]{1,40}\$?)"""
     """"TargetUserName\\*":\\*"({user}[\w\.\-]{1,40}\$?)"""
-    """"serviceName":"({src_host}[\w\-.]+)\/({domain}[^\\\/\s"]+?)\s*"""",
     """"ServiceName\\*":\\*"[^/]*\/({domain}[^"\\]*)""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({result}[^"]+?)\s*"""",
@@ -46,7 +45,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_json_path=$..TargetSid,exa_field_name=user_sid""",
     """exa_json_path=$..TargetDomainName,exa_field_name=user_sid""",
     """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
-    """exa_json_path=$..ServiceName,exa_regex=^({src_host}[\w\-.]+)\/({domain}[^\\\/\s"]+?)$""",
+    """exa_json_path=$..ServiceName,exa_regex=^([\w\-.]+)\/({domain}[^\\\/\s"]+?)$""",
     """exa_json_path=$..eventRecordID,exa_field_name=event_id""",
     """exa_json_path=$..severityValue,exa_field_name=result""",
     """exa_json_path=$..Status,exa_field_name=result_code""",
@@ -55,7 +54,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_json_path=$..ip,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
   ]
   DupFields = [
-    "host->dest_host"
     "result_code->failure_code"
   ]
 

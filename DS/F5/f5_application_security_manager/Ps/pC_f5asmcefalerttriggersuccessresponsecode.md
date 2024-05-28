@@ -25,6 +25,7 @@ Fields = [
   """policy_name=\"({alert_name}[^\"]+)\""""
   """,violations=\"({alert_name}[^\"]+)\""""
   """violation_rating=\"({alert_severity}[^\"]+)""""
+  """severity="({alert_severity}[^\"]+)""""
   """protocol=\"({protocol}[^\"]+)"""
   """protocol=\"({alert_type}[^\"]+)"""
   """,attack_type=\"({alert_type}[^\"]+)""""

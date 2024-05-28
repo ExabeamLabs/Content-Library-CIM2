@@ -8,7 +8,6 @@ Conditions = [
 """event_id\":4726"""
 ]
 DupFields = [
-"host->dest_host"
 "dest_user->account_name",
 "src_host_windows->src_host"
 ]

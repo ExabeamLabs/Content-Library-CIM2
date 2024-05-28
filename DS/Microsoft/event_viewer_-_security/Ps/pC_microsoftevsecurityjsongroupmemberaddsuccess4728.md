@@ -32,7 +32,6 @@ Fields = [
 """TargetDomainName\\?"+:\\?"+({group_domain}[^\\]+)\\?""""
 ]
 DupFields = [
-"host->dest_host",
 "src_host_windows->src_host"
 ]
 ParserVersion = "v1.0.0"

@@ -5,12 +5,12 @@ Name = microsoft-evsecurity-kv-handle-close-4658-1
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [ """The handle to an object was closed""", """Computer""", """TimeCreated SystemTime""" ]
   Fields = [
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_code}4658)""",
-    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """({event_name}The handle to an object was closed)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",

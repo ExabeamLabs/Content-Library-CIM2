@@ -9,7 +9,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """Workload"""
   """"PowerBI""""
-  """WorkspaceId"""
+  """"ActivityId":"""
 ]
 Fields = [
   """exa_json_path=$.CreationTime,exa_field_name=time"""
@@ -23,6 +23,8 @@ Fields = [
   """exa_regex="DatasetName":\s*"({data_set_name}[^"]+)"""
   """exa_json_path=$.Workload,exa_field_name=resource"""
   """exa_json_path=$.IsSuccess,exa_field_name=result"""
+  """exa_json_path=$.Activity,exa_field_name=event_name"""
+  """exa_json_path=$.ActivityId,exa_field_name=activity_id"""
 ]
 ParserVersion = "v1.0.0"
 

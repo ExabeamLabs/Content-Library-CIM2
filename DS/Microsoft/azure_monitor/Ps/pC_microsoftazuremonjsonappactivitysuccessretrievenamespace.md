@@ -4,7 +4,7 @@
 Name = microsoft-azuremon-json-app-activity-success-retrievenamespace
   ExtractionType = json
   ParserVersion = v1.0.0
-  Conditions= [ """"EventName":"Retrieve Namespace"""", """"category":"OperationalLogs"""" ]
+  Conditions= [ """"EventName":""", """"Retrieve Namespace"""", """"category":""", """"OperationalLogs"""" ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft

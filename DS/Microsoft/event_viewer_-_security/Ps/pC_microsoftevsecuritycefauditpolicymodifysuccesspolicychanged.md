@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-cef-audit-policy-modify-success-policychanged
       """({event_code}4719)"""
       """\srt=({time}\d{13})""",
       """ahost=({host}[\w\-.]+)"""
-      """dvchost=({dest_host}[\w\-.]+)""",
+      """dvchost=({host}[\w\-.]+)""",
       """duser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
       """dntdom=({domain}.+?)\s+\w+=""",
       """cs5=({sub_category}.+?)\s+\w+="""

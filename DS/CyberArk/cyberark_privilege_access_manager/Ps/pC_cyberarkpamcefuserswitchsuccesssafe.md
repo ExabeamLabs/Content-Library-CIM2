@@ -24,6 +24,12 @@ Fields = [
 """\sdhost="?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\:({dest_port}\d+))?|({dest_host}[\w\-.]+))"""
 """\sduser="?([^\\="]+\\+)?({dest_user}[^="]+?)"?\s+\w+="""
 """cs2="?({safe_value}[^"]+?)"?\s+\w+="""
+"""CEF:\d+\|([^\|]+\|){3}({event_code}[^\|]+)"""
+"""CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
+"""CEF:\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
+"""msg="*\[*({additional_info}[^"\]]+)?\]*\s*"""
+"""cn2="*({action}[^=]+)\s"+(\s+\w+=)"""
+"""cs3="*({device_type}[^="]+)?"*\s+\w+="""
 ]
 DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"

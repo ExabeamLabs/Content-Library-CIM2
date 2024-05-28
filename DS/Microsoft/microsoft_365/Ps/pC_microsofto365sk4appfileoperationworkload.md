@@ -46,7 +46,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"ServiceObjectType":"({role_name}[^",\}]+)""",
     """"Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """Device\.DisplayName.*?NewValue":"({src_host}[^"]+)"""",
-    """"FileName":"({file_name}[^"]+?(\.({file_ext}[^"]+))?)"""",
+    """"FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)"""",
     """"User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*"""",
     """"os":"({os}[^"]+)"""",
     """"(browser|BrowserName)":"({browser}[^"]+)"""",

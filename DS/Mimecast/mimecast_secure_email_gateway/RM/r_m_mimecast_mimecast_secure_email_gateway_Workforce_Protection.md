@@ -7,7 +7,7 @@ Vendor: Mimecast
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   4   |   1    |         1          |       1        |    6    |
+|   4   |   1    |         1          |       1        |    7    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

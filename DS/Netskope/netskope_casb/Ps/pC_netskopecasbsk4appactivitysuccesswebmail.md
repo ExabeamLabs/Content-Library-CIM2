@@ -6,7 +6,7 @@ Name = netskope-casb-sk4-app-activity-success-webmail
   Product = Netskope CASB
   TimeFormat = "epoch_sec"
   ParserVersion = v1.0.0
-  Conditions = [ """"organization_unit":"""" ,""""access_method":"""",""""aggregated_user":"""",""""app_session_id":""",""""appcategory":"Webmail""""]
+  Conditions = [ """"access_method":"""", """"type":"connection"""", """"traffic_type":""", """"ccl":""", """"appcategory":"""", ]
   Fields = [
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",
@@ -22,6 +22,14 @@ Name = netskope-casb-sk4-app-activity-success-webmail
     """"src_country":"({src_country}[^="]+)""",
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"srcip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"appcategory":\s*"(-|none|({categories}({category}[^",;:]+)[^"]*?))"""",
+    """"client_bytes":\s*({bytes_in}\d+)""",
+    """"dst_country":\s*"({dest_country}[^"]+)"""",
+    """"dst_location":\s*"({location}[^"]+)"""",
+    """"dsthost":\s*"({dest_host}[^"]+)"""",
+    """"server_bytes":\s*({bytes_out}\d+)"""
+    """"traffic_type":\s*"({app_type}[^"]+)""",
+    """"type":\s*"({operation_type}[^"]+)""",
   ]
 
 

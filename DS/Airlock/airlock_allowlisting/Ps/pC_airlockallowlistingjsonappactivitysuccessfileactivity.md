@@ -12,7 +12,7 @@ Name = airlock-allowlisting-json-app-activity-success-fileactivity
     """exa_json_path=$.hostname,exa_regex=({host}[\w\-\.]+)"""
     """exa_json_path=$.username,exa_regex=(SYSTEM|LOCAL SERVICE|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))"""
     """exa_json_path=$.path,exa_field_name=file_dir""",
-    """exa_json_path=$.filename,exa_regex=({file_name}[^\"\\\/]+?(\.({file_ext}[^\.\"]+)))""",
+    """exa_json_path=$.filename,exa_regex=({file_name}[^\"\\\/]+(\.({file_ext}[^\.\"]+)))""",
     """exa_regex=({event_name}FileActivityMessage)""",
     """exa_json_path=$.event,exa_field_name=operation""",
     """exa_json_path=$.sha256,exa_field_name=hash_sha256""",

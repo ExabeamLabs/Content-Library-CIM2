@@ -25,7 +25,7 @@ Fields = [
   """Properties:\s*({attributes}\S.*?)\s*Additional Information:"""
 ]
 DupFields = [
-"host->dest_host", "ds_object_name->object"
+"ds_object_name->object"
 ]
 ParserVersion = "v1.0.0"
 

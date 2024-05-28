@@ -5,11 +5,12 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Conditions = [ """<EventID>4670</EventID>""", """<Task>Authorization Policy Change""", """Permissions on an object were changed""" ]
   Fields = [
     """({event_name}Permissions on an object were changed)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",

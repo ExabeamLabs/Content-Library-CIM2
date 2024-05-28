@@ -4,7 +4,7 @@ Product: Mimecast Secure Email Gateway
 --------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  105  |   43   |         7          |       7        |   13    |
+|  105  |   43   |         7          |       7        |   14    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

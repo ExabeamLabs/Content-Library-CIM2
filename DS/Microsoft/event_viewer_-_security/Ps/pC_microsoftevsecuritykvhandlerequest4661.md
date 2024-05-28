@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-handle-request-4661
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [ """4661""", """A handle to an object was requested""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-kv-handle-request-4661
     """Object Server:\s*({object_server}\S.*?)\s+Object Type:""",
     """Object Type:\s*({object_type}File)\s*Object Name:\s*(-|({file_path}({file_dir}[^<]*?)({file_name}[^:<>\\\/]+?(\.({file_ext}[^:<>\\\/\.]+?))?)))\s*Handle ID:""",
     """Object Type:\s*({object_type}Process)\s*Object Name:\s*(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^:<>\\\/]+?)))\s*Handle ID:""",
-    """Object Type:\s*({object_type}SAM_DOMAIN)\s*Object Name:\s*(-|({dest_domain}\S+?))\s*Handle ID:""",
+    """Object Type:\s*({object_type}SAM_DOMAIN)\s*Object Name:\s*(-|({dest_domain}[^=\s]+?))\s*Handle ID:""",
     """Object Type:\s*({object_type}Key)\s*Object Name:\s*(-|({registry_key}[^:]+?))\s*Handle ID:""",
     """Object Type:\s*(?!(File|Process|SAM_DOMAIN|Key))({object_type}\S+?)\s*Object Name:\s*(-|({object}[^<]+?))\s*Handle ID:""",
     """Handle ID:\s*({handle_id}\S+)""",

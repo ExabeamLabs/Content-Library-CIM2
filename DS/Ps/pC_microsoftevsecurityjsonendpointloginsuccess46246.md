@@ -8,7 +8,7 @@ Conditions = [
   """4624"""
 ]
 ExtractionType = json
-DupFields = [ "src_host_windows->src_host" ]
+DupFields = [ "src_host_windows->src_host", "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
 

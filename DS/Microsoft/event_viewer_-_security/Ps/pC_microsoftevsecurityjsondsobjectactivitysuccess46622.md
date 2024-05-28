@@ -24,7 +24,7 @@ Fields = [
 """exa_json_path=$.event_id,exa_field_name=event_code""",
 """exa_json_path=$.event_data.AccessList,exa_field_name=access"""
 ]
-DupFields = [ "host->dest_host", "ds_object_name->object" ]
+DupFields = [ "ds_object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

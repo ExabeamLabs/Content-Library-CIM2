@@ -56,7 +56,7 @@ Fields = [
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
 DupFields = [
-"host->dest_host","ds_object_name->object"
+"ds_object_name->object"
 ]
 
 

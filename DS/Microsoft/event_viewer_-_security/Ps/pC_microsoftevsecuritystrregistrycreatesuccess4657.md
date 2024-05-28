@@ -4,12 +4,13 @@
 Name = "microsoft-evsecurity-str-registry-create-success-4657"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   Conditions = [ """4657""", """A registry value was modified""", """Subject:""", """Object:""" ]
   Fields = [
     """({time}\w+\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+({event_code}4657)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)""",
     """EventCode=({event_code}\d+)""",
     """<Computer>({host}[\w\-.]+?)<\/Computer>"""
     """ComputerName =({host}[^\s]+)""",

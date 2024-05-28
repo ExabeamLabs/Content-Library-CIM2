@@ -31,7 +31,7 @@ Mvision-json-template = {
       """"threatactiontaken\":\s*\"({action}[^\"]+)\""""
       """"RuleNames\":\s+\"({rule}[^\"]+)\""""
       """"EmailSubject\":\s*\"({alert_subject}[^\"]+)\""""
-      """"MatchedEmailRecipients\":\s*\"({recipients}[^\"]+?)\s*\""""
+      """"MatchedEmailRecipients\":\s*\"({email_recipients}[^\"]+?)\s*\""""
       """"EmailSender\":\s*\"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\""""
       """"PrinterName\":\s*\"({printer_name}[^\"]+)\""""
       """"Destination\":\s+\"({target}[^\"]+)\""""

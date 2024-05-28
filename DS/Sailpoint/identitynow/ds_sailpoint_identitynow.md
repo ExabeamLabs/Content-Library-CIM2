@@ -4,7 +4,7 @@ Product: IdentityNow
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  133  |   52   |         21         |       14       |   22    |
+|  115  |   45   |         19         |       13       |   22    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

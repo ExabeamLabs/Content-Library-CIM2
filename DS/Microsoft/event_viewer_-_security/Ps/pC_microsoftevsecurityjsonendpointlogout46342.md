@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """({event_code}4634)""",
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"Computer":"({host}[^"]+)"""",
+    """"Computer":"({src_host}({host}[\w\-.]+))"""",
     """"Keywords":"({result}[^"]+)""",
     """"TargetUserName":"({user}[\w\.\-]{1,40}\$?)"""",
     """"TargetLogonId":"({login_id}[^"]+)"""",
@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """exa_regex=({event_code}4634)""",
     """exa_json_path=$..systemTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$..TimeCreated,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """exa_json_path=$..Computer,exa_regex=^({host}[\w\-.]+)$""",
+    """exa_json_path=$..Computer,exa_regex=^({src_host}({host}[\w\-.]+))$""",
     """exa_json_path=$..Keywords,exa_field_name=result""",
     """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
     """exa_json_path=$..TargetLogonId,exa_field_name=login_id""",
@@ -36,7 +36,6 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """exa_json_path=$..severityValue,exa_field_name=action""",
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-sk4-user-password-reset-success-4724
   Vendor = Microsoft
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [ """"EventID":"4724"""", """An attempt was made to reset an account's password."""", """"SubjectUserName":"""", """"TargetSid":"""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """"Computer":"({host}[^"]+)"""",
     """"EventID":"({event_code}\d+)"""",
     """({event_name}An attempt was made to reset an account's password)""",

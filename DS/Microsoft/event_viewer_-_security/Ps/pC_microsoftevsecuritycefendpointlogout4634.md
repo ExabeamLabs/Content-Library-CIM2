@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-cef-endpoint-logout-4634
   Conditions = [ """<EventID>4634<""", """An account was logged off""", """<Data Name\=""", """TargetUserName""" ]
   Fields = [
     """<TimeCreated SystemTime\\='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})""",
-    """<Computer>({host}[^<>]+)</Computer>""",
+    """<Computer>({src_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}[^<>]+)</Keywords>""",
     """<Data Name\\='(Caller)?ProcessName'>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<""",

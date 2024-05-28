@@ -21,7 +21,7 @@ Fields = [
 """"QueryType"*:\"*({dns_query_type}[^\"]+)"""
 """"ResponseCode"*:\"*({dns_response_code}[^\"]+)"""
 """"Domain"*:\"*({dns_query}[^\"]+)"""
-""""Categories"*:\"*({category}[^\"]+)"""
+""""categories":\[({categories}({category}[^,;]+)[^\]]+)"""
 """exa_json_path=$.Timestamp,exa_field_name=time"""
 """exa_json_path=$.Identities,exa_field_name=identities"""
 """exa_json_path=$.InternalIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -30,7 +30,7 @@ Fields = [
 """exa_json_path=$.QueryType,exa_field_name=dns_query_type"""
 """exa_json_path=$.ResponseCode,exa_field_name=dns_response_code"""
 """exa_json_path=$.Domain,exa_field_name=dns_query"""
-"""exa_json_path=$.Categories,exa_field_name=category"""
+"""exa_regex="Categories"*:"*({categories}({category}[^,"]+)[^"]*)""""
 ]
 ParserVersion = "v1.0.0"
 

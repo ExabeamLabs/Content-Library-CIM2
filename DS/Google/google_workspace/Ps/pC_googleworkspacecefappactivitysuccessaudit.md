@@ -20,7 +20,8 @@ Name = google-workspace-cef-app-activity-success-audit
   """({app}Gmail|gmail)""",
   """"action_type":({action_type}\d+)"""
   """"service":"({service_name}[^"]+)"""
-  """suser=(anonymous|({email_address}[^@=\s]+@[^\.=\s]+\.[^=\s]+)|({user}[\w\.\-]{1,40}\$?))""",
+  """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+[\w=]+""",
+  """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
   """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
   ]
   DupFields = [ "src_email_address->email_address" ]

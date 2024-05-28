@@ -10,7 +10,7 @@ Conditions = [
 ]
 Fields = [
   """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-  """<Computer>({dest_host}({host}[\w\-.]+))<"""
+  """<Computer>({src_host}({host}[\w\-.]+))<"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name\\*='SubjectUserSid'>(?:NONE_MAPPED|({user_sid}[^<]+))<"""

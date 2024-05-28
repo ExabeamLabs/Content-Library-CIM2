@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-endpoint-lock-success-4800"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
 Conditions = [
 """<EventID>4800"""
 """TargetUserName"""
@@ -12,6 +12,7 @@ Conditions = [
 Fields = [
   """<EventTime>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
 """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)"""
+"""<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
 """<Computer>({dest_host}({host}[\w\-.]+))"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """({event_name}The workstation was locked)"""

@@ -15,10 +15,10 @@ Fields = [
   """UserId\"*:\s*\"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\"*"""
   """Sender\"*:\s*\"*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\""""
   """Receivers\"*:\s*\[\"*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+  """Receivers"*:\s*\[({recipients}[^\]]+)\]"""
 ]
 DupFields = [
   "src_email_address->email_address"
-  "dest_email_address->recipients"
 ]
 ParserVersion = "v1.0.0"
 

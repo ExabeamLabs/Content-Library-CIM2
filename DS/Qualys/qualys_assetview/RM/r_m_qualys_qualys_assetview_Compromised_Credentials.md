@@ -7,7 +7,7 @@ Vendor: Qualys
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  62   |   33   |         4          |       2        |    1    |
+|  62   |   33   |         4          |       2        |    0    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

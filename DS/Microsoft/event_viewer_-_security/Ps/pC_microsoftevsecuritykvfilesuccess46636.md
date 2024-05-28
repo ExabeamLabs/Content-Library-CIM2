@@ -24,7 +24,7 @@ Fields = [
 """Object Type:\s+(?:|({file_type}.+?))\s+Object Name:"""
 ]
 DupFields = [
-"host->dest_host"
+"host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

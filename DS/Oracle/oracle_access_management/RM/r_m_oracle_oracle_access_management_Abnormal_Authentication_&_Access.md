@@ -7,7 +7,7 @@ Vendor: Oracle
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  16   |   5    |         2          |       8        |   22    |
+|  16   |   5    |         2          |       7        |   22    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |
@@ -19,4 +19,3 @@ Vendor: Oracle
 | failed-app-login          | <b>T1133 - External Remote Services</b><br> ↳ <b>FA-UC-F</b>: Failed activity from a country from which there was no prior successful activity<br> ↳ <b>FA-GC-F</b>: First Failed activity in session from country in which group has never had a successful activity<br> ↳ <b>FA-OC-F</b>: First Failed activity in session from country in which organization has never had a successful activity    |  • <b>UA-OC</b>: Countries for organization<br> • <b>UA-GC</b>: Countries for peer groups<br> • <b>UA-UC</b>: Countries for user activity    |
 | failed-physical-access    | <b>T1078 - Valid Accounts</b><br> ↳ <b>PA-VPN-02</b>: Badge access after VPN login    |  • <b>PA-VPN-02</b>: Users who accessed a physical location after vpn login    |
 | physical-access    | <b>T1078 - Valid Accounts</b><br> ↳ <b>DORMANT-USER</b>: Dormant User<br> ↳ <b>AE-UA-F</b>: First activity type for user<br> ↳ <b>PA-VPN-02</b>: Badge access after VPN login    |  • <b>PA-VPN-02</b>: Users who accessed a physical location after vpn login<br> • <b>AE-UA</b>: All activity for users    |
-| privileged-access         | <b>T1078 - Valid Accounts</b><br> ↳ <b>AE-UA-F</b>: First activity type for user    |  • <b>AE-UA</b>: All activity for users    |

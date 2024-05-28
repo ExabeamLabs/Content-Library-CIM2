@@ -5,13 +5,13 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4634
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [ """<EventID>4634</EventID>""", """<TimeCreated SystemTime""", """<Data Name""" ]
   Fields = [
     """<Message>({event_name}[^.。]+)""",
     """({event_name}An account was logged off)""",
-    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")\/>""",
-    """<Computer>([^<>]+?[\\\/]+)?({host}[^<>]+)<\/Computer>""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")\/>""",
+    """<Computer>([^<>]+?[\\\/]+)?({src_host}({host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Keywords>({result}[^<]+)</Keywords>""",

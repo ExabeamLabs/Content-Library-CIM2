@@ -5,7 +5,7 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [
 """A user account was created"""
   ]
@@ -16,6 +16,7 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))""",
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+"""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """({event_code}4720)""",
 """Hostname\":\"({host}[\w\-.]+)\"""",
 """"ComputerName":"({host}[\w\-.]+)""",

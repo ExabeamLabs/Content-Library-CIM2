@@ -21,6 +21,7 @@ armorblox-email = {
     """exa_json_path=$.priority,exa_field_name=priority""",
     """exa_json_path=$.incident_type,exa_field_name=event_name""",
     """exa_json_path=$.attachment_list[0],exa_field_name=email_attachments""",
+    """exa_regex="attachment_list":\["({email_attachment}[^,]*(\.({file_ext}[^",\]]+)))"""
    
 }
 ```

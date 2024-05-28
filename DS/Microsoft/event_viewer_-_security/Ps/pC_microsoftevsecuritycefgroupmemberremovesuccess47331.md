@@ -28,9 +28,6 @@ Fields = [
 """"subjectDomainName":"({domain}[^"\s]+?)\s*""""
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

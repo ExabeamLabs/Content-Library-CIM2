@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-json-share-access-5145-2"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss", "epoch_sec"]
 Conditions = [
   """"Message":"A network share object was checked to see whether client can be granted desired access"""
   """"EventID":5145"""
@@ -14,6 +14,7 @@ Fields = [
   """({event_name}A network share object was checked to see whether client can be granted desired access)"""
   """({event_code}5145)"""
   """"hostname":"({host}[\w\-.]+)"""
+  """"EventTime":({time}\d{10})"""
   """"EventTime\\?":\s*\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
   """SubjectLogonId"+:"+({login_id}[^"]+)"""
@@ -25,7 +26,7 @@ Fields = [
   """ObjectType"+:"+({file_type}[^"]+)"""
   """ShareName"+:"+[\\\*]*({share_name}[^"]+)"""
   """ShareLocalPath"+:"+(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)""""
-  """RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)""""
+  """RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]{1,20}?))?)""""
   """AccessList"+:"+({access}[^"]+)"""
   """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:"""
   """Access Check Results:\s*({result}-)\s"""

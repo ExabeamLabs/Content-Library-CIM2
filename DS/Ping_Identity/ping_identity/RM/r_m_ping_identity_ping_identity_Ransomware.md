@@ -7,7 +7,7 @@ Vendor: Ping Identity
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   0    |         1          |       5        |   82    |
+|   2   |   0    |         1          |       5        |   52    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

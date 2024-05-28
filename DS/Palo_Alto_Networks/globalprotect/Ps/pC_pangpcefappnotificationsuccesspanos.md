@@ -4,10 +4,16 @@
 Name = pan-gp-cef-app-notification-success-panos
   Vendor = Palo Alto Networks
   Product = GlobalProtect
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss", "MMM dd yyyy HH:mm:ss"]
   Conditions = [ """CEF:""", """|Palo Alto Networks|""", """|GLOBALPROTECT|""", """=gateway-config-release""" ]
   Fields = [
-    """\s({host}[\w\-.]+?)\sCEF:""",
+    """\sdvchost=({host}[^\s]+)"""
+    """\sshost=({src_host}[\w\-.]+)\s""",
+    """\srt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
+    """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)(@({=domain}[^\s@=]+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+\w+=""",
+    """PanOSHostID=({src_mac}[^=]+)\s+\w+=""",
+    """\s(-|({host}[\w\-.]+?))\sCEF:""",
     """PanOSLogTimeStamp=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)""",
     """PanOSSourceUserName =(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s\w+=""",
     """PanOSPrivateIPv(4|6)=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",

@@ -4,7 +4,7 @@ Product: vCenter
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  157  |   62   |         26         |       5        |    2    |
+|  139  |   55   |         24         |       4        |    1    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

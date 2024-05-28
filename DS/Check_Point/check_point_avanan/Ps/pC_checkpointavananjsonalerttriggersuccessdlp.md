@@ -3,7 +3,7 @@
 {
 Name = checkpoint-avanan-json-alert-trigger-success-dlp
   ParserVersion = v1.0.0
-  Conditions = [ """"eventtype":"avanan_security_event_dlp"""", """"dlp_detections"""", """"security_event"""", """"severity"""" ]
+  Conditions = [ """type":"avanan_security_event_dlp"""", """"dlp_detections"""", """"security_event"""", """"severity"""" ]
 
 json-avanan-security-alert = {
   Vendor = Check Point
@@ -11,7 +11,7 @@ json-avanan-security-alert = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """"time":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
-    """"eventtype\\*":\\*"({alert_name}[^\\"]+)""",
+    """"(event|source)type\\*":\\*"({alert_name}[^\\"]+)""",
     """"severity\\*":({alert_severity}[^,]+?)\}?,""",
     """"entity_info\\*":\{[^\}]+?"entity_id\\*":\\*"({alert_id}[^"\\]+)""",
     """"entity_info\\*":\{[^\}]+?"entity_sub_type\\*":\\*"({alert_type}[^"\\]+)""",
@@ -26,6 +26,7 @@ json-avanan-security-alert = {
     """attachments\\*":\[\{[^\}]+?"name\\*":\\*"({email_attachments}[^"\\]+)""",
     """file_name\\*":\\*"\s*({file_name}[^\\"]+?)\s*\\*"""",
     """from_email\\*":\\*"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"category":"({category}[^"]+)""""
     
 }
 ```

@@ -15,7 +15,6 @@ Fields = [
   """\w+ \d+ \d\d:\d\d:\d\d\s({host}[\w\-.]+)\sProduct"""
   """\sDestIP="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   """From=({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s"""
-  """User=(?!(<n\/a>))({email_user}[^\s]+)\s"""
   """To=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """To=({email_recipients}[^\n\s]+)"""
   """SrcIP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
@@ -26,9 +25,6 @@ Fields = [
   """Rule="({alert_type}[^"]+)""""
   """SrcPort="({src_port}\d+)""""
   """DestPort="({dest_port}\d+)""""
-]
-DupFields = [
-  "email_user->email_address"
 ]
 ParserVersion = "v1.0.0"
 

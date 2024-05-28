@@ -6,7 +6,7 @@ Name = microsoft-sysmon-xml-alert-trigger-success-25
   Vendor = Microsoft
   Product = Sysmon
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<Provider Name""", """<EventID>25</EventID>""" ]
+  Conditions = [ """<Provider Name""", """<EventID>25</EventID>""", """Microsoft-Windows-Sysmon""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
     """<Computer>({dest_host}({host}[\w\-.]+))""",

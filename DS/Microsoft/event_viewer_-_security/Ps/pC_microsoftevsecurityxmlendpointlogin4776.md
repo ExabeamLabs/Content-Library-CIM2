@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
   """<EventID>4776</EventID>""",
   """Status""",
@@ -13,7 +13,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """</Data>"""
   ]
   Fields = [
-  """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
   """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)"""
   """<Data Name(\\)?=('|")Workstation('|")>(\\+)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)((?i)(workstation)|(\\*({src_host}[\w\-.]+)))))<\/Data>""",
   """<Computer>(\w+\.({domain}[^<]+))"""

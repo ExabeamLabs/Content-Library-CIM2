@@ -12,6 +12,12 @@ Name = symantec-endpointprotection-json-file-success-8004
     """exa_json_path=$.directory.folder,exa_field_name=file_dir"""
 	  """exa_regex="rule_name":"({event_name}[^"]+)"""",
 	  """exa_regex="rule_description":"({additional_info}[^"]+)"""",
+    """"id":({operation}\d+)""",
+ 	  """"directory".+?path":"({file_path}[^"]+)"""",
+ 	  """"directory".+?folder":"({file_dir}[^"]+)"""",
+ 	  """"rule_name":"({event_name}[^"]+)"""",
+ 	  """"rule_description":"({additional_info}[^"]+)"""",
+ 	  """"type_id":({event_code}8004)"""
   ]
 
 json-symantec-endpoint-protection = {

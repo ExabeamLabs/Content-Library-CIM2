@@ -27,7 +27,7 @@ Fields = [
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
 ]
 DupFields = [
-"host->dest_host"
+"host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -55,7 +55,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """exa_json_path=$.Action,exa_field_name=action"""
     """exa_regex="ToIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   ]
-  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user", "src_email_address->email_address"]
+  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user"]
  
 
 }

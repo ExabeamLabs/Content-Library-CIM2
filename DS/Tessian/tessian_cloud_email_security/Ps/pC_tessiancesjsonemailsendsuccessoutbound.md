@@ -5,6 +5,7 @@ Name = tessian-ces-json-email-send-success-outbound
   Conditions = [ """.tessian-platform.""", """"recipients":{""", """"transmitter":"""", """"from":"""", """"to":[""", """::outbound-""" ]
   Fields = ${TessianParserTemplates.tessian-dlp-email-alert.Fields} [
     """::({direction}outbound)\-"""
+    """"attachments":\{"names":\[[^"]*"[^"]*(\.({file_ext}\w+))"""
   ]
   ParserVersion = v1.0.0
 

@@ -7,7 +7,6 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4662-1
   Fields = ${WindowsParsersTemplates.json-windows-events-1.Fields}[
     """({event_name}An operation was performed on an object)""",
   ]
-  DupFields = [ "host-> dest_host"]
 
 json-windows-events-1 = {
   Vendor = Microsoft

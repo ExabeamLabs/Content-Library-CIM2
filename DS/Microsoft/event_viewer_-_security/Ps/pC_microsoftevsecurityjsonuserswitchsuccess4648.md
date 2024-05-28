@@ -6,7 +6,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss"]
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [
 """4648""",
 """"TargetServerName":"""
@@ -18,7 +18,8 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
 """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s""",
 """"EventReceivedTime":\s*({time}\d+)""",
 """"timestamp":\s*({time}\d+)""",
-""""(Hostname|MachineName|Computer)":"({host}[\w\-.]*)""",
+"""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""",
+""""(Hostname|MachineName|Computer)":"({dest_host}({host}[\w\-.]*))""",
 """({event_code}4648)""",
 """"SubjectUserSid":"({user_sid}[^"]*)""",
 """"SubjectUserName":"(-|({user}[\w\.\-]{1,40}\$?))""",
@@ -26,7 +27,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
 """"SubjectLogonId":"({login_id}[^"]*)""",
 """"TargetUserName":"({dest_user}[^"]*)""",
 """"TargetDomainName":"({dest_domain}[^\s"]*)""",
-""""TargetServerName":"({dest_host}[\w\-.]*)""",
+""""TargetServerName":"(localhost|({dest_host}[\w\-.]*))""",
 """"TargetInfo":"({dest_service_name}[^"]*)""",
 """"(?i)(ProcessId)":"*({process_id}[^",]*)""",
 """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))"""",

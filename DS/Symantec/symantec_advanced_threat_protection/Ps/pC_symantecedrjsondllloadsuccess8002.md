@@ -7,7 +7,7 @@ Name = symantec-edr-json-dll-load-success-8002
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
     """"module":\{.+?path":"({file_path}[^"]+)"""",
     """"module":\{.+?folder":"({file_dir}[^"]+)"""",
-    """"module":\{.+?name":"({file_name}[^"]+)"""",
+    """"module":\{.+?name":"({file_name}[^"]*?(\.({file_ext}[^"]+)))"""",
     """"type_id":({event_code}8002)"""
   ]
 

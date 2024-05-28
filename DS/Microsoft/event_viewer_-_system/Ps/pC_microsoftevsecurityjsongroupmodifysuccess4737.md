@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)""",
    ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

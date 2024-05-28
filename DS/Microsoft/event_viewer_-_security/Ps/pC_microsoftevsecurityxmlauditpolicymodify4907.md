@@ -7,6 +7,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4907
   Conditions = [ """Auditing settings on object were changed""", """<EventID>4907<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """New Security Descriptor:[^\S<]*({audit_policy_name}[^<"]+?)(\s+|<|")"""
   ]
 
 s-xml-events = {

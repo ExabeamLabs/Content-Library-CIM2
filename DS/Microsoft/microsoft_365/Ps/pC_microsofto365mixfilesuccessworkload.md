@@ -17,8 +17,8 @@ Fields = [
   """"host\\*\"+:\\*\s*\"+(::ffff:)?({host}[^\"\\]+)"""
   """"*SourceRelativeUrl\\*\"+:\\*\s*\"+({src_file_dir}[^\"]+)"""
   """\"*SourceFileName\\*\"+:\\*\s*\"+\s*({src_file_name}[^\"\\]+?(\.({src_file_ext}\w+))?)(,|\s*\")"""
-  """\"*SourceFileExtension\\*"+:\\*\s*"+\s*({src_file_ext}[^"\\,\s]+)""",
-  """"*ObjectId\\*":\s*\\*"([a-f0-9]{8}(?:-[a-f0-9]{4}){4}[a-f0-9]{8}|({src_file_path}({src_file_dir}[^"]*?)?({src_file_name}[^\/"]+?(\.({src_file_ext}[^\\\/.\s",]+))?)))"(?!u\d+)"""
+  """\"*SourceFileExtension\\*"+:\\*\s*"+\s*({src_file_ext}[^"\\,\s']+)""",
+  """"*ObjectId\\*":\s*\\*"([a-f0-9]{8}(?:-[a-f0-9]{4}){4}[a-f0-9]{8}|({src_file_path}({src_file_dir}[^"]*?)?({src_file_name}[^\/"]+?(\.({src_file_ext}[^\\\/.\s",']+))?)))"(?!u\d+)"""
   """Operation\\*"+:\\*\s*"+({operation}[^"\\,]+)""",
   """\"*ClientIP\\*\"+:\\*\s*\"+(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?"""
   """\"*UserAgent\\*\"+:\\*\s*\"+({user_agent}[^\"\\]+)\"*,"""

@@ -16,7 +16,7 @@ Name = microsoft-windows-sk4-endpoint-notification-success-4797
 json-windows-system-info = {
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
     """"Computer":"({host}[^"]+)"""",

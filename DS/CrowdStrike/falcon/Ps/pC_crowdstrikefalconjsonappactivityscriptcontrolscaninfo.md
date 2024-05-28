@@ -10,6 +10,15 @@ Conditions = [
 """"event_simpleName":"ScriptControlScanInfo""""
 ]
 Fields = [
+""""timestamp":"({time}\d{13})"""",
+""""event_simpleName":"({event_code}[^"]+)"""",
+""""aid":"({aid}[^"]+)"""",
+""""cid":"({cid}[^"]+)"""",
+""""event_platform":"({os}[^"]+)"""",
+""""ConfigStateHash":"({old_hash}[^"]+)"""",
+""""ContextProcessId":"({process_id}[^"]+)"""",
+""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+""""name":"({event_name}[^"]+)"""",
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",

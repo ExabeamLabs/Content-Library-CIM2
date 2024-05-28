@@ -72,7 +72,7 @@ Fields = [
 """exa_json_path=$.Hostname,exa_field_name=host"""
 ]
 DupFields = [
-"host->dest_host","ds_object_name->object"
+"ds_object_name->object"
 ]
 
 

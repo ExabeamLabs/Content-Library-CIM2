@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-cef-file-write-success-4663
     """\scs3=({access_mask}\w+)""",
     """Object Type:\s*({file_type}[^\s]+)\s*Object Name:"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

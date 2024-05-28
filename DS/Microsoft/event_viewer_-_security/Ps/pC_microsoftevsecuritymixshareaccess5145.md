@@ -26,9 +26,9 @@ Fields = [
   """Share Name:\s*((?-i)\\+[rnt])*(?:\\\\\*\\)?({share_name}[^=]+?)((?-i)\\+[rnt])*\s*Share Path:""",
   """Share Name:\s*((?-i)\\+[rnt])*(?:\\\\\*\\)?({share_name}.+?)((?-i)\\+[rnt])*\s*Share Path:"""
   """Share Path:\s*((?-i)\\+[rnt])*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}[^=]+?)\\)?(|({d_name}[^\\]*?)))\\?)((?-i)\\+[rnt])*\s*Relative Target Name:""",
-  """Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}[^=]+?)\\)?(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.]+?))?))(?:\\HEAD|:[^=]+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:""",
+  """Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}[^=]+?)\\)?(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.\\\/\(\{,]+?))?))(?:\\HEAD|:[^=]+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:""",
   """Share Path:\s*((?-i)\\+[rnt])*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+?)\\)?(|({d_name}[^\\]*?)))\\?)((?-i)\\+[rnt])*\s*Relative Target Name:"""
-  """Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}.+?)\\)?(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.\\]+?))?))(?:\\HEAD|:.+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:"""
+  """Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}.+?)\\)?(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.\\\(\{,]+?))?))(?:\\HEAD|:.+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:"""
   """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:"""
   """Access Check Results:\s*({result}-)\s"""
   """Access Check Results:.*({result}Granted|Denied)\s+by"""

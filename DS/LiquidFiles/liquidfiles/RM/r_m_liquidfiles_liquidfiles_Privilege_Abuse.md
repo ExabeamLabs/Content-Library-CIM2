@@ -7,7 +7,7 @@ Vendor: LiquidFiles
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   1    |         3          |       6        |   12    |
+|   5   |   1    |         3          |       6        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

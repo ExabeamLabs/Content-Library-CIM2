@@ -137,10 +137,6 @@ Use Case: Physical Security
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |
 |:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | [Lyrix](../DS/Lyrix/lyrix/ds_lyrix_lyrix.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Lyrix/lyrix/RM/r_m_lyrix_lyrix_Physical_Security.md) |
-### Vendor: McAfee
-|                            Product                            | MITRE ATT&CK® TTP          | Content                                                                                                                      |
-|:-------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| [McAfee DAM](../DS/McAfee/mcafee_dam/ds_mcafee_mcafee_dam.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/McAfee/mcafee_dam/RM/r_m_mcafee_mcafee_dam_Physical_Security.md) |
 ### Vendor: Microsoft
 |                                                  Product                                                   | MITRE ATT&CK® TTP                    | Content                                                                                                                                                      |
 |:----------------------------------------------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -216,18 +212,10 @@ Use Case: Physical Security
 |                      Product                      | MITRE ATT&CK® TTP          | Content                                                                                                              |
 |:-------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [Swipes](../DS/Swipes/swipes/ds_swipes_swipes.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Swipes/swipes/RM/r_m_swipes_swipes_Physical_Security.md) |
-### Vendor: Symantec
-|                                                         Product                                                         | MITRE ATT&CK® TTP                    | Content                                                                                                                                                              |
-|:-----------------------------------------------------------------------------------------------------------------------:| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Symantec Endpoint Protection](../DS/Symantec/symantec_endpoint_protection/ds_symantec_symantec_endpoint_protection.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Symantec/symantec_endpoint_protection/RM/r_m_symantec_symantec_endpoint_protection_Physical_Security.md) |
 ### Vendor: TimeLox
 |                        Product                         | MITRE ATT&CK® TTP          | Content                                                                                                                  |
 |:------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | [TimeLox](../DS/TimeLox/timelox/ds_timelox_timelox.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/TimeLox/timelox/RM/r_m_timelox_timelox_Physical_Security.md) |
-### Vendor: Trend Micro
-|                                 Product                                 | MITRE ATT&CK® TTP                    | Content                                                                                                                                |
-|:-----------------------------------------------------------------------:| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
-| [Vision One](../DS/Trend_Micro/vision_one/ds_trend_micro_vision_one.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Trend_Micro/vision_one/RM/r_m_trend_micro_vision_one_Physical_Security.md) |
 ### Vendor: Tyco
 |                                                           Product                                                           | MITRE ATT&CK® TTP          | Content                                                                                                                                                              |
 |:---------------------------------------------------------------------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

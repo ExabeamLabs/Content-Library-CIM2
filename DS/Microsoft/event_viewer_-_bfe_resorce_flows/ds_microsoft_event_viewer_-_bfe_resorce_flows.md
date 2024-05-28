@@ -4,16 +4,11 @@ Product: Event Viewer - BFE Resorce Flows
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   2    |         3          |       1        |    0    |
+|   0   |   0    |         0          |       0        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
-|:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  audit-log-clear<br> ↳[microsoft-evbferf-xml-network-notification-success-2003](Ps/pC_microsoftevbferfxmlnetworknotificationsuccess2003.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_bfe_resorce_flows_Abnormal_Authentication_&_Access.md) |
-|    [Audit Tampering](../../../UseCases/uc_audit_tampering.md)    |  audit-log-clear<br> ↳[microsoft-evbferf-xml-network-notification-success-2003](Ps/pC_microsoftevbferfxmlnetworknotificationsuccess2003.md)<br> | T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>T1562.002 - T1562.002<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_bfe_resorce_flows_Audit_Tampering.md)    |
-|    [Evasion](../../../UseCases/uc_evasion.md)    |  audit-log-clear<br> ↳[microsoft-evbferf-xml-network-notification-success-2003](Ps/pC_microsoftevbferfxmlnetworknotificationsuccess2003.md)<br> | T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_microsoft_event_viewer_-_bfe_resorce_flows_Evasion.md)    |
+|  Use-Case  | Activity Types/Parsers | MITRE ATT&CK® TTP | Content    |
+|:----------:| ---- | ---- | ---- |
+| Enrichment |    |    | [](RM/r_m_microsoft_event_viewer_-_bfe_resorce_flows_Enrichment.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------
-| Initial Access                                                      | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                                                                                                                                                                                                                                                                                   | Credential Access | Discovery | Lateral Movement | Collection | Command and Control | Exfiltration | Impact |
-| ------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------- | ------------ | ------ |
-| [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Impair Defenses](https://attack.mitre.org/techniques/T1562)<br><br>[Indicator Removal on Host: Clear Windows Event Logs](https://attack.mitre.org/techniques/T1070/001)<br><br>[Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Indicator Removal on Host](https://attack.mitre.org/techniques/T1070)<br><br> |                   |           |                  |            |                     |              |        |

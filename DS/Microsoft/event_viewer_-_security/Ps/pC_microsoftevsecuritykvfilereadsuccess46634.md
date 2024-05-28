@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-4
     """AccessMask="({access_mask}[^"]+)""",
     """Accesses:\s*({additional_info}.+?)\s+Access Mask:"""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->src_host" ]
   ParserVersion = "v1.0.0"
 
 

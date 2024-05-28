@@ -26,7 +26,6 @@ Name = "microsoft-evsecurity-cef-endpoint-login-fail-4771"
     """\ssourceGeoLocationInfo=({location}[^=]+?)\s+\w+="""
   ]
   DupFields = [
-    "host->dest_host"
     "result_code->failure_code"
   ]
 

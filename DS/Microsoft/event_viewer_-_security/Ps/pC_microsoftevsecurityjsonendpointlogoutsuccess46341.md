@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4634-1
     """"+TargetDomainName"+:"+({domain}[^"]+)"+""",
     """"+TargetUserSid"+:"+({user_sid}[^"]+)"+""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

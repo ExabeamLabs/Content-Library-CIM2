@@ -20,11 +20,7 @@ Fields = [
     """Category:(?:\\t|\\n|\\r|\s)*({audit_category}[^:]+?)(?:\\t|\\n|\\r|\s)*Subcategory:"""
     """Subcategory:(?:\\t|\\n|\\r|\s)*({sub_category}[^:]+?)(?:\\t|\\n|\\r|\s)*Subcategory GUID:""",
     """Changes:(?:\\t)*({audit_policy_name}[^"]+)""",
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

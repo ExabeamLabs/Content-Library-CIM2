@@ -4,13 +4,14 @@
 Name = microsoft-evsecurity-xml-group-create-success-4731
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Conditions = [ """Microsoft-Windows-Security-Auditing""", """<EventID>4731</EventID>""" ]
   Fields = [
     """({event_name}A security-enabled local group was created)""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime\\?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9})""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
     """({event_code}4731)""",
     """<Data Name\\?='SubjectUserSid'>(-|({user_sid}[^<>]+))<""",
     """<Data Name\\?='SubjectUserName'>(-|({user}[\w\.\-]{1,40}\$?))<""",

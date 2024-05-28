@@ -27,6 +27,7 @@ Fields = [
   """"src-account-name":"({account}[^"]+)"""
   """"UserType":"*({user_type}[^,}"]+)"*"""
   """"UserId":"(NOT-FOUND|SecurityComplianceAlerts|SecurityComplianceInsights|(\w+\-){4}\w+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""""
+  """"sip\\*":\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.CreationTime,exa_field_name=time"""
   """exa_regex=CreationTime":"({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d\.\d\d\d)""""
   """exa_regex="CreationTime"*:\s*"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
@@ -43,6 +44,7 @@ Fields = [
   """exa_json_path=$.ResultStatus,exa_field_name=result"""
   """exa_regex="src-account-name":"({account}[^"]+)"""
   """exa_regex="UserId":"(NOT-FOUND|SecurityComplianceAlerts|SecurityComplianceInsights|(\w+\-){4}\w+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""""
+  """exa_regex="sip\\*":\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 ]
 ParserVersion = "v1.0.0"
 

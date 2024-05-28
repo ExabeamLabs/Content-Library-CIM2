@@ -23,7 +23,7 @@ Fields = [
 """exa_json_path=$.event_data.AuditPolicyChanges,exa_field_name=policy_name""",
 """exa_json_path=$.message,exa_regex=Changes:(\\t|\\n|\s)*({policy_name}.+?)(\\t|\\n|")"""
 ]
-DupFields = [ "host->dest_host" ]
+DupFields = [ "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

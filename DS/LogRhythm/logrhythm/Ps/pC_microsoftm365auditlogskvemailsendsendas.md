@@ -27,6 +27,7 @@ logrhythm-o365-app-activity-1 = {
     """"Attachments\\*"+:[\s\\]*"+\s*({email_attachment}[^"\\;]+)\s*""",
     """InternetMessageId":"({message_id}[^"]+)"""",
     """"Subject":"\s*({email_subject}[^"}]+?)\s*""""
+    """"Attachments\\*"+:[\s\\]*"+\s*[^"\\;]*(\.({file_ext}\w+))"""
   
 }
 ```

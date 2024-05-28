@@ -20,7 +20,6 @@ Name = dg-ndlp-cef-email-send-success-sendmail
     """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?)\s+(ad\.\S+=|\w+=|$)""",
     """\sfname=\s*(?:message body|({email_attachment}[^=]+?))\s+(ad\.\S+=|\w+=|$)"""
   ]
-  DupFields = [ "user->email_user" ]
 
 
 }

@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-json-user-privilege-use-success-4673
     Vendor = Microsoft
     Product = Event Viewer - Security 
     ParserVersion = "v1.0.0"
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
     Conditions = [ """"EventID":"4673"""", """<Data Name""" ]
     Fields = [
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+      """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z)""",
       """"Computer":"({host}[\w\-.]+)""",
       """"EventID":"({event_code}\d+)""",
       """<Data Name\\*='SubjectUserSid'>\s*(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)</Data>""",

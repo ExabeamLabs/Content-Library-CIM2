@@ -32,6 +32,7 @@ Fields = [
   """"return-path"+:\s*\["+(<>|({return_path}[^"]+))""""
   """"detectedName"+:"+({attachment_1}[^"]+)"(.+?detectedName"+:"+({attachment_2}[^"]+)")?(.+?detectedName"+:"+({attachment_3}[^"]+)")?(.+?detectedName"+:"+({attachment_4}[^"]+)?")?(.+?detectedName"+:"+({attachment_5}[^"]+)")?(.+?detectedName"+:"+({attachment_6}[^"]+)")?(.+?detectedName"+:"+({attachment_7}[^"]+)")?(.+?detectedName"+:"+({attachment_8}[^"]+)")?(.+?detectedName"+:"+({attachment_9}[^"]+)")?(.+?detectedName"+:"+({attachment_10}[^"]+)")?"""
   """"cc"+:\[({cc}[^\]]+)\]"""
+  """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
 ]
 ParserVersion = "v1.0.0"
 

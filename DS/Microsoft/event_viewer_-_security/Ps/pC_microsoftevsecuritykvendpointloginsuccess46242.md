@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-kv-endpoint-login-success-4624-2"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "MMM dd HH:mm:ss yyyy"
+  TimeFormat = [ "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
     """An account was successfully logged on"""
     """Account Name"""
@@ -14,6 +14,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-success-4624-2"
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """({event_name}An account was successfully logged on)"""
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """"dhn":"({host}[\w\-.]+)"""
     """({event_code}4624)"""
     """Logon Type(:|=)\s*({login_type}\d+)"""

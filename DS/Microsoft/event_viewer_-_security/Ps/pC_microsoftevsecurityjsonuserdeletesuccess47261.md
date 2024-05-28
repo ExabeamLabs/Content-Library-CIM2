@@ -25,7 +25,6 @@ Fields = [
 """exa_json_path=$.SubjectLogonId,exa_field_name=login_id"""
 ]
 DupFields = [
-"host->dest_host"
 "dest_user->account_name"
 ]
 ParserVersion = "v1.0.0"

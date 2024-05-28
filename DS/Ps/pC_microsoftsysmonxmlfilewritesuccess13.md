@@ -6,6 +6,7 @@ Conditions = [
   """<EventID>13</EventID>"""
   """<Provider Name"""
   """<Execution ProcessID="""
+  """Microsoft-Windows-Sysmon"""
 ]
 ParserVersion = "v1.0.0"
 

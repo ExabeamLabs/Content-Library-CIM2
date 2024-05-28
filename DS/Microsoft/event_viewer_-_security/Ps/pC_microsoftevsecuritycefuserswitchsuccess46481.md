@@ -25,7 +25,6 @@ Fields = [
 ]
 DupFields = [
   "dest_ip->host"
-  "dest_host->host"
 ]
 ParserVersion = "v1.0.0"
 
