@@ -1,4 +1,4 @@
-![Exabeam](https://user-images.githubusercontent.com/57500390/233131296-b8618125-ef0d-497b-9c50-a8abe8b0d2b4.svg)
+![Exabeam](resources/Exabeam-2024-Logo.png)
 
 # Exabeam Content Library - New-Scale
 Based on the Common Information Model 2.0
