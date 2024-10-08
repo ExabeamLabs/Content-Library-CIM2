@@ -33,7 +33,6 @@ Fields = [
   """Target Account.+?Account Name:\s*(\\t)?({dest_user}[^:].+?)\s*(\\n|\\r\s\\t)?\s*Account Domain:\s*(\\t)?({dest_domain}[^:].+?)\s*(\\n\\n|\\r\s\\r\s\\n)?Additional Information:"""
 ]
 DupFields = [
-  "host->dest_host"
   "dest_user->account_name"
 ]
 ParserVersion = "v1.0.0"

@@ -4,6 +4,9 @@
 Name = "liquidfiles-l-json-app-authentication-success-user"
   ParserVersion = v1.0.0
   Conditions = [ """liquidfiles[""", """"message":"User """  ]
+  Fields = ${LiquidFilesParserTemplates.Liquid-json-template.Fields}[
+    """"login_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  ]
 
 Liquid-json-template = {
     Vendor = "LiquidFiles"

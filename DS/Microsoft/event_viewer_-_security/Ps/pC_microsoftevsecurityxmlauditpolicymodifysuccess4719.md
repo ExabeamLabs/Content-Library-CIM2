@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-audit-policy-modify-success-4719"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
 Conditions = [
 """<EventID>4719<"""
 """<Data Name"""
@@ -13,9 +13,9 @@ Conditions = [
 Fields = [
 """({event_code}4719)"""
 """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""<Computer>({host}[^<]+)"""
+"""<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
+"""<Computer>({src_host}({host}[\w\-.]+))"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
-"""<Computer>(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[\w\-.]+))"""
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
 """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))"""
 """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)"""

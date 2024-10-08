@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-user-password-modify-4723"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
 Conditions = [
   """<EventID>4723</EventID>"""
   """<Data Name"""
@@ -12,6 +12,7 @@ Conditions = [
 ]
 Fields = [
   """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
   """<Computer>({host}[\w\-.]+)</Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>"""

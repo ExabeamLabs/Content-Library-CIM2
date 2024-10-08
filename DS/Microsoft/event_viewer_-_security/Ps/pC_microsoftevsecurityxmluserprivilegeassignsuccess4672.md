@@ -4,11 +4,12 @@
 Name = "microsoft-evsecurity-xml-user-privilege-assign-success-4672"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [ """<EventID>4672</EventID>""", """SubjectUserName""" ]
 Fields = [
   """<EventTime>({time}[^\<]+)<""",
   """<TimeCreated SystemTime(\\\/)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+  """<TimeCreated SystemTime(\\\/)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
   """<Computer>({host}({src_host}[\w\-.]+))</Computer>""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<Keywords>({result}[^<]+)</Keywords>""",

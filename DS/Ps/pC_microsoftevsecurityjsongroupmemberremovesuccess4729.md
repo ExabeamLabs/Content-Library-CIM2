@@ -11,7 +11,6 @@ Conditions = [
 """computer_name"""
 ]
 DupFields = [
-"host->dest_host"
 "user_dn->member",
 "src_host_windows->src_host"
 ]

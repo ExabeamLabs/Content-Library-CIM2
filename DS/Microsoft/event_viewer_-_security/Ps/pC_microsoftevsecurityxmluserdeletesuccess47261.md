@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-user-delete-success-4726-1"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
 Conditions = [
   """<EventID>4726</EventID>""",
   """TargetSid""",
@@ -14,7 +14,8 @@ Conditions = [
 Fields = [
   """({event_name}A user account was deleted)"""
   """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
+  """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
+  """<Computer>({src_host}({host}[\w\-.]+))</Computer>"""
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>"""
   """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""

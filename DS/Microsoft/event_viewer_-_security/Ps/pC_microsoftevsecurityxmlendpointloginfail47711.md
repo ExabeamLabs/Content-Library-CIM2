@@ -15,8 +15,8 @@ Fields = [
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """({event_code}4771)"""
   """"Activity":"({event_name}[^"]+)"""
-  """"Computer":"({dest_host}({host}[\w\-.]+))""",
-  """<Computer>({dest_host}({host}[\w\-.]+))<""",
+  """"Computer":"({host}[\w\-.]+)""",
+  """<Computer>({host}[\w\-.]+)<""",
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
   """<Data Name\\*=('|")Status('|")>({result_code}[^<]+)</Data>"""

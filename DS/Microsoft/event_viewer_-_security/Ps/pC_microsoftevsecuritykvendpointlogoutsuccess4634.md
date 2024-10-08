@@ -15,7 +15,6 @@ Name = microsoft-evsecurity-kv-endpoint-logout-success-4634
    """Nombre de cuenta:\s*({user}[\w\.\-]{1,40}\$?)\s*Dominio de cuenta:\s*({domain}[^\s]+)\s*Id. de inicio de sesión:\s*({login_id}[^\s]+)\s*Tipo de inicio de sesión:\s*({login_type}\d+)\s*""",
    """Keywords=({action}[^\=]+?)\s*TaskCategory=""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """"globallyuniqueeventid":"({time}\d\d\d\d.\d\d.\d\d.\d\d.\d\d.\d\d)"""
 """"cardnumber":({badge_id}\d+)"""
-""""accountname":"({user}[^"]+)"""
+""""accountname":"({user}[\w\.\-]{1,40}\$?)"""
 """"cardholder":"({last_name}[^,]+),\s({first_name}[^"]+)"""
 """"eventlocation":"({location_door}[^"]+)"""
 """"eventdescription":"({action}[^"]+)"""

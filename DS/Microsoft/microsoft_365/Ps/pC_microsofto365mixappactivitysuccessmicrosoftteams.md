@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """destinationServiceName =({app}[^=]+?)\s*deviceInboundInterface"""
-  """Workload"*:"*({app}[^"]+)"""
+  """Workload"*:\s*"*({app}[^"]+)"""
   """Workload"*:\s*"*({app}[^"]+)"*\}"""
   """ObjectId"*:\s*"*((?i)(Unknown)|({object}[^"]+))"*"""
   """Operation"*:\s*"*({operation}[^"]+)"*"""

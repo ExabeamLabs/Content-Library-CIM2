@@ -22,7 +22,7 @@ Name = netskope-sc-sk4-alert-trigger-success-dlp
       """"srcip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"category"+:"+({category}[^"]+)""""
       """"+activity"+:"+({operation}[^"]+)"+""",
-      """"object"+:"+({file_name}[^"]+)"""",
+      """"object"+:"+({file_name}[^"]+?(\.({file_ext}\w+))?)"""",
       """"+ccl"+:"+({alert_severity}[^"]+)"+""",
       """"+md5"+:"+({hash_md5}[^"]+)"+""",
       """"+request_id"+:({alert_id}[^,]+)""",

@@ -3,7 +3,7 @@
 {
 Name = amazon-awscloudtrail-json-app-success-activityauthentication
   ParserVersion = v1.0.0
-  Conditions = [ """"eventType":"AwsServiceEvent"""",  """"eventName"""" ]
+  Conditions = [ """"eventType":"AwsServiceEvent"""",  """"eventName":"authenticate"""" ]
 
 aws-cloudtrail-json-1 = {
   Vendor = Amazon

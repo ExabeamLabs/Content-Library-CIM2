@@ -12,7 +12,6 @@ Name = microsoft-evsecurity-sk4-group-modify-success-4737
 # sam_account_name is removed
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
   ]
-   DupFields = [ "host-> dest_host" ]
 
 json-windows-events-2 = {
   Vendor = Microsoft

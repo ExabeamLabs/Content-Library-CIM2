@@ -20,6 +20,7 @@ Fields = [
   """FileSize"*:\s*"*({bytes}\d+)"""
   """From"*:\s*"*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """To"*:\s*\["*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """To"*:\s*\[({email_recipients}[^\]]+)\]"""
   """Subject"*:\s*"*({alert_subject}[^"]+?)\s*""""
   """MessageID"*:\s*"*<?({message_id}[^"]+?)>?""""
   """Severity"*:\s*"*({alert_severity}[^"]+)""""
@@ -31,7 +32,6 @@ Fields = [
 ]
 DupFields = [
   "src_email_address->email_address"
-  "dest_email_address->recipients"
   "operation->alert_type"
 ]
 ParserVersion = "v1.0.0"

@@ -25,6 +25,7 @@ Name = google-workspace-cef-email-send
      """\sdestinationServiceName =({app}[^=]+?)\s+\w+=""",
      """num_message_attachments":({attachment_count}\d+)""",
      """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
+     """"file_extension_type":"({file_ext}[^"]+)"""
   ]
   DupFields = ["dest_email_address->external_address"]
 

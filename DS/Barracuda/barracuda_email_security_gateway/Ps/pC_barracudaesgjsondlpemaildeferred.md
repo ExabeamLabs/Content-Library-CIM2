@@ -21,6 +21,7 @@ barracuda-dlp-email{
       """"message_id":"({message_id}[^"]+)""""
       """"reason":"({failure_reason}[^"]+)"""
       """"hdr_to":"({email_recipients}(({dest_email_address}[^@,"]+@[^,"]+?),)?[^"]+?)",""",
+      """"attachments":\[\{"name":"({email_attachment}[^,"]*(\.({file_ext}[^",]+)))"""
 
 }
 ```

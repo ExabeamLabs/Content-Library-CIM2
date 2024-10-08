@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
   """<EventID>4768</EventID>"""
   """<Data Name"""
@@ -12,6 +12,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   ]
   Fields = [
   """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
   """({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""
   """<Computer>({host}[\w.-]+)</Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

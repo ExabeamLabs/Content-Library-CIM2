@@ -25,7 +25,7 @@ Fields = [
   """exa_json_path=$.Size,exa_field_name=bytes"""
   """exa_json_path=$.Status,exa_field_name=result"""
   """exa_json_path=$.Organization,exa_field_name=host"""
-  """exa_json_path=$.MessageTraceId,exa_field_name=alert_id"""
+  """exa_json_path=$.MessageTraceId,exa_field_name=message_id"""
 ]
 ParserVersion = "v1.0.0"
 

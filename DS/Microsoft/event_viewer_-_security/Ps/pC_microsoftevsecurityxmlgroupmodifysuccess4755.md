@@ -17,11 +17,12 @@ Name = microsoft-evsecurity-xml-group-modify-success-4755
 
 s-xml-object-access = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<Message>({event_name}.+?)\s*\.(\s|</Message>)""",
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",

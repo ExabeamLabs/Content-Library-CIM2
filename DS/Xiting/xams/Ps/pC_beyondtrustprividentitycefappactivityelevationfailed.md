@@ -45,7 +45,7 @@ ${VectraParserTemplates.vectra-meta-data}{
   TimeFormat = "epoch"
   Conditions = [ """COGNITO_STREAM""", """vectra_metadata_ntlm""", """METADATA_NTLM""" ]
   Fields = ${VectraParserTemplates.vectra-meta-data.Fields} [
-    """username="({user}[^"]+)"""",
+    """username="({user}[\w\.\-]{1,40}\$?)"""",
     """domain="({domain}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
@@ -74,7 +74,7 @@ ${VectraParserTemplates.vectra-meta-data}{
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """Login erfolgreich""", """CEF:""", """|Xiting|XAMS|""", """"USERID":"""" ]
   Fields = [
-    """"USERID":"({user}[^"]+)"""",
+    """"USERID":"({user}[\w\.\-]{1,40}\$?)"""",
     """({app}XAMS)""",
     """({event_name}Login erfolgreich)"""
     """"MSG":"({additional_info}[^"]+)""""

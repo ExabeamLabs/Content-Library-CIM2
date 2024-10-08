@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-json-user-privilege-assign-success-4672"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [ """4672""", """"PrivilegeList":"""" ]
 Fields = [
   """({event_name}Special privileges assigned to new logon)""",
@@ -13,6 +13,7 @@ Fields = [
   """"Computer":"({host}({src_host}[\w\-.]+))"""",
   """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z)""",
   """"(Hostname|MachineName)":"({host}[\w\-.]*)""",
   """({event_code}4672)""",
   """"(Event|Entry)Type":"({result}[^"]+)""",

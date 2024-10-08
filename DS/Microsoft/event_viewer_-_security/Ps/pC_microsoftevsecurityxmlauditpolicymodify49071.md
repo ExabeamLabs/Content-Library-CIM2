@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4907-1
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Data Name\\*=('|")NewSd('|")>({audit_policy_name}[^<]+)</Data>"""
   ]
 
 

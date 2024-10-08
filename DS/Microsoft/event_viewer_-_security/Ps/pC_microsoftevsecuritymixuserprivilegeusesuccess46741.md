@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-user-privilege-use-success-4674-1"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [
   """An operation was attempted on a privileged object"""
   """Computer"""
@@ -15,6 +15,7 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """TimeGenerated=({time}\d{10})"""
   """TimeGenerated=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
+  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}Z)"""
   """Type\s*=\s*"({result}[^";]+)""""
   """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+)"""
   """({event_code}4674)"""

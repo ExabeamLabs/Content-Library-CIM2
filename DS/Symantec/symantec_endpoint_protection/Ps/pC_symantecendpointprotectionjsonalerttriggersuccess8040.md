@@ -10,6 +10,10 @@ Name = symantec-endpointprotection-json-alert-trigger-success-8040
     """exa_json_path=$.policy.name,exa_field_name=alert_name"""
     """exa_json_path=$.severity_id,exa_field_name=alert_severity"""
     """exa_json_path=$.type_id,exa_field_name=event_code"""
+    """"feature_name":"({alert_type}[^"]+)"""",
+    """"policy":[^\}]+?"name":"({alert_name}[^"]+)""",
+    """"severity_id":({alert_severity}\d+)""",
+ 	  """"type_id":({event_code}8040)"""
   ]
 
 json-symantec-endpoint-protection = {

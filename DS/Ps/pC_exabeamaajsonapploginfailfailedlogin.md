@@ -20,6 +20,7 @@ SSSZ"
       """activity":"({operation}[^"]+)""",
       """additional_info":"({additional_info}.+?)\s*"}}\s"*""",
       """exa_jdbc_database:({db_name}[^\\"\]]+)"""
+      """"event_type":"({event_category}[^"]+)""""
     
 }
 ```

@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """({event_name}System audit policy was changed)"""
-  """ComputerName =({host}[\w.\-]+)"""
+  """ComputerName =({src_host}({host}[\w.\-]+))"""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
   """EventCode=({event_code}\d+)"""
   """\sAccount Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain"""
@@ -20,9 +20,6 @@ Fields = [
   """\sCategory:\s*({audit_category}[^:]+?)\s+Subcategory:"""
   """\sSubcategory:\s*({sub_category}[^:]+?)\s+Subcategory GUID:"""
   """\sChanges:\s*({policy_name}[^:]+?)(\s+\d+|\s*$|\s*")"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

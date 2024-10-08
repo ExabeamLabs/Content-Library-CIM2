@@ -30,7 +30,7 @@ Fields = [
   """Used(:|=);?\s*Account Name(:|=)\s*({dest_user}[^\s;@]+?)(@({dest_domain}[^\s;]+?))?[\s;]*Account Domain(:|=)""",
   """Used(:|=)[^\"]+?Account Domain(:|=)\s*((?i)(NULL)|({dest_domain}[^\s;]+?))(\\r|\\n|\\t)*[\s;]*Logon GUID(:|=)""",
   """Used(:|=)[^\"]+?Logon GUID(:|=)\s*\{({account_login_guid}[^\s;]+?)\}[\s;]*Target Server(:|=)""",
-  """Target Server Name(:|=)\s*({dest_host}[\w\-.]+?)(:\S+)?[\s;]*Additional Information(:|=)""",
+  """Target Server Name(:|=)\s*(localhost|({dest_host}[\w\-.]+?))(:\S+)?[\s;]*Additional Information(:|=)""",
   """Additional Information(:|=)\s*({dest_service_name}[^=:]+?)[\s;]*Process Information(:|=)""",
   """Process ID(:|=)\s*({process_id}[^=:]+?)[\s;]*Process Name(:|=)""",
   """Process Name(:|=)\s*(?:|({process_path}({process_dir}(?:[^\"]+)?[\\\/])?\s*({process_name}[^\\\/]+?)))\s+Network Information:""",

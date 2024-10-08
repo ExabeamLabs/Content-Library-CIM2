@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-kv-group-member-add-success-memberwasadded"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [
     """A member was added to a security-enabled"""
   ]
@@ -14,6 +14,7 @@ Name = "microsoft-evsecurity-kv-group-member-add-success-memberwasadded"
       """({event_name}A member was added to a security-enabled [\w\s]+ group)""",
       """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
       """({time}\w+ \d+ \d+:\d+:\d+ \d{4})\s+47\d\d\s+Microsoft""",
+      """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
       """\s(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)({host}[\w.\-]+)\s""",
       """ComputerName\\=({host}[\w\-.]+)""",
       """Computer_name:({host}[\w\-\.]+)"""

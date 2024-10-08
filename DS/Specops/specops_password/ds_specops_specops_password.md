@@ -6,11 +6,11 @@ Product: Specops Password
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   3   |   1    |         2          |       2        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  account-password-reset<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br><br> account-unlocked<br> ↳[specops-spr-xml-user-unlock-success-unlock](Ps/pC_specopssprxmluserunlocksuccessunlock.md)<br> | T1078 - Valid Accounts<br>       | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_specops_specops_password_Abnormal_Authentication_&_Access.md) |
-|    [Account Manipulation](../../../UseCases/uc_account_manipulation.md)    |  account-password-reset<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br>    | T1098 - Account Manipulation<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_specops_specops_password_Account_Manipulation.md)    |
-|    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  account-password-reset<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br>    | T1098 - Account Manipulation<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_specops_specops_password_Privilege_Abuse.md)    |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  user-password-reset:success(account-password-reset)<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br><br> user-unlock:success(account-unlocked)<br> ↳[specops-spr-xml-user-unlock-success-unlock](Ps/pC_specopssprxmluserunlocksuccessunlock.md)<br> | T1078 - Valid Accounts<br>       | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_specops_specops_password_Abnormal_Authentication_&_Access.md) |
+|    [Account Manipulation](../../../UseCases/uc_account_manipulation.md)    |  user-password-reset:success(account-password-reset)<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br>    | T1098 - Account Manipulation<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_specops_specops_password_Account_Manipulation.md)    |
+|    [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)    |  user-password-reset:success(account-password-reset)<br> ↳[specops-spr-xml-user-password-reset-success-passwordresetsucceeded](Ps/pC_specopssprxmluserpasswordresetsuccesspasswordresetsucceeded.md)<br>    | T1098 - Account Manipulation<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_specops_specops_password_Privilege_Abuse.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

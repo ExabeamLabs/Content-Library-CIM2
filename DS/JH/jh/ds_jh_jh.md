@@ -6,10 +6,10 @@ Product: JH
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   1   |   0    |         1          |       1        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP          | Content    |
+|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP          | Content    |
 |:----:| ---- | ---- | ---- |
-|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  file-download<br> ↳[jh-j-kv-file-download-success-downloadcomplete](Ps/pC_jhjkvfiledownloadsuccessdownloadcomplete.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_jh_jh_Privilege_Abuse.md)     |
-| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  file-download<br> ↳[jh-j-kv-file-download-success-downloadcomplete](Ps/pC_jhjkvfiledownloadsuccessdownloadcomplete.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_jh_jh_Privileged_Activity.md) |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  file-download:success(file-download)<br> ↳[jh-j-kv-file-download-success-downloadcomplete](Ps/pC_jhjkvfiledownloadsuccessdownloadcomplete.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_jh_jh_Privilege_Abuse.md)     |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  file-download:success(file-download)<br> ↳[jh-j-kv-file-download-success-downloadcomplete](Ps/pC_jhjkvfiledownloadsuccessdownloadcomplete.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_jh_jh_Privileged_Activity.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

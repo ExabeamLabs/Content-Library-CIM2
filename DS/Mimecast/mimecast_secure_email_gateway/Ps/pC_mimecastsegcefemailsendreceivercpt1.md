@@ -35,6 +35,8 @@ Name = mimecast-seg-cef-email-send-receive-rcpt-1
       """"Sender":"(<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
       """"MsgId":"?(null|({message_id}[^,"]+))\s*"?,"""
       """dtz=({dtz}[^\s]+)"""
+      """"fileName":"({email_attachments}[^"]+)""""
+      """"fileName":"({email_attachment}[^,"]*(\.({file_ext}[^",]+)))""""
   ]
 
 

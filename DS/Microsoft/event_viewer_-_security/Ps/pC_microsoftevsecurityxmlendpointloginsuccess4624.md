@@ -4,14 +4,14 @@
 Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
   """<EventID>4624</EventID>"""
   """<Data Name"""
   """'LogonType'"""
   ]
   Fields = [
-  """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
   """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<]+?)\s*<"""
   """<Provider Name\\*=('|")({provider_name}[^'\"]+)"""
   """({event_name}An account was successfully logged on)"""

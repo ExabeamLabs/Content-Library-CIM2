@@ -23,6 +23,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-securityalerts
      """"+description"+:"({additional_info}[^"]+?)\s*"""",
      """"+sourceMaterials"+:\["+({additional_info}[^"]+)""",
      """"id"+:"+({alert_id}[^"]+)""""
+     """status":"({result}[^"]+)""""
    ]
    DupFields = [ "host->dest_host"]
 

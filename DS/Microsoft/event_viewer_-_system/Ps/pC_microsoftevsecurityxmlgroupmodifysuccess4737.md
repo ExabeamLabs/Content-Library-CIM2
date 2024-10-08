@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)"""
-	  """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+	  """<Computer>({host}[\w\-.]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 	  """<Data Name\\?='TargetSid'>({group_id}[^<]+)""",
 	  """({event_name}A security-enabled global group was changed)""",

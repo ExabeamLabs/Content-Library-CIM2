@@ -8,7 +8,6 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
   """<Data Name"""
   """<EventID>4674</EventID>"""
-  """<Event xmlns"""
 ]
 Fields = [
   """<TimeCreated SystemTime[\\\/]*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""

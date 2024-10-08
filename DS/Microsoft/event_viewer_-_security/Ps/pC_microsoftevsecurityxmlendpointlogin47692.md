@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
   """<EventID>4769</EventID>"""
   """A Kerberos service ticket was requested"""
@@ -14,6 +14,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   Fields = [
   """({event_name}A Kerberos service ticket was requested)"""
   """TimeCreated SystemTime=('|")?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """TimeCreated SystemTime=('|")?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
   """Computer>({host}[\w\-.]+)<\/Computer"""
   """({event_code}4769)"""
   """Account Name(:|=)\s*({user}[\w\.\-]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*Account Domain(:|=)"""

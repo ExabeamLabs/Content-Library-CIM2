@@ -39,7 +39,6 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Computer,exa_field_name=host"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
   Fields = [
     """SystemTime(\\)?=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+    """<Computer>({host}[\w\-.]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?='MemberName'>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?='TargetUserName'>(?=\w)({group_name}[^<]+)</Data>""",

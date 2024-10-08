@@ -4,12 +4,12 @@ Product: ThreatBlockr
 ---------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  58   |   20   |         6          |       3        |    0    |
+|  58   |   20   |         8          |       3        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-connection-failed<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br><br> network-connection-successful<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br>    | T1071 - Application Layer Protocol<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_threatblockr_threatblockr_Lateral_Movement.md) |
-|          [Malware](../../../UseCases/uc_malware.md)          |  dns-response<br> ↳[threatblockr-t-kv-dns-response-success-dnsresplog](Ps/pC_threatblockrtkvdnsresponsesuccessdnsresplog.md)<br><br> network-connection-failed<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br><br> network-connection-successful<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br> | T1071 - Application Layer Protocol<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>TA0011 - TA0011<br>    | [<ul><li>6 Rules</li></ul>](RM/r_m_threatblockr_threatblockr_Malware.md)    |
+| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-traffic:fail(network-connection-failed)<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br><br> network-traffic:success(network-connection-successful)<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br>    | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_threatblockr_threatblockr_Lateral_Movement.md) |
+|          [Malware](../../../UseCases/uc_malware.md)          |  dns-response:success(dns-response)<br> ↳[threatblockr-t-kv-dns-response-success-dnsresplog](Ps/pC_threatblockrtkvdnsresponsesuccessdnsresplog.md)<br><br> network-traffic:fail(network-connection-failed)<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br><br> network-traffic:success(network-connection-successful)<br> ↳[threatblockr-t-kv-network-traffic-packatlog](Ps/pC_threatblockrtkvnetworktrafficpackatlog.md)<br> | T1071 - Application Layer Protocol<br>T1568 - Dynamic Resolution<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>TA0011 - TA0011<br>    | [<ul><li>6 Rules</li></ul>](RM/r_m_threatblockr_threatblockr_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

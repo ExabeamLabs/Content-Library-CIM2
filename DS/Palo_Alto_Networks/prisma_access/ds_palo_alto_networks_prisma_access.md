@@ -4,12 +4,12 @@ Product: Prisma Access
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   17   |         5          |       1        |    0    |
+|  39   |   17   |         6          |       1        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-connection-successful<br> ↳[pan-prismaaccess-leef-network-traffic-success-end](Ps/pC_panprismaaccessleefnetworktrafficsuccessend.md)<br> | T1071 - Application Layer Protocol<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>39 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_palo_alto_networks_prisma_access_Lateral_Movement.md) |
-|          [Malware](../../../UseCases/uc_malware.md)          |  network-connection-successful<br> ↳[pan-prismaaccess-leef-network-traffic-success-end](Ps/pC_panprismaaccessleefnetworktrafficsuccessend.md)<br> | TA0011 - TA0011<br>    | [<ul><li>3 Rules</li></ul>](RM/r_m_palo_alto_networks_prisma_access_Malware.md)    |
+| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-traffic:success(network-connection-successful)<br> ↳[pan-prismaaccess-leef-network-traffic-success-end](Ps/pC_panprismaaccessleefnetworktrafficsuccessend.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>39 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_palo_alto_networks_prisma_access_Lateral_Movement.md) |
+|          [Malware](../../../UseCases/uc_malware.md)          |  network-traffic:success(network-connection-successful)<br> ↳[pan-prismaaccess-leef-network-traffic-success-end](Ps/pC_panprismaaccessleefnetworktrafficsuccessend.md)<br> | TA0011 - TA0011<br>    | [<ul><li>3 Rules</li></ul>](RM/r_m_palo_alto_networks_prisma_access_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

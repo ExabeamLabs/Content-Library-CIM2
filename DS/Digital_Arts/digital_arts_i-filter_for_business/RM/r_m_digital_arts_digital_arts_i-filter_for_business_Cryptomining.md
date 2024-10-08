@@ -7,7 +7,7 @@ Vendor: Digital Arts
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         2          |       2        |    1    |
+|   1   |   0    |         3          |       2        |    1    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

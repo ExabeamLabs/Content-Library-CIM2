@@ -27,7 +27,7 @@ Name = microsoft-o365-cef-email-receive-success-fromname
     """({direction}o)"""
     """ValidatedFromAddress\\=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));"""
   ]
-  DupFields = [ "src_email_address->email_user","src_email_address->orig_user", "alert_name->alert_type", "to_address->email_recipients", "dest_email_address->external_address","src_email_address->email_address" ]
+  DupFields = [ "src_email_address->orig_user", "alert_name->alert_type", "to_address->email_recipients" ]
  
 
 }

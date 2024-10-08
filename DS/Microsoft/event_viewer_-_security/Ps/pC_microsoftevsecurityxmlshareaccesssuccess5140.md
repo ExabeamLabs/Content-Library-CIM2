@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-share-access-success-5140"
 Vendor = "Microsoft"
 Product = Event Viewer - Security
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [ """<EventID>5140</EventID>""", """<Data Name""", """ShareName""" ]
 Fields = [
   """({event_name}A network share object was accessed)""",
@@ -12,6 +12,7 @@ Fields = [
   """<Computer>({host}({dest_host}[\w\-.]+))</Computer>""",
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<TimeCreated SystemTime(\\\/)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d*Z('|")/>""",
+  """<TimeCreated SystemTime(\\\/)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")/>""",
   """<Data Name(\\\/)?=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
   """<Data Name(\\\/)?=('|")SubjectUserName('|")>(-|({user}[\w\.\-]{1,40}\$?))</Data>""",
   """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>""",

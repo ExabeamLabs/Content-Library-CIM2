@@ -5,7 +5,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "epoch_sec"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   ExtractionType = json
   Conditions = [
     """4769"""
@@ -19,6 +19,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s"""
     """"+created"+:"+({time}[^"]+)"""
     """"TimeCreated"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """"Computer"+:"+({host}[\w\-.]+)""""
     """"+(?:winlog\.)?computer_name"+:"+({host}[\w\-.]+)"""
     """"(?i)(Hostname|MachineName)":"({host}[\w\-.]*)"""

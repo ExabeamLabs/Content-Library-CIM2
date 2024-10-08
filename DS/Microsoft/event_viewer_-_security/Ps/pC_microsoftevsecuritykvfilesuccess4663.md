@@ -33,7 +33,6 @@ Fields = [
   """\WACCESSES\s*=\s*(null|({access}[^\]]+?))\s*\]"""
 ]
 DupFields = [
-  "host->dest_host"
   "object->file_path"
 ]
 ParserVersion = "v1.0.0"

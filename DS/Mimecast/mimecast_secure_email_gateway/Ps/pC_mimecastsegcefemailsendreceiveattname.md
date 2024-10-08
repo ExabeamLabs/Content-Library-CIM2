@@ -21,11 +21,12 @@ Name = mimecast-seg-cef-email-send-receive-attname
     """"Subject":"({email_subject}[^"]+?)\s*"""",
     """"Sender":"(<>|({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"datetime":"({time}\d+-\d+-\d+T\d+:\d+:\d+-\d+)""",
-    """"AttCnt":({attachment_count}\d+)""",
+    """"AttCnt":"?({attachment_count}\d+)""",
     """"AttSize":({attachment_size}\d+)""",
     """"Hld":"({result}[^"]+)""",
     """"MsgId":"<({message_id}[^"]+?)>"""",
     """"AttNames":\["({email_attachment}[^"]+\.({file_ext}[^"]+))"""
+    """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
   ]
 
 

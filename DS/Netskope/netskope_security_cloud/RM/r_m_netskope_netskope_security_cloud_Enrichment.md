@@ -1,0 +1,12 @@
+Rules by Product and UseCase
+============================
+Vendor: Netskope
+----------------
+### Product: [Netskope Security Cloud](../ds_netskope_netskope_security_cloud.md)
+### Use-Case: [Enrichment](../../../../UseCases/uc_enrichment.md)
+
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   0   |   0    |         0          |       0        |    0    |
+
+| Event Type | Rules | Models || ---------- | ----- | ------ |

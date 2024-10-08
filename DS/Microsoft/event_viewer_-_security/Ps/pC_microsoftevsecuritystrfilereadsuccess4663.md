@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-str-file-read-success-4663
       """"ObjectType":"(-|({file_type}[^\s"]+))""",
       """"ProcessName":"(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*"""",
     ]
-    DupFields = ["host->dest_host"]
   
 
 }

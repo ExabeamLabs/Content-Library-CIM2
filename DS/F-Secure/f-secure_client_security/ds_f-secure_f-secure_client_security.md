@@ -4,14 +4,14 @@ Product: F-Secure Client Security
 ---------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  30   |   11   |         6          |       1        |    0    |
+|  30   |   11   |         7          |       1        |    0    |
 
-|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  security-alert<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1078 - Valid Accounts<br>T1133 - External Remote Services<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>23 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_f-secure_f-secure_client_security_Compromised_Credentials.md) |
-|        [Lateral Movement](../../../UseCases/uc_lateral_movement.md)        |  security-alert<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_f-secure_f-secure_client_security_Lateral_Movement.md)    |
-|    [Malware](../../../UseCases/uc_malware.md)    |  security-alert<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_f-secure_f-secure_client_security_Malware.md)    |
-|     [Privileged Activity](../../../UseCases/uc_privileged_activity.md)     |  security-alert<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1068 - Exploitation for Privilege Escalation<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_f-secure_f-secure_client_security_Privileged_Activity.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success(security-alert)<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1078 - Valid Accounts<br>T1133 - External Remote Services<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>23 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_f-secure_f-secure_client_security_Compromised_Credentials.md) |
+|        [Lateral Movement](../../../UseCases/uc_lateral_movement.md)        |  alert-trigger:success(security-alert)<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>    | [<ul><li>2 Rules</li></ul>](RM/r_m_f-secure_f-secure_client_security_Lateral_Movement.md)    |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success(security-alert)<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_f-secure_f-secure_client_security_Malware.md)    |
+|     [Privileged Activity](../../../UseCases/uc_privileged_activity.md)     |  alert-trigger:success(security-alert)<br> ↳[fsecure-policymanager-cef-alert-trigger-success-fsecure](Ps/pC_fsecurepolicymanagercefalerttriggersuccessfsecure.md)<br> | T1068 - Exploitation for Privilege Escalation<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_f-secure_f-secure_client_security_Privileged_Activity.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

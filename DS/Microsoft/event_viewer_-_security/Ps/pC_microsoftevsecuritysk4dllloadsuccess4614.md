@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-sk4-dll-load-success-4614
 json-windows-system-info = {
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
     """"Computer":"({host}[^"]+)"""",

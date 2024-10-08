@@ -31,7 +31,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
      """exa_json_path=$.emailInfo.senderIp,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
      """exa_json_path=$.emailInfo.filesAndLinks[0].fileNameOrURL,exa_regex=^({email_attachment}[^\.]+\.({file_ext}[^"]+))$"""
    ]
-  DupFields = [ "src_email_address->email_user", "dest_email_address->external_address", "email_attachment->file_name" ]
+  DupFields = [ "email_attachment->file_name" ]
  
 
 }

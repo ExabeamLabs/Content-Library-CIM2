@@ -30,7 +30,7 @@ Fields = [
 """KeyLength":"\s*({key_length}\d+)\s*""""
 ]
 DupFields = [
-"src_host_windows->dest_host"
+"src_host_windows->src_host"
 "user->account"
 ]
 ParserVersion = "v1.0.0"

@@ -7,7 +7,7 @@ Vendor: Bitglass
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         2          |       7        |    3    |
+|   2   |   0    |         1          |       6        |    3    |
 
 | Event Type          | Rules    | Models |
 | ---- | ---- | ------ |
@@ -17,4 +17,3 @@ Vendor: Bitglass
 | file-download       | <b>T1078 - Valid Accounts</b><br> ↳ <b>FA-Account-deactivated</b>: File Activity from a de-activated user account |        |
 | file-read    | <b>T1078 - Valid Accounts</b><br> ↳ <b>FA-Account-deactivated</b>: File Activity from a de-activated user account |        |
 | file-write          | <b>T1078 - Valid Accounts</b><br> ↳ <b>FA-Account-deactivated</b>: File Activity from a de-activated user account |        |
-| security-alert      | <b>T1068 - Exploitation for Privilege Escalation</b><br> ↳ <b>ALERT-EXEC</b>: Security violation by Executive     |        |

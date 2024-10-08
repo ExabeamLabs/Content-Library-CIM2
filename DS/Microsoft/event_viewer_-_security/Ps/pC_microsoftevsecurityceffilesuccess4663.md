@@ -24,9 +24,6 @@ Fields = [
   """\sfname=[^=]*\\({file_name}.*?(\.({file_ext}[^\\:\s.]+))?)\s+(?:$|\w+=)"""
   """\scs3=({access_mask}\w+)"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

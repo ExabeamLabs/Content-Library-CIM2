@@ -11,10 +11,11 @@ Name = microsoft-evsecurity-cef-user-permission-modify-4718
 json-xml-object-access = {
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ] 
   Fields = [
     """"Activity":"(\d+\s+-\s+)?({event_name}[^"]+?)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """"Computer":"({host}[^"]+)""",
     """"EventID":"?({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",

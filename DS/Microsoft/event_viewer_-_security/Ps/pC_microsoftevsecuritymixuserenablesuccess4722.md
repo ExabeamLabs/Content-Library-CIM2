@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-user-enable-success-4722"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "MM/dd/yyyy hh:mm:ss a", "MM/dd/yyyy HH:mm:ss", "MMM dd HH:mm:ss yyyy"]
+TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "MM/dd/yyyy hh:mm:ss a", "MM/dd/yyyy HH:mm:ss", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
 """A user account was enabled"""
 """Account"""
@@ -17,6 +17,7 @@ Fields = [
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """\"_raw\":\"({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
+"""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """\s+(?i)(((audit|success)( |_)(success|audit))|information)\s+({host}[\w.\-]+)"""
 """<Computer>({host}[^<]+)</Computer>"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}.+?)(\"|\s)"""

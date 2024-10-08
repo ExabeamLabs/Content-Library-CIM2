@@ -50,8 +50,8 @@ eset-activity.Fields}[
 {
   Name = tenable-t-json-alert-trigger-success-dcerpcservice
   ExtractionType = json
-  Vendor = Tenable.io
-  Product = Tenable.io
+  Vendor = Tenable
+  Product = Tenable Web App Scanning
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"scan":""", """"completed_at":""", """"synopsis":""",""""IO_address":""", """"asset_fqdn":""", """"publication_date":""" ]
   Fields = [
@@ -74,8 +74,8 @@ eset-activity.Fields}[
 
 {
   Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
-  Vendor = Tenable.io
-  Product = Tenable.io
+  Vendor = Tenable
+  Product = Tenable Web App Scanning
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"scan":""", """"completed_at":""", """"synopsis":""", """fqdn":""", """"publication_date":""" ]
   Fields = [

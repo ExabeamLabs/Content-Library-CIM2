@@ -6,7 +6,7 @@ Name = tenable-t-cef-app-scan-scaninformation
   Product = Tenable.io
   Vendor = Tenable.io
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"synopsys":""", """"pluginName":"Nessus Scan Information"""", """"pluginFamily":""" ]
+  Conditions = [ """Scan Information""", """destinationServiceName =Tenable.io""" ]
   Fields = [
     """"synopsys":"({alert_name}[^",]+)""",
     """"pluginFamily":"({alert_type}[^",]+)"""",

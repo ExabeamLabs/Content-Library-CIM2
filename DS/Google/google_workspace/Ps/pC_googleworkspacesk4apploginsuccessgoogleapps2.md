@@ -13,7 +13,8 @@ Name = google-workspace-sk4-app-login-success-googleapps2
     """({operation}login-success)""",
     """({event_name}login_success)""",
     """"profileId"\s*:\s*"({user_id}\d+)""",
-    """"actor"\s*:\s*\{[^\}]*?"email"\s*:\s*"({email_address}({user}[\w\.\-]{1,40}\$?)@[^"]+)"""",
+    """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+[\w=]+""",
+    """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"events"[\\n\s]*:[^\]]*?"name"[\\n\s]*:[\\n\s]*"login_type"[\\n\s]*,[\\n\s]*"value"[\\n\s]*:[\\n\s]*"({login_type_text}[^"]+?)"""",
     """({app}Google Apps)"""
   ]

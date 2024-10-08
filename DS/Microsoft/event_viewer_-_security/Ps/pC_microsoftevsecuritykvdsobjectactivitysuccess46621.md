@@ -26,7 +26,7 @@ Fields = [
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
 DupFields = [
-  "host->dest_host", "ds_object_name->object"
+  "ds_object_name->object"
 ]
 ParserVersion = "v1.0.0"
 

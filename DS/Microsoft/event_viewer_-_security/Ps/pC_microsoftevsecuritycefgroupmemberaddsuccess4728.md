@@ -11,7 +11,6 @@ Name = microsoft-evsecurity-cef-group-member-add-success-4728
     """"+TargetUserName"+:"+({group_name}[^"]+)""",
 
   ]
-   DupFields = [ "host->dest_host" ]
 
 json-windows-events-1 = {
   Vendor = Microsoft

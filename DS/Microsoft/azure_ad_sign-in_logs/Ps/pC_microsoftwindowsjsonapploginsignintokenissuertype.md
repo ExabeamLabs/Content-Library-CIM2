@@ -9,14 +9,14 @@ Conditions = [
 """"operationName": "Sign-in activity""""
 """"conditionalAccessStatus""""
 """"tokenIssuerType""""
-""""resourceDisplayName": "Windows Azure Active Directory""""
-""""category": "SignInLogs""""
-""""userDisplayName"""
+""""resourceDisplayName": """
+""""category": """
+"""SignInLogs""""
 ]
 Fields = [
 """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
 """\d\d:\d\d:\d\d\s({host}[\w\.\-]+)\s\{"time"""",
-""""errorCode":({error_code}\d+)""",
+""""errorCode":\s*({error_code}\d+)""",
 """"failureReason":\s*"({failure_reason}[^"]+)"""",
 """"Level":\s*({severity}\d+)""",
 """category":\s*"({category}[^"]+)"""",
@@ -28,11 +28,11 @@ Fields = [
 """"userId"=:\s*"({user_uid}[^"]+)"""",
 """"operationName":\s"({operation}[^"]+)"""",
 """"userAgent":\s*"({user_agent}[^"]+)"""",
-""""authenticationMethod":"({auth_method}[^"]+)"""",
+""""authenticationMethod":\s*"({auth_method}[^"]+)"""",
 """"conditionalAccessStatus":\s*"({result}[^"]+)"""",
 """"tokenIssuerType":\s*"({app}[^"]+)"""",
-""""countryOrRegion":"({country_code}[^"]+)"""",
-"""deviceDetail\".+?"displayName\":\"({src_host}[\w\-\.]+)\$?\s*\""""
+""""countryOrRegion":\s*"({country_code}[^"]+)"""",
+"""deviceDetail\".+?"displayName\":\s*\"({src_host}[\w\-\.]+)\$?\s*\""""
 ]
 DupFields = ["operation->event_name"]
 ParserVersion = "v1.0.0"

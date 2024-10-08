@@ -26,7 +26,7 @@ Fields = [
 """"alert_type":"({alert_name}[^"]+)"""
 """dpriv=({alert_name}[^=]+)\s+\w+="""
 """"file_path":"({malware_file_name}[^"]+)"""
-""""object":"({object}[^"]+)"""
+""""object":"({object}({file_name}[^"]+?(\.({file_ext}\w+))?))""""
 """"breach_id":"\s*({alert_id}[^"]+)""""
 """duser=({user}[\w\.\-]{1,40}\$?)"""
 """"organization_unit":"({user_ou}[^"]+)""""

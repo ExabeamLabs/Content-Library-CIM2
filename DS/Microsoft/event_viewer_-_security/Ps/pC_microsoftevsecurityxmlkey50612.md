@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-key-5061-2
   Conditions = ["""<EventID>5061<""","""SubjectLogonId""", """<Data Name""" ]
   Fields = [
     """TimeCreated SystemTime(\\)?=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({dest_host}({host}[\w\-.]+))"""
+    """<Computer>({src_host}({host}[\w\-.]+))"""
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",

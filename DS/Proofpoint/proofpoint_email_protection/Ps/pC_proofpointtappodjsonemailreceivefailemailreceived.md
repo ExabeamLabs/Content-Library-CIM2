@@ -28,6 +28,7 @@ Fields = [
 """routeDirection":"({direction}[^"]+)""""
 """"message-id":\["<({message_id}[^">]+?)\s*>""""
 """msgParts":[^\n]*?"detectedName":"({email_attachment}[^"]+)""""
+"""msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
 """msgParts":[^\n]*?"sizeDecodedBytes":({bytes}\d+),"""
 """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"host":"({host}[^"]+)""""
@@ -53,6 +54,8 @@ Fields = [
 """exa_json_path=$.filter.quarantine.rule,exa_field_name=rule""",
 """exa_regex=fromDisplayNames":\["({full_name}[^"]+)""""
 """exa_regex="return-path":\["(<>|({return_path}[^"]+))""""
+"""exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
+
 ]
 DupFields = [
   "email_attachment->email_attachments"

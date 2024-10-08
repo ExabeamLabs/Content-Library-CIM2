@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-str-endpoint-activity-4660
     """({event_code}4660)""",
     """\w{3}\s+\d+\s+\d+:\d+:\d+\s+(\d+|({host}[\w\-\.]+))\s"""
     """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({host}[\w.-]+)""",
-    """<?Computer>?(Name)?\s*=?\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
+    """<?Computer>?(Name)?\s*=?\s*"*({src_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({host}[\w.\-]+))""",
     """(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)""",
     """\Wdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",

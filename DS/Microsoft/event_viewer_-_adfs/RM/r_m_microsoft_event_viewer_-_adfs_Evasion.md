@@ -7,8 +7,8 @@ Vendor: Microsoft
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         1          |       1        |    0    |
+|   1   |   0    |         2          |       1        |    0    |
 
 | Event Type      | Rules    | Models |
 | ---- | ---- | ------ |
-| audit-log-clear | <b>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs</b><br> ↳ <b>A-WA-F</b>: Audit log has been cleared on this asset |        |
+| audit-log-clear | <b>T1070 - Indicator Removal on Host</b><br> ↳ <b>A-WA-F</b>: Audit log has been cleared on this asset<br><br><b>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs</b><br> ↳ <b>A-WA-F</b>: Audit log has been cleared on this asset |        |

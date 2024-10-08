@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-xml-handle-request-4656
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [ """<EventID>4656</EventID>""", """SubjectUserSid""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7,9}Z)"""
     """<Computer>([^<>]+?[\\\/]+)?({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",

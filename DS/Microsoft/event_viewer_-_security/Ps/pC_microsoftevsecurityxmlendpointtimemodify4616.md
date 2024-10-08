@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-xml-endpoint-time-modify-4616
   ParserVersion = "v1.0.0"
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Conditions = [ """The system time was changed""", """<EventID>4616<""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
     """<Computer>({host}[^<>]+)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^:<\.]+)""",

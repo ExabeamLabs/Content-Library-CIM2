@@ -13,7 +13,8 @@ Name = symantec-endpointprotection-csv-file-write-success-fichier
   """Commencer :\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
   """Règle : [^,]*,\d+,({target}[^,]+),""",
   """Règle : [^,]*,\d+,({process_path}({process_dir}[^"]*?)(\/|\\)({process_name}[^\/\\]+)),\d,""",
-  """,[^",]+[\\\/]({file_name}[^,]+),Nom d’utilisateur""",
+  """,({file_path}(({file_dir}[^,]*)[\/\\])[^,]+),Nom d’utilisateur"""
+  """,[^",]+[\\\/]({file_name}[^,]*?(\.({file_ext}[^,]+))?),Nom d’utilisateur""",
   """\| \[[^,]*,\d+,[^,]+,\d+,[^,]+,[^",]*/({file_name}[^",]+?)"?,Nom d’utilisateur""",
   """Nom d’utilisateur :\s+(SYSTEM|Système|({user}[\w\.\-]{1,40}\$?))(\(\w+\))?,Nom du domaine :""",
   """Nom du domaine :\s+(|AUTORITE NT|({domain}[^:,]+?)),Type d’action :""",

@@ -25,9 +25,6 @@ Fields = [
   """USERNAME\s*=\s*(({user}[\w\.\-]{1,40}\$?))\s*\]"""
   """USER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

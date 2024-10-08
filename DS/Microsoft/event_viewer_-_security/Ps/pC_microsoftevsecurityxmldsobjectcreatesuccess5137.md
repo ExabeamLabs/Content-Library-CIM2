@@ -4,12 +4,13 @@
 Name = "microsoft-evsecurity-xml-ds-object-create-success-5137"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
 Conditions = [
 """<EventID>5137</EventID>"""
 ]
 Fields = [
 """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+"""<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
 """({event_code}5137)"""
 """<Computer>({dest_host}({host}[\w\-\.]+))</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

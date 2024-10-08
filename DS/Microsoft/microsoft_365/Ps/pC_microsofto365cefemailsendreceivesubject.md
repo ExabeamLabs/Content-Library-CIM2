@@ -33,7 +33,7 @@ Name = microsoft-o365-cef-email-send-receive-subject
     """\ssourceServiceName =({alert_source}[^=]+)\s+\w+="""
     """fsize=({bytes}\d+)\s"""
   ]
-  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user" ,"src_email_address->email_address" ]
+  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user" ]
  
 
 }

@@ -4,11 +4,11 @@
 Name = microsoft-azuremon-sk4-app-activity-policy
   Product = Azure Monitor
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions = [ """"resourceId":""", """"category":"Policy"""", """"operationName":"""" ]
+  Conditions = [ """"resourceId":""", """"category":""", """"Policy"""", """"operationName":""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """resultSignature":"({result}[^"]+?)\.?"""",
-    """"policyDefinitionId\\?":\\?"({additional_info}[^"]+)"""",
+    """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """resultSignature":\s*"({result}[^"]+?)\.?"""",
+    """"policyDefinitionId\\?":\s*\\?"({additional_info}[^"]+)"""",
   ]
   ParserVersion = "v1.0.0"
 

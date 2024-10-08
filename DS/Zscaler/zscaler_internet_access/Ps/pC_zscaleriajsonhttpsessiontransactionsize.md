@@ -25,7 +25,7 @@ Name = zscaler-ia-json-http-session-transactionsize
     """"status":"({result_code}\d{1,3})"""",
     """"user":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""",
     """"url":"({url}(\w{1,5}:\/\/)?[^"\/\?]+({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)"""",
-    """"hostname":"({web_domain}[^"]+)"""",
+    """"hostname":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}[^"]+))"""",
     """"appname":"({app}[^"]+)"""",
     """"reason":"(Allowed|({failure_reason}[^"]+))"""",
     """"devicehostname":"(NA|({src_host}[\w\.\-]+))""""
@@ -47,7 +47,7 @@ Name = zscaler-ia-json-http-session-transactionsize
     """exa_json_path=$..status,exa_field_name=result_code""",
     """exa_json_path=$..user,exa_regex=(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""
     """exa_json_path=$..url,exa_regex=({url}(\w{1,5}:\/\/)?[^"\/\?]+({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)"""
-    """exa_json_path=$..hostname,exa_field_name=web_domain""",
+    """exa_json_path=$..hostname,exa_regex=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}[^"]+))""",
     """exa_json_path=$..appname,exa_field_name=app""",
     """exa_json_path=$..reason,exa_field_name=failure_reason,exa_match_expr=!InList(toLower($.[reason]),"allowed")""",
     """exa_json_path=$..devicehostname,exa_regex=(NA|({src_host}[\w\.\-]+))"""

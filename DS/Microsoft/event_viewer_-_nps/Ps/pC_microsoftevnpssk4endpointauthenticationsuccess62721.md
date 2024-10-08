@@ -19,7 +19,7 @@ Name = microsoft-evnps-sk4-endpoint-authentication-success-6272-1
 json-windows-events-3 = {
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
     """"Computer":"({host}[^"]+)"""",

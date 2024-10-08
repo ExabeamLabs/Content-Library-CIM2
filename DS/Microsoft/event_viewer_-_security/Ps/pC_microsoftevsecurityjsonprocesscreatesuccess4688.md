@@ -5,13 +5,14 @@ Name = microsoft-evsecurity-json-process-create-success-4688
     ParserVersion = v1.0.0
     Vendor = Microsoft
     Product = Event Viewer - Security
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
     Conditions = [
 ""","EventID":"4688",""",
 """A new process has been created"""
    ]
     Fields = [
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+      """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z)""",
       """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
       """({event_code}4688)""",
       """"Activity":"({event_name}[^"]+)""",

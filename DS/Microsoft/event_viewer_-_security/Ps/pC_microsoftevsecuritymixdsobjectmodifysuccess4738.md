@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-ds-object-modify-success-4738"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MM/dd/yyyy hh:mm:ss a"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
 """A user account was changed"""
 ]
@@ -15,6 +15,7 @@ Fields = [
 """\sComputerName =(::ffff:)?({host}.+?)(\s+\w+=|\s*$)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
 """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)"""
+"""TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """(?i)\w+\s+\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*Account Expires:"""
 """Security ID:\s*(|({user_sid}[^:]+?))\s+Account Name:"""
 """Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:\s*(|({domain}[^\s:]+?))\s+Logon ID:\s*(|({login_id}[^\s:]+?))\s+Target Account:"""

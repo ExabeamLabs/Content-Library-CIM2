@@ -19,11 +19,12 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670-1
 
 json-windows-system-events = {
   Vendor = Microsoft
-  TimeFormat = [ "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss" ]
+  TimeFormat = [ "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """exa_json_path=$.EventID,exa_field_name=event_code""",
     """exa_json_path=$.EventTime,exa_regex=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
     """exa_json_path=$.TimeCreated,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """exa_json_path=$.TimeCreated,exa_field_name=time""",
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.EventType,exa_field_name=result""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",

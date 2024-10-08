@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-kv-file-success-4663-7
       """Process Name:\s*(?:|({process_path}({process_dir}(\w:)?(?:[^:;]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Access Request Information:""",
       """Accesses:\s*({access}.+?)[\s;]*Access Mask:\s*({access_mask}\w+)""",
     ]
-    DupFields = ["host->dest_host"]
   
 
 }

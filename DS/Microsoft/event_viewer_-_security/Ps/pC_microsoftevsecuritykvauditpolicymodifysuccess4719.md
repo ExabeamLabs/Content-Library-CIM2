@@ -21,9 +21,6 @@ Fields = [
 """\sSubcategory:\s*({sub_category}.+?)\s+Subcategory GUID:"""
 """\sChanges:\s*({audit_policy_name}.+?)\s*(\w+:|$)"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

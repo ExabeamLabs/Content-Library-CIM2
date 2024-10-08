@@ -29,12 +29,17 @@ Fields = [
 """({protocol}SSH)""",
 """reason=?\s+cs1Label="?({process_command_line}[^\n"]+?)"""",
 """reason="?({result_reason}[^="]+?)"?\s+\w+=""",
-"""cs3="?({device_type}[^="]+?)"?\s+\w+""",
+"""cs3="*({device_type}[^="]+)?"*\s+\w+="""
 """cs2="?({safe_name}[^="]+?)"?\s+\w+=""",
 """\Wact="?({operation}[^"=\[\]]+?)"?(\[|\]|\s+\w+=|\s*$)""",
+"""msg="*\[*({additional_info}[^"\]]+)?\]*\s*""""
 """fname=({additional_info}[^=]+?)\s+\w+=""",
 """Error:\s*({failure_reason}[^:]+?)\s*\w+:""",
 """(C|c)ode:\s*({failure_code}\d+),"""
+"""CEF:\d+\|([^\|]+\|){3}({event_code}[^\|]+)"""
+"""CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
+"""CEF:\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
+"""cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 ]
 DupFields = [
 "src_file_name->object"

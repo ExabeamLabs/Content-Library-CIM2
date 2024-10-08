@@ -16,7 +16,7 @@ Name = symantec-dlp-cef-alert-trigger-success-applicationname
       """\WSENDER=({src_ip}[A-Fa-f.:\d]+)\s+\w+=""",
       """\WENDPOINT_MACHINE=(N\/A|({src_host}[^=]+))\s\w+="""
       """\WRECIPIENTS=(N\/A|({target}[^=]+))\s\w+=""",
-      """\WRECIPIENTS=(N\/A|({recipients}[^@]+@[^=]+))\s\w+=""",
+      """\WRECIPIENTS=(N\/A|({email_recipients}[^@]+@[^=]+))\s\w+=""",
       """\WSUBJECT=+\s*(N\/A|({email_subject}[^=]+))\s\w+=""",
       """\WATTACHMENT_FILENAME=\s*(N\/A|({file_dir}[^=]+[\\\/])?({file_name}[^\s]+(\.({file_ext}[^\s]+))?))\s*\w+=""",
       """\WSENDER=((WinNT:\/+({domain}[^\/]+)\/({user}[\w\.\-]{1,40}\$?))|({email_address}[^@]+@[^=]+))\s\w+=""",

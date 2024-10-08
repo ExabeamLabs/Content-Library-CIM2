@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-file-success-4663-1"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a", "epoch_sec"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a", "epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [
   """An attempt was made to access an object."""
   """Microsoft-Windows-Security-Auditing"""
@@ -14,6 +14,7 @@ Fields = [
   """({event_name}An attempt was made to access an object)"""
   """TimeGenerated=({time}\d{10})"""
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7,9}Z)""",
   """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """Computer=({host}[\w\-.]*?)\s*\w+="""
   """({event_code}4663)"""
@@ -42,7 +43,7 @@ Fields = [
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
 DupFields = [
-  "host->dest_host"
+  "host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

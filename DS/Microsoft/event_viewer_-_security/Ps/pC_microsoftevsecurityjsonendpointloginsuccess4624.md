@@ -5,7 +5,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [
     """4624"""
     """"AuthenticationPackageName":""""
@@ -15,6 +15,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """"@timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """"Computer":"({host}[\w\-.]+)"""
     """({event_name}An account was successfully logged on)"""
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""

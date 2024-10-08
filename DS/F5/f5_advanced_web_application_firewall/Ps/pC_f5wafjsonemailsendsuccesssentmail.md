@@ -4,7 +4,7 @@
 Name = f5-waf-json-email-send-success-sentmail
   Conditions = [ """"log_type":"WAF"""", """"log_vendor":"f5"""", """ sSMTP[""", """]: Sent mail""" ]
   Fields = ${F5ParsersTemplates.f5-waf-activity.Fields} [
-    """Sent mail for ({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """Sent mail for ({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """outbytes=({bytes}\d+)""",
     """uid=({message_id}[^\s]+)""",
     """username=({user}[\w\.\-]{1,40}\$?)"""

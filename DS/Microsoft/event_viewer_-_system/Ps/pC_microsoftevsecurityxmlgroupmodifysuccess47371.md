@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737-1
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
-    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+    """<Computer>({host}[\w\-.]+)</Computer>""",
     """Guid\\*=('|")\{({process_guid}[^\"'\}]+)""",
     """({event_code}4737)""",
     """ThreadID(\\)?=('|")({thread_id}\d+)""",

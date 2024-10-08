@@ -6,7 +6,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-success-18
   Vendor = Microsoft
   Product = Sysmon
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
-  Conditions = [ """<EventID>18</EventID>""", """<Provider Name =""" ]
+  Conditions = [ """<EventID>18</EventID>""", """<Provider Name =""", """Microsoft-Windows-Sysmo""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """<Data Name\\*='UtcTime'>({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d+)<\/Data>""",

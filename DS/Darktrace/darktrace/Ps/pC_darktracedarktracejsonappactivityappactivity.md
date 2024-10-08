@@ -7,7 +7,7 @@ Name = darktrace-darktrace-json-app-activity-appactivity
  Vendor = Darktrace
  TimeFormat ="yyyy-MM-dd HH:mm:ss"
  ExtractionType = json
- Conditions =[ """endpoint":"""", """description":"""", """username":"""", """method":"""" ]
+ Conditions =[ """"endpoint":"""", """description":"""", """username":"""", """method":"""" ]
  Fields = [
   """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
   """exa_json_path=$.endpoint,exa_field_name=event_name"""

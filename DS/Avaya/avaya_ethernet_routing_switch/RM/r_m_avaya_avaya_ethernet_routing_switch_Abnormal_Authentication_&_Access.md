@@ -7,7 +7,7 @@ Vendor: Avaya
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  14   |   4    |         2          |       2        |    7    |
+|  14   |   4    |         2          |       2        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

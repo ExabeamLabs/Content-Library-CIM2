@@ -28,7 +28,7 @@ Name = microsoft-x-csv-email-received
     """,\s*({bytes}\d+)\s*,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){7}Originating,""",
     """,\s*({num_recipients}\d+)\s*,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){6}Originating,"""
 ]
-DupFields = [ "src_email_address->orig_user","dest_email_address->external_address" ]
+DupFields = [ "src_email_address->orig_user" ]
 
 
 }

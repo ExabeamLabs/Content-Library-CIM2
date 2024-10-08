@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
   Fields = [
     """SystemTime(\\)?=\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
+    """<Computer>({host}[\w\-.]+)</Computer>""",
     """<Data Name(\\)?="MemberName">({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?="TargetUserName">(?=\w)({group_name}[^<]+)</Data>""",
     """<Data Name(\\)?="TargetDomainName">(?=\w)({group_domain}[^<]+)</Data>""",

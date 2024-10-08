@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "epoch", "yyyy-MM-dd'T'HH:mm:ss.SSS"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "epoch", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [ """An attempt was made to unregister a security event source""", """4905""" ]
   Fields = [
     """({event_name}An attempt was made to unregister a security event source)""",
@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""". 
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?(am|AM|pm|PM|({host}[\w.\-]+))""",
     """({event_code}4905)""",

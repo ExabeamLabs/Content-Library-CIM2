@@ -24,10 +24,8 @@ Fields = [
   """"emailSender":"+({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"emailRecipients":\[*"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"emailSubject":\[*"+({email_subject}[^"]+)""""
-]
-DupFields = [
-  "src_email_address->email_user"
-  "dest_email_address->email_recipients"
+  """"emailRecipients":\[*"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+  """"emailRecipients":\[({email_recipeints}[^\]]+)\s*\]"""
 ]
 ParserVersion = "v1.0.0"
 
