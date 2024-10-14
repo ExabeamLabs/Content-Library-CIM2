@@ -11,7 +11,7 @@ Fields = [
 """\sdvchost=({host}[^\s]+)"""
 """(?:([^\|]*\|)){5}({result}[^\|]+)"""
 """\srt=({time}\d{13})"""
-"""\ssuser=(?:N\/A|({user}[\w\.\-]{1,40}\$?))\s(\w+=|$)"""
+"""\ssuser=(?:N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s(\w+=|$)"""
 """\scs1=({first_name}.+?)\s(\w+=|$)"""
 """\scs2=({last_name}.+?)\s(\w+=|$)"""
 """\sflexNumber1=({badge_id}\d+)"""

@@ -16,7 +16,7 @@ Fields = [
   """deviceTranslatedAddress=({host}[a-fA-F:\d.]+)"""
   """shost=({dest_host}[\w\-.]+)"""
   """duser=({dest_user}[\w\-\.]+(?:\w+)?\$?)\s+suser"""
-  """suser=({user}[\w\.\-]{1,40}\$?)\s+nitroSource"""
+  """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+nitroSource"""
   """sntdom=({domain}.+?)\s+shost"""
   """nitroSource_Logon_ID=\([^,]+,({login_id}[^\)]+)"""
 ]

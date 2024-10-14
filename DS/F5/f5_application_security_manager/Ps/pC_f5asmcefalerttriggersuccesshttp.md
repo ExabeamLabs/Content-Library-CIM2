@@ -27,7 +27,7 @@ Fields = [
   """User-Agent:\s+({user_agent}[^\"]+?)\\r\\n"""
   """CEF:([^\|]+\|){4}(\d+\|)?({alert_type}[^\|]+)"""
   """CEF:([^\|]+\|){6}({alert_severity}\d+)"""
-  """"username":"({user}[\w\.\-]{1,40}\$?)""""
+  """"username":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 SOAR {
   IncidentType = "malware"

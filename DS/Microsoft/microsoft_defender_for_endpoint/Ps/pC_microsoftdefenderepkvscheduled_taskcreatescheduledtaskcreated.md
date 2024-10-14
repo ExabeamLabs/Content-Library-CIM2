@@ -21,7 +21,7 @@ azure-event-hub = {
        """"FileName":"({file_name}[^"]+)""",
        """"FolderPath":"({file_path}[^"]+)""",
        """"InitiatingProcessAccountDomain":"({domain}[^"]+)""",
-       """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
+       """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"InitiatingProcessAccountSid":"({user_sid}[^"]+)""",
        """"InitiatingProcessCommandLine":"\s*({process_command_line}.+?)\s*"+\,""",
        """"InitiatingProcessFileName":"({process_name}[^"]+)""",

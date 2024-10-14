@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""""
     """:\d+\s({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[^\s]+))\sMSWinEventLog""",
     """<Keywords>({result}.+?)</Keywords>""",
-    """Security ID:\s*(|({user_sid}[^:]+?))\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:""",
+    """Security ID:\s*(|({user_sid}[^:]+?))\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:""",
     """Task Name:\s*(|({task_name}.+?))\s*Task New Content:""",
     """(<|&lt;)UserId(>|&gt;)(?=\w)(({account_domain}[^\\<]*)\\+)?({account_name}[^<]+)(<|&lt;)/UserId(>|&gt;)""",
     """(<|&lt;)Settings(>|&gt;)\s*({additional_info}.+?)\s*(<|&lt;)/Settings(>|&gt;)""",

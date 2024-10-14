@@ -9,7 +9,7 @@ Name = microsoft-defenderep-kv-alert-trigger-success-systemcenterep-1
   Fields = [
     """dest_name=({src_host}[^\s]+)\s""",
     """DetectionTime=({time}\d+)""",
-    """user="*({domain}[^\\]+)?(\\)*({user}[\w\.\-]{1,40}\$?)"*\starget""",
+    """user="*({domain}[^\\]+)?(\\)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"*\starget""",
     """severity=({alert_severity}.+?)\s+category="*({alert_type}.+?)"*\saction""",
     """resourceid=({alert_id}[^\s]+)\s+""",
     """signature=({alert_name}[^\s]+)\s+""",

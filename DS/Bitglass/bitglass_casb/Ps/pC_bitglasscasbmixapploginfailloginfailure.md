@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """"time":\s*"({time}\d+ \w+ \d\d\d\d \d\d:\d\d:\d\d)"""
   """"instancename":\s*"({host}[^"]+)""""
-  """"user":\s*"({user}[\w\.\-]{1,40}\$?)""""
+  """"user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"user":\s*"({full_name}[^"\s@]+\s+[^"\s@]+)""""
   """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"application":\s*"({app}[^"]+)""""

@@ -18,7 +18,7 @@ Fields = [
   """\sLocation:\s*\(({dest_host}[^\)]+)"""
   """Location:(\s*\([^;]*?\))?\s*(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^;\-]+))"""
   """\sfor:\s*'({file_path}({file_dir}[^']*?[\\\/]+)?({file_name}[^'\\\/]+?(\.({file_ext}\w+))?))'"""
-  """\sCurrent SHA1:\s*'({sha1_sum}[^;']+)"""
+  """\sCurrent SHA1:\s*'({hash_sha1}[^;']+)"""
   """\sCurrent MD5:\s*'({hash_md5}[^;']+)"""
 ]
 ParserVersion = "v1.0.0"

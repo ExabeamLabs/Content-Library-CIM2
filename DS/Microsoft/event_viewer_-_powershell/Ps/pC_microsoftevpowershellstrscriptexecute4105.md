@@ -10,7 +10,7 @@ Name = microsoft-evpowershell-str-script-execute-4105
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\sMicrosoft-Windows-PowerShell""",
     """EventID\s({event_code}\d+)""",
-    """({provider_name}Microsoft-Windows-PowerShell)\[\d+\]:\s+({domain}[\w\s]+)\\({user}[\w\.\-]{1,40}\$?)""",
+    """({provider_name}Microsoft-Windows-PowerShell)\[\d+\]:\s+({domain}[\w\s]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """({event_name}Started invocation of ScriptBlock ID)""",
     """ScriptBlock\sID:\s+({scriptblock_id}[\w\-]+)""",
 # runspace_id is removed

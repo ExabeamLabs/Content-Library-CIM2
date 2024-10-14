@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
   """exa_json_path=$.startdate,exa_field_name=time"""
-  """exa_json_path=$.username,exa_regex=(({email_address}[^@\"]+@[^\.\"]+\.[^\"]+)|(({domain}[^\\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.username,exa_regex=(({email_address}[^@\"]+@[^\.\"]+\.[^\"]+)|(({domain}[^\\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_regex=({event_name}desktop-start)"""
   """exa_json_path=$.servername,exa_field_name=host"""
   """exa_json_path=$.clientaddress,exa_regex=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""

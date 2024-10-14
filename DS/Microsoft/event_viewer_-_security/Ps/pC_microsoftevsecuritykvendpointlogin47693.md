@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-3
     """"({time}\d\d\d\d\-\d{1,100}\-\d{1,100}T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
     """EventRecordID="+({event_id}[^"]+)"""",
-    """TargetUserName ="+({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+)"""",
+    """TargetUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+)"""",
     """TargetLogonId="+({login_id}[^"]+)"""",
     """ServiceName ="+({dest_host}[\w\-.]+\$)"""",
     """ServiceName ="+({service_name}[^"]+)"""",

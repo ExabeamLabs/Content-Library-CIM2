@@ -15,7 +15,7 @@ Name = google-workspace-cef-email-send
   Fields = [
      """"timestamp_usec":({time}\d{10,13})""",
      """"destination":\[\{"address[":]*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-     """"source":\{"address":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+     """"source":\{"address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
      """"subject":"({email_subject}[^",]+)"""",
      """"selector":"({action}[^",]+)""",
      """"success":({result}true|false)""",
@@ -27,7 +27,6 @@ Name = google-workspace-cef-email-send
      """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
      """"file_extension_type":"({file_ext}[^"]+)"""
   ]
-  DupFields = ["dest_email_address->external_address"]
 
 
 }

@@ -12,7 +12,7 @@ Fields = [
   """\sdeviceSeverity=({result}[^\s]+)""",
   """\sdhost=({host}[\w\-.]+?)(\s+\w+=|\s*$)""",
   """\sexternalId=({event_code}\d+)""",
-  """\sduser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+  """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)""",
   """\sdntdom=({domain}.+?)(\s+\w+=|\s*$)""",
   """\sduid=({login_id}[^\s]+)""",
   """\sdpriv=({privileges}.+?)(\s+\w+=|\s*$)"""

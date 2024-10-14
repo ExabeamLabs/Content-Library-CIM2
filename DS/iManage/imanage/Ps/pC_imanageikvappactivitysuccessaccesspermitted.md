@@ -17,7 +17,7 @@ Fields = [
   """APPNAME:\s*"+({app}[^"]+)"+"""
   """DOCNAME:\s*"+({object}[^"]+)"+"""
   """AUTHOR_NAME:\s*"+({full_name}.+?)\s*"+"""
-  """OPERATOR_ID:\s*"+({user}[\w\.\-]{1,40}\$?)"+"""
+  """OPERATOR_ID:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"+"""
   """OPERATOR_NAME:\s*"+({operator_name}.+?)\s*"+"""
   """CLIENT_ID:\s*"+({client_id}[^"]+)"+"""
   """CLIENT_NAME:\s*"+({client_name}[^"]+)"+"""

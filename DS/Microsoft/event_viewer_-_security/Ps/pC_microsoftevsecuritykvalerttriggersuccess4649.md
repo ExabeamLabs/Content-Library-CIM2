@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-alert-trigger-success-4649
     """Keywords=({result}[^=]+?)\s+\w+=""",
     """Message=({event_name}[^:]+?)\s+\w+:""",
     """Subject:\s+Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
-    """Subject:.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)""",
+    """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Process ID:\s+({process_id}[^\s]+)""",

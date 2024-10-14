@@ -6,7 +6,7 @@ Name = ibm-mainframe-json-app-login-success-loggedon
    Conditions = [ """"MFSOURCETYPE":"SYSLOG"""", """"MSGTXT":"""", """ LOGGED ON """ ]
    Fields = ${IBMParsersTemplates.ibm-mainframe-events.Fields}[
      """exa_regex=({event_name}LOGGED ON)""",
-     """exa_json_path=$.MSGTXT,exa_regex=^[^"\s]+?\s({user}[\w\.\-]{1,40}\$?)\s\S+?\sLOGGED ON"""
+     """exa_json_path=$.MSGTXT,exa_regex=^[^"\s]+?\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\S+?\sLOGGED ON"""
    ]
    ParserVersion = "v1.0.0"
 

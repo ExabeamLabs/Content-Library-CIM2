@@ -18,7 +18,7 @@ Name = zeek-z-json-network-traffic-sip
 # response_to is removed
 # request_path is removed
 # response_path is removed
-    """"status_code"+:({status_code}\d+)""",
+    """"status_code"+:({result_code}\d+)""",
     """"status_msg"+:"+({status_msg}[^"]+)""",
 # response_body_len is removed
 # content_type is removed

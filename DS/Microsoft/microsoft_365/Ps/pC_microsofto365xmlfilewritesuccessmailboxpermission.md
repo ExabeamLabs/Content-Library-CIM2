@@ -20,7 +20,7 @@ Fields = [
   """, User=({object}[^,]+)"""
   """<Data>\{Identity=({resource}[^,]+)"""
   """<EventData><Data>({operation}.+?)<\/Data>"""
-  """User=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
+  """User=(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

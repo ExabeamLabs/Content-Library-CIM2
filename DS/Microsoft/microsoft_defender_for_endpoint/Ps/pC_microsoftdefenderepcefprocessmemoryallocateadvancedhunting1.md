@@ -19,7 +19,7 @@ Name = microsoft-defenderep-cef-process-memory-allocate-advancedhunting-1
        """ActionType"+:\s*"+({action}[^"]+)""",
        """RemoteIPType"+:\s*"+(null|({direction}[^"]+))""",
        """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
-       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",

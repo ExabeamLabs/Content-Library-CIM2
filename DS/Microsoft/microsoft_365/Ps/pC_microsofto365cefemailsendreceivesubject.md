@@ -18,7 +18,7 @@ Name = microsoft-o365-cef-email-send-receive-subject
     """"StartDate":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """"Subject":"\s*(|({email_subject}[^=]+?))\s*","\w+?":""",
     """"Direction":"({direction}[^"]+)"""",
-    """"SenderAddress":"({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+(?<!local)(?<!loc))"""",
+    """"SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+(?<!local)(?<!loc))"""",
     """"RecipientAddress":"({email_recipients}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"Size":"?({bytes}\d+)""",
@@ -33,7 +33,7 @@ Name = microsoft-o365-cef-email-send-receive-subject
     """\ssourceServiceName =({alert_source}[^=]+)\s+\w+="""
     """fsize=({bytes}\d+)\s"""
   ]
-  DupFields = [ "alert_type->alert_name" ,"src_email_address->orig_user" ]
+  DupFields = [ "alert_type->alert_name" ,"email_address->orig_user" ]
  
 
 }

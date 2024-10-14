@@ -16,12 +16,12 @@ Fields = [
 """<Computer>({host}[\w\-.]+)</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<EventID>({event_code}\d+)</EventID>"""
-"""Subject:[\s\S]*?Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""
+"""Subject:[\s\S]*?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""
 """Target Account:\s*Security ID:\s*({user_sid}.+?)\s*Account Name:\s*({dest_user}.+?)\s*Account Domain:\s*({dest_domain}[^=<]+)\s*<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>"""
 """<Data Name\\*=('|")SubjectUserSid('|")>\s*({user_sid}[^\s]+?)\s*</Data>"""
 """<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
-"""<Data Name ='SubjectUserName'>\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*</Data>"""
+"""<Data Name ='SubjectUserName'>\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*</Data>"""
 """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"

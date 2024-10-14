@@ -12,7 +12,7 @@ servicenow-login-template = {
     Fields = [
       """"sys_created_on":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """({app}ServiceNow)""",
-      """"user(_name)?":"((?i)(anonymous)|({user}[\w\.\-]{1,40}\$?)@({domain}[^"\s@]+)|({=user}[^"\s@]+))"""",
+      """"user(_name)?":"((?i)(anonymous)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"\s@]+)|({=user}[^"\s@]+))"""",
       """"name":"({object}[^"]+)""",
       """"name":"({event_name}[^"]+)"""",
       """"queue":"({event_name}[^"]+)""",

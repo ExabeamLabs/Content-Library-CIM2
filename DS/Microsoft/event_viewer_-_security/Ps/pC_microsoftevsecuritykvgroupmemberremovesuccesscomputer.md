@@ -22,14 +22,14 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)""",
       """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing""",
       """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group""",
-      """Account Name\s*:((\\)*[rnt])*\s*({user}[\w\.\-]{1,40}\$?)\s*((\\)*[rnt])*Account Domain\s*:((\\)*[rnt])*\s*({domain}[^\s\\:]+)"""
+      """Account Name\s*:((\\)*[rnt])*\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*((\\)*[rnt])*Account Domain\s*:((\\)*[rnt])*\s*({domain}[^\s\\:]+)"""
       """Logon ID:\s*({login_id}[^\s]+)\s+"""
       """Group:.+?(Group|Account) Name\s*:(\\*(r|n|t|\s))*({group_name}.+?)?(\\*(r|n|t|\s))*(Group|Account) Domain\s*:(\\*(r|n|t))*({group_domain}.+?)?(\\*(r|n|t|\s))*Additional Information:"""
-      """Account Name\s*:\s*(\\t|\\n|\\r)*({user}[\w\.\-]{1,40}\$?)\s*(\\t|\\n|\\r)*\s*Account Domain\s*:\s*(\\t|\\n|\\r)*({domain}[^\\\s]+)\s*(\\t|\\n|\\r)*""",
+      """Account Name\s*:\s*(\\t|\\n|\\r)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\\t|\\n|\\r)*\s*Account Domain\s*:\s*(\\t|\\n|\\r)*({domain}[^\\\s]+)\s*(\\t|\\n|\\r)*""",
       """Logon ID:\s*(\\t|\\n|\\r)*({login_id}[^\\\s]+)(\\t|\\n|\\r)*\s*""",
       """"+SubjectUserSid\\?"+:\\?"+({user_sid}[^"\\<,]+)"""
-      """Member:\s*(\\t|\\n|\\r)*Security ID\s*:\s*(\\t|\\n|\\r)*({dest_user_sid}[^:]+?)\s*(\\t|\\n|\\r)*Account Name:""",
-      """Member:.+?Security ID\s*:\s*(\\t|\\n|\\r)*({dest_user_sid}[^\\\s]+)"""
+      """Member:\s*(\\t|\\n|\\r)*Security ID\s*:\s*(\\t|\\n|\\r)*(({dest_user_sid}S-[^:]+?)|({account_domain}[^\\\s:]+)\\+({account_name}[^:]+?))\s*(\\t|\\n|\\r)*Account Name:""",
+      """Member:.+?Security ID\s*:\s*(\\t|\\n|\\r)*({dest_user_sid}S-\d+-[^\\\s]+)"""
       """Account Name\s*:\s*(\\*(r|n|t))*(.+?({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+)))\s*(\\*(r|n|t))*Group:""",
       """Group\s*:(\\*(r|n|t))*.+?Security ID\s*:\s*(\\*(r|n|t))*({group_id}[^\\\s]+)\s*""",
       """Group:.+?(Group|Account) Name\s*:\s*(\\t|\\n|\\r)*({group_name}.+?)?(\\t|\\n|\\r)*\s*(\\t|\\n|\\r)*(Group|Account) Domain\s*:\s*(\\t|\\n|\\r)*({group_domain}[^\\\s]+)\s*""",
@@ -40,7 +40,7 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"record_id"+:({event_id}\d+)"""
       """"task"+:"+({task_name}[^"]+)"""
       """"event_id\\?"+:({event_code}\d+)"""
-      """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)"""
+      """"(?:winlog\.)?computer_name"+:"+({host}[^"]+)"""
       """"(?i)Hostname\\*"+:\\*"+({host}[\w\-.]+)"""
       """"keywords"+:\["+({result}[^"]+)"""
       """"pid"+:({process_id}\d+)"""
@@ -51,7 +51,7 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """ComputerName =({host}[\w\-.]+)"""
   ]
   DupFields = [
-    "host->dest_host"
+    "host->src_host"
     "user_dn->member"
   ]
   ParserVersion = "v1.0.0"

@@ -20,7 +20,7 @@ Fields = [
 """Subject=.*?Account Name =({src_user}[^;\"\s]+)"""
 """Subject=.*?Account Domain=({src_domain}[^;\"\s]+)"""
 """Logon ID=({login_id}[^;\"\s]+)"""
-"""Security ID=({user_sid}[^;\"]+);Account Name =({user}[\w\.\-]{1,40}\$?);Additional Information="""
+"""Security ID=({user_sid}[^;\"]+);Account Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?);Additional Information="""
 """Caller Computer Name =\\*({src_host}[\w\-.]+)"""
 ]
 DupFields = [

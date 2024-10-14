@@ -10,7 +10,7 @@ Name = kaspersky-endpointsecurity-xml-alert-trigger-success-security
   Fields = [
     """Result:\s+({result}[^:]+)""",
     """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){5}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(({file_dir}[^\<]+?)\\+)?({file_name}[^\<\\]+?(\.({file_ext}[^\<\.\s]+)))<\/Data><\/Cell>""",
-    """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){8}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(({domain}[^\<]+)\\+)?({user}[\w\.\-]{1,40}\$?)<\/Data><\/Cell>""",
+    """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){8}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(({domain}[^\<]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data><\/Cell>""",
     """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){1}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>({group_name}[^\<]+?)<\/Data><\/Cell>""",
     """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){2}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>({src_host}[^\<]+?)<\/Data><\/Cell>""",
     """<Row>(<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>(<\/Cell>|[^\<]+?<\/Data><\/Cell>)){3}<Cell ss:StyleID="TableData"><Data ss:Type=[^\<]+?>({alert_name}[^\<]+?)<\/Data><\/Cell>""",

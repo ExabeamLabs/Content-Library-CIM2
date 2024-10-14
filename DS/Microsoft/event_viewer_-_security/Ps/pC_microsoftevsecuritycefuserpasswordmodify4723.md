@@ -16,7 +16,7 @@ Fields = [
   """\srt=({time}\d{13})"""
   """\sdvc=({host}[a-fA-F:\d.]+)"""
   """\sdvchost=({host}[\w\-.]+)"""
-  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+  """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\sduser=({dest_user}.+?)\s+\w+="""
   """Security_,ID=({user_sid}[^\s]+?)(\s|\||$)"""
   """\ssntdom=({domain}.+?)\s\w+="""

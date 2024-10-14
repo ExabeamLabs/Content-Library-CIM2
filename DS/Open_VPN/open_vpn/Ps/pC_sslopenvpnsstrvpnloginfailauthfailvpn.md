@@ -11,7 +11,7 @@ Conditions = [
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\+|\-)\d+).*?VPN Auth Failed:"""
 """VPN Auth Failed:\s*'({failure_reason}[^']+)"""
-"""({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?\[({user}[\w\.\-]{1,40}\$?)\] Peer Connection Initiated with"""
+"""({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*?\[({user}[\w\.\-\!\#\^\~]{1,40}\$?)\] Peer Connection Initiated with"""
 ]
 ParserVersion = "v1.0.0"
 

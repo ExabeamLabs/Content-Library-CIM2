@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4647
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}User initiated logoff)""",
-    """"TargetUserName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"TargetDomainName":"({domain}[^"]+)"""",
     """"TargetLogonId":"({login_id}[^"]+)"""",
     """"Keywords":({result}[^,]+)"""

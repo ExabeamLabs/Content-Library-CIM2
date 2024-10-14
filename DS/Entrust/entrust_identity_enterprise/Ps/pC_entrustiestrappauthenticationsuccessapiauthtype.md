@@ -10,7 +10,7 @@ Name = entrust-ie-str-app-authentication-success-apiauthtype
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
     """({event_name}IG.SYSTEM.AuthenticationManagement.API)""",
-    """Authenticate type ({auth_method}[^\s]+) for (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\s""",
+    """Authenticate type ({auth_method}[^\s]+) for (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
   ]
 
 

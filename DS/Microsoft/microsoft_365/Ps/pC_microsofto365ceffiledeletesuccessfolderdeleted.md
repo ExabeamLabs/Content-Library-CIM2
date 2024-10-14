@@ -19,7 +19,7 @@ cef-o365-file-delete = {
     """\Wdvchost=({host}[\w\-.]+)""",
     """\Wduser=({email_address}[^@\s]+@[^\s@]+)""",
     """\Wsuser=({email_address}[^@\s]+@[^\s@]+)""",
-    """\Wsuid=(?!\S+@\S+)({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
+    """\Wsuid=(?!\S+@\S+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=|$)""",
     """\Wsuid=({email_address}[^\s@]+@[^\s]+)\s*(\w+=|$)""",
     """\WfilePath=({file_path}.+?)\s*(\w+=|$)""",
     """\WfilePath=(({file_dir}.+?)\/({file_name}[^\/]+?))\s*(\w+=|$)""",

@@ -13,8 +13,8 @@ Conditions = [
 Fields = [
   """type":"discovery_ip","label":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """type":"discovery_user","label":"(|({email_address}[^@",]+?@[^@",]+?)|(({domain}[^"\/]+)\/)?({user}[\w\.\-]{1,40}\$?))""""
-  """\Wsuser=(|({email_address}[^@=]+?@[^@=]+)|({user_uid}(?i)s[^\s]+)|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+  """type":"discovery_user","label":"(|({email_address}[^@",]+?@[^@",]+?)|(({domain}[^"\/]+)\/)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+  """\Wsuser=(|({email_address}[^@=]+?@[^@=]+)|({user_uid}(?i)s[^\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
   """"timestamp":({time}\d{13})"""
   """"description":"(|\s*({additional_info}[^\}]+?))\s*","""
   """"title":"({alert_name}[^"]+)"""

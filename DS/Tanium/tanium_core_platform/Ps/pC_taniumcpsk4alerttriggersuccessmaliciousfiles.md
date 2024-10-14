@@ -22,7 +22,7 @@ Name = "tanium-cp-sk4-alert-trigger-success-maliciousfiles"
     """properties"+:[^\]]+?fullpath"+:"+({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
     """md5"+:"+({hash_md5}[^"]+)"""
     """os"+:"+({os}[^"]+)"""
-    """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))"""
+    """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """({app}Tanium)"""
   ]
   ParserVersion = "v1.0.0"

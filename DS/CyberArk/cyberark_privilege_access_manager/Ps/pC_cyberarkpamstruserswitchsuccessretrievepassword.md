@@ -10,7 +10,7 @@ Name = cyberark-pam-str-user-switch-success-retrievepassword
         """Operation: ({operation}.*?) ObjectType""",
   """({time}(\w+\s+\d\d\s+\d\d:\d\d:\d\d))[^:]+:\s+(AdminName|UserName)"""
 	"""({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-	"""(AdminName|UserName):\s({user}[\w\.\-]{1,40}\$?)\sOperation""",
+	"""(AdminName|UserName):\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sOperation""",
 	"""Target:\s*(?:({account_domain}[^\\\/]+)[\\\/]+)?({dest_user}.+?)\s*Role:""",
 	""":\d\d\s({host}[^=]+)\sPAR""",
 	"""PAR\[({event_code}\d+)"""

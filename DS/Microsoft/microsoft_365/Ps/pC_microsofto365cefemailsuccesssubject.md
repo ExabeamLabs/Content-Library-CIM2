@@ -24,7 +24,7 @@ Name = microsoft-o365-cef-email-success-subject
     """"Subject":"\s*({email_subject}[^",]+)\s*"""",
     """"MessageSize":({bytes}\d+)""",
     """"Direction":"({direction}[^"]+)""",
-    """"SenderAddress":"({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+(?<!local)(?<!loc)(?<!localdomain))"""",
+    """"SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+(?<!local)(?<!loc)(?<!localdomain))"""",
     """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"TransportRule":"({alert_name}[^"]+)""",
     """"EventType":"({alert_type}[^"]+)""",
@@ -33,7 +33,6 @@ Name = microsoft-o365-cef-email-success-subject
  ]
  DupFields = [ 
   "email_attachment"->"file_name"
-  "src_email_address->email_address"
  ]
  
 

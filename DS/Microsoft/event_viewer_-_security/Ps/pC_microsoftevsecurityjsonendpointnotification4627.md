@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """"SubjectDomainName"+:"+(-|({account_domain}[^"]+))""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
     """"TargetUserSid"+:"+(SYSTEM|ANONYMOUS|({user_sid}[^",]+))""",
-    """"TargetUserName"+:"+(SYSTEM|ANONYMOUS|({user}[\w\.\-]{1,40}\$?))""",
+    """"TargetUserName"+:"+(SYSTEM|ANONYMOUS|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"TargetDomainName"+:"+(NT AUTHORITY|({domain}[^"]+))""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
@@ -28,15 +28,15 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """exa_json_path=$.Properties.SubjectUserSid,exa_field_name=user_sid"""
-    """exa_json_path=$.Properties.SubjectUserName,exa_regex=(-|({account_name}[^"]+))"""
-    """exa_json_path=$.Properties.SubjectDomainName,exa_regex=(-|({account_domain}[^"]+))"""
-    """exa_json_path=$.Properties.SubjectLogonId,exa_field_name=login_id"""
-    """exa_json_path=$.Properties.TargetUserSid,exa_field_name=user_sid"""
-    """exa_json_path=$.Properties.TargetUserName,exa_field_name=user"""
-    """exa_json_path=$.Properties.TargetDomainName,exa_field_name=domain"""
-    """exa_json_path=$.Properties.TargetLogonId,exa_field_name=login_id"""
-    """exa_json_path=$.Properties.LogonType,exa_field_name=login_type"""
+    """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
+    """exa_json_path=$..SubjectUserName,exa_regex=(-|({account_name}[^"]+))"""
+    """exa_json_path=$..SubjectDomainName,exa_regex=(-|({account_domain}[^"]+))"""
+    """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
+    """exa_json_path=$..TargetUserSid,exa_field_name=user_sid"""
+    """exa_json_path=$..TargetUserName,exa_field_name=user"""
+    """exa_json_path=$..TargetDomainName,exa_field_name=domain"""
+    """exa_json_path=$..TargetLogonId,exa_field_name=login_id"""
+    """exa_json_path=$..LogonType,exa_field_name=login_type"""
   ]
 
 

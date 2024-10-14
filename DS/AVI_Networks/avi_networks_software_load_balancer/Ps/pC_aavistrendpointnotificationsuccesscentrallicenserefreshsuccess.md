@@ -14,7 +14,7 @@ nsx-config-endpoint-notification-success = {
       """event\s({event_name}[^\s]+)""",
       """({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d.\d\d:\d\d)\sevent""",
       """({result}Success|Failed)""",
-      """tenant\s({tenant}[\w\-\.]+)\s"""
+      """tenant\s({tenant_id}[\w\-\.]+)\s"""
     
 }
 ```

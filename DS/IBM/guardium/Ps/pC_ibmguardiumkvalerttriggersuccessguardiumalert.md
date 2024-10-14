@@ -23,7 +23,7 @@ Fields = [
 """server-type=({server_group}[^\^]+)(\^+|$)"""
 """src-program=({process_path}({process_dir}(?:[^\^]+)?[\\\/]+)?({process_name}[^\\\/\^]+))(\^+|$)"""
 """db-user=([^\\\^]+\\)?({db_user}[^\^]+)(\^+|$)"""
-"""os-user=([^\\\^]+\\)?({user}[\w\.\-]{1,40}\$?)(\^+|$)"""
+"""os-user=([^\\\^]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\^\^"""
 ]
 DupFields = [
 "db_user->account"

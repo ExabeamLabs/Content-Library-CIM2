@@ -14,7 +14,7 @@ Fields = [
   """({event_name}An attempt was made to change an account's password)"""
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   """"Computer":"({host}[\w\-.]+)"""
-  """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+  """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"TargetAccount":"(({dest_domain}[^\\\s"]+)\\+)?({dest_user}[^\\\s"]+)"""
   """"SubjectUserSid":"({user_sid}[^\s"]+)"""
   """"SubjectLogonId":"({login_id}[^\s"]+)"""

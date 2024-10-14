@@ -21,7 +21,7 @@ Name = microsoft-m365auditlogs-kv-email-send-emailsend
     """cs6=.*?"EventType":"({alert_type}[^"]+)"""",
     """cs6=.*?"MessageTraceId":"({message_id}[^"]+)"""",
   ]
-  DupFields = [ "alert_type->alert_name", "email_address->src_email_address" ]
+  DupFields = [ "alert_type->alert_name" ]
 
 
 }

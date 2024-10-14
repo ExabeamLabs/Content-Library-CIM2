@@ -14,7 +14,7 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventID>({event_code}[^<]+)</EventID>"""
   """<Data Name\\*="SubjectUserSid">(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-  """<Data Name\\*="SubjectUserName">(?=\w)({user}[\w\.\-]{1,40}\$?)<"""
+  """<Data Name\\*="SubjectUserName">(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
   """<Data Name\\*="SubjectDomainName">(?=\w)({domain}[^<]+)<"""
   """<Data Name\\*="SubjectLogonId">({login_id}[^<]+)<"""
   """<Data Name\\*="ObjectType">({file_type}[^<]+)<"""

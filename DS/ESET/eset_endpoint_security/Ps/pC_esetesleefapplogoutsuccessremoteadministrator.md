@@ -18,8 +18,8 @@ Name = eset-es-leef-app-logout-success-remoteadministrator
       """\Wresult=({result}[^=]+?)\s*(\w+=|$)""",
       """\WdeviceName =({device_id}[^\s]+)\s""",
       """\Wdetail=({additional_info}[^.]+)\.""",
-      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[\w\.\-]{1,40}\$?)'.""",
-      """\Wuser=({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
+      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'.""",
+      """\Wuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=|$)""",
     ]
   ParserVersion = "v1.0.0"
 

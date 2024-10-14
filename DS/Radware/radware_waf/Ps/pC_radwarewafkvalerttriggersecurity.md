@@ -17,7 +17,7 @@ Name = radware-waf-kv-alert-trigger-security
      """\sSourcePort=({src_port}\d+)""",
      """\sURI="+\s*({uri_path}[^"]+)""",
      """WebApp="+({app}[^"]+)""",
-     """WebUser="+({user}[\w\.\-]{1,40}\$?)"""
+     """WebUser="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

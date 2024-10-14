@@ -26,7 +26,7 @@ accelion-kite-app = {
     """"+app_host"+:\s*"+({host}[^"]+)"+""",
     """"+event"+:\s*"+({access}[^"]+)"+""",
     """"+user_agent"+:\s+"+({user_agent}[^"]+)?"+\,""",
-    """"+url_host"+:\s*"+({url_host}[^"]+)?"+\,""",
+    """"+url_host"+:\s*"+({web_domain}[^"]+)?"+\,""",
     """"+size"+:\s*({bytes}\d+)""",
     """"+mime":\s*"({mime}[^"]+)""",
     """exa_json_path=$.description,exa_field_name=additional_info""",
@@ -36,7 +36,7 @@ accelion-kite-app = {
     """exa_json_path=$.app_host,exa_field_name=host""",
     """exa_json_path=$.event,exa_field_name=access""",
     """exa_json_path=$.user_agent,exa_field_name=user_agent""",
-    """exa_json_path=$.url_host,exa_field_name=url_host""",
+    """exa_json_path=$.url_host,exa_field_name=web_domain""",
     """exa_json_path=$.size,exa_field_name=bytes""",
     """exa_json_path=$.mime,exa_field_name=mime""",
   

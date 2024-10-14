@@ -16,7 +16,7 @@ Fields = [
   """src=({host}[a-fA-F:\d.]+)"""
   """nitroCommandID=({result_code}.+?)\s+\w+="""
   """sntdom=({domain}[^\s]+)"""
-  """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+  """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """shost=({dest_host}[\w\-.]+?)\s+\w+="""
 ]
 ParserVersion = "v1.0.0"

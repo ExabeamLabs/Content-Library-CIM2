@@ -21,7 +21,7 @@ cef-azure-event-hub-cosmosdb = {
      """"databaseName":\s*"({db_name}[^"]+)""",
      """"collectionName":\s*"({table_name}[^"]+)""",
      """"requestResourceId":\s*"({db_object}[^"]+)""",
-     """"callerId":\s*"(Anonymous|({user}[\w\.\-]{1,40}\$?))""",
+     """"callerId":\s*"(Anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
      """"userAgent":\s*"({user_agent}[^"]+)""",
      """(?i)({app}MICROSOFT\.DOCUMENTDB)""",
      """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",

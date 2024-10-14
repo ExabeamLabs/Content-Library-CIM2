@@ -10,7 +10,7 @@ Name = tanium-cp-kv-process-create-success-processcreationstest
     """({host}[\w.\-]+)\s+Tanium """,
     """\sEndpoint-Name ="(-|({dest_host}[\w.\-]+))"""",
     """\sStart-Time="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)""",
-    """\sUsername="(-|({user}[\w\.\-]{1,40}\$?))"""",
+    """\sUsername="(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\sDomain="(-|({domain}[^"]+))"""",
     """\sMD5="(-|({hash_md5}[^"]+))"""",
     """\sCommand-Line="(-|({process_command_line}[^"]+))"""",

@@ -9,6 +9,7 @@ ParserVersion = v1.0.0
 Conditions = [ """warning tmm""", """Connection error""" ]
 Fields = [
 """\d\d:\d\d:\d\d ({host}[^\s]+)"""
+"""({host}[\w.-]+)\swarning"""
 """warning tmm\[({process_id}\d+)"""
 """warning tmm\[\d+\]:\s+[\d:]+\s+({failure_reason}[^;(]+)"""
 """({failure_reason}Connection error:[^:\d]+)"""

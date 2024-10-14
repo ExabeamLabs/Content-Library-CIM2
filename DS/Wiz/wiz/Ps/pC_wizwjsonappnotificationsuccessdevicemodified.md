@@ -10,7 +10,7 @@ Name = wiz-w-json-app-notification-success-devicemodified
  Fields = [
    """exa_json_path=$.event.timestamp,exa_field_name=time""",
    """exa_json_path=$.event.actor.IP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-   """exa_json_path=$.event.actor.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+   """exa_json_path=$.event.actor.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
    """exa_json_path=$.event.eventURL,exa_field_name=url""",
    """exa_regex=({app}wiz)""",
    """exa_json_path=$.event,exa_regex="matchedRules":.+ruleName:\s*({rule}[^,]+?)\s*",""",

@@ -18,9 +18,9 @@ Name = sophos-xgfirewall-kv-network-traffic-success-firewallrule
     """\sstatus="({action}\S+)?"\s""",
     """\spriority=({priority}\S+)?\s""",
     """\sduration=({duration}\d+)?\s""",
-    """\sfw_rule_id=({rule_id}\d+)?\s""",
+    """\sfw_rule_id="*({rule_id}\d+)"*"\s""",
     """\spolicy_type=({policy_name}\S+)?\s""",
-    """\suser_name="(({user}[\w\.\-]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?"\s.*?\s""",
+    """\suser_name="(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?"\s.*?\s""",
     """\sin_interface="({src_interface}\S+)?"\s""",
     """\sout_interface="({dest_interface}\S+)?"\s""",
     """\ssrc_mac="?({src_mac}\S+?)"?\s""",
@@ -28,19 +28,20 @@ Name = sophos-xgfirewall-kv-network-traffic-success-firewallrule
     """\ssrc_ip="?({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?"?\s""",
     """\ssrc_country_code=({src_country_code}\S+)?\s""",
     """\sdst_ip="?({dest_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?"?\s""",
-    """\sdst_country_code=({dest_county_code}\S+)?\s""",
+    """\sdst_country_code=({dest_country_code}\S+)?\s""",
     """\sprotocol="({protocol}\S+)?"\s""",
     """\ssrc_port=({src_port}\d+)?\s""",
     """\sdst_port=({dest_port}\d+)?\s""",
-    """\s(tran_src_ip|src_trans_ip)=({src_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?\s""",
+    """\s(tran_src_ip|src_trans_ip)="*({src_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?"*\s""",
     """\s(tran_src_port|src_trans_port)=({src_translated_port}\d+)?\s""",
-    """\s(tran_dst_ip|dst_trans_ip)=({dest_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?\s""",
+    """\s(tran_dst_ip|dst_trans_ip)="*({dest_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?"*\s""",
     """\s(tran_dst_port|dst_trans_port)=({dest_translated_port}\d+)?\s""",
     """\ssrc_zone="({src_network_zone}[^"]+)""""
     """\sdst_zone="({dest_network_zone}[^"]+)""""
     """\ssrc_country="({src_country}[^"]+)""""
     """\sdst_country="({dest_country}[^"]+)""""
   ]
+  DupFields = [ "action->result" ]
 
 
 }

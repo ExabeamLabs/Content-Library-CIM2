@@ -10,7 +10,7 @@ Conditions = [
   """event"""
 ]
 ExtractionType = json
-DupFields = ["email_recipients->dest_email_address" , "email_address->src_email_address"]
+DupFields = ["email_recipients->dest_email_address"]
 ParserVersion = "v1.0.0"
 
 

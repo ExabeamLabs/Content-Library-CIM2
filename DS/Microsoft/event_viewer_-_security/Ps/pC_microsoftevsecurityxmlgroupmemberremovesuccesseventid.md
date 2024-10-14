@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<Data Name =('|")MemberName('|")>(-|({user_dn}[^<]+))<""",
       """<Data Name =('|")MemberSid('|")>({dest_user_sid}[^<]+)""",
       """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-      """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+      """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
       """<Data Name =('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
       """<Data Name =('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
       """CN=({account_id}.*?(?=\s*,OU))""",
@@ -30,7 +30,7 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)""",
       """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
       """<Data Name ="MemberName(">|":")CN\\?=({member}[^>]+)<\/Data>""",
-      """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
+      """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
       """<Level>({run_level}[^<]+)<"""
       ]
   DupFields = [

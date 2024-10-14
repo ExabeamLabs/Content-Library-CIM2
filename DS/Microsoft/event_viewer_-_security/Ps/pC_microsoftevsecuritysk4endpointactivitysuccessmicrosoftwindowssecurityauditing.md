@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-sk4-endpoint-activity-success-microsoftwindowssecuri
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.EventType,exa_field_name=result""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
     """exa_json_path=$..ProcessId,exa_field_name=process_id""",

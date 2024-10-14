@@ -3,9 +3,10 @@
 {
 Name = "microsoft-o365-cef-app-login-success-user"
 Conditions = [
-""""Workload":""""
+""""Workload":"""
 """"AzureActiveDirectoryEventType":"""
-""""Operation":"UserLoggedIn""""
+""""Operation":"""
+""""UserLoggedIn""""
 """"ResultStatus":"""
 """"ClientIP":"""
 ]

@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4755-1
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",

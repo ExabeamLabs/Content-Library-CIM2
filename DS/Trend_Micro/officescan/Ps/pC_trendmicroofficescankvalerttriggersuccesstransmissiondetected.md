@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """Date\/Time:\s*({time}\d+\/\d+\/\d\d\d\d \d\d:\d\d:\d\d)"""
   """Endpoint:\s*({src_host}[^\s]+)"""
-  """User:\s*({user}[\w\.\-]{1,40}\$?)\s+\w+:"""
+  """User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+:"""
   """Domain:\s*({domain}[^\\]+)\\"""
   """Channel:\s*({alert_type}.+?)\s+\w+:"""
   """Channel:\s*({protocol}.+?)\s+\w+:"""

@@ -11,7 +11,7 @@ Name = sunone-s-kv-endpoint-authentication-bind
       """\[({time}\d+\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d\.\d+\s*(\+|\-)\d+)\]""",
       """({host}[\w\-\.]+)\s+BIND RESULT """,
       """({dest_host}[\w\-\.]+)\s+BIND RESULT """,
-      """\Wuid=({user}[\w\.\-]{1,40}\$?)""",
+      """\Wuid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\WauthType="+({auth_type}[^"]+?)"+(\s+\w+=|\s*$)""",
       """\WresultCodeName ="+({result}[^"]+?)"\s*\w+=""",
       """\WresultCode=({result}\d+)""",

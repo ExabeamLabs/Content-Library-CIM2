@@ -10,7 +10,7 @@ Conditions = [
 """UBA Machine Learning Anomaly"""
 ]
 Fields = [
-"""usrName =({user}[\w\.\-]{1,40}\$?)\s"""
+"""usrName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s"""
 """senseValue=({sense_value}\d+)\s"""
 """senseScore=({sense_score}[\d.]+)"""
 """startTime=({time}\d{13})"""

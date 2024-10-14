@@ -5,8 +5,8 @@ Name = vectra-cs-kv-email-send-success-metadatasmtp
   TimeFormat = "epoch"
   Conditions = [ """COGNITO_STREAM""", """vectra_metadata_smtp""", """METADATA_SMTP""" ]
   Fields = ${VectraParserTemplates.vectra-meta-data.Fields} [
-    """subject="({log_subject}[^"]+)"""",
-    """mail_from="({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """subject="({email_subject}[^"]+)"""",
+    """mail_from="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """rcpt_to="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """msgid="<({message_id}[^"]+)>""""
   ]

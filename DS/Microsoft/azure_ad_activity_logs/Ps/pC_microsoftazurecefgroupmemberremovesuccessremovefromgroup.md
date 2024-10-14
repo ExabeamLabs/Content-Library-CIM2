@@ -37,7 +37,7 @@ Fields = [
 """exa_regex="TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\dZ)""""
 """exa_regex=targetResources":.+?id":"({user_uid}[^",]+)"""
 """exa_json_path=$.TenantId,exa_field_name=account_id"""
-"""exa_json_path=$.properties.result,exa_field_name=result"""
+"""exa_json_path=$..result,exa_field_name=result"""
 """exa_regex=({event_name}Remove member from group)"""
 """exa_regex=loggedByService":"({app}[^",]+)"""
 """exa_json_path=$.operationName,exa_field_name=operation"""

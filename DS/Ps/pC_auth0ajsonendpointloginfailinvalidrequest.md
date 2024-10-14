@@ -4,8 +4,7 @@
 Name = auth0-a-json-endpoint-login-fail-invalidrequest
 Conditions = [
   """type":"f""""
-  """user_id"""
-  """client_name"""
+  """connection_id"""
   """client_id"""
 ]
 ParserVersion = "v1.0.0"

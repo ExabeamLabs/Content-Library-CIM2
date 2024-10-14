@@ -19,12 +19,11 @@ Fields = [
   """\scs3=({result}[^\s]+)"""
   """msg=({email_subject}.+?)\scs2"""
   """cs5=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\s]+)\s"""
-  """cs4=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\scs5Label"""
+  """cs4=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\scs5Label"""
   """\|({alert_severity}\d+)\|rt"""
   """cs1=({return_path}[^\s]+)\s"""
 ]
 DupFields = [
-  "src_email_address->external_address"
   "email_address->email_user"
 ]
 ParserVersion = "v1.0.0"

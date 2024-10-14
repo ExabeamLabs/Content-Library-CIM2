@@ -17,10 +17,10 @@ Name = eset-es-leef-app-logout-success-domainuserlogout
     """\WdeviceName =({host}[^\s]+)\s""",
     """\Wtarget=({object}[^\s]+)\s*""",
     """\Wdetail=({additional_info}[^.]+).""",
-    """\Wuser '\w+\\({user}[\w\.\-]{1,40}\$?)'.""",
+    """\Wuser '\w+\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)'.""",
     """(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\|({event_name}[^|]+)\|""",
     """\d+Z\s*({host}\w+)\s""",
-    """\Wuser=((NT AUTHORITY|({domain}[^\\=]+?))\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
+    """\Wuser=((NT AUTHORITY|({domain}[^\\=]+?))\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
   ]
 
 

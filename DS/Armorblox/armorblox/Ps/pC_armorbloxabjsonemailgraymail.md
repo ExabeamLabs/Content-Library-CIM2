@@ -13,7 +13,7 @@ armorblox-email = {
   Fields = [
     """exa_json_path=$.date,exa_field_name=time""",
     """exa_json_path=$.title,exa_field_name=email_subject""",
-    """exa_json_path=$.original_sender_address,exa_regex=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.original_sender_address,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """exa_json_path=$.users[0].email,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """exa_json_path=$.app_name,exa_field_name=app""",
     """exa_json_path=$.remediation_actions[0],exa_field_name=operation""",

@@ -13,7 +13,7 @@ Fields = [
 """({event_name}Privileged object operation)"""
 """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+"""
 """\s+(Information|Audit Success|Success Audit)\s+({host}[\w\-.]+)"""
-"""(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Primary Domain"""
+"""(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Primary Domain"""
 """({event_code}578)"""
 """Security\t([^\s]+\t){2}({result}.+?)\t"""
 """\s+Primary Domain:\s+({domain}[^\s]+)"""

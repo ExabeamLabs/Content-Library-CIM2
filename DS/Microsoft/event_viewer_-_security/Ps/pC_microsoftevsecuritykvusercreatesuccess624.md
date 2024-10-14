@@ -19,7 +19,7 @@ Fields = [
 """({host}[^\/\s]+)\/Security \(624\)"""
 """Computer=({host}[\w\-.]+)"""
 """New Account Name:\s+({account_name}.+?)\s+New Domain:\s+({account_domain}[^\s]+)\s+New Account ID:\s+(%\{)?({account_id}[^\s\}]+)"""
-"""Caller User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+({domain}[^\s]+)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
+"""Caller User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Caller Domain:\s+({domain}[^\s]+)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
 ]
 DupFields = [
 "account_name->dest_user"

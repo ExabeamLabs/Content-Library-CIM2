@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """Subject:.+?Security ID:\s*(\\t|\\r|\\n)*({user_sid}[^\s\\"]+)\s*(\\t|\\r|\\n)*""",
-    """Subject:\s*([^"]+?)Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
+    """Subject:\s*([^"]+?)Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Subject:\s*([^"]+?)Account Domain:(\\t|\\r|\\n|\s)*(|-|({domain}.+?))(\\t|\\r|\\n|\s)*Logon ID:""",
     """Subject:\s*([^"]+?)Logon ID:(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*""",
     """Object Server:\s*((?-i)\\+[rnt])*({object_server}[^:]+?)[\\rnt\s]*Object Type:""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """Object:\s*[^$]+Object Name:(\\t|\\r|\\n|-)*\s*(-|({object_name}[^:"]+?))\s""",
     """Process:\s*Process ID:\s*({process_id}[^\s]+)""",
     """Process:\s*([^$]+?)Process Name:\s*({process_path}(?:({process_dir}.+?)[\\\/]+)?({process_name}[^\s\\\/]+))\s+Permissions Change:""",
-    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """Permissions Change:(\\+[rnt]|\s)*({attribute}[^<]+?)\s*<""",
     """Permissions Change:[\s\S]*?New Security Descriptor:\s*(\\t|\\r|\\n)*({permissions}[^<]+?)\s*<""",
     """<Data Name(\\)?=(\\)?("|')+ObjectName(\\)?("|')+>(-|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?))|[^\\:<]+)<\/Data>"""

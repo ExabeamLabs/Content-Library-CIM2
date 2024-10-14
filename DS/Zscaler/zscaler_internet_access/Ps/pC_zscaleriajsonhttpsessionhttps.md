@@ -15,7 +15,7 @@ Conditions = [
 ]
 Fields = [
   """exa_json_path=$.time,exa_field_name=time""",
-  """exa_json_path=$.ologin,exa_regex=({email_address}({user}[\w\.\-]{1,40}\$?)@[^@\s"]+)""",
+  """exa_json_path=$.ologin,exa_regex=({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@[^@\s"]+)""",
   """exa_json_path=$.cip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
  """exa_json_path=$.proto,exa_field_name=protocol""",
  """exa_json_path=$.reqmethod,exa_field_name=method""",

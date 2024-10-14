@@ -15,7 +15,7 @@ Fields = [
   """dhost=({dest_host}[\w\-.]+)""",
   """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
   """msg=({additional_info}[^=]+)\s\w+=""",
-  """duser=({user}[\w\.\-]{1,40}\$?)\s\w+=""",
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+=""",
   """dntdom=({domain}[^\s]+)""",
   """filePath=({object}[^=]+)\s\w+=""",
   """fileType=({object_type}[^=]+)\s\w+=""",

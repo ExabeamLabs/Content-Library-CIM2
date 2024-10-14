@@ -9,8 +9,8 @@ Name = entrust-ie-str-space-delimited-app-authentication-fail-foruser
   Conditions = [ """An invalid response was specified for the token with serial number """ , """ for user """ ]
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
-    """({event_description}An invalid response was specified for the token with serial number .+)""",
-    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))\.""",
+    """({additional_info}An invalid response was specified for the token with serial number .+)""",
+    """for user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\.""",
 
   ]
 

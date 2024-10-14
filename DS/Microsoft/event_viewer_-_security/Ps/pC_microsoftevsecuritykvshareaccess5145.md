@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-share-access-5145
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Detailed File Share""",
     """({event_code}5145)""",
-    """SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
+    """SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """SubjectDomainName:({domain}[^,]+),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """ObjectType:({file_type}[^,]+),""",

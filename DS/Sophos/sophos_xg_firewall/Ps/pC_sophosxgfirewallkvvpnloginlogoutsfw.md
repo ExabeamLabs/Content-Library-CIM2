@@ -20,7 +20,7 @@ Fields = [
 """\Wsrc_port=({src_port}\d+)"""
 """\Wdst_port=({dest_port}\d+)"""
 """\Wlog_component="({operation}[^"]+)""""
-"""\Wuser_name="({user}[\w\.\-]{1,40}\$?)""""
+"""\Wuser_name="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """\Wuser_name="({email_address}[^\s@"]+@[^\s@"]+)""""
 """\Wfw_rule_id=({rule}\d+)"""
 """\Win_interface=(({src_interface}\d+)|"({=src_interface}[^"]+?)")"""

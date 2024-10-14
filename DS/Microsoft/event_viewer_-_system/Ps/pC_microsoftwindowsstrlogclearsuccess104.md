@@ -11,11 +11,10 @@ Conditions = [
 """log file was cleared."""
 ]
 Fields = [
-"""({host}[\w\-.]+)\s+MSWinEventLog\s+\S+\s+\S+\s+\S+\s+\S+\s+({time}\w+ \d+ \d\d:\d\d:\d\d \d+)\s+({event_code}104)\s+Microsoft-Windows-Eventlog\s+(({domain}[^\\]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""
+"""({host}[\w\-.]+)\s+MSWinEventLog\s+\S+\s+\S+\s+\S+\s+\S+\s+({time}\w+ \d+ \d\d:\d\d:\d\d \d+)\s+({event_code}104)\s+Microsoft-Windows-Eventlog\s+(({domain}[^\\]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w\-\.]+))\s+MSWinEventLog\s+"""
 """({event_name}The.*?log file was cleared.)"""
 ]
-DupFields = [ "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

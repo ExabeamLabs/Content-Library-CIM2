@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627-1
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)<""",
     """<Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)<""",
     """<Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)<""",
-    """<Data Name(\\)?=('|")TargetUserName('|")>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))<\/Data>""",
+    """<Data Name(\\)?=('|")TargetUserName('|")>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """<Data Name(\\)?=('|")LogonType('|")>({login_type}\d+)<""",
     """ProcessID(\\)?=('|")({process_id}\d+)('|")""",
     """ThreadID(\\)?=('|")({thread_id}\d+)('|")""",

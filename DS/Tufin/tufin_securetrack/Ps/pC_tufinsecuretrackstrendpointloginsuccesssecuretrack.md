@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """timestamp:({time}\d+.\d+.\d+ \d+:\d+:\d+)"""
 """({host}[^\s]+)\s+SecureTrack:"""
-"""Login was done by\s+({user}[\w\.\-]{1,40}\$?)\.,"""
+"""Login was done by\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\.,"""
 ]
 ParserVersion = "v1.0.0"
 

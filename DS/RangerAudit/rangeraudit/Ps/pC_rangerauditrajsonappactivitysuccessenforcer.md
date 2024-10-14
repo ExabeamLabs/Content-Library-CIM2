@@ -15,7 +15,7 @@ Fields = [
     """evtTime"*:"({time}[^"]+)"""
     """agentHost"*:"({host}[^"]+)"""
     """repo"*:"({app}[^"]+)"""
-    """reqUser"*:"({user}[\w\.\-]{1,40}\$?)"""
+    """reqUser"*:"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """access"*:"({operation}[^"]+)"""
     """reqData"*:"({additional_info}[^"]+)"""
     """resource"*:"({object}[^"\/]+)"""
@@ -26,7 +26,7 @@ Fields = [
     """exa_json_path=$.evtTime,exa_field_name=time""",
     """exa_json_path=$.agentHost,exa_field_name=host""",
     """exa_json_path=$.repo,exa_field_name=app""",
-    """exa_json_path=$.reqUser,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.reqUser,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.access,exa_field_name=operation""",
     """exa_json_path=$.reqData,exa_field_name=additional_info""",
     """exa_json_path=$.resource,exa_field_name=object""",

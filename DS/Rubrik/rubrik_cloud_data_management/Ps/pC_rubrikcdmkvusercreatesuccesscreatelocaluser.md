@@ -5,7 +5,7 @@ Name = rubrik-cdm-kv-user-create-success-createlocaluser
     ParserVersion = v1.0.0
     Conditions = [ """ Rubrik """, """status="Success"""", """eventName ="Audit.CreateLocalUserAudit"""", """ created local user """ ]
     Fields = ${RubrikCDMParserTemplates.rubrik-events.Fields}[
-      """\] ({user}[\w\.\-]{1,40}\$?) [^\)]+?\) created local user '({account_name}[^']+?)'"""
+      """\] ({user}[\w\.\-\!\#\^\~]{1,40}\$?) [^\)]+?\) created local user '({account_name}[^']+?)'"""
    ],
    DupFields = ${RubrikCDMParserTemplates.rubrik-events.DupFields}["account_name->dest_user"]
   

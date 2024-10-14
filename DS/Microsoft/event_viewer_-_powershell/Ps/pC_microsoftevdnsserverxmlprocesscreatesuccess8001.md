@@ -16,7 +16,7 @@ Name = microsoft-evdnsserver-xml-process-create-success-800-1
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """UserId\\*=({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)\s*HostName""",
+    """UserId\\*=({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*HostName""",
     """({event_code}800)""",
     """ScriptName\\*=\s*(|({process_path}({process_dir}([\w:]+\\)?([^\\]+?\\)*?)({process_name}[^\\=]*?)))\s+CommandLine""",
     """HostApplication\\*=\s*({powershell_image}[^=]+?)\s+EngineVersion=""",

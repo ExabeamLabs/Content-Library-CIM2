@@ -13,7 +13,7 @@ Fields = [
   """({event_name}An operation was performed on an object)"""
   """(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+),"""
   """({action}(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)),({host}[\w\-.]+)"""
-  """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain"""
+  """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain"""
   """Account Domain:\s*({domain}.+?)\s*Logon ID"""
   """Logon ID:\s*({login_id}[^\s]+)"""
   """Object Server:\s*({ds_object_class}.+?)\s*Object Type:"""

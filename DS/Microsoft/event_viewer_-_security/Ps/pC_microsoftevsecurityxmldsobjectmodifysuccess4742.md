@@ -16,7 +16,7 @@ Fields = [
   """<EventID>({event_code}4742)<"""
   """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)<"""
   """<Data Name\\*=('|")TargetDomainName('|")>({ds_object_dn}[^<]+)<"""
-  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
   """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
   """<Data Name\\*=('|")UserPrincipalName('|")>(-|({attribute}[^<]+))<"""

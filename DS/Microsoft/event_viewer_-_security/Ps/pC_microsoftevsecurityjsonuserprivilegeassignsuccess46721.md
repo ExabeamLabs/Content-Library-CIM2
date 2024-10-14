@@ -17,7 +17,7 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<Keywords>({result}[^<]+)</Keywords>"""
   """<EventID>({event_code}[^<]+)</EventID>"""
-  """\s*Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s*Logon ID:"""
+  """\s*Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s*Logon ID:"""
   """\s*Logon ID:\s*({login_id}.+?)\s*Privileges:"""
   """\s*Privileges:\s*({privileges}.+?)</EventData>"""
 ]

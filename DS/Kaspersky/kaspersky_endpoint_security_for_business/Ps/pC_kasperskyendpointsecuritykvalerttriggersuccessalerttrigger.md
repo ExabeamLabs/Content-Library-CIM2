@@ -18,7 +18,7 @@ Fields = [
   """wstrPar5:\s*"(null|({alert_name}[^"]+))"""
   """wstrPar2:\s*"(null|({malware_url}[^"]+))"""
   """wstrPar8:\s*"(null|({alert_severity}[^"]+))"""
-  """User:\s+(({domain}[^\\]*)\\+)?({user}[\w\.\-]{1,40}\$?)\s*\("""
+  """User:\s+(({domain}[^\\]*)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\("""
   """\d+:\d+:\d+.+?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?.*?nId:"""
 ]
 DupFields = [

@@ -11,6 +11,12 @@ Name = fortinet-vpn-kv-vpn-login-fail-loginfailed
   Fields = ${FortinetParsersTemplates.fortinet-ssl-vpn.Fields} [
     """reason="({failure_reason}[^"]+)"""
     """eventtime=({time}\d{10})"""
+    """\saction="({action}[^\"]+)""""
+    """\d\d:\d\d:\d\d ({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\b"""
+    """\sdevid="({devid}[^\"]+)""""
+    """\slevel="({severity}[^\"]+)"""",
+    """\slogdesc="({description}[^\"]+)"""",
+    """\slogid="({log_uid}[^\"]+)""""
   ]
 
 fortinet-ssl-vpn = {
@@ -23,7 +29,7 @@ fortinet-ssl-vpn = {
     """\Wdevname="*({host}[\w\-.]+)""",
     """\Wremip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wtunnelip=(\(null\)|({src_translated_ip}[A-Fa-f:\d.]+))""",
-    """\Wuser="(.+?\\\\)?(?:N\/A|({user}[\w\.\-]{1,40}\$?))"""",
+    """\Wuser="(.+?\\\\)?(?:N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\Wuser="(?:N\/A|({email_address}[^\s@"]+@[^\s@"]+))"""",
     """\Wmsg="({event_name}[^"]+)""",
     """\Wsentbyte=({bytes_out}\d+)""",

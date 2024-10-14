@@ -17,7 +17,7 @@ Fields = [
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
 """"DomainID":"({domain}[^"]+)""""
 """"HostID":"({host}[^"]+)""""
-""""UserIDSrc":"({user}[\w\.\-]{1,40}\$?)""""
+""""UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"Source_Logon_ID":"({login_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"

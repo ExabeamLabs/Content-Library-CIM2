@@ -25,7 +25,7 @@ Name = barracuda-firewall-kv-network-traffic-networktraffic
     """duration=({duration}[^\|]+)""",
     """receivedBytes=({bytes_in}\d+)""",
     """sentBytes=({bytes_out}\d+)""",
-    """user=((NT AUTHORITY|({domain}[^\\]+))\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """user=((NT AUTHORITY|({domain}[^\\]+))\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """application=({app}[^\|]+)"""
    ]
 

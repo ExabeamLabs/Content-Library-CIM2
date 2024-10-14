@@ -15,7 +15,7 @@ Fields = [
   """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)"""
   """EventID="+({event_code}[^"]+)""""
   """EventRecordID="+({event_id}[^"]+)""""
-  """TargetUserName ="+({user}[\w\.\-]{1,40}\$?)""""
+  """TargetUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """TargetDomainName ="+({domain}[^"]+)""""
   """TargetSid="+({user_sid}[^"]+)""""
   """IpAddress="+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

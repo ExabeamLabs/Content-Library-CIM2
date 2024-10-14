@@ -17,7 +17,7 @@ Fields = [
 """spt=({src_port}\d+)"""
 """sessionId=({session_id}\d+)"""
 """({app}NetWitness)"""
-"""\Wsuser=((?i)system|({user}[\w\.\-]{1,40}\$?))(\s\w+=|\()"""
+"""\Wsuser=((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s\w+=|\()"""
 """sourceServiceName =({service_name}[^=]+?)\s\w+="""
 """outcome=({result}[^=]+?)\s\w+="""
 """userRole=({role}[^=]+?)\s*(\w+=|$)"""

@@ -20,7 +20,7 @@ Fields = [
 """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)</Data>"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-"""<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[\w\.\-]{1,40}\$?)</Data>"""
+"""<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
 """<Data Name =('|")TargetDomainName('|")>(?:\\+)?({host}[\w\-\.]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""

@@ -9,12 +9,11 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [
 """<EventID>4104<""",
-"""Microsoft-Windows-PowerShell""",
 """ScriptBlockText"""
   ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)('|")""",
-    """<Security UserID\\*=('|")(({user_sid}S-[^'"]+?)|(({domain}[^'"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))('|")""",
+    """<Security UserID\\*=('|")(({user_sid}S-[^'"]+?)|(({domain}[^'"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))('|")""",
     """<Computer>({dest_host}({host}[\w\-.]+))<[\\\/]+Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w\-\.]+)""",
     """<Data Name\\*=('|")ScriptBlockId('|")>({scriptblock_id}[^<]+)<[\\\/]+Data>""",
@@ -29,9 +28,14 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
     """({process_name}PowerShell)""",
     """<Data Name\\*=('|")ScriptBlockText('|")>\s*({scriptblock_text}[^<]+?)\s*<[\\\/]+Data>""",
     """"ScriptBlockText":"({scriptblock_text}[^"]+?)\s*""""
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+?)<""",
+    """<Keywords>({result}[^<]+?)<""",
+    """<EventRecordID>({event_id}[^<]+?)<""",
+    """<Task>({operation}[^<]+?)<""",
+    """<Opcode>({opcode}[^<]+?)<""",
     """exa_regex=<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)('|")""",
-    """exa_regex=<Security UserID\\*=('|")(({user_sid}S-[^'"]+?)|(({domain}[^'"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))('|")""",
+    """exa_regex=<Security UserID\\*=('|")(({user_sid}S-[^'"]+?)|(({domain}[^'"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))('|")""",
     """exa_regex=<Computer>({dest_host}({host}[\w\-.]+))<[\\\/]+Computer>""",
     """exa_regex=<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w\-\.]+)""",
     """exa_regex=<Data Name\\*=('|")ScriptBlockId('|")>({scriptblock_id}[^<]+)<[\\\/]+Data>""",

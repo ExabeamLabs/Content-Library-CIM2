@@ -10,7 +10,7 @@ Name = catonetworks-cc-cef-alert-trigger-success-policy
   Fields = [
     """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
     """\Wrt=({time}\w+\s+\w+\s+\d+\s+\d\d:\d\d:\d\d\s+\w+\s+\d\d\d\d)""",
-    """\Wsuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """\Wmsg=({alert_name}.+?)\s+(\w+=|$)""",
     """\WinternalType=({alert_type}.+?)\s+(\w+=|$)""",
     """\WflexString2=({alert_type}.+?)\s+(\w+=|$)""",

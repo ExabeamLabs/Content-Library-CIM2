@@ -14,7 +14,7 @@ Name = sophos-xgfirewall-kv-app-login-success-sfw-1
     """\slog_subtype="(({subtype}\S+))?"\s""",
     """\sstatus="({result}\S+)?"\s""",
     """\severity="({severity}\S+)?"\s""",
-    """\suser_name="(({user}[\w\.\-]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?"\s.*?\s""",
+    """\suser_name="(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?"\s.*?\s""",
     """user_full_name="({full_name}[^"\s,]+\s*,?\s*[^"\s]+)""""
     """\sauth_mechanism="({auth_method}\S+)?"\s""",
     """\ssrc_ip="?({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})?"?\s""",

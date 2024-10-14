@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-endpoint-4768
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Authentication Service""",
     """({event_code}4768)""",
-    """TargetUserName:(({email_address}[^@,]+@[^,]+)|({user}[\w\.\-]{1,40}\$?)),""",
+    """TargetUserName:(({email_address}[^@,]+@[^,]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
     """TargetSid:({user_sid}[^,]+),""",
     """ServiceName:({service_name}[^,]+)""",
     """TicketOptions:({ticket_options}[^,]+),""",

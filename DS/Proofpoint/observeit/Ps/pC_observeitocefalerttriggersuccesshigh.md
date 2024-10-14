@@ -23,7 +23,7 @@ Fields = [
 """\WdestinationServiceName =(|({object}.+?))(\s+\w+=|\s*$)"""
 """\Wdhost=(|({dest_host}.+?))(\s+\w+=|\s*$)"""
 """\Wshost=\(?(|({src_host}[\w\-.]+))\)?(\s+\w+=|\s*$)"""
-"""\Wduser=(|(?i)n\/a|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+"""\Wduser=(|(?i)n\/a|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
 """\Wdntdom=(|({domain}.+?))(\s+\w+=|\s*$)"""
 """\WdeviceSeverity=(|({alert_severity}.+?))(\s+\w+=|\s*$)"""
 """\WeventId=(|({alert_id}.+?))(\s+\w+=|\s*$)"""

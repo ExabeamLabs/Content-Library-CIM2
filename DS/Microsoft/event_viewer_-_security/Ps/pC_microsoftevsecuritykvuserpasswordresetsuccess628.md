@@ -14,7 +14,7 @@ Fields = [
 """Computer=({host}[^\s]+)"""
 """EventID=({event_code}\d+)"""
 """Target Account Name:\s+({dest_user}.+?)\s+Target Domain:\s+({dest_domain}.+?)\s+Target Account ID:\s*({dest_user_sid}.+?)\s+Caller User"""
-"""Caller User Name:\s+(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+(?=\w)({domain}.+?)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
+"""Caller User Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Caller Domain:\s+(?=\w)({domain}.+?)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
 ]
 DupFields = [
 "host->dest_host"

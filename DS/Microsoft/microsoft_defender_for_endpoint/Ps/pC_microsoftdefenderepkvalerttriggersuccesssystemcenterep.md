@@ -12,7 +12,7 @@ Name = microsoft-defenderep-kv-alert-trigger-success-systemcenterep
     """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """((?i)RowID)"?:\s*"+({alert_id}[^"]+)""",
     """((?i)TargetHost)"?:\s*"+({dest_host}[\w\-.]+)""",
-    """((?i)TargetUser"?:\s*|user=)"+(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """((?i)TargetUser"?:\s*|user=)"+(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """((?i)TargetResource)"?:\s*"+({additional_info}[^"]+)""",
     """((?i)ClassificationType"?:\s*|signature=)"+({alert_name}[^"]+)""",
     """((?i)ClassificationSeverity"?:\s*|severity=)"+({alert_severity}[^"]+)""",

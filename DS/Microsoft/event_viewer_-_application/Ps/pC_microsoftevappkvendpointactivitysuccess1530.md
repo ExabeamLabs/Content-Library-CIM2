@@ -11,7 +11,7 @@ Name = microsoft-evapp-kv-endpoint-activity-success-1530
      """eventid="({event_code}\d+)"*\s*task=""",
      """\d\d:\d\d:\d\d.\dZ\s+({host}[^\s]+)\s+""",
      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-     """userid="(NT AUTHORITY|({user}[\w\.\-]{1,40}\$?))\\+(SYSTEM|({domain}[^"\s]+))""",
+     """userid="(NT AUTHORITY|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\+(SYSTEM|({domain}[^"\s]+))""",
      """providername="[^"]+"(\s+\w+="[^"]+")*\]\s+({additional_info}.+?)(\.\s|\s*"*$)""",
      """eventrecordid="({event_id}[^"]+)""",
      """providername="({provider_name}[^"]+)""",

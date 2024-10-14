@@ -20,10 +20,11 @@ Fields = [
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"+created_by"+:\{.+?"+name"+:"+(UnknownUser|({full_name}[^\"]+))"+"""
 """"+additional_details"+:\{"+size"+:({bytes}\d+)"""
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
 """\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""
 """\sfileType=({file_type}\w+)"""
 """"+parent"+:\{.+?"+name"+:"+({file_dir}[^"]+)"""
+""""file_path":"({file_dir}[^"]+)""""
 """"+event_type"+:"+({access}[^"]+)"+"""
 """(\||\s)requestClientApplication=({app}.+?)(\s+\w+=|\s*$)"""
 ]

@@ -13,7 +13,7 @@ Name = fireeye-endpointsecurity-json-alert-trigger-success-fireeyehx
     """exa_json_path=$.deviceHostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.srcIP,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$.malwarePath,exa_field_name=malware_url""",
-    """exa_json_path=$.userID,exa_regex=^(({domain}[^"\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.userID,exa_regex=^(({domain}[^"\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.srcOS,exa_field_name=os""",
     """exa_json_path=$.process,exa_field_name=alert_name""",
     """exa_json_path=$.log_type,exa_field_name=alert_type""",

@@ -15,7 +15,7 @@ Fields = [
 """__li_source_path="({host}[^"]+)""""
 """Source Workstation:\s*(\\+)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)({src_host}[^\s]+)))?(:\d+)?\s*Error Code:"""
 """({event_code}4776)"""
-"""Logon (?:a|A)ccount:\s+({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation"""
+"""Logon (?:a|A)ccount:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation"""
 """Error Code:\s+({result_code}[\w\-]+)"""
 ]
 ParserVersion = "v1.0.0"

@@ -15,7 +15,7 @@ Fields = [
   """({time}\w{3}\s\d{2}\s\d{2}:\d{2}:\d{2}\s\d{4})"""
   """(Information|Success Audit|Audit Success)\s+({host}[\w\-.]+)"""
   """({event_code}5141)"""
-  """Subject:.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
+  """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
   """Object:.+?Class:\s+({ds_object_class}.+?)\s+Operation:"""
   """Object:\s+DN:\s+({ds_object_dn}.+?)\s+GUID:"""
   """Object:\s+DN:.+?({ds_object_ou}OU.+?)\s+GUID:"""

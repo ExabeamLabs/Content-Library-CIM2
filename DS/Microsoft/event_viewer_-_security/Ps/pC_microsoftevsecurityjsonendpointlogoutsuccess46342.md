@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4634-2
     """exa_json_path=$.['decoder.name'],exa_field_name=decoder_name""",
     """exa_json_path=$.full_log,exa_regex=({event_name}An account was logged off)"""
     """exa_json_path=$.['data.subject.security_id'],exa_field_name=user_sid""",
-    """exa_json_path=$.['data.subject.account_name'],exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.['data.subject.account_name'],exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.['data.subject.account_domain'],exa_field_name=domain""",
     """exa_json_path=$.['data.subject.logon_id'],exa_field_name=login_id""",
     """exa_json_path=$.['data.logon_type'],exa_field_name=login_type"""

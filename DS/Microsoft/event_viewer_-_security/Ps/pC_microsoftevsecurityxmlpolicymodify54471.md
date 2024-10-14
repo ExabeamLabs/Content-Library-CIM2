@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447-1
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}5447)""",
-    """<Data Name\\*=('|")UserName('|")>(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)<""",
+    """<Data Name\\*=('|")UserName('|")>(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Data Name\\*=('|")UserSid('|")>({user_sid}[^<]+)<""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<]+)<""",
 # change_type is removed

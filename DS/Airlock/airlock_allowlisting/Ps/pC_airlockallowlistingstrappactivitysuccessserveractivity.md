@@ -10,7 +10,7 @@ Name = airlock-allowlisting-str-app-activity-success-serveractivity
   Fields = [
     """ServerActivityMessage\|({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s\w{2})\|""",
     """ServerActivityMessage\|[^\|]*\|({operation}[^\|]+)\|""",
-    """ServerActivityMessage\|([^\|]*\|){2}(SYSTEM|({user}[\w\.\-]{1,40}\$?))\|""",
+    """ServerActivityMessage\|([^\|]*\|){2}(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
     """ServerActivityMessage\|([^\|]*\|){3}({additional_info}[^\|$]+?)\s*$""",
     """({event_name}ServerActivityMessage)""",
     """({app}Airlock)"""

@@ -4,7 +4,7 @@
 Name = "fireeye-networksecurity-json-ftp-traffic-success-ftp"
 	Conditions = [ """"event_type":"ftp"""", """"flow_id":""", """"ftp":{""", """"user":""", """"reply_code":""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
-  	  """exa_json_path=$.ftp.user,exa_regex=({user}[\w\.\-]{1,40}\$?)""",
+  	  """exa_json_path=$.ftp.user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   	  """exa_json_path=$.ftp.reply_code,exa_field_name=result_code""",
   	  """exa_json_path=$.ftp.reply_data,exa_field_name=result""",
     ]

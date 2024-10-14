@@ -7,7 +7,7 @@ Name = ibm-hclnotes-str-file-download-success-pulling
   Fields = ${IbmLotusNotesTemplates.ibm-lotus-notes.Fields}[
 # system_info is removed
   ]
-  DupFields = ["src_file_name -> file_name"]
+  DupFields = ["src_file_name -> file_name","src_file_ext -> file_ext"]
 
 ibm-lotus-notes = {
     Vendor = "IBM"

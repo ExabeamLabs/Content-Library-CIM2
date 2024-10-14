@@ -12,7 +12,7 @@ Name = microsoft-wdac-str-alert-trigger-success-3076
     """\s({time}\w{3}\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})""",
     """\s\w{3}\s+({time}\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})"""
     """({event_code}3076)""",
-    """Microsoft-Windows-CodeIntegrity\s+(N\/A|SYSTEM|LOCAL|NETWORK|({user}[\w\.\-]{1,40}\$?))\s"""
+    """Microsoft-Windows-CodeIntegrity\s+(N\/A|SYSTEM|LOCAL|NETWORK|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
     """a process\s\(({process_path}({process_dir}[^"]*?)({process_name}[^\\\)]+?))\)\s""",
     """({alert_name}did not meet [^\(]+?)\s\(""",
     """({additional_info}Code Integrity [^<>]+\.)\s+({alert_id}\d+)"""

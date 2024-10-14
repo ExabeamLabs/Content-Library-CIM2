@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-fail-5168
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """<Computer>({host}({dest_host}[\w\-\.]+))</Computer>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>(-|({user_sid}[^<>]+))<""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[\w\.\-]{1,40}\$?))<""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<>]+))<""",
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<"""
     """<Data Name\\*=('|")ServerNames('|")>({src_host}[\w\-\.]+)""",

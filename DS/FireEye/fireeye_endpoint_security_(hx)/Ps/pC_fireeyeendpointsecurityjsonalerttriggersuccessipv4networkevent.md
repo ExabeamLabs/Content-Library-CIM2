@@ -19,7 +19,7 @@ Name = fireeye-endpointsecurity-json-alert-trigger-success-ipv4networkevent
       """exa_json_path=$.event_values.ipv4NetworkEvent/protocol,exa_field_name=protocol""",
       """exa_json_path=$.event_values.ipv4NetworkEvent/localIP,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
       """exa_json_path=$.event_values.ipv4NetworkEvent/localPort,exa_field_name=src_port""",
-      """exa_json_path=$.event_values.ipv4NetworkEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)$"""
+      """exa_json_path=$.event_values.ipv4NetworkEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
     ]
     DupFields = ["alert_name->alert_type"]
 	ParserVersion = "v1.0.0"

@@ -9,7 +9,7 @@ Name = beyondtrust-sra-cef-app-activity-success-netbiosdomaingroup
   Conditions = [ """CEF:""", """RET-SCAN-003""", """BeyondTrust|BeyondInsight""", """Netbios Domain/Group""", """cat=RNBGROUP""" ]
   Fields = [
   """start=({time}\w{3,4}\s\d{1,2}\s\d{4}\s\d{1,2}:\d{1,2}:\d{1,2})"""
-  """suser=({user}[\w\.\-]{1,40}\$?)"""
+  """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """BeyondTrustBeyondInsightClientHost=({src_host}[\w\-\.]+)"""
   """BeyondTrustBeyondInsightEventName =({event_name}[^\s]+)"""

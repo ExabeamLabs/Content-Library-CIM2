@@ -24,7 +24,7 @@ Name = trendmicro-ds-cef-alert-trigger-success-codeexecution
     """\Wcn3=({threat_type}[^=]+?)(\s+\w+=|\s*$|\s*")""",
     """\Wrequest="*(|({malware_url}[^"]+?))(\s+\w+=|\s*$|\s*"|”\]+\s+\w+=)""",
     """\WdeviceProcessName =({process_path}({process_dir}[^=]*?)({process_name}[^\/\\=]+?))(\s+\w+=|\s*$|\s*")""",
-    """\sduser=((\d{1,3}\.){3}\d{1,3}|({email_address}[^@\s]+@[^\.\s]+\.[^\s]+?)|((({domain}[^\s\\\/=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))(\s+\w+=|\s*$)""",
+    """\sduser=((\d{1,3}\.){3}\d{1,3}|({email_address}[^@\s]+@[^\.\s]+\.[^\s]+?)|((({domain}[^\s\\\/=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|\s*$)""",
     """\sfilePath=({malware_url}[^=]+?)(\s+\w+=|\s*$)""",
     """\sfileHash=({hash_md5}\w+)(\s+\w+=|\s*$)"""
  ]

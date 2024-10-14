@@ -14,7 +14,7 @@ cef-trendmicro-dlp-alert = {
     """\Wrt=({time}\d{13})""",
     """\Wdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\Wdvchost=({host}[^\s]+)""",
-    """\Wcs4=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """\Wcs4=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wshost=({src_host}.+?)\s+(\w+=|$)""",
     """\Wfname=({file_name}.+?)\s+(\w+=|$)""",
@@ -51,7 +51,7 @@ cef-trendmicro-security-alert = {
     """\Wcn3=({threat_type}[^=]+?)(\s+\w+=|\s*$|\s*")""",
     """\Wrequest="*(|({malware_url}[^"]+?))(\s+\w+=|\s*$|\s*"|”\]+\s+\w+=)""",
     """\WdeviceProcessName =({process_path}({process_dir}[^=]*?)({process_name}[^\/\\=]+?))(\s+\w+=|\s*$|\s*")""",
-    """\sduser=((\d{1,3}\.){3}\d{1,3}|({email_address}[^@\s]+@[^\.\s]+\.[^\s]+?)|((({email_domain}[^\s\\\/=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))(\s+\w+=|\s*$)""",
+    """\sduser=((\d{1,3}\.){3}\d{1,3}|({email_address}[^@\s]+@[^\.\s]+\.[^\s]+?)|((({email_domain}[^\s\\\/=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|\s*$)""",
     """\sfilePath=({malware_url}[^=]+?)(\s+\w+=|\s*$)""",
     """\sfileHash=({hash_md5}\w+)(\s+\w+=|\s*$)"""
   

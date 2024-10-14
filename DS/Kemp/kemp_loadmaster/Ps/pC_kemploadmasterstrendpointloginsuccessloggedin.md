@@ -11,7 +11,7 @@ Conditions = [
   """(Session: """
 ]
 Fields = [
-  """User\s+({user}[\w\.\-]{1,40}\$?)\s+\(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
+  """User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
   """({event_name}Logged in)"""
   """({event_category}logger)"""
 ]

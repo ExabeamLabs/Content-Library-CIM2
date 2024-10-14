@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
     """<System>.*?Guid(\\)?="\{({process_guid}[^}]+)""",
     """<Execution ProcessID(\\)?="({process_id}\d+)""",
     """<Data Name ="MemberName(">|":")CN\\?=({member}[^>]+)<\/Data>""",
-    """<Data Name(\\)?="MemberSid">({account_id}(?=[^\\<]+\\)({domain}[^\\]+)\\({user}[^\s]+)|(?:[^\s\<]+))</Data>""",
+    """<Data Name(\\)?="MemberSid">(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Level>({run_level}[^<]+)<"""
       ]
 

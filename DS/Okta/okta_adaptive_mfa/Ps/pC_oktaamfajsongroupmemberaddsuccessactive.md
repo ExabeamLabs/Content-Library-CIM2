@@ -19,8 +19,8 @@ Fields = [
    """exa_json_path=$.profile.department,exa_field_name=group_type""",
    """exa_json_path=$.lastUpdated,exa_field_name=time"""
    """exa_json_path=$.profile.samAccountName,exa_field_name=user""",
-   """exa_json_path=$.profile.email,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
-   """exa_json_path=$.profile.displayName,exa_regex="+:\s*"+({domain}[^\s\\"]+)\\+({user}[\w\.\-]{1,40}\$?)""",
+   """exa_json_path=$.profile.email,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+   """exa_json_path=$.profile.displayName,exa_regex=^((({domain}[^\s\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^\s,]+([\s,]+\s*[^\s"]+)+?))$""",
 ]
 ParserVersion = "v1.0.0"
 

@@ -12,7 +12,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8001
     """<Computer>({host}[^<]+?)<\/Computer>"""
     """Security UserID='({user_sid}[^'\/>]+)"""
     """({event_code}8001)"""
-    """<Data Name ='ClientUserName'>(\((?i)NULL\)|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
+    """<Data Name ='ClientUserName'>(\((?i)NULL\)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>"""
     """<Data Name ='ClientDomainName'>(\((?i)NULL\)|({domain}[^<]+))<"""
     """({event_name}NTLM client blocked)"""
     """<Message>({additional_info}[^<]+)<"""

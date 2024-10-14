@@ -9,11 +9,11 @@ Name = firemon-f-json-app-authentication-success-loginsuccess
  Fields = [
    """\d{1,2}:\d{1,2}:\d{1,2} ({host}[\w\-\.]+)"""
    """Date:\s*({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d{1,6})"""
-   """Event Name:\s*({event_name}[^:]+) User:\s*({user}[\w\.\-]{1,40}\$?)\s\w+:"""
+   """Event Name:\s*({event_name}[^:]+) User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+:"""
    """({operation}Login)"""
    """({result}Success)"""
    """"username":"\s*(({user}[^\@"]+)@({domain}[^"]+))""""
-   """"username":"\s*(({domain}[^"\\]+)\\+)({user}[\w\.\-]{1,40}\$?)""""
+   """"username":"\s*(({domain}[^"\\]+)\\+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
  ]
  ParserVersion = "v1.0.0"
 

@@ -11,8 +11,8 @@ Conditions = [
 ]
 Fields = [
 """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])"""
-"""({event_description}Maximum authentication.+?is locked.)"""
-"""User (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)) is locked."""
+"""({additional_info}Maximum authentication.+?is locked.)"""
+"""User (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)) is locked."""
 ]
 ParserVersion = "v1.0.0"
 

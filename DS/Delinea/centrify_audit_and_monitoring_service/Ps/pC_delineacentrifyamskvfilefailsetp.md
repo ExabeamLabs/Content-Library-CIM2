@@ -11,13 +11,13 @@ Name = "delinea-centrifyams-kv-file-fail-setp"
   ]
   Fields = [
     """utc=({time}\d{10})"""
-    """user=({user}[\w\.\-]{1,40}\$?)"""
+    """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """\d+\|\d+\|({event_name}.+?)\|\d"""
     """status=({result}.+?)\s\w+="""
     """pid=({process_id}\d+)"""
     """service=({protocol}.+?)\s\w+="""
     """operation=({operation}.+?)\s\w+="""
-    """arguments=({file_path}({file_dir}.*?)(\/+({file_name}[^\/]+?))?)\s*(\w+=|$)"""
+    """arguments=({file_path}({file_dir}.*?)(\/+({file_name}[^\/]+?(\.({file_ext}[^\\\.\s]+))?))?)\s*(\w+=|$)"""
     """reason=({failure_reason}.+?)\s*$"""
   ]
   ParserVersion = "v1.0.0"

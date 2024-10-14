@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """LogTime:\s*({time}\d+\/\d+\/\d+ \d+:\d+:\d+)"""
-"""User:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+\s)?\w+:"""
+"""User:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+\s)?\w+:"""
 """Source Host:\s*({host}[^\s]+)"""
 """Event Subject:\s*0*({src_ip_1}\d+\.)0*({src_ip_2}\d+\.)0*({src_ip_3}\d+\.)0*({src_ip_4}\d+)"""
 """Target:.*?Asset:({dest_host}[^\s]+)\s+\w+:"""

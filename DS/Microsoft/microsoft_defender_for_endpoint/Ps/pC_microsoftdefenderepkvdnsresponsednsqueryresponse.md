@@ -5,7 +5,7 @@ Name = microsoft-defenderep-kv-dns-response-dnsqueryresponse
   ParserVersion = "v1.0.0"
   Conditions = ["""|beatname=eventhubbeat|""", """|device_type=eventhubbeat|""", """|subject=AdvancedHunting-DeviceEvents|""", """vmid=""", """@timestamp""", """@metadata""", """"ActionType":"DnsQueryResponse""""]
   Fields = ${DLMicrosoftParsersTemplates.azure-event-hub.Fields} [
-    """"DnsQueryString\\"+:\\"+({query}.+?)\\"\}""",
+    """"DnsQueryString\\"+:\\"+({dns_query}.+?)\\"\}""",
   ]
 
 azure-event-hub = {
@@ -21,7 +21,7 @@ azure-event-hub = {
        """"FileName":"({file_name}[^"]+)""",
        """"FolderPath":"({file_path}[^"]+)""",
        """"InitiatingProcessAccountDomain":"({domain}[^"]+)""",
-       """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
+       """"InitiatingProcessAccountName":"(system|local service|SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"InitiatingProcessAccountSid":"({user_sid}[^"]+)""",
        """"InitiatingProcessCommandLine":"\s*({process_command_line}.+?)\s*"+\,""",
        """"InitiatingProcessFileName":"({process_name}[^"]+)""",

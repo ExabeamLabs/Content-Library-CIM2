@@ -13,7 +13,7 @@ dl-wazuh-windows-template = {
     Fields = [
       """exa_regex="data.id":"({event_code}\d+)"""",
       """exa_json_path=$.@timestamp,exa_field_name=time""",
-      """exa_json_path=$.['data.dstuser'],exa_regex=^(\(no user\)|({dest_user}[\w\.\-]{1,40}\$?))""",
+      """exa_json_path=$.['data.dstuser'],exa_regex=^(\(no user\)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """exa_json_path=$.['data.status'],exa_field_name=result""",
       """exa_json_path=$.location,exa_field_name=log_location"""
       """exa_json_path=$.['data.data'],exa_field_name=data""",

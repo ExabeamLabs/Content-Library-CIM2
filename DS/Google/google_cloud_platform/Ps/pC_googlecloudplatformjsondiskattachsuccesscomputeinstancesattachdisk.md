@@ -8,15 +8,17 @@ Name = google-cloudplatform-json-disk-attach-success-computeinstancesattachdisk
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
     """exa_json_path=$.protoPayload.request.deviceName,exa_field_name=device_name"""
     """exa_json_path=$.protoPayload.request.mode,exa_field_name=disk_mode"""
-    """exa_json_path=$.protoPayload.request.source,exa_field_name=source_resource"""
+    """exa_json_path=$.protoPayload.request.source,exa_field_name=src_resource"""
   ]
+  DupFields = ["src_resource->source_resource"]
 
 gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
     Fields = [
+    """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"logName"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
@@ -40,9 +42,9 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$.protoPayload.status.code,exa_field_name=result_code""",
     """exa_json_path=$.protoPayload.status.message,exa_field_name=failure_reason""",
-    """exa_json_path=$.protoPayload.authenticationInfo.serviceAccountDelegationInfo[:1].firstPartyPrincipal.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
-    """exa_json_path=$.protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
-    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
+    """exa_json_path=$.protoPayload.authenticationInfo.serviceAccountDelegationInfo[:1].firstPartyPrincipal.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.jsonPayload.access.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_json_path=$.protoPayload.requestMetadata.callerSuppliedUserAgent,exa_field_name=user_agent""",
@@ -60,6 +62,8 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name,exa_match_expr=!InList($.resource.labels.bucket_name,"")""",
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",
     """exa_json_path=$.operation.last,exa_field_name=operation_last"""
+    """exa_json_path=$.protoPayload.request.storageLocations[0],exa_field_name=location""",
+    """exa_json_path=$.protoPayload.response.operationType,exa_field_name=operation_type"""
     
 }
 ```

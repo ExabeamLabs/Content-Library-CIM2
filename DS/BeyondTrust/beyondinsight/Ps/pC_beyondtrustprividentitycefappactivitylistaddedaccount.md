@@ -24,7 +24,7 @@ json-beyondtrust-activity-1.Fields}[
   Conditions = [ """ Message forwarded from """, """: accepted """ ]
   Fields = [
     """\s+Message forwarded from ({host}[\w\-.]+)""",
-    """accepted ({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/]+?)) from ({user}[\w\.\-]{1,40}\$?)@({src_host}[\w\-.]+) to ({account}[^\s@]+)@({dest_host}[\w\-.]+)""",
+    """accepted ({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/]+?)) from ({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({src_host}[\w\-.]+) to ({account}[^\s@]+)@({dest_host}[\w\-.]+)""",
   ]
   ParserVersion = "v1.0.0"
 },
@@ -41,7 +41,7 @@ Conditions = [
 ]
 Fields = [
 """LogTime:\s*({time}\d+\/\d+\/\d+ \d+:\d+:\d+)"""
-"""User:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+(\w+\s)?\w+:"""
+"""User:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+\s)?\w+:"""
 """Source Host:\s*({host}[^\s]+)"""
 """Event Subject:\s*0*({src_ip_1}\d+\.)0*({src_ip_2}\d+\.)0*({src_ip_3}\d+\.)0*({src_ip_4}\d+)"""
 """Target:.*?Asset:({dest_host}[^\s]+)\s+\w+:"""
@@ -63,7 +63,7 @@ ParserVersion = "v1.0.0"
     """\WProcessStartTime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)""",
     """\WHostName ="({host}[^"]+)""",
     """\WEventNumber="({event_code}\d+)""",
-    """\WUserName ="(({domain}[^\\"]+)\\)?({user}[\w\.\-]{1,40}\$?)""",
+    """\WUserName ="(({domain}[^\\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\WEventDescription="({additional_info}[^"]+)""",
     """\WFileName ="({process_path}({process_dir}(?:(\w+:)?[^:"]+)?[\\\/])?({process_name}.+?))"""",
     """\WCommandLine="({process_command_line}.+?)",""",
@@ -90,8 +90,8 @@ ParserVersion = "v1.0.0"
     Fields = [
       """ComputerName =({host}[^\s]+)""",
       """Message=({operation_type}.+?)\s+Command Line:""",
-      """User Name:\s*(?:[A-F\d\-]{36}|({user}[\w\.\-]{1,40}\$?))\s+User Domain SID:""",
-      """User Domain Name:\s*({domain}.*?)\s+User Domain Name""",
+      """User Name:\s*(?:[A-F\d\-]{36}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+User Domain SID:""",
+      """User Domain Name:\s*({domain}[\w\.\-]{1,40}?)\s+User Domain Name""",
       """User SID:\s*({user_sid}.*?)\s+User Name""",
       """Administrator:\s*({admin}.*?)\s+Power User""",
       """Power User:\s*({power_user}.*?)\s+Workstyle""",
@@ -113,7 +113,7 @@ ParserVersion = "v1.0.0"
         """dtPostTime="({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})""",
         """dwAppSpecificEventID="({event_code}\d+)""",
         """sEventID="({event_name}[^"]+)""",
-        """sOriginatingAccount="(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+        """sOriginatingAccount="(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
         """sOriginatingSystem="({dest_host}[^"]+)""",
         """key="AccountToElevate"\s+value="(({account_domain}[^"\\]+)\\+)?({account}[^"]+)"""
     ]
@@ -129,7 +129,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """\d\d:\d\d:\d\d ({host}[\w\-.]+) CEF""",
     """\|rt=({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)""",
-    """BeyondTrustBeyondInsightUserName =(?: |({user}[\w\.\-]{1,40}\$?)\s+\w+=)""",
+    """BeyondTrustBeyondInsightUserName =(?: |({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=)""",
     """BeyondTrustBeyondInsightPath=(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))\s+\w+=)""",
     """BeyondTrustBeyondInsightAssetName =(?: |({src_host}.+?)\s+\w+=)""",
     """BeyondTrustBeyondInsightUserType=(?: |({privileges}.+?)\s*$)""",
@@ -147,7 +147,7 @@ Fields = [
 """rt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)"""
 """msg=({additional_info}.+?)\s+(\w+=|$)"""
 """dntdom=\[?({domain}.+?)\]?\s+(\w+=|$)"""
-"""duser=(\\)*((?i)(user|admin|administrator)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+"""duser=(\\)*((?i)(user|admin|administrator)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """cs3=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """CEF:\d+\|([^\|]+\|){3}({event_name}[^\|]+)\|"""
 """cs1=.+?({result}Success|Failure)"""
@@ -171,7 +171,7 @@ Fields = [
 """rt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)"""
 """msg=({additional_info}.+?)\s+(\w+=|$)"""
 """dntdom=\[?({domain}.+?)\]?\s+(\w+=|$)"""
-"""duser=(\\)*((?i)(user|admin|administrator)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+"""duser=(\\)*((?i)(user|admin|administrator)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """cs3=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """CEF:\d+\|([^\|]+\|){3}({event_name}[^\|]+)\|"""
 """cs1=.+?({result}Success|Failure)"""
@@ -199,9 +199,9 @@ Fields = [
   """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
   """sntdom=({account_domain}[^\s]+)"""
   """suser=({account}[^\s]+)"""
-  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
+  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
   """dntdom=({domain}[^\s]+)"""
-  """duser=({user}[\w\.\-]{1,40}\$?)"""
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """group '({object}[^\']+)' on system """
   """dhost=({src_host}[\w\-.]+)"""
   """({app}Liebsoft)"""
@@ -227,9 +227,9 @@ Fields = [
   """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
   """sntdom=({account_domain}[^\s]+)"""
   """suser=({account}[^\s]+)"""
-  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
+  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
   """dntdom=({domain}[^\s]+)"""
-  """duser=({user}[\w\.\-]{1,40}\$?)"""
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """group '({object}[^\']+)' on system """
   """dhost=({src_host}[\w\-.]+)"""
   """({app}Liebsoft)"""
@@ -255,9 +255,9 @@ Fields = [
   """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
   """sntdom=({account_domain}[^\s]+)"""
   """suser=({account}[^\s]+)"""
-  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
+  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
   """dntdom=({domain}[^\s]+)"""
-  """duser=({user}[\w\.\-]{1,40}\$?)"""
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """group '({object}[^\']+)' on system """
   """dhost=({src_host}[\w\-.]+)"""
   """({app}Liebsoft)"""
@@ -283,9 +283,9 @@ Fields = [
   """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
   """sntdom=({account_domain}[^\s]+)"""
   """suser=({account}[^\s]+)"""
-  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
+  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
   """dntdom=({domain}[^\s]+)"""
-  """duser=({user}[\w\.\-]{1,40}\$?)"""
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """group '({object}[^\']+)' on system """
   """dhost=({src_host}[\w\-.]+)"""
   """({app}Liebsoft)"""
@@ -311,9 +311,9 @@ Fields = [
   """\(running as user (({account_domain}[^\s\\]+)\\+)?({account}[^\s\\\)]+)\)"""
   """sntdom=({account_domain}[^\s]+)"""
   """suser=({account}[^\s]+)"""
-  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
+  """\(user (({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) \-\s+({additional_info}.+?)\s+(\w+=|$)"""
   """dntdom=({domain}[^\s]+)"""
-  """duser=({user}[\w\.\-]{1,40}\$?)"""
+  """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """group '({object}[^\']+)' on system """
   """dhost=({src_host}[\w\-.]+)"""
   """({app}Liebsoft)"""
@@ -336,7 +336,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """"host":"({host}[^"]+)"""",
     """"createdate":"({time}\d{1,2}\/\d{1,2}\/\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s\w{1,2})"""",
-    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"(sourceip|ipaddress)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"sourcehost":"({src_host}[^"]+)"""",
     """"({app}BeyondInsight)"""",
@@ -355,7 +355,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """"host":"({host}[^"]+)"""",
     """"createdate":"({time}\d{1,2}\/\d{1,2}\/\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s\w{1,2})"""",
-    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"(sourceip|ipaddress)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"sourcehost":"({src_host}[^"]+)"""",
     """"({app}BeyondInsight)"""",
@@ -374,7 +374,7 @@ ParserVersion = "v1.0.0"
   Fields = [
     """"host":"({host}[^"]+)"""",
     """"createdate":"({time}\d{1,2}\/\d{1,2}\/\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s\w{1,2})"""",
-    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"(sourceip|ipaddress)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"sourcehost":"({src_host}[^"]+)"""",
     """"({app}BeyondInsight)"""",
@@ -398,7 +398,7 @@ ParserVersion = "v1.0.0"
     """srcPort=({src_port}\d+)""",
     """srcHost=({src_host}[^\|]+)""",
     """\|dstUser=(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({dest_user}[^\|]+))""",
-    """\|srcUser=(\[Pinned\] )?(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({email_address}[^\s@\|]+@[^\s@\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """\|srcUser=(\[Pinned\] )?(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({email_address}[^\s@\|]+@[^\s@\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """msg=({additional_info}[^\|]+?)\s*\|""",
     """credentialName =({additional_info}[^\|]+)"""
   ]

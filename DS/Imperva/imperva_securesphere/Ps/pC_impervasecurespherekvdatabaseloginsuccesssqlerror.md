@@ -28,10 +28,10 @@ Name = "imperva-securesphere-kv-database-login-success-sqlerror"
    """(,\s+|,\s*)sql_error=\s*(|({sql_error}.+?))\s*(,|$)"""
    """(,\s+|,\s*)rawquery=[^,]*({db_operation}(insert|delete|truncate\s+\w+|drop\s+\w+|alter\s+\w+|create\s+\w+|update|enable\s+\w+|disable\s+\w+|merge|delete|select|dbcc))"""
    """(,\s+|,\s*)operation=\s*(|(L|l)ogin|(L|l)ogout|({db_operation}.+?))\s*(,|$)"""
-   """(,\s+|,\s*)affected_rows=\s*(|({affected_rows}\d+))\s*(,|$)"""
+   """(,\s+|,\s*)affected_rows=\s*(|({sql_count}\d+))\s*(,|$)"""
    """(,\s+|,\s*)rawquery=\s*(|({db_query}.+?))\s*(,\s*\w+=|$)"""
    """(,\s+|,\s*)schema=\s*(|({db_schema}.+?))\s*(,|$)"""
-   """\Wos_user=({user}[\w\.\-]{1,40}\$?)"""
+   """\Wos_user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
  ]
  DupFields = [
    "db_user->account"

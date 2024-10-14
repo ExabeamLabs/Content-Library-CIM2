@@ -19,7 +19,7 @@ Fields = [
 """"EventTime":\s*"?({time}[^",]+)"""
 """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""""
 """"SubjectUserSid":"({user_sid}[^"]+)""""
-""""SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""""
+""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"SubjectDomainName":"({domain}[^"]+)""""
 """"ObjectName":"({ds_object_name}[^"]+)""""
 """"ObjectServer":"({ds_object_class}[^"]+)""""

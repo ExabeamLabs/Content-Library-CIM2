@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4770
     """ComputerName =({computer_name}[\w.\-]+)""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?Kerberos サービス チケットが更新されました。""",
     """({event_code}4770)""",
-    """アカウント名:\s+({user}[\w\.\-]{1,40}\$?).+?\s+""",
+    """アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?\s+""",
     """アカウント ドメイン:\s+({domain}.+?)\s+サービス情報:""",
     """サービス名:\s+({service_name}.+?)\s+サービス ID:""",
     """サービス名:\s+({dest_host}.+?\$)\s+サービス ID:""",

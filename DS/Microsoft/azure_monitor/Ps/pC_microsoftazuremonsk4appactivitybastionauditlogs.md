@@ -13,7 +13,7 @@ Name = microsoft-azuremon-sk4-app-activity-bastionauditlogs
     """"targetResourceId":"(\S+\/)?({dest_host}[\w\-.]+)""",
     """"clientIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"clientPort":({src_port}\d+)""",
-    """"userName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"protocol":"({protocol}[^"]+)""",
     """"userAgent":"({user_agent}[^"]+)""",
     """"resourceType":"({resource_type}[^"]+)""",
@@ -60,7 +60,8 @@ cef-microsoft-app-activity = {
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = [ "object->resource" 
 }

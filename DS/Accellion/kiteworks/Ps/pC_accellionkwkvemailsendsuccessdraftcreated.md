@@ -16,7 +16,6 @@ q-kiteworks-email = {
     """\sTo:\s*({email_recipients}.+?)\s*with files \[({email_attachments}.+?)\]""",
     """\sTo:\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 
-  ]
-  DupFields = [ "dest_email_address->external_address" 
+  
 }
 ```

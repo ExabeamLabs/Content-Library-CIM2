@@ -16,7 +16,7 @@ wazuh-catch-all-template {
     ExtractionType = json
     Fields = [
       """exa_json_path=$.@timestamp,exa_field_name=time""",
-      """exa_json_path=$.['data.dstuser'],exa_regex=^(\(no user\)|({dest_user}[\w\.\-]{1,40}\$?))""",
+      """exa_json_path=$.['data.dstuser'],exa_regex=^(\(no user\)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """exa_json_path=$.location,exa_field_name=log_location"""
       """exa_json_path=$.path,exa_field_name=log_path"""
       """exa_json_path=$.['agent.id'],exa_field_name=agent_id"""

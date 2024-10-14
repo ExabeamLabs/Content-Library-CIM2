@@ -20,7 +20,7 @@ netapp-json-windows-events = {
     """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'SubjectDomainName':\s+'({domain}[^']+)""",
-    """'SubjectUserName':\s+'({user}[\w\.\-]{1,40}\$?)""",
+    """'SubjectUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """'ObjectServer':\s+'({object_server}[^']+)""",
     """'ObjectType':\s+'({object_class}[^']+)""",
     """'HandleID':\s+'({handle_id}[^']+)""",
@@ -37,7 +37,7 @@ netapp-json-windows-events = {
     """'Provider':.+?@Name':\s+'({provider_name}[^']+)""",
     """'Provider':.+?@Guid':\s+'({provider_guid}[^']+)""",
     """'ObjectName':\s+'({file_path}[^']+)""",
-    """'ObjectName':\s+'[^.]+\/({file_name}[^']+)""",
+    """'ObjectName':\s+'[^.]+\/({file_name}[^']+?(\.({file_ext}[^\s\.']+))?)'""",
     """'OldSD':\s+'({old_sd}[^']+)""",
     """'NewSD':\s+'({new_sd}[^']+)"""
     

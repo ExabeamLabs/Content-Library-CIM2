@@ -10,7 +10,7 @@ Conditions = [
   """ primary host changed to """
 ]
 Fields = [
-  """\d\d:\d\d:\d\d ({host}[^\s]+) \[({src_host}[^\]]+)\].+? by user "({user}[\w\.\-]{1,40}\$?)"""
+  """\d\d:\d\d:\d\d ({host}[^\s]+) \[({src_host}[^\]]+)\].+? by user "({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """({operation}primary host changed)"""
 ]
 ParserVersion = "v1.0.0"

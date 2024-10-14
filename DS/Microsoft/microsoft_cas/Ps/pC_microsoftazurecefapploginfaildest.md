@@ -19,8 +19,8 @@ Fields = [
 """act=({operation}[^\s]+)\s+(\w+=|$)"""
 """\Wrt=({time}\d+)"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) \S+ """
-"""\Wduser=(anonymous|Unknown|email|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
-"""\Wsuser=(anonymous|Unknown|email|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+"""\Wduser=(anonymous|Unknown|email|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
+"""\Wsuser=(anonymous|Unknown|email|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
 """\Woutcome=({result}[^\s]+)\s+(\w+=|$)"""
 """CEF:([^\|]*\|){2}({app}[^\|]+)"""
 """destinationServiceName =({app}[^=]+?)\s+(\w+=|$)"""
@@ -33,9 +33,9 @@ Fields = [
 """\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
 """\"description\":\"Failed log on \(({failure_reason}[^\)]+)"""
-"""\"failedUserData\":\{\"userName\":\"(({email_address}[^@\"]+@[^\.]+\.[^\"]+)|({user}[\w\.\-]{1,40}\$?))\""""
+"""\"failedUserData\":\{\"userName\":\"(({email_address}[^@\"]+@[^\.]+\.[^\"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """\"userAgent\":\";?({user_agent}[^\"]+?)[;]*\""""
-""""+userName"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+""""+userName"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """app-user-id":"({user_id}[\w-]+)""",
 """src-ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """activityResult":[^}]+?"isSuccess":({result}(?i)(true|false))""",

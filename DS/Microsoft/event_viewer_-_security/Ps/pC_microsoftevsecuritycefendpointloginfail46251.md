@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-cef-endpoint-login-fail-4625-1
     """"subStatus":"({result_code}[^"]+?)\s*"""",
     """"failureReason":"({failure_reason}[^"]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*"""",
+    """"targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """"targetDomainName":"({domain}[^"\s]+?)\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*"""",
     """"logonType":"({login_type}\d+?)\s*"""",

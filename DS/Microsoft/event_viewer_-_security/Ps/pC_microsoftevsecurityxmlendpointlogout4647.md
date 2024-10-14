@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4647
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<\/Data>""",
     """<Data Name\\*=('|")TargetDomainName('|")>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*=('|")TargetUserName('|")>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\*=('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]

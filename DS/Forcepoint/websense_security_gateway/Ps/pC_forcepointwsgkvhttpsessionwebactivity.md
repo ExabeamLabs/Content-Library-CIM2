@@ -38,8 +38,8 @@ Fields = [
 """\WReferer="*({referrer}.+?)"*,?\s*(\w+=|$)"""
 """\Whttp_content_type="?(?:-|({mime}.+?))"?,?\s*(\w+=|$)"""
 """\Whttp_user_agent="*({user_agent}[^"]+?)(\s"|")"""
-"""\Wuser="?({user}[\w\.\-]{1,40}\$?)"?,?\s*(\w+=|$)"""
-"""\Wuser="?LDAP.+?DC\\*=org\/({user}[\w\.\-]{1,40}\$?)"?,?\s*(\w+=|$)"""
+"""\Wuser="?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"?,?\s*(\w+=|$)"""
+"""\Wuser="?LDAP.+?DC\\*=org\/({user}[\w\.\-\!\#\^\~]{1,40}\$?)"?,?\s*(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"
 

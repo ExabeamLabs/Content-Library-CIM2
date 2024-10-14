@@ -28,7 +28,7 @@ Fields = [
   """\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)"""
   """\Wsucceeded:({result}[^:\s]+)"""
   """\Wevent_time:({time}\d+\-\d+\-\d+ \d+:\d+:\d+\.\d{3})"""
-  """\WUser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+  """\WUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
   """\WSid=({user_sid}[^\s]+?)(\s+\w+=|\s*$)"""
   """\Wserver_principal_name:(({domain}[^\\\/]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)"""
   """\Wserver_principal_sid:({db_user_sid}[^\s]+)"""

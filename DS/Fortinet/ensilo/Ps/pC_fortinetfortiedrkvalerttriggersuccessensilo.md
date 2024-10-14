@@ -22,7 +22,7 @@ Name = fortinet-fortiedr-kv-alert-trigger-success-ensilo
     """\WAction:\s*({action}[^;]+)""",
     """\WCount:\s*({rule_count}\d+)""",
     """\WRules List:\s*({alert_name}[^;]+)""",
-    """\WUsers:\s*(({domain}[^\\\s;]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """\WUsers:\s*(({domain}[^\\\s;]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\WMAC Address:\s*({src_mac}[^;,\s]+)""",
    ]
    ParserVersion = "v1.0.0"

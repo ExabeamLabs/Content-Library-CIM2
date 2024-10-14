@@ -12,7 +12,7 @@ Conditions = [
 """"Authenticated by:"""
 ]
 Fields = [
-"""OS_USERNAME:\s*"+({user}[\w\.\-]{1,40}\$?)"""
+"""OS_USERNAME:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sUSERNAME:\s*"+({db_user}[^":]+)"""
 """USERHOST:\s*"+({dest_host}[^":]+)"""
 """TIMESTAMP:\s*"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)"""
@@ -21,6 +21,7 @@ Fields = [
 """SESSIONID:\s*"+({session_id}[^":]+)"""
 """OS_PROCESS:\s*"+({process_id}\d+)"""
 """DBID:\s*"+({db_name}\d+)"""
+"""({operation}LOGON)"""
 ]
 DupFields = [
 "user->user"

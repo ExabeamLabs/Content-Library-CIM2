@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-service-create-success-4697"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
 Conditions = [
 """<EventID>4697</EventID>"""
 """ServiceFileName"""
@@ -17,7 +17,7 @@ Fields = [
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<EventID>({event_code}[^<]+)</EventID>"""
 """<Data Name(\\)?=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-]{1,40}\$?)</Data>"""
+"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
 """<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
 """<Data Name(\\)?=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Data Name(\\)?=('|")ServiceName('|")>(?=\w)(({service_name}[^_]+?)(_[^\<]+)?)</Data>"""

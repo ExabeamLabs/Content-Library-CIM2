@@ -14,7 +14,7 @@ Fields = [
 """\sexternalId=({event_code}\d+)"""
 """\srt=({time}\d{13})"""
 """\ssntdom=({domain}[^\s]+)"""
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """\ssuid=({login_id}[^\s]+)"""
 """\sdntdom=({dest_domain}[^\s]+)"""
 """\sduser=({dest_user}.+?)\s+\w+="""

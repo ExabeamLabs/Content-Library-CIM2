@@ -9,7 +9,7 @@ Name = microsoft-windows-json-user-lock-success-4740-2
     """SubjectDomainName\\?"+:\\?"({src_domain}[^\\]+)\\?"""",
     """SubjectLogonId\\?"+:\\?"({login_id}[^\\]+)\\?"""",
     """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"({user}[\w\.\-]{1,40}\$?)\\?"""",
+    """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
   ]
   DupFields=[ "src_domain->domain" ]
@@ -21,7 +21,7 @@ json-windows-events-2 = {
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

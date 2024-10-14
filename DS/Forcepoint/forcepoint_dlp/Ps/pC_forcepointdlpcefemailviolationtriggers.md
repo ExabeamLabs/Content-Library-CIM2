@@ -22,7 +22,7 @@ Name = forcepoint-dlp-cef-email-violationtriggers
     """severity="({alert_severity}[^"]+)"""",
     """sourceEmail="({email_address}[^@"]+@[^\."]+\.[^"]+)""",
     """sourceIP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """sourceUsername="(({domain}[^\\"]+)\\)?({user}[\w\.\-]{1,40}\$?)"""",
+    """sourceUsername="(({domain}[^\\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """details="({additional_info}[^"]+?)\s*"""",
     """policies="({alert_name}[^"]+?)\s*"""",
   ]

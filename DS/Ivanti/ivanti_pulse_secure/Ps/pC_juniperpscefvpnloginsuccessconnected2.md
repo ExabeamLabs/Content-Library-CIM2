@@ -16,7 +16,7 @@ Name = juniper-ps-cef-vpn-login-success-connected-2
     """\stime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """\sfw=(::ffff:)?({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-\.]+)))""",
     """\s+(::ffff:)?({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+)))\s+(Juniper|PulseSecure):""",
-    """\suser=(({email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|({user}[\w\.\-]{1,40}\$?))\s""",
+    """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-]+))(\s+\w+=|\s*$)""",
     """: User with IP ({src_translated_ip}[A-Fa-f\d:.]+)""",
     """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ] 

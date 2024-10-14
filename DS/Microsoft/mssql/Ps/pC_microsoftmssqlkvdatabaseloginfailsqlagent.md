@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
   """\sinstance_name="({additional_info}[^"]+)"""
-  """\saccount_name="(({domain}[^\\\/"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)\s*""""
+  """\saccount_name="(({domain}[^\\\/"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
   """\sclient_name="({src_host}[^"]+)"""
   """\sapplication_name="({app}[^"]+)"""
   """\sdatabase_name="({db_name}[^"]+)"""

@@ -9,7 +9,7 @@ Name = microsoft-o365-kv-app-login-fail-workload
   Conditions = [ """SESSID=""", """RESULTCODE=""", """WORKLOAD=""", """COMMAND=UserLoginFailed""", """OBJECT=""" ]
   Fields = [
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
+    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",

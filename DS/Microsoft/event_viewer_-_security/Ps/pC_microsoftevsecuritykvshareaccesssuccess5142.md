@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5142
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(am|AM|pm|PM))""",
     """({event_name}A network share object was added)""",
     """({event_code}5142)""",
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Account Domain:\s*({domain}[^\s]+)""",
     """Logon ID:\s*({login_id}[^\s]+)""",
     """Security ID:\s*(NT|({user_sid}[^\s]+))""",

@@ -4,7 +4,7 @@
 Name = tanium-im-json-file-write-success-filemove
   Conditions = [ """"event":"file_move"""",""""tanium_computer_id":"""",""""process__file__full_path":"""" ]
   Fields = ${TaniumParserTemplates.tanium-operations-1.Fields}[
-    """exa_json_path=$.fields.['src_full_path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+))"""
+    """exa_json_path=$.fields.['src_full_path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\.\s"\\\/]+))?))$"""
   ]
   DupFields = [ "file_name->src_file_name"]
   ParserVersion = "v1.0.0"

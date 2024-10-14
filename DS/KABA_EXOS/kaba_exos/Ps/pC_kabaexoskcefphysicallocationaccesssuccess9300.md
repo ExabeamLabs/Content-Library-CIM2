@@ -11,7 +11,7 @@ Conditions = [
 Fields = [
 """([^\|]*\|){5}({action}[^\|]+)"""
 """\Wrt=({time}\d{13})"""
-"""\Wduser=({user}[\w\.\-]{1,40}\$?)"""
+"""\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\Wmsg=({location_door}.+?)\s*(\w+=|$)"""
 """\Wcs2=({badge_id}\d+)"""
 ]

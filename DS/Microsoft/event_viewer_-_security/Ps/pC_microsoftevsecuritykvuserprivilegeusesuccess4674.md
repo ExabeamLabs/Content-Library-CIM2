@@ -16,7 +16,7 @@ Fields = [
   """({event_code}4674)"""
   """(K|k)eywords=\"({result}[^\"]+)\""""
   """Process Name:\s+(?: |({process_path}({process_dir}(?:[^\"]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\s+Requested"""
-  """(?:Information|Success Audit|Audit Success).+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:"""
+  """(?:Information|Success Audit|Audit Success).+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
   """\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
   """Object Server:\s+({object_server}.+?)\s+Object Type:\s+(?:-|({object_type}.+?))\s+Object Name:\s+(?:-|({object}.+?))\s+Object Handle"""
   """Desired Access:\s+({access}.+?)\s+Privileges:\s+({privileges}.+?)(,\d+|\s*$)"""

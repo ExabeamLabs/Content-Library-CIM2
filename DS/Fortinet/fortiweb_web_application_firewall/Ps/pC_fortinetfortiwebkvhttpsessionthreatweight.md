@@ -15,7 +15,7 @@ Name = fortinet-fortiweb-kv-http-session-threatweight
     """src_port=({src_port}\d{1,5})""",
     """http_agent=(none|-|({user_agent}[^"]+?))\s+http_refer=""",
     """http_method=(NONE|({method}[^=]+?))\s\w+=""",
-    """user_name=+(({email_address}[^\s@]+@[^\s@]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """user_name=+(({email_address}[^\s@]+@[^\s@]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """http_refer=(none|({referrer}[^=]+?))\s\w+=""",
     """http_url=(none|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?({web_domain}[^\\\/\s:,"]+)?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?)))"""
     """app_name="({app}[^"]+)""",

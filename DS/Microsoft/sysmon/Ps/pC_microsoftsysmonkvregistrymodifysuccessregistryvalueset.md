@@ -12,9 +12,9 @@ Name = microsoft-sysmon-kv-registry-modify-success-registryvalueset
     """\sComputer(?:Name)?=({host}[\w\-.]+)""",
     """Message=({operation_type}[^:]+)""",
     """Task=({operation}.+?)\s+(\w+=|$)""",
-    """User=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """Domain=({domain}.+?)\s+(\w+=|$)""",
-    """User:\s*(?:({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\s+\w+:""",
+    """User:\s*(?:({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+:""",
     """ProcessGuid:\s*\{({process_guid}[^\s\}]+)""",
     """ProcessId:\s*({process_id}\d+)""",
     """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^:]+?))\s+\w+:"""

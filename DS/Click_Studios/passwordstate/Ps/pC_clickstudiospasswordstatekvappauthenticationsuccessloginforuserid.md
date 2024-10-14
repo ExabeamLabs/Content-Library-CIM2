@@ -12,7 +12,7 @@ Name = clickstudios-passwordstate-kv-app-authentication-success-loginforuserid
     """Passwordstate:\s+({result}Successful)\s""",
     """({event_name}Successful 'SAML' login for UserID)""",
     """\d\d:\d\d:\d\d\s({host}[\w\-.]+)\s+""",
-    """UserID\s+'(({domain}[^']+)\\)?({user}[\w\.\-]{1,40}\$?)"""
+    """UserID\s+'(({domain}[^']+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = v1.0.0
 

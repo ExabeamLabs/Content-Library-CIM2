@@ -23,8 +23,8 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """"(MachineName|Hostname|(?:winlog\.)?computer_name)\\?":\\?"({host}[\w\-.]+)"""
     """({event_code}4770)"""
     """"TargetDomainName\\?":\\?"({domain}[^."\\]*)"""
-    """"TargetUserName\\?":\\?"({user}[\w\.\-]{1,40}\$?)"""
-    """"ServiceName\\?":\\?"({service_name}[^"\\]*)"""
+    """"TargetUserName\\?":\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """"ServiceName":"(({service_name}[^_"]+?)(_[^"\<]+?)?)"""",
     """"ServiceName\\?":\\?"({dest_host}[\w\-.]*\$)"""
     """"TicketOptions\\?":\\?"({ticket_options}[^"\\]*)"""
     """"TicketEncryptionType\\?":\\?"({ticket_encryption_type}[^"\\]*)"""
@@ -40,7 +40,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """exa_json_path=$..computer_name,exa_regex=^({host}[\w\-.]+)$""",
     """exa_regex=({event_code}4770)""",
     """exa_json_path=$..TargetDomainName,exa_field_name=domain""",
-    """exa_json_path=$..TargetUserName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$..ServiceName,exa_field_name=service_name""",
     """exa_json_path=$..ServiceName,exa_regex=^({dest_host}[\w\-.]*\$)$""",
     """exa_json_path=$..TicketOptions,exa_field_name=ticket_options""",

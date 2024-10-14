@@ -10,10 +10,10 @@ Name = tanium-cp-json-alert-trigger-success-security
     Conditions = [ """tanium-index""", """Timestamp""", """Computer Name""", """Computer IP""" ]
     Fields = [
       """"Timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""",
-      """"User Name":"({user}[\w\.\-]{1,40}\$?)"""",
-      """"User Id":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"User Name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+      """"User Id":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"User Domain":"({domain}[^",]+?)"""",
-      """"user\\*":\\*"((NT AUTHORITY|({domain}[^"\\]+))\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))\\*"""",
+      """"user\\*":\\*"((NT AUTHORITY|({domain}[^"\\]+))\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""",
       """"Priority":"({alert_severity}[^",]+)"""",
       """"Event Name":"({alert_name}[^",]+)"""",
       """({alert_name}Reputation Malicious Files)""",

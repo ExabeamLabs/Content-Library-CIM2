@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-cef-endpoint-notification-success-esm
       """shost=({host}[^\s]+)""",
       """nitroAppID=({process_name}.+?)\s+\w+=""",
       """sntdom=({domain}[^\s]+)""",
-      """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+""",
+      """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+""",
       """nitroSecurity_ID=({user_sid}[^\s]+)""",
       """nitroSource_Logon_ID=({login_id}[^\s]+)"""
     ]

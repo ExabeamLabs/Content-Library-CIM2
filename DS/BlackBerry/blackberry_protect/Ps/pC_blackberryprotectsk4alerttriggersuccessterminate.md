@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """created":"({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-""""user_name":"({user}[\w\.\-]{1,40}\$?)""""
+""""user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"process_id":({process_id}\d+)"""
 """"image_name":"({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))""""
 """"file_hash_id":"({hash_sha256}[^"]+)""""

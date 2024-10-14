@@ -17,14 +17,15 @@ Name = microsoft-o365-sk4-app-activity-success-sentmailbox
     """Operation":"({operation}[^"]+)"""",
     """cs1=(\[\{"additional-properties"\:)?\{"({policy_name}[^"]+)""",
     """msg=({additional_info}[^=]+?)\s\w+=""",
-    """"Value":"(?:smtp:)?[^@]+?@({dest_domain}[^;"]+)"""",
-    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\\"]+)\\+)(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))|({=user}[\w\.\-"]+)(@({=domain}[^"]+))?)""",
+    """"Value":"(?:smtp:)?[^@]+?@({dest_domain}[^,\s;"\]\\]+)""",
+    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\\"]+)\\+)(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({=user}[\w\.\-"]+)(@({=domain}[^"]+))?)""",
     """destinationServiceName =({app}[^=]+?)\s*filePath""",
     """({app}Office 365)""",
     """"OriginatingServer":"({host}[\w\-.]+?)\s*\(""",
     """"ObjectId":"({object_id}[^"]+)"""",
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
 
 

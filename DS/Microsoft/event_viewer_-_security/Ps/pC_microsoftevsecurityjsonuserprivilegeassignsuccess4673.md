@@ -12,7 +12,7 @@ Fields = [
   """"Hostname":"({host}[\w\-.]*)""",
   """({event_code}4673)""",
   """"EventType":"({result}[^"]*)""",
-  """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   """"SubjectDomainName":"({domain}[^"]*)""",
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))",""",

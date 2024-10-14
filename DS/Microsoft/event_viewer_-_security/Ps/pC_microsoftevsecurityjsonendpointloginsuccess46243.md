@@ -16,7 +16,7 @@ Fields = [
 """({event_name}An account was successfully logged on)"""
 """({event_code}4624)"""
 """"logon_type":"\s*({login_type}\d+)"""
-""""new_logon-AccountName":"\s*({user}[\w\.\-]{1,40}\$?)\s*""""
+""""new_logon-AccountName":"\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
 """"new_logon-AccountDomain":"\s*({domain}[^"]+)\s*""""
 """"process_information-ProcessName":"(-|\s*({process_path}[^"]+))\s*""""
 """"network_information-WorkstationName":"\s*(-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host_windows}[\w\-.]+))\s*""""

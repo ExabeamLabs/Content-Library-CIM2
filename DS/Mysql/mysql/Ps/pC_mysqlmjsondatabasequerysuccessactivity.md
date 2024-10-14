@@ -19,7 +19,7 @@ Fields = [
   """"_client_name":"({app}[^"]+)""""
   """"rows":"({response_size}\d+)""""
   """"pid":"({process_id}[^"]+)""""
-  """"os_user":"({user}[\w\.\-]{1,40}\$?)""""
+  """"os_user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"status":"({action}[^"]+)""""
   """"cmd":"({db_operation}[^"]+)""""
   """"db":"({db_name}[^"]+)""""

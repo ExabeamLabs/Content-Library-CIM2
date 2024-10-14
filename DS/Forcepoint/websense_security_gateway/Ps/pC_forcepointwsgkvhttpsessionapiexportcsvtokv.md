@@ -25,7 +25,7 @@ Fields = [
 """User_Agent="(None|({user_agent}[^"]+))""""
 """HTTP_Status_Code="({http_response_code}\d+)""""
 """Workstation="(Not available|({src_host}[^"]+))""""
-"""User="(Not available|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+"""User="(Not available|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """File_Name ="((?i)none|({file_name}[^"]+))""""
 """File_Type="((?i)Unknown|({file_type}[^"]+))"""
 ]

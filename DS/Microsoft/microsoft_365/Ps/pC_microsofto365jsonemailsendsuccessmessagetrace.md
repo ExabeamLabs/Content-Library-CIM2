@@ -8,7 +8,7 @@ Name = microsoft-o365-json-email-send-success-messagetrace
   Conditions = [ """office365""", """"d:FromIP"""", """"d:Organization"""", """"d:Subject"""", """MessageTrace""" ]
   Fields = [
     """"d:Received":.+?#text":\s*"({time}[^"]+)"""", 
-    """"d:SenderAddress":\s*"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"d:SenderAddress":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"d:RecipientAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"d:Subject"":\s*"({email_subject}[^"]+)"""",
     """"d:Organization":\s*""({email_domain}[^"]+)"""",

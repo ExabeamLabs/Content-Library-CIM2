@@ -24,7 +24,7 @@ Name = "microsoft-evsecurity-cef-network-session-fail-5157"
 """\sDestination Port:\s*({src_port}\d+)"""
 """\sProtocol:\s*({protocol}\S+)"""
 """\sLayer Name:\s*(|({layer_name}.+?))\s*Layer Run-Time ID:"""
-"""\sUser:\s*(N/A|({user}[\w\.\-]{1,40}\$?))\s*ComputerName:"""
+"""\sUser:\s*(N/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*ComputerName:"""
   ]
 
 

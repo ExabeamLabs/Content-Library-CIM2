@@ -21,7 +21,7 @@ Fields = [
   """FilePath\s+:\s*({process_path}({process_dir}[^=]+\\)([^=]*?)?)\s+\w+\s+:"""
   """Hash\s+:\s*({hash_sha256}\S+)"""
   """FileName\s+:\s*({file_name}[^]]+?)\s+\w+\s+:"""
-  """User\s+:\s*((?i)eis)?(.\\|\\)?({user}[\w\.\-]{1,40}\$?)"""
+  """User\s+:\s*((?i)eis)?(.\\|\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """PolicyCategory\s+:\s*({alert_type}[^]]+?)\s+\w+\s+:"""
   """FilePath\s+:\s*({file_path}[^]]+?)\s+\w+\s+:"""
 ]

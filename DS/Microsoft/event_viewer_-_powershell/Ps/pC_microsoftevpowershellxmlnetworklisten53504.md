@@ -15,6 +15,7 @@ Name = microsoft-evpowershell-xml-network-listen-53504
     """<Keywords>({result}[^<]+)</Keywords>"""
     """<Data Name =('|")param1('|")>({process_id}[^<]+)"""
     """<Data Name =('|")param2('|")>({domain}[^<]+)"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

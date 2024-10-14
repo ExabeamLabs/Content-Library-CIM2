@@ -14,6 +14,7 @@ Name = microsoft-evpowershell-xml-endpoint-activity-12039
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)"""
     """<security userid=('|")({user_sid}[^'"]+)('|")\/>""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

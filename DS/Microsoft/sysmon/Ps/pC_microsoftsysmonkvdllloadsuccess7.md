@@ -14,7 +14,7 @@ Fields = [
 """Event ID:\s*({event_code}\d+)"""
 """ComputerName(:|=)\s*({host}[\w.-]+)"""
 """UtcTime:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
-"""User:\s*({user}[\w\.\-]{1,40}\$?)\s*\w+:"""
+"""User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+:"""
 """ProcessGuid:\s*\{({process_guid}[^}]+?)\}"""
 """ProcessId:\s*({process_id}\d+)"""
 """Image:\s*({process_path}({process_dir}(\w+:)?[^:]+\\)({process_name}[^\\]+\.exe))\s*\w+:"""

@@ -16,7 +16,7 @@ Fields = [
 """\Wrt=({time}\d{13})"""
 """\Wdvc=({host}[A-Fa-f:\d.]+)"""
 """\Wdvchost=({host}[\w\-.]+)"""
-"""\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
+"""\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\Wcs3=(|({db_name}.+?))\s*(\w+=|$)"""
 """\Wcs2=({server_group}.+?)\s*(\w+=|$)"""
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -25,7 +25,7 @@ Fields = [
 """\Wdhost=({dest_host}[\w\-.]+)"""
 """\WeventId=({alert_id}\d+)"""
 """\Wcn1=({response_size}\d+)"""
-"""\WdeviceSeverity=({device_severity}\d+)"""
+"""\WdeviceSeverity=({severity}\d+)"""
 ]
 DupFields = [
 "alert_name->alert_type"

@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """timestamp=\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d \w+)\""""
 """\d\d:\d\d ({host}[^\s]+)\s+\d+\s+\d{4}\-"""
-"""source=\"(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-]{1,40}\$?))\""""
+"""source=\"(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """destination=\"(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({target}[^\"]+))\""""
 """inspected_document=\"(?:|({additional_info}.+?))\""""
 """protocol=\"({alert_type}[^\"]+)"""

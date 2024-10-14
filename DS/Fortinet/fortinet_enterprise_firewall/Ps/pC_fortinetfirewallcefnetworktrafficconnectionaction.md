@@ -29,6 +29,7 @@ Name = fortinet-firewall-cef-network-traffic-connectionaction
     """\Wout=({bytes_out}\d+)""",
     """\Win=({bytes_in}\d+)""",
     """\Wtz="?({tz}[+-]\d+)"""
+    """deviceDirection=({direction}\d+)"""
 ]
 
 

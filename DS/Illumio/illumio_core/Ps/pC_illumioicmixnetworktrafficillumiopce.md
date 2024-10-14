@@ -18,7 +18,7 @@ Name = illumio-ic-mix-network-traffic-illumiopce
     """"proto":({protocol}\d+)""",
     """"src_hostname":"({src_host}[^"]+)"""",
     """"dst_hostname":"({dest_host}[^"]+)"""",
-    """"un":"(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"un":"(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"fqdn":"({web_domain}[^"]+)"""",
     """"pn":"({process_name}[^"]+)"""",
     """"dir":"({direction}[^"]+)"""",

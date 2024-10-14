@@ -14,7 +14,7 @@ Name = zscaler-ia-kv-alert-trigger-success-alerttrigeerd
     """\sClientIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sserverip=(?:0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """\suseragent=({user_agent}[^=]+?)\s+\w+=""",
-    """\suser=(({email_address}[^\s@]+@[^\s\.]+\.[^\s=]+?)|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
+    """\suser=(({email_address}[^\s@]+@[^\s\.]+\.[^\s=]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
     """\shostname=({host}[\w\-.]+)\s+(\w+=|$)""",
     """\sdlpengine=({alert_name}[^=]+?)\s+(\w+=|$)""",
     """\surl=({target}[^\s]+)\s+(\w+=|$)""",
@@ -22,7 +22,7 @@ Name = zscaler-ia-kv-alert-trigger-success-alerttrigeerd
     """requestsize=({bytes_out}\d+)""",
     """requestmethod=({method}[^\s]+)""",
     """\sodevicehostname=({src_host}[^\s]+)""",
-    """\sodeviceowner=(NA|({device_owner}[^\s]+))"""
+    """\sodeviceowner=(NA|({owner_id}[^\s]+))"""
   ]
 
 

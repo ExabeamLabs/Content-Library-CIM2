@@ -20,7 +20,7 @@ Fields = [
 """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)"""
 """({host}[^\s=]+)\sMSWinEventLog"""
 """Security ID:(\\t|\\r|\\n)*\s*(|({user_sid}[^:]+?))(\\t|\\r|\\n)*\s*Account Name:"""
-"""Account Name:(\\r|\\n|\\t|\s)*((-|({user}[\w\.\-]{1,40}\$?))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\\r|\\n|\\t|\s)*.+?Account Domain:"""
+"""Account Name:(\\r|\\n|\\t|\s)*((-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\\r|\\n|\\t|\s)*.+?Account Domain:"""
 """Account Domain:(\\t|\\r|\\n)*\s*(|({domain}[^:]+?))(\\t|\\r|\\n)*\s*Logon ID:"""
 """Object Server:(\\t|\\r|\\n)*\s*(|({ds_object_class}[^:]+?))(\\t|\\r|\\n)*\s*Object Type:"""
 """Object Type:(\\t|\\r|\\n)*\s*(|({ds_object_type}[^:]+?))(\\t|\\r|\\n)*\s*Object Name:"""

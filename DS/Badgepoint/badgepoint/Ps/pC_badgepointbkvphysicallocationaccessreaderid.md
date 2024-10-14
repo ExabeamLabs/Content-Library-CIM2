@@ -18,8 +18,8 @@ Fields = [
 """\WBadgeStatus="({action}[^"]+)"""
 """\WFacilityID="({facility_id}[^"]+)"""
 """\WReaderID="({location_door_id}[^"]+)"""
-"""\WTransactionType="({transaction_type}[^"]+)"""
-"""\WEmployeeNumber="({user}[\w\.\-]{1,40}\$?)"""
+"""\WTransactionType="({result_code}[^"]+)"""
+"""\WEmployeeNumber="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\WBadgeNumber="({badge_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"

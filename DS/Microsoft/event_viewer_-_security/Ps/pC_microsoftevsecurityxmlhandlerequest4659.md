@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-xml-handle-request-4659
     """<Task>({operation}File System)"""
     """<Provider>({provider_name}[^<]+)"""
     """Security ID:\s*({user_sid}\S+)\s+"""
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+"""
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+"""
     """Account Domain:\s*({domain}\S+)\s+"""
     """Logon ID:\s*({login_id}\S+)\s+"""
     """Object Server:\s*({object_server}\S.*?)\s+"""

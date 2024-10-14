@@ -18,7 +18,7 @@ Fields = [
 """\sshost=({dest_host}[\w\-.]+?)(\s|0\||$)"""
 """\ssntdom=({domain}[^\s]+?)(\s|0\||$)"""
 """\sdntdom=({dest_domain}[^\s]+?)(\s|0\||$)"""
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|0\||\s*$)"""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|0\||\s*$)"""
 """\sduser=({dest_user}.+?)(\s+\w+=|0\||\s*$)"""
 """\snitroSource_Logon_ID=({login_id}.+?)(\s|0\||$)"""
 ]

@@ -12,7 +12,7 @@ Name = "github-g-kv-app-login-authentication"
   ]
   Fields = [
     """({host}[\w.\-]+)\s+github_auth:"""
-    """\Wlogin=(nil|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s=]+))?)(\s+\w+=|\s*$)"""
+    """\Wlogin=(nil|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s=]+))?)(\s+\w+=|\s*$)"""
     """\Wrepo=(nil|({object}.+?)(.git)?)(\s+\w+=|\s*$)"""
     """\Waction=({operation}[^\s]+?)(\s+\w+=|\s*$)"""
     """\Wprotocol=({protocol}[^\s]+)"""

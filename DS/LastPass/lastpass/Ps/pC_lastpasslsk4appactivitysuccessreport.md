@@ -13,12 +13,12 @@ Fields = [
 """destinationServiceName =({app}[^=]+?)\s\w+=""",
 """"+Action"+:"+({event_name}[^"]+)"+""",
 """"Username"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-""""Username"+:"+API:\s*({user}[\w\.\-]{1,40}\$?)""",
+""""Username"+:"+API:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
 """"+Action"+:"+({action}[^"]+)"+""",
 """"+Data"+:"+({additional_info}[^"\}]+)""",
 """fname=({file_name}[^=]+?)\s+[\w]+=""",
 """filePermission=({access}[^=]+?)\s+[\w]+=""",
-"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))\s+[\w]+=""",
+"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w]+=""",
 """Resource:\s+({file_type}[^:]+)\s+::"""
 ]
 DupFields = [ "event_name->operation" ]

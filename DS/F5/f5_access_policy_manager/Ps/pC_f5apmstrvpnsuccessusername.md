@@ -8,7 +8,7 @@ Name = f5-apm-str-vpn-success-username
   Conditions = [ """:Common:""", """Username """ ]
   Fields = [
     """:Common:({session_id}[^\s:]+): Username""",
-    """\sUsername\s+'(?:[^'\\]+\\{1,20})?({user}[\w\.\-]{1,40}\$?)'"""
+    """\sUsername\s+'(?:[^'\\]+\\{1,20})?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
   ]
   ParserVersion = "v1.0.0"
 

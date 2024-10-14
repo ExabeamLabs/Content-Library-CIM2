@@ -14,7 +14,7 @@ Name = microsoft-m365auditlogs-sk4-app-activity-graphdirectoryauditlogs
    """activityDisplayName":"({operation}[^"]+)""",
    """"displayName":"({email_address}[^@"]+@[^."]+\.[^"]+)","type":"User"""",
    """"+userPrincipalName"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
-   """user":"({user}[\w\.\-]{1,40}\$?)""",
+   """user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
    """"type":"application","name":"({app}[^"]+)""",
    """"+application-action"+:"+({operation}[^"]+)""",
    """"+application-action".+?status"+.+?code":"+({result}[^"]+)""",

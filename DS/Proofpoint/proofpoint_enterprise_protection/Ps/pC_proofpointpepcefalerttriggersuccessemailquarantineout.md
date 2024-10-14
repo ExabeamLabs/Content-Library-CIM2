@@ -15,7 +15,7 @@ Fields = [
 """\Wdvchost=({host}.+?)\s*(\w+=|$)"""
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\Wshost=({src_host}.+?)\s*(\w+=|$)"""
-"""\Wsuser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(\w+=|$)"""
+"""\Wsuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(\w+=|$)"""
 """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\Wdhost=({dest_host}.+?)\s*(\w+=|$)"""
 """\Wduser=({email_recipients}.+?)\s*(\w+=|$)"""
@@ -26,7 +26,6 @@ Fields = [
 """\WeventId=({alert_id}\d+)"""
 ]
 DupFields = [
-"src_email_address->email_address"
 "dest_email_address->target"
 ]
 ParserVersion = "v1.0.0"

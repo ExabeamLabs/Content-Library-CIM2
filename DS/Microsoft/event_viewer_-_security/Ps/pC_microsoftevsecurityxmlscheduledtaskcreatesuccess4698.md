@@ -17,7 +17,7 @@ Fields = [
 """({event_name}A scheduled task was created)"""
 """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
-"""Security ID:\s*(|({user_sid}[^:]+?))(\\[srnt])*\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))(\\[srnt])*\s*Account Domain:\s*(|({domain}[^:]+?))(\\[srnt])*\s*Logon ID:\s*(|({login_id}[^:]+?))(\\[srnt])*\s*Task Information:"""
+"""Security ID:\s*(|({user_sid}[^:]+?))(\\[srnt])*\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[srnt])*\s*Account Domain:\s*(|({domain}[^:]+?))(\\[srnt])*\s*Logon ID:\s*(|({login_id}[^:]+?))(\\[srnt])*\s*Task Information:"""
 """Task Name:\s*(|({task_name}.+?))\s*Task Content:"""
 """<UserId>(?=\w)(({account_domain}[^\\<]*)\\)?({account_name}[^<]+)</UserId>"""
 """<Settings>\s*({additional_info}.+?)\s*</Settings>"""

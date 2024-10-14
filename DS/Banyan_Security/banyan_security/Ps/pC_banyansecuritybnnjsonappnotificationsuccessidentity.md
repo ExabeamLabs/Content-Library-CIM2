@@ -21,7 +21,7 @@ banyan-events  = {
       """exa_json_path=$.sub_type,exa_field_name=operation_type""",
       """exa_json_path=$.action,exa_field_name=operation""",
       """exa_json_path=$..roles,exa_regex=\[({access}[^\]]+)"""
-      """exa_json_path=$..groups,exa_regex=\[({groups}[^\]]+)"""
+      """exa_json_path=$..groups,exa_regex=\[({group_info}[^\]]+)"""
       """exa_json_path=$.message,exa_field_name=additional_info""",
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
     

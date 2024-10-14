@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-certificate-request-success-4886
   Conditions = [ """<EventID>4886</EventID>""", """<Provider""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-]{1,40}\$?)<""",
+    """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Data Name\\*='Attributes'>\s*({attributes}[^<]+?)\s*<"""
   ]
 
@@ -22,7 +22,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

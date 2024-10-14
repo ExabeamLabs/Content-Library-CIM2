@@ -13,7 +13,7 @@ Fields = [
   """EVNTUSERID=({db_user}[^=]+?)\s\w+=""",
   """EVNTNAME=({event_name}[^=]+?)\s\w+=""",
   """EVNTJOBNAME=({service_name}[^=]+?)\s\w+=""",
-  """EVNTUSERNAME=(\-*N\/A\-*|({user}[\w\.\-]{1,40}\$?))\s\w+=""",
+  """EVNTUSERNAME=(\-*N\/A\-*|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s\w+=""",
   """EVNTTEXT=({additional_info}[^=]+?)\s\w+=""",
   """EVNTCOMMAND=(\-*N\/A\-*|({db_query}[^=]+?))(\s\w+=|\s*$)""",
   """EVNTCLASSNAME=({db_object}[^=]+?)\s*\w+="""

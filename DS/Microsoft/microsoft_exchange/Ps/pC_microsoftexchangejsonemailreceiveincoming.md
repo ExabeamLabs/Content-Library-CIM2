@@ -22,14 +22,12 @@ Fields = [
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
-  """sender_address":"(?:|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
-  """sender_address":"(?:|({external_address}[^,;@]+@[^;,"']+))","""
+  """sender_address":"(?:|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
   """recipient_address":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 ]
 DupFields = [
   "alert_name->alert_type"
-  "dest_email_address->email_address"
   "dest_email_address->orig_user"
 ]
 ParserVersion = "v1.0.0"

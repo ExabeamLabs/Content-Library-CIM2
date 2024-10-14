@@ -24,7 +24,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """"+(?:winlog\.)?computer_name"+:"+({host}[\w\-.]+)"""
     """"(?i)(Hostname|MachineName)":"({host}[\w\-.]*)"""
     """({event_code}4769)"""
-    """"TargetUserName":"({user}[\w\.\-]{1,40}\$?)"""
+    """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """"TargetDomainName":"({domain}[^."]+)"""
     """"ServiceName":"({src_host}[\w\-.]+\$)""""
     """"ServiceName":"({service_name}[^@"]+)""""
@@ -44,7 +44,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """exa_json_path=$.MachineName,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_regex=({event_code}4769)""",
-    """exa_json_path=$..TargetUserName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$..TargetDomainName,exa_field_name=domain""",
     """exa_json_path=$..ServiceName,exa_regex=^({src_host}[\w\-.]+\$)$""",
     """exa_json_path=$..ServiceName,exa_field_name=service_name""",

@@ -6,10 +6,10 @@ Product: F5 Silverline
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |  25   |   11   |         4          |       1        |    1    |
 
-|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success(network-alert)<br> ↳[f5-silverline-json-alert-trigger-success-waf](Ps/pC_f5silverlinejsonalerttriggersuccesswaf.md)<br> ↳[f5-silverline-kv-alert-trigger-success-waf](Ps/pC_f5silverlinekvalerttriggersuccesswaf.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_f5_f5_silverline_Compromised_Credentials.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success(network-alert)<br> ↳[f5-silverline-json-alert-trigger-success-waf](Ps/pC_f5silverlinejsonalerttriggersuccesswaf.md)<br> ↳[f5-silverline-kv-alert-trigger-success-waf](Ps/pC_f5silverlinekvalerttriggersuccesswaf.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_f5_f5_silverline_Malware.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (network-alert)<br> ↳[f5-silverline-json-alert-trigger-success-waf](Ps/pC_f5silverlinejsonalerttriggersuccesswaf.md)<br> ↳[f5-silverline-kv-alert-trigger-success-waf](Ps/pC_f5silverlinekvalerttriggersuccesswaf.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br> | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_f5_f5_silverline_Compromised_Credentials.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (network-alert)<br> ↳[f5-silverline-json-alert-trigger-success-waf](Ps/pC_f5silverlinejsonalerttriggersuccesswaf.md)<br> ↳[f5-silverline-kv-alert-trigger-success-waf](Ps/pC_f5silverlinekvalerttriggersuccesswaf.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_f5_f5_silverline_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

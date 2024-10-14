@@ -16,8 +16,8 @@ Name = microsoft-defenderep-kv-alert-trigger-success-detection
     """\s+Severity:\s+({alert_severity}.+?)\s+Category""",
     """\s+Category:\s+({alert_type}.+?)\s+Path:""",
     """\s+Path:\s+({malware_url}.+?)(;|\s+Detection Origin)""",
-    """\s+User:\s+({user}[\w\.\-]{1,40}\$?)\s+Process Name:""",
-    """C:\\Users\\({user}[\w\.\-]{1,40}\$?)"""
+    """\s+User:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Process Name:""",
+    """C:\\Users\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 

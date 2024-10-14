@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """"Timestamp":"({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
 """DeviceName":\s*"({src_host}({host}[^"\.]+)?[^"]+)"""
-""""AccountName":"(-|system|({user}[\w\.\-]{1,40}\$?))""""
+""""AccountName":"(-|system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"AccountDomain":"({domain}[^"\s]+)""""
 """"AccountSid":"({user_sid}[^"]+)""""
 """"ActionType":"({result}[^"]+)""""

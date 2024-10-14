@@ -42,7 +42,7 @@ Name = barracuda-waf-str-http-request-success-tr
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"[^"]+"\s+([^\s]+\s+){5}"[^"]+"\s+[^\s]+\s+.+?\s+"(?:-|Mozilla\/.+\(({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin).+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"[^"]+"\s+([^\s]+\s+){5}"[^"]+"\s+[^\s]+\s+.+?\s+"[^"]+"\s+(?:-|({proxy_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))""",
 # proxy_port is removed
-      """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"[^"]+"\s+([^\s]+\s+){5}"[^"]+"\s+[^\s]+\s+.+?\s+"[^"]+"\s+([^\s]+\s+){2}"(?:-|({user}[\w\.\-]{1,40}\$?))"""",
+      """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"[^"]+"\s+([^\s]+\s+){5}"[^"]+"\s+[^\s]+\s+.+?\s+"[^"]+"\s+([^\s]+\s+){2}"(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){12}"[^"]+"\s+([^\s]+\s+){5}"[^"]+"\s+[^\s]+\s+.+?\s+"[^"]+"\s+([^\s]+\s+){2}("[^"]+"\s+){4}(?:-|({request_id}[^\s]+))\s*$"""
     ]
   

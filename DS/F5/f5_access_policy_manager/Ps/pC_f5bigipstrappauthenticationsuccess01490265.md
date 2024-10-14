@@ -9,7 +9,7 @@ Name = f5-bigip-str-app-authentication-success-01490265
   Conditions = [ """01490265""", """ BIG-IP """, """have received SAML Assertion from IdP""" ]
   Fields = [
     """:\d\d:\d\d ({host}[\w.-]+)\s""",
-    """value \(({user}[\w\.\-]{1,40}\$?)\)""",
+    """value \(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\)""",
     """({app}BIG-IP)""",
     """({event_name}received SAML Assertion from IdP)""",
     """({event_code}01490265)""",

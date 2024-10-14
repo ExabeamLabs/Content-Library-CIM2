@@ -14,7 +14,7 @@ Fields = [
   """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   """<Computer>({host}.+?)</Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
-  """<Data Name\\*='User'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-]{1,40}\$?)</Data>"""
+  """<Data Name\\*='User'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
   """<Security UserID\\*='({user_sid}.+?)'/>"""
   """<Level>({alert_severity}[^"<]+)"""
   """<FilePath>({malware_url}[^"<]+)"""
@@ -22,6 +22,7 @@ Fields = [
   """<PolicyName>({alert_name}[^"<]+)"""
   """<Message>({additional_info}[^"<]+)"""
   """<FileHash>({hash_md5}[^"<]+)"""
+  """<EventID>({event_code}[^<]+)<"""
 ]
 DupFields = [
   "malware_url->process_name"

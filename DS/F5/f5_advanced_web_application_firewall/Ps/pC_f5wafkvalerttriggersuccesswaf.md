@@ -22,7 +22,7 @@ Fields = [
 """request_status\s*=\s*({result}[^,]+)"""
 """severity\s*=\s*({alert_severity}[^,]+)"""
 """src_port\s*=\s*({src_port}\d+)"""
-"""username\s*=\s*(N\/A|({user}[\w\.\-]{1,40}\$?)),"""
+"""username\s*=\s*(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
 ]
 DupFields = [
 "alert_name->alert_type"

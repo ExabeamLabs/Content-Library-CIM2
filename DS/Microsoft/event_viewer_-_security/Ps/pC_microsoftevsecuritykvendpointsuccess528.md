@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({event_name}Successful Logon)"""
 """\s+({time}\w+ \d+ \d+:\d+:\d+ \d+):.+?/Security\s+\(({event_code}\d+)\)"""
-"""Successful Logon:\s+User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Domain:\s+({domain}[\w.\-]+)\s+Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
+"""Successful Logon:\s+User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain:\s+({domain}[\w.\-]+)\s+Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
 """Logon Type:\s+({login_type}\d+)"""
 """Logon Process:\s+({auth_process}.+?)\s+Authentication Package:\s+({auth_package}[^\s]+)"""
 """Workstation Name:\s+({src_host_windows}[\w.\-\$]+)"""

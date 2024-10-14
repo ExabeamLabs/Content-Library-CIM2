@@ -10,7 +10,7 @@ Name = microsoft-sysmon-json-kv-file-time-modify-timechanged
   Fields = [
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
-    """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)""",
+    """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """ProcessGuid:\s*\{({process_guid}[^\s\}]+)""",
     """ProcessId:\s*({process_id}\d+)""",
     """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^=]+?))\s*";"""

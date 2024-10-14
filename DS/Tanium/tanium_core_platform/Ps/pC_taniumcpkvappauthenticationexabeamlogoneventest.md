@@ -11,7 +11,7 @@ Name = tanium-cp-kv-app-authentication-exabeamlogoneventest
       """({host}[\w.\-]+)\s+Tanium """,
       """\sEndpoint-Name ="(-|({dest_host}[^"]+))"""",
       """\sTimestamp="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)""",
-      """\sTarget-User="(-|({user}[\w\.\-]{1,40}\$?))"""",
+      """\sTarget-User="(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """\sTarget-Domain="(-|({domain}[^"]+))"""",
       """\sLogon-Result="(-|({result}[^"]+))"""",
       """\sLogon-Type="(-|({login_type_text}[^"]+))"""",

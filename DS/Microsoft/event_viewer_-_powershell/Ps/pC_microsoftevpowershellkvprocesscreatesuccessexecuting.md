@@ -23,12 +23,13 @@ Name = microsoft-evpowershell-kv-process-create-success-executing
     """Sid=({user_sid}[\w\-]+)""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Security UserID\\*='({user_sid}[\w\-]+)'/>""",
-    """Context[^\]]+?User\s*\\?=\s*(({domain}[^=]+?)[\\\/]+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*""",
+    """Context[^\]]+?User\s*\\?=\s*(({domain}[^=]+?)[\\\/]+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""",
     """Context[^@]+?Host Application\s*=\s*({process_command_line}.+?)\s*Engine Version =""",
     """Context[^@]+?Host Application\s*=\s*({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)[^\n]+?)\s+Engine Version =""",
     """Context[^@]+?Command Type\s*=\s*(|({command_type}[^=]+?))\s*Script Name =""",
-    """Context[^@]+?Command Name\s*=\s*(|({command_name}[^=]+?))\s*Command Type =""",
+    """Context[^@]+?Command Name\s*=\s*(|({command}[^=]+?))\s*Command Type =""",
     """Context[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path =""",
+    """CommandInvocation(.+?):\s*\\*"({command_invocation}[^"\\]+)\\?"""",
     """Engine Version\s*=\s*({engine_version}[^\s]+)\s*"""
     """"(?:winlog\.)?computer_name"\s*:\s*"({dest_host}({host}[\w\-\.]+))"""
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

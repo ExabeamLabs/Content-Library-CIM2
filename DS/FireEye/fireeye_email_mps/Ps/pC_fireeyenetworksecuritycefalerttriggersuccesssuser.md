@@ -22,7 +22,7 @@ Fields = [
   """\Wsuser=({src_user}[^@\s]+)"""
   """\Wduser=({dest_user}[^@\s]+)"""
   """\Wduser=({email_address}[^@\s,]+@[^@\s,]+)"""
-  """\Wduser=({user}[\w\.\-]{1,40}\$?)"""
+  """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\Wcn2=({alert_id}\d+)"""
   """\Wcs1=({alert_name}.+?)(\s+\w+=|\s*$)"""
   """\Wsproc=({process_name}.+?)(\s+\w+=|\s*$)"""

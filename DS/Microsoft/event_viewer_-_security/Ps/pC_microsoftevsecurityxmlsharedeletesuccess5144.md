@@ -18,7 +18,7 @@ Name = "microsoft-evsecurity-xml-share-delete-success-5144"
     """<Data Name\\*='ShareLocalPath'>({share_path}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
     """<Keyword>({result}[^<]+)<\/Keyword>""",
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
 

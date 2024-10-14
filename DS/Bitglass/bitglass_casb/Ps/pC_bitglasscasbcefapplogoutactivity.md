@@ -10,7 +10,7 @@ Name = bitglass-casb-cef-app-logout-activity
   Fields = [
     """"instancename":\s*"({host}[^"]+)"""",
     """"time":\s*"({time}\d+ \w+ \d\d\d\d \d\d:\d\d:\d\d)""",
-    """"user":\s*"({user}[\w\.\-]{1,40}\$?)"""",
+    """"user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"user":\s*"({full_name}[^"\s@]+\s+[^"\s@]+)"""",
     """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"device":\s*"({os}[^"]+)"""",

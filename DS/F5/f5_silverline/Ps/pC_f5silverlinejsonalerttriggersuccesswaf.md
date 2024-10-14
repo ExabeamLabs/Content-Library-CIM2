@@ -26,7 +26,7 @@ Fields = [
 """http_class_name="({domain}[^"]+)""""
 """support_id="({alert_id}[^"]+)""""
 """uri="({uri_path}[^"]+)""""
-"""username="(N\/A|({user}[\w\.\-]{1,40}\$?))""""
+"""username="(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """sub_violations="(({additional_info}[^"]+))""""
 """violations="({alert_name}[^"]+)"""
 ]

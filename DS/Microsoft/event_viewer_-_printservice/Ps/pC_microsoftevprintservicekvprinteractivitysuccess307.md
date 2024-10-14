@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """TimeGenerated=({time}\d{10})"""
 """Computer=({host}[\w\-.]+)"""
-"""User=({user}[\w\.\-]{1,40}\$?)"""
+"""User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Domain=({domain}[^\s]+)"""
 """EventID=({event_code}\d+)"""
 """Opcode=({result}.+?)\s*(\w+=|$)"""

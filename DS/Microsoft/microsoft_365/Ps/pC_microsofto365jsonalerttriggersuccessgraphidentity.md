@@ -19,7 +19,7 @@ Name = microsoft-o365-json-alert-trigger-success-graphidentity
     """exa_json_path=$.id,exa_field_name=alert_id"""
     """exa_json_path=$.riskState,exa_field_name=action"""
     """exa_json_path=$.riskDetail,exa_field_name=additional_info"""
-    """exa_json_path=userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
   ParserVersion = "v1.0.0"
 

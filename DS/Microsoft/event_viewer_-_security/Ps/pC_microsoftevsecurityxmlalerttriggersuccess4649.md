@@ -28,7 +28,7 @@ Fields = [
   """Security ID:\s*({user_sid}\S+)\s+Account Name:"""
   """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)"""
   """Logon ID:\s*({login_id}\S+)\s+"""
-  """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:"""
+  """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:"""
   """<EventID>({event_code}[^<]+)<\/EventID>"""
   """({additional_info}Credentials Which Were Replayed:.+)This event indicates that a Kerberos replay attack was detected"""
   """<Level>({run_level}[^<]+)"""

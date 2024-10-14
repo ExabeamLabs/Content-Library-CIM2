@@ -16,7 +16,7 @@ oam-app-activity = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-]\d\d:\d\d) ({host}[\w\-.]+)""",
-    """IAU_USERID:\s*"(null|Anonymous|GET_HIDE_COLUMN_LIST|({user}[\w\.\-]{1,40}\$?))"""",
+    """IAU_USERID:\s*"(null|Anonymous|GET_HIDE_COLUMN_LIST|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """IAU_USERID:\s*"(null|Anonymous|({email_address}[^\s"@]+@[^\s"@]+))"""",
     """IAU_IDENTITYDOMAIN:\s*"(null|({domain}[^\s"]+))"""",
     """IAU_INSTANCENAME:\s*"(null|({target}[^"]+))"""",

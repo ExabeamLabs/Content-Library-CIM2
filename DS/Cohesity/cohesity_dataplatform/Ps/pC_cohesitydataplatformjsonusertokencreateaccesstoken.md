@@ -13,7 +13,7 @@ cohesity-log = {
      """"+ClusterName:\s*({host}[^,]+)""",
      """"+Timestamp"+\s+:\s+"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)""",
      """"+Timestamp"+\s+:\s+"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+-\d+:\d+)""",
-     """"User"+\s+:\s+"+({user}[\w\.\-]{1,40}\$?)""",
+     """"User"+\s+:\s+"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """"Domain"+\s+:\s+"+({domain}[^"]+)""",
      """"Action"+\s+:\s+"+({operation}[^"]+)""",
      """"EventMessage"+\s+:\s+"+({event_name}[^"]+)""",

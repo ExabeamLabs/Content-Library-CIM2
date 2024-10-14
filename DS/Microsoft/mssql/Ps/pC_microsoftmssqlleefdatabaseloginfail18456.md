@@ -17,9 +17,9 @@ leef-mssql-login = {
       """devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\w{1,3})""",
       """resource=({host}[\w\-.]+?)\s*\w+=""",
       """LEEF\s({event_code}\d+)""",
-      """usrName =(N\/A|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+      """usrName =(N\/A|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """message=({additional_info}[^\[]+)\.\s+\[""",
-      """message=[^']+?\Wuser\s'(({domain}[^\\']+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+      """message=[^']+?\Wuser\s'(({domain}[^\\']+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
       """CLIENT:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """application=({app}[^=]+?)\s+\w+="""
     ]

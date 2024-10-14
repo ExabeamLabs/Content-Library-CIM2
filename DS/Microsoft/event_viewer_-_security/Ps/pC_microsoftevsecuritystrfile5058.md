@@ -9,12 +9,12 @@ Name = microsoft-evsecurity-str-file-5058
     """({event_name}Key file operation)""",
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
-    """File Path:\s*({file_path}(({file_dir}[^=]+[^\\])\\+)?({file_name}[^\s]+))\s*Operation:"""
+    """File Path:\s*({file_path}(({file_dir}[^=]+[^\\])\\+)?({file_name}[^\s]+?(\.({file_ext}[^\s\.]+))?))\s*Operation:"""
   ]
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "epoch"]
   Fields = [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
@@ -23,7 +23,7 @@ raw-object-access = {
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Cryptographic Parameters:""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",

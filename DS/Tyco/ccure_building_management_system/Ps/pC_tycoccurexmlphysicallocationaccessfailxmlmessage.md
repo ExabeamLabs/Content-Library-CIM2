@@ -17,7 +17,7 @@ Fields = [
 """<Card>\s*({badge_id}\d+)\s*</Card>"""
 """<PrimaryObjectName>\s*({last_name}[^,]+?),\s*({first_name}.*?)\s*</PrimaryObjectName>"""
 """<SecondaryObjectName>\s*({location_door}.+?)\s*</SecondaryObjectName>"""
-"""PrimaryPartitionName:\s*\"({user_city}[^\"]+)"""
+"""PrimaryPartitionName:\s*\"({location_city}[^\"]+)"""
 """<AdmitCode>\s*({result_reason}.+?)\s*</AdmitCode>"""
 """<RejectCode>\s*({result_reason}.+?)\s*</RejectCode>"""
 ]

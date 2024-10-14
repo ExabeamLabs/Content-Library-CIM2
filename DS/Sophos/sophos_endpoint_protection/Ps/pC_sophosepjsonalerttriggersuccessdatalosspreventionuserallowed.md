@@ -13,7 +13,7 @@ Name = sophos-ep-json-alert-trigger-success-datalosspreventionuserallowed
     """"type":\s*"({alert_type}[^"]+)""",
     """"dhost":\s*"({dest_host}[^"]+)""",
     """"severity":\s*"({alert_severity}[^"]+)""",
-    """"suser":\s*"(?:n\/a|({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?)""""
+    """"suser":\s*"(?:n\/a|({domain}[^\\",]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"id":\s*"({alert_id}[^"]+)""",
     """"rule":\s*"({rule}[^"]+)""",
     """"action":\s*"({action}[^"]+)""",

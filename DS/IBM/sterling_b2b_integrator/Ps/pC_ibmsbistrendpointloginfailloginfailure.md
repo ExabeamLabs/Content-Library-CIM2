@@ -14,6 +14,7 @@ Fields = [
   """Login failure for :({user_id}[^:]+)"""
   """Login failure for :[^:]+:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """({event_name}Failed login)"""
+  """Login failure for user ({user}[\w\-\.]+)"""
 ]
 ParserVersion = "v1.0.0"
 

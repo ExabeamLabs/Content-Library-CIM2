@@ -9,10 +9,11 @@ Conditions = [
   """EmailUrlInfo""""
   """"UrlDomain":"""
   """"Url":"""
+  """"NetworkMessageId":"""
 ]
 Fields = [
   """"Timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
-  """"Url":\s*"({url}[^"@\s]+@[^"@\s]+?)""""
+  """"Url":\s*"({url}[^"]+?)""""
   """"UrlDomain":\s*"(\w+:\/\/)?({web_domain}[^\s"]+)\s*""""
   """({event_name}AdvancedHunting-EmailUrlInfo)"""
   """"NetworkMessageId":\s*"({message_id}[^"]+?)""""

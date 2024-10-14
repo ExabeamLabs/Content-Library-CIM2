@@ -16,7 +16,7 @@ Fields = [
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
 """"DomainID":"({domain}[^"]+)""""
 """"HostID":"({host}[^"]+)""""
-""""UserIDSrc":"({user}[\w\.\-]{1,40}\$?)""""
+""""UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"Service_Name":"({service_name}[^"]+)""""
 """"Service_Name":"({dest_host}[\w\-.]+\$)""""
 """({event_code}4770)"""

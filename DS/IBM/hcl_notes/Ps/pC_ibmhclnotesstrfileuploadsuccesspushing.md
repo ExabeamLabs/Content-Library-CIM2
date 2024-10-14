@@ -8,7 +8,7 @@ Name = ibm-hclnotes-str-file-upload-success-pushing
 # system_info is removed
     """Pushing\s*({src_file_path}(({file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))\"*"""
   ]
-  DupFields = ["src_file_name -> file_name"]
+  DupFields = ["src_file_name -> file_name","src_file_ext -> file_ext"]
 
 ibm-lotus-notes = {
     Vendor = "IBM"

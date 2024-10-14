@@ -6,7 +6,7 @@ Name = splunk-s-json-dhcp-session-success-dhcpack
   Vendor = Splunk 
   Product = Splunk Stream
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-  Conditions = [ """"opcode":"""", """ip:udp:dhcp""", """"giaddr":"""", """"flow_id":"""" ]
+  Conditions = [ """"opcode":"""", """"DHCPACK"""", """ip:udp:dhcp""", """"giaddr":"""", """"flow_id":"""" ]
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.bytes,exa_field_name=bytes"""
@@ -23,12 +23,13 @@ Name = splunk-s-json-dhcp-session-success-dhcpack
     """exa_json_path=$.src_mac,exa_field_name=src_mac"""
     """exa_json_path=$.src_port,exa_field_name=src_port"""
     """exa_json_path=$.subnetmask,exa_field_name=router_subnet"""
-    """exa_json_path=$.transaction_id,exa_field_name=trans_id"""
+    """exa_json_path=$.transaction_id,exa_field_name=transaction_id"""
     """exa_regex=({protocol}dhcp)""",
     """exa_json_path=$.yiaddr,exa_field_name=assigned_ip"""
     """exa_json_path=$.ip_lease_time,exa_field_name=ip_lease_time"""
     """exa_json_path=$.host_name,exa_field_name=host"""
     ]
+    DupFields = ["transaction_id->trans_id"]
   ParserVersion = "v1.0.0"
 
 

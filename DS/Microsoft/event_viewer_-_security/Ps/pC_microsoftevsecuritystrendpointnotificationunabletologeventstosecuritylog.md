@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-str-endpoint-notification-unabletologeventstosecurit
   Conditions = [ """Unable to log events to security log:""" ]
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
     """({event_name}Unable to log events to security log)""",
-    """Status code:\s*({status_code}[^\s]+)""",
+    """Status code:\s*({result_code}[^\s]+)""",
 # CrashOnAuditFail is removed
 # number_of_failed_audits is removed
   ]
@@ -23,7 +23,7 @@ windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

@@ -14,8 +14,8 @@ Conditions = [
 ]
 Fields = [
 """exa_json_path=$.appliance,exa_regex=^({host}[\w\-.]+)$""",
-"""exa_json_path=$.alert.dst.smtp-to,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
-"""exa_json_path=$.alert.src.smtp-mail-from,exa_regex=^({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
+"""exa_json_path=$.alert.dst.smtp-to,exa_regex=^({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
+"""exa_json_path=$.alert.src.smtp-mail-from,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
 """exa_json_path=$.alert.explanation.malware-detected.malware.name,exa_field_name=alert_name""",
 """exa_regex=({alert_type}malware-detected)""",
 """exa_json_path=$.alert.severity,exa_field_name=alert_severity""",
@@ -28,7 +28,6 @@ Fields = [
 ]
 DupFields = [
 "alert_name->malware_file_name"
-"email_address->dest_email_address"
 ]
 SOAR {
   IncidentType = "malware"

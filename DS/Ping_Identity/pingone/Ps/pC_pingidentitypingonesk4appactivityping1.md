@@ -15,13 +15,13 @@ Name = pingidentity-pingone-sk4-app-activity-ping-1
     """Requested\sApplication\sName:\s*(N\/A|({requested_app}.*?))(\\n)*\s*Password\sReset""",
     """request=({action}[^\s]+)""",
     """requestClientApplication=({app}.*?)\s\w+=""",
-    """suid=(anonymous|({user}[\w\.\-]{1,40}\$?))\s\w+=""",
-    """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s\w+=""",
+    """suid=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s\w+=""",
+    """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s\w+=""",
    """flexString2=({action}.*?)\s\w*(:|=|")""",
     """Country:\s({country}.*?)\s*(\\n)*New Device""",
     """Mobile OS Version:\s({os}.*?)\s*(\\n)*Device Model""",
     """Device Model:\s(N\/A|({device_name}.*?))\s*(\\n)*Device Lock""",
-    """"actors":\[\{"type":"user","name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+    """"actors":\[\{"type":"user","name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """dproc=({process_name}[^\s]+)"""
     """flexString2=({result}[^\s]+)"""
   ]

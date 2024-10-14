@@ -21,7 +21,7 @@ Fields = [
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\srt=({time}\d{13})""",
 """({event_code}4742)"""
-"""Subject:.+?\s*Account Name:\s*(\\t|\\r|\\n)*(|-|(?i)ANONYMOUS LOGON|({user}[\w\.\-]{1,40}\$?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({domain}[^:]+?))(\\r|\\n|\\t)*\s*Logon ID:\s*(\\r|\\n|\\t)*(|-|({login_id}[^\s]+?))\s*(\\r|\\n|\\t)*Computer Account That Was Changed:.*?\s*Account Name:\s*(\\r|\\n|\\t)*(|-|({dest_user}[^:]+?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({ds_object_dn}[^:]+?))\s*(\\r|\\n|\\t)*Changed Attributes:"""
+"""Subject:.+?\s*Account Name:\s*(\\t|\\r|\\n)*(|-|(?i)ANONYMOUS LOGON|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({domain}[^:]+?))(\\r|\\n|\\t)*\s*Logon ID:\s*(\\r|\\n|\\t)*(|-|({login_id}[^\s]+?))\s*(\\r|\\n|\\t)*Computer Account That Was Changed:.*?\s*Account Name:\s*(\\r|\\n|\\t)*(|-|({dest_user}[^:]+?))\s*(\\r|\\n|\\t)*Account Domain:\s*(\\r|\\n|\\t)*(|-|({ds_object_dn}[^:]+?))\s*(\\r|\\n|\\t)*Changed Attributes:"""
 """\s*Computer Account That Was Changed:.+?Account Name:\s*(\\r|\\n|\\t)*(::ffff:)?({src_host}[^$:]+?)\$(\\r|\\n|\\t)*"""
 """\s*User Principal Name:\s*(\\r|\\n|\\t)*(|-|({attribute}.+?))\s*(\\r|\\n|\\t)*Home Directory:"""
 """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?((?i)(am|pm|\d{4})|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))\s"""

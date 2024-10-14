@@ -19,7 +19,7 @@ Fields = [
 """<EventID[^<]*?>({event_code}\d+)"""
 """({event_name}An account was successfully logged on)"""
 """<Data Name\\='SubjectUserSid'>(-|({user_sid}.+?))<"""
-"""<Data Name\\='SubjectUserName'>(-|({user}[\w\.\-]{1,40}\$?))<"""
+"""<Data Name\\='SubjectUserName'>(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>"""
 """<Data Name\\='SubjectDomainName'>(-|({domain}.+?))<"""
 """<Data Name\\='SubjectLogonId'>(-|({login_id}.+?))<"""
 """<Data Name\\='TargetUserName'>(SYSTEM|({dest_user}[^<]+))<"""

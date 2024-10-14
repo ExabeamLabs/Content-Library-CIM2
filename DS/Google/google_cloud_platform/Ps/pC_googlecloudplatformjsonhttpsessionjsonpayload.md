@@ -25,7 +25,7 @@ Fields = [
 """exa_json_path=$.resource.labels.project_id,exa_field_name=project_id"""
 """exa_json_path=$.jsonPayload.hierarchy_target,exa_regex=(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 """exa_json_path=$.resource.labels.zone,exa_field_name=zone"""
-"""exa_json_path=$.resource.labels.instance_id,exa_field_name=host"""
+"""exa_json_path=$.resource.labels.instance_id,exa_field_name=instance_id"""
 ]
 ParserVersion = "v1.0.0"
 

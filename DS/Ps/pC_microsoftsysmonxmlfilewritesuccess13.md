@@ -8,11 +8,9 @@ Conditions = [
   """<Execution ProcessID="""
   """Microsoft-Windows-Sysmon"""
 ]
+DupFields = ["file_path->registry_path"]
 ParserVersion = "v1.0.0"
 
-json-windows-events-1.Fields}[
-    """({event_name}A user account was disabled)""",
-    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({host}[^"]+))""",
-  
+
 }
 ```

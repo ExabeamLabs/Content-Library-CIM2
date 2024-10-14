@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4780
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4780</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\*='TargetUserName'>({dest_user}[^<]+)""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
@@ -25,7 +25,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

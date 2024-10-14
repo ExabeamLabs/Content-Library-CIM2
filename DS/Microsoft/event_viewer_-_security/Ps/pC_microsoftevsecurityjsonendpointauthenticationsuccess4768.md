@@ -20,8 +20,8 @@ ad-audit-json-events = {
   ExtractionType = json
   Fields = [
     """exa_json_path=$.TIME_GENERATED,exa_field_name=time""",
-    """exa_json_path=$.CALLER_USER_NAME,exa_regex=^(-|({user}[\w\.\-]{1,40}\$?))$""",
-    """exa_json_path=$.USERNAME,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.CALLER_USER_NAME,exa_regex=^(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$.USERNAME,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.LOGON_TYPE,exa_field_name=login_type""",
     """exa_json_path=$.REMARKS,exa_field_name=event_name""",
     """exa_json_path=$.EVENT_NUMBER,exa_field_name=event_code""",

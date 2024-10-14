@@ -15,7 +15,7 @@ Fields = [
 """cs7=\s*\(({time}\d\d \w+ \d{4} \d\d:\d\d:\d\d)\)\s*cs7Label=EventTime"""
 """rt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
 """\d\d:\d\d:\d\d ({host}.+?) CEF:"""
-"""\sduser="*(?:n\/a|(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-]{1,40}\$?))\"*\s*\w+="""
+"""\sduser="*(?:n\/a|(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\"*\s*\w+="""
 """\scs4=(?: |({app}.+?))\s*\w+="""
 """\scs3=(?: |({service_name}.+?))\s*\w+="""
 """\scs2=(?: |({server_group}.+?))\s*\w+="""

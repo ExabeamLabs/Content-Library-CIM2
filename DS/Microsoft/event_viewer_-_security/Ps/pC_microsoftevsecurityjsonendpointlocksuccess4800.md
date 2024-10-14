@@ -12,7 +12,7 @@ Fields = [
 """"Hostname":"({host}[^"]+)"""
 """({event_name}The workstation was locked)"""
 """({event_code}4800)"""
-"""Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-]{1,40}\$?)(\\t|\\r|\\n)*\s*Account Domain"""
+"""Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n)*\s*Account Domain"""
 """Account Domain:\s*(\\t|\\r|\\n)*({domain}.+?)(\\t|\\r|\\n)*\s*Logon ID"""
 """Logon ID:\s*(\\t|\\r|\\n)*({login_id}.+?)(\\t|\\r|\\n)*\s*Session"""
 ]

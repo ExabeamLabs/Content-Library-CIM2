@@ -3,7 +3,11 @@
 {
 Name = microsoft-azuremon-json-endpoint-activity-success-sourcesystemcontainers
    ParserVersion = v1.0.0
-   Conditions = [ """"SourceSystem":"Containers"""", """"Computer":"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""" ]
+   Conditions = [ """"SourceSystem":"Containers"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""" ]
+   Fields = ${MSParserTemplates.microsoft-azure-endpoint-json.Fields} [
+     """exa_json_path=$.Type,exa_field_name=event_name""",
+     """exa_json_path=$.Message,exa_field_name=additional_info"""
+   ]
  
 microsoft-azure-endpoint-json = {
     Vendor = Microsoft

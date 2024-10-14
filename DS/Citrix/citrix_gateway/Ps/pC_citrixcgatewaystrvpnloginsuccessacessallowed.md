@@ -16,7 +16,7 @@ Fields = [
 """\s({time}\d\d\/\d\d\/\d\d\d\d:\d\d:\d\d:\d\d)"""
 """({host}[^\s]+)\s*:\s*SSLVPN \w+\s"""
 """\sEnd_time(\s*\&quot;)?\s*"?({time}\d+\/\d+\/\d+:\d+:\d+:\d+)"""
-"""\sUser\s*(({email_address}[^@\-\s]+@[^\.\-\s]+\.[^\-\s]+)|(({domain}[^\\\s\-]+)\\+)?(-|({=email_address}[^@"\s]+@[^@"\s]+)|({user}[\w\.\-]{1,40}\$?)))\s*\-""",
+"""\sUser\s*(({email_address}[^@\-\s]+@[^\.\-\s]+\.[^\-\s]+)|(({domain}[^\\\s\-]+)\\+)?(-|({=email_address}[^@"\s]+@[^@"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\-""",
 """({event_name}SSLVPN \w+)"""
 """\sSessionId:\s*({session_id}\d+)"""
 """\sSource\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)"""

@@ -16,7 +16,7 @@ Fields = [
 """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
 """({event_name}validate_oath_code)""",
 """({failure_reason}OATH Code Incorrect)""",
-    """user\s+(({email_address}[^@\s]+@[^\s]+)|(({domain}[^\\\s']+)\\)?({user}[\w\.\-]{1,40}\$?))\s+updated"""
+    """user\s+(({email_address}[^@\s]+@[^\s]+)|(({domain}[^\\\s']+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+updated"""
     ]
 
 

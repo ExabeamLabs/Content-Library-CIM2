@@ -21,13 +21,12 @@ Fields = [
 """shost="?(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"?(\s+\w+=|\s*$)""",
 """dhost="?(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+))"?(\s+\w+=|\s*$)""",
 """\sfname="?({domain}[^"\\]+)\\+[^"]+""""
-"""\Wduser="?(|(({dest_domain}[^\\="]+)(\\)+)?({dest_user}[\w\.\-]{1,40}\$?))"?\s+(\w+=|$)"""
-"""\ssuser="?(|(({domain}[^\\="]+)(\\)+)?({user}[\w\.\-]{1,40}\$?))"?(\s+\w+=|\s*$)"""
+"""\Wduser="?(|(({dest_domain}[^\\="]+)(\\)+)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\s+(\w+=|$)"""
+"""\ssuser="?(|(({domain}[^\\="]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?(\s+\w+=|\s*$)"""
 """\sfname="?(|({src_file_path}({file_dir}[^="]*?[\\\/]+)?({src_file_name}[^="\\\/]+?(\.({src_file_ext}\w+))?)))"?(\s+\w+=|\s*$)"""
 """({file_type}(?i)file)"""
 """({app}Vault)"""
 """({protocol}SSH)""",
-"""reason=?\s+cs1Label="?({process_command_line}[^\n"]+?)"""",
 """reason="?({result_reason}[^="]+?)"?\s+\w+=""",
 """cs3="*({device_type}[^="]+)?"*\s+\w+="""
 """cs2="?({safe_name}[^="]+?)"?\s+\w+=""",
@@ -40,11 +39,14 @@ Fields = [
 """CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
 """CEF:\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
+"""cs1="*(|({client_name}[^="]+?))(\s*\w+|")="""
+"""\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 ]
 DupFields = [
 "src_file_name->object"
 "operation->access"
 "src_file_name->file_name"
+"src_file_ext->file_ext"
 ]
 ParserVersion = "v1.0.0"
 

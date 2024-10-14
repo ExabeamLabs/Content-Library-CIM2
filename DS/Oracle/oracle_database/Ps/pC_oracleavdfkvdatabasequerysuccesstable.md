@@ -31,7 +31,7 @@ Fields = [
   """RETURNCODE="({result}[^"]+)"""
   """Client address.+?\(PROTOCOL=({protocol}[^\)]+)"""
   """Client address.+?\(HOST=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """SPARE1="({user}[\w\.\-]{1,40}\$?)"""
+  """SPARE1="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 DupFields = [
   "db_user->account"
@@ -54,7 +54,7 @@ Conditions = [
 Fields = [
   """<Extended_Timestamp>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+\w)</Extended_Timestamp>"""
   """<DB_User>(\/|({db_user}.+?))</DB_User>"""
-  """<OS_User>({user}[\w\.\-]{1,40}\$?)</OS_User>"""
+  """<OS_User>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</OS_User>"""
   """<Userhost>({src_host}[^\<]+)</Userhost>"""
   """<OS_Process>({process_id}\d+)</OS_Process>"""
   """<Session_Id>({session_id}\d+)</Session_Id>"""
@@ -75,7 +75,7 @@ ${OracleParsersTemplates.oracle-db-template-2} {
    Name = oracle-db-kv-database-activity-success-grant
    Conditions = [ """.sql.AUDIT_TYPE="Standard Audit"""", """.sql.STATEMENT_TYPE="GRANT""", """.sql.DB_USER=""", """.sql.USERHOST=""" ]
    Fields = ${OracleParsersTemplates.oracle-db-template-2.Fields}[
-    """sql\.OBJ_PRIVILEGE=({privilege}[^=]+?)\s+[\w\.]+?=""",
+    """sql\.OBJ_PRIVILEGE=({privileges}[^=]+?)\s+[\w\.]+?=""",
     """sql\.STATEMENT_TYPE=({db_operation}[^=]+?)\s+[\w\.]+?="""
    ]
    ParserVersion = "v1.0.0"
@@ -94,7 +94,7 @@ Fields = [
 """\Wrt=({time}\d{13})"""
 """\Wshost=({src_host}[\w\-.]+)"""
 """\Wdhost=({dest_host}[\w\-.]+)"""
-"""\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
+"""\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\Wduser=({db_user}[^\s]+)"""
 """\Wcs3=({db_name}[^\s]+)"""
 """CEF:([^\|]*\|){5}({db_operation}[^\|]+)"""
@@ -161,7 +161,7 @@ Fields = [
 """EVENT_TIME="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
 """SECURED_TARGET_NAME="({host}[^-]+)-({db_name}[^"]+)""""
 """USER_NAME="(unknown_username|({db_user}[^"]+))""""
-"""OSUSER_NAME="(({domain}[^\\]+)\\)?((?i)system|unknown_osusername|({user}[\w\.\-]{1,40}\$?))""""
+"""OSUSER_NAME="(({domain}[^\\]+)\\)?((?i)system|unknown_osusername|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """CLIENT_HOST_NAME="({src_host}[^"]+)""""
 """CLIENT_IP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """EVENT_NAME="({event_name}[^"]+)""""
@@ -272,10 +272,10 @@ ${OracleParsersTemplates.oracle-db-template-2} {
       """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+)[-|+]\d+:\d\d\s*({host}[\w\-.]+)""",
       """\s({time}\w{3} \d\d \d\d:\d\d:\d\d \d\d\d\d [+-]\d\d:\d\d)""",
       """ACTION\s+:\[\d+\]\s+'\s*({db_query}({db_operation}\w+).*?)\s*'([\w\s]+\w+\s*:|$)""",
-      """\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-]{1,40}\$?)'""",
+      """\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
       """\sDBID:\[\d+\]\s*'(|({db_name}[^']+))'""",
       """\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\\/\s]+))'""",
-      """\sPRIVILEGE :\[\d+\]\s*'({privilege}[^']+)'""",
+      """\sPRIVILEGE :\[\d+\]\s*'({privileges}[^']+)'""",
     ]
     DupFields = [ "user->user", "account->db_user" ]
  }
@@ -315,7 +315,7 @@ ParserVersion = "v1.0.0"
      """({host}[\w\-.]+)\s+(?:journal:)?\s+Oracle Unified Audit""",
      """DBID:\s*"+({db_name}\d+)""",
      """DBUSER:\s*"+({db_user}[^":]+)""",
-     """CURUSER:\s*"+({user}[\w\.\-]{1,40}\$?)""",
+     """CURUSER:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """ACTION:"({db_operation}100)"""",
      """RETCODE:"({return_code}\d+)""""
     ]

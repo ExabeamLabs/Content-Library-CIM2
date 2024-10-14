@@ -12,7 +12,7 @@ Name = microsoft-evntlm-kv-endpoint-login-fail-8004
     """({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d)""",
     """ComputerName =({host}[^\s]+)""",
     """({event_code}8004)""",
-    """User name:\s+({user}[\w\.\-]{1,40}\$?)""",
+    """User name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Domain name:\s+(NULL|({domain}[^\s]+))""",
     """RecordNumber=({event_id}\d+)""",
     """Channel name:\s*({resource}.*?)\s+User name:""",

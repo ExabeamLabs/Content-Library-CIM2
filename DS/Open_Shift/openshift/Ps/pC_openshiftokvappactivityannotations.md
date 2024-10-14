@@ -12,7 +12,7 @@ Name = openshift-o-kv-app-activity-annotations
   Fields =[
     """"*uid\\?"*(=>|:)\\?"*({user_id}[^"\\]+)""",
     """"*sourceIPs\\?"*:\[\\?"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"*username\\?"*(=>|:)\\?"*({user}[\w\.\-]{1,40}\$?)""",
+    """"*username\\?"*(=>|:)\\?"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"*groups\\?"*(=>|:)\[\\?"*({group_name}[^"\\]+)""",
     """"*authorization.k8s.io\/decision\\?"*(=>|:)\\?"*({action}[^\s"]+?)\\?"""",
     """hostname:({host}[^\s]+)""",
@@ -20,7 +20,7 @@ Name = openshift-o-kv-app-activity-annotations
     """"*code\\?"*(=>|:)({result}\d+)""",
     """"*message"*=>"*({event_name}[^"]+)""",
     """"*userAgent\\?"*:\\?"*({user_agent}.+?)\s*kubernetes""",
-    """xA8username\\xD9."*({user}[\w\.\-]{1,40}\$?)""",
+    """xA8username\\xD9."*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """xA3uid\\xD9.({user_id}[^\\]+)""",
     """xA6groups\\x93.xB6({group_name}[^\\]+)""",
     """xA9sourceIPs\\x91.xA3({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\xA9userAgent""",

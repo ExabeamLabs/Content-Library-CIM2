@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-storageanalyticsevents
   Product = Azure Monitor
   Conditions= [ """destinationServiceName =Azure""", """"operationType":"""", """"serviceType":"""", """dproc=iaas-storage-analytics-events""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"ownerAccountName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"ownerAccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"operationType":"({operation}[^"]+)"""",
     """"requestedObjectKey":"({object}[^"]+)"""",
     """"requestedObjectKey":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))""""
@@ -49,7 +49,8 @@ cef-microsoft-app-activity = {
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = [ "object->resource" 
 }

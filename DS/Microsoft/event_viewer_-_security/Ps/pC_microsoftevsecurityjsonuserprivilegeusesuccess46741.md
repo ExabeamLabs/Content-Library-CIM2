@@ -18,7 +18,7 @@ Fields = [
   """({event_code}4674)"""
   """\"keywords\":\[\"({result}.+?)\"\]"""
   """(ProcessName|process_name)\":\"(?: |({process_path}({process_dir}(?:[^\"]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\""""
-  """\"(SubjectUserName)\"\s*:\s*\"(-|({user}[\w\.\-]{1,40}\$?))\s*\""""
+  """\"(SubjectUserName)\"\s*:\s*\"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\""""
   """\"(SubjectDomainName)\"\s*:\s*\"(-|({domain}.+?))\s*\""""
   """\"(SubjectLogonId)\"\s*:\s*\"(-|({login_id}.+?))\s*\""""
   """\"(ObjectServer)\"\s*:\s*\"(-|({object_server}.+?))\s*\""""
@@ -40,7 +40,7 @@ Fields = [
   """exa_regex=({event_code}4674)"""
   """exa_json_path=$.keywords,exa_field_name=result"""
   """exa_json_path=$.ProcessName,exa_regex=(?: |({process_path}({process_dir}(?:[^\"]+)?[\\\/])?({process_name}[^\\\/\"]+?)))$"""
-  """exa_json_path=$.event_data.SubjectUserName,exa_regex=(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?$"""
+  """exa_json_path=$.event_data.SubjectUserName,exa_regex=(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?$"""
   """exa_json_path=$.event_data.SubjectDomainName,exa_regex=(|-|NT Service|NT AUTHORITY|({domain}[^\"]+))\\?$"""
   """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id,exa_match_expr=!InList($..SubjectLogonId,"-")"""
   """exa_json_path=$.event_data.ObjectServer,exa_field_name=object_server,exa_match_expr=!InList($..ObjectServer,"-")""",

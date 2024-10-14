@@ -12,7 +12,7 @@ zscaler-audit-events = {
     ExtractionType = json
     Fields = [
       """exa_json_path=$.CreationTime,exa_field_name=time""",
-      """exa_json_path=$.User,exa_regex=(({email_address}[^"@]+@({email_domain}[^".]+\.[^"]+))|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+))"""
+      """exa_json_path=$.User,exa_regex=(({email_address}[^"@]+@({email_domain}[^".]+\.[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""
       """exa_json_path=$.ObjectName,exa_field_name=object,exa_match_expr=!InList($.ObjectName,"")"""
       """exa_json_path=$.ObjectType,exa_field_name=object_type""",
       """exa_json_path=$.SessionID,exa_field_name=session_id,exa_match_expr=!InList($.SessionID,"")"""

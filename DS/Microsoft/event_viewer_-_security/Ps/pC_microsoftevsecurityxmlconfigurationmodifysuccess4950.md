@@ -13,6 +13,7 @@ Fields = [
   """<Keywords>({result}[^<]+)</Keywords>""",
   """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)""",
   """<Data Name =('|")SettingType('|")>({additional_info}[^<]+)</Data>"""
+  """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"

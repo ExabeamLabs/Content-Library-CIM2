@@ -17,7 +17,7 @@ Fields = [
 """printer_type:\s*\"+({printer_type}\d+)\"+"""
 """printer_name:\s*\"+({printer_name}[^\"]+)\"+"""
 """object_id:\s*\"+({object_id}({object}\d+))\"+"""
-"""user_name:\s*\"+(({domain}[^\"\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\"+"""
+"""user_name:\s*\"+(({domain}[^\"\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\"+"""
 """source_machine:\s*\"+({src_host}[^\"]+)\"+"""
 """total_pages:\s*\"+({num_pages}\d+)\"+"""
 """ip_address:\s*\"+0*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\"+"""

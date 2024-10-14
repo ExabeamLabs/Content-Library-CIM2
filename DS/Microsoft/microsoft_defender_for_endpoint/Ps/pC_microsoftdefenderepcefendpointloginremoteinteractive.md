@@ -17,7 +17,7 @@ cef-defender-atp-events = {
       """"(time|TimeGenerated)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"DeviceName":"({host}[\w\-.]+)""""
       """"LogonType":"({login_type_text}[^"]+)"""",
-      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
+      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"AccountDomain":"({domain}[^"]+)"""",
       """"InitiatingProcessFileName":"({process_name}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",
@@ -34,37 +34,37 @@ cef-defender-atp-events = {
       """"FailureReason":"({failure_reason}[^"]+)"""",
       """"InitiatingProcessAccountName":"({account}[^"]+)""""
       """exa_regex="(time|TimeGenerated)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-      """exa_json_path=$.properties.DeviceName,exa_field_name=host"""
+      """exa_json_path=$..DeviceName,exa_field_name=host"""
       """exa_json_path=$.DeviceName,exa_field_name=host"""
-      """exa_json_path=$.properties.LogonType,exa_field_name=login_type_text"""
+      """exa_json_path=$..LogonType,exa_field_name=login_type_text"""
       """exa_json_path=$.LogonType,exa_field_name=login_type_text"""
-      """exa_json_path=$.properties.AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
-      """exa_json_path=$.AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
-      """exa_json_path=$.properties.AccountDomain,exa_field_name=domain"""
+      """exa_json_path=$..AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_json_path=$.AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_json_path=$..AccountDomain,exa_field_name=domain"""
       """exa_json_path=$.AccountDomain,exa_field_name=domain"""
-      """exa_json_path=$.properties.InitiatingProcessFileName,exa_field_name=process_name"""
+      """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""
       """exa_json_path=$.InitiatingProcessFileName,exa_field_name=process_name"""
       """exa_json_path=$.category,exa_field_name=event_name"""
-      """exa_json_path=$.properties.ActionType,exa_field_name=result"""
+      """exa_json_path=$..ActionType,exa_field_name=result"""
       """exa_json_path=$.ActionType,exa_field_name=result"""
-      """exa_json_path=$.properties.Protocol,exa_field_name=protocol"""
+      """exa_json_path=$..Protocol,exa_field_name=protocol"""
       """exa_json_path=$.Protocol,exa_field_name=protocol"""
       """exa_json_path=$.LogonId,exa_regex=(null|({login_id}[^",]+))"""
-      """exa_json_path=$.properties.LogonId,exa_regex=(null|({login_id}[^",]+))"""
-      """exa_json_path=$.properties.InitiatingProcessFolderPath,exa_field_name=process_path"""
+      """exa_json_path=$..LogonId,exa_regex=(null|({login_id}[^",]+))"""
+      """exa_json_path=$..InitiatingProcessFolderPath,exa_field_name=process_path"""
       """exa_json_path=$.InitiatingProcessFolderPath,exa_field_name=process_path"""
-      """exa_json_path=$.properties.InitiatingProcessCommandLine,exa_field_name=process_command_line"""
+      """exa_json_path=$..InitiatingProcessCommandLine,exa_field_name=process_command_line"""
       """exa_json_path=$.InitiatingProcessCommandLine,exa_field_name=process_command_line"""
-      """exa_json_path=$.properties.InitiatingProcessId,exa_field_name=process_id"""
+      """exa_json_path=$..InitiatingProcessId,exa_field_name=process_id"""
       """exa_json_path=$.InitiatingProcessId,exa_field_name=process_id"""
-      """exa_json_path=$.properties.InitiatingProcessMD5,exa_field_name=hash_md5"""
+      """exa_json_path=$..InitiatingProcessMD5,exa_field_name=hash_md5"""
       """exa_json_path=$.InitiatingProcessMD5,exa_field_name=hash_md5"""
-      """exa_json_path=$.properties.FailureReason,exa_field_name=failure_reason"""
+      """exa_json_path=$..FailureReason,exa_field_name=failure_reason"""
       """exa_json_path=$.FailureReason,exa_field_name=failure_reason"""
-      """exa_json_path=$.properties.InitiatingProcessAccountName,exa_field_name=account"""
+      """exa_json_path=$..InitiatingProcessAccountName,exa_field_name=account"""
       """exa_json_path=$.InitiatingProcessAccountName,exa_field_name=account"""
       """exa_json_path=$.DeviceId,exa_field_name=device_id"""
-      """exa_json_path=$.properties.DeviceId,exa_field_name=device_id"""
+      """exa_json_path=$..DeviceId,exa_field_name=device_id"""
     ]
     DupFields = ["host->dest_host"
 }

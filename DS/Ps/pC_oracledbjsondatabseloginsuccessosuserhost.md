@@ -14,9 +14,7 @@ SSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
     Fields = [
           """exa_json_path=$..created,exa_field_name=time"""
           """exa_json_path=$..timestamp,exa_field_name=time""",
-          """exa_json_path=$..actorName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
-
-
+          """exa_json_path=$..actorName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
           """exa_json_path=$..ssoPlatform,exa_field_name=os""",
           """exa_json_path=$..idcsLastModifiedBy.display,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}[^,"]+,[^"]+))""",
           """exa_json_path=$..eventId,exa_field_name=event_name""",

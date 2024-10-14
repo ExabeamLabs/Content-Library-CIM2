@@ -16,7 +16,7 @@ Fields = [
   """ATTRIBUTES_NEW_VALUE\s*=\s*({new_attribute}[^]]+?)\s*\]""",
   """ATTRIBUTES_OLD_VALUE\s*=\s*({old_attribute}[^]]+?)\s*\]""",
   """\sCORRELATION_ID\s*=\s*(null|({correlation_id}[^]]+?))\s*\]""",
-  """ACCOUNT_NAME\s*=\s*(({user}[\w\.\-]{1,40}\$?))\s*\]""",
+  """ACCOUNT_NAME\s*=\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
   """ACCOUNT_SID\s*=\s*\%\{(({user_sid}[^]]+?))\}\s*\]""",
   """FORMAT_MESSAGE\s*=\s*(null|-|({ds_object_class}[^\']+?))\s*'"""
 ]

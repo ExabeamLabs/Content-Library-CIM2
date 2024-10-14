@@ -14,7 +14,7 @@ Fields = [
   """DetectTime=({time}\d{1,4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2})\s+\w+="""
   """ComputerName =({host}[\w.\-]+)"""
   """EventID=({event_code}\w+)"""
-  """Account Name =({user}[\w\.\-]{1,40}\$?)\s+"""
+  """Account Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+"""
   """Account Domain=({domain}.+?)\s"""
   """Logon ID=({login_id}[^\s]+)\s"""
   """Object:Class=({ds_object_class}.+?)\s"""

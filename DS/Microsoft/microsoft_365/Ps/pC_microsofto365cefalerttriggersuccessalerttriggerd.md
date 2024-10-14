@@ -8,7 +8,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [ """"Operation":"AlertTriggered"""", """"AlertType":""", """AlertId""", """"Workload":"""]
   Fields = [
    """"(ts|CreationTime)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-   """\\?"f3u\\?":\\?"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+   """\\?"f3u\\?":\\?"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
    """"ad\\?":\\?"({additional_info}[^"]+?)\\?"""",
    """"(Name|an)":"({alert_name}[^"]+)""",
    """"AlertId":"({alert_id}[^"]+)""""

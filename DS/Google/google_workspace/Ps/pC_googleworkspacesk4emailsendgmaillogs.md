@@ -9,7 +9,7 @@ Name = google-workspace-sk4-email-send-gmaillogs
   Fields = [
   """"timestamp_usec":({time}\d{13})""",
   """"destination":\[\{"address[":]*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-  """"source":\{"address[":]*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+  """"source":\{"address[":]*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
   """"subject":"({email_subject}[^"]+)"""",
   """"selector":"({action}[^"]+)""",
   """"success":({result}true|false)""",
@@ -19,7 +19,6 @@ Name = google-workspace-sk4-email-send-gmaillogs
   """({app}Gmail|gmail)""",
   """num_message_attachments":({attachment_count}\d+)"""
   ]
-  DupFields = [ "src_email_address->email_address" ]
   ParserVersion = v1.0.0
 
 

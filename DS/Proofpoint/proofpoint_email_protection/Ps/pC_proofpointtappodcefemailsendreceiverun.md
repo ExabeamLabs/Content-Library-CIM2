@@ -12,7 +12,7 @@ Name = proofpoint-tappod-cef-email-send-receive-run
   Fields = [
     """"+host"+:"+({host}[^"]+)""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"+"""
-    """\sx=({xid}.+?)\s+(\w+=|$)""",
+    """\sx=({alert_id}.+?)\s+(\w+=|$)""",
     """\smalwarescore=({malware_score}[^=]+?)\s+(\w+=|$)""",
     """\sphishscore=({phishing_score}[^=]+?)\s+(\w+=|$)""",
     """\sspamscore=({spam_score}[^=]+?)\s+(\w+=|$)""",

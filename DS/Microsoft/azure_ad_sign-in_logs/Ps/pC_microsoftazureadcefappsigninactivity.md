@@ -18,7 +18,7 @@ Fields = [
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\Wshost=({src_host}[\w\-.]+)"""
 """\Woutcome=({result_code}[^\"\=]+?)\s+(\w+=|$)"""
-"""\Wduser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+"""\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
 """\Wduser=({full_name}[^\"\=\s]+?\s+[^\"\=\s]+?)\s+(\w+=|$)"""
 """\Wcs6=({email_address}[^\"\=\s@]+@({email_domain}[^\"\=\s@]+?))\s+(\w+=|$)"""
 """\Wreason=(Other|({failure_reason}[^\"\=]+?))\s+(\w+=|$)"""

@@ -14,7 +14,7 @@ Name = "microsoft-evsecurity-kv-user-delete-fail-4743"
     """Keywords=({result}[^=]+?)\s+\w+=""",
     """Message=({event_name}[^:]+?)\s+\w+:""",
     """Subject:\s+Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
-    """Subject:.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Target Computer:\s+Security ID:\s+({dest_user_sid}[^:]+?)\s+Account Name:""",

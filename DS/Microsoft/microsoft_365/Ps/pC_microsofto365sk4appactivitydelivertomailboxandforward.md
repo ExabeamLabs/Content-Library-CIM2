@@ -18,6 +18,7 @@ Name = microsoft-o365-sk4-app-activity-delivertomailboxandforward
     """UserId":"({email_address}[^"\\\s@]+@({email_domain}[^"\\\s@]+\.[^"\\\s@]+))""",
     """({app}Office 365)"""
     """destinationServiceName =({app}.+?)\sdevice"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
 
 

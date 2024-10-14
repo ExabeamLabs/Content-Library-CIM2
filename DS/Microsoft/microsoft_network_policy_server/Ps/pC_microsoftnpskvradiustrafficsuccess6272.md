@@ -10,7 +10,7 @@ Name = microsoft-nps-kv-radius-traffic-success-6272
     """({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))""",
     """ComputerName =({host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)""",
-    """User:.+?Account Name:\s+(\w+(\\)+)?(?:-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """User:.+?Account Name:\s+(\w+(\\)+)?(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """User:.+?Account Domain:\s+(?:-|({domain}.+?))\s+Fully""",
     """NAS Identifier:\s+(?:-|({location}[\w\-.]+))""",
     """Calling Station Identifier:\s+(?:-|({src_mac}.+?))\s+NAS:""",

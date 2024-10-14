@@ -8,7 +8,7 @@ Name = microsoft-azuremon-sk4-database-modify-success-sql
 	""""operationName":\s*\{[^\}]*?"localizedValue":\s*"({db_operation}[^"]+)"""",
 	"""request=({result}[^=\s]+)\s+\w+=""",
 	"""sourceServiceName =\s*({service_name}[^=]+)\s+\w+=""",
-	"""suser=(Azure Security Center|({user}[\w\.\-]{1,40}\$?))\s+\w+=""",
+	"""suser=(Azure Security Center|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
 	"""\srequestClientApplication=({app}[^=]+)\s+\w+="""
 	""""correlationId":"({correlation_id}[^"]+)"""
 	""""category":\s*\{[^\}]*?"localizedValue":\s*"({category}[^"]+)""""
@@ -54,7 +54,8 @@ cef-microsoft-app-activity = {
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = [ "object->resource" 
 }

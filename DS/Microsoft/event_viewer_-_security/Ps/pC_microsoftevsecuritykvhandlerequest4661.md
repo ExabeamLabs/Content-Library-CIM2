@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-kv-handle-request-4661
     """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
     """({event_name}A handle to an object was requested)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Object:""",
     """Object Server:\s*({object_server}\S.*?)\s+Object Type:""",

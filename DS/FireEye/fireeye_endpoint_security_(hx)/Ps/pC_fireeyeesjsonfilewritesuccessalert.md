@@ -22,8 +22,8 @@ Fields = [
 """exa_json_path=$..hostname,exa_regex=^({host}[\w\-.]+)$""",
 """exa_json_path=$.event_type,exa_field_name=event_name""",
 """exa_json_path=$.event_values.fileWriteEvent/eventReason,exa_field_name=operation""",
-"""exa_json_path=$.event_values.fileWriteEvent/fileName,exa_field_name=file_name""",
-"""exa_json_path=$.event_values.fileWriteEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.event_values.fileWriteEvent/fileName,exa_regex=({file_name}[^"]+?(\.({file_ext}[^"]+))?)$""",
+"""exa_json_path=$.event_values.fileWriteEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.event_values.fileWriteEvent/fullPath,exa_field_name=file_path""",
 """exa_json_path=$.event_values.fileWriteEvent/process,exa_field_name=process_name""",
 """exa_json_path=$.event_values.fileWriteEvent/processPath,exa_field_name=process_dir"""

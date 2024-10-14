@@ -20,8 +20,8 @@ Name = microsoft-sysmon-cef-file-stream-create-success-streamcreated
 # category_device_group is removed
 # category_object is removed
 # category_custom_format_field is removed
-    """\WdeviceSeverity=({device_severity}.+?)\s+(\w+=|$)""",
-    """\Wfname=.+?USERS\\+({user}[\w\.\-]{1,40}\$?)""",
+    """\WdeviceSeverity=({severity}.+?)\s+(\w+=|$)""",
+    """\Wfname=.+?USERS\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
     """\Wfname=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
 # dvc_pid is removed

@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-xml-handle-request-4656
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<>]+)<""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>(NT AUTHORITY|({domain}[^<>]+))<""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>(SYSTEM|({user}[\w\.\-]{1,40}\$?))<""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """<Data Name(\\)?=('|")ObjectServer('|")>({object_server}[^<>]+)<""",
     """<Data Name(\\)?=('|")ObjectType('|")>({object_class}File)</Data><Data Name(\\)?=('|")ObjectName('|")>(-|({file_path}({file_dir}[^<]*?)({file_name}[^<>\\\/]+?(\.({file_ext}[^<>\\\/\.]+?))?)))<""",
     """<Data Name(\\)?=('|")ObjectType('|")>({object_class}Process)</Data><Data Name(\\)?=('|")ObjectName('|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+?)))<""",

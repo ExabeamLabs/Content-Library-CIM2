@@ -16,19 +16,18 @@ Fields = [
   """({alert_name}STOREDRIVER,DELIVER)"""
   """,STOREDRIVER,DELIVER,\s*({alert_id}\d+)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){2}\s*(?:'|")?({email_recipients}[^,]+?)\s*(?:'|")?,"""
-  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){2}\s*(?:'|")?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({orig_user}[\w\.\-]{1,40}\$?))[^,]*?\s*(?:'|")?,"""
+  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){2}\s*(?:'|")?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({orig_user}[\w\.\-\!\#\^\~]{1,40}\$?))[^,]*?\s*(?:'|")?,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){4}\s*({bytes}\d+)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){5}\s*({num_recipients}\d+)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*({email_subject}[^,]+)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*'({email_subject}(?:[^']|'')+)'\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){8}\s*"({email_subject}(?:[^"]|"")+)"\s*,"""
-  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}\s*(?:'|")?(|MicrosoftExchange.*?|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,"""
+  """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}\s*(?:'|")?(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,"""
   """,STOREDRIVER,DELIVER,(?:(?:\s*'(?:[^']|'')+')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){10}\s*(?:'|")?(?:<>|({return_path}[^,]+?))(?:'|")?\s*,"""
 ]
 DupFields = [
   "orig_user->user"
   "alert_name->alert_type"
-  "src_email_address->external_address"
 ]
 ParserVersion = "v1.0.0"
 

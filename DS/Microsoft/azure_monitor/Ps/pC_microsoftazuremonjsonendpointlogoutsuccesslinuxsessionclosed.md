@@ -19,7 +19,7 @@ Name = microsoft-azuremon-json-endpoint-logout-success-linuxsessionclosed
     """exa_json_path=$.SourceSystem,exa_field_name=os""",
     """exa_json_path=$.SyslogMessage,exa_field_name=additional_info""",
     """exa_json_path=$.SeverityLevel,exa_field_name=severity""",
-    """exa_regex=(({event_name}session closed for user)\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
+    """exa_regex=(({event_name}session closed for user)\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
   ]
 
 

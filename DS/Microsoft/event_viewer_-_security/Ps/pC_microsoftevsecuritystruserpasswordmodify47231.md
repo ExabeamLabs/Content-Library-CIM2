@@ -18,7 +18,7 @@ Fields = [
   """<EventID>({event_code}[^<]+)</EventID>""",
   """<Keywords>({result}[^<]+)</Keywords>""",
   """Subject.+?Security ID:\s*({user_sid}.+?)\s*Account Name""",
-  """Subject.+?Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s*Account Domain""",
+  """Subject.+?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain""",
   """Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:""",
   """Target Account.+?Security ID:\s*({dest_user_sid}.+?)\s*Account Name:""",
   """Target Account.+?Account Name:\s*({dest_user}.+?)\s*Account Domain:\s*({dest_domain}.+?)\s*Additional"""

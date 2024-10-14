@@ -20,7 +20,7 @@ s-cyberark-events {
     """({app}CYBERARK)""",
     """;Message="(|({operation}[^"]+?))\s*"""",
     """MessageID="({event_code}\d+)""",
-    """;Issuer="({user}[\w\.\-]{1,40}\$?)""",
+    """;Issuer="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """;Station="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """;Safe="(|({safe_value}[^"]+))"""",
     """;DeviceType="(|({dest_service_name}[^"]+))"""",

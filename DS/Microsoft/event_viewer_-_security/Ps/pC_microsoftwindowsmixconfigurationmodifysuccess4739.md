@@ -16,7 +16,7 @@ Name = microsoft-windows-mix-configuration-modify-success-4739
     """<Keyword>({result}[^<]+)<""",
     """<Data Name\\?='SubjectUserSid'>({user_sid}[^<]+)<\/Data>""",
     """ThreadID\\?='({thread_id}\d+)""",
-    """<Data Name\\?='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\?='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\?='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\?='SubjectLogonId'>({login_id}[^<]+)<\/Data>"""
   ]

@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-cef-service-create-success-4697
   Fields = ${WindowsParsersTemplates.json-windows-events-1.Fields}[
     """({event_name}A service was installed in the system)""",
     """"+ServiceType"+:"+({service_type}[^"]+)""",
-    """"+ServiceName"+:"+({service_name}[^"]+)""",
+    """"ServiceName":"(({service_name}[^_"]+?)(_[^"\<]+?)?)"""",
     """"+ServiceFileName"+:"+({process_path}({process_dir}[^\s]+)\\({process_name}[^"]+))""",
     """"+ServiceStartType"+:"+({service_start_type}[^"]+)"""
   ]
@@ -42,8 +42,8 @@ json-windows-events-1 = {
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
     """"+SubjectDomainName"+:"+({domain}[^"]+)""",
-    """"user"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))""",
+    """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""
@@ -88,7 +88,7 @@ json-windows-events-2 = {
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

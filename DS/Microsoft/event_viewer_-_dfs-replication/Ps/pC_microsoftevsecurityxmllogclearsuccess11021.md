@@ -6,10 +6,10 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
   Vendor = "Microsoft"
   Product = Event Viewer - DFS-Replication
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [  """>1102</EventID>""", """<TimeCreated SystemTime"""    ]
+  Conditions = [  """>1102</EventID>""", """<TimeCreated SystemTime""","""Channel>DFS Replication</Channel>"""    ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({host}({dest_host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
     """<Data Name\\*='TargetProcessName'>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?='ProcessId'>({process_id}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Client IP: ({src_ip}[a-fA-F:\.\d]+)""",

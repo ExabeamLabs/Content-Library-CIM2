@@ -7,7 +7,7 @@ Name = microsoft-defenderep-kv-endpoint-scan-success-scanstarted
   Conditions = [ """Microsoft-Windows-Windows Defender/Operational""", """Windows Defender Antivirus scan has started"""]
   Fields = ${WindowsParsersTemplates.windows-defender-1.Fields}[
     """({event_name}Windows Defender Antivirus scan has started)""",
-    """User:\s*(NT AUTHORITY|({domain}[^\\]+))[\\]+(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+    """User:\s*(NT AUTHORITY|({domain}[^\\]+))[\\]+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     ]
 
 windows-defender-1 = {
@@ -25,7 +25,7 @@ windows-defender-1 = {
     """Severity":"({severity}[^"]+?)"""",
     """AccountType":"({user_type}[^"]+?)"""",
     """Message":"({additional_info}[^"]+?)\s*"""",
-    """AccountName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """EventID":({event_code}\d+)""",
     """EventType":"({operation_type}[^"]+?)"""",
 # src_name is removed

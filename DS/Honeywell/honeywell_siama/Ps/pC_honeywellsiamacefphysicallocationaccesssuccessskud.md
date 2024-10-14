@@ -16,7 +16,7 @@ Fields = [
   """\Wrt=({time}\d{13})"""
   """\Wahost=({host}[\w\-.]+)"""
   """\Wsuser=({last_name}[^,=]+),\s*({first_name}[^,=]+?)\s+(\w+=|$)"""
-  """\Wduser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
   """\Wsuid=({user_id}[^\s]+)"""
   """\Wmsg=({location_door}.+?)\s+(\w+=|$)"""
   """\Wcn2=({src_location_id}.+?)\s+(\w+=|$)"""

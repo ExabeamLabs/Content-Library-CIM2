@@ -6,7 +6,7 @@ Name = microsoft-evpowershell-cef-script-execute-fail-4100
   Product = Event Viewer - PowerShell
   Conditions = [ """CEF: """, """|Microsoft|PowerShell|""", """|Microsoft-Windows-PowerShell:4100|""" ]
   Fields = ${DLWindowsParsersTemplates.microsoft-windows-cef-powershell.Fields} [
-    """\sduser=(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s""",
+    """\sduser=(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
     """\sahost=({host}[^\s]+)\s""",
     """\sad.ProcessID=({process_id}[^\s]+)\s""",
     """\sad.Ведущее_,приложение=({process_command_line}.+?)\sad""",
@@ -49,7 +49,7 @@ microsoft-windows-cef-powershell = {
         """\sdpt=({dest_port}\d+)""",
         """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*\w+=""",
         """\sdtz=({dtz}.+?)\s*\w+=""",
-        """\sduser=(N\/A|-|({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
+        """\sduser=(N\/A|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
         """\sdvc=({host}[A-Fa-f:\d.]+)""",
         """\sdvchost=({host}[\w\-.]+)""",
 # dvcp_id is removed
@@ -73,7 +73,7 @@ microsoft-windows-cef-powershell = {
         """\sspt=({src_port}\d+)""",
 # src is removed
         """\ssuid=(N\/A|-|({user_uid}.+?))\s*\w+=""",
-        """\ssuser=(N\/A|-|({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
+        """\ssuser=(N\/A|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
         """\stime_reopen='({time}[^']+)'""",
         """\stype=({event_category}.+?)\s*\w+="""
         """CEF[^|]+\|({device_vendor}[^|]+)""",

@@ -11,7 +11,7 @@ Name = tyco-ccure-cef-app-login-success-operatorlogin
      """src=({host}[^\s]+)""",
      """\|start=({time}\d{13})""",
      """({app}C-CURE)""",
-     """\ssuid=(?:Unknown|(({domain}[^\\]+)\\?)?({user}[\w\.\-]{1,40}\$?))\s(\w+=|$)""",
+     """\ssuid=(?:Unknown|(({domain}[^\\]+)\\?)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s(\w+=|$)""",
      """\ssuser=(?:|({full_name}.+?))\s(\w+=|$)"""
     ]
 

@@ -15,8 +15,8 @@ Name = extrahop-revealx-json-alert-trigger-success-sec
      """"dnsNames":\["({dest_host}[^."]+)(\.({domain}[^"]+))?".+?victim""",
      """"title":"({alert_name}[^"]+)""",
      """"netbiosName":(null|"({sub_domain}[^"]+))""",
-     """"dnsNames":\["({query}[^"]+)"\]""",
-     """"status":(null|"({status}[^"\s]+))""",
+     """"dnsNames":\["({dns_query}[^"]+)"\]""",
+     """"status":(null|"({status_msg}[^"\s]+))""",
      """"riskScore":(null|({alert_severity}\d+))""",
   ]
   DupFields = ["alert_name->alert_type"]

@@ -14,7 +14,7 @@ Fields = [
   """ACTIVITY_DATETIME\s*=\s*({time}\d+\/\d+\/\d\d\d\d \d\d:\d\d:\d\d)"""
   """DOCNUM\s*=\s*({object}.+?)\s+(\w+\s+=|$)"""
   """ACTIVITY\s*=\s*({operation}.+?)\s+(\w+\s+=|$)"""
-  """DOCUSER\s*=\s*({user}[\w\.\-]{1,40}\$?)\s+(\w+\s+=|$)"""
+  """DOCUSER\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+\s+=|$)"""
   """APPNAME\s*=\s*({additional_info}.+?)\s+(\w+\s+=|$)"""
   """LOCATION\s*=\s*({dest_host}[\w\-.]+)\s+(\w+\s+=|$)"""
   """DOCNAME\s*=\s*({resource}.+?)\s+(\w+\s+=|$)"""

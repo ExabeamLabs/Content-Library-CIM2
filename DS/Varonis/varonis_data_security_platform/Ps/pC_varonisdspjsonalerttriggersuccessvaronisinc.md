@@ -16,7 +16,7 @@ Fields = [
    """\d\d:\d\d\s({host}[^\s]+)\sVaronis-DatAlert:"""
    """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
    """\sdvchost=(?:|({dest_ip}\d+\.\d+\.\d+\.\d+)|({dest_host}[\w\-.]+))\s\w+="""
-   """\sduser=(?:|((Abstract|({domain}[^\\]+))\\+)?(Nobody|SYSTEM|({user}[\w\.\-]{1,40}\$?)))\s+\w+="""
+   """\sduser=(?:|((Abstract|({domain}[^\\]+))\\+)?(Nobody|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
    """\sduser=(?:|((Abstract|({domain}[^\\]+))\\+)?(Nobody|SYSTEM|({full_name}[^\\\s,=]+\s+[^\\,=]+?)))\s+\w+="""
    """\sduser=(?:|(({domain}[^\\]+)\\+)?({last_name}[^\\,=]+?),\s*({first_name}[^\\,=]+))\s+\w+="""
    """\|Varonis Inc.\|([^|]*\|){3}({access}[^|]+)\|"""
@@ -27,7 +27,7 @@ Fields = [
    """\sdhost=(?:|({dest_ip}\d+\.\d+\.\d+\.\d+)|({dest_host}[\w\-.]+))\s+\w+="""
    """\soutcome=(?:|({result}\S+?))\s+\w+="""
    """\|Varonis Inc.\|([^\|]+\|){4}({alert_severity}\d+)\|"""
-   """SAMAccountName =(SYSTEM|not available|({user}[\w\.\-]{1,40}\$?))"""
+   """SAMAccountName =(SYSTEM|not available|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
  ]
  DupFields = [
   "alert_name->alert_type"

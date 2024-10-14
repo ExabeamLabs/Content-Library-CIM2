@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """failure\s+Event time:\s+({time}\d\d-\w+-\d\d\d\d\s+\d\d:\d\d:\d\d\.\d\d)"""
-"""failure\s+[^"]+Username:\s+({user}[\w\.\-]{1,40}\$?)\s+(\w+|$)"""
+"""failure\s+[^"]+Username:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+|$)"""
 """({event_name}Remote interactive login failure)"""
 """failure\s+[^"]+PID:\s+({process_id}[\w]+)\s+(\w+|$)"""
 """failure\s+[^"]+Process name:\s+({process_name}[^\s]+)\s+(\w+|$)"""

@@ -24,7 +24,7 @@ Fields = [
   """\saction=\"(NONE|({result}[^\"]+))\""""
   """\sthreat-severity=\"({alert_severity}[^\"]+)\""""
   """\sattack-name=\"({alert_name}[^\"]+)\""""
-  """\susername=\"(N\/A|({user}[\w\.\-]{1,40}\$?))\""""
+  """\susername=\"(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
   """\srulebase-name=\"({alert_type}[^\"]+)"""
 ]
 ParserVersion = "v1.0.0"

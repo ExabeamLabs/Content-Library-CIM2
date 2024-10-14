@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """\Wstart=({time}\d{13})"""
 """\WDevice_Name =(({domain}[^\\]+)\\+)?({host}[^\\\s]+)"""
-"""\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s"""
+"""\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s"""
 """Printer_Details=\{.*?"Name":\s*"({printer_name}[^"\s]+)"""
 """Printer_Pages=({num_pages}\d+)"""
 """Source_File_Name =({object}.+?)\s*(\w+=|$)"""

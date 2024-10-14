@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """ComputerName =({host}[^\s\n]+)"""
 """\sType=({alert_severity}[^\s\n]+)"""
-"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """RecordNumber=({alert_id}\d+)"""
 """Spyware/Grayware:\s({alert_name}.+?)\s+Computer:"""
 """(Endpoint|Computer):\s+({src_host}[^\s\n]+)"""

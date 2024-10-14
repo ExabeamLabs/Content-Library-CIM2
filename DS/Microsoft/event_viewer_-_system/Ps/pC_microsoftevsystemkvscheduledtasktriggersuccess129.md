@@ -23,7 +23,7 @@ windows-events-2 = {
    """"process_information.process_name"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
    """"process_information.process_id"+:"+({process_id}[^"]+)""",
    """"Computer"+:"+({host}[^"]+)""",
-   """"subject.account_name"+:"+(-|({email_address}({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
+   """"subject.account_name"+:"+(-|({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
    """"network_information.source_port"+:"+(-|({src_port}\d+))""",
    """"new_logon.account_domain"+:"+({domain}[^"]+)""",
    """"message"+:"+({additional_info}[^"]+)""",
@@ -37,7 +37,7 @@ windows-events-2 = {
    #"""exa_json_path=$.process_information.process_name,exa_field_name=process_path"""
    #"""exa_json_path=$.process_information.process_id,exa_field_name=process_id"""
    """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host"""
-   """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({email_address}({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))"""
+   """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))"""
    #"""exa_json_path=$.network_information.source_port,exa_field_name=src_port"""
    #"""exa_json_path=$.new_logon.account_domain,exa_field_name=domain"""
    """exa_json_path=$.log.jsonPayload.message,exa_field_name=additional_info"""

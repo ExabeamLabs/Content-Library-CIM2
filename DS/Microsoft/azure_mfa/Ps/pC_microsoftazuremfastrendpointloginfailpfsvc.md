@@ -15,7 +15,7 @@ Product = "Azure MFA"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\|"""
-"""Pfauth (?:failed|succeeded) for user '(?:({email_address}[^@']+@[^']+)|({user}[\w\.\-]{1,40}\$?))'"""
+"""Pfauth (?:failed|succeeded) for user '(?:({email_address}[^@']+@[^']+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'"""
 """Call status:\s*({call_status}.+?)\s*-\s*\""""
 """Pfauth failed for user.*?\-\s*\"({failure_reason}[^\"]+)\""""
 """({auth_method}Pfauth)"""

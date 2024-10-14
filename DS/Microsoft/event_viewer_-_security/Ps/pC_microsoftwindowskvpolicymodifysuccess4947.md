@@ -9,7 +9,7 @@ Name = microsoft-windows-kv-policy-modify-success-4947
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(am|AM|pm|PM))""",
     """EventCode=({event_code}\d+)\s*""",
-    """User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+""",
+    """User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+""",
     """({event_name}A change was made to the Windows Firewall exception list)""",
     """ComputerName =({host}[\w.\-]+)"""
     """RecordNumber=({event_id}\w+)"""

@@ -14,14 +14,10 @@ Conditions = [
 ]
 Fields = [
   """,analysed_time:\s*({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""
-  """from:\s*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """from:\s*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """,to:\s*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,]*?)\s*,"""
   """,subject:\s*({email_subject}[^,]*?)\s*,"""
   """,severity:\s*({alert_severity}[^,]*?)\s*,"""
-]
-DupFields = [
-  "dest_email_address->email_address"
-  "src_email_address->external_address"
 ]
 SOAR {
   IncidentType = "dlp"

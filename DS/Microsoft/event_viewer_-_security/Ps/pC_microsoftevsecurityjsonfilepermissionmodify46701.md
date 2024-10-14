@@ -13,9 +13,10 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670-1
     """exa_json_path=$..ObjectName,exa_regex=^(?:-|({object_name}[^"]+))$""",
     """exa_json_path=$..NewSd,exa_field_name=attribute""",
     """exa_json_path=$..Category,exa_field_name=category""",
-    """exa_json_path=$..Opcode,exa_field_name=severity"""
+    """exa_json_path=$..Opcode,exa_field_name=severity""",
+    """exa_json_path=$..ProcessName,exa_regex=^({file_path}({file_dir}[^,"]*?[\\\/]+)?({file_name}[^\\\/\s"]+?(\.({file_ext}[^"\s\.]+))?))$""",
+    """exa_json_path=$..param1,exa_regex=^({file_path}({file_dir}[^,"]*?[\\\/]+)?({file_name}[^\\\/\s"]+?(\.({file_ext}[^"\s\.]+))?))$""",
   ]
-  DupFields = ["process_name -> file_name"]
 
 json-windows-system-events = {
   Vendor = Microsoft
@@ -28,7 +29,7 @@ json-windows-system-events = {
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.EventType,exa_field_name=result""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
     """exa_json_path=$..ProcessId,exa_field_name=process_id""",

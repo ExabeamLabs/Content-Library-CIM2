@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-process-create-success-4688wls
       """EventID="+({event_code}[^"]+)"""",
       """NewProcessName ="+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))"""",
       """NewProcessName ="+({path}.+?)"""",
-      """SubjectUserName ="+(?=\w)({user}[\w\.\-]{1,40}\$?)"""",
+      """SubjectUserName ="+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """SubjectDomainName ="+(?=\w)({domain}[^"]+)"""",
       """SubjectLogonId="+({login_id}[^"]+)"""",
       """ProcessId="+({parent_process_guid}[^"]+)"""",

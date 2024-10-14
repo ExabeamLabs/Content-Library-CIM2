@@ -14,7 +14,7 @@ Fields = [
 """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
 """pfsvc:\s({additional_info}[^.$]+)."""
 """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+:\d+),({host}[^\s,]+),"pfsvc: User"""
-"""pfsvc: User\s+"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s]+)\\)?({user}[\w\.\-]{1,40}\$?))"""
+"""pfsvc: User\s+"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """changed user "+({target}[^"]+)"+\s+({additional_info}value\s+({operation}[^=]+?)\s+from[^\.]+)\."""
 """changed user "+({target}[^"]+)"+\s+({additional_info}value\s+({operation}[^=]+?)\s+from "+[^"]+"+ to "+(({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)|[^"]+)"+)\."""
 ]

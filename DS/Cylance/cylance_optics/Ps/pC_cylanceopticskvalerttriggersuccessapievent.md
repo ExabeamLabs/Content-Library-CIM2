@@ -19,7 +19,7 @@ kv-cylance-optics-events = {
     """Severity:\s*({alert_severity}[^,]+)"""
     """Description:\s*({additional_info}[^,]+)"""
     """Process Name:\s*(|({process_name}[^,]+)),"""
-    """Process Owner:\s*(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\/\/+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+    """Process Owner:\s*(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\/\/+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """Device Id:\s*({device_id}[^",]+)"""
     """Target Domain Name:\s*({dest_domain}[^,]+)"""
     """File Path:\s({file_path}[^,]+)"""

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """exa_json_path=$.@timestamp,exa_field_name=time""",
-  """exa_regex=\sradiusd\[\d+\]:\s*\(\d+\) Login ({result}OK):\s*\[({user}[\w\.\-]{1,40}\$?)\] \(from client ({src_host}[\w\-.]+) port ({src_port}\d+)"""
+  """exa_regex=\sradiusd\[\d+\]:\s*\(\d+\) Login ({result}OK):\s*\[({user}[\w\.\-\!\#\^\~]{1,40}\$?)\] \(from client ({src_host}[\w\-.]+) port ({src_port}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -14,7 +14,7 @@ Fields = [
   """({time}\w+ \d{1,2} [\d:]+ \d+):"""
   """\d{4}:[\s/]([^/]+)\/Security"""
   """/Security \(({event_code}680)\)"""
-  """Logon account:\s+({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation:\s+({dest_host}[\w\-.]+)"""
+  """Logon account:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\s.]+)[^\s]*)?\s+Source Workstation:\s+({dest_host}[\w\-.]+)"""
   """Error Code:\s+({result_code}[^\s]+)"""
 ]
 ParserVersion = "v1.0.0"

@@ -27,7 +27,7 @@ Fields = [
   """\sdvc=({host}[A-Fa-f:\d.]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\sduser=({user}[\w\.\-]{1,40}\$?)(@[^\s]+)?\s+cn1Label"""
+  """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@[^\s]+)?\s+cn1Label"""
   """\sduser=({email_address}[^@\s]+@[^,\s]+)"""
 ]
 SOAR {

@@ -7,7 +7,7 @@ Conditions = [
   """Sales Cloud"""
 ]
 Fields = ${SalesforceParsersTemplates.cef-salesforce-app-activity-1.Fields}[
-  """suser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
   """suser=({email_address}[^@\s]+?@[^@\s]+)\s*(\w+=|$)"""
   """Display\\=.*?({object}Ip WhiteList)"""
 ]

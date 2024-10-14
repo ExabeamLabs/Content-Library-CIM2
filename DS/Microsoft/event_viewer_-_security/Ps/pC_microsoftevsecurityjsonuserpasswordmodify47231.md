@@ -16,7 +16,7 @@ Fields = [
   """"SubjectUserSid":"({user_sid}[^"]+)"""
   """"EventType":"({result}[^"]+)"""
   """({event_code}4723)"""
-  """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""
+  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"SubjectDomainName":"({domain}[^"]+)"""
   """"SubjectLogonId":"({login_id}[^"]+)"""
   """"TargetSid":"({dest_user_sid}[^"]+)"""

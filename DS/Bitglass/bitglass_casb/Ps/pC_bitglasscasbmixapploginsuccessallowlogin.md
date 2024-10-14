@@ -14,7 +14,7 @@ ExtractionType = json
 Fields = [
   """"time":\s*"({time}\d+ \w+ \d\d\d\d \d\d:\d\d:\d\d)"""
   """"instancename":\s*"({host}[^"]+)""""
-  """"user":\s*"({user}[\w\.\-]{1,40}\$?)""""
+  """"user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"user":\s*"({full_name}[^"\s@]+\s+[^"\s@]+)""""
   """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"application":\s*"({app}[^"]+)""""
@@ -22,7 +22,7 @@ Fields = [
   """"useragent":\s*"({user_agent}.+?)","""
   """exa_json_path=$.time,exa_field_name=time"""
   """exa_json_path=$.instancename,exa_field_name=host"""
-  """exa_regex="user":\s*"({user}[\w\.\-]{1,40}\$?)""""
+  """exa_regex="user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """exa_json_path=$.user,exa_field_name=full_name"""
   """exa_json_path=$.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """exa_json_path=$.application,exa_field_name=app"""

@@ -11,7 +11,7 @@ Name = pingidentity-pi-cef-app-authentication-success-inprogress-1
     """\Wrt=({time}\w+\.? \d+ \d\d\d\d \d\d:\d\d:\d\d\.\d+)""",
     """\Wdvchost=({host}[\w\-.]+)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wduid=({user}[\w\.\-]{1,40}\$?)[\\\=]*\s+(\w+=|$)""",
+    """\Wduid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\\\=]*\s+(\w+=|$)""",
     """\Wduid=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """\Wcs2=(|({connection_id}[^=]+?))\s+(\w+=|$)""",
     """\Wcs3=(|({protocol}[^=]+?))\s+(\w+=|$)""",

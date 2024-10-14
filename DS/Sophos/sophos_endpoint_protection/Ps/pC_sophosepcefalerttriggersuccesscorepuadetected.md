@@ -19,7 +19,7 @@ Fields = [
   """Event::Endpoint::CorePuaDetection\|({additional_info}[^\|]+)\|"""
   """threat=({alert_name}[^=]+?)\s\w+="""
   """({alert_type}Event::Endpoint::CorePuaDetection)"""
-  """suser=(({full_name}({last_name}[^,]+),\s({first_name}[^=\(]+?)\s\([^\)]+\))|(({domain}[^\\\s=]+)\\+)({user}[\w\.\-]{1,40}\$?)|({email_address}[^@]+@[^@\s=]+?))\s\w+="""
+  """suser=(({full_name}({last_name}[^,]+),\s({first_name}[^=\(]+?)\s\([^\)]+\))|(({domain}[^\\\s=]+)\\+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}[^@]+@[^@\s=]+?))\s\w+="""
   """PUA detected: '[^']+' at '({malware_url}[^']+)'"""
 ]
 ParserVersion = "v1.0.0"

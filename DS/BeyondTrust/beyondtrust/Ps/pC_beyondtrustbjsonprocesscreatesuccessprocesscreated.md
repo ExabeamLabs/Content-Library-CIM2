@@ -13,7 +13,7 @@ Name = beyondtrust-b-json-process-create-success-processcreated
   """exa_json_path=$.Processes,exa_regex=process_path":"({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))""""
   """exa_json_path=$.Processes.process,exa_field_name=process_command_line"""
   """exa_json_path=$.Processes.action,exa_field_name=action"""
-  """exa_json_path=$.Processes.user,exa_regex=({user}[\w\.\-]{1,40}\$?)"""
+  """exa_json_path=$.Processes.user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """exa_json_path=$.Processes.dest,exa_regex=({dest_host}[\w\-\.]+)"""
   """exa_json_path=$.Processes.user_id,exa_field_name=user_sid"""
   """exa_json_path=$.Processes.description,exa_field_name=additional_info"""

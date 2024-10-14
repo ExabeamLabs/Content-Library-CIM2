@@ -10,7 +10,7 @@ Name = semperis-dsp-kv-app-login-logintodsp
     """Occured at \([^:]+: ({time}\d{2}\/\d{1,2}\/\d{4}\s\d{2}:\d{2}:\d{2}\.\d{4})""",
     """Operation:\s*({event_name}Login to DSP)""",
     """Result:\s*({result}[\S]+)""",
-    """Trustee Name:\s*((({domain}[^\\:]+?)|(NT AUTHORITY))\\+)?(({user}[\w\.\-]{1,40}\$?)|(SYSTEM))""",
+    """Trustee Name:\s*((({domain}[^\\:]+?)|(NT AUTHORITY))\\+)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(SYSTEM))""",
     """Product:\s*({app}DSP)""",
     """Source:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]

@@ -16,7 +16,7 @@ Fields = [
 """LastModifiedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
 """LastModifiedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))"""
 """({operation}resource-deleted)"""
-"""suser=(({email_address}[^@\s;=]+?@[^@\s;\.]+\.[^@\s;]+)|({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)"""
+"""suser=(({email_address}[^@\s;=]+?@[^@\s;\.]+\.[^@\s;]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)"""
 """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^@",\s]+))"""
 """fname=({object}.+?)\s+(\w+=|$)"""
 """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""

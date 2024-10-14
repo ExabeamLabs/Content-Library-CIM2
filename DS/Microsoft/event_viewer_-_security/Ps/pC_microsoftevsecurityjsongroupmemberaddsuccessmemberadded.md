@@ -16,7 +16,7 @@ Fields = [
 """"TimeGenerated":"({time}[^"]*)"""
 """"InstanceId":"({event_code}[^"]+)"""
 """"Message":"A member was added to a security-enabled ({group_type}[^\s]+) group."""
-""""6":"({user}[\w\.\-]{1,40}\$?)"""
+""""6":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"5":"({user_sid}[^"]+)"""
 """"7":"({domain}[^"]+)"""
 """"8":"({login_id}[^"]+)"""

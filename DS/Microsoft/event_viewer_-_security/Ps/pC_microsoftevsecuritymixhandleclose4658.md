@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """"Activity":"({event_name}[^"]+)""",
     """(<|")Computer(>|"):?"?({host}[^"<]+)""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<>]+)</Data>""",
-    """<Data Name\\*='SubjectUserName'>(SYSTEM|({user}[\w\.\-]{1,40}\$?))</Data>""",
+    """<Data Name\\*='SubjectUserName'>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<Data Name\\*='SubjectDomainName'>(NT AUTHORITY|({domain}[^<>]+))</Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)</Data>""",
     """<Data Name\\*='ObjectServer'>({object_server}[^<>]+)</Data>""",

@@ -15,7 +15,7 @@ Fields = [
 """({host}[^\s=]+)\sMSWinEventLog"""
 """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+"""
 """({event_code}4719)"""
-"""\s+Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain"""
+"""\s+Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain"""
 """\s+Account Domain:\s+({domain}[^\s]+)"""
 """\s+Logon ID:\s+({login_id}[^\s]+)"""
 """\s+Category:\s+({audit_category}.+?)\s+Subcategory:"""

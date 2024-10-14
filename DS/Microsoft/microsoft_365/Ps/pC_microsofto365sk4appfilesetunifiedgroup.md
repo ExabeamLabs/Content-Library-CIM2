@@ -16,8 +16,7 @@ o365-activity-template = {
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
     """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
     """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
-    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\\*"""",
-    """UserKey"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
     """"UserId\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?))))",""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
     """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
@@ -32,7 +31,7 @@ o365-activity-template = {
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
     """"AffectedItems"+:[\s\\]*\[({additional_info}[^=]+?)\s*\],""",
     """"ClientIP\\*"+:[\s\\]*"+\[?((0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))|((0\.0\.0\.0|({=src_ip}[a-fA-F\d.:]+))\]?(:({=src_port}\d+))?))"""",
-    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|([^#]+#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-]{1,40}\$?))))))\s""",
+    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|([^#]+#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))))\s""",
     """"ClientIPAddress\\*"+:[\s\\]*"+\[?(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))?""",
     """\sreason=(?:None|({failure_reason}[^\s]+))""",
     """\{"Value": "(?:None|({failure_reason}[^"]+))", "Name": "MethodExecutionResult."\}""",
@@ -50,6 +49,7 @@ o365-activity-template = {
     """"(browser|BrowserName)":"({browser}[^"]+)""""
     """"ClientInfoString":"({user_agent}[^"]+)","""
     """"UserType":"*({user_type}[^,}"]+)"*"""
+    """"correlationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = ["operation->event_name"
 }

@@ -10,7 +10,7 @@ Name = onapsis-o-json-alert-trigger-erphost
     Conditions=[ """"alarm_name":""", """"erp_host":""", """"incident_detail":""", """"incident_name": "Extraction problem detected in ICM: Extractors Adjusted"""  ]
     Fields=[
       """exa_json_path=$.created_at,exa_field_name=time""",
-      """exa_json_path=$.username,exa_regex=({user}[\w\.\-]{1,40}\$?)""",
+      """exa_json_path=$.username,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$.incident_name,exa_field_name=event_name""",
       """exa_json_path=$..alarm_name,exa_field_name=alert_name""",
       """exa_json_path=$.incident_detail,exa_field_name=additional_info""",

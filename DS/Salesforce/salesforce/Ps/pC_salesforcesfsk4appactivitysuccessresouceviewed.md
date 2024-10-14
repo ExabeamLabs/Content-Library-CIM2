@@ -13,7 +13,7 @@ Name = "salesforce-sf-sk4-app-activity-success-resouceviewed"
   ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s+""",
-    """\Wsuser=[^=]*?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """\Wsuser=[^=]*?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """msg=({additional_info}[^=]+?)\s\w+="""
     """\Wfname=({object}.+?)\s+(\w+=|$)"""
     """\WdestinationServiceName =({app}Sales Cloud)"""

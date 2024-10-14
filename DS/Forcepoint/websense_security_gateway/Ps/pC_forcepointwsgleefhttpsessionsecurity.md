@@ -12,7 +12,7 @@ Name = forcepoint-wsg-leef-http-session-security
       """\ssrcPort=({src_port}\d+)""",
       """\sdstPort=({dest_port}\d+)""",
       """\susrName =(?:\w+:\/+\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+({user_ou}[^\/]+)\/({full_name}.+?)\s+([\w\-]+=|$)""",
-      """\sloginID=(-|(({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
+      """\sloginID=(-|(({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
       """\|transaction:({action}[^\|]+)""",
       """\smethod=(?:-|({method}[^\s]+))""",
       """\ssrcBytes=({bytes_in}\d+)""",

@@ -23,7 +23,7 @@ Fields = [
 """exa_json_path=$..infection.confidence-level,exa_field_name=alert_severity""",
 """exa_json_path=$..applied-action,exa_field_name=action""",
 """exa_json_path=$..infected-object.file-object.file-path,exa_regex=^({file_path}(({file_dir}[^"]*?[\\\/]+)?({file_name}[^\\\/"]+?(\.({file_ext}\w+))?)))$""",
-"""exa_json_path=$..user.username,exa_regex=^((?i)SYSTEM|({user}[\w\.\-]{1,40}\$?))$""",
+"""exa_json_path=$..user.username,exa_regex=^((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
 """exa_json_path=$..user.domain,exa_regex=^((?i)NT AUTHORITY|({domain}[^"]+))$""",
 """exa_json_path=$..infected-object.file-object.md5sum,exa_field_name=hash_md5""",
 """exa_json_path=$..infected-object.file-object.sha1sum,exa_field_name=hash_sha1""",

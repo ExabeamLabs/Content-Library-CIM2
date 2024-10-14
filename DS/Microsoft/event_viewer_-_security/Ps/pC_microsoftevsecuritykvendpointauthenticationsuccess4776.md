@@ -20,7 +20,7 @@ spanish-windows-events = {
 	  """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+?)("|\s|;)""",
 	  """EventCode=({event_code}\d+)""",
 	  """Nombre de proceso(:|=)(\\t|\\r|\\n|\s)*({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))\s(\\t|\\r|\\n|\s)*""",
-	  """\s*Nombre de cuenta(:|=)(\\t|\\r|\\n|\s)*({user}[\w\.\-]{1,40}\$?)(\\t|\\r|\\n|\s)*""",
+	  """\s*Nombre de cuenta(:|=)(\\t|\\r|\\n|\s)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*""",
 	  """\s*Dominio de cuenta(:|=)(\\t|\\r|\\n|\s)*({domain}.+?)(\\t|\\r|\\n|\s)*Id. de inicio de sesión(:|=)""",
 	  """\s*Id. de inicio de sesión(:|=)(\\t|\\r|\\n|\s)*({login_id}[^\s]+)""",
 	  """\s*Servidor(:|=)(\\t|\\r|\\n|\s)*({object_server}.+?)(\\t|\\r|\\n|\s)*Nombre de servicio""",

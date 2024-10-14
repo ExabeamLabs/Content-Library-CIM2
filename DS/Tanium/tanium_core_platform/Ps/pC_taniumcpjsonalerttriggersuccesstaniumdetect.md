@@ -10,10 +10,10 @@ Name = tanium-cp-json-alert-trigger-success-taniumdetect
   Conditions = [ """TaniumDetect""", """Timestamp""", """Computer Name""", """Computer IP""" ]
   Fields = [
     """"Timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""",
-    """"User Name":"({user}[\w\.\-]{1,40}\$?)"""",
-    """"User Id":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"User Name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """"User Id":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"User Domain":"({domain}[^",]+?)"""",
-    """"user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[\w\.\-]{1,40}\$?))\\*"""",
+    """"user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""",
     """"Priority":"({alert_severity}[^",]+)"""",
     """"Event Name":"({alert_name}[^",]+)"""",
     """"Event Name":"({alert_type}[^",]+)"""",
@@ -33,7 +33,7 @@ Name = tanium-cp-json-alert-trigger-success-taniumdetect
     """exa_json_path=$.['User Name'],exa_field_name=user"""
     """exa_json_path=$.['User Domain'],exa_field_name=domain"""
     """exa_json_path=$.['User Domain'],exa_field_name=domain"""
-    """exa_json_path=$.['Other Parameters'],exa_regex="user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[\w\.\-]{1,40}\$?))\\*""""
+    """exa_json_path=$.['Other Parameters'],exa_regex="user\\*":\\*"((NT-AUTORITÄT|NT AUTHORITY|({domain}[^"\\]+))\\+)?(Système|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*""""
     """exa_json_path=$.Priority,exa_field_name=alert_severity"""
     """exa_json_path=$.['Event Name'],exa_field_name=alert_name"""
     """exa_json_path=$.['Event Name'],exa_field_name=alert_type"""

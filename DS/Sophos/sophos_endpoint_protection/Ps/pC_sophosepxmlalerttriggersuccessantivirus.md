@@ -14,7 +14,7 @@ Fields = [
 """<Computer>({src_host}.+?)</Computer>"""
 """<EventData><Data>({alert_name}.+?)</Data><Data>({file_path}({file_dir}[^<>]+?)?({file_name}[^<>\\\/]*?(\.({file_ext}\w+))?))(\\\w+)?</Data><Data>.*?</Data><Data>({alert_type}.+?)</Data><Data>.*?</Data><Data>({result}.+?)\.?\s*</Data>"""
 """<Computer>({src_host}.+?)</Computer>"""
-"""C:\\Users\\({user}[\w\.\-]{1,40}\$?)"""
+"""C:\\Users\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """</Message><Level>({alert_severity}[^\<]+)"""
 ]
 ParserVersion = "v1.0.0"

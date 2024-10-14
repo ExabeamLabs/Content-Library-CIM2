@@ -16,7 +16,7 @@ windows-events-4 = {
     """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",

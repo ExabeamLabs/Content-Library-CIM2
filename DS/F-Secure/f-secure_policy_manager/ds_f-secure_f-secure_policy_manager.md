@@ -6,7 +6,7 @@ Product: F-Secure Policy Manager
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   0   |   0    |         0          |       0        |    0    |
 
-|  Use-Case  | Activity Types(Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
+|  Use-Case  | Activity Types (Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
 |:----------:| ---- | ---- | ---- |
 | Enrichment |    |    | [](RM/r_m_f-secure_f-secure_policy_manager_Enrichment.md) |
 

@@ -9,7 +9,7 @@ Name = beyondtrust-passwordsafe-json-app-login-success-applogin
   Fields = [
     """"host":"({host}[^"]+)"""",
     """"createdate":"({time}\d{1,2}\/\d{1,2}\/\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s\w{1,2})"""",
-    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"username":"(({domain}[^\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"(sourceip|ipaddress)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"sourcehost":"({src_host}[^"]+)"""",
     """"({app}BeyondInsight)"""",

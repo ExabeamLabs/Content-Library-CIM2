@@ -19,7 +19,7 @@ Fields = [
 """shost=({dest_host}[\w\-.]+)\s+(\w+=|$)"""
 """deviceProcessName =({process_name}.+?)\s+(\w+=|$)"""
 """cs1=({additional_info}.+?)\s+(\w+=|$)"""
-"""duser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
+"""duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+="""
 ]
 DupFields = [
 "alert_name->alert_type"

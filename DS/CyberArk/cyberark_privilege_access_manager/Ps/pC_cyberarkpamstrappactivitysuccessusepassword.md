@@ -14,11 +14,11 @@ Fields = [
 """Protocol=({protocol}[^\s;]+)"""
 """SessionID=({session_id}[^\s;]+)"""
 """SrcHost=({src_host}[^\s;]+)"""
-"""User=(({domain}[^\\]*?)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""User=(({domain}[^\\]*?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Command=({command}[^\s;,]+)"""
 """ProcessName =({process_name}[^\s;,]+)"""
 """DstHost=({dest_host}[^\s;,]+)"""
-"""({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s+({host}[^\s]+)\s+\|({user}[\w\.\-]{1,40}\$?)\|[^\|]+\|({operation}[^\|]+)"""
+"""({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s+({host}[^\s]+)\s+\|({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|[^\|]+\|({operation}[^\|]+)"""
 ]
 ParserVersion = "v1.0.0"
 

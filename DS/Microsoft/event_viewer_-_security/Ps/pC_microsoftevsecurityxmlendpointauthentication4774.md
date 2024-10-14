@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-4774
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
-    """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """Account UPN:\s*(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Mapped Name:\s*({account}[^\s\<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]

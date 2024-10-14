@@ -22,7 +22,7 @@ defender-atp-events {
      """ActionType_s"+:\s*"+({result}[^",]+)""",
      """RemoteIPType_s"+:\s*"+(null|({direction}[^",]+))""",
      """DeviceName_s"+:\s*"+({dest_host}[\w\-.]+)""",
-     """InitiatingProcessAccountName_s"+:\s*"+(system|SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+     """InitiatingProcessAccountName_s"+:\s*"+(system|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
      """"ProcessIntegrityLevel_s"+:\s*"+({process_integrity}[^",]+)""",
      """InitiatingProcessAccountSid_s"+:\s*"+({user_sid}[^",]+)""",
      """InitiatingProcessFileName_s"+:\s*"+({parent_process_name}[^",]+)""",

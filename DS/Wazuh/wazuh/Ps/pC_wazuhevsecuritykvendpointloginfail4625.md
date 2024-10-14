@@ -13,7 +13,7 @@ Name = wazuh-evsecurity-kv-endpoint-login-fail-4625
     """exa_regex=Processus d\\u2019ouverture de session\\u00A0:\s*({auth_process}[^\s]+)\s*Package d\\u2019authentification\\u00A0:\s*({auth_package}[^\s]+)""",
     """exa_regex=\s*Compte pour lequel l\\u2019ouverture de session a \\u00E9chou\\u00E9\\u00A0:\s*ID de s\\u00E9curit\\u00E9\\u00A0:\s*(?:\/?NULL SID|({user_sid}.+?))\s*Nom du compte\\u00A0""",
     """exa_regex=ouverture de session a \\u00E9chou\\u00E9\\u00A0:.+?Domaine du compte\\u00A0:\s*(?=\w)({domain}.+?)\s*Informations sur l\\u2019\\u00E9chec\\u00A0""",
-    """exa_regex=ouverture de session a \\u00E9chou\\u00E9\\u00A0:.+?Nom du compte\\u00A0:\s*(?=\w)({user}[\w\.\-]{1,40}\$?)\s*Domaine du compte\\u00A0:""",
+    """exa_regex=ouverture de session a \\u00E9chou\\u00E9\\u00A0:.+?Nom du compte\\u00A0:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Domaine du compte\\u00A0:""",
     """exa_regex=Raison de l\\u2019\\u00E9chec\\u00A0:\s*({failure_reason}.+?)\s*\\u00C9tat\\u00A0:""",
     """exa_regex=Sujet.+?Nom du compte\\u00A0:\s*(?=\w)({src_user}.+?)\s*Domaine du compte\\u00A0:""",
     """exa_regex=Sujet.+?Domaine du compte\\u00A0:\s*(?=\w)({src_domain}[^:]+?)\\s*ID d\\u2019ouverture de session\\u00A0:""",

@@ -19,7 +19,7 @@ Fields = [
   """\sshost=({src_host}.+?)(\s+\w+=|\s*$)"""
   """\sdhost=({auth_server}.+?)(\s+\w+=|\s*$)"""
   """\ssourceTranslatedAddress=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+  """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
   """\sdntdom=({domain}.+?)(\s+\w+=|\s*$)"""
   """\sapp=({protocol}.+?)(\s+\w+=|\s*$)"""
   """\ssourceGeoCountryCode=({src_country_code}\w+)"""

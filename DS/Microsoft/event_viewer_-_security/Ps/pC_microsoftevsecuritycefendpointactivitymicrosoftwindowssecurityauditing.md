@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-cef-endpoint-activity-microsoftwindowssecurityauditi
     """\|Microsoft-Windows-Security-Auditing:({event_code}\d+)\|({event_name}[^\|=]+?)\|"""
     """ahost=({host}[^\s]+)"""
     """dvchost=({dest_host}[\w\-.]+)""",
-    """(s|d)user=(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"=]+))\s+\w+="""
+    """(s|d)user=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"=]+))\s+\w+="""
     """dntdom=({domain}.+?)\s+\w+="""
   ]
 

@@ -17,7 +17,7 @@ Fields = [
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """({event_name}The workstation was locked)"""
 """({event_code}4800)"""
-"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-]{1,40}\$?)"""
+"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)"""
 """Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)"""
 """Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""
@@ -26,7 +26,7 @@ Fields = [
 """<Category>({category}[^\<]+)<"""
 """<Severity>({alert_severity}[^\<]+)<""",
 """<TargetLogonId>({login_id}[^\<]+)<""",
-"""<TargetUserName>({user}[\w\.\-]{1,40}\$?)<""",
+"""<TargetUserName>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 """<TargetDomainName>({dest_domain}[^\<]+)<""",
 """<RecordNumber>({event_id}\d+)<""",
 """<TargetUserSid>({user_sid}[^\<]+)<""",

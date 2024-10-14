@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-process-create-success-processcreated
     """({event_code}4688)""",
     """Process Name:\s+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))\s+Token Elevation Type:""",
     """Process Name:\s+({path}.+?)\s+Token Elevation Type:""",
-    """Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)""",
+    """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)""",
     """New Process ID:\s+({process_guid}[^\s]+)\s""",
     """Creator Process ID:\s+({parent_process_guid}[^\s]+)\s""",
     """Process Command Line:\s+"({process_command_line}[^"]+)"\s""",

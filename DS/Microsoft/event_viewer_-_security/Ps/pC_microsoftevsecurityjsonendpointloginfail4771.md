@@ -23,8 +23,8 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """"(Hostname|MachineName|(?:winlog\.)?computer_name)\\*":\\*"({host}[\w\-\.]+)"""
     """({event_code}4771)"""
     """"(TargetSid|TargetDomainName)\\*":\\*"({user_sid}[^"\\]*)"""
-    """<Data Name ="TargetUserName">({user}[\w\.\-]{1,40}\$?)"""
-    """"TargetUserName\\*":\\*"({user}[\w\.\-]{1,40}\$?)"""
+    """<Data Name ="TargetUserName">({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """"TargetUserName\\*":\\*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """"ServiceName\\*":\\*"[^/]*\/({domain}[^"\\]*)""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({result}[^"]+?)\s*"""",
@@ -44,7 +44,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_regex=({event_code}4771)""",
     """exa_json_path=$..TargetSid,exa_field_name=user_sid""",
     """exa_json_path=$..TargetDomainName,exa_field_name=user_sid""",
-    """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$..ServiceName,exa_regex=^([\w\-.]+)\/({domain}[^\\\/\s"]+?)$""",
     """exa_json_path=$..eventRecordID,exa_field_name=event_id""",
     """exa_json_path=$..severityValue,exa_field_name=result""",

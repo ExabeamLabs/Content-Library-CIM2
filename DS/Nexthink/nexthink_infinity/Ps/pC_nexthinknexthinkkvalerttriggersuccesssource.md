@@ -13,7 +13,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)\s+({host}[\w.\-]+)\s+(\S+\s+){2}source \[.*?\] \[({alert_type}[^\[\]]+?)\] ({alert_name}.+?)\s+\["""
 """name="({src_host}[^"]+)"""
 """os_name="({os}[^"]+)"""
-"""last_login_user="({user}[\w\.\-]{1,40}\$?)@({domain}[^@"]+)"""
+"""last_login_user="({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^@"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

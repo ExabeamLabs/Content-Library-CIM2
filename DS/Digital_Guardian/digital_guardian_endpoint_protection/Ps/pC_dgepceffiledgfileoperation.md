@@ -23,7 +23,7 @@ Name = dg-ep-cef-file-dgfileoperation
     """\sshost=(([^\/\\=]+)[\/\\]+)?({src_host}\S+)""",
     """\sdst=({dest_host}\S+)""",
     """\sdhost=(([^\/\\=]+)[\/\\]+)?({dest_host}\S+)""",
-    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?)\s+(ad\.\S+=|\w+=|$)""",
+    """\ssuser=(({domain}[^\/\\=]+)[\/\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(ad\.\S+=|\w+=|$)""",
     """\ssproc=({process_name}.+?)\s+(ad\.\S+=|\w+=|$)""",
     """\|Digital Guardian\|(.*?\|){2}({event_code}.+?)\|""",
     """\soldFilePath=(|\?:\\+|({src_file_dir}.+?))\\*\s+(ad\.\S+=|\w+=|$)""",

@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-576
     """exa_json_path=$.record_number,exa_field_name=event_id""",
     """exa_json_path=$.user.identifier,exa_field_name=user_sid""",
     """exa_json_path=$.user.domain,exa_field_name=domain""",
-    """exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$..param4,exa_field_name=privileges""",
     """exa_json_path=$..Privileges,exa_field_name=privileges""",
     """exa_json_path=$..param3,exa_regex=\(([^,\s]+(,|\s))?(-|({login_id}.+?)\))""",

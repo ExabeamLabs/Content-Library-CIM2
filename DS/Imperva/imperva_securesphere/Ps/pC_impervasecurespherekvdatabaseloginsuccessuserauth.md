@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """\sdb-user=({db_user}[^,]+)"""
-  """\sos-user=({user}[\w\.\-]{1,40}\$?)"""
+  """\sos-user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\sapplication-name=({app}[^,]+)"""
   """\sservice-name=({service_name}[^,]+)"""
   """\sserver-group=({server_group}[^,]+)"""

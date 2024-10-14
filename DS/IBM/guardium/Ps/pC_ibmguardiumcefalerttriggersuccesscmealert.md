@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """\srt=({time}\d{13})"""
 """\scs5=(({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)|({table_name}\w+))"""
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+="""
 """\sduser=(|({db_user}.+?))\s*\w+="""
 """\scs3=(?: |({db_name}.+?))\s*\w+="""
 """\scs2=({server_group}.+?)\s*\w+="""

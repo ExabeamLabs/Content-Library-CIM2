@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4985
     """exa_json_path=$..EventTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
     """exa_json_path=$.ProcessId,exa_field_name=process_id""",
     """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",

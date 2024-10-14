@@ -5,7 +5,7 @@ Name = vectra-cs-kv-endpoint-login-success-metadatantlm
   TimeFormat = "epoch"
   Conditions = [ """COGNITO_STREAM""", """vectra_metadata_ntlm""", """METADATA_NTLM""" ]
   Fields = ${VectraParserTemplates.vectra-meta-data.Fields} [
-    """username="({user}[\w\.\-]{1,40}\$?)"""",
+    """username="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """domain="({domain}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"

@@ -29,7 +29,7 @@ azure-event-hub-network-events = {
     """"RemoteUrl"+:"+({url}[^",]+)""",
     """domainorigin=({web_domain}[^|]+)""",
     """"InitiatingProcessId":({process_id}\d+)""",
-    """"InitiatingProcessAccountName":"(system|SYSTEM|NETWORK SERVICE|local service|({user}[\w\.\-]{1,40}\$?))""",
+    """"InitiatingProcessAccountName":"(system|SYSTEM|NETWORK SERVICE|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"InitiatingProcessAccountSid"+:"+({user_sid}[^"]+)""",
   
 }

@@ -9,7 +9,7 @@ Name = tripwire-t-cef-alert-trigger-success-filemodified
   Fields = [
     """\|rt=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
     """\|dvchost=({host}[^|]+)\|""",
-    """\|duser=(?:not available|(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?))\|""",
+    """\|duser=(?:not available|(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
     """\|Tripwire\|([^|]*\|){3}({alert_name}[^|]+)\|""",
     """\|cs2=({access}[^|]+)\|""",
     """\|cs3=({alert_type}[^|]+)\|""",

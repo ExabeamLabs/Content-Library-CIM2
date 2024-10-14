@@ -13,7 +13,7 @@ Fields = [
 """deviceCustomDate1(":\s+"|=)({time}\d{13}).*?"?deviceCustomDate1Label(":"|=)DetectionDate"""
 """"deviceCustomDate1Label(": "|=)DetectionDate".*?"deviceCustomDate1(":\s+"|=)({time}\d+)"""
 """\shost_masked="({host}[^",]+)"""
-"""\sduser="?(?:None|({user}[\w\.\-]{1,40}\$?))"""
+"""\sduser="?(?:None|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\sdvc_masked="({host}[^",]+)"""
 """\shost_ip_masked="({host}[^",]+)"""
 """\shost_masked="({host}[^",]+)"""

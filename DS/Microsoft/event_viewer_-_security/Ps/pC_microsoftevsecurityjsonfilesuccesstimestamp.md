@@ -17,7 +17,7 @@ Fields = [
   """"record_number"\s*:\s*\"({event_id}\d+)"""
   """({event_code}4663)"""
   """"SubjectUserSid"\s*:\s*\"({user_sid}[^\"]+)"""
-  """"SubjectUserName"\s*:\s*\"({user}[\w\.\-]{1,40}\$?)"""
+  """"SubjectUserName"\s*:\s*\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"SubjectDomainName"\s*:\s*\"({domain}[^\"]+)"""
   """"SubjectLogonId"\s*:\s*\"({login_id}[^\"]+)"""
   """"ObjectType"\s*:\s*\"({file_type}[^\"]+)"""

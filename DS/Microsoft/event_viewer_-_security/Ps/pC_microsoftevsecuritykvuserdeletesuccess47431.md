@@ -16,7 +16,7 @@ Fields = [
 """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)"""
 """({event_code}4743)"""
 """:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog"""
-"""Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Account Domain:\s+(?=\w)({domain}[^:]+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+"""
+"""Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+(?=\w)({domain}[^:]+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+"""
 """Target Computer:\s+Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({dest_user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({dest_user}[^:]+?)\s+Account Domain:\s+(?=\w)({object_dn}[^:]+?)\s+Additional Information:"""
 ]
 DupFields = [

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),.+?ovirt"""
 """Validation of action '({operation}[^']+)"""
-"""failed for user ({user}[\w\.\-]{1,40}\$?)(@({domain}[^@\s]+))?.+Reasons:"""
+"""failed for user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@\s]+))?.+Reasons:"""
 """Reasons:\s*({failure_reason}[^"]+?)\s*$"""
 """({app}ovirt)"""
 ]

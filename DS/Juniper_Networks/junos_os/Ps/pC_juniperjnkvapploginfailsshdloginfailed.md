@@ -8,7 +8,7 @@ Name = juniper-jn-kv-app-login-fail-sshdloginfailed
   Conditions = [ """ sshd - SSHD_LOGIN_FAILED""", """ Login failed""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\-|\+)\d\d:\d\d) ({host}[\w\-.]+) sshd - SSHD_LOGIN_FAILED""",
-    """username="({user}[\w\.\-]{1,40}\$?)""",
+    """username="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """source-address="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
   DupFields = [ "host->dest_host" ]

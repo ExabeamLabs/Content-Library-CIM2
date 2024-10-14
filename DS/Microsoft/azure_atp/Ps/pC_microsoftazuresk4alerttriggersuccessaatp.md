@@ -20,7 +20,7 @@ Fields = [
   """"id":"({alert_id}[^"]+)"""
   """"sourceMaterials":\["({malware_url}[^"]+)"""
   """"title":"({alert_name}[^"]+)"""
-  """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""
+  """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   """"userPrincipalName":"((?i)null|({email_user}[^\@"]+\@([^\."]+\.)*\w+))"""
   """"logonLocation":((?i)null|({src_location}[^"]+))"""
   """"status":"({alert_status}[^",]+)"""

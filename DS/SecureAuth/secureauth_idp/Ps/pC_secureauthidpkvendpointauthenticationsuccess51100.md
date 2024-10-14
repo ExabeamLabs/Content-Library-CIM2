@@ -6,7 +6,7 @@ Name = secureauth-idp-kv-endpoint-authentication-success-51100
   ParserVersion = "v1.0.0"
   Conditions = [ """EventID="51100"""", """RequestID=""", """BrowserSession=""", """PEN=""" ]
   Fields = ${SecureAuthDLParsersTemplates.secure-auth-events.Fields} [
-    """\suidStr:[^"]*?CN=({user}[\w\.\-]{1,40}\$?)\,""",
+    """\suidStr:[^"]*?CN=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\,""",
     """\suidStr:({user_dn}[^":]+)\s*(,\s|"*$)"""
   ]
 
@@ -21,7 +21,7 @@ secure-auth-events = {
     """\WRealm="({realm}[^"]+)""",
     """\WAppliance="({host}({dest_host}[\w\-.]+))""",
     """\WHostName ="({host}[\w\-.]+)"""",
-    """\WUserID="(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
+    """\WUserID="(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\WPriority="({priority}\d+)""",
     """\WEventID="({event_code}\d+)""",
     """UserAgent="(?:-|Mozilla\/.+({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin).+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))""",

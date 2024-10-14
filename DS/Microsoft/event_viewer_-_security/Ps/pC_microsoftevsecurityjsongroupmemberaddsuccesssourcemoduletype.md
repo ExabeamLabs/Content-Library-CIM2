@@ -18,13 +18,13 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """"EventID":({event_code}[^,]+)""",
     """"RecordNumber":({event_id}[^,]+)""",
     """"Message":"A member was added to a security-enabled ({group_type}[^\s]+) group.""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"SubjectDomainName":"({domain}[^"]+)""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"TargetUserName":"({group_name}[^"]+)""",
     """"TargetDomainName":"({group_domain}[^"]+)""",
-    """"MemberSid":"({account_id}[^"]+)""",
+    """"MemberSid":"(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s"]+))""",
     """"MemberName":"({user_dn}[^"]+)""",
     """"MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""
     """exa_regex=({event_name}A member was added to a security-enabled [\w\s]+ group)"""

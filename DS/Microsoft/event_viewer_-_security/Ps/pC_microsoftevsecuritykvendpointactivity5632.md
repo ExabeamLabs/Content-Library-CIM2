@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-5632
     """Keywords=({result}[^=]+?)\s+\w+=""",
     """Message=({event_name}[^:]+?)\s+\w+:""",
     """Subject:\s+Security ID:\s+(\s+|({user_sid}[^:]+?))\s+Account Name:""",
-    """Subject:.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Network Information:\s*Name\s*\(SSID\):\s*({ssid}[^\s]+)""",

@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-process-create-success-newprocess
       """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"DomainID":"({domain}[^"]+)""",
       """"HostID":"({host}({src_host}[\w\-.]+))""",
-      """"UserIDSrc":"({user}[\w\.\-]{1,40}\$?)""",
+      """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"Security_ID":"({user_sid}[^"]+)""",
       """"Process_Name":"({process_path}({process_dir}[^"]*?)(\\u005|[\\\/])*({process_name}[^\\\/"]+?))"""",
       """"Source_Logon_ID":"({login_id}[^"]+)"""

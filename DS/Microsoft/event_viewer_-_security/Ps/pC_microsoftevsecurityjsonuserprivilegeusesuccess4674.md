@@ -18,7 +18,7 @@ Fields = [
   """EventType"*:"*({result}[^"]+)"""
   """ProcessName"*:"*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
   """"SubjectUserSid"*:"*(SYSTEM|({user_sid}[^"]+))"""
-  """"SubjectUserName"*:"*(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+  """"SubjectUserName"*:"*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """"SubjectDomainName"*:"*({domain}[^"]+)"""
   """"SubjectLogonId"*:"*({login_id}[^"]+)"""
   """"ProcessID"*:({process_id}[^,"]+)"""

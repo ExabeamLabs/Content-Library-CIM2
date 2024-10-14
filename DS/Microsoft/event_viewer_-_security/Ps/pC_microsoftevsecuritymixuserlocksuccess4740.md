@@ -27,14 +27,14 @@ Fields = [
 """"system_name":"(::ffff:)?({host}[\w.\-]+)""""
 """Security,?(\srn=|\s+)?({event_id}\d+)"""
 """Subject:.+?Account Name:(\\t|\\r|\\n|\s)*({src_user}[^:]+?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*(?=\w)({src_domain}[^:]+?)(\\t|\\r|\\n|\s)*Logon ID:(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*"""
-"""Locked Out:\s+Security ID:\s*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Account Name:\s*(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Additional""",
-"""Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-]{1,40}\$?)"""
+"""Locked Out:\s+Security ID:\s*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Account Name:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Additional""",
+"""Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"targetUserName":"({dest_user}[^"]+)"""",
 """Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
 """\Weventrecordid="({event_id}\d+)""""
 """Subject(:|=).+?Logon ID(:|=)(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*Account""",
 """Subject(:|=).+?Account Name(:|=)\s*({src_user}[^\s]*?)(\\n)*[\s;]*Account Domain(:|=)""",
-"""Locked Out:(\\n)*\s+Security ID:\s*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?(\\n)*\s+Account Name:\s*(?=\w)({user}[\w\.\-]{1,40}\$?)(\\n)*\s*Additional""",
+"""Locked Out:(\\n)*\s+Security ID:\s*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?(\\n)*\s+Account Name:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\n)*\s*Additional""",
 """\W__li_source_path="({host}[\w\.-]+)"""",
 ]
 DupFields = [

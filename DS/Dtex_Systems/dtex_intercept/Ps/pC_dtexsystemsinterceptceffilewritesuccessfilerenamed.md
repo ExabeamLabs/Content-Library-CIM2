@@ -10,7 +10,7 @@ Name = "dtexsystems-intercept-cef-file-write-success-filerenamed"
     """\Wstart=({time}\d{13})""",
     """\|Dtex\|([^\|]+\|){2}(FileSystemActivity\|)?({access}[^\|]+)\|""",
     """\WDevice_Name =(({domain}[^\\]+)\\+)?({host}[^\\\s]+)""",
-    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
+    """\WUser_Name =(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s""",
     """\WProcess_Name =(?:\s+|({process_name}.+?)\s+)(\w+=|$)""",
     """\WProcess_Directory=(?:\s+|({process_dir}.+?)\s+)(\w+=|$)""",
     """\WDestination_File_Extension=({file_ext}[^\s]+)\s""",

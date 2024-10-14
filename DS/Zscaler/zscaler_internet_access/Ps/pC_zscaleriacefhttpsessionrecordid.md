@@ -16,8 +16,8 @@ Name = zscaler-ia-cef-http-session-recordid
   ]
   Fields = [
     """HOST\|({host}[^\|]+)""",
-    """CONTENTTYPE\|([^\|]*\|){2}(NA|({user}[\w\.\-]{1,40}\$?))\|(NA|({host}[\w\-.]+))""",
-    """LOGINNAME\|(({email_address}[^\|]+@[^\|]+)|({user}[\w\.\-]{1,40}\$?))\|""",
+    """CONTENTTYPE\|([^\|]*\|){2}(NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|(NA|({host}[\w\-.]+))""",
+    """LOGINNAME\|(({email_address}[^\|]+@[^\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
     """REASON\|({proxy_action}[^\|]+)""",
     """ACTION\|({action}[^\|]+)""",
     """REQMETHOD\|(NA|({method}[^\|]+))""",
@@ -37,7 +37,7 @@ Name = zscaler-ia-cef-http-session-recordid
     """DLPENGINE\|(None|({dlp_eng}[^|]+))""",
     """LOCATION\|(None|({location}[^|]+))""",
     """DEPARTMENT\|(None|({department}[^|]+))""",
-    """MALWARECAT\|(None|({malware_category}[^|]+))""",
+    """MALWARECAT\|(None|({malware_family}[^|]+))""",
     """CONTENTTYPE\|(None|({mime}[^\|]+))"""
     ]
   

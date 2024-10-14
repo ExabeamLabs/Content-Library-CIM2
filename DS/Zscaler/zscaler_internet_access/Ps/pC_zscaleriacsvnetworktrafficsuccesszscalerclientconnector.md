@@ -28,7 +28,7 @@ Name = zscaler-ia-csv-network-traffic-success-zscalerclientconnector
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){28}"({duration}[^"]+)""""
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){30}"({session_id}[^"]+)""""
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){32}"(None|({threat_category}[^"]+))""""
-    """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){34}"(None|({user}[\w\.\-]{1,40}\$?))""""
+    """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){34}"(None|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){35}"(NA|({src_host}[\w\-.]+))"""
       ]
 

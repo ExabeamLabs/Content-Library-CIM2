@@ -14,7 +14,7 @@ Name = cyberark-pam-kv-user-switch-success-retrievepassword
     """;IP="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """;Safe="({safe_value}[^"]+)""",
     """;GatewayStation="(|({gateway_station}[^"]+))""",
-    """;UsuarioCyberArk="({user}[\w\.\-]{1,40}\$?)""",
+    """;UsuarioCyberArk="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
   DupFields = [ "dest_user->account" ]
   ParserVersion = "v1.0.0"

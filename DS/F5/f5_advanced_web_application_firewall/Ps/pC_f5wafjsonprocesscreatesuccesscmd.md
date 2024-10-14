@@ -4,7 +4,7 @@
 Name = f5-waf-json-process-create-success-cmd
   Conditions = [ """"log_type":"WAF"""", """"log_vendor":"f5"""", """ CMD """, """]: (""" ]
   Fields = ${F5ParsersTemplates.f5-waf-activity.Fields} [
-    """\(({user}[\w\.\-]{1,40}\$?)\) CMD""",
+    """\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) CMD""",
     """\sCMD \(\s*({process_command_line}[^\)]+)\)""",
     """\sCMD \(\s*[^\/]*?({process_path}({process_dir}\/[^\)]*?)({process_name}[^\/]*?[^\\]))((\\\\)*\s|\))"""
   ]

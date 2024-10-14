@@ -10,7 +10,7 @@ Conditions = [
 """download_time:"""
 ]
 Fields = [
-"""login:\s*"*({user}[\w\.\-]{1,40}\$?)"""
+"""login:\s*"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """login:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """ordernum:\s*"*({order_num}\d+)"""
 """s_date:\s*"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""

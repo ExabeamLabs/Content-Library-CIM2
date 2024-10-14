@@ -17,7 +17,7 @@ Fields = [
   """resource=({dest_host}[^=]+?)\s*\w+="""
   """application=({app}[^=]+?)\s*\w+="""
   """message=({alert_name}[^\"]+?)\s*$"""
-  """usrName =(N\/A|(({domain}[^\\\s]+)\\)?({user}[\w\.\-]{1,40}\$?))\s*\w+="""
+  """usrName =(N\/A|(({domain}[^\\\s]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+="""
   """LEEF\s({event_code}\d+)"""
   """sev=({alert_severity}\d+)"""
 ]

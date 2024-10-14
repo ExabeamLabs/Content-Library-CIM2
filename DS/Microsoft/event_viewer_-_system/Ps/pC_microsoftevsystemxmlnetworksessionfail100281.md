@@ -8,7 +8,7 @@ Name = microsoft-evsystem-xml-network-session-fail-10028-1
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<Provider Name ='Microsoft-Windows-DistributedCOM'""", """<EventID Qualifiers='""", """>10028<""", """<Computer>""", """<Data Name ='param3'>""" ]
   Fields = [
-    """<Computer>({host}[^<]+)</Computer>""",
+    """<Computer>({host}[\w\.\-]+)<""",
 	  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """>({event_code}\d+)</EventID>""",

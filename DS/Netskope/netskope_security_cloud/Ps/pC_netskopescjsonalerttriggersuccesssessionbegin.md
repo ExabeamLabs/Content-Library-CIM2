@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """"dstip": "({host}[^"]+)","""
 """"timestamp": ({time}\d{10})"""
-""""user": "(?![^\s]+@[^\s]+)({user}[\w\.\-]{1,40}\$?)""""
+""""user": "(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"user": "(?=[^\s]+@[^\s]+)({email_address}[^"\s@]+@[^"\s@]+)""""
 """"policy": "({alert_name}[^"]+).*({alert_type}policy)"""
 """"alert_name": "({alert_name}[^"]+)""""

@@ -12,8 +12,8 @@ Name = microsoft-evsystem-kv-service-create-success-7045
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))\s+LogName =""",
     """({event_code}7045)""",
     """ComputerName =({host}[\w\-.]+)""",
-    """User=\s*({user}[\w\.\-]{1,40}\$?)\s+Sid=({user_sid}[^\s]+)""",
-    """Service Name:\s+({service_name}.+?)\s+Service File Name:""",
+    """User=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Sid=({user_sid}[^\s]+)""",
+    """Service Name:\s*(\\+r|\\+t|\\+n)*(({service_name}[^=:\\_]+?)(_[^"\<]+?)?)\s*(\\+r|\\+t|\\+n)*Service File"""
     """Service File Name:\s+(|-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/\s]+)))\s+Service Type:""",
     """Service Type:\s+({service_type}.+?)\s+Service Start Type:""",
     """Service Account:\s+({account_name}.+?)\s*(\w+=|$)"""

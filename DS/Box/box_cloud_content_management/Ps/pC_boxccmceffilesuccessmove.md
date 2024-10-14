@@ -11,13 +11,14 @@ Name = "box-ccm-cef-file-success-move"
   ]
   Fields = [
     """"created_at":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
-    """"source":.*?"item_name":"({file_name}[^"]+\.({file_ext}[^"]+|))""",
+    """"source":.*?"item_name":"({file_name}[^"]+?(\.({file_ext}[^"\s]+))?)"""",
     """"source":.*?"item_type":"({file_type}[^",]+)""",
-    """"login":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"login":"({email_address}[^\s",@]+@[^\s",@]+)""",
     """"event_type":"({access}[^",]+)""",
     """"ip_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"parent":.*?"name":"({file_dir}[^",]+)""",
+    """"file_path":"({file_dir}[^"]+)"""",
     """"service_name":"({process_name}[^",]+)""",
     """"size":({bytes}\d+)""",
     """({app}Box)""",

@@ -4,7 +4,7 @@
 Name = goanywhere-gamft-kv-file-download-success-download
   Conditions = [ """GoAnywhereServicesevent_type="Download Successful"""","""GoAnywhereServicescommand="Download"""","""GoAnywhereServicesremote_ip="""" ]
   Fields = ${GoAnywhereParsersTemplates.goanywhere-events.Fields}[
-     """GoAnywhereServicesvirtual_path="({file_path}[^"]*\/({file_name}[^"]*))"""",
+     """GoAnywhereServicesvirtual_path="({file_path}[^"]*\/({file_name}[^"]*?(\.({file_ext}[^"\.]+))?))"""",
      """"({operation}Download)""""
   ]
   ParserVersion = v1.0.0
@@ -17,7 +17,7 @@ goanywhere-events = {
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d[+-]\d\d:\d\d)\s({dest_host}[\w\-.]+)""",
       """GoAnywhereServiceslocal_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """GoAnywhereServicesremote_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-      """GoAnywhereServicesuser_name="(({email_address}[^@"]+@[^\.]+\.[^"]+)|(admin|666666|guest|({user}[\w\.\-]{1,40}\$?)))"""",
+      """GoAnywhereServicesuser_name="(({email_address}[^@"]+@[^\.]+\.[^"]+)|(admin|666666|guest|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
       """GoAnywhereServicesevent_type="({event_name}[^"]+)"""",
     
 }

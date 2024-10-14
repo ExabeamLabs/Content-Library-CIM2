@@ -13,7 +13,7 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s*({host}[^\s]+)\s"""
   """eventid="+({event_code}\d+)"""
   """providername="+({provider_name}[^"]+)"""
-  """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))"""
+  """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """\stask="+({operation}[^"]+)"""
   """\Weventrecordid="+({event_id}\d+)""""
   """({event_name}A new external device was recognized by the system)"""
@@ -22,7 +22,7 @@ Fields = [
   """\sAccount Domain:\s*({domain}.+?)\s*Logon ID:"""
   """\sLogon ID:\s*({login_id}[^\s]+)"""
   """\sDevice ID:\s*({device_id}[^\s]+)"""
-  """\sDevice Name:\s*({device_name}.+?)\s*Class ID:"""
+  """\sDevice Name:\s*({device_description}.+?)\s*Class ID:"""
   """\sClass ID:\s*({class_id}.+?)\s*Class"""
   """\sClass Name:\s*({class_name}.+?)\s*Vendor IDs:"""
 ]

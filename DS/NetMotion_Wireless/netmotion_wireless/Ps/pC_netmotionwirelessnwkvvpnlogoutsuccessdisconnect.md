@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """Log_Date_Time=({time}\d{13})"""
 """Device_Name ="+({src_host}[^\"]+)"""
-"""User_Name ="+([^\\]+\\)?({user}[\w\.\-]{1,40}\$?)"""
+"""User_Name ="+([^\\]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

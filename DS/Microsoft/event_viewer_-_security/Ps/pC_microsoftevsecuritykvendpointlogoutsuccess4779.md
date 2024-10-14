@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """TIME_GENERATED\s*=\s*({time}\d{10})"""
 """({host}[\w\-.]+) ADAuditPlus"""
-"""USERNAME\s*=\s*({user}[\w\.\-]{1,40}\$?)"""
+"""USERNAME\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """DOMAIN\s*=\s*({domain}[^\s\]]+)"""
 """CLIENT_IP_ADDRESS\s*=\s*(LOCAL|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 """CLIENT_HOST_NAME\s*=\s*(Unknown|({dest_host}[\w\-.]+))"""

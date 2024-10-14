@@ -4,7 +4,7 @@
 Name = tanium-im-json-file-permission-modify-success-permission
   Conditions = [ """"event":"file_permission_change"""",""""permission":"""",""""process__file__full_path":"""" ]
   Fields = ${TaniumParserTemplates.tanium-operations-1.Fields}[
-    """exa_json_path=$.fields.['process__file__full_path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+))"""
+    """exa_json_path=$.fields.['process__file__full_path'],exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\.\s"\\\/]+))?))$"""
   ]
   ParserVersion = "v1.0.0"
 

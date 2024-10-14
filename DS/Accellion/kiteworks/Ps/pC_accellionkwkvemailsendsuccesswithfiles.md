@@ -18,7 +18,6 @@ Name = accellion-kw-kv-email-send-success-withfiles
     """s*with files \[({email_attachment}[^\],]*(\.({file_ext}\w+)))"""
     """\sTo:\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
-  DupFields = [ "dest_email_address->external_address" , "email_address->src_email_address" ]
 
 
 }

@@ -22,7 +22,7 @@ Fields = [
 """shost=({src_host}[\w\-.]+)\s+(\w+=|$)"""
 """deviceProcessName =({process_name}.+?)\s+(\w+=|$)"""
 """cs1=({additional_info}.+?)\s+(\w+=|$)"""
-"""duser=({user}[\w\.\-]{1,40}\$?)\s*\w+="""
+"""duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+="""
 """({event_code}DB2_AU05)"""
 """({event_name}DB2Aud005_Login_Logout_Activity)"""
 ]

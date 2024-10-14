@@ -23,9 +23,9 @@ ping-events-3 = {
     """connectionid=(|({connection_id}[^=]+?))\s+(\w+=|$)""",
     """protocol=(|({protocol}[^=]+?))\s+(\w+=|$)""",
     """pfhost=(|({host}[\w.-]+?))\s+(\w+=|$)""",
+    """\sbrowser=\\"({user_agent}[^"]+?)\\?"""",
     """useragent="({user_agent}[^"]+)"""",
     """description="({additional_info}[^"]]+)""""
-    """subject="(|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?:[^"]+?:)?({user}[\w\.\-]{1,40}\$?)))"""",
-  
+    """\ssubject="?(||(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\-\s"\\,;\|]+\.[^\]\s"\\,;\|\-]+))|(?:[^"]+?:)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\-[^"]+)?"?(,|\s\w+=)"""  
 }
 ```

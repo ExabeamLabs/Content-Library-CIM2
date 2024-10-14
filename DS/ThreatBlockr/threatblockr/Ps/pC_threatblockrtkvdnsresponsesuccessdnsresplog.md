@@ -15,8 +15,8 @@ Name = threatblockr-t-kv-dns-response-success-dnsresplog
     """\sproto=({protocol}[^=]+?)(,\s\w+=|\s*$)""",
     """\saction=({action}[^=]+?)(,\s\w+=|\s*$)""",
     """\sreason=({additional_info}[^=]+?)(,\s\w+=|\s*$)""",
-    """\squery_name=({query}[^=]+?)(,\s\w+=|\s*$)""",
-    """\squery_type=({query_type}[^=]+?)(,\s\w+=|\s*$)""",
+    """\squery_name=({dns_query}[^=]+?)(,\s\w+=|\s*$)""",
+    """\squery_type=({dns_query_type}[^=]+?)(,\s\w+=|\s*$)""",
     """\sanswer_value=({response}[^=]+?)(,\s\w+=|\s*$)"""
   ]
   DupFields = [ "action->result" ]

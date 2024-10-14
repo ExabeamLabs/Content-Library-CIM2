@@ -11,7 +11,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
 """({host}[\w\-.]+)\s+Sensitive Privilege Use""",
 """({event_code}4674)""",
-"""SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
+"""SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
 """SubjectDomainName:({domain}[^,]+),""",
 """SubjectLogonId:({login_id}[^,]+),""",
 """PrivilegeList:({privileges}[^:]+),\s+\w+:""",

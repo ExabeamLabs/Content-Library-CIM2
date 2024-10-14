@@ -22,7 +22,7 @@ Fields = [
 """SubjectUserName ="+(?=\w)({src_user}[^"]+)""""
 """SubjectDomainName ="+(?=\w)({src_domain}[^"]+)""""
 """TargetDomainName ="(?:-|({domain}[^"]+))"""
-"""TargetUserName ="+(?=\w)({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\s]+))?""""
+"""TargetUserName ="+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\s]+))?""""
 """TargetUserSid="+({user_sid}[^"]+)""""
 """WorkstationName ="+(-|({src_host_windows}[^"]+))""""
 """FailureReason="+({failure_reason}[^"]+)""""

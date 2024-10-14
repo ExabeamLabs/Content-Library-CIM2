@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-handle-request-success-4656
   Fields = [
     """exa_json_path=$.['data.id'],exa_field_name=event_code""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
-    """exa_json_path=$.['data.dstuser'],exa_regex=(\(no user\)|({dest_user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.['data.dstuser'],exa_regex=(\(no user\)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.['data.status'],exa_field_name=result""",
     """exa_json_path=$.location,exa_field_name=log_location""",
     """exa_json_path=$.['data.data'],exa_field_name=data""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-json-handle-request-success-4656
     """exa_json_path=$.['decoder.name'],exa_field_name=decoder_name""",
     """exa_json_path=$.full_log,exa_regex=({event_name}A handle to an object was ({operation_type}requested))""",
     """exa_json_path=$.['data.subject.security_id'],exa_field_name=user_sid""",
-    """exa_json_path=$.['data.subject.account_name'],exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.['data.subject.account_name'],exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.['data.subject.account_domain'],exa_field_name=domain""",
     """exa_json_path=$.['data.subject.logon_id'],exa_field_name=login_id""",
     """exa_json_path=$.full_log,exa_regex=Object Server:\s*({object_server}\S.*?)\s+Object Type:""",

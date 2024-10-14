@@ -16,7 +16,7 @@ Fields = [
 """CallerLogonId=\"+\([^,]+,({login_id}[^\)]+)\""""
 """CallerUserName =\"+({src_user}[^\"]+)\""""
 """TargetAccountID=\"+\%\{({user_sid}[^}]+)\}\""""
-"""TargetAccountName =\"+({user}[\w\.\-]{1,40}\$?)\""""
+"""TargetAccountName =\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 """CallerMachineName =\"+({src_host}[^\"]+)\""""
 ]
 DupFields = [

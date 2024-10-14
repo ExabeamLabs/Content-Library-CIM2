@@ -13,7 +13,7 @@ Name = microsoft-windows-kv-user-privilege-assign-success-576-1
     """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+""",
     """({event_code}576)""",
     """Security\t([^\s]+\t){2}({result}.+?)\t""",
-    """(?:Information|Audit Success|Success Audit).+?User Name:\s+(|({user}[\w\.\-]{1,40}\$?))\s+Domain""",
+    """(?:Information|Audit Success|Success Audit).+?User Name:\s+(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Domain""",
     """\s+Domain:\s+({domain}[^\s]+)""",
     """\s+Logon ID:\s+\([^,]+,({login_id}[^)]+)""",
     """\s+Privileges:\s+({privileges}.+?)\s+\d+""",

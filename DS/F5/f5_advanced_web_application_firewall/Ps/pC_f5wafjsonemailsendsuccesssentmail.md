@@ -7,7 +7,7 @@ Name = f5-waf-json-email-send-success-sentmail
     """Sent mail for ({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """outbytes=({bytes}\d+)""",
     """uid=({message_id}[^\s]+)""",
-    """username=({user}[\w\.\-]{1,40}\$?)"""
+    """username=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

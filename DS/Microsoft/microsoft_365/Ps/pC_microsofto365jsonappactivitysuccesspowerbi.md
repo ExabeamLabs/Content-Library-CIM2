@@ -25,6 +25,7 @@ Fields = [
   """exa_json_path=$.IsSuccess,exa_field_name=result"""
   """exa_json_path=$.Activity,exa_field_name=event_name"""
   """exa_json_path=$.ActivityId,exa_field_name=activity_id"""
+  """exa_regex="UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})"""
 ]
 ParserVersion = "v1.0.0"
 

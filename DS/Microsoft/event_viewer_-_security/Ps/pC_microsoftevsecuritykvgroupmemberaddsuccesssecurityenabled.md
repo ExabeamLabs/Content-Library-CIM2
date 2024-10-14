@@ -20,10 +20,10 @@ Fields = [
 """EventID=({event_code}\d+)"""
 """\d\d:\d\d:\d\d\s+\d\d\d\d(\s+|,)({event_code}\d+)(\s|,)+Security"""
 """Security Enabled ({group_type}[^\s]+) Group Member"""
-"""Member ID:\s+(?:\%\{)?({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}[^\s]+)|(?:[^\s\}]+))\}?"""
+"""Member ID:\s+(?:\%\{)?(({dest_user_sid}S-\d+-[^\s:\}]+)|(({account_domain}[^\\\s:]+)\\+)({account_name}[^\s\}:]+))\s*\}?"""
 """Target Account Name:\s+({group_name}.+?)\s+Target Domain:\s+({group_domain}[^\s]+)"""
 """Target Account ID:\s+%\{({group_id}[\w\-]+)"""
-"""Caller User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Caller Domain:\s+({domain}.+?)\s+Caller Logon ID:\s+\([^,\s]+[,\s]({login_id}[^)]+)"""
+"""Caller User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Caller Domain:\s+({domain}.+?)\s+Caller Logon ID:\s+\([^,\s]+[,\s]({login_id}[^)]+)"""
 """Group Member.+?Member Name:\s+({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))\s+Member ID"""
 """Security,({event_id}\d+)"""
 ]

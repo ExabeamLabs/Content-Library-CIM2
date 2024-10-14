@@ -26,7 +26,7 @@ Name = zscaler-ia-kv-http-session-zscalerclient
   """\sduration=({duration}[^=]+?)\s""",
   """numsessions=({session_id}[^\s]+)""",
   """threatcat=(None|({threat_category}[^\s]+))""",
-  """threatname=(None|({threat_name}[^\s]+))""",
+  """threatname=(None|({alert_name}[^\s]+))""",
   """deviceowner=(NA|({device_owner}[^\s]+))""",
   """devicehostname=(NA|({src_host}[^=]+?))\s"""
   """\snwapp=({network_app}[^=]+?)\s+\w+="""

@@ -12,9 +12,9 @@ Conditions = [
 ]
 Fields = [
 """({host}\S+)\sMicrosoft-Windows-PrintService\["""
-"""Microsoft-Windows-PrintService\[[^:]+:\s((NT AUTHORITY\\)|({domain}[^\\]+)\\)?((SYSTEM)|({user}[\w\.\-]{1,40}\$?)):"""
+"""Microsoft-Windows-PrintService\[[^:]+:\s((NT AUTHORITY\\)|({domain}[^\\]+)\\)?((SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)):"""
 """EventID ({event_code}\d+)"""
-"""\]:\s*({time}\d{4}\-\d\d\-\d\d \d\d:\d\d:\d\d)\s({host}[^\s]+)\s[^\s]+\s({event_code}\d+)\s(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s"""
+"""\]:\s*({time}\d{4}\-\d\d\-\d\d \d\d:\d\d:\d\d)\s({host}[^\s]+)\s[^\s]+\s({event_code}\d+)\s(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s"""
 """\s({activity_1}Document) \d+,"""
 """owned by [^\s]+\s*[^$]*?( on [^\s]+)?({activity_2}[^\s]+?) on ({printer_name}[^$]+?)(\.\s+|\s+through)"""
 """\sDocument \d+,\s+({object}[^$"]+?)\s+owned by"""

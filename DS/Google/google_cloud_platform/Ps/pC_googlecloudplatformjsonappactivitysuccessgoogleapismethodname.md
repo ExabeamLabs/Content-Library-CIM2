@@ -27,7 +27,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"resource"+:[^\}]*labels[^\}]*"+bucket_name"+:\s*"+({bucket_name}[^"\\\/\}]+)"+""",
     """"operation"+:[^\}]*first"+:\s*({operation_first}[^"\\\/\}\s,]+)""",
     """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
-    """"user":"({user}[\w\.\-]{1,40}\$?)""""
+    """"user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"callerUserAgent":"({user_agent}[^"]+)""""
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.logName,exa_field_name=event_category""",
@@ -52,7 +52,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name""",
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",
     """exa_json_path=$.operation.last,exa_field_name=operation_last""",
-    """exa_regex="user":"({user}[\w\.\-]{1,40}\$?)""""
+    """exa_regex="user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   ]
 
 

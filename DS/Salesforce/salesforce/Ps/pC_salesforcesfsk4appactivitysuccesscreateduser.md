@@ -16,6 +16,7 @@ Fields = [
 """CreatedDate\\=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
 """CreatedBy\.Username\\=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+));"""
 """Display\\=({additional_info}Created new user ({object}.+?))\s*(\w+=|$)"""
+"""({operation}createduser)"""
 ]
 ParserVersion = "v1.0.0"
 

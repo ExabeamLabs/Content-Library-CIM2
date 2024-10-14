@@ -12,7 +12,7 @@ Name = microsoft-windows-str-configuration-load-success-4826
     """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
     """\s({event_code}4826)\s""",
     """({event_name}Boot Configuration Data loaded)""",
-    """Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))\s*""",
+    """Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""",
     """Account Domain:\s*(-|({domain}[^\s]+))\s*""",
     """Logon ID:\s*({login_id}[^\s]+)\s*""",
   ]

@@ -10,9 +10,9 @@ Name = namespacerdirectory-nrd-xml-user-delete-success-rdirectorydelete
   Fields = [
     """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
-    """Modified by:(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",\(]+))\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
+    """Modified by:(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",\(]+))\s+(\(.+?\))?\s+\(({domain}[^\/)]+)""",
     """Credentials:({account_domain}[^\\]+)\\+([^\s.]+\.)*({account}[^\s.]+)""",
-    """Delete:\s*(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))\s+\(({dest_domain}[^\/)]+)"""
+    """Delete:\s*(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))\s+\(({dest_domain}[^\/)]+)"""
   ]
   DupFields = [ "host->dest_host" , "dest_user->account_name"]
 

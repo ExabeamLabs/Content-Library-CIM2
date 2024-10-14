@@ -17,7 +17,7 @@ Fields = [
   """"(Hostname|MachineName)":"({host}[\w\-.]*)""",
   """({event_code}4672)""",
   """"(Event|Entry)Type":"({result}[^"]+)""",
-  """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   """"SubjectDomainName":"({domain}[^"]*)""",
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"PrivilegeList":"(-|({privileges}[^"]*))""",

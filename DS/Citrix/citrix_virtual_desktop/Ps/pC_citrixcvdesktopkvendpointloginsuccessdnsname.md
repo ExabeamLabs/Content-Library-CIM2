@@ -20,7 +20,7 @@ Fields = [
 """\sClientAddress=\"({src_ip}(?!127\.0\.0\.1|0\.0\.0\.0|::0)[^\"]+?)\""""
 """\sProtocol=\"({login_type_text}[^\"]+?)\""""
 """\sCatalogName =\"({catalog}[^\"]+?)\""""
-"""\sUserName =\"(({domain}[^\"]+)\\)?({user}[\w\.\-]{1,40}\$?)\""""
+"""\sUserName =\"(({domain}[^\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 """\sUserSID=\"({user_sid}[^\"]+?)\""""
 ]
 DupFields = [

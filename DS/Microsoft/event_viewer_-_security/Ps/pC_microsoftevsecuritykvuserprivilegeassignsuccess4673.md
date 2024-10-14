@@ -27,7 +27,7 @@ Fields = [
   """\s*Source Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*Source Port(:|=)""",
   """({event_code}4673)""",
   """Process Name(:|=)\s*(?: |({process_path}({process_dir}(\w+:)(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Service Request Information(:|=)""",
-  """\s*Account Name(:|=)\s*({user}[\w\.\-]{1,40}\$?)[\s;]*Account Domain(:|=)""",
+  """\s*Account Name(:|=)\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*Account Domain(:|=)""",
   """\s*Account Domain(:|=)\s*({domain}.+?)[\s;]*Logon ID(:|=)""",
   """\s*Logon ID(:|=)\s*({login_id}.+?)[\s;]*Service(:|=)""",
   """\s*Server(:|=)\s*({object_server}.+?)[\s;]*Service Name""",

@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720"
 """<Data Name\\*=('|")TargetUserName('|")>(?=\w)({account_name}[^<]+)</Data>""",
 """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({account_domain}[^<]+)</Data>""",
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>""",
-"""<Data Name\\*=('|")SubjectUserName('|")>(?=\w)((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))</Data>""",
+"""<Data Name\\*=('|")SubjectUserName('|")>(?=\w)((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>""",
 """<Data Name\\*=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""

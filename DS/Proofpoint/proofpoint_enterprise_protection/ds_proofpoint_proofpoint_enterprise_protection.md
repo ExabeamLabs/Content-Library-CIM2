@@ -6,11 +6,11 @@ Product: Proofpoint Enterprise Protection
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |  33   |   19   |         4          |       1        |    0    |
 
-|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  alert-trigger:success(dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Data_Exfiltration.md) |
-|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  alert-trigger:success(dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Data_Leak.md)         |
-|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success(dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Malware.md)    |
+| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  alert-trigger:success (dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Data_Exfiltration.md) |
+|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  alert-trigger:success (dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Data_Leak.md)         |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (dlp-alert)<br> ↳[proofpoint-pep-cef-alert-trigger-success-emailquarantineout](Ps/pC_proofpointpepcefalerttriggersuccessemailquarantineout.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_proofpoint_proofpoint_enterprise_protection_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

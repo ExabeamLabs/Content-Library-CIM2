@@ -13,7 +13,7 @@ Name = proofpoint-tappod-cef-email-send-receive-msg
     """"+host"+:"+({host}[^"]+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+[-+]\d+:\d+)""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"+"""
-    """\sx=({xid}.+?)\s+(\w+=|$)""",
+    """\sx=({alert_id}.+?)\s+(\w+=|$)""",
     """\saction=({action}[^=]+?)\s+(\w+=|$)""",
     """\srcpts=({num_recipients}\d+)""",
     """\sroutes=({routes}[^=]+?)\s+(\w+=|$)""",
@@ -21,7 +21,6 @@ Name = proofpoint-tappod-cef-email-send-receive-msg
     """\ssubject=\\*"+({email_subject}[^"=]+?)\\*"*\s+(\w+=|$)""",
     """\svirusname=({alert_name}[^=]+?)\s+(\w+=|$)"""
   ]
-  DupFields = [ "xid->alert_id" ]
 
 
 }

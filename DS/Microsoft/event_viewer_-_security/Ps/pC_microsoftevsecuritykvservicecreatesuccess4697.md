@@ -19,9 +19,10 @@ Fields = [
 """({event_name}A service was installed in the system)"""
 """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
-"""Security ID:\s*(|({user_sid}.+?))(\\[nrt]\s+|\s*)Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))(\\[nrt]\s+|\s*)Account Domain:\s*(|({domain}.+?))(\\[nrt]\s+|\s*)Logon ID:\s*(|({login_id}.+?))((\\[nrt])+\s*|\s*)Service Information:"""
+"""Security ID:\s*(|({user_sid}.+?))(\\[nrt]\s+|\s*)Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]\s+|\s*)Account Domain:\s*(|({domain}.+?))(\\[nrt]\s+|\s*)Logon ID:\s*(|({login_id}.+?))((\\[nrt])+\s*|\s*)Service Information:"""
 """\sdestinationServiceName =({service_name}[^=]+?)\s+\w+="""
 """\sService Name:\s*(|({service_name}[^:]+?)(_[0-9a-f]+)?)\s"""
+"""Service File Name:\s*({process_command_line}[^=]+?)\s*(\\t|\\r|\\n)*Service Type:"""
 """\sService Type:\s*(|({service_type}.+?))(\\[nrt]\s+|\s)"""
 """filePath=\s*\"*(?:|-|({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}.*?)))\\?\"""",
 """\sService File Name:\s*\"*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\"*\s"""
@@ -31,6 +32,7 @@ Fields = [
 ]
 DupFields = [
 "host->dest_host"
+"process_command_line->service_command_line"
 ]
 ParserVersion = "v1.0.0"
 

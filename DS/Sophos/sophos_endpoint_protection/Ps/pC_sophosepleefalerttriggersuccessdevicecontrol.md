@@ -11,7 +11,7 @@ Name = sophos-ep-leef-alert-trigger-success-devicecontrol
           """devTime=({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})""",
           """LEEF:[^|]*\|Sophos\|Enterprise Console\|[^|]*\|({alert_name}[^|]*)\|""",
           """Model=({alert_type}.+?)\s+(\w+=|$)""",
-          """usrName =[^\\]*\\({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+          """usrName =[^\\]*\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
           """ComputerName =({dest_host}.+?)\s+(\w+=|$)""",
           """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
           """domain=({domain}.+?)\s+(\w+=|$)""",

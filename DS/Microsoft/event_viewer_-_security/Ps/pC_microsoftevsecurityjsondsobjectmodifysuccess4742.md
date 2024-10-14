@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4742
     """({event_code}4742)""",
     """({event_name}A computer account was changed.)""",
     """SubjectDomainName"\s*:\s*"({domain}[^"]+)""",
-    """SubjectUserName"\s*:\s*"({user}[\w\.\-]{1,40}\$?)"""
+    """SubjectUserName"\s*:\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """SubjectLogonId"\s*:\s*"({login_id}[^"]+)""",
     """TargetUserName"\s*:\s*"({dest_user}[^"]+)""",
     """ServicePrincipalNames"\s*:\s*"({attribute}[^"]+)"""

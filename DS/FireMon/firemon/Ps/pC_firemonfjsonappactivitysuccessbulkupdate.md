@@ -9,7 +9,7 @@ Name = firemon-f-json-app-activity-success-bulkupdate
  Fields = [
    """\d{1,2}:\d{1,2}:\d{1,2} ({host}[\w\-\.]+)"""
    """Date:\s*({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d{1,6})"""
-   """Event Name:\s*({event_name}[^:]+) User:\s*({user}[\w\.\-]{1,40}\$?)\s\w+:"""
+   """Event Name:\s*({event_name}[^:]+) User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+:"""
    """({app}FireMon)"""
  ]
  DupFields = [ "event_name->operation" ]

@@ -6,11 +6,11 @@ Product: Event Viewer - DFS-Replication
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   5   |   2    |         5          |       1        |    0    |
 
-|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  log-clear:success(audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Abnormal_Authentication_&_Access.md) |
-|    [Audit Tampering](../../../UseCases/uc_audit_tampering.md)    |  log-clear:success(audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1070 - Indicator Removal on Host<br>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>T1562 - Impair Defenses<br>T1562.002 - T1562.002<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Audit_Tampering.md)    |
-|    [Evasion](../../../UseCases/uc_evasion.md)    |  log-clear:success(audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1070 - Indicator Removal on Host<br>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Evasion.md)    |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  log-clear:success (audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Abnormal_Authentication_&_Access.md) |
+|    [Audit Tampering](../../../UseCases/uc_audit_tampering.md)    |  log-clear:success (audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1070 - Indicator Removal on Host<br>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>T1562 - Impair Defenses<br>T1562.002 - T1562.002<br> | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Audit_Tampering.md)    |
+|    [Evasion](../../../UseCases/uc_evasion.md)    |  log-clear:success (audit-log-clear)<br> ↳[microsoft-evsecurity-xml-log-clear-success-1102-1](Ps/pC_microsoftevsecurityxmllogclearsuccess11021.md)<br> | T1070 - Indicator Removal on Host<br>T1070.001 - Indicator Removal on Host: Clear Windows Event Logs<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_microsoft_event_viewer_-_dfs-replication_Evasion.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

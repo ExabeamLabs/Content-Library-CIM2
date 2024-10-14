@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-4
     """Computer="+({host}[^"]+)"""",
     """({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
-    """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)"""",
+    """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """SubjectUserSid="+({user_sid}[^"]+)"""",
     """SubjectDomainName ="+({domain}[^"]+)"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",

@@ -78,7 +78,7 @@ Fields = [
 """({app}CYBERARK)"""
 """;Message="(|({operation}[^"]+?))\s*""""
 """MessageID="({event_code}\d+)"""
-""";Issuer="({user}[\w\.\-]{1,40}\$?)"""
+""";Issuer="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """;Station="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """;Safe="(|({safe_value}[^"]+))""""
 """;UserName ="(|(({domain}[^\s\\"]+)\\+)?({account}[^\s\\"]+))""""
@@ -110,7 +110,7 @@ Fields = [
 """({app}CYBERARK)"""
 """;Message="(|({operation}[^"]+?))\s*""""
 """MessageID="({event_code}\d+)"""
-""";Issuer="({user}[\w\.\-]{1,40}\$?)"""
+""";Issuer="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """;Station="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """;Safe="(|({safe_value}[^"]+))""""
 """;UserName ="(|(({domain}[^\s\\"]+)\\+)?({account}[^\s\\"]+))""""
@@ -151,7 +151,7 @@ Fields = [
 """"computerName"+:"+({src_host}[^"]+)""",
 """"Description"+:"+({additional_info}[^"]+)""",
 """"PolicyName"+:"+({policy_name}[^"]+)""",
-""""@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+""""@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 """"@OsProcessId"+:"+({process_id}\d+)""",
 """"Path"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
 """"@allowed"+:"+({result}[^"]+)""",

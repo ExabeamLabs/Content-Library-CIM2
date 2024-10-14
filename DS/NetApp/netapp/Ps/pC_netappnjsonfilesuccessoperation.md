@@ -18,7 +18,7 @@ Fields = [
 """"hostname":"({host}[^"]+)""""
 """"userDisplayName\\*":\\*"({full_name}[^"]+?)\\*""""
 """"entityType\\*":\\*"({file_type}[^"]+?)\\*""""
-""""userName\\*":\\*"({user}[\w\.\-]{1,40}\$?)\\*""""
+""""userName\\*":\\*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\*""""
 """"domain\\*":\\*"({domain}[^"]+?)\\*""""
 """"extension\\*":\\*"({file_ext}[^"]+?)\\*""""
 """"entityName\\*":\\*"({file_name}[^"]+?)\\*""""

@@ -13,7 +13,7 @@ Name = "salesforce-sf-cef-file-upload-success-cloud-1"
   ]
   Fields = [
     """CreatedDate\\?=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\S+""",
-    """CreatedBy\.Username\\?=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|;]+\.[^\]\s"\\,\|;]+)|({user}[\w\.\-]{1,40}\$?);)""",
+    """CreatedBy\.Username\\?=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|;]+\.[^\]\s"\\,\|;]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?);)""",
     """msg=({additional_info}[^=]+?)\s\w+="""
     """\Wfname=({src_file_name}.+?(?:\.({file_ext}[^".]+?))?)\s+(\w+=|$)""",
     """\WfileType=({file_type}.+?)\s+(\w+=|$)""",

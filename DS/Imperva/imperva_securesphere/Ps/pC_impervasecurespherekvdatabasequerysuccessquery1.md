@@ -24,7 +24,7 @@ Fields = [
 """\sdbname=({db_name}[^\s]+)"""
 """\sschemaname=({db_schema}[^\s]+)"""
 """\sresponsesize=({response_size}\d*)\s\w+="""
-"""\sosuser=({user}[\w\.\-]{1,40}\$?)"""
+"""\sosuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sduser=({db_user}[^\s]+)"""
 """\sobjectname=({object_name}[^\s]+)"""
 """\srawdata=#\(({db_query}[^\)]+)"""

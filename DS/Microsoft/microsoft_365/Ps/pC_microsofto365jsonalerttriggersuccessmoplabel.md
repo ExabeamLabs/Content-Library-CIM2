@@ -18,7 +18,7 @@ Fields = [
   """Operation"*:\s*"*({operation}[^"]+)"*"""
   """UserId"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"*"""
   """FileSize"*:\s*"*({bytes}\d+)"""
-  """From"*:\s*"*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+  """From"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """To"*:\s*\["*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """To"*:\s*\[({email_recipients}[^\]]+)\]"""
   """Subject"*:\s*"*({alert_subject}[^"]+?)\s*""""
@@ -31,7 +31,6 @@ Fields = [
   """RecipientCount"*:\s*({recipient_count}\d+)"""
 ]
 DupFields = [
-  "src_email_address->email_address"
   "operation->alert_type"
 ]
 ParserVersion = "v1.0.0"

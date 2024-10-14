@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-csv-user-delete-success-4726
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}4726),""",
       """({host}[\w.\-]+),ユーザー アカウントが削除されました。""",
-      """セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({dest_user}.*?)\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報"""
+      """セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({dest_user}.*?)\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報"""
     ]
     DupFields = [ "dest_user->account_name" ]
 

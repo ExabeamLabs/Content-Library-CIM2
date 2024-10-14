@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """\|SCB\|PAM\|([^\|]*\|){2}({operation}[^\|]+)"""
-  """\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+  """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
   """\sdhost=({dest_host}.+?)(\s+\w+=|\s*$)"""
   """\sOtherInfo:\s*({object}[^\s]+?)(\s+\w+=|\s*$)"""
   """\sduser=({object}.+?)(\s+\w+=|\s*$)"""

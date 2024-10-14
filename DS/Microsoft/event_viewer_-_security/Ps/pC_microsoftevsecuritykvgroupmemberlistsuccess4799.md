@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-group-member-list-success-4799
   Fields = [
     """({event_name}A security-enabled local group membership was enumerated)""",
     """Security ID:\s+({user_sid}[^\s]+?)\s+Account Name:"""
-    """Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:"""
+    """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
     """Account Domain:\s+({domain}[^:]+?)\s+Logon ID:"""
     """Logon ID:\s+({login_id}[^\s:]+?)\s+Group:"""
     """Group Name:\s+({group_name}[^:]+?)\s+Group Domain:\s+({group_domain}[^:]+?)\s+Process Information:"""

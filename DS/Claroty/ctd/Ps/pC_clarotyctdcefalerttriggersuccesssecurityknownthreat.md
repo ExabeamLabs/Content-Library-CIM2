@@ -19,8 +19,8 @@ claroty-network-alert {
       """shost=({src_host}[^=]+)\s\w+=""",
       """smac=({src_mac}[^=]+)\s\w+=""",
       """dmac=({dest_mac}[^=]+)\s\w+=""",
-      """\suser:\s({user}[\w\.\-]{1,40}\$?)""",
-      """\suser\s'({user}[\w\.\-]{1,40}\$?)""",
+      """\suser:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+      """\suser\s'({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """msg=({additional_info}[^=]+)\s\w+="""
     ]
     DupFields = ["alert_name->alert_type","alert_name->event_name"

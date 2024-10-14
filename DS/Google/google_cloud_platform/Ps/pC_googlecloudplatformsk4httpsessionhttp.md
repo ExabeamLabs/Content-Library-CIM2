@@ -13,7 +13,7 @@ Fields = [
 """"cache":"({proxy_action}[^"]+)""""
 """"status":"*({http_response_code}\d+)"""
 """"requestUrl":"({url}[^"]+)""""
-""""user":"({user}[\w\.\-]{1,40}\$?)""""
+""""user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"protocol":"({protocol}[^"]+)""""
 """"project_id":"({project_id}[^"]+)""""
 """"requestSize":"({bytes_in}\d+)"""",

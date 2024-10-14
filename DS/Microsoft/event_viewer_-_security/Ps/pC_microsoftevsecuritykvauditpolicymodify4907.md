@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-audit-policy-modify-4907
     """({event_code}4907)""",
     """({event_name}Auditing settings on object were changed)""",
     """Security ID:\s*((NT AUTHORITY|({account_domain}[^\\\/:]+?))[\\\/]+)?(\\t|\\n|\\r)*(SYSTEM|({account}[^\\\s:]+))\s"""
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Object:""",
     """Object Server:\s*({object_server}\S.*?)\s+Object Type:""",

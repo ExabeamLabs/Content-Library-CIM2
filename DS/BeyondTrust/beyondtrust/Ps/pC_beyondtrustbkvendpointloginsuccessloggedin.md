@@ -13,7 +13,7 @@ Name = beyondtrust-b-kv-endpoint-login-success-loggedin
     """srcPort=({src_port}\d+)""",
     """srcHost=({src_host}[^\|]+)""",
     """\|dstUser=(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({dest_user}[^\|]+))""",
-    """\|srcUser=(\[Pinned\] )?(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({email_address}[^\s@\|]+@[^\s@\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """\|srcUser=(\[Pinned\] )?(({full_name}({first_name}[^\s\|]+)\s({last_name}[^\|]+))|({email_address}[^\s@\|]+@[^\s@\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """msg=({additional_info}[^\|]+?)\s*\|""",
     """credentialName =({additional_info}[^\|]+)"""
   ]

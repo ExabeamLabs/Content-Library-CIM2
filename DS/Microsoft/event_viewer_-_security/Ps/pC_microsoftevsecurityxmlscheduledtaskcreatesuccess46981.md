@@ -16,7 +16,7 @@ Fields = [
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<EventID>({event_code}[^<]+)</EventID>"""
 """<Data Name(\\)?=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-]{1,40}\$?)</Data>"""
+"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
 """<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
 """<Data Name(\\)?=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Data Name(\\)?=('|")TaskName('|")>(?=[\\\w])({task_name}[^<]+)</Data>"""

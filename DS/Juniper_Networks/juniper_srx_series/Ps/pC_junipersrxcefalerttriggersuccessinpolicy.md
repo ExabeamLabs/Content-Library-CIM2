@@ -17,7 +17,7 @@ Fields = [
   """ for ({protocol}[^\s]+) protocol and service ({service_name}[^\s]+) application ({app}[^\s]+) by rule ({rule_id}[^\s]+)"""
   """attack:.+?action=(NONE|({result}[^\s,]+))"""
   """attack:.+?threat-severity=({alert_severity}[^\s,]+)"""
-  """attack:.+?username=(N\/A|({user}[\w\.\-]{1,40}\$?))"""
+  """attack:.+?username=(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """\sname=({alert_name}[^,\s]+)"""
 ]
 ParserVersion = "v1.0.0"

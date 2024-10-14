@@ -18,7 +18,7 @@ Fields = [
   """ServiceName =\"+\w+\/(?=\w)({domain}[^\"]+)\""""
   """Status=\"+({result_code}[^\"]+)\""""
   """TargetSid=\"+({user_sid}[^\"]+)\""""
-  """TargetUserName =\"+(?=\w)({user}[\w\.\-]{1,40}\$?)\""""
+  """TargetUserName =\"+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 ]
 DupFields = [
   "result_code->failure_code"

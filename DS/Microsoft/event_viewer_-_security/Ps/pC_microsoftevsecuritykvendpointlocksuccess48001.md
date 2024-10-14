@@ -17,7 +17,7 @@ Fields = [
 """(?i)(((audit|success)( |_)(success|audit))|information)(<\d+>|\s+)({host}[\w\-.]+)"""
 """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({host}[\w.\-]+))"""
 """({event_code}4800)"""
-"""Account Name:\s*({user}[\w\.\-]{1,40}\$?)[\\n\s]*Account Domain"""
+"""Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\\n\s]*Account Domain"""
 """Account Domain:\s*({domain}[^\s]+)[\\n\s]*Logon ID"""
 """Logon ID:\s*({login_id}[^\s]+?)[\\n\s]+Session"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""

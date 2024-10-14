@@ -16,7 +16,7 @@ Fields = [
 """shost=({host}[^\s]+)"""
 """A member was added to a security-enabled ({group_type}\w+) group"""
 """sntdom=({domain}[^\s]+)"""
-"""suser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+"""suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """duser=({user_dn}.+?)\s+\w+="""
 """nitroObjectID=({group_name}.+?)\s+\w+="""
 """nitroSecurity_ID=({account_id}[^\s]+)"""

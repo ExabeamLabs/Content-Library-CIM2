@@ -11,8 +11,8 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-500
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|am|PM|pm))""",
     """ComputerName =({host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)""",
-    """Instance ID:\s*({iid}[^\s]+)""",
-    """Issued identity:.*claims/UPN\s*({user}[\w\.\-]{1,40}\$?)@({domain}[^\s]+)""",
+    """Instance ID:\s*({instance_id}[^\s]+)""",
+    """Issued identity:.*claims/UPN\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+)""",
     """Issued identity:.*/authenticationmethod/({auth_method}[^\s]+)"""
   ]
 

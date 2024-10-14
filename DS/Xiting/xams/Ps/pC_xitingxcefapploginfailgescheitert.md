@@ -8,7 +8,7 @@ Name = xiting-x-cef-app-login-fail-gescheitert
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """Login gescheitert""", """CEF:""", """|Xiting|XAMS|""", """"USERID":"""" ]
   Fields = [
-    """"USERID":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"USERID":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """({app}XAMS)""",
     """({event_name}Login gescheitert)"""
     """"MSG":"({additional_info}[^"]+)""""

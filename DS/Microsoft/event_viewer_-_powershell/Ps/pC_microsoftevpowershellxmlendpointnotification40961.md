@@ -12,6 +12,7 @@ Name = "microsoft-evpowershell-xml-endpoint-notification-40961"
     """<Computer>({host}[\w\-.]+)"""
     """({event_code}40961)"""
     """<Execution ProcessID\\*=('|")({process_id}\d+)"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

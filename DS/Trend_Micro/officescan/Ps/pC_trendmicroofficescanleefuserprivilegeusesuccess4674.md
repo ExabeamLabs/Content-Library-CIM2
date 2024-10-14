@@ -20,7 +20,7 @@ Fields = [
   """({event_name}An operation was attempted on a privileged object)"""
   """Security:\s*({result}[^\(]+)"""
   """Process Name:\s*(?: |({process_path}({process_dir}(?:[^\"]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\s*Requested"""
-  """Account Name:\s*(?:-|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:"""
+  """Account Name:\s*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:"""
   """Account Domain:\s*({domain}.+?)\s*Logon ID:"""
   """Logon ID:\s*({login_id}.+?)\s*Object:"""
   """Object Server:\s*({object_server}.+?)\s*Object Type:"""

@@ -18,7 +18,7 @@ Fields = [
 """exa_json_path=$.DeviceName,exa_field_name=host"""
 """exa_json_path=$.Classification,exa_field_name=alert_name"""
 """exa_json_path=$.Classification,exa_field_name=alert_type"""
-"""exa_json_path=$.['File Owner'],exa_regex=((N/A)|(({domain}[^\\]+)\\+({user}[\w\.\-]{1,40}\$?)))"""
+"""exa_json_path=$.['File Owner'],exa_regex=((N/A)|(({domain}[^\\]+)\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """exa_json_path=$.['Cylance Score'],exa_field_name=alert_severity"""
 """exa_json_path=$.['File Path'],exa_regex=({file_dir}([^"\\]|(\\\\)*\\"|\\[^"])+)\\+({file_name}([^"\\]|(\\\\)*\\"|\\[^"])+)"""
 """exa_json_path=$.['File Path'],exa_field_name=file_path"""

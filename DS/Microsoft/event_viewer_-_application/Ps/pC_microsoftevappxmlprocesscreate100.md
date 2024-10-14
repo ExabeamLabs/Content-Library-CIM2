@@ -4,7 +4,11 @@
 Name = microsoft-evapp-xml-process-create-100
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Application
-  Conditions = [ """<EventID Qualifiers""", """'>100</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """<EventID Qualifiers""", """'>100</EventID>""", """<TimeCreated SystemTime""", """<Channel>Application<""" ]
+  Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
+    """<EventData><Data>({additional_info}[^<]+)</Data></EventData>"""
+    """<Provider Name =('|")({app}[^'">]+)('|")\/>"""
+  ]
 
 s-xml-object-access-1 = {
   Vendor = Microsoft
@@ -21,7 +25,7 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",

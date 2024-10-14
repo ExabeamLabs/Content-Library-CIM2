@@ -11,7 +11,7 @@ Conditions = [
 """fileType=Security Audit"""
 ]
 Fields = [
-"""\ssuser=(({domain}[^=\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\ssuser=(({domain}[^=\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 """CEF:([^\|]*\|){5}({result_reason}[^\|]+)"""
 """cs3=({service_name}[^\s]+)"""
 """\sdestinationServiceName =(|({service_name}.+?))(\s+\w+=|\s*$)"""

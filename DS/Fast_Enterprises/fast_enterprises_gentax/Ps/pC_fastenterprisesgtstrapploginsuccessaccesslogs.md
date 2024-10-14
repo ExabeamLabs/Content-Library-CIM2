@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({app}WEB\.GENTAX),({event_category}AccessLogs)"""
-""",AccessLogs,({category}[^,]+),({user_id}[^,]+),({user}[\w\.\-]{1,40}\$?),({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
+""",AccessLogs,({category}[^,]+),({user_id}[^,]+),({user}[\w\.\-\!\#\^\~]{1,40}\$?),({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

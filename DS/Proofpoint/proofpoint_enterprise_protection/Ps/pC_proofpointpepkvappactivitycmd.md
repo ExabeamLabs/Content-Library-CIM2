@@ -28,14 +28,14 @@ proofpoint-dlp-log = {
     """file=(?:\s|({file_name}[^\s]+))""",
     """size=(?:\s|({bytes}\d+))\s""",
     """sha256=(?:\s|({hash_md5}[^\s]+))\s""",
-    """value=(?:\s|({email_address}[^\s]+))\s""",
+    """value=(?:\s|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
     """prot=(?:\s|({protocol}[^:\s]+))""",
     """\sscore=({original_risk_score}[\d.]+)\s""",
     """spamscore=({spam_score}[\d]+)\s""",
     """phishscore=({phishing_score}[\d]+)\s""",
     """malwarescore=({malware_score}[\d]+)\s""",
-    """value=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
-    """from=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("+|\s+\w+=)""",
+    """value=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
+    """from=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("+|\s+\w+=)""",
   
 }
 ```

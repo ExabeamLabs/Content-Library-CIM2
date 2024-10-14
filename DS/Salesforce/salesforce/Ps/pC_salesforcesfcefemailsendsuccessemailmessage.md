@@ -12,13 +12,13 @@ Name = salesforce-sf-cef-email-send-success-emailmessage
   ]
   Fields = [
     """LastModifiedDate\\=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
-    """ValidatedFromAddress\\=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));""",
+    """ValidatedFromAddress\\=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));""",
     """Subject\\=({email_subject}[^;=]+);\w+\\=""",
     """ToAddress\\=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """ToAddress\\=({email_recipients}[^=]+?)\s+("|$)""",
     """CcAddress\\=(?:null|({cc_address}[^;]+?))(;\w+\\=|\s+\w+=|\s*$)"""
   ]
-  DupFields = [ "src_email_address->orig_user", "email_recipients->to_address" ]
+  DupFields = [ "email_address->orig_user", "email_recipients->dest_email_address" ]
 
 
 }

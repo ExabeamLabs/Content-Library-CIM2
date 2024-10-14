@@ -11,14 +11,14 @@ Name = qush-r-json-file-write-success-filecopy
   ParserVersion = "v1.0.0"
 
 qush-reveal-events = {
-    Vendor = QUSH
+    Vendor = NextDLP
     Product = Reveal
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
     Fields = [
       """"agent_hostname"+:"+({host}[^"]+)"""",
       """"timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""",
       """"description"+:"+({additional_info}[^\n]+?)\s*",""",
-      """"username":"(({full_name}[^\\\s"]+\s[^"\\]+)|(({domain}[^"\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""",
+      """"username":"(({full_name}[^\\\s"]+\s[^"\\]+)|(({domain}[^"\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"destination_ip":\["({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"\]""",
       """"destination_port":\["({dest_port}\d{1,5})"\]""",
       """"source_ip":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"\]""",
@@ -26,7 +26,7 @@ qush-reveal-events = {
       """"binary_path"+:"+({process_path}({process_dir}[^"]+?)\\+({process_name}[^"\\]+))"""",
       """"binary_name"+:\["+({process_name}[^",]+)"\]""",
       """"anonymised_description"+:"+({event_name}[^\n]+?)",""",
-      """"accountname"+:\["+((({domain}[^\\",]+)\\+)?({user}[\w\.\-]{1,40}\$?))"\]""",
+      """"accountname"+:\["+((({domain}[^\\",]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\]""",
       """"file_name":\["({file_name}[^"]+?(\.({file_ext}[^"\.:]+)(:[^"]+)?)?)"""",
       """"file_path":\["({file_path}[^"]+)"""",
       """"tags":\[[^\]]*?"({tag}[^"\]]+)"\]""",

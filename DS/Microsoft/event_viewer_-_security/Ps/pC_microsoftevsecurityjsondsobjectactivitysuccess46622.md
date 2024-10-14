@@ -14,7 +14,7 @@ Fields = [
 """exa_json_path=$.event_data.ObjectServer,exa_field_name=ds_object_class""",
 """exa_json_path=$.event_data.ObjectName,exa_field_name=ds_object_name""",
 """exa_json_path=$.event_data.ObjectType,exa_field_name=ds_object_type""",
-"""exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id""",
 """exa_json_path=$.event_data.SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$.event_data.OperationType,exa_field_name=action""",

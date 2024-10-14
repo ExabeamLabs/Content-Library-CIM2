@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """CoID=\{({session_id}[^\{\}]+?)\}"""
-""":\s*The user (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_doamin}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))\s+connected on port"""
+""":\s*The user (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+connected on port"""
 """has been assigned address ({src_translated_ip}[a-fA-F\d.:]+)"""
 ]
 ParserVersion = "v1.0.0"

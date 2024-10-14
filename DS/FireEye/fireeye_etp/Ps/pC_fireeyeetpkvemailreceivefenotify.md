@@ -18,7 +18,7 @@ Name = fireeye-etp-kv-email-receive-fenotify
     """occurred:\s*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """\salert\s*\(id:({alert_id}[^,]+),\s*name:({alert_type}[^\)]+)""",
     """severity:\s*({alert_severity}[^\s]+)""",
-    """smtp-mail-from:\s*([^<]+<)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """smtp-mail-from:\s*([^<]+<)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """smtp-to:\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\saction:\s*({result}[^\s]+)""",
     """\ssubject:\s*({email_subject}.+?)\s+src:""",

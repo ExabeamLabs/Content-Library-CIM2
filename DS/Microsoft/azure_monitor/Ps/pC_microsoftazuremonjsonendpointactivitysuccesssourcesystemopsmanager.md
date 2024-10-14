@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-json-endpoint-activity-success-sourcesystemopsmanager
    ParserVersion = v1.0.0
-   Conditions = [ """"SourceSystem":"OpsManager"""", """"Computer":"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""" ]
+   Conditions = [ """"SourceSystem":"OpsManager"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""" ]
  
 microsoft-azure-endpoint-json = {
     Vendor = Microsoft

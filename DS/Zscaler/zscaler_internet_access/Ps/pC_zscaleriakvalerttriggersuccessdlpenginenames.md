@@ -20,7 +20,7 @@ Fields = [
 """filename=(None|({file_name}[^=]+?))\s*\w+="""
 """filesource=({additional_info}[^=]+?)\s*\w+="""
 """filemd5=(None|({hash_md5}[^=]+?))\s*\w+="""
-"""login=(({email_address}[^@]+@[^\.]+\.[^=]+?)|({user}[\w\.\-]{1,40}\$?))\s*\w+="""
+"""login=(({email_address}[^@]+@[^\.]+\.[^=]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+="""
 """policy=(None|({policy_name}[^=]+?))\s*\w+="""
 ]
 DupFields = [

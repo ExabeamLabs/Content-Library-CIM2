@@ -9,7 +9,7 @@ Conditions = [
 ""","WRITE-DENIED",""""
 ]
 Fields = [
-"""({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)","[^"]*","(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)?","({user_ou}[^"]+)","({operation}WRITE-DENIED)","({host}[^"]+)",("[^"]*",){2}"({file_path}[^"]+)",""""
+"""({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)","[^"]*","(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)?","({user_ou}[^"]+)","({operation}WRITE-DENIED)","({host}[^"]+)",("[^"]*",){2}"({file_path}[^"]+)",""""
 ""","({process_name}[^"]+)"\s*$"""
 ]
 ParserVersion = "v1.0.0"

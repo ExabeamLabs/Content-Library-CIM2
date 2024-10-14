@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-kv-user-permission-modify-4718
     """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """({event_code}4718)""",
     """({event_name}System security access was removed from an account)""",
-    """Subject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*Account Modified:""",
-    """Account Modified:.*?Account Name:\s*(|(({dest_domain}\S[^\\\/]*?)?[\\\/]+)?(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_sid}[^\s]+)))\s*Access Removed:""",
+    """Subject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*Account Modified:""",
+    """Account Modified:.*?Account Name:\s*(|(({dest_domain}\S[^\\\/]*?)?[\\\/]+)?(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_sid}[^\s]+)))\s*Access Removed:""",
     """Access Removed:.*?Access Right:\s*({access_type}.+?)\s*("|<|$)""",
   ]
 

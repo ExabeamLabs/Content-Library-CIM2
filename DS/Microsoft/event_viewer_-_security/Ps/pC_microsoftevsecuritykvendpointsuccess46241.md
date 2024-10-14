@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-success-4624-1
       """Audit\s+({host}[\w\-.]+)\s+Logon""",
       """({event_code}4624)""",
       """LogonType:({login_type}\d+)""",
-      """TargetUserName:({user}[\w\.\-]{1,40}\$?)""",
+      """TargetUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """TargetDomainName:({domain}[^,]+)""",
       """TargetLogonId:({login_id}[^,]+)""",
       """TargetUserSid:({user_sid}[^,]+)""",

@@ -12,7 +12,7 @@ Conditions = [
 """ Time_Printed="""
 ]
 Fields = [
-"""\sUserName =({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\sUserName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 """\sJobName ="?({object}.+?)"?(\s+\w+=|\s*$)"""
 """\sPages=({num_pages}\d+)(\s+\w+=|\s*$)"""
 """\sFileSize=({bytes}\d+)(\s+\w+=|\s*$)"""

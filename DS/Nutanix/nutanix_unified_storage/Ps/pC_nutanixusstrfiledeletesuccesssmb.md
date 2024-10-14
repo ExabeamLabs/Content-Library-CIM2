@@ -13,7 +13,7 @@ nutanixfiles-events = {
     Product = Nutanix Unified Storage
     TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Fields = [
-      """SMB\[[^]]+\]:[^\\]+\\({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)""",
+      """SMB\[[^]]+\]:[^\\]+\\({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """SMB\[[^\|]+\|([^\|]*\|){4}({file_path}({file_dir}[^|]+)\/({file_name}[^\|\/]+?(\.({file_ext}[^\|\.]+))?))\|""",
       """\d\d:\d\d:\d\d\s+({host}[\w\-.]+)\s+SMB\[""",
     

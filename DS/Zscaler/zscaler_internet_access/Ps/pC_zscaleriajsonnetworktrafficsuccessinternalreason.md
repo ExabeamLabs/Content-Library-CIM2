@@ -20,7 +20,7 @@ Name = zscaler-ia-json-network-traffic-success-internalreason
      """"SessionID":\s*"({session_id}[^"]+)""""
      """"ConnectionID":\s*"({connection_id}[^"]+)""""
      """"InternalReason":\s*"({result_reason}[^"]+)""""
-     """"Username":\s*"(({email_address}[^"@]+?@[^"]+)|({user}[\w\.\-]{1,40}\$?))""""
+     """"Username":\s*"(({email_address}[^"@]+?@[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
      """"ServicePort":\s*"({dest_port}\d+)""""
      """"ClientPublicIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
      """"ClientCountryCode":\s*"({src_country}[^"]+)""""

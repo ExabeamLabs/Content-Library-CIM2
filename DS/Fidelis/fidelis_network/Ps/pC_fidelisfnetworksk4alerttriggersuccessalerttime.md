@@ -32,7 +32,7 @@ Fields = [
 """"SEVERITY\":"({alert_severity}[^\"]+)\""""
 """"SESSION_ID\":"({session_id}[^\"]+)\""""
 """\smsg=({additional_info}.+)\soldFilePath="""
-""""APPLICATION_USER\":"(({email_address}[^@]+?@[^\"]+)|({user}[\w\.\-]{1,40}\$?))\""""
+""""APPLICATION_USER\":"(({email_address}[^@]+?@[^\"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """"MD5":"({hash_md5}[^\"]+)\""""
 ]
 ParserVersion = "v1.0.0"

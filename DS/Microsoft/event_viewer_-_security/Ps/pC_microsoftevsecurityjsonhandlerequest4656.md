@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"EventTime"+:\s*"+({time}[^",]+)""",
     """"Hostname"+:"+({host}[^",]+)""",
     """"SubjectUserSid"+:"+({user_sid}[^",]+)"""",
-    """"SubjectUserName"+:"+({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectDomainName"+:"+({domain}[^",]+)"""",
     """"SubjectLogonId"+:"+({login_id}[^",]+)"""",
     """"TransactionId"+:"+({transaction_id}[^",]+)"""",

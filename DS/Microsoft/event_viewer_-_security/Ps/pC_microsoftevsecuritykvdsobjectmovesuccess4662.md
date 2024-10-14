@@ -14,7 +14,7 @@ Fields = [
   """TimeGenerated=({time}\d{10})"""
   """Message=({event_name}.*?)\s+Subject:"""
   """Security ID:\s*({user_sid}\S+)\s+Account Name:"""
-  """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:"""
+  """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
   """Account Domain:\s*({domain}\S+)\s+Logon ID:"""
   """Logon ID:\s*({login_id}\S+)\s+Object:"""
   """Object Server:\s*({ds_object_class}\S.*?)\s+Object Type:"""

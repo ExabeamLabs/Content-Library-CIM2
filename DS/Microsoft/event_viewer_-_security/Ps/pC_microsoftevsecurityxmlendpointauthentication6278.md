@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-6278
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)</Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)</Data>""",
-    """<Data Name\\*='SubjectUserName'>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))</Data>""",
+    """<Data Name\\*='SubjectUserName'>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
@@ -22,7 +22,7 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({host}[\w\.\-]+)<""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -34,7 +34,7 @@ s-xml-object-access = {
     """<Provider>({provider_name}.+?)</Provider>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
@@ -49,6 +49,7 @@ s-xml-object-access = {
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<\/Data><Data Name ='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
   
 }
 ```

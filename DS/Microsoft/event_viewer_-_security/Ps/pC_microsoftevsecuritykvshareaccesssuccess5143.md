@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5143
     """({event_name}A network share object was modified)""",
     """Keywords=({result}[^=]+?)\s*\w+=""",
     """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """Account Name:\s+({user}[\w\.\-]{1,40}\$?)""",
+    """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Account Domain:\s+({domain}[^\s]+)""",
     """Logon ID:\s+({login_id}[^\s]+)""",
     """Share Information:\s+Object Type:\s+({file_type}[^:]+?)\s+Share Name:""",

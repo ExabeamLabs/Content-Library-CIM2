@@ -9,9 +9,9 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-4742
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
     """({host}[\w\-.]+) ADAuditPlus""",
-    """CLIENT_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*\]""",
+    """CLIENT_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
     """CLIENT_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
-    """CALLER_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*\]""",
+    """CALLER_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
     """CALLER_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
     """RECORD_NUMBER\s*=\s*({event_id}\d+)""",

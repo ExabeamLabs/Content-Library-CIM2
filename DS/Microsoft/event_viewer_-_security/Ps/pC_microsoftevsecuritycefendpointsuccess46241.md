@@ -18,7 +18,7 @@ Fields = [
   """"eventRecordID":"({event_id}\d+)"""
   """"severityValue":"({result}[^"]+?)\s*""""
   """"subjectUserSid":"({user_sid}[^"\s]+?)\s*""""
-  """"subjectUserName":"({user}[\w\.\-]{1,40}\$?)\s*""""
+  """"subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
   """"subjectDomainName":"({domain}[^"\s]+?)\s*""""
   """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
   """"logonType":"({login_type}\d+?)\s*""""

@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-json-process-token-assign-success-4696
     """exa_json_path=$..['process_information.process_name'],exa_regex=^({process_path}({process_dir}[^"]*?)\\+({process_name}[^"\\\/]+))$""",
     """exa_json_path=$..['process_information.process_id'],exa_field_name=process_id""",
     """exa_json_path=$..Computer,exa_regex=^({host}[\w\-.]+)$""",
-    """exa_json_path=$..['subject.account_name'],exa_regex=^(-|({email_address}({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))$""",
+    """exa_json_path=$..['subject.account_name'],exa_regex=^(-|({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))$""",
     """exa_json_path=$..['subject.account_domain'],exa_field_name=domain""",
     """exa_json_path=$..message,exa_field_name=additional_info""",
     """exa_json_path=$..ProviderName,exa_field_name=provider_name"""

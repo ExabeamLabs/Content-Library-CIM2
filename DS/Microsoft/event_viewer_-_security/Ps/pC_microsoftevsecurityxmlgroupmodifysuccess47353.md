@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4735-3
   Conditions = [ """<EventID>4735</EventID>""", """<Computer>""", """<Data Name""","""'SubjectUserName'>""","""'TargetUserName'>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)"""
@@ -29,7 +29,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

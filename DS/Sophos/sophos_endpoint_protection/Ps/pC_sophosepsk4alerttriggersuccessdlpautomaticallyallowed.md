@@ -16,7 +16,7 @@ Name = sophos-ep-sk4-alert-trigger-success-dlpautomaticallyallowed
     """"location":"({src_host}[^"]+)""",
     """"name":\s*"({alert_name}.+?)\s+(\w+:)"""
     """"name":\s*"({additional_info}[^"]+)"""
-    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s""",
+    """"name".+?Username:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s""",
     """"name".+?Rule names:\s*′({rule}[^′]+)""",
     """"name".+?User action:\s*({operation}.+?)\s+(\w+\s+\w+:)""",
     """"name".+?Application Name:\s+({app}.+?)\s+Data Control action:""",

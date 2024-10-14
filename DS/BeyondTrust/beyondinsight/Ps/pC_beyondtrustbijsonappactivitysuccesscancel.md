@@ -13,7 +13,7 @@ json-beyondtrust-activity = {
     """"eventdate":"({time}\w\w\w\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
     """"sourcehost":"({host}[\w\-\.]+)""",
     """"sourceip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """"user":"(({domain}[^\\\/]+)\\+)?(Internal process|({user}[\w\.\-]{1,40}\$?))""",
+    """"user":"(({domain}[^\\\/]+)\\+)?(Internal process|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"operation":"({operation}[^"]+)""",
     """"failed":"({result}\d)""",
     """"ipaddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
@@ -34,7 +34,7 @@ json-beyondtrust-activity-1 = {
   """exa_json_path=$.TimeCreated,exa_field_name=time"""
   """exa_json_path=$.EventName,exa_field_name=event_code"""
   """exa_json_path=$.AssetName,exa_field_name=dest_host"""
-  """exa_json_path=$.UserName,exa_regex=({domain}[^\\\/]+?)[\\\/]+({user}[\w\.\-]{1,40}\$?)"""
+  """exa_json_path=$.UserName,exa_regex=({domain}[^\\\/]+?)[\\\/]+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """exa_regex=Path\":\"({process_path}({process_dir}(?:[^\"]+)?[\\\/])?({process_name}[^\\\/\"]+?))\""""
   """exa_json_path=$.UserType,exa_field_name=privileges"""
   """exa_json_path=$.RuleName,exa_field_name=event_name,exa_match_expr=!inlist($.RuleName,"NONE")"""

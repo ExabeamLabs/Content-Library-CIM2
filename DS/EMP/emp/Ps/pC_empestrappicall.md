@@ -10,7 +10,7 @@ Conditions = [
 """|ICALL|"""
 ]
 Fields = [
-"""EMP-LOGS ([^\|]*\|)({location}[^\|]+)\|({app}[^\|]+)\|({host}[^\|]+)\|[^\|]*\|({user}[\w\.\-]{1,40}\$?)\|({operation}[^\|]+)\|({time}[^\|]+)\|(null|({object}[^\|]+))\|(null|({additional_info}[^\|]+))\|"""
+"""EMP-LOGS ([^\|]*\|)({location}[^\|]+)\|({app}[^\|]+)\|({host}[^\|]+)\|[^\|]*\|({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|({operation}[^\|]+)\|({time}[^\|]+)\|(null|({object}[^\|]+))\|(null|({additional_info}[^\|]+))\|"""
 ]
 DupFields = [
 "app->app_code"

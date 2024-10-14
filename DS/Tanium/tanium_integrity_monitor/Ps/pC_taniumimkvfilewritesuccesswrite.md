@@ -14,7 +14,7 @@ Name = "tanium-im-kv-file-write-success-write"
   ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+\+?\-?\d\d:\d\d)\s+({host}[^\s]+)\s+Tanium"""
-    """\sUser="({user}[\w\.\-]{1,40}\$?)""""
+    """\sUser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """Computer-Name ="({dest_host}[^"]+)""""
     """File-Path="({file_path}({file_dir}[^"]+\\)({file_name}[^"]+\.({file_ext}[^"]+)))"""
     """Process-Path="({process_path}[^"]+(\\|\/)({process_name}[^"]+))""""

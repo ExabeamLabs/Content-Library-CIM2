@@ -11,7 +11,7 @@ securesphere-system = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
      """\(({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d)""",
-     """SecureSphere\|[^|]+?\|({operation}[^\|]+)\|({event_name}[^\|]+)\|({severity}[^\|]+)\|\s*suser=(({last_name}[^,]+),\s*({first_name}.+?)|({user}[\w\.\-]{1,40}\$?))\srt"""
+     """SecureSphere\|[^|]+?\|({operation}[^\|]+)\|({event_name}[^\|]+)\|({severity}[^\|]+)\|\s*suser=(({last_name}[^,]+),\s*({first_name}.+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\srt"""
   ]
  }
 

@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-kv-endpoint-login-success-4648-3"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "epoch_sec", "MM/dd/yyyy hh:mm:ss a"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "epoch_sec", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss Z"]
 Conditions = [
   """A logon was attempted using explicit credentials"""
   """Target Server Name"""
@@ -16,26 +16,26 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
   """TimeGenerated=({time}\d{10})"""
-  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+  """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d(T|\s)\d\d:\d\d:\d\d(\s*(\+|\-)[\d\:]+)?)"""",
+  """<\d+>\w+ \d+ \d\d:\d\d:\d\d\s*({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w.\-]+))"""
   """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
   """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s|;)""",
-  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4648)""",
-  """Account Whose Credentials Were Used:.+?Account Name(:|=)\s*(-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+(?<!local)(?<!loc))\s|({user}[\w\.\-]{1,40}\$?)))"""
-  """Subject(:|=)[\s;]*Security ID(:|=)\s*({user_sid}[^\s;]+?)[\s;]*Account Name(:|=)""",
-  """Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^<\]\s"\\,\|]+(?<!local)(?<!loc))|({user}[\w\.\-]{1,40}\$?)))[\s;]+(\\t|\\r|\\n)*Account Domain(:|=)""",
-  """Subject(:|=)[^\"]+?Account Domain(:|=)\s*(\\t)?(?:-|NT Service|({domain}[^\s;]+?))[\s;]*(\s*\\r\s\\t)?Logon ID(:|=)""",
-  """Subject(:|=)[^\"]+?Logon ID(:|=)\s*({login_id}[^=:]+?)[\s;]*Logon GUID(:|=)""",
-  """Subject(:|=)[^\"]+?Logon GUID(:|=)\s*\{({user_login_guid}[^}]+)\}[\s;]*Account Whose""",
-  """Used(:|=);?\s*Account Name(:|=)\s*({dest_user}[^\s;@]+?)(@({dest_domain}[^\s;]+?))?[\s;]*Account Domain(:|=)""",
-  """Used(:|=)[^\"]+?Account Domain(:|=)\s*((?i)(NULL)|({dest_domain}[^\s;]+?))(\\r|\\n|\\t)*[\s;]*Logon GUID(:|=)""",
-  """Used(:|=)[^\"]+?Logon GUID(:|=)\s*\{({account_login_guid}[^\s;]+?)\}[\s;]*Target Server(:|=)""",
-  """Target Server Name(:|=)\s*(localhost|({dest_host}[\w\-.]+?))(:\S+)?[\s;]*Additional Information(:|=)""",
-  """Additional Information(:|=)\s*({dest_service_name}[^=:]+?)[\s;]*Process Information(:|=)""",
-  """Process ID(:|=)\s*({process_id}[^=:]+?)[\s;]*Process Name(:|=)""",
-  """Process Name(:|=)\s*(?:|({process_path}({process_dir}(?:[^\"]+)?[\\\/])?\s*({process_name}[^\\\/]+?)))\s+Network Information:""",
-  """Network Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
-  """Account Name:\s*([\\t]*)?(-|({account}.+?))\s*(\\r|\\t|\\n)*?\s*Account Domain:"""
+  """Account Whose Credentials Were Used:.+?Account Name(:|=)[\\t\s]*(-|SYSTEM|(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+(?<!local)(?<!loc))\s|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\\r\\t\\n]*\s*(\w+\s\w+:|\w+=|[\w\s]+?\.)"""
+  """Subject(:|=).+?Security ID(:|=)[\\t\s]*({user_sid}NULL SID|S-[^\:]+?)[;\s\\n\\r\\t]*\w+\s\w+(:|=)""",
+  """Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^<\]\s"\\,\|]+(?<!local)(?<!loc))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*(Account Domain(:|=)|\w+=|[\w\s]+?\.)""",
+  """Subject(:|=)[^\"]+?Account Domain(:|=)\s*(\\r|\\n|\\t)*(?:-|NT Service|({domain}[^\s;]+?))[\s;]*(\\r|\\n|\\t)*Logon ID(:|=)""",
+  """Subject(:|=)[^\"]+?Logon ID(:|=)\s*(\\t)*({login_id}[^=:;\s;\\]+)[\s;]*""",
+  """Subject(:|=)[^\"]+?Logon GUID(:|=)(\\[rnt]|\s)*\{({user_login_guid}[^}]+)\}[\s;]*(\\[rnt]|\s)*Account Whose""",
+  """Used(:|=);?\s*Account Name(:|=)\s*({dest_user}[^\s;@]+?)(@({dest_domain}[^\s;]+?))?[\s;]*\w+\s\w+(:|=)""",
+  """Used(:|=)[^\"]+?Account Domain(:|=)\s*(\\r|\\n|\\t)*((?i)(NULL)|({dest_domain}[^\s;]+?))(\\r|\\n|\\t)*[\s;]*(Logon GUID|Callout Information)(:|=)""",
+  """Used(:|=)[^\"]+?Logon GUID(:|=)(\\[rnt]|\s)*\{({account_login_guid}[^\s;]+?)\}[\s;]*(\\[rnt]|\s)*\w+\s\w+(:|=)""",
+  """Target Server Name(:|=)(\\[rnt]|\s)*({dest_host}[\w\-\.]+)""",
+  """Additional Information(:|=)\s*(\\r|\\t|\\n)*({dest_service_name}[^=:\s;\\]+)"""
+  """Process ID(:|=)\s*(\\t)*({process_id}[^=:\s;\\]+)[\s;\\]*""",
+  """Process Name(:|=)\s*(\\r|\\t|\\n)*(-|({process_path}({process_dir}\w:([^:=]+)?)[\\\/])?\s*(|({process_name}[^\\\/;\s]+\.\w+)))(;|\s|\\[rnt]|\s)+|Process Name"""
+  """Network Address(:|=)(\\[rnt]|\s)*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+  """Used(:|=);?\s*.+?Account Name(:|=)\s*(\\t|\\r|\\n)*\s*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*(\\t|\\r|\\n)*\s*"""
 ]
 DupFields = [
 "dest_user->account",

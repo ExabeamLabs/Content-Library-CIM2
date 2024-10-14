@@ -16,15 +16,16 @@ Name = microsoft-o365-sk4-app-activity-success-setinboxrule
     """cs1=(\[\{"additional-properties"\:)?\{"({operation}[^"]+)""",
     """msg=({additional_info}.+?)\s\w+=""",
     """"Value":"(?:smtp:)?.+?@({dest_domain}[^\\\s",;@<]+)""",
-    """UserId":"({email_address}[^"\\]+@({email_domain}[^"]+)[^"]+)"""",
-    """UserId":"(\\.+)?\/(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"\\=]+))(\\)?\\"\s*on behalf""",
+    """UserId":"({email_address}[^"\\,]+@({email_domain}[^",]+))"""",
+    """UserId":"(\\.+)?\/(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=]+))(\\)?\\"\s*on behalf""",
     """UserId":"(\\.+)?\/({last_name}[^,]+),\s*({first_name}[^\\"]+)\\"\s*on behalf""",
-    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
+    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """destinationServiceName =({app}.+?)\s*filePath"""
     """({app}Office 365)"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)""",
     """"ObjectId":"({object}[^"]+)"""",
     """"OriginatingServer":"({host}[\w\-.]+)\s*\("""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
 
 

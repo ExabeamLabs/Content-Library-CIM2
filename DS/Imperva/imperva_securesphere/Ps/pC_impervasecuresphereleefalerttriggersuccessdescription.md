@@ -17,7 +17,7 @@ Fields = [
 """(\s|\||\\t)SourcePort=({src_port}\d+)"""
 """(\s|\||\\t)ServerIP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """(\s|\||\\t)ServerPort=({dest_port}\d+)"""
-"""(\s|\||\\t)Username=(|({user}[\w\.\-]{1,40}\$?))(\\t\w+=|\s*$)"""
+"""(\s|\||\\t)Username=(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\t\w+=|\s*$)"""
 """(\s|\||\\t)AlertType=(|({alert_type}.+?))(\\t\w+=|\s*$)"""
 """(\s|\||\\t)ServerGroup=(|({server_group}.+?))(\\t\w+=|\s*$)"""
 """(\s|\||\\t)Severity=(|({alert_severity}.+?))(\\t\w+=|\s*$)"""

@@ -10,7 +10,7 @@ Conditions = [
 ]
 Fields = [
 """<.+?>\w+ \d+ \d\d:\d\d:\d\d ({host}\S+)"""
-"""\[?({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s@\]]+))?\]?\s+\S+\s+\(VPN\) PKI: Verification failed!\s*({failure_reason}[^\.]+)(\.|\s*$)"""
+"""\[?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s@\]]+))?\]?\s+\S+\s+\(VPN\) PKI: Verification failed!\s*({failure_reason}[^\.]+)(\.|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 

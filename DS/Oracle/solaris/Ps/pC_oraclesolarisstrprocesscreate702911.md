@@ -16,7 +16,7 @@ Fields = [
 """({event_code}702911)\s({event_name}audit.notice)]\s*({operation}[^\s]+)"""
 """({result}(ok|failed))"""
 """session\s*({login_id}\d+)"""
-"""by\s*({user}[\w\.\-]{1,40}\$?)"""
+"""by\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """as\s*({auth}[^\s]+)"""
 """\sin\s({src_zone}[^\s]+)"""
 """from\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

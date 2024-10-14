@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """start=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-"""suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)) """
+"""suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)) """
 """shost=(unknown|({src_host}[^\s]+))"""
 """({app}Netwrix)"""
 """msg=({additional_info}.+?)(\s\w+=|$)"""

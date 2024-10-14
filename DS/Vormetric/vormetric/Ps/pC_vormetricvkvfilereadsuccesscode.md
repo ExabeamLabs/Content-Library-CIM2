@@ -13,11 +13,11 @@ Conditions = [
 ]
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\S+\s+({dest_host}[\w.\-]+)"""
-"""\suinfo=\"({user}[\w\.\-]{1,40}\$?)\\+[^\"]+?({domain}[^,\"\\]+?),[^,\"\\]*?\""""
+"""\suinfo=\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\+[^\"]+?({domain}[^,\"\\]+?),[^,\"\\]*?\""""
 """\ssproc=\"({process_path}({process_dir}[^\"]*?)(\\+({process_name}[^\"\\]+?))?)\""""
 """\sact=\"({access}[^\"]+)\""""
 """\sgp=\"({file_dir}[^\"]+)\""""
-"""\sfilePath=\"\\+({file_name}[^\"\\]+)\""""
+"""\sfilePath=\"\\+({file_name}[^\"\\]+?(\.({file_ext}[^\.\s"\\]+?))?)\""""
 """\sdenyStr=\"({action}[^\"]+)\""""
 """({alert_name}DENIED)"""
 ]

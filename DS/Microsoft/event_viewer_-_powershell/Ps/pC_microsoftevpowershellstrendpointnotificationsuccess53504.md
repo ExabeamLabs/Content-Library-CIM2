@@ -11,7 +11,7 @@ Name = microsoft-evpowershell-str-endpoint-notification-success-53504
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s*({host}[^\s]+)\s""",
     """eventid="+({event_code}\d+)""",
     """providername="+({provider_name}[^"]+)""",
-    """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
+    """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
     """\Weventrecordid="+({event_id}\d+)"""",
   """({event_name}Windows PowerShell has started an IPC listening thread)""",

@@ -20,6 +20,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-25
     """<Provider>({provider_name}[^<]+?)</Provider>""",
     """ThreadID\\*='({thread_id}[^']+)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

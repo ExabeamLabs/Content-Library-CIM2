@@ -8,7 +8,8 @@ TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss.SSS","yyyy-MM-dd'T'H
 Conditions = [ """"Operation":"DlpRuleMatch"""", """"UserId":"""" ]
 Fields = [
 """"CreationTime":"({time}\d\d\d\d-\d\d-\d\d(T|\s)\d\d:\d\d:\d\d(\.\d{1,3})?)""",
-"""suser=((anonymous)|({email_address}[^"@\s]+@[^".\s]+\.[^"\s]+)|({user}[\w\.\-]{1,40}\$?))""",
+""""UserId":"({email_address}[^"\\,]+@({email_domain}[^",]+))"""",
+"""suser=((anonymous)|({email_address}[^"@\s]+@[^".\s]+\.[^"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """"ObjectId":"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))"""",
 """"SensitiveInfoTypeName":"({additional_info}[^"]+)"""",
 """"FromPerson":"({email_address}[^\@]+\@[^"]+)""""

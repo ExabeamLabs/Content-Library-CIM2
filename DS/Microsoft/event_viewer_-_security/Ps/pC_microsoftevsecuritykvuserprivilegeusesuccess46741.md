@@ -12,7 +12,7 @@ Name = "microsoft-evsecurity-kv-user-privilege-use-success-4674-1"
       """Keywords=Audit\s({result}\w+)\s""",
       """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+)""",
       """({event_code}4674)""",
-      """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:\s*(NT AUTHORITY|({domain}[^":]+?))\s""",
+      """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s*(NT AUTHORITY|({domain}[^":]+?))\s""",
       """"TargetAccount":"(({dest_domain}[^\\\s"]+)\\+)?({dest_user}[^\\\s"]+)""",
       """"SubjectUserSid":"({user_sid}[^\s"]+)""",
       """Logon ID:\s*({login_id}[^\s"]+)""",

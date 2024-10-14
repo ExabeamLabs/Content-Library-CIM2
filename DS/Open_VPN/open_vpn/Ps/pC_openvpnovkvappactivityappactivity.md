@@ -13,7 +13,7 @@ Fields = [
   """timestamp:\s*\[({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
   """\w+ \d+ \d\d:\d\d:\d\d ({host}[\w\-.]+)"""
   """Cmd\\*=({operation}[^\s&"]+)"""
-  """User\\*=({user}[\w\.\-]{1,40}\$?)"""
+  """User\\*=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """DeviceType\\*=({src_host}[\w\-.]+)"""
   """request size:\s*({bytes}\d+)"""
   """mapping:\s*({app}.+?)\s*,"""

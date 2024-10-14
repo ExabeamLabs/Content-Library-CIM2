@@ -14,9 +14,9 @@ Conditions = [
 Fields = [
 """Agent_UTC_Time="({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))"""
 """Computer_Name ="([^\\]+\\)?({src_host}[^"]+)""""
-"""User_Name ="(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)""""
+"""User_Name ="(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """Source_Directory="(\?:\\|({src_file_dir}[^"]+))""""
-"""Source_File="({src_file_name}[^"]+?)\s*""""
+"""Source_File="({src_file_name}[^"]+?(\.({src_file_ext}[^"\s\.=]+))?)\s*""""
 """Destination_Directory="(\?:\\|({file_dir}[^"]+))""""
 """Destination_File="({file_name}[^"]+?)\s*""""
 """Destination_File_Extension="({file_ext}[^"]+)"\s"""

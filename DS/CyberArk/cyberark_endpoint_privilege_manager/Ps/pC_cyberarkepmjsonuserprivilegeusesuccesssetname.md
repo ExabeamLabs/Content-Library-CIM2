@@ -19,7 +19,7 @@ Fields = [
 """"computerName"+:"+({src_host}[^"]+)""",
 """"Description"+:"+({additional_info}[^"]+)""",
 """"PolicyName"+:"+({policy_name}[^"]+)""",
-""""@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+""""@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 """"@OsProcessId"+:"+({process_id}\d+)""",
 """"Path"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
 """"@allowed"+:"+({result}[^"]+)""",

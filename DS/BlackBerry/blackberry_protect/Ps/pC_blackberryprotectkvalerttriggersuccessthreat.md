@@ -23,7 +23,7 @@ Fields = [
 """Threat Classification:\s*({alert_name}[^,]+),"""
 """Status:\s*({result}[^,]+),"""
 """MD5:\s*({hash_md5}[^,]+),"""
-"""File Owner:\s*(({domain}[^\\,]+)\\)?({user}[\w\.\-]{1,40}\$?),"""
+"""File Owner:\s*(({domain}[^\\,]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?),"""
 """SHA256:\s*({hash_sha256}[^,]+),"""
 """Detected By:\s*({additional_info}[^,]+?)\s*(\w+=|,|"\s*$)"""
 ]

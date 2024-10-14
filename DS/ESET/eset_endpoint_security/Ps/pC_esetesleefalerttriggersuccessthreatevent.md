@@ -18,11 +18,11 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
       """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
-      """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
+      """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
       """objectType=({object_type}[^=]+?)\s*(\w+=|$)""",
       """threatHandled=({threat_handled}\d+)""",
-      """needRestart=({need_restart}\d+)""",
+      """needRestart=({result_code}\d+)""",
       """circumstances=({circumstances}[^=]+?)\s*(\w+=|$)""",
       """firstseen=({firstseen}[^=]+?)\s*(\w+=|$)""",
       """hash=({hash_sha256}[^\s]+)"""

@@ -14,6 +14,7 @@ Name = microsoft-evpowershell-xml-endpoint-notification-40962
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)"""
     """<security userid=('|")({user_sid}[^'"]+)('|")\/>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

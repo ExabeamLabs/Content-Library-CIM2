@@ -21,8 +21,8 @@ Fields = [
   """event.status="({result}[^"]+)""""
   """http.user-agent="({user_agent}[^"]+)""""
   """session.id="({session_id}[^"]+)""""
-  """push.user="(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^,\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))|({=user}[^"]+))"""
-  """user.id="(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^,\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))|({=user}[^"]+))"""
+  """push.user="(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^,\\]+)[\\]+({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({=user}[^"]+))"""
+  """user.id="(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^,\\]+)[\\]+({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({=user}[^"]+))"""
   """arg1":"({additional_info}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"

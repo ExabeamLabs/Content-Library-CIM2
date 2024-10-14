@@ -18,7 +18,7 @@ Fields = [
 """"ComputerName":"({host}[\w\-.]+)""""
 """({event_name}A service was installed in the system)"""
 """Service Type:\s+({service_type}[^\\:=]+?)(\\r|\\t|\\n)*Service Start Type:"""
-"""Service Name:\s*({service_name}[^=:\\]+?)\s*(\\r|\\t|\\n)*Service File Name:"""
+"""Service Name:\s*(\\+r|\\+t|\\+n)*(({service_name}[^=:\\_]+?)(_[^"\<]+?)?)\s*(\\+r|\\+t|\\+n)*Service """
 """Service File Name:\s+(|-|({process_path}({process_dir}[^\"=]+?[\\\/]+)?({process_name}[^\\\/\s]+?)))(\s+\/Processid:\{[^\}]*?\})?(\\t|\\n|\\r)*Service Type"""
 """Service File Name:\s*({process_command_line}[^=]+?)\s*(\\t|\\r|\\n)*Service Type:"""
 """Service Account:\s*(\\\\t|\\\\r|\\\\n)*(|({account_name}[^\\"]+?))\s*(\\t|\\r|\\n)*""""

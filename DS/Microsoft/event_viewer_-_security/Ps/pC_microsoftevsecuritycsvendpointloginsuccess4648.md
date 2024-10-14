@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4648
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}4648),""",
     """EventCode=({event_code}\w+)""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?明示的な資格情報を使用してログオンが試行されました。""",
-    """サブジェクト:\s+セキュリティ ID:\s+({user_sid}[^\s]+)\s+アカウント名:\s+({user}[\w\.\-]{1,40}\$?)\s+>アカウント ドメイン:\s+({domain}[^\s]+)\s+ログオン ID:\s+({login_id}[^\s]+)\s+""",
+    """サブジェクト:\s+セキュリティ ID:\s+({user_sid}[^\s]+)\s+アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+>アカウント ドメイン:\s+({domain}[^\s]+)\s+ログオン ID:\s+({login_id}[^\s]+)\s+""",
     """資格情報が使用されたアカウント:\s+アカウント名:\s+({dest_user}[^\s]+)\s+アカウント ドメイン:\s+({dest_domain}[^\s]+)\s+"""
     """ターゲット サーバー名:\s+({dest_host}[^\s]+)""",
     """プロセス ID:\s+({process_id}\w+)\s+プロセス名:\s+({process_path}({process_dir}.*?\\)({process_name}[^\\]*?))\s+ネットワーク情報:""",

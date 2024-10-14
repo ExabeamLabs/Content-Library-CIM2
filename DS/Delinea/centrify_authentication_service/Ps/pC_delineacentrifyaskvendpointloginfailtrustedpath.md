@@ -12,8 +12,8 @@ Name = "delinea-centrifyas-kv-endpoint-login-fail-trustedpath"
 ]
    Fields = [
 """utc=({time}\d{13})"""
-"""user=({user}[\w\.\-]{1,40}\$?)\("""
-"""user=({user}[\w\.\-]{1,40}\$?)@({domain}[^\(\)\s@]+)\s+(\w+=|$)"""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\("""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\(\)\s@]+)\s+(\w+=|$)"""
 """\|({event_name}Trusted path\s+[^\|]*)\|"""
 """status=({result}.+?)\s+(\w+=|$)"""
 """pid=({process_id}\d+)"""

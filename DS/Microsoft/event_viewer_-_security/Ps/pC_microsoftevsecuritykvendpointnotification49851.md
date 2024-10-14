@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985-1
     """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """({event_name}The state of a transaction has changed)""",
     """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """SubjectUserName ="+({user}[\w\.\-]{1,40}\$?)"""
+    """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """SubjectDomainName ="+({domain}[^"]+)""",
     """SubjectLogonId="+({login_id}[^"]+)""",
 # transcation_id is removed

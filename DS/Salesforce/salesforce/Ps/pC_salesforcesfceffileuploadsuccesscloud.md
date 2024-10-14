@@ -13,8 +13,8 @@ Name = "salesforce-sf-cef-file-upload-success-cloud"
     """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\S+""",
     """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
     """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\S+""",
-    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@;=]+)\\+)?(system|anonymous|({user}[\w\.\-]{1,40}\$?)))\s+(\w+=|$)""",
-    """\Wfname=({file_name}.+?(?:\.({file_ext}[^".]+?))?)\s+(\w+=|$)""",
+    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@;=]+)\\+)?(system|anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+(\w+=|$)""",
+    """\Wfname=({file_name}.+?(?:\.({file_ext}[^"\.\s=]+?))?)\s+(\w+=|$)""",
     """\WoldFileName =({src_file_name}.+?)\s*(\w+=|$)"""
     """\WfileType=({file_type}.+?)\s+(\w+=|$)""",
     """\WdestinationServiceName =({app}.+?)\s*(\w+=|$)""",

@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
 """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""USER=(Unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+="""
+"""USER=(Unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+="""
 """DOMAIN=(|({domain}[^\s]+?))\s+\w+="""
 """WORKLOAD=({app}[^=]+?)\s+\w+="""
 """COMMAND=({event_name}[^=]+?)\s+\w+="""

@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
     """({event_name}An account was logged off)""",
     """Security ID:\s*(SYSTEM|({user_sid}\S+))\s+Account Name:""",
-    """Account Name:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Logon Type:""",
     """Logon Type:\s*({login_type}\d+)""",
@@ -31,11 +31,11 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """exa_json_path=$.TimeCreated,exa_regex=[\\\/]*Date\(({time}\d{13})"""
     """exa_json_path=$.times[0].EventTime,exa_field_name=time"""
     """exa_regex=({event_name}An account was logged off)"""
-    """exa_json_path=$.Properties.TargetUserSid,exa_regex=(SYSTEM|({user_sid}\S+))"""
-    """exa_json_path=$.Properties.TargetUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}\S+))"""
-    """exa_json_path=$.Properties.TargetDomainName,exa_regex=(-|NT AUTHORITY|({domain}[^\s\\"]+))"""
-    """exa_json_path=$.Properties.TargetLogonId,exa_field_name=login_id"""
-    """exa_json_path=$.Properties.LogonType,exa_field_name=login_type"""
+    """exa_json_path=$..TargetUserSid,exa_regex=(SYSTEM|({user_sid}\S+))"""
+    """exa_json_path=$..TargetUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}\S+))"""
+    """exa_json_path=$..TargetDomainName,exa_regex=(-|NT AUTHORITY|({domain}[^\s\\"]+))"""
+    """exa_json_path=$..TargetLogonId,exa_field_name=login_id"""
+    """exa_json_path=$..LogonType,exa_field_name=login_type"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Computer,exa_field_name=host"""
   ]

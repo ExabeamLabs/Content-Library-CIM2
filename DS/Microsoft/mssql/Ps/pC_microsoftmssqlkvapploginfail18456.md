@@ -10,7 +10,7 @@ Name = microsoft-mssql-kv-app-login-fail-18456
   Fields = [
     """(\\n|\W)ComputerName =({host}[\w\-\.]+)\s*(\\n)?(\w+=|$)""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (?i)(AM|PM))""",
-    """(\\n|\W)Message=[^=]*?\Wuser\s*'\s*((({domain}[^\\]+)(\\)+))?({user}[\w\.\-]{1,40}\$?)'""",
+    """(\\n|\W)Message=[^=]*?\Wuser\s*'\s*((({domain}[^\\]+)(\\)+))?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """(\\n|\W)SourceName =({service_name}[^=]+?)\s*(\\n)?(\w+=|$)""",
     """SourceName =({app}MSSQL)""",
     """\[CLIENT:\s+({src_ip}[a-fA-F\d:\.]+)\]""",

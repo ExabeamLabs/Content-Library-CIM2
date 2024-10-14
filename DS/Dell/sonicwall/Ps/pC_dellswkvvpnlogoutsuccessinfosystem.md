@@ -7,7 +7,7 @@ Name = dell-sw-kv-vpn-logout-success-infosystem
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss"
   Conditions = [ """Info System Session End:""",]
   Fields = [
-    """:\s.+?\]\s+({host}[^\s]+).+?\sEnd:.+?\(({user}[\w\.\-]{1,40}\$?)"""
+    """:\s.+?\]\s+({host}[^\s]+).+?\sEnd:.+?\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

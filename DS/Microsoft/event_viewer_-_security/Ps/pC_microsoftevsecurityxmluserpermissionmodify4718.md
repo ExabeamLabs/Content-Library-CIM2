@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
     """<Data Name[^<>]+?AccessRemoved[^<>]+?>({access_type}[^<>]+?)</Data>""",
     """<EventID>({event_code}\d+)""",
     """<Keywords>({result}[^<]+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name\\*=('|")SubjectDomainName'>({domain}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",

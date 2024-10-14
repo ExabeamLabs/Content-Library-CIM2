@@ -7,20 +7,22 @@ Name = google-cloudplatform-json-endpoint-create-success-betacomputeinstancesins
   Conditions = [ """googleapis.com""", """"methodName":""", """compute.instances.insert"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
     """exa_regex="timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,6}Z)""",
-    """exa_regex="source({source_resource_type}Snapshot)":\s*"({source_resource}[^"\\]+)"""",
-    """exa_regex="source({source_resource_type}Image)":\s*"({source_resource}[^"\\]+)"""",
-    """exa_regex="source({source_resource_type}Disk)":\s*"({source_resource}[^"\\]+)"""",
+    """exa_regex="source({src_resource_type}Snapshot)":\s*"({src_resource}[^"\\]+)"""",
+    """exa_regex="source({src_resource_type}Image)":\s*"({src_resource}[^"\\]+)"""",
+    """exa_regex="source({src_resource_type}Disk)":\s*"({src_resource}[^"\\]+)"""",
     """exa_json_path=$.protoPayload.request.machineType,exa_field_name=machine_type""",
     """exa_json_path=$.protoPayload.request.serviceAccounts[:1].email,exa_field_name=linked_service_account""",
     """exa_json_path=$.protoPayload.request.networkInterfaces[:1].subnetwork,exa_field_name=subnetwork""",
   ]
+  DupFields = ["src_resource->source_resource", "src_resource_type->source_resource_type"]
 
 gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
     Fields = [
+    """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"logName"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
@@ -44,9 +46,9 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$.protoPayload.status.code,exa_field_name=result_code""",
     """exa_json_path=$.protoPayload.status.message,exa_field_name=failure_reason""",
-    """exa_json_path=$.protoPayload.authenticationInfo.serviceAccountDelegationInfo[:1].firstPartyPrincipal.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
-    """exa_json_path=$.protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
-    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
+    """exa_json_path=$.protoPayload.authenticationInfo.serviceAccountDelegationInfo[:1].firstPartyPrincipal.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.jsonPayload.access.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_json_path=$.protoPayload.requestMetadata.callerSuppliedUserAgent,exa_field_name=user_agent""",
@@ -64,6 +66,8 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name,exa_match_expr=!InList($.resource.labels.bucket_name,"")""",
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",
     """exa_json_path=$.operation.last,exa_field_name=operation_last"""
+    """exa_json_path=$.protoPayload.request.storageLocations[0],exa_field_name=location""",
+    """exa_json_path=$.protoPayload.response.operationType,exa_field_name=operation_type"""
     
 }
 ```

@@ -16,7 +16,7 @@ Fields = [
   """({event_code}5145)""",
   """<EventRecordID>({event_id}[^<]+)""",
   """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-  """('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+  """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
   """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
   """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
   """('|")ObjectType('|")>({file_type}[^<]+)<""",

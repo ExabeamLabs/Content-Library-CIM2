@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """devTime=({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))"""
-  """accountName =({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """accountName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
   """domain=(|({domain}.+?))\s+(\w+=|$)"""
   """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+(\w+=|$)"""
   """Event_Type=({access}.+?)\s+(\w+=|$)"""
@@ -22,8 +22,8 @@ Fields = [
   """cat=({category}[^=]+?)\s+(\w+=|$)"""
   """DatAdvantage\|[^\\]+?\|({alert_name}[^\\]+?)\|"""
   """Device_Name =({src_host}[\w\-.]+?)\s+(\w+=|$)"""
-  """accountName =({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
-  """usrName =(({domain}[^\\]+)\\)?(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"=]+?))\s+(\w+=|$)"""
+  """accountName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
+  """usrName =(({domain}[^\\]+)\\)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"=]+?))\s+(\w+=|$)"""
   """devTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
 ]
 DupFields = [

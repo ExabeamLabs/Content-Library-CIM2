@@ -20,6 +20,7 @@ Name = microsoft-o365-sk4-app-activity-success-forwardto
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)""",
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
     """"ObjectId":"(Unknown|Not Available|({object}[^"]+?))\s*""""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
 
 

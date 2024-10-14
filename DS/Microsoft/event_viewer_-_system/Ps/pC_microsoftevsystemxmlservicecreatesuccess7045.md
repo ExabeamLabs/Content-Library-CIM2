@@ -17,7 +17,7 @@ Fields = [
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """>({event_code}\d+)</EventID>"""
 """<Security UserID\\*=('|")({user_sid}[^"']+)"""
-"""<Data Name\\*=('|")ServiceName('|")>({service_name}[^<]+?)\s*</Data>"""
+"""<Data Name\\*=('|")ServiceName('|")>(?=\w)(({service_name}[^_]+?)(_[^\<]+)?)\s*</Data>"""
 """<Data Name\\*=('|")ServiceType('|")>({service_type}[^<]+?)\s*</Data>"""
 """<Data Name\\*=('|")ImagePath('|")>({process_path}({process_dir}[^<>\"]*?[\\\/]+)?({process_name}[^\"<>\\\/]*))</Data>"""
 """<Data Name\\*=('|")ImagePath('|")>({process_command_line}\"({process_path}({process_dir}[^<>\"]*?[\\\/]+)?({process_name}[^\"<>\\\/]*))\"(\s*({arg}[^<>]+))?)</Data>"""

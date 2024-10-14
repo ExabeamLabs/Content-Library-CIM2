@@ -10,7 +10,7 @@ Name = trendmicro-ds-json-endpoint-login-fail-4625
     """Subject(:|=).+?Account Domain(:|=)\s*(-|({src_domain}[^:;]+?))[\s;]*Logon ID(:|=)"""  
     """Logon Type(:|=)\s*({login_type}\d+)""" 
     """Account For[\s;]*Which Logon Failed(:|=)[\s;]*Security ID(:|=)\s*([\/\\]{0,9}NULL SID|({user_sid}[^=:]+?))[\s;]*Account Name"""  
-    """Logon Failed(:|=).+?Account Name(:|=)\s*(-|SYSTEM|d2\/|({email_address}[^\s@;]+?@[^\s@;]+?)|({user}[\w\.\-]{1,40}\$?))[\s;]*Account Domain(:|=)"""  
+    """Logon Failed(:|=).+?Account Name(:|=)\s*(-|SYSTEM|d2\/|({email_address}[^\s@;]+?@[^\s@;]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)"""  
     """Logon Failed(:|=).+?Account Domain(:|=)\s*(|-|\?|({domain}[^\s]+?))[\s;]*Failure Information""" 
     """Sub Status(:|=)\s*({result_code}[^\s;]+?)[\s;]*Process Information(:|=)""" 
     """Workstation Name(:|=)\s*(?:-|(::ffff:)?({src_host_windows}[^\s;]+))[\s;]*Source Network Address(:|=)"""  
@@ -37,7 +37,7 @@ trendmicro-ds-ossecevents = {
       """"TenantId\\*":({tenant_id}\d+)""",
       """"OSSEC_ID\\*":\\*"({event_code}\d+)""",
       """Subject:.+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
-      """Subject:.+?Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
+      """Subject:.+?Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """Subject:.+?Account Domain:\s*(-|({domain}[^\s]+))""",
       """Subject:.+?Logon ID:\s*({login_id}[^\s]+)"""
     

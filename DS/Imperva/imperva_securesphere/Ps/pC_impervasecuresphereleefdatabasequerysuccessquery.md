@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
   """\|devTime=({time}\d+ \w+ \d+ \d\d:\d\d:\d\d)"""
-  """usrName =(({domain}[^\\|]+)(\\))?({user}[\w\.\-]{1,40}\$?)"""
+  """usrName =(({domain}[^\\|]+)(\\))?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """ApplicationName =({app}[^|]+)"""
   """Service Name =({service_name}[^|]+)"""
   """Server Group=({server_group}[^|]+)"""

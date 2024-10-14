@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Data Name(\\)?=('|")TaskName('|")>({task_name}[^<]+)""",

@@ -20,7 +20,7 @@ Fields = [
 """"UserIDSrc":"({src_user}[^\"]+)"""
 """"Security_ID":"({user_sid}[^\"]+)"""
 """"Source_Logon_ID":\"({login_id}[^\"]+)"""
-""""UserIDDst":"({user}[\w\.\-]{1,40}\$?)"""
+""""UserIDDst":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 DupFields = [
 "src_domain->domain"

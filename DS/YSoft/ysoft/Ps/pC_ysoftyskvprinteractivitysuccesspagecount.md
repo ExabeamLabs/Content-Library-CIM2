@@ -9,7 +9,7 @@ Name = ysoft-ys-kv-printer-activity-success-pagecount
   Conditions = [ """DeviceName ="""",""", PrinterLocation="""",""", PageCount="""" ]
   Fields = [
     """date="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
-    """UserLogin="({user}[\w\.\-]{1,40}\$?)"""",
+    """UserLogin="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """DeviceName ="({printer_name}[^"]+)"""",
     """title="({object}[^"]+)"""",
     """PageCount="({num_pages}\d+)""",

@@ -9,7 +9,7 @@ Name = redshield-rswaf-kv-alert-trigger-success-asm
   Conditions = [ """ASM:SUPPORT_ID=""", """TYPE=""", """DEST_IP=""", """DEST_PORT=""" ]
   Fields = [
     """;HOST=({host}[\w\-\.]+)"""
-    """ASM:SUPPORT_ID=({incident_id}\d+)"""
+    """ASM:SUPPORT_ID=({alert_id}\d+)"""
     """;TYPE=({alert_name}[^=;]+)"""
     """;DATE=({time}[^=;]+)"""
     """;DEST_IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
@@ -20,7 +20,7 @@ Name = redshield-rswaf-kv-alert-trigger-success-asm
     """;USERNAME=(N\/A|({user}[^;]+))"""
     """;POLICY=({policy_name}[^;]+)"""
     """;PROTO=({protocol}[^;]+)"""
-    """;REQ_STATUS=({status}[^;]+)"""
+    """;REQ_STATUS=({status_msg}[^;]+)"""
     """;RESP_CODE=({result_code}[^;]+)"""
     """;SEV=({alert_severity}[^;]+)"""
     """;SRC_PORT=({src_port}\d+)"""

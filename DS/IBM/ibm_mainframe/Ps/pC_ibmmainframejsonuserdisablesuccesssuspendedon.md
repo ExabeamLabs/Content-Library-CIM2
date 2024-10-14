@@ -6,7 +6,7 @@ Name = ibm-mainframe-json-user-disable-success-suspendedon
    Conditions = [ """"MFSOURCETYPE":"SYSLOG"""", """"MSGTXT":"""", """ was suspended on """ ]
    Fields = ${IBMParsersTemplates.ibm-mainframe-events.Fields}[
      """exa_regex=({event_name}suspended)""",
-     """exa_json_path=$.MSGTXT,exa_regex=^[^"]+?\sUserID ({user}[\w\.\-]{1,40}\$?)\sfor"""
+     """exa_json_path=$.MSGTXT,exa_regex=^[^"]+?\sUserID ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sfor"""
    ]
    ParserVersion = "v1.0.0"
 

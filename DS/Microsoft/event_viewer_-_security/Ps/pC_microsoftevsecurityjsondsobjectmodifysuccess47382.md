@@ -11,11 +11,11 @@ Name = "microsoft-evsecurity-json-ds-object-modify-success-4738-2"
     """({event_code}4738)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"Category"+:"+({category}[^"]+)"""",
-    """"TargetSid":"({target_sid}[^"]+)""""
+    """"TargetSid":"({dest_user_sid}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

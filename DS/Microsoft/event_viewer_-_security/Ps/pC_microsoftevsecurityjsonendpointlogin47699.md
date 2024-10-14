@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-9
     """ComputerName =({computer_name}[\w.\-]+)""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?Kerberos サービス チケットが要求されました。""",
     """({event_code}4769)""",
-    """アカウント名:\s+({user}[\w\.\-]{1,40}\$?)@({domain}[\w._\-]+)""",
+    """アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[\w._\-]+)""",
     """サービス名:\s+({dest_host}\S+\$)\s+サービス ID:""",
     """サービス名:\s+({service_name}\S+)\s+サービス ID:""",
     """チケット オプション:\s+({ticket_options}\S+)\s+チケット暗号化の種類:""",

@@ -17,7 +17,7 @@ Fields = [
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 """"DomainID":"({domain}[^"]+)"""
 """"HostID":"({host}[\w\-.]+)"""
-""""UserIDSrc":"({user}[\w\.\-]{1,40}\$?)"""
+""""UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"Security_ID":"({user_sid}[^"]+)"""
 """"Source_Logon_ID":"({login_id}[^"]+)"""
 """"UserIDDst":"({dest_user}[^"]+)"""

@@ -6,7 +6,7 @@ Name = sap-s-cef-file-download-success-download
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|SECUDE|C-Bus|""", """|AUY|Download to File|""" ]
   Fields = ${SAPParsersTemplates.sap-activity.Fields} [
-  """fname=({file_path}(({file_dir}\w:)[^"]+?)[\\]+[^"]+)[\\]+(\\|({file_name}[^"\s]+)?)"""
+  """fname=({file_path}(({file_dir}\w:)[^"]+?)[\\]+[^"]+)[\\]+(\\|({file_name}[^"\s]+?(\.({file_ext}[^"\s\.=]+?))?)?)\s*$"""
  ]
 
 sap-activity = {
@@ -16,7 +16,7 @@ sap-activity = {
   Fields = [
     """end=({time}\w{3,4} \d{1,2} \d{4} \d{1,2}:\d{1,2}:\d{1,2})""",
     """dvchost=({host}[^\s]+)""",
-    """suser=({user}[\w\.\-]{1,40}\$?)""",
+    """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """shost=(({src_ip}((([0-9a-fA-F.:]{1,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w.-]+))\s""",
     """msg=({additional_info}[^=]+?)\s*\w+=""",
     """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

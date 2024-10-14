@@ -10,7 +10,7 @@ Name = stealthbits-ssd-cef-alert-trigger-kerberoasting
   Fields = [
     """threatTime=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\dZ)""",
     """threatType=({alert_name}[^=]+)\s+\w+=""",
-    """users=([^\\]+\\)?({user}[\w\.\-]{1,40}\$?)""",
+    """users=([^\\]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """computers=([^\\]+\\)?({host}[^;]+)""",
    ]
    DupFields = [ "alert_name->alert_type" ]

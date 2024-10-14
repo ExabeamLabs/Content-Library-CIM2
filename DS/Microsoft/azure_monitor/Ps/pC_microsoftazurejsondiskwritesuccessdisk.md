@@ -5,16 +5,17 @@ Name = microsoft-azure-json-disk-write-success-disk
   ParserVersion = v1.0.0
   Conditions = [ """"operationName":""", """Microsoft.Compute/disks/write""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
-    """exa_json_path=$.properties.responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\"""
-    """exa_json_path=$.properties.responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+?)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="managedBy\\?"+:\s*\\?"+({dest_host}[\w\-.]+)\\"""
-    """exa_json_path=$.properties.responseBody,exa_regex="osType\\?"+:\s*\\?"+({os_type}[^"]+?)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="createOption\\?"+:\s*\\?"+({source_resource_type}[^"]+?)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="imageReference\\?"+:[^\}]+"+id\\?"+:\s*\\?"+({source_resource}[^"]+?)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="creationData\\?"+:[^\}]+"+sourceResourceId\\?"+:\s*\\?"+({source_resource}[^"]+)\\"""
-    """exa_json_path=$.properties.responseBody,exa_regex="diskSizeGB\\?"+:\s*\\?({disk_size}[^,"]+)"""
-    """exa_json_path=$.properties.responseBody,exa_regex="diskState\\?"+:\s*\\?"+({disk_state}[^"]+?)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\"""
+    """exa_json_path=$..responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+?)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="managedBy\\?"+:\s*\\?"+({dest_host}[\w\-.]+)\\"""
+    """exa_json_path=$..responseBody,exa_regex="osType\\?"+:\s*\\?"+({os_type}[^"]+?)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="createOption\\?"+:\s*\\?"+({src_resource_type}[^"]+?)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+id\\?"+:\s*\\?"+({src_resource}[^"]+?)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="creationData\\?"+:[^\}]+"+sourceResourceId\\?"+:\s*\\?"+({src_resource}[^"]+)\\"""
+    """exa_json_path=$..responseBody,exa_regex="diskSizeGB\\?"+:\s*\\?({disk_size}[^,"]+)"""
+    """exa_json_path=$..responseBody,exa_regex="diskState\\?"+:\s*\\?"+({disk_state}[^"]+?)\\?""""
   ]
+  DupFields = ["src_resource->source_resource", "src_resource_type->source_resource_type" ]
 
 azure-activity-json = {
     Vendor = Microsoft
@@ -40,7 +41,7 @@ azure-activity-json = {
       """exa_json_path=$.resourceProviderName.value,exa_field_name=service_name"""
       """exa_json_path=$.resourceType.value,exa_field_name=resource_type"""
       """exa_json_path=$.resourceId,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"""
-      """exa_json_path=$.status.value,exa_field_name=status"""
+      """exa_json_path=$.status.value,exa_field_name=status_msg"""
       """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""

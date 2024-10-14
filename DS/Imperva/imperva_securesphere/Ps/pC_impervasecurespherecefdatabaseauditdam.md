@@ -27,7 +27,7 @@ Fields = [
   """spt=({src_port}\d+)"""
   """dpt=({dest_port}\d+)"""
   """cat=({service_name}[^=]+?)\s\w+="""
-  """\Wduser="?\s*(({domain}[^\\\s@]+)\\+)?({user}[\w\.\-]{1,40}\$?)\\?\s*"?\s+(\w+=|$)"""
+  """\Wduser="?\s*(({domain}[^\\\s@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?\s*"?\s+(\w+=|$)"""
   """proto=({protocol}[^\s=]+?)\s\w+="""
 ]
 ParserVersion = "v1.0.0"

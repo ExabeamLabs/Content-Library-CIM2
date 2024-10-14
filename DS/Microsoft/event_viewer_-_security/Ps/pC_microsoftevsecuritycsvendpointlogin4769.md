@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-4769
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Service Ticket Operations""",
     """({event_code}4769)""",
-    """TargetUserName:({user}[\w\.\-]{1,40}\$?)@({domain}[^,]+),""",
+    """TargetUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^,]+),""",
     """TargetDomainName:({domain}[^,]+),""",
     """ServiceName:({src_host}[\w\-.]+\$)""",
     """TicketOptions:({ticket_options}[^,]+),""",

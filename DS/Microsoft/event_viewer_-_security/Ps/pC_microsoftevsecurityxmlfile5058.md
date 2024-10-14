@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-file-5058
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>5058</EventID>""", """<Message>Key file operation""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+)<""",
+    """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+(\.({file_ext}[^\s<]+))?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
   DupFields = ["host->dest_host"]
@@ -19,7 +19,7 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[^<>]+)<\/Computer>""",
+    """<Computer>({host}[\w\.\-]+)<""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -31,7 +31,7 @@ s-xml-object-access = {
     """<Provider>({provider_name}.+?)</Provider>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
@@ -46,6 +46,7 @@ s-xml-object-access = {
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<\/Data><Data Name ='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
   
 }
 ```

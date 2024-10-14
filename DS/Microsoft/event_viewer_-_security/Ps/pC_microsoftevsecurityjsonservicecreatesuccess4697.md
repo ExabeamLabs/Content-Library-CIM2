@@ -17,10 +17,11 @@ Fields = [
 """"Hostname":"({host}[\w\-.]+)""""
 """"Keywords":({result}[^,]+),"""
 """"SubjectUserSid":"({user_sid}[^"]+)""""
-""""SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""""
+""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"SubjectDomainName":"({domain}[^"]+)""""
 """"SubjectLogonId":"({login_id}[^"]+)""""
-""""ServiceName":"({service_name}[^"]+)""""
+"""Service Name:\s*(\\+r|\\+t|\\+n)*(({service_name}[^=:\\_]+?)(_[^"\<]+?)?)\s*(\\+r|\\+t|\\+n)*Service """
+""""ServiceName":"(({service_name}[^_"]+?)(_[^"\<]+?)?)"""",
 """"ServiceFileName":"\s*(|({process_path}({process_dir}.*?[\\\/]+)?({process_name}[^\\\/]+?)))""""
 """"ServiceType":"({service_type}[^"]+)""""
 """"ServiceStartType":"({service_start_type}[^\"]+)""""

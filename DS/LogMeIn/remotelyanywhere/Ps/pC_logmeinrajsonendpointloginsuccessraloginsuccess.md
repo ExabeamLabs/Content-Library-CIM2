@@ -14,7 +14,7 @@ Fields = [
   """EVENT_DT:\s"+({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d)""""
   """\sHOSTADDR:\s"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   """\sHOSTNAME:\s+"+({host}[^"]+)"+\s"""
-  """\sSession\s-\s({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s-\sLogging in as '(({domain}\w+)\\)?({user}[\w\.\-]{1,40}\$?)'."""
+  """\sSession\s-\s({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s-\sLogging in as '(({domain}\w+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'."""
   """\sDESCRIPTION:\s"+({description}[^"]+)""""
   """\sRULE_NAME: "*({rule}[^"]+)""""
   """\sDOMAIN_NAME:\s+"+(unknown|null|({domain}[^"]+))"+\s"""
@@ -23,7 +23,7 @@ Fields = [
   """\sEVENT_PRIORITY:\s+"+({priority}[^"]+)"+\s"""
   """\sPOLICY_NAME:\s+"+({policy_name}[^"]+)"+\s"""
   """\sPROCESS_NAME:\s+"+(unknown|null|({process_path}[^"]+))"+\s"""
-  """\sUSER_NAME:\s+"+(unknown|null|({user}[\w\.\-]{1,40}\$?))"+\s"""
+  """\sUSER_NAME:\s+"+(unknown|null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+\s"""
 ]
 DupFields = [
   "event_name->event_category"

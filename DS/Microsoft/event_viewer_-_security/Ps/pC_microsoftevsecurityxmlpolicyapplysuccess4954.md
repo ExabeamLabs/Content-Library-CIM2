@@ -22,7 +22,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

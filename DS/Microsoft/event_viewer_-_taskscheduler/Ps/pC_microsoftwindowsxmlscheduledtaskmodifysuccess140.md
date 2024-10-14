@@ -15,7 +15,8 @@ Name = microsoft-windows-xml-scheduled-task-modify-success-140
     """<Task>({task_name}[^<]+)""",
     """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<""",
     """<Data Name\\*=('|")ResultCode('|")>({result_code}[^<]+)<""",
-    """<Data Name =('|")UserName('|")>(SYSTEM|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
+    """<Data Name =('|")UserName('|")>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

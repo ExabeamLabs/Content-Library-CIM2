@@ -27,11 +27,11 @@ eset-activity = {
       """inbound=({direction}\d+)""",
       """\Waction=({operation}[^\s]+)\s""",
       """\Wcat=({category}[^=]+?)\s*(\w+=|$)""",
-      """\Wuser=({user}[\w\.\-]{1,40}\$?)\s*(\w+=|$)""",
+      """\Wuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=|$)""",
       """processName =({process_path}({process_dir}(?:(\w+:)*([\\\/]+[^=\\\/"]+)+)?[\\\/]+)({process_name}[^=\,\\\/]+?))\s*(\w+=|$)""",
       """proto=({protocol}[^\s]+)""",
-      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[\w\.\-]{1,40}\$?)'.""",
-      """accountName =(NT AUTHORITY\\+|({domain}[^\\]+?)\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)"""
+      """\Wuser '(({domain}[^\s\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'.""",
+      """accountName =(NT AUTHORITY\\+|({domain}[^\\]+?)\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)"""
     
 }
 ```

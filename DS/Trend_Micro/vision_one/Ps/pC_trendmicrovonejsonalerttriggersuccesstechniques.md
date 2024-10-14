@@ -15,7 +15,7 @@ Name = trendmicro-vone-json-alert-trigger-success-techniques
     """exa_json_path=$.detectionTime,exa_field_name=time"""
     """exa_json_path=$.filters[0].name,exa_field_name=alert_name"""
     """exa_json_path=$.entityName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-    """exa_json_path=$..highlightedObjects[?(@.type == 'email_sender')].value,exa_regex=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$..highlightedObjects[?(@.type == 'email_sender')].value,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """exa_json_path=$..highlightedObjects[?(@.type == 'email_subject')].value,exa_field_name=email_subject"""
     """exa_json_path=$..highlightedObjects[?(@.type == 'email_message_id')].value,exa_regex=\<({message_id}[^"\>]+)"""  
   ]

@@ -6,11 +6,11 @@ Product: Forcepoint Insider Threat
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |  33   |   19   |         4          |       1        |    0    |
 
-|    Use-Case    | Activity Types(Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  alert-trigger:success(dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Data_Exfiltration.md) |
-|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  alert-trigger:success(dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Data_Leak.md)         |
-|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success(dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Malware.md)    |
+| [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md) |  alert-trigger:success (dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Data_Exfiltration.md) |
+|         [Data Leak](../../../UseCases/uc_data_leak.md)         |  alert-trigger:success (dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | T1020 - Automated Exfiltration<br>T1071 - Application Layer Protocol<br>TA0010 - TA0010<br> | [<ul><li>29 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Data_Leak.md)         |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (dlp-alert)<br> ↳[forcepoint-insiderthreat-cef-alert-trigger-success-siemnotification](Ps/pC_forcepointinsiderthreatcefalerttriggersuccesssiemnotification.md)<br> | TA0002 - TA0002<br>    | [<ul><li>4 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_forcepoint_forcepoint_insider_threat_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

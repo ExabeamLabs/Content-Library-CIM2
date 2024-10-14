@@ -17,6 +17,7 @@ Fields = [
   """exa_json_path=$.appDisplayName,exa_field_name=app""",
   """exa_json_path=$.userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))\s*""",
   """exa_json_path=$.failureReason,exa_field_name=failure_reason,exa_match_expr=!InList(toLower($.failureReason), 'null')"""
+  """exa_json_path=$.appDisplayName,exa_field_name=operation"""
 ]
 ParserVersion = "v1.0.0"
 

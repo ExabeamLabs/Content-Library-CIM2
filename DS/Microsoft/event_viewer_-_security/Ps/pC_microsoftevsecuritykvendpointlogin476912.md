@@ -25,7 +25,7 @@ Fields = [
 """Logon GUID(?::|=)\{?({user_login_guid}[^\}\s]+)"""
 """Ticket Options(:|=)\s*({ticket_options}[^\s]+)"""
 """EventType(:|=)\s*({result}[^\s]+)"""
-"""Account Name(:|=)\s*([^\/]+\/)?({user}[\w\.\-]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*Account"""
+"""Account Name(:|=)\s*([^\/]+\/)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*Account"""
 ]
 ParserVersion = "v1.0.0"
 

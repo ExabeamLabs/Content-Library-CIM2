@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-policy-apply-4954
     """({event_name}Group Policy settings for Windows Firewall were changed, and the new settings were applied)""",
     """EventIDCode=({event_code}\d+)""",
     """Computer=({host}[\w\-.]+)""",
-    """User=(|({user}[\w\.\-]{1,40}\$?))\s""",
+    """User=(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
     """Domain=(|({domain}[^\s]+))\s""",
     """EventType=(|({event_category}[^\s]+))\s""",
     """EventCategory=({operation_type}\S+)""",

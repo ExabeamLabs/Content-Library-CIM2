@@ -19,7 +19,7 @@ Fields = [
   """"severity":({alert_severity}\d+),"""
   """"description":"({additional_info}.+?)"+,"+\w+"+:"""
   """"URL":"({malware_url}[^"]+)"+\}"""
-  """app-username":"({user}[\w\.\-]{1,40}\$?)"""
+  """app-username":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"event-name":"({event_name}[^"]+)"""
   """user-email":"({email_address}[^\s@]+@({email_domain}[^"]+))"+\}"""
   """"app-user-displayname":"({full_name}[^"]+)"""

@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-1
     """TimeGenerated=({time}\d{10})""",
     """Message=({event_name}.*?)\s*Subject\s*:""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Object:""",
     """Object Server:\s*({object_server}\S.*?)\s+Object Type:""",

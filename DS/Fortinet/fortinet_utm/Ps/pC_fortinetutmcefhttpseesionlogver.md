@@ -30,12 +30,13 @@ Fields = [
 """\sad.direction=({direction}[^=]+?)\s+\w+="""
 """referralurl=({referrer}[^\s]+)"""
 """\sad.policyid=({policy_id}[^\s]+)"""
-"""\sduser=({user}[\w\.\-]{1,40}\$?)"""
+"""\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sad.agent=({user_agent}[^=]+?)\s+[\w.]+="""
 """requestContext=({category}[^=]+?)\s+([\w.]+=|$)"""
 """deviceSeverity=({additional_info}[^=]+?)\s+([\w.]+=|$)""",
 """\sad\.profile=({profile}[^=]+?)\s\w+=""",
 """\Wtz="?({tz}[+-]\d+)"""
+"""referralurl=({url}[^\s]+)"""
 ]
 ParserVersion = "v1.0.0"
 

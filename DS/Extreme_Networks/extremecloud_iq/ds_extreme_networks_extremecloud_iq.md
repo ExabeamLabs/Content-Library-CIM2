@@ -6,7 +6,7 @@ Product: ExtremeCloud IQ
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   0   |   0    |         0          |       0        |    0    |
 
-|  Use-Case  | Activity Types(Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
+|  Use-Case  | Activity Types (Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
 |:----------:| ---- | ---- | ---- |
 | Enrichment |    |    | [](RM/r_m_extreme_networks_extremecloud_iq_Enrichment.md) |
 

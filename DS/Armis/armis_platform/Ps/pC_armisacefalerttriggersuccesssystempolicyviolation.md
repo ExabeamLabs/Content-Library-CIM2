@@ -18,7 +18,7 @@ Name = armis-a-cef-alert-trigger-success-systempolicyviolation
     """"device_0_id":({device_id}\d+)""",
     """"device_0_name":"({device_name}[^"]+)""",
     """"device_0_category":"({device_category}[^"]+)""",
-    """"device_0_riskLevel":({device_severity}\d+)""",
+    """"device_0_riskLevel":({severity}\d+)""",
     """"device_0_model":"({device_model}[^"]+)""",
     """"device_0_sensorName":"({sensor}[^"]+)""",
     """"device_0_type":"({device_type}[^"]+)""",

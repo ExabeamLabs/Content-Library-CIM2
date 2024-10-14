@@ -17,7 +17,7 @@ Name = tyco-ccure-kv-physical-location-access-vendoraction
     """reason_code="({action}[^"]+)"""",
     """vendor_action="({result}[^"]+)"""",
     """description="({additional_info}[^"]+)"""",
-    """user="({user}[\w\.\-]{1,40}\$?)""""
+    """user="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   ]
 
 

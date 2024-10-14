@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-policy-apply-6144
     """({event_name}Security policy in the group policy objects has been applied successfully)""",
     """EventIDCode=({event_code}\d+)""",
     """Computer=({host}[\w\-.]+)""",
-    """User=(|({user}[\w\.\-]{1,40}\$?))\s""",
+    """User=(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
     """Domain=(|({domain}[^\s]+))\s""",
     """EventType=(|({event_category}[^\s]+))\s""",
     """EventCategory=({operation_type}\S+)""",

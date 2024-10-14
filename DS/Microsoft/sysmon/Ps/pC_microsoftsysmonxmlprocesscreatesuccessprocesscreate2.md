@@ -17,7 +17,7 @@ Fields = [
     """<Data Name\\*='UtcTime'>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)</Data>""",
     """<Computer>({src_host}({host}({dest_host}[\w\-.]+)))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*='User'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name\\*='User'>(({domain}[^\\<]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Security UserID\\*='({user_sid}[^']+)'/>""",
     """<Data Name\\*='Hashes'>.*?MD5=({hash_md5}[A-F0-9a-f]+).*?</Data>""",
     """(?i)<Data Name\\*='SourceProcessGuid'>\{({process_guid}[A-F0-9a-f-]+)\}</Data>""",

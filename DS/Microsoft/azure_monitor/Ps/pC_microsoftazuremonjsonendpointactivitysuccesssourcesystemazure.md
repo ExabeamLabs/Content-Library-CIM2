@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuremon-json-endpoint-activity-success-sourcesystemazure
   ParserVersion = v1.0.0
-  Conditions = [ """"SourceSystem":"Azure"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""", """"Category":"""" ]
+  Conditions = [ """"SourceSystem":"Azure"""", """"TenantId":"""", """ResourceId":"""", """"_ItemId":"""" ]
   Fields = ${MSParserTemplates.microsoft-azure-endpoint-json.Fields} [
     """exa_json_path=$.Uri,exa_field_name=file_path""",
     """exa_json_path=$.AccountName,exa_field_name=storage_account""",

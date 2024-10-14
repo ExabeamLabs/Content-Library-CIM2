@@ -7,7 +7,7 @@ Product = "Nokia VitalQIP"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
   """qip"""
-  """DHCP"""
+  """DHCP_RenewLease"""
   """ Host="""
   """ Domain="""
 ]

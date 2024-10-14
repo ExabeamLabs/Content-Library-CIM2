@@ -14,7 +14,7 @@ Fields = [
   """\"+created_at\"+:\"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
   """\"time\"\s*:\s*\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\ssuser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)"""
+  """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
   """\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""
   """\ssuser=.*?@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))\s+"""
   """\"+created_by\"+:\{.+?\"+name\"+:\"+({full_name}[^\"]+)\"+"""

@@ -19,7 +19,7 @@ Fields = [
 """An account failed to log on.+?Account Domain:\s+(?=\w)({src_domain}.+?)\s+Logon ID:"""
 """Logon Type:\s+({login_type}\d+)"""
 """Account For Which Logon Failed:\s+Security ID:\s+({user_sid}[^\s]+)\s+Account"""
-"""Logon Failed:.+?Account Name:\s+(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Account Domain:"""
+"""Logon Failed:.+?Account Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
 """Logon Failed:.+?Account Domain:\s+(?=\w)({domain}.+?)\s+Failure Information"""
 """Sub Status:\s+({result_code}[^\s]+) """
 """Source Network Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

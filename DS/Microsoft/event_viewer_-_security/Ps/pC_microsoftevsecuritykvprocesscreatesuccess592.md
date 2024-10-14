@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-process-create-success-592
     """({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))""",
     """ComputerName =({dest_host}[\w\-.]+?)\s""",
     """({event_code}592)""",
-    """User\s*Name:\s*(?:-|({user}[\w\.\-]{1,40}\$?))\s+Domain""",
+    """User\s*Name:\s*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Domain""",
     """Domain:\s*(?:-|({domain}.+?))\s+Logon""",
     """Logon\s*ID:\s*(?:-|({login_id}.+?))\s*$""",
     """New\s*Process\s*ID:\s*(?:-|({process_guid}\d+))\s""",

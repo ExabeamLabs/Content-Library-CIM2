@@ -17,7 +17,7 @@ Fields = [
 """"eventID":"({event_code}\d+)""""
 """"eventRecordID":"({event_id}\d+)""""
 """"severityValue":"({result}[^"]+?)\s*""""
-""""targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*""""
+""""targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
 """"targetUserName":"({email_address}[^"\s@]+@[^"\s@]+?)\s*""""
 """"workstation":"({src_host}[^"\s]+?)\s*""""
 """"status":"({result_code}[^"]+?)\s*""""

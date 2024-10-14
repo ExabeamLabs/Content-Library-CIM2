@@ -18,7 +18,7 @@ Name = "microsoft-evsecurity-str-group-member-remove-success-memberwasremoved"
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
       """Computer=({host}[^\s]+)""",
       """"SubjectDomainName":"({domain}[^"]+)"""",
-      """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"SubjectLogonId":"({login_id}[^"]+)"""",
       """"SubjectUserSid":"({user_sid}[^"]+)"""",
       """"TargetDomainName":"({group_domain}[^"]+)"""",
@@ -26,8 +26,8 @@ Name = "microsoft-evsecurity-str-group-member-remove-success-memberwasremoved"
       """"TargetSid":"({group_id}[^"]+)"""",
       """"MemberSid":"({dest_user_sid}[^"]+)"""",
       """"MemberName":"(-|({user_dn}({account_id}[^"]+)))"""",
-      """A member was removed from a security-enabled ({group_type}[^\s]+) group.+?Account Name:\s+({user}[\w\.\-]{1,40}\$?).+?Account Domain:\s+({domain}[^\s]+).+?Logon ID:\s+({login_id}[^\s]+)\s+""",
-      """Member:\s+Security ID:\s+({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}[^:]+?)|(?:[^:]+?))\s+Account Name:\s+({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))?[\w-]*\s+Group:\s+Security ID:\s+({group_id}[^\s]+).+?\s+(Group|Account) Name:\s+({group_name}[^\s]+)?.+?\s+(Group|Account) Domain:\s+({group_domain}[^\s]+)""",
+      """A member was removed from a security-enabled ({group_type}[^\s]+) group.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Account Domain:\s+({domain}[^\s]+).+?Logon ID:\s+({login_id}[^\s]+)\s+""",
+      """Member:\s+Security ID:\s+(({dest_user_sid}S-\d+-[^\s:]+)|(({account_domain}[^\\:]+)\\({account_name}[^:]+?))|(?:[^:]+?))\s+Account Name:\s+({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))?[\w-]*\s+Group:\s+Security ID:\s+({group_id}[^\s]+).+?\s+(Group|Account) Name:\s+({group_name}[^\s]+)?.+?\s+(Group|Account) Domain:\s+({group_domain}[^\s]+)""",
   ]
   DupFields = [
     "host->dest_host"

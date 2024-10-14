@@ -8,7 +8,7 @@ Name = beyondtrust-powerbroker-str-process-create-success-messageforwarded
   Conditions = [ """ Message forwarded from """, """: accepted """ ]
   Fields = [
     """\s+Message forwarded from ({host}[\w\-.]+)""",
-    """accepted ({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/]+?)) from ({user}[\w\.\-]{1,40}\$?)@({src_host}[\w\-.]+) to ({account}[^\s@]+)@({dest_host}[\w\-.]+)""",
+    """accepted ({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/]+?)) from ({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({src_host}[\w\-.]+) to ({account}[^\s@]+)@({dest_host}[\w\-.]+)""",
   ]
   ParserVersion = "v1.0.0"
 

@@ -4,14 +4,18 @@
 Name = microsoft-azure-sk4-app-activity-adduser
   Conditions = [ """"ActivityDisplayName":"Add user"""", """"OperationName":"Add user"""", """"ActivityDateTime":"""", """"ResourceId":"""" ]
   ParserVersion = "v1.0.0"
+  Fields = ${MSParsersTemplates.azure-app-activity-2.Fields}[
+    """({operation}Add user)"""
+  ]
 
 azure-app-activity-2 {
     Vendor = Microsoft
     Product = Azure Monitor
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Fields = [
-      """"ActivityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
+      """"ActivityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?(Z|[+-]\d\d:\d\d))"""",
       """"Result":"({result}[^"]+)"""",
+      """"resultReason":"({failure_reason}[^"]+)"""",
       """"ActivityDisplayName":"({event_name}[^"]+)"""",
       """"ResourceId":"({object}[^"]+)"""",
       """"resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)"""

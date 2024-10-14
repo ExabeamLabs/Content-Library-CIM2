@@ -15,7 +15,7 @@ Name = "microsoft-evsecurity-kv-user-password-read-5379"
     """EventCode=({event_code}\d+)\s*EventType=""",
     """Logon ID:\s*({login_id}[^\s]+)\s+Read Operation:""",
     """Security ID:\s*(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({user_sid}[^:]+?))\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}[^\s]+))\s+Logon ID:""",
     """({event_name}Credential Manager credentials were read)"""
  ]

@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-4945
     """RecordNumber=({event_id}\d+)""",
     """TaskCategory=({sub_category}[^=]+)\s+\w+=""",
     """Rule ID:\s*({rule_id}[^\s]+)\s""",
-    """Rule Name:\s*({rule_name}[^:]+)"""
+    """Rule Name:\s*({rule}[^:]+)"""
   ]
   
 windows-events = {
@@ -22,7 +22,7 @@ windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

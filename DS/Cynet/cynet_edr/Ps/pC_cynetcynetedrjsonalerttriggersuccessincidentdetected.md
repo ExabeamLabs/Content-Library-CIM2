@@ -18,7 +18,9 @@ Name = cynet-cynetedr-json-alert-trigger-success-incidentdetected
           """exa_regex=User SID:\s({user_sid}[^\s\\]+)"""
          """exa_json_path=$.Sha256,exa_field_name=hash_sha256""",
          """exa_json_path=$.HostName,exa_field_name=host""",
-         """exa_json_path=$.UserName,exa_regex="UserName":"(({domain}[^\\]+)[\\]+)?({user}[\w\.\-]{1,40}\$?)"""
+         """exa_json_path=$.RunningUser,exa_field_name=user""",
+         """exa_json_path=$.UserName,exa_regex=(({domain}[^\\,]+)[\\]+)?((?i)nt authority - system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+         """exa_json_path=$.UserName,exa_regex=(({client}[^\\,]+)[\\]+)?({domain}[\s\w]+)\s+-\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
          """exa_json_path=$.Severity,exa_field_name=alert_severity""",
          """exa_json_path=$.Subject,exa_field_name=alert_subject""",
          """exa_json_path=$.StringIP,exa_field_name=alert_source""",

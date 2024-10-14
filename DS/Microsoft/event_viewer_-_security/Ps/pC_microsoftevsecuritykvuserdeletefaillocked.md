@@ -16,7 +16,7 @@ Fields = [
 """({event_code}4740)"""
 """\Weventrecordid=\"({event_id}\d+)\""""
 """Subject:.+?Account Name:\s+({src_user}.+?)\s+Account Domain:\s+(?=\w)({src_domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
-"""Locked Out:\s+Security ID:\s+(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Account Name:\s+(?=\w)({user}[\w\.\-]{1,40}\$?)\s+Additional"""
+"""Locked Out:\s+Security ID:\s+(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Account Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Additional"""
 """Caller Computer Name:\s+(\\+)?({src_host}[^\#\s\",]+)"""
 ]
 DupFields = [

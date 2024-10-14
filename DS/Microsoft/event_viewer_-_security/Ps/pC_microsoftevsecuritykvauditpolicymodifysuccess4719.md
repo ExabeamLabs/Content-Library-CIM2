@@ -14,7 +14,7 @@ Fields = [
 """({event_name}System audit policy was changed)"""
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s+AUDIT_SUCCESS"""
 """({event_code}4719)"""
-"""\sAccount Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain"""
+"""\sAccount Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain"""
 """\sAccount Domain:\s*({domain}[^\s]+)"""
 """\sLogon ID:\s*({login_id}[^\s]+)"""
 """\sCategory:\s*({audit_category}.+?)\s+Subcategory:"""

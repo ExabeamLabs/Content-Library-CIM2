@@ -13,10 +13,10 @@ Name = microsoft-evsecurity-kv-user-privilege-assign-success-4672-1
       """DetectTime=({time}\d+-\d+-\d+\s\d+:\d+:\d+)""",
       """ComputerName =({host}({src_host}[\w\-.]+))\s+\w+=""",
       """EventType=({result}\w.+?)\s*\w+=""",
-      """Account Name =\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))[\s;]+""",
-      """User=(?:(?i)null|({user}[\w\.\-]{1,40}\$?))\s+""",
+      """Account Name =\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]+""",
+      """User=(?:(?i)null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+""",
       """Account Domain=\s*(-|({domain}[^\s\:\=]+?))[\s;]+""",
-      """Security ID=\s*(|(({domain}[^\\\s\:\=]+)[\\]({user}[\w\.\-]{1,40}\$?))|({user_sid}[^\s\:\=]+?))\s+""",
+      """Security ID=\s*(|(({domain}[^\\\s\:\=]+)[\\]({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({user_sid}[^\s\:\=]+?))\s+""",
       """Privileges=\s*({privileges}.+?)(,|\s*"|;|\s*$)""",
       """Logon ID=\s*({login_id}[^\s\=]+)\s+""",
       """EventSource=({log_source}[^\s\=]+)\s*\w+="""

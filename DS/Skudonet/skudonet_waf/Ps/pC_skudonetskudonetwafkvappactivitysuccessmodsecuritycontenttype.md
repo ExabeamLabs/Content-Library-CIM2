@@ -6,7 +6,6 @@ ParserVersion = "v1.0.0"
 Conditions = [
 """Skudonet ModSecurity"""
 """severity"""
-"""TX:content_type"""
 """OWASP_CRS"""
 ]
 

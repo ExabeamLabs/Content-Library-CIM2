@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
       """<Computer>(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[\w\-.]+)</Computer>)""",
       """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-      """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))</Data>""",
+      """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
       """<Data Name\\*=('|")SubjectDomainName('|")>(|NT AUTHORITY|({domain}[^<]+))</Data>""",
       """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
       """<Data Name\\*=('|")ObjectType('|")>({file_type}[^<]+)</Data>""",

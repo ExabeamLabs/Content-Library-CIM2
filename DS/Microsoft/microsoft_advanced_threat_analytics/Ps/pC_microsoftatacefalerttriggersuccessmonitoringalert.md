@@ -14,7 +14,7 @@ Fields = [
   """\WexternalId=({alert_id}\d+)"""
   """\Wapp=({service_name}.+?)\s+(\w+=|$)"""
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
-  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+  """\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
   """\Wshost=(?:({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

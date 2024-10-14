@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)"""
-"""\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d\spid ({process_id}\d+) (({user}[\w\.\-]{1,40}\$?)@)?({additional_info}[^\s]+)"""
+"""\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d\spid ({process_id}\d+) (({user}[\w\.\-\!\#\^\~]{1,40}\$?)@)?({additional_info}[^\s]+)"""
 """\s(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\/)?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s"""
 """\]\s+'({operation}[^\s\']+)"""
 """\s+({object}\/+[^\/\s'@\.]+(\/+[^\/\s'@\.]+)?)?\s*(|({resource}[^'\s\-]+?))'\s*$"""

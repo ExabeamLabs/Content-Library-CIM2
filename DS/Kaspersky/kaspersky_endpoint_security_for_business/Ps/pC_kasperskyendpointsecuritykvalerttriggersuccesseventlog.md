@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """ComputerName =({host}[\w.\-]+)"""
   """Message=({src_host}.+?)\s*\["""
-  """User:\s+({domain}[^\\]*)\\({user}[\w\.\-]{1,40}\$?)\s*\("""
+  """User:\s+({domain}[^\\]*)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\("""
   """Object:\s+({malware_url}.+?)\s*(Result|Object)"""
   """Result\Name:\s*({alert_type}.+?)\s*Result"""
   """Result\Type:\s*({alert_type}.+?)\s*Result"""

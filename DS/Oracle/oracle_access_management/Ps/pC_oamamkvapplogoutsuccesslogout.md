@@ -9,7 +9,7 @@ Name = oam-am-kv-app-logout-success-logout
   Conditions = [ """ IAU_RESOURCEHOST: """", """IAU_USERID: """", """ IAU_EVENTTYPE: "Logout""""  ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-]\d\d:\d\d) ({host}[\w\-.]+)""",
-    """IAU_USERID: "(null|Anonymous|GET_HIDE_COLUMN_LIST|({user}[\w\.\-]{1,40}\$?))"""",
+    """IAU_USERID: "(null|Anonymous|GET_HIDE_COLUMN_LIST|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """IAU_USERID: "(null|Anonymous|({email_address}[^\s"@]+@[^\s"@]+))"""",
     """IAU_IDENTITYDOMAIN: "(null|({domain}[^\s"]+))"""",
     """IAU_INSTANCENAME: "(null|({target}[^"]+))"""",

@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-process-create-success-26304688
       """\srt=({time}\d{13})""",
       """shost=({host}[\w\-.]+)""",
       """sntdom=({domain}[^\s]+)""",
-      """suser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
+      """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
       """nitroProcess_Name =({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))\s+\w+=""",
       """nitroProcess_Name =({path}.+?)\s+\w+=""",
       """nitroSource_Logon_ID=({login_id}.+?)(\s|0\|)"""

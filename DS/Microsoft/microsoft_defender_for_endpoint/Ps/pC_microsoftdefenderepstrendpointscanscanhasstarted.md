@@ -27,7 +27,7 @@ windows-defender-1 = {
     """Severity":"({severity}[^"]+?)"""",
     """AccountType":"({user_type}[^"]+?)"""",
     """Message":"({additional_info}[^"]+?)\s*"""",
-    """AccountName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """EventID":({event_code}\d+)""",
     """EventType":"({operation_type}[^"]+?)"""",
 # src_name is removed

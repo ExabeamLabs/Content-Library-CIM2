@@ -10,7 +10,7 @@ Name = microsoft-nsgflowlogs-sk4-network-traffic-success-nsgflowvents
   Fields=[
 		"""\"time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """\"time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""
-		"""\Wsuser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))(\s+|\s*$)"""
+		"""\Wsuser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+|\s*$)"""
 		"""destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
 		"""\WrequestClientApplication=(|({app}.+?))(\s+\w+=|\s*$)"""	
 		"""category\":\"({operation}[^"]+)"""

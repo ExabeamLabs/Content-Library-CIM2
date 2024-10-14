@@ -19,11 +19,11 @@ Name = juniper-ps-json-vpn-login-success-started
       """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
       """with IP(?:v4 address)?\s+({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
       """\srealm=[\\"]*({realm}.+?)[\\"]*(\s+\w+=|\s*")""",
-      """\sroles=[\\"]*({roles}.+?)[\\"]*(\s+\w+=|\s*")""",
-      """\svpn=[\\"]*({vpn}.+?)[\\"]*(\s+\w+=|\s*")""",
-      """user=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*")"""
+      """\sroles=[\\"]*({role}.+?)[\\"]*(\s+\w+=|\s*")""",
+      """\svpn=[\\"]*({vpn_client}.+?)[\\"]*(\s+\w+=|\s*")""",
+      """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*")"""
       """\sfw=({firewall}[a-fA-F\d.:]+)"""
-      """\stype=({vpn_type}[^=]+?)(\s+\w+=|\s*$)"""
+      """\stype=({vpn_client_type}[^=]+?)(\s+\w+=|\s*$)"""
     ]
     DupFields = [ "user->account" ]
   

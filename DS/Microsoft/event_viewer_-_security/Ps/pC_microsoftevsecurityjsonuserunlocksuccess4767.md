@@ -17,7 +17,7 @@ Fields = [
 """\"Hostname\":\"({host}[\w\-.]+)"""
 """({event_code}4767)"""
 """\"SubjectUserSid\":\"({user_sid}[^\"]+)"""
-"""\"SubjectUserName\":\"({user}[\w\.\-]{1,40}\$?)"""
+"""\"SubjectUserName\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\"SubjectDomainName\":\"({domain}[^\"]+)"""
 """\"SubjectLogonId\":\"({login_id}[^\"]+)"""
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""

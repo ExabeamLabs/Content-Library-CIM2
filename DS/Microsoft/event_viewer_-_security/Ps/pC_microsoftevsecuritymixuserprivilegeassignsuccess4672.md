@@ -27,7 +27,7 @@ Fields = [
   """Computer(\w+)?["\s]*(:|=)\s*"?(::ffff:)?({src_host}({host}[\w\-.]+))""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}4672)""",
-  """Account Name(:|=)\s*(-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))(\\r|\\n|\\t)*[\s;]*Account Domain(:|=)""",
+  """Account Name(:|=)\s*(-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\\r|\\n|\\t)*[\s;]*Account Domain(:|=)""",
   """Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*(\\[rnt])*\s*Logon ID(:|=)""",
   """\s*Logon ID(:|=)\s*({login_id}[^=]+?)[\s;]*Privileges(:|=)\s*({privileges}.+?)(<|\s*User:|\s+\d+|,|\s*\"|;|\s*$|\s*\(EventID)""",
   """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",

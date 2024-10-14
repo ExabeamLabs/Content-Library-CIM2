@@ -6,7 +6,7 @@ Product: SFTP
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   0   |   0    |         0          |       0        |    0    |
 
-|  Use-Case  | Activity Types(Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
+|  Use-Case  | Activity Types (Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
 |:----------:| ---- | ---- | ---- |
 | Enrichment |    |    | [](RM/r_m_sftp_sftp_Enrichment.md) |
 

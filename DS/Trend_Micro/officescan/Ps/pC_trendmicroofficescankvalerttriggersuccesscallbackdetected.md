@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """ComputerName =({host}[^\s\n]+)"""
 """\sType=({alert_severity}[^\s\n]+)"""
-"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+"""User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """RecordNumber=({alert_id}\d+)"""
 """C\&C\s+({alert_name}.+?)\s+Compromised Host:"""
 """(Endpoint|Computer|Compromised Host):\s+({src_host}[^\s\n]+)"""

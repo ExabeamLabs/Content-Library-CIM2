@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}An attempt was made to duplicate a handle to an object)"""
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
@@ -28,12 +28,12 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """exa_json_path=$.Hostname,exa_field_name=host"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Message,exa_field_name=event_name"""
-    """exa_json_path=$.Properties.SubjectUserName,exa_field_name=user"""
-    """exa_json_path=$.Properties.SubjectDomainName,exa_field_name=domain"""
-    """exa_json_path=$.Properties.SubjectLogonId,exa_field_name=login_id"""
-    """exa_json_path=$.Properties.SubjectUserSid,exa_field_name=user_sid"""
+    """exa_json_path=$..SubjectUserName,exa_field_name=user"""
+    """exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
+    """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
+    """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
     """exa_json_path=$.Keywords,exa_field_name=result"""
-    """exa_json_path=$.Properties.TargetProcessId,exa_field_name=dest_process_id"""
+    """exa_json_path=$..TargetProcessId,exa_field_name=dest_process_id"""
     """exa_json_path=$.ProcessId,exa_field_name=process_id"""
     """exa_json_path=$.ThreadId,exa_field_name=thread_id"""
     """exa_regex="EventTime":({time}\d{10})""",

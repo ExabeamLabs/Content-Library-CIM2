@@ -9,7 +9,7 @@ Name = delinea-centrifyas-kv-app-notification-success-trustedpath
   Conditions = ["""Centrify Suite|Trusted Path""" , """|Trusted path"""]
   Fields = [
     """utc=({time}\d{13})""",
-    """user=({user}[\w\.\-]{1,40}\$?)"""
+    """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """\d+\|\d+\|({event_name}.+?)\|\d""",
     """status=({action}.+?)\s\w+=""",
     """pid=({process_id}\d+)""",

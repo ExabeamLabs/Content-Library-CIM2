@@ -13,15 +13,16 @@ Conditions = [
 Fields = [
 """"+created_at"+:"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d([\+\-]\d\d:\d\d)?)"""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""created_by":[^\}]+?"login":"(anonymous|Unknown User|({user}[\w\.\-]{1,40}\$?))"""
+"""created_by":[^\}]+?"login":"(anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """created_by":[^\}]+?"login":"({email_address}[^\s@"]+@[^\s@"]+)"""
-"""\ssuser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+"""\ssuser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""
 """"item_name":"({file_name}[^"]+)""""
-""""item_name":"([^\.]+?|(({file_name}[^"]+?\.(|({file_ext}[^\.\s"]+?)))))",""""
+""""item_name":"([^\.]+?|(({file_name}[^"]+?(\.(|({file_ext}[^\.\s"]+?)))?)))",""""
 """"item_type":"({file_type}[^"]+)"""
 """\sfname=({file_name}.+?)\s+(\w+=|$)"""
 """"parent":\{[^\}]*?"name":"({file_dir}[^"]+)"""
+""""file_path":"({file_dir}[^"]+)""""
 """"event_type":"({access}[^"]+)"""
 """additional_details":\{[^\}]*?"size":({bytes}\d+)"""
 """(\||\s)requestClientApplication=({app}[^=]+?)(\s+\w+=|\s*$)"""
@@ -30,7 +31,6 @@ Fields = [
 """\smsg=({additional_info}.*?)\s\w+="""
 """owned_by"+:.+?"login"+:"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """[^\w]created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+(Unknown User|({full_name}[^":,]+))[",\]\}]"""
-"""[^\w]created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+.*?@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))"""
 """"user":\{[^\}]+?"name":"({full_name}[^"]+)","email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 ]
 DupFields = [

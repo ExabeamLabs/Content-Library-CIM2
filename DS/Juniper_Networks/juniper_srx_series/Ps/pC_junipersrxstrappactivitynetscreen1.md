@@ -9,7 +9,7 @@ Name = juniper-srx-str-app-activity-netscreen-1
   Conditions = [ """: NetScreen """, """ device_id=""", """ [Root]""" ]
   Fields = [
     """\sdevice_id=({host}.+?)\s+\[Root\]""",
-    """\[Root\]\s*({event_name}[^:]+?)\-\d+:\s*({event_description}.+?)\.?\s*\(({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\)""",
+    """\[Root\]\s*({event_name}[^:]+?)\-\d+:\s*({additional_info}.+?)\.?\s*\(({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\)""",
   ]
 
 

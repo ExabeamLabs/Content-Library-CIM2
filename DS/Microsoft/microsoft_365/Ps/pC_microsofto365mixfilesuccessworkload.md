@@ -28,11 +28,10 @@ Fields = [
   """"NewValue\\*\"+:\\*\s*\"+({new_attribute}[^\"@\\]+)"""
   """\WfileType=({file_type}[^\s]+)"""
   """\Wsproc=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
-  """\WfilePermission=(|({permission_type}.+?))(\s+\w+=|\s*$)"""
-  """\Wduser=(|({action_performer}[^=]+?))(\s+\w+=|\s*$)"""
+  """\WfilePermission=(|({file_permissions}.+?))(\s+\w+=|\s*$)"""
+  """\Wduser=(|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[^=]+?))(\s+\w+=|\s*$)"""
   """\Wsuser=(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+)|\_({=domain}[^@=]+)#(ext|EXT)#@[^"=]+)?)))(\s+\w+=|\s*$)"""
   """"UserId\\*\"+:\\*\s*\"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|system|SecurityComplianceAlerts|SecurityComplianceInsights|AAD to SharePoint Sync|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@"]+)\\)?(system|({user}[\w\.\-]{1,40}\$?))(@({=domain}[^\s"]+)|\_({=domain}[^@"]+)#(ext|EXT)#@[^"]+)?|({full_name}[\w,\s]+?)))""""
-  """\Wsuser=(|({affected_user}[^@\s]+@[^=]+?))(\s+\w+=|\s*$)"""
   """src-account-name\":\"({account_name}[^\"]+)"""
   """"FileSizeBytes\\*"+:\s*({bytes}\d+)"""
   """"BrowserName":"({browser}[^"]+)"""",
@@ -41,6 +40,7 @@ Fields = [
   """"AuthenticationType":"({auth_method}[^",]+)"""
   """"UserType":"*\s*({user_type}[^,}"]+)"*"""
   """"DestinationLabel":"({tag}[^"]+)""""
+  """"CorrelationId":\s*"({correlation_id}[^"]+)""""
 ]
 DupFields = [
   "operation->action"

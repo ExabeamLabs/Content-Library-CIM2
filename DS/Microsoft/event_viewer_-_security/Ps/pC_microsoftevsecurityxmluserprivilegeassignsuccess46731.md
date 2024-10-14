@@ -13,8 +13,8 @@ Fields = [
   """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>""",
-  """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*(({domain}[^\\\/<]+)[\\\/])?({user}[\w\.\-]{1,40}\$?)</Data>""",
-  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)</Data>""",
+  """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*(({domain}[^\\\/<]+)[\\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
   """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")ObjectServer('|")>({object_server}[^<]+?)</Data>""",

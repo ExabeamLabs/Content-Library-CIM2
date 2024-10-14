@@ -16,12 +16,12 @@ Fields = [
 """ComputerName =({dest_host}[^\s]+)"""
 """Sid=({dest_user_sid}[^\s]+)"""
 """\s+Type=({alert_severity}[^\s]+)"""
-"""\'\w+:\\+(?i)users\\+({user}[\w\.\-]{1,40}\$?)"""
+"""\'\w+:\\+(?i)users\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Hash:({hash_md5}[^\s\]]+)"""
 """Vendor:\s+({process_vendor}[^\]]+)"""
 """Message=AppSense Application Manager ({alert_name}.+?)\s+(of [^\w]|\'|for)"""
 """Message=(The file )?\'.+?\'( has had)?\s+({alert_name}.+?)\s*(\.|of|for)"""
-"""Message=\'(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\'"""
+"""Message=\'(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\'"""
 """\'({process_path}({process_dir}(?:(\w+:)*([\\\/]+[^\\\/'\]\"]+)+)?[\\\/]+)({process_name}[^\\\/\"\]]*?))(\s+\[\w+:|')"""
 ]
 DupFields = [

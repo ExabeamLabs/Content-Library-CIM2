@@ -20,7 +20,7 @@ Name = google-cloudplatform-sk4-network-traffic-success-payload
 """"packets_sent":"({packets}\d+)"""
 """"reporter":"({reporter}[^\"]+)"""
 """"direction":"({direction}[^"]+)""""
-"""suser=((?i)anonymous|({user}[\w\.\-]{1,40}\$?))\s+[\w=]+"""
+"""suser=((?i)anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+"""
   ]
 
 

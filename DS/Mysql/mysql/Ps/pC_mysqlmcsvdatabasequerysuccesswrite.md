@@ -14,7 +14,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\S+\s+\S+\s+mysql-server_auditing:"""
 """({app}mysql)"""
 """mysql-server_auditing:\s*({db_name}[^,]+)\s*,"""
-"""mysql-server_auditing:\s*([^,]*,)\s*({user}[\w\.\-]{1,40}\$?)\s*,"""
+"""mysql-server_auditing:\s*([^,]*,)\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*,"""
 """mysql-server_auditing:\s*([^,]*,){2}\s*({src_host}[^,]+)\s*,"""
 """({db_operation}WRITE)"""
 """,WRITE,\s*({db_name}[^,]+)\s*,"""

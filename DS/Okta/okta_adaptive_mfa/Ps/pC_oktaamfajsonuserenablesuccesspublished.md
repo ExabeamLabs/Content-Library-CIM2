@@ -63,7 +63,7 @@ ${OktaParserTemplates.q-okta-app-login}{
 	"""start=({time}\d\d\d\d\-\d+\-\d+T\d+:\d+:\d+:\d+)""",
 	"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 	"""instance=({host}[^,]+)""",
-    """duid=({user}[\w\.\-]{1,40}\$?)""",
+    """duid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """duid=[^@,]+@({domain}[^,.]+)""",
     """destinationServiceName =({app}[^,]+)""",
     """cs3=({user_agent}.+?), \w+=""",
@@ -82,13 +82,12 @@ ${OktaParserTemplates.q-okta-app-login}{
     """exa_json_path=$.@timestamp,exa_field_name=time""",
     """exa_json_path=$.agent.hostname,exa_field_name=host""",
     """exa_json_path=$.fields.device_product,exa_field_name=app""",
-    """exa_regex=wd_systemaccount":"({domain}[^\/]+?)\s\/\s({full_name}[^"]+?)"""",
+    """exa_regex=wd_systemaccount":"({domain}[^\/]+?)\s\/\s(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^\s,]+([\s,]+\s*[^\s"]+)+?))"""",
     """exa_json_path=$.wd_task,exa_field_name=operation""",
     """exa_json_path=$.wd_target,exa_field_name=object""",
     """exa_json_path=$.wd_useragent,exa_field_name=user_agent""",
     """exa_json_path=$.wd_ipaddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
    ]
-   DupFields = [ "full_name->user" ]
    ParserVersion = v1.0.0
 }
 
@@ -106,8 +105,8 @@ Fields = [
 """"actors":\[.*?\{.*?"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"[^\{\}]+?"objectType":"User".*?\}"""
 """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"displayName":\s*"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))""""
 """"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+?))\s*"[^\}\]]*"objectType":"User""""
-""""actors":\[.*?\{.*?"login":"({user}[\w\.\-]{1,40}\$?)"[^\{\}]+?"objectType":"User".*?\}"""
-""""actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({user}[\w\.\-]{1,40}\$?)""""
+""""actors":\[.*?\{.*?"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"[^\{\}]+?"objectType":"User".*?\}"""
+""""actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"actors":\[.*?\{.*?"login":"({email_address}[^"\s@]+@[^"\s@]+)"[^\{\}]+?"objectType":"User".*?\}"""
 """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({email_address}[^"\s@]+@[^"\s@]+)""""
 """"actors":\[.*?\{.*?"login":"[^@]+@({email_domain}[^"]+)"[^\{\}]+?"objectType":"User".*?\}"""
@@ -124,7 +123,7 @@ Fields = [
 """"targets":\[.*?\{.*?"displayName":"({app}[^"]+)"[^\{\}]+?"objectType":"AppInstance".*?\}"""
 """"targets":\s*\[\{[^\]]*?"objectType":\s*"AppInstance"[^\]]*?"displayName":\s*"({app}[^"]+)""""
 """"type":"AppInstance"[^\}\]]*"displayName":"({app}[^"]+?)\s*""""
-"""requestUri":\s*"({request_uri}[^"]+?)\s*""""
+"""requestUri":\s*"({uri_path}[^"]+?)\s*""""
 """"id":"({object}[^"]+)"[^\}\]]*"objectType":"AppInstance""""
 """"objectType":"AppInstance"[^\}\]]*"id":"({object}[^"]+)""""
 ]
@@ -154,8 +153,8 @@ Fields = [
   """"actors":\[.*?\{.*?"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"[^\{\}]+?"objectType":"User".*?\}"""
   """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"displayName":\s*"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))""""
   """"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+?))\s*"[^\}\]]*"objectType":"User""""
-  """"actors":\[.*?\{.*?"login":"({user}[\w\.\-]{1,40}\$?)"[^\{\}]+?"objectType":"User".*?\}"""
-  """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({user}[\w\.\-]{1,40}\$?)""""
+  """"actors":\[.*?\{.*?"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"[^\{\}]+?"objectType":"User".*?\}"""
+  """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"actors":\[.*?\{.*?"login":"({email_address}[^"\s@]+@[^"\s@]+)"[^\{\}]+?"objectType":"User".*?\}"""
   """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({email_address}[^"\s@]+@[^"\s@]+)""""
   """"actors":\[.*?\{.*?"login":"[^@]+@({email_domain}[^"]+)"[^\{\}]+?"objectType":"User".*?\}"""
@@ -172,7 +171,7 @@ Fields = [
   """"targets":\[.*?\{.*?"displayName":"({app}[^"]+)"[^\{\}]+?"objectType":"AppInstance".*?\}"""
   """"targets":\s*\[\{[^\]]*?"objectType":\s*"AppInstance"[^\]]*?"displayName":\s*"({app}[^"]+)""""
   """"type":"AppInstance"[^\}\]]*"displayName":"({app}[^"]+?)\s*""""
-  """requestUri":\s*"({request_uri}[^"]+?)\s*""""
+  """requestUri":\s*"({uri_path}[^"]+?)\s*""""
   """"id":"({object}[^"]+)"[^\}\]]*"objectType":"AppInstance""""
   """"objectType":"AppInstance"[^\}\]]*"id":"({object}[^"]+)""""
 ]
@@ -228,10 +227,10 @@ Fields = [
   """"actors":\[.*?\{.*?"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"[^\{\}]+?"objectType":"User".*?\}"""
   """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"displayName":\s*"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))""""
   """"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+?))\s*"[^\}\]]*"objectType":"User""""
-  """"actors":\[.*?\{.*?"login":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"[^\{\}]+?"objectType":"User".*?\}""",
-  """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
-  """"targets":\[.*?\{.*?"login":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"[^\{\}]+?"objectType":"User".*?\}"""
-  """"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))""""
+  """"actors":\[.*?\{.*?"login":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\{\}]+?"objectType":"User".*?\}""",
+  """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+  """"targets":\[.*?\{.*?"login":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\{\}]+?"objectType":"User".*?\}"""
+  """"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """"actors":\[.*?\{.*?"id":"({user_agent}[^"]+)"[^\{\}]+?"objectType":"Client".*?\}"""
   """"actors":\s*\[\{[^\]]*?"objectType":\s*"Client"[^\]]*?"id":\s*"({user_agent}[^"]+)""""
   """"message":\s*"({additional_info}[^"]+?)\s*""""
@@ -240,7 +239,7 @@ Fields = [
   """"targets":\[.*?\{.*?"displayName":"({app}[^"]+)"[^\{\}]+?"objectType":"AppInstance".*?\}"""
   """"targets":\s*\[\{[^\]]*?"objectType":\s*"AppInstance"[^\]]*?"displayName":\s*"({app}[^"]+)""""
   """"type":"AppInstance"[^\}\]]*"displayName":"({app}[^"]+?)\s*""""
-  """requestUri":\s*"({request_uri}[^"]+?)\s*""""
+  """requestUri":\s*"({uri_path}[^"]+?)\s*""""
   """"id":"({object}[^"]+)"[^\}\]]*"objectType":"AppInstance""""
   """"objectType":"AppInstance"[^\}\]]*"id":"({object}[^"]+)""""
 ]

@@ -15,7 +15,7 @@ Fields = [
 """\Wmsg=\s*({db_query}([^\\=]|(\\\\)*\\=|\\)+)\s+(\w+=|$)"""
 """\Wrt=({time}\d{13})"""
 """\Wshost=({src_host}[^\s]+)"""
-"""\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
+"""\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\Wdhost=({dest_host}[^\s]+)"""
 """\Wduser=({db_user}[^\s]+)"""
 """\Wcs3=({db_name}[^\s]+)"""

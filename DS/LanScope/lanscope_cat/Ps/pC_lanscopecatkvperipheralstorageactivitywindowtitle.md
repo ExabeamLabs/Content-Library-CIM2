@@ -10,7 +10,7 @@ Name = lanscope-cat-kv-peripheral-storage-activity-windowtitle
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)\s+({host}\S+)\s+LanScopeCat\s+\-""",
     """\sEvent="({operation}[^"]+)""",
     """\sAgent="({dest_host}[^"]+)""",
-    """\sLogonUser="({user}[\w\.\-]{1,40}\$?)""",
+    """\sLogonUser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\sApplication="({process_name}[^"]+)""",
     """\sFileSize="({bytes}\d+)""",
     """\sDevice="({device_id}[^"]+)""",

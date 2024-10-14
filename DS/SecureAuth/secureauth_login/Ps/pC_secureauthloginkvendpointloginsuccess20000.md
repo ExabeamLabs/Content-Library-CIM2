@@ -17,7 +17,7 @@ Fields = [
 """\WAppliance="({host}[\w\-.]+)"""
 """\sHostName ="({host}[\w\-.]+)""""
 """\WAppliance="({dest_host}[\w\-.]+)"""
-"""\WUserID="(({email_address}[^\@]+\@[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
+"""\WUserID="(({email_address}[^\@]+\@[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\WPriority="({priority}\d+)"""
 """\WEventID="({event_code}\d+)"""
 """({event_name}Authentication Success)"""

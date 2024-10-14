@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4625-3
       """Authentication Package:\s+(?:({auth_package}[^\s]+))\s+Transited Services""",
       """Logon ID:\s+({login_id}[^\s]+)\s+Logon GUID""",
       """\s*Account For[\s;]*Which Logon Failed:[\s;]*Security ID:\s*(?:\/?NULL SID|(?:|({user_sid}.+?)))[\s;]*Account Name""",
-      """\s*Logon Failed:.+?Account Name:\s*(?=\w)({user}[\w\.\-]{1,40}\$?)[\s;]*Account Domain:""",
+      """\s*Logon Failed:.+?Account Name:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*Account Domain:""",
       """\s*Logon Failed:.+?Account Domain:\s*(?=\w)({domain}.+?)[\s;]*Failure Information""",
       """\s*Sub Status:\s*({result_code}.+?)[\s;]*Process Information:""",
       """Workstation Name:\s+({src_host_windows}[^\s]+)\s+Source Network""",

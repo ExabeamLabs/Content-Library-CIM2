@@ -9,7 +9,7 @@ Name = apache-guacamole-kv-http-session-success-client
   Conditions = [ """ user="""", """ http_content_type="""", """ client=""", """ http_method="""", """ uri_path="""" ]
   Fields = [
     """time=({time}\d{10})""",
-    """user="+(-|({user}[\w\.\-]{1,40}\$?))"""",
+    """user="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """http_method="+({method}[^"]+)"""",
     """server=({web_domain}[\w._-]+),""",
     """client=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

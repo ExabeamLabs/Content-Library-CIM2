@@ -7,7 +7,7 @@ Name = microsoft-azuremon-json-http-session-requestmethod
   ParserVersion = "v1.0.0"
   ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions = [ """"RequestMethod":"""", """"ResponseStatusCode":""", """"UserAgent":"""", """"RequestUri":"""", """"_ItemId":""""]
+  Conditions = [ """"RequestMethod":"""", """"ResponseStatusCode":""", """"TenantId":"""", """"RequestUri":"""", """"_ItemId":""""]
   Fields = [
     """exa_json_path=$.TimeGenerated,exa_field_name=time""",
     """exa_json_path=$.Location,exa_field_name=region""",

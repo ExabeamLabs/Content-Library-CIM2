@@ -18,7 +18,7 @@ Name = microsoft-evpowershell-cef-script-execute-success-4104
     """message=({script_message}[^:]+)""",
     """"Path"":""(|({path}.+?))"""",
     """"ProcessID"":""({process_id}\d+)"""",
-    """duser=({user}[\w\.\-]{1,40}\$?)""",
+    """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
   ParserVersion = "v1.0.0"
 

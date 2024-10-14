@@ -15,7 +15,7 @@ Name = "microsoft-evsecurity-json-user-create-success-4720"
 """"EventTime":\s*"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})"""",
 """"Hostname":"({host}[\w\-.]*)""",
 """({event_code}4720)""",
-""""SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""",
+""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
 """"SubjectDomainName":"({domain}[^"]+)""",
 """"SubjectLogonId":"({login_id}[^"]+)"""
 """"TargetSid":"({account_id}[^"]+)""",

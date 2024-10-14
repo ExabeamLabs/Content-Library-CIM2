@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-299
     """ComputerName =({host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)""",
     """Relying party:\s*({service_name}[^\s]+)""",
-    """Instance ID:\s*({iid}[^\s]+)""",
+    """Instance ID:\s*({instance_id}[^\s]+)""",
   ]
 
 

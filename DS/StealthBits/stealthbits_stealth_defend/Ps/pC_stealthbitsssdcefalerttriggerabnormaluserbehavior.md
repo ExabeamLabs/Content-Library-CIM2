@@ -11,7 +11,7 @@ Name = stealthbits-ssd-cef-alert-trigger-abnormaluserbehavior
     """threatTime=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\dZ)""",
     """computers=([^\\]+\\)?({host}[^;]+)""",
     """threatType=({alert_name}[^=]+)\s+\w+=""",
-    """users=(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)""",
+    """users=(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """process=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""", """fileName =(|%FILENAME%|({src_file_path}({src_file_dir}[^=]+?)(\\({src_file_name}[^\\]+(\.({src_file_ext}[\w~]+))))?))\s+newFileName =""",
     """newFileName =(|({file_path}({file_dir}[^=]+?)(\\({file_name}[^\\]+(\.({file_ext}[\w]+))))?))\s+process="""
   ]

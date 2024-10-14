@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4911
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4911</EventID>""", """<Data Name =""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\*='ObjectType'>({object_type}File)</Data><Data Name\\*='ObjectName'>(-|({file_path}({file_dir}[^<]*?)({file_name}[^<\\\/]+?(\.({file_ext}[^<\\\/\.]+?))?)))<""",
     """<Data Name\\*='OldSd'>({old_attribute}[^<]+)""",
@@ -27,7 +27,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

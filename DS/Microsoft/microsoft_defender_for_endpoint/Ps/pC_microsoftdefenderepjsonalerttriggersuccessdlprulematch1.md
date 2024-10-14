@@ -16,13 +16,13 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """"Actions":\s*\["({result}[^"]+)"""",
     """"RuleName":\s*"(|({alert_name}[^",\(]+?)\s*)("|\()""",
     """"FileName":\s*"(|({file_name}[^"]+))"(,|\})""",
-    """"From":\s*"\s*\|?\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)""",
+    """"From":\s*"\s*\|?\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@"]+))?)""",
     """"To":\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?")\]""",
     """"To":\s*\[({target}[^\]]+)\]""",
     """src-account-name":"({account_name}[^"]+)""",
     """Operation":\s*"({additional_info}[^"]+)"""",
     """"Workload":\s*"({alert_source}[^",]+)"""",
-    """\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))\s""",
+    """\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
     """FileSize":({bytes}\d+),""",
     """Subject":"({alert_subject}[^"]+?)\s*""""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
@@ -33,14 +33,15 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """exa_json_path=$.IncidentId,exa_field_name=alert_id"""
     """exa_json_path=$.PolicyDetails.[0].Rules.[0].Actions,exa_field_name=result"""
     """exa_json_path=$.PolicyDetails.[0].RuleName,exa_field_name=alert_name"""
-    """exa_json_path=$.ExchangeMetaData.From,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)"""
-    """exa_json_path=$.ExchangeMetaData.To,exa_regex=\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?")\]"""
+    """exa_json_path=$.ExchangeMetaData.From,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@"]+))?)"""
+    """exa_regex="To":\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?")\]"""
+    """exa_regex="To":\s*\[({target}[^\]]+)\]""",
     """exa_json_path=$.Operation,exa_field_name=additional_info"""
     """exa_json_path=$.Workload,exa_field_name=alert_source"""
     """exa_json_path=$.ExchangeMetaData.FileSize,exa_field_name=bytes"""
     """exa_json_path=$.ExchangeMetaData.Subject,exa_field_name=alert_subject"""
     """exa_json_path=$.SharePointMetaData.FileName,exa_field_name=file_name"""
-    """exa_json_path=$.SharePointMetaData.From,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)"""
+    """exa_json_path=$.SharePointMetaData.From,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@"]+))?)"""
     """exa_json_path=$.PolicyDetails.[0].Rules.[0].RuleName,exa_field_name=alert_name"""
     """exa_json_path=$.PolicyDetails.[0].Rules.[0].Severity,exa_field_name=alert_severity"""
   ]

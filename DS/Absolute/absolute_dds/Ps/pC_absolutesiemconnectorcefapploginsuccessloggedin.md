@@ -12,7 +12,7 @@ Name = absolute-siemconnector-cef-app-login-success-loggedin
     """\s({host}[\w\-.]+)\sAbsoluteSIEMConnector""",
     """({event_name}LoggedIn)""",
     """({operation}UserLogin)""",
-    """actorName ="(({email_user}[^"@]+@[^".]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """actorName ="(({email_user}[^"@]+@[^".]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """objectProperties="({additional_info}.+?)"\s+\w+="""
    ]
 

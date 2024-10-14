@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4662-1
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """<EventRecordID>({event_id}[^<]+)""",
     """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-    """('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
     """('|")ObjectServer('|")>({ds_object_class}[^<]+)<""",

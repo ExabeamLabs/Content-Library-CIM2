@@ -11,7 +11,7 @@ Name = microsoft-o365-json-app-activity-graphdirectoryauditlogs
  Fields = [
    """exa_json_path=$.activityDisplayName,exa_field_name=operation"""
    """exa_json_path=$.activityDateTime,exa_field_name=time"""
-   """exa_json_path=$.targetResources..userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+   """exa_json_path=$.targetResources..userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
    """exa_json_path=$.category,exa_field_name=category"""
    """exa_json_path=$.destinationServiceName,exa_field_name=app"""
    """exa_json_path=$.result,exa_field_name=result"""

@@ -19,11 +19,10 @@ Fields = [
   """event_id":"(?:|({action}[^"]+))","""
   """internal_message_id":"*(?:|({alert_id}[^",]+))"*,"""
   """recipient_address":"(?:|({email_recipients}[^"]+))","""
-  """recipient_address":"(?:|({external_address}[^,;@]+@[^;,"']+))","""
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
-  """sender_address":"(?:|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
+  """sender_address":"(?:|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
 ]
 DupFields = [

@@ -11,10 +11,10 @@ Fields = [
 """"TimeGenerated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)"""",
 """destinationServiceName =({app}[^\s]+)"""
 """\"Category\":\s*\"({category}[^\"]+)"""
-"""suser=(anonymous|\$([\w\-]+)|({user}[\w\.\-]{1,40}\$?))\s+\w+="""
+"""suser=(anonymous|\$([\w\-]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
 """\"ResourceId\":\s*\"({object}[^\"]+)\""""
 """\"OperationName\":\s*\"({operation}[^\"]+)"""
-"""\"User\":\s*\"(\$([\w\-]+)|({user}[\w\.\-]{1,40}\$?))\""""
+"""\"User\":\s*\"(\$([\w\-]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """\"UserDisplayName\":\s*\"({email_address}[^@]+@[^\.]+\.[^\"]+)\""""
 """\"UserAddress\":\s*\"({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"Protocol\":\s*\"({protocol}[^\"]+)\""""

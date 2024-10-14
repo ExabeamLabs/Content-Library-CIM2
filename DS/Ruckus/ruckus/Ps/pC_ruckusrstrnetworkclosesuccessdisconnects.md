@@ -12,7 +12,7 @@ exa-syslog-network-connection = {
   Product = Ruckus
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
-    """User\s*\[({user}[\w\.\-]{1,40}\$?)(@({domain}[\w.\-]+))?(@({src_mac}(\w{2}:){5}\w{2}))?\]""",
+    """User\s*\[({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[\w.\-]+))?(@({src_mac}(\w{2}:){5}\w{2}))?\]""",
     """User\s*\[({src_mac}(\w{2}:){5}\w{2})\]""",
     """User\s*\[host\/({src_host}[\w\-]+)(@({src_mac}(\w{2}:){5}\w{2}))?\]""",
     """WLAN\[({ssid}[^\]]+)""",

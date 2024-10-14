@@ -17,7 +17,7 @@ Fields = [
 """exa_json_path=$.record_number,exa_field_name=event_id""",
 """exa_json_path=$.event_id,exa_field_name=event_code""",
 """exa_json_path=$.user.identifier,exa_field_name=user_sid""",
-"""exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.user.domain,exa_field_name=domain""",
 """exa_json_path=$..param3,exa_field_name=file_type""",
 """exa_json_path=$..ObjectType,exa_field_name=file_type""",

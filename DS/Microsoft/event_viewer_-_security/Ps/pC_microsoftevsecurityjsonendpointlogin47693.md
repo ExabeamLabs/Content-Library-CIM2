@@ -15,7 +15,7 @@ Fields = [
 """"time":"({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))""""
 """"host":"({host}[^"]+)\s*"""
 """({event_code}4769)"""
-""""account_information-AccountName":"\s*({user}[\w\.\-]{1,40}\$?)\s*"""
+""""account_information-AccountName":"\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""
 """"account_information-AccountDomain":"\s*({domain}[^"]+)\s*"""
 """"service_information-ServiceName":"\s*({dest_host}\S+\$)\s*""""
 """"service_information-ServiceName":"\s*({service_name}[^"]+)\s*""""

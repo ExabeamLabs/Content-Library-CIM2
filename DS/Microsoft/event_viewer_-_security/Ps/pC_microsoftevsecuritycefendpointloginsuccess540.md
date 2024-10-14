@@ -14,7 +14,7 @@ Fields = [
 """({event_code}540)"""
 """\srt=({time}\d{13})"""
 """\ssproc=({auth_process}.+?)\s+\w+="""
-"""\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+"""\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """\sduid=\([^,]+,({login_id}[^\)]+)"""
 """\scn1=({login_type}\d+)"""
 """\sdvchost=({host}[^\s]+)"""

@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-kv-group-create-success-4731-1
   """TaskCategory=({operation}[^=]+?)\s*(\w+=|$)"""
   """Keywords=(None|({result}[^=]+))\s\w+="""
   """SourceName =({service_name}.+?)(\.\s+\w+=|\s*$)"""
-  """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s"""
+  """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s"""
   """Group Name:\s*(|-|({group_name}[^:]+?))\s+Group Domain:\s*(|-|({group_domain}[^\s]+))\s"""
   """Message=A security-enabled\s*({group_type}[^\s]+)\s+group was created."""
 ]

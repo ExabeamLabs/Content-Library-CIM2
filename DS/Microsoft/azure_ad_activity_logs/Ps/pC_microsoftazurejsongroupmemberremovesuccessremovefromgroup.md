@@ -5,7 +5,7 @@ Name = microsoft-azure-json-group-member-remove-success-removefromgroup
   ParserVersion = "v1.0.0"
   Conditions = [ """"activityDisplayName":"Remove member from group"""", """"operationType":"Unassign"""", """"targetResources":[""", """"category":"GroupManagement"""" ]
   Fields = ${MicrosoftParserTemplates.microsoft-azuread-json-events.Fields}[
-    """exa_json_path=$.targetResources[:1].modifiedProperties[?(@.displayName =='Group.DisplayName')].oldValue,exa_field_name=group_name"""
+    """exa_json_path=$.targetResources[:1].modifiedProperties[?(@.displayName =='Group.DisplayName')].oldValue,exa_regex=\[?\\?"\s*({group_name}[^"\\\]]+?)\s*\\?""""
   ]
 
 microsoft-azuread-json-events = {

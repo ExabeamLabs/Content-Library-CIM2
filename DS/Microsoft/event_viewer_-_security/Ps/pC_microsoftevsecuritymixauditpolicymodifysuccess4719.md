@@ -19,7 +19,7 @@ Fields = [
 """({host}[\w\-.]+)\sMSWinEventLog"""
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """({event_code}4719)"""
-"""\s+Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain"""
+"""\s+Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain"""
 """\s+Account Domain:\s+({domain}[^\s]+)"""
 """\s+Logon ID:\s+({login_id}[^\s]+)"""
 """\s+Category:\s+({audit_category}.+?)\s+Subcategory:"""

@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4907-1
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Data Name\\*=('|")ProcessName('|")>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/\"]+?))<\/Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[\w\.\-]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<\/Data>""",
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""

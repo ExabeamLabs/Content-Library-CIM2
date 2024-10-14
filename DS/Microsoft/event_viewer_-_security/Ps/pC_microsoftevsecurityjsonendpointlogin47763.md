@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
+    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
 
 json-windows-events-2 = {
@@ -19,7 +19,7 @@ json-windows-events-2 = {
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",

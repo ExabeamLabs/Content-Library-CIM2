@@ -14,7 +14,7 @@ Fields = [
   """utc=({time}\d{10})"""
   """\sahost=({host}[^=]+?)\s+\w+="""
   """\sclient=(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(\(none\)|({src_host}[^=]+?)))(\||\s+\w+=)""",
-  """user=({user}[\w\.\-]{1,40}\$?)"""
+  """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\d+\|\d+\|({event_name}.+?)\|\d"""
   """status=({result}.+?)\s\w+="""
   """pid=({process_id}\d+)"""

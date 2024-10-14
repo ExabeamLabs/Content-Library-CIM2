@@ -27,7 +27,7 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalytics
     """"Command Line\\*"+:\s*\\*"+\\*"+({process_command_line}.*?)\\+"""",
     """"User SID\\*"+:\s*\\*"+({user_sid}.*?)\\"""",
     """"Account Logon Id\\*"+:\s*\\*"+({login_id}[^"]+)\\""",
-    """"Account\\":\s*\\"+({domain}[^\\]*?)\\{1,25}({user}[\w\.\-]{1,40}\$?)\\",""",
+    """"Account\\":\s*\\"+({domain}[^\\]*?)\\{1,25}({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\",""",
     """"ActionTaken\\":\s*\\"+({action}.*?)\\*"""",
     """"DnsDomain\\":\s*\\"+(\s*|({dns_domain}.*?))\\*"""",
     """"NTDomain\\":\s*\\"+(\s*|({nt_domain}.*?))\\*"""",

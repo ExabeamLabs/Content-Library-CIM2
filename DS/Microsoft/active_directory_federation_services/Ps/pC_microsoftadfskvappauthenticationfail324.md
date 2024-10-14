@@ -10,7 +10,7 @@ Name = microsoft-adfs-kv-app-authentication-fail-324
   Fields = [
     """({host}[\w\-.]+)\s+AD_FS_Auditing\[\d+\]:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """AUDIT_FAILURE\s+({event_code}\d+)\s+(({domain}[^\\\s]+)\\+)?({service_name}[^\\\s]+)\s+({failure_reason}[^\.]+?)\.""",
-    """caller\s+'(({domain}[^\\\s']+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """caller\s+'(({domain}[^\\\s']+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """User:\s*({email_address}[^\s@]+@[^\s@]+)""",
   ]
 

@@ -16,7 +16,7 @@ observeit-events = {
       """exa_json_path=$.command,exa_field_name=process_command_line""",
       """exa_json_path=$.domainName,exa_field_name=domain""",
       """exa_json_path=$.endpointName,exa_field_name=host""",
-      """exa_json_path=$.loginName,exa_regex=({user}[\w\.\-]{1,40}\$?)$""",
+      """exa_json_path=$.loginName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
       """exa_json_path=$.loginName,exa_regex=({full_name}\w+\s\w+)""",
       """exa_json_path=$.os,exa_field_name=os""",
       """exa_json_path=$.remoteAddress,exa_regex=(?:127\.0\.0\.1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",

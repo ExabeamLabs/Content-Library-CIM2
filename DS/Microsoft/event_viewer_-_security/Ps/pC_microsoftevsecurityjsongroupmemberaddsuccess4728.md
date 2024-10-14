@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
 """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
-"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?""""
+"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
 """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
 """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?""""
 """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
@@ -26,7 +26,7 @@ Fields = [
 """AuthenticationPackageName\\?"+:\\?"+({auth_package}[^\s\\]+)\\?""""
 """A member was added to a security-enabled ({group_type}\w+) group"""
 """MemberName\\?"+:\\?"+(-|({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-\\]+?)))\\?""""
-"""MemberSid\\?"+:\\?"+({account_id}[^\\]+)\\?""""
+"""MemberSid\\?"+:\\?"+(({dest_user_sid}S-\d+-[^\\"]+)|({account_id}[^\\]+))\\?""""
 """TargetSid\\?"+:\\?"+({group_id}[^\\]+)\\?""""
 """TargetUserName\\?"+:\\?"+({group_name}[^\\]+)\\?""""
 """TargetDomainName\\?"+:\\?"+({group_domain}[^\\]+)\\?""""

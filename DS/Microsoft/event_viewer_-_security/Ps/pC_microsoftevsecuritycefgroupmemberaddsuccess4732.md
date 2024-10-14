@@ -22,9 +22,10 @@ Fields = [
 """"targetUserName":"({group_name}[^"\s]+?)\s*""""
 """"targetDomainName":"({group_domain}[^"\s]+?)\s*""""
 """"subjectUserSid":"({user_sid}[^"\s]+?)\s*""""
-""""subjectUserName":"({user}[\w\.\-]{1,40}\$?)\s*""""
+""""subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
 """"subjectDomainName":"({domain}[^"\s]+?)\s*""""
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
+""""memberSid":"({dest_user_sid}S-\d+-[^\s"]+)""""
 ]
 DupFields = [
 "host->src_host"

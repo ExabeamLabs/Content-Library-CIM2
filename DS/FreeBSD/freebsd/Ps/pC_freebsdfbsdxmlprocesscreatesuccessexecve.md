@@ -16,7 +16,7 @@ freebsd-events = {
       """\s*pid="({process_id}[^"]+)"""",
       """<return errval="({result}[^"]+)"\s*""",
       """\s*event="({event_name}[^"]+)"""",
-      """Users\s*'({user}[\w\.\-]{1,40}\$?)'\s*""",
+      """Users\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s*""",
       """<text>({additional_info}[^<]+)<\/text>""",
       """<path>(|({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?))<\/path>"""
     

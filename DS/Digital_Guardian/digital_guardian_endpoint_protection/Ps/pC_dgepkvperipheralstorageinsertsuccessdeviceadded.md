@@ -12,11 +12,11 @@ splunk-digitalguardian-usb-insert = {
   Fields = [
     """(Agent_UTC_Time|Server_UTC_Timestamp)="({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))"""",
     """Computer_Name ="([^\/\\"]+[\/\\]+)?({host}[\w\-.]+)"""",
-    """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[\w\.\-]{1,40}\$?))"""",
+    """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """Domain_Name ="(?:|({domain}[^"]+))"""",
-    """User_Name ="(?:|([^"\/]+\/+)?({user}[\w\.\-]{1,40}\$?))"""",
+    """User_Name ="(?:|([^"\/]+\/+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """Device_ID="(?:|({device_id}[^"]+))"""",
-    """Drive_Type="(?:|({device_type}[^"]+))"""",
+    """Drive_Type="(?:|({device_class}[^"]+))"""",
     """Friendly_Name ="(?:|({operation_details}[^"]+))"""",
     """Operation="(?:|({event_code}[^"]+))"""",
   ]
@@ -24,7 +24,7 @@ splunk-digitalguardian-usb-insert = {
   SOAR {
     IncidentType = "generic"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "operation_details->description"]
-    NameTemplate = """Digital Guardian ${device_type} insert found"""
+    NameTemplate = """Digital Guardian ${device_class} insert found"""
     ProjectName = "SOC"
     EntityFields = [
       {EntityType="device", Name ="dest_address", Fields=["dest_host->host_name"]},

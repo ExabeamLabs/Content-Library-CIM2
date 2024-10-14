@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688
     Fields = [
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z)""",
-      """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""",
+      """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """({event_code}4688)""",
       """"Activity":"({event_name}[^"]+)""",
       """"Computer":"({host}({src_host}[\w\-.]+))""",

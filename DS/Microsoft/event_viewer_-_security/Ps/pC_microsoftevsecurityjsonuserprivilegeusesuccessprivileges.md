@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """({event_name}Special privileges assigned to new logon)"""
-  """"subject-AccountName\":\"({user}[\w\.\-]{1,40}\$?)"""
+  """"subject-AccountName\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"level\":\"({result}[^\"]+)"""
   """"time\":\"({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))"""
   """"privileges\":\[({privileges}.+?)\]"""

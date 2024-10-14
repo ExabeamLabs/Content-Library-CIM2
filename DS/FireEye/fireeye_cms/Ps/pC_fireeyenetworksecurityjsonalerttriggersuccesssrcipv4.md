@@ -27,7 +27,7 @@ Fields = [
 """"dstport":\s*({dest_port}\d+)"""
 """"detail":.+?"uri":\s*"({malware_url}[^"]+)""""
 """"description":\s*"({additional_info}[^"]+)""""
-""""username":\s*"({user}[\w\.\-]{1,40}\$?)""""
+""""username":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 SOAR {
   IncidentType = "malware"

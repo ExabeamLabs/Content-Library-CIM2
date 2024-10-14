@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """"targetUserName":"({dest_user}[^"\s]+?)\s*"""",
     """"targetDomainName":"({ds_object_dn}[^"\s]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"subjectUserName":"({user}[\w\.\-]{1,40}\$?)\s*"""",
+    """"subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """"subjectDomainName":"({domain}[^"\s]+?)\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
   ]

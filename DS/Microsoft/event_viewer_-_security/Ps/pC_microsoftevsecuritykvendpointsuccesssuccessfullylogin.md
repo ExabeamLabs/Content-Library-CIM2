@@ -18,7 +18,7 @@ Fields = [
   """({host}[^\s\/]+)\/Microsoft-Windows-Security-Auditing \(4624\)"""
   """({event_code}4624)"""
   """Logon Type(:|=)\s*({login_type}\d+)"""
-  """New Logon[\s\S]*?Account Name(:|=)\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))[\s;]*Account Domain(:|=)"""
+  """New Logon[\s\S]*?Account Name(:|=)\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)"""
   """New Logon[\s\S]*?Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)"""
   """Process Name(:|=)\s*(?:-|({process_path}({process_dir}.*?)(\\+({process_name}[^\\]+?))?))\s+Network Information:"""
   """Workstation Name(:|=)\s*(-|[A-Fa-f:\d.]+|({src_host_windows}[^\s;]+))[\s;]*Source Network Address(:|=)"""

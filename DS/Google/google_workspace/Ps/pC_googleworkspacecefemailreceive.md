@@ -16,7 +16,7 @@ Name = google-workspace-cef-email-receive
     """"timestamp_usec":({time}\d{10,13})""",
     """"subject":"({email_subject}[^"]+)"""",
     """"destination":\[\{"address[":]*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"source":\{"address":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"source":\{"address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"service":"({action}[^",]+)""",
     """"success":({result}true|false)""",
     """"rfc2822_message_id"+:"+({message_id}[^",]+)""",
@@ -26,7 +26,6 @@ Name = google-workspace-cef-email-receive
     """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})""",
     """num_message_attachments":({attachment_count}\d+)"""
   ]
-  DupFields = [ "src_email_address->external_address" ]
 
 
 }

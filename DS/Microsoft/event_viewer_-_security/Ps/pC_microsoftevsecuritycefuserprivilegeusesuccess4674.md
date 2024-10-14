@@ -16,7 +16,7 @@ Fields = [
   """\sdeviceSeverity=({result}[^\s]+)"""
   """\sdhost=({host}[\w\-.]+?)(\s+[^\s]+=|\s*$)"""
   """\sexternalId=({event_code}\d+)"""
-  """\sduser=({user}[\w\.\-]{1,40}\$?)(\s+[^\s]+=|\s*$)"""
+  """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+[^\s]+=|\s*$)"""
   """\sdntdom=({domain}.+?)(\s+[^\s]+=|\s*$)"""
   """\sdproc=({process_path}(({process_dir}.+?)({process_name}[^\\\/]+?)))(\s+\S+=|\s*$)"""
   """Object_\,Server=({object_server}.+?)(\s+[^\s]+=|\s*$)"""

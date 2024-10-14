@@ -23,7 +23,7 @@ trendmicro-ds-ossecevents = {
       """"TenantId\\*":({tenant_id}\d+)""",
       """"OSSEC_ID\\*":\\*"({event_code}\d+)""",
       """Subject:.+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
-      """Subject:.+?Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
+      """Subject:.+?Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """Subject:.+?Account Domain:\s*(-|({domain}[^\s]+))""",
       """Subject:.+?Logon ID:\s*({login_id}[^\s]+)"""
     

@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5140-6
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}""",
     """({host}[^\s]+?)\s+(Detailed File Share|File Share)""",
     """({event_code}5140)""",
-    """SubjectUserName:({user}[\w\.\-]{1,40}\$?),""",
+    """SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """SubjectDomainName:({domain}[^,]+),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """ObjectType:({file_type}[^,]+),""",

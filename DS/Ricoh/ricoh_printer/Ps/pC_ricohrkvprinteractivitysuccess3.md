@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)"""
 """({host}[\w\-.]+)\sUSER_NAME="""
-"""\WUSER_NAME=({user}[\w\.\-]{1,40}\$?)(,|\s*$)"""
+"""\WUSER_NAME=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(,|\s*$)"""
 """\WJOB_NAME=({object}[^,]+)(,|\s*$)"""
 """\WCLIENT_MACHINE=({src_host}[^,]+)(,|\s*$)"""
 """\WDATA_SIZE=({bytes}\d+)"""

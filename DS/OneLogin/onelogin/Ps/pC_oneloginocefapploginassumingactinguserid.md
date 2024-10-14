@@ -11,7 +11,7 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"created_at":\s*"({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z)""",
     """\WdestinationServiceName =({app}\w+)""",
     """"app_name":\s*"\s*({app}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
-    """"event_type_id":\s*({activity_code}\d+)""",
+    """"event_type_id":\s*({activity_id}\d+)""",
     """"actor_user_name":"({full_name}[^"]+?)\s*"""",
     """"ipaddr":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"notes":\s*"\s*({failure_reason}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",

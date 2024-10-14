@@ -16,7 +16,7 @@ Conditions = [
 Fields = [
   """exa_json_path=$.ts,exa_field_name=time""",
   """exa_json_path=$.msg.sizeBytes,exa_field_name=bytes""",
-  """exa_json_path=$.envelope.from,exa_regex=({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+  """exa_json_path=$.envelope.from,exa_regex=({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
   """exa_regex="subject"+:\s*\["+({email_subject}[^"]+)"""
   """exa_regex="rcpts"+:\s*\[({email_recipients}"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)).*?)\]"""
   """exa_json_path=$.connection.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

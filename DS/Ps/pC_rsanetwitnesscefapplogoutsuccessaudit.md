@@ -9,8 +9,9 @@ Name = rsa-netwitness-cef-app-logout-success-audit
     """\sdeviceExternalId=({external_id}.+?)\s*\w+=""",
     """\sdeviceProcessName =({process_name}.+?)\s*\w+=""",
     """\scs2=(null|({group_name}.+?))\s*\w+=""",
-    """\sactionType=(null|({action_type}.+?))\s*\w+=""",
+    """\sactionType=(null|({operation}.+?))\s*\w+=""",
   ]
+  DupFields = [ "operation->action_type"]
   ParserVersion = "v1.0.0"
 
 

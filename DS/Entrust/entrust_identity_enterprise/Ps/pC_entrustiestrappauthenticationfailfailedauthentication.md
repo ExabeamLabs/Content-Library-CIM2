@@ -10,7 +10,7 @@ Name = entrust-ie-str-app-authentication-fail-failedauthentication
   Fields = [
     """\[({time}\d{4}-\d\d-\d\d \d\d:\d\d:\d\d)(\]|,\]|,\d+\])""",
     """({event_name}IG.SYSTEM.AuthenticationManagement.API)""",
-    """ user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)) failed authentication""",
+    """ user (({email_address}[^\@\s]+@[^\s]+)|(({domain}[^\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)) failed authentication""",
   ]
 
 

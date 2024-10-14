@@ -11,7 +11,7 @@ windows-events-2.Fields}[
     """SubjectDomainName\\?"+:\\?"({src_domain}[^\\]+)\\?"""",
     """SubjectLogonId\\?"+:\\?"({login_id}[^\\]+)\\?"""",
     """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"({user}[\w\.\-]{1,40}\$?)\\?"""",
+    """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
   ]
   DupFields=[ "src_domain->domain" 

@@ -9,7 +9,7 @@ Name = microsoft-azuremfa-str-app-authentication-primery
   Conditions = [ """ pfsvc: Primary auth type '""", """ requested for user """ ]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\spfsvc:""",
-    """user\s+'(({email_address}[^'@]+@[^'\s]+)|(({domain}[^\\\s']+)\\)?({user}[\w\.\-]{1,40}\$?))""",
+    """user\s+'(({email_address}[^'@]+@[^'\s]+)|(({domain}[^\\\s']+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
     """auth type '({auth_type}[^']+)'"""
     ]
 

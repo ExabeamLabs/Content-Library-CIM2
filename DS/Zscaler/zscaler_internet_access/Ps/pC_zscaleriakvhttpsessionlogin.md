@@ -16,7 +16,7 @@ Fields = [
 """epochtime=({time}\d+)"""
 """ehost=({host}[^\s]+)"""
 """"time=\w+\s+({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)"""
-"""login=({email_address}({user}[\w\.\-]{1,40}\$?)@[^@\s"]+)"""
+"""login=({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@[^@\s"]+)"""
 """(\W|")reason=({proxy_action}[^="]+?)("|\s+\w+=)"""
 """(\s|")action=({action}[^="]+?)("|\s+\w+=)"""
 """(\W|")reqmethod=(NA|({method}[^"=]+?))("|\s+\w+=)"""
@@ -37,7 +37,7 @@ Fields = [
 """"dlpeng=(None|({dlp_eng}[^"]+))"""
 """"location=(None|({location}[^"]+))"""
 """"dept=(None|({department}[^"]+))"""
-""""malwarecat=(None|({malware_category}[^"]+))"""
+""""malwarecat=(None|({malware_family}[^"]+))"""
 ]
 ParserVersion = "v1.0.0"
 

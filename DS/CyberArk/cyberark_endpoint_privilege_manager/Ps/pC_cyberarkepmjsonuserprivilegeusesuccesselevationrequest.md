@@ -9,7 +9,7 @@ Name = cyberark-epm-json-user-privilege-use-success-elevationrequest
   Conditions = [ """CyberArk-EPM-Event {""", """'eventType': 'ElevationRequest'""", """'sourceType':""" ]
   Fields = [
     """'arrivalTime':\s'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{0,3})?Z)'""",
-    """'userName':\s'((\.|({domain}[^'\\]+))\\+)?({user}[\w\.\-]{1,40}\$?)'""",
+    """'userName':\s'((\.|({domain}[^'\\]+))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """'eventType':\s'({event_name}[^']+)'""",
     """'originalFileName':\s'({file_name}[^']+?(\.({file_ext}[^'\.]+))?)'""",
     """'filePath':\s'({file_path}[^']+)'""",

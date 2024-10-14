@@ -24,7 +24,7 @@ Fields = [
 """"f3u\\*"*:\\*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
 """\ssuser=({email_address}[^@]+@[^\s]+)\s"""
 """"userDisplayName":"({full_name}[^"]+?)\s*""""
-""""userPrincipalName":"({user}[\w\.\-]{1,40}\$?)@({domain}[^"\s]+)""""
+""""userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))"""",
 """msg=({additional_info}[^=]+?)\s+(\w+=|$)"""
 """activity":"({operation}[^"]+)"""
 """"userAgent\\?",[^,]*?"Value\\?":\\?"(|({user_agent}[^"\\]+?))\s*\\?"""",
@@ -46,7 +46,7 @@ Fields = [
 """"city":"({location_city}[^"]+)"""
 """"countryOrRegion":"({country_code}[^"]+)"""
 """"state":"({location_state}[^"]+)"""
-""""suid":"(anonymous|\\|({email_address}[^@="\\]+@({email_domain}[^"\\]+?))|({user}[\w\.\-]{1,40}\$?))\\?""""
+""""suid":"(anonymous|\\|({email_address}[^@="\\]+@({email_domain}[^"\\]+?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
 """"PolicyName":"({alert_type}[^"]+)""""
 """"RuleName":"({alert_name}[^"]+)""""
 """"Id":"({alert_id}[^"]+)""""
@@ -54,7 +54,8 @@ Fields = [
 """"riskState":"({action}[^"]+)"""
 """"op\\*"*:\\*"*({operation}[^",\\\s]+)"""
 """"wl\\*"*:\\*"*({app}[^",\\\s]+)"""
-""""von\\*"*:\\*"*({alert_subject}[^",\\]+)"""
+""""von\\*"*:\\*"*({alert_subject}[^",\\]+)""",
+""""correlationId":\s*"({correlation_id}[^"]+)""""
 ]
 DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = "v1.0.0"

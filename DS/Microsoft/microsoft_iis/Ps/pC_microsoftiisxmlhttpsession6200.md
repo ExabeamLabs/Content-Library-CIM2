@@ -27,8 +27,8 @@ Fields = [
 """<Data Name\\*='cs-host'>(-|({web_domain}[^<]+?))<"""
 """<Keywords>({result}[^<]+)<"""
 """<Data Name\\*='s-computername'>(-|({src_host}[^<]+?))<"""
-"""<Data Name\\*='cs-username'>(-|(0#\.f\|ww\|)?({user}[\w\.\-]{1,40}\$?)@({domain}[^.\d<]+)?)<"""
-"""<Data Name\\*='cs-username'>(-|((0#\.f\|ww\|)|(0#\.w\|))?(((({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?))|({email_address}[^@]+@[^.<]+?\.[^<]+)))<"""
+"""<Data Name\\*='cs-username'>(-|(0#\.f\|ww\|)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^.\d<]+)?)<"""
+"""<Data Name\\*='cs-username'>(-|((0#\.f\|ww\|)|(0#\.w\|))?(((({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({email_address}[^@]+@[^.<]+?\.[^<]+)))<"""
 ]
 ParserVersion = "v1.0.0"
 

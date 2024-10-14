@@ -10,11 +10,11 @@ Name = okta-amfa-cef-alert-trigger-success-passwordspraydetected
   Fields=[
     """"published"\s*:\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """"displayMessage"\s*:\s*"({additional_info}[^"]+)""",
-    """"eventType"\s*:\s*"({operation_details}({alert_name}[^"]+))""",
-    """"legacyEventType"\s*:\s*"({operation}({alert_name}[^"]+))""",
+    """"eventType"\s*:\s*"({operation}({alert_name}[^"]+))""",
+    """"legacyEventType"\s*:\s*"({operation_details}({alert_name}[^"]+))""",
     """cat=({alert_type}[^\s]+)"""
     """"actor":\s*[^\]]*?"displayName"\s*:\s*"(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))"""",
-    """"actor":[^\]]*?"alternateId"\s*:\s*"(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}[^"@]+@({email_domain}[^"]+))|({=user}[\w\.\-]{1,40}\$?))"""",
+    """"actor":[^\]]*?"alternateId"\s*:\s*"(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}[^"@]+@({email_domain}[^"]+))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"client":[^\]]*?"rawUserAgent"\s*:\s*"({user_agent}[^"]+)""",
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"outcome":[^\]]*?"result"\s*:\s*"FAILURE","reason":"({failure_reason}[^"]+)""",

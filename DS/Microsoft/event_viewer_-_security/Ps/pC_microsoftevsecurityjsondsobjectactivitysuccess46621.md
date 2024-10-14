@@ -26,7 +26,7 @@ Fields = [
 """exa_json_path=$.Provider.Name,exa_field_name=provider_name""",
 """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
-"""exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))$""",
+"""exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
 """exa_json_path=$..ObjectName,exa_field_name=ds_object_name""",
 """exa_json_path=$..ObjectServer,exa_field_name=ds_object_class""",
 """exa_json_path=$..ObjectType,exa_field_name=ds_object_type""",

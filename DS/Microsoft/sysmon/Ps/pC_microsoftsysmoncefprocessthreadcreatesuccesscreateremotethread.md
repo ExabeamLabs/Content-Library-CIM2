@@ -20,7 +20,7 @@ Name = microsoft-sysmon-cef-process-thread-create-success-createremotethread
 # category_device_group is removed
 # category_object is removed
 # category_custom_format_field is removed
-    """\WdeviceSeverity=({device_severity}.+?)\s+(\w+=|$)""",
+    """\WdeviceSeverity=({severity}.+?)\s+(\w+=|$)""",
 # sproc is removed
     """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
 # new_thread_id is removed

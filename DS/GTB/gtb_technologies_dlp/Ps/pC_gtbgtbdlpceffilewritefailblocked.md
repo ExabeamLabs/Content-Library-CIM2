@@ -20,7 +20,7 @@ cef-gtb-alerts = {
       """\w+\s\d\d\s\d\d:\d\d:\d\d\s+({host}[\w-]+)""",
       """\Wrt=({time}\d{13})""",
       """\Wuser=({full_name}(({last_name}[^,=]+),\s+({first_name}[^=\(]+)\s+[^=]+|[^=]+))\s+\w+=""",
-      """\Wcs5=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
+      """\Wcs5=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
       """\Wcs6=({email_address}[^=@]+@[^=]+)\s+\w+=""",
       """\|GTB\|({dest_host}[^\|]+)\|""",
       """\Woperation=({operation}[^=]+)\s+\w+=""",

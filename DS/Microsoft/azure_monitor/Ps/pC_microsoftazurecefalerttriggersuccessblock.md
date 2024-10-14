@@ -21,7 +21,7 @@ Fields = [
   """"ruleName":"({alert_name}[^"]+)"""
   """"category":"({alert_type}[^"]+)"""
   """"action":"({action}[^"]+)""""
-  """suser=(anonymous|({user}[\w\.\-]{1,40}\$?))\s+\w+="""
+  """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """"requestUri":"({url}.+?)",""""
   """Namespace:\s*({event_hub_namespace}\S+)"""
   """EventHub name:\s*({event_hub_name}[^\]\s]+)\s*\]"""

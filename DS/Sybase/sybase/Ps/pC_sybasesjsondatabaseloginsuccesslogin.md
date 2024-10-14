@@ -20,7 +20,7 @@ Fields = [
   """"object_owner"+:"+({db_user}[^"]+?)""""
   """"facets_environment"+:"+({host}[^"]+?)""""
   """"event_time"+:"+({time}[^"]+?)""""
-  """"user_name"+:"+({user}[\w\.\-]{1,40}\$?)""""
+  """"user_name"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 ParserVersion = "v1.0.0"
 

@@ -20,7 +20,7 @@ Fields = [
 """exa_json_path=$.threat_type,exa_field_name=alert_type""",
 """exa_json_path=$.alert_type_details.source,exa_regex=^({dest_host}[\w\-.]+)$""",
 """exa_json_path=$.alert_type_details.destination,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
-"""exa_json_path=$.alert_type_details.detail.username,exa_regex=^([\w\s]+\\+)?(system|({user}[\w\.\-]{1,40}\$?))$""",
+"""exa_json_path=$.alert_type_details.detail.username,exa_regex=^([\w\s]+\\+)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
 """exa_json_path=$.alert_type_details.detail.process,exa_field_name=process_name""",
 """exa_json_path=$.alert_type_details.detail.processpath,exa_field_name=process_path""",
 """exa_regex="virus":"({malware_name}[^"]+)"""",

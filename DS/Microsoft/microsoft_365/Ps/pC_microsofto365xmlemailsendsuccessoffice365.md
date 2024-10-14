@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
   """<d:Received.+?>({time}.+?)<\/d:Received>"""
-  """<d:SenderAddress>({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))<\/d:SenderAddress>"""
+  """<d:SenderAddress>({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))<\/d:SenderAddress>"""
   """<d:RecipientAddress>({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))<\/d:RecipientAddress>"""
   """<d:Subject>({email_subject}.+?)<\/d:Subject>"""
   """<d:Organization>({domain}.+?)<\/d:Organization>"""

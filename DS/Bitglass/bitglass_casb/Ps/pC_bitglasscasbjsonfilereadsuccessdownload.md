@@ -17,7 +17,7 @@ bitglass-json-activity = {
     Fields = [
       """exa_json_path=$.time,exa_field_name=time""",
       """exa_json_path=$.instancename,exa_field_name=host""",
-      """exa_json_path=$.user,exa_regex=\s*"(({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+))"""",
+      """exa_json_path=$.user,exa_regex=\s*"(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""",
       """exa_json_path=$.email,exa_regex=\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """exa_json_path=$.device,exa_field_name=os""",
       """exa_json_path=$.application,exa_field_name=app""",

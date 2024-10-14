@@ -13,7 +13,7 @@ Name = semperis-dsp-str-app-login-success-logindsp
   """OperationSource\]\s({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9]+:[A-Fa-f0-9:]+))"""
   """({event_name}DSP Login)"""
   """OperationResult\]\s({action}[^\s]+)"""
-  """TrusteeName\]\s(NT AUTHORITY|({domain}[^\\\s]+))[\\]+(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+  """TrusteeName\]\s(NT AUTHORITY|({domain}[^\\\s]+))[\\]+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """({app}Semperis.DSP)"""
   """({result}Success)"""
   ]

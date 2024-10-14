@@ -5,10 +5,10 @@ Name = microsoft-azure-json-user-role-assign-success-createroleassignment
   ParserVersion = v1.0.0
   Conditions = [ """localizedValue":"Create role assignment""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
-    """exa_json_path=$.properties.requestbody,exa_regex="Id\\?"+:\s*\\?"+({assignment_id}[^"]+)\\?""""
-    """exa_json_path=$.properties.requestbody,exa_regex="PrincipalId\\?"+:\s*\\?"+({principal_id}[^"]+)\\?""""
-    """exa_json_path=$.properties.requestbody,exa_regex="PrincipalType\\?"+:\s*\\?"+({principal_type}[^"]+)\\?""""
-    """exa_json_path=$.properties.requestbody,exa_regex="RoleDefinitionId\\?"+:\s*\\?"+({role_definition_id}[^"]+)\\?""""
+    """exa_json_path=$..requestbody,exa_regex="Id\\?"+:\s*\\?"+({assignment_id}[^"]+)\\?""""
+    """exa_json_path=$..requestbody,exa_regex="PrincipalId\\?"+:\s*\\?"+({principal_id}[^"]+)\\?""""
+    """exa_json_path=$..requestbody,exa_regex="PrincipalType\\?"+:\s*\\?"+({principal_type}[^"]+)\\?""""
+    """exa_json_path=$..requestbody,exa_regex="RoleDefinitionId\\?"+:\s*\\?"+({role_definition_id}[^"]+)\\?""""
   ]
 
 azure-activity-json = {
@@ -35,7 +35,7 @@ azure-activity-json = {
       """exa_json_path=$.resourceProviderName.value,exa_field_name=service_name"""
       """exa_json_path=$.resourceType.value,exa_field_name=resource_type"""
       """exa_json_path=$.resourceId,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"""
-      """exa_json_path=$.status.value,exa_field_name=status"""
+      """exa_json_path=$.status.value,exa_field_name=status_msg"""
       """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""

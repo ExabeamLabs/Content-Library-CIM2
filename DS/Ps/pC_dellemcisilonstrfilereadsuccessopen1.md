@@ -6,12 +6,9 @@ Conditions = [
 """ Isilon"""
 """|OPEN|SUCCESS|"""
 ]
+DupFields = ["src_file_path->file_path","src_file_ext->file_ext"]
 ParserVersion = "v1.0.0"
 
-auth0-authentication-template.Fields}[
-    """"exa_regex=({operation_type}fcp)"""",
-  ]
-  ParserVersion = "v1.0.0"
-  DupFields = [ "user->dest_user" 
+
 }
 ```

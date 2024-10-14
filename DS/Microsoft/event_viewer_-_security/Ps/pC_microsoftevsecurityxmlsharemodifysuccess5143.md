@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-share-modify-success-5143
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}5143)""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)<""",
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
      """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<""",
     """<Data Name\\*='ObjectType'>({file_type}[^<]+)<""",

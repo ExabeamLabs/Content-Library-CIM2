@@ -10,7 +10,8 @@ Conditions = [
 """"USB"""
 ]
 Fields = [
-"""({device_id}USB[^"]+)",\d+,"({dest_host}[^"]+)","*({user}[\w\.\-]{1,40}\$?)"*,"*({file_name}[^"]+)"*,"*({bytes}\d+)"*,"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
+"""({device_id}USB[^"]+)",\d+,"({dest_host}[^"]+)","*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"*,"*({file_name}[^"]+)"*,"*({bytes}\d+)"*,"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
+"""VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -4,7 +4,7 @@
 Name = microsoft-sysmon-xml-registry-12
   Product = Sysmon
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>12</EventID>""", """<Provider Name""","""'Microsoft-Windows-Sysmon'""" ]
+  Conditions = [ """<EventID>12</EventID>""", """<Provider Name""","""<Channel>Microsoft-Windows-Sysmon""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
     """<Data Name\\*='TargetObject'>({file_path}(({file_dir}[^<>]+?)[\\\/]+)?({file_name}[^\\\/<>]*?(\.({file_ext}\w+))?))<\/Data>""",
     """<Data Name\\*='EventType'>({operation}[^<]+)<""",

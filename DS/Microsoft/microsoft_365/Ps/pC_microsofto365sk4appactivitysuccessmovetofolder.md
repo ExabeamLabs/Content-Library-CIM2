@@ -19,7 +19,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """user_email="({email_address}[^"@\s]+@({email_domain}[^"@\s]+))"""",
     """app="({app}[^"]+)"""",
     """destinationServiceName =({app}.+?)\sdevice""",
-    """UserId":"(\\.+)?\/(({user}[\w\.\-]{1,40}\$?)|({full_name}[^"\\=]+))(\\)?\\"\s*on behalf""",
+    """UserId":"(\\.+)?\/(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=]+))(\\)?\\"\s*on behalf""",
     """UserId":"(\\.+)?\/({last_name}[^,]+),\s*({first_name}[^\\"]+)\\"\s*on behalf"""
     """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^\\"]+)))"+"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
@@ -27,6 +27,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """"ObjectId":"(Unknown|Not Available|({object}[^"]+?))\s*""""
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)"""
     """"OriginatingServer":"({host}[\w\-.]+?)\s*\("""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
 
 

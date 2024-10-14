@@ -12,8 +12,8 @@ Name = akamai-siem-cef-network-notification-success-rule
     """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """cs2=({additional_info}[^,=]+?)(,|\s{0,100}\w+=)""",
     """act=({result}[^=]+)\s+\w+=""",
+    """request=((\w+:\/\/)?({web_domain}[^\s\/]+?)?({uri_path}\/[^\s]*))\s+\w+=""",
     """dhost=({web_domain}[^\s]+)\s+\w+=""",
-    """request=({request_uri}[^\s]+)\s+\w+=""",
     """dpt=({src_port}\d+)""",
     """CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)""", 
     """CEF:\d+\|([^\|]+\|){3}({category}[^\|]+)"""

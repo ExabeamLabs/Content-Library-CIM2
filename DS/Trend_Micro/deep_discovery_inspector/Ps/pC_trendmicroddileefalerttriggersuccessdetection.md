@@ -22,9 +22,9 @@ Name = trendmicro-ddi-leef-alert-trigger-success-detection
     """ptype=({alert_type}[^\s]+)""",
     """sev=({alert_severity}\d+)""",
     """act=({result}.+?)\s+\w+=""",
-    """suid=([^\\\/]+(\\|\/))?(anonymous|({email_address}[^@]+@[^\s]+)|({user}[\w\.\-]{1,40}\$?))""",
-    """d(U|u)ser(\d+)?=([^\\]+\\)?({user}[\w\.\-]{1,40}\$?)"""
-    """s(U|u)ser(\d+)?=([^\\]+\\)?({user}[\w\.\-]{1,40}\$?)"""
+    """suid=([^\\\/]+(\\|\/))?(anonymous|({email_address}[^@]+@[^\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """d(U|u)ser(\d+)?=([^\\]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """s(U|u)ser(\d+)?=([^\\]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 

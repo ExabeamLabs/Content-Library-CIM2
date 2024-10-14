@@ -16,7 +16,7 @@ Name = f5-f-kv-app-activity-common
    """domain' set to '({domain}[^\\\/\s'"]+)'""",
    """sAMAccountName =({account}[^\s'"\)]+)\)' ({result}\S+)""",
    """ Username '({account}[^\s'"]+)""",
-   """ AD agent:\s*({user}[\w\.\-]{1,40}\$?).+? authenticate with '({account}[^\s'"]+)' ({result}\S+)""",
+   """ AD agent:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?).+? authenticate with '({account}[^\s'"]+)' ({result}\S+)""",
    """ authentication with '({account}[^\s']+)""",
    """ bytes in:\s*({bytes_in}\d+)""",
    """ bytes out:\s*({bytes_out}\d+)""",
@@ -35,7 +35,7 @@ Name = f5-f-kv-app-activity-common
    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d+:\d+\s({vpn_server}[^\s]+)"""
    """hostname' set to '({src_host}[\w\-.]+)""",
    """"timestamp":"({time}\d{10})"""
-   """attr.userPrincipalName' set to '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+   """attr.userPrincipalName' set to '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
    """Object="({object}[^\s]+?)"""",
    """\d\d:\d\d:\d\d(\S+)?\s({host}[\w\-\.]+)\s\w+\s"""
  ]

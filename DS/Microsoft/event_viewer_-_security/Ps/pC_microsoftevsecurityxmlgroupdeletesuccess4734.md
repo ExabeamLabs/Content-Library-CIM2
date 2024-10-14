@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-xml-group-delete-success-4734
      """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)""",
      """<Data Name(\\)?=('|")TargetDomainName('|")>({group_domain}[^<]+)""",
      """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-     """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)""",
+     """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
      """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
      """<Level>({run_level}[^<]+)<"""

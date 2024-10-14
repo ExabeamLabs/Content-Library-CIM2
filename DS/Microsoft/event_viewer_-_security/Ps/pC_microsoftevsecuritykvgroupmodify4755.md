@@ -13,7 +13,7 @@ Name = "microsoft-evsecurity-kv-group-modify-4755"
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s""",
     """\srt=({time}\d{13})""",
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
-    """Subject:.+?Account Name:\s*(-|({user}[\w\.\-]{1,40}\$?))""",
+    """Subject:.+?Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Subject:.+?Account Domain:\s*(-|({domain}[^\s]+))""",
     """Subject:.+?Logon ID:\s*({login_id}[^\s]+)""",
     """Group:\s+Security ID:\s+({group_id}[^\s]+)""",

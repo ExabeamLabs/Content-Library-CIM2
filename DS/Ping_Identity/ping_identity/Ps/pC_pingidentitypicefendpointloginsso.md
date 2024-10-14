@@ -21,7 +21,7 @@ Name = pingidentity-pi-cef-endpoint-login-sso
     """\WexternalId=(|tid:({tracking_id}.+?))(\s+\w+=|\s*$)""",
     """\Wcs5=(|({local_user_id}.+?))(\s+\w+=|\s*$)""",
     """\Wcs6=(|({attributes}.+?))(\s+\w+=|\s*$)""",
-    """\WSAML_SUBJECT\\=(|({email_address}[^=@]+?@[^=@]+?),?|({user}[\w\.\-]{1,40}\$?))(\s+\w+\\=|\s*$)""",
+    """\WSAML_SUBJECT\\=(|({email_address}[^=@]+?@[^=@]+?),?|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+\\=|\s*$)""",
   ]
   ParserVersion = "v1.0.0"
   DupFields = [ "auth_method->operation" ]

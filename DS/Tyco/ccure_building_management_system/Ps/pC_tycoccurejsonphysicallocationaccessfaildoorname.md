@@ -15,7 +15,7 @@ Fields = [
 """"serverName":\s*\"({host}[^\"]+)""""
 """"firstName":\s*\"({first_name}[^\"]+)""""
 """"lastName":\s*\"({last_name}[^\"]+)""""
-""""ntid":\s*\"({user}[\w\.\-]{1,40}\$?)""""
+""""ntid":\s*\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"doorName":\s*\"({location_door}[^\"]+?)\s*""""
 """"direction":\s*\"({direction}[^\"]+)""""
 """"messageDateTime":\s*\"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""

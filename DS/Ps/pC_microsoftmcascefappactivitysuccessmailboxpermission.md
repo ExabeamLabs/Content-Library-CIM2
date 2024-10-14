@@ -26,8 +26,8 @@ ${MSParsersTemplates.ms-azure-eventhubs-activity} {
     """exa_regex=({category}UserManagement)""",
     """"Resource":\s*"({resource}[^"]+)""",
     """exa_json_path=$.Resource,exa_field_name=resource"""
-    """TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?))\\?"""",
-    """exa_regex=TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?))\\?"""",
+    """TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """exa_regex=TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"ActivityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""",
     """"ResourceId":\s*"({object}[^"]+)"""",
     """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""

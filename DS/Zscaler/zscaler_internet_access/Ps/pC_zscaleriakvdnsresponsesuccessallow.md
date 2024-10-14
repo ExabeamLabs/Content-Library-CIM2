@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """reqaction=({result}[^\s]+)"""
 """datetime=\w{1,3}\s+({time}\w{1,3}\s+\d+\s\d\d:\d\d:\d\d\s\d{4})"""
-"""user=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))\s"""
+"""user=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
 """dns_reqtype=({dns_query_type}[^\s]+)"""
 """durationms=({duration}\d+)"""
 """category=(Miscellaneous or Unknown|({category}[^\=]+?)\s+\w+=)"""
@@ -27,7 +27,7 @@ Fields = [
 """srv_dport=({dest_port}\d+)\s+"""
 """department=({department}[^\=]+?)\s+\w+="""
 """location=({location}[^\=]+?)\s+\w+="""
-"""deviceowner=(NA|({device_owner}[^\s]+))"""
+"""deviceowner=(NA|({owner_id}[^\s]+))"""
 """devicehostname=({host}[\w\-.]+?)\s*(\w+=|"*$)"""
 """clt_sip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]

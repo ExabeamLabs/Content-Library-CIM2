@@ -17,9 +17,9 @@ logrhythm-o365-file-operation = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
+    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
-    """USER=({domain}[^\\\s]+)\\({user}[\w\.\-]{1,40}\$?)""",
+    """USER=({domain}[^\\\s]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
     """COMMAND=({event_name}[^=]+?)\s+\w+=""",
     """OBJECT=({object}[^=]+?)\s+\w+=""",
@@ -37,12 +37,12 @@ azure-app-activity-skyfromation= {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[^\s]+\s+""",
-    """"+src-event-id"+:"+({src_event_id}[^"]+)""",
+    """"+src-event-id"+:"+({event_code}[^"]+)""",
     """"+event-name"+:"+({event_name}[^"]+)""",
     """"+application-module"+:"+({app_module}[^"]+)""",
     """"+authorization"+:.+?action"+:"+({action}[^"]+)""",
     """"+authorization"+:.+?scope"+:"+({scope}[^"]+)""",
-    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))"""
+    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """"channels"+:"+({channels}[^"]+)""",
     """"claims".+?aud"+:"+({aud}[^"]+)""",
     """"claims".+?iss"+:"+({iss}[^"]+)""",
@@ -67,7 +67,7 @@ azure-app-activity-skyfromation= {
     """"+category"+:"+({category}[^"]+)"""
     """"+subscriptionId"+:"+({subscription_id}[^"]+)""",
     """"+tenantId"+:"+({tenant_id}[^"]+)"""
-    """"+provider-account-identifier".+?id"+:"+({provider_account_id}[^"]+)""",
+    """"+provider-account-identifier".+?id"+:"+({account_id}[^"]+)""",
     """"+provider-account-identifier".+?name"+:"+({resource}[^"]+)"""
     """"+type"+:"+({object}[^"]+)""",
     """"+src-application-name"+:"+({app}[^"]+)""",

@@ -4,9 +4,10 @@
 Name = openldap-o-str-user-success-fd
   Vendor = OpenLDAP
   Product = OpenLDAP
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = "MMM dd HH:mm:ss"
   Conditions = [ """slapd[""", """conn=""", """fd=""" ]
   Fields = [
+    """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)"""
     """conn=({connection_id}\d+)""",
     """({host}[^\s]+)\s+slapd""",
     """fd=\d+\s+(({protocol}TLS)|({action}[^\s]+))"""

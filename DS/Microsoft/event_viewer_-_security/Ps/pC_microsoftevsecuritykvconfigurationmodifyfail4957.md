@@ -11,7 +11,7 @@ Fields = [
    """Microsoft-Windows-Security-Auditing:({event_code}4957)""",
    """({event_name}Windows Firewall did not apply the following rule)""",
    """sntdom=({domain}[^=]+)\s\w+=""",
-   """\ssuser=(N\/A|-|({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
+   """\ssuser=(N\/A|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
    """\ssuid=(N\/A|-|({user_uid}.+?))\s*\w+=""",
    """dhost=({host}[\w\-.]+)"""
    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",

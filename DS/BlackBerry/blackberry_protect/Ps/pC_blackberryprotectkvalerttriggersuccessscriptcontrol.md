@@ -20,7 +20,7 @@ Fields = [
 """Device Name:\s*({src_host}[^,]+)\s*,"""
 """File Path:\s*({malware_url}[^,]+)\s*,"""
 """Interpreter:\s*({alert_name}[^,]+)\s*,"""
-"""User Name:\s*(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))\s*(,|$)"""
+"""User Name:\s*(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(,|$)"""
 ]
 DupFields = [
 "malware_url->malware_file_name"

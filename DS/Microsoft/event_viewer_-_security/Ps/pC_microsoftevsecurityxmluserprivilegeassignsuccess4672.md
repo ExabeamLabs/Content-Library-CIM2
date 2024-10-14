@@ -16,7 +16,7 @@ Fields = [
   """<Keywords><Keyword>({result}[^<]+)</Keyword></Keywords>""",
   """<EventID>({event_code}[^<]+)</EventID>""",
   """<Data Name(\\\/)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
-  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(NETWORK SERVICE|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-]{1,40}\$?))</Data>""",
+  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(NETWORK SERVICE|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
   """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
   """<Data Name(\\\/)?=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
   """({event_name}Special privileges assigned to new logon)""",

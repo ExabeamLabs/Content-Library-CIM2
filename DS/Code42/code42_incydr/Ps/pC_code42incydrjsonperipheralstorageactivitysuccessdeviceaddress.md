@@ -21,10 +21,10 @@ Fields = [
 """exa_json_path=$.timestamp,exa_field_name=time"""
 """exa_json_path=$.userUid,exa_field_name=user_uid"""
 """exa_json_path=$.eventType,exa_field_name=operation"""
-"""exa_json_path=$.detectionDevice.busType,exa_field_name=device_type"""
+"""exa_json_path=$.detectionDevice.busType,exa_field_name=device_class"""
 """exa_json_path=$.deviceGuid,exa_field_name=device_id"""
-"""exa_json_path=$.detectionDevice.deviceName,exa_field_name=device_name"""
-"""exa_json_path=$.detectionDevice.mediaName,exa_field_name=device_name"""
+"""exa_json_path=$.detectionDevice.deviceName,exa_field_name=device_description"""
+"""exa_json_path=$.detectionDevice.mediaName,exa_field_name=device_description"""
 """exa_json_path=$.detectionDevice.serialNumber,exa_field_name=usb_serial_number,exa_match_expr=!InList(($.detectionDevice.serialNumber), "unknown")""",
 """exa_json_path=$.detectionDevice.vendorName,exa_field_name=vendor_name"""
 """exa_json_path=$.detectionDevice.volumes[0].volumeName,exa_field_name=drive_letter"""

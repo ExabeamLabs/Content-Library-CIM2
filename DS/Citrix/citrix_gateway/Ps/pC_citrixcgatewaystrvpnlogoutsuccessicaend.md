@@ -11,7 +11,7 @@ Name = citrix-cgateway-str-vpn-logout-success-icaend
     """({time}\d\d/\d\d/\d\d\d\d:\d\d:\d\d:\d\d \w+)\s+({host}[\w.\-]+)(\s+\S+){3}\s+SSLVPN ({event_name}ICAEND_CONNSTAT)\s""",
     """\sSource\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
     """\sDestination\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",
-    """\susername:domainname\s+({user}[\w\.\-]{1,40}\$?):({domain}[^\s]+)""",
+    """\susername:domainname\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?):({domain}[^\s]+)""",
     """\sDuration ({duration}\S+)""",
     """\sTotal_bytes_send\s+({bytes_out}\d+)""",
     """\sTotal_bytes_recv\s+({bytes_in}\d+)""",

@@ -15,7 +15,7 @@ Fields = [
   """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)"""
   """\sComputer(?:Name)?\s*=\s*"?({host}[\w\-.]+)"""
   """Message\s*=\s*"?({operation_type}[^:]+)"""
-  """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)"""
+  """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """ProcessGuid:\s*\{({process_guid}[^\s\}]+)"""
   """ProcessId:\s*({process_id}\d+)"""
   """ParentProcessGuid:\s*\{({parent_process_guid}[^\s\}]+)"""
@@ -23,7 +23,7 @@ Fields = [
   """\sTargetFilename:\s*({file_path}(({file_dir}.+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+CreationUtcTime:"""
   """EventID":({event_code}\d+),"""
   """Domain":"({domain}[^"]+?)""""
-  """AccountName":"({user}[\w\.\-]{1,40}\$?)""""
+  """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))""""
   """"TargetFilename":"({file_path}(({file_dir}[^"]+?)[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))""""
 ]

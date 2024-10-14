@@ -15,7 +15,7 @@ Fields = [
 """<Computer>({src_host}({host}[^<]+))"""
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
-"""<Data Name(\\)?=('|")SubjectUserName('|")>(-|CN=[^<]+|({user}[\w\.\-]{1,40}\$?))<"""
+"""<Data Name(\\)?=('|")SubjectUserName('|")>(-|CN=[^<]+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
 """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({domain}[^<]+))"""
 """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)"""
 """<Data Name(\\)?=('|")ObjectServer('|")>({ds_object_class}[^<]+)"""

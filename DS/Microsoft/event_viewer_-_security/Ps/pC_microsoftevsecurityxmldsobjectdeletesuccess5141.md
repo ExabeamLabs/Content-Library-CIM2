@@ -14,7 +14,7 @@ Fields = [
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<Keywords>({result}[^<]+)</Keywords>""",
   """<Data Name\\*='SubjectUserSid'>(|({user_sid}[^<]+?))</Data>""",
-  """<Data Name\\*='SubjectUserName'>(|({user}[\w\.\-]{1,40}\$?))</Data>""",
+  """<Data Name\\*='SubjectUserName'>(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
   """<Data Name\\*='SubjectDomainName'>(|({domain}[^<]+?))</Data>""",
   """<Data Name\\*='SubjectLogonId'>(|({login_id}[^<]+?))</Data>""",
   """<Data Name\\*='ObjectDN'>(|({ds_object_dn}[^<]+?))</Data>""",

@@ -11,7 +11,7 @@ Fields = [
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
 """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
-""""UserId\\*"+:[\s\\]*"+(({domain}[^"\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(SecurityComplianceAlerts|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-]{1,40}\$?))))"""",
+""""UserId\\*"+:[\s\\]*"+(({domain}[^"\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(SecurityComplianceAlerts|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))"""",
 """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
 """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)""",
 """Workload"*:"*({app}[^"]+)""",
@@ -20,9 +20,9 @@ Fields = [
 """"Operation\\*":\\*"(File|Folder)[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({file_path}({file_dir}[^"]*?)({file_name}[^"\\\/]+?(\.({file_ext}[^"\\\/\.]+?))?)))\\*"""",
 """"Operation\\*:\\*"(?!(File|Folder))[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({object}[^"]+?))\\*"""",
 """"SourceFileName\\*":\\*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\\\/\.]+?))?)\\*"""",
-"""\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-]{1,40}\$?)))\s""",
+"""\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
 """"ItemName":"({email_subject}[^"]+)""",
-""""Sender":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+""""Sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
 """"Receivers":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]+?)\],"""",
 """"ClientIP"+:"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """UserAgent":\s*"({user_agent}[^"]+)"""",
@@ -35,7 +35,8 @@ Fields = [
 """SiteUrl":"({url}[^"]+)"""",
 """"MailboxPrimaryAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
 """("Value":"({os}[^"]+)",)?"Key":"OsName"(,"Value":"({=os}[^"]+)")?"""
-""""UserType":"*({user_type}[^,}"]+)"*"""
+""""UserType":({user_type}[^,\}"]+)"*"""
+""""correlationId":\s*"({correlation_id}[^"]+)""""
 ]
 
 

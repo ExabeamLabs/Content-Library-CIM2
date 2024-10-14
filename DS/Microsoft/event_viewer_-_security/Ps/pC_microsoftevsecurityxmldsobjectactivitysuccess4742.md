@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4742
     """({event_code}4742)""",
     """<EventRecordID>({event_id}[^<]+)""",
     """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-    """('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)<""",
+    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
   ]

@@ -11,7 +11,7 @@ Name = "dell-sw-str-vpn-login-success-csacl"
         """CSACL"""
     ]
     Fields = [
-        """:\s.+?\]\s+({host}[^\s]+).+?\sUser.+?\(({user}[\w\.\-]{1,40}\$?).+connecting from.+?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):.+access to.+?({dest_host}[\w.-]+)"""
+        """:\s.+?\]\s+({host}[^\s]+).+?\sUser.+?\(({user}[\w\.\-\!\#\^\~]{1,40}\$?).+connecting from.+?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}):.+access to.+?({dest_host}[\w.-]+)"""
     ]
     ParserVersion = "v1.0.0"
 

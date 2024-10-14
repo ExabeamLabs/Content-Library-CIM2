@@ -17,7 +17,7 @@ Name = fireeye-endpointsecurity-json-alert-trigger-success-processevent
        """exa_json_path=$.event_values.processEvent/processCmdLine,exa_field_name=process_command_line""",
        """exa_json_path=$.event_values.processEvent/md5,exa_field_name=hash_md5""",
        """exa_json_path=$.event_values.processEvent/process,exa_field_name=process_name""",
-       """exa_json_path=$.event_values.processEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)$"""
+       """exa_json_path=$.event_values.processEvent/username,exa_regex=^(({domain}[^"\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
     ]
     DupFields = ["alert_name->alert_type"]
 	ParserVersion = "v1.0.0"

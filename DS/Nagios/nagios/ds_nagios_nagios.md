@@ -6,7 +6,7 @@ Product: Nagios
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   0   |   0    |         0          |       0        |    0    |
 
-|  Use-Case  | Activity Types(Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
+|  Use-Case  | Activity Types (Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
 |:----------:| ---- | ---- | ---- |
 | Enrichment |    |    | [](RM/r_m_nagios_nagios_Enrichment.md) |
 

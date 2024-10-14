@@ -23,10 +23,10 @@ Fields = [
 """ACTION\s+:\[\d+\]\s+'({db_operation}grant \w+)"""
 """ACTION\s+:\[\d+\]\s+'({db_operation}revoke \w+)"""
 """ACTION\s+:\[\d+\]\s+'({db_operation}alter \w+)"""
-"""\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-]{1,40}\$?)'"""
+"""\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
 """\sDBID:\[\d+\]\s*'(|({db_id}[^']+))'"""
 """\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\/\s]+))'"""
-"""\sPRIVILEGE\s*:\[\d+\]\s*'({privilege}[^']+)'"""
+"""\sPRIVILEGE\s*:\[\d+\]\s*'({privileges}[^']+)'"""
 """(?i:((create|drop) user))\s+({dest_user}[^\s]+)"""
 ]
 DupFields = [

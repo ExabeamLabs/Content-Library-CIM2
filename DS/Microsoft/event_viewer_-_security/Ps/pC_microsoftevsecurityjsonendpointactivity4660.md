@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-4660
     """"Hostname":"({host}[^"]+)""""
     """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """"SubjectUserSid":"({user_sid}[^"]+)""""
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)""""
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"SubjectDomainName":"({domain}[^"]+)""""
     """"SubjectLogonId":"({login_id}[^"]+)""""
     """"ObjectServer":"({object_server}[^"]+)""""

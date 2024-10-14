@@ -4,7 +4,7 @@
 Name = "fireeye-networksecurity-json-endpoint-login-success-krb5"
 	Conditions = [ """"event_type":"krb5"""", """"flow_id":""", """"krb5":{""", """"request_type":"""", """realm"""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
-    	"""exa_json_path=$.krb5.client[:1],exa_regex=({user}[\w\.\-]{1,40}\$?)""",
+    	"""exa_json_path=$.krb5.client[:1],exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     	"""exa_json_path=$.krb5.server_realm,exa_field_name=domain""",
     	"""exa_json_path=$.krb5.client_realm,exa_field_name=domain""",
     	"""exa_json_path=$.krb5.success,exa_field_name=result""",

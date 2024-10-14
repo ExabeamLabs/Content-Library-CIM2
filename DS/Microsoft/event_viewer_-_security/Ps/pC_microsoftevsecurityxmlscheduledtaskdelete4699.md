@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-delete-4699
   Conditions = [ """<EventID>4699<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-]{1,40}\$?)""",
+    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)""",
     """<Data Name\\*='TaskName'>({task_name}[^<]+)""",
@@ -34,7 +34,7 @@ s-xml-events = {
     """<Data Name\\*=('|")TargetProcessName('|")>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?=('|")ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Task Name:\s*(|-|({task_name}[^:]+?))\s*Task Content:""",

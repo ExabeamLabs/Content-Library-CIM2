@@ -12,7 +12,7 @@ Fields = [
 """exa_json_path=$.@timestamp,exa_field_name=time""",
 """exa_json_path=$.computer_name,exa_regex=^({host}[\w\-.]+)$""",
 """exa_json_path=$.event_id,exa_field_name=event_code""",
-"""exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.event_data.SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id""",
 """exa_json_path=$.logon_id,exa_field_name=login_id""",

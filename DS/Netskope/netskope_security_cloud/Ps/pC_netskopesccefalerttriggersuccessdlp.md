@@ -15,9 +15,9 @@ Name = netskope-sc-cef-alert-trigger-success-dlp
     """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """fsize=({bytes}\d+)\s"""
     """requestClientApplication=(null|({app}[^=]+?))\s\w+=""",
-    """md5=({md5}[^=]+?)\s\w+=""",
-    """sha256=({sha256}[^=]+?)\s\w+=""",
-    """suser=(({email_address}[^@=\s]+@[^@=\s\.]+\.[^=\s]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """md5=({hash_md5}[^=]+?)\s\w+=""",
+    """sha256=({hash_sha256}[^=]+?)\s\w+=""",
+    """suser=(({email_address}[^@=\s]+@[^@=\s\.]+\.[^=\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """url=({target}[^~]+?)\s("|$)""",
   ]
   ParserVersion = v1.0.0

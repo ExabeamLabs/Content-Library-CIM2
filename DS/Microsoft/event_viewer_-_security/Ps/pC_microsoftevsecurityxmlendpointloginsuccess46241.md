@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624-1"
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name\\*="LogonType">({login_type}\d+)<"""
-  """<Data Name\\*="TargetUserName">(SYSTEM|-|({user}[\w\.\-]{1,40}\$?))<"""
+  """<Data Name\\*="TargetUserName">(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>"""
   """<Data Name\\*="TargetDomainName">(-|({domain}[^<]+))<"""
   """<Data Name\\*="ProcessName">(?:-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<"""
   """<Data Name\\*="IpAddress"[^<>]*?>(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)<""",

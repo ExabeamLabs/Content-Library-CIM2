@@ -17,7 +17,7 @@ servicenow-auth-template = {
     Fields = [
       """"sys_created_on":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """destinationServiceName =({app}ServiceNow)""",
-      """"user(_name)?":"(({email_address}[^@"]+@[^.]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
+      """"user(_name)?":"(({email_address}[^@"]+@[^.]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """"name":"({object}[^"]+)""",
       """"parm1":"\s*(|-|({resource}[^",]+?[^\\\s])\s*)","""
     

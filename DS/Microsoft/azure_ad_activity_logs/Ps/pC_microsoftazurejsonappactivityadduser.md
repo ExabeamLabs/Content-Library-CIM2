@@ -5,7 +5,7 @@ Name = microsoft-azure-json-app-activity-adduser
   ParserVersion = "v1.0.0"
   Conditions = [ """"activityDisplayName":"Add user"""", """"operationType":"Add"""", """"targetResources":[""", """"category":"UserManagement"""" ]
   Fields = ${MicrosoftParserTemplates.microsoft-azuread-json-events.Fields}[
-    """exa_json_path=$.targetResources[:1].modifiedProperties[?(@.displayName =='DisplayName')].newValue,exa_field_name=target""",
+    """exa_json_path=$.targetResources[:1].modifiedProperties[?(@.displayName =='DisplayName')].newValue,exa_regex=\[?\\?"\s*({target}[^"\\\]]+?)\s*\\?"""",
     """exa_json_path=$.targetResources[:1].modifiedProperties[?(@.displayName =='UserPrincipalName')].newValue,exa_field_name=object"""
   ]
 

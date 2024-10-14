@@ -11,7 +11,7 @@ Name = microsoft-sysmon-str-handle-open-success-10
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s*({host}[^\s]+)\s""",
     """eventid="+({event_code}\d+)""",
     """providername="+({provider_name}[^"]+)""",
-    """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?))""",
+    """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
     """\Weventrecordid="+({event_id}\d+)"""",
     """SourceProcessGUID:\s*\{({process_guid}[^\s\}]+)""",
@@ -20,7 +20,7 @@ Name = microsoft-sysmon-str-handle-open-success-10
     """\s+SourceImage:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))\s+TargetProcessGUID:""",
 # target_process_guid is removed
     """TargetProcessId:\s*({dest_process_id}\d+)""",
-    """\s+TargetImage:\s*({dest_process}({dest_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({dest_process_name}.+?))\s+""",
+    """\s+TargetImage:\s*({dest_process_path}({dest_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({dest_process_name}.+?))\s+""",
     """\sGrantedAccess:\s*({result}[^\s]+)""",
   ]
   DupFields = ["event_id->event_code"]

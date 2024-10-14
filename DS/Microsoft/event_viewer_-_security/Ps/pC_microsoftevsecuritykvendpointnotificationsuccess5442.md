@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-5442
       """RecordNumber=({event_id}\d+)"""
       """TaskCategory=({operation}[^=]+?)\s*(\w+=|$)"""
       """SourceName =({service_name}.+?)(\.\s+\w+=|\s*$)"""
-      """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s"""	
+      """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s"""	
   ]
   
 windows-events = {
@@ -26,7 +26,7 @@ windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

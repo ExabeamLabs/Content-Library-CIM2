@@ -13,7 +13,7 @@ Name = secureauth-login-leef-app-logout-90050
     """\sCategory="({category}[^"]+)"""",
     """({event_code}90050)""",
     """({event_name}Session - End)""",
-    """\sUserID="+(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
+    """\sUserID="+(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\WAppliance="({dest_host}[\w\-.]+)""",
     """\WRealm="({realm}[^"]+)""",
     """\WPriority="({priority}\d+)"""

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """utc=({time}\d{10})"""
 """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w.\-]+)\s"""
-"""user=({user}[\w\.\-]{1,40}\$?)"""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\d+\|\d+\|({event_name}.+?)\|\d"""
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""

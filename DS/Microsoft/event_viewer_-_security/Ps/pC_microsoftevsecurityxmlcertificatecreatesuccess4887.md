@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-certificate-create-success-4887
   Conditions = [ """<EventID>4887</EventID>""", """<Data Name =""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-]{1,40}\$?)<""",
+    """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Data Name\\*='Attributes'>\s*({attributes}[^<]+?)\s*<"""
     """<Data Name\\*='Disposition'>({disposition}[^<]+)""",
 # subject_key is removed
@@ -25,7 +25,7 @@ xml-windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

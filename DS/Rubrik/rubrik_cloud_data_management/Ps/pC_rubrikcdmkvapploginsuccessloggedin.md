@@ -17,7 +17,7 @@ Name = rubrik-cdm-kv-app-login-success-loggedin
       """objectType="({object_type}[^"]+)"""",
       """objectId="({object_id}[^"]+)"""",
       """eventSeverity="({alert_severity}[^"]+)"""",
-      """\]\s+({user}[\w\.\-]{1,40}\$?)\s(\([^\)]+\)\s)*in '[^\']+' logged in from""",
+      """\]\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s(\([^\)]+\)\s)*in '[^\']+' logged in from""",
       """\(({user_ou}[^)]+)\) in '[^\']+' logged in from""",
       """logged in from\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""                          
     ]

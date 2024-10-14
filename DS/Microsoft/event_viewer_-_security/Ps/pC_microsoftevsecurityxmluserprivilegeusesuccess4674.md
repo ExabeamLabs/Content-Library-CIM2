@@ -14,8 +14,8 @@ Fields = [
   """<Computer>({dest_host}({host}[\w.\-]+))<"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4674)"""
-  """<Data Name\\*=('|")SubjectUserSid('|")>\s*(({domain}[^\\<]+)\\)?({user}[\w\.\-]{1,40}\$?)<"""
-  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))<"""
+  """<Data Name\\*=('|")SubjectUserSid('|")>\s*(({domain}[^\\<]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
   """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+?)<"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+?)<"""
   """<Data Name\\*=('|")ObjectServer('|")>(-|({object_server}[^<]+?))<"""

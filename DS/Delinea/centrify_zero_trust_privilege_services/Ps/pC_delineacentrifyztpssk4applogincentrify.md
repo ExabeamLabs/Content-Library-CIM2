@@ -7,7 +7,7 @@ Name = delinea-centrifyztps-sk4-app-login-centrify
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = ["""destinationServiceName =Centrify""", """Centrify""", """"EventType":"""" ]
   Fields = [
-    """"NormalizedUser":"(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"]+))(?<!local)|(({user}[\w\.\-]{1,40}\$?)(@({domain}[^"]+)?)))"""",
+    """"NormalizedUser":"(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"]+))(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))"""",
     """"EventType":"({operation}[^"]+)"""
     """destinationServiceName =({app}[^\s]+)""",
     """"CredentialType":"({object}[^"]+)""",

@@ -20,7 +20,7 @@ Name = microsoft-sysmon-cef-registry-success-sysmonregkey
 # category_device_group is removed
 # category_object is removed
 # category_custom_format_field is removed
-    """\WdeviceSeverity=({device_severity}.+?)\s+(\w+=|$)""",
+    """\WdeviceSeverity=({severity}.+?)\s+(\w+=|$)""",
     """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
     """\Wdproc=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
     """\Wcs6=\{({process_guid}[^\}]+)""",

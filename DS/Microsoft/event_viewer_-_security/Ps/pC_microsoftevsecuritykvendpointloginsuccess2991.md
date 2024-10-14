@@ -16,7 +16,7 @@ Fields = [
 """AD FS Auditing\s+({account}[^\s]+)"""
 """({host}[^\s]+)\s+MSWinEventLog"""
 """({time}\w+ \d+ \d+:\d+:\d+ \d{1,4})\s+299"""
-"""Instance ID:\s*({iid}[^\s]+)"""
+"""Instance ID:\s*({instance_id}[^\s]+)"""
 """\s({email_address}[^@\s]+@[^\.]+\.[^\s]+)\s+\d+"""
 """({result}Success Audit)"""
 """({event_name}A token was successfully issued)"""

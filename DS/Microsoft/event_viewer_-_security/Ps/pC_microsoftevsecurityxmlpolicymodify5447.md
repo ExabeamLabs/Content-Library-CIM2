@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447
     """<Task>({task_name}[^<]+)""",
     """<Data Name(\\)?=('|")UserSid('|")>({user_sid}[^<]+)""",
 # provider_key is removed
-    """<Data Name(\\)?=('|")UserName('|")>(((?i)NT AUTHORITY|(({domain}[^\\]+)))\\)?((?i)LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))""",
+    """<Data Name(\\)?=('|")UserName('|")>(((?i)NT AUTHORITY|(({domain}[^\\]+)))\\)?((?i)LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """<Data Name(\\)?=('|")ProviderName('|")>({provider_name}[^<]+)""",
     """<Data Name(\\)?=('|")ChangeType('|")>({event_category}[^<]+)""",
 # filter_key is removed

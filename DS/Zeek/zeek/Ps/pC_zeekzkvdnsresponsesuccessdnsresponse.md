@@ -23,7 +23,7 @@ Fields = [
   """query="({dns_query}[^"\\]+)"""
   """qtype_name="(Unassigned|({dns_query_type}[^"\\]+))"""
   """rejected="({result}[^"]+)"""
-  """rcode="({rcode}[^"]+)"""
+  """rcode="({dns_response_code}[^"]+)"""
   """answers="({answers}[^"]+)"""
   """answers=(|({dns_response}.+?))\s\w+=(\s|")"""
 ]

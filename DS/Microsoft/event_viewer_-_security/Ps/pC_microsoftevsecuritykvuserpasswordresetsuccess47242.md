@@ -16,7 +16,7 @@ Fields = [
 """shost=({host}[\w\-.]+)"""
 """sntdom=({domain}[^\s]+)"""
 """dntdom=({dest_domain}[^\s]+)"""
-"""suser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+"""suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """duser=({dest_user}.+?)\s+\w+="""
 """nitroSource_Logon_ID=({login_id}.+?)(\s|0\|)"""
 """nitroSecurity_ID=({user_sid}[^\s]+)"""

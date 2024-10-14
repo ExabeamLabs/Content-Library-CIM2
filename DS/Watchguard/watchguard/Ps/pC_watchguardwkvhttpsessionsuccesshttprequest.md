@@ -20,7 +20,7 @@ Fields = [
 """\ssent_bytes="({bytes_in}\d+)"""
 """\srcvd_bytes="({bytes_out}\d+)"""
 """\sapp_cat_name="({category}[^"]+)""""
-"""\ssrc_user="(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+"""\ssrc_user="(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 ]
 ParserVersion = "v1.0.0"
 

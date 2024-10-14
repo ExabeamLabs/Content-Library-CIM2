@@ -9,10 +9,9 @@ Conditions = [
 """"assigned_ip"""
 """"lease_time"""
 ]
+DupFields = ["transaction_id->trans_id"]
 ParserVersion = "v1.0.0"
 
-json-zeek-activity.Fields}[
-    """"ts":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
-  
+
 }
 ```

@@ -6,7 +6,7 @@ Name = dell-sw-kv-dns-request-success-1481
   ParserVersion = "v1.0.0"
   Conditions = [ """ m=1481 """, """id=""", """ fw=""", """ c=""", """ pri="""]
   Fields = ${SonicwallParsersTemplates.sonicwall-firewall.Fields} [
-    """Domain:\s*({query}[^"]+)"""
+    """Domain:\s*({dns_query}[^"]+)"""
     """time="({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
     """\spri=({severity}\d+)""",
     """\snote="\s*({additional_info}[^"]+?)\s*""""
@@ -18,7 +18,7 @@ sonicwall-firewall = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """time=(\\)?"({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d)"""
-    """usr="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """usr="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\smsg="({additional_info}[^"]+?)\s*"""",
     """\sc=({category_id}\d+)""",
     """\sm=({message_id}\d+)""",

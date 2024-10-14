@@ -17,7 +17,7 @@ Fields = [
   """Computer"+:"+({host}[\w\-.]+)"""
   """({event_code}4674)"""
   """<Data Name(\\)?=(\\)?"+SubjectUserSid(\\)?"+>(?:NONE_MAPPED|({user_sid}[^<]+))"""
-  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))<\/Data>"""
+  """<Data Name(\\)?=(\\)?"+SubjectUserName(\\)?"+>(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectDomainName(\\)?"+>(NT AUTHORITY|({domain}[^<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectLogonId(\\)?"+>({login_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectServer(\\)?"+>(-|({object_server}[^<]+))"""

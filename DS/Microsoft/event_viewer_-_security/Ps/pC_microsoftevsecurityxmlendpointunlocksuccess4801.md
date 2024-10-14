@@ -17,7 +17,7 @@ Fields = [
 """<Computer>({dest_host}({host}[\w\-.]+))<"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<EventID>({event_code}4801)"""
-"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-]{1,40}\$?)"""
+"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)"""
 """Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)"""
 """Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""

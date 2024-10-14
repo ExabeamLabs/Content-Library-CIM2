@@ -19,7 +19,7 @@ Fields = [
 """nitroService_Name =({dest_host}\S+\$)\s"""
 """nitroService_Name =({service_name}\S+)"""
 """sntdom=({domain}[^\s]+)"""
-"""suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+"""suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 

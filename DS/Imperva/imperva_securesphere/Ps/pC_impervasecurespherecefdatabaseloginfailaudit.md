@@ -23,7 +23,7 @@ Name = imperva-securesphere-cef-database-login-fail-audit
     """\Wcs2=\s*(|({server_group}.+?))\s*(\w+=|$)""",
     """\Wcs3=(|({service_name}.+?))\s*(\w+=|$)""",
     """\Wcs4=(|({app}.+?))\s*(\w+=|$)""",
-    """\Wcs11="*(({domain}[^\\\s",]+)\\+)?({user}[\w\.\-]{1,40}\$?)"*\s*(\w+=|$)""",
+    """\Wcs11="*(({domain}[^\\\s",]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"*\s*(\w+=|$)""",
     """\Wcs13=(|({db_name}.+?))\s*(\w+=|$)""",
     """\Wcs14=(|({db_schema}.+?))\s*(\w+=|$)""",
     """\Wcs18=(|({result_reason}.+?))\s*(\w+=|$)""",

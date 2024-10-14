@@ -18,7 +18,7 @@ Fields = [
   """PROGRAM=({process_name}[^\)]+)"""
   """PROTOCOL=({protocol}[^\)]+)"""
   """SERVICE_NAME=({app}[^\)]+)"""
-  """USER=({user}[\w\.\-]{1,40}\$?)"""
+  """USER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\(PORT=\d+\)\)\s*\*\s*({result}[^\s\*]+)"""
 ]
 ParserVersion = "v1.0.0"

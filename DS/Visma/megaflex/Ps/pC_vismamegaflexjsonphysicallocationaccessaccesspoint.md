@@ -16,9 +16,9 @@ Name = visma-megaflex-json-physical-location-access-accesspoint
     """"destinationArea".*?"type":"({location_area}[^"]+)"""",
     """"destinationArea".*?"id":({location_door_id}[^,]+),""",
     """"destinationArea".*?"name":"({location_full}[^"]+)"""",
-    """"sourceArea".*?"type":"({source_location_area}[^"]+)"""",
-    """"sourceArea".*?"id":({source_location_door_id}[^,]+),""",
-    """"sourceArea".*?"name":"({source_location_full}[^"]+)"""",
+    """"sourceArea".*?"type":"({src_location_area}[^"]+)"""",
+    """"sourceArea".*?"id":({src_location_door_id}[^,]+),""",
+    """"sourceArea".*?"name":"({src_location_full}[^"]+)"""",
   ]
   ParserVersion = "v1.0.0"
 

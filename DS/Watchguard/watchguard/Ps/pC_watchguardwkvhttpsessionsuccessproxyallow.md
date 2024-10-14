@@ -21,7 +21,7 @@ Fields = [
 """\ssent_bytes="({bytes_in}\d+)"""
 """\srcvd_bytes="({bytes_out}\d+)"""
 """\scats="({category}[^"]+)""""
-"""\ssrc_user="({email_address}({user}[\w\.\-]{1,40}\$?)[^"]+)""""
+"""\ssrc_user="({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^"]+)""""
 """action="+({proxy_action}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"

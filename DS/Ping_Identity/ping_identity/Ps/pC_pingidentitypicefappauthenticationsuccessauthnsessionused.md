@@ -15,7 +15,7 @@ ping-auth-events{
      """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """msg=({result}[^\s]+)""",
      """cs3=\(\w+:({protocol}[^\s]+)\)""", 
-     """cs5=({user}[\w\.\-]{1,40}\$?)""",
+     """cs5=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """CEF:([^\|]*\|){3}({event_name}[^\|]+)\|""",
      """cs8=({user_agent}[^=]+?)\s+\w+=""",
      """cs7=(|({additional_info}[^\n]+?))\s+cs8Label="""
@@ -39,8 +39,8 @@ pingone-events = {
       """exa_json_path=$.result.description,exa_field_name=additional_info""",
       """exa_json_path=$.correlationId,exa_field_name=correlation_id""",
       """exa_json_path=$.source.ipAddress,exa_field_name=src_ip""",
-      """exa_regex="user":.+?"name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
-      """exa_regex="resources":.+?"name":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))""""
+      """exa_regex="user":.+?"name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """exa_regex="resources":.+?"name":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
    
 }
 ```

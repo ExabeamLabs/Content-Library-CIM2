@@ -11,10 +11,10 @@ Name = "microsoft-defenderep-cef-endpoint-notification-advancehuntingdevinfo"
     """DeviceName":\s*"({dest_host}[\w\-.]+)""",
     """"ClientVersion"+:"+({client_version}[^"]+)""",
     """Sid"+:"+({user_sid}[^"]+)""",
-    """"UserName"+:"+({user}[\w\.\-]{1,40}\$?)""",
+    """"UserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"DomainName"+:"+({domain}[^"]+)""",
     """"PublicIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"UserName"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"},"""
+    """"UserName"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"},"""
     ]
 
 cef-defender-atp {
@@ -31,7 +31,7 @@ cef-defender-atp {
        """LocalPort"+:({src_port}\d+)""",
        """ActionType"+:\s*"+({result}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
-       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]+)[\\\/]({process_name}[^"]+))""",

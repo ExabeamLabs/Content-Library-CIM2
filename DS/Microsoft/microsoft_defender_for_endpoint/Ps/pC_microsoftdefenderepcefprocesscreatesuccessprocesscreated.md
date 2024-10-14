@@ -21,10 +21,10 @@ Fields = [
 """ActionType\\?"+:\s*\\?"+({result}[^"]+?)\\?""""
 """RemoteIPType"+:\s*"+(null|({direction}[^"]+))"""
 """DeviceName\\?"+:\s*\\?"+({dest_host}[\w\-.]+?)\\?""""
-"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))\\?""""
+"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
 """"ProcessIntegrityLevel\\?"+:\s*\\?"+({process_integrity}[^"]+?)\\?""""
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
-"""InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?""""
+"""InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?",""""
 """ProcessId\\?"+:({process_id}\d+)"""
 """"FileName\\?"+:\s*\\?"+(|({process_name}[^"]+?))\\?,""""
 """"InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
@@ -41,7 +41,7 @@ Fields = [
 """"SHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
-""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 DupFields = [
 "category->event_name"

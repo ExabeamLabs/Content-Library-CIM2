@@ -29,7 +29,7 @@ beyondtrust-pi-app-activity = {
       """\ssEventID=\\?"({operation}[^"]+?)\\?""""
       """\ssOriginatingApplicationName =\\?"({app}[^"\\]+?)\\?""""
       """dwAppSpecificEventID=\\?"({event_code}\d+)"""
-      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\\?""""
+      """\ssOriginatingAccount=\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
       """\ssOriginatingSystem=\\?"({src_host}[^"\\]+?)\\?""""
       """"sAccountName\\?"\svalue=\\?"({account}[^"\\]+)\\?""""
       """key=\\?"AccountToElevate\\?"\svalue=\\?"(({account_domain}[^\\]+)\\+)?({account}[^"\\]+?)\\?""""
@@ -52,7 +52,7 @@ beyondtrust-pi-app-activity = {
         """sOriginatingAccount="(({account_domain}[^\\]+)[\\]+)?({account}[^\s"]+)""""
         """dtPostTime="({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
         """sMessage="({additional_info}[^"]+)"""
-        """sLoginName ="(({domain}[^\\]+)[\\]+)?({user}[\w\.\-]{1,40}\$?)""""
+        """sLoginName ="(({domain}[^\\]+)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 # job_id is removed
         """sIpAddress="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
         

@@ -12,13 +12,13 @@ cef-azure-alert = {
     Fields = [
     """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{2}(\.\d{1,7})?Z)"""
     """"title":"({alert_name}[^"]+)""""
-    """"userPrincipalName":\s*"([-|\\|<]|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-]{1,40}\$?)(@[^"]+)?))>?""""
+    """"userPrincipalName":\s*"([-|\\|<]|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@[^"]+)?))>?""""
     """"severity":"({alert_severity}[^"]+)""""
     """"domainName":"({domain}[^"]+)""""
     """"id":"({alert_id}[^"]+)""""
     """msg=({additional_info}[^=]+?)\s\w+="""
     """"category":"({alert_type}[^"]+)""""
-    """"accountName":"({user}[\w\.\-]{1,40}\$?)""""
+    """"accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     
 }
 ```

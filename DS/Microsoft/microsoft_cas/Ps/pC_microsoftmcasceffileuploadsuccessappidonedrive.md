@@ -15,7 +15,7 @@ Fields = [
 """SIEM_Agent\|[^|]+?\|({access}[^\|]+)\|"""
 """msg=(.+?):\s*({file_type}[^\s]+)\s*({file_dir}[^=]+)[\\\/]+({file_name}.*?\.({file_ext}[^\\:\s.]+)?)\s+(?:$|\w+=)"""
 """msg=(.+?):\s*({file_type}[^\s]+)\s*({file_path}.+?)\s+\w+="""
-"""\ssuser=({email_address}({user}[\w\.\-]{1,40}\$?)@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch)))\s+"""
+"""\ssuser=({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch)))\s+"""
 """\srt=({time}\d{13})"""
 """destinationServiceName =({app}.+?)\s+\w+="""
 """\srequestClientApplication=({user_agent}.+?)\s+\w+="""

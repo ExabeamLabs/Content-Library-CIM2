@@ -6,7 +6,7 @@ Name = "lookout-l-kv-endpoint-notification-success-device"
   Vendor = "Lookout"
   Product = "Lookout"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """entName =lookoutEnt""", """type=DEVICE,""", """details.activationStatus""" ]
+  Conditions = [ """details.type=""", """type=DEVICE,""", """details.activationStatus=""" ]
   Fields = [
 	  """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
 	  """target.emailAddress=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""

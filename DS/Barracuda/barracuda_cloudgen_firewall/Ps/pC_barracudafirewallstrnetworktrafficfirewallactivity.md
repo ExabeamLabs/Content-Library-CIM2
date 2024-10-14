@@ -29,7 +29,7 @@ Fields = [
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){14}({duration}\d+)""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){16}({bytes_in}\d+)""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){17}({bytes_out}\d+)""",
-  """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){20}(-|({email_address}[^@"\s]+@[^@"\s\|]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-]{1,40}\$?)))\|"""
+  """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){20}(-|({email_address}[^@"\s]+@[^@"\s\|]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\|"""
 ]
 ParserVersion = "v1.0.0"
 

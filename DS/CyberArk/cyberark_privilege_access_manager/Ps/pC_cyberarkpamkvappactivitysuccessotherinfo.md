@@ -10,7 +10,7 @@ Name = cyberark-pam-kv-app-activity-success-otherinfo
                 """Operation: ({operation}.*?) ObjectType""",
                 """:\d\d\s({host}[^=]+)\sPAR""",
                 """({time}\w+ \d+ \d+:\d+:\d+)?\s({host}[^=\[:]+)\sPAR""",
-                """(AdminName|UserName): ({user}[\w\.\-]{1,40}\$?)\sOperation""",
+                """(AdminName|UserName): ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sOperation""",
                 """Failed\?\s({event_subtype}\d)\s""",
                 """Target: ({app}[^\s].+)\sRole""",
                 """OtherInfo:\s({additional_info}.+)\s""",

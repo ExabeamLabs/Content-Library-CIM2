@@ -21,8 +21,7 @@ Name = microsoft-x-csv-email-deliver
     """,\s*({bytes}\d+)\s*,(?:[^,]*,){7}Incoming,""",
     """,\s*({num_recipients}\d+)\s*,(?:[^,]*,){6}Incoming,""",
     """,\s*({email_subject}[^,]+?)\s*,(?:[^,]*,){3}Incoming,""",
-    """,\s*['"]*(|MicrosoftExchange.*?|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))['"]*)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)\s*,(?:[^,]*,){2}Incoming,""",
-    """,\s*['"]*(|.+?@({external_domain}[^,]+?)['"]*)\s*,(?:[^,]*,){2}Incoming,""",
+    """,\s*['"]*(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))['"]*)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*['"]*(?:<>|({return_path}[^,]+?))['"]*\s*,(?:[^,]*,)Incoming,"""
   ]
   DupFields = [ "alert_name->alert_type","orig_user->email_address"]

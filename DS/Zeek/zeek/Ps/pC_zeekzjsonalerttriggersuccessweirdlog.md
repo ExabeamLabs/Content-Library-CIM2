@@ -16,6 +16,7 @@ Name = zeek-z-json-alert-trigger-success-weirdlog
     """"id\.resp_p\\?"+:({dest_port}\d+)""",
     """"name\\?"+:\\?"+({alert_name}[^"\\]+)""",
     """"peer\\?"+:\\?"+({src_host}[^"\\]+)"""
+    """"PRIORITY":"({alert_severity}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

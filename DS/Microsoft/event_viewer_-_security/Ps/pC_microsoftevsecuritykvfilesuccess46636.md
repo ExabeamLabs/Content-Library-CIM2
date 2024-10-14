@@ -14,7 +14,7 @@ Fields = [
 """({event_name}An attempt was made to access an object)"""
 """EventCode = ({event_code}\d+)"""
 """TimeGenerated = "({time}[\d]+)\.\d\d\d"""
-"""Account Name:\s+(?:|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:\s+(?:|({domain}.+?))\s+Logon ID:"""
+"""Account Name:\s+(?:|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+(?:|({domain}.+?))\s+Logon ID:"""
 """Process Name:\s+(?:|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/]+?)))\s+Access Request"""
 """Logon ID:\s+({login_id}[^\s]+)\s+Object:"""
 """Security ID:\s+({user_sid}[^\s]+)\s"""

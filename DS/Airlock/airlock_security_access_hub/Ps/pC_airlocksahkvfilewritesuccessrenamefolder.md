@@ -5,7 +5,7 @@ Name = airlock-sah-kv-file-write-success-renamefolder
   Product = Airlock Security Access Hub
   Conditions = [ """ Audit Log [""", """ event_type="""", """" time_taken="""", """" system_name="""", """"Rename Folder Successful"""" ]
   Fields = ${AirlockTemplates.AirlockEvent.Fields}[
-      """\sfile_path="(\w+:_)?({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+))""",
+      """\sfile_path="(\w+:_)?({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^"\\\/;]+))?))"""",
   ]
   ParserVersion = v1.0.0
 
@@ -25,7 +25,7 @@ AirlockEvent = {
       """\sevent_type="({event_name}[^"]+)"""",
       """\sevent_id="({event_code}[^"]+)"""",
       """\scommand="({action}[^"]+)"""",
-      """\suser_name="(unknown|({user}[\w\.\-]{1,40}\$?))"""",
+      """\suser_name="(unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """\sdomain="(Default|({domain}[^"]+))"""",
       """\sfile_size="({bytes}\d+)"""",
       """\sfile_path="(\w+:_)?({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))"""

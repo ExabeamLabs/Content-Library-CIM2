@@ -17,7 +17,7 @@ Name = zscaler-ia-json-network-traffic-success-tunnel
 	"""exa_json_path=$..location,exa_field_name=location""", 
 	"""exa_json_path=$.event.event,exa_field_name=additional_info""",
 	"""exa_json_path=$..eventreason,exa_field_name=result_reason,exa_match_expr=!InList(toLower($..eventreason), "none")""",
-	"""exa_json_path=$..user,exa_regex=((\d{1,3}\.){3}\d{1,3}|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?)))"""
+	"""exa_json_path=$..user,exa_regex=((\d{1,3}\.){3}\d{1,3}|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   ]
 
 

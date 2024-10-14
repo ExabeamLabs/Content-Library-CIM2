@@ -9,7 +9,7 @@ Conditions=["""action type""", """object name""", """samaccountname""", """creat
  Fields=[
    """creation_timestamp\\"+:\\"+({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})""",
    """message"+:\s*"+[^\s]+\s+({host}[^\s]+)""",
-   """"+samaccountname\\"+:\\"+({user}[\w\.\-]{1,40}\$?)""",
+   """"+samaccountname\\"+:\\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
    """"+userprincipalname\\"+:\\"+({email_address}[^\\"]+)""",
    """"+object name\\"+:\\"+({file_name}[^\\"]+)""",
    """"+file extension\\"+:\\"+({file_ext}[^\\"]+)""",

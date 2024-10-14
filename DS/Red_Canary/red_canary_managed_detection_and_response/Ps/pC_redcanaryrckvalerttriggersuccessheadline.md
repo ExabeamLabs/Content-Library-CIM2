@@ -17,7 +17,7 @@ Fields = [
 """u'url':\s*u'({malware_url}[^']+)"""
 """u'path':\s*u'({process_path}({process_dir}(?:[^']+)?[\\\/])?({process_name}[^\\\/']+))"""
 """u'md5':\s*u'({hash_md5}[^']+)"""
-"""u'username':\s*u'({user}[\w\.\-]{1,40}\$?)"""
+"""u'username':\s*u'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
 """u'sensor_id':\s*u'({sensor_id}[^']+)"""
 """u'ip_addresses':\s*\[u'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """u'hostname':\s*u'({src_host}[^']+)"""

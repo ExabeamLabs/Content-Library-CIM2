@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",

@@ -10,7 +10,7 @@ Name = barracuda-esg-cef-app-activity-success-scan
     Fields = [
       """\srt=({time}\d{13})""",
       """({host}\S+)\s+CEF:\d+\|""",
-      """\ssuser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(\w+=|$)""",
+      """\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(\w+=|$)""",
       """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(\w+=|$)""",
       """\snitroSubject=({email_subject}[^\s].+?)\s*(\w+=|$)""",
       """\sact=({action}[^\s]+)\s*(\w+=|$)""",

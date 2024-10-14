@@ -10,7 +10,7 @@ Conditions = [
 """ Login failed"""
 ]
 Fields = [
-"""User\s+({user}[\w\.\-]{1,40}\$?)\s+\(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
+"""User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
 """({event_name}Login failed)"""
 """({event_category}logger)"""
 """({failure_reason}Invalid user\/password)"""

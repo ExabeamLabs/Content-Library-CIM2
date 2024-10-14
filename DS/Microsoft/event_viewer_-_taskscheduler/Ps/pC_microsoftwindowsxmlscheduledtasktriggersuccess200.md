@@ -4,7 +4,7 @@
 Name = microsoft-windows-xml-scheduled-task-trigger-success-200
   Vendor = Microsoft
   Product = Event Viewer - TaskScheduler
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat =  [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>200</EventID>""", """Microsoft-Windows-TaskScheduler""" ]
   Fields =[
@@ -15,6 +15,7 @@ Name = microsoft-windows-xml-scheduled-task-trigger-success-200
     """<Task>({task_name}[^<]+)""",
     """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<""",
     """<Data Name\\*=('|")ResultCode('|")>({result_code}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

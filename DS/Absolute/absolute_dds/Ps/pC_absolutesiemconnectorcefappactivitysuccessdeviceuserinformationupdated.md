@@ -12,7 +12,7 @@ Name = absolute-siemconnector-cef-app-activity-success-deviceuserinformationupda
     """\s({host}[\w\-.]+)\sAbsoluteSIEMConnector""",
     """({operation}DeviceUserInformationUpdated)""",
     """objectID="({object}[^"]+)"""",
-    """actorType=("Device".+?actorName ="({src_host}[\w\-.]+)|"User".+?actorName ="(({email_user}[^"@]+@[^".]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?)))"""",
+    """actorType=("Device".+?actorName ="({src_host}[\w\-.]+)|"User".+?actorName ="(({email_user}[^"@]+@[^".]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """objectProperties="({additional_info}.+?)"\s+\w+="""
    ]
    DupFields = ["operation -> event_name"]

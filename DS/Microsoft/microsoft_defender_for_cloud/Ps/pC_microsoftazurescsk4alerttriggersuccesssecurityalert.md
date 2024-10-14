@@ -17,7 +17,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-securityalert
     """"CompromisedEntity":"({src_host}[^"]+)""",
     """"Address":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"User agent":\s*"({user_agent}[^"]+)""",
-    """"Azure AD user":\s*"(N\/A\s+\(Azure AD authentication was not used\)|({user}[\w\.\-]{1,40}\$?))""",
+    """"Azure AD user":\s*"(N\/A\s+\(Azure AD authentication was not used\)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"CountryName":\s*"({location_country}[^"]+)""",
     """"City":\s*"({location_city}[^"]+)""",
     """"AlertLink":"({malware_url}[^"]+)"""

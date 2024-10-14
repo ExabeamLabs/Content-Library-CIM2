@@ -15,7 +15,7 @@ Fields = [
 """<Computer>({host}[\w\-\.]+)"""
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)"""
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)"""

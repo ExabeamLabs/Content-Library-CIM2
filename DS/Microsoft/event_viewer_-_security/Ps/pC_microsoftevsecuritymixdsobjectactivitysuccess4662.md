@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-mix-ds-object-activity-success-4662"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "MMM dd HH:mm:ss yyyy"
+TimeFormat = [ "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss" ,"epoch","yyyy-MM-dd'T'HH:mm:ss.SSS"]
 Conditions = [
 """An operation was performed on an object"""
 ]
@@ -12,8 +12,10 @@ Fields = [
 """({event_name}An operation was performed on an object)"""
 """({event_code}4662)"""
 """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+"""
+""""time":({time}\d{13})"""
+""""time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+)"""
 """Security ID:\s*(|({user_sid}.+?))\s*Account Name:"""
-"""Account Name:\s*(({full_name}[^:]+?\s[^\s]+?)|({user}[\w\.\-]{1,40}\$?))\s*Account Domain:"""
+"""Account Name:\s*(({full_name}[^:]+?\s[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:"""
 """Account Domain:\s*(|({domain}.+?))\s*Logon ID:"""
 """Object Server:\s*(|({ds_object_class}.+?))\s*Object Type:"""
 """Object Type:\s*(|({ds_object_type}.+?))\s*Object Name:"""

@@ -9,9 +9,8 @@ Name = dg-ndlp-kv-email-send-success-smtp
   Fields = [
     """timestamp="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d \w+)"""",
     """\d\d:\d\d ({host}[^\s]+)\s+\d+\s+\d{4}\-\d\d\-\d\d""",
-    """source="(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-]{1,40}\$?))"""",
-    """email_sender="(?:|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
-    """email_recipients="({external_address}[^";]+)""",
+    """source="(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """email_sender="(?:|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
     """email_recipients="({email_recipients}.+?)"""",
     """inspected_document="(?:|({file_name}.+?))"""",
     """inspected_document="(?:|({email_attachment}.+?))"""",

@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-ds-object-delete-success-5141-1
     """<Data Name\\?=\\?"ObjectDN\\?">(|({ds_object_dn}[^<]+))<\/Data>""",
     """<Data Name\\?=\\?"ObjectClass\\?">(|({ds_object_class}[^<]+))<\/Data>""",
     """<Data Name\\?=\\?"SubjectUserSid\\?">({user_sid}[^<]+)<\/Data>""",
-    """<Data Name\\?=\\?"SubjectUserName\\?">({user}[\w\.\-]{1,40}\$?)<\/Data>""",
+    """<Data Name\\?=\\?"SubjectUserName\\?">({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\?=\\?"SubjectDomainName\\?">({domain}[^<]+)<\/Data>""",
     """<Data Name\\?=\\?"SubjectLogonId\\?">({login_id}[^<]+)<\/Data>"""
   ]
@@ -22,7 +22,7 @@ json-windows-events-4 = {
     """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"SubjectDomainName":"({domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",

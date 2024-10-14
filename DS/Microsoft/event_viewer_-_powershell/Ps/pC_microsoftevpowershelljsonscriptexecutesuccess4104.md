@@ -12,7 +12,7 @@ Name = microsoft-evpowershell-json-script-execute-success-4104
     """"EventID":({event_code}\d+)""",
     """"ProcessID":({process_id}\d+)""",
     """"Domain":"({domain}[^"]+)"""",
-    """"AccountName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"UserID":"({user_sid}[^"]+)"""",
     """"Message":"({event_name}[^\(:]+?)\s*\(""",
     """"ScriptBlockId":"({scriptblock_id}[^"]+)"""",

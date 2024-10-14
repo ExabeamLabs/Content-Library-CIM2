@@ -12,7 +12,7 @@ Name = openvpn-ov-str-vpn-logout-success-reset
 ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d+)""",
-    """(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\W?\d+\s\d+:\d+:\d+\s\d+\s({user}[\w\.\-]{1,40}\$?)\/({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):({src_port}\d+)""",
+    """(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s\W?\d+\s\d+:\d+:\d+\s\d+\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\/({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}):({src_port}\d+)""",
     """({additional_info}Connection reset, restarting)"""
   ]
 

@@ -18,7 +18,7 @@ Fields = [
 """\ssntdom=({src_domain}[^\s]+)"""
 """\ssuser=({src_user}.+?)\s+\w+="""
 """\sdntdom=({domain}[^\s\\]+)"""
-"""\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+"""\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """\sduid=({login_id}[^\s]+)"""
 """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sdvchost=({host}[\w\-.]+)"""

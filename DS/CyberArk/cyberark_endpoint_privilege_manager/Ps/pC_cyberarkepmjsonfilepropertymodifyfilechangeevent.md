@@ -6,8 +6,8 @@ Name = cyberark-epm-json-file-property-modify-filechangeevent
   Conditions = [ """"FileChangeEvent":""", """"setName":"""", """"agentId":"""" ]
   Fields = ${CyberarkParsersTemplates.json-cyberark-activity.Fields} [
     """({event_name}FileChangeEvent)""",
+    """"Path"+:"+({file_path}({file_dir}[^"]*)[\\\/]+({file_name}[^"]+?(\.({file_ext}[^"\.\s]+))?))""""
   ]
-  DupFields = ["process_name -> file_name"]
 
 json-cyberark-activity {
     Vendor = CyberArk
@@ -19,8 +19,8 @@ json-cyberark-activity {
       """"Size"+:"+({bytes}\d+)""",
       """"computerName"+:"+({src_host}[^"]+)""",
       """"Description"+:"+({additional_info}[^"]+)""",
-      """"@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
-      """"(U|u)ser"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+      """"@user"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+      """"(U|u)ser"+:"+(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"Path"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
       """"eventId"+:"+({event_code}[^"]+)""",
       """"Hash"+:"+({file_hash}[^"]+)""",

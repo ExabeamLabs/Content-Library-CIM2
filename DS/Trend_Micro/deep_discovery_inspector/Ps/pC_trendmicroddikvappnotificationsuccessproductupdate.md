@@ -12,7 +12,7 @@ cef-trendmicro-system-event = {
     Fields = [
       """({host}[\w.\-]+)\s+CEF:([^\|]*\|){5}({event_name}[^\|]+)""",
       """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d \w+(\+|\-)\d\d:\d\d)""",
-      """\Wmsg=(|({event_description}.+?))(\s+\w+=|\s*$)""",
+      """\Wmsg=(|({additional_info}.+?))(\s+\w+=|\s*$)""",
       """\Wdvchost=(|({host}.+?))(\s+\w+=|\s*$)""",
 # host_mac is removed
       """\Wdvc=({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",

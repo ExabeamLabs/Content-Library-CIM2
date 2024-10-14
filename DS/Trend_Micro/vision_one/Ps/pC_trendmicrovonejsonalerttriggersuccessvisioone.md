@@ -15,7 +15,7 @@ Name = trendmicro-vone-json-alert-trigger-success-visioone
     """exa_json_path=$.description,exa_field_name=alert_name""",
     """exa_json_path=$.createdTime,exa_field_name=time""",
     """exa_json_path=$.user,exa_field_name=user""",
-    """exa_json_path=$.dest,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$.dest,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.detail.alertProvider,exa_field_name=alert_source""",
   ]
 

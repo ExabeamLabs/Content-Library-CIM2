@@ -34,11 +34,11 @@ eset-activity.Fields}[
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
       """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
-      """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-]{1,40}\$?))\s*(\w+=|$)""",
+      """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
       """objectType=({object_type}[^=]+?)\s*(\w+=|$)""",
       """threatHandled=({threat_handled}\d+)""",
-      """needRestart=({need_restart}\d+)""",
+      """needRestart=({result_code}\d+)""",
       """circumstances=({circumstances}[^=]+?)\s*(\w+=|$)""",
       """firstseen=({firstseen}[^=]+?)\s*(\w+=|$)""",
       """hash=({hash_sha256}[^\s]+)"""
@@ -103,7 +103,7 @@ Product = Netwrix Auditor
 TimeFormat = "MMM dd yyyy HH:mm:ss"
 Fields = [
   """start=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-  """suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)) """
+  """suser=(N\/A|({email_address}[^@]+@[^\\\s]+)|(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)) """
   """shost=(unknown|({src_host}[^\s]+))"""
   """({app}Netwrix)"""
   """msg=({additional_info}.+?)(\s\w+=|$)"""
@@ -133,7 +133,7 @@ Fields = [
   """act=({action}[^\s]+)"""
   """flexString1=({operation}[^\:]+):({result}\d+)"""
   """\|({alert_severity}[^\|]+)\|\s*event"""
-  """suser=(-|({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
+  """suser=(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
   """duser=(-|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
   """reason=({alert_name}\d+)"""
 ]
@@ -160,8 +160,8 @@ Fields = [
   """\Wdvchost=({host}[^\s]+)"""
   """\WmessageId=({alert_id}[^\s]+)"""
   """\|Forcepoint\|Email Security\|[^\|]*\|({alert_name}[^\|]*)\|({alert_type}[^\|]*)\|({alert_severity}[^\|]*)\|"""
-  """suser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s|\s*$)"""
-  """\Wsuser=\s*([^<]+<)?(<)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s+\w+=|\s*$)"""
+  """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s|\s*$)"""
+  """\Wsuser=\s*([^<]+<)?(<)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s+\w+=|\s*$)"""
   """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s|\s*$)"""
   """\Wduser=\s*([^<]+<)?(<)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(>)?(\s+\w+=|\s*$)"""
   """ad.fnameAndfileHash=({email_attachments}[^|]+?)\s*\|\s*({file_hash}[^|\s]+)"""
@@ -191,7 +191,7 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
-    """from=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """from=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """to=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """src_host=((?i)unknown|({src_host}[^\s]+))""",
     """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

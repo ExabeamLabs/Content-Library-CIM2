@@ -15,7 +15,8 @@ Name = microsoft-o365-cef-app-file-success-displayname
     """"category"+:"+({additional_info}[^"]+)""",
     """"key":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
     """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"userPrincipalName":"({email_address}[^"@\s]+@[^,"@\s]+\.[^,"@\s]+)""",
+    """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"displayName"\s*:\s*"({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))"""
+    """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"userPrincipalName"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
     """"DeviceOSType".*?newValue":"\[?\\?"({os}[^"\\]+)\\?"\]?"""
     """"Device OS.*?value":"({os}[^"]+)""""
@@ -60,7 +61,8 @@ cef-microsoft-app-activity = {
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = [ "object->resource" 
 }

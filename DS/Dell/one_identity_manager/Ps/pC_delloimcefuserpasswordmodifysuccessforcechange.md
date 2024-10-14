@@ -11,7 +11,7 @@ Conditions = [
 """|Force Change|"""
 ]
 Fields = [
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 """\sdhost=({dest_host}.+?)(\s+\w+=|\s*$)"""
 """\sduser=({dest_user}.+?)(\s+\w+=|\s*$)"""
 """\sdvc=({host}.+?)(\s+\w+=|\s*$)"""

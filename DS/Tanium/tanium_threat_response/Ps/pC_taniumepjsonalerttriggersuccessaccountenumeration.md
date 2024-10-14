@@ -11,9 +11,6 @@ Conditions = [
 """Intel Type"""
 """Intel Name"""
 """Intel Labels"""
-"""recorder_unique_id"""
-""""type""""
-""""process""""
 ]
 Fields = [
   """exa_json_path=$.['Alert Id'],exa_field_name=alert_id"""
@@ -23,10 +20,12 @@ Fields = [
   """exa_json_path=$.['Intel Type'],exa_field_name=alert_type"""
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
-  """exa_json_path=$.['Match Details'].match.properties.file.fullpath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
-  """exa_json_path=$.['Match Details'].match.properties.file.md5,exa_field_name=hash_md5"""
-  """exa_json_path=$.['Match Details'].match.properties,exa_regex=[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","cwd"""
-  """exa_regex="user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+\}\,"+source"+:"""
+  """exa_json_path=$.['Match Details'].match..file.fullpath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
+  """exa_json_path=$.['Match Details'].match..file.md5,exa_field_name=hash_md5"""
+  """exa_json_path=$.['Match Details'].match.properties,exa_regex=[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","""
+  """exa_regex="user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+\}\,"+source"+:"""
+  """exa_json_path=$.['Match Details'].match.properties.user,exa_regex=([^\\]+\\+)?({user}[\w\-\.]+)"""
+  """exa_json_path=$.['Match Details'].match.properties.parent.file.fullpath,exa_regex=(({parent_process_path}({parent_process_dir}[^"]+)\\+({parent_process_name}[^"]+)))"""
 ]
 DupFields = [
 "process_path->path"

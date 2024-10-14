@@ -13,7 +13,7 @@ Name = "microsoft-windows-str-dns-request-success-udpquesinfo"
     """XID\s+0x({query_id}[\da-fA-F]+)""",
     """QTYPE\s+({dns_query_type}\w+)""",
     """RCODE\s+[^(]*?\(({result}[^(]+)\)""",
-    """QUESTION SECTION:.*?Name\s+"({query}[^"]+)"""",
+    """QUESTION SECTION:.*?Name\s+"({dns_query}[^"]+)"""",
     """Buf length\s*=\s*\S+\s*\(({bytes}\d+)""",
     """ANSWER SECTION:(\s*empty|.+?DATA\s+({response}\S+))"""
   ]

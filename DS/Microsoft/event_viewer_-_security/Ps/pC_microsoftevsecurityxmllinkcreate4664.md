@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-link-create-4664
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """'SubjectUserSid'>({user_sid}[^'<\s]+)<""",
-    """'SubjectUserName'>({user}[\w\.\-]{1,40}\$?)<""",
+    """'SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """'SubjectDomainName'>({domain}[^'<\s]+)<""",
     """'SubjectLogonId'>({login_id}[^'<\s]+)<""",
     """'FileName'>(|({file_path}({file_dir}[^"<]*?)[\\\/]*({file_name}[^\\\/"<]+?(\.({file_ext}[^\\\/\.\s"<]+))?)))<""",

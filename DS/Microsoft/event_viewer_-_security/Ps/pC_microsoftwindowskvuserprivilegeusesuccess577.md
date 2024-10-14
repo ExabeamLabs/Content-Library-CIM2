@@ -13,7 +13,7 @@ Name = microsoft-windows-kv-user-privilege-use-success-577
     """\s+(Information|Audit Success|Success Audit)\s+({host}[^\s]+)""",
     """({event_code}577)""",
     """Security\t([^\s]+\t){2}({result}.+?)\t""",
-    """(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Primary Domain""",
+    """(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Primary Domain""",
     """\s+Primary Domain:\s+({domain}[^\s]+)""",
     """\s+Primary Logon ID:\s+\([^,]+,({login_id}[^)]+)""",
     """\s+Privileges:\s+({privileges}.+?)\s+\d+""",

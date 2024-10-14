@@ -10,7 +10,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+\w) [\w\-.]+ """
 """\srt=({time}\d{13})"""
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\Wsuser=(\w+-\w+-\w+-\w+-\w+|Sync|System|NotApplicable|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?)))"""
+"""\Wsuser=(\w+-\w+-\w+-\w+-\w+|Sync|System|NotApplicable|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """\Wsuser=[^@\s]*?@([\.\w+]+\.)?({email_domain}[^\.\s]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))\s+"""
 """\Wrequest=({result}[^=]+?)\s+(\w+=|$)"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
@@ -33,7 +33,7 @@ Fields = [
 """\"browser\":\"({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident|IE|Edge)"""
 """\"operatingSystem\":\"({os}[^\",]+)\""""
 """deviceDetail\":\{[^\}]+?displayName\":\"({src_host}[^\",]+)\""""
-"""conditionalAccessStatus\":\"({status}[^\",]+)\""""
+"""conditionalAccessStatus\":\"({status_msg}[^\",]+)\""""
 """\"clientAppUsed\":\"({object}[^\",]+)"""
 """\"resourceDisplayName\":\"({resource}[^\",]+)"""
 """\"errorCode\":({error_code}\d+)"""

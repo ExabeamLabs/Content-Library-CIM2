@@ -9,6 +9,7 @@ Name = microsoft-o365-cef-app-file-success-updatedevice
     """"targetResources":[^\}]+?"displayName":"\s*({target}[^",]+?)\s*"""",
     """"DeviceOSType\\?":\\?"({os}[^"]+?)\\?""""
     """"key":"DeviceOSType","value":"({os}[^"]+)""""
+    """\{"value":"({os}[^"\}]+)","key":"DeviceOSType"\}"""
     """\"key\":\"User-Agent\",\"value\":\"({user_agent}[^\"]+)\""""
   ]
 
@@ -49,7 +50,8 @@ cef-microsoft-app-activity = {
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"CorrelationId":\s*"({correlation_id}[^"]+)""""
   ]
   DupFields = [ "object->resource" 
 }

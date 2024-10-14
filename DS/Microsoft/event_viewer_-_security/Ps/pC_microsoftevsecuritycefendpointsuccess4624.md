@@ -14,7 +14,7 @@ Fields = [
   """({event_code}4624)"""
   """\srt=({time}\d{13})"""
   """\sdntdom=({domain}[^\s]+)"""
-  """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+  """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\sduid=({login_id}[^\s]+)"""
   """\scn1=({login_type}\d+)"""
   """\sdvchost=({host}[\w\-.]+)"""

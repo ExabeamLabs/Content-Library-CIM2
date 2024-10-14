@@ -4,12 +4,13 @@
 Name = "microsoft-evsecurity-kv-rdp-traffic-success-4778"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy hh:mm:ss a"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss Z"]
   Conditions = [
     """A session was reconnected to a Window Station"""
     """Session Name"""
   ]
   Fields = [
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\s*(\+|\-)[\d\:]+)?)""""
     """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
     """({event_name}A session was reconnected to a Window Station)"""
     """({host}[\w\-.]+)\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))"""
@@ -23,8 +24,8 @@ Name = "microsoft-evsecurity-kv-rdp-traffic-success-4778"
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s|;)"""
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4778)"""
-    """Account Name(:|=)\s*({user}[\w\.\-]{1,40}\$?)[\s;]*Account Domain(:|=)"""
-    """Account Domain(:|=)\s*({domain}[^\s;]+)[\s;]*Logon ID(:|=)"""
+    """Account Name(:|=)\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*Account Domain(:|=)"""
+    """Account Domain(:|=)(?:\\t|\\n|\\r|\s)*({domain}[^\s;]+?)[\s;]*(?:\\t|\\n|\\r|\s)*Logon ID(:|=)"""
     """\soriginalAgentHostName =({dest_host}[\w\-.]+?)\s+\w+="""
     """Service Name(:|=)\s*(::ffff:)?({dest_host}[\w\-.]+?)[\s;]*Service ID"""
     """(Client Address|src)(:|=)\s*(::[\w]+:)?(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

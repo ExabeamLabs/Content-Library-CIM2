@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-sk4-user-create-success-usercreated
   Fields = [
     """"TimeGenerated":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,8})?Z)""""
     """({event_name}A user account was created)"""
-    """"SamAccountName":"({user}[\w\.\-]{1,40}\$?)""""
+    """"SamAccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"SubjectUserSid":"({user_sid}[^"]+)"""
     """"Category":"({category}[^"]+)"""
     """({event_code}4720)"""

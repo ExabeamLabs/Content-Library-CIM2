@@ -12,7 +12,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """\s({event_id}\w+-\w+-\w+-\w+-\w+)\s"""
-  """Call received from:\s*sip:(({email_address}[^@]+@[^,\s;'']+)[,;\s]|({user}[\w\.\-]{1,40}\$?))"""
+  """Call received from:\s*sip:(({email_address}[^@]+@[^,\s;'']+)[,;\s]|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 DupFields = [
   "email_address->src_user"

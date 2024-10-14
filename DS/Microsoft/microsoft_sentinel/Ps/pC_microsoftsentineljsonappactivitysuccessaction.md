@@ -20,9 +20,9 @@ microsoft-sentinel-app-notificatation-json = {
       """exa_json_path=$.resultSignature,exa_field_name=result""",
       """exa_json_path=$.correlationId,exa_field_name=correlation_id"""
       """exa_json_path=$.category,exa_field_name=category""",
-      """exa_json_path=$.properties.eventCategory,exa_field_name=operation_type""",
-      """exa_json_path=$.properties.entity,exa_field_name=object""",
-      """exa_json_path=$.properties.statusCode,exa_field_name=result_code""",
+      """exa_json_path=$..eventCategory,exa_field_name=operation_type""",
+      """exa_json_path=$..entity,exa_field_name=object""",
+      """exa_json_path=$..statusCode,exa_field_name=result_code""",
       """exa_json_path=$.category,exa_field_name=category""",
       """exa_json_path=$.identity.claims.aud,exa_field_name=aud""",
       """exa_json_path=$.identity.claims.iss,exa_field_name=iss""",

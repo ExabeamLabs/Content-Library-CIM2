@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-2
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   ParserVersion = v1.0.0
-  Conditions = ["""<EventID>4760</EventID>""" ,"""<Provider Name""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = ["""<EventID>4760</EventID>""" ,"""<Provider Name""", """Microsoft-Windows-Security-Auditing""" , """<Channel>Security</Channel>""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({dest_host}({host}[^<>]+))<""",
@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-2
     """<Task>({sub_category}[^<]+)""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",

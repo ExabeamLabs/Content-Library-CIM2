@@ -34,7 +34,7 @@ Fields = [
 """\Wreason=(None|({failure_reason}.+?))(\s+\w+=|\s*$)"""
 """\WrequestClientApplication=(None|({app}.+?))(\s+\w+=|\s*$)"""
 """\Wshost=(None|({src_host}.+?))(\s+\w+=|\s*$)"""
-"""\Wsuser=(None|({user}[\w\.\-]{1,40}\$?))(\s*TAG:|\s+\w+=|\s*$)"""
+"""\Wsuser=(None|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s*TAG:|\s+\w+=|\s*$)"""
 """\WTAG:\s*({tag}.+?)(\s*\w+=|\s*$)"""
 ]
 Name = "onapsis-o-cef-app-login-success-onapsis"
@@ -62,7 +62,7 @@ Fields = [
 """\Wreason=(None|({failure_reason}.+?))(\s+\w+=|\s*$)"""
 """\WrequestClientApplication=(None|({app}.+?))(\s+\w+=|\s*$)"""
 """\Wshost=(None|({src_host}.+?))(\s+\w+=|\s*$)"""
-"""\Wsuser=(None|({user}[\w\.\-]{1,40}\$?))(\s*TAG:|\s+\w+=|\s*$)"""
+"""\Wsuser=(None|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s*TAG:|\s+\w+=|\s*$)"""
 """\WTAG:\s*({tag}.+?)(\s*\w+=|\s*$)"""
 ]
 Name = "onapsis-o-cef-app-login-fail-logins"
@@ -156,32 +156,10 @@ ${OnapsisParsersTemplates.cef-onapsis-activity}{
     """\WAction:\s*({action}[^;]+)""",
     """\WCount:\s*({rule_count}\d+)""",
     """\WRules List:\s*({alert_name}[^;]+)""",
-    """\WUsers:\s*(({domain}[^\\\s;]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """\WUsers:\s*(({domain}[^\\\s;]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\WMAC Address:\s*({src_mac}[^;,\s]+)""",
    ]
    ParserVersion = "v1.0.0"
-},
-
-{
-Name = "nokia-vqip-cef-dhcp-session-success-dhcpsession"
-Vendor = "Nokia VitalQIP"
-Product = "Nokia VitalQIP"
-TimeFormat = "epoch"
-Conditions = [
-  """CEF:"""
-  """|QIP|DHCP|"""
-]
-Fields = [
-  """\srt=({time}\d{13})"""
-  """\sshost=({dest_host}.+?)\s+([\w\.]+=|$)"""
-  """\ssrc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """\sdvc=({host}.+?)\s+([\w\.]+=|$)"""
-  """\ssntdom=({domain}.+?)\s+([\w\.]+=|$)"""
-]
-DupFields = [
-  "dest_host->user"
-]
-ParserVersion = "v1.0.0"
 },
 
 {
@@ -213,7 +191,7 @@ Product = "Nokia VitalQIP"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
   """qip"""
-  """DHCP"""
+  """DHCP_RenewLease"""
   """ Host="""
   """ Domain="""
 ]
@@ -229,48 +207,6 @@ ParserVersion = "v1.0.0"
 },
 
 {
-Name = "n3k-n-kv-dhcp-session-success-time"
-Vendor = "N3K"
-Product = "N3K"
-TimeFormat = "epoch_sec"
-Conditions = [
-  """maskedIP"""
-  """_time"""
-  """Domain"""
-]
-Fields = [
-  """"_time":\s+"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)"""
-  """\sinfo_search_time=({time}\d{10}\.\d{3})"""
-  """\sinfo_search_time=({time}\d{10})\.\d{3}"""
-  """("|\s)Host(":\s+|=)"?({dest_host}[^",]+)"""
-  """("|\s)maskedIP(":\s+|=)"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """("|\s)MAC(":\s+|=)"?({src_mac}[^",]+)"""
-]
-DupFields = [
-  "dest_host->user"
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "nokia-vqip-str-dhcp-session-success-qip"
-Vendor = "Nokia VitalQIP"
-Product = "Nokia VitalQIP"
-TimeFormat = ["dd/MM/yyyy HH:mm:ss", "MM/dd/yyyy HH:mm:ss"]
-Conditions = [
-  """QIP[-]: """
-]
-Fields = [
-  """QIP\[\-\]:([^,]*,){6}\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """QIP\[\-\]:([^,]*,){7}\s*({dest_host}[^,]*?)\s*,"""
-  """QIP\[\-\]:([^,]*,){8}\s*({domain}([^,\s]{1,256}\s*?){1,256}?)\s*,"""
-  """QIP\[\-\]:([^,]*,){10}\s*({user}[\w\.\-]{1,40}\$?)\s*,"""
-  """QIP\[\-\]:([^,]*,){11}\s*({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
 Name = "kemp-loadmaster-str-endpoint-login-success-loggedin"
 Vendor = "Kemp"
 Product = "Kemp LoadMaster"
@@ -281,7 +217,7 @@ Conditions = [
   """(Session: """
 ]
 Fields = [
-  """User\s+({user}[\w\.\-]{1,40}\$?)\s+\(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
+  """User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
   """({event_name}Logged in)"""
   """({event_category}logger)"""
 ]
@@ -295,7 +231,7 @@ ParserVersion = "v1.0.0"
   TimeFormat = ["yyyy-MM-dd'@'HH:mm:ss.SSSZ","yyyy/MM/dd'@'HH:mm:ss.SSSZ"]
   Conditions = [ """ T-""", """ P-""", """(742)""", """ Login """ ]
   Fields = [
-  """:\d\d:\d\d\s+({src_host}[^\s]+)\s+\[({time}\d\d\d\d\/\d\d\/\d\d@\d\d:\d\d:\d\d\.\d\d\d-\d\d\d\d)\]\s+({process_id}[^\s]+)\s+({thread_id}[^\s]+)\s+({severity}[^\s]+)\s+({service_name}TSRV)\s+\d:\s*\(({event_code}742)\)\s+({additional_info}({event_name}Login)[^,]+),\s+userid\s({user}[\w\.\-]{1,40}\$?)[^,]+,\son\s({dest_host}[^\s]+)\s[^"]+?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\.?\s+"?$"""
+  """:\d\d:\d\d\s+({src_host}[^\s]+)\s+\[({time}\d\d\d\d\/\d\d\/\d\d@\d\d:\d\d:\d\d\.\d\d\d-\d\d\d\d)\]\s+({process_id}[^\s]+)\s+({thread_id}[^\s]+)\s+({severity}[^\s]+)\s+({service_name}TSRV)\s+\d:\s*\(({event_code}742)\)\s+({additional_info}({event_name}Login)[^,]+),\s+userid\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^,]+,\son\s({dest_host}[^\s]+)\s[^"]+?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\.?\s+"?$"""
   ]
   ParserVersion = "v1.0.0"
 },
@@ -315,8 +251,8 @@ ParserVersion = "v1.0.0"
      """"dnsNames":\["({dest_host}[^."]+)(\.({domain}[^"]+))?".+?victim""",
      """"title":"({alert_name}[^"]+)""",
      """"netbiosName":(null|"({sub_domain}[^"]+))""",
-     """"dnsNames":\["({query}[^"]+)"\]""",
-     """"status":(null|"({status}[^"\s]+))""",
+     """"dnsNames":\["({dns_query}[^"]+)"\]""",
+     """"status":(null|"({status_msg}[^"\s]+))""",
      """"riskScore":(null|({alert_severity}\d+))""",
   ]
   DupFields = ["alert_name->alert_type"]
@@ -343,6 +279,26 @@ ParserVersion = "v1.0.0"
     ParserVersion = "v1.0.0"
 }
 
+{
+  Name = extrahop-revealx-json-alert-trigger-success-detection
+  Vendor = Extrahop
+  Product = Extrahop Reveal(x)
+  TimeFormat = "yyyy/MM/dd HH:mm:ss.SSS"
+  ExtractionType = json
+  Conditions = [ """"detectionType"""", """"event":"Detection"""", """"title":"""", """"riskScore":"""]
+  Fields = [
+    """exa_json_path=$.startTime,exa_field_name=time""",
+    """exa_json_path=$.id,exa_field_name=alert_id""",
+    """exa_json_path=$.title,exa_field_name=alert_name""",
+    """exa_json_path=$.event,exa_field_name=alert_type""",
+    """exa_json_path=$.riskScore,exa_field_name=alert_severity""",
+    """exa_json_path=$.offenders,exa_regex=\["({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """exa_json_path=$.victims,exa_regex=\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",    
+    """exa_json_path=$.description,exa_field_name=additional_info"""
+  ]
+  ParserVersion = "v1.0.0"
+}
+
 ${GravityzoneParsersTemplates.gravityzone-security-alert}{
   Name = bitdefender-gz-json-alert-trigger-success-hd
   Conditions = [ """gravityzone:""", """"module":"hd"""" ]
@@ -363,7 +319,7 @@ ${GravityzoneParsersTemplates.gravityzone-security-alert}{
         """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
         """product=({alert_type}[^\s]+)""",
         """request=({malware_url}.+?)\s+num_exec""",
-        """src_user=({user}[\w\.\-]{1,40}\$?)\s+src_host"""
+        """src_user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+src_host"""
   ]
   DupFields = ["host->dest_host", "malware_url->process_name"]
   ParserVersion = "v1.0.0"
@@ -379,7 +335,7 @@ ${GravityzoneParsersTemplates.gravityzone-security-alert}{
     """ start=({time}\d{13}) """,
     """ eventId=({alert_id}\d+)""",
     """ cat=({alert_name}[^\s]+) """,
-    """ suser=({user}[\w\.\-]{1,40}\$?)\s+\w+=""",
+    """ suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
     """ act=({action}.+?)\s+\w+=""",
     """ dvc=({host}[\w\-.]+) """,
     """ agt=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? """,
@@ -449,7 +405,7 @@ Fields = [
   """EVENT_DT:\s"+({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d)""""
   """\sHOSTADDR:\s"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   """\sHOSTNAME:\s+"+({host}[^"]+)"+\s"""
-  """\sSession\s-\s({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s-\sLogging in as '(({domain}\w+)\\)?({user}[\w\.\-]{1,40}\$?)'."""
+  """\sSession\s-\s({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s-\sLogging in as '(({domain}\w+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'."""
   """\sDESCRIPTION:\s"+({description}[^"]+)""""
   """\sRULE_NAME: "*({rule}[^"]+)""""
   """\sDOMAIN_NAME:\s+"+(unknown|null|({domain}[^"]+))"+\s"""
@@ -458,30 +414,10 @@ Fields = [
   """\sEVENT_PRIORITY:\s+"+({priority}[^"]+)"+\s"""
   """\sPOLICY_NAME:\s+"+({policy_name}[^"]+)"+\s"""
   """\sPROCESS_NAME:\s+"+(unknown|null|({process_path}[^"]+))"+\s"""
-  """\sUSER_NAME:\s+"+(unknown|null|({user}[\w\.\-]{1,40}\$?))"+\s"""
+  """\sUSER_NAME:\s+"+(unknown|null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+\s"""
 ]
 DupFields = [
   "event_name->event_category"
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "questintrust-q-kv-endpoint-login-success-dnsrecord"
-Vendor = "Quest InTrust"
-Product = "Quest InTrust"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-Conditions = [
-  """Message=DNS record was"""
-  """DNS Record Data:"""
-]
-Fields = [
-  """ComputerName =({host}.+?)\s*Category"""
-  """DNS Record Name[:\s]*({dest_host}[^\s.]+)"""
-  """\s(New )?DNS Record Data[:\s]*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-]
-DupFields = [
-  "dest_host->user"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -493,7 +429,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss.S"
 Fields = [
 """\sHOSTNAME\s*:\s*"+({host}[^\s"]+)"""
 """\sEVENT_DT\s*:\s*"+({time}[^"]+)"""
-"""\sUSER_NAME\s*:\s*"+({user}[\w\.\-]{1,40}\$?)"""
+"""\sUSER_NAME\s*:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sRULE_NAME\s*:\s*"+({rule}[^"\s]+)"""
 """\sPOLICY_NAME\s*:\s*"+\s*({policy_name}[^"]+?)\s*"+?\s[^:]+:"""
 """\sPROCESS_PATH\s*:\s*"+({process_name}[^"\s]+)"""
@@ -526,7 +462,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss.S"
 Fields = [
 """\sHOSTNAME\s*:\s*"+({host}[^\s"]+)"""
 """\sEVENT_DT\s*:\s*"+({time}[^"]+)"""
-"""\sUSER_NAME\s*:\s*"+({user}[\w\.\-]{1,40}\$?)"""
+"""\sUSER_NAME\s*:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sRULE_NAME\s*:\s*"+({rule}[^"\s]+)"""
 """\sPOLICY_NAME\s*:\s*"+\s*({policy_name}[^"]+?)\s*"+?\s[^:]+:"""
 """\sPROCESS_PATH\s*:\s*"+({process_name}[^"\s]+)"""
@@ -574,7 +510,7 @@ Fields = [
   """Session id:\s*({session_id}\d+)"""
   """Process Name:\s*(null|unknown|({process_name}\S+))"""
   """Parent Name:\s*(null|unknown|({parent_process_name}\S+))"""
-  """Username:\s*({user}[\w\.\-]{1,40}\$?)"""
+  """Username:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Port:\s*({src_port}\d+)"""
   """\sRULE_NAME: \"*({rule}[^\"]+)\""""
   """EVENT_TYPE_D:\s+\"+({event_name}[^\"]+)\"+\s"""
@@ -600,7 +536,7 @@ Fields = [
   """\s({host}[\w\.\-]+)\s+\S+\s+\S+\s+l7log:"""
   """l7log:\s+(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s:]+))"""
   """from\s+(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^\s:]+))"""
-  """\sUser\s+({user}[\w\.\-]{1,40}\$?)\s+logged"""
+  """\sUser\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+logged"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -619,7 +555,7 @@ Fields = [
   """connected\sto\s({dest_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})[:;]"""
   """connection,({dest_host}[\w.-]+),"""
   """({user_dn}CN\s*=\s*.+?)\",connection,"""
-  """,\"?({user}[\w\.\-]{1,40}\$?)\"?,connection,"""
+  """,\"?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\"?,connection,"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -637,7 +573,7 @@ Conditions = [
 Fields = [
   """({time}\w+\s+\d+ \d+:\d+:\d+)"""
   """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2})"""
-  """\s+({host}[^\s]+)\s+({event_code}%\d*SYSTEM-3-LOGIN_FAIL):\s+Log-in ({result}failed) for user '({user}[\w\.\-]{1,40}\$?)'\s+from '({protocol}[^']+)\'"""
+  """\s+({host}[^\s]+)\s+({event_code}%\d*SYSTEM-3-LOGIN_FAIL):\s+Log-in ({result}failed) for user '({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s+from '({protocol}[^']+)\'"""
 ]
 DupFields = [
   "host->dest_host"
@@ -652,7 +588,7 @@ ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """CEF:""", """|SCB|PAM|""", """|Retrieve Password|""" ]
   Fields = [
-    """\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)""",
+    """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)""",
     """\sdhost=({dest_host}.+?)(\s+\w+=|\s*$)""",
     """\sduser=({dest_user}.+?)(\s+\w+=|\s*$)""",
     """\sdvc=({host}.+?)(\s+\w+=|\s*$)""",
@@ -704,7 +640,7 @@ Conditions = [
 ]
 Fields = [
 """MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
+"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -720,7 +656,7 @@ Conditions = [
 ]
 Fields = [
 """ mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
+"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -748,7 +684,7 @@ Fields = [
 """\sdtz=({dtz}.+?)\s*\w+="""
 """\sact=({action}.+?)\s*\w+="""
 """\seventId=({alert_id}.+?)\s*\w+="""
-"""\ssuser=(N\/A|-|\[unknown\]|({user}[\w\.\-]{1,40}\$?))\s*\w+="""
+"""\ssuser=(N\/A|-|\[unknown\]|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+="""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*\w+="""
 ]
 ParserVersion = "v1.0.0"
@@ -768,7 +704,7 @@ Conditions = [
 Fields = [
   """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
   """entityname=({domain}[^\\]+)\\({dest_host}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Sid=({user_sid}[^\s]+?)\sSidType"""
   """EventCode=({event_code}6034)"""
   """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}Remote login failure)"""
@@ -790,7 +726,7 @@ Fields = [
 """"object_owner"+:"+({db_user}[^"]+?)""""
 """"facets_environment"+:"+({host}[^"]+?)""""
 """"event_time"+:"+({time}[^"]+?)""""
-""""user_name"+:"+({user}[\w\.\-]{1,40}\$?)""""
+""""user_name"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 Name = "sybase-s-json-database-activity-success-accesstodb"
 Conditions = [
@@ -815,7 +751,7 @@ Fields = [
 """"object_owner"+:"+({db_user}[^"]+?)""""
 """"facets_environment"+:"+({host}[^"]+?)""""
 """"event_time"+:"+({time}[^"]+?)""""
-""""user_name"+:"+({user}[\w\.\-]{1,40}\$?)""""
+""""user_name"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 Name = "sybase-s-json-database-activity-success-eventdesc"
 Conditions = [
@@ -842,7 +778,7 @@ Conditions = [
 Fields = [
   """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
   """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Sid=({user_sid}[^\s]+?)\sSidType"""
   """EventCode=({event_code}6049)"""
   """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}PowerShell remote connection failure)"""
@@ -892,7 +828,7 @@ Conditions = [
 Fields = [
   """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
   """entityname=({domain}[^\\]+)\\({dest_host}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Sid=({user_sid}[^\s]+?)\sSidType"""
   """EventCode=({event_code}6033)"""
   """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}Remote login success)"""
@@ -912,7 +848,7 @@ Conditions = [
 ]
 Fields = [
 """MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
+"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -931,7 +867,7 @@ Conditions = [
 Fields = [
   """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
   """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-]{1,40}\$?))"""
+  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Sid=({user_sid}[^\s]+?)\sSidType"""
   """EventCode=({event_code}6048)"""
   """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}PowerShell remote connection success)"""
@@ -997,7 +933,7 @@ Conditions = [
 ]
 Fields = [
 """MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
+"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1013,7 +949,7 @@ Conditions = [
 ]
 Fields = [
 """MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
+"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1047,7 +983,7 @@ Conditions = [
 ]
 Fields = [
 """ mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
+"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1058,7 +994,7 @@ Product = "MasterSAM PAM"
 TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 Fields = [
   """({host}[\w\-.]+)\s+Event Time:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)"""
-  """\WUser:\s*(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+  """\WUser:\s*(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\Wname=({dest_host}[\w\-.]+)\s+(\w+=|$)"""
   """\Whost=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\Wprotocol=({protocol}.+?)\s+(\w+=|$)"""
@@ -1105,7 +1041,7 @@ Fields = [
   """"_client_name":"({app}[^"]+)""""
   """"rows":"({response_size}\d+)""""
   """"pid":"({process_id}[^"]+)""""
-  """"os_user":"({user}[\w\.\-]{1,40}\$?)""""
+  """"os_user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"status":"({action}[^"]+)""""
   """"cmd":"({db_operation}[^"]+)""""
   """"db":"({db_name}[^"]+)""""
@@ -1145,7 +1081,7 @@ Conditions = [
 ]
 Fields = [
 """<.*?>\w+ \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} ({host}[\w\.-]+?) ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-""", user_name=\s*({user}[\w\.\-]{1,40}\$?)\s*,"""
+""", user_name=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*,"""
 """, user_id=\s*({user_id}[^,]+?)\s*,"""
 """, action=\s*({db_operation}[^,]+?)\s*,"""
 """, db_table\s*=({table_name}[^,]+?)\s*,"""
@@ -1201,7 +1137,7 @@ Fields = [
 """cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
 """cs2=({policy_name}[^=]+?)\s\w+="""
 """msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 Name = "portox-clear-cef-endpoint-login-fail-accessdenied"
 Conditions = [
@@ -1251,7 +1187,7 @@ Fields = [
 """cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
 """cs2=({policy_name}[^=]+?)\s\w+="""
 """msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 Name = "portox-clear-cef-endpoint-login-fail-accountnotfound"
 Conditions = [
@@ -1277,7 +1213,7 @@ Fields = [
 """cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
 """cs2=({policy_name}[^=]+?)\s\w+="""
 """msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 Name = "portox-clear-cef-endpoint-login-fail-macbypassdenied"
 Conditions = [
@@ -1302,7 +1238,7 @@ Fields = [
 """cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
 """cs2=({policy_name}[^=]+?)\s\w+="""
 """msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 Name = "portox-clear-cef-endpoint-login-success-deviceauthsuccess"
 Conditions = [
@@ -1406,7 +1342,7 @@ Fields = [
   """\Wdvchost=({host}[\w\-.]+)"""
   """\Wshost=({src_host}[\w\-.]+)"""
   """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\Wsuser=({user}[\w\.\-]{1,40}\$?)"""
+  """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\Wdhost=({dest_host}[\w\-.]+)"""
   """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\Wcs6=({db_name}.+?)\s+\w+=.+?cs6Label=Database Name"""
@@ -1441,7 +1377,7 @@ Fields = [
   """"object_owner"+:"+({db_user}[^"]+?)""""
   """"facets_environment"+:"+({host}[^"]+?)""""
   """"event_time"+:"+({time}[^"]+?)""""
-  """"user_name"+:"+({user}[\w\.\-]{1,40}\$?)""""
+  """"user_name"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1461,7 +1397,7 @@ Fields = [
   """({host}[\w.\-]+) sonarw """
   """"\$date":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   """"DB User Name":"(({db_domain}[^\\"]+)\\+)?(SYSTEM|({db_user}[^\\"]+))"""
-  """"OS User":"(({domain}[^\\"]+)\\+)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+  """"OS User":"(({domain}[^\\"]+)\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """"Server IP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """"Service Name":"({service_name}[^"]+)"""
   """"Server Host Name":"({dest_host}[\w\-.]+)"""
@@ -1485,7 +1421,7 @@ ParserVersion = "v1.0.0"
     """Server IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """Server Host Name =({service_name}[^\s]+)""",
     """Client IP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """OS User=(null|((({domain}[^\\=]+?)\\)?({user}[\w\.\-]{1,40}\$?)))\s+Server""",
+    """OS User=(null|((({domain}[^\\=]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+Server""",
     """Session Activity Type=({event_name}[^=]+?)\s+Server IP="""
   ]
   ParserVersion = "v1.0.0"

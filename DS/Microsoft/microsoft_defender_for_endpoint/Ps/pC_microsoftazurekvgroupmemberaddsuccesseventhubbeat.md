@@ -24,7 +24,7 @@ Fields = [
 """"FileName":"({file_name}[^"]+)"""
 """"FolderPath":"({file_path}[^"]+)"""
 """"InitiatingProcessAccountDomain":"({domain}[^"]+)"""
-""""InitiatingProcessAccountName":"(system|SYSTEM|NETWORK SERVICE|local service|({user}[\w\.\-]{1,40}\$?))"""
+""""InitiatingProcessAccountName":"(system|SYSTEM|NETWORK SERVICE|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """"InitiatingProcessAccountSid":"({user_sid}[^"]+)"""
 """"InitiatingProcessCommandLine":"\s*({process_command_line}.+?)\s*"+\,"""
 """"InitiatingProcessFileName":"({process_name}[^"]+)"""
@@ -37,7 +37,7 @@ Fields = [
 """"AccountName"+:"+({group_name}[^"]+)"""
 """"AccountDomain"+:"+({group_domain}[^"]+)"""
 """"AccountSid"+:"+({user_sid}[^"]+)"""
-""""MemberSid\\"+:\\"+({account_id}[^"]+)"""
+""""MemberSid\\"+:\\"+(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^"]+))"""
 ]
 ParserVersion = "v1.0.0"
 

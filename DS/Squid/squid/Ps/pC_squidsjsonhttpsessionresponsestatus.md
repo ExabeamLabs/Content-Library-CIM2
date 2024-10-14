@@ -13,7 +13,7 @@ Name = squid-s-json-http-session-responsestatus
 ]
   Fields = [
     """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """http_username":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-]{1,40}\$?)))"""",
+    """http_username":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """http_method":"({method}[^"]+)"""",
     """squid_request_status":"({proxy_action}[^"]+)"""",
     """http_url":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?({web_domain}[^\\\/\s:,"]+)?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?))""",

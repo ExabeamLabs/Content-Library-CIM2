@@ -12,6 +12,7 @@ Conditions = [
 """ModSecurity"""
 """severity"""
 """OWASP_CRS"""
+""""method":"""
 ]
   Fields = [
     """"time_stamp":"({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \d\d\d\d)"""

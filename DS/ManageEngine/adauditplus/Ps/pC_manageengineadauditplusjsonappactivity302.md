@@ -21,14 +21,14 @@ Name = "manageengine-adauditplus-json-app-activity-302"
     """exa_json_path=$.LOCATION_CITY,exa_field_name=location_city""",
     """exa_json_path=$.host,exa_field_name=host""",
     """exa_json_path=$.RECORD_ID,exa_field_name=event_id""",
-    """exa_json_path=$.USER_PRINCIPAL_NAME,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.USER_PRINCIPAL_NAME,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.USER_DISPLAY_NAME,exa_field_name=full_name""",
     """exa_json_path=$.sourcetype,exa_field_name=protocol""",
     """exa_json_path=$.APP_ID,exa_field_name=app_id""",
     """exa_json_path=$.LOCATION_COUNTRY,exa_field_name=location_country""",
     """exa_json_path=$.REPORT_PROFILE,exa_field_name=action""",
     """exa_json_path=$.APP_DISPLAY_NAME,exa_field_name=client_name""",
-    """exa_json_path=$.DEVICE_INFO,exa_field_name=device_name""",
+    """exa_json_path=$.DEVICE_INFO,exa_regex=({device_name}[^;"]+)""",
     """exa_json_path=$.ACCOUNT_DOMAIN,exa_field_name=account_domain""",
     """exa_json_path=$.LOGIN_STATUS,exa_field_name=result""",
     """exa_json_path=$.EVENT_NUMBER,exa_field_name=event_code""",
@@ -36,6 +36,7 @@ Name = "manageengine-adauditplus-json-app-activity-302"
     """exa_json_path=$.IP_ADDRESS,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.MFA_AUTH_METHOD,exa_field_name=auth_method""",
     """exa_json_path=$.MFA_RESULT,exa_field_name=result_reason"""
+    """exa_regex="DEVICE_INFO":"({dest_host}[^";]+)"""
   ]
   ParserVersion = "v1.0.0"
 

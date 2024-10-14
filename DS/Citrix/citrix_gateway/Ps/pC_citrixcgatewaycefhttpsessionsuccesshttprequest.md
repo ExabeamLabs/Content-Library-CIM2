@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({time}\d\d\d\d\/\d\d\/\d\d:\d\d:\d\d:\d\d)"""
-"""User\s+({user}[\w\.\-]{1,40}\$?)"""
+"""User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Vserver\s+(127.0.0.1|({host}[^:\s]+))"""
 """SSO is ON\s*:\s*({method}[^\s]+)\s+({object}[^\-\s]+)"""
 """SessionId:\s+({session_id}\d+)"""

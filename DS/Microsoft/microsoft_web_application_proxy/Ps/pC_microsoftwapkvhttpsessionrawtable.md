@@ -11,7 +11,7 @@ Conditions = [
 """ uri:"""
 ]
 Fields = [
-"""ClientUserName:\s*"(?:anonymous|({user}[\w\.\-]{1,40}\$?))""""
+"""ClientUserName:\s*"(?:anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """ClientAgent:\s*"({user_agent}[^"]+)""""
 """logTime:\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """servername:\s*"({host}[^"]+)""""

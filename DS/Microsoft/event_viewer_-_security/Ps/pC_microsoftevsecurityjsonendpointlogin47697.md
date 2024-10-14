@@ -17,8 +17,8 @@ Fields = [
 """"dest_host":"({service_name}(\w+\/)?({dest_host}[^"]+?)(@({dest_domain}[^"]+))?)""""
 """"time":({time}\d{13})"""
 """"result_code":"({result_code}[^"]+)"""
-""""user":(null|"({user}[\w\.\-]{1,40}\$?))"""
-""""user":(null|"({email_address}({user}[\w\.\-]{1,40}\$?)@[^"]+))"""
+""""user":(null|"({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""user":(null|"({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@[^"]+))"""
 """"domain":"({domain}[^"]+)"""
 """"event_code":({event_code}\d+)"""
 ]

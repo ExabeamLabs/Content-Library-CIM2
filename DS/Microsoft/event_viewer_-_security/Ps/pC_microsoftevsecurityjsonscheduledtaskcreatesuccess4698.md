@@ -17,7 +17,7 @@ Fields = [
 """"ComputerName":"({host}[\w\-.]+)"""
 """"EventID":({event_code}\d+)"""
 """({event_name}A scheduled task was created)"""
-""""SubjectUserName":"({user}[\w\.\-]{1,40}\$?)"""
+""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"SubjectDomainName":"({domain}[^\"]+)""""
 """"SubjectUserSid":"({user_sid}[^\"]+)"""
 """"TaskName":"({task_name}[^\"]+)""""

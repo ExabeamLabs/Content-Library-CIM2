@@ -10,7 +10,7 @@ Name = airlock-allowlisting-str-app-activity-success-fileactivity
   Fields = [
     """FileActivityMessage\|({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s\w{2})\|""",
     """FileActivityMessage\|[^\|]*\|({host}[\w\-\.]+)\|""",
-    """FileActivityMessage\|([^\|]*\|){2}(SYSTEM|({user}[\w\.\-]{1,40}\$?))\|""",
+    """FileActivityMessage\|([^\|]*\|){2}(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
     """FileActivityMessage\|([^\|]*\|){3}({file_dir}[^\|]+)\|""",
     """FileActivityMessage\|([^\|]*\|){4}({file_name}[^\|]+?(\.(\d{1,5}|({file_ext}[^\.\|]+)))?)\|""",
 	"""({event_name}FileActivityMessage)""",

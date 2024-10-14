@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-user-privilege-use-success-4673-1
     """(K|k)eywords="({result}[^"]+)"""",
     """Process Name:\s+(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))\s+Service""",
     """\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)""",
-    """(?:Information|Success Audit|Audit Success).+?Account Name:\s+({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """(?:Information|Success Audit|Audit Success).+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Server:\s+({object_server}.+?)\s+Service Name""",
     """Privileges:\s+({privileges}.+?)(,\d+|\s*$)""",
     """\s+({ownership_privilege}SeTakeOwnershipPrivilege)""",

@@ -11,7 +11,7 @@ Conditions = [
   """caseClassification="""
 ]
 Fields = [
-  """caseDescription=({additional_info}({last_name}[^,<]+),\s*({first_name}[^\s,]+).+?)\scaseDate"""
+  """caseDescription=({additional_info}({full_name}\w+[\s,]+[^,\s]+).+?)\s*caseDateAndTime="""
   """caseDescription=({additional_info}({user}^((?!Unknown source).)*<.+?>).+?)\scaseDate"""
   """({host}[\w\-.]+)\s+CEF:"""
   """caseDateAndTime=({time}\d\d\s*\w{3}\.\s*\d\d\d\d,\s*\d\d:\d\d:\d\d)"""

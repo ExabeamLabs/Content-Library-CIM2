@@ -15,7 +15,7 @@ Fields = [
 """:\d+\s*({host}[^\s]+)\s*\w+:"""
 """\d\d:\d\d:\d\d\s*({host}[^\.]+)\.({domain}[^\.]+)\..*?(?=\sauditprocess)"""
 """Start\sTime=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-"""({process_name}[^\|]+)\|App\sUser\sName =({user}[\w\.\-]{1,40}\$?)\|Service\sName =({service_name}[^\|]+)\|Object\/Field=({db_object}[^\|]+)\|Sum\sOf\sRecord\sAffected=({sql_count}\d+)"""
+"""({process_name}[^\|]+)\|App\sUser\sName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|Service\sName =({service_name}[^\|]+)\|Object\/Field=({db_object}[^\|]+)\|Sum\sOf\sRecord\sAffected=({sql_count}\d+)"""
 ]
 DupFields = [
 "user->db_user"

@@ -5,12 +5,13 @@ Name = microsoft-azure-json-image-write-success-imagewrite
   ParserVersion = v1.0.0
   Conditions = [ """"value":"Microsoft.Compute/images/write""", """"operationName":""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
-    """exa_json_path=$.properties.responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="blobUri\\?"+:\s*\\?"+({source_resource}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="blobUri\\?"+:\s*\\?"+({src_resource}[^"]+)\\?""""
     """"eventTimestamp":"({time}\d{4}\-\d{1,2}\-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+Z)"""
   ]
+  DupFields = ["src_resource->source_resource"]
 
 azure-activity-json = {
     Vendor = Microsoft
@@ -36,7 +37,7 @@ azure-activity-json = {
       """exa_json_path=$.resourceProviderName.value,exa_field_name=service_name"""
       """exa_json_path=$.resourceType.value,exa_field_name=resource_type"""
       """exa_json_path=$.resourceId,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"""
-      """exa_json_path=$.status.value,exa_field_name=status"""
+      """exa_json_path=$.status.value,exa_field_name=status_msg"""
       """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""

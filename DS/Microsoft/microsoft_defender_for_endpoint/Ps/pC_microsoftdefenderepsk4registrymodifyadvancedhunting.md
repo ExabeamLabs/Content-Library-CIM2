@@ -13,7 +13,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """category"+:\s*"+({operation}[^"]+)""",
        """ActionType"+:\s*"+({operation_type}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
-       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
@@ -27,19 +27,19 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """exa_json_path=$.time,exa_field_name=time"""
        """exa_regex="(time|TimeGenerated)"+:\s*"+({time}[^"]+)"""",
        """exa_json_path=$.category,exa_field_name=operation"""
-       """exa_json_path=$.properties.ActionType,exa_field_name=operation_type"""
-       """exa_json_path=$.properties.DeviceName,exa_field_name=host"""
-       """exa_json_path=$.properties.DeviceName,exa_field_name=dest_host"""
-       """exa_json_path=$.properties.InitiatingProcessAccountName,exa_field_name=operation_type"""
-       """exa_json_path=$.properties.InitiatingProcessAccountSid,exa_field_name=user_sid"""
-       """exa_json_path=$.properties.InitiatingProcessFolderPath,exa_regex=({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""
-       """exa_json_path=$.properties.InitiatingProcessParentFileName,exa_field_name=parent_process_name"""
-       """exa_json_path=$.properties.InitiatingProcessCommandLine,exa_field_name=process_command_line"""
-       """exa_json_path=$.properties.InitiatingProcessId,exa_field_name=process_id"""
+       """exa_json_path=$..ActionType,exa_field_name=operation_type"""
+       """exa_json_path=$..DeviceName,exa_field_name=host"""
+       """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
+       """exa_json_path=$..InitiatingProcessAccountName,exa_field_name=operation_type"""
+       """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
+       """exa_regex="InitiatingProcessFolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
+       """exa_json_path=$..InitiatingProcessParentFileName,exa_field_name=parent_process_name"""
+       """exa_json_path=$..InitiatingProcessCommandLine,exa_field_name=process_command_line"""
+       """exa_json_path=$..InitiatingProcessId,exa_field_name=process_id"""
        """exa_json_path=$.operationName,exa_field_name=action"""
-       """exa_json_path=$.properties.RegistryKey,exa_regex=({registry_path}({registry_key}[^"]+))"""
-       """exa_json_path=$.properties.RegistryValueName,exa_field_name=registry_value"""
-       """exa_json_path=$.properties.RegistryValueData,exa_field_name=registry_details"""
+       """exa_json_path=$..RegistryKey,exa_regex=({registry_path}({registry_key}[^"]+))"""
+       """exa_json_path=$..RegistryValueName,exa_field_name=registry_value"""
+       """exa_json_path=$..RegistryValueData,exa_field_name=registry_details"""
     ]
     DupFields = ["operation_type->event_name", "file_path->process_path", "file_dir->process_dir"]
 

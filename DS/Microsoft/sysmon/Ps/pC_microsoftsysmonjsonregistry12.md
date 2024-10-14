@@ -10,7 +10,7 @@ Name = microsoft-sysmon-json-registry-12
   Fields = [
     """"Hostname":"({host}[\w\-.]+)"""",
     """"UtcTime":"({time}\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d\.\d+)"""",
-    """"AccountName":"(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
+    """"AccountName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"Domain":"(NT AUTHORITY|({domain}[^",]+))"""",
     """"UserID":"({user_sid}[^",]+)"""",
     """"Category":"({category}[^",]+)"""",

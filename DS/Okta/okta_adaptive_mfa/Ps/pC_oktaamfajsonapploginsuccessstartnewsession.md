@@ -13,7 +13,7 @@ Name = okta-amfa-json-app-login-success-startnewsession
     """exa_json_path=$.systemAccount,exa_field_name=user""",
     """exa_json_path=$.tenantHost,exa_field_name=app""",
     """exa_json_path=$.activityAction,exa_field_name=operation""",
-    """exa_json_path=$.target.descriptor,exa_regex=({user}[\w\.\-]{1,40}\$?)\s*\/\s*({full_name}[^"]+)"""
+    """exa_json_path=$.target.descriptor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\/\s*({full_name}[^"]+)"""
     """exa_json_path=$.ipAddress,exa_field_name=src_ip"""
   ]
   ParserVersion = "v1.0.0"

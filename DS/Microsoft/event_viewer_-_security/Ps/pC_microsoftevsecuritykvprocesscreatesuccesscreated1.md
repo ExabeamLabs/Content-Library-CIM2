@@ -23,32 +23,33 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """\w+\s+({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s*""",
     """({event_code}4688)""",
     """ComputerName =({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))\s"""
-    """Success Audit\s+({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^\s]+))"""
-    """Process Name:(\\*[nrt]|\s)*({process_path}({process_dir}(\w+:)?[^:]+?[\\\/]+)?({process_name}[^:\\\/]+?))(\\*[nrt]|\s)*(Token Elevation Type:|Requested Operation:)"""
+    """Success Audit(\s|\\t)+({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w\-.]+))(\s|\\t)"""
+    """Process Name:(\\*[nrt]|\s)*({process_path}({process_dir}(\w+:)?[^:]+?[\\\/]+)?({process_name}[^:\\\/]+?))(\\*[nrt]|\s)+(Token Elevation Type:|Requested Operation:|%\{S-)"""
     """Target Subject:.+?Account Name:((\\)*(\\r|\\t|\\n))*\s*(-|SYSTEM|({dest_user}[^\\\s]+))((\\)*(\\r|\\t|\\n))*\s*""",
-    """Creator Subject:.+?Account Name:\s*(-|SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
-    """Account Domain:((\\)*(\\t|\\r|\\n))*\s*(-|({domain}[^\s]+?))[\\n\s;]*((\\)*(\\t|\\r|\\n))*Logon ID:""",
+    """Subject:.+?Account Name:\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+\s\w+:""",
+    """Creator Subject:.+?Account Name:(\\+[rnt]|\s)*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """Account Domain:(\\+[rnt]|\s)*(-|({domain}[^\s]+?))(\\+[rnt]|\s|;)*Logon ID:""",
     """Logon ID:(\\[nrt]|\s)*({login_id}[^\s\\;]+?)(\\[nrt]|\s)*(Target|Process)""",
-    """Creator Subject:.+?Account Domain:((\\)*(\\t|\\r|\\n))*\s*(-|({domain}[^\s]+?))[\\n\s;]*((\\)*(\\t|\\r|\\n))*Logon ID:""",
+    """Creator Subject:.+?Account Domain:(\\+[rnt]|\s)*(-|({domain}[^\s]+?))(\\+[rnt]|\s|;)*Logon ID:""",
     """Creator Subject:.+?Logon ID:(\\[nrt]|\s)*({login_id}[^\s\\;]+?)(\\[nrt]|\s)*(Target|Process)""",
-    """New Process Name:(\\*[nrt]|\s)*({dest_process_path}({dest_process_dir}[^"]+?)?[\\]*?({dest_process_name}[^"\\]+?))(\\*[nrt]|\s)*Token Elevation Type:""",
+    """New Process Name:(\\+[nrt]|\s)*({dest_process_path}({dest_process_dir}[^"=]+?)?[\\]*({dest_process_name}[^"\\=]+?))(\\+[nrt]|\s)+(Token Elevation Type:|%\{S-)""",
     """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
-    """Creator Process ID:\s*({parent_process_guid}[^\\\s;]+)(\s|;|\\)""",
-    """Creator Process Name:(\\*[nrt]|\s)*(|({parent_process_path}({parent_process_dir}[^"]+?)?[\\]*?({parent_process_name}[^"\\]+?)))(\\*[nrt]|\s)*Process""",
-    """Process Command Line:\s*"?((\\)[nrt])*(\s*|({process_command_line}.+?))"?[\s\\n\\r\\t]*Token Elevation Type indicates""",
+    """Creator Process ID:(\\+[rnt]|\s)*({parent_process_guid}[^\\\s;]+)(\s|\\+[rnt]|;|\\)""",
+    """Creator Process Name:(\\*[nrt]|\s)*(|({parent_process_path}({parent_process_dir}[^"=]+?)?[\\]*?({parent_process_name}[^"\\=]+?)))(\\*[nrt]|\s)*(Process|%\{S-)""",
+    """Process Command Line:\s*((\\)[\\r\\n\\t]+)*(|({process_command_line}.*?))\s*((\\)[\\r\\n\\t]*)*Token Elevation Type indicates"""
     """Process Command Line:\s*"*(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= \s*(|-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/\s]+)))"*\s*Token Elevation Type""",
     """binPath=\s*({service_command_line}(?:\"(.+)\")|(?:(\S+)))\s*""",
     """Command\s*Line(:|=).*\s+({parameter_sct}\S+\.sct)""",
-    """Command\s*Line(:|=).*\s+"({parameter_sct}.+\.sct)"""",
+    """Command\s*Line(:|=).*\s+"({parameter_sct}.+\.sct)""",
     """Command\s*Line(:|=).*\s+({parameter_hta}\S+\.hta)""",
-    """Command\s*Line(:|=).*\s+"({parameter_hta}.+\.hta)"""",
+    """Command\s*Line(:|=).*\s+"({parameter_hta}.+\.hta)""",
     """Command\s*Line(:|=).*\s+({parameter_xml}\S+\.xml)""",
-    """Command\s*Line(:|=).*\s+\s+"({parameter_xml}.+\.xml)"""",
+    """Command\s*Line(:|=).*\s+\s+"({parameter_xml}.+\.xml)""",
     """Command\s*Line(:|=).*\s+({parameter_csproj}\S+\.csproj)""",
-    """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)"""",
+    """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_exe}.+?\.exe)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-]{1,40}\$?))\\?""""
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
     """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
     """SubjectLogonId\\?"+:\\?"+(\\[nrt]|\s)*({login_id}[^\\]+)(\\[nrt]|\s)*\\?""""
     """\"SubjectDomainName\\?":\\?"({domain}[^\\"]+)"""

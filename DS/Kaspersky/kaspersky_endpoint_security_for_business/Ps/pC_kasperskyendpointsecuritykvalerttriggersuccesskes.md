@@ -17,7 +17,7 @@ Name = kaspersky-endpointsecurity-kv-alert-trigger-success-kes
     """p5="({alert_name}[^"]+)""",
     """tdn="({alert_type}[^"]+)""",
     """et="({alert_type}[^"]+)""",
-    """p7="(({domain}[^"\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """p7="(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
 
 

@@ -9,7 +9,7 @@ Conditions = [
 """issue_comment.update,"""
 ]
 Fields = [
-"""({operation}[^,]+),({user}[\w\.\-]{1,40}\$?),(?:\s*|({resource}[^,]*)),[^,]*,(?:\s*|({object}[^,]*)),({time}\d{13}),[^,]*,(?:\s*|("*\[)?({additional_info_2}[^\[\]]*)(\]"*)?),([^,]*,){3}(?:\s*|({additional_info_1}.*?))\s*$"""
+"""({operation}[^,]+),({user}[\w\.\-\!\#\^\~]{1,40}\$?),(?:\s*|({resource}[^,]*)),[^,]*,(?:\s*|({object}[^,]*)),({time}\d{13}),[^,]*,(?:\s*|("*\[)?({additional_info_2}[^\[\]]*)(\]"*)?),([^,]*,){3}(?:\s*|({additional_info_1}.*?))\s*$"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-handle-close-4658-1
     """<EventID>({event_code}[^<]+)</EventID>""",
     """({event_name}The handle to an object was closed)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*({user}[\w\.\-]{1,40}\$?)\s+Account Domain:""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:""",
     """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Object:""",
     """Object Server:\s*({object_server}\S.*?)\s+Handle ID:""",

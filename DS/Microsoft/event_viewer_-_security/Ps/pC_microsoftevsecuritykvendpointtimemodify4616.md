@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-kv-endpoint-time-modify-4616
 		"""({event_name}The system time was changed)""",
 		"""EventType=(|({event_category}[^\s]+))\s""",
 		"""Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-		"""Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+		"""Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
 		"""Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
 		"""Logon ID:\s*({login_id}\S+)\s+""",
 	]

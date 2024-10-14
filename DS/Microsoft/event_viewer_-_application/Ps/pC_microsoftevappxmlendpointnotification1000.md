@@ -4,7 +4,7 @@
 Name = microsoft-evapp-xml-endpoint-notification-1000
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Application
-  Conditions = [ """<EventID Qualifiers""", """'>1000</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """<EventID Qualifiers""", """'>1000</EventID>""", """<TimeCreated SystemTime""", """<Channel>Application<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
     """<Message>({event_name}[^:<\.]+)""",
     """System.ObjectDisposedException:\s*({event_name}[^<.]+)""",
@@ -28,7 +28,7 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",

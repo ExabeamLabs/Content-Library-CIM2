@@ -13,11 +13,11 @@ Conditions = [
 ]
 Fields = [
 """created_at=\"+({time}[^\"]+)\""""
-"""created_by_login=\"+({user}[\w\.\-]{1,40}\$?)"""
+"""created_by_login=\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """accessible_by_login=\"+({object}[^\"@]+)"""
 """source_user_email=\"+({object}[^@]+)"""
 """({file_type}folder)"""
-"""source_item_name=\"+({file_name}[^".]+\.?({file_ext}[^"]+|))"""
+"""source_item_name=\"+({file_name}[^".]+?(\.({file_ext}[^"]+))?)""""
 """source_item_type=\"+({file_type}[^\"]+)"""
 """source_folder_name=\"+({file_name}[^\"]+)"""
 """source_parent_name=\"+({file_dir}[^\"]+)"""

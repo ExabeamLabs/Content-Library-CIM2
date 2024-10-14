@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-cef-endpoint-login-fail-4771-1
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({result}[^"]+?)\s*"""",
     """"targetSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"targetUserName":"({user}[\w\.\-]{1,40}\$?)\s*"""",
+    """"targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """"serviceName":"([\w\-.]+)\/({domain}[^\\\/\s"]+?)\s*"""",
     """"status":"({result_code}[^"]+?)\s*""""
   ]

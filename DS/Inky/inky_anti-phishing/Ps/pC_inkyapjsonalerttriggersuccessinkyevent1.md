@@ -19,16 +19,13 @@ Fields = [
 """"client_ip\":\s*\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
 """\d\d:\d\d:\d\d\.\S+\s({host}[^\s]+)\s+inky"""
 """"rcpt_to_addresses\":\s*\[\"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\""""
-""""mail_from\":\s*\"<?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>?""""
+""""mail_from\":\s*\"<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>?""""
 """"sender_IP\":\s*\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\""""
 """"subject\":\s*\"({alert_subject}[^\"]+?)\s*\""""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s\S+\s+inky"""
 """"original_url\":\s*\"({malware_url}[^\"]+)\""""
 """"tracking_id\":({alert_id}\d+)"""
 """"threat_level\":({threat_level}\d+)"""
-]
-DupFields = [
-"dest_email_address->email_address"
 ]
 ParserVersion = "v1.0.0"
 

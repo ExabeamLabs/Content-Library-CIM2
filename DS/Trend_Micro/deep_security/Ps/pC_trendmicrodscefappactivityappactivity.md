@@ -23,7 +23,7 @@ Name = trendmicro-ds-cef-app-activity-appactivity
     """\scs1=({additional_info}[^=]+?)\s*\w+=""",
     """Application:\s+AUDIT_({result}[^(]+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-    """Login succeeded for user\s+'(({domain}[^\\]+)\\\\)?(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """Login succeeded for user\s+'(({domain}[^\\]+)\\\\)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
   ]
 
 

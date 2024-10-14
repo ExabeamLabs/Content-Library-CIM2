@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4771-3
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Authentication Service""",
     """({event_code}4771)""",
-    """TargetUserName:({user}[\w\.\-]{1,40}\$?),""",
+    """TargetUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """TargetSid:({user_sid}[^,]+),""",
     """ServiceName:\w+\/(?=\w)({domain}[^,]+)""",
     """Status:({result_code}[^,]+),""",

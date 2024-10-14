@@ -10,7 +10,7 @@ Name = wiz-w-json-alert-trigger-success-ddosattack
  Fields = [
    """exa_json_path=$.event.timestamp,exa_field_name=time""",
    """exa_json_path=$.event.actor.IP,exa_field_name=src_ip""",
-   """exa_json_path=$.event.actor.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+   """exa_json_path=$.event.actor.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
    """exa_json_path=$.event.eventURL,exa_field_name=url""",
    """exa_regex=({app}wiz)"""
    """exa_json_path=$.event,exa_regex="matchedRules":.+ruleName:\s*({rule}[^,]+?)\s*",""",

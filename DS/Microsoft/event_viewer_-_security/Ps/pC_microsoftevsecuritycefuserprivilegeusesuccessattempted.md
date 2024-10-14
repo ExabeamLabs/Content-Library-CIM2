@@ -20,7 +20,7 @@ Fields = [
 """"subjectUserSid":\"({user_sid}[^\s\"]+)"""
 """"subjectLogonId":\"({login_id}[^\s\"]+)"""
 """"objectServer":\"(-|({object_server}[^\s\"]+))"""
-""""subjectUserName":\"(-|({user}[\w\.\-]{1,40}\$?))""""
+""""subjectUserName":\"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"subjectDomainName":\"(-|({domain}[^\s\"]+))""""
 """"processName":\"(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))\s*""""
 """"privilegeList":\"({privileges}[^\"]+?)\s*""""

@@ -10,7 +10,7 @@ Name = microsoft-defenderep-cef-file-devicefileevents
     """MD5"+:"+({hash_md5}[^"]+)""",
     """"SHA1"+:(null|"+({hash_sha1}[^",]+)"+),""",
     """"SHA256"+:(null|"+({hash_sha256}[^",]+)"+),"""
-    """"InitiatingProcessAccountName"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """"InitiatingProcessAccountName"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 cef-defender-atp {
@@ -27,7 +27,7 @@ cef-defender-atp {
        """LocalPort"+:({src_port}\d+)""",
        """ActionType"+:\s*"+({result}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
-       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-]{1,40}\$?))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]+)[\\\/]({process_name}[^"]+))""",

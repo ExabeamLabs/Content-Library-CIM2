@@ -5,21 +5,25 @@ Name = microsoft-azure-json-image-write-success-createvm
   ParserVersion = v1.0.0
   Conditions = [ """"operationName":""", """Microsoft.Compute/virtualMachines/write""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
-    """exa_json_path=$.properties.responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="vmId\\?"+:\s*\\?"+({instance_id}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="vmSize\\?"+:\s*\\?"+({vm_size}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="imageReference\\?"+:[^\}]+"+publisher\\?"+:\s*\\?"+({image_publisher}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="imageReference\\?"+:[^\}]+"+offer\\?"+:\s*\\?"+({image_name}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="imageReference\\?"+:[^\}]+"+sku\\?"+:\s*\\?"+({image_release}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="imageReference\\?"+:[^\}]+"+exactVersion\\?"+:\s*\\?"+({image_version}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="osDisk\\?"+:[^\}]+"+osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="createOption\\?"+:\s*\\?"+({source_resource_type}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="computerName\\?"+:\s*\\?"+({computer_name}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="adminUsername\\?"+:\s*\\?"+({os_admin}[^"]+)\\?""""
-    """exa_json_path=$.properties.responseBody,exa_regex="networkInterfaces\\?"+:[^\}]+"+id\\?"+:\s*\\?"+({interface_id}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="vmId\\?"+:\s*\\?"+({instance_id}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="vmSize\\?"+:\s*\\?"+({vm_size}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+publisher\\?"+:\s*\\?"+({image_publisher}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+offer\\?"+:\s*\\?"+({image_name}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+sku\\?"+:\s*\\?"+({image_release}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+exactVersion\\?"+:\s*\\?"+({image_version}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="osDisk\\?"+:[^\}]+"+osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="createOption\\?"+:\s*\\?"+({src_resource_type}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="computerName\\?"+:\s*\\?"+({computer_name}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="adminUsername\\?"+:\s*\\?"+({os_admin}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="networkInterfaces\\?"+:[^\}]+"+id\\?"+:\s*\\?"+({interface_id}[^"]+)\\?""""
+    """exa_regex=identity\/claims\/upn"\s*:\s*"(({user_upn}[^"@\s]+@[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_json_path=$.identity.claims.name,exa_regex=^({full_name}[^"\(]+?)(\s\(|$)"""
+    """exa_regex=identity\/claims\/givenname"\s*:\s*"({full_name}({first_name}[^"\s,]+)[\s,]+({last_name}[^"]+))"""
+    """exa_regex=\\*"Creator\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   ]
-  DupFields = [ "image_name->source_resource" ]
+  DupFields = [ "image_name->src_resource",  "image_name->source_resource", "src_resource_type->source_resource_type" ]
 
 azure-activity-json = {
     Vendor = Microsoft
@@ -45,7 +49,7 @@ azure-activity-json = {
       """exa_json_path=$.resourceProviderName.value,exa_field_name=service_name"""
       """exa_json_path=$.resourceType.value,exa_field_name=resource_type"""
       """exa_json_path=$.resourceId,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)"""
-      """exa_json_path=$.status.value,exa_field_name=status"""
+      """exa_json_path=$.status.value,exa_field_name=status_msg"""
       """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""

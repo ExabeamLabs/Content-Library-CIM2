@@ -24,7 +24,7 @@ Fields = [
   """\WsrcHost=\[?({src_host}[\w\-.]+)"""
   """\WdstPort=({dest_port}\d+)"""
   """\WdstIP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """\Wusername=(?:hashed user|nt authority\\anonymous logon|(({domain}[^\\,]+)\\)?({user}[\w\.\-]{1,40}\$?))(,\w+=|\s*$)"""
+  """\Wusername=(?:hashed user|nt authority\\anonymous logon|(({domain}[^\\,]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,\w+=|\s*$)"""
   """\WdbUsername=(?:nt authority\\anonymous logon|(({domain}[^\\,]+)\\)?({db_user}[^,\\]+?))(,\w+=|\s*$)"""
   """\WdbName =(|({db_name}[^,]+?))(,\w+=|\s*$)"""
   """\Wapplication=\"({process_name}[^\"]+)\""""

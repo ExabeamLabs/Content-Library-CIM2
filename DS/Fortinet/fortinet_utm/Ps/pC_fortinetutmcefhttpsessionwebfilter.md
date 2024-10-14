@@ -5,14 +5,14 @@ Name = fortinet-utm-cef-http-session-webfilter
   Vendor = Fortinet
   Product = Fortinet UTM
   TimeFormat = "epoch"
-  Conditions = [ """CEF:""", """|Fortinet|FortiGate-VM|""", """|webfilter""" ]
+  Conditions = [ """CEF:""", """|Fortinet|FortiGate""", """|webfilter""" ]
   Fields = [
     """\Wrt=({time}\d{13})\s+(\w+=|$)""",
     """\Wdvc=({host}.+?)\s+(\w+=|$)""",
     """\Wdvchost=({host}.+?)\s+(\w+=|$)""",
     """\Wact=({action}.+?)\s+(\w+=|$)""",
     """\Wcat=({categories}({category}[^;,=]+)[^=]*?)\s+(\w+=|$)""",
-    """\Wduser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """\Wduser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+(\w+=|$)""",
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s+(\w+=|$)""",

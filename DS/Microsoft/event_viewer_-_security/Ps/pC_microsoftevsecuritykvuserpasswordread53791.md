@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-user-password-read-5379-1
   ParserVersion = v1.0.0
   Conditions = [  """ EventCode=5379 """,""" ComputerName =""" ]
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))\s+Account Domain:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}[^\s]+))\s+Logon ID:""",
   ]
 
@@ -21,7 +21,7 @@ windows-events = {
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
-    """<Task>({task}[^<]+)"""
+    """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   
 }

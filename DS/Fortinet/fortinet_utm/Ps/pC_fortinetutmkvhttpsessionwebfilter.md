@@ -16,14 +16,14 @@ Name = fortinet-utm-kv-http-session-webfilter
   Fields = [
     """date=({time}\d\d\d\d-\d\d-\d\d time\=\d\d:\d\d:\d\d([+-]\d\d:\d\d)?)""",
     """\Wdevname="*({host}[^\s"]+)"*(\s|")""",
-    """\Waction="*({action}[^\s"]+)"*(\s|")""",
     """\Wstatus="*({action}[^"]+)"""",
+    """\Waction="*({action}[^\s"]+)"*(\s|")""",
     """\Wurl="*(?:-|\w+:\/+[^\/]+)?({uri_path}\/[^?\s"]*)""",
     """\Wurl="*(?:[^?]+?(|({uri_query}\?[^\s"]+)))["\s]*(\w+=|$)""",
     """\Wcatdesc="*(\.+|({category}[^"]+?))["\s]*(\w+=|$|,)""",
-    """\suser="*(({email_address}[^@"\s]+@[^\."\s]+\.[^"\s]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^"\s]+))?)("|\s)""",
-    """\Wsrcip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdstip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\suser="*(({email_address}[^@"\s]+@[^\."\s]+\.[^"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"\s]+))?)("|\s)""",
+    """\Wsrcip="*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wdstip="*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Whostname="*({web_domain}[^"\s]+)""",
     """\Wservice="*({protocol}[^\s"]+)"*(\s|")""",
     """\Wlevel="*({alert_severity}[^\s"]+)"*(\s|")""",
@@ -41,6 +41,7 @@ Name = fortinet-utm-kv-http-session-webfilter
     """cat=({http_response_code}\d+)""",
     """method="({method}[^"]+)"""",
     """\Wtz="?({tz}[+-]\d+)"""
+    """direction="*({direction}[^="\s]+?)"*\s*\w+="""
   ]
 
 

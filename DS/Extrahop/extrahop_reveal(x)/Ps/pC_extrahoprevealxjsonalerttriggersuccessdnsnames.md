@@ -21,8 +21,8 @@ Fields = [
 """"dnsNames":\["({dest_host}[^."]+)(\.({domain}[^"]+))?".+?victim"""
 """"title":"({alert_name}[^"]+)"""
 """"netbiosName":(null|"({sub_domain}[^"]+))"""
-""""dnsNames":\["({query}[^"]+)"\]"""
-""""status":(null|"({status}[^"]+))"""
+""""dnsNames":\["({dns_query}[^"]+)"\]"""
+""""status":(null|"({status_msg}[^"]+))"""
 """"riskScore":(null|"({alert_severity}[^"]+))"""
 ]
 DupFields = [

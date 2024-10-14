@@ -29,7 +29,7 @@ Name = "microsoft-sysmon-json-network-session-success-netconn"
     """exa_json_path=$.DestinationHostname,exa_field_name=dest_host"""
     """exa_json_path=$.DestinationPort,exa_field_name=dest_port"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
-    """exa_regex=\"User\":\"((NT AUTHORITY|({domain}[^\\]+))[\\]+)?((?i)SYSTEM|({user}[\w\.\-]{1,40}\$?))\""""
+    """exa_regex=\"User\":\"((NT AUTHORITY|({domain}[^\\]+))[\\]+)?((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
     """exa_regex=\"Image\":\"({process_path}({process_dir}[^\"]*?[\\\/]+)?({process_name}[^\"\\\/]+))\""""
   ]
   DupFields = [
