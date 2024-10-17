@@ -9,7 +9,7 @@ Name = symantec-atp-json-alert-trigger-success-symcdeviceaction
   Conditions = [ """"app_name":""", """"symc_device_action":""", """"sep_mid":"""" ]
   Fields = [
     """"device_time":"({time}[^"]+)"""",
-    """"user_name":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"device_name":"({host}[^"]+)"""",
     """"categories":\["({alert_type}[^"]+)"""",
     """"signature_name":"({alert_name}[^"]+)"""",

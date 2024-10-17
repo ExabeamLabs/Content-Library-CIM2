@@ -18,7 +18,7 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """"ServiceDisplayName":"({service_name}[^"]+)"""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"UserName":\s*"((LOCAL SERVICE|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))))"""",
-    """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
+    """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """"ImageFileName":\s*"[\\\?]+(|({parent_process_path}({parent_process_dir}[^"]*?)(\\+({parent_process_name}[^"\\]+?))?))""""
     """"aid":\s*"({aid}[^"]+)""",
@@ -33,7 +33,7 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """exa_json_path=$.ServiceDisplayName,exa_field_name=service_name""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$.UserName,exa_regex=((LOCAL SERVICE|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))))""",
-    """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.UserName,exa_regex=(LOCAL SERVICE|(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """exa_json_path=$.src-account-name,exa_field_name=account_name""",
     """exa_regex="ImageFileName":\s*"[\\\?]+(|({parent_process_path}({parent_process_dir}[^"]*?)(\\+({parent_process_name}[^"\\]+?))?))"""",
     """exa_json_path=$.aid,exa_field_name=aid""",

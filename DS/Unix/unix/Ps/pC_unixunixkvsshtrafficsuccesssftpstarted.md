@@ -16,7 +16,7 @@ Name = "unix-unix-kv-ssh-traffic-success-sftpstarted"
     """\d\d:\d\d:\d\d ({host}[^\s]+) channel:"""
     """Listener=({dest_ip}[\da-fA-F:\.]+):({dest_port}\d+),"""
     """Client=({src_ip}[\da-fA-F:\.]+):({src_port}\d+),"""
-    """User=({user}[\w\.\-]{1,40}\$?)"""
+    """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """Host=({dest_host}[^,]+)"""
     """channel: ({event_name}[^:]+?)\s+\w+:"""
   ]

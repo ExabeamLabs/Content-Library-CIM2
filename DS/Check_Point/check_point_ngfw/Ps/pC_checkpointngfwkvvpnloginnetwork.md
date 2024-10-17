@@ -20,7 +20,7 @@ Fields = [
   """svc=\"({dest_port}\d+)"""
   """tunnel_protocol=\"+({tunnel_protocol}[^\"]+)"""
   """\Wreason=\"+({failure_reason}.+?)\s*\"+ latitude="""
-  """\WUser=\"+(({full_name}[^\(]+)\s\()?(({email_address}[^@\"]+@[^\"]+)|({user}[\w\.\-]{1,40}\$?))\)?\"+ auth_method="""
+  """\WUser=\"+(({full_name}[^\(]+)\s\()?(({email_address}[^@\"]+@[^\"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)?\"+ auth_method="""
 ]
 ParserVersion = "v1.0.0"
 

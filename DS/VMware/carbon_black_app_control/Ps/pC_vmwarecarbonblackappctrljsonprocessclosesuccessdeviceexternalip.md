@@ -25,7 +25,7 @@ Name = vmware-carbonblackappctrl-json-process-close-success-deviceexternalip
     """"device_id"+:"+({device_id}[^",]+)""",
     """"+device_os"+:"+({os}[^"]+)"+"""
     """"device_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+""",
+    """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",
   ]
   DupFields = ["event_category->operation_type"]
 

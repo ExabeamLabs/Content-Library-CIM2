@@ -21,7 +21,6 @@ Name = symantec-esc-cef-alert-trigger-success-emailseccloud
     """"subject":"({email_subject}[^"]+)",""",
     """"messageSize":({bytes}\d+)""",
   ]
-  DupFields = [ "dest_email_address->external_address" ]
 
 
 }

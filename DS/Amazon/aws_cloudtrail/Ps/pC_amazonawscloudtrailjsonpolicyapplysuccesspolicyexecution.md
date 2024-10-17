@@ -49,7 +49,7 @@ aws-cloudtrail-json-1 = {
 	  """"userAgent":"(\s*|({user_agent}[^"]+))"""",
 	  """"eventType":"({event_category}[^"]+)"""",
 	  """"eventName":"({event_name}[^"]+)"""",
-	  """"userName":"({aws_user}({user}[\w\.\-]{1,40}\$?))"""",
+	  """"userName":"({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
 	  """"accessKeyId":"({key_id}[^"]+?)""""
   
 }

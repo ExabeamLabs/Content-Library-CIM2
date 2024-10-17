@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """disconnected from gateway,([^,]*,){14}({time}[^,]+)"""
-  """disconnected from gateway,([^,]*?,)({user}[\w\.\-]{1,40}\$?)"""
+  """disconnected from gateway,([^,]*?,)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

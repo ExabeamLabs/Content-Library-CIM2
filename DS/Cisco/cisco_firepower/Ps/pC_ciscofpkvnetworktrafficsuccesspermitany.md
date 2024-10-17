@@ -28,7 +28,7 @@ Name = cisco-fp-kv-network-traffic-success-permitany
     """URL="+({url}[^"]+)"+""",
     """InitiatorPackets="+({initiator_packets}[^"]+)"+""",
     """ResponderPackets="+({responder_packets}\d+)"+""",
-    """User="+(No Authentication Required|({user}[\w\.\-]{1,40}\$?))"+""",
+    """User="+(No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",
   ]
   DupFields = [ "result->action" ]
 

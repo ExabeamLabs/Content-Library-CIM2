@@ -9,7 +9,7 @@ Name = mcafee-es-kv-alert-trigger-success-hostintrusionprevention
     """\WWorkstation Name =({host}[^,]+)""",
     """\WThreatEventID=({alert_id}\d+)""",
     """\WThreatType=({alert_type}[^,]+)""",
-      """,ThreatSourceUserName =(({domain}[^,\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?),""",
+      """,ThreatSourceUserName =(({domain}[^,\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """\WThreatSourceURL=({malware_url}[^,]+)""",
   ]
 
@@ -22,7 +22,7 @@ mcafee-dlp-alert = {
     """StartTime=({time}\d{13})""",
     """,HostName =({host}[^,]+)""",
     """,(targetprocessname|sourceprocessname)=({process_path}({process_dir}[^,]*[\\\/]+)?({process_name}[^,\\\/]+))""",
-    """,(sourceusername|targetusername|agentusername)=(({domain}[^,\\\/]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?),""",
+    """,(sourceusername|targetusername|agentusername)=(({domain}[^,\\\/]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """,sourcehostname=({dest_host}[^,]+)""",
     """,threatseverity=({alert_severity}[^,]+)""",
     """,ThreatSeverity=({alert_severity}[^,]+)""",

@@ -24,10 +24,12 @@ pan-system-1 {
       """SYSTEM,([^,]*,){9}({severity}[^,]+),""",
       """SYSTEM,(?:[^,]*,){10}"*({additional_info}[^",]+?)(?:\.*"|\.\s|\.*,|\s(\d{1,3}\.){3}\d{1,3}:\d+)""",
       """Private IP:\s?({src_translated_ip}[^,\s]+)""",
-      """User\s*(name:)?\s+({user}[\w\.\-]{1,40}\$?)\.?(\s|,|"|$)""",
+      """User\s*(name:)?\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\.?(\s|,|"|$)""",
       """User\s*(name:)?\s+({email_address}[^@\s]+@[^\s,]+?)(\.\\"|\.")?,""",
       """Client OS( version)?:\s+({os}[^":]+)(,|\.)""",
       """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+      """,({serial_num}\d+),SYSTEM,"""
+      """,SYSTEM,([^,]*,){18}({device_name}[^,"]+)"""
       
 }
 ```

@@ -15,9 +15,9 @@ Name = crowdstrike-falcon-sk4-app-activity-fdritemsexplorer
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
-    """"name":\s*"({process_name}[^"]+)""",
+    """"name":\s*"({event_name}[^"]+)""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
     """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?)))"""",
+    """"UserName":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",
     """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
@@ -40,9 +40,9 @@ Name = crowdstrike-falcon-sk4-app-activity-fdritemsexplorer
     """exa_json_path=$.ParentProcessId,exa_field_name=parent_process_id""",
     """exa_json_path=$.event_platform,exa_field_name=os""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
-    """exa_json_path=$.name,exa_field_name=process_name""",
+    """exa_json_path=$.name,exa_field_name=event_name""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
     """exa_json_path=$.UserSid,exa_field_name=user_sid""",
-    """exa_json_path=$.UserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?)))""",
+    """exa_json_path=$.UserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """exa_json_path=$.src-account-name,exa_field_name=account_name""",
     """exa_json_path=$.CommandLine,exa_field_name=process_command_line""",
     """exa_regex=CommandLine":"({process_command_line}.+?)","\w+":"""",

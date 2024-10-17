@@ -44,8 +44,8 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
 # fc_type is removed
     """original_server_ip='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'""",
     """'Sess-ID\[({session_id}\d+)\]\s""",
-    """\sUser\[(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\]:""",
-    """\sUser\[[^\]]+\]:\s({additional_info}[^"]+?)(\s(Reason:\s({reason}[^']+?))?)\s*'""",
+    """\sUser\[(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\]:""",
+    """\sUser\[[^\]]+\]:\s({additional_info}[^"]+?)(\s(Reason:\s({result_reason}[^']+?))?)\s*'""",
     """\sconn_id\[({connection_id}\d+)\]\s""",
     """\sBytes rcv:\s({bytes_in}\d+),\s"""
   ]

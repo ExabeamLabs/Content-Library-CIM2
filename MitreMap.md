@@ -200,7 +200,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1598     | [T1598](https://attack.mitre.org/techniques/T1598)<br><br>                                                                                                | 2     |
 | T1598.003 | [T1598.003](https://attack.mitre.org/techniques/T1598/003)<br><br>                                                                                        | 2     |
 | TA0001    | [TA0001](https://attack.mitre.org/techniques/TA0001)<br><br>                                                                                              | 1     |
-| TA0002    | [TA0002](https://attack.mitre.org/techniques/TA0002)<br><br>                                                                                              | 52    |
+| TA0002    | [TA0002](https://attack.mitre.org/techniques/TA0002)<br><br>                                                                                              | 53    |
 | TA0003    | [TA0003](https://attack.mitre.org/techniques/TA0003)<br><br>                                                                                              | 1     |
 | TA0004    | [TA0004](https://attack.mitre.org/techniques/TA0004)<br><br>                                                                                              | 36    |
 | TA0007    | [TA0007](https://attack.mitre.org/techniques/TA0007)<br><br>                                                                                              | 2     |

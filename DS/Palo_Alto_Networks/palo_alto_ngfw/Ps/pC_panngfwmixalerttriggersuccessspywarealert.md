@@ -22,7 +22,7 @@ Fields = [
   """,THREAT,[^"]+?,\\?"[^\s]*",[^,]*,({category}[^,]+),"""
   """THREAT,spyware,([^,]*,){29}({alert_severity}[^,]+)"""
   """THREAT,spyware,[^"]+?,\\?"[^\s]*?",([^,]*,){2}({alert_severity}[^,]+)"""
-  """THREAT,spyware,([^,]*,){7}(({email_address}[^@,]+@[^\.,]+\.[^,]+)|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)),"""
+  """THREAT,spyware,([^,]*,){7}(({email_address}[^@,]+@[^\.,]+\.[^,]+)|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
   """THREAT,spyware,([^,]*,){19}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),([^,]*,){3}(?:|({protocol}[^,]+)),(?:|({action}[^,]+)),\\?"*"""
   """THREAT,spyware,([^,]*,){9}({app}[^,]+),"""
   """,THREAT,[^"]+?,\\?"[^\s]*?"+,?([^"]+)"+,({alert_id}\d+)?"""
@@ -30,6 +30,11 @@ Fields = [
   """THREAT,spyware,(("[^\s]+"|[^,]*),){64}(|""|({threat_category}[^,]+)),"""
   """,THREAT,spyware([^,]*,){27}(|(\\?"+(({malware_url}[^<>".,]+(?:\.[^<>\/\s,]+)?\/[^<>]*?)|({malware_file_name}[^<>,]+?)|[^,]*?)[\\\/]*"+)),(|(\d+|({alert_name}[^,"]+?))\(({alert_id}\d+)?\)),(|({category}[^,]*)),(|({alert_severity}[^,]+)),("[^"]*",|[^,]*,){34}(|({threat_category}[^,]+)),""",
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+  """({event_category}THREAT)"""
+  """,THREAT,({alert_type}[^,]+),([^,]*,){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),"""
+  """,THREAT,([^,]*,){20}(|({src_port}\d+)),(|({dest_port}\d+)),(|({src_translated_port}\d+)),(|({dest_translated_port}\d+)),"""
+  """({serial_num}[^,]+),THREAT,"""
+  """,THREAT,([^,]*,){55}(|({device_name}({host}[^,]+)))"""
 ]
 SOAR {
   IncidentType = "malware"

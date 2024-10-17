@@ -19,7 +19,7 @@ Fields = [
 """\"aid\":\"({aid}[^\"]+)"""
 """\"(ImageFileName|TargetFileName)\":\"({src_file_path}[^\"]+)"""
 """\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({src_file_name}[^\\\/\"]+\.({src_file_ext}[^\\\/\"]+))"""
-"""\"UserName\":\"({user}[\w\.\-]{1,40}\$?)\""""
+"""\"UserName\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 """\"aip\":\"({aip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"ClientComputerName\":\"({src_host}[^\"]+)"""
 """\"ServiceImagePath\":\"({src_file_path}({file_dir}[^\"]*?\\+)({src_file_name}[^\\\s\"]+?\.({src_file_ext}[^\\\s\"\.]+?)))(\s|\")"""

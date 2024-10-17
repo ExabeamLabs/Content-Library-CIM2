@@ -5,7 +5,7 @@ Name = sentinelone-evsentinelone-xml-app-notification-5
   ParserVersion = "v1.0.0"
   Vendor = SentinelOne
   Product = Event Viewer - Sentinelone
-  Conditions = [ """<EventID>5</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """<EventID>5</EventID>""", """<TimeCreated SystemTime""", """<Channel>SentinelOne""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
     """<EventID>({event_code}5)"""
   ]
@@ -25,7 +25,7 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",

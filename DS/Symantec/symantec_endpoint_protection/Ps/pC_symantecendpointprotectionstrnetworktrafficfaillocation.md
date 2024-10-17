@@ -23,7 +23,7 @@ Name = symantec-endpointprotection-str-network-traffic-fail-location
     """Remote Host Name:\s+({dest_host}[^,\s]+)""",
     """Remote Port:\s+({dest_port}\d+)""",
     """Remote Host MAC:\s+({dest_mac}[^,\s]+)""",
-    """User Name:\s+(SYSTEM|none|NETWORK|LOCAL|({user}[\w\.\-]{1,40}\$?))""",
+    """User Name:\s+(SYSTEM|none|NETWORK|LOCAL|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Application:\s+({process_path}({process_dir}[^,]*?[\\\/]+)({process_name}[^,\\\/]+)),"""
     """Rule:\s+(?:|({rule}[^,]+)),""",
     """Domain Name:\s+({domain}[^\s,]+)""",

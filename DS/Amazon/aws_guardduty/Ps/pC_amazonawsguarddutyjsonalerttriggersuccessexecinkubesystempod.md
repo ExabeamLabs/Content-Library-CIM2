@@ -21,7 +21,8 @@ json-aws-guardduty-security-alert-template = {
       """"accountId":\s*"({account_id}[^"]+?)","""
       """domain":"({domain}[^"]+)"""",
       """resource":[^}]+principalId":\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"""",
-      """resource":[^}]+"userName":\s*"({aws_user}({user}[\w\.-]{1,99}\$?))"""",
+      """resource":[^}]+"userName":\s*"({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\}]+?"userType":\s*"(?!AssumedRole)[^"]+"""",
+      """resource":[^}]+"userType":\s*"(?!AssumedRole)[^"]+"[^\}]+?"userName":\s*"({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """resource":[^}]+"userType":\s*"({user_type}[^},]+?)"""",
       """key":"PrincipalId","value":"([^:]+:)?({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
       """"resourceType":\s*"({resource_type}[^"]+)"""",
@@ -29,7 +30,7 @@ json-aws-guardduty-security-alert-template = {
       """"service".*?"action".*?"portProbeAction".*?"portProbeDetails".*?"localPortDetails".*?"port":"({dest_port}\d+)"""",
       """"instanceId":"({instance_id}[^"]+)"""",
       """"city":\{"cityName":"((?i)UNKNOWN|({location_city}[^"]+))""""
-      """\ssuser=(|Anonymous|({aws_user}({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$))""",
+      """\ssuser=(|Anonymous|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+(\w+=|$)""",
       """"service".*?"action".*?"networkConnectionAction.*?({result}"blocked":"*(false|true))"""
       """"accountId":"({aws_account}\d+)"""
       """\srequestClientApplication=({app}\S+)""",
@@ -39,10 +40,12 @@ json-aws-guardduty-security-alert-template = {
       """"service".*?"action".*?"portProbeAction".*?"portProbeDetails".*?"localPortDetails".*?"port":"({dest_port}\d+)"""",
       """"service".*?"action".*?"networkConnectionAction".*?"localPortDetails".*?"port":({dest_port}\d+)"""
       """"id":"({alert_id}[^"]+?)"""",
-      """"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""""
+      """"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"[^\}]+?"userType":\s*"(?!AssumedRole)[^"]+""""
+      """"userType":\s*"(?!AssumedRole)[^"]+"[^\}]+?"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
       """"key":"ProductOwner","value":"({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
       """"accessKeyId":"({key_id}[^"]+?)""""
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
+      """"tags":\[({tags}.+"\})\]\}""",
       """exa_json_path=$.updatedAt,exa_field_name=time"""
       """exa_json_path=$.awsRegion,exa_field_name=region"""
       """exa_regex="ipAddressV4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
@@ -54,7 +57,8 @@ json-aws-guardduty-security-alert-template = {
       """exa_json_path=$.region,exa_field_name=region""",
       """exa_json_path=$.resource.accessKeyDetails.userType,exa_field_name=user_type"""
       """exa_json_path=$.readOnly,exa_field_name=readonly""",
-      """exa_regex="userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""",
+      """exa_regex="userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"[^\}]+?"userType":\s*"(?!AssumedRole)[^"]+"""",
+      """exa_regex="userType":\s*"(?!AssumedRole)[^"]+"[^\}]+?"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
       """exa_json_path=$.eventName,exa_field_name=event_name""",
       """exa_json_path=$.destinationServiceName,exa_field_name=app""",
       """exa_json_path=$.userAgent,exa_field_name=user_agent""",
@@ -71,6 +75,8 @@ json-aws-guardduty-security-alert-template = {
       """exa_json_path=$.service.action.kubernetesApiCallAction.remoteIpDetails.city.cityName,exa_field_name=location_city"""
       """exa_json_path=$.resource.instanceDetails.instanceId,exa_field_name=instance_id"""
       """exa_regex="accessKeyId":"({key_id}[^"]+?)""""
+      """dhost=({dest_host}[\w\-.]+)"""
+      """exa_json_path=$.resource.tags,exa_field_name=tags"""
     
 }
 ```

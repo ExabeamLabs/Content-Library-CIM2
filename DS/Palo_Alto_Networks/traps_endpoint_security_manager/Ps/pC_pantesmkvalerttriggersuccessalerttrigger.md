@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """\w+ \d\d \d\d:\d\d:\d\d ({host}[^\s]+)\s*Palo"""
-  """User: (({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
+  """User: (({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """eventID=({alert_name}[^\s]+) \w+="""
   """Module Name: ({alert_type}[^,]+),"""
   """sev=({alert_severity}\d+)"""

@@ -10,7 +10,7 @@ Name = symantec-dlp-kv-email-send-sender
     """Incident_Date:\_({time}\w+\s\d\d,\s\d\d\d\d\s\d{1,2}:\d{1,2}:\d{1,2}\s((?i)am|pm))"""
     """\s\d\d\s\d\d:\d\d:\d\d\s({host}[\w\.\-]+)\s""",
     """\sEmail_Blocked:\_({result}[^\s,]+)""",
-    """\sSender:\_({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """\sSender:\_({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\sRecipient:\_({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^:]*?)\sSubject:""",
     """Subject:\_(N\/A|({email_subject}[^\n]+?))\s*Attachment:""",
     """Policy_Violated:\_({alert_name}[^:]+?)(\s\-\s|\sSender:)""",

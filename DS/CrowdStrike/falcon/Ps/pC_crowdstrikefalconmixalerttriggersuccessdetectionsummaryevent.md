@@ -15,7 +15,7 @@ Fields = [
 """"ProcessStartTime":({time}\d{10})"""
 """({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)"""
 """"Tactic":"({category}[^"]+)""""
-""""UserName":"(N/A|({user}[\w\.\-]{1,40}\$?))(@({src_host}[^"]+))?""""
+""""UserName":"(N/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({src_host}[^"]+))?""""
 """"ComputerName":"({src_host}[^"]+)""""
 """\\*"DetectDescription\\*":\\*"({alert_name}[^"]+?)(\.\s+|")"""
 """"DetectName":"({alert_type}[^"]+)""""
@@ -23,8 +23,8 @@ Fields = [
 """"ExternalApiType":"({alert_type}[^"]+)""""
 """"DetectDescription":"({additional_info}[^"]+)""""
 """"PatternDispositionDescription":"({additional_info}[^"]+)""""
-""""Severity":({alert_severity}\d+)"""
-""""SeverityName":"({alert_severity}[^"]+?)""""
+""""Severity":\s*({alert_severity}\d+)"""
+""""SeverityName":\s*"({alert_severity}[^"]+?)""""
 """"FileName":"({file_name}[^"]+?)""""
 """"FilePath":"({file_path}[^"]+?)\\?""""
 """"CommandLine"+:"+\\*"*({process_command_line}[^,"]+?)\\*""""
@@ -66,7 +66,7 @@ Fields = [
 """exa_json_path=$.ProcessStartTime,exa_field_name=time""",
 """exa_regex=({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)""",
 """exa_json_path=$.Tactic,exa_field_name=category""",
-"""exa_json_path=$.UserName,exa_regex=({user}[\w\.\-]{1,40}\$?)(@({src_host}[^\"]+))?""",
+"""exa_json_path=$.UserName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({src_host}[^\"]+))?""",
 """exa_json_path=$.ComputerName,exa_field_name=src_host""",
 """exa_json_path=$.DetectDescription,exa_field_name=alert_name""",
 """exa_json_path=$.DetectName,exa_field_name=alert_type""",
@@ -75,7 +75,7 @@ Fields = [
 """exa_json_path=$.DetectDescription,exa_field_name=additional_info""",
 """exa_json_path=$.PatternDispositionDescription,exa_field_name=additional_info""",
 """exa_json_path=$.Technique,exa_field_name=alert_type""",
-"""exa_json_path=$.IOCValue,exa_regex=(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[a-zA-Z\.\-]+))""",
+"""exa_json_path=$.IOCValue,exa_regex=^(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[a-zA-Z\.\-]+))$""",
 """exa_json_path=$.DetectId,exa_field_name=alert_id""",
 """exa_json_path=$.Severity,exa_field_name=severity""",
 """exa_json_path=$.SeverityName,exa_field_name=alert_severity""",

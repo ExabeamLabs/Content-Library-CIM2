@@ -24,7 +24,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -56,7 +56,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -89,7 +89,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -120,7 +120,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -151,7 +151,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -182,7 +182,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -214,7 +214,7 @@ Fields = [
 """"(start_)?time":({time}\d{13})"""
 """collector_device_name":"({host}[^"]+)""""
 """"path":"({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))?))""""
-"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-]{1,40}\$?))""""
+"""user_name":"((?i)(LOCAL SERVICE|SYSTEM|NETWORK SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """user_domain":"(NT AUTHORITY|({domain}[^"]+))""""
 """"device_name":"({src_host}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
@@ -250,7 +250,7 @@ ParserVersion = "v1.0.0"
     """cs6=\[[^,]+,\s({time}\d\d\d\d-\d\d-\d\d,\s\d\d:\d\d:\d\d)""",
     """cs6=\[([^,]+,){3}\s({host}[^,]+)""",
     """\sdproc=(|({process_name}[^=]+?))\s+\w+=""",
-    """,\s(Unauthenticated User|-|({user}[\w\.\-]{1,40}\$?))(,\s[^,]+){2},\sOBSERVED""",
+    """,\s(Unauthenticated User|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,\s[^,]+){2},\sOBSERVED""",
     """,\s({action}OBSERVED),""".
     """,\sOBSERVED,\s(-|({category}[^,]+))""",
     """,\sOBSERVED(,\s([^,]+)),\s(-|({referrer}[^\s,]+))""",
@@ -266,6 +266,8 @@ ParserVersion = "v1.0.0"
     """,\sOBSERVED(,\s([^,]+)){12},\s(-|({user_agent}[^,]+))""",
     """,\sOBSERVED(,\s([^,]+)){13},\s(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),""",
     """,\sOBSERVED(,\s([^,]+)){25,26},\s(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?),"""
-  
+    """OBSERVED(,\s+[^,]+){25},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
+  ]
+  DupFields = ["result_code->http_response_code"
 }
 ```

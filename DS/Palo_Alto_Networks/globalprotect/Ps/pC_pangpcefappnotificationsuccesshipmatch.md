@@ -10,7 +10,7 @@ Name = pan-gp-cef-app-notification-success-hipmatch
     """\s({host}[\w\-.]+?)\sCEF:""",
     """\sdvchost=({host}[\w\-.]+)""",
     """\|rt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d\s\w{3})""",
-    """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s\w+=""",
+    """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+=""",
     """\sshost=({src_host}[\w\-.]+)\s""",
     """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+\w+=""",
     """\scat=({category}[^=]+)\s+\w+=""",

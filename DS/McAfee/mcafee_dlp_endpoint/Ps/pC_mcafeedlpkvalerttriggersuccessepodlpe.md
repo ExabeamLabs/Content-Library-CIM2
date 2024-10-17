@@ -13,7 +13,7 @@ Name = mcafee-dlp-kv-alert-trigger-success-epodlpe
         """\WeventId=({alert_id}\d+)""",
         """\Wcs1=({alert_type}.+?)\s*(\w+=|$)""",
         """\Wcat=({alert_name}.+?)\s*(\w+=|$)""",
-        """\Wsuser=(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s*(\w+=[^\/]|$)""",
+        """\Wsuser=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=[^\/]|$)""",
         """\Wsntdom=({domain}.+?)\s*(\w+=|$)""",
         """\Wfname=({file_name}[^,]+),\s*({target}.+?)\s*(\w+=|$)""",
         """\Wfsize=({bytes}\d+)\s*(\w+=|$)""",

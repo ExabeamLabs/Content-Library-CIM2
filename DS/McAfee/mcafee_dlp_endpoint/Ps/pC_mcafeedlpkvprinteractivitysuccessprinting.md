@@ -15,7 +15,7 @@ Name = mcafee-dlp-kv-printer-activity-success-printing
      """\sName ="*({host}[^"]+)""",
      """\sFileName ="*({object}[^"]+)""",
      """\sdestination="*({printer_name}[^"]+)""",
-     """\sUsername_NTLM="*(({domain}[^\\]+)\\*)?({user}[\w\.\-]{1,40}\$?)"""
+     """\sUsername_NTLM="*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

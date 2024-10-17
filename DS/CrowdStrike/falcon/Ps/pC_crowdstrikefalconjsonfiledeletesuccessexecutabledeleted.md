@@ -32,7 +32,7 @@ crowdstrike-auth-activity = {
     """"ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """"ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """"Size\\*"+:\\*"+({bytes}\d+)""",
-    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """"UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """"aid\\?":\\?"({aid}[^"]+?)\\?""""
     """"event_platform\\?":\\?"({os}[^"]+?)\\?""""
@@ -52,7 +52,7 @@ crowdstrike-auth-activity = {
     """exa_json_path=$.message,exa_regex="ConfigStateHash\\*"+:\\*"+({old_hash}[^\\"]+)""",
     """exa_json_path=$.message,exa_regex="ContextProcessId\\*"+:\\*"+({process_guid}[^\\"]+)""",
     """exa_json_path=$.message,exa_regex="Size\\*"+:\\*"+({bytes}\d+)""",
-    """exa_json_path=$.message,exa_regex="UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.message,exa_regex="UserName\\*"+:\\*"+((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"\\]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.message,exa_regex="FalconHostLink\\*"+:\s*\\*"+({falcon_host_link}[^"]+)"""
     """exa_json_path=$.message,exa_regex="aid\\?":\\?"({aid}[^"]+?)\\?""""
     """exa_json_path=$.message,exa_regex="event_platform\\?":\\?"({os}[^"]+?)\\?""""

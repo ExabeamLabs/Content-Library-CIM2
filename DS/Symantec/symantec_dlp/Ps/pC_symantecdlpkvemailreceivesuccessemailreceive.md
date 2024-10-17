@@ -15,15 +15,12 @@ Fields = [
   """^.*?, Last Name =(|({last_name}[^,]+?))(,|\})"""
   """^.*?, First Name =(|({first_name}[^,]+?))(,|\})"""
   """, attachment-name1=(|({email_attachment}[^,]+?))(,|\})"""
-  """, sender-email=(|(\w+:/+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(,|\})"""
+  """, sender-email=(|(\w+:/+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(,|\})"""
   """, monitor-host=(|({host}[^,]+?))(,|\})"""
   """, subject=(|({email_subject}[^,]+?))\s*(,|\})"""
   """, protocol=(|({protocol}[^,]+?))(,|\})"""
   """, recipient-email1=(|(\w+:/+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(,|\})"""
   """\+\d+;\w+;({email_attachments}[^;]+;([^;]*;){3}([^;]+;)*)"""
-]
-DupFields = [
-  "src_email_address->external_address"
 ]
 ParserVersion = "v1.0.0"
 

@@ -18,7 +18,7 @@ Name = mcafee-wg-cef-http-session-gateway
     """\WcategoryOutcome=\/?({action}[^\/]+?)\s*([\w\.]+=|$)""",
     """\Wdvc=({host}[^=]+?)\s*([\w\.]+=|$)""",
     """\Wapp=({protocol}[^=]+?)\s*([\w\.]+=|$)""",
-    """\Wsuser=(-|\([^\)]+\)|({user}[\w\.\-]{1,40}\$?))\s*([\w\.]+=|$)""",
+    """\Wsuser=(-|\([^\)]+\)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*([\w\.]+=|$)""",
     """\WfileType=({mime}[^=]+?)(\s+[\w\.]+=|\s*$)""",
     """\WrequestMethod=({method}[^=]+?)(\s+[\w\.]+=|\s*$)""",
     """\Wrequest=({url}(?:\w+:\/\/)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({web_domain}[a-zA-z0-9.\-_]+(\.[a-zA-Z]{2,})?)?)(:({dest_port}\d+))?({uri_path}\/.*?)?)(\s+[\w\.]+=|\s*$)""",

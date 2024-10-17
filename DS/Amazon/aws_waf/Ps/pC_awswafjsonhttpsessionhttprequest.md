@@ -19,7 +19,7 @@ Name = aws-waf-json-http-session-httprequest
     """"httpVersion":"({protocol}[^"]+)"""",
     """"httpMethod":"({method}[^"]+)"""",
     """"name":"accept","value":"({mime}[^"]+)"""",
-    """"AccountName":"({aws_user}({user}[\w\.\-]{1,40}\$?))"""",
+    """"AccountName":"({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"webaclId":"arn:aws:waf([^:]+:){2}({account_id}\d+):"""
     """"terminatingRuleId"+:"+({rule_id}[^"]+)"""",
     """"terminatingRuleType"+:"+({rule}[^"]+)""""

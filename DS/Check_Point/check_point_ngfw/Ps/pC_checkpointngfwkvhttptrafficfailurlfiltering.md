@@ -12,7 +12,7 @@ Name = checkpoint-ngfw-kv-http-traffic-fail-urlfiltering
     """(\d{2}:){2}\d{2}(\+|\-){1,2}\d{1,2}:\d{2}\s+({host}[A-Fa-f0-9.:]+)\s""",
     """ProductName ="({product_name}URL Filtering)"""",
     """protocol="({protocol}[^"]+)"""",
-    """user="({user}[\w\.\-]{1,40}\$?)"""",
+    """user="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """method="({method}[^"]+)""""
   ]
 

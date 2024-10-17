@@ -9,7 +9,7 @@ Name = cisco-se-cef-email-send-receive-esafriendlyfrom
   Conditions = [ """CEF""" , """|Cisco|""", """Email Security Virtual Appliance""", """ESA_CONSOLIDATED_LOG_EVENT""", """ESAFriendlyFrom""" ]
   Fields = [
     """({time}\w{3}\s+\d{1,2}\s+\d\d:\d\d:\d\d\s+\d\d\d\d)"""
-    """ESAFriendlyFrom=(({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?)@({domain}[^\s]+))""",
+    """ESAFriendlyFrom=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+))""",
     """ESAFriendlyFrom="({full_name}[^"\(\)]+[\s,]+[^"\(\)]+)"""
     """ESAReplyTo=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\s]*)\s+(\w+=|$)""",
     """msg='\s*(\\=\?[^']+|({email_subject}[^']+?))\s*'""",
@@ -22,7 +22,7 @@ Name = cisco-se-cef-email-send-receive-esafriendlyfrom
     """\s+ESAAttachmentDetails=\{\'(unknown|({email_attachment}[^']+))\'""",
     """ESAAttachmentDetails=({additional_info}[^"=]+?)\s*ESAFriendlyFrom=""",
     """ESAMsgSize=({bytes}\d+)\s"""
-    """ESAMFVerdict=({url_verdict}[\w\.\-]+)"""
+    """ESAMFVerdict=({result}[\w\.\-]+)"""
     """\Wact=({action}[^=]+?)\s*\w+="""
   ]
 

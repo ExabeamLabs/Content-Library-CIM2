@@ -10,7 +10,7 @@ Name = mcafee-wg-kv-http-session-authenticationmethod
   Fields = [
     """\Wdatetime="\[({time}[^\[\]]+)""",
     """({host}[\w\-\.]+)\s*mwg:""",
-    """\Wuser="({user}[\w\.\-]{1,40}\$?)""",
+    """\Wuser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\Wsrc="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wdest="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wstatus="({http_response_code}\d+)""",
@@ -20,7 +20,7 @@ Name = mcafee-wg-kv-http-session-authenticationmethod
     """\Wcategory="({category}[^"]+)""",
     """\Whttp_content_type="({mime}[^"]+)""",
     """\Whttp_user_agent="({user_agent}[^"]+)""",
-    """\Wvirus_names="(|({ransomware_name}[^"]+))""",
+    """\Wvirus_names="(|({malware_name}[^"]+))""",
     """\Waction="({action}[^"]+)""",
     """\Wblock_reason="({failure_reason}[^"]+)"""",
     """\Wreferrer="({referrer}[^"]+)""",

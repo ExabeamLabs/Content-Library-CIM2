@@ -15,7 +15,7 @@ Name = pan-ngfw-csv-http-session-9999
     """({host}[^\s]+)[\s\-]+\d+,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),[^,]*,THREAT,url,""",
     """:\d\d:\d\d\s+({host}[\w.-]+)\s""",
     """THREAT,url,\d+,(|({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,""",
-    """THREAT,url,\d+,[^,]*,([A-Fa-f0-9:.]+,){2,4}[^,]*,(|x-fwd-for: [^,]+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\,]+)\\+)?({user}[\w\.\-]{1,40}\$?)),(|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_domain}[^\\,]+)\\+)?({dest_user}[\w\.\-]{1,40}\$?)),""",
+    """THREAT,url,\d+,[^,]*,([A-Fa-f0-9:.]+,){2,4}[^,]*,(|x-fwd-for: [^,]+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),(|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_domain}[^\\,]+)\\+)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
     """THREAT,url,([^,]*,){19}(|({src_port}\d+)),(|({dest_port}\d+)),([^,]*,){3}(|({protocol}[^,]+)),(|({action}[^,]*)),""",
     """THREAT,url,.+?"+(?:\\|({url}(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({web_domain}[^\\\/\s:,"]+))(:({dest_port}\d+))?({uri_path}\/[^\?\s]*?)?(\/|({uri_query}\?[^\s]*?))?))\\?"*,(9999)?\(9999\),""",
     """\(9999\),([^,]*,){8}"?({mime}[^,"]+)""",
@@ -39,6 +39,7 @@ Name = pan-ngfw-csv-http-session-9999
     """THREAT,url,([^,]*,){26}(\\?"+)?(\w+:\/{2})?.*?\.?({top_domain}\w+\.(?i)(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ai|ms|mx|))[\/:]""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
     """(9999)?\(9999\),([^,]*?,){2}({direction}[^,]+?),"""
+    """({serial_num}\d+),THREAT,url,"""
    ]
  
 

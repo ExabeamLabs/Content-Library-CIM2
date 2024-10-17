@@ -36,8 +36,7 @@ checkpoint-network-alert = {
     """\Wrule_name:"({rule}[^"]+)""",
     """\Wrule_uid:"\{({rule_id}[^"\}]+)""",
     """\Wsmartdefense_profile:"({smartdefense_profile}[^"]+)""",
-    """\Wuser:"({user}[\w\.\-]{1,40}\$?)\s*"""",
-    """ifdir:"+({direction}[^"]+)""",
+    """\Wuser:"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """originsicname:"+({user_ou}[^"]+)"""
   ]
   DupFields = [ "attack->alert_subject" 

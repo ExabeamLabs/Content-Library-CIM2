@@ -15,9 +15,9 @@ Name = vmware-esxi-mix-app-activity-sub
     """ViewManager\s+[^\s]+\s+({additional_info}[^\s]+)""",
     """({additional_info}(POST|CONNECT|BEGIN|GET|PUT|DELETE|HEAD|PATCH|OPTIONS) [^\s]+)""",
     """Originator@6876[^\]]+\]\s*({additional_info}[^\}\}]+?)\s*$"""
-    """GetUserInfoInternal\s*\(?(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))\s*,\s\w+\)"""
-    """subject=\{Name:\s*(({user}[\w\.\-]{1,40}\$?);)?.+?\sDomain:({domain}[^\},]+)"""
-    """Auth\]: User\s*(({domain}[^\\]+)[\\]+({user}[\w\.\-]{1,40}\$?))\s*""""
+    """GetUserInfoInternal\s*\(?(({domain}[^\\]+)[\\]+({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*,\s\w+\)"""
+    """subject=\{Name:\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?);)?.+?\sDomain:({domain}[^\},]+)"""
+    """Auth\]: User\s*(({domain}[^\\]+)[\\]+({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""""
   ]
 
 

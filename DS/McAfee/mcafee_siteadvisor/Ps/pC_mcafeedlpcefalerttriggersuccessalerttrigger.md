@@ -14,7 +14,7 @@ Name = mcafee-dlp-cef-alert-trigger-success-alerttrigger
     """\Wseverity=({alert_severity}\d+)""",
     """\Wact=(|({result}.+?))(\s+\w+=|\s*$)""",
     """\Wrt=({time}\d{13})(\s+\w+=|\s*$)""",
-    """\Wsuid=(|(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
+    """\Wsuid=(|(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\Wsntdom=(|({domain}.+?))(\s+\w+=|\s*$)""",
     """\Wrequest=(|({malware_url}.+?))(\s+\w+=|\s*$)""",
     """\Wdvc=(|({host}.+?))(\s+\w+=|\s*$)""",

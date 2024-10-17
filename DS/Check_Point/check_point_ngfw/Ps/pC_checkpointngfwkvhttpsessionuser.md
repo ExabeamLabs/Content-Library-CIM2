@@ -12,7 +12,7 @@ Name = checkpoint-ngfw-kv-http-session-user
     """service:\s+(?:-|({dest_port}\d+));""",
     """src:\s+(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """s_port:\s+(?:-|({src_port}\d+));""",
-    """user:.+?\(({user}[\w\.\-]{1,40}\$?)\)\s+;web_client_type:""",
+    """user:.+?\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\)\s+;web_client_type:""",
     """({action}[^\s]+)\s+[^\s]+ product: """,
     """sent_bytes:\s+(?:-|({bytes_out}\d+));""",
     """received_bytes:\s+(?:-|({bytes_in}\d+))""",

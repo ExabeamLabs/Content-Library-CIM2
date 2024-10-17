@@ -20,11 +20,11 @@ Name = cisco-fp-kv-alert-trigger-success-sinkhole
     """\WRevision:\s*({revision}[^,]+)\s*(,|$)""",
     """\WPolicy:\s*({policy_name}[^,]+)\s*(,|$)"""
     """\WAccessControlRuleAction:\s*({result}[^,]+)""",
-    """\WUserName:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """\WUserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """InitiatorBytes:\s*({bytes_in}\d+)""",
     """\WResponderBytes:\s*({bytes_out}\d+)""",
     """NAPPolicy:\s*({nap_policy}[^,]+)""",
-    """\sDNSQuery:\s*({query}[^,]+)""",
+    """\sDNSQuery:\s*({dns_query}[^,]+)""",
     """\WDNSResponseType:\s*({response_type}[^,]+)""",
     """\sDNSRecordType:\s*({dns_query_type}[^,]+)""",
     """URLCategory:\s*({category}[^,]+)""",

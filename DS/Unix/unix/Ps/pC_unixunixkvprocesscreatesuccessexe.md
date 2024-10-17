@@ -16,7 +16,7 @@ Name = unix-unix-kv-process-create-success-exe
     """\suid=({user_id}.+?)\s+(\w+=|$)""",
     """\stype=({operation_type}.+?)\s+(\w+=|$)""",
     """\w+\s*\d{1,2} \d\d:\d\d:\d\d\s+({host}[\w\-.]+)""",
-    """({host}[\w.\-]+)\s+audispd:""",
+    """({host}[\w\-.]+)\s*(vcsa-audit|audispd:)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w\-.]+)""",
     """msg=audit\(({time}\d{10})""",
     """\sppid=({parent_process_id}[^=]+?)\s+(\w+=|$)""",

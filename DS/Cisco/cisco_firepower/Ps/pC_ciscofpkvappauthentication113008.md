@@ -16,7 +16,7 @@ Name = cisco-fp-kv-app-authentication-113008
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)"""
     """-113008:\s+({event_name}AAA transaction status ACCEPT)"""
-    """ user\s*=?\s*(({domain}[^\s\/\\]+)[\\\/])?({user}[\w\.\-]{1,40}\$?)(?:@({=domain}[^\s]+))?"""
+    """ user\s*=?\s*(({domain}[^\s\/\\]+)[\\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({=domain}[^\s]+))?"""
   ]
 
 

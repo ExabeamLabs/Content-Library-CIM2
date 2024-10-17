@@ -15,7 +15,7 @@ Fields = [
 """globalprotect(gateway|portal)-\S+?,({host}[^,]+),"""
 """:\d\d:\d\d\s+({host}[^\s]+)"""
 """Private IP:\s?({src_translated_ip}[^,\s]+)"""
-"""User name:\s+(({domain}[^,"\\\/]+)[\\\/]+)?(({email_address}[^,]+@({email_domain}[^,]+))|({user}[\w\.\-]{1,40}\$?)),"""
+"""User name:\s+(({domain}[^,"\\\/]+)[\\\/]+)?(({email_address}[^,]+@({email_domain}[^,]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
 """Client OS( version)?:\s+({os}[^":]+)(,|\.)"""
 """SYSTEM,({vpn_client}[^,]+),"""
 """Source region:\s*({src_country}[^,]+)"""

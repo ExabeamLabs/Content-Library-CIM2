@@ -22,7 +22,7 @@ Fields = [
   """\smsg=({alert_name}.+?)\s+\w+="""
   """CEF:([^|]+?\|){6}({alert_severity}[^|]+)"""
   """CEF:([^|]+?\|){5}({alert_type}[^|]+)"""
-  """\ssuser=(?:<>|<?({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+?))>?)\s+\w+="""
+  """\ssuser=(?:<>|<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+?))>?)\s+\w+="""
   """\sduser=(?:<>|({recipients_unfixed}.+?))\s+\w+="""
   """\sduser=({email_recipients}<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+?))>?(,[^=]*)?)\s+\w+="""
   """\sapp=({protocol}.+?)\s+\w+="""
@@ -36,9 +36,6 @@ Fields = [
   """\sfsize=({bytes}\d+)"""
   """\scn3=({num_recipients}\d+)"""
   """\sfilePath=(({file_path}[^\s]+\\)?({file_name}[^\s]+\.({file_ext}[^\s]+)))"""
-]
-DupFields = [
-  "orig_user->src_email_address"
 ]
 ParserVersion = "v1.0.0"
 

@@ -17,7 +17,7 @@ Name = symantec-dlp-kv-alert-trigger-success-dlpalert
       """\sFile Name:\s+(?:N\/A|({file_name}[^:]+?))\s*Machine IP:""",
       """\WSeverity:\s+({alert_severity}[^\s]+)""",
       """\sIncident ID:\s+({alert_id}\d+)""",
-      """\sEndpoint Username:\s+(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)""",
+      """\sEndpoint Username:\s+(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """({alert_type}DLP ALERT)""",
     ]
     ParserVersion = "v1.0.0"

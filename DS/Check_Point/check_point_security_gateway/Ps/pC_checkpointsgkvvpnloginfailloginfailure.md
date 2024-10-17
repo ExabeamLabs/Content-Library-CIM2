@@ -8,7 +8,7 @@ Name = checkpoint-sg-kv-vpn-login-fail-loginfailure
   TimeFormat = ["ddMMMyyyy HH:mm:ss","ddMMMyyyy  H:mm:ss"]
   Conditions = [ """,cvpn_category=Session,""", """,product=Connectra,""", """,status=Failure,""", """,event_type=Login,""" ]
   Fields = [
-    """\,(U|u)ser=({user}[\w\.\-]{1,40}\$?)""",
+    """\,(U|u)ser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\,user_dn=({user_ou}[^\,]+)""",
     """\s+time=({time}\d+\w+\s+\d+:\d+:\d+)""",
     """\,reason=({failure_reason}[^\,]+\S)\s*\,""",

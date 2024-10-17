@@ -14,7 +14,7 @@ Fields = [
 """LEEF:([^\|]*\|){4}({alert_name}[^\|]+)"""
 """({host}[\w\-.]+)\s*LEEF:"""
 """\Wsev=({alert_severity}\d+)"""
-"""\WusrName =(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""\WusrName =(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\WsrcHostName =(({domain}[^\\]+)\\+)?({src_host}[\w\-.]+)"""
 """\WdstHostName =({dest_host}[\w\-.]+)"""

@@ -12,8 +12,8 @@ Name = cisco-asa-str-app-authentication-113008
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)\s*\S*\s*:\s*%ASA\-({priority}\d+)\-({event_code}\d+)""",
     """-113008:\s+({event_name}AAA transaction status ACCEPT)""",
-    """user\s*=\s*({user}[\w\.\-]{1,40}\$?)(@({domain}[^@,\s:]+))?""",
-    """user\s*=\s*(({email_address}[^\@"]+\@[^"|\s]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """user\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@,\s:]+))?""",
+    """user\s*=\s*(({email_address}[^\@"]+\@[^"|\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-"""
   ]
 

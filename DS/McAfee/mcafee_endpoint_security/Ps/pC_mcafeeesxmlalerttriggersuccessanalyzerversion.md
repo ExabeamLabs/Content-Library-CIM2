@@ -13,10 +13,10 @@ Name = "mcafee-es-xml-alert-trigger-success-analyzerversion"
         """<TargetHostName>({src_host}[^<]+)""",
         """<MachineName>({src_host}[^<]+)""",
         """<IPAddress>(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
-        """<SourceUserName>((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?((?i)system|({user}[\w\.\-]{1,40}\$?))<\/SourceUserName>""",
+        """<SourceUserName>((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/SourceUserName>""",
        """<DomainName>({domain}[^<]+)""",
-       """<UserName>(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((|NT AUTHORITY|NT-AUTORITÄT|AUTORIDADE NT|({domain}[^\\\s]+))\\+)?(|SYSTEM|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$))<\/UserName>"""
-       """<TargetUserName>((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?((?i)SYSTEM|({user}[\w\.\-]{1,40}\$?))<\/TargetUserName>""",
+       """<UserName>(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((|NT AUTHORITY|NT-AUTORITÄT|AUTORIDADE NT|({domain}[^\\\s]+))\\+)?(|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$))<\/UserName>"""
+       """<TargetUserName>((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/TargetUserName>""",
        """<ThreatCategory>({threat_category}[^<]+)""",
        """<ThreatEventID>({event_code}[^<]+)""",
        """<ThreatSeverity>({alert_severity}[^<]+)""",

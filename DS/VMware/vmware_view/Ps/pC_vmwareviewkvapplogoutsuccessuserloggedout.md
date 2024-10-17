@@ -10,7 +10,7 @@ Name = vmware-view-kv-app-logout-success-userloggedout
   Fields = [
     """\s+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """\s+({dest_host}[^\s]+)\s+View - """,
-    """UserDisplayName ="(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """UserDisplayName ="(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """EventType="({event_category}[^"]+)""",
     """Severity="({result}[^"]+)""",
   ]

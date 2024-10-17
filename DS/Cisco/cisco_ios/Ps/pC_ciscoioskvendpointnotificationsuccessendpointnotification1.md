@@ -9,7 +9,7 @@ Name = cisco-ios-kv-endpoint-notification-success-endpointnotification-1
   ParserVersion = "v1.0.0"
   Fields = [
     """({time}\w{3}\s\d\d\s(\d\d\d\d\s)?\d\d:\d\d:\d\d(\.\d\d\d)?)"""
-    """Username entry \(((host\/({src_host}[\w.-]+))|({email_address}[^@]+@[^)]+)|({user_id}\d+)|({user}[\w\.\-]{1,40}\$?))\)\s""",
+    """Username entry \(((host\/({src_host}[\w.-]+))|({email_address}[^@]+@[^)]+)|({user_id}\d+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)\s""",
     """for device with MAC:\s*({src_mac}[\S]+)""",
     """%({event_name}CLIENT_ORCH_LOG-6-CLIENT_ADDED_TO_RUN_STATE):"""
   ]

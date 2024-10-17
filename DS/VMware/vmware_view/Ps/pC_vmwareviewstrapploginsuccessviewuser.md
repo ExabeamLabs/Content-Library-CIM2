@@ -9,7 +9,7 @@ Name = vmware-view-str-app-login-success-viewuser
   Conditions = [ """View User""", """ has logged in""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+View User""",
-    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """({app}View)"""
    ]
 ParserVersion = "v1.0.0"

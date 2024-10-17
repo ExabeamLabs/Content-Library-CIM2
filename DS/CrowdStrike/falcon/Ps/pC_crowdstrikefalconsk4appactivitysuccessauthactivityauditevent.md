@@ -4,9 +4,10 @@
 Name = crowdstrike-falcon-sk4-app-activity-success-authactivityauditevent
   Vendor = CrowdStrike
   Product = Falcon
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss"]
   Conditions = [ """"eventType":""", """"OperationName":""", """AuthActivityAuditEvent""" ]
   Fields = [
+    """"received_time":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
     """"eventCreationTime":\s*({time}\d{10})""",
     """"timestamp":"({time}\d{10})"""",
     """"UTCTimestamp":({time}\d{10})""",
@@ -15,6 +16,11 @@ Name = crowdstrike-falcon-sk4-app-activity-success-authactivityauditevent
     """"ServiceName":\s*"({app}[^"]+)""",
     """"Success":\s*({result}[^",}]+)"""
     """"OperationName":"({event_name}[^"]+)""""
+    """"user_agent":"({user_agent}[^"]+)""""
+    """"request_path":"({uri_path}[^"]+)""""
+    """"status_code":"({http_response_code}\d+)""""
+    """"request_query":"({uri_query}[^"]+)""""
+    """"request_method":"({method}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -19,7 +19,7 @@ Fields = [
   """"destPort":"({dest_port}\d+)""""
   """"sourcePort":"({src_port}\d+)""""
   """"deviceName":"(({domain}[^\\\s\"]+)\\+)?({src_host}[^\\\s"]+)""""
-  """"email":"(({domain}[^\\\s\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)""""
+  """"email":"(({domain}[^\\\s\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"eventType":"({alert_name}[^"]+)""""
   """"threatIndicators":\[?\"({alert_type}[^\s\"]+)""""
   """"applicationPath":"({process_path}(({process_dir}[^\"=,]+?)[\\\/]+)?({process_name}[^\\\"\/]+))""""

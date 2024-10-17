@@ -18,7 +18,7 @@ Name = vmware-carbonblack-leef-alert-trigger-success-activethreat
     """\sincidentId=({alert_id}[^\s]+)""",
     """\sapplicationName =({process_name}.+?)\s+indicatorName =""",
     """\|CarbonBlack\|CbDefense\|(.*?)\|({alert_name}.*?)\|""",
-    """\semail=(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+    """\semail=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   SOAR {
     IncidentType = "malware"

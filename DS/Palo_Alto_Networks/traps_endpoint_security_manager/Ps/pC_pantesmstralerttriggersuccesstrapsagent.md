@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """\d+\s+\d{4}\-\d+\-\d+T\d+:\d+:\d+\.\d+Z(\-|\+)\d+:\d+\s+({host}(\d{1,3}\.){3}\d{1,3})"""
   """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d),Traps Agent,"""
-  """,Traps Agent,([^,]*,){2}(?:-|({alert_name}[^,]+)),(?:-|({src_host}[^,]+)),(({domain}[^\\]+)\\)?(?:-|({user}[\w\.\-]{1,40}\$?)),(|({additional_info}.+?))\s*Prevention Key:"""
+  """,Traps Agent,([^,]*,){2}(?:-|({alert_name}[^,]+)),(?:-|({src_host}[^,]+)),(({domain}[^\\]+)\\)?(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),(|({additional_info}.+?))\s*Prevention Key:"""
   """Prevention Key:\s*({alert_id}[^,\s]+),(?:-|({alert_severity}\d+)),(?:-|({alert_type}[^,]+)),(?:-|({malware_url}[^,]+)),([^,]*,){2}(?:-|({dest_ip}(\d{1,3}\.){3}\d{1,3}))"""
   """Parent process:\s*({process_name}[^\.]+)""",
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""

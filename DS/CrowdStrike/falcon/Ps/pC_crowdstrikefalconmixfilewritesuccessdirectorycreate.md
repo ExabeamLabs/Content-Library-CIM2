@@ -18,7 +18,7 @@ Fields = [
 """\"TargetFileName\":\s*\"({file_path}[^\"]+)"""
 """"TargetFileName":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?\s*({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\._\]\s]+)))?))"""",
 """({file_type}Directory)"""
-"""suser=(system|({user}[\w\.\-]{1,40}\$?))"""
+"""suser=(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """src-account-name\":\"({account_name}[^\"]+)""",
 """"aip":\s*"({aip}[^"]+)"""",
 """"cid":"({cid}[^"]+)"""
@@ -29,7 +29,7 @@ Fields = [
 """exa_regex="TargetFileName\":\s*\"({file_path}[^\"]+)"""
 """exa_regex="TargetFileName":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?\s*({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\._\]\s]+)))?))"""",
 """exa_regex=({file_type}Directory)"""
-"""exa_regex="suser=(system|({user}[\w\.\-]{1,40}\$?))"""
+"""exa_regex="suser=(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """exa_json_path=$.src-account-name,exa_field_name=account_name"""
 """exa_json_path=$.aip,exa_field_name=aip"""
 """exa_json_path=$.cid,exa_field_name=cid"""

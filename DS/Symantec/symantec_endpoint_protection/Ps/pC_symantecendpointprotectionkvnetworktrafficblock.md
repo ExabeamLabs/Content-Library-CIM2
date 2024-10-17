@@ -24,7 +24,7 @@ Fields = [
   """\WApplication:\s*({process_path}({process_dir}[^",]+?)?([\\\/]+({process_name}[^\\\/,"]+)))\s*,"""
   """\WRule:\s*({event_name}[^,]+)"""
   """\WAction:\s*({action}[^,]+?)"*\s*$"""
-  """\WUser:\s*(none|({user}[\w\.\-]{1,40}\$?)),Domain:\s*(|({domain}[^,]+?))\s*,"""
+  """\WUser:\s*(none|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),Domain:\s*(|({domain}[^,]+?))\s*,"""
 ]
 ParserVersion = "v1.0.0"
 

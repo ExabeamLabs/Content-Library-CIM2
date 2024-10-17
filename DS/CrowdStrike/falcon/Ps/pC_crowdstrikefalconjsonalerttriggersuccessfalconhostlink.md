@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """exa_json_path=$.ProcessStartTime,exa_field_name=time""",
-"""exa_json_path=$.UserName,exa_regex=({user}[\w\.\-]{1,40}\$?)(@({src_host}[^\"]+))?""",
+"""exa_json_path=$.UserName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({src_host}[^\"]+))?""",
 """exa_json_path=$.ComputerName,exa_field_name=src_host""",
 """exa_json_path=$.DetectDescription,exa_field_name=alert_name""",
 """exa_json_path=$.DetectName,exa_field_name=alert_name""",

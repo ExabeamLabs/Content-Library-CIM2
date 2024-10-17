@@ -11,7 +11,7 @@ Conditions = [
 """|status=Failure|"""
 ]
 Fields = [
-"""\|(U|u)ser=({first_name}[^,@\|]+),\s*({last_name}[^@\|]+)@({domain}[^\s\|]+)\s*\(({user}[\w\.\-]{1,40}\$?)\)\s*(\||$)"""
+"""\|(U|u)ser=({first_name}[^,@\|]+),\s*({last_name}[^@\|]+)@({domain}[^\s\|]+)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\)\s*(\||$)"""
 """\|user_dn=({user_ou}[^\|]+)\|"""
 """\|user_group=({realm}[^\|]+)"""
 """\|time=({time}\d+\w+\d\d\d\d \d+:\d+:\d+)"""

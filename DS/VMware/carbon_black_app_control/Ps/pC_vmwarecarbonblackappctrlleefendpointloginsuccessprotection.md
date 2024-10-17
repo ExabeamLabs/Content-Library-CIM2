@@ -13,7 +13,7 @@ Name = vmware-carbonblackappctrl-leef-endpoint-login-success-protection
     """\WsrcHostName =(({domain}[^\\\s]+)\\+)?({src_host}[\w\-.]+)""",
     """\WdstHostName =({dest_host}[\w\-.]+)""",
     """\WEvent\[({event_code}\d+)\]\s*Type\[""",
-    """\WUser\[(({domain}[^\\\s\]]+)\\+)?(|({user}[\w\.\-]{1,40}\$?))\]""",
+    """\WUser\[(({domain}[^\\\s\]]+)\\+)?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\]""",
   ]
   ParserVersion = "v1.0.0"
 

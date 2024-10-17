@@ -15,10 +15,10 @@ Fields = [
 """\stext="({operation_details}[^"]+)""""
 """\ssubtype="({event_code}[^"]+)""""
 """\shostname="(({domain}[^"\\]+)\\)?({dest_host}[^"\\]+)""""
-"""\susername="(({domain}[^"\\]+)\\)?({user}[\w\.\-]{1,40}\$?)""""
+"""\susername="(({domain}[^"\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """\sip_address="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sprocess="({process_path}(({process_dir}[^"]+?)\\)?({process_name}[^"\\]+?))""""
-"""Device '({device_type}[^'(]+?)\s*\("""
+"""Device '({device_class}[^'(]+?)\s*\("""
 """\(S\/N:\s*({device_id}[^)]+)\)"""
 ]
 ParserVersion = "v1.0.0"

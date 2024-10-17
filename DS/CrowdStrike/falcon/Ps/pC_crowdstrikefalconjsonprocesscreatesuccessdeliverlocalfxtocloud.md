@@ -13,12 +13,13 @@ crowdstrike-process-info-1 = {
   Fields = [
     """"timestamp":\s*"({time}\d{10,13})""",
     """"ContextProcessId":\s*"({process_id}[^"]+)""",
+    """"ContextBaseFileName":"({file_name}[^"]+)""""
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)""",
+    """"name":\s*"({event_name}[^"]+)""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
     """"event_simpleName":\s*"({event_name}[^"]+)""",
-    """"name":\s*"({process_name}[^"]+)""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))"""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",
     """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
@@ -40,7 +41,7 @@ crowdstrike-process-info-1 = {
     """exa_json_path=$.event_simpleName,exa_field_name=event_name""",
     """exa_json_path=$.name,exa_field_name=process_name""",
     """exa_json_path=$.UserSid,exa_field_name=user_sid""",
-    """exa_json_path=$.UserName,exa_regex=(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.UserName,exa_regex=(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_regex=rc-account-name":"({account_name}[^"]+)""",
     """exa_json_path=$.CommandLine,exa_field_name=process_command_line""",
     """exa_regex="RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
@@ -58,6 +59,7 @@ crowdstrike-process-info-1 = {
     """exa_json_path=$.TargetProcessId,exa_field_name=process_id""",
     """exa_regex="(ImageFileName|TargetFileName)\\*"+:\\*"+(({file_path}[^"]+?))\\*"""",
     """exa_regex="(ImageFileName|TargetFileName)\\*"+:\\*"+({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
+    """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
   ]
   DupFields = ["event_name->event_code"
 }

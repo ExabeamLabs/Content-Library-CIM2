@@ -19,7 +19,7 @@ Fields = [
   """\sSrcPort:\s*({src_port}\d+)"""
   """\sDstPort:\s*({dest_port}\d+)"""
   """\sProtocol:\s*({protocol}[^,]+?)(,|\s*$)"""
-  """\sUser:\s*(Unknown|No Authentication Required|({user}[\w\.\-]{1,40}\$?))(,|\s*$)"""
+  """\sUser:\s*(Unknown|No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,|\s*$)"""
   """\sIngressInterface:\s*({ingress_interface}[^,]+?)(,|\s*$)"""
   """\sEgressInterface:\s*({egress_interface}[^,]+?)(,|\s*$)"""
   """\sClassification:\s*({alert_type}[^,]+?)(,|\s*$)"""

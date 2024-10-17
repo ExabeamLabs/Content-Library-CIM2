@@ -7,7 +7,7 @@ Vendor: Egnyte
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  74   |   38   |         7          |       6        |    1    |
+|  74   |   38   |         7          |       6        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

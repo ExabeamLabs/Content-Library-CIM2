@@ -14,7 +14,7 @@ Name = unix-unix-cef-app-activity-sendmail
       """CEF:([^\|]*\|){4}({additional_info}[^\|]+)""",
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wduser=({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s]+))?""",
+      """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?""",
       """\Wduid=({email_address}[^\s]+)""",
    ]
  

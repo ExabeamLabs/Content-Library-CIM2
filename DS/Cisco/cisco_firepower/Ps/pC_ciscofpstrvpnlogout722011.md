@@ -12,7 +12,7 @@ Name = cisco-fp-str-vpn-logout-722011
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
     """Group\s*<({group_name}[^>]+)""",
-    """User\s*<({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^>]+))?>""",
+    """User\s*<({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^>]+))?>""",
     """IP <({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>"""
     ]
 

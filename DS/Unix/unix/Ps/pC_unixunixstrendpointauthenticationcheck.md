@@ -11,7 +11,7 @@ Name = unix-unix-str-endpoint-authentication-check
     """({time}\w+\s\d+\s\d\d:\d\d:\d\d)?\s*(::ffff:)?({host}\S+)? sshd\["""
     """>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """\d\d\s({host}[\w\-\.]+)(\s\w+)?\s*sshd\[""",
-    """check pass; user (unknown|({user}[\w\.\-]{1,40}\$?))""",
+    """check pass; user (unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   ]
 
 

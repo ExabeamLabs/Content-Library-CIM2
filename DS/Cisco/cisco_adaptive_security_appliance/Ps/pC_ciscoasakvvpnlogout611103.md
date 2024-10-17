@@ -15,7 +15,7 @@ Name = cisco-asa-kv-vpn-logout-611103
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)\s*(({host}[\w.\-]+))?\s*:\s*%ASA\-({priority}\d+)\-({event_code}\d+)"""
     """-611103:\s*({event_name}User logged out)"""
-    """Uname:\s*({user}[\w\.\-]{1,40}\$?)"""
+    """Uname:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-"""
     ]
 

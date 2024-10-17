@@ -8,7 +8,7 @@ Name = cisco-duo-csv-app-login-fail-failure
     TimeFormat = "epoch_sec"
     Conditions = [ ""","FAILURE",""""]
     Fields = [
-      """FAILURE","({user}[\w\.\-]{1,40}\$?)"""",
+      """FAILURE","({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"({failure_reason}[^"]+)","FAILURE",""",
       """"\d{10}",(("[^"]+")?,)"(?:n\/a|({auth_method}[^"]+))"""",
       """"\d{10}",(("[^"]+")?,){2}"({app}[^"]+)"""",

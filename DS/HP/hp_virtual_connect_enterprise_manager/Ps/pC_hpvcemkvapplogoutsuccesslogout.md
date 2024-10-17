@@ -9,7 +9,7 @@ Name = hp-vcem-kv-app-logout-success-logout
   Conditions = [ """vcmd:""", """VCM user logout :""" ]
   Fields = [
      """\d\d:\d\d:\d\d\s({host}\S+)\svcmd:""",
-     """VCM user logout : ({auth_type}\w+)\s({domain}[^\\]+)\\({user}[\w\.\-]{1,40}\$?)@({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """VCM user logout : ({auth_type}\w+)\s({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """({event_name}user logout)""",
      """({app}VCM)"""
   ]

@@ -13,7 +13,7 @@ carbonblack-edr {
    TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
     Fields = [
     """"+process_cmdline"+:"+\s*({process_command_line}[^"]+?)\s*"+,""",
-    """"+process_username"+:"+((NT AUTHORITY|({domain}[^\\,]+))\\\\)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+""",
+    """"+process_username"+:"+((NT AUTHORITY|({domain}[^\\,]+))\\\\)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+sensor_action"+:"+({result}[^"]+)"+""",
@@ -30,7 +30,7 @@ carbonblack-edr {
     """"device_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """"+device_os"+:"+({os}[^"]+)"+"""
     """exa_json_path=$.process_cmdline,exa_field_name=process_command_line"""
-    """exa_json_path=$.process_username,exa_regex=((NT AUTHORITY|({domain}[^\\,]+?))\\)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$.process_username,exa_regex=((NT AUTHORITY|({domain}[^\\,]+?))\\)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.process_pid,exa_field_name=process_id"""
     """exa_json_path=$.device_name,exa_regex=(\w+\\+)?({host}[^."]+)"""
     """exa_json_path=$.sensor_action,exa_field_name=result"""

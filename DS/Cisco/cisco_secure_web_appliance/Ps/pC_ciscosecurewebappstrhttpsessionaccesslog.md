@@ -11,7 +11,7 @@ Conditions = [
 Fields = [
 """accesslog_syslog:\s\S+\s({time}\d{10})\.\d{3}\s\S+\s({src_ip}[\d.:a-fA-F]+)\s((-|(?i)NONE|({proxy_action}[^\s\/]+?))(\/(-|({http_response_code}\d+)))?)\s\d+\s(-|({method}[^\s]+))"""
 """accesslog_syslog:(\s\S+){7}\s(-|({url}(({protocol}[^:]+):\/+)?[^\s:\/]+(:({dest_port}\d+))?\/(?:-|({uri_path}[^?\s]+))?({uri_query}\?[^\s]+)?))"""
-"""accesslog_syslog:(\s\S+){8}\s"*(-|(({domain}[^\\]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"""
+"""accesslog_syslog:(\s\S+){8}\s"*(-|(({domain}[^\\]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """accesslog_syslog:(\s\S+){7}\s(\w+:\/+)?({web_domain}(?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|[^\s\/:]+))"""
 """accesslog_syslog:(\s\S+){11}\s(-|({action}[^\s-]+))"""
 """accesslog_syslog:(\s\S+){10}\s(["-]+|({mime}[^\s]+))"""

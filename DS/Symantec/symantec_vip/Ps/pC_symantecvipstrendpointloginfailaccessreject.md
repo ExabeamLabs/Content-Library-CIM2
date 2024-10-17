@@ -10,7 +10,7 @@ Conditions = [
 ]
 Fields = [
 """INFO.*?({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d\d\d \w+)(\+|\-)\d+\s*\"\s+\S+\s+({service_name}[^\":]+)"""
-"""for user \[({user}[\w\.\-]{1,40}\$?)"""
+"""for user \[({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """reason=[^;]*;\s*({failure_reason}[^\"]*)"""
 ]
 ParserVersion = "v1.0.0"

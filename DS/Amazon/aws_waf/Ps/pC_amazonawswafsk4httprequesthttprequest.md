@@ -38,7 +38,6 @@ aws-web-activity-event = {
       """exa_json_path=$.httpRequest.headers[*].value,exa_field_name=user_agent,exa_match_expr=Contains(toLower($.httpRequest.headers[*].name),"referer")"""
       """exa_json_path=$.httpRequest.headers[*].value,exa_field_name=user_agent,exa_match_expr=Contains(toLower($.httpRequest.headers[*].name),"user-agent")"""
       """exa_json_path=$.account,exa_field_name=aws_account""",
-
 # http_source_id is removed
     
 }

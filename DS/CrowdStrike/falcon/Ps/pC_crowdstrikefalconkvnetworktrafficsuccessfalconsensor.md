@@ -7,7 +7,7 @@ Name = crowdstrike-falcon-kv-network-traffic-success-falconsensor
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """CrowdStrike""" ,"""SslConnect: """, """falcon-sensor""" ]
   Fields = [
-    """\d\d:\d\d\s({host}[\w\-\.]+)\s({log_source}[^\[]+)(\[\d+\]):\sCrowdStrike[^"]*SslConnect:\s({dest_host}[\w\-\.]+)"""
+    """\d\d:\d\d\s({host}[\w\-\.]+)\s({log_source}[^\[]+)(\[\d+\]):(([^:]+):)?\sCrowdStrike[^"]*SslConnect:(\s({dest_host}[\w\-\.]+):({dest_port}\d+))?\s*(({additional_info}[^"]+?)$)?"""
   ]
   ParserVersion = "v1.0.0"
 

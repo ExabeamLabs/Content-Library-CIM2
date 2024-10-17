@@ -10,8 +10,8 @@ Name = "exabeam-search-kv-alert-trigger-success-rulealerts"
       """({time}\d\d\d\d.\d\d.\d\d.\d\d.\d\d.\d\d)"""
       """(?:\W|")exa_rawEventTime(:|=)"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
       """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s({host}[^\s]+)\sExabeam\s""",
-      """query_key_value:\s+({user}[\w\.\-]{1,40}\$?)\s+\|""",
-      """(?:\W|")user"*(:|=)\\?"*\s*({user}[\w\.\-]{1,40}\$?)\s*(?:\||\\?")""",
+      """query_key_value:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\|""",
+      """(?:\W|")user"*(:|=)\\?"*\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(?:\||\\?")""",
       """(?:\W|")host"*(:|=)\\?"*\s*({host}[^"|]+?)\s*(?:\||\\?")""",
       """(?:\W|")compare_key_value"*(:|=)"*\s*({additional_info}[^"|]+?)\s*(?:\||")""",
       """(?:\W|")cardinality_field_value"*(:|=)"*\s*({additional_info}[^"|]+?)\s*(?:\||")""",

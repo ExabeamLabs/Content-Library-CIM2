@@ -15,7 +15,7 @@ symantec-dlp-alert = {
         """\|\sseverity=\s*"({alert_severity}[^"]+)"""",
         """\|\spolicy_rule="({policy_name}[^"]+?)\s*"""",
         """\|\incident_type="({alert_type}[^"]+)""",
-        """\|\sUserID="({user}[\w\.\-]{1,40}\$?)"""",
+        """\|\sUserID="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
         """\|\sprotocol="({protocol}[^"]+)"""",
         """\|\sBusiness_Unit="({additional_info}[^"]+)"""",
         """\|\sfilename="(N/A|(?i)unknown|({target}[^"]+?))\s*"""",
@@ -28,6 +28,7 @@ symantec-dlp-alert = {
         """\|\application="({app}[^"]+)"""",
         """\|\device_id="({device_id}[^"]+)"""",
       ]
+      DupFields = [ "action->result" ]
     
 }
 ```

@@ -11,15 +11,15 @@ splunk-mcafee-usb-activity = {
       TimeFormat = "epoch_sec"
       Fields = [
         """^.*?({alert_id}\d+)\|""",
-        """^([^|]*\|){11}({device_type}[^|]+)\|""",
+        """^([^|]*\|){11}({device_class}[^|]+)\|""",
         """^([^|]*\|){14}({dest_ip}[a-fA-F0-9.:]+)\|""",
         """^([^|]*\|){15}({dest_host}[^|]+)\|""",
         """^([^|]*\|){17}({file_name}[^|]+)""",
         """^([^|]*\|){19}({file_path}[^|]+)""",
-        """^([^|]*\|){19}({file_path}[^|]*?({file_name}[^\\\/|]+))\|""",
+        """^([^|]*\|){19}({file_path}[^|]*?({file_name}[^\\\/|]+?(\.({file_ext}[^\s\.\\\/|]+?))?))\|""",
         """^([^|]*\|){16}({file_path}[^|]+)""",
-        """^([^|]*\|){16}({file_path}[^|]*?({file_name}[^\\\/|]+))\|""",
-        """^([^|]*\|){20}(({domain}[^\\]+?)\\)?({user}[\w\.\-]{1,40}\$?)\|""",
+        """^([^|]*\|){16}({file_path}[^|]*?({file_name}[^\\\/|]+?(\.({file_ext}[^\s\.\\\/|]+?))?))\|""",
+        """^([^|]*\|){20}(({domain}[^\\]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|""",
         """\|({time}\d{10})(\.\d+)?\s*\|""",
       ]
     }
@@ -33,12 +33,13 @@ splunk-mcafee-usb-activity = {
         """RulesToDisplay="({operation}[^"]+)""",
         """IP="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
         """\sName ="({dest_host}[^"]+)""",
-        """Username_NTLM="((({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?))""",
+        """Username_NTLM="((({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
         """USBVendorId="(\s*|({device_id}[^"]+))"""",
-        """DeviceName ="({device_type}[^"]+)""",
+        """DeviceName ="({device_class}[^"]+)""",
         """\sFileName ="({file_name}[^"]+)""",
         """({action}Block)""",
         """TotalContentSize="({bytes}\d+)"""
+        """DeviceClassName ="({device_class}[^"=]+)"""
 
       ]
       DupFields = ["operation->operation_details"]
@@ -49,9 +50,13 @@ splunk-mcafee-usb-activity = {
     Product = McAfee Web Gateway
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd HH:mm:ss"]
     Fields = [
-    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s({host}[\w\-.]+)\s(\S+\s+){4}"({user}[\w\.\-]{1,40}\$?)","({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))","({method}[^"]+)","({bytes_in}\d+)","({bytes_out}\d+)","(({url}[^?";]+)","({uri_path}\/[^\s\?]*)?)","({action}OBSERVED|PROXIED|DENIED)",("[^"]*",){3}"({protocol}[^"]+)","({categories}({category}[^,"]+?)(,[^"]*)?)",("[^"]*",){4}"({http_response_code}\d+)","({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",("[^"]*",){2}"({browser}[^"]+)","[^"]*","(\s*|({user_agent}[^"]+))""""
-    """"({user}[\w\.\-]{1,40}\$?)","({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))","({method}[^"]+)","({bytes_in}\d+)","({bytes_out}\d+)","(({url}[^?";]+)","({uri_path}\/[^\s\?]*)?)","({action}OBSERVED|PROXIED|DENIED)",([^,]+,){2}"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)","({protocol}[^"]+)","({categories}({category}[^,"]+?)(,[^"]*)?)",("[^"]*",){4}"({http_response_code}\d+)","({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",("[^"]*",){2}"({browser}[^"]+)","[^"]*","(\s*|({user_agent}[^"]+))""""
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s({host}[\w\-.]+)\s(\S+\s+){4}"({user}[\w\.\-\!\#\^\~]{1,40}\$?)","({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))","({method}[^"]+)","({bytes_in}\d+)","({bytes_out}\d+)","(({url}[^?";]+)","({uri_path}\/[^;\?]*?)?)","({action}OBSERVED|PROXIED|DENIED)",("[^"]*",){3}"({protocol}[^"]+)","({categories}({category}[^,"]+?)(,[^"]*)?)",("[^"]*",){4}"({http_response_code}\d+)","({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",("[^"]*",){2}"({browser}[^"]+)","[^"]*","(\s*|({user_agent}[^"]+))""""
+    """"({user}[\w\.\-\!\#\^\~]{1,40}\$?)","({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))","({method}GET|POST|PUT|TUNNEL|OPTIONS|CONNECT|HEAD|DELETE|CERTVERIFY)",""""
+   """"(GET|POST|PUT|TUNNEL|OPTIONS|CONNECT|HEAD|DELETE|CERTVERIFY)","({bytes_in}\d+)","({bytes_out}\d+)","(({url}[^?";]+)","({uri_path}\/[^;\?]*?)?)","({action}OBSERVED|PROXIED|DENIED)","""
+   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)","({protocol}[^"]+)","({categories}({category}[^,"]+?)(,[^"]*)?)",("[^"]*",)""""
+   """",("[^"]*",){6}"({http_response_code}\d+)","({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",("[^"]*",){2}"({browser}[^"]+)","[^"]*","(\s*|({user_agent}[^"]+))""""
     ]
+    DupFields = ["url->web_domain"]
     
 }
 ```

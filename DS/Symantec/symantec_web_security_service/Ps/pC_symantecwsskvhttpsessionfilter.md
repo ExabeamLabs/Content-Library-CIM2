@@ -10,7 +10,7 @@ Conditions = [
 """cs-host="""
 ]
 Fields = [
-"""\tcs-userdn=(?:-|(({domain}[^\\\t]+)\\)?({user}[\w\.\-]{1,40}\$?))"""
+"""\tcs-userdn=(?:-|(({domain}[^\\\t]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\Ws-ip="?(-|({host}[\w\-.]+?))("|\||$|\t|\s+[\w\-\(\)]+=)"""
 """\Ws-computername="?(-|({host}[^"|]))("|\||$|\t|\s+[\w\-\(\)]+=)"""
 """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""""
@@ -23,7 +23,7 @@ Fields = [
 """\Wsrcport=(-|({src_port}\d+))"""
 """\Wdst=(-|({external_dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"""
 """\Wdstport=(?:-|({dest_port}\d+))"""
-"""\W(cs-username|username)="?(-|({user}[\w\.\-]{1,40}\$?))\s*("|\||$|\t|\s+[\w\-\(\)]+=)"""
+"""\W(cs-username|username)="?(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*("|\||$|\t|\s+[\w\-\(\)]+=)"""
 """\Ws-action="?(-|({proxy_action}[^"|]+))\s*("|\||$|\t|\s+[\w\-\(\)]+=)"""
 """\W(sc|cs)-status="?(-|({http_response_code}\d+))\s*("|\||$|\t|\s+[\w\-\(\)]+=)"""
 """\Wcs-method="?((?i)(unknown)|-|({method}[^"|]+))\s*("|\||$|\t|\s+[\w\-\(\)]+=)"""

@@ -19,14 +19,12 @@ Name = symantec-dlp-json-alert-trigger-success-rule
       """exa_regex=protocol=\\"*({protocol}[^\\]+)\\""",
       """exa_regex=block=\\"*({action}[^\\]+)\\""",
       """exa_regex=subject=\\"*({alert_subject}[^\\]+)\\""",
-      """exa_regex=sender=\\"*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\""",
+      """exa_regex=sender=\\"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\""",
       """exa_regex=recipients=\\"*({email_recipients}[^\\]+)\\""",
       """exa_regex=recipients=\\"*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\\]*)\\"*""",
-      """exa_regex=(?i)recipients="*(?=[\w.]+@[\w.])({external_address}[^",]+)("|,|\s*$)""",
       """exa_regex=(?i)recipients="*(?=\w+:\/+)({target}[^",]+)("|,|\s*$)""",
       """exa_regex=message"+:\s*"+\s*({additional_info}[^\\]+\s)"""
     ]
-    DupFields = [ "external_address->dest_email_address" ]
 
 
 }

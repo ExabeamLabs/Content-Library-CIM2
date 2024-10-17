@@ -10,7 +10,7 @@ Name = "mcafee-mdam-kv-database-dbactivity"
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+(\w+=|$)""",
     """execution_time="({time}\d\d \w{3} \d{4} \d\d:\d\d:\d\d)""",
     """src_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """user="(NULL|(({domain}[^"]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s*)"""",
+    """user="(NULL|(({domain}[^"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*)"""",
     """cmdtype="({db_operation}[^"]+)"""",
     """sqlstmt="({db_query}.+?)\s*"+\s*(\w+=|$)""",
     """db_name="({db_name}[^"]+)"""",

@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """devTime=({time}\w{1,3}-\d\d-\d\d\d\d\s\d\d:\d\d:\d\d\s\w{1,3})"""
 """deviceName =({host}[^\s]+)"""
-"""userName =(None|({user}[\w\.\-]{1,40}\$?))\s+\w+="""
+"""userName =(None|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
 """email=({email_address}[^@]+@[^\s]+)"""
 """\WcommandLine=(None|({process_command_line}[^\n]+?))\s+\w+="""
 """threatIndicators=({alert_name}[^=]+?)\s+\w+="""

@@ -24,8 +24,8 @@ Fields = [
 """\|proto=({protocol}[^\|]+)"""
 """\|src_machine_name=({src_host}[^\|]+)"""
 """\|description=({additional_info}[^\|]+)"""
-"""\|src_user_name=[^(]+\(({user}[\w\.\-]{1,40}\$?)"""
-"""\|user=[^(]+\(({user}[\w\.\-]{1,40}\$?)"""
+"""\|src_user_name=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+"""\|user=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 SOAR {
   IncidentType = "malware"

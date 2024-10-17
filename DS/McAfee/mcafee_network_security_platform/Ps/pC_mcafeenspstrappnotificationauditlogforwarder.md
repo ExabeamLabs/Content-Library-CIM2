@@ -9,7 +9,7 @@ Name = mcafee-nsp-str-app-notification-auditlogforwarder
   Conditions = [ """ SyslogAuditLogForwarder: """, """Port:""" ]
   Fields = [
     """SyslogAuditLogForwarder:\s*({event_name}[^;]+?)\s*;\s*({action}[^;]+?)\s*;\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d \w+)\s*;""",
-    """Port:\s*([^;]*?)\s*;\s*({user}[\w\.\-]{1,40}\$?)\s*;""",# message_info is removed
+    """Port:\s*([^;]*?)\s*;\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*;""",# message_info is removed
   ]
 
 

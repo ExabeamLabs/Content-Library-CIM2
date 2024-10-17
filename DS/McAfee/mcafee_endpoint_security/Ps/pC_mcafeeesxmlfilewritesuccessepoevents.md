@@ -10,7 +10,7 @@ Name = mcafee-es-xml-file-write-success-epoevents
   Fields = [
     """<GMTTime>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)</GMTTime>""",
     """({host}[\w\-.]+)\s+EPOEvents""",
-    """<SCORuser_name>(({domain}[^\\\/<>]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)</SCORuser_name>""",
+    """<SCORuser_name>(({domain}[^\\\/<>]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</SCORuser_name>""",
     """<SCORfile_name>({file_path}({file_dir}[^<>]*?[\\\/<>]+)?({file_name}[^\\\/<>]+?(\.({file_ext}\w+))?))</SCORfile_name>""",
     """<SCORprocess_name>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^\\\/<>]+))</SCORprocess_name>""",
     """<RawMACAddress>({src_mac}.+?)</RawMACAddress>""",

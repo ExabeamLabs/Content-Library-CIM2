@@ -8,7 +8,7 @@ Product: Event Viewer - DNSClient
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Malware](../../../UseCases/uc_malware.md) |  dns-request:success (dns-query)<br> ↳[microsoft-evsecurity-xml-dns-request-success-3008](Ps/pC_microsoftevsecurityxmldnsrequestsuccess3008.md)<br> | T1071 - Application Layer Protocol<br>T1568 - Dynamic Resolution<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>T1583 - T1583<br>T1583.001 - T1583.001<br> | [<ul><li>3 Rules</li></ul>](RM/r_m_microsoft_event_viewer_-_dnsclient_Malware.md) |
+| [Malware](../../../UseCases/uc_malware.md) |  dns-request:fail (dns-query)<br> ↳[microsoft-evsecurity-xml-dns-request-success-3008](Ps/pC_microsoftevsecurityxmldnsrequestsuccess3008.md)<br> | T1071 - Application Layer Protocol<br>T1568 - Dynamic Resolution<br>T1568.002 - Dynamic Resolution: Domain Generation Algorithms<br>T1583 - T1583<br>T1583.001 - T1583.001<br> | [<ul><li>3 Rules</li></ul>](RM/r_m_microsoft_event_viewer_-_dnsclient_Malware.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

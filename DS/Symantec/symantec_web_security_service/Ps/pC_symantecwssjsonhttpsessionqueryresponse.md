@@ -12,7 +12,7 @@ Name = symantec-wss-json-http-session-queryresponse
     """"DomainID":"({web_domain}[^"]+)""",
     """"User_Agent":"({user_agent}[^"]+)""",
     """"CommandID":"({method}[^"]+)""",
-    """"UserIDSrc":"({user}[\w\.\-]{1,40}\$?)""",
+    """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"Response_Code":"({http_response_code}\d+)""",
     """"Category":"({category}[^"]+)""",
     """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -24,8 +24,9 @@ Name = symantec-wss-json-http-session-queryresponse
     """"Bytes_Sent":({bytes_out}\d+)""",
     """"Bytes_Received":({bytes_in}\d+)""",
     """"AppID":"({mime}[^"]+)""",
-    """"Destination_Logon_ID":"({app_user}[^"]+)""",
+    """"Destination_Logon_ID":"([^\W]+\W)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
+  DupFields = ["dest_user->app_user"]
   ParserVersion = "v1.0.0"
 
 

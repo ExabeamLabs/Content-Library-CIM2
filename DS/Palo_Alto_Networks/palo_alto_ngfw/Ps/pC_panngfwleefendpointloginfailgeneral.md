@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)"""
-"""User ({user}[\w\.\-]{1,40}\$?) logged in via\s+\w+\s+from\s*(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^,]+))"""
+"""User ({user}[\w\.\-\!\#\^\~]{1,40}\$?) logged in via\s+\w+\s+from\s*(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^,]+))"""
 """msg=".+?using\s*({auth_method}[^"]+)""",
 """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]

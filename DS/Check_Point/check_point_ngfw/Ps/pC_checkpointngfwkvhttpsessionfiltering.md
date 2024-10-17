@@ -28,12 +28,12 @@ Fields = [
 """service_id=({protocol}[^|]+)\|"""
 """protocol=({protocol}[^\|]+)"""
 """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|"""
-"""ifdir=({direction}[^|]+)\|"""
+"""conn_direction=({direction}[^|]+)\|"""
 """ifname=({src_interface}[^|]+)\|"""
 """\|bytes=({bytes}\d+)"""
 """\|server_inbound_bytes=({bytes_in}\d+)"""
 """\|server_outbound_bytes=({bytes_out}\d+)"""
-"""(U|u)ser=(-|({full_name}[^\(]+)\s+\(({user}[\w\.\-]{1,40}\$?))"""
+"""(U|u)ser=(-|({full_name}[^\(]+)\s+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 

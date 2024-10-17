@@ -10,7 +10,7 @@ Name = cisco-umbrella-cef-dns-response-success-responsecode
   Fields = [
     """\"timestamp\":\"({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
     """\"identities\":\[[^\]]*?\"({host}[\w\-\.]+)\"""",
-    """\"identities\":\[\"({full_name}[^\(\"]+?)?(?:\s*\(\w+\)\s*)?(\s+\((({email_address}[^@"]+@({email_domain}[^\."]+\.[^"]+))(?<!local)|(({user}[\w\.\-]{1,40}\$?)(@({domain}[^"]+)?)))\))?\"?,(\"({host}[\w\-\.]+)\")?"""
+    """\"identities\":\[\"({full_name}[^\(\"]+?)?(?:\s*\(\w+\)\s*)?(\s+\((({email_address}[^@"]+@({email_domain}[^\."]+\.[^"]+))(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))\))?\"?,(\"({host}[\w\-\.]+)\")?"""
     """\"action\":\"({result}[^\"]+)\"""",
     """\"queryType\":\"[^\"]*\(({dns_query_type}[^\"\)]+)\)\"""",
     """\"responseCode\":\"({dns_response_code}[^\"]+)\"""",

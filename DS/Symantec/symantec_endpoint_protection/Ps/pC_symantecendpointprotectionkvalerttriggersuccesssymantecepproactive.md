@@ -22,7 +22,7 @@ Fields = [
 """\sEnd_Time="({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)"""
 """\sHost_Name =({host}[^,]+?)\s*(,|$)"""
 """\sdest=({dest_host}[^,]+?)\s*(,|$)"""
-"""\suser=({user}[\w\.\-]{1,40}\$?)\s*(,|$)"""
+"""\suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(,|$)"""
 """\saction=({action}[^,]+?)\s*(,|$)"""
 """\ssignature="({alert_name}[^"]+)"""
 """\seventtype="?({alert_type}[^",]+)"""
@@ -48,7 +48,7 @@ Fields = [
 """\sEnd_Time="({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)"""
 """\sHost_Name =({host}[^,]+?)\s*(,|$)"""
 """\sdest=({dest_host}[^,]+?)\s*(,|$)"""
-"""\suser=({user}[\w\.\-]{1,40}\$?)\s*(,|$)"""
+"""\suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(,|$)"""
 """\saction=({action}[^,]+?)\s*(,|$)"""
 """\ssignature="({alert_name}[^"]+)"""
 """\seventtype="?({alert_type}[^",]+)"""
@@ -75,7 +75,7 @@ Fields = [
 """\sEnd_Time="({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)"""
 """\sHost_Name =({host}[^,]+?)\s*(,|$)"""
 """\sdest=({dest_host}[^,]+?)\s*(,|$)"""
-"""\suser=({user}[\w\.\-]{1,40}\$?)\s*(,|$)"""
+"""\suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(,|$)"""
 """\saction=({action}[^,]+?)\s*(,|$)"""
 """\ssignature="({alert_name}[^"]+)"""
 """\seventtype="?({alert_type}[^",]+)"""
@@ -103,7 +103,7 @@ ParserVersion = "v1.0.0"
     Fields = [
       """({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d),スキャン ID:""",
       """スキャン ID:\s*({alert_id}\d+)""",
-      """ユーザー 1:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))""",
+      """ユーザー 1:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """IP アドレス:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """コンピュータ:\s*({src_host}[\w\-.]+)""",
       """,({alert_name}[^,]+),スキャン 完了:""",

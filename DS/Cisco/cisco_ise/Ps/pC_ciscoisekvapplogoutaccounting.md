@@ -19,7 +19,7 @@ Name = "cisco-ise-kv-app-logout-accounting"
     """({operation}Accounting STOP)"""
     """Privilege-Level=({privileges}[^,]+),"""
     """({app}TACACS\+ Accounting)"""
-    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-]{1,40}\$?)),"""
+    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
   ]
   ParserVersion = "v1.0.0"
 

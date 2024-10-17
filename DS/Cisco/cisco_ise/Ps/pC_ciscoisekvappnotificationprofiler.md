@@ -4,12 +4,13 @@
 Name = "cisco-ise-kv-app-notification-profiler"
   Vendor = "Cisco"
   Product = "Cisco ISE"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss"]
   Conditions = [
     """ CISE_Profiler """
 	]
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+(::ffff:)?({host}[\w\-.]+)\s+CISE_"""
+    """\s*({time}\w+ \d+ \d+:\d+:\d+)"""
     """\w+\s+\d+\s+\d+:\d+:\d+\s+\S+\s+CISE_.*?({time}\d+-\d+-\d+\s+\d+:\d+:\d+)"""
     """\s({event_name}CISE_\S+)\s"""
     """\WMatchedPolicyID=({policy_id}[^\\,]+)"""
@@ -25,14 +26,17 @@ Name = "cisco-ise-kv-app-notification-profiler"
     """\WAD-Host-DNS-Domain=({domain}[\w\-.]+)"""
     """\WFailureReason=(-|({failure_reason}[^\\,]+))"""
     """\WUser-Fetch-User-Name =({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"""
-    """,OriginalUserName =(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """,OriginalUserName =(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """CreationType=({operation}[^,\\]+)"""
     """op=({operation}[^,\\]+)"""
     """dhcp-client-identifier=({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"""
     """host-name=(::ffff:)?({src_host}[^,\\]+)"""
-    """(Original)?UserName =(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+    """(Original)?UserName =(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """EndpointMacAddress=({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"""
+    """\d+\s({event_code}\d+)\sINFO"""
+    """EndpointIdentityGroup=({device_type}[^,\\]+),\s*"""
+    """NACRadiusUserName =(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
-  
   ParserVersion = "v1.0.0"
 
 

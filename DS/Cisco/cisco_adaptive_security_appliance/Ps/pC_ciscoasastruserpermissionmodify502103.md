@@ -16,7 +16,7 @@ Name = cisco-asa-str-user-permission-modify-502103
     """%ASA-({priority}\d+)-({event_code}\d+)""",
     """(({host}[\w\-.]+)\s+)?({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d)\s*({=host}[\w\-.]+)?\s*:\s*%ASA\-({priority}\d+)\-({event_code}\d+)"""
     """-502103:\s*({event_name}User priv level changed)"""
-    """Uname:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))\s+From"""
+    """Uname:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+From"""
 # info is removed
 ]
 

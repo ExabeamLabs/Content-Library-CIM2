@@ -14,7 +14,7 @@ Name = cisco-duo-kv-endpoint-authentication-fail-failure
     """\Wresult=\s*({result}[^;]+?)(?:;|\})""",
     """\Wreason=\s*({failure_reason}[^;]+?)(?:;|\})""",
     """timestamp=\s*({time}\d+\/\d+\/\d\d\d\d \d\d:\d\d:\d\d)""",
-    """\Wusername=\s*({user}[\w\.\-]{1,40}\$?)(?:;|\})""",
+    """\Wusername=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:;|\})""",
     """\Wnew_enrollment=\s*({new_enrollment}[^;]+?)(?:;|\})""",
   ]
   ParserVersion = "v1.0.0"

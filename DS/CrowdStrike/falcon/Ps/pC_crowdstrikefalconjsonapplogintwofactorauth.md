@@ -13,6 +13,14 @@ Conditions = [
   """"twoFactorAuthenticate""""
 ]
 Fields = [
+    """"eventCreationTime":\s*({time}\d{10})"""
+    """"timestamp":"({time}\d{10})""""
+    """"UTCTimestamp":({time}\d{10})"""
+    """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"ServiceName":\s*"({app}[^"]+)"""
+    """"Success":\s*({result}[^",}]+)"""
+    """"OperationName":"({operation}[^"]+)""""
     """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",
     """exa_regex="timestamp":"({time}\d{10})"""",
     """exa_json_path=$.event.UTCTimestamp,exa_field_name=time""",

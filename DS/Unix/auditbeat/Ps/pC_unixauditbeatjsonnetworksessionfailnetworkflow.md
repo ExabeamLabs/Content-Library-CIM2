@@ -23,7 +23,7 @@ Fields = [
   """"network":.+?"direction":"(unknown|({direction}[^"]+))""""
   """"network":.+?"bytes":({bytes}\d+)"""
   """"domain":"({domain}[^"]+)""""
-  """"user":\{.+?name":"({user}[\w\.\-]{1,40}\$?)""""
+  """"user":\{.+?name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"process":.+?"pid":({process_id}\d+)"""
   """"complete":({result}[^,}]+)"""
   """"action":"({action}[^"]+)""""

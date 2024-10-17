@@ -18,7 +18,7 @@ Name = pan-ngfw-json-alert-trigger-success-resetserver
   """exa_json_path=$.event.EventStatus,exa_field_name=result"""
   """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
   """exa_json_path=$.event.SourceRegion,exa_field_name=src_country,exa_match_expr=!Contains(toLower($.SourceRegion),"null")"""
-  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method,exa_match_expr=!Contains(toLower($.EventIDValue),"null")"""

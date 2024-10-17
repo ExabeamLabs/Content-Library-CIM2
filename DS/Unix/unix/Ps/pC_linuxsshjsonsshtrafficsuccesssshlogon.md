@@ -22,7 +22,7 @@ Fields = [
   """Session id:\s*({session_id}\d+)"""
   """Process Name:\s*(null|unknown|({process_name}\S+))"""
   """Parent Name:\s*(null|unknown|({parent_process_name}\S+))"""
-  """Username:\s*({user}[\w\.\-]{1,40}\$?)"""
+  """Username:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Port:\s*({src_port}\d+)"""
   """\sRULE_NAME: \"*({rule}[^\"]+)\""""
   """EVENT_TYPE_D:\s+\"+({event_name}[^\"]+)\"+\s"""

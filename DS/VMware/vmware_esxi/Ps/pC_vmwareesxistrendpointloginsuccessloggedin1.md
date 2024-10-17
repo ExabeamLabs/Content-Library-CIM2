@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d).+?\s+({host}[^\s]+)\s""",
-  """User\s+((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-]{1,40}\$?)).+?\s*logged""",
+  """User\s+((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?\s*logged""",
   """({event_name}logged in)""",
   """:\s+({additional_info}User.+?)\s*$"""
   """logged in\s*as\s*({user_agent}.+?)\s*$""",

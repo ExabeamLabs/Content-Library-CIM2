@@ -22,7 +22,7 @@ Name = "cisco-ise-kv-endpoint-policy-verify-accounting"
     """CmdAV=({command}[^,]+)\s],""",
     """Privilege-Level=({privileges}[^,]+),""",
     """({app}TACACS\+ Accounting)""",
-    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-]{1,40}\$?)),"""
+    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
     """TACACS\+\s*({operation}Accounting with Command)"""
   ]
   ParserVersion = "v1.0.0"

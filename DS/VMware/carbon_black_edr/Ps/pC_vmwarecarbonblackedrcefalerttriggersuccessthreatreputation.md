@@ -20,7 +20,7 @@ Fields = [
 """\WdeviceSeverity=({alert_severity}\d+)"""
 """\Wdhost=({src_host}[\w\-.]+)"""
 """\WfilePath=\[({additional_info}[^\]]+?)\]\s*(\w+=|$)"""
-"""\WfilePath=.+?\\users\\+({user}[\w\.\-]{1,40}\$?)"""
+"""\WfilePath=.+?\\users\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\WfileHash=({hash_md5}[^\s]+)"""
 ]
 SOAR {

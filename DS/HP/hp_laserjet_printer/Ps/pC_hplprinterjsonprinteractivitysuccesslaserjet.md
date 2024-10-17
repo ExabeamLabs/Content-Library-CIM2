@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """exa_json_path=$.@timestamp,exa_field_name=time""",
   """exa_json_path=$.host,exa_field_name=host""",
-  """exa_json_path=$.job_lab_ntusername,exa_regex=^(?:Unspecified|({user}[\w\.\-]{1,40}\$?))""",
+  """exa_json_path=$.job_lab_ntusername,exa_regex=^(?:Unspecified|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """exa_json_path=$.job_lab_documentname,exa_regex=^(?:Unspecified|({object}[^"]+))""",
   """exa_json_path=$.job_qty_size,exa_field_name=bytes""",
   """exa_json_path=$.job_qty_printedpages,exa_field_name=num_pages""",

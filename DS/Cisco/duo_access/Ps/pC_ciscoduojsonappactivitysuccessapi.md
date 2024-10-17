@@ -8,7 +8,7 @@ Name = cisco-duo-json-app-activity-success-api
   Conditions = [ """API (IAM UI Admin API)""" ]
   Fields = [
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2})""",
-    """API \(({app}IAM UI Admin API)\)\|({user}[\w\.\-]{1,40}\$?)\|({operation}[^\|]+)\|""",
+    """API \(({app}IAM UI Admin API)\)\|({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|({operation}[^\|]+)\|""",
     """"email":\s*"({email_address}[^@]+@[^.]+\.\w+?)"""",
     """"type":\s*"({object}[^"]+)""""
   ]

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """"device_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-""""user_name":"({user}[\w\.\-]{1,40}\$?)"""
+""""user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"uuid":"({user_uid}[^"]+)"""
 """({host}[\w.\-]+)\s+atp_incident:"""
 """"detection_type":"({alert_type}[^"]+)"""

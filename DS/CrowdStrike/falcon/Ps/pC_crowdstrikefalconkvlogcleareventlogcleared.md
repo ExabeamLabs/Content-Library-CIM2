@@ -16,7 +16,7 @@ Name = "crowdstrike-falcon-kv-log-clear-eventlogcleared"
     """"event_platform":"({os}[^"]+)""",
     """"UserSid":"({user_sid}[^"]+)""",
     """"TargetFileName":"({target}[^"]+)""",
-    """"UserName":"({user}[\w\.\-]{1,40}\$?)""",
+    """"UserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
 
 

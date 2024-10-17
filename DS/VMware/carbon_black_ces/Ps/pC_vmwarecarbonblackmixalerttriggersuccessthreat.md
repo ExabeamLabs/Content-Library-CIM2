@@ -9,7 +9,7 @@ Name = vmware-carbonblack-mix-alert-trigger-success-threat
   Conditions = [ """"threatInfo":""", """"indicators":""", """"summary":""", """"ruleName":""", """"incidentId":""", """"THREAT"""" ]
   Fields = [
     """eventTime"+:\s*({time}\d{13})""",
-    """email"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?)))"""",
+    """email"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """deviceName"+:\s*"+([^\\"]+\\+)?({src_host}[^"]+)"""",
     """ruleName"+:\s*"+(Confer - )?({alert_name}[^"]+)"""",
     """type"+:\s*"+({alert_type}[^"]+)"""",
@@ -22,7 +22,7 @@ Name = vmware-carbonblack-mix-alert-trigger-success-threat
     """applicationName":\s"({process_name}[^"]+)""",
 
     """exa_json_path=$.eventTime,exa_field_name=time""",
-    """exa_json_path=$.deviceInfo.email,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?)))$""",
+    """exa_json_path=$.deviceInfo.email,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
     """exa_json_path=$.deviceInfo.deviceName,exa_regex=^([^\\"]+\\+)?({src_host}[\w\-.]+)$""",
     """exa_json_path=$.deviceInfo.deviceType,exa_field_name=os""",
     """exa_json_path=$.deviceInfo.externalIpAddress,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",

@@ -14,7 +14,7 @@ Name = "unix-unix-str-endpoint-notification-success-systemerror"
   Fields = [
   """({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """({host}[\w\.\-]+)?:?\s*sudo"""
-  """\suser\s*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """\suser\s*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """received for user ({account}[\w\.\-]{1,40}).+?\(({additional_info}[^\)]+?)\)"""
   ]
 

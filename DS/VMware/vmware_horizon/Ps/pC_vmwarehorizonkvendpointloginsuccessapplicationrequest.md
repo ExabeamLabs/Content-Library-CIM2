@@ -16,7 +16,7 @@ Fields = [
   """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\S+\s({host}[\w\-.]+)\s"""
   """({app}View)"""
   """EventType="*({event_name}[^"]+)"""
-  """UserDisplayName ="(({domain}[^"\\]+)\\)?\\?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+  """UserDisplayName ="(({domain}[^"\\]+)\\)?\\?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """SessionType="*({operation}[^"]+)"""
   """UserSID="*({user_sid}[^"]+)"""
   """Module="*({resource}[^"]+)"""

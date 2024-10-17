@@ -48,6 +48,8 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){14}({src_interface}[^,]+),""",
      """TRAFFIC,([^,]*,){15}({dest_interface}[^,]+),""",
      """TRAFFIC,([^,]*,){42}({result_reason}[^,]+),"""
+     """({serial_num}[^,]+),TRAFFIC,"""
+     """TRAFFIC,([^,]*,){48}({device_name}[\w.-]+)"""
    
 }
 ```

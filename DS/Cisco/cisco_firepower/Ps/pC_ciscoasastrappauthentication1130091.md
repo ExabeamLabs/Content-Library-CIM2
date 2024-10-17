@@ -12,7 +12,7 @@ Name = cisco-asa-str-app-authentication-113009-1
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-\w+?-?({priority}\d+)-({event_code}\d+)""",
     """-113009:\s+({event_name}AAA retrieved default group policy)""",
-    """user\s*=\s*({user}[\w\.\-]{1,40}\$?)(@({domain}[^@,\s:]+))?""",
+    """user\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@,\s:]+))?""",
   ]
 
 

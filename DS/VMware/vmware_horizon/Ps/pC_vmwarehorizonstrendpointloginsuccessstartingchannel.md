@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """connecting to target (?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s:]+))"""
-  """User ({user}[\w\.\-]{1,40}\$?) starting channel"""
+  """User ({user}[\w\.\-\!\#\^\~]{1,40}\$?) starting channel"""
 ]
 ParserVersion = "v1.0.0"
 

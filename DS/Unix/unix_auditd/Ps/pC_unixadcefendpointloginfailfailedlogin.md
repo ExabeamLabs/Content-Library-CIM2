@@ -6,7 +6,7 @@ Name = unix-ad-cef-endpoint-login-fail-failedlogin
   Product = Unix Auditd
   Conditions = [ """CEF""", """Unix|Unix""", """|failed login attempt|""" ]
   Fields = ${UnixParsersTemplates.cef-unix-template.Fields}[
-     """\sduser=({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+     """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   ]
   ParserVersion = "v1.0.0"
 
@@ -22,7 +22,7 @@ cef-unix-template = {
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=({user}[\w\.\-]{1,40}\$?)""",
+      """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\Wdhost=({dest_host}[\w\-.]+)""",
     
 }

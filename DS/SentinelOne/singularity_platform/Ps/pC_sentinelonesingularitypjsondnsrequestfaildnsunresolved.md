@@ -4,7 +4,7 @@
 Name = sentinelone-singularityp-json-dns-request-fail-dnsunresolved
   ExtractionType = json
   ParserVersion = v1.0.0
-  Conditions = [ """"dataSource.name":"SentinelOne"""", """"i.scheme":"edr"""", """"event.category":"dns"""", """"event.type":"DNS Unresolved"""" ]
+  Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"dns"""", """"event.type":"DNS Unresolved"""" ]
   Fields = ${SentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
     """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
     """exa_json_path=$.['endpoint.type'],exa_field_name=device_type""",
@@ -33,6 +33,8 @@ json-sentinelone-edr-events = {
       """"src\.process\.pid":({process_id}\d+)""",
       """"src\.process\.cmdline":"({process_command_line}.+?)",""",
       """"account\.id":"({account_id}[^"]+)""",
+      """"src.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))"""",
+      """"tgt.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))"""",
       """exa_json_path=$..timestamp,exa_field_name=time""",
       """exa_json_path=$..['event.type'],exa_field_name=event_name""",
       """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
@@ -43,7 +45,9 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..['endpoint.type'],exa_field_name=host_type""",
       """exa_json_path=$..['src.process.pid'],exa_field_name=process_id""",
       """exa_json_path=$..['src.process.cmdline'],exa_field_name=process_command_line""",
-      """exa_json_path=$..['account.id'],exa_field_name=account_id"""
+      """exa_json_path=$..['account.id'],exa_field_name=account_id""",
+      """exa_json_path=$..['src.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))($|")""",
+      """exa_json_path=$..['tgt.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
     
 }
 ```

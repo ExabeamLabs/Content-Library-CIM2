@@ -15,8 +15,8 @@ Conditions = [
 Fields = [
 """exa_json_path=$._time,exa_field_name=time""",
 """exa_json_path=$.threatName,exa_field_name=alert_name""",
-"""exa_json_path=$.username,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
-"""exa_json_path=$.lastLoggedInUserName,exa_regex=^({user}[\w\.\-]{1,40}\$?)$""",
+"""exa_json_path=$.username,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+"""exa_json_path=$.lastLoggedInUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.accountName,exa_field_name=account""",
 """exa_json_path=$.primaryDescription,exa_field_name=alert_type""",
 """exa_json_path=$.description,exa_field_name=alert_type""",

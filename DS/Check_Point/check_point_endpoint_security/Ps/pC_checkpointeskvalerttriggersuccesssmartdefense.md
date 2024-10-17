@@ -20,8 +20,8 @@ Fields = [
   """\|service=({dest_port}\d+)"""
   """\|src_country=(?:Internal|({src_country}[^\|]+))\|"""
   """\|dst_country=(?:Other|({dest_country}[^\|]+))\|"""
-  """\|src_user_name=[^(]+\(({user}[\w\.\-]{1,40}\$?)"""
-  """\|user=[^(]+\(({user}[\w\.\-]{1,40}\$?)"""
+  """\|src_user_name=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """\|user=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 SOAR {
   IncidentType = "malware"

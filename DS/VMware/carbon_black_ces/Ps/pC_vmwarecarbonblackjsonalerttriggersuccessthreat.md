@@ -28,7 +28,7 @@ Fields = [
 """indicatorName":"({alert_type}[^"]+)""""
 """ruleName":"({alert_name}[^"]+)""""
 """summary":"({additional_info}[^"]+)""""
-"""email"+:\\s*"+(({domain}[^"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+"""email"+:\\s*"+(({domain}[^"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """deviceId"+:({sensor_id}[^,]+)"""
 ]
 ParserVersion = "v1.0.0"

@@ -22,7 +22,7 @@ Fields = [
 """CrowdStrike-FileName =({process_name}[^\=]+?)(\s+CrowdStrike-SensorId)"""
 """CrowdStrike-ComputerName =({src_host}[^\s]+)"""
 """CrowdStrike-IOCValue=({file_hash}[^\s]+)"""
-"""CrowdStrike-UserName =(N/A|({user}[\w\.\-]{1,40}\$?))"""
+"""CrowdStrike-UserName =(N/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """CrowdStrike-ProcessId=({process_guid}\d+)"""
 """CrowdStrike-FalconHostLink=({falcon_host_link}[^\s]+)"""
 """CrowdStrike-MD5=({hash_md5}[^\s]+)"""

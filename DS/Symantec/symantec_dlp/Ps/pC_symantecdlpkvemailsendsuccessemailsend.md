@@ -20,9 +20,9 @@ Fields = [
   """\Wpolicy="[^"\-]+\-\s*({alert_type}[^"]+)"""
   """\Wpolicy="[^"\-]+\-\s*({protocol}[^"]+)"""
   """\Wrecipients="({email_recipients}[^"]+)"""
-  """\Wrecipients="({external_address}[^,"]+)"""
-  """\Wsender="({user}[\w\.\-]{1,40}\$?)"""
-  """\Wsender="({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """\Wrecipients="({dest_email_address}[^,"]+)"""
+  """\Wsender="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """\Wsender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """\Wseverity="({alert_severity}[^"]+)"""
   """\Wsubject="({email_subject}[^"]+)"""
 ]

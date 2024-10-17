@@ -10,7 +10,7 @@ Name = vmware-horizon-str-endpoint-authentication-success-allocated
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """({event_name}({operation}requested Pool [^,]+).+?)[\s"]*$""",
    ]
 

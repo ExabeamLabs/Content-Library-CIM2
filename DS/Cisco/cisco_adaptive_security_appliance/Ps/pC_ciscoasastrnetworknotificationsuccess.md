@@ -24,7 +24,7 @@ Name = cisco-asa-str-network-notification-success
     """URL Server (::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) not responding""",
     """({protocol}ICMP|TCP|UDP)"""
     """\sGroup\s*<({group_name}[^>]+)>"""
-    """\sUser\s*<({user}[\w\.\-]{1,40}\$?)>"""
+    """\sUser\s*<({user}[\w\.\-\!\#\^\~]{1,40}\$?)>"""
     """packet\s+(-|({bytes}\d+))\s+"""
     """IP <({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>"""
     """src_addr=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,"""

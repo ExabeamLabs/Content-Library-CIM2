@@ -16,8 +16,8 @@ Name = "exabeam-search-kv-alert-trigger-success-rulename"
     Fields = [
       """\Wevent_time="({time}\d{13})"""
       """timestamp="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-      """query_key_value:\s+({user}[\w\.\-]{1,40}\$?)\s+\|""",
-      """\Wuser="({user}[\w\.\-]{1,40}\$?)"""
+      """query_key_value:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\|""",
+      """\Wuser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """\Wdomain="({domain}[^"]+)"""
       """\Whost="({host}[\w.-]+)"""
       """\Wurl="({malware_url}[^"]+)"""

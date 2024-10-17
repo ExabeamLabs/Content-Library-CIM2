@@ -17,7 +17,7 @@ Name = mcafee-dlp-json-alert-trigger-success-analyzerdlp
       """exa_json_path=$.sourcehostname,exa_field_name=src_host"""
       """exa_json_path=$.sourceprocessname,exa_regex=({process_path}(({process_dir}[^"]*?)\\)?({process_name}[^"\\]*?))$"""
       """exa_json_path=$.threatactiontaken,exa_field_name=result"""
-      """exa_json_path=$.sourceusername,exa_regex=(({domain}[^"\\\/]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)$"""
+      """exa_json_path=$.sourceusername,exa_regex=(({domain}[^"\\\/]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
     ]
     DupFields = [ "src_host->host" ]
   

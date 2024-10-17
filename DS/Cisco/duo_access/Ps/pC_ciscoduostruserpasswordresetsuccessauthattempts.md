@@ -10,7 +10,7 @@ Name = cisco-duo-str-user-password-reset-success-authattempts
   Fields = [
     """"ts"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """:\d\d\|({full_name}[^\|]*)\|(|(({dest_user}[\w\.\-]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)))\|({event_name}[^\|]+)\|""",
+    """:\d\d\|({full_name}[^\|]*)\|(|(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)))\|({event_name}[^\|]+)\|""",
     """"message":\s*"({additional_info}[^"]+?)"""",
     """({app}duo)""",
    ]

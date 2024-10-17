@@ -10,7 +10,7 @@ Conditions = [
 """\tWould be blocked by Access Protection rule """
 ]
 Fields = [
-"""({time}\d+\/\d+\/\d+\t\d+:\d+:\d+ (am|AM|pm|PM))\t({alert_name}[^\t]+?)\s*\t(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)\s*\t({process_path}({process_dir}[^\t]+?)({process_name}[^\\\t]+))\s*\t"""
+"""({time}\d+\/\d+\/\d+\t\d+:\d+:\d+ (am|AM|pm|PM))\t({alert_name}[^\t]+?)\s*\t(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\t({process_path}({process_dir}[^\t]+?)({process_name}[^\\\t]+))\s*\t"""
 """\t({alert_type}[^\t]+?)\s*$"""
 ]
 DupFields = [

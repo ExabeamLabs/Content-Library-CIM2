@@ -15,8 +15,8 @@ Name = symantec-endpointprotection-csv-file-write-success-fichier
   """Règle : [^,]*,\d+,({process_path}({process_dir}[^"]*?)(\/|\\)({process_name}[^\/\\]+)),\d,""",
   """,({file_path}(({file_dir}[^,]*)[\/\\])[^,]+),Nom d’utilisateur"""
   """,[^",]+[\\\/]({file_name}[^,]*?(\.({file_ext}[^,]+))?),Nom d’utilisateur""",
-  """\| \[[^,]*,\d+,[^,]+,\d+,[^,]+,[^",]*/({file_name}[^",]+?)"?,Nom d’utilisateur""",
-  """Nom d’utilisateur :\s+(SYSTEM|Système|({user}[\w\.\-]{1,40}\$?))(\(\w+\))?,Nom du domaine :""",
+  """\| \[[^,]*,\d+,[^,]+,\d+,[^,]+,[^",]*/({file_name}[^",]+?(\.({file_ext}[^,"\s\.]+))?)"?,Nom d’utilisateur""",
+  """Nom d’utilisateur :\s+(SYSTEM|Système|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\(\w+\))?,Nom du domaine :""",
   """Nom du domaine :\s+(|AUTORITE NT|({domain}[^:,]+?)),Type d’action :""",
   """Taille de fichier \(({bytes_unit}[^\)]+?)\) :\s*({bytes}\d+)""",
   """ID du périphérique :\s+({device_id}[^"]+)&\d+""",

@@ -20,7 +20,7 @@ Fields = [
 """dpt=({dest_port}\d+)"""
 """dvchost=({host}[^\s]+)"""
 """act=({action}[^=]+?)\s\w+="""
-"""suser=({user}[\w\.\-]{1,40}\$?)\s\w+="""
+"""suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+="""
 """request=({url}(({protocol}[^:]+):\/\/)?({web_domain}[^\/:\s]+)({uri_path}\/[^\?\s]*)?(({uri_query}\?[^\s]+))?)\s\w+="""
 """requestMethod=({method}[^=]+?)\s\w+="""
 """dhost=({dest_host}[^\s]+)\s\w+="""

@@ -19,7 +19,7 @@ Fields = [
 """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)"""
 """\WeventId=({alert_id}\d+)"""
 """\Wdsn\\=({result}[^\s,]+)"""
-"""\Wsuser=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""\Wsuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """\Wduser=\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """\Wduser=\s*({email_recipients}[^\s]+)"""
 """\Wcn3=({num_recipients}\d+)"""

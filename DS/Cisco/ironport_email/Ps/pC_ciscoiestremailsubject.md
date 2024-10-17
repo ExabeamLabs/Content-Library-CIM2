@@ -6,9 +6,10 @@ Name = cisco-ie-str-email-subject
     Vendor = Cisco
     Product = IronPort Email
     TimeFormat = "yyyy-MM-dd HH:mm:ss"
-    Conditions = [ """MID """, """ Subject '""" ]
+    Conditions = [ """MID """, """ Subject """ ]
     Fields = [
-      """MID ({alert_id}\d+) Subject '?({email_subject}[^']+?)\s*('|$)"""
+      """MID ({alert_id}\d+) Subject ('|")?({email_subject}.+?)\s*('|"|$)"""
+      """\sMID\s+({alert_id}\d+)"""
     ]
     DupFields = [ "alert_id->message_id" ]
   

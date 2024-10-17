@@ -17,7 +17,7 @@ Name = cisco-securenwanalytics-cef-alert-trigger-success-fcdvc
     """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dest_ip=(0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """src=({src_host}[^\s]+)""",
-    """src_user=({user}[\w\.\-]{1,40}\$?)""",
+    """src_user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """dest=({dest_host}[^\s]+)""",
     """dest_port=({dest_port}\d+)"""
   ]

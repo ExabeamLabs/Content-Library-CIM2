@@ -9,7 +9,7 @@ Name = symantec-vip-kv-endpoint-login-success-authentication
   Fields = [
     """INFO\s*"*({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\.\d\d\d \w+)(\+|\-)\d+\s*"*\s+\S+\s+({service_name}[^":]+)""",
     """({event_name}Authentication Success for user)"""
-    """for user \[(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""
+    """for user \[(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = v1.0.0
 

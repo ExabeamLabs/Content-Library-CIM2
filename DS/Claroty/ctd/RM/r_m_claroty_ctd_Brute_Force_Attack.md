@@ -7,7 +7,7 @@ Vendor: Claroty
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   0    |         4          |       1        |    0    |
+|   9   |   0    |         4          |       1        |    1    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

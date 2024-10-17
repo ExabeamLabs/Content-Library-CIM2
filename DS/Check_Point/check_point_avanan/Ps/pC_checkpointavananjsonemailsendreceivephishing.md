@@ -7,7 +7,7 @@ Name = checkpoint-avanan-json-email-send-receive-phishing
   Fields = ${AvananParserTemplates.json-avanan-security-alert.Fields}[
     """"description_text\\*":\\*"[^"']+?'({email_subject}[^"']+)'""",
     """"saas_info\\*":\[\{[^\}]+?"full_name\\*":\\*"({full_name}[^\\"]+)\\*"""",
-    """"sender_address":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"sender_address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"saas_info":[^\}]+"email":"({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
     """"is_deleted\\*":({result}[^,]+)"""
   ]
@@ -33,7 +33,7 @@ json-avanan-security-alert = {
     """sender_client_ip\\*":\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """attachments\\*":\[\{[^\}]+?"name\\*":\\*"({email_attachments}[^"\\]+)""",
     """file_name\\*":\\*"\s*({file_name}[^\\"]+?)\s*\\*"""",
-    """from_email\\*":\\*"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """from_email\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"category":"({category}[^"]+)""""
     
 }

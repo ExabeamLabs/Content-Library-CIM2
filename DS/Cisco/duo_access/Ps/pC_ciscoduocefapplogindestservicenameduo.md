@@ -12,7 +12,7 @@ Name = "cisco-duo-cef-app-login-destservicenameduo"
     """"isotimestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{6})?([+-]\d\d:\d\d)?)"""",
     """\"timestamp\":\s*({time}\d{10})""",
     """\WdestinationServiceName =(|({app}[^=]+?))(\s+\w+=|\s*$)""",
-    """"username"+:"+(?!AD Sync:|AD User Sync:)(({email_address}[^"\s@]+@({email_domain}[^"\s@]+))|({full_name}[^\s]+\s[^"]+)|({user}[\w\.\-]{1,40}\$?))"""",
+    """"username"+:"+(?!AD Sync:|AD User Sync:)(({email_address}[^"\s@]+@({email_domain}[^"\s@]+))|({full_name}[^\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"phone":\s*"({device_name}({object}[^"]+))"""",
     """"device":\s*"({device_name}({object}[^"]+))""",
     """"object":\s*"(({email_address}[^"@\s]+@[^"\s@]+)|({object}[^"]+))""",

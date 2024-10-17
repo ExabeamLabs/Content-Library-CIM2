@@ -17,7 +17,7 @@ Fields = [
 """"device_domain":"({domain}[^"]+)""""
 """"file":\{.*?"md5":"?(?:null|({hash_md5}[^"]+))""""
 """"file":\{.*?"path":"({file_path}({file_dir}[^"]*?)({file_name}[^"\\\/]+?)(\.({file_ext}[^"\\\/.]+))?)""""
-""""user_name":"(?:SYSTEM|(A|a)dministrator|({full_name}[^\s"]+\s+[^\s"]+)|({user}[\w\.\-]{1,40}\$?))".+?\]"""
+""""user_name":"(?:SYSTEM|(A|a)dministrator|({full_name}[^\s"]+\s+[^\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))".+?\]"""
 """"device_os_name":"({os}[^"]+)""""
 """"event_id":({alert_id}\d+)"""
 """"severity_id":({alert_severity}\d+)"""

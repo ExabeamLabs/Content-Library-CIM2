@@ -16,7 +16,7 @@ Fields = [
   """0\|CB\|CB\|[^|]*\|({alert_type}[^|]+)\|"""
   """\Wcomputer_name=(|({dest_host}[^=]+?))(\s+\w+=|\s*$)"""
   """\Winterface_ip=(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
-  """\Wusername=(({domain}[^\\]+)\\+)?(|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)"""
+  """\Wusername=(({domain}[^\\]+)\\+)?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
   """\Wsensor_id=(|({sensor_id}[^=]+?))(\s+\w+=|\s*$)"""
   """\Wioc_type=md5[^@]+?ioc_value=(|({hash_md5}[^=]+?))(\s+\w+=|\s*$)"""
   """\W(process_)?md5=(|({hash_md5}[^=]+?))(\s+\w+=|\s*$)"""

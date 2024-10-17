@@ -6,7 +6,7 @@ Name = unix-unix-str-endpoint-notification-auth
   Product = Unix
   Conditions = [ """ su """, """ auth.notice]""" ]
   Fields = ${DLUnixParsersTemplates.unix-events.Fields}[
-    """'({command}su ({user}[\w\.\-]{1,40}\$?))'""",
+    """'({command}su ({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
   ]
 
 unix-events = {

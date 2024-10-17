@@ -13,7 +13,7 @@ Name = mcafee-es-cef-alert-trigger-success-hostintrusion
       """\Wrt=({time}\d{13})""",
       """\Wshost=({src_host}.+?)\s+(\w+=|$)""",
       """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """\Wsuser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
+      """\Wsuser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
       """\Wsproc=({process_path}({process_dir}.*?)[\\\/]*({process_name}[^\\\/=]+?))\s+(\w+=|$)""",
       """\Wdhost=({dest_host}.+?)\s+(\w+=|$)""",
       """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

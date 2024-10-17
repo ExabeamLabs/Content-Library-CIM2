@@ -17,7 +17,7 @@ Fields = [
 """\sdvchost=({host}\S+)(\s+\w+=|\s*$)"""
 """\sdhost=({dest_host}\S+)(\s+\w+=|\s*$)"""
 """\sdst=({dest_ip}\S+)(\s+\w+=|\s*$)"""
-"""\ssuser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 """\ssuid=({user_uid}.+?)(\s+\w+=|\s*$)"""
 """\sduser=({account}.+?)(\s+\w+=|\s*$)"""
 """({event_code}sudo)"""

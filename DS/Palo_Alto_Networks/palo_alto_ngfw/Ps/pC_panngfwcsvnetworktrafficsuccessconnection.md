@@ -16,7 +16,7 @@ Name = pan-ngfw-csv-network-traffic-success-connection
     """THREAT,url,((|[^,]+),){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,({src_translated_ip}[A-Fa-f\d:.]+),({dest_translated_ip}[A-Fa-f\d:.]+),"""
      """THREAT,url,([^,]*,){26}(\\?"+)?(\w+:\/{2})?(www\.)?({web_domain}[a-zA-Z0-9\-_\.]+?)[\\\/\s:"]"""
     """THREAT,([^,]*,){7}({rule}[^,]+?)\s*,""",
-    """THREAT,([^,]*,){8}(({email_address}[^@,]+@[^,\.]+\.[^,]+)|(({domain}[^,\\]+?)[\\]{1,2})?({user}[\w\.\-]{1,40}\$?))"""
+    """THREAT,([^,]*,){8}(({email_address}[^@,]+@[^,\.]+\.[^,]+)|(({domain}[^,\\]+?)[\\]{1,2})?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^,]+)),"""
     """THREAT,([^,]*,){10}(not-applicable|({network_app}[^,]+?))\s*,""",
     """THREAT,([^,]*,){12}({src_network_zone}[^,]+?)\s*,""",
     """THREAT,([^,]*,){13}({dest_network_zone}[^,]+?)\s*,""",

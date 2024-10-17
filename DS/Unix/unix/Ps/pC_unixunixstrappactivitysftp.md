@@ -10,7 +10,7 @@ Name = unix-unix-str-app-activity-sftp
     """\d\d:\d\d:\d\d ({host}[^\s]+) SFTP:""",
     """Listener=({dest_ip}[\da-fA-F:\.]+):({dest_port}\d+)""",
     """Client=({src_ip}[\da-fA-F:\.]+):({src_port}\d+)""",
-    """User=({user}[\w\.\-]{1,40}\$?)><\w+=""",
+    """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)><\w+=""",
     """Host=({dest_host}[^,=]+?),\s+\w+=""",
     """({app}SFTP)""",
     """SFTP: ({additional_info}[^<]+?)\s+<Host""",

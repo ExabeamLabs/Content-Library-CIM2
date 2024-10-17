@@ -15,7 +15,7 @@ Fields = [
   """(\s|\|)deviceSeverity=({alert_severity}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)shost=({src_host}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+([\w\.-]+=|$)"""
-  """(\s|\|)suser=({user}[\w\.\-]{1,40}\$?)\s+([\w\.-]+=|$)"""
+  """(\s|\|)suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+([\w\.-]+=|$)"""
   """(\s|\|)sntdom=({domain}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)sproc=({process_name}.+?)\s+([\w\.-]+=|$)"""
   """(\s|\|)cs1=({alert_name}.+?)\s+cs2="""
@@ -34,7 +34,6 @@ Fields = [
 DupFields = [
   "dest_email_address->target"
   "file_name->email_attachments"
-  "email_address->src_email_address"
 ]
 ParserVersion = "v1.0.0"
 

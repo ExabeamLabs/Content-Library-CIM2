@@ -15,7 +15,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-detecte
   """Chemin de fichier :\s({process_path}(({process_dir}\w+:[^,]+)[\\]+)?({process_name}[^\\.]+\.[^\"\\,:]+))"""
   """Action réelle\s:\s({action}[^,]+)"""
   """Nom du serveur\s:\s({host}[\w\-.]+)"""
-  """Nom d’utilisateur\s:\s({user}[\w\.\-]{1,40}\$?)"""
+  """Nom d’utilisateur\s:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Hachage d’application :\s({hash_md5}[^,]+)"""
   """Jeu de catégories :\s({alert_type}[^,]+)"""
   """Type de catégorie :\s({additional_info}[^,]+)"""

@@ -11,7 +11,7 @@ Name = cisco-fp-str-process-create-success-111008
     """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s*:\s*%FTD""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD\-({priority}\d+)\-({event_code}\d+)""",
-    """User\s+'({user}[\w\.\-]{1,40}\$?)'""",
+    """User\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """({event_name}executed)\s+the\s+'({process_command_line}[^']+?)\s*'"""
   ]
 

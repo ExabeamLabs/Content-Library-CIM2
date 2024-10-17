@@ -10,7 +10,7 @@ Name = vmware-horizon-str-endpoint-login-fail-unable
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """user\s+(({domain}[^\\\s:"]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """user\s+(({domain}[^\\\s:"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """({event_name}({operation}Unable to launch from Pool \w+).+?)[\s"]*$"""
     """ Unable to launch from Pool\s+({src_host}[\w\-.]+)""",
 # machine is removed

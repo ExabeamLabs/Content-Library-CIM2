@@ -28,7 +28,7 @@ json-symantec-endpoint-protection = {
       """"time\\*":({time}\d{13})"""
       """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"message":"\s*({additional_info}[^"]+)""",
-      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[\w\.\-]{1,40}\$?)""",
+      """"user_name":"(({domain}[^\\"]+)\\\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"uuid":"({user_uid}[^"]+)""",
       """"destinationServiceName":"({app}[^"]+)""",
       """"session_id":"({session_id}[^"]+)""",
@@ -48,7 +48,7 @@ json-symantec-endpoint-protection = {
       """exa_json_path=$.device_name,exa_field_name=host"""
       """exa_json_path=$.device_domain,exa_field_name=domain"""
       """exa_json_path=$..rule_name,exa_field_name=operation"""
-      """exa_json_path=$.user_name,exa_regex=^(({domain}[^\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)$"""
+      """exa_json_path=$.user_name,exa_regex=^(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
     ]
    DupFields = [ "host->src_host" 
 }

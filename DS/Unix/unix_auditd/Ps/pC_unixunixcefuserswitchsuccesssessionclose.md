@@ -20,7 +20,7 @@ cef-unix-template = {
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=({user}[\w\.\-]{1,40}\$?)""",
+      """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\Wdhost=({dest_host}[\w\-.]+)""",
     
 }

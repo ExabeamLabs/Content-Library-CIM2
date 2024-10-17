@@ -15,7 +15,7 @@ Name = "cisco-ios-str-configuration-modify-success-configured"
     """({event_code}%SYS-[^\s]+):"""
     """({event_category}CONFIG)"""
     """%SYS-[^\s]+: ({event_name}.+?)\s*$"""
-    """Configured from console by (({email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|(({domain}[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)) on""",
+    """Configured from console by (({email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|(({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)) on""",
     """ on .+?\((({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^)]+))\)"""
   ]
   ParserVersion = "v1.0.0"

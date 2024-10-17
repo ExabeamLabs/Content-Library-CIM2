@@ -9,7 +9,7 @@ Name = pan-gp-leef-app-activity-system
   Conditions = [ """LEEF:""", """|Palo Alto Networks|PAN-OS Syslog Integration|""" ,"""|cat=SYSTEM|""", """|Subtype="""]
   Fields = [
     """\|ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)""",
-    """User name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """IP\s*({src_ip}[A-Fa-f:.\d]+),\s*port\s*({src_port}\d+)""",
     """DeviceName =({host}[\w\-.]+)""",
     """Severity=({severity}[^\s|]+)""",

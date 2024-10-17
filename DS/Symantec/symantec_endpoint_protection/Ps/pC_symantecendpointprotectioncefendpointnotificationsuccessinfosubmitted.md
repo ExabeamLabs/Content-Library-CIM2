@@ -11,7 +11,7 @@ Name = symantec-endpointprotection-cef-endpoint-notification-success-infosubmitt
       """\d\d:\d\d:\d\d\s({host}[^\s]+) CEF:""",
       """"arr_time":"({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z)"""",
       """({event_name}Information submitted to Symantec)""",
-      """suser=({user}[\w\.\-]{1,40}\$?)\s*\w+=""",
+      """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+=""",
       """\sdvchost=({host}[\w\-.]+)""",
 	  """agt=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))\s"""
       """\|Symantec\|([^\|]*\|){3}({additional_info}[^\|]+)\|"""   

@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """({time}\w+ \d+ \d\d:\d\d:\d\d)\s+({host}\S+)\s+\S+\s+\S+\(dsepam:auth\)"""
-"""\suser=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 

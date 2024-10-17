@@ -23,7 +23,7 @@ Name = "cisco-ise-kv-configuration-modify-configurationchange"
     """({result}success|failure)"""
 # connection_requested is removed
     """AdminIPAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    """AdminName =({user}[\w\.\-]{1,40}\$?)"""
+    """AdminName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """ConfigChangeData=({additional_info}.+?)\,?\s$"""
   ]
   ParserVersion = "v1.0.0"

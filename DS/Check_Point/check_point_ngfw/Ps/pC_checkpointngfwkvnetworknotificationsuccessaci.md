@@ -12,7 +12,6 @@ Name = checkpoint-ngfw-kv-network-notification-success-aci
     """\Wsyslog_severity:"({alert_severity}[^"]+)"""",
     """\Worigin:"({origin_ip}[A-Fa-f\d\.:]+)"""",
     """\Wproduct:"({product_name}[^"]+)"""",
-    """\Wifdir:"({direction}[^"]+)"""",
     """default_device_message:"[^%]+({additional_info}.+?)\s*";"""
   ]
   ParserVersion = v1.0.0

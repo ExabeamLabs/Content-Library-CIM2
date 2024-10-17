@@ -14,7 +14,7 @@ Fields = [
   """({app}View)"""
   """\s+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
   """\sUserSID="({user_sid}[^"]+)""""
-  """UserDisplayName ="(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""""
+  """UserDisplayName ="(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """MachineName ="({dest_host}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"

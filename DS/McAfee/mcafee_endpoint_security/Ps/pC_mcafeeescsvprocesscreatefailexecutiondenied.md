@@ -9,7 +9,7 @@ Name = mcafee-es-csv-process-create-fail-executiondenied
   Fields = [
     """<GMTTime>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)</GMTTime>""",
     """({host}[\w\-.]+)\s+EPOEvents""",
-    """<SCORuser_name>(({domain}[^\\\/<>]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)</SCORuser_name>""",
+    """<SCORuser_name>(({domain}[^\\\/<>]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</SCORuser_name>""",
     """<SCORfile_name>({file_path}({file_dir}[^<>]*?[\\\/<>]+)?({file_name}[^\\\/<>]+?(\.({file_ext}\w+))?))</SCORfile_name>""",
     """<SCORprocess_name>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^\\\/<>]+))</SCORprocess_name>""",
     """<SCORparent_process_name>({parent_process_path}({parent_process_dir}[^<>]*?[\\\/]+)?({parent_process_name}[^\\\/<>]+))</SCORparent_process_name>""",

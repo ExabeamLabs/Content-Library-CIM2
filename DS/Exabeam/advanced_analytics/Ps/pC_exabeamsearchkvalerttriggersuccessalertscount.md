@@ -6,6 +6,7 @@ Name = "exabeam-search-kv-alert-trigger-success-alertscount"
     Product = "Advanced Analytics"
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
     end_timeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    event_timeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Conditions = [
       """score="""
       """top_reasons="""
@@ -17,18 +18,20 @@ Name = "exabeam-search-kv-alert-trigger-success-alertscount"
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\sexabeam-analytics-master""" 
       """timestamp="({time}[^"]+)"""", 
       """\sid=\"({session_id}[^\"]+)"""
-      """\suser=\"({user}[\w\.\-]{1,40}\$?)"""
+      """\suser=\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """\sscore=\"({original_risk_score}\d+)"""
-      """\sreasons_count=\"({reasons_count}\d+)"""
+      """\sreasons_count=\"({count}\d+)"""
       """\sevents_count=\"({events_count}\d+)"""
       """\salerts_count=\"({alerts_count}\d+)"""
       """\surl=\"({url}[^\"]+)\""""
-      """\szones=\"({network_zones}[^\"]+)\""""
+      """\szones=\"({src_network_zone}[^\"]+)\""""
       """\stop_reasons=\"(|({alert_reason}[^\"]*))\"*\s+\w+="""
+      """\stop_reasons=\"(|({alert_name}[^\"]*))\"*\s+\w+="""
       """\ssrc_ip=\"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
       """\ssrc_host=\"(|NA|-|({src_host}[^\"]*))\"*\s+\w+=""",
       """end_time=\"({end_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """labels=\"({asset_labels}[^\"]+)\""""
+      """start_time=\"({event_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
     ]
     SOAR {
       IncidentType = "ueba"

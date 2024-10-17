@@ -13,7 +13,7 @@ Name = mcafee-es-kv-file-write-success-localizationkey
         """Evidence(=|:)\s*"([^,]*,){4}\s*({device_id}.+?)(\"|&\d|,)""",
         """Evidence(=|:)\s*"([^,]*,)\s*({device_type}[^,]+)""",
         """EventType_LocalizationKey(=|:)\s*"({operation}[^"]+)"""",
-        """UserName(=|:)\s*"(({domain}[^\\]+)\\)?({user}[\w\.\-]{1,40}\$?)"""",
+        """UserName(=|:)\s*"(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
         """FocusDisplay(=|:)\s*"({operation_details}[^"]+)"""",
     ]
 	ParserVersion = "v1.0.0"

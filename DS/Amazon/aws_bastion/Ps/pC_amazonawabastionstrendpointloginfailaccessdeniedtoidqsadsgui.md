@@ -12,7 +12,7 @@ Name = "amazon-awabastion-str-endpoint-login-fail-accessdeniedtoidqsadsgui"
   Fields = [
   """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+bastion"""
   """({event_name}denied access)"""
-  """bastion\d*:({hostname}[^:]+):({aws_user}({user}[\w\.\-]{1,40}\$?)):\s"""
+  """bastion\d*:({src_host}[^:]+):({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)):\s"""
   """:\s+({failure_reason}.+?)\s*$"""
   ]
   ParserVersion = "v1.0.0"

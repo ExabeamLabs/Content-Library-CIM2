@@ -24,7 +24,7 @@ Name = cisco-fp-json-alert-trigger-success-502
     """exa_json_path=$.fileName.data,exa_field_name=malware_file_name""",
     """exa_json_path=$.direction,exa_field_name=direction""",
     """exa_json_path=$.@computed.fileType,exa_field_name=file_type""",
-    """exa_json_path=$.@computed.user,exa_regex=(No Authentication Required|Unknown|({user}[\w\.\-]{1,40}\$?))""",
+    """exa_json_path=$.@computed.user,exa_regex=(No Authentication Required|Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.disposition,exa_field_name=result""",
     """exa_json_path=$.@computed.disposition,exa_field_name=additional_info""",
     """exa_json_path=$.threatScore,exa_field_name=alert_severity""",

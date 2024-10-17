@@ -14,7 +14,7 @@ Name = cisco-asa-kv-network-session-fail-750003
     """%ASA\-({priority}\d+)\-({event_code}\d+)""",
     """Local:(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?)):({dest_port}\d+)""",
     """Remote:(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?)):({src_port}\d+)""",
-    """Username:({user}[\w\.\-]{1,40}\$?)\s+({protocol}\w+)?\s*({event_name}Negotiation aborted due to ERROR)""",
+    """Username:({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+({protocol}\w+)?\s*({event_name}Negotiation aborted due to ERROR)""",
     """ERROR:\s*(|({result_reason}.*?))\s*$"""
   ]
   DupFields = [ "result_reason->failure_reason" ]

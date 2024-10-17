@@ -19,7 +19,7 @@ Name = cisco-ac-json-network-session-success-pph
       """exa_json_path=$.obc,exa_field_name=bytes_out"""
       """exa_json_path=$.pr,exa_field_name=protocol"""
       """exa_json_path=$.ct,exa_field_name=connection_type"""
-      """exa_regex="pa":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+      """exa_regex="pa":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """exa_json_path=$.pn,exa_field_name=process_name"""
       """exa_json_path=$.pid,exa_field_name=process_id"""
       """exa_json_path=$.ppn,exa_field_name=parent_process_name"""
@@ -29,7 +29,7 @@ Name = cisco-ac-json-network-session-success-pph
       """exa_json_path=$.fst,exa_field_name=flow_start_time"""
       """exa_json_path=$.fet,exa_field_name=flow_end_time"""
       """exa_json_path=$.udid,exa_field_name=udid"""
-      """exa_regex="liuid":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+      """exa_regex="liuid":\s*"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """exa_json_path=$.ppath,exa_field_name=process_path"""
       """exa_json_path=$.pppath,exa_field_name=parent_process_path"""
     ]

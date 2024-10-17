@@ -10,7 +10,8 @@ Name = unix-unix-str-scheduled-task-start-crond
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z\s(::ffff:)?({host}[\w\-.]+)\s""",
     """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)? crond\[""",
-    """\scrond\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\scrond\[\d+\]:\s*({additional_info}.+?)\s*$""",
+    """USER\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*pid"""
   ]
 
 

@@ -29,7 +29,7 @@ leef-pan-alert = {
     """\|URLCategory=({category}[^\|]+)""",
     """\|Severity=({alert_severity}[^\|]+)""",
     """\|ThreatCategory=(?:unknown|({threat_category}[^\|]+))""",
-    """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-]{1,40}\$?)""",
+    """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\|SourceZone=({src_network_zone}[^\|]+?)\|""",
     """\|DestinationZone=({dest_network_zone}[^\|]+?)\|""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""

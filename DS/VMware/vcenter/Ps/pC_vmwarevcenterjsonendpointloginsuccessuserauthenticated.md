@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """exa_json_path=$.host,exa_field_name=host"""
-  """exa_json_path=$.message,exa_regex=Authenticated user ({user}[\w\.\-]{1,40}\$?)"""
+  """exa_json_path=$.message,exa_regex=Authenticated user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """exa_regex=({app}VM_VCenter)"""
 ]
 ParserVersion = "v1.0.0"

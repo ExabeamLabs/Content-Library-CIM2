@@ -9,7 +9,7 @@ Name = pan-tesm-mix-alert-trigger-success-trapsagent
   Fields = [
     """\d\d:\d\d:\d\d ({host}[^\s]+)\sCEF""",
     """(devTime|rt)=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
-    """duser=(({domain}[^\\]+)\\)?(?: |({user}[\w\.\-]{1,40}\$?))\s*\w+=""",
+    """duser=(({domain}[^\\]+)\\)?(?: |({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
     """dhost=(?: |({src_host}.+?))\s*\w+=""",
     """\|Palo Alto Networks\|([^|]+\|){2}({alert_name}[^|]+)""",
     """\|Palo Alto Networks\|([^|]+\|){4}({alert_severity}[^|]+)""",

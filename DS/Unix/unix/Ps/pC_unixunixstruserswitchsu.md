@@ -12,7 +12,7 @@ Name = unix-unix-str-user-switch-su
     """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)? su:""",
     """\ssu:\s*({additional_info}.+?)\s*$"""
     """({event_code}su)"""
-    """from ({user}[\w\.\-]{1,40}\$?) to ({account}\w+) at ({process_dir}.*?)\?*\s*$"""
+    """from ({user}[\w\.\-\!\#\^\~]{1,40}\$?) to ({account}\w+) at ({process_dir}.*?)\?*\s*$"""
 
   ]
   ParserVersion = "v1.0.0"

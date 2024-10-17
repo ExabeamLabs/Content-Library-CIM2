@@ -15,7 +15,7 @@ Conditions = [
 ]
 Fields = [
     """exa_json_path=$.date_part,exa_field_name=time""",
-    """exa_json_path=$.userid,exa_regex=^({user}[\w\.\-]{1,40}\$?)""",
+    """exa_json_path=$.userid,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.printer_name,exa_field_name=printer_name""",
     """exa_json_path=$.pages_printed,exa_field_name=num_pages""",
     """exa_json_path=$.document_details,exa_field_name=object""",

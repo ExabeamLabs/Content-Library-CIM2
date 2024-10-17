@@ -16,11 +16,11 @@ SSSSSSZ"]
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """\|({operation}[^\|]+)\|\{""",
     """\|({full_name}({first_name}[^\s"\|]+)\s({last_name}[^"\|]+))\|[^\|]*\|\{""",
-    """"name":\s*"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-]{1,40}\$?))"""",
+    """"name":\s*"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"email":\s*"({email_address}[^@"]+@({email_domain}[^"\s]+))"""",
     """"(phone|number)":\s*"({object}[^"]+)"""",
     """"role":\s*"({role}[^"]+)"""",
-    """"status":\s*"({status}[^"]+)"""",
+    """"status":\s*"({status_msg}[^"]+)"""",
     """({app}duo)""",
   
 }

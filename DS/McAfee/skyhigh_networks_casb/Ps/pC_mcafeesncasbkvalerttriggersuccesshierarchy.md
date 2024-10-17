@@ -23,7 +23,7 @@ Fields = [
 """,name=({file_name}[^,]+)"""
 """,serviceName =({additional_info}[^,]+)"""
 """,response=({action}[^,]+)"""
-""",userDisplayName =({user}[\w\.\-]{1,40}\$?)"""
+""",userDisplayName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """,size=({bytes}\d+)"""
 ]
 ParserVersion = "v1.0.0"

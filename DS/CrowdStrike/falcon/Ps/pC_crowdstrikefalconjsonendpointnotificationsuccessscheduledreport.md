@@ -7,11 +7,11 @@ Name = crowdstrike-falcon-json-endpoint-notification-success-scheduledreport
   Conditions = [ """"offset":""", """"eventType":"ScheduledReportNotificationEvent"""", """"ReportName"""" ]
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-alert-1.Fields} [
     """"ReportName":"({additional_info}[^"]+)""""
-    """"(?i)UserId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""",
+    """"(?i)UserId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"eventCreationTime":({time}\d{13}),"""
     """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",
     """exa_json_path=$.event.ReportName,exa_field_name=additional_info""",
-    """exa_regex="(?i)UserId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+    """exa_regex="(?i)UserId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 
   ]
 

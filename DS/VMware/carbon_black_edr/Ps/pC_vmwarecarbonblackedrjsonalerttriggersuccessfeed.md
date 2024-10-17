@@ -16,7 +16,7 @@ Fields = [
   """exa_json_path=$.type,exa_field_name=alert_type"""
   """exa_json_path=$.computer_name,exa_field_name=dest_host"""
   """exa_json_path=$.interface_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """exa_json_path=$.docs[*].username,exa_regex=(({domain}[^\\\"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+  """exa_json_path=$.docs[*].username,exa_regex=(({domain}[^\\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """exa_json_path=$.sensor_id,exa_field_name=sensor_id"""
   """exa_json_path=$.docs[*].process_md5,exa_field_name=hash_md5"""
   """exa_json_path=$.docs[*].unique_id,exa_field_name=alert_id"""

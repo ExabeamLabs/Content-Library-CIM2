@@ -9,7 +9,7 @@ Name = unix-ad-kv-endpoint-notification-permissioncheck
   Conditions = [ """Auditd: SELinux permission check""", """type=AVC""", """ denied """ ]
   Fields = [
     """"description":"({description}[^"]+)""",
-    """"groups":\[({groups}[^\]]+?)\]""",
+    """"groups":\[({group_info}[^\]]+?)\]""",
 # euid is removed
     """"command":"({process_name}[^"]+)""",
     """"location":"({log_location}[^"]+)""",

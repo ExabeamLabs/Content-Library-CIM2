@@ -17,7 +17,7 @@ sentinelone-vigilance-app-events {
     """\srt=(#arcsightDate\()?({time}\w{3},\s\d\d\s\w{1,3}\s\d\d\d\d,\s\d\d:\d\d:\d\d\s\w{3})\)?""",
     """activityType=({event_code}\d+)\s\w+=""",
     """({app}SentinelOne)""",
-    """suser=(({full_name}[^=]+?\s[^=]+?)|({user}[\w\.\-]{1,40}\$?))\s\w+="""
+    """suser=(({full_name}[^=]+?\s[^=]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s\w+="""
   
 }
 ```

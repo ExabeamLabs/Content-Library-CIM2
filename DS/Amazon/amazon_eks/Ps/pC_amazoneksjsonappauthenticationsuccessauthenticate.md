@@ -11,7 +11,7 @@ Name = amazon-eks-json-app-authentication-success-authenticate
       """eks"""
       ]
       Fields =[
-      """"*username\\?"*(=>|:|=)\\?"*({user}[\w\.\-]{1,40}\$?)""",
+      """"*username\\?"*(=>|:|=)\\?"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"*groups\\?"*(=>|:|=)"\[\\?({group_name}[^"\\\]]+)""",
       """({time}\d+\-\d+\-\d+T\d\d:\d\d:\d\dZ)""",
       """"AccountName":"({account}[^"\\]+)""""

@@ -4,7 +4,7 @@
 Name = pan-ngfw-json-endpoint-authentication-success-signvalidated
  Conditions = [ """"LogType":"SYSTEM"""", """"Subtype":"auth"""", """"EventName":"saml-signature-validated""""]
  Fields = ${DLPaloAltoParserTemplates.json-pan-system.Fields}[
-   """exa_json_path=$.EventDescription,exa_regex= for user '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"'\\,\|]+))|(({domain}[^\s'\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+   """exa_json_path=$.EventDescription,exa_regex= for user '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"'\\,\|]+))|(({domain}[^\s'\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
  ]
 
 json-pan-system = {

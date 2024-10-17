@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """connected to gateway,([^,]*,){14}({time}[^,]+)"""
 """authcrypt,([^,]*?,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""connected to gateway,([^,]*?,)({user}[\w\.\-]{1,40}\$?)"""
+"""connected to gateway,([^,]*?,)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

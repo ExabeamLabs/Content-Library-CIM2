@@ -19,7 +19,7 @@ Fields = [
 """\Wcs2=\"?({process_command_line}[^\n]+?)\s*\"?\s+cs2Label="""
 """initiatorPath=(System|({process_path}[^=]+))\s+(\w+=|$)"""
 """\Wcs1=({process_name}[^\=]+)\s+"""
-"""\Wsuser=\['(((NT AUTHORITY|TEST|({domain}[^\\\=]+))\\+)?(N\/A|LOCAL SERVICE|SYSTEM|Administrator|NETWORK SERVICE|({user}[\w\.\-]{1,40}\$?)))(',\s|'\]\s+\w+=)"""
+"""\Wsuser=\['(((NT AUTHORITY|TEST|({domain}[^\\\=]+))\\+)?(N\/A|LOCAL SERVICE|SYSTEM|Administrator|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(',\s|'\]\s+\w+=)"""
 """\Wshost=(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^\=]+?))\s+\w+="""
 """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
 """\Wspt=({src_port}\d+)"""

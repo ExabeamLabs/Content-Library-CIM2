@@ -34,6 +34,7 @@ Name = crowdstrike-falcon-json-network-traffic-success-connectip
    """"RemoteAddressIP(4|6)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":"({src_port}\d+)".+?"ConnectionDirection":"1"""",
    """"cid":"({cid}[^"]+)""",
    """"event_platform":\s*"({os}[^"]+)"""
+   """"ContextBaseFileName":"({file_name}[^"]+)""""
    """exa_json_path=$.OciContainerId,exa_field_name=container_id""",
    """exa_json_path=$.hostname,exa_field_name=host""",
    """exa_json_path=$.timestamp,exa_field_name=time""",
@@ -57,6 +58,7 @@ Name = crowdstrike-falcon-json-network-traffic-success-connectip
    """exa_regex="RemoteAddressIP(4|6)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":"({src_port}\d+)".+?"ConnectionDirection":"1"""",
    """exa_json_path=$.cid,exa_field_name=cid""",
     """exa_json_path=$.event_platform,exa_field_name=os"""
+   """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
   ]
 
 

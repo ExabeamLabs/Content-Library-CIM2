@@ -18,7 +18,7 @@ Name = pan-gp-json-app-activity-success-tunnel
   """exa_json_path=$.EventStatus,exa_field_name=result"""
   """exa_json_path=$.EndpointDeviceName,exa_field_name=src_host,exa_match_expr=!Contains(toLower($.EndpointDeviceName),"null")"""
   """exa_json_path=$.SourceRegion,exa_field_name=src_country,exa_match_expr=!Contains(toLower($.SourceRegion),"null")"""
-  """exa_json_path=$.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.EventIDValue,exa_field_name=auth_method,exa_match_expr=!Contains(toLower($.EventIDValue),"null")"""

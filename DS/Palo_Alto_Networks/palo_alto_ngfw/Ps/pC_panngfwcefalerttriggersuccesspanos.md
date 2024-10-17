@@ -25,7 +25,7 @@ Fields = [
   """\|spyware\|THREAT\|(Unknown|({alert_severity}[^\|]+))"""
   """\seventId=({alert_id}\d+)\s+(\w+=|$)"""
   """\sapp=({threat_category}[^=]+)\s+(\w+=|$)"""
-  """\ssuser="*((({domain}[^\\\/="]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"*"""
+  """\ssuser="*((({domain}[^\\\/="]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"*"""
   """\sproto=({protocol}[^=]+?)\s+\w+="""
   """\sact=({action}[^=]+?)\s+\w+="""
   """\sspt=({src_port}\d+)"""

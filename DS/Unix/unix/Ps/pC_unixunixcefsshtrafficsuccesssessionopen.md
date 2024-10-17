@@ -11,7 +11,7 @@ Name = unix-unix-cef-ssh-traffic-success-sessionopen
     """\Wrt=({time}\d{13})""",
     """\Wdvchost=({host}.+?)\s+(\w+=|$)""",
     """\Wsuid=({account_id}.+?)\s+(\w+=|$)""",
-    """\Wduser=({user}[\w\.\-]{1,40}\$?)\s+(\w+=|$)""",
+    """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """\Wcs1=({event_code}.+?)\s+(\w+=|$)""",
     """\Wdhost=({dest_host}.+?)\s+(\w+=|$)""",
     """\Wcs4=({login_id}\d+)""",

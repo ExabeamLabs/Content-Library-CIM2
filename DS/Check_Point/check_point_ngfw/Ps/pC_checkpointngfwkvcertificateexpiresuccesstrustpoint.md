@@ -13,7 +13,6 @@ Name = checkpoint-ngfw-kv-certificate-expire-success-trustpoint
     """\Wsyslog_severity:"({alert_severity}[^"]+)"""",
     """\Worigin:"({origin_ip}[A-Fa-f\d\.:]+)"""",
     """\Wproduct:"({product_name}[^"]+)"""",
-    """\Wifdir:"({direction}[^"]+)"""",
     """Subject Name\s<({subject_name}[^>]+)>""",
     """Issuer Name\s<({issuer_name}[^>]+)>""",
     """Serial Number\s<({serial_number}[^>]+)>""",

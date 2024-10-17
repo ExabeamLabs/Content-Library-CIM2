@@ -16,23 +16,22 @@ Fields = [
   """(?i)policy="*({alert_name}[^",]+)("|,|\s*$)"""
   """(?i)protocol="*({protocol}[^",]+)("|,|\s*$)"""
   """(?i)recipients="*(?=[\w.]+@[\w.])({email_recipients}[^",]+)("|,|\s*$)"""
-  """(?i)recipients="*(?=[\w.]+@[\w.])({external_address}[^",]+)("|,|\s*$)"""
+  """(?i)recipients="*(?=[\w.]+@[\w.])({dest_email_address}[^",]+)("|,|\s*$)"""
   """(?i)recipients="*(?=\w+:\/+)({target}[^",]+)("|,|\s*$)"""
-  """(?i)sender="*(?=[\w.]+@[\w.])({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("|,|\s*$)"""
-  """(?i)sender="*(?=[\w.]+@[\w.])({user}[\w\.\-]{1,40}\$?)("|,|\s*$)"""
+  """(?i)sender="*(?=[\w.]+@[\w.])({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("|,|\s*$)"""
+  """(?i)sender="*(?=[\w.]+@[\w.])({user}[\w\.\-\!\#\^\~]{1,40}\$?)("|,|\s*$)"""
   """(?i)severity="*({alert_severity}[^",]+)("|,|\s*$)"""
   """(?i)subject="*(?:N\/A|({email_subject}[^",]+))("|,|\s*$)"""
   """\s(?i)file_name="*(?:N\/A|({file_name}[^",]+))\s*("|,|\s*$)"""
   """(?i)blocked="*(?:N\/A|None|({action}[^",]+))("|,|\s*$)"""
   """(?i)endpoint_machine="*(N\/A|({dest_host}[\w\-.]+))("|,|\s*$)"""
-  """(?i)endpoint_user_name="*\s*(N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))("|,|\s*$)"""
-  """(?i)endpoint_user_name="*\s*(N\/A|({user}[\w\.\-]{1,40}\$?)@({domain}[^\s",@]+))"""
+  """(?i)endpoint_user_name="*\s*(N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))("|,|\s*$)"""
+  """(?i)endpoint_user_name="*\s*(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",@]+))"""
   """(?i)incident_snapshot=[^,]*?({alert_id}\d+),"""
   """(?i)machineIP="*(N\/A|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 ]
 DupFields = [
   "alert_name->alert_type"
-  "external_address->dest_email_address"
 ]
 SOAR {
   IncidentType = "dlp"

@@ -10,7 +10,7 @@ json-crowdstrike-endpoint-activity = {
   Product = Falcon
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Fields = [
-    """suser=(system|({user}[\w\.\-]{1,40}\$?))"""
+    """suser=(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"EventType":"({event_name}[^"]+)""",
 # eid is removed
     """"SHA256HashData":"({hash_sha256}[^"]+)""",

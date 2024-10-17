@@ -15,7 +15,7 @@ Fields = [
 """({app}View)"""
 """\s+({dest_host}[^\s]+)\s+View - """
 """\s+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
-"""UserDisplayName ="(({domain}[^\\]+)\\+)?\\*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))""""
+"""UserDisplayName ="(({domain}[^\\]+)\\+)?\\*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """MachineName ="({dest_host}[^"]+)""""
 """EventType="({operation}[^"]+)""""
 """DesktopId="({object}[^"]+)""""

@@ -10,7 +10,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
    Conditions = [ """emailInfo""", """HELOString""", """"isOutbound":true""" ]
    Fields = [
      """"mailProcessingStartTime"+:({time}\d{10})""",
-     """"headerFrom":"({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))",""",
+     """"headerFrom":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))",""",
      """"subject":"({email_subject}[^"]+)",""",
      """"messageSize":({bytes}\d+)""",
      """"messageId":"({alert_id}[^"]+)",""",
@@ -21,7 +21,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
      """\[\{"fileNameOrURL":"({email_attachment}[^\.]+\.({file_ext}[^"]+))"""
 
      """exa_json_path=$.emailInfo.mailProcessingStartTime,exa_field_name=time""",
-     """exa_json_path=$.emailInfo.headerFrom,exa_regex=^({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
+     """exa_json_path=$.emailInfo.headerFrom,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
      """exa_json_path=$.emailInfo.subject,exa_field_name=email_subject""",
      """exa_json_path=$.emailInfo.messageSize,exa_field_name=bytes""",
      """exa_json_path=$.emailInfo.messageId,exa_field_name=alert_id""",

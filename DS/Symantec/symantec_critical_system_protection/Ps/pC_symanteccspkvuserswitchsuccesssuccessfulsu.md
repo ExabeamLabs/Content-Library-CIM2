@@ -9,7 +9,7 @@ Name = symantec-csp-kv-user-switch-success-successfulsu
   Fields = [
     """\sHOSTNAME\s*:\s*"+({host}[^\s"]+)""",
     """\sEVENT_DT\s*:\s*"*({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d.\d)(\s*|"*)""",
-    """\sUSER_NAME\s*:\s*"+({user}[\w\.\-]{1,40}\$?)""",
+    """\sUSER_NAME\s*:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\sRULE_NAME\s*:\s*"+({rule}[^"\s]+)""",
     """\sPOLICY_NAME\s*:\s*"+\s*({policy_name}[^"]+?)\s*"+?\s[^:]+:"""
     """\sPROCESS_PATH\s*:\s*"+({process_name}[^"\s]+)""",

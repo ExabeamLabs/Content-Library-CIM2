@@ -17,7 +17,7 @@ Name = pan-prisma-sk4-alert-trigger-success-prismacloud
     """"source":"({app}[^"]+)"""",
     """"url":"({url}[^"]+)"""",
     """"policyId":"({policy_id}[^"]+)"""",
-    """"accountName":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"alertRuleName":"({alert_type}[^"]+)"""
   ]
 

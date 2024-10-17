@@ -10,7 +10,7 @@ Name = "unix-unix-str-endpoint-login-fail-manyauthfail"
   ]
   Fields = [
     """({host}[\w.\-]+)\s+sshd\["""
-    """({event_name}Too many authentication failures) for ({user}[\w\.\-]{1,40}\$?)"""
+    """({event_name}Too many authentication failures) for ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """({event_code}ssh)"""
     """\[\]:\s\w{3} \d\d \d\d:\d\d:\d\d ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""

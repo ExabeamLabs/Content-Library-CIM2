@@ -16,8 +16,8 @@ Name = checkpoint-sg-cef-app-activity-connectra
     """spt=({src_port}\d+)""",
     """dpt=({dest_port}\d+)""",
     """categoryOutcome=(\/)?({result}.+?)\s\w+=""",
-    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-]{1,40}\$?))""",
-    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-]{1,40}\$?))""",
+    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   ]
 
 

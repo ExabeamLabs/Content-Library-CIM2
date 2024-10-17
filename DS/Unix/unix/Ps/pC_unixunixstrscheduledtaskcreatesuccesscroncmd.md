@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """\d\d:\d\d:\d\d(\.\S+)?\s({host}[^\s]+)""",
 """\w+\s+\d+\s+\d\d:\d\d:\d\d(\.\S+)?\s+(::ffff:)?({host}[\w\-.]+)""",
-"""\(({user}[\w\.\-]{1,40}\$?)\) CMD""",
+"""\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) CMD""",
 """\sCMD\s+\(({task_name}[^"]+?\s*\)\s+?\]?)\s+""",
 """\sCMD\s+\(\s*({task_name}[^\)]+?)\s*(\)|")""",
 """\sCMD\s+\(\s*({process_command_line}.+?)\)\s*("|$)""",

@@ -18,10 +18,10 @@ Conditions = [ """\"source\":\"aws.guardduty\"""", """\"detail-type\":\"GuardDut
     """"localPortDetails\\?":\{\\?"port\\?":({dest_port}\d+)""",
     """requestClientApplication=({app}[^=]+?)\s+\w+=""",
     """"accountId\\?":\\?"({account_id}\d+)""",
-    """"country\\?":\{\\?"countryName\\?":\\?"({country_name}[^"\\]+)""",
+    """"country\\?":\{\\?"countryName\\?":\\?"({country_code}[^"\\]+)""",
     """"city\\?":\{\\?"cityName\\":\\"((?i)UNKNOWN|({location_city}[^"\\]+))""",
     """"principalId\\?":\\?"({principal_id}[^"\\]+)\\?"""",
-    """"userName\\?":\\?"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({aws_user}({user}[\w\.\-]{1,40}\$?)))""",
+    """"userName\\?":\\?"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """"s3BucketDetails\\?":[^\}\]]*"name\\?":\\?"({s3_bucket_name}[^"\\]+)""",
     """securityGroups\\?":[^"]+"groupName\\?":\\?"({group_name}[^"\\]+)"""
   ]

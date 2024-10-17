@@ -17,7 +17,7 @@ Fields = [
   """DstPort:\s*({dest_port}\d+)"""
   """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
   """AccessControlRuleAction:\s*({action}[^,]+)"""
-  """UserName:\s*({user}[\w\.\-]{1,40}\$?)"""
+  """UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Client:\s*({user_agent}[^,]+)"""
   """UserAgent:\s*({user_agent}.+?),\s*Client:"""
   """ApplicationProtocol:\s*({protocol}[^,]+)"""

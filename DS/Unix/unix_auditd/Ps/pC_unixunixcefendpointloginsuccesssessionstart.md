@@ -5,7 +5,7 @@ Name = unix-unix-cef-endpoint-login-success-sessionstart
   ParserVersion = "v1.0.0"
   Conditions = [ """CEF""", """Unix|Unix""", """|Started Session|""" ]
   Fields = ${UnixParsersTemplates.cef-unix-template.Fields}[
-    """of user ({user}[\w\.\-]{1,40}\$?)""",
+    """of user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
 
 cef-unix-template = {
@@ -20,7 +20,7 @@ cef-unix-template = {
       """CEF:([^\|]*\|){5}({event_code}[^\|]+)""",
       """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
       """\WeventId=({alert_id}\d+)""",
-      """\Wsuser=({user}[\w\.\-]{1,40}\$?)""",
+      """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\Wdhost=({dest_host}[\w\-.]+)""",
     
 }

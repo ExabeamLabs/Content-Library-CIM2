@@ -16,7 +16,7 @@ duo-app-activity-1 = {
     """"event-name":"({event_name}[^"]+)"""",
     """"action":"({operation}[^"]+)"""",
     """"description":\s*"\{({additional_info}[^"]+?)\}",""",
-    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-]{1,40}\$?))"""",
+    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"object":"({object}[^"]+)"""",
     """"error":\s*"({failure_reason}[^"]+)""",
     """"email\\"+:\s*\\"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\"""",

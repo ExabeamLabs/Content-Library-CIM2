@@ -16,7 +16,7 @@ Name = symantec-dlp-kv-alert-trigger-success-smtp-1
       """\sSubject="({additional_info}[^"]+)""",
       """\sBlocked="({action}[^"]+)"""
     ]
-    DupFields = [ "protocol->alert_type", "email_address->src_email_address"]
+    DupFields = [ "protocol->alert_type" ]
     ParserVersion = "v1.0.0"
   
 

@@ -23,9 +23,9 @@ symantec-epp-cef-alert-1 = {
   Fields = [
     """\srt=({time}\d{13})""",
     """\scs1=({alert_name}[^=]+?)\s+(\w+=|$)""",
-    """\sduser=((?i)(system|none)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",
-    """\ssuser=((?i)(system|none)|({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)""",
-    """\sfname=\w:\\+[uU]sers\\+({user}[\w\.\-]{1,40}\$?)""",
+    """\sduser=((?i)(system|none)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)""",
+    """\ssuser=((?i)(system|none)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)""",
+    """\sfname=\w:\\+[uU]sers\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\sfname=[\s ]*({malware_file_name}[^=]+?)\s+(\w+=|$)""",
     """\seventId=({alert_id}\d+)""",
     """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

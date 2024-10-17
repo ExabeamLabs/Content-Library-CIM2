@@ -7,7 +7,7 @@ Name = cisco-secureendpoint-sk4-alert-trigger-success-faultcleared
   Conditions = [ """"event_type"""", """"Fault Cleared""", """"trajectory":""", """"timestamp_nanoseconds":""" ]
   Fields = ${DLLMSCiscoParsersTemplates.s-cisco-amp-alert.Fields} [
         """timestamp":\s*({time}\d{10})""",
-    """"fault_event_title":"({event_description}[^"]+)"""",
+    """"fault_event_title":"({additional_info}[^"]+)"""",
     """"event_type":"({alert_name}[^"]+)""""
   ] 
 
@@ -23,10 +23,10 @@ s-cisco-amp-alert = {
     """"timestamp":\s*({time}\d{10})""",
     """dpriv=({alert_name}[^=]+?)\s\w+=""",
     """"detection":\s*"(|({alert_name}[^"]+?))"""",
-    """\Wsuser=((?i)(anonymous|system)|({user}[\w\.\-]{1,40}\$?))(\s+\w+=|\s*$)""",
-    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-]{1,40}\$?))@(NT AUTHORITY|({domain}[^@\s\.=]+?)))(\s+\w+=|\s*$)""",
-    """user":\s*"((?i)(anonymous|system)|({user}[\w\.\-]{1,40}\$?))"""",
-    """user"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))"""",
+    """\Wsuser=((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
+    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^@\s\.=]+?)))(\s+\w+=|\s*$)""",
+    """user":\s*"((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """user"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))"""",
     """hostname":\s*"({src_host}[^"]+)""",
     """file_path":\s*"(\\+\?\\+)?({file_path}[^"]+)""",
     """external_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

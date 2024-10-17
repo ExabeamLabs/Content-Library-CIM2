@@ -11,7 +11,7 @@ Name = symantec-cloudsoc-sk4-alert-trigger-success-fromdetect
     """suser=({email_address}[^\s]+@.+?)\s\w+=""",
     """"user_name":"({full_name}[^"]+)""",
     """"user":"({email_address}[^\@]+@[^"]+)""",
-    """"user":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"service":"({process_path}[^"]+)"""",
     """"browsers":\["({browser}[^"]+)"""",
     """"user_agent":"({user_agent}[^"]+)"""",

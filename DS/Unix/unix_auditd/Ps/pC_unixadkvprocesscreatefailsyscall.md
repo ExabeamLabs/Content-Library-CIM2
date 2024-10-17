@@ -7,10 +7,10 @@ Name = unix-ad-kv-process-create-fail-syscall
   Product = Unix Auditd
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS","MMM dd HH:mm:ss","epoch_sec"]
   Conditions = [
-"""type=SYSCALL""",
+""" type=SYSCALL""",
 """success=no""",
-"""msg=audit""",
-"""audispd:"""
+""" msg=audit(""",
+""" ppid="""
   ]
   Fields = [
     """msg=audit\(({time}\d{10}).\d+:\d+""",

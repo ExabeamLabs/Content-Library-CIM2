@@ -9,7 +9,7 @@ Conditions = [
 """Authen Session End:"""
 ]
 Fields = [
-"""\s({host}[^\s]+)\s({time}[a-zA-Z]{3} \d\d \d\d\d\d \d\d:\d\d:\d\d).+Authen Session End: user '({user}[\w\.\-]{1,40}\$?)'"""
+"""\s({host}[^\s]+)\s({time}[a-zA-Z]{3} \d\d \d\d\d\d \d\d:\d\d:\d\d).+Authen Session End: user '({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
 ]
 ParserVersion = "v1.0.0"
 

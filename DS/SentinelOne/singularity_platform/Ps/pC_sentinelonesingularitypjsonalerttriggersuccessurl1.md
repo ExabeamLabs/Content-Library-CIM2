@@ -7,7 +7,7 @@ Name = sentinelone-singularityp-json-alert-trigger-success-url-1
   Vendor = SentinelOne
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   ParserVersion = "v1.0.0"
-  Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"url"""", """"i.scheme":"edr"""" ]
+  Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"url"""", """"event.type":""" ]
   Fields = [    
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.['event.type'],exa_field_name=alert_name""",

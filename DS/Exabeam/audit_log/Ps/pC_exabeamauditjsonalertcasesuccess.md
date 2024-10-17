@@ -12,9 +12,11 @@ Name = exabeam-audit-json-alert-case-success
       """"application":"({app}[^"]+)"""",
       """"subject":"({additional_info}.+?)","""",
       """"object_name":"({object_name}.+?)",""",
+      """"object_name":"({rule}.+?)",""",
       """"object_id":"({object_id}[^"]+)"""",
       """"activity_type":"({operation_type}[^"]+)"""",
       """"operation":"({operation}.+?)",""",
+      """"operation":"({alert_name}.+?)",""",
       """"old_value":"({old_value}.*?)","""",
       """"new_value":"({new_value}.*?)","""",
       """"old_value":"({old_value}\[.*?\])","\w+":""",
@@ -30,9 +32,11 @@ Name = exabeam-audit-json-alert-case-success
       """exa_json_path=$..application,exa_field_name=app"""
       """exa_json_path=$..subject,exa_field_name=additional_info"""
       """exa_json_path=$..object_name,exa_field_name=object_name"""
+      """exa_json_path=$..object_name,exa_field_name=rule"""
       """exa_json_path=$..activity_type,exa_field_name=operation_type"""
       """exa_json_path=$..object_id,exa_field_name=object_id"""
       """exa_json_path=$..operation,exa_field_name=operation"""
+      """exa_json_path=$..operation,exa_field_name=alert_name"""
       """exa_json_path=$..old_value,exa_field_name=old_value,exa_match_expr=!InList($..old_value,"")""",
       """exa_json_path=$..new_value,exa_field_name=new_value,exa_match_expr=!InList($..new_value,"")""",
       """exa_json_path=$.old_value,exa_field_name=old_value,exa_match_expr=!InList($.old_value,"")""",

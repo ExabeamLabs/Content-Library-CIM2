@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-sk4-peripheral-storage-activity-dcusb
   """"id":"({alert_id}[\w-]+?)""""
   """"event_simpleName":"({operation_details}[^"]+)"""
   """"DeviceInstanceId":"({device_id}[^"]+)"""
-  """"DevicePropertyDeviceDescription":"({device_type}[^"]+?)\s*""""
+  """"DevicePropertyDeviceDescription":"({device_description}[^"]+?)\s*""""
   """"event_platform":"({os}[^"]+)""""
   """"cid":"({cid}[^"]+)"""
   ]

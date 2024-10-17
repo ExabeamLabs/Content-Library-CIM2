@@ -14,7 +14,7 @@ Name = cisco-ise-kv-app-activity-tacacsplus
     """CmdAV=({command}[^,]+)\s],""",
     """Privilege-Level=({privileges}[^,]+),""",
     """({app}TACACS\+ Accounting)""",
-    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-]{1,40}\$?)),"""
+    """\sUser=(({email_address}[^\s]+?@[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
     """TACACS\+\s*({operation}Accounting with Command)"""
 
   ]

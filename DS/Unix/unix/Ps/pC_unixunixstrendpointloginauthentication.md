@@ -19,7 +19,7 @@ Fields = [
   """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\+\d\d:\d\d)\s({host}({dest_host}[\w\-\.]+))\s\w+\_\w+:""",
   """\sAuthentication\s*<({result}[^\s>]+)>"""
   """\sAuthentication\s*<({result}[^\s>]+)\s+({auth_method}[^>]+)>"""
-  """\suser:\s*<({user}[\w\.\-]{1,40}\$?)>"""
+  """\suser:\s*<({user}[\w\.\-\!\#\^\~]{1,40}\$?)>"""
   """\saccount:\s*<(({domain}[^\\\s>]+)\\+)?({account}[^\\\s>]+)>"""
   """\sservice:\s*<({event_code}[^>]+)>"""
   """Caused by:\s*({failure_reason}[^\s\(:>]+)"""

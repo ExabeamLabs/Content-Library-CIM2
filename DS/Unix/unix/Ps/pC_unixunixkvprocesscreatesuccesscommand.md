@@ -11,9 +11,10 @@ Name = unix-unix-kv-process-create-success-command
 """; COMMAND="""
   ]
   Fields = [
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """({time}\d\d\s\w\w\w\s\d\d\d\d\s\d\d:\d\d:\d\d)"""
-    """({time}\w+ \d+ \d\d:\d\d:\d\d)\s*:\s*({user}[\w\.\-]{1,40}\$?)\s*:""",
-    """(-|({src_host}[\w.\-]+))\s+({user}[\w\.\-]{1,40}\$?)\s+:\s+"""
+    """({time}\w+ \d+ \d\d:\d\d:\d\d)\s*:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*:""",
+    """(-|({src_host}[\w.\-]+))\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+:\s+"""
     """"agent_hostname":"(::ffff:)?({host}[^"]+)"""",
     """\w+ \d\d \d\d:\d\d:\d\d (::ffff:)?({host}[\w.\-]+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)((\.\d+)?(\+|-)\d\d:\d\d) (::ffff:)?({host}[\w.\-]+)\s""",

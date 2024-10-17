@@ -25,7 +25,7 @@ Name = pan-ngfw-cef-alert-trigger-success-panos-1
     """\sdpt=({dest_port}\d+)""",
     """\scs1="*({rule}[^="]+?)"*\s+\w+=""",
     """PanOSThreatCategory=({threat_category}[^=]+?)\s+\w+=""",
-    """suser=((({domain}[^\\=]+?)\\+)?({user}[\w\.\-]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\s+\w+=""",
+    """suser=((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\s+\w+=""",
     """\scs2=({category}[^=]+)\s+\w+=""",
     """\sflexString2=({direction}[^=]+)\s+\w+="""
   ]

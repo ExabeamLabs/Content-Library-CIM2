@@ -11,12 +11,14 @@ Name = cisco-asa-str-endpoint-login-success-2960
 cisco-2960-auth-events = {
   Vendor = "Cisco"
   Product = "Cisco Adaptive Security Appliance"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss"]
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss", "MMM dd HH:mm:ss.SSS Z","MMM dd HH:mm:ss.SSS z"]
   Fields = [
 """\s({time}\w+ \d+ \d+:\d+:\d+)"""
 """ for client \(({src_mac}[^\)]+)\) on Interface ({src_interface}\S+) """
 """%({event_code}\w+\-\d+\-({result}[^:]+))"""
 """({event_name}Authentication \w+)"""
+"""({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
+"""\s({time}\w{3}\s+\d{2}\s+\d\d:\d\d:\d\d\.\d+\s+\w+)"""
   
 }
 ```

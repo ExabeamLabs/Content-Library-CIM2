@@ -4,6 +4,10 @@
 Name = exabeam-nganalytics-json-rule-trigger-success-nganalytics
   Product = NG Analytics
   Conditions = [ """"product":"NG Analytics"""" , """subscription_code""" , """"vendor":"Exabeam"""" ]
+  ExtractionType = json
+  Fields = ${EXAParsersTemplates.exa-events-ns.Fields} [
+    """exa_json_path=$.rules[*].rule_id,exa_field_name=rule_id"""
+  ]
 
 exa-events-ns = {
     Vendor = Exabeam
@@ -37,6 +41,12 @@ exa-events-ns = {
        """exa_json_path=$.dest_host,exa_field_name=dest_host"""
        """exa_json_path=$.create_case,exa_field_name=create_case"""
        """exa_json_path=$.id,exa_field_name=id"""
+      """exa_json_path=$.product,exa_field_name=alert_source"""
+      """exa_json_path=$.source_user_entity_id,exa_field_name=source_user_entity_id"""
+      """exa_json_path=$.dest_user_entity_id,exa_field_name=dest_user_entity_id"""
+      """exa_json_path=$.dest_device_entity_id,exa_field_name=dest_device_entity_id"""
+      """exa_json_path=$.source_device_entity_id,exa_field_name=source_device_entity_id"""
+
     
 }
 ```

@@ -12,7 +12,6 @@ s-checkpoint-firewall = {
   Fields = [
     """"time=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """\|orig=({host}[^\|]+)\|""",
-    """\|i\/f_dir=({direction}[^\|]+)""",
     """\|service=({app_protocol}[^\|]+)\|""",
     """\|action=({action}[^\|]+)\|""",
     """\|app_rule_name=({rule}[^\|]+)\|""",
@@ -21,8 +20,8 @@ s-checkpoint-firewall = {
     """\|dst=(?:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^\|]+))\|""",
     """\|proto=({protocol}[^\|]+)\|""",
     """\|src_machine_name=({src_host}[^\|]+)""",
-    """\|src_user_name=[^(]+\(({user}[\w\.\-]{1,40}\$?)""",
-    """\|user=[^(]+\(({user}[\w\.\-]{1,40}\$?)"""
+    """\|src_user_name=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """\|user=[^(]+\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   
 }
 ```

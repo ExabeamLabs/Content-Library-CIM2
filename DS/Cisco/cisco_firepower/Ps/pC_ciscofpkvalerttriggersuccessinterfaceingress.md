@@ -15,7 +15,7 @@ Fields = [
   """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
   """Protocol:\s*(Unknown|({protocol}[^,]+))"""
   """"({alert_name}[^"]+)"\s*\[Classification:\s*(Unknown|({alert_type}[^\]]+))"""
-  """User:\s*(Unknown|({user}[\w\.\-]{1,40}\$?))"""
+  """User:\s*(Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Interface Ingress:\s*(Unknown|({ingress_interface}[^,]+))"""
   """Interface Egress:\s*(Unknown|({egress_interface}[^,]+))"""
   """Security Zone Ingress:\s*(Unknown|({ingress_zone}[^,]+))"""

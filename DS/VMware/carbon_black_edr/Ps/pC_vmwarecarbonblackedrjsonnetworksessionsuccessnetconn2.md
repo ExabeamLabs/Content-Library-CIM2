@@ -15,7 +15,7 @@ Name = "vmware-carbonblackedr-json-network-session-success-netconn-2"
   Fields = [
     """exa_regex=({time}\d+-\d+-\d+ \d+:\d+:\d+.\d\d\d)"""
     """exa_json_path=$.process_cmdline,exa_field_name=process_command_line"""
-    """exa_json_path=$.process_username,exa_regex=(NT AUTHORITY\\+|(({domain}[^\\,]+)\\+))?(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$.process_username,exa_regex=(NT AUTHORITY\\+|(({domain}[^\\,]+)\\+))?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.process_pid,exa_field_name=process_id"""
     """exa_json_path=$.device_name,exa_regex=(\w+\\+)?({host}[^.\"]+)"""
     """exa_json_path=$.sensor_action,exa_field_name=result"""

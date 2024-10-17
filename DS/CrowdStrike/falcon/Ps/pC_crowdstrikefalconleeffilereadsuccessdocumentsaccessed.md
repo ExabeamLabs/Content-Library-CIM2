@@ -7,7 +7,7 @@ Name = crowdstrike-falcon-leef-file-read-success-documentsaccessed
   Conditions = [ """LEEF:""", """|CrowdStrike|FalconHost|""", """cat=DocumentsAccessed""" ]
   Fields = ${CrowdStrikeParsersTemplates.leef-crowdstrike-alert-t.Fields} [
     """CrowdStrike\|([^|]+\|){2}({alert_name}[^|]+)""",
-    """\WdocAccessedFileName =({file_name}[^|"]+?)\s*(\||\w+=|$|"+\s*$)""",
+    """\WdocAccessedFileName =({file_name}[^|"]+?(\.({file_ext}[^"\|.]+?))?)\s*(\||\w+=|$|"+\s*$)""",
     """\WdocAccessedFilePath=({file_dir}[^=]+?)\s*(\||\w+=|$|"+\s*$)""",
     """\Wdescription=({additional_info}[^=]+?)\s*(\||\w+=|$|"+\s*$)"""
   ]
@@ -17,8 +17,8 @@ leef-crowdstrike-alert-t = {
     TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Fields = [
       """\WdevTime=({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d)""",
-      """\Wduser=(?!N\/A)({user}[\w\.\-]{1,40}\$?)(@({domain}[^@]+?))?(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
-      """\WusrName =(?!N\/A)({user}[\w\.\-]{1,40}\$?)(@({domain}[^@]+?))?(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
+      """\Wduser=(?!N\/A)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@]+?))?(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
+      """\WusrName =(?!N\/A)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@]+?))?(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
       """\Wdomain=(?!N\/A)({domain}[^=]+?)(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
       """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

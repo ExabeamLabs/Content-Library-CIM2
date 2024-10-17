@@ -11,7 +11,7 @@ Name = unix-unix-str-user-switch-success-su
 """ su:"""
   ]
   Fields = [
-"""\d\d:\d\d\s*(::ffff:)?({host}[\w\.\-]+)?\s*({event_code}su):\s(?:\[[^]]+\])?\s*\'su ({account}[^']+)\' succeeded for\s+({user}[\w\.\-]{1,40}\$?)\s+on"""
+"""\d\d:\d\d\s*(::ffff:)?({host}[\w\.\-]+)?\s*({event_code}su):\s(?:\[[^]]+\])?\s*\'su ({account}[^']+)\' succeeded for\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+on"""
 """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+)))\s"""
   ]
 

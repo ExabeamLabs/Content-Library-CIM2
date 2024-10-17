@@ -14,7 +14,7 @@ Name = mcafee-ep-cef-email-send-success-emaildelivered
     """\Wact=({result}.+?)\s+([\w\\]+=|$)""",
     """\Wshost=({src_host}[\w\-.]+)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\WFrom\\=<({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
+    """\WFrom\\=<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\Wsize=({bytes}\d+)""",
     """\Wto\\=<({email_recipients}[^>]+)""",
     """\Wto\\=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",

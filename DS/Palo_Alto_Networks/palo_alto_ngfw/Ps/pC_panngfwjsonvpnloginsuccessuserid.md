@@ -79,7 +79,7 @@ Fields = [
   """exa_json_path=$.event.EventStatus,exa_field_name=result"""
   """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
   """exa_json_path=$.event.SourceRegion,exa_field_name=src_country"""
-  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method"""
@@ -105,7 +105,7 @@ Fields = [
     """exa_json_path=$.event.NATDestinationPort,exa_field_name=dest_translated_port"""
     """exa_json_path=$.event.DirectionOfAttack,exa_field_name=direction"""
     """exa_json_path=$.event.URL,exa_field_name=malware_url"""
-    """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-]{1,40}\$?))"""
+    """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 Name = "pan-ngfw-json-alert-trigger-success-threat"
 Conditions = [
@@ -196,7 +196,7 @@ Fields = [
   """exa_json_path=$.event.EventStatus,exa_field_name=result"""
   """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
   """exa_json_path=$.event.SourceRegion,exa_field_name=src_country"""
-  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method"""
@@ -218,7 +218,7 @@ Fields = [
     """exa_json_path=$.event.FileName,exa_regex=({file_name}[^\."]+)*?(\.({file_ext}[^"\.]+))"""
     """exa_json_path=$.event.Rule,exa_field_name=alert_name"""
     """exa_json_path=$.event.SubType,exa_field_name=alert_type"""
-    """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-]{1,40}\$?))"""
+    """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 Name = "pan-ngfw-json-alert-trigger-success-threatalert"
 Conditions = [

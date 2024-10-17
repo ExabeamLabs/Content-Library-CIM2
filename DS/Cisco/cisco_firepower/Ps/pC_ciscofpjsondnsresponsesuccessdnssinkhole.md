@@ -20,7 +20,7 @@ Fields = [
 """\sProtocol:\s({protocol}[^,]+)"""
 """\sIngressInterface:\s*({ingress_interface}[^,]+)"""
 """\sEgressInterface:\s*({egress_interface}[^,]+)"""
-"""\sUser:\s*(Unknown|({user}[\w\.\-]{1,40}\$?))"""
+"""\sUser:\s*(Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """InitiatorBytes:\s*({bytes_out}\d+)"""
 """ResponderBytes:\s*({bytes_in}\d+)"""
 """\sDNSQuery:\s*({dns_query}[^,]+)"""

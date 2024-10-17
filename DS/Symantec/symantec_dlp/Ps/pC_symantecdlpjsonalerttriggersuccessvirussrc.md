@@ -18,7 +18,7 @@ Fields = [
 """"virusSrc":"({alert_type}[^"]+)"""
 """"filePath":"(Unavailable|({malware_url}[^"]+))"""
 """"virusName":"({alert_name}[^"]+)"""
-""""userID":"(system|({user}[\w\.\-]{1,40}\$?))"""
+""""userID":"(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """"action":"({action}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"

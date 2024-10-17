@@ -21,7 +21,7 @@ Name = "unix-unix-kv-endpoint-login-success-logonsuccess"
     """FTP\/SSL: ({event_name}[^\(]+)\s\("""
     """SessionID=({session_id}\d+)"""
     """Host=({dest_host}[^,=]+?),\s+\w+="""
-    """User=({user}[\w\.\-]{1,40}\$?)><\w+="""
+    """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)><\w+="""
   ]
   ParserVersion = "v1.0.0"
 

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """\Wrt=({time}\d{10})"""
-  """\Wduser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?)(@({domain}[^@]+?))?)\s*(\w+=|$)"""
+  """\Wduser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@]+?))?)\s*(\w+=|$)"""
   """\Woutcome=({result}.+?)\s*(\w+=|$)"""
   """({app}FalconHost)"""
 ]

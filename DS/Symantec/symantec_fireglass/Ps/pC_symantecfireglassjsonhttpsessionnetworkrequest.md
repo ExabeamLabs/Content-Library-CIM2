@@ -22,7 +22,7 @@ Fields = [
 """"source_port":({src_port}\d+)"""
 """"url_port":({dest_port}\d+)"""
 """"url_host":"({web_domain}[^"]+)""""
-""""username":"(({email_address}[^@]+@[^."]+?\.[^"]+)|({user}[\w\.\-]{1,40}\$?)@({domain}[^"]+))""""
+""""username":"(({email_address}[^@]+@[^."]+?\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))""""
 """"url":"({url}[^"]+)""""
 """"response_status_code":({http_response_code}\d+)"""
 """"url":"(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s"]+)"""
@@ -31,7 +31,7 @@ Fields = [
 """"user_agent":"({user_agent}[^"]+)""""
 """"content_type":"({mime}[^"]+)""""
 """"referer_url":"({referrer}[^"]+)""""
-""""malicious":"({malicious}[^"]+)""""
+""""malicious":"({result}[^"]+)""""
 """"total_bytes":({bytes}\d+)"""
 """"action":"({action}[^"]+)""""
 ]

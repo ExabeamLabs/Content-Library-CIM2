@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """\s({host}[\w\-.]+)\s+CSCOacs_Passed_Authentications"""
   """\s+\d+\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d\s(\+|-)\d\d:\d\d)"""
-  """, User-?Name =((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))))"""
+  """, User-?Name =((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))"""
   """,\s*User-?Name =(?=[^\s]+@[^\s]+)({email_address}[^\s,]+)"""
   """,\s*Calling-Station-ID=({dest_host}[^,]+)"""
   """,\s*NAS-Identifier=({dest_host}[^@,]+)"""

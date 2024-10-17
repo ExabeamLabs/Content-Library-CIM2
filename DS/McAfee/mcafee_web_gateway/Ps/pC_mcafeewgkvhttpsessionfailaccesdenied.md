@@ -11,7 +11,7 @@ Name = "mcafee-wg-kv-http-session-fail-accesdenied"
       """\s+({host}[^\s]+)\s+mwg:""",
       """({failure_reason}Acces Denied)""",
       """mwg:\s+Acces Denied\s+\[({time}[^\]]+)\]""",
-      """mwg:\s+Acces Denied\s+\[.+?\]\s+".*?"\s+"(?:|-|({user}[\w\.\-]{1,40}\$?))"""",
+      """mwg:\s+Acces Denied\s+\[.+?\]\s+".*?"\s+"(?:|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """mwg:\s+Acces Denied\s+\[.+?\]\s+(".*?"\s+){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """mwg:\s+Acces Denied\s+\[.+?\]\s+(".*?"\s+){2}[^\s]+\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """mwg:\s+Acces Denied\s+\[.+?\]\s+("[^"]*?"\s+){2}([^\s]+\s+){2}"(?:"|-"|({web_domain}[^\s"]+)")""",

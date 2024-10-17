@@ -12,7 +12,7 @@ Name = pan-prisma-sk4-app-activity-prismacloud
     """"policyName":"({policy_name}[^"]+)"""",
     """"alertId":"({event_code}[^"]+)"""",
     """"callbackUrl":"({additional_info}[^"]+)"""",
-    """"instanceOwnerId":"({user}[\w\.\-]{1,40}\$?)"""",
+    """"instanceOwnerId":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"source":"({app}[^"]+)"""",
     """"url":"({object}[^"]+)"""",
     """"policyId":"({policy_id}[^"]+)"""",

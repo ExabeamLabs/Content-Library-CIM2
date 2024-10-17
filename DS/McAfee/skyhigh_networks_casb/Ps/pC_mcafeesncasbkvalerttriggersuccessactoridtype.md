@@ -20,7 +20,7 @@ Name = "mcafee-sncasb-kv-alert-trigger-success-actoridtype"
     """({additional_info}totalMatchCount=[^\s]+)""",
     """contentItemId=({target}[^=]+?)\s+\w+=""",
     """instanceName =({src_host}[^=]+?)\s+\w+=""",
-    """usrName =(({email_address}[^@]+@[^@\s]+)|({user}[\w\.\-]{1,40}\$?))\s+sev""",
+    """usrName =(({email_address}[^@]+@[^@\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+sev""",
     """activityName =\[({alert_type}[^\]]+?)\]"""
   ]
 

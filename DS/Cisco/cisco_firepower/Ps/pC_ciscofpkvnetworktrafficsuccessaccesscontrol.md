@@ -27,7 +27,7 @@ cisco-firepower-template = {
     """ConnectionID:\s*({connection_id}[^,]+)"""
     """ConnectionDuration:\s*({connection_duration}[^,]+)"""
     """DeviceUUID:\s*({device_id}[^\s,]+)"""
-    """DstIP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """DstIP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """DstPort:\s*({dest_port}\d+)""",
     """EgressInterface:\s*({dest_interface}[^\s,]+?),""",
     """EgressZone:\s*({egress_zone}[^,]+)"""
@@ -40,7 +40,7 @@ cisco-firepower-template = {
     """\s+Protocol:\s*({protocol}[^,]+)"""
     """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """SrcPort:\s*({src_port}\d+)""",
-    """User:\s*(Unknown|No Authentication Required|Not Found|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """User:\s*(Unknown|No Authentication Required|Not Found|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """AccessControlRuleAction:\s*({action}[^,]+)""",
     """WebApplication:\s*({web_application}[^,]+)""",
     """InitiatorPackets:\s*({initiator_packets}[^,]+)""",

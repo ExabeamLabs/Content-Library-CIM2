@@ -15,7 +15,7 @@ Name = exabeam-aa-kv-alert-trigger-success-anomaly
       """\salert_source="({alert_source}anomaly)""""
       """\sid="({container_id}[^"]+)"""",
       """\sscore="({original_risk_score}\d+)"""",
-      """\suser="(\*+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))"""",
+      """\suser="(\*+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
       """\sevent_type="({event_category}[^"]+)"""",
       """\srule_id="({rule_id}[^"]+)"""",
       """\srule_name="({rule}[^"]+)"""",

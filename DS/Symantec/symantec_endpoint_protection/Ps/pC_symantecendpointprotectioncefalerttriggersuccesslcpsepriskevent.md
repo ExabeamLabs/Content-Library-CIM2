@@ -17,7 +17,7 @@ Fields = [
 """\WinternalIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\WinternalHost=({src_host}[^=]+?)(\s+\w+=|\s*$)"""
 """\Wmd5=({hash_md5}[^=]+?)(\s+\w+=|\s*$)"""
-"""\Wuser_name=({user}[\w\.\-]{1,40}\$?)(\s+\w+=|\s*$)"""
+"""\Wuser_name=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
 """\Wdomain_name=({domain}[^=]+?)(\s+\w+=|\s*$)"""
 """\"app_name\":\"({process_path}({process_dir}[^\"]*?)({process_name}[^\"\\\/]+))\""""
 """\"event_desc\":\"({additional_info}[^\"]+)"""

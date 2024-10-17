@@ -21,7 +21,7 @@ Name = crowdstrike-falcon-json-network-session-success-listenip
     """"ContextProcessId":"({process_guid}[^"]+)""",
     """"event_simpleName":"({event_code}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)"""",
-    """"name":"({process_name}[^"]+)""",
+    """"name":"({event_name}[^"]+)""",   #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
     """"LocalAddressIP6":"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """"RemoteAddressIP6":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """src-account-name":"({account_name}[^"]+)""",
@@ -44,7 +44,7 @@ Name = crowdstrike-falcon-json-network-session-success-listenip
     """exa_json_path=$.ContextProcessId,exa_field_name=process_guid""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$.event_platform,exa_field_name=os""",
-    """exa_json_path=$.name,exa_field_name=process_name""",
+    """exa_json_path=$.name,exa_field_name=event_name""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
     """exa_json_path=$.LocalAddressIP6,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.RemoteAddressIP6,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.aid,exa_field_name=aid""",

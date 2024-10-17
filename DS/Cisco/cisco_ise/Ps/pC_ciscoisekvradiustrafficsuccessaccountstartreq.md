@@ -15,7 +15,7 @@ Fields = [
   """({host}[\w\-.]+) CISE_RADIUS_Accounting"""
   """Host:\s*({host}\S+)"""
   """, NetworkDeviceName =({network}[^,]+),"""
-  """, User-?Name =((host\/)({src_host}[^,]+)|(?!(host\/))((({domain}[^\\\/,\s@]+)[\\\/]+)?(([a-fA-f\d]{1,2}(\-|:)){5}[a-fA-f\d]{1,2}|({user}[\w\.\-]{1,40}\$?)))),"""  
+  """, User-?Name =((host\/)({src_host}[^,]+)|(?!(host\/))((({domain}[^\\\/,\s@]+)[\\\/]+)?(([a-fA-f\d]{1,2}(\-|:)){5}[a-fA-f\d]{1,2}|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))),"""  
   """, User-?Name =({email_address}[^\\\/\s,@]+@[^\\\/\s,@]+\.[^\]\s"\\,\|]+)"""
   """, NAS-Identifier=({computer_name}[\w\-.]+)"""
   """, Device IP Address=({auth_server}[^,]+)"""

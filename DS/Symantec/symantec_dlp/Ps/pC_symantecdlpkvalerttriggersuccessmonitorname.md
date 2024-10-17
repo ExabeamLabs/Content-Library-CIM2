@@ -15,7 +15,7 @@ Name = symantec-dlp-kv-alert-trigger-success-monitorname
      """protocol="+({protocol}[^"]+)""",
      """severity="+({alert_severity}[^"]+)""",
      """(policy|Policy)="+({alert_name}[^"]+)""",
-     """sender="+(({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|(WinNT:\/+)?({domain}[^\\\/]+)(\\|\/)({user}[\w\.\-]{1,40}\$?))"+""",     
+     """sender="+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|(WinNT:\/+)?({domain}[^\\\/]+)(\\|\/)({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",     
      """block="+({action}[^"]+)""",
      """recipients="+((({target}http.+?)"+)|({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^"]*)"+)""",
      """attachment="+({email_attachments}[^"]+)\s+""",

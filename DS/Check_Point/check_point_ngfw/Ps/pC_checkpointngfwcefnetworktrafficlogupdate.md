@@ -5,14 +5,15 @@ Name = "checkpoint-ngfw-cef-network-traffic-logupdate"
   ParserVersion = "v1.0.0"
   Vendor = "Check Point"
   Product = "Check Point NGFW"
-  TimeFormat = "epoch"
+  TimeFormat = ["epoch", "MMM dd HH:mm:ss"]
   Conditions = [
-    """CEF:"""
     """|Check Point|Log Update|"""
   ]
   Fields = [
-    """\Wrt=({time}\d{13})"""
-    """\Wact=(|({action}.+?))(\s+\w+=|\s*$)"""
+    """\Wrt=({time}\d{13})""",
+    """({event_name}Log Update)""",
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+)""",
+    """\W(act|action)=(|({action}.+?))(\s+\w+=|\s*$)"""
     """\Wifname=(|({src_interface}.+?))(\s+\w+=|\s*$)"""
     """\Woriginsicname=(|({user_ou}.+?))(\s+\w+=|\s*$)"""
     """\Wproduct=(|({product_name}.+?))(\s+\w+=|\s*$)"""
@@ -21,8 +22,8 @@ Name = "checkpoint-ngfw-cef-network-traffic-logupdate"
     """\Wconn_direction=(|({direction}.+?))(\s+\w+=|\s*$)"""
     """\Wapp=(|({protocol}.+?))(\s+\w+=|\s*$)"""
     """\Wcp_severity=(|({alert_severity}.+?))(\s+\w+=|\s*$)"""
-    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-]{1,40}\$?))"""
-    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-]{1,40}\$?))"""
+    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """\Wshost=(|({src_host}[\w\-.]+?)(@({domain}[^\s@]+))?)(\s+\w+=|\s*$)"""
     """\Wsntdom=(|({domain}.+?))(\s+\w+=|\s*$)"""
     """\Wos_name=(|({os}.+?))(\s+\w+=|\s*$)"""

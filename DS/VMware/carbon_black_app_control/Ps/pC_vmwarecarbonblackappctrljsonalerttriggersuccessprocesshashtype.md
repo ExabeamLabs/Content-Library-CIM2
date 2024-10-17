@@ -19,8 +19,8 @@ Name = vmware-carbonblackappctrl-json-alert-trigger-success-processhashtype
     """exa_json_path=$.ABId,exa_field_name=alert_id""",
     """exa_json_path=$.Message,exa_field_name=additional_info""",
     """exa_json_path=$.PathName,exa_field_name=url""",
-    """exa_json_path=$.UserName,exa_regex=^(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)$""",
-    """exa_regex=c:\\+users\\+({user}[\w\.\-]{1,40}\$?)"""
+    """exa_json_path=$.UserName,exa_regex=^(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+    """exa_regex=c:\\+users\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 

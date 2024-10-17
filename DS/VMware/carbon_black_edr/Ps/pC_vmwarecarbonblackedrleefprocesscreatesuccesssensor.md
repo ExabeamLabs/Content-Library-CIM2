@@ -11,7 +11,7 @@ Name = vmware-carbonblackedr-leef-process-create-success-sensor
   Fields = [
     """\Wtimestamp(":|=)({time}\d{10})""",
     """\Wtype(":"|=)({operation_type}[^"]+?)\s*("|\w+=|$)""",
-    """\Wusername(":"|=)(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)""",
+    """\Wusername(":"|=)(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\Wcomputer_name(":"|=)({dest_host}[\w\-.]+)""",
     """\Wsensor_id(":|=)({sensor_id}\d+)""",
     """\Wmd5(":"|=)({hash_md5}[^"]+?)\s*("|\w+=|$)""",
@@ -27,7 +27,7 @@ Name = vmware-carbonblackedr-leef-process-create-success-sensor
 
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.type,exa_field_name=operation_type""",
-    """exa_json_path=$.username,exa_regex=^(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)$""",
+    """exa_json_path=$.username,exa_regex=^(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.computer_name,exa_regex=^({dest_host}[\w\-.]+)$""",
     """exa_json_path=$.sensor_id,exa_field_name=sensor_id""",
     """exa_json_path=$.md5,exa_field_name=hash_md5""",

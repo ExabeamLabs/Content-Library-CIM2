@@ -12,7 +12,7 @@ Name = "unix-unix-str-endpoint-authentication-smbdunabletovalidate"
   Fields = [
     """({host}[\w.\-]+)\s+smbd\["""
     """\ssmbd\[\d+\]:\s*({event_name}.+?)\s*$"""
-    """\suser ({user}[\w\.\-]{1,40}\$?) in domain ({domain}.+?) to Domain controller"""
+    """\suser ({user}[\w\.\-\!\#\^\~]{1,40}\$?) in domain ({domain}.+?) to Domain controller"""
     """\sError was ({failure_reason}\w+)"""
   ]
   ParserVersion = "v1.0.0"

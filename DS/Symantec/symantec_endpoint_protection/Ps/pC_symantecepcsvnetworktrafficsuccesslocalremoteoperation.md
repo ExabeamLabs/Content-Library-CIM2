@@ -16,7 +16,7 @@ Name = symantec-ep-csv-network-traffic-success-localremoteoperation
     """\W应用程序:\s*({process_path}.*[\\\/]({process_name}[^\\\/,]+))""",
     """\W规则:\s*({event_name}[^,]+)""",
     """\W操作:\s*({action}[^,]+?)"*\s*$""",
-    """\W用户:\s*({user}[\w\.\-]{1,40}\$?),域:\s*({domain}[^,]+)"""
+    """\W用户:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?),域:\s*({domain}[^,]+)"""
   ]
 
 

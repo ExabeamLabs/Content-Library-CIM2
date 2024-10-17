@@ -26,8 +26,8 @@ Fields = [
   """[\s,]policy="+({alert_type}[^"]+?)""""
   """[\s,]rules=(?:"+)?\s*({alert_type}[^="]+?)\s*(?:"+)?,\s\w+="""
   """[\s,]severity="+({alert_severity}[^"]+?)""""
-  """[\s,]sender="+\s*({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
-  """,\sendpoint_username="+\s*(?:N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+  """[\s,]sender="+\s*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+  """,\sendpoint_username="+\s*(?:N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """[\s,]sender="+\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """,\smachine_ip="+({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*",\s"""
   """,\sdestination_ip="+(?:N\/A|null\s*|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s*"*,\s"""
@@ -40,7 +40,7 @@ Fields = [
   """,\sfile_name="+(?:N\/A|({file_name}[^",]+?\.({file_ext}[^"\s]+)))\s*[^"]*"*,"""
   """,\sattachment_filename="(([^"]+\\)?({file_name}[^"]+\.({file_ext}[a-zA-Z]{2,})))\s*","""
   """,\sendpoint_machine="+(?:N\/A|({device_id}[^",]+?))\s*"*,\s"""
-  """\sZID="+({user}[\w\.\-]{1,40}\$?)"*,"""
+  """\sZID="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"*,"""
 ]
 DupFields = [
   "additional_info->email_subject"

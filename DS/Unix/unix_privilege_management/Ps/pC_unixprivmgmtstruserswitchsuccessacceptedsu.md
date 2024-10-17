@@ -9,7 +9,7 @@ Name = unix-privmgmt-str-user-switch-success-acceptedsu
   Fields = [
     """({host}[\w\.\-]+)\s+upm-log end=({time}\d{10})""",
     """: accepted su \S+\s+({account}[^\s]+)""",
-    """ from ({user}[\w\.\-]{1,40}\$?)@(eth0\.)?({src_host}[^@\s]+)""",
+    """ from ({user}[\w\.\-\!\#\^\~]{1,40}\$?)@(eth0\.)?({src_host}[^@\s]+)""",
     """ to ({account}[^@\s]+)@(eth0\.)?({dest_host}[^@\s]+)""",
   ]
   ParserVersion = "v1.0.0"

@@ -18,8 +18,8 @@ Fields = [
 """Rule: [^,]*,\d+,({target}[^,]+),\d+,[^,]*,"?({file_dir}[^,]+[\\\/])?({file_name}.+?)"?,User"""
 """Rule: [^,]*,\d+,({process_path}.*(\/|\\)({process_name}[^\/\\]+)),\d,"""
 """\| \[[^,]*,\d+,[^,]+,\d+,[^,]+,.*/({file_name}.+?)"?,User"""
-"""User:\s+(SYSTEM|({user}[\w\.\-]{1,40}\$?)),Domain"""
-"""User Name:\s*(SYSTEM|({user}[\w\.\-]{1,40}\$?))"""
+"""User:\s+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),Domain"""
+"""User Name:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """Domain Name:\s({domain}[^,]+)\s*,""",
 """Domain:\s+({domain}.+?),Action Type"""
 """File size \(({bytes_unit}.+?)\):\s*({bytes}\d+)"""

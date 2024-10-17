@@ -6,7 +6,7 @@ ParserVersion = "v1.0.0"
 Conditions = [ """SVA_IP_ADDRESS: """, """ USER_NAME:""", """User_Primary_Group_Changed""" ]
 Fields = ${SymantecParsersTemplates.symantec-critical-sys-protection.Fields} [
   """({event_name}User_Primary_Group_Changed)""",
-  """User Primary Group ID for "+({user}[\w\.\-]{1,40}\$?)"+ CHANGED from .+ in ({object}[^\s"]+)"*""",
+  """User Primary Group ID for "+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"+ CHANGED from .+ in ({object}[^\s"]+)"*""",
   """({old_attribute}Old Entry: [^\s]+)""",
   """({new_attribute}New Entry: [^"]+)"""
 ]
@@ -19,7 +19,7 @@ symantec-critical-sys-protection = {
     Fields = [
       """\sHOSTNAME\s*:\s*"*({host}[^\s"]+)""",
       """\sEVENT_DT\s*:\s*"*({time}[^"]+)""",
-      """\sUSER_NAME\s*:\s*"*({user}[\w\.\-]{1,40}\$?)""",
+      """\sUSER_NAME\s*:\s*"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\sRULE_NAME\s*:\s*"*({rule}[^"\s]+)""",
       """\sPOLICY_NAME\s*:\s*"*\s*({policy_name}[^"]+)\s*"*?\s[^:]+:"""
       """\sPROCESS_PATH\s*:\s*"*({process_name}[^"\s]+)""",

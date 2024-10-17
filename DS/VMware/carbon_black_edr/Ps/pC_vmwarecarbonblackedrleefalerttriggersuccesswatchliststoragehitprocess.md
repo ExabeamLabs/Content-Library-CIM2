@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """\Wstart=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s"""
-"""\Wusername=((({domain}[^\\\s]+)\\\\)?({user}[\w\.\-]{1,40}\$?))"""
+"""\Wusername=((({domain}[^\\\s]+)\\\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\Wprocess_name=({process_name}[^=]+?)\s*(([\w_]+=)|$)"""
 """\Wpath=({process_path}({process_dir}[^=]*?[\\\/]+)?[^\\\/=]+?)(\s+\w+=|\s*$)"""
 """\Wtype=({alert_name}watchlist.storage.hit.process)"""

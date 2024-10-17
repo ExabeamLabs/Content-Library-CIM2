@@ -21,7 +21,7 @@ cef-aws-guardduty-security-alert-template-1 = {
       """AccountId:\s*({account_id}[^,]+),""",
       """ResourceType:\s*({resource_type}[^,\}]+)""",
       """,Arn:\s*({object}[^,]+),\w+:""",
-      """,UserName:\s*({aws_user}({user}[\w\.\-]{1,40}\$?))""",
+      """,UserName:\s*({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """,UserType:\s*({user_type}[^,\}]+)"""
     
 }

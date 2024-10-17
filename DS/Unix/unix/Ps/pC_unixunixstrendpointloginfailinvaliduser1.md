@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """<({time}\d+\s+\w+\s+\d+\s+\d+:\d+:\d+)\s"""
 """({event_code}ssh)"""
-"""<Invalid user ({user}[\w\.\-]{1,40}\$?)"""
+"""<Invalid user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """ from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\d+\s+\w+\s+\d+\s+\d+:\d+:\d+\s+\w+>\s+<({dest_host}[\w\-.]+)"""
 ]

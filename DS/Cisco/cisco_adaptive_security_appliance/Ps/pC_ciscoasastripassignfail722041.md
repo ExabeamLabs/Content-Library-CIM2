@@ -12,12 +12,12 @@ Name = cisco-asa-str-ip-assign-fail-722041
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-""",
     """%ASA-({priority}\d+)-({event_code}\d+)""",
-    """ User <(({domain}[^\s\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))>""",
+    """ User <(({domain}[^\s\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>""",
     """\sIP\s+<({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>""",
     """ Group\s+<({realm}.+?)>""",
     """({time}\w+ \d+ \d{4} \d\d:\d\d:\d\d).*?%ASA-""",
     """\sGroup\s*<({group_name}[^>]+)>""",
-    """\sUser\s*<({user}[\w\.\-]{1,40}\$?)>""",
+    """\sUser\s*<({user}[\w\.\-\!\#\^\~]{1,40}\$?)>""",
     """({failure_reason}No IPv6 address available for SVC connection)"""
 
   ]

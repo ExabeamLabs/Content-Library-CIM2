@@ -10,7 +10,7 @@ Name = cisco-ac-str-vpn-login-success-734001
     Fields = [
       """\w{1,3}\s{1,2}\d{1,2}\s\d\d:\d\d:\d\d\s({host}[\w.\-]+)\s%ASA-""",
       """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD-""",
-      """User\s(({email_address}[^@,]+@[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",      
+      """User\s(({email_address}[^@,]+@[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",      
       """User\s+({full_name}[^,@]+\s\w+)""",
       """Addr\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """({time}\w+ \d+ \d+:\d+:\d+)\s*(({host}[\w.\-]+))?.*?%(ASA|FTD)-""",

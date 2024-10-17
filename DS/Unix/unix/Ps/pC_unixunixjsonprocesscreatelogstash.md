@@ -8,8 +8,8 @@ Name = unix-unix-json-process-create-logstash
   Conditions = ["""logstash-auditbeat""", """"process""""]
   Fields = [
     """"@timestamp":"({time}[^"]+)""",
-    """"name_map":\{.*?"uid":"(|({user}[\w\.\-]{1,40}\$?))"""",
-    """"actor":\{[^\}]+?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
+    """"name_map":\{.*?"uid":"(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"actor":\{[^\}]+?"secondary":"(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """"actor":\{[^\}]+?"primary":"(|({account}[^"]+))""""
     """"name_map":\{.*?"suid":"(|({account}[^"]+))"""",
     """"user":\{.*?"uid":"({user_id}\d+)"""",

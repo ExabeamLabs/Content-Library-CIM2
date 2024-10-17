@@ -9,7 +9,7 @@ Name = cisco-ise-kv-app-activity-guest
   Conditions = [""" CISE_Guest """]
   Fields = [
     """({host}\S+) ({event_name}CISE_Guest) (\S+\s+){3}({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """\sUserName =({user}[\w\.\-]{1,40}\$?)(,|;)""",
+    """\sUserName =({user}[\w\.\-\!\#\^\~]{1,40}\$?)(,|;)""",
     """\sUserName =({email_address}[^,;@\s]+@[^,;@\s]+?)(,|;)""",
 # auditsessionid is removed
 # guestusername is removed

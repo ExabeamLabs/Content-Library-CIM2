@@ -14,8 +14,8 @@ Name = symantec-dlp-kv-alert-trigger-success-blocked
     """\WProtocol:\s+({protocol}.+?)(,\s*\w+:|\s*$)""",
     """\WRecipient:\s+(?:N\/A|({target}.+?))(,\s*\w+:|\s*$)""",
     """\WRecipient:\s+({account}[^@]+)@({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\WSender:\s+(?:N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({user}[\w\.\-]{1,40}\$?))""",
-    """\WSender:\s+({os}[^:]+):\/+({domain}[^/]+)\/({user}[\w\.\-]{1,40}\$?)""",
+    """\WSender:\s+(?:N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """\WSender:\s+({os}[^:]+):\/+({domain}[^/]+)\/({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\WSeverity:\s+({alert_severity}.+?)(,\s*\w+:|\s*$)""",
     """\sPATH:\s+(|({file_path}({file_dir}.*?[\\\/,]+)?({file_name}[^\\\/,]+?(\.({file_ext}\w+))?)))(,\s*\w+:|\s*$)""",
     """\WFilename:\s+(?:N\/A|({file_name}.+?))(,\s*\w+:|\s*$)""",
@@ -23,7 +23,7 @@ Name = symantec-dlp-kv-alert-trigger-success-blocked
     """\WProtocol: FTP,.+?Subject:.+?\(({bytes}\d+)""",
     """\WEndpoint:\s+(?:N\/A|({src_host}.+?))(,\s*\w+:|\s*$|\s*"|\s+\w+=)""",
     """\WBlocked:\s+({action}[^,]+?(,User:[^:]+?)?)(,\s*\w+:|\s*$)""",
-    """ViolatorsName:\s+(({full_name}\w+(,\s*\w+)+)|({user}[\w\.\-]{1,40}\$?))(,\s*\w+:|\s*$)""",
+    """ViolatorsName:\s+(({full_name}\w+(,\s*\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,\s*\w+:|\s*$)""",
     """ViolatorsUserID:\s+({user_id}[^,]+)(,\s*\w+:|\s*$)""",
     """ViolatorsEmail:\s+({email_address}[^@\s]+@[^\s,]+)(,\s*\w+:|\s*$)""",
     """\sDEVICE_ID:\s+({device_id}[^,]+)(,\s*\w+:|\s*$)""",
@@ -31,7 +31,7 @@ Name = symantec-dlp-kv-alert-trigger-success-blocked
     """\WSubject:\s+({email_subject}[^,]+?)(,\s*\w+:|\s*$)""",
     """\WAttachment_Filename:\s+({email_attachments}[^,]+?)(,\s*\w+:|\s*$)"""
   ]
-  DupFields = ["email_address->src_email_address", "target->email_recipients"]
+  DupFields = ["target->email_recipients"]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "protocol->dlpProtocol", "src_host->dlpDeviceName", "src_file_name->dlpFileName", "bytes->dlpFileSize", "action->dlpActionTaken"]

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """"device_time":"({time}[^"]+)""""
-""""user_name":"({user}[\w\.\-]{1,40}\$?)""""
+""""user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"device_name":"({host}[^"]+)""""
 """"host_name":"({src_host}[^"]+)""""
 """"domain_name":"({domain}[^"]+)""""

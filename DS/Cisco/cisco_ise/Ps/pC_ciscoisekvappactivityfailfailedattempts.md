@@ -9,7 +9,8 @@ Name = cisco-ise-kv-app-activity-fail-failedattempts
   Conditions = [""" CISE_Failed_Attempts """]
   Fields = [
     """(::ffff:)?({host}\S+) ({event_name}CISE_Failed_Attempts)""",
-    """User(-)?Name =(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?))>?,"""
+    """,\s*AD-User-SamAccount-Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """User(-)?Name =(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>?,"""
     """AcsSessionID=({acs_session_id}[^,]+?),""",
     """AuthenticationMethod=({auth_method}[^,]+?),""",
     """Calling-Station-ID=(::ffff:)?(({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
@@ -33,7 +34,7 @@ Name = cisco-ise-kv-app-activity-fail-failedattempts
 # usertype is removed
     """Called-Station-ID=({dest_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})(:({ssid}[^,]+))?,""",
     """AllowedProtocolMatchedRule=({rule}[^,]+),""",
-    """(=\d+)?[\=,](({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-]{1,40}\$?)(?:@({domain}[^,"]+)))("|,)\s""",
+    """(=\d+)?[\=,](({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^,"]+)))("|,)\s""",
     """ISEPolicySetName =({policy_name}[^,]+),""",
   ]
 

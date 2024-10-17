@@ -25,10 +25,10 @@ Fields = [
 """\|alarm_severity_id(=|\|)({alert_severity}[^|]+)\|"""
 """\|source_ip(=|\|)({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\|source_mac_address(=|\|)({src_mac}[a-fA-F\d.:]+)"""
-"""\|source_username(=|\|)(|({user}[\w\.\-]{1,40}\$?)) details"""
+"""\|source_username(=|\|)(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)) details"""
 """\|device_ip(=|\|)({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 """\|device_name(=|\|)({host}[^|]+)\|"""
-"""\|details(=|\|)(|({details}[^|]+))\|"""
+"""\|details(=|\|)(|({activity_details}[^|]+))\|"""
 """\|protocol(=|\|)(|({protocol}[^|\s]+?))\s*\|"""
 """\|alarm_id(=|\|)({alert_id}[^|]+)\|"""
 ]

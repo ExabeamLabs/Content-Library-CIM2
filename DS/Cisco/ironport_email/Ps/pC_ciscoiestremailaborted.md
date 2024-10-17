@@ -10,6 +10,9 @@ Name = cisco-ie-str-email-aborted
     Fields = [
       """\srt=({time}\d+)""",
       """Message ({result}aborted) MID ({alert_id}\d+) Receiving ({failure_reason}.+?)"*(\s+\w+=|\s*$)"""
+      """\sMID\s+({alert_id}\d+)\s+({failure_reason}.+?)$"""
+      """\sMessage\s+({result}aborted)"""
+      """\sMID\s+({alert_id}\d+)"""
     ]
     DupFields = [ "alert_id->message_id" ]
   

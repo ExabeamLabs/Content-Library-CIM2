@@ -5,8 +5,8 @@ Name = pan-wildfire-leef-alert-trigger-success-wildfire
   Conditions = [ """|Palo Alto Networks|PAN-OS""", """|Subtype=wildfire""" ]
   ParserVersion = "v1.0.0"
   Fields = ${PaloAltoParsersTemplates.leef-pan-alert.Fields}[
-    """usrName =(({domain}[^\\]+)\\)?(|({user}[\w\.\-]{1,40}\$?))\|(SerialNumber|SourceUser)""",
-    """DestinationUser=(?:[^\\/]+[\\/])?({user}[\w\.\-]{1,40}\$?)\|Application=""",
+    """usrName =(({domain}[^\\]+)\\)?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|(SerialNumber|SourceUser)""",
+    """DestinationUser=(?:[^\\/]+[\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|Application=""",
     """SessionID=({alert_id}[^|]+)\|""",
     """LEEF[^|]+?\|([^\|]+\|){3}({alert_name}[^|]+)\|""",
     """\|URLCategory=({category}[^\|]*)\|""",
@@ -35,7 +35,7 @@ leef-pan-alert = {
     """\|URLCategory=({category}[^\|]+)""",
     """\|Severity=({alert_severity}[^\|]+)""",
     """\|ThreatCategory=(?:unknown|({threat_category}[^\|]+))""",
-    """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-]{1,40}\$?)""",
+    """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\|SourceZone=({src_network_zone}[^\|]+?)\|""",
     """\|DestinationZone=({dest_network_zone}[^\|]+?)\|""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""

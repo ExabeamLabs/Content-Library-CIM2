@@ -13,7 +13,7 @@ Name = vmware-carbonblack-json-alert-trigger-success-watchlist-1
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.category,exa_field_name=category"""
     """exa_json_path=$.threat_id,exa_field_name=threat_id"""
-    """exa_json_path=$.device_username,exa_regex=(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$.device_username,exa_regex=(({email_address}[^@,"]+@[^",]+)|(({domain}[^\\"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.device_name,exa_regex=(\w+\\+)?({host}[^."]+)"""
     """exa_json_path=$.threat_indicators[:1].process_name,exa_field_name=process_name"""
     """exa_json_path=$.reason,exa_field_name=additional_info"""

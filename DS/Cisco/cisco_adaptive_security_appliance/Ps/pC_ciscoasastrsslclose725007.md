@@ -5,7 +5,7 @@ Name = cisco-asa-str-ssl-close-725007
   Vendor = Cisco
   Product = Cisco Adaptive Security Appliance
   ParserVersion = "v1.0.0"
-  TimeFormat = ["MMM dd yyyy HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+  TimeFormat = ["MMM dd yyyy HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd HH:mm:ss"]
   Conditions = [ 
 """-725007"""
 """%ASA-""" 

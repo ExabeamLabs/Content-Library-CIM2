@@ -13,7 +13,7 @@ Conditions = [
 TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 Fields = [
 """"+process_cmdline"+:"+\s*({process_command_line}[^"]+?)\s*"+,"""
-""""+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-]{1,40}\$?))"+"""
+""""+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+"""
 """"+process_pid"+:({process_id}\d+)"""
 """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)"""
 """"+sensor_action"+:"+({result}[^"]+)"+"""

@@ -16,7 +16,7 @@ Name = cisco-duo-cef-vpn-login-fail-loginfailure
     """\"timestamp\":\s*({time}\d{10})""",
     """\WdestinationServiceName =(|({app}.+?))(\s+\w+=|\s*$)""",
     """"factor"+:\s*"+({factor}[^"]+)"""",
-    """"username":"(?!AD Sync:)({user}[\w\.\-]{1,40}\$?)""",
+    """"username":"(?!AD Sync:)({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"device":\s*"({object}[^"]+)""",
     """"type":\s*"({alert_type}[^"]+)""",
     """"error":\s*"({failure_reason}[^"]+)""",

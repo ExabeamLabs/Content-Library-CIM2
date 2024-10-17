@@ -9,7 +9,7 @@ Name = unix-unix-str-endpoint-logout-success-sshsdisconnect
     """_time":({time}\d{10})""",
     """({event_name}SSHS_DISCONNECT)""",
     """IP: ({src_ip}[a-fA-F:\d\.]+)\)""",
-    """SSH user (\(null\)|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))""",
+    """SSH user (\(null\)|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
   ]
 
 unix-events-1 = {

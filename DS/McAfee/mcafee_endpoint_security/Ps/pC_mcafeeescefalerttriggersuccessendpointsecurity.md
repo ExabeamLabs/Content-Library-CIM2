@@ -16,8 +16,8 @@ Name = "mcafee-es-cef-alert-trigger-success-endpointsecurity"
       """\Wshost=({src_host}.+?)\s+(\w+=|$)""",
       """\Wc6a2=({src_ip}([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))\s+(\w+=|$)"""
       """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """\Wsuser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
-      """\Wduser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
+      """\Wsuser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
+      """\Wduser=(?!NT AUTHORITY)(({domain}[^\\\/=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?<!SYSTEM)\s+(\w+=|$)""",
       """\Wsproc=({process_path}(|({process_dir}.*?))[\\\/]*({process_name}[^\\\/=]+?))\s+(\w+=|$)""",
       """\Wdproc=({process_path}(|({process_dir}.*?))[\\\/]*({process_name}[^\\\/=]+?))\s+(\w+=|$)""",
       """\Wdhost=({dest_host}.+?)\s+(\w+=|$)""",

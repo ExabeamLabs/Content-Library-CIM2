@@ -13,7 +13,7 @@ q-duo-app-activity = {
     """"ts"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)"""
     """\d\d:\d\d\s+({host}.+?)\s+(\S+\s+)*@\{action=({operation}[^;]+)""",
     """username=(?![^:]+:\s*[^;\}]+)({full_name}[^;\}]+)""",
-    """"uname"+:\s*"{1,2}({user}[\w\.\-]{1,40}\$?)"+,""",
+    """"uname"+:\s*"{1,2}({user}[\w\.\-\!\#\^\~]{1,40}\$?)"+,""",
     """"realname"+:\s*"{1,2}({full_name}[^"]+?)"+,""",
     """object=\s*({object}[^;]+?)(?:;|\})""",
     """timestamp=\s*({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d)""",
@@ -34,7 +34,7 @@ duo-app-activity-1 = {
     """"event-name":"({event_name}[^"]+)"""",
     """"action":"({operation}[^"]+)"""",
     """"description":\s*"\{({additional_info}[^"]+?)\}",""",
-    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-]{1,40}\$?))"""",
+    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"object":"({object}[^"]+)"""",
     """"error":\s*"({failure_reason}[^"]+)""",
     """"email\\"+:\s*\\"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\"""",

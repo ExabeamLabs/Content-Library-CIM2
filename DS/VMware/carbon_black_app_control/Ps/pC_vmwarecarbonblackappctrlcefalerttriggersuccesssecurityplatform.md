@@ -15,7 +15,7 @@ Fields = [
   """(\||\s)dvchost=(|({host}.+?))\s+(\w+=|$)"""
   """(\||\s)dst=(|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s+(\w+=|$)"""
   """(\||\s)dhost=(|(\S+\\+)?({dest_host}.+?))\s+(\w+=|$)"""
-  """(\||\s)duser=(|(({domain}NT AUTHORITY|[^\s\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))\s+(\w+=|$)"""
+  """(\||\s)duser=(|(({domain}NT AUTHORITY|[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
   """(\||\s)externalId=(|({alert_id}.+?))\s+(\w+=|$)"""
   """\|Bit9\|Security Platform\|(.*?\|){2}({alert_name}[^\|]+)\|"""
   """\|Bit9\|Security Platform\|(.*?\|){2}({access}[^\|]+)\|"""

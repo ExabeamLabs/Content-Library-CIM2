@@ -18,7 +18,7 @@ Name = mcafee-es-kv-alert-trigger-success-parametervalue
       """signature_id="({signature_id}\d+)""",
       """severity="({alert_severity}\d+)""",
       """parameter_name="({additional_info}[^"]+)""",
-      """user="(({domain}[^\\]+)\\+)?(?: |({user}[\w\.\-]{1,40}\$?))""",
+      """user="(({domain}[^\\]+)\\+)?(?: |({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     ]
     SOAR {
         IncidentType = "malware"

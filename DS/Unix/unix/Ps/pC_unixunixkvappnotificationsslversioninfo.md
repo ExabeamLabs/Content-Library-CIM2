@@ -14,7 +14,7 @@ Name = unix-unix-kv-app-notification-sslversioninfo
     """SessionID=({session_id}\d+)""",
     """FTP\/SSL: ({event_name}[^:]+):\s+\w+=""",
     """Host=({dest_host}[^,=]+?),\s+\w+=""",
-    """User=({user}[\w\.\-]{1,40}\$?)><\w+="""
+    """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)><\w+="""
   ]
 
 

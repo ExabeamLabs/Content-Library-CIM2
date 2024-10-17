@@ -7,7 +7,7 @@ Name = pan-ngfw-json-endpoint-login-auth
   Fields = ${PaloAltoParsersTemplates.paloalto-vpn.Fields}[
     """exa_json_path=$.AuthEvent,exa_field_name=event_name"""
     """exa_json_path=$.AuthenticationDescription,exa_regex=(\s+|({additional_info}[^"]+))"""
-    """exa_json_path=$.AuthenticatedUserName,exa_regex=({user}[\w\.\-]{1,40}\$?)"""
+    """exa_json_path=$.AuthenticatedUserName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """exa_json_path=$.AuthenticatedUserDomain,exa_field_name=domain"""
     """exa_json_path=$.AuthenticationProtocol,exa_field_name=auth_type"""
   ]
@@ -29,8 +29,8 @@ paloalto-vpn = {
   """exa_json_path=$.EventStatus,exa_field_name=result"""
   """exa_json_path=$.EndpointDeviceName,exa_field_name=src_host"""
   """exa_json_path=$.SourceRegion,exa_field_name=src_country"""
-  """exa_json_path=$.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
-  """exa_regex=(Source)?User(Name)?":"((na|NA|({domain}[^"\\]+))\\+)?(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """exa_regex=(Source)?User(Name)?":"((na|NA|({domain}[^"\\]+))\\+)?(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.EventIDValue,exa_field_name=auth_method"""
@@ -53,7 +53,7 @@ paloalto-vpn = {
   """exa_json_path=$.event.EventStatus,exa_field_name=result"""
   """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
   """exa_json_path=$.event.SourceRegion,exa_field_name=src_country"""
-  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
   """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method"""

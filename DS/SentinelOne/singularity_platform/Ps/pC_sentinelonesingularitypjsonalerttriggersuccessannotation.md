@@ -15,7 +15,7 @@ Conditions = [
 ]
 Fields = [
 """exa_regex="_time":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
-"""exa_regex="username":\s*"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+"""exa_regex="username":\s*"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 """exa_regex="classification":\s*"({alert_type}[^"]+)"""
 """exa_regex="filePath":\s*"({malware_url}[^"]+)"""
 """exa_regex="fileContentHash":\s*"({hash_sha1}[^"]+)"""

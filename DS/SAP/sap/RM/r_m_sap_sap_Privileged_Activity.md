@@ -7,7 +7,7 @@ Vendor: SAP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   8    |         4          |       6        |    2    |
+|  18   |   8    |         4          |       6        |    3    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

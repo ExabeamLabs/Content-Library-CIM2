@@ -19,7 +19,7 @@ Fields = [
 """desc=({alert_name}.+?)\s+(\w+=|$)"""
 """sev=({alert_severity}.+?)\s+(\w+=|$)"""
 """emailSubject=\s*({alert_subject}.+?)\s+(\w+=|$)"""
-"""(sender|Sender)=({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
+"""(sender|Sender)=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
 """fname=({file_name}.+?)\s+(\w+=|$)"""
 """EventDetailLink=({additional_info}.+?)\s+(\w+=|$)"""
 """(mailUrlHash|fileHash)=({hash_md5}.+?)\s+(\w+=|$)"""
@@ -29,7 +29,7 @@ Fields = [
 DupFields = [
 "email_address->dest_email_address"
 "host->dest_host"
-"src_email_address->target"
+"email_address->target"
 ]
 ParserVersion = "v1.0.0"
 

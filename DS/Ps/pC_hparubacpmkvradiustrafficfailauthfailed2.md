@@ -11,7 +11,7 @@ ParserVersion = "v1.0.0"
 
 Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+)?[\+\-]\d+)""",
     """\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d,\d+ ({host}[\w\-.]+)""",
-    """Common\.Username=(?:({user_type}host)/)?(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[\w\.\-]{1,40}\$?))""",
+    """Common\.Username=(?:({user_type}host)/)?(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Common\.Username=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """Common\.Service=({network}[^,]+)""",
     """Common\.Host-MAC-Address=({src_mac}\w+)""",

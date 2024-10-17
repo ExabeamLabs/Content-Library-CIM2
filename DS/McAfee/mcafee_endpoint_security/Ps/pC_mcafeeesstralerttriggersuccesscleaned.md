@@ -8,7 +8,7 @@ Name = mcafee-es-str-alert-trigger-success-cleaned
   TimeFormat = "M/d/yyyy H:mm:ss a"
   Conditions = [ """ (MD5)""", """ Cleaned"""]
   Fields = [
-    """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\s({additional_info}[^\s]+?)\s*\s(({domain}[^\s]+)(\\)+)?({user}[\w\.\-]{1,40}\$?)\s({process_path}[^\s]+)\s({url}.+?\\({malware_file_name}[^\\]+))\s({alert_name}[^\s]+?)\s*\(({alert_type}[^\)]+)\)\s({hash_md5}\S+?)\s*\(MD5\)"""
+    """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\s({additional_info}[^\s]+?)\s*\s(({domain}[^\s]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s({process_path}[^\s]+)\s({url}.+?\\({malware_file_name}[^\\]+))\s({alert_name}[^\s]+?)\s*\(({alert_type}[^\)]+)\)\s({hash_md5}\S+?)\s*\(MD5\)"""
   ]
   DupFields=[ "host->src_host" ]
   SOAR {

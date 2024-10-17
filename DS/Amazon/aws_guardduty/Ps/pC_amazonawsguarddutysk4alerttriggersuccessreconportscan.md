@@ -20,7 +20,7 @@ cef-aws-guardduty-security-alert-template = {
       """"accountId":\s*"({account_id}[^"]+?)","""
       """domain":"({domain}[^"]+)"""",
       """resource":[^}]+principalId":\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"""",
-      """resource":[^}]+"userName":\s*"({aws_user}({user}[\w\.-]{1,99}\$?))"""",
+      """resource":[^}]+"userName":\s*"({aws_account}({user}[\w\.-]{1,99}\$?))"""",
       """resource":[^}]+"userType":\s*"({user_type}[^},]+?)"""",
       """key":"PrincipalId","value":"([^:]+:)?({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
       """"resourceType":\s*"({resource_type}[^"]+)"""",

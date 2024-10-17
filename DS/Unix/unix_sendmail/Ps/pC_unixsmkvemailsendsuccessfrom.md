@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d)\s+({host}\S+)\s+TRANSMIT\[.*?\]:\s*({alert_id}[^:]+?)\s*:"""
-  """\sfrom=<({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>"""
+  """\sfrom=<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>"""
   """\ssize=({bytes}\d+)"""
   """\snrcpts=({num_recipients}\d+)"""
   """\sproto=({protocol}[^,]+)"""

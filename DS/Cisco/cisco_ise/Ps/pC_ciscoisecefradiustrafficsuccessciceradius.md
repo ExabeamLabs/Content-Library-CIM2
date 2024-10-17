@@ -13,7 +13,7 @@ Name = cisco-ise-cef-radius-traffic-success-ciceradius
     """Timestamp=({time}\d{10})"""
     """({time}\w+ \d+ \d\d:\d\d:\d\d)""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """duser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))))""",
+    """duser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))""",
     """User(-)?Name =({email_address}[^,;@\s]+@[^,;@\s]+)""",
 # acct_authentic is removed
 # acct_input_octets is removed

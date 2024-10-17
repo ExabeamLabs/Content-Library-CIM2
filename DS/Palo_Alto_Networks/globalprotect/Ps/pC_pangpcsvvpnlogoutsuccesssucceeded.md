@@ -13,12 +13,14 @@ Name = pan-gp-csv-vpn-logout-success-succeeded
   ]
   Fields = [
     """({time}\d\d\d\d/\d\d/\d\d \d+:\d+:\d+)""",
-    """User name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """User name:\s*({email_address}[^@\s]+@[^\s,]+),""",    
     """globalprotectgateway-\S+?,({host}[\w.-]+?),""",
     """SYSTEM,({vpn_client}[^,]+),""",
     """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+    """({serial_num}[^,]+),SYSTEM,globalprotect,"""
+    """,SYSTEM,globalprotect,([^,]*,){20}({device_name}[^,"]+)"""
   ]
 
 

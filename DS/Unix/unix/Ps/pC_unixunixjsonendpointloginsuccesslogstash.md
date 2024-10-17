@@ -9,7 +9,7 @@ Name = unix-unix-json-endpoint-login-success-logstash
   Conditions = ["""logstash-auditbeat""", """"process"""",  """"op":"login"""", """authentication""", """success"""]
   Fields = [
     """"end":({time}\d{10})""",
-    """"actor":\{.*?"secondary":"(|({user}[\w\.\-]{1,40}\$?))""""
+    """"actor":\{.*?"secondary":"(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """"actor":\{.*?"primary":"(|({account}[^"]+))""""
     """"user":\{.*?"uid":"({user_id}\d+)"""",
     """"user":\{.*?"gid":"({group_id}\d+)"""",

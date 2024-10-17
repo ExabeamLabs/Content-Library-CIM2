@@ -24,7 +24,7 @@ symantec-parser-template = {
       """"device_name":"({src_host}[\w\-.]+)"""",
       """"device_os_name":"({os}[^"]+)"""",
       """"ipv4":\[?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """"user_name":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"rule_description":"({additional_info}[^"]+?)\s*"""",
       """exa_json_path=$.time,exa_field_name=time"""
       """exa_json_path=$.device_domain,exa_field_name=domain"""

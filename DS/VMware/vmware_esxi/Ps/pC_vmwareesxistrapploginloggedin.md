@@ -9,7 +9,7 @@ Name = vmware-esxi-str-app-login-loggedin
   Conditions = [""" logged in """, """ : User """, """ hostd[""", """ Hostd:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)\s+({host}[^\s]+)\sHostd:""",
-    """User\s+((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-]{1,40}\$?))[^$]+?\s*logged""",
+    """User\s+((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))[^$]+?\s*logged""",
     """({event_name}logged in)""",
     """logged in as ({user_agent}\S+)""",
     """user agent:\s+({user_agent}[^)]+)""",

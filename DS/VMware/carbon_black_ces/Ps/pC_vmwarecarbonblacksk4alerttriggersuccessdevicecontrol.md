@@ -8,7 +8,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-devicecontrol
   Conditions = [ """"type":"DEVICE_CONTROL"""", """"state":"OPEN"""", """"threat_id":""", """"alert_url":"""" ]
   Fields = [
     """"first_event_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
-    """"device_username":"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""",
+    """"device_username":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"device_name":"({src_host}[^"]+)"""",
     """"policy_name":"({alert_name}[^"]+)"""",
     """"severity":({alert_severity}\d+)""",

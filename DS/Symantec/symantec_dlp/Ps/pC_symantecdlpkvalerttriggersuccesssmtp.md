@@ -5,10 +5,10 @@ Name = symantec-dlp-kv-alert-trigger-success-smtp
   ParserVersion = v1.0.0
   Conditions = [ """| incident_type="email"|""","""| protocol="SMTP"|""" ]
   Fields = ${SymantecParsersTemplates.symantec-dlp-alert.Fields} [
-    """\|\ssender="({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """\|\ssender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """\|\ssubject="\s*(N/A|({email_subject}[^"]+?))\s*"""",
     """\|\srecipient="(N/A|({email_recipients}[^"]+))""""
-    """\|\srecipient="({external_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\|\srecipient="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 symantec-dlp-alert = {
@@ -21,7 +21,7 @@ symantec-dlp-alert = {
         """\|\sseverity=\s*"({alert_severity}[^"]+)"""",
         """\|\spolicy_rule="({policy_name}[^"]+?)\s*"""",
         """\|\incident_type="({alert_type}[^"]+)""",
-        """\|\sUserID="({user}[\w\.\-]{1,40}\$?)"""",
+        """\|\sUserID="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
         """\|\sprotocol="({protocol}[^"]+)"""",
         """\|\sBusiness_Unit="({additional_info}[^"]+)"""",
         """\|\sfilename="(N/A|(?i)unknown|({target}[^"]+?))\s*"""",
@@ -34,6 +34,7 @@ symantec-dlp-alert = {
         """\|\application="({app}[^"]+)"""",
         """\|\device_id="({device_id}[^"]+)"""",
       ]
+      DupFields = [ "action->result" ]
     
 }
 ```

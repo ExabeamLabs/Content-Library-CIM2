@@ -21,7 +21,7 @@ Fields = [
   """"message":\s*"({additional_info}[^"]+)"""
   """"recordTypeDescription":\s*"({alert_name}[^"]+)"""
   """"priority":\s*"({alert_severity}[^"]+)"""
-  """"user":\s*"(?:Unknown|No Authentication Required|({user}[\w\.\-]{1,40}\$?))"""
+  """"user":\s*"(?:Unknown|No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """"destinationPortOrIcmpType":\s*({dest_port}\d+)"""
   """"transportProtocol":\s*"({protocol}[^"]+)"""
   """"sourceIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -40,7 +40,7 @@ Fields = [
   """"connectionCounter":\s*({connection_counter}[^",]+)"""
   """"ipProtocolId":\s*({ip_protocol_id}[^",]+)"""
   """"destinationCountry":\s*({dest_country}[^",]+)"""
-  """"ingressSecurityZone":\s*"(N\/A|({ingressSecurity_zone}[^"]+))"""
+  """"ingressSecurityZone":\s*"(N\/A|({ingress_zone}[^"]+))"""
   """"ingressInterface":\s*"(N\/A|({ingress_interface}[^"]+))"""
   """"egressSecurityZone":\s*"(N\/A|({egress_security_zone}[^"]+))"""
   """"impactDescription":\s*"({impact}[^"]+)"""
@@ -59,7 +59,7 @@ Fields = [
   """exa_json_path=$.@computed.message,exa_field_name=additional_info""",
   """exa_json_path=$.@computed.recordTypeDescription,exa_field_name=alert_name""",
   """exa_json_path=$.@computed.priority,exa_field_name=alert_severity""",
-  """exa_json_path=$.@computed.user,exa_regex=(?:Unknown|No Authentication Required|({user}[\w\.\-]{1,40}\$?))""",
+  """exa_json_path=$.@computed.user,exa_regex=(?:Unknown|No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """exa_json_path=$.destinationPortOrIcmpType,exa_field_name=dest_port""",
   """exa_json_path=$.@computed.transportProtocol,exa_field_name=protocol""",
   """exa_json_path=$.sourceIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -78,7 +78,7 @@ Fields = [
   """exa_json_path=$.connectionCounter,exa_field_name=connection_counter""",
   """exa_json_path=$.ipProtocolId,exa_field_name=ip_protocol_id""",
   """exa_json_path=$.destinationCountry,exa_field_name=dest_country""",
-  """exa_regex="ingressSecurityZone":\s*"(N\/A|({ingressSecurity_zone}[^"]+))""",
+  """exa_regex="ingressSecurityZone":\s*"(N\/A|({ingress_zone}[^"]+))""",
   """exa_regex="ingressInterface":\s*"(N\/A|({ingress_interface}[^"]+))""",
   """exa_regex="egressSecurityZone":\s*"(N\/A|({egress_security_zone}[^"]+))""",
   """exa_json_path=$.@computed.impactDescription,exa_field_name=impact""",

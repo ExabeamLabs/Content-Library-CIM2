@@ -15,7 +15,7 @@ Fields = [
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
 """Original Address=({host}[^\s]+)\s"""
 """events\s*({event_name}.*?)\s*$"""
-"""connected to server ({dest_host}[^\s]+) \(({dest_ip}.*?)\)\sas ({domain}[^\/]+)\/({user}[\w\.\-]{1,40}\$?)"""
+"""connected to server ({dest_host}[^\s]+) \(({dest_ip}.*?)\)\sas ({domain}[^\/]+)\/({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

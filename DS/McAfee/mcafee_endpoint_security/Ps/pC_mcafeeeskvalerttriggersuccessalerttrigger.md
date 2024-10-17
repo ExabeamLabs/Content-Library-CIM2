@@ -18,7 +18,7 @@ Name = mcafee-es-kv-alert-trigger-success-alerttrigger
     """dest_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """threat_type="(\s+|({alert_type}[^"]+))"""",
     """dest_nt_domain="({domain}[^"]+)"""",
-    """user="*(N\/A|\s+|NULL|([^\\]+\\+)?({user}[\w\.\-]{1,40}\$?))"""",
+    """user="*(N\/A|\s+|NULL|([^\\]+\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """AutoID="({alert_id}[^"]+)""""
   ]
 

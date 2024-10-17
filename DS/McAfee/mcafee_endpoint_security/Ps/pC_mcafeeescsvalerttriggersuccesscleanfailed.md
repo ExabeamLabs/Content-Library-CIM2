@@ -8,7 +8,7 @@ Name = mcafee-es-csv-alert-trigger-success-cleanfailed
     TimeFormat = "M/d/yyyy H:mm:ss a"
     Conditions = [ " (MD5)", " (Clean failed)"]
     Fields = [
-      """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\t({additional_info}[^\t]+?)\s*\t(({domain}[^\t]+)(\\)+)?({user}[\w\.\-]{1,40}\$?)\t(\w+\[({process_id}\d+)\]|({process_path}[^\t]+))\t({malware_url}.+?\\({malware_file_name}[^\\]+))\t({alert_name}[^\t]+?)\s*\(({alert_type}[^\)]+)\)\t({hash_md5}\S+?)\s*\(MD5\)"""
+      """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\t({additional_info}[^\t]+?)\s*\t(({domain}[^\t]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\t(\w+\[({process_id}\d+)\]|({process_path}[^\t]+))\t({malware_url}.+?\\({malware_file_name}[^\\]+))\t({alert_name}[^\t]+?)\s*\(({alert_type}[^\)]+)\)\t({hash_md5}\S+?)\s*\(MD5\)"""
     ]
     DupFields=[ "host->src_host" ]
     SOAR {

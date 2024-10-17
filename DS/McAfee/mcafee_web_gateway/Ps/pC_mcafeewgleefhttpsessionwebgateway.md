@@ -10,7 +10,7 @@ Name = mcafee-wg-leef-http-session-webgateway
     Fields = [
                 """\|devTime=({time}\d{13})""",
                 """\d\d:\d\d:\d\d\s({host}[^\s]+)\s(mwg:\s)?LEEF:""",
-                """\|usrName =(?:|({user}[\w\.\-]{1,40}\$?))\|""",
+                """\|usrName =(?:|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
                 """\|src=(?:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\|""",
                 """\|dst=(?:|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\|""",
                 """\|httpStatus=(?:|({http_response_code}\d+))\|""",
@@ -27,7 +27,7 @@ Name = mcafee-wg-leef-http-session-webgateway
                 """\|blockReason=(?:|\s*({failure_reason}[^\s|][^|]+?)\s*)\|""",
         """\|blockReason=(?:|\s*({action}[^\s|][^|]+?)\s*)\|""",
                 """\|blockReason=(?:|[^|]+by ({action}[^|]+))\|""",
-                """\|mal=(?:|({malicious}[^|]+))\|""",
+                """\|mal=(?:|({result}[^|]+))\|""",
                 """\|(?:mType|mime)=(?:|({mime}.+?))\s*(\||$)"""
     ]
   

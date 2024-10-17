@@ -14,7 +14,7 @@ Fields = [
 """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+\d+\s+"""
 """\s+({dest_host}[^\s]+)\s+View - """
 """\s+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
-"""UserDisplayName =\"(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\""""
+"""UserDisplayName =\"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 ]
 ParserVersion = "v1.0.0"
 

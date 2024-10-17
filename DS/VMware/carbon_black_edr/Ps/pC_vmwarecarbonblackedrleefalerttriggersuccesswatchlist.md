@@ -15,7 +15,7 @@ Fields = [
   """0\|CB\|CB\|[^|]+\|({alert_type}[^|]+)\|"""
   """computer_name=({dest_host}[^=]+?)\s+\w+="""
   """interface_ip=(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
-  """username=(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?)\s+\w+="""
+  """username=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """sensor_id=({sensor_id}[^=]+?)\s+\w+="""
   """\W(process_)?md5=(|({hash_md5}[^=]+?))(\s+\w+=|\s*$)"""
   """cmdline=\"+(\\+\?+\\+)?({process_path}({process_dir}(?:[^=]+)?[\\\/])?({process_name}[^\\\/=]+))\"+"""

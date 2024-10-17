@@ -25,7 +25,6 @@ Name = checkpoint-ngfw-kv-alert-trigger-success-detect
     """\Wconfidence_level:({confidence_level}[^"]+)""",
     """\Wrule_uid:({rule_id}[^"]+)""",
     """\Wsmartdefense_profile:({smartdefense_profile}[^"]+)""",
-    """ifdir:({direction}[^"]+)""",
     """originsicname:({user_ou}[^"]+)""",
     """\Wdescription:({additional_info}[^"]+)""",
     """\Wpolicy_name=({rule}[^"]+?)\\\]"""

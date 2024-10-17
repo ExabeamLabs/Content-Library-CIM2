@@ -15,7 +15,7 @@ Name = pan-ngfw-csv-http-session-webbrowsing
     """THREAT,[^,]+,[^,]+,({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d),""",
     """THREAT,[^,]+,[^,]+,({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z),""",
     """THREAT,([^,]+,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,({src_translated_ip}[^,]+),({dest_translated_ip}[^,]+)""",
-    """,THREAT,([^,]*?,){8}(({email_address}[^@,]+@[^\.]+\.[^,]+)|(({domain}[^\\]+?)\\)?({user}[\w\.\-]{1,40}\$?))"""
+    """,THREAT,([^,]*?,){8}(({email_address}[^@,]+@[^\.]+\.[^,]+)|(({domain}[\w\.\-]{1,40}?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^,]+)),"""
     """THREAT,url,([^,]*,){21}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),[^,]*,(?:|({protocol}[^,]+)),(?:|({action}[^,]*)),""",
     """THREAT,url,([^,]*,){26}("+)?({url}[^\\\/\s:,"]+({uri_path}\/[^\?\s,"]+)?)"?"""
     """Informational,([^,]*,){11}"+}({user_agent}.+?)\s*"""",

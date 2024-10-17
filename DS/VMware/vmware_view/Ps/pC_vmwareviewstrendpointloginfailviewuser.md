@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+View User"""
-  """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-]{1,40}\$?)"""
+  """View User\s+(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """({app}View)"""
   """new session on machine\s+({dest_host}[\w.-]+)"""
 ]

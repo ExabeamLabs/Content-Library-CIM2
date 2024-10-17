@@ -17,7 +17,7 @@ Name = cisco-sourcefire-kv-alert-trigger-classification
     """\WSrcPort:\s*({src_port}\d+)""",
     """\WDstPort:\s*({dest_port}\d+)""",
     """\WPriority:\s*({alert_severity}[^,]+)\s*(,|$)""",
-    """\WUser:\s*(No Authentication Required|(({domain}[^\\]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """\WUser:\s*(No Authentication Required|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\WIngressInterface:\s*({ingress_interface}[^,]+)\s*(,|$)""",
     """\WEgressInterface:\s*({egress_interface}[^,]+)\s*(,|$)""",
     """\WIngressZone:\s*({ingress_zone}[^,]+)\s*(,|$)""",

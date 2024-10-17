@@ -17,14 +17,14 @@ Name = symantec-dlp-kv-alert-trigger-success-alerttrigger
     """\|\s*PROTOCOL=({protocol}[^\|]+)""",
     """\|\s*BLOCKED=(None|({action}\w+))""",
     """\|\s*SENDER=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\|\s*ENDPOINT_USERNAME=(N\/A|(({domain}[^\s\\\|@]+)\\+)?({user}[\w\.\-]{1,40}\$?))\|""",
+    """\|\s*ENDPOINT_USERNAME=(N\/A|(({domain}[^\s\\\|@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|""",
     """\|\s*SENDER=(N\/A|({email_address}[^\\\s\|@]+@[^\\\s\|]+))\|""",
     """\|\s*RECIPIENTS=+(N\/A|({target}[^\|]+))""",
     """\|\s*SUBJECT=+\s*(N\/A|({email_subject}[^\|]+?))\s*\|""",
     """\|\s*ATTACHMENTS=({file_path}(({file_dir}[^"\|]+)?[\\\/]+)?({file_name}[^\|"]+?))\s*(\||$|")""",
     """"timestamp":"({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z)\s*"""
   ]
-  DupFields = [ "email_subject->additional_info" , "target->email_recipients", "email_address->src_email_address"]
+  DupFields = [ "email_subject->additional_info" , "target->email_recipients"]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_severity->sourceSeverity", "protocol->dlpProtocol", "action->dlpActionTaken"]

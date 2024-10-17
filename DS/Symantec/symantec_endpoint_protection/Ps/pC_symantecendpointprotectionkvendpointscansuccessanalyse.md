@@ -13,8 +13,8 @@ Fields = [
   """Ordinateur[^:]*:\s({src_host}[\w\-.]+)""",
   """Nom du domaine[^:]*:\s({src_domain}[^,]+)""",
   """Nom du serveur[^:]*:\s({host}[^,]+)""",
-  """Utilisateur1[^:]*:\s({user}[\w\.\-]{1,40}\$?)""",
-  """Utilisateur2[^:]*:\s({user}[\w\.\-]{1,40}\$?)""",
+  """Utilisateur1[^:]*:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+  """Utilisateur2[^:]*:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   """Type d’analyse[^:]*:\s({event_name}Analyse planifiée)""",
   """Utilisateur2[^:]*:\s[^,]+,({additional_info}[^=]+?),Ordinateur"""
 ]

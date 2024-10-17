@@ -20,7 +20,7 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID='({user_sid}[^']+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-]{1,40}\$?)""",
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Execution ProcessID='({process_id}[^']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",
     """ThreadID='({thread_id}[^']+)""",

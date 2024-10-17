@@ -6,7 +6,7 @@ Product: Advanced Analytics
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
 |   0   |   0    |         0          |       0        |    0    |
 
-|  Use-Case  | Activity Types(Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
+|  Use-Case  | Activity Types (Legacy Event Type)/Parsers | MITRE ATT&CK® TTP | Content    |
 |:----------:| ---- | ---- | ---- |
 | Enrichment |    |    | [](RM/r_m_exabeam_advanced_analytics_Enrichment.md) |
 

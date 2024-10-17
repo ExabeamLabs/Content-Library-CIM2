@@ -18,7 +18,7 @@ Name = amazon-awscloudwatch-sk4-app-activity-aws
     # src_system is removed
     """"(?i)Type":"({event_category}[^"]+)""",
     """"Computer":"({computer_name}[^"]+)""",
-    """"Account":"(({domain}[^"]+?)[\\\/]+)?({aws_user}({user}[\w\.\-]{1,40}\$?))"""",
+    """"Account":"(({domain}[^"]+?)[\\\/]+)?({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     # mg is removed
     """"ManagementGroupName":"({group_name}[^"]+)""",
     """"_ResourceId":"({resource_id}[^"]+)""",
@@ -38,7 +38,7 @@ Name = amazon-awscloudwatch-sk4-app-activity-aws
     """User Agent - ({user_agent}.+?)\s+\[""",
     """"sourceIPs":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"userAgent":"({user_agent}[^"]+)"""",
-    """"code":({response_code}\d+)""",
+    """"code":({result_code}\d+)""",
     """"AlertSeverity":"({alert_severity}[^",]+)""",
     """"AlertName":"({alert_name}[^",]+)""",
     """"RiskScore"+:\s*"+({alert_severity}[^",]+)""",

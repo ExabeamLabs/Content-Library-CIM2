@@ -20,13 +20,15 @@ Fields = [
 """"cid":"({cid}[^"]+)"""
 """"event_platform":"({os}[^"]+)""""
 """exa_json_path=$.raw-event.timestamp,exa_field_name=time""",
-"""exa_regex=\Whostname=(|({host}[^,=]+?)),?(\s+\w+=|\s*\})"""
-"""exa_json_path=$.raw-event.InjectedDll,exa_field_name=malware_file_name""",
-"""exa_json_path=$.raw-event.event_simpleName,exa_field_name=alert_name""",
+"""exa_json_path=$.timestamp,exa_field_name=time""",
+"""exa_json_path=$.id,exa_field_name=alert_id""",
 """exa_json_path=$.raw-event.id,exa_field_name=alert_id""",
-"""exa_json_path=$.raw-event.aid,exa_field_name=aid""",
-"""exa_json_path=$.raw-event.cid,exa_field_name=cid""",
-"""exa_json_path=$.raw-event.event_platform,exa_field_name=os""",
+"""exa_regex=\Whostname=(|({host}[^,=]+?)),?(\s+\w+=|\s*\})"""
+"""exa_json_path=$..InjectedDll,exa_field_name=malware_file_name""",
+"""exa_json_path=$..event_simpleName,exa_field_name=alert_name""",
+"""exa_json_path=$..aid,exa_field_name=aid""",
+"""exa_json_path=$..cid,exa_field_name=cid""",
+"""exa_json_path=$..event_platform,exa_field_name=os""",
 ]
 DupFields = [
 "alert_name->alert_type"

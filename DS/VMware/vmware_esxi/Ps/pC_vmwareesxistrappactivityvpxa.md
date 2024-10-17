@@ -9,7 +9,7 @@ Name = vmware-esxi-str-app-activity-vpxa
   Conditions = [""" Vpxa:""", """Originator@6876""", """ vpxa[""", """sub=""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)\s+({host}[^\s]+)\sVpxa:""",
-    """user=((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """user=((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Vpxa:\s+({additional_info}[^"]+?)\s*$"""
   ]
 

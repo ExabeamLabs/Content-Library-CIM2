@@ -19,7 +19,7 @@ Fields = [
   """"ServiceName":\s*"({app}[^"]+)"""
   """"Success":\s*({result}[^",}]+)"""
   """"UserName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
-  """"UserName":\s*"({user}[\w\.\-]{1,40}\$?)""""
+  """"UserName":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   """"HostnameField":\s*"({host}[^"@]+)""""
   """destinationServiceName =({app}[^=]+)\s\w+="""
   """"destinationServiceName":"({app}[^=]+?)"(\s\w+=)?"""

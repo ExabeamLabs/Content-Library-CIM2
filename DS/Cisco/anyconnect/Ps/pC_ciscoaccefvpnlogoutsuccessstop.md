@@ -10,7 +10,7 @@ Name = cisco-ac-cef-vpn-logout-success-stop
   Fields = [
     """\d\d:\d\d:\d\d\s({host}[^\s]+)""",
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d.\d\d\d)""",
-    """UserName =(({email_adress}[^@,]+@[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """UserName =(({email_address}[^@,]+@[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Device\sIP\sAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """NetworkDeviceName =({src_host}[^,]+)""",
     """NAS-IP-Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",

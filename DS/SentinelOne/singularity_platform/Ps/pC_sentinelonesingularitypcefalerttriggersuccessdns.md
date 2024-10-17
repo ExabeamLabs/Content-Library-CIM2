@@ -5,7 +5,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-dns
   Product = Singularity Platform
   Conditions = [ """CEF:""", """|Security|SentinelOne|""", """|dns|""" ]
   Fields = ${SentinelOneParsersTemplates.cef-sentinelone-security-alert.Fields}[
-    """\sdnsRequest:({query}[^\s]+)""",
+    """\sdnsRequest:({dns_query}[^\s]+)""",
     """\sdnsResponse:(|({response}.+?))(\s+\w+:|\s*$)""",
   ]
   ParserVersion = "v1.0.0"

@@ -9,7 +9,7 @@ Name = vmware-airwatch-kv-endpoint-logout-success-adminuserlogout
   Fields = [
       """Timestamp: ({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d{1,6})"""
       """Event Type:\s*({event_name}[^=]+?)\s*User:""",
-      """User:\s*((({domain}[^\\]+?)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))\s*Event Source:"""
+      """User:\s*((({domain}[^\\]+?)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*Event Source:"""
       """"Application=({app}[^;=]+);\w+="""
     ]
     DupFields = ["event_name->opration"]

@@ -15,7 +15,7 @@ Name = symantec-endpointprotection-cef-alert-trigger-success-symantec
       """\Wdvchost=({host}.+?)(\s+\w+=|\s*$)""",
       """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\Wshost=({src_host}.+?)(\s+\w+=|\s*$)""",
-      """"user_name":"({user}[\w\.\-]{1,40}\$?)"""",
+      """"user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"type":"({alert_type}[^"]+)"""",
       """"device_domain":"({domain}[^"]+)"""",
       """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",

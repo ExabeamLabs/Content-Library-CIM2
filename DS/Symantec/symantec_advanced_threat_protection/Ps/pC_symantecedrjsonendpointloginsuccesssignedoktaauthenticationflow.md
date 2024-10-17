@@ -15,7 +15,7 @@ symantec-app-template = {
     Fields = [
       """\\"time\\":\\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """\\"message\\":\\"({additional_info}[^"\\]+)""",
-      """\\"user_name\\":\\"({user}[\w\.\-]{1,40}\$?)""",
+      """\\"user_name\\":\\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\\"event_id\\":({event_code}\d+)""",
       """\\"user_uid\\":\\"({user_id}[^\\"]+)""",
       """\\"destinationServiceName\\":\\"({app}[^\\"]+)""",

@@ -27,7 +27,7 @@ Fields = [
   """ConnectType:\s*({connection_type}[^,]+)""",
   """AccessControlRuleName:\s*({rule}[^,]+)""",
   """AccessControlRuleAction:\s*({result}[^,]+)""",
-  """UserName:\s*(No Authentication Required|({user}[\w\.\-]{1,40}\$?))""",
+  """UserName:\s*(No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """UserAgent:\s*({user_agent}.+?), Client:""",
   """ApplicationProtocol:\s*({app_protocol}[^,]+)""",
   """WebApplication:\s*({web_application}[^,]+)""",
