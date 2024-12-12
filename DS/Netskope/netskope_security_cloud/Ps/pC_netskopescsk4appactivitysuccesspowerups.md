@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-powerups
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Power Ups"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Power Ups"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

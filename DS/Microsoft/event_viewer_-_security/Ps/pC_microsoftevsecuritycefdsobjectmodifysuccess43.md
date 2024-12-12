@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-cef-ds-object-modify-success-43
     """nitroSource_Logon_ID=({login_id}.+?)(\s+\w+=|"*\s*$)""",
     """nitroObjectID=({ds_object_dn}.+?)(\s+\w+=|"*\s*$)""",
     """nitroObjectID=.*?({ds_object_ou}(OU|ou).+?)?(\s+\w+=|"*\s*$)""",
-    """nitroTarget_Class=({ds_object_class}.+?)(\s+\w+=|"*\s*$)"""
+    """nitroTarget_Class=({object_type}.+?)(\s+\w+=|"*\s*$)"""
   ]
   ParserVersion = "v1.0.0"
 

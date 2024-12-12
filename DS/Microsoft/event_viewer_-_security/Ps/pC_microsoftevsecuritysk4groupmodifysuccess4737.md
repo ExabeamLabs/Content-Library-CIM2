@@ -6,6 +6,8 @@ Name = microsoft-evsecurity-sk4-group-modify-success-4737
   ParserVersion = v1.0.0
   Conditions = [""""event_id":4737""", """Microsoft-Windows-Security-Auditing""", """A security-enabled global group was changed"""]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+    """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
+    """"hostname"+:"+({host}[^"]+)""",
     """({event_name}A security-enabled global group was changed)""",
     """"+group"+:.+?name"+:"+({group_name}[^"]+)""",
     """"+group"+:.+?domain"+:"+({group_domain}[^"]+)""",
@@ -19,14 +21,12 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",
     """event_id\\?"+:({event_code}\d+)""",
     """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?"""",
-    """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """Status\\?"+:\\?"+({result_code}[^\\]+)\\?"""",
     """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?"""",
     """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?"""",

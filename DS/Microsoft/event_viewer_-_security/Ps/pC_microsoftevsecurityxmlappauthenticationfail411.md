@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-app-authentication-fail-411
   Product = Event Viewer - Security
   Conditions = [ """>411</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data>({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)-The referenced account is currently locked out"""
   ]
@@ -15,7 +16,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

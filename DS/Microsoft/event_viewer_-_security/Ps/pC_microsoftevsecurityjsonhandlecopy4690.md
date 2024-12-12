@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
   Fields = [
     """"EventTime":({time}\d{10})""",
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",    
-    """"Hostname":"({host}[\w.-]+?)"""",
+    """"(Hostname|Computer)":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}An attempt was made to duplicate a handle to an object)"""
     """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
+    """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Message,exa_field_name=event_name"""
     """exa_json_path=$..SubjectUserName,exa_field_name=user"""

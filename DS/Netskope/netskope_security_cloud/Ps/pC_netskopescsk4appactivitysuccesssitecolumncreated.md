@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-sitecolumncreated
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"SiteColumnCreated"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"SiteColumnCreated"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

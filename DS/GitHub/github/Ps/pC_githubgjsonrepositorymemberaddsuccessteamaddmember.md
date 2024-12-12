@@ -36,6 +36,7 @@ json-github-actions-1 = {
       """exa_json_path=$.actor_location.country_code,exa_field_name=country_code"""
       """exa_json_path=$.request_method,exa_field_name=method"""
       """exa_json_path=$.url_path,exa_field_name=uri_path"""
+      """exa_json_path=$.query_string,exa_field_name=query"""
     ]
     DupFields = [ "object->repository_name" 
 }

@@ -11,6 +11,7 @@ Conditions = [
 ParserVersion = "v1.0.0"
 
 wazuh-windows-template.Fields} [
+    """exa_json_path=$.['data.system_name'],exa_regex=^({host}[\w\-.]+)$""",
     """exa_regex=Type d\\u2019ouverture de session\\u00A0:\s*({login_type}\d+)""",
     """exa_regex=Nom de la station de travail\\u00A0:\s*(-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host_windows}[^\s]+))\s*Adresse du r\\u00E9seau source\\u00A0:""",
     """exa_regex=Nom de la station de travail\\u00A0:\s*(-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[^\s]+))\s*Adresse du r\\u00E9seau source\\u00A0:\s*-\s+""",

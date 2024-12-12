@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """hostname=({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+)),\s*\w+="""
     """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
     """"timestamp":"({time}[^"]+)""",
-    """"(host|MachineName)":"(::ffff:)?({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))"""
+    """"(host|MachineName|Computer)":"(::ffff:)?({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))"""
     """HOSTNAME:\s*\\?"+\(({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))"""
     """({event_name}A new process has been created)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""

@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-download
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """destinationServiceName =Netskope""", """"activity":"Download"""" ]
+  Conditions = [ """"type":""", """destinationServiceName =Netskope""", """"activity":""", """"Download"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

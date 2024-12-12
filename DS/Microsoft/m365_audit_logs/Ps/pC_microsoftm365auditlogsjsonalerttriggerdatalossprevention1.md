@@ -29,7 +29,7 @@ q-microsoft-security-events = {
       """"hostStates"+:[^\}\]]+?privateIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
       """"hostStates"+:[^\}\]]+?publicIpAddress"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
       """"fileStates"+:[^]]+?"+name"+:\s*"+({file_name}[^."]+([\.\w]+)?)"""",
-      """"status"+:"+({result}[^"]+)"""",
+      """"status"+:"+({incident_status}[^"]+)"""",
       """"logonLocation"+:\s*"+({location}[^"]+)""""
     
 }

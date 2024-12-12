@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-securityinvestigationquery
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"SECURITY_INVESTIGATION_QUERY"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"SECURITY_INVESTIGATION_QUERY"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

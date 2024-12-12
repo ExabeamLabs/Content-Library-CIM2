@@ -5,6 +5,7 @@ Name = microsoft-windows-sk4-endpoint-notification-success-4797
    ParserVersion = v1.0.0
    Conditions = [ """"Activity":"4797 - An attempt was made to query the existence of a blank password for an account."""", """"EventID":"4797"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
    Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
+     """"Computer":"({host}[^"]+)"""",
      """({event_name}An attempt was made to query the existence of a blank password for an account)""",
      """"TargetUserName":"({dest_user}[^"]+)"""",
      """"TargetDomainName":"({dest_domain}[^"]+)"""",
@@ -19,7 +20,6 @@ json-windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

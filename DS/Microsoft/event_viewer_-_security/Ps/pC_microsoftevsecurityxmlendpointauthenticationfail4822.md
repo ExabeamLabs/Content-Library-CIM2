@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-fail-4822
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4822<""", """Provider Name""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """<Keyword>({result}.+?)<\/Keyword>""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Device Name:""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -16,7 +17,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

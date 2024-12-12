@@ -6,12 +6,15 @@ Name = microsoft-evapp-xml-endpoint-notification-1000
   Product = Event Viewer - Application
   Conditions = [ """<EventID Qualifiers""", """'>1000</EventID>""", """<TimeCreated SystemTime""", """<Channel>Application<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
+    """<Computer>({host}[\w\-.]+?)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^:<\.]+)""",
     """System.ObjectDisposedException:\s*({event_name}[^<.]+)""",
     """<Message>({additional_info}[^<]+?)\s*<\/Message>""",
     """Object name:\s*'({object}[^']+)""",
     """RequestId:\s*({request_id}[^\s]+)""",
   ]
+  DupFields = [ "host->dest_host" ]
 
 s-xml-object-access-1 = {
   Vendor = Microsoft
@@ -19,8 +22,6 @@ s-xml-object-access-1 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",

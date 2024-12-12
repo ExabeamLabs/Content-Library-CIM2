@@ -24,7 +24,7 @@ cef-atp-alert = {
     """\Wcs1=({url}.+?)\s+(\w+=|$).+?cs1Label=url""",
     """\Wcs1Label=url.*?\Wcs1=({url}.+?)\s+(\w+=|$)""",
     """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s""",
-    """\Wcs2=({result}[^\s]+)""",
+    """\Wcs2=({incident_status}[^\s]+)""",
   
 }
 ```

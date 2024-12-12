@@ -17,9 +17,9 @@ Name = microsoft-evsecurity-csv-ds-object-activity-success-4662
     """"4662",("[^"]*",){4}"({dest_domain}[^"]+)"""",
     """"4662",("[^"]*",){5}"({dest_user}[^"]+)"""",
     """"4662",("[^"]*",){6}"({dest_user_sid}[^"]+)"""",
-    """"(An operation was performed on an object)",("[^"]+",){2}"({ds_object_class}[^"]+)""",
-    """"(An operation was performed on an object)",("[^"]+",){3}"({ds_object_name}[^"]+)""",
-    """"(An operation was performed on an object)",("[^"]+",){4}"({ds_object_type}[^"]+)""",
+    """"(An operation was performed on an object)",("[^"]+",){2}"({object_type}[^"]+)""",
+    """"(An operation was performed on an object)",("[^"]+",){3}"({object_name}[^"]+)""",
+    """"(An operation was performed on an object)",("[^"]+",){4}"({object_type}[^"]+)""",
     """"(An operation was performed on an object)",("[^"]+",){5}"(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"(An operation was performed on an object)",("[^"]+",){6}"({login_id}[^"]+)""",
     """"(An operation was performed on an object)",("[^"]+",){7}"(NT AUTHORITY|({domain}[^"]+))""",
@@ -28,7 +28,7 @@ Name = microsoft-evsecurity-csv-ds-object-activity-success-4662
     """"(An operation was performed on an object)",("[^"]+",){10}"[\\ntr-]*({attribute}[^"]+?)[trn\s\\]*(<\/Message>|")""",
     """"(An operation was performed on an object)",("[^"]+",){12}"({result}[^"]+)"""
   ]
-  DupFields = ["ds_object_name->object"]
+  DupFields = ["object_name->object"]
   ParserVersion = "v1.0.0"
 
 

@@ -20,7 +20,7 @@ Fields = [
   """"Category":"({category}[^"]+)"""
   """"Severity":"({alert_severity}[^"]+)"""
   """"Source":"({additional_info}[^"]+)"""
-  """"Status":"({status_msg}[^"]+)"""
+  """"Status":"({incident_status}[^"]+)"""
   """"category":"({alert_type}[^"]+)"""
   """"action":"({alert_name}[^"]+)"""
   """"src-account-name":"({account}[^"]+)"""

@@ -4,6 +4,9 @@
 Name = netapp-n-sk4-file-rename-9999
   ParserVersion = "v1.0.0"
   Conditions = [  """'NetApp-Security-Auditing'""", """'EventID': 9999""", """'Rename"""  ]
+  Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields}[
+    """'Computer':\s+'({host}[\w\-\.]+)"""
+  ]
 
 netapp-json-windows-events = {
   Vendor = NetApp
@@ -15,7 +18,6 @@ netapp-json-windows-events = {
     """'Opcode':\s+({opcode}\d+)""",
     """'Keywords':\s+'({keywords}[^']+)""",
     """'Result':\s+'({result}[^']+)""",
-    """'Computer':\s+'({host}[\w\-\.]+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",

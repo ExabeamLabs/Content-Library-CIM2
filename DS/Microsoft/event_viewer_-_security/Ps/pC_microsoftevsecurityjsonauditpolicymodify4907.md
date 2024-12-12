@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-audit-policy-modify-4907
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """"EventID":4907""", """Auditing settings on object were changed""" ]
   Fields = [
-    """"Hostname"+:"+({host}[^",]+)""",
+    """"(Hostname|Computer)"+:"+({host}[^",]+)""",
     """"EventTime"+:"+({time}[^",]+)""",
     """({event_code}4907)""",
     """({event_name}Auditing settings on object were changed)""",

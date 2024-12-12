@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-group-list-4798-1
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4798<""", """<Data Name =""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """Status Code:\s*({result}.+?)\s*<""",
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
@@ -18,7 +19,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

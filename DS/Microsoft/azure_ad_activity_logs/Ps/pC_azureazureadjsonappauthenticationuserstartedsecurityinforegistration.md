@@ -12,7 +12,8 @@ Name = azure-azuread-json-app-authentication-userstartedsecurityinforegistration
     """exa_json_path=$.TargetResources[:1].displayName,exa_regex=^({dest_user_full_name}[^\s"]+\s+[^"]+)""",
     """exa_json_path=$.TargetResources[:1].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^@",\s]+))"""",
     """exa_json_path=$.TargetResources[:1].id,exa_field_name=user_sid""",
-    """exa_json_path=$.ActivityDisplayName,exa_field_name=operation"""
+    """exa_json_path=$.ActivityDisplayName,exa_field_name=operation""",
+    """"targetResources":\[\{[^\}]+?displayName":"({dest_user_full_name}[^"]+)""""
   ]
 
 microsoft-azuread-json-events = {
@@ -44,7 +45,23 @@ microsoft-azuread-json-events = {
       """exa_json_path=$.ResultReason,exa_field_name=additional_info""",
       """exa_json_path=$..AADOperationType,exa_field_name=operation""",
       """exa_json_path=$..CorrelationId,exa_field_name=correlation_id""",
-      """exa_json_path=$..ActivityDisplayName,exa_field_name=event_name"""
+      """exa_json_path=$..ActivityDisplayName,exa_field_name=event_name""",
+
+      """"activityDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+([+-]\d\d:\d\d|Z))"""",
+      """"initiatedBy":[^\}]+?userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """"initiatedBy":[^\}]+?id":"({user_uid}[^",]+)"""",
+      """"initiatedBy":\{[^\}]+?ipAddress":"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
+      """"callerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"result":"({result}[^"]+)"""",
+      """"resultReason":"({result_reason}[^"]+)"""",
+      """"category":"({category}[^"]+)"""",
+      """"properties".*?"category":"({category}[^"]+)"""",
+      """"loggedByService":"(Account Provisioning|Core Directory|({app}[^"]+))"""",
+      """"initiatedBy":\{"app":\{[^\}]*?"displayName":"({app}[^"]+)"""",
+      """"operationType":"({operation}[^"]+)"""",
+      """"correlationId":"({correlation_id}[^"]+)"""",
+      """"activityDisplayName":"({operation}({event_name}[^"]+))"""",
+      """"targetResources":\[\{[^\}]+?userPrincipalName":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^"]+))""""
     
 }
 ```

@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-loginattempt
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Login Attempt"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Login Attempt"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

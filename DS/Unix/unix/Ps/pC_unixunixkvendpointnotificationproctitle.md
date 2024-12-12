@@ -19,6 +19,7 @@ Name = unix-unix-kv-endpoint-notification-proctitle
     """({host}[\w\-.]+)\s*vcsa-audit"""
 # proctitle is removed
   ]
+  DupFields = ["event_category->operation_type"]
 
 
 }

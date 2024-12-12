@@ -12,6 +12,7 @@ Conditions = [
 Fields = [
 """Authentication failed from ({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}): user '({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
 """\(realm ({realm}[^\)]+)"""
+"""({event_name}Authentication failed)"""
 ]
 ParserVersion = "v1.0.0"
 

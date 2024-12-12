@@ -21,7 +21,7 @@ Fields = [
   """Account Domain:\s*((?-i)\\+[rnt])*({domain}\S+?)((?-i)\\+[rnt])*\s*Logon ID:""",
   """Object Type:\s*((?-i)\\+[rnt])*({file_type}.+?)\s*((?-i)\\+[rnt])*\s*Source Address:""",
   """Source Address:\s*((?-i)\\+[rnt])*(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)((?-i)\\+[rnt])*\s*Source Port:""",
-  """Share Name:\s*((?-i)\\+[rnt])*(?:\\\\\*\\)?({share_name}.+?)\s*((?-i)\\+[rnt])*\s*Share Path:""",
+  """Share Name:\s*((?-i)\\+[rnt])*(?:[\\\*]+)?({share_name}.+?)\s*((?-i)\\+[rnt])*\s*Share Path:""",
   """Share Path:\s*((?-i)\\+[rnt])*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+?)\\)?(|({d_name}[^\\]*?)))\\?)\s*((?-i)\\+[rnt])*\s*Relative Target Name:""",
   """Relative Target Name:\s*((?-i)\\+[rnt])*\\?(?:\s*|(?:({file_dir}.+?)\\)?(|({file_name}[^\\:\/]+?(?:\.({file_ext}[^\.]+?))?))(?:\\HEAD|:.+?|\\|\s|((?-i)\\+[rnt])*)\s*)Access Request Information:""",
   """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:""",

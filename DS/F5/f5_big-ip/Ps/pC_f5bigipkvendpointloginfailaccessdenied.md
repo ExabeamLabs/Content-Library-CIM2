@@ -11,6 +11,7 @@ Name = f5-bigip-kv-endpoint-login-fail-accessdenied
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(\+|-)\d{2}:\d{2})\s({host}[\w.-]+)""",
     """authentication with '({user}[\w\.\-\!\#\^\~]{1,40}\$?)' failed""",
     """Error_Message="({event_name}[^\."]+)"""
+    """\sAccess_Profile="({access_group}[^"]+)""""
   ]
 
 

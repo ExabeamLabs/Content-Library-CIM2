@@ -6,6 +6,7 @@ Name = wazuh-evsecurity-kv-endpoint-login-fail-4625
   Product = Wazuh
   Conditions = [ """"data.id":"4625"""", """"type":"wazuh-alerts"""", """"decoder.parent":"windows""""  ]
     Fields = ${WazuhParserTemplates.wazuh-windows-template.Fields} [
+    """exa_json_path=$.['data.system_name'],exa_regex=^({host}[\w\-.]+)$""",
     """exa_regex=Type d\\u2019ouverture de session\\u00A0:\s*({login_type}\d+)""",
     """exa_regex=Nom de la station de travail\\u00A0:\s*(-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host_windows}[^\s]+))\s*Adresse du r\\u00E9seau source\\u00A0:""",
     """exa_regex=Nom de la station de travail\\u00A0:\s*(-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[^\s]+))\s*Adresse du r\\u00E9seau source\\u00A0:\s*-\s+""",
@@ -35,7 +36,6 @@ wazuh-windows-template = {
       """exa_json_path=$.location,exa_field_name=log_location""",
       """exa_json_path=$.['data.data'],exa_field_name=data""",
       """exa_json_path=$.path,exa_field_name=log_path""",
-      """exa_json_path=$.['data.system_name'],exa_regex=^({host}[\w\-.]+)$""",
       """exa_json_path=$.['agent.id'],exa_field_name=agent_id""",
       """exa_json_path=$.['manager.name'],exa_field_name=wazuh_manager""",
       """exa_json_path=$.['rule.description'],exa_field_name=description""",

@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-putobject
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"PutObject"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"PutObject"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

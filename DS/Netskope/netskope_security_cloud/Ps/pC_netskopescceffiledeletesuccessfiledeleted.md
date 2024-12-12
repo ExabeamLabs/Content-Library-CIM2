@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-delete-success-filedeleted"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"FileDeleted"""
+""""activity":"""
+""""FileDeleted"""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
   """"object":\s*"({file_name}[^"]+?(\.({file_ext}[^"\.]+?))?)""""

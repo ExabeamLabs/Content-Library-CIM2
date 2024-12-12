@@ -17,7 +17,7 @@ Fields = [
 """"ConditionalAccessStatus":"({result}[^"]+)""""
 """destinationServiceName =\s*({app}[^=]+?)\s+\w+=""",
 """"AppDisplayName":"\s*({app}[^"]+?)\s*"""",
-""""identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",\s]+)))"""
+""""identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))""""
 """UserDisplayName"+:"+([a-f\d]+(\-[a-f\d]+){4}|({full_name}[^"]+))"""
 """UserId"+:"+({user_id}[^"]+)"""
 """"(Device)?(b|B)rowser":"({browser}[^"]+)"""
@@ -80,6 +80,7 @@ Fields = [
 """exa_regex=TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""",
 """exa_regex="resourceId":\s*"({resource}[^"]+)"""",
 """exa_regex="(app|resource)DisplayName":"({resource}[^"]+)"""",
+"""exa_json_path=$.properties.resourceId,exa_field_name=resource""",
 """exa_regex="resultType":\s*"({error_code}\d+)"""",
 """exa_regex=UserId"+:"+({user_id}[^"]+)"""
 """exa_regex="(Device)?(b|B)rowser":"({browser}[^"]+)"""
@@ -94,7 +95,7 @@ Fields = [
 """exa_regex="AppDisplayName":"\s*({app}[^"]+?)\s*"""",
 """exa_regex="category":\s*"({category}[^"]+)"""",
 """exa_regex="UserPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-"""exa_regex="identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",\s]+)))"""
+"""exa_regex="identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))""""
 """exa_regex=UserDisplayName"+:"+([a-f\d]+(\-[a-f\d]+){4}|({full_name}[^"]+))"""
 """exa_regex="countryOrRegion":"({country_code}[^"]+)""""
 """"LocationDetails_string":".+?"city\\":\\"({city}[^\\",]+)\\""""

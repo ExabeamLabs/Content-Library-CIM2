@@ -49,7 +49,7 @@ cisco-firepower-template = {
     """ResponderBytes:\s*({bytes_in}\d+)""",
     """URLCategory:\s*({categories}({category}[^,;]+)[^,]+)""",
     """URL:\s*({url}[^,\s"]+)""",
-    """URL:\s*(?:-|\w+:\/+)({web_domain}[^\s\/:]+)""",
+    """URL:\s*(?:-|\w+:\/+)({web_domain}[^\s\/:]+?)(,|$|:|"|\/|\\)""",
     """URL:\s*(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s]+)""",
     """URL:\s*.*?({uri_query}\?[^\s"]+)""",
     """URI:\s*(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s]+)""",

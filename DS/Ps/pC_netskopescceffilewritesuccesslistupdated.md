@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-write-success-listupdated"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"ListUpdated""""
+""""activity":"""
+""""ListUpdated""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -32,12 +32,12 @@ Fields = [
 """"cid":"({cid}[^"]+)""",
 """"event_platform":\s*"({os}[^"]+)"""",
 """"OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
-""""ContextBaseFileName":"({file_name}[^"]+)""""
 """"ShareAccess":"({access}[^"]+)""""
 """"FileObject":"({object}[^"]+)""""
 """"FileAttributes":"({attributes}[^"]+)""""
 """"(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
-""""(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*""""
+""""(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*"""",
+""""ContextBaseFileName":"({file_name}[^"]+)"""",
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -53,12 +53,12 @@ Fields = [
 """exa_json_path=$.cid,exa_field_name=cid"""
 """exa_json_path=$.event_platform,exa_field_name=os""",
 """exa_json_path=$.OciContainerId,exa_field_name=container_id"""
-"""exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
 """exa_json_path=$.ShareAccess,exa_field_name=access"""
 """exa_json_path=$.FileObject,exa_field_name=object"""
 """exa_json_path=$.FileAttributes,exa_field_name=attributes"""
 """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
 """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*""""
+"""exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
 
 }
 ```

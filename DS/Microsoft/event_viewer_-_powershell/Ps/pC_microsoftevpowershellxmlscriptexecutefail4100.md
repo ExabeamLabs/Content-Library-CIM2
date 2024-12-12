@@ -6,7 +6,7 @@ Name = microsoft-evpowershell-xml-script-execute-fail-4100
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Product = Event Viewer - PowerShell
   Vendor = Microsoft
-  Conditions = [ """<EventID>4100</EventID""", """<Provider Name =""", """<Execution ProcessID=""" ]
+  Conditions = [ """<EventID>4100</EventID""", """<Provider Name =""", """<Execution ProcessID=""", """<Channel>Microsoft-Windows-PowerShell/Operational<""" ]
   Fields =[
     """<Computer>({host}[^<]+)<"""
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""

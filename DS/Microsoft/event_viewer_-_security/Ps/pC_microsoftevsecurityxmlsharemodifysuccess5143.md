@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-xml-share-modify-success-5143
      """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<""",
     """<Data Name\\*='ObjectType'>({file_type}[^<]+)<""",
-    """<Data Name\\*='ShareName'>[\\\*]*({share_name}[^<]+)<""",
+    """<Data Name\\*='ShareName'>(?:[\\\*]+)?({share_name}[^<]+)<""",
      """<Data Name\\*='ShareLocalPath'>[\\\?]*({share_path}(({d_parent}[^@]+?)\\)?(|({d_name}[^\\]+?)))<""",
     """<Message>({event_name}A network share object was modified)""",
     """<Level>({run_level}[^<]+)<"""

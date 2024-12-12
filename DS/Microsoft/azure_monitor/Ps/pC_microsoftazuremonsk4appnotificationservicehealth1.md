@@ -43,7 +43,7 @@ cef-microsoft-app-activity = {
     """"(?i)userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
+    """(?i)userId":"({user_upn}[^",]+)""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"Platform":"({os}[^"]+)""""

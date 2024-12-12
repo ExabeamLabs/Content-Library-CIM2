@@ -17,6 +17,8 @@ Name = cisco-ise-kv-app-activity-success-ciseidentitystoresdiagnostics
     """Response=\{QueryResult=({result}[^;\s]*)""",
     """AcsSessionID=({acs_session_id}[^,]+),""",
     """Protocol=({protocol}[^,]+),"""
+    """\sCPMSessionID=({session_id}[^,]+)"""
+    """\sSelectedAccessService=({dest_service_name}[^,]*)"""
   ]
 
 

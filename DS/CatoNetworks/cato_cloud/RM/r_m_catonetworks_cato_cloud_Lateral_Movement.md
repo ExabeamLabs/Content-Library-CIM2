@@ -7,7 +7,7 @@ Vendor: CatoNetworks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  16   |   3    |         9          |       3        |    5    |
+|  16   |   3    |         9          |       3        |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

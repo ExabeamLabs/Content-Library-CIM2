@@ -21,7 +21,7 @@ Fields = [
 """Object Type=\s*({file_type}[^\s]+)"""
 """Source Address=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """({access}Read)"""
-"""Share Name =\s*[\\\*]*({share_name}[^\s]+)\s*Share"""
+"""Share Name =\s*(?:[\\\*]+)?({share_name}[^\s]+)\s*Share"""
 """Share Path=\s*[\\\?]*(\s*|({share_path}(({d_parent}.+?)\\)?(|({d_name}[^\\]+?)))\\?)\s*Access Request Information:"""
 """Source Port(=|:)\s*({src_port}\d+)"""
 ]

@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-user-privilege-modify-4703
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4703<""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """Target Account:.*?Account Name:\s*(|({dest_user}.+?))\s*Account Domain:\s*(|({dest_domain}.+?))\s*Logon ID:""",
     """Process Name:\s*(-|({process_path}({process_dir}(?:[^<=]+)?[\\\/])?({process_name}[^\\\/<:]+?)))[\s\<\>\d]+\s+(.*?)?[\w\s]+:""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -16,7 +17,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-send
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Send"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Send"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

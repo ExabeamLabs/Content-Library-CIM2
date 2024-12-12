@@ -22,7 +22,7 @@ Fields = [
   """IpPort\"+:\"+({src_port}\d+)"""
   """SubjectUserSid\"+:\"+({user_sid}[^\"<]+)"""
   """ObjectType\"+:\"+({file_type}[^\"]+)"""
-  """ShareName\"+:\"+[\\\*]*({share_name}[^\"]+)"""
+  """ShareName\"+:\"+(?:[\\\*]+)?({share_name}[^\"]+)"""
   """ShareLocalPath\"+:\"+(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)\""""
   """RelativeTargetName\"+:\"+({file_dir}(?:[^\"]+)?[\\\/])?({file_name}[^\\:\"]+?(\.\s*({file_ext}[^\"\\.]+?))?)\""""
   """AccessList\"+:\"+({access}[^\"]+)"""

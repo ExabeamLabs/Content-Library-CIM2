@@ -5,6 +5,7 @@ Name = microsoft-evsecurity-sk4-endpoint-lock-success-4800
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"4800 - A session was disconnected from a Window Station."""", """"EventID":"4800"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}A session was disconnected from a Window Station)""",
     """"TargetUserName":"({dest_user}[^"]+)"""",
     """"TargetDomainName":"({dest_domain}[^"]+)"""",
@@ -17,7 +18,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

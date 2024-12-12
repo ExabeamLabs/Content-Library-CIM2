@@ -5,6 +5,10 @@ Name = microsoft-evdnsserver-xml-network-notification-6004
   ParserVersion = "v1.0.0"
   Product = Event Viewer - DNSServer
   Conditions = [ """>6004</EventID>""","""DNS_EVENT_BAD_ZONE_TRANSFER_REQUEST""", """<Provider>Microsoft-Windows-DNS-Server-Service</Provider>""", """<Channel>DNS Server</Channel>""" ]
+  Fields = ${DLWindowsParsersTemplates.windows-events-4.Fields}[
+    """<Computer>({host}[^<>]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
 
 windows-events-4 = {
   Vendor = Microsoft
@@ -12,7 +16,6 @@ windows-events-4 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-    """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",

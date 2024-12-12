@@ -6,7 +6,8 @@ Name = cisco-ac-xml-app-notification-5005
   Conditions = [
     """<EventID Qualifiers='""",
     """'>5005</EventID>""",
-    """<TimeCreated SystemTime="""
+    """<TimeCreated SystemTime=""",
+    """<Channel>Cisco AnyConnect Secure Mobility Client<"""
   ]
   Fields = ${CiscoParsersTemplates.s-xml-object-access-1.Fields}[
     """<Message>({additional_info}[^<]+?)\s*<\/Message>""",

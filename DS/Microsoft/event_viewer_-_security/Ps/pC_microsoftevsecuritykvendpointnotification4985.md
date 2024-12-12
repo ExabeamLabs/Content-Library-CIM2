@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)\s"""
     """({event_name}The state of a transaction has changed)""",
     """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",
+    """"Computer":"({host}[^"]+)""""
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """\Wrt=({time}\d+)""",
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",

@@ -7,6 +7,8 @@ Name = microsoft-evapp-xml-endpoint-notification-success-1400
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>1400</EventID>""", """connector failed to connect to""", """Microsoft-SharePoint Products-SharePoint Server Search""" ]
   Fields = ${DLWindowsParsersTemplates.xml-windows-events.Fields}[
+    """<Computer>({host}[\w.-]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^<]+)</Message>""",
     """<Data Name\\*='string0'>({additional_info}[^<]+)<""",
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
@@ -18,8 +20,6 @@ xml-windows-events = {
   Product = Windows
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",

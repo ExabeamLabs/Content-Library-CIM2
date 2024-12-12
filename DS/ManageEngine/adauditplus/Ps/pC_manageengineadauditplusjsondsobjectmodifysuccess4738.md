@@ -5,7 +5,7 @@ Name = manageengine-adauditplus-json-ds-object-modify-success-4738
   ParserVersion = "v1.0.0"
   Conditions = [ """"EVENT_NUMBER":"4738"""", """"A user account was changed."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-plus-json-events.Fields}[
-    """exa_json_path=$.OBJECT_CLASS,exa_field_name=ds_object_class"""
+    """exa_json_path=$.OBJECT_CLASS,exa_field_name=object_type"""
     """exa_json_path=$.COMP_MGMT_TYPE,exa_field_name=event_category"""
   ]
 

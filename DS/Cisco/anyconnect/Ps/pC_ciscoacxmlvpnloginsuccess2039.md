@@ -4,7 +4,7 @@
 Name = cisco-ac-xml-vpn-login-success-2039
   Product = AnyConnect
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID Qualifiers='""", """'>2039</EventID>""", """<TimeCreated SystemTime=""" ]
+  Conditions = [ """<EventID Qualifiers='""", """'>2039</EventID>""", """<TimeCreated SystemTime=""", """<Channel>Cisco AnyConnect Secure Mobility Client<""" ]
 
 s-xml-object-access-1 = {
   Vendor = Cisco

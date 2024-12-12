@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-4660
   Fields = [
     """({event_name}An object was deleted)""",
     """({event_code}4660)""",
-    """"Hostname":"({host}[^"]+)""""
+    """"(Hostname|Computer)":"({host}[^"]+)""""
     """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """"SubjectUserSid":"({user_sid}[^"]+)""""
     """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""

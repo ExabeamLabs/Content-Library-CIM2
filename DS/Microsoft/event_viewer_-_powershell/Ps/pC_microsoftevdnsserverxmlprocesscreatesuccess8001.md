@@ -8,9 +8,10 @@ Name = microsoft-evdnsserver-xml-process-create-success-800-1
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
 """<Provider Name"""
-"""'PowerShell""",
+"""PowerShell""",
 """>800</EventID>""",
 """<Computer>"""
+"""<Channel>Windows PowerShell</Channel"""
   ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

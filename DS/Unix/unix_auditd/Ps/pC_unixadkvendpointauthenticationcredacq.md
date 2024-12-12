@@ -21,6 +21,7 @@ Name = unix-ad-kv-endpoint-authentication-credacq
     """\sauid=({account_id}\d+)\s""",
     """\suid=({user_uid}\d+)""",
     """op=({action}[^\s]+)"""
+    """type=({operation_type}\S+)"""
   ]
   DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"

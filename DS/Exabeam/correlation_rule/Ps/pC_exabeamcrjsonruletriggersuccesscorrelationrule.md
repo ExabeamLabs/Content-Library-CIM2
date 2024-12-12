@@ -17,6 +17,7 @@ Name = exabeam-cr-json-rule-trigger-success-correlationrule
     """exa_json_path=$.rules[0].mitre_labels[0].tactic,exa_field_name=tactic""",
     """exa_json_path=$.rules[0].mitre_labels[0].technique_key,exa_field_name=technique_key""",
     """exa_json_path=$.rules[0].mitre_labels[0].technique,exa_field_name=technique"""
+    """exa_json_path=$.activity_type,exa_field_name=operation_type"""
   ]
 
 exa-events-ns = {
@@ -47,7 +48,7 @@ exa-events-ns = {
        """exa_json_path=$.recoverability,exa_field_name=recoverability"""
        """exa_json_path=$.src_product,exa_field_name=src_product"""
        """exa_json_path=$.src_vendor,exa_field_name=src_vendor"""
-       """exa_json_path=$.business_criticality,exa_regex=({business_criticality}\d+)"""
+       """exa_json_path=$.security_criticality,exa_regex=({security_criticality}\d+)"""
        """exa_json_path=$.dest_host,exa_field_name=dest_host"""
        """exa_json_path=$.create_case,exa_field_name=create_case"""
        """exa_json_path=$.id,exa_field_name=id"""
@@ -56,6 +57,7 @@ exa-events-ns = {
       """exa_json_path=$.dest_user_entity_id,exa_field_name=dest_user_entity_id"""
       """exa_json_path=$.dest_device_entity_id,exa_field_name=dest_device_entity_id"""
       """exa_json_path=$.source_device_entity_id,exa_field_name=source_device_entity_id"""
+      """exa_json_path=$.user,exa_field_name=user"""
 
     
 }

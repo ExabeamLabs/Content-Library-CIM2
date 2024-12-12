@@ -5,6 +5,9 @@ Name = microsoft-o365-cef-app-file-success-addtogroup
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Add member to group""" ]
+  Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
+    """"targetResources":\[.+?"newValue":"\\*"({group_name}[^\\"]+)\\*"+,"displayName":"Group.DisplayName""""
+  ]
 
 cef-microsoft-app-activity = {
   Vendor = Microsoft
@@ -34,7 +37,7 @@ cef-microsoft-app-activity = {
     """"(?i)userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
+    """(?i)userId":"({user_upn}[^",]+)""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"Platform":"({os}[^"]+)""""

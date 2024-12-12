@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-json-app-login-loginattempt
 ParserVersion = "v1.0.0"
-Conditions = [ """"type":"""", """"ccl":""", """"activity":"Login Attempt"""" ]
+Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Login Attempt"""" ]
 DupFields = ${NetskopeParsersTemplates.cef-netskope-activity.DupFields}[ "operation->access" ]
 
 cef-netskope-activity = {

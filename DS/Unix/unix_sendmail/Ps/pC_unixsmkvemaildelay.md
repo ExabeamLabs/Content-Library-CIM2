@@ -17,10 +17,10 @@ Name = unix-sm-kv-email-delay
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
     """\w+ \d{2} \d{2}:\d{2}:\d{2} (Message forwarded from )?(::ffff:)?({host}[\w.\-]+):? \S+ ({alert_id}\S+?):""",
     """\sstat=({result}\w+)""",
-    """to=(\w+,|)({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\;,\|]+))?""",
+    """to=(\w+,|)<?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\;,\|\>]+))?""",
     """\srelay=({dest_host}[^\s\[]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?""",
     """({bytes}\d+)\sbytes"""
-    """sendmail \d+ [\-\s]+({alert_id}[^:]+)"""
+    """(sendmail|sm-mta)\s*\[?\d+\]?[\s\-:]+({alert_id}\w+)"""
   ]
 
 

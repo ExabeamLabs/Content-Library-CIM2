@@ -15,7 +15,6 @@ Name = salesforce-sf-json-app-activity-success-setupaudittrail
     """exa_json_path=$.CreatedBy.Username,exa_regex=(autoproc|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^"@]+))?""",
     """exa_json_path=$.CreatedBy.Id,exa_field_name=user_id""",
     """exa_json_path=$.CreatedBy.Name,exa_regex=((Automated Process)|({full_name}[^"]+))""",
-    """exa_json_path=$.Display,exa_field_name=additional_info"""
   ]
 
 

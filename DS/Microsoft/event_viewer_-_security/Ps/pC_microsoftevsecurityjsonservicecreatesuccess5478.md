@@ -7,6 +7,7 @@ Name = microsoft-evsecurity-json-service-create-success-5478
   Fields = ${WindowsParsersTemplates.json-windows-events-4.Fields}[
     """"ManagementGroupName":"({group_name}[^\s"]+)""",
     """({service_name}IPsec Services)""",
+    """"Computer":"({host}[\w\-\.]+)""""
   ]
   DupFields = [ "host->dest_host" ]
 
@@ -16,7 +17,6 @@ json-windows-events-4 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-    """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",

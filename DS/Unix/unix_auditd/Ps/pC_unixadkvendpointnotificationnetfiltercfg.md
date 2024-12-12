@@ -14,7 +14,7 @@ Name = unix-ad-kv-endpoint-notification-netfiltercfg
 # family is removed
 # entries is removed
     ]
-    DupFields = [ "host->dest_host" ]
+    DupFields = [ "host->dest_host", "event_category->operation_type" ]
 	ParserVersion = "v1.0.0"
 
 

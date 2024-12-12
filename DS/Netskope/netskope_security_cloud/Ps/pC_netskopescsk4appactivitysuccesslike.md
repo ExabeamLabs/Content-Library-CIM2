@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-like
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """destinationServiceName =Netskope""", """"activity":"Like"""" ]
+  Conditions = [ """"type":""", """destinationServiceName =Netskope""", """"activity":""", """"Like"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

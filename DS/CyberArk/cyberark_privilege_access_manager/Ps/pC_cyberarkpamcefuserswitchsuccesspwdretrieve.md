@@ -25,7 +25,7 @@ Fields = [
 """CEF:\s*\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
 """msg="*\[*({additional_info}[^"\]]+)?\]*\s*"""
 """act=({operation}Retrieve password)"""
-"""cn2="*\(?({action}[^=\)]+?)(\.\s|\s*\w+=|\))"""
+"""cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs3=({device_type}[^=]+)\s+\w+="""
 ]
 DupFields = [ "dest_user->account" ]

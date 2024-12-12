@@ -3,15 +3,16 @@
 {
 Name = "netskope-sc-json-file-write-app-activity-success-rename"
   Conditions = [
-""""type":"nspolicy""""
+""""type":"""
+""""nspolicy""""
 """"ccl":"""
-""""activity":""""
-""""netskope_pop":""""
+""""activity":"""
+""""netskope_pop":"""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
-    """"to_object":"({file_name}[^"]+)".*"object_type":"(File|Image)""""
+    """"to_object":\s*"({file_name}[^"]+)".*"object_type":\s*"(File|Image)""""
     """"object_type":\s*"(File|Image)"[^\}]*?"to_object":\s*"\s*({file_name}[^"]+?)""""   
-    """"from_object":"({src_file_name}[^"]+)".*"object_type":"(File|Image)""""
+    """"from_object":\s*"({src_file_name}[^"]+)".*"object_type":\s*"(File|Image)""""
     """"object_type":\s*"(File|Image)"[^\}]*?"from_object":\s*"\s*({src_file_name}[^"]+?)""""
     """"object":\s*"'?\s*(|({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?))'?"[^\}]*?"object_type":\s*"(File|Image)""""
     

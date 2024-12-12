@@ -5,6 +5,7 @@ Name = microsoft-evsecurity-sk4-service-create-success-4622
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"4622 - A security package has been loaded by the Local Security Authority."""", """"EventID":"4622"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}A security package has been loaded by the Local Security Authority)""",
     """ <Data Name\\?="SecurityPackageName">({service_name}[^<]+)<"""
   ]
@@ -16,7 +17,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

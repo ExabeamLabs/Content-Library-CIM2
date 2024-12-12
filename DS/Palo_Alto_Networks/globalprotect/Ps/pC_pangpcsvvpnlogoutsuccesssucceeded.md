@@ -20,7 +20,7 @@ Name = pan-gp-csv-vpn-logout-success-succeeded
     """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     """({serial_num}[^,]+),SYSTEM,globalprotect,"""
-    """,SYSTEM,globalprotect,([^,]*,){20}({device_name}[^,"]+)"""
+    """,SYSTEM,globalprotect,([^,]*,){20}({device_name}({host}[^,"]+))"""
   ]
 
 

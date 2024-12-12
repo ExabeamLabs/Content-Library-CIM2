@@ -4,14 +4,16 @@
 Name = microsoft-windows-sk4-app-notification-success-heartbeat
    ParserVersion = v1.0.0
    Conditions = [ """"Type":"Heartbeat"""", """"Category":"Direct Agent"""", """"ManagementGroupName":"""", """"ComputerEnvironment":"""" ]
- 
+   Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
+     """"Computer":"({host}[^"]+)""""
+   ]
+
 json-windows-system-info = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

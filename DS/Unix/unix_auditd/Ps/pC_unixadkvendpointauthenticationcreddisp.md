@@ -19,7 +19,8 @@ Name = unix-ad-kv-endpoint-authentication-creddisp
     """exe="({process_dir}.+\/)({process_name}.+?)"""",
     """\sauid=({account_id}\d+)\s""",
     """\suid=({user_uid}\d+)""",
-    """op=({action}[^\s]+)"""
+    """op=({action}[^\s]+)""",
+    """type=({operation_type}\S+)"""
   ]
   DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"

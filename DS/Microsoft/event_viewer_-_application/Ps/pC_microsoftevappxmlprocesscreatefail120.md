@@ -5,6 +5,11 @@ Name = microsoft-evapp-xml-process-create-fail-120
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Application  
   Conditions = [ """<EventID Qualifiers""", """'>120</EventID>""", """<TimeCreated SystemTime""" ]
+  Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
+    """<Computer>({host}[\w\-.]+?)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
+  DupFields = [ "host->dest_host" ]
 
 s-xml-object-access-1 = {
   Vendor = Microsoft
@@ -12,8 +17,6 @@ s-xml-object-access-1 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",

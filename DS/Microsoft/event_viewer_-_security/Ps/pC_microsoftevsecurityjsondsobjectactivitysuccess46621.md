@@ -27,16 +27,16 @@ Fields = [
 """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
-"""exa_json_path=$..ObjectName,exa_field_name=ds_object_name""",
-"""exa_json_path=$..ObjectServer,exa_field_name=ds_object_class""",
-"""exa_json_path=$..ObjectType,exa_field_name=ds_object_type""",
+"""exa_json_path=$..ObjectName,exa_field_name=object_name""",
+"""exa_json_path=$..ObjectServer,exa_field_name=object_server""",
+"""exa_json_path=$..ObjectType,exa_field_name=object_type""",
 """exa_json_path=$..OperationType,exa_field_name=operation""",
 """exa_json_path=$..AdditionalInfo,exa_regex=(?:-|({additional_info}[^"]+))""",
 """exa_json_path=$..AccessList,exa_field_name=access""",
 """exa_regex=Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
 DupFields = [
-"ds_object_name->object"
+"object_name->object"
 ]
 
 

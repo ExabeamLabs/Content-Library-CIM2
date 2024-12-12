@@ -30,6 +30,7 @@ Name = unix-unix-kv-process-create-success-exe
     """\ssuccess=(|({result}.+?))(\s+\w+=|\s*$)""",
     """\skey=({additional_info}[^\s"\\]+)"""    
     """node=({dest_host}[\w\-.]+)"""
+    """type=({operation_type}\S+)"""
   ]
 
 

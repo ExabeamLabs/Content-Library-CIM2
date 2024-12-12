@@ -23,7 +23,7 @@ Fields = [
   """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   """"userPrincipalName":"((?i)null|({email_user}[^\@"]+\@([^\."]+\.)*\w+))"""
   """"logonLocation":((?i)null|({src_location}[^"]+))"""
-  """"status":"({alert_status}[^",]+)"""
+  """"status":"({incident_status}[^",]+)"""
 ]
 
 

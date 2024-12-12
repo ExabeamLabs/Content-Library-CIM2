@@ -16,7 +16,7 @@ Name = google-gcpca-sk4-app-activity-cloud
      """"callerSuppliedUserAgent":"({user_agent}[^"]+)""",
      """"resource"[^=]*?project_id":"({account}[^"]+)""",
      """"resource"[^=]*?"type":"({resource_type}[^"]+)""",
-     """"resourceName":\s*"({resource}[^"]+)""",
+     """"resourceName":\s*"({resource_path}[^"]+)""",
      """"permission":"({permission}[^"]+)""",
      """"granted":({result}[^,":\}]+)""",
      """requestClientApplication=\s*({app}[^=]+?)\s+\w+=""",

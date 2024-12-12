@@ -7,8 +7,11 @@ Name = sentinelone-evsentinelone-xml-app-notification-5
   Product = Event Viewer - Sentinelone
   Conditions = [ """<EventID>5</EventID>""", """<TimeCreated SystemTime""", """<Channel>SentinelOne""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
+    """<Computer>({host}[\w\-.]+?)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}5)"""
   ]
+  DupFields = [ "host->dest_host" ]
 
 s-xml-object-access-1 = {
   Vendor = Microsoft
@@ -16,8 +19,6 @@ s-xml-object-access-1 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",

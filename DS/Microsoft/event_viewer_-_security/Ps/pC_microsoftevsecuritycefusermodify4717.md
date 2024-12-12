@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-cef-user-modify-4717
   Conditions = [ """"EventID":4717""", """<Data Name""" ]
   Fields = ${WindowsParsersTemplates.json-xml-object-access.Fields}[
     """<Data Name[^<>]+?AccessGranted[^<>]+?>({access_type}[^<>]+?)</Data>""",
+    """"Computer":"({host}[^"]+)"""
   ]
 
 json-xml-object-access = {
@@ -15,8 +16,7 @@ json-xml-object-access = {
   Fields = [
     """"Activity":"(\d+\s+-\s+)?({event_name}[^"]+?)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
-    """"Computer":"({host}[^"]+)""",
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""" 
     """"EventID":"?({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",

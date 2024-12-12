@@ -18,7 +18,7 @@ Fields = [
   """\sCORRELATION_ID\s*=\s*(null|({correlation_id}[^]]+?))\s*\]""",
   """ACCOUNT_NAME\s*=\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
   """ACCOUNT_SID\s*=\s*\%\{(({user_sid}[^]]+?))\}\s*\]""",
-  """FORMAT_MESSAGE\s*=\s*(null|-|({ds_object_class}[^\']+?))\s*'"""
+  """FORMAT_MESSAGE\s*=\s*(null|-|({object_type}[^\']+?))\s*'"""
 ]
 ParserVersion = "v1.0.0"
 

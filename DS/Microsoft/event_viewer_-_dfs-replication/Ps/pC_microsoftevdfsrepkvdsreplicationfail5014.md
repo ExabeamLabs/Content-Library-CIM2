@@ -6,6 +6,9 @@ Name = microsoft-evdfsrep-kv-ds-replication-fail-5014
   Product = Event Viewer - DFS-Replication
   ParserVersion = "v1.0.0"
   Conditions = [  """SourceName =DFSR""", """EventCode=5014"""   ]
+  Fields = ${DLWindowsParsersTemplates.windows-system-info-2.Fields}[
+    """ComputerName =({host}[\w\-.]+)"""
+  ]
 
 windows-system-info-2 = {
   Vendor = Microsoft
@@ -13,7 +16,6 @@ windows-system-info-2 = {
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s((?i)AM|PM))""",
-    """ComputerName =({host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)""",
     """EventType=({result}\d+)""",
     """TaskCategory=(None|({operation_type}[^\n]+?))\s*\w+(=|:)""",

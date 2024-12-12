@@ -31,6 +31,7 @@ json-github-actions = {
       """"(external_identity_nameid|external_identity_username)":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"external_identity_username":"[^@"]+?@({domain}[^"]+)"""",
       """"external_identity_nameid":"[^@"]+?@({domain}[^"]+)"""",
+      """"business":\s*"({company}[^"]+)""",
       """exa_json_path=$..['@timestamp'],exa_field_name=time""",
       """exa_json_path=$..action,exa_field_name=operation""",
       """exa_json_path=$..transport_protocol_name,exa_field_name=protocol""",
@@ -56,6 +57,7 @@ json-github-actions = {
       """exa_json_path=$..external_identity_nameid,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """exa_json_path=$..external_identity_username,exa_regex=^[^@"]+?@({domain}[^"]+)$""",
       """exa_json_path=$..external_identity_nameid,exa_regex=^[^@"]+?@({domain}[^"]+)$"""
+      """exa_json_path=$.business,exa_field_name=company"""
     ]
     DupFields = [ "object->repository_name" 
 }

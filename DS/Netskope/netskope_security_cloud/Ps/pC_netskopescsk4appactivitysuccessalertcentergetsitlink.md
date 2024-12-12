@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-alertcentergetsitlink
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"ALERT_CENTER_GET_SIT_LINK"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"ALERT_CENTER_GET_SIT_LINK"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

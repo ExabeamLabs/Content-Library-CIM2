@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-write-success-rename"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"Rename""""
+""""activity":"""
+""""Rename""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
     """"to_object":"({file_name}[^"]+)".*"object_type":"(File|Image)""""

@@ -14,9 +14,8 @@ Name = unix-sm-kv-email-send
   Fields = [
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
-    """sendmail\S*:\s+(\[.*?\])?\s*({alert_id}\S+?):\s""",
-    """sm-mta\S*:\s+({alert_id}\S+?):\s""",
-    """\s+from=<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>""",
+    """(sendmail|sm-mta)\s*\[?\d+\]?[\s\-:]+({alert_id}\w+)""",
+    """\s+from=<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\ssize=({bytes}\d+)""",
     """\snrcpts=({num_recipients}\d+)""",
     """\smsgid=<({return_path}[^>]+)>""",

@@ -4,7 +4,7 @@
 Name = netskope-sc-json-app-login-success-login-1
   ParserVersion = v1.0.0
   Product = Netskope Security Cloud
-  Conditions = [ """"audit_log_event":"Login Successful"""" , """"type":"""" ,""""sAMAccountName":""""]
+  Conditions = [ """"audit_log_event":""", """"Login Successful"""", """"type":""" ,""""sAMAccountName":"""]
 
 json-netskope-activity = {
   Vendor = Netskope

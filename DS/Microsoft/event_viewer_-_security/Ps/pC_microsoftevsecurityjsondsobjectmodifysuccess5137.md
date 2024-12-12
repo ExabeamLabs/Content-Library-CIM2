@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-5137
       """"Source_Logon_ID":"({login_id}[^"]+)""",
       """"ObjectID":"({ds_object_dn}[^"]+)""",
       """"ObjectID":"[^"]*?({ds_object_ou}(OU|ou)[^"]+)""",
-      """"Target_Class":"({ds_object_class}[^"]+)""",
+      """"Target_Class":"({object_type}[^"]+)""",
       """"Process_Name":"({process_name}[^"]+)""",
     ]
     DupFields = [ "host->dest_host" ]

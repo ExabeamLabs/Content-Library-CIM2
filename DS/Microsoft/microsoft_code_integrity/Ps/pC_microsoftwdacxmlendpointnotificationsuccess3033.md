@@ -14,6 +14,8 @@ Name = microsoft-wdac-xml-endpoint-notification-success-3033
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)"""
     """<security userid=('|")({user_sid}[^'"]+)('|")\/>"""
+    """ThreadID(\\)?='({thread_id}\d+)"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
   DupFields = [ "host->dest_host" ]

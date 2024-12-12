@@ -57,7 +57,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"ClientInfoString":\s*"({user_agent}[^"]+)","""
     """MailboxOwnerUPN":\s"({user_upn}[^"]+)",""",
     """ClientIPAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-    """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """"UserId":\s*"({user_upn}[^",]+)""""
     """"SizeInBytes":\s*({bytes_in}\d+)"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
   ]

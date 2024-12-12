@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-str-share-create-success-5142
    """({event_name}A network share object was added)""",
    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""",
    """Account Domain:\s*({domain}[^\s]+)\s*""",
-   """Share Name:\s*\\\\\*\\({share_name}.+?)\s+Share Path:\s+(\s+|({share_path}.+?))\s""",
+   """Share Name:\s*(?:[\\\*]+)?({share_name}.+?)\s+Share Path:\s+(\s+|({share_path}.+?))\s""",
    """({result}\S+)\sAudit"""
   ]
 

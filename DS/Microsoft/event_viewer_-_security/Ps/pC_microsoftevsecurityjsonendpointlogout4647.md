@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4647
   Conditions = [ """"EventID":4647""", """User initiated logoff""" ]
   Fields = [
     """"EventTime":({time}\d{10})""",
-    """"Hostname":"({host}[\w.-]+?)"""",
+    """"(Hostname|Computer)":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}User initiated logoff)""",
     """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",

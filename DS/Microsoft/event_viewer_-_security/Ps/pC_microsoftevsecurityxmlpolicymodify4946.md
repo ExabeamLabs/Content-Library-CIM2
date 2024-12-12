@@ -7,6 +7,7 @@ Name = microsoft-evsecurity-xml-policy-modify-4946
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [ """<EventID>4946</EventID>""", """A change was made to the Windows Firewall exception list""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """<Computer>({host}[\w\.\-]+)<""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Message>({additional_info}[^<]+)</Message>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -20,7 +21,9 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[\w\.\-]+)<""",
+    """>({event_code}[^<]+)</EventID>"""
+    """<Channel>({channel}[^<]+)<"""
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -30,6 +33,7 @@ s-xml-object-access = {
     """ActivityID=('|")\{?({activity_id}[^\}'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Provider>({provider_name}.+?)</Provider>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

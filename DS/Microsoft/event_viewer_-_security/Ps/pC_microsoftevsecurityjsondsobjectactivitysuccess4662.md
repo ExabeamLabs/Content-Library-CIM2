@@ -21,9 +21,9 @@ Fields = [
 """"SubjectUserSid":"({user_sid}[^"]+)""""
 """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """"SubjectDomainName":"({domain}[^"]+)""""
-""""ObjectName":"({ds_object_name}[^"]+)""""
-""""ObjectServer":"({ds_object_class}[^"]+)""""
-""""ObjectType":"({ds_object_type}[^"]+)""""
+""""ObjectName":"({object_name}[^"]+)""""
+""""ObjectServer":"({object_server}[^"]+)""""
+""""ObjectType":"({object_type}[^"]+)""""
 """"LogonID":"({login_id}[^"]+)""""
 """"OperationType":"({operation}[^"]+)""""
 """"Properties":"(-|({properties}[^"]+))""""
@@ -31,7 +31,7 @@ Fields = [
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [ "ds_object_name->object" ]
+DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

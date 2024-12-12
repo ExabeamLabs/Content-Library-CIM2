@@ -6,6 +6,7 @@ Name = microsoft-evnps-sk4-endpoint-authentication-success-6272-1
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"6272 - Network Policy Server granted access to a user."""", """"EventID":6272""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}Network Policy Server granted access to a user)""",
     """"AuthenticationType":"({auth_type}[^"]+)"""",
     """"EAPType":"(-|({auth_type}[^"]+))"""",
@@ -22,7 +23,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

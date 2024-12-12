@@ -38,6 +38,7 @@ Name = f5-f-kv-app-activity-common
    """attr.userPrincipalName' set to '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
    """Object="({object}[^\s]+?)"""",
    """\d\d:\d\d:\d\d(\S+)?\s({host}[\w\-\.]+)\s\w+\s"""
+   """\sAccess_Profile="({access_group}[^"]+)""""
  ]
   DupFields = [ "vpn_server->realm" ]
 

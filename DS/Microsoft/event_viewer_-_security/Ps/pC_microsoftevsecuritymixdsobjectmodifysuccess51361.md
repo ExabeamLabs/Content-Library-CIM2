@@ -23,7 +23,7 @@ Fields = [
 """\WTimeGenerated=({time}\d+)"""
 """({event_code}5136)"""
 """Subject:.+?Account Name:\s+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
-"""Object:.+?Class:\s+({ds_object_class}.+?)\s+Attribute:"""
+"""Object:.+?Class:\s+({object_type}.+?)\s+Attribute:"""
 """Attribute:.+?LDAP Display Name:\s+({attribute}.+?)\s+Syntax"""
 """Object:\s+DN:\s+({ds_object_dn}.+?)\s+GUID:"""
 """"hostname":"({dest_host}({host}[\w\-.]+))""""

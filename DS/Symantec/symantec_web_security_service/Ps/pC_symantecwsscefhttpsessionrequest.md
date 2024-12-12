@@ -32,6 +32,8 @@ Name = symantec-wss-cef-http-session-request
     """OBSERVED(,\s+[^,]+){25},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
     """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){2},\s+({http_response_code}\d+),"""
     """,\s*(-|({additional_info}[^,]+)),?\s*(OBSERVED|PROXIED|DENIED)"""
+    """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){65},\s+(-,\s)?(?:-|({transaction_id}[^,"\]]+))"""
+    """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){66},\s+(-,\s)?(?:-|({transaction_id}[^,"\]]+))"""
   ]
   
 

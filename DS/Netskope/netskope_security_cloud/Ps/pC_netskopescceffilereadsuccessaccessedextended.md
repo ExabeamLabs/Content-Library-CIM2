@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-read-success-accessedextended"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"FileAccessedExtended""""
+""""activity":"""
+""""FileAccessedExtended""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
       """"alert":"({alert_status}[^",]+)"""

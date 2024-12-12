@@ -6,6 +6,7 @@ Name = microsoft-nps-sk4-endpoint-authentication-fail-6273
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"6273 - Network Policy Server denied access to a user."""", """"EventID":"6273"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}Network Policy Server denied access to a user)""",
     """"NASIPv(4|6)Address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """<Data Name\\?="Reason">({failure_reason}[^<]+)""",
@@ -21,7 +22,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

@@ -28,7 +28,7 @@ Fields = [
 """"ServiceAccount":"({account_domain}[^"]+)""""
 """"ProcessID":({process_id}\d+)"""
 """"EventType":"({operation_type}[^"]+?)""""
-""""ComputerName":"({host}[\w\-\.]+)"""
+""""Computer(Name)?":"({host}[\w\-\.]+)"""
 ]
 DupFields = [
 "host->dest_host"

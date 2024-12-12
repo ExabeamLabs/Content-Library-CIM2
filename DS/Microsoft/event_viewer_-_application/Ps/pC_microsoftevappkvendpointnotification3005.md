@@ -14,7 +14,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
     """Event time:\s*({time}\d+\/\d+\/\d\d\d\d\s\d+:\d\d:\d\d\s(AM|PM|am|pm))""",
     """Event code:\s*({event_code}\d+)""",
     """Event message:\s*({event_name}[^=]+?)\s*Event time:""",
-    """Account name:\s*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """Account name:\s*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s|\\[rnt])+Exception information:""",
     """Process ID:\s({process_id}\d+)""",
     """Process name:\s+({process_name}[^=]+?)\s+Account name:""",
 # application_path is removed
@@ -25,7 +25,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
     """exa_json_path=$.Id,exa_field_name=event_code"""
     """exa_regex=Event code:\s*({event_code}\d+)"""
     """exa_regex=Event message:\s*({event_name}[^=]+?)\s*Event time:"""
-    """exa_regex=Account name:\s*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_regex=Account name:\s*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s|\\[rnt])+Exception information:""",
     """exa_regex=Process ID:\s({process_id}\d+)""",
     """exa_regex=Process name:\s+({process_name}[^=]+?)\s+Account name:""",
   ]

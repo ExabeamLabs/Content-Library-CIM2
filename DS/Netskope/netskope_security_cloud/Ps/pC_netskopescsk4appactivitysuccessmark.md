@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-mark
   ParserVersion = v1.0.0
-  Conditions = [  """"type":"""", """"ccl":""", """"activity":"Mark"""" ]
+  Conditions = [  """"type":""", """"ccl":""", """"activity":""", """"Mark"""" ]
   DupFields = ${NetskopeParsersTemplates.cef-netskope-activity.DupFields}[ "operation->access" ]
 
 cef-netskope-activity = {

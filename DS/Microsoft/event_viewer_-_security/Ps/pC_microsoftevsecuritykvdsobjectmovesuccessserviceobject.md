@@ -12,7 +12,7 @@ Fields = [
   """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
   """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s({time}\w+\s\d\d\s\d\d:\d\d:\d\d\s\d{4})\s""",
   """Security ID:\s+({user_sid}[^\s]+?)\s+Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+((?i)(NA)|({domain}[^\s]+?))\s+Logon ID:\s+({login_id}[^\s]+)""",
-  """Class:\s+({ds_object_class}[^:]+?)\s+Operation:""",
+  """Class:\s+({object_type}[^:]+?)\s+Operation:""",
   """Object:[^\{\}]+?New DN:\s+({ds_object_dn}[^:]+?)\s+GUID:""",
   """Object:\s+Old DN:\s*({src_ds_object_dn}[^\{\}]+?,({src_ds_object_ou}OU[^:]+?)?)\s+New DN:""",
   """Object:\s+Old DN:[^\{\}]+?,({src_ds_object_ou}OU[^:]+?)\s+GUID:""",

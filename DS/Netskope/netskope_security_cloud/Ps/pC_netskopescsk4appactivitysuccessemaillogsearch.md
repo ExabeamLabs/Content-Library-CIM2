@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-emaillogsearch
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"EMAIL_LOG_SEARCH"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"EMAIL_LOG_SEARCH"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

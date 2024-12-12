@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-log-disable-1100
   Product = Event Viewer - Security
   Conditions = [ """<EventID>1100<""", """Microsoft-Windows-Eventlog""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Provider Name\\*=('|")({log_name}[^'"]+)('|")"""
   ]
@@ -15,7 +16,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

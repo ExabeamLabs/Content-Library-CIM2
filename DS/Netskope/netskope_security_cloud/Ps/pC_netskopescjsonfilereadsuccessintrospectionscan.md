@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-json-file-read-success-introspectionscan
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Introspection Scan"""", """"object_type":"File"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Introspection Scan"""", """"object_type":""", """"File"""" ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
    """"file_path":"({file_path}({file_dir}.*?)({file_name}[^\\\/;"]+?(\.({file_ext}[^\.;\\"]+?))?))""""
   ]

@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-kv-handle-request-4661
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"(?i)HostName":\s*"({host}[^"]+)"""",
+    """"(?i)(HostName|Computer)":\s*"({host}[^"]+)"""",
     """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
     """({event_name}A handle to an object was requested)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",

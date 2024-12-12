@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-terminate
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Terminate"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Terminate"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

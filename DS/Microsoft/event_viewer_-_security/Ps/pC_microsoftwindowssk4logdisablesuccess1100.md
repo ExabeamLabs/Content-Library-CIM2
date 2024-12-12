@@ -5,6 +5,7 @@ Name = microsoft-windows-sk4-log-disable-success-1100
    ParserVersion = v1.0.0
    Conditions = [ """"Activity":"1100 - The event logging service has shut down."""", """"EventID":"1100"""", """"EventSourceName":"Microsoft-Windows-Eventlog"""", """"Type":"SecurityEvent"""" ]
    Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
+     """"Computer":"({host}[^"]+)"""",
      """({event_name}The event logging service has shut down)"""
    ]
  
@@ -14,7 +15,6 @@ json-windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

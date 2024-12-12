@@ -16,6 +16,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-windowsdefenderav
     """"SystemAlertId"+:"+({alert_id}[^"]+)""",
     """"AlertLink":\s*"({additional_info}[^"]+)""",
     """"LastIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"Status_string":"({incident_status}[^"]+)"""
   ]
   DupFields = ["dest_host->host"]
 

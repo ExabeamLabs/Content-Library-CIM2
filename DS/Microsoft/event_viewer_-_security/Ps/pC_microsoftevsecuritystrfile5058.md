@@ -6,6 +6,9 @@ Name = microsoft-evsecurity-str-file-5058
   ParserVersion = "v1.0.0"
   Conditions = [ """5058""", """Key file operation""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
+    """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_name}Key file operation)""",
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
@@ -16,12 +19,9 @@ raw-object-access = {
   Vendor = Microsoft
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "epoch"]
   Fields = [
-    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
     """\WexternalId=({event_code}\d+)""",
-    """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
-    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",

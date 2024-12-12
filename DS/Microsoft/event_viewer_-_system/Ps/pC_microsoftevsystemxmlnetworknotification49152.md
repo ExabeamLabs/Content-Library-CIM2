@@ -4,9 +4,10 @@
 Name = microsoft-evsystem-xml-network-notification-49152
   ParserVersion = v1.0.0
   Product = Event Viewer - System
-  Conditions = [ """<EventID Qualifiers""","""'49152'>""" ]
+  Conditions = [ """<EventID Qualifiers""","""'49152'>""", """<Channel>System<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """({event_code}49152)""",
+    """<Computer>({host}[\w\.\-]+)<""",
+    """>({event_code}\d+)<\/EventID>""",
     """<Data Name\\*='Endpoint'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
@@ -19,7 +20,9 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[\w\.\-]+)<""",
+    """>({event_code}[^<]+)</EventID>"""
+    """<Channel>({channel}[^<]+)<"""
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -29,6 +32,7 @@ s-xml-object-access = {
     """ActivityID=('|")\{?({activity_id}[^\}'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Provider>({provider_name}.+?)</Provider>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

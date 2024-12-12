@@ -9,8 +9,8 @@ Conditions = [
   """/box_Firewall_Activity: """
 ]
 Fields = [
-  """\/box_Firewall_Activity:\s+[^\s]+\s+({host}[^\s]+)\s+({operation}[^\s:]+):\s+""",
-  """\/box_Firewall_Activity:\s+-([\d:\d]+\s\w+)?\s*({host}[^\s]+)\s+({operation}[^\s:]+):\s+"""
+  """\/box_Firewall_Activity:\s+[^\s]+\s+({host}[^\s]+)\s+({action}[^\s:]+):\s+""",
+  """\/box_Firewall_Activity:\s+-([\d:\d]+\s\w+)?\s*({host}[^\s]+)\s+({action}[^\s:]+):\s+"""
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}({event_code}[^\|\s]+)\|""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}[^\|]*\|({protocol}[^\|]+)\|""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){2}({src_interface}[^\|]+)\|""",
@@ -22,7 +22,7 @@ Fields = [
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){8}({app_protocol}[^\|]+)\|""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){9}({dest_interface}[^\|]+)\|""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){10}({rule}[^\|]+)\|""",
-  """\s+(Allow|Remove|LocalRemove|LocalAllow):\s+([^\|]*\|){11}({action}[^\|]+)\|""",
+  """\s+(Allow|Remove|LocalRemove|LocalAllow):\s+([^\|]*\|){11}({result_reason}[^\|]+)\|""",
   """\s+(Drop|Block|LocalBlock):\s+([^\|]*\|){11}({failure_reason}[^\|]+)\|""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){12}(?:0.0.0.0|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))""",
   """\/box_Firewall_Activity:\s+([^\s]+\s+){3}([^\|]*\|){13}(?:0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",

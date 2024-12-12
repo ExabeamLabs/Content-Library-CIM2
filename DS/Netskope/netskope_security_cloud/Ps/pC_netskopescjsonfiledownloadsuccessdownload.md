@@ -6,7 +6,7 @@ Name = netskope-sc-json-file-download-success-download
   Product = Netskope Security Cloud
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   ExtractionType = json
-  Conditions = [ """"type":"""", """"activity":"Download"""", """"object_type":"File"""", """"act_user":"""", """"src-application-name":"Netskope"""" ]
+  Conditions = [ """"type":""", """"activity":""", """"Download"""", """"object_type":""", """"File"""", """"act_user":""", """"src-application-name":""", """"Netskope"""" ]
   Fields = [
     """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.event-name,exa_field_name=event_name"""

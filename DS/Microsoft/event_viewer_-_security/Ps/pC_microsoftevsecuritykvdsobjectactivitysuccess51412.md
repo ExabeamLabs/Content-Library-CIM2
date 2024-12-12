@@ -17,7 +17,7 @@ Fields = [
   """Account Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+"""
   """Account Domain=({domain}.+?)\s"""
   """Logon ID=({login_id}[^\s]+)\s"""
-  """Object:Class=({ds_object_class}.+?)\s"""
+  """Object:Class=({object_type}.+?)\s"""
   """Object:DN=({ds_object_dn}.+?)\s*Object:GUID="""
   """Object:DN=.+?({ds_object_ou}OU.+?)\s*Object:GUID"""
 ]

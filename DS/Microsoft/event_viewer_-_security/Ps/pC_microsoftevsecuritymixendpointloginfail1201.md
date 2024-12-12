@@ -4,6 +4,9 @@
 Name = microsoft-evsecurity-mix-endpoint-login-fail-1201
   ParserVersion = "v1.0.0"
   Conditions = [ """Message=The Federation Service failed to issue a valid token""", """EventIDCode=1201""" ]
+  Fields = ${MicrosoftParserTemplates.q-adfs-auth.Fields}[
+    """\sComputer=({host}.+?)(\s+\w+=|\s*$)"""
+  ]
 
 q-adfs-auth = {
   Vendor = Microsoft
@@ -12,7 +15,6 @@ q-adfs-auth = {
   Fields = [
     """\sTimeGenerated=({time}\d{10})""",
     """\sEventIDCode=({event_code}\d+)""",
-    """\sComputer=({host}.+?)(\s+\w+=|\s*$)""",
     """\sUser=({account}.+?)(\s+\w+=|\s*$)""",
     """\sDomain=({account_domain}.+?)(\s+\w+=|\s*$)""",
     """\sMessage=({event_name}[^=\.]+)""",

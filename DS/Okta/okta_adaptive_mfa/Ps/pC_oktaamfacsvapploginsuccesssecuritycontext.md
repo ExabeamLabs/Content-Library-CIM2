@@ -15,8 +15,9 @@ Conditions = [
 Fields = [
 """"published"+:"+({time}[^",]+)"+"""
 """({app}(?i)Okta)"""
-""""+actor"+:\{[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,"""
-""""+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")"""
+""""+target"+:\[?\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({dest_user}[\w\.\-]{1,40})@({dest_domain}[^\s",]+?\.corp))|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")"""
+""""+actor"+:\{[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,"""
+""""+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-]{1,40})@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")"""
 """"+actor"+:\{[^\{\}]*?"+displayName"+:"+(Okta System|Okta Admin|(unknown|({full_name}[^",]+)))"+,"""
 """"policyType"+:"+({alert_type}[^",]+)"""
 """"eventType"+:"+({operation}[^",]+)"""

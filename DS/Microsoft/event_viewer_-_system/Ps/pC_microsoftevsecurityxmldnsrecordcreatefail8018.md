@@ -5,14 +5,16 @@ Name = microsoft-evsecurity-xml-dns-record-create-fail-8018
   Product = Event Viewer - System
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>8018</EventID>""", """<Provider Name =""","""<Channel>System</Channel>""" ]
+  Fields = ${WindowsParsersTemplates.windows-events-5.Fields}[
+    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
 
 windows-events-5 = {
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Fields = [
-    """<Computer>({host}[^<]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  Fields = [ 
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",

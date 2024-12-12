@@ -22,7 +22,8 @@ Name = "pan-gp-csv-endpoint-authentication-success-authsuccess"
 """,SYSTEM,(\"[^\"]+\",|[^,]*,){18}({host}[\w\-.]+)""",
 """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 """,({serial_num}\d+),SYSTEM,auth"""
-""",SYSTEM,([^,]*,){24}({device_name}[^,"]+)"""
+""",SYSTEM,([^,]*,){24}({device_name}({host}[^,"]+))"""
+""",SYSTEM,([^,]*,){10}("[^"]+")?,([^,]*,){7}({device_name}({host}[^,"]+))"""
   ]
   ParserVersion = "v1.0.0"
 

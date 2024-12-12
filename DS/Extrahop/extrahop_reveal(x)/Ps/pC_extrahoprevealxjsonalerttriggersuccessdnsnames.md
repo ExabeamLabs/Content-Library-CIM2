@@ -23,10 +23,10 @@ Fields = [
 """"netbiosName":(null|"({sub_domain}[^"]+))"""
 """"dnsNames":\["({dns_query}[^"]+)"\]"""
 """"status":(null|"({status_msg}[^"]+))"""
-""""riskScore":(null|"({alert_severity}[^"]+))"""
+""""riskScore":(null|"({original_risk_score}\d+))"""
 ]
 DupFields = [
-"alert_name->alert_type"
+"alert_name->alert_type","original_risk_score->alert_severity"
 ]
 ParserVersion = "v1.0.0"
 

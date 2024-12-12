@@ -5,9 +5,10 @@ Name = microsoft-evsecurity-sk4-share-access-success-5145
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"5145 - A network share object was checked to see whether the client can be granted desired access."""", """"EventID":"5145"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}A network share object was checked to see whether the client can be granted desired access)""",
     """"ObjectType":"({file_type}[^"]+)""",
-    """"ShareName":"[\\\*]*({share_name}[^"]+)""",
+    """"ShareName":"(?:[\\\*]+)?({share_name}[^"]+)""",
     """"ShareLocalPath":"(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)"""",
     """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
@@ -20,7 +21,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

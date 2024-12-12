@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-write-success-listcolumncreated"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"ListColumnCreated""""
+""""activity":"""
+""""ListColumnCreated""""
   ]
   ParserVersion = "v1.0.0"
 

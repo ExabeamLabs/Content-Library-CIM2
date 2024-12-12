@@ -15,7 +15,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"OS.*?Value":\s*"({os}[^"]+)|"Value":\s*"({=os}[^"]+)",\s*"Name":\s*"OS"""",
     """"BrowserType.*?Value":\s*"({browser}[^"]+)|"Value":\s*"({=browser}[^"]+)",\s*"Name":\s*"BrowserType""""
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-    """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
+    """"UserId":\s*"({user_upn}[^",]+)""""
     """"ObjectId":\s*"({object_id}[^"]+?)"""",
     """"ApplicationId":\s*"({app_id}[^"]+)""""
     """"UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})"""
@@ -36,7 +36,7 @@ cef-o365-app-login-2 = {
   Fields = [
     """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """"UserId":\s*"({email_address}[^@\s"]+@[^@\s\."]+\.[^\s",]+)"""",
+    """"UserId":\s*"({user_upn}[^",]+)"""",
     """"ClientIP":\s*"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(\]:({src_port}\d+))?"""",
     """"Operation":\s*"({event_name}[^"]+)""",
     """"ResultStatus":\s*"({result}[^"]+)"""",

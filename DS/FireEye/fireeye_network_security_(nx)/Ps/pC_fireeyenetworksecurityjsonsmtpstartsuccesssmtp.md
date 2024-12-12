@@ -2,7 +2,7 @@
 ```Java
 {
 Name = "fireeye-networksecurity-json-smtp-start-success-smtp"
-	Conditions = [ """"event_type":"smtp"""", """"flow_id":""", """"smtp":{""", """"status":"""" ]
+	Conditions = [ """"event_type":"smtp"""", """"flow_id":""", """"smtp":{""", """"iface":"""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
   	  """exa_json_path=$.email.from,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     	"""exa_json_path=$.email.to[:1],exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",

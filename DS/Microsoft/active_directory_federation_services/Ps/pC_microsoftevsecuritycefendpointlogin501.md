@@ -4,6 +4,12 @@
 Name = microsoft-evsecurity-cef-endpoint-login-501
   ParserVersion = "v1.0.0"
   Conditions = [ """CEF:""", """|AD FS Auditing:501""" ]
+  Fields = ${MicrosoftParserTemplates.cef-ad-fs-audit.Fields}[
+    """\sdhost=({dest_host}[\w\-.]+?)(\s+[\w\.]+=|\s*$)""",
+    """\sahost=({src_host}.+?)(\s+[\w\.]+=|\s*$)""",
+    """\sdvc=({host}.+?)(\s+[\w\.]+=|\s*$)""",
+    """\sdvchost=({host}.+?)(\s+[\w\.]+=|\s*$)"""
+  ]
 
 cef-ad-fs-audit = {
   Vendor = Microsoft

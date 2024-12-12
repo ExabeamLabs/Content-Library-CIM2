@@ -5,7 +5,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-asc
 Vendor = Microsoft
 Product = Microsoft Defender for Cloud
 TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
-Conditions = [ """"status":"newAlert"""", """"category":""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":"ASC"""" ]
+Conditions = [ """"status":"""", """"category":""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":"ASC"""" ]
 Fields = [
 """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}(\.\d+)?Z)"""
 """act=({action}[^\s]+)"""
@@ -26,6 +26,7 @@ Fields = [
 """"+provider"+:"+({provider_name}[^",]+)"""
 """"+azureSubscriptionId"+:"+({subscription_id}[^",]+)""",
 """msg=.*?\[({alert_source}[^\]]+)\]:"""
+""""status":"({incident_status}[^"]+)""""
 ]
 DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = v1.0.0

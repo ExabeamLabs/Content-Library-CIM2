@@ -2,9 +2,10 @@
 ```Java
 {
 Name = "fireeye-networksecurity-json-radius-traffic-radius"
-	Conditions = [ """"event_type":"radius"""", """"flow_id":""", """"radius":{""", """"success":""" ]
+	Conditions = [ """"event_type":"radius"""", """"flow_id":""", """"radius":{""", """"iface":"""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
   	  """exa_json_path=$.radius.reply.code,exa_field_name=result_code"""
+  	  """exa_json_path=$.radius.request.code,exa_field_name=result_code"""
   	  """exa_json_path=$.radius.success,exa_field_name=result"""
     ]
 	ParserVersion = "v1.0.0"

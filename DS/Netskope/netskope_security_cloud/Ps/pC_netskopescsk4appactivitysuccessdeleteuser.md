@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-deleteuser
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Delete application password for user"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Delete application password for user"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

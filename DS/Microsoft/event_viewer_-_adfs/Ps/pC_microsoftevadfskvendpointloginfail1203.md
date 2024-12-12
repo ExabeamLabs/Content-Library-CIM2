@@ -11,6 +11,7 @@ Conditions = [
 """Message=The Federation Service failed to validate a new credential"""
 ]
 Fields = ${WindowsParsersTemplates.windows-events-6.Fields}[
+	"""ComputerName =({host}[\w\-.]+)""",
 	"""({event_name}The Federation Service failed to validate a new credential)""",
 ]
 
@@ -21,7 +22,6 @@ windows-events-6 = {
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
 	"""\WEventCode=({event_code}\d+)""",
-	"""ComputerName =({host}[\w\-.]+)""",
 	"""\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",
 	"""RecordNumber=({event_id}\w+)\s*""",
 	"""Message=({additional_info}[^:\.]+?)(:|\.)""",

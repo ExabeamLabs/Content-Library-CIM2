@@ -5,6 +5,10 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-1
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   Conditions = [ """<Message>A security-disabled universal group was changed""", """<EventID>4760</EventID>""" ]
+  Fields = ${DLWindowsParsersTemplates.windows-events-1.Fields}[
+    """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
 
 windows-events-1 = {
   Vendor = Microsoft
@@ -26,8 +30,6 @@ windows-events-1 = {
     """"record_id"+:({event_id}\d+)""",
     """"task"+:"+({task_name}[^"]+)""",
     """"event_id"+:({event_code}\d+)""",
-    """"(?:winlog\.)?computer_name"+:"+({src_host}[\w\-.]+)""",
-    """"hostname"+:"+({host}[\w\-.]+)""",
     """"action"+:"+({action}[^"]+)""",
     """"os":[^@]+?"name":"({os}[^"]+)""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
@@ -55,8 +57,6 @@ windows-events-1 = {
       """exa_json_path=$.winlog.record_id,exa_field_name=event_id"""
       """exa_json_path=$.winlog.task,exa_field_name=task_name"""
       """exa_json_path=$.winlog.event_id,exa_field_name=event_code"""
-      """exa_json_path=$.winlog.computer_name,exa_field_name=src_host"""
-      """exa_json_path=$.host.hostname,exa_field_name=host"""
       """exa_json_path=$.event.action,exa_field_name=action"""
       """exa_json_path=$.host.os.name,exa_field_name=os"""
       """exa_json_path=$.winlog.event_data.SubjectLogonId,exa_field_name=login_id"""
@@ -80,14 +80,12 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",
     """event_id\\?"+:({event_code}\d+)""",
     """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?"""",
-    """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """Status\\?"+:\\?"+({result_code}[^\\]+)\\?"""",
     """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?"""",
     """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?"""",

@@ -6,11 +6,7 @@ Name = zscaler-ia-cef-http-session-spriv
   Vendor = Zscaler
   Product = Zscaler Internet Access
   TimeFormat = "MMM dd yyyy HH:mm:ss"
-  Conditions = [
-"""|Zscaler|NSSWeblog|""",
-"""requestClientApplication=""",
-"""act="""
-  ]
+  Conditions = [ """|Zscaler|NSSWeblog|""", """requestClientApplication=""", """act=""", """cs6=None""" ]
   Fields = [
     """({time}\d\d\d\d\s\w+\s\d{1,2}\s\d\d:\d\d:\d\d)\szscaler-nss""",
     """\srt=({time}\d+)""",

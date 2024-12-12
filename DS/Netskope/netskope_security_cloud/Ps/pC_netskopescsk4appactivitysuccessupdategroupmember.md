@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-updategroupmember
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"UPDATE_GROUP_MEMBER"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"UPDATE_GROUP_MEMBER"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

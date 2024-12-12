@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-alertcenterlistchange
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"ALERT_CENTER_LIST_CHANGE"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"ALERT_CENTER_LIST_CHANGE"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

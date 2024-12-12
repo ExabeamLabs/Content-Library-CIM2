@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-5136-1
     """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\Wduid=({login_id}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\WcategoryOutcome=\/?({result}.+?)\s+(\w+=|$)""",
-    """\Wcs5=(|({ds_object_class}.+?))(\s+(\w+|\w+\.\w+)=|\s*$)""",
+    """\Wcs5=(|({object_type}.+?))(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\Wcs6=(|({ds_object_dn}.+?))(\s+(\w+|\w+\.\w+)=|\s*$)""",
     """\Wcs6=(|[^=]*?({ds_object_ou}OU.+?))(\s+(\w+|\w+\.\w+)=|\s*$)""",
   ]

@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-changegmailsetting
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"CHANGE_GMAIL_SETTING"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"CHANGE_GMAIL_SETTING"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

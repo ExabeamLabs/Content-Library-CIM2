@@ -7,7 +7,7 @@ Name = cloudfare-cdn-sk4-alert-trigger-success-edgestart
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """CEF:""", """destinationServiceName =cloudflare""", """"actor":""" ]
   Fields = [
-    """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+=""",
+    """suser=(anonymous|1|({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+=)""",
     """act=({alert_type}.+?)\s\w+=""",
     """cat=({alert_name}.+?)\s\w+=""", 
     """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

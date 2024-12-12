@@ -16,7 +16,7 @@ Fields = [
   """({event_name}A directory service object was undeleted)"""
   """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+Microsoft-Windows-Security-Auditing"""
   """Security ID:\s+({user_sid}[^\s]+?)\s+Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+((?i)(NA)|({domain}[^\s]+?))\s+Logon ID:\s+({login_id}[^\s]+)"""
-  """Class:\s+({ds_object_class}[^:]+?)\s+Operation:"""
+  """Class:\s+({object_type}[^:]+?)\s+Operation:"""
   """Object:[^\{\}]+?New DN:\s+({new_attribute}({ds_object_dn}[^\s]+))"""
   """Object:\s+Old DN:\s*({old_attribute}[^\{\}]+?({ds_object_ou}OU[^\s]+?)?)\s+New DN:"""
   """Object:\s+Old DN:[^\{\}]+?({ds_object_ou}OU[^\s]+?)\s+GUID:"""

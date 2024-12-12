@@ -4,7 +4,7 @@
 Name = netskope-sc-json-configuration-modify-success-configuration-1
   ParserVersion = v1.0.0
   Product = Netskope Security Cloud
-  Conditions = [ """"audit_log_event":"Exception Configuration"""" , """"type":"""" ,""""sAMAccountName":""""]
+  Conditions = [ """"audit_log_event":""", """"Exception Configuration"""", """"type":""" ,""""sAMAccountName":"""]
 
 json-netskope-activity = {
   Vendor = Netskope

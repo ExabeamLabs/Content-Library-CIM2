@@ -7,16 +7,16 @@ Name = microsoft-evsecurity-xml-dns-record-create-fail-8015
   Conditions = [ """<EventID>8015</EventID>""", """Data Name""","""'AdapterSuffixName'""" , """<Channel>System</Channel>""" ]
   Fields = ${WindowsParsersTemplates.windows-events-5.Fields}[
     """IP Address\(es\) :\s*[^\s]+\s*({failure_reason}[^>]+?)\.""",
-    """<Data Name ='ErrorCode'>({failure_code}[^<]+)<\/Data>"""
+    """<Data Name ='ErrorCode'>({failure_code}[^<]+)<\/Data>""",
+    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 windows-events-5 = {
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Fields = [
-    """<Computer>({host}[^<]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  Fields = [ 
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",

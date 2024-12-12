@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4768-3"
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""  
     """({host}[^\s\/]+)\/Microsoft-Windows-Security-Auditing \(4768\)"""  
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*[a-zA-Z]+"""
+    """\d+:\d+:\d+\s+({host}[\w\-.]+)\s*[a-zA-Z]+"""
     """({event_code}4768)"""  
     """Account Name(:|=)\s*(\\t|\\r|\\n)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@.+?)?[\s;]*(\\t|\\r|\\n)*"?\s*Supplied Realm Name""" 
     """Client Address(:|=)\s*(\\t|\\r|\\n)*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?(\\t|\\r|\\n)*""" 

@@ -6,6 +6,7 @@ Name = "microsoft-evapp-xml-certificate-request-fail-49754"
   Product = Event Viewer - Application
   Conditions = [ """49754""", """</EventID>""", """Certificate enrollment for Local system failed to enroll for""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """<Computer>({host}[\w\.\-]+)<""",
     """({event_code}49754)""",
     """<Data Name\\*='TemplateName'>({host_type}[^<]+?)</Data>""",
     """<Data Name\\*='RequestId'>({additional_info}({src_host}[^<\\]+)\\+({domain}\w+)[^<]*?)</Data>""",
@@ -20,7 +21,9 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[\w\.\-]+)<""",
+    """>({event_code}[^<]+)</EventID>"""
+    """<Channel>({channel}[^<]+)<"""
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -30,6 +33,7 @@ s-xml-object-access = {
     """ActivityID=('|")\{?({activity_id}[^\}'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Provider>({provider_name}.+?)</Provider>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

@@ -72,7 +72,7 @@ Fields = [
   """\Wcs1=({malware_url}.+?)\s+(\w+=|$).+?cs1Label=url"""
   """\Wcs1Label=url.*?\Wcs1=({malware_url}.+?)\s+(\w+=|$)"""
   """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s"""
-  """\Wcs2=({result}[^\s]+)"""
+  """\Wcs2=({incident_status}[^\s]+)"""
 ]
 Name = microsoft-azureatp-cef-alert-trigger-success-enumerationsecurityalert
 Conditions = [

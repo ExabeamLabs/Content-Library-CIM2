@@ -5,6 +5,7 @@ Name = microsoft-evsecurity-sk4-peripheral_storage-insert-success-6416
   ParserVersion = v1.0.0
   Conditions = [ """"Activity":"6416 - A new external device was recognized by the System"""", """"EventID":"6416"""", """"EventSourceName":"Microsoft-Windows-Security-Auditing"""", """"Type":"SecurityEvent"""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}A new external device was recognized by the System)"""
     """"DeviceId">.+?VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)"""
   ]
@@ -15,7 +16,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

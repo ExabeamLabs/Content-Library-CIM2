@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-move
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Move"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Move"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

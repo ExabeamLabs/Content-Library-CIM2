@@ -14,7 +14,7 @@ Fields = [
 """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """"Hostname":"({host}[\w.-]+?)""""
-""""ComputerName":"({host}[\w\-.]+)"""
+""""Computer(Name)?":"({host}[\w\-.]+)"""
 """"EventID":({event_code}\d+)"""
 """({event_name}A scheduled task was created)"""
 """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""

@@ -4,6 +4,10 @@
 Name = microsoft-evsecurity-xml-group-member-remove-success-4729
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>4729</EventID>""", """TargetSid""", """<Data Name""", """</Data>""" ]
+  Fields = ${WindowsParsersTemplates.s-xml-windows-member.Fields}[
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Computer>({host}[\w\-.]+)<\/Computer>"""
+  ]
   
 s-xml-windows-member = {
   Vendor = Microsoft
@@ -12,8 +16,6 @@ s-xml-windows-member = {
   Fields = [
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Computer>({host}[\w\-.]+)<\/Computer>""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""

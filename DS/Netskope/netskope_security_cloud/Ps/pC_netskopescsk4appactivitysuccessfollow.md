@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-follow
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Follow"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Follow"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

@@ -20,7 +20,7 @@ Name = pan-gp-leef-vpn-logout-success-succeeded
     """\WReason:\s*({result_reason}[^",]+?)\.?(\s+\w+=|[",]|\s*$)""",
     """:\d\d:\d\d (-|({host}[\w.-]+))\s""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-    """DeviceName =({device_name}[\w\-.]+)""",
+    """DeviceName =({device_name}({host}[\w\-.]+))""",
     """SerialNumber=({serial_num}[^\|]+)"""
   ]
 

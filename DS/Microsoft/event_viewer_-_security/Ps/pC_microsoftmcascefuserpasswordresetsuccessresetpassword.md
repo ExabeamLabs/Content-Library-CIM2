@@ -10,8 +10,9 @@ Conditions = [
 ParserVersion = "v1.0.0"
 
 account-password-activity.Fields}[
+    """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 	"""<EventID>({event_code}30009)</EventID>"""
-
   ]
  },
 ${MicrosoftParserTemplates.account-password-activity}{
@@ -20,7 +21,9 @@ ${MicrosoftParserTemplates.account-password-activity}{
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>30029</EventID>""","""'Microsoft-AzureADPasswordProtection-DCAgent'""", """ UserName:""" ]
   Fields = ${MicrosoftParserTemplates.account-password-activity.Fields}[
-      """<EventID>({event_code}30029)</EventID>"""
+    """<Computer>({host}[^<]+)</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<EventID>({event_code}30029)</EventID>"""
   ]
  },
 {

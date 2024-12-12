@@ -3,10 +3,12 @@
 {
 Name = "netskope-sc-cef-file-permission-modify-success-share"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"Share""""
-""""object_type":"File""""
+""""activity":"""
+""""Share""""
+""""object_type":"""
+""""File""""
   ]
   ParserVersion = "v1.0.0"
 

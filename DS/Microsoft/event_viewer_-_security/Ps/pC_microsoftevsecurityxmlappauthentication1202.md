@@ -4,8 +4,9 @@
 Name = microsoft-evsecurity-xml-app-authentication-1202
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Security
-  Conditions = [ """>1202</EventID>""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """>1202</EventID>""", """<TimeCreated SystemTime""", """<Channel>Security<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields} [
+    """<Computer>({host}[\w\-.]+?)<""",
 # audit_type is removed
     """(<|&lt;)AuditResult(&gt;|>)({result}.+?)(&lt;|<)\/AuditResult(&gt;|>)""",
     """(<|&lt;)IpAddress(&gt;|>)({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -28,7 +29,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

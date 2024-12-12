@@ -21,7 +21,8 @@ Name = unix-ad-kv-endpoint-authentication-credrefr
     """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+=""",
     """\sauid=({account_id}\d+)\s""",
     """\suid=({user_id}\d+)""",
-    """op=({action}[^\s]+)"""
+    """op=({action}[^\s]+)""",
+    """type=({operation_type}\S+)"""
   ]
   DupFields = [ "host->dest_host" ]
 

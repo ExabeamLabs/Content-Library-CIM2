@@ -17,9 +17,10 @@ Name = extrahop-revealx-json-alert-trigger-success-sec
      """"netbiosName":(null|"({sub_domain}[^"]+))""",
      """"dnsNames":\["({dns_query}[^"]+)"\]""",
      """"status":(null|"({status_msg}[^"\s]+))""",
-     """"riskScore":(null|({alert_severity}\d+))""",
+     """"riskScore":(null|({original_risk_score}\d+))""",
   ]
-  DupFields = ["alert_name->alert_type"]
+  DupFields = ["alert_name->alert_type",
+  "original_risk_score->alert_severity"]
   ParserVersion = "v1.0.0"
 
 

@@ -18,7 +18,7 @@ Fields = [
   """<Data Name\\*='SubjectDomainName'>(|({domain}[^<]+?))</Data>""",
   """<Data Name\\*='SubjectLogonId'>(|({login_id}[^<]+?))</Data>""",
   """<Data Name\\*='ObjectDN'>(|({ds_object_dn}[^<]+?))</Data>""",
-  """<Data Name\\*='ObjectClass'>(|({ds_object_class}[^<]+?))</Data>"""
+  """<Data Name\\*='ObjectClass'>(|({object_type}[^<]+?))</Data>"""
   """<Data Name\\*='DSName'>(|({ds_name}[^<]+?))</Data>"""
   """<Data Name\\*='DSType'>(|({ds_type}[^<]+?))</Data>"""
   """<Level>({run_level}[^<]+)<"""

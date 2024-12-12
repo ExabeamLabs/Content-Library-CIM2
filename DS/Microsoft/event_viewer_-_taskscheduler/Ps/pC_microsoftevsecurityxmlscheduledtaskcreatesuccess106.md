@@ -16,6 +16,12 @@ Name = microsoft-evsecurity-xml-scheduled-task-create-success-106
     """({event_name}Task registered)""",
     """<Message>({additional_info}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """ProcessID(\\)?=('|")({process_id}[^'"]+)"""
+    """ThreadID(\\)?=('|")({thread_id}[^'"]+)"""
+    """EventData Name(\\)?=('|")({event_name}[^'"\>]+)"""
+    """<Channel>({channel}[^<]+)<"""
+    """<Keywords>({result}[^<]+)</Keywords>"""
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

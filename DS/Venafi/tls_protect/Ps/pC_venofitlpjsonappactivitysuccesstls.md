@@ -17,6 +17,7 @@ Name = venofi-tlp-json-app-activity-success-tls
       """"severity":({severity}\d)"""
       """"object_id":({object_id}\d+)"""
       """"dvc_ip":"({device_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
+      """"name":\s*"({object_name}[^\"]+)","object":\s*"({object}[^\"]+)","""
     ]
     DupFields = ["additional_info->event_name"]
 

@@ -6,7 +6,7 @@ Name = microsoft-azuremon-sk4-app-activity-alert
   Conditions = [ """destinationServiceName =Azure""", """"category":"Alert"""", """resourceId""" ]
   Fields = ${LMSMSParsersTemplates.cef-microsoft-app-activity.Fields}[
 # azure_event_properties is removed
-    """"status":"({result}[^"]+)""",
+    """"status":"({incident_status}[^"]+)""",
 # azure_operation_name is removed
 # azure_resource_group is removed
 # azure_alert_description is removed
@@ -43,7 +43,7 @@ cef-microsoft-app-activity = {
     """"(?i)userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
+    """(?i)userId":"({user_upn}[^",]+)""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"Platform":"({os}[^"]+)""""

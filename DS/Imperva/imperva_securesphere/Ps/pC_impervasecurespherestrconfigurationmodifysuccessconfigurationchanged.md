@@ -15,6 +15,34 @@ securesphere-system = {
   ]
  }
 
+securesphere-db-activity= {
+  Vendor = Imperva
+  Product = Imperva SecureSphere
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  Fields = [
+    """rt=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
+    """EventId=({alert_id}[^\|]+)"""
+    """Policy=({policy_name}[^\|]+)"""
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """spt=({src_port}\d+)"""
+    """OSUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """dpt=({dest_port}\d+)"""
+    """duser=(({domain}[^\\\s]+)\\+)?({db_user}[^\s\|]+)"""
+    """UserGroup=({group_name}[^\|]+)"""
+    """\WserviceName ="(|({service_name}[^"\|]+))"""
+    """HostName =({host}[^\|]+)"""
+    """Schema=({db_schema}[^\|]+)"""
+    """Database=({db_name}[^\|]+)"""
+    """EventType=({event_category}[^\|]+)"""
+    """ApplicationName =({app}[^\|]+)"""
+    """Operation=({operation}[^\|]+)"""
+    """RawQuery=({db_query}[^\|\$]+)"""
+    """Object=({object}[^\|]+)"""
+  ]
+  DupFields = [ "db_user->account" ]
+ }
+
 }
 #============================================== Start of ImpervaParsers section ==================================================================
 ImpervaParsers = [

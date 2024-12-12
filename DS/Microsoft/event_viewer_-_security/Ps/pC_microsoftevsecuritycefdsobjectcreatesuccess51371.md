@@ -18,7 +18,7 @@ Fields = [
   """suid=({user_sid}[^=]+)\s\w+=""",
   """categoryBehavior=([^=]+?\/|\/)?({action}[^=]+?)\s\w+=""",
   """cs6=({ds_object_dn}.+?)\s\w+="""  ,
-  """cs5=({ds_object_class}[^=]+?)\s\w+="""
+  """cs5=({object_type}[^=]+?)\s\w+="""
 ]
 ParserVersion = "v1.0.0"
 

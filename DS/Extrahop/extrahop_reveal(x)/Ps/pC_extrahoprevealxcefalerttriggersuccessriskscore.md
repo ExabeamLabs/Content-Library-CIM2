@@ -20,14 +20,14 @@ Fields = [
 """cn1=({alert_id}\d+)"""
 """cn2=({original_risk_score}\d+)"""
 """dst=(({dest_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
-"""CEF:\d+\|([^\|]+\|){3}({alert_severity}\d+)"""
+"""CEF:\d+\|([^\|]+\|){3}({alert_type}\d+)"""
 """src=(({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
 """sent\s*({bytes_out}[\d.]+)"""
 """received\s*({bytes_in}[\d.]+)"""
 """msg=({additional_info}[^\n]+)"""
 ]
 DupFields = [
-"alert_name->alert_type"
+"original_risk_score->alert_severity"
 ]
 ParserVersion = "v1.0.0"
 

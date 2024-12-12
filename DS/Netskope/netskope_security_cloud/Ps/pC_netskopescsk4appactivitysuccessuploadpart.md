@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-uploadpart
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"UploadPart"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"UploadPart"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

@@ -3,9 +3,10 @@
 {
 Name = "netskope-sc-cef-file-read-success-pageviewedextended"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"PageViewedExtended""""
+""""activity":"""
+""""PageViewedExtended""""
   ]
   ParserVersion = "v1.0.0"
 

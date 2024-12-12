@@ -28,6 +28,8 @@ Fields = [
 """exa_json_path=$.ContextProcessId,exa_field_name=process_id""",
 """exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.name,exa_field_name=event_name""",
+"""exa_json_path=$.ScriptContentName,exa_field_name=command_invocation"""
+"""exa_json_path=$.ScriptContent,exa_field_name=scriptblock_text"""
 ]
 ParserVersion = "v1.0.0"
 

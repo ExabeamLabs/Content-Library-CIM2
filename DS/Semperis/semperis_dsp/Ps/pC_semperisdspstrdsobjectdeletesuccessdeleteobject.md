@@ -13,7 +13,7 @@ Name = semperis-dsp-str-ds-object-delete-success-deleteobject
   """ObjectModificationType\]\s({event_name}[^\[]+?)\s+\["""
   """AttributeModificationType\]\s({operation_type}[^\[]+?)\s+\["""
   """OriginatingUsers\]\s({domain}[^\;]+)[\\]+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """ClassName\]\s({ds_object_class}[^\s]+)"""
+  """ClassName\]\s({object_type}[^\s]+)"""
   """DistinguishedName\]\s({ds_object_dn}[^\[]+?)\s+\["""
   """AttributeName\]\s({attribute}[^\s]+)"""
   """StringValueFrom\]\s({old_attribute}[^\s]+)"""

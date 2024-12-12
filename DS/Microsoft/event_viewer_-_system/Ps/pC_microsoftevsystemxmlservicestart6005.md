@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-service-start-6005
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """>6005<""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """>6005<""", """<TimeCreated SystemTime""", """<Channel>System<""", """<Provider Name =""" ]
   Fields = [
     """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

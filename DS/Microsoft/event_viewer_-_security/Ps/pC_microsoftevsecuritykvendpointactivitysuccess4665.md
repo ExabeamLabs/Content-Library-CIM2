@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-success-4665
   ParserVersion = v1.0.0
   Conditions = [ """EventID="4665"""", """An attempt was made to create an application client context.""", """Microsoft-Windows-Security-Auditing""", """RecordNumber=""", """EventType=""", """Channel=""" ]
   Fields = ${DLWindowsParsersTemplates.windows-system-info.Fields}[
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)\-\d+:\d+\s({host}[^\s]+)""",
     """Application Information:\s+({additional_info}[^@]+?)\s+Status:""",
     """({event_name}An attempt was made to create an application client context)"""
   ]
@@ -16,7 +17,6 @@ windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

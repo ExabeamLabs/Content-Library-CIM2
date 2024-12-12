@@ -11,9 +11,9 @@ Fields = [
 """exa_json_path=$.message,exa_regex=({event_name}An operation was performed on an object)""",
 """exa_json_path=$.@timestamp,exa_field_name=time""",
 """exa_json_path=$.computer_name,exa_regex=^({host}[\w\-.]+?)$""",
-"""exa_json_path=$.event_data.ObjectServer,exa_field_name=ds_object_class""",
-"""exa_json_path=$.event_data.ObjectName,exa_field_name=ds_object_name""",
-"""exa_json_path=$.event_data.ObjectType,exa_field_name=ds_object_type""",
+"""exa_json_path=$.event_data.ObjectServer,exa_field_name=object_server""",
+"""exa_json_path=$.event_data.ObjectName,exa_field_name=object_name""",
+"""exa_json_path=$.event_data.ObjectType,exa_field_name=object_type""",
 """exa_json_path=$.event_data.SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id""",
 """exa_json_path=$.event_data.SubjectDomainName,exa_field_name=domain""",
@@ -24,7 +24,7 @@ Fields = [
 """exa_json_path=$.event_id,exa_field_name=event_code""",
 """exa_json_path=$.event_data.AccessList,exa_field_name=access"""
 ]
-DupFields = [ "ds_object_name->object" ]
+DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

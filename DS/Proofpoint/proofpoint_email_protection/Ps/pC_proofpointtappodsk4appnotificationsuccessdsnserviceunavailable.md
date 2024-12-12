@@ -11,7 +11,7 @@ Name = proofpoint-tappod-sk4-app-notification-success-dsnserviceunavailable
     """"ts"+:\s*"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"qid"+:\s*"+({alert_id}[^"]+)""",
     """({event_name}DSN: Service unavailable)""",
-    """\Wdproc=({event_category}.+?)\s*(\w+=|$)""",
+    """\Wdproc=({event_category}.+?)\s*(\w+=|$|<)""",
     """({app}Proofpoint)""",
     """({additional_info}DSN: Service unavailable)"""
   ]

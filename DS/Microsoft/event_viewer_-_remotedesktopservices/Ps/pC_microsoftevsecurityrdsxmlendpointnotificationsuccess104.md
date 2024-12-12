@@ -19,6 +19,7 @@ Fields = [
 """ThreadID=('|")({thread_id}[^']+)"""
 """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
 """<Channel>({channel}[^<]+)<"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 DupFields = [ "host->src_host" ]

@@ -6,6 +6,9 @@ Name = microsoft-evsecurity-str-endpoint-notification-unabletologeventstosecurit
   ParserVersion = v1.0.0
   Conditions = [ """Unable to log events to security log:""" ]
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
+    """ComputerName =({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))""",
+    """Workstation Name\s*:\s*(-|({src_host_windows}[^\s]+))\s+Logon GUID:""",
+    """Workstation Name\s*:\s*(-|({src_host}[\w\-\.]+))\s+Logon GUID:.*?Source Network Address:\s*-\s+""",
     """({event_name}Unable to log events to security log)""",
     """Status code:\s*({result_code}[^\s]+)""",
 # CrashOnAuditFail is removed
@@ -17,8 +20,6 @@ windows-events = {
   Product = Windows
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",

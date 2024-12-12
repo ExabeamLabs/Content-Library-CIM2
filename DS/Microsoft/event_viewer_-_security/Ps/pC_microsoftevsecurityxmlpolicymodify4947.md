@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-policy-modify-4947
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4947</EventID>""", """<Provider Name""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Computer>({host}[\w\-.]+?)<""",
     """<Data Name\\*=('|")RuleId('|")>({rule_id}[^<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Task>({task_name}[^<]+)"""
@@ -16,7 +17,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

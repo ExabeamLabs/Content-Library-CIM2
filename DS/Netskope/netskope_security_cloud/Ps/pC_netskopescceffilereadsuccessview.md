@@ -3,10 +3,12 @@
 {
 Name = "netskope-sc-cef-file-read-success-view"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"View""""
-""""object_type":"File""""
+""""activity":"""
+""""View""""
+""""object_type":"""
+""""File""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
     """"object":\s*"'?\s*({file_dir}[^"]+\/)?({file_name}[^"]+?(\.({file_ext}\w+))?)",.*"object_type":"(File|Image)""""

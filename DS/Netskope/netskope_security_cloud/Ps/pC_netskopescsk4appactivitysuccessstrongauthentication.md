@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-strongauthentication
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Disable Strong Authentication"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Disable Strong Authentication"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

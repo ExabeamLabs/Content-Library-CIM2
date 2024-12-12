@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-accesslevel
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"UPDATE_ACCESS_LEVEL_V2"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"UPDATE_ACCESS_LEVEL_V2"""" ]
   DupFields = ${NetskopeParsersTemplates.cef-netskope-activity.DupFields}[ "operation->access" ]
   ParserVersion = "v1.0.0"
 

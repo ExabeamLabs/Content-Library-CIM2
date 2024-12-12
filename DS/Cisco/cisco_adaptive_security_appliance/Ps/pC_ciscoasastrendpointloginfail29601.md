@@ -14,14 +14,14 @@ Name = cisco-asa-str-endpoint-login-fail-2960-1
 cisco-2960-auth-events = {
   Vendor = "Cisco"
   Product = "Cisco Adaptive Security Appliance"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss", "MMM dd HH:mm:ss.SSS Z","MMM dd HH:mm:ss.SSS z"]
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "MMM dd HH:mm:ss", "MMM dd HH:mm:ss.SSS Z","MMM dd HH:mm:ss.SSS z", "MMM dd yyyy HH:mm:ss.SSS z", "MMM dd yyyy HH:mm:ss.SSS Z"]
   Fields = [
 """\s({time}\w+ \d+ \d+:\d+:\d+)"""
 """ for client \(({src_mac}[^\)]+)\) on Interface ({src_interface}\S+) """
 """%({event_code}\w+\-\d+\-({result}[^:]+))"""
 """({event_name}Authentication \w+)"""
-"""({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
 """\s({time}\w{3}\s+\d{2}\s+\d\d:\d\d:\d\d\.\d+\s+\w+)"""
+"""({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d\d\d(\s+\w+)?)"""
   
 }
 ```

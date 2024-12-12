@@ -11,7 +11,7 @@ Name = "delinea-ss-cef-app-notification-systemlog"
   ]
   Fields = [
     """rt=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-    """msg=({operation}.+?) rt="""
+    """msg=({additional_info}.+?) rt="""
   ]
   ParserVersion = "v1.0.0"
 

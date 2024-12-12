@@ -5,7 +5,7 @@ Name = cisco-ie-str-email-url-1
     ParserVersion = v1.0.0
     Vendor = Cisco
     Product = IronPort Email
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ","yyyy-MM-dd'T'HH:mm:ssz"]
     Conditions = [ """MID """, """URL Reputation Rule""" ]
     Fields = [
       """\d\d:\d\d\s+({host}[^\s]+)\s*""",

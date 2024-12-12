@@ -14,6 +14,7 @@ Name = proofpoint-tap-leef-email-receive-fail-threatinsight
     """threat":\s*"({malware_url}[^",]+?)\s*(,|")"""
     """quarantineRule":\s*"({rule}[^",]+)"""
     """"messageParts":\s*\[.+?"contentType":\s*"({mime}[^",]+)"""
+    """subject":\s*"({email_subject}.+?),\w+": """
   ]
   DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_type->alert_name"]
 
@@ -31,7 +32,7 @@ s-proofpoint-email-in-1 = {
     """classification":\s*"({alert_type}[^",]+?)\s*(,|")""",
     """"threatsInfoMap":\s*\[\{"[^}\]]+?"classification":\s*"({alert_type}[^"]+)""",
     """"threatsInfoMap":\s*\[\{"[^}\]]+?"threatType":\s*"({alert_type}[^"]+)""",
-    """subject":\s*"\s*(\{\\|({email_subject}[^",]+?))\s*(,|")""",
+    """"subject":\s*"\s*(\{\\|({email_subject}.+?))\s*",\s*"(quarantineRule|quarantineFolder)""",
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|0-9]+))""",
     """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """sender":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|0-9]+))""",
@@ -59,7 +60,7 @@ s-proofpoint-email-in-1 = {
     """exa_json_path=$.classification,exa_field_name=alert_type""",
     """exa_json_path=$.threatsInfoMap[0].classification,exa_field_name=alert_type""",
     """exa_json_path=$.threatsInfoMap[0].threatType,exa_field_name=alert_type""",
-    """exa_json_path=$.subject,exa_regex=(\{\\|({email_subject}[^",]+))""",
+    """exa_json_path=$.subject,exa_field_name=email_subject""",
     """exa_json_path=$.sender,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|0-9]+))""",
     """exa_regex=recipient":\s*\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_regex=recipient":\s*\[?"({email_recipients}[^",;]+@[^",;]+[^"]*)""",

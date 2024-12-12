@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-json-key-5061
     """"ProviderName":"({provider_name}[^"]+)"""",
 # algorithm_name is removed
     """"KeyName":"({key_name}[^"]+)"""",
-    """"+Hostname"+:"+({host}[^"]+)"+""",
+    """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
   ]
 
 

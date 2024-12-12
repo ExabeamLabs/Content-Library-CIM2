@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-groupmembersdownload
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"GROUP_MEMBERS_DOWNLOAD"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"GROUP_MEMBERS_DOWNLOAD"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

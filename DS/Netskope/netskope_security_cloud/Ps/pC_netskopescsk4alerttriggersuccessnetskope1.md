@@ -6,7 +6,7 @@ Name = netskope-sc-sk4-alert-trigger-success-netskope-1
   Product = Netskope Security Cloud
   ParserVersion = "v1.0.0"
   TimeFormat = "epoch_sec"
-  Conditions = [ """"alert_type":"""", """"ccl":""", """"ns_detection_name":"""", """"alert":"yes"""" ]
+  Conditions = [ """"alert_type":""", """"ccl":""", """"ns_detection_name":""", """"alert":""", """"yes"""" ]
   Fields = [
     """"timestamp":({time}\d{10})""",
     """"user":"(({email_address}[^@"\s]+@[^@"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?))"""",

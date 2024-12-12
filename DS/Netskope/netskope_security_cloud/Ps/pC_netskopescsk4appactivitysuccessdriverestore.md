@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-driverestore
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"DRIVE_DATA_RESTORE"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"DRIVE_DATA_RESTORE"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-deletesetting
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"DELETE_GMAIL_SETTING"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"DELETE_GMAIL_SETTING"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

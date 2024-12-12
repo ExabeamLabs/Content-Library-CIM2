@@ -17,7 +17,7 @@ Fields = [
   """\Wdntdom=({domain}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wduid=({login_id}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-  """\WfilePath=(?:\\+\*\\+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
+  """\WfilePath=(?:[\\\*]+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """({access}Read)""",
   """\Wad\.ShareLocalPath=(?:[\\\/\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\\/]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\WfileType=({file_type}\w+)"""

@@ -3,13 +3,15 @@
 {
 Name = "netskope-sc-cef-file-download-success-download"
  Conditions = [
-""""type":""""
+""""type":"""
 """destinationServiceName =Netskope"""
-""""activity":"Download""""
-""""object_type":"File""""
+""""activity":"""
+""""Download""""
+""""object_type":"""
+""""File""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
-    """"url":"({file_url}({file_path}({file_dir}[^"]+\/)({file_name}[^"]+?(\.({file_ext}[^"\\\/\.]+))?)?))""""
+    """"url":\s*"({file_url}({file_path}({file_dir}[^"]+\/)({file_name}[^"]+?(\.({file_ext}[^"\\\/\.]+))?)?))""""
     """"object":\s*"'?\s*({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}\w+)?))".*"object_type":"(File|Image)""""
     """"object_type":"File",.*"object":\s*"'?\s*({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}\w+)?))""""
     ]

@@ -37,7 +37,7 @@ Fields = [
 """\"resourceDisplayName\":\"({resource}[^\",]+)"""
 """\"errorCode\":\"*({error_code}\d+)"""
 """\"\"signinErrorCode\":\"*({error_code}\d+)"""
-"""userId\":\"({user_id}[^\"]+)"""
+"""userId\":\"({user_upn}[^\"]+)"""
 """\"appId\":\"({app_id}[^\"]+)"""
 """\"deviceDetail\".+?"deviceId\":\"({device_id}[^\"]+)"""
 """\"deviceDetail\":\{[^\}]*?\"displayName\":\"({device_name}[^\"]+?)\$?""""
@@ -46,8 +46,9 @@ Fields = [
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
 """"browser":"(|({browser}[^"]+))"""",
-""""riskState":"({action}[^"]+)""",
+""""riskState":"(none|({action}[^"]+))""",
 """"correlationId":\s*"({correlation_id}[^"]+)""""
+
 ]
 DupFields = ["error_code->failure_code"]
 ParserVersion = "v1.0.0"

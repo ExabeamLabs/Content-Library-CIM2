@@ -14,7 +14,7 @@ Name = semperis-dsp-str-ds-object-create-success-createobject
   """AttributeModificationType\]\s({operation_type}[^\[]+?)\s+\["""
   """OriginatingUsers\]\s(NT AUTHORITY|({domain}[^\;]+))[\\]+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """OriginatingUserWorkstations\]\s({src_host}[\w\-.]+)"""
-  """ClassName\]\s({ds_object_class}[^\s]+)"""
+  """ClassName\]\s({object_type}[^\s]+)"""
   """DistinguishedName\]\s({ds_object_dn}[^\[]+?)\s+\["""
   """AttributeName\]\s({attribute}[^\s]+)"""
   """StringValueFrom\]\s({old_attribute}[^\s]+)"""

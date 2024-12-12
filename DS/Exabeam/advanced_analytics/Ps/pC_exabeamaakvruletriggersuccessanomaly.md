@@ -46,9 +46,7 @@ Name = exabeam-aa-kv-rule-trigger-success-anomaly
       """\sscore="({rule_severity}\d+)"""", 
       """app="({app}[^"=]+)""",
       """source="({log_source}[^"=]+)"""
-      """mitre_labels="(({tactic_key}TA\d[^,"]+),\s*({tactic}[^,"]+)|({technique_key}T\d[^,"]+),\s*({technique}[^",]+))"""
-      """mitre_labels="[^"]*?({tactic_key}TA[^,"]+)"""
-      """mitre_labels="((TA\d[^,"]+),\s*({tactic}[^,"]+)|({technique_key}T\d[^,"]+),\s*({technique}[^",]+))"""
+      """mitre_labels="(({mitre_tactic_key}TA\d[^,"]+),\s*({mitre_tactic}[^,"]+)|({mitre_technique_key}T\d[^,"]+),\s*({mitre_technique}[^",]+))"""
       """\ssource_event_id="({event_id}[^"]+)"""
       """\smitre_labels="({mitre_labels}[^"]+)"""",
       """\sevent_time="({event_time}\d{13})"""",

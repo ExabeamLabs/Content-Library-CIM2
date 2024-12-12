@@ -17,6 +17,7 @@ Name = microsoft-defendercloud-sk4-alert-trigger-success-simulated
   """"User Name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\"]+)\\{1,100})?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """"AlertUri":"({malware_url}[^"]+)"""
   """"Compromised Host":"({host}[\w\-\.]+)"""
+  """"Status":"({incident_status}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

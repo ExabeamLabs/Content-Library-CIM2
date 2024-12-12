@@ -4,7 +4,7 @@ Product: MSSQL
 --------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  135  |   52   |         18         |       11       |   24    |
+|  135  |   52   |         18         |       11       |   25    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

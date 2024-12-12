@@ -4,14 +4,16 @@
 Name = microsoft-evsystem-xml-endpoint-password-modify-5823
   ParserVersion = v1.0.0
   Conditions = [ """>5823</EventID>""", """<TimeCreated SystemTime""" ]
+  Fields = ${WindowsParsersTemplates.windows-events-5.Fields}[
+    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+  ]
 
 windows-events-5 = {
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Fields = [
-    """<Computer>({host}[^<]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  Fields = [ 
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",

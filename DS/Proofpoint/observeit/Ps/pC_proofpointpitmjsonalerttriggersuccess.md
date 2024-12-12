@@ -7,7 +7,7 @@ Conditions = [
 """"createdAt""""
 """"indicators""""
 """"description""""
-""""trigger""""
+""""trigger"""
 ]
 ExtractionType = json
 ParserVersion = "v1.0.0"

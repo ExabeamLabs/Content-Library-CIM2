@@ -39,6 +39,7 @@ Name = microsoft-evsecurity-xml-process-create-success-4688-1
    """({operation_type}Process Creation)""",
    """<Data Name\\*=('|")ParentProcessName('|")>({parent_process_path}({parent_process_dir}[^<]+[\\\/]+)?({parent_process_name}[^<]+))<"""
    """<Level>({run_level}[^<]+)<"""
+   """<Data Name(\\)?\s*=('|")TargetUserName('|")>(-|({dest_user}[^<]+))"""
   ]
   DupFields = [ "process_guid->process_id" , "host->src_host" ]
 

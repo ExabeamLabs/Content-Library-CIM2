@@ -31,7 +31,7 @@ Fields = [
   """,THREAT,({alert_type}[^,]+),([^,]*,){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),"""
   """,THREAT,([^,]*,){20}(|({src_port}\d+)),(|({dest_port}\d+)),(|({src_translated_port}\d+)),(|({dest_translated_port}\d+)),"""
   """({serial_num}[^,]+),THREAT,"""
-  """,THREAT,([^,]*,){55}(|({device_name}({host}[^,]+)))"""
+  """,THREAT,([^,]*,){55}({device_name}({host}[^,]+))"""
 ]
 DupFields = ["alert_name->additional_info", "user->src_user"]
 SOAR {

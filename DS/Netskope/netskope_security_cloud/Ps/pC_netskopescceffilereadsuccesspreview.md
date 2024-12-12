@@ -3,10 +3,12 @@
 {
 Name = "netskope-sc-cef-file-read-success-preview"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"Preview""""
-""""object_type":"File""""
+""""activity":"""
+""""Preview""""
+""""object_type":"""
+""""File""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
   """"activity":\s*"({access}[^\"]+)"""

@@ -5,18 +5,18 @@ Name = symantec-dlp-kv-peripheral-storage-insert-success-allowedthedevice
   Vendor = Symantec
   Product = Symantec DLP
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """Device Manager Message""", """Allowed the device""", """User: """ ]
+  Conditions = [ """Device Manager Message""", """Allowed the device""", """,User""", """ [deviceID]:""" ]
   Fields = [
     """SymantecServer:\s*({host}[\w\-.]+)""",
-    """(\s|,)({dest_host}[^,\s]+),Device Manager Message""",
-    """,Local: (0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+    """(\s|,)({dest_host}[^,\s]+),("Event Description: )?Device Manager Message""",
+    """,Local( Host IP)?: (0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """Begin:\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """User:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?),Domain""",
+    """User( Name)?:\s+(none|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),Domain""",
     """({operation}Allowed the device)""",
-    """Domain:\s+({domain}[^,]+),""",
+    """Domain( Name)?:\s+({domain}[^,]+),""",
     """\[class\]:(?:\?|({device_class}.+?))\s+\[guid\]:""",
     """Device ID:\s+({device_id}.+)&\d+""",
-    """\[deviceID\]:({device_id}.+)&\d+""",
+    """\[deviceID\]:({device_id}[^,"]+?)"*,""",
     """Allowed the device\.\s+({operation_details}.*?)\s+\[guid""",
     """VEN_({device_vid}[^&]+)&(amp;)?PROD_({device_pid}[^\\&]+)"""
   ]

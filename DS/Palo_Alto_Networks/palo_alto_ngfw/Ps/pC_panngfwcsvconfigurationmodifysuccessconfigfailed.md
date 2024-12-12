@@ -21,6 +21,7 @@ Name = "pan-ngfw-csv-configuration-modify-success-configfailed"
     """CONFIG,([^,]*,){9}\s*({object}[^,]+),"""
     """CONFIG,([^,]*,){17}({host}[^\s,]+)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+    """,CONFIG,([^,]*,){17}({device_name}({host}[^,]+)),"""
   ]
   ParserVersion = "v1.0.0"
 

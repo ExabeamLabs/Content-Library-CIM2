@@ -5,6 +5,10 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-securitydisabled"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
   Conditions = [ """<EventID>4752<""", """<Provider Name =""", """Microsoft-Windows-Security-Auditing""" ]
+  Fields = ${WindowsParsersTemplates.s-xml-windows-member.Fields}[
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Computer>({host}[\w\-.]+)<\/Computer>"""
+  ]
   ParserVersion = "v1.0.0"
 
 s-xml-windows-member = {
@@ -14,8 +18,6 @@ s-xml-windows-member = {
   Fields = [
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Computer>({host}[\w\-.]+)<\/Computer>""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""

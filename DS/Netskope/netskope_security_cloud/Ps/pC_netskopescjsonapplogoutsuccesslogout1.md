@@ -4,7 +4,7 @@
 Name = netskope-sc-json-app-logout-success-logout-1
   ParserVersion = v1.0.0
   Product = Netskope Security Cloud
-  Conditions = [ """"audit_log_event":"Logout Successful"""" , """"type":"""" ,""""sAMAccountName":""""]
+  Conditions = [ """"audit_log_event":""", """"Logout Successful"""", """"type":""" ,""""sAMAccountName":"""]
 
 json-netskope-activity = {
   Vendor = Netskope

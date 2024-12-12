@@ -38,6 +38,8 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\Wsubtype=\"({operation}[^"]+)""",
     """\ssrcmac="?({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"?""",
     """\Wtz="?({tz}[+-]\d+)"""
+    """\ssrcname=\"*({src_host}[\w\-.]+)\"*"""
+    """\sdstname=\"*({dest_host}[\w\-.]+)\"*"""
 ]
  DupFields = [ "bytes_in->bytes"]
 

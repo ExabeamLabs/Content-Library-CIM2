@@ -6,7 +6,7 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailfrom
   Vendor = Proofpoint
   Product = Proofpoint Email Protection
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ssZ","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [
 """msgid""",
 """"cipher"""",

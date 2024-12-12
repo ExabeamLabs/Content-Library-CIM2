@@ -25,7 +25,7 @@ Fields = [
   """ResponderBytes:\s*({bytes_in}\d+)"""
   """URLCategory:\s*({category}[^,]+)"""
   """URL:\s*({url}\S+?)(,\s*\w+:|\s)"""
-  """URL:\s*(?:-|\w+:\/+)({web_domain}[^\s\/]+)"""
+  """URL:\s*(?:-|\w+:\/+)({web_domain}[^\s\/]+),?"""
   """URL:\s*(?:-|\w+:\/+[^\/]+)({uri_path}\/[^?\s]+)"""
   """URL:\s*.*?({uri_query}\?[^\s\"]+)"""
 ]

@@ -5,6 +5,7 @@ Name = microsoft-sysmon-xml-dll-load-7
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>7</EventID>""", """<Provider Name""","""'Microsoft-Windows-Sysmon'""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields} [
+    """<Computer>({host}.+?)</Computer>""",
     """<Data Name\\*='Hash(es)?'>[^<>]*?MD5=({hash_md5}[^,<]+)""",
     """<Data Name\\*='Signed'>({signed}[^<>]+?)<\/Data>""",
     """<Data Name\\*='Signature'>({signature}[^<>]+?)<\/Data>""",
@@ -24,7 +25,6 @@ xml-sysmon-activity = {
     """<EventID>({event_code}\d+)</EventID>""",
     """<Task>({operation}.*?)</Task>""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
-    """<Computer>({host}.+?)</Computer>""",
     """<Security UserID\\*='({user_sid}[^']+)'""",
     """<Data Name\\*='Image'>({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({process_name}[^\\\/<>]+?))<\/Data>""",
     """<Data Name\\*='TargetFilename'>({file_path}(({file_dir}[^<>]+?)[\\\/]+)?({file_name}[^\\\/<>]*?(\.({file_ext}\w+))?))(:\w+)?<\/Data>""",

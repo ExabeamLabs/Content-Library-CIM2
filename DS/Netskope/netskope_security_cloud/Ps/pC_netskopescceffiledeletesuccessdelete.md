@@ -3,13 +3,15 @@
 {
 Name = "netskope-sc-cef-file-delete-success-delete"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"Delete""""
-""""object_type":"File""""
+""""activity":"""
+""""Delete""""
+""""object_type":"""
+""""File""""
   ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields}[
-    """"object":"\s*({file_dir}[^"]+\/)?({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)([,;]({additional_info}[^"]+)).*"object_type":"(File|Image)""""
+    """"object":\s*"\s*({file_dir}[^"]+\/)?({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)([,;]({additional_info}[^"]+)).*"object_type":\s*"(File|Image)""""
     ]
   ParserVersion = "v1.0.0"
 

@@ -13,6 +13,7 @@ Name = f5-bigip-kv-app-notification-success-01490248
     """Client_Platform="({os}[^"]+)""",
     """\][^~]+?:\s+({additional_info}[^~]+?)\s*("|$)""",
     """session_id="({session_id}[^"]+)"""
+    """\sAccess_Profile="({access_group}[^"]+)""""
   ]
 
 

@@ -13,7 +13,7 @@ Fields = [
 """>\w+ \d\d \d\d:\d\d:\d\d\s+({host}\S+)"""
 """Event:\s*({access}[^,]+),"""
 """Path:\s*({file_path}({file_dir}[^,]*?)[\\\/]*({file_name}[^,\\\/]+?)),"""
-"""Path:\s*\/({share_name}[^\/]+)"""
+"""Path:\s*(?:[\\\/\*]+)?({share_name}[^\/]+)"""
 """File\/Folder:\s*({file_type}[^,]+?),"""
 """Size:\s*({bytes}[\d.]+)\s+({bytes_unit}\w+),"""
 """User:\s*(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?),"""

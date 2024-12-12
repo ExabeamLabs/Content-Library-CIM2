@@ -6,7 +6,7 @@ Name = netskope-sc-sk4-app-activity-success-pageprefetched
   Vendor = Netskope
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
-  Conditions = [ """"type":"""", """destinationServiceName =Netskope""", """"activity":""""]
+  Conditions = [ """"type":""", """destinationServiceName =Netskope""", """"activity":""" ]
   Fields = [
     """"timestamp":\s*({time}\d{10})""",
     """requestClientApplication=({app}[^=]+?)\s+(\w+=|$)""",

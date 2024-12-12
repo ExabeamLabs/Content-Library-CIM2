@@ -24,7 +24,7 @@ Fields = [
 """GUID(:|=)\s*\{({object_id}[^\}]+)"""
 """Operation:\s*Correlation ID(:|=)\s*\{({correlation_id}[^\}]+)"""
 """Object:\s*DN(:|=)\s*({ds_object_dn}.+?)\s+([\w]+:)?GUID"""
-"""Object:\s*.*?Class(:|=)\s*({ds_object_class}[^\s]+)"""
+"""Object:\s*.*?Class(:|=)\s*({object_type}[^\s]+)"""
 """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
 """"DSName":"({ds_name}[^"]+)""""
 """"DSType":"({ds_type}[^"]+)""""
@@ -41,7 +41,7 @@ Fields = [
   """exa_json_path=$.Message,exa_regex=GUID(:|=)\s*\{({object_id}[^\}]+)""",
   """exa_json_path=$.Message,exa_regex=Operation:\s*Correlation ID(:|=)\s*\{({correlation_id}[^\}]+)""",
   """exa_json_path=$.Message,exa_regex=Object:\s*DN(:|=)\s*({ds_object_dn}.+?)\s+([\w]+:)?GUID""",
-  """exa_json_path=$.Message,exa_regex=Object:\s*.*?Class(:|=)\s*(\\*(r|n|t|\s))*({ds_object_class}[^\s\\]+)""",
+  """exa_json_path=$.Message,exa_regex=Object:\s*.*?Class(:|=)\s*(\\*(r|n|t|\s))*({object_type}[^\s\\]+)""",
   """exa_json_path=$.DSName,exa_field_name=ds_name""",
   """exa_json_path=$.Message,exa_regex=Directory Service:(\s*)Name:\s*({ds_name}[^\s]+)\s+Type:\s*({ds_type}[^:]*?Services)"""
   """exa_json_path=$.DSType,exa_field_name=ds_type"""

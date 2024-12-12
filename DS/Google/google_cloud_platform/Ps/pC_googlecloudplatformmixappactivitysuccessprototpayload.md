@@ -20,7 +20,7 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """\sdproc=({app}[^=]+)\s\w+=""",
     """"bucket_name":"({bucket_name}[^",}]+)""""
     """"resource":\s*\{\s*"type":\s*"({resource_type}[^"\\\/]+)"""",
-    """"resourceName":\s*"({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))"""",
+    """"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"""",
     """"resource"+:[^\}]*labels[^\}]*"+location"+:\s*"+({region}[^"\\\/\}]+)"+""",
     """"operation"+:[^\}]*first"+:\s*({operation_first}[^"\\\/\}\s,]+)""",
     """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
@@ -40,7 +40,7 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name""",
     """exa_json_path=$.resource.type,exa_field_name=resource_type""",
     """exa_json_path=$.resource.labels.location,exa_field_name=region""",
-    """exa_json_path=$.protoPayload.resourceName,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))""",
+    """exa_json_path=$.protoPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
     """exa_regex=\sdproc=({app}[^=]+)\s\w+=""",
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",
     """exa_json_path=$.operation.last,exa_field_name=operation_last""",

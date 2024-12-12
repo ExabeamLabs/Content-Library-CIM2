@@ -6,7 +6,7 @@ Product = "Zeek"
 Conditions = [
   """protocol"""
   """"smtp""""
-  """zeek"""
+  """"zeek""""
   """type"""
 ]
 ExtractionType = json

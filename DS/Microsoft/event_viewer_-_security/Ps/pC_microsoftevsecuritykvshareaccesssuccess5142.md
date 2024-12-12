@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5142
     """Account Domain:\s*({domain}[^\s]+)""",
     """Logon ID:\s*({login_id}[^\s]+)""",
     """Security ID:\s*(NT|({user_sid}[^\s]+))""",
-    """Share Name:\s*[\\\*]*({share_name}[^:]+?)\s*Share Path:""",
+    """Share Name:\s*(?:[\\\*]+)?({share_name}[^:]+?)\s*Share Path:""",
     """Share Path:\s*(\s|({share_path}[^"]+?))\s*$""",
     """Keywords=({result}[^:=]+?)\s*\w+[:=]"""
     """Source Port(=|:)\s*({src_port}\d+)"""

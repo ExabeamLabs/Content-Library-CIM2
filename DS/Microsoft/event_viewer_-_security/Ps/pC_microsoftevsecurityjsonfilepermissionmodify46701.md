@@ -7,6 +7,7 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670-1
   ExtractionType = json
   Conditions = [  """EventID":"4670"""", """Permissions on an object were changed""" ]
   Fields =${DLWindowsParsersTemplates.json-windows-system-events.Fields}[
+    """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.Computer,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$..HandleId,exa_field_name=object_id""",
     """exa_json_path=$..ObjectType,exa_field_name=object_type""",
@@ -26,7 +27,6 @@ json-windows-system-events = {
     """exa_json_path=$.EventTime,exa_regex=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
     """exa_json_path=$.TimeCreated,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.TimeCreated,exa_field_name=time""",
-    """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.EventType,exa_field_name=result""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
     """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",

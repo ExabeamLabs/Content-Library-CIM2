@@ -5,6 +5,7 @@ Name = microsoft-evsecurity-json-policy-modify-4948
   ParserVersion = v1.0.0
   Conditions = [ """"EventID":"4948"""", """Microsoft-Windows-Security-Auditing""", """A change has been made to Windows Firewall exception list""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
+    """"Computer":"({host}[^"]+)"""",
     """({event_name}A change has been made to Windows Firewall exception list)""",
     """({event_code}4948)"""
     """<Data Name\\*=\\*('|")RuleId\\*('|")>({rule_id}[^<]+)""",
@@ -17,7 +18,6 @@ json-windows-events-3 = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"?({event_code}\d+)"?""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",

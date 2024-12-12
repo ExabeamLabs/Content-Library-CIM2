@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-updatetimestamp
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Update StsRefreshTokenValidFrom Timestamp"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Update StsRefreshTokenValidFrom Timestamp"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

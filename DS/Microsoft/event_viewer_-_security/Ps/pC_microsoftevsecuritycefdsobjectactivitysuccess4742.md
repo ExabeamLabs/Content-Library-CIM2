@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """"eventID":"({event_code}\d+)""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({result}[^"]+?)\s*"""",
-    """"targetSid":"({ds_object_name}[^"\s]+?)\s*"""",
+    """"targetSid":"({object_name}[^"\s]+?)\s*"""",
     """"targetUserName":"({dest_user}[^"\s]+?)\s*"""",
     """"targetDomainName":"({ds_object_dn}[^"\s]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",

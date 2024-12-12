@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-delete
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Delete"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Delete"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

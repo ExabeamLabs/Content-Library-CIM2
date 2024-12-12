@@ -6,6 +6,8 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
   Product = Event Viewer - Security
   Conditions = ["""attempted to validate the credentials for an account""", """Authentication Package""", """computer_name""", """event_id\":4776""", """"audit-event""""]
   Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
+    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
+    """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
@@ -18,14 +20,12 @@ json-windows-events-2 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",
     """event_id\\?"+:({event_code}\d+)""",
     """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?"""",
-    """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """Status\\?"+:\\?"+({result_code}[^\\]+)\\?"""",
     """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?"""",
     """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?"""",

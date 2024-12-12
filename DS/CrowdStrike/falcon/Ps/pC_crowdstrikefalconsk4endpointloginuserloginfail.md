@@ -23,7 +23,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """"cid":"({cid}[^"]+)"""
     """"event_platform":"({os}[^"]+)""""
     """exa_json_path=$.ProcessStartTime,exa_field_name=time""",
-    """exa_json_path=$.UserName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({src_host}[^\"]+))?""",
+    """exa_json_path=$.UserName,exa_regex=^(-|\/+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}({first_name}[^\s"@]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\"]+))?)$""",
     """exa_json_path=$..timestamp,exa_field_name=time""",
     """exa_json_path=$.raw-event.timestamp,exa_field_name=time""",
     """exa_json_path=$..UserName,exa_regex=(-|\/+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}({first_name}[^\s"@]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

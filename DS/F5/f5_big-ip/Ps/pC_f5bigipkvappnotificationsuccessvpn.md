@@ -11,6 +11,7 @@ Name = f5-bigip-kv-app-notification-success-vpn
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(\+|-)\d{2}:\d{2})\s({host}[\w.-]+)""",
     """endpoint software detected \(({additional_info}[^\)]+)\)""",
     """({event_name}endpoint software detected)"""
+    """\sAccess_Profile="({access_group}[^"]+)""""
   ]
 
 

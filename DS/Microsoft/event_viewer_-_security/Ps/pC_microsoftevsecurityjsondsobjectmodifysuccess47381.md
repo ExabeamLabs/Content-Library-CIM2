@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4738-1
   Product = Event Viewer - Security
   Conditions = [ """"data.id":"4738"""", """"type":"wazuh-alerts"""", """"decoder.parent":"windows""""  ]
   Fields = ${WazuhParserTemplates.wazuh-windows-template.Fields} [
+    """exa_json_path=$.['data.system_name'],exa_regex=^({host}[\w\-.]+)$""",
     """({event_name}A user account was changed)""",
     """Security ID:\s*(|({user_sid}.+?))\s+Account Name:""",
     """Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s*(|({domain}.+?))\s+Logon ID:\s*(|({login_id}.+?))\s+Target Account:""",
@@ -28,7 +29,6 @@ wazuh-windows-template = {
       """exa_json_path=$.location,exa_field_name=log_location""",
       """exa_json_path=$.['data.data'],exa_field_name=data""",
       """exa_json_path=$.path,exa_field_name=log_path""",
-      """exa_json_path=$.['data.system_name'],exa_regex=^({host}[\w\-.]+)$""",
       """exa_json_path=$.['agent.id'],exa_field_name=agent_id""",
       """exa_json_path=$.['manager.name'],exa_field_name=wazuh_manager""",
       """exa_json_path=$.['rule.description'],exa_field_name=description""",

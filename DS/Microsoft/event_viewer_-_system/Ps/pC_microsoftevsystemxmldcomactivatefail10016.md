@@ -6,15 +6,15 @@ Name = microsoft-evsystem-xml-dcom-activate-fail-10016
   Conditions = [ """>10016</EventID>""", """This security permission can be modified using the Component Services administrative tool.""" ]
   Fields = ${WindowsParsersTemplates.windows-events-5.Fields}[
     """<Opcode>(0|({opcode}[^<]+))"""
+    """<Computer>({host}[^<]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 windows-events-5 = {
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Fields = [
-    """<Computer>({host}[^<]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+  Fields = [ 
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>\s*({additional_info}[^<]+)<\/Message>""",
     """(<EventID)?>({event_code}\d+)<\/EventID>""",

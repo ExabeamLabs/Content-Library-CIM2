@@ -6,7 +6,7 @@ Name = netskope-casb-sk4-app-activity-success-webmail
   Product = Netskope CASB
   TimeFormat = "epoch_sec"
   ParserVersion = v1.0.0
-  Conditions = [ """"access_method":"""", """"type":"connection"""", """"traffic_type":""", """"ccl":""", """"appcategory":"""", ]
+  Conditions = [ """"access_method":""", """"type":""", """"connection"""", """"traffic_type":""", """"ccl":""", """"appcategory":""", ]
   Fields = [
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",

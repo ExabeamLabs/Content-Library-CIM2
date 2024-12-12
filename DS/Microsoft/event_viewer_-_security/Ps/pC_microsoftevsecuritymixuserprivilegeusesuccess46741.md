@@ -29,10 +29,10 @@ Fields = [
   """"ObjectServer":"(-|({object_server}[^\s"]+))"""
   """"ObjectName":"(-|({object}[^\s"]+))"""
   """"ObjectType":"(-|({object_type}[^\s"]+))"""
-  """Process\s*Name(:|=)\s*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Requested"""
-  """\s*Account Name(:|=)\s*(?:-|(?i)local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+?))[\s;]*Account Domain(:|=)\s*((?i)NT AUTHORITY|({domain}.+?))[\s;]*Logon ID(:|=)\s*({login_id}.+?)[\s;]*Object(:|=)"""
-  """\s*Object Server(:|=)\s*({object_server}.+?)[nrt\\\s;]*Object Type(:|=)\s*(?:-|({object_type}.+?))[\s;]*Object Name(:|=)\s*(?:|-|({object}.+?))[nrt\\\s;]*Object Handle"""
-  """Desired Access(:|=)\s*({access}.+?)[\s;]*Privileges(:|=)\s*({privileges}.+?)(\s+\d+|"|,|;|\s+User:|\s*$)"""
+  """Process\s*Name(:|=)\s*((?-i)\\+[rnt])*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Requested"""
+  """\s*Account Name(:|=)\s*((?-i)\\+[rnt])*(?:-|(?i)local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+?))[\s;]*((?-i)\\+[rnt])*Account Domain(:|=)\s*((?-i)\\+[rnt])*((?i)NT AUTHORITY|({domain}.+?))[\s;]*((?-i)\\+[rnt])*Logon ID(:|=)\s*((?-i)\\+[rnt])*({login_id}.+?)[\s;]*((?-i)\\+[rnt])*Object(:|=)"""
+  """\s*Object Server(:|=)\s*((?-i)\\+[rnt])*({object_server}.+?)[nrt\\\s;]*((?-i)\\+[rnt])*Object Type(:|=)\s*((?-i)\\+[rnt])*(?:-|({object_type}.+?))[\s;]*((?-i)\\+[rnt])*Object Name(:|=)\s*((?-i)\\+[rnt])*(?:|-|({object}.+?))[nrt\\\s;]*((?-i)\\+[rnt])*Object Handle"""
+  """Desired Access(:|=)\s*((?-i)\\+[rnt])*({access}.+?)[\s;]*((?-i)\\+[rnt])*Privileges(:|=)\s*((?-i)\\+[rnt])*({privileges}.+?)(\s+\d+|"|,|;|\s+User:|\s*$)"""
 ]
 DupFields = [
   "host->dest_host"

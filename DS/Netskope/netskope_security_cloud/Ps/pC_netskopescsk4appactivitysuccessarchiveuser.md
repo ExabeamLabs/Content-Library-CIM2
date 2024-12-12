@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-archiveuser
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"ARCHIVE_USER"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"ARCHIVE_USER"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

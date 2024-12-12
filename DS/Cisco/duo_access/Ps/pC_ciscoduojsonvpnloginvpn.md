@@ -24,6 +24,7 @@ Name = cisco-duo-json-vpn-login-vpn
     """"application".+?"name":\s*"({service_name}[^"]+)"""
     """"location":.+?"country":\s*"({src_country}[^"]+)"""
     """"access_device":.+?"hostname":"({mfa_device}[^"]+)"""
+    """"event_type":"({event_name}[^"]+)""""   
   ]
    DupFields = ["src_country->mfa_country"]
 

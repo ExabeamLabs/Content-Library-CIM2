@@ -27,7 +27,7 @@ json-catonetwork = {
     """exa_json_path=$..src_port,exa_field_name=src_port""",
     """exa_json_path=$..categories,exa_field_name=categories""",
     """exa_json_path=$..action,exa_field_name=action""",
-    """exa_json_path=$..domain_name,exa_field_name=domain""",
+    """exa_json_path=$..domain_name,exa_field_name=web_domain""",
     """exa_json_path=$..http_host_name,exa_field_name=host"""
     """exa_json_path=$..vpn_user_email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
     """exa_json_path=$..event_type,exa_field_name=event_category"""

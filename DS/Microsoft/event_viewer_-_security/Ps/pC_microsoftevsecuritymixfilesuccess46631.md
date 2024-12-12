@@ -17,6 +17,7 @@ Fields = [
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7,9}Z)""",
   """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """Computer=({host}[\w\-.]*?)\s*\w+="""
+  """"Computer":"({host}[^"]+?)""""
   """({event_code}4663)"""
   """"AccessList":"({access}[^"]+?)\s*""""
   """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""

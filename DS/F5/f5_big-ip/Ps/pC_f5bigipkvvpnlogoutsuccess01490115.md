@@ -11,6 +11,7 @@ Name = f5-bigip-kv-vpn-logout-success-01490115
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(\+|-)\d{2}:\d{2})\s({host}[\w.-]+)""",
     """\][^~]+?:\s+({additional_info}[^~]+?)\s*("|$)""",
     """session_id="({session_id}[^"]+)"""
+    """\sAccess_Profile="({access_group}[^"]+)""""
   ]
 
 

@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-success-4666
   ParserVersion = v1.0.0
   Conditions = [ """EventID="4666"""", """An application attempted an operation:""", """Microsoft-Windows-Security-Auditing""", """RecordNumber=""", """EventType=""", """Channel=""" ]
   Fields = ${DLWindowsParsersTemplates.windows-system-info.Fields}[
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)\-\d+:\d+\s({host}[^\s]+)""",
     """Application Information:\s+({additional_info}[^@]+?)\s+Access Request Information:""",
     """({event_name}An application attempted an operation)"""
   ]
@@ -16,7 +17,6 @@ windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

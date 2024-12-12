@@ -11,7 +11,7 @@ Fields = [
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
 """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
-""""UserId\\*"+:[\s\\]*"+(({domain}[^"\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(SecurityComplianceAlerts|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))"""",
+""""UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)"""",
 """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
 """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)""",
 """Workload"*:"*({app}[^"]+)""",

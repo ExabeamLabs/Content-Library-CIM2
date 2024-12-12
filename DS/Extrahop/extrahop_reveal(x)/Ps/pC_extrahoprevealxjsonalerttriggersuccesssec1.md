@@ -17,6 +17,7 @@ Name = extrahop-revealx-json-alert-trigger-success-sec-1
 ?",[^,]+?ipaddr""",
     """exa_json_path=$.event.participants[0].hostname,exa_regex=^({src_host}[\w\-.]+)$"""
     ]
+      DupFields = [ "original_risk_score->alert_severity"]
     ParserVersion = "v1.0.0"
 
 

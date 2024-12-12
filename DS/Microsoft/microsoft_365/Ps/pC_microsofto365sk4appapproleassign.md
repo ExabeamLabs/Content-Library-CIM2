@@ -20,7 +20,7 @@ o365-activity-template = {
     """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
     """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
     """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
-    """"UserId\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?))))",""",
+    """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)",""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
     """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
     """sourceServiceName =({app}[^=]+?)\s+(\w+=|$)""",

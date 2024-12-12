@@ -52,7 +52,7 @@ paloalto-firewall = {
      """TRAFFIC,([^,]*,){15}({dest_interface}[^,]+),""",
      """TRAFFIC,([^,]*,){42}({result_reason}[^,]+),"""
      """({serial_num}[^,]+),TRAFFIC,"""
-     """TRAFFIC,([^,]*,){48}({device_name}[\w.-]+)"""
+     """TRAFFIC,([^,]*,){48}({device_name}({host}[\w.-]+))"""
    
 }
 ```

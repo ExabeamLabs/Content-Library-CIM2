@@ -4,6 +4,10 @@
 Name = microsoft-windows-xml-vpn-logout-success-1018
   Product = "Event Viewer - WinNat"
   Conditions = [ """<EventID>1018</EventID>""", """<Data Name""","""'TransportProtocol'>""" , """<Channel>Microsoft-Windows-WinNat""" ]
+  Fields = ${WindowsParsersTemplates.s-xml-windows-member.Fields}[
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Computer>({host}[\w\-.]+)<\/Computer>"""
+  ]
   ParserVersion = "v1.0.0"
 
 s-xml-windows-member = {
@@ -13,8 +17,6 @@ s-xml-windows-member = {
   Fields = [
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Computer>({host}[\w\-.]+)<\/Computer>""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""

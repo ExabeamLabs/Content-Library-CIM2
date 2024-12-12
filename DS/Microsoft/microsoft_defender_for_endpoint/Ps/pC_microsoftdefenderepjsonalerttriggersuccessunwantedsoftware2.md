@@ -20,14 +20,14 @@ json-microsoft-security-events-1 = {
       """"createdDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z?)""",
       """"firstActivity":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
       """"firstEventTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-      """"accountName":\s*"((?i:-|SYSTEM)|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """"accountName":\s*"((?i:-|SYSTEM)|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({account}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """aadUserId[^}\]]+?"accountName":\s*"((?i:-|SYSTEM)|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"userPrincipalName":\s*"(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@[^"]+)?))"""",
       """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
       """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))"""",
       """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))[^}\]]+?userPrincipalName""",
       """"deviceDnsName":\s*"+({src_host}[\w.-]+)"""",
-      """"status":\s*"({result}[^",]+)"""",
+      """"status":\s*"({incident_status}[^",]+)"""",
       """"threatFamilyName":\s*"({malware_family}[^"]+)"""",
       """"entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
       """"entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
@@ -50,7 +50,7 @@ json-microsoft-security-events-1 = {
       """exa_regex="userPrincipalName":\s*"({user_upn}[^"]+?)""""
       """exa_regex="domainName":\s*"({domain}[^"]+)""""
       """exa_regex="deviceDnsName":\s*"+({src_host}[\w.-]+)""""
-      """exa_json_path=$.status,exa_field_name=result"""
+      """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.threatFamilyName,exa_field_name=malware_family"""
       """exa_regex="ipAddress":\s*"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
       """exa_regex="entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",

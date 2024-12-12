@@ -6,6 +6,10 @@ Name = microsoft-evpowershell-cef-script-execute-fail-4100
   Product = Event Viewer - PowerShell
   Conditions = [ """CEF: """, """|Microsoft|PowerShell|""", """|Microsoft-Windows-PowerShell:4100|""" ]
   Fields = ${DLWindowsParsersTemplates.microsoft-windows-cef-powershell.Fields} [
+    """\sdhost=({dest_host}[\w\-.]+?)\s*\w+=""",
+    """\sdvc=({host}[A-Fa-f:\d.]+)""",
+    """\sdvchost=({host}[\w\-.]+)""",
+    """\sshost=({src_host}.+?)\s*\w+=""",
     """\sduser=(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s""",
     """\sahost=({host}[^\s]+)\s""",
     """\sad.ProcessID=({process_id}[^\s]+)\s""",
@@ -44,14 +48,11 @@ microsoft-windows-cef-powershell = {
         """\sfilePath=({file_path}.+?)\s*\w+=""",
         """\ssourceTranslatedAddress=({src_translated_ip}[A-Fa-f:\d.]+)""",
         """\ssourceTranslatedPort=({src_translated_port}\d+)""",
-        """\sdhost=({dest_host}[\w\-.]+?)\s*\w+=""",
         """\sdproc=({dproc}.+?)\s*\w+=""",
         """\sdpt=({dest_port}\d+)""",
         """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*\w+=""",
         """\sdtz=({dtz}.+?)\s*\w+=""",
         """\sduser=(N\/A|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
-        """\sdvc=({host}[A-Fa-f:\d.]+)""",
-        """\sdvchost=({host}[\w\-.]+)""",
 # dvcp_id is removed
         """\serror='({result}[^']+)'""",
         """\seventId=({event_code}.+?)\s*\w+=""",
@@ -67,7 +68,6 @@ microsoft-windows-cef-powershell = {
         """\sreason=({result_reason}.+?)\s*\w+=""",
         """\srequest=({request}.+?)\s*\w+=""",
         """\srt=({time}\d{13})\s*\w+=""",
-        """\sshost=({src_host}.+?)\s*\w+=""",
         """\ssourceDnsDomain=({src_domain}.+?)\s*\w+=""",
         """\sspid=({process_id}.+?)\s*\w+=""",
         """\sspt=({src_port}\d+)""",

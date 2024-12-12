@@ -3,10 +3,12 @@
 {
 Name = "netskope-sc-cef-file-write-success-edit"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"Edit""""
-""""object_type":"File""""
+""""activity":"""
+""""Edit""""
+""""object_type":"""
+""""File""""
   ]
     ParserVersion = "v1.0.0"
 

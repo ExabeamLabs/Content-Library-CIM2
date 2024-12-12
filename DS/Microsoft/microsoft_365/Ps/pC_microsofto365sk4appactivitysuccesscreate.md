@@ -6,6 +6,7 @@ Name = microsoft-o365-sk4-app-activity-success-create
   ParserVersion = "v1.0.0"
   Conditions= [ """"MailboxOwnerUPN":"""", """"OriginatingServer":"""", """"Workload":"""", """"Operation":"Create"""", """"UserId":"""" ]
   Fields = ${MSO365ParsersTemplates.cef-microsoft-o365-app-activity.Fields}[
+    """"OriginatingServer":(\s*|)"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?"""",
     """"LogonType":({login_type}\d+)"""
   ]
   DupFields = ["operation->event_name"]
@@ -15,7 +16,6 @@ cef-microsoft-o365-app-activity = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
     """"CreationTime\\*"+:[\s\\]*"+({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """"OriginatingServer":(\s*|)"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?"""",
     """CEF:([^\|"]*\|){5}({operation}[^\|"]+)""",
     """\sflexString1=({event_name}[^=]+?)\.?\s+(\w+=|$)""",
     """"Operation":"({operation}[^"]+?)\.?"""",

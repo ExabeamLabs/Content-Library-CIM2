@@ -6,11 +6,12 @@ Name = microsoft-evsecurity-xml-ds-object-delete-success-5141-1
   Conditions = [  """"Activity":"5141 - A directory service object was deleted."""", """"EventID":5141""", """"EventSourceName":"Microsoft-Windows-Security-Auditing""""]
   Fields = ${WindowsParsersTemplates.json-windows-events-4.Fields}[
     """<Data Name\\?=\\?"ObjectDN\\?">(|({ds_object_dn}[^<]+))<\/Data>""",
-    """<Data Name\\?=\\?"ObjectClass\\?">(|({ds_object_class}[^<]+))<\/Data>""",
+    """<Data Name\\?=\\?"ObjectClass\\?">(|({object_type}[^<]+))<\/Data>""",
     """<Data Name\\?=\\?"SubjectUserSid\\?">({user_sid}[^<]+)<\/Data>""",
     """<Data Name\\?=\\?"SubjectUserName\\?">({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Data Name\\?=\\?"SubjectDomainName\\?">({domain}[^<]+)<\/Data>""",
-    """<Data Name\\?=\\?"SubjectLogonId\\?">({login_id}[^<]+)<\/Data>"""
+    """<Data Name\\?=\\?"SubjectLogonId\\?">({login_id}[^<]+)<\/Data>""",
+    """"Computer":"({host}[\w\-\.]+)""""
   ]
 
 json-windows-events-4 = {
@@ -19,7 +20,6 @@ json-windows-events-4 = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-    """"Computer":"({host}[\w\-\.]+)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",

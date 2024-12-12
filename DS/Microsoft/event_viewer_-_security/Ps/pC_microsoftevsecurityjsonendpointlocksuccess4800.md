@@ -9,7 +9,7 @@ Conditions = [ """"EventID":4800""", """The workstation was locked""" ]
 Fields = [
 """"TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-""""Hostname":"({host}[^"]+)"""
+""""(Hostname|Computer)":"({host}[^"]+)"""
 """({event_name}The workstation was locked)"""
 """({event_code}4800)"""
 """Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n)*\s*Account Domain"""

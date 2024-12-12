@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-xml-share-create-success-5142
     """<Data\sName\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Data\sName\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<EventID>({event_code}[^<]+)""",
-    """<Data\sName\\*=('|")ShareName('|")>\\\\\*\\({share_name}[^<]+)""",
+    """<Data\sName\\*=('|")ShareName('|")>(?:[\\\*]+)?({share_name}[^<]+)""",
     """<Data\sName\\*=('|")ShareLocalPath('|")>({share_path}[^<]+)""",
     """<Keyword>({result}[^<]+)<\/Keyword>"""
     """({event_name}A network share object was added)"""

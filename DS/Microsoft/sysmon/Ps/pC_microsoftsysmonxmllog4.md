@@ -6,6 +6,7 @@ Name = microsoft-sysmon-xml-log-4
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4</EventID>""", """<Provider Name""","""<Channel>Microsoft-Windows-Sysmon""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
+    """<Computer>({host}.+?)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
@@ -19,7 +20,6 @@ xml-sysmon-activity = {
     """<EventID>({event_code}\d+)</EventID>""",
     """<Task>({operation}.*?)</Task>""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
-    """<Computer>({host}.+?)</Computer>""",
     """<Security UserID\\*='({user_sid}[^']+)'""",
     """<Data Name\\*='Image'>({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({process_name}[^\\\/<>]+?))<\/Data>""",
     """<Data Name\\*='TargetFilename'>({file_path}(({file_dir}[^<>]+?)[\\\/]+)?({file_name}[^\\\/<>]*?(\.({file_ext}\w+))?))(:\w+)?<\/Data>""",

@@ -12,7 +12,7 @@ Name = semperis-dsp-str-ds-object-move-success-moveobject
   """OriginatingServer\]\s({host}[\w\-.]+)"""
   """ObjectModificationType\]\s({event_name}[^\[]+?)\s+\["""
   """AttributeModificationType\]\s({operation_type}[^\[]+?)\s+\["""
-  """ClassName\]\s({ds_object_class}[^\s]+)"""
+  """ClassName\]\s({object_type}[^\s]+)"""
   """DistinguishedName\]\s({ds_object_dn}[^\[]+?)\s+\["""
   """AttributeName\]\s({attribute}[^\s]+)"""
   """StringValueFrom\]\s({old_attribute}[^\s]+)"""

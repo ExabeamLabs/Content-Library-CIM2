@@ -5,7 +5,8 @@ Name = "netskope-sc-cef-file-browse"
   Conditions = [
 """"type":""""
 """destinationServiceName =Netskope"""
-""""activity":"Browse""""
+""""activity":"""
+""""Browse""""
   ]
   ParserVersion = "v1.0.0"
 

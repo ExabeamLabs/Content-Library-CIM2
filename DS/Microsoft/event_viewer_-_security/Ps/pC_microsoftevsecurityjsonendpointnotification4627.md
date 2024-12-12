@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
   Fields = [
     """({event_name}Group membership information)""",
     """({event_code}4627)""",
-    """"Hostname"+:"+({host}[^",]+)""",
+    """"(Hostname|Computer)"+:"+({host}[^",]+)""",
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"SubjectUserSid"+:"+(SYSTEM|NT AUTHORITY|\\NULL SID|({user_sid}[^"]+))""",
     """"SubjectUserName"+:"+(-|({account_name}[^"]+))""",
@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """exa_json_path=$.Message,exa_field_name=event_name"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
+    """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
     """exa_json_path=$..SubjectUserName,exa_regex=(-|({account_name}[^"]+))"""

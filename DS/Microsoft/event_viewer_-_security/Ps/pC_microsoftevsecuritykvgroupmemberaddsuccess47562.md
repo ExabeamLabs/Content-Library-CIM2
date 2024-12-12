@@ -29,6 +29,8 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<System>.*?Guid(\\)?='\{({process_guid}[^}]+)""",
     """<Execution ProcessID(\\)?='({process_id}\d+)""",
     """<Security UserID(\\)?='({user_sid}[^']+)""",
+    """ThreadID(\\)?='({thread_id}\d+)"""
+    """<Level>({run_level}[^<]+)<"""
     """<Data Name(\\)?='RemoteMachineAccount'>({dest_host}[\w\-.]+)"""
     """<Data Name ='MemberName('>|":")CN\\?=({member}[^>]+)<\/Data>""",
     """<Data Name(\\)?='MemberSid'>(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",

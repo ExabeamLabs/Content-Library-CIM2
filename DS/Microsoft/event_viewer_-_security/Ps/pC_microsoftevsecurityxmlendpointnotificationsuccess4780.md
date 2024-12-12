@@ -11,7 +11,9 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4780
     """<Data Name\\*='TargetUserName'>({dest_user}[^<]+)""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
     """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)"""
+    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
+    """<Computer>({host}[\w.-]+)<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 
 xml-windows-events = {
@@ -19,8 +21,6 @@ xml-windows-events = {
   Product = Windows
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",

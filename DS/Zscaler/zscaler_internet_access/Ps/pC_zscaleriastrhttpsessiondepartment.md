@@ -43,7 +43,7 @@ s-zscaler-web-activity = {
     """\sappname=({app}[^=]+?)\s+(\w+|$)""",
     """\slocation=({location}[^=]+?)\s+\w+="""
     """deviceowner=(NA|({owner_id}[^\s]+))""",
-    """dname=({web_domain}[^\.\=]+)"""
+    """dname=({web_domain}[^=]+?)\s+(\w+=|$)"""
     """login=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """urlClass=({event_category}[^=]+?)\s*\w+="""
   

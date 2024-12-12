@@ -22,9 +22,9 @@ Fields = [
 """Security ID:(\\t|\\r|\\n)*\s*(|({user_sid}[^:]+?))(\\t|\\r|\\n)*\s*Account Name:"""
 """Account Name:(\\r|\\n|\\t|\s)*((-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\\r|\\n|\\t|\s)*Account Domain:"""
 """Account Domain:(\\t|\\r|\\n)*\s*(|({domain}[^:]+?))(\\t|\\r|\\n)*\s*Logon ID:"""
-"""Object Server:(\\t|\\r|\\n)*\s*(|({ds_object_class}[^:]+?))(\\t|\\r|\\n)*\s*Object Type:"""
-"""Object Type:(\\t|\\r|\\n)*\s*(|({ds_object_type}[^:]+?))(\\t|\\r|\\n)*\s*Object Name:"""
-"""Object Name:(\\t|\\r|\\n)*\s*(|({ds_object_name}[^:]+?))(\\t|\\r|\\n)*\s*Handle ID:"""
+"""Object Server:(\\t|\\r|\\n)*\s*(|({object_server}[^:]+?))(\\t|\\r|\\n)*\s*Object Type:"""
+"""Object Type:(\\t|\\r|\\n)*\s*(|({object_type}[^:]+?))(\\t|\\r|\\n)*\s*Object Name:"""
+"""Object Name:(\\t|\\r|\\n)*\s*(|({object_name}[^:]+?))(\\t|\\r|\\n)*\s*Handle ID:"""
 """Logon ID:(\\t|\\r|\\n)*\s*({login_id}[^\\\s]+)(\\t|\\r|\\n)*\s*"""
 """Operation Type:\s*({operation}[^:]+?)\s+Accesses:"""
 """Properties:(\\t|\\r|\\n)*\s*(-|({properties}[^:]+?))(\\t|\\r|\\n)*\s*Additional Information:"""
@@ -33,7 +33,7 @@ Fields = [
 """"EventType":"({operation_type}[^"]+?)""""
 """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
-DupFields = [ "ds_object_name->object" ]
+DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

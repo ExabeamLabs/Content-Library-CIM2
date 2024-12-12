@@ -15,6 +15,7 @@ Fields = [
 """hostname="({host}[^"]+)"""
 """\s+01490500:5:.*?({session_id}[^\s:]+): New session"""
 """client IP ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\sAccess_Profile="({access_group}[^"]+)""""
 """exa_regex=\d\d:\d\d\s+({host}[^\s]+)\s([^\s]+\s)?[^\s]+\[\d+\]"""
 """exa_json_path=$.host.name,exa_field_name=host"""
 """exa_regex=hostname="({host}[^"]+)"""

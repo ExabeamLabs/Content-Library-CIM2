@@ -14,7 +14,7 @@ Name = microsoft-azuremon-json-app-notification-success-databricks
   ]
   Fields =[
   	"""exa_json_path=$.time,exa_field_name=time""",
-  	"""exa_json_path=$.resourceId,exa_regex=({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/"]+)\/RESOURCEGROUPS\/({resource_group}[^\/"]+)(\/PROVIDERS\/({provider_name}[^"]+?))?(\/({resource}[^"\/]+))?)""""
+  	"""exa_regex=({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/"]+)\/RESOURCEGROUPS\/({resource_group}[^\/"]+)(\/PROVIDERS\/({provider_name}[^"]+?))?(\/({resource}[^"\/]+))?)""""
   	"""exa_json_path=$.operationName,exa_field_name=operation""",
   	"""exa_json_path=$.Host,exa_field_name=host""",
   	"""exa_json_path=$.category,exa_field_name=category""",

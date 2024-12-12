@@ -17,7 +17,7 @@ Name = "microsoft-365defender-json-alert-trigger-success-publish"
     """"SHA256":"({hash_sha256}[^"]+)""",
     """"SHA1":"({file_hash}[^"]+)""",
     """"DetectionStatus\\?":\\?"({result}[^"\\]+)""",
-    """"AccountName":"(ALL|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"AccountName":"(ALL|({account}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"AccountUpn":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"AccountSid":"({user_sid}[^"]+)""",
     """"EmailSubject":"({email_subject}[^"]+)""",

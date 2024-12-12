@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-kv-file-fileoperation
     """Account Domain:\s+({domain}[^\s]+)\s+Logon ID:""",
     """Logon ID:\s+({login_id}[^\s]+)\s+\w+""",
     """Operation:\s+({operation}[^$]+?)\s+Return Code:"""
+    """"Computer":"({host}[^"]+)""""
   ]
 
 

@@ -7,10 +7,12 @@ Name = netskope-sc-cef-email-send-success-mail
   Product = Netskope Security Cloud
   TimeFormat = "epoch_sec"
   Conditions = [
-    """"type":""""
+    """"type":"""
     """"ccl":"""
-    """"object_type":"Mail""""
-    """"activity":"Send""""
+    """"object_type":"""
+    """"Mail""""
+    """"activity":"""
+    """"Send""""
   ]
   Fields = [
     """"hostname":\s*"({src_host}[^"]+)"""",

@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-2004
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>2004</EventID>""", """<Provider Name =""" ]
+  Conditions = [ """<EventID>2004</EventID>""", """<Provider Name =""", """<Channel>System<""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)"""
     """<EventID>({event_code}\d+)""",

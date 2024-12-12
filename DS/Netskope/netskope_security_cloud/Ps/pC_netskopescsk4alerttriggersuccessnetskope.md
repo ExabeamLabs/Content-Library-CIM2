@@ -18,7 +18,7 @@ Fields = [
 """"category":"(n\/a|({alert_type}[^"]+))"""
 """"url":"({malware_url}[^"]+)"""
 """CEF:([^\|]+\|){6}({alert_severity}[^\|]+)"""
-""""severity":"((?i)unknown|({alert_severity}[^"]+))"""
+""""severity":"({alert_severity}[^"]+)"""
 """"md5":"({hash_md5}[^"]+)"""
 """"policy":"({policy_name}[^"]+)"""
 """"alert_name":"\s*({additional_info}[^"]+)""""

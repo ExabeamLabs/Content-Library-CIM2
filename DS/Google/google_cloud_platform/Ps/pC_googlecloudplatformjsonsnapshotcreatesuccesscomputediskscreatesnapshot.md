@@ -6,7 +6,7 @@ Name = google-cloudplatform-json-snapshot-create-success-computediskscreatesnaps
   Conditions = [ """googleapis.com""", """"methodName":""", """compute.disks.createSnapshot"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
     """exa_json_path=$.protoPayload.request.sourceDisk,exa_field_name=src_resource""",
-    """exa_json_path=$.protoPayload.authorizationInfo[1].resource,exa_field_name=resource"""
+    """exa_json_path=$.protoPayload.authorizationInfo[1].resource,exa_field_name=resource_path"""
   ]
   DupFields = ["src_resource->source_resource"]
 
@@ -26,7 +26,7 @@ gcp-cloudaudit-json = {
     """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
     """"methodName":\s*"({operation}[^"]+)""",
-    """"resourceName":\s*"({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))"""",
+    """"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"""",
     """"serviceName":\s*"({service_name}[^"]+)""",
     """"resource":\s*\{\s*"type":\s*"({resource_type}[^"\\\/]+)"""",
     """"resource"+:[^\}]*labels[^\}]*"+project_id"+:\s*"+({project_id}[^"\\\/\}]+)"+""",
@@ -49,8 +49,8 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.jsonPayload.access.userAgent,exa_field_name=user_agent""",
     """exa_json_path=$.protoPayload.methodName,exa_field_name=operation""",
     """exa_json_path=$.jsonPayload.access.methodName,exa_field_name=operation""",
-    """exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))""",
-    """exa_json_path=$.protoPayload.resourceName,exa_regex=({resource}({resource_path}[^"]+)\/({resource_name}[^"\/]+))""",
+    """exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
+    """exa_json_path=$.protoPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
     """exa_json_path=$.protoPayload.serviceName,exa_field_name=service_name""",
     """exa_json_path=$.jsonPayload.access.serviceName,exa_field_name=service_name""",
     """exa_json_path=$.resource.type,exa_field_name=resource_type""",

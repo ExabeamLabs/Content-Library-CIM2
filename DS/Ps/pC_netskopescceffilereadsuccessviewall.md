@@ -3,10 +3,12 @@
 {
 Name = "netskope-sc-cef-file-read-success-viewall"
   Conditions = [
-""""type":""""
+""""type":"""
 """"ccl":"""
-""""activity":"View All""""
-""""object_type":"File""""
+""""activity":"""
+""""View All""""
+""""object_type":"""
+""""File""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -26,7 +26,8 @@ Name = "github-g-json-app-activity-document_id"
     """exa_json_path=$..email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+.[^\]\s"\\,\|]+)"""
 		"""exa_json_path=$..external_identity_username,exa_field_name=user_ou"""
 		"""exa_json_path=$..actor_location.country_code,exa_field_name=country_code"""
-		"""exa_json_path=$..external_identity_username,exa_field_name=additional_info"""
+    """exa_json_path=$.external_identity_username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.external_identity_username,exa_regex=^[^@"]+?@({domain}[^"]+)$"""    
 	]
 	ParserVersion = "v1.0.0"
 

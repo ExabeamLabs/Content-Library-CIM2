@@ -13,7 +13,8 @@ Name = cisco-ise-kv-app-activity-tacacsaccounting
     """CmdAV=({command}[^,]+)\s],""",
     """Privilege-Level=({privileges}[^,]+),""",
     """({app}TACACS\+ Accounting)""",
-    """TACACS\+\s*({operation}Accounting with Command)"""
+    """TACACS\+\s*({operation}Accounting with Command)""",
+    """NetworkDeviceName =({src_host}[\w\-\.]+)"""
   ]
   ParserVersion = "v1.0.0"
 

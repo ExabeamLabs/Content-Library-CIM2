@@ -3,10 +3,14 @@
 {
 Name = "microsoft-evsecurity-kv-endpoint-authentication-success-4776"
 Conditions = [ 
-	"""EventCode=4776"""
+  """EventCode=4776"""
   """Message=El equipo intentó validar las credenciales de una cuenta"""
-	"""Microsoft Windows security auditing"""
-	]
+  """Microsoft Windows security auditing"""
+]
+Fields = ${WindowsParsersTemplates.spanish-windows-events.Fields}[
+  """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+?)("|\s|;)""",
+  """Estación de trabajo de origen:(\\t|\\r|\\n|\s)*({src_host}[\w\-\.]+)(\\t|\\r|\\n|\s)*"""
+]
 ParserVersion = "v1.0.0"
 
 spanish-windows-events = {
@@ -17,7 +21,6 @@ spanish-windows-events = {
 	  """Message=({event_name}[^\.]+)""",
 	  """({time}\d+\/\d+\/\d+ \d+:\d+:\d+ (am|AM|pm|PM))""",
 	  """Keywords=({result}.+?);?(\\t|\\r|\\n|\s)*Message=""",
-	  """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+?)("|\s|;)""",
 	  """EventCode=({event_code}\d+)""",
 	  """Nombre de proceso(:|=)(\\t|\\r|\\n|\s)*({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))\s(\\t|\\r|\\n|\s)*""",
 	  """\s*Nombre de cuenta(:|=)(\\t|\\r|\\n|\s)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*""",
@@ -31,7 +34,6 @@ spanish-windows-events = {
 	  """Id. de proceso:\s*({process_id}[^\s]+)(\\t|\\r|\\n|\s)*"""
 	  """Tipo de objeto:(\\t|\\r|\\n|\s)*({object_type}Key)(\\t|\\r|\\n|\s)*Nombre del objeto:\s*(-|({registry_key}[^:]+?))(\\t|\\r|\\n|\s)*Identificador del objeto"""
 	  """Información de red:(\\t|\\r|\\n|\s)*Dirección de red:(\\t|\\r|\\n|\s|\-)*Puerto:(\\t|\\r|\\n|\s|\-)*({additional_info}.+?)\.(\w+=|$|")"""
-	  """Estación de trabajo de origen:(\\t|\\r|\\n|\s)*({src_host}[\w\-\.]+)(\\t|\\r|\\n|\s)*"""
 	  """Código de error:(\\t|\\r|\\n|\s)*({error_code}[^"]+)"""
   
 }

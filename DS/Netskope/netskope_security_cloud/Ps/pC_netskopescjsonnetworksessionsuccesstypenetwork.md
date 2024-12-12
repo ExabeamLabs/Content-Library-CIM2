@@ -6,7 +6,7 @@ Name = "netskope-sc-json-network-session-success-typenetwork"
   Product = "Netskope Security Cloud"
   TimeFormat = "epoch_sec"
   ExtractionType = json
-  Conditions = [ """"type":"network"""", """"flow_status":""", """"ccl":"""", """"traffic_type":""" ]
+  Conditions = [ """"type":""", """"network"""", """"flow_status":""", """"ccl":""", """"traffic_type":""" ]
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""

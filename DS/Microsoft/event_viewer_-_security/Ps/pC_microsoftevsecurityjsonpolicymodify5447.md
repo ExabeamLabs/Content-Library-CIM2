@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-policy-modify-5447
     """({event_name}A Windows Filtering Platform filter has been changed)""",
     """({event_code}5447)""",
     """"EventTime"+:\s*"+({time}[^",]+)""",
-    """"Hostname"+:"+({host}[^",]+)""",
+    """"(Hostname|Computer)"+:"+({host}[^",]+)""",
     """"UserSid"+:"+({user_sid}[^",]+)""",
 # filter_id is removed
 # filter_name is removed

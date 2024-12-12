@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-sk4-share-create-success-5142
   """({event_name}A network share object was added)"""
   """"SubjectLogonId":"({login_id}[^"]+)""""
   """"Computer":"({host}[\w\-.]+)"""
-  """"ShareName":"({share_name}[^"]+)""""
+  """"ShareName":"(?:[\\\*]+)?({share_name}[^"]+)""""
   """"SubjectAccount":"(-|({domain}[\w\-.]+)([\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"ShareLocalPath":"({share_path}[^"]+)""""

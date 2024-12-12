@@ -5,7 +5,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-alerttriggered
   Vendor = Symantec
   Product = Symantec Endpoint Protection
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """ SymantecServer: """, """"Event Description:""", """,Local Host IP: """, """,Intensive Protection Level: """ ]
+  Conditions = [ """ SymantecServer: """, """Event Type: Port Scan""", """"Event Description:""", """,Local Host IP: """, """,Intensive Protection Level: """ ]
   Fields = [
     """Begin:\s({time}\d{4}-\d{1,2}-\d{1,2} \d{1,2}:\d{1,2}:\d{1,2})""",
     """\d\d:\d\d:\d\d\s({host}[\w.\-]+)\s+SymantecServer:\s*({src_host}[\w\-\.]+)""",

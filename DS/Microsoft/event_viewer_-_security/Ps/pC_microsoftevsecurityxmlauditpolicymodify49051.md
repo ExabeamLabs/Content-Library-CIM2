@@ -4,6 +4,9 @@
 Name = microsoft-evsecurity-xml-audit-policy-modify-4905-1
   ParserVersion = v1.0.0
   Conditions = [ """"EventID":4905""", """<Data Name""" ]
+  Fields = ${WindowsParsersTemplates.json-xml-object-access.Fields}[
+    """"Computer":"({host}[^"]+)"""
+  ]
 
 json-xml-object-access = {
   Vendor = Microsoft
@@ -12,8 +15,7 @@ json-xml-object-access = {
   Fields = [
     """"Activity":"(\d+\s+-\s+)?({event_name}[^"]+?)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
-    """"Computer":"({host}[^"]+)""",
+    """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""" 
     """"EventID":"?({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",

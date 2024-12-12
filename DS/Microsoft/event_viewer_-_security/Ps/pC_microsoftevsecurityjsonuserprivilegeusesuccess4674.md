@@ -14,7 +14,7 @@ Fields = [
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """"EventID"*:({event_code}\d+)"""
   """({event_name}An operation was attempted on a privileged object)"""
-  """"Hostname"*:"*({host}[^"]+)"""
+  """"(Hostname|Computer)"*:"*({host}[^"]+)"""
   """EventType"*:"*({result}[^"]+)"""
   """ProcessName"*:"*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
   """"SubjectUserSid"*:"*(SYSTEM|({user_sid}[^"]+))"""

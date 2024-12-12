@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """exa_json_path=$..created,exa_field_name=time""",
     """exa_json_path=$.EventTime,exa_field_name=time""",
     """exa_json_path=$..computer_name,exa_regex=^({host}[\w\-.]+)$""",
+    """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_regex=({event_code}4798)""",
     """exa_regex=({event_name}A user's local group membership was enumerated)""",
     """exa_json_path=$.message,exa_regex=\sSubject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*User:""",

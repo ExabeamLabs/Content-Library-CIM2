@@ -4,6 +4,9 @@
 Name = microsoft-windows-sk4-app-authentication-success-299
    ParserVersion = v1.0.0
    Conditions = [ """"Activity":"299"""", """"EventID":"299"""", """"EventSourceName":"AD FS Auditing"""", """"Type":"SecurityEvent"""" ]
+   Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
+     """"Computer":"({host}[^"]+)""""
+   ]
  
 json-windows-system-info = {
   Vendor = Microsoft
@@ -11,7 +14,6 @@ json-windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

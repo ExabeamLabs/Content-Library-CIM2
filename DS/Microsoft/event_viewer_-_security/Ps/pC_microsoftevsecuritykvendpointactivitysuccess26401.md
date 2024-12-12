@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-success-26401
   ParserVersion = v1.0.0
   Conditions = [ """EventID="26401"""", """MOMSDK_Service_Security""", """RecordNumber=""", """EventType=""", """Channel=""" ]
   Fields = ${DLWindowsParsersTemplates.windows-system-info.Fields}[
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)\-\d+:\d+\s({host}[^\s]+)""",
     """AccountName ="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"\sUserID="({user_sid}[^"]+)"\sAccountType="User""""
   ]
 
@@ -15,7 +16,6 @@ windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

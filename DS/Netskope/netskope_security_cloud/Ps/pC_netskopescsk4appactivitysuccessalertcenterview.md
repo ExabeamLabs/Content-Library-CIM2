@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-alertcenterview
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"ALERT_CENTER_VIEW"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"ALERT_CENTER_VIEW"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

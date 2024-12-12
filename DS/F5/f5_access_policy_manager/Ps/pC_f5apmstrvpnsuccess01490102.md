@@ -13,6 +13,7 @@ Fields = [
 """\s+01490102:5:\s+({session_id}[^:]+)"""
 """\s+01490102:5:.*?({session_id}[^\s:]+): Access policy result"""
 """\sAccess policy result:\s*({policy_name}[^"]+?)\s*("|$)"""
+"""\sAccess_Profile="({access_group}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

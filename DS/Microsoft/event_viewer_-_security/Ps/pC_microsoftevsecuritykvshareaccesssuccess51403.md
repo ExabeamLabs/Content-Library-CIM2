@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5140-3
       """\s物件類型:\s*({file_type}[^\s]+)""",
       """\s來源位址:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\s來源連接埠:\s*({src_port}\d+)""",
-      """\s共用名稱:\s*(?:\\+\*\\+)?({share_name}.+?)\s+共用路徑:""",
+      """\s共用名稱:\s*(?:[\\\*]+)?({share_name}.+?)\s+共用路徑:""",
       """\s共用路徑:\s*(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+?)\\)?({d_name}\s*\S[^\\]+?))\\?\s+)""",
       """({access}Read)"""
       """Source Port(=|:)\s*({src_port}\d+)"""

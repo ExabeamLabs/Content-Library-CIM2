@@ -4,6 +4,9 @@
 Name = microsoft-evsecurity-xml-app-authentication-success-1202
   ParserVersion = "v1.0.0"
   Conditions = [ """(EventID 1202)""", """MSWinEventLog""", """AD FS Auditing""" ]
+  Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
+    """({host}[\w.-]+)\sMSWinEventLog\s"""
+  ]
 
 s-xml-events-1 = {
   Vendor = Microsoft
@@ -11,7 +14,6 @@ s-xml-events-1 = {
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Fields = [
     """MSWinEventLog\s.+?\s({time}\w{3}\s\d{2}\s(\d{2}:){2}\d{2}\s\d{4})""",
-    """({host}[\w.-]+)\sMSWinEventLog\s""",
     """\(EventID\s({event_code}\d+)\)""",
     """(<|&lt;)AuditType(&gt;|>)({audit_subcategory}.+?)(&lt;|<)\/AuditType(&gt;|>)""",
     """(<|&lt;)AuditResult(&gt;|>)({result}.+?)(&lt;|<)\/AuditResult(&gt;|>)""",

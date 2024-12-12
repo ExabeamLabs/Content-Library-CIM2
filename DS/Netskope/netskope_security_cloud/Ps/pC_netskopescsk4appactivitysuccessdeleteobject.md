@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-deleteobject
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"DeleteObject"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"DeleteObject"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

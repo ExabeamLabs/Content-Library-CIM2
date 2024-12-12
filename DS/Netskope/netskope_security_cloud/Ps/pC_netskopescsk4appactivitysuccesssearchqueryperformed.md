@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-searchqueryperformed
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"SearchQueryPerformed"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"SearchQueryPerformed"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

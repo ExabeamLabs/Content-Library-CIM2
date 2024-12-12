@@ -21,6 +21,7 @@ Fields = [
   """"Subject":\s*"({email_subject}[^\n]+?)"(,\s*"\w+":|\s*\})"""
   """"SenderIPv4":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"AttachmentCount":\s*({attachment_count}\d+)"""
+  """"UrlCount":\s*({url_count}\d+)"""
   """"NetworkMessageId":\s*"({message_id}[^"]+?)""""
   """"DeliveryAction":\s*"({result}[^"]+?)""""
   """({file_verdict}Malicious Payload)"""
@@ -50,6 +51,7 @@ Fields = [
   """exa_json_path=$..AuthenticationDetails,exa_regex="DMARC\\*":\\*"({dmarc_result}[^\\"]+)\\*""""
   """exa_json_path=$..AuthenticationDetails,exa_regex="CompAuth\\*":\\*"({compauth_result}[^\\"]+)\\*""""
   """exa_json_path=$..Connectors,exa_field_name=connectors"""
+  """exa_json_path=$..UrlCount,exa_field_name=url_count"""
 ]
 ParserVersion = "v1.0.0"
 

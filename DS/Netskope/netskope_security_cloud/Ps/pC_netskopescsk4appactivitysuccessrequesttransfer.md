@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-requesttransfer
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Request Data Transfer"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Request Data Transfer"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

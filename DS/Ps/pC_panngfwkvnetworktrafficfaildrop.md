@@ -2,7 +2,7 @@
 ```Java
 {
 Name = pan-ngfw-kv-network-traffic-fail-drop
-Conditions = ["""TRAFFIC,""", """Panorama,""", """drop,""" ]
+Conditions = ["""type=TRAFFIC,""", """logset=Panorama,""", """subtype=drop,""" ]
 ParserVersion = "v1.0.0"
 
 leef-paloalto-vpn-event-1.Fields}[

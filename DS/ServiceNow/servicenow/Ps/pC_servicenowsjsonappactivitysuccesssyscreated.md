@@ -17,6 +17,10 @@ Name = servicenow-s-json-app-activity-success-syscreated
   	"""exa_json_path=$.short_description.value,exa_field_name=operation""",
   	"""exa_json_path=$.cat_item.display_value,exa_field_name=operation""",
   	"""exa_json_path=$.state.display_value,exa_field_name=state"""
+  	"""exa_json_path=$.number.display_value,exa_field_name=alert_id"""
+  	"""exa_json_path=$.assignment_group.display_value,exa_field_name=group_name"""
+  	"""exa_json_path=$.sys_created_by.display_value,exa_field_name=user"""
+  	"""exa_json_path=$.assigned_to.display_value,exa_field_name=dest_user"""
   ]
   DupFields = ["time->incident_creation_time"]
 

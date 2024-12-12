@@ -46,9 +46,9 @@ Fields = [
 """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_name}An operation was performed on an object)"""
 """({event_code}4662)"""
-""""ObjectName":"({ds_object_name}[^"]+)""""
-""""ObjectServer":"({ds_object_class}[^"]+)""""
-""""ObjectType":"({ds_object_type}[^"]+)""""
+""""ObjectName":"({object_name}[^"]+)""""
+""""ObjectServer":"({object_server}[^"]+)""""
+""""ObjectType":"({object_type}[^"]+)""""
 """"LogonID":"({login_id}[^"]+)""""
 """"OperationType":"({operation}[^"]+)""""
 """"AdditionalInfo":"(?:-|({additional_info}[^"]+))""""
@@ -56,7 +56,7 @@ Fields = [
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
 DupFields = [
-"ds_object_name->object"
+"object_name->object"
 ]
 
 

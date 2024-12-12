@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-login-success-page
 ParserVersion = "v1.0.0"
-Conditions = [ """"type":"page"""", """"ccl":""" ]
+Conditions = [ """"type":"page"""",""""ccl":""" ]
 Fields = ${NetskopeParsersTemplates.cef-netskope-activity.Fields} [
 """"useragent":"({user_agent}[^"]+)""""
 ]

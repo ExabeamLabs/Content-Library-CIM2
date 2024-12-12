@@ -5,6 +5,7 @@ Name = microsoft-windows-sk4-app-notification-success-500
    ParserVersion = v1.0.0
    Conditions = [ """"Activity":"500 - The Desktop Window Manager is experiencing heavy resource contention."""", """"EventID":"500"""", """"EventSourceName":"AD FS Auditing"""", """"Type":"SecurityEvent"""" ]
    Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
+     """"Computer":"({host}[^"]+)"""",
      """({event_name}The Desktop Window Manager is experiencing heavy resource contention)"""
    ]
  
@@ -14,7 +15,6 @@ json-windows-system-info = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Fields = [
     """"EventID":"({event_code}\d+)"""",
-    """"Computer":"({host}[^"]+)"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

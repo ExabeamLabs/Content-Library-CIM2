@@ -2,7 +2,7 @@
 ```Java
 {
 Name = netskope-sc-sk4-app-activity-success-copyobject
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"CopyObject"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"CopyObject"""" ]
   ParserVersion = "v1.0.0"
 
 cef-netskope-activity = {

@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-upload
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """destinationServiceName =Netskope""", """"activity":"Upload"""" ]
+  Conditions = [ """"type":""", """destinationServiceName =Netskope""", """"activity":""", """"Upload"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"

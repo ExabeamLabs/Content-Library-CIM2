@@ -19,7 +19,7 @@ Name = google-workspace-json-rule-trigger-success-ruletrigger
     """"rule_type"[^}]+?"value":"({rule_type}[^"]+)"""",
     """"severity"[^}]+?"value":"({rule_severity}[^"]+)"""",
     """"resource_type"[^}]+?"value":"({resource_type}[^"]+)"""",
-    """"rule_resource_name"[^\}]+?"value":"({resource}[^"]+)"""",
+    """"rule_resource_name"[^\}]+?"value":"({resource_path}[^"]+)"""",
     """"resource_title"[^\}]+?"value":"({resource_name}[^"]+)"""",
     """"scan_type"[^\}]+?"value":"({scan_type}[^"]+)"""",
     """"multiValue":\[({recipients}[^\]]+)\][^\}]+?"resource_recipients"""",

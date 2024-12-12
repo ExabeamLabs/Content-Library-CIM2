@@ -18,7 +18,7 @@ Fields = [
 """<Data Name\\*=('|")SubjectUserName('|")>\s*((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>\s*({domain}[^<]+?)\s*</Data>"""
 """<Data Name\\*=('|")AttributeLDAPDisplayName('|")>\s*({attribute}[^<]+?)\s*</Data>"""
-"""<Data Name\\*=('|")ObjectClass('|")>\s*({ds_object_class}[^<]+?)\s*</Data>"""
+"""<Data Name\\*=('|")ObjectClass('|")>\s*({object_type}[^<]+?)\s*</Data>"""
 """<Data Name\\*=('|")ObjectDN('|")>\s*({ds_object_dn}[^<]+?)\s*</Data>"""
 """({event_code}5136)"""
 """<Message>({event_name}A directory service object was modified)"""

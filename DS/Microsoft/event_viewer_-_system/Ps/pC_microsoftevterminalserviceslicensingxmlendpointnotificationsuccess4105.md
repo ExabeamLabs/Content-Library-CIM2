@@ -6,6 +6,7 @@ Name = microsoft-evterminalserviceslicensing-xml-endpoint-notification-success-4
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>4105</EventID>""", """Microsoft-Windows-TerminalServices-Licensing""", """<Security UserID=""","""<Channel>System</Channel>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+     """<Computer>({host}[\w\-.]+?)<""",
      """<Provider Name =('|")({provider_name}[^'"]+)('|")""",
      """<param1>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
      """<param2>({domain}[^<]+)<""",
@@ -18,7 +19,6 @@ s-xml-events = {
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z?)""",
-    """<Computer>({host}[\w\-.]+?)<""",
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """<Message>({additional_info}[^<]+?)\s*<""",

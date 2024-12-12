@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4759</EventID>""", """<Message>A security-disabled universal group was created""" , """<Channel>Security</Channel>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """<Computer>({host}[\w\.\-]+)<""",
     """Provider Name\\*='({provider_name}[^\']+)""",
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
 # src_handle_id is removed
@@ -23,7 +24,9 @@ s-xml-object-access = {
     """<Message>({event_name}.+?)\s+Subject:""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
-    """<Computer>({host}[\w\.\-]+)<""",
+    """>({event_code}[^<]+)</EventID>"""
+    """<Channel>({channel}[^<]+)<"""
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
@@ -33,6 +36,7 @@ s-xml-object-access = {
     """ActivityID=('|")\{?({activity_id}[^\}'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Provider>({provider_name}.+?)</Provider>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

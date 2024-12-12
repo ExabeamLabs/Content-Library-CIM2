@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4611
     Conditions = [ """EventID":4611""", """A trusted logon process has been registered with the Local Security Authority""",""""Channel":"Security"""" ]
     Fields = [
       """"+EventTime"+:\s*"+({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})"+""",
-      """"+Hostname"+:"+({host}[^"]+)"+""",
+      """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
       """"+EventType"+:"+({result}[^"]+)"+""",
       """"+SourceName"+:"+({log_source}[^"]+)"+""",
       """"+ProcessID"+:({process_id}\d+)""",

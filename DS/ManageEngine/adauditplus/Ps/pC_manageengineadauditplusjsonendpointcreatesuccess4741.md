@@ -5,7 +5,7 @@ Name = manageengine-adauditplus-json-endpoint-create-success-4741
   ParserVersion = "v1.0.0"
   Conditions = [ """"EVENT_NUMBER":"4741"""", """"A computer account was created."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-plus-json-events.Fields}[
-    """exa_json_path=$.OBJECT_CLASS,exa_field_name=ds_object_class"""
+    """exa_json_path=$.OBJECT_CLASS,exa_field_name=object_type"""
   ]
 
 ad-audit-plus-json-events = {

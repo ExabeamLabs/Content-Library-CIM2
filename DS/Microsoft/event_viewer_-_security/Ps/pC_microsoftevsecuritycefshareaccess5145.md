@@ -22,13 +22,13 @@ Fields = [
   """\Wduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wduid=({login_id}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\WcategoryOutcome=\/?({result}\w+)""",
-  """\W\ad\.ShareName =(?:\\+\*\\+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
+  """\W\ad\.ShareName =(?:[\\\*]+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wcs1=.*?({access}SYNCHRONIZE|Execute|Traverse|Read|READ).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wcs1=.*?({access}WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wcs1=.*?({access}WriteData|AppendData).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wcs1=.*?({access}delete|Delete).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-  """\Wad\.RelativeTargetName =(({file_dir}.*?)({file_name}[^\\:]+?(\.({file_ext}[^\\.]+?))?))(\s+(\w+|\w+\.\w+)=|\s*$)""",
+  """\Wad\.RelativeTargetName =({file_dir}(?:[^"=]+)?[\\\/])?({file_name}[^=\\:"]+?(\.\s*({file_ext}[^="\\.]{1,20}?))?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wad\.ObjectType=({file_type}\w+)"""
   """Source Port(=|:)\s*({src_port}\d+)"""
 ]

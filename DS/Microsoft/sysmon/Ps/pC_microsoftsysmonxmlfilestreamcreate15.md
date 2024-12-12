@@ -21,7 +21,6 @@ xml-sysmon-activity = {
     """<EventID>({event_code}\d+)</EventID>""",
     """<Task>({operation}.*?)</Task>""",
     """<Execution ProcessID\\*='({process_id}\d+)""",
-    """<Computer>({host}.+?)</Computer>""",
     """<Security UserID\\*='({user_sid}[^']+)'""",
     """<Data Name\\*='Image'>({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({process_name}[^\\\/<>]+?))<\/Data>""",
     """<Data Name\\*='TargetFilename'>({file_path}(({file_dir}[^<>]+?)[\\\/]+)?({file_name}[^\\\/<>]*?(\.({file_ext}\w+))?))(:\w+)?<\/Data>""",

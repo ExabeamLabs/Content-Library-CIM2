@@ -5,7 +5,16 @@ Name = microsoft-evsecurity-json-endpoint-endpoint-logout-success-userinitiatedl
   ParserVersion = "v1.0.0"
   Conditions = [ """"event-id":4647""", """"message":"User initiated logoff""", """"user":""" ]
   Fields = ${DLWindowsParsersTemplates.json-windows-events.Fields}[
-    """"target-logon-id":"({login_id}[^"]+)""",
+    """"service":".+?","host":"({host}[^"]+)""",
+    """"host":"({host}[^"]+)","authentication""",
+    """"host":"({host}[^"]+)","service":"""",
+    """"host":"({host}[^"]+)","ad"""",
+    """"host":"({host}[^"]+)","index"""",
+    """"source":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"host":"({src_host}[^"]+)""",
+    """"destination":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"host":"({dest_host}[\w\-.]+)""",
+    """"service-name":"({dest_host}[\w\-.]+\$)""",
+    """workstation-name":"(-|({src_host_windows}[^"]+))"""",
+    """"target-logon-id":"({login_id}[^"]+)"""
   ]
 
 json-windows-events = {
@@ -17,7 +26,6 @@ json-windows-events = {
     """'Opcode':\s+({opcode}\d+)""",
     """'Keywords':\s+'({keywords}[^']+)""",
     """'Result':\s+'({result}[^']+)""",
-    """'Computer':\s+'({host}[\w\-\.]+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",

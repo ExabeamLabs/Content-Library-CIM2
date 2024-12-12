@@ -3,7 +3,7 @@
 {
 Name = netskope-sc-sk4-app-activity-success-dislike
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"""", """"ccl":""", """"activity":"Dislike"""" ]
+  Conditions = [ """"type":""", """"ccl":""", """"activity":""", """"Dislike"""" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"
