@@ -19,7 +19,8 @@ Fields = [
   """({operation}Archive Message View Logs)"""
   """"subject":"({object}[^"]+?)""""
   """"to":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({target}[^"]+)")""",
-  """"from":"({log_source}[^"]+?)""""
+  """"source":"({log_source}[^"]+?)""""
+  """"from":"\s*(({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""
   """"discoveryCase":({result}\w+)"""
   """"source":"({resource}[^"]+?)""""
   """({additional_info}"contentViewed[^}]+?)\}"""

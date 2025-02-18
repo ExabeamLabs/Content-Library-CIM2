@@ -15,8 +15,6 @@ Fields = [
     """\d+:\d+ ({host}[^\s]+) \{""",
     """[^\w]created_at":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d-\d\d:\d\d)""",
     """[^\w]ip_address"+\s*:\s*"+(Unknown IP|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[",\]\}]""",
-    """[^\w]created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":]+)[",\]\}]""",
-    """[^\w]created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(|({email_address}[^@"]+?@(([\.\w+]+\.)?({email_domain}[^\.\s"]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))|[^@"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[",\]\}]""",
     """[^\w]event_type"+\s*:\s*"+({access}[^",]+)[",\]\}]""",
     """({app}Box|Okta)""",
     """[^\w]additional_details"+\s*:\s*[^\}]+[^\w]size"+\s*:\s*({bytes}\d+)[",\]\}]""",
@@ -30,6 +28,8 @@ Fields = [
     """[^\w]accessible_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+[^":,]*[",\]\}],"login":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))"}""" ,
     """"role":"({access_type}[^"]+)"""",
     """filePermission=({permission}[^=]+?)\s+[\w]+="""
+    """created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":,]+)[",\]\}]""",
+    """created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 DupFields = [
   "access->operation"

@@ -7,7 +7,7 @@ Vendor: AppSense
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   7   |   2    |         3          |       1        |    1    |
+|   7   |   2    |         3          |       1        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

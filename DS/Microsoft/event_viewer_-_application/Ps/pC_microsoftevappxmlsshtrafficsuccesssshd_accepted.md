@@ -17,6 +17,7 @@ Name = microsoft-evapp-xml-ssh-traffic-success-sshd_accepted
     """({protocol}ssh)""",
     """<EventRecordID>({event_id}\d+)<""",
     """<EventID Qualifiers='0'>({event_code}\d+)</EventID>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

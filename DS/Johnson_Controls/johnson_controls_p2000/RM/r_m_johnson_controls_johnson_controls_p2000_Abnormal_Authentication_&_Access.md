@@ -7,7 +7,7 @@ Vendor: Johnson Controls
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   2    |         1          |       1        |    0    |
+|   3   |   2    |         1          |       1        |    1    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

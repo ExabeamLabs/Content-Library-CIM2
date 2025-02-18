@@ -4,7 +4,7 @@ Product: Prisma Access
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  185  |   64   |         28         |       8        |    5    |
+|  185  |   64   |         28         |       8        |   11    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

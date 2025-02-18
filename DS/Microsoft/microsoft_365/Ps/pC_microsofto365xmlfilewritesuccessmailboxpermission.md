@@ -21,6 +21,7 @@ Fields = [
   """<Data>\{Identity=({resource}[^,]+)"""
   """<EventData><Data>({operation}.+?)<\/Data>"""
   """User=(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -29,6 +29,7 @@ Fields = [
 """<Data Name\\*='s-computername'>(-|({src_host}[^<]+?))<"""
 """<Data Name\\*='cs-username'>(-|(0#\.f\|ww\|)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^.\d<]+)?)<"""
 """<Data Name\\*='cs-username'>(-|((0#\.f\|ww\|)|(0#\.w\|))?(((({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({email_address}[^@]+@[^.<]+?\.[^<]+)))<"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

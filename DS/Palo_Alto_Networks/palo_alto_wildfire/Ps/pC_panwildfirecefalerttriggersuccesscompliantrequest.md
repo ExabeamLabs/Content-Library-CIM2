@@ -28,11 +28,17 @@ pan-cef-alert = {
     """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({=domain}[^\s@=]+))?""",
     """\ssourceTranslatedAddress=({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\sdestinationTranslatedAddress=({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
-    """\sdvchost=({host}[^\s]+)""",
+    """\sdvchost=({host}[\w\-\.]+)""",
     """\srequest="({malware_url}.+?)"\s""",
     """\sspt=({src_port}\d+)""",
     """\sdpt=({dest_port}\d+)""",
+    """\scs4=({src_network_zone}[^\s]+)""",
+    """\scs5=({dest_network_zone}[^\s]+)""",
+    """deviceInboundInterface=({src_interface}[^\s]+)""",
+    """deviceOutboundInterface=({dest_interface}[^\s]+)""",
+    """deviceExternalId=({serial_num}\d+)""",
+    """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
   ]
-  DupFields = [ "alert_type->category" 
+  DupFields = [ "alert_type->category", "host->device_name" 
 }
 ```

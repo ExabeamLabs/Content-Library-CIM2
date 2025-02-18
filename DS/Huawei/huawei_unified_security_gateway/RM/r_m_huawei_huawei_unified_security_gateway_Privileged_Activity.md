@@ -7,7 +7,7 @@ Vendor: Huawei
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   7    |         5          |       8        |    6    |
+|  18   |   7    |         5          |       8        |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

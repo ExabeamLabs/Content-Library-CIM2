@@ -7,7 +7,7 @@ Vendor: Nasuni
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  31   |   14   |         4          |       3        |    5    |
+|  31   |   14   |         4          |       3        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

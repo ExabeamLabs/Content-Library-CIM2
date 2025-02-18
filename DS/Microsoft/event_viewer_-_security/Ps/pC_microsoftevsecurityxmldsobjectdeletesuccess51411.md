@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-xml-ds-object-delete-success-5141-1
     """<Data Name\\?=\\?"SubjectDomainName\\?">({domain}[^<]+)<\/Data>""",
     """<Data Name\\?=\\?"SubjectLogonId\\?">({login_id}[^<]+)<\/Data>""",
     """"Computer":"({host}[\w\-\.]+)""""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 json-windows-events-4 = {

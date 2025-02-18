@@ -12,7 +12,6 @@ Name = "cisco-ise-kv-endpoint-authentication-accounting"
     """(({time}\w+ \d+ \d+:\d+:\d+)\s+)?({host}\S+) ({event_name}CISE_RADIUS_Accounting)"""
     """CISE_RADIUS_Accounting (\S+\s+){3}({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """, User-?Name =((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))"""
-    """User(-)?Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^,;@\s]+)"""
 # acct_authentic is removed
 # acct_input_octets is removed
 # acct_output_octets is removed

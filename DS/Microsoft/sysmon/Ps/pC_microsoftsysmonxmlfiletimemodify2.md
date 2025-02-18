@@ -21,6 +21,7 @@ Name = microsoft-sysmon-xml-file-time-modify-2
     """<Data Name\\*='Image'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/<]+?))<\/Data>""",
     """<Data Name\\*='TargetFilename'>({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<]+))))<\/Data>""",
     """<Provider Name\\*='({log_name}[^']+)'"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "event_name->access" ]
 

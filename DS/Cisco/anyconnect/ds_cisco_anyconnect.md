@@ -4,7 +4,7 @@ Product: AnyConnect
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  132  |   65   |         28         |       3        |    4    |
+|  132  |   65   |         28         |       3        |    7    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

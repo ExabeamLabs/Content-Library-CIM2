@@ -4,7 +4,7 @@
 Name = "proofpoint-tap-cef-email-receive-messageblocked"
 Vendor = "Proofpoint"
 Product = "Targeted Attack Platform"
-TimeFormat = "epoch"
+TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
 """|Proofpoint|TAP|"""
 ]
@@ -18,6 +18,7 @@ Fields = [
 """\"threatType\":\"({alert_type}[^\"]+)"""
 """\"threatID\":\"({alert_id}[^\"]+)"""
 """\scs6=\[({additional_info}[^\]]+)"""
+"""eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]
 DupFields = [
 "user->email_recipients"

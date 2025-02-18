@@ -7,7 +7,7 @@ Vendor: GoAnywhere
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  44   |   15   |         13         |       3        |    3    |
+|  44   |   15   |         13         |       3        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

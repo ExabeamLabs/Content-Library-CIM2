@@ -4,7 +4,7 @@ Product: Cisco IOS
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  399  |   77   |        146         |       4        |    4    |
+|  399  |   77   |        146         |       4        |    8    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

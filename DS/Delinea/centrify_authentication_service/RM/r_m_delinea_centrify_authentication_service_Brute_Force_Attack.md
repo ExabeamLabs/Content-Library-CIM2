@@ -7,7 +7,7 @@ Vendor: Delinea
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   0    |         4          |       1        |    4    |
+|   9   |   0    |         4          |       1        |    5    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

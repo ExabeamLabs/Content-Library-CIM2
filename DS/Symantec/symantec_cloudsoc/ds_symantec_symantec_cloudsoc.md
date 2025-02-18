@@ -4,7 +4,7 @@ Product: Symantec CloudSOC
 --------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  126  |   58   |         17         |       7        |    1    |
+|  126  |   58   |         17         |       7        |    2    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

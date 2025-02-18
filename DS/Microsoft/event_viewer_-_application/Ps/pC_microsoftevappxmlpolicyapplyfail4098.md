@@ -17,6 +17,7 @@ Name = microsoft-evapp-xml-policy-apply-fail-4098
     """<Security UserID\\*='({user_sid}.+?)'\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """error code '({error_code}[^\s]+)\s"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

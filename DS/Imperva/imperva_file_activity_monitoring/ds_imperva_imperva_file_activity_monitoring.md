@@ -4,7 +4,7 @@ Product: Imperva File Activity Monitoring
 -----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  46   |   19   |         17         |       4        |    0    |
+|  46   |   19   |         17         |       4        |    1    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

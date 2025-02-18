@@ -7,9 +7,9 @@ Name = akamai-ca-json-http-session-webactivity
   Product = Cloud Akamai
   TimeFormat = "epoch_sec"
   Conditions = [ 
-""""message":{""""
+""""reqPort":""""
 """"reqHost":""""
-""""status":""""
+""""status"""
 """"reqPath":"""" 
 ]
 ExtractionType = json
@@ -17,6 +17,10 @@ ExtractionType = json
     """exa_json_path=$.start,exa_regex=({time}\d{10})""",
     """exa_json_path=$..proto,exa_field_name=protocol""",
     """exa_json_path=$..status,exa_field_name=http_response_code""",
+    """exa_json_path=$..reqTimeSec,exa_regex=({time}\d{10})""",
+    """exa_json_path=$..statusCode,exa_field_name=http_response_code""",
+    """exa_json_path=$..queryStr,exa_field_name=query_string,exa_match_expr=!InList($.queryStr,"")""",
+    """exa_json_path=$..UA,exa_field_name=user_agent,exa_match_expr=!InList($.UA,"")""",
     """exa_json_path=$..cliIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$..reqPort,exa_field_name=dest_port""",
     """exa_json_path=$..reqHost,exa_field_name=web_domain""",

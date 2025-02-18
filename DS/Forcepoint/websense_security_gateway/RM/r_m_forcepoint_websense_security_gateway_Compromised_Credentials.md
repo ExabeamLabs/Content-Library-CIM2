@@ -7,7 +7,7 @@ Vendor: Forcepoint
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  40   |   22   |         12         |       2        |    7    |
+|  40   |   22   |         12         |       2        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

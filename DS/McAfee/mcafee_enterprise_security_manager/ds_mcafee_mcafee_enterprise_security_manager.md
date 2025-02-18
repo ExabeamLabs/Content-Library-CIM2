@@ -4,7 +4,7 @@ Product: McAfee Enterprise Security Manager
 -------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  133  |   55   |         24         |       6        |    1    |
+|  133  |   55   |         24         |       6        |    5    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

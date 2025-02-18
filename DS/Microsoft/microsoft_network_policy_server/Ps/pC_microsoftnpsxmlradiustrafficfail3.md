@@ -20,6 +20,7 @@ Name = microsoft-nps-xml-radius-traffic-fail-3
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<"""
     """<NP-Policy-Name[^>]+>({network}[^<]+)<"""
     """<Reason-Code[^>]+>({failure_reason}\d+)"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "result->event_code" ]
 

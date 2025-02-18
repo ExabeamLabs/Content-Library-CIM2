@@ -7,7 +7,7 @@ Vendor: BlackBerry
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  32   |   17   |         5          |       2        |    0    |
+|  32   |   17   |         5          |       2        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -21,6 +21,8 @@ Name = crowdstrike-falcon-sk4-app-activity-success-authactivityauditevent
     """"status_code":"({http_response_code}\d+)""""
     """"request_query":"({uri_query}[^"]+)""""
     """"request_method":"({method}[^"]+)""""
+    """"cid":"({cid}[^"]+)""""
+    """"customerIDString":"({cid}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

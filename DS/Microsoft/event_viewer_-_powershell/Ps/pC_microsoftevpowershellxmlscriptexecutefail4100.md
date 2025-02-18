@@ -19,6 +19,7 @@ Name = microsoft-evpowershell-xml-script-execute-fail-4100
     """<Data Name ='ContextInfo'>[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path ="""
     """Engine Version\s*=\s*({engine_version}[^\s]+)\s"""
     """Data Name ='Payload'>Error Message = ({failure_reason}[^<]+?)\s*<"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   
 

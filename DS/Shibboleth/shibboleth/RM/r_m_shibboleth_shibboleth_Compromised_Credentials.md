@@ -7,7 +7,7 @@ Vendor: Shibboleth
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  27   |   16   |         3          |       2        |    1    |
+|  27   |   16   |         3          |       2        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

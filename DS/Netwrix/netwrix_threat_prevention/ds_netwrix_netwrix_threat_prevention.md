@@ -4,7 +4,7 @@ Product: Netwrix Threat Prevention
 ----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  28   |   11   |         9          |       1        |    0    |
+|  28   |   11   |         9          |       1        |    1    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

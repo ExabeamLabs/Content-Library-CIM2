@@ -7,7 +7,7 @@ Vendor: Onapsis
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  51   |   25   |         5          |       3        |    0    |
+|  51   |   25   |         5          |       3        |    3    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

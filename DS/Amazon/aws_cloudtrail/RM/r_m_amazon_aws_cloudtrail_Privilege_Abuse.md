@@ -7,7 +7,7 @@ Vendor: Amazon
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  11   |   7    |         7          |       10       |    6    |
+|  11   |   7    |         7          |       10       |   13    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

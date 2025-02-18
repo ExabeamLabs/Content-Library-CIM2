@@ -6,6 +6,7 @@ Name = "okta-amfa-cef-app-login-fail-coreuserauthloginfailed"
   ExtractionType = json
   Conditions = [ """Type":"core.user_auth.login_failed"""" ]
   Fields = ${OktaParserTemplates.json-okta-auth.Fields}[
+    """"objectType"+:"+({operation_details}[^",]+)""",
     """({result}(?i)FAILURE|INVALID|(?i)failed|(?i)fail)""",
     """"browser":"((?i)UNKNOWN|({browser}[^"]+))"""",
     """"deviceFingerprint":"({fingerprint}[^"]+)"""",

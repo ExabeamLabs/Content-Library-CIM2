@@ -24,7 +24,7 @@ Fields = [
   """THREAT,spyware,[^"]+?,\\?"[^\s]*?",([^,]*,){2}({alert_severity}[^,]+)"""
   """THREAT,spyware,([^,]*,){7}(({email_address}[^@,]+@[^\.,]+\.[^,]+)|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
   """THREAT,spyware,([^,]*,){19}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),([^,]*,){3}(?:|({protocol}[^,]+)),(?:|({action}[^,]+)),\\?"*"""
-  """THREAT,spyware,([^,]*,){9}({app}[^,]+),"""
+  """THREAT,spyware,([^,]*,){9}({network_app}[^,]+),"""
   """,THREAT,[^"]+?,\\?"[^\s]*?"+,?([^"]+)"+,({alert_id}\d+)?"""
   """,({alert_severity}(?i)(low|medium|high|critical|informational)),({direction}[^,]*),([^,]+,){2}({src_location}[^\d,]+)?"""
   """THREAT,spyware,(("[^\s]+"|[^,]*),){64}(|""|({threat_category}[^,]+)),"""
@@ -35,6 +35,10 @@ Fields = [
   """,THREAT,([^,]*,){20}(|({src_port}\d+)),(|({dest_port}\d+)),(|({src_translated_port}\d+)),(|({dest_translated_port}\d+)),"""
   """({serial_num}[^,]+),THREAT,"""
   """THREAT,spyware,([^,]*,){26}("[^"]+")?,([^,]*,){27}({device_name}({host}[^",]+))"""
+  """THREAT,([^,]*,){12}({src_network_zone}[^,]+),""",
+  """THREAT,([^,]*,){13}({dest_network_zone}[^,]+),""",
+  """THREAT,([^,]*,){14}({src_interface}[^,]+),""",
+  """THREAT,([^,]*,){15}({dest_interface}[^,]+),""",
 ]
 SOAR {
   IncidentType = "malware"

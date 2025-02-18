@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-endpoint-stop-1074
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
-  Conditions = [ """<System><Provider""", """<EventID Qualifiers""", """>1074</EventID>""", """<Computer>""" ]
+  Conditions = [ """<System><Provider""", """<EventID Qualifiers""", """>1074</EventID>""", """<Computer>""", """<Channel>System<""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Computer>({host}({dest_host}[\w\-.]+))</Computer>""",

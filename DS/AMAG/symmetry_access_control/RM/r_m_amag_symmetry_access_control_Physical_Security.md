@@ -7,7 +7,7 @@ Vendor: AMAG
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   4    |         1          |       1        |    8    |
+|   9   |   4    |         1          |       1        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

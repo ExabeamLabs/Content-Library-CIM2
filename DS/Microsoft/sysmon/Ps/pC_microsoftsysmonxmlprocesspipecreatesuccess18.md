@@ -20,6 +20,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-success-18
     """<Security UserID\\*='({user_sid}[^']+)'"""
     """({log_name}Microsoft-Windows-Sysmon)""" 
     """<Data Name\\*='User'>(({domain}[^\>]+?\w+))?\\({user}[^\<>]+)<\/Data>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

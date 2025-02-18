@@ -7,7 +7,7 @@ Vendor: Nutanix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   1    |         1          |       1        |    3    |
+|   2   |   1    |         1          |       1        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

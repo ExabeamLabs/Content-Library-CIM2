@@ -6,7 +6,7 @@ Name = "cisco-asa-str-file-download-success-filedirection"
   Product = "Cisco Firepower"
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd yyyy HH:mm:ss"
-  Conditions = [ "-303002", "%FTD-", "Retrieved file" ]
+  Conditions = [ "-303002", "%FTD-", ": FTP connection from inside:" ]
   Fields = [
     """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s*:\s*%FTD""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""

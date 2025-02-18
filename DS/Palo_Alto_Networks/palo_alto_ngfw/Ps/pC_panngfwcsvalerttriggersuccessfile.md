@@ -32,6 +32,11 @@ Fields = [
   """,THREAT,([^,]*,){20}(|({src_port}\d+)),(|({dest_port}\d+)),(|({src_translated_port}\d+)),(|({dest_translated_port}\d+)),"""
   """({serial_num}[^,]+),THREAT,"""
   """,THREAT,([^,]*,){55}({device_name}({host}[^,]+))"""
+  """THREAT,([^,]*,){10}(not-applicable|({network_app}[^,]+)),"""
+  """THREAT,([^,]*,){12}({src_network_zone}[^,]+),"""
+  """THREAT,([^,]*,){13}({dest_network_zone}[^,]+),"""
+  """THREAT,([^,]*,){14}({src_interface}[^,]+),"""
+  """THREAT,([^,]*,){15}({dest_interface}[^,]+),"""
 ]
 DupFields = ["alert_name->additional_info", "user->src_user"]
 SOAR {

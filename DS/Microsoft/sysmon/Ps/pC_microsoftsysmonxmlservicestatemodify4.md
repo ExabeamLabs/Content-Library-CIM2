@@ -18,6 +18,7 @@ Name = microsoft-sysmon-xml-service-state-modify-4
     """<Security UserID\\*='({user_sid}.+?)'\/>""",
     """<Data Name\\*='State'>({state}.+?)<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

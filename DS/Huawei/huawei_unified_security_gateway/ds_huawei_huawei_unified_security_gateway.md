@@ -4,7 +4,7 @@ Product: Huawei Unified Security Gateway
 ----------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  494  |  122   |        150         |       12       |   12    |
+|  494  |  122   |        150         |       12       |   25    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

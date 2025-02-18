@@ -4,7 +4,7 @@
 Name = tanium-cp-json-file-success-tracefile
  ParserVersion = "v1.0.0"
  Product = "Tanium Core Platform"
- Conditions = [ """"table":"TraceFile"""" ]
+ Conditions = [ """"table":"TraceFile"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
 
 tanium-template-1 {
     Vendor= Tanium

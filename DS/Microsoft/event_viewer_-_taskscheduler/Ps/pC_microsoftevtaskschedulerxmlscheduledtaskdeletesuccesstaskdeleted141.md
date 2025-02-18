@@ -18,7 +18,7 @@ xml-windows-eventviewer-events = {
 	  """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
 	  """<Execution ProcessID=('|")({process_id}\d+)""",
 	  """<Security UserID=('|")({user_sid}[\w\-]+)('|")/>""",
-	  """ThreadID=('|")({thread_id}[^']+)""",
+	  """ThreadID=('|")({thread_id}[^'"]+)""",
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",

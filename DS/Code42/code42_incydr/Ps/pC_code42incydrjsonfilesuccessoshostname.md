@@ -5,7 +5,7 @@ Name = "code42-incydr-json-file-success-oshostname"
   Vendor = "Code42"
   Product = "Code42 Incydr"
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [
     """"fileCategoryByExtension""""
     """"eventType""""

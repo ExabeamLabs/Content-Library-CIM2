@@ -41,6 +41,9 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """"request".+?"geographicalContext".+?"country":"({mfa_country}[^"]+)""""
     """"target":\s*\[.*?\{.*?"alternateId":\s*"({app_id}[^"]+)"[^\{\}]*?"type":\s*"AppInstance""""
     """"target":\s*\[.*?\{.*?"displayName":\s*"({app}[^"]+)"[^\{\}]*?"type":\s*"AppInstance""""
+    """"city":"({location_city}[^"]+)""",
+    """"state":"({location_state}[^"]+)""",
+    """"country":"({location_country}[^"]+)"""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
@@ -70,6 +73,9 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """exa_regex="methodTypeUsed":\s*"({auth_method}[^"]+)""""
     """exa_regex="target":\s*\[.*?\{.*?"alternateId":\s*"({app_id}[^"]+)"[^\{\}]*?"type":\s*"AppInstance""""
     """exa_regex="target":\s*\[.*?\{.*?"displayName":\s*"({app}[^"]+)"[^\{\}]*?"type":\s*"AppInstance""""
+    """exa_json_path=$..client.geographicalContext.city,exa_field_name=location_city""",
+    """exa_json_path=$..client.geographicalContext.state,exa_field_name=location_state""",
+    """exa_json_path=$..client.geographicalContext.country,exa_field_name=location_country"""
   ]
 
 

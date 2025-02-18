@@ -15,7 +15,7 @@ Name = cisco-mma-kv-network-traffic-firewall-1
     """\ssport=({src_port}\d+)"""
     """\sdport=({dest_port}\d+)"""
     """\smac=({src_mac}[a-fA-F\d.:]+)"""
-    """\spattern:\s*({result}[\w\s]+)"""
+    """\spattern:\s*({result}\d|[\w\s]+)"""
   ]
   ParserVersion = "v1.0.0"
 

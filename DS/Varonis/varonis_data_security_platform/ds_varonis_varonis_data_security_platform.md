@@ -4,7 +4,7 @@ Product: Varonis Data Security Platform
 ---------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  103  |   46   |         25         |       6        |    3    |
+|  103  |   46   |         25         |       6        |    6    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

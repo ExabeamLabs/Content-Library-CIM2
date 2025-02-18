@@ -8,7 +8,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Conditions = [ """"classification":""", """"threatName":"""", """"mitigationStatus":""", """"engines":"""]
   Fields = [
-     """CEF:([^\|]*\|){5}({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|"""
+     """CEF:([^\|]*\|){5}({alert_name}[^\|]+)\|"""
      """"createdAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
      """"updatedAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
      """"title":\s*"({alert_name}[^"]+)""",

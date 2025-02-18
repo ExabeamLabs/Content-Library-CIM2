@@ -23,7 +23,7 @@ Name = mimecast-seg-cef-email-hold
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
     """"fileName":"({email_attachment}[^"]+\.({file_ext}[^"]+))""",
     """"fileType":"({file_type}[^"]+)""",
-    """"fileHash":"({hash_md5}[^"]+)""",
+    """"fileHash":"({file_hash}[^"]+)""",
     """"(?:action|actions)":"({action}[^"]+)""",
     """"actionTriggered":"(none|({action}[^"]+))""",
     """"SourceIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",

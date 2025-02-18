@@ -4,7 +4,7 @@ Product: Symantec DLP
 ---------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  117  |   51   |         15         |       10       |   47    |
+|  117  |   51   |         15         |       10       |   49    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

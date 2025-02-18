@@ -102,6 +102,7 @@ Fields = [
 """"LocationDetails_string":".+?"state\\":\\"({state}[^\\",]+)\\""""
 """exa_regex="LocationDetails_string":".+?"city\\":\\"({city}[^\\",]+)\\""""
 """exa_regex="LocationDetails_string":".+?"state\\":\\"({state}[^\\",]+)\\""""
+"""exa_regex=deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*""",
 ]
 DupFields = [ "operation->event_name" ]
 ParserVersion = "v1.0.0"

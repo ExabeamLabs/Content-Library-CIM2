@@ -7,7 +7,7 @@ Vendor: Watchguard
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  61   |   20   |         7          |       4        |    7    |
+|  61   |   20   |         7          |       4        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

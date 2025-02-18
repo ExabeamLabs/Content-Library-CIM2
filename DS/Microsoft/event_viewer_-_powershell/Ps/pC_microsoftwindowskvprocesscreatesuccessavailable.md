@@ -22,6 +22,9 @@ Name = microsoft-windows-kv-process-create-success-available
     """"ProcessID\\?"+:\\?"*({process_id}[^,":\\]+?)"""
     """"Message\\?"+:\\?"+({additional_info}[^"\\\.]+)"""
     """"EventID\\?":({event_code}\d+)"""
+    """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+    """\sMessage=({event_name}\S+)"""
+    """\sEventCode=({event_code}\d+)"""
 ]
   DupFields = [ "host->dest_host"]
 

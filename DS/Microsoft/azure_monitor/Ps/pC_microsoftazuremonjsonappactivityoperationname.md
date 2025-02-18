@@ -19,7 +19,7 @@ Name = microsoft-azuremon-json-app-activity-operationname
     """exa_json_path=$..resultSignature,exa_field_name=result""",
     """exa_json_path=$..callerIpAddress,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..resultDescription,exa_regex=^\s*({additional_info}[^"]+?)\s*$""",
-    """exa_json_path=$..caller,exa_field_name=user""",
+    """exa_json_path=$..caller,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)@([^"]+)""",
     """exa_json_path=$..EventIpAddress,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..level,exa_field_name=run_level""",
     """exa_json_path=$..location,exa_field_name=region""",

@@ -21,7 +21,7 @@ Name = proofpoint-tap-leef-email-receive-fail-threatinsight
 s-proofpoint-email-in-1 = {
   Vendor = Proofpoint
   Product = Targeted Attack Platform
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
   Fields = [
     """threatTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """messageTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
@@ -46,10 +46,10 @@ s-proofpoint-email-in-1 = {
     """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)",\s*"\w+":""",
     ""","fromArray":"({result}[^\]]+?)","\w+":""",
     """eventType":\s*"({result}[^",]+?)\s*(,|")""",
+    """eventType=({result}[^\s]+)""",
     """"messageID":\s*"<?({message_id}[^>"]+)""",
     """src-account-name":"({account_name}[^"]+)""",
-    """"threatStatus":\s*"({result}[^"]+)""",
-    """eventType=({result}[^\s]+)"""
+    """"threatStatus":\s*"({alert_status}[^"]+)""",
 
     """exa_json_path=$.threatTime,exa_field_name=time""",
     """exa_json_path=$.messageTime,exa_field_name=time""",
@@ -71,13 +71,13 @@ s-proofpoint-email-in-1 = {
     """exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)$""",
     """exa_json_path=$.fromArray,exa_field_name=result""",
     """exa_json_path=$.eventType,exa_field_name=result""",
+    """exa_regex=({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)""",
+    """exa_regex=eventType=({result}[^\s]+)"""
     """exa_json_path=$.messageID,exa_regex=<?({message_id}[^>"]+)""",
     """exa_json_path=$.src-account-name,exa_field_name=account_name""",
-    """exa_json_path=$.threatStatus,exa_field_name=result"""
+    """exa_json_path=$.threatStatus,exa_field_name=alert_status"""
     """exa_json_path=$.threatsInfoMap[0].threatUrl,exa_field_name=threat_url"""
-    """exa_regex=({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)""",
-    """exa_json_path=$.threatsInfoMap[0].threatUrl,exa_field_name=threat_url"""
-    """exa_regex=eventType=({result}[^\s]+)"""
+    """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
   ]
   DupFields = [ "email_attachment->file_name" 
 }

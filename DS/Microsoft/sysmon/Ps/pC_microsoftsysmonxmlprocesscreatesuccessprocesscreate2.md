@@ -30,6 +30,7 @@ Fields = [
     """<Data Name\\*='GrantedAccess'>({result}[^<]+)</Data>""",
     """<EventID>({event_code}\d+)""",
     """CallTrace:\s*({additional_info}[^<]+)</Message>"""
+    """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

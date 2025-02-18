@@ -7,7 +7,7 @@ Vendor: Lenel
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   4   |   1    |         1          |       3        |   21    |
+|   4   |   1    |         1          |       3        |   23    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

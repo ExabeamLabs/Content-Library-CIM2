@@ -4,7 +4,7 @@ Product: Cisco Secure Cloud Analytics
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  53   |   21   |         15         |       1        |    0    |
+|  53   |   21   |         15         |       1        |    1    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

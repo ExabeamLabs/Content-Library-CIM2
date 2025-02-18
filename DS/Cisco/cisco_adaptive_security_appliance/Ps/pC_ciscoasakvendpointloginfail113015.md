@@ -7,12 +7,12 @@ Product = "Cisco Adaptive Security Appliance"
 TimeFormat = ["MMM dd yyyy HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
 """-113015"""
-"""%ASA-"""
+""": AAA user authentication Rejected"""
 ]
 Fields = [
-  """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
-"""\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
-"""({time}\w+ \d+ \d\d\d\d \d+:\d+:\d+)\s*(({host}[\w.\-]+))?.*?%ASA-({priority}\d+)-({event_code}\d+)"""
+"""({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
+"""\s(({host}[\w.\-]+))\s+([-\s:]+)?%\w+\-""",
+"""({time}\w+ \d+ \d\d\d\d \d+:\d+:\d+)\s*(({host}[\w.\-]+))?.*?%\w+-({priority}\d+)-({event_code}\d+)"""
 """({event_name}AAA user authentication Rejected)"""
 """\sreason\s*=\s*({failure_reason}.+?)\s*:"""
 """\suser\s*=\s*((\*+?)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*:"""

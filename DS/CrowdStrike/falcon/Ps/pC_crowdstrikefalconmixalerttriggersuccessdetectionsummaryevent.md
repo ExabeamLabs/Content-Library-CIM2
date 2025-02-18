@@ -63,6 +63,9 @@ Fields = [
 """"Indicator"+:\s*({indicator}true|false)"""
 """"aid":"({aid}[^"]+)"""
 """"cid":"({cid}[^"]+)"""
+""""customerIDString":"({cid}[^"]+)""""
+"""exa_json_path=$..cid,exa_field_name=cid""",
+"""exa_json_path=$..customerIDString,exa_field_name=cid""",
 """exa_json_path=$.ProcessStartTime,exa_field_name=time""",
 """exa_regex=({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)""",
 """exa_json_path=$.Tactic,exa_field_name=category""",

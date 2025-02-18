@@ -7,7 +7,7 @@ Vendor: LOGBinder
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  71   |   38   |         7          |       3        |    0    |
+|  71   |   38   |         7          |       3        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

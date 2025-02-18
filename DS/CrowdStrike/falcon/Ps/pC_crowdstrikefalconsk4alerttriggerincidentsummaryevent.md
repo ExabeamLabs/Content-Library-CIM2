@@ -21,6 +21,9 @@ Name = crowdstrike-falcon-sk4-alert-trigger-incidentsummaryevent
     """"HostID":"({aid}[^"]+)"""",
     """"event_platform":"({os}[^"]+)""""
     """"cid":"({cid}[^"]+)"""
+    """"customerIDString":"({cid}[^"]+)""""
+    """exa_json_path=$..cid,exa_field_name=cid""",
+    """exa_json_path=$..customerIDString,exa_field_name=cid""",
     """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",
     """exa_json_path=$.metadata.eventType,exa_field_name=event_category""",
     """exa_json_path=$..IncidentEndTime,exa_field_name=time""",

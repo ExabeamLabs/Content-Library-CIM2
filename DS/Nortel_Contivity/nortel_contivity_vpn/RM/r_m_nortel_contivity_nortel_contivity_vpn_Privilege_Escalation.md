@@ -7,7 +7,7 @@ Vendor: Nortel Contivity
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   5    |         4          |       1        |    0    |
+|   5   |   5    |         4          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

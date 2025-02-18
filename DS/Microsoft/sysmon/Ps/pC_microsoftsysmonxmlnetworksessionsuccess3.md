@@ -36,6 +36,7 @@ Name = microsoft-sysmon-xml-network-session-success-3
     """<EventData>.*?<Data Name\\*='DestinationIp'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """<EventData>.*?<Data Name\\*='DestinationHostname'>(-|({dest_host}[\w\-.]+))</Data>""",
     """<EventData>.*?<Data Name\\*='DestinationPort'>({dest_port}\d+)""",
+    """<Level>({run_level}[^<]+)<"""
  ]
 
 

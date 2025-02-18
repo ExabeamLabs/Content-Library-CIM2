@@ -15,6 +15,8 @@ Name = "crowdstrike-falcon-sk4-app-logout-streamstopped"
     """"ServiceName":\s*"({app}[^"]+)""",
     """"Success":\s*({result}[^",}]+)""",
     """"OperationName":"({event_name}[^"]+)"""
+    """"cid":"({cid}[^"]+)""""
+    """"customerIDString":"({cid}[^"]+)""""
     ]
 
 

@@ -18,6 +18,7 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
          """<Execution\sProcessID\\*='({process_id}[^']+)'""",
          """ThreadID\\*='({thread_id}[^']+)'""",
          """<Message>({additional_info}[^\n]+?)\s*<\/Message>"""
+         """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "event_name->operation"]
 

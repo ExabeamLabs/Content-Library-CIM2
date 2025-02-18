@@ -23,6 +23,7 @@ account-password-activity = {
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Keywords>({result}[^<]+)</Keywords>""",
+    """<Level>({run_level}[^<]+)<"""
   
 }
 ```

@@ -7,7 +7,7 @@ Vendor: Tyco
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  13   |   5    |         2          |       3        |   12    |
+|  13   |   5    |         2          |       3        |   15    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

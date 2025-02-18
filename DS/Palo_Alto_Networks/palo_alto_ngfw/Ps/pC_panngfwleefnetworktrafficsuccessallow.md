@@ -37,8 +37,12 @@ Fields = [
   """\|Direction=({direction}[\w-]+)\|"""
   """\|SessionEndReason=({result_reason}[^\|]+)"""
   """\|action=({action}\w+)\|"""
-  """\|SourceLocation=({src_location}[^\|]+)\|""",
+  """\|SourceLocation=({src_location}[^\|]+)\|"""
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+  """IngressInterface=({src_interface}[^\|]+)"""
+  """EgressInterface=({dest_interface}[^\|]+)"""
+  """Application=({network_app}[^\|]+)"""
+  """SerialNumber=({serial_num}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

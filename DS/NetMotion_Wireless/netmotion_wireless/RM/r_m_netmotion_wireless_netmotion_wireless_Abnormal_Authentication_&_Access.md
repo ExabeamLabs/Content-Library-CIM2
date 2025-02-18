@@ -7,7 +7,7 @@ Vendor: NetMotion Wireless
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  26   |   7    |         3          |       3        |    1    |
+|  26   |   7    |         3          |       3        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

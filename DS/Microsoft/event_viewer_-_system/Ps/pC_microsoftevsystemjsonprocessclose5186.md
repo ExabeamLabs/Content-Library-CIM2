@@ -8,7 +8,7 @@ Name = microsoft-evsystem-json-process-close-5186
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Conditions = [  """"EventID":5186""", """Microsoft-Windows-WAS""" ]
   Fields = [
-     """Hostname":\s*"({host}[^"]+)""",
+     """(Hostname|Computer)":\s*"({host}[^"]+)""",
      """EventTime":\s*"({time}[^"]+)""",
      """({event_code}5186)""",
      """ExecutionProcessID":\s*({process_id}\d+)""",

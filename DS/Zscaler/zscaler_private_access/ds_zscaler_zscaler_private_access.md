@@ -4,7 +4,7 @@ Product: Zscaler Private Access
 -------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  223  |   97   |         37         |       9        |    1    |
+|  223  |   97   |         37         |       9        |    5    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

@@ -22,6 +22,7 @@ Fields = [
 """<Data Name\\*='QTYPE'>({dns_query_type}.+?)<\/Data>"""
 """<Data Name\\*='Flags'>({dns_query_flags}.+?)<\/Data>"""
 """<Data Name\\*='BufferSize'>({bytes}\d+)<\/Data>"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

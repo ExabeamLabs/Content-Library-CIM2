@@ -46,6 +46,9 @@ Fields = [
   """\|sequence=({sequence}\d+)\|"""
   """\|action=({action}\w+)\|""",
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+  """IngressInterface=({src_interface}[^\|]+)"""
+  """EgressInterface=({dest_interface}[^\|]+)"""
+  """SerialNumber=({serial_num}\d+)"""
 ]
 DupFields = [
   "miscellaneous->malware_url"

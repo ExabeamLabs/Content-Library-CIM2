@@ -5,7 +5,7 @@ Name = servicenow-s-sk4-app-authentication-success-externalauthenticationsucceed
   Vendor = ServiceNow
   ParserVersion = "v1.0.0"
   Product = ServiceNow
-  Conditions = [ """destinationServiceName =ServiceNow""", """"name":"external.authentication.succeeded"""" ]
+  Conditions = [ """"sys_created_by":""", """"sys_created_on":""", """"name":"external.authentication.succeeded"""" ]
   Fields = ${ServiceNowParsersTemplates.servicenow-auth-template.Fields}[
     """"parm2":"({additional_info}[^"]+)"""
   ]

@@ -7,7 +7,7 @@ Vendor: Atlassian
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  15   |   4    |         2          |       3        |   13    |
+|  15   |   4    |         2          |       3        |   16    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

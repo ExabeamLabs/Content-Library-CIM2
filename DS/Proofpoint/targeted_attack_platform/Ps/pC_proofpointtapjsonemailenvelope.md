@@ -5,7 +5,7 @@ Name = proofpoint-tap-json-email-envelope
 Vendor = Proofpoint
 Product = Targeted Attack Platform
 ExtractionType = json
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
   """"from""""
   """"rcpts""""
@@ -28,6 +28,7 @@ Fields = [
   """exa_json_path=$.connection.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   """exa_regex="x-originating-ip"+:\s*\["+\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """exa_json_path=$.connection.host,exa_field_name=host"""
+  """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]
 DupFields = [
   "email_attachment->email_attachments"

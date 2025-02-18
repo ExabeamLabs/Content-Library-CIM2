@@ -7,7 +7,8 @@ Product = "Microsoft Network Policy Server"
 TimeFormat = "MM/dd/yyyy,HH:mm:ss"
 Conditions = [
   """,IAS,"""
-  """,4136,1,4142,0"""
+  """,4136,"""
+  """,4142,"""
 ]
 Fields = [
   """,({time}\d\d\/\d\d\/\d\d\d\d,\d\d:\d\d:\d\d),IAS,({auth_server}[^\,]+),""",
@@ -17,6 +18,7 @@ Fields = [
   """,25,\d+\s+\d+\s+({host}[^\s]+)\s""",
   """,30,[^:]+\:({network}[^\,]+),""",
   """,31,({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+),"""
+  """,4142,({result_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -39,6 +39,12 @@ Fields = [
   """exa_json_path=$..NATDestination,exa_field_name=dest_translated_ip"""
   """exa_json_path=$..NATSourcePort,exa_field_name=src_translated_port"""
   """exa_json_path=$..NATDestinationPort,exa_field_name=dest_translated_port"""
+  """exa_json_path=$..Application,exa_field_name=network_app"""
+	"""exa_json_path=$..InboundInterface,exa_field_name=src_interface"""
+  """exa_json_path=$..OutboundInterface,exa_field_name=dest_interface"""
+  """exa_json_path=$..FromZone,exa_field_name=src_network_zone"""
+  """exa_json_path=$..ToZone,exa_field_name=dest_network_zone"""
+  """exa_json_path=$..DeviceName,exa_field_name=device_name"""
 ]
 ParserVersion = "v1.0.0"
 

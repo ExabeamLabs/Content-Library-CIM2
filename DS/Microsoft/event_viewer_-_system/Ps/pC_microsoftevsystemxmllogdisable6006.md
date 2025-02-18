@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-log-disable-6006
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """>6006<""", """<TimeCreated SystemTime""" ]
+  Conditions = [ """>6006<""", """<TimeCreated SystemTime""", """<Channel>System<""" ]
   Fields = [
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

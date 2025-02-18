@@ -7,7 +7,7 @@ Vendor: Vormetric
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  28   |   14   |         4          |       1        |    0    |
+|  28   |   14   |         4          |       1        |    1    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

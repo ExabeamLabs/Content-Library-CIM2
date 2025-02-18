@@ -7,7 +7,7 @@ Vendor: Bromium
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  55   |   23   |         10         |       4        |    1    |
+|  55   |   23   |         10         |       4        |    5    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -4,7 +4,7 @@ Product: Airlock Security Access Hub
 ------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  147  |   56   |         23         |       8        |    2    |
+|  147  |   56   |         23         |       8        |    9    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

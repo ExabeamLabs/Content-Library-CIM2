@@ -4,7 +4,7 @@
 Name = tanium-cp-json-app-activity-success-tracemoduleserversettings
  ParserVersion = "v1.0.0"
  Product = "Tanium Core Platform"
- Conditions = [ """"table":"TraceModuleServerSettings"""" ]
+ Conditions = [ """"table":"TraceModuleServerSettings"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
 
 tanium-template-1 {
     Vendor= Tanium

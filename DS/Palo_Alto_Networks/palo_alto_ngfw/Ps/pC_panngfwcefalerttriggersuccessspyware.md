@@ -27,7 +27,16 @@ Name = pan-ngfw-cef-alert-trigger-success-spyware
     """\sapp=({app}[^=]+)\s+\w+=""",
     """\scs2=({category}[^=]+)\s+\w+=""",
     """\sflexString2=({direction}[^=]+)\s+\w+="""
+    """\scs4=({src_network_zone}[^\s]+)"""
+    """\scs5=({dest_network_zone}[^\s]+)"""
+    """deviceInboundInterface=({src_interface}[^\s]+)"""
+    """deviceOutboundInterface=({dest_interface}[^\s]+)"""
+    """deviceExternalId=({serial_num}\d+)"""
+    """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
+	  """sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
+    """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
   ]
+  DupFields = ["host->device_name"]
   ParserVersion = v1.0.0
 
 

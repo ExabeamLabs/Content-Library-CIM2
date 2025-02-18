@@ -31,6 +31,10 @@ json-crowdstrike-app-logout = {
     """"AgentIdString":"({aid}[^",]+)"""",
     """"(?i)EventType":\s*"({operation_details}[^",]+)"""",
 	  """"ExternalApiType":\s*"({operation}[^"]+)"""",
+    """"cid":"({cid}[^"]+)""""
+    """"customerIDString":"({cid}[^"]+)""""
+    """exa_json_path=$..cid,exa_field_name=cid""",
+    """exa_json_path=$..customerIDString,exa_field_name=cid""",
     """exa_json_path=$.event.HostnameField,exa_field_name=host"""
     """exa_regex=Timestamp":\s*({time}\d{10})""",
     """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",

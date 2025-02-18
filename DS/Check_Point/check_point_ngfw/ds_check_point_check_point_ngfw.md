@@ -4,7 +4,7 @@ Product: Check Point NGFW
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  339  |  147   |         46         |       16       |   62    |
+|  339  |  147   |         46         |       16       |   73    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

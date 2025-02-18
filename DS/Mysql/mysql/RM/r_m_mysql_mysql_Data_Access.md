@@ -7,7 +7,7 @@ Vendor: Mysql
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   10   |         1          |       1        |    2    |
+|  18   |   10   |         1          |       1        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

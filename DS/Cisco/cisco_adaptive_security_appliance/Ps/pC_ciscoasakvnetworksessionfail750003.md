@@ -6,7 +6,7 @@ Name = cisco-asa-kv-network-session-fail-750003
   Product = Cisco Adaptive Security Appliance
   ParserVersion = v1.0.0
   TimeFormat = ["MMM dd yyyy HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
-  Conditions = [ """-750003""", """%ASA-""" ]
+  Conditions = [ """-750003""", """Negotiation aborted due to ERROR""" ]
   Fields = [
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",

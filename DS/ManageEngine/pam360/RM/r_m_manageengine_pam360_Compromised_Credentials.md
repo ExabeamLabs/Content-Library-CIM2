@@ -7,7 +7,7 @@ Vendor: ManageEngine
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  74   |   39   |         9          |       3        |    0    |
+|  74   |   39   |         9          |       3        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

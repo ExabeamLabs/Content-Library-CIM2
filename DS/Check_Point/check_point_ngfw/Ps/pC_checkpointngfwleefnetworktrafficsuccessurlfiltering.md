@@ -12,7 +12,8 @@ leef-checkpoint-firewall = {
   Fields = [
     """\Worigin=({host}.+?)(\s+\w+:?=|\s*$)""",
     """\Worigin_sic_name=CN\\=({origin_sic_name}[^,\s]+),""",
-    """\Wcat=({action}.+?)(\s+\w+:?=|\s*$)""",
+    """\Wcat=({category}.+?)(\s+\w+:?=|\s*$)""",
+    """\W(action|act)=({action}[^=]+?)\s*\w+="""
     """\WdevTime=({time}\d{10})""",
     """\WsrcPort=({src_port}\d+)""",
     """\WdstPort=({dest_port}\d+)""",
@@ -40,6 +41,8 @@ leef-checkpoint-firewall = {
     """\Wrule_action=({action}.+?)(\s+\w+=|\s*$)""",
     """\WdestinationDnsDomain=(?:|({url}.+?))(\s+\w+=|\s*$)""",
     """\Wappi_name=({web_domain}.+?)(\s+\w+=|\s*$)""",
+    """\Wurl=({url}[^=]+?)\s*\w+=""",
+    """\Wdescription=({additional_info}[^=]+?)\s*\w+="""
   
 }
 ```

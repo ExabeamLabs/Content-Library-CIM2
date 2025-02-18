@@ -17,6 +17,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-30010
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Keywords>({result}[^<]+)</Keywords>""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

@@ -7,7 +7,7 @@ Vendor: Sailpoint
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  16   |   4    |         3          |       7        |    7    |
+|  16   |   4    |         3          |       7        |   11    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

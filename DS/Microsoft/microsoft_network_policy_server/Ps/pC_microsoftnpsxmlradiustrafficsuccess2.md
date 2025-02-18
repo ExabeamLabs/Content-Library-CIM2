@@ -22,6 +22,7 @@ Name = "microsoft-nps-xml-radius-traffic-success-2"
     """<SAM-Account-Name[^>]+>(({domain}[^<\\]+)\\)?({account}[^<]+)"""
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<"""
     """<NP-Policy-Name[^>]+>({network}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [
 "result->event_code"

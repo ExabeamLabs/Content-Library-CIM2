@@ -4,7 +4,7 @@ Product: SecurityIQ
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  101  |   45   |         21         |       6        |    3    |
+|  101  |   45   |         21         |       6        |    4    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

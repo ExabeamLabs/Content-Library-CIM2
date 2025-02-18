@@ -7,7 +7,7 @@ Vendor: Extrahop
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  41   |   18   |         5          |       2        |    2    |
+|  41   |   18   |         5          |       2        |    4    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

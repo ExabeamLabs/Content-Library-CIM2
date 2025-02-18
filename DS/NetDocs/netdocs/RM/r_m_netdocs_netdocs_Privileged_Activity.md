@@ -7,7 +7,7 @@ Vendor: NetDocs
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         1          |       5        |    2    |
+|   3   |   1    |         1          |       5        |    3    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

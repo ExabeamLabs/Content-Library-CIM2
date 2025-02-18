@@ -54,7 +54,17 @@ cisco-firepower-template = {
     """DNSQuery:\s*({dns_query}[^,]+)""",
     """DNSRecordType:\s*({dns_query_type}[^:,]+?),""",
     """DNSResponseType:\s*({dns_response}[^,]+)""",
-    """AccessControlRuleReason:\s*({rule_reason}[^,]+)"""
+    """AccessControlRuleReason:\s*({rule_reason}[^,]+)""",
+    """FileDirection:\s*({operation}[^,:]+?),\s\w+:""",
+    """FileAction:\s*({operation_details}[^,:]+?),\s\w+:""",
+    """FileSHA256:\s*({hash_sha256}[^,:]+?),\s\w+:""",
+    """SHA_Disposition:\s*(Unavailable|Unknown|({disposition}[^,:]+?)),\s\w+:""",
+    """\sFileName:\s*({file_name}[^,]+?(\.({file_ext}[^\.,]+?))?),\s\w+:""",
+    """FileType:\s*({file_type}[^,:]+?),\s\w+:""",
+    """FileSize:\s*({bytes}\d+)""",
+    """FilePolicy:\s*({policy_name}[^,:]+?),\s\w+:""",
+    """FilePolicy:.*?URI:\s*({file_url}[^,]+),\s\w+:""",
+    """%\w+\-\d+\-({event_code}\d+):\s\w+:"""
   
 }
 ```

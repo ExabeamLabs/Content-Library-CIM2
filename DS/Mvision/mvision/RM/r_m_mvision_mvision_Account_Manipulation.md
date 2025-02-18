@@ -7,7 +7,7 @@ Vendor: Mvision
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  34   |   17   |         4          |       2        |    5    |
+|  34   |   17   |         4          |       2        |    7    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

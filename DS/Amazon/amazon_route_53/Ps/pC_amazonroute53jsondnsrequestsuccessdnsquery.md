@@ -16,6 +16,12 @@ Name = amazon-route53-json-dns-request-success-dnsquery
    """exa_json_path=$.rcode,exa_field_name=dns_response_code""",
    """exa_json_path=$.srcport,exa_field_name=src_port""",
    """exa_json_path=$.query_class,exa_field_name=dns_query_flags"""
+   """exa_json_path=$.account_id,exa_field_name=account_id"""
+   """exa_json_path=$.region,exa_field_name=region"""
+   """exa_json_path=$.vpc_id,exa_field_name=vpc"""
+   """exa_json_path=$..instance,exa_field_name=instance_id"""
+   """exa_json_path=$.transport,exa_field_name=protocol"""
+   """exa_json_path=$.answers,exa_field_name=dns_response"""
  ]
 
 

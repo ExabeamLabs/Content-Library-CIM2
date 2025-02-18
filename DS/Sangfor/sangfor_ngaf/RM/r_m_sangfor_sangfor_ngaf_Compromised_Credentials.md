@@ -7,7 +7,7 @@ Vendor: Sangfor
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  61   |   31   |         14         |       3        |    0    |
+|  61   |   31   |         14         |       3        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

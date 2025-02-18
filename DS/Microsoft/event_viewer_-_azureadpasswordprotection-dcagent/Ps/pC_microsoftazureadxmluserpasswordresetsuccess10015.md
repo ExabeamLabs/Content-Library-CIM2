@@ -18,6 +18,7 @@ Name = microsoft-azuread-xml-user-password-reset-success-10015
     """<Keywords>({result}[^<]+)</Keywords>""",
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Message>({additional_info}[^<]+?)\s+</Message>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

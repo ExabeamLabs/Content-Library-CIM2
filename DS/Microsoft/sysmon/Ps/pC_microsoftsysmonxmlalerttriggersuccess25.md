@@ -18,6 +18,7 @@ Name = microsoft-sysmon-xml-alert-trigger-success-25
     """Guid\\*='\{({process_guid}[^'}]+)""",
     """({alert_name}Process Tampering)""",
     """<Data Name ='Image'>({process_path}({process_dir}[^<>"]*?[\\\/]+)?({process_name}[^"<>\\\/]*))<\/Data>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

@@ -4,7 +4,7 @@ Product: Powertech Identity and Access Manager
 ----------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  451  |  103   |        150         |       7        |    1    |
+|  451  |  103   |        150         |       7        |    8    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

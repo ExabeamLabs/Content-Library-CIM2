@@ -38,7 +38,14 @@ leef-pan-alert = {
     """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\|SourceZone=({src_network_zone}[^\|]+?)\|""",
     """\|DestinationZone=({dest_network_zone}[^\|]+?)\|""",
-    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-    
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
+    """IngressInterface=({src_interface}[^\|]+)""",
+    """EgressInterface=({dest_interface}[^\|]+)""",
+    """Application=({network_app}[^\|]+)""",
+    """SerialNumber=({serial_num}\d+)""",
+    """srcPostNAT=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """dstPostNAT=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    ]
+    DupFields = ["host->device_name"
 }
 ```

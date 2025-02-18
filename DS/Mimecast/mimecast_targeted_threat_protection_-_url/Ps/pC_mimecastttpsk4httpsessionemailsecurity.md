@@ -11,7 +11,7 @@ Name = mimecast-ttp-sk4-http-session-emailsecurity
     """"userEmailAddress":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """"action":"({action}[^"]+)""",
     """"category":"(Unknown|({category}[^"]+))""",
-    """"url":"(-|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?[\\\/]*(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({web_domain}[^\\\/\s:,"]+))(:({dest_port}\d+))?({uri_path}\/[^\?",]*?)?({uri_query}\?[^"]*?)?))\s*"""",
+    """"url":"(-|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?[\\\/]*(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({web_domain}[^\\\/\s:,"]+))(:({dest_port}\d+))?({uri_path}\/[^\?",]*?)?({uri_query}\?[^"]*?)?))\s*""""
   ]
   ParserVersion = "v1.0.0"
 

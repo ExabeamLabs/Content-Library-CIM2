@@ -62,6 +62,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\sdirection=\\?"?({direction}[^=]+?)\\?"?\s+(\w+=|$)""",
     """\sdevice=\\?"?({device_name}[^=]+?)\\?"?\s+(\w+=|$)""",
     """\Wtz=\\?"?({tz}[+-]\d+)"""
+    """forwardedfor="*({more_info}[^"=]+)"""
   ]
   DupFields = [
     "bytes_in->bytes"

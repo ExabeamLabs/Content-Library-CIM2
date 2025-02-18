@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-endpoint-notification-1085
   ParserVersion = v1.0.0
   Product = Event Viewer - System
-  Conditions = [ """<EventID>1085</EventID>""" ]
+  Conditions = [ """<EventID>1085</EventID>""", """<Provider>Microsoft-Windows-GroupPolicy<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

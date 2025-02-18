@@ -4,7 +4,7 @@ Product: Quest Change Auditor for Active Directory
 --------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  250  |   97   |         42         |       16       |   16    |
+|  250  |   97   |         42         |       16       |   30    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

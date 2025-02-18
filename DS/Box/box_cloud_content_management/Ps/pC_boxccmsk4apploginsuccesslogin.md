@@ -12,8 +12,9 @@ Name = box-ccm-sk4-app-login-success-login
     """"created_at":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """\Wdproc=({process_name}[^=]+?)(\s+\w+=|\s*$)""",
     """"ip_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"login":"({email_address}[^"@]+@({email_domain}[^@"]+))""",
     """"event_type":"({event_name}[^"]+)"""
+    """created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":,]+)[",\]\}]""",
+    """created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
   ParserVersion = "v1.0.0"
 

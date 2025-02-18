@@ -30,6 +30,7 @@ crowdstrike-app-activity = {
     """"aid":"({aid}[^"]+)""",
     """"event_platform":"({os}[^"]+)"""",
     """"cid":"({cid}[^"]+)"""
+    """"customerIDString":"({cid}[^"]+)""""
   
 }
 ```

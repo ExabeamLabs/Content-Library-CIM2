@@ -7,7 +7,7 @@ Vendor: OneSpan
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  13   |   1    |         11         |       1        |    0    |
+|  13   |   1    |         11         |       1        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

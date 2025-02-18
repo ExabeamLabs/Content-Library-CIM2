@@ -7,7 +7,7 @@ Name = symantec-esc-str-email-delivery
     Product = Symantec Email Security
     TimeFormat = "epoch_sec"
     Conditions = [
-"""|DELIVER"""
+"""|DELIVER|"""
     ]
     Fields = [
       """\s({host}[\w\.-]+)\s+\w+\[\d+\]:""",

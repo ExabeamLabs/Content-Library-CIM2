@@ -6,7 +6,7 @@ Name = microsoft-azuredevops-json-app-activity-success-devopsaudit
   Vendor = Microsoft
   Product = Azure DevOps
   ParserVersion = v1.0.0
-  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSZ" ]
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Conditions = [ """"eventType":"AzureDevOpsAuditEvent"""", """"subject":"AzureDevOps""", """"ActorUPN":"""" ]
   Fields = [ 
     """exa_json_path=$.data.Timestamp,exa_field_name=time"""
@@ -24,7 +24,7 @@ Name = microsoft-azuredevops-json-app-activity-success-devopsaudit
     """exa_json_path=$.data.Area,exa_field_name=area_classification"""
     """exa_json_path=$.data.ActionId,exa_field_name=activity_id"""
     """exa_json_path=$.data.ActorDisplayName,exa_field_name=full_name"""
-    """exa_json_path=$.data.ActorUPN,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_regex="ActorUPN":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """exa_json_path=$.data.ActorUPN,exa_field_name=user_upn""",
     """exa_json_path=$.data.IpAddress,exa_field_name=src_ip"""
   ]

@@ -4,7 +4,7 @@ Product: Google Workspace
 -------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  183  |   80   |         29         |       16       |   19    |
+|  183  |   80   |         29         |       16       |   24    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

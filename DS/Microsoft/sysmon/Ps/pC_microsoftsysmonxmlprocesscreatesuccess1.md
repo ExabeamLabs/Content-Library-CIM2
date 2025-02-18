@@ -23,6 +23,7 @@ Fields = [
 """<EventData>.*?Image:\s*({path}.+?)\s*CommandLine:"""
 """CommandLine:\s*({process_command_line}.*?)\s*CurrentDirectory:"""
 """,MD5=({hash_md5}[^,]+)(,|\s*$)"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

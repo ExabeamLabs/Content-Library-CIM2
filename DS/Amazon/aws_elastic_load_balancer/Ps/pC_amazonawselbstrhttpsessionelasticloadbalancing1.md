@@ -12,6 +12,5 @@ Name = amazon-awselb-str-http-session-elasticloadbalancing-1
 ]
 
 
-
 }
 ```

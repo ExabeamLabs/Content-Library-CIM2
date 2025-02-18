@@ -21,6 +21,8 @@ Fields = [
 	"""exa_json_path=$.event.DomainNames,exa_regex=({domain}[^,]+)""",
 	"""exa_json_path=$.event.IPv4Addresses,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 	"""exa_regex="HostNames":"({host}[^,]+)"""
+  """exa_json_path=$..cid,exa_field_name=cid""",
+  """exa_json_path=$..customerIDString,exa_field_name=cid"""
 ]
 DupFields = [ "category->alert_type" ]
 

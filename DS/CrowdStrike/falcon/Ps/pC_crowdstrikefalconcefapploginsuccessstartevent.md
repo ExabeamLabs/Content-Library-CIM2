@@ -26,10 +26,12 @@ Fields = [
   """({event_name}RemoteResponseSessionStartEvent)"""
   """"SessionId":"({session_id}[^",]+)""""
   """"(?i)EventType":\s*"({operation_details}[^",]+)""""
+  """"cid":"({cid}[^"]+)""""
+  """"customerIDString":"({cid}[^"]+)""""
 ]
 DupFields = [
   "event_name->operation"
-  "host->src_host"
+  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

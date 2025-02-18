@@ -4,7 +4,7 @@ Product: Symantec Advanced Threat Protection
 --------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  500  |  121   |        153         |       12       |   18    |
+|  500  |  121   |        153         |       12       |   29    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

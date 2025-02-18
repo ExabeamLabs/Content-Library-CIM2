@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4742
     """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
+    """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

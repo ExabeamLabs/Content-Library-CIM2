@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-policy-apply-fail-1030
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>1030</EventID>""" ]
+  Conditions = [ """<EventID>1030</EventID>""", """<Provider>Microsoft-Windows-GroupPolicy<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """<Data Name ='ErrorCode'>({failure_code}[^<]+)<""",

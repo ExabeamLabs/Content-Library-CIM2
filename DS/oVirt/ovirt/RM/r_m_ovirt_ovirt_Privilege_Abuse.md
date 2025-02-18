@@ -7,7 +7,7 @@ Vendor: oVirt
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   2    |         3          |       4        |   36    |
+|   6   |   2    |         3          |       4        |   40    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

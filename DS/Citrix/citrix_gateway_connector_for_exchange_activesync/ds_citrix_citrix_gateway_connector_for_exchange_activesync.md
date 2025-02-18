@@ -4,7 +4,7 @@ Product: Citrix Gateway Connector For Exchange ActiveSync
 ---------------------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  55   |   26   |         6          |       2        |    0    |
+|  55   |   26   |         6          |       2        |    2    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

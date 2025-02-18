@@ -36,7 +36,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
     """Creator Process ID:(\\+[rnt]|\s)*({parent_process_guid}[^\\\s;]+)(\s|\\+[rnt]|;|\\)""",
     """Creator Process Name:(\\*[nrt]|\s)*(|({parent_process_path}({parent_process_dir}[^"=]+?)?[\\]*?({parent_process_name}[^"\\=]+?)))(\\*[nrt]|\s)*(Process|%\{S-)""",
-    """Process Command Line:\s*((\\)[\\r\\n\\t]+)*(|({process_command_line}.*?))\s*((\\)[\\r\\n\\t]*)*Token Elevation Type indicates"""
+    """Process Command Line(:|=)\s{0,2}"?((?-i)\\+[rnt])*(|({process_command_line}\S[^";]*?))((\\)[\\r\\n\\t]+)*(\s*Token Elevation Type indicates|"+?\s*|;|\s*$)"""
     """Process Command Line:\s*"*(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= \s*(|-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/\s]+)))"*\s*Token Elevation Type""",
     """binPath=\s*({service_command_line}(?:\"(.+)\")|(?:(\S+)))\s*""",
     """Command\s*Line(:|=).*\s+({parameter_sct}\S+\.sct)""",

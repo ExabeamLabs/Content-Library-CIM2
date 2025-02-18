@@ -7,7 +7,7 @@ Vendor: ESector
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  24   |   13   |         1          |       3        |    1    |
+|  24   |   13   |         1          |       3        |    4    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

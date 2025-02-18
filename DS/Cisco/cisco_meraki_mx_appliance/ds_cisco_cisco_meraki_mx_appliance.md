@@ -4,7 +4,7 @@ Product: Cisco Meraki MX appliance
 ----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  221  |   96   |         40         |       7        |    5    |
+|  221  |   96   |         40         |       7        |   11    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

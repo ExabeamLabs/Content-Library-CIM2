@@ -9,7 +9,7 @@ Name = cisco-duo-json-vpn-login-vpn
   Conditions = [ """"event_type":"""", """"result":""", """"user":""", """"access_device":""", """VPN""" ]
   Fields = [
     """"timestamp":({time}\d{10})""",
-    """"host":"+({host}[\w\-\.]+)"""",
+    """"host(name)?":"+({host}[\w\-\.]+)"""",
     """"ip":"+(0.0.0.0|null|({src_ip}[a-fA-F:\.\d]+))"""",
     """"result":"({result}[^"]+)"""",
     """"reason":"({failure_reason}[^"]+)"[^=]+?"result":"(denied|fraud|failure|error)"""",

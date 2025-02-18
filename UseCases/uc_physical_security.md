@@ -6,14 +6,6 @@ Use Case: Physical Security
 |                                             Product                                              | MITRE ATT&CK® TTP          | Content                                                                                                                                            |
 |:------------------------------------------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Symmetry Access Control](../DS/AMAG/symmetry_access_control/ds_amag_symmetry_access_control.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/AMAG/symmetry_access_control/RM/r_m_amag_symmetry_access_control_Physical_Security.md) |
-### Vendor: AccessIT
-|                                                Product                                                | MITRE ATT&CK® TTP          | Content                                                                                                                                                  |
-|:-----------------------------------------------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AccessIT Universal.NET](../DS/AccessIT/accessit_universal.net/ds_accessit_accessit_universal.net.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/AccessIT/accessit_universal.net/RM/r_m_accessit_accessit_universal.net_Physical_Security.md) |
-### Vendor: Avaya
-|                         Product                          | MITRE ATT&CK® TTP                    | Content                                                                                                                  |
-|:--------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| [Avaya VPN](../DS/Avaya/avaya_vpn/ds_avaya_avaya_vpn.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Avaya/avaya_vpn/RM/r_m_avaya_avaya_vpn_Physical_Security.md) |
 ### Vendor: Aviglion
 |                                 Product                                 | MITRE ATT&CK® TTP          | Content                                                                                                                              |
 |:-----------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -22,10 +14,6 @@ Use Case: Physical Security
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |
 |:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
 | [Badge](../DS/Badge/badge/ds_badge_badge.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Badge/badge/RM/r_m_badge_badge_Physical_Security.md) |
-### Vendor: Badgepoint
-|                                Product                                | MITRE ATT&CK® TTP          | Content                                                                                                                              |
-|:---------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Badgepoint](../DS/Badgepoint/badgepoint/ds_badgepoint_badgepoint.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Badgepoint/badgepoint/RM/r_m_badgepoint_badgepoint_Physical_Security.md) |
 ### Vendor: Barracuda
 |                                                        Product                                                         | MITRE ATT&CK® TTP                    | Content                                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------------------------------:| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -76,17 +64,14 @@ Use Case: Physical Security
 | [F5 Access Policy Manager](../DS/F5/f5_access_policy_manager/ds_f5_f5_access_policy_manager.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/F5/f5_access_policy_manager/RM/r_m_f5_f5_access_policy_manager_Physical_Security.md) |
 |                       [F5 BIG-IP](../DS/F5/f5_big-ip/ds_f5_f5_big-ip.md)                        | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/F5/f5_big-ip/RM/r_m_f5_f5_big-ip_Physical_Security.md)                               |
 ### Vendor: Fortinet
-|                            Product                             | MITRE ATT&CK® TTP                    | Content                                                                                                                        |
-|:--------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Physical_Security.md) |
+|                               Product                                | MITRE ATT&CK® TTP                    | Content                                                                                                                            |
+|:--------------------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [FortiClient](../DS/Fortinet/forticlient/ds_fortinet_forticlient.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/forticlient/RM/r_m_fortinet_forticlient_Physical_Security.md) |
+|    [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md)    | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Physical_Security.md)     |
 ### Vendor: Galaxy
 |                      Product                      | MITRE ATT&CK® TTP          | Content                                                                                                              |
 |:-------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | [Galaxy](../DS/Galaxy/galaxy/ds_galaxy_galaxy.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Galaxy/galaxy/RM/r_m_galaxy_galaxy_Physical_Security.md) |
-### Vendor: Generic Badge Access
-|                                                         Product                                                         | MITRE ATT&CK® TTP          | Content                                                                                                                                                                      |
-|:-----------------------------------------------------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Generic Badge Access](../DS/Generic_Badge_Access/generic_badge_access/ds_generic_badge_access_generic_badge_access.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Generic_Badge_Access/generic_badge_access/RM/r_m_generic_badge_access_generic_badge_access_Physical_Security.md) |
 ### Vendor: Genetec
 |                                 Product                                  | MITRE ATT&CK® TTP          | Content                                                                                                                              |
 |:------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |

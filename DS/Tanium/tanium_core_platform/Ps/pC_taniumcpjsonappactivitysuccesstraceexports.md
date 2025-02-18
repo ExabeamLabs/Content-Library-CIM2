@@ -4,7 +4,7 @@
 Name = tanium-cp-json-app-activity-success-traceexports
  ParserVersion = "v1.0.0"
  Product = "Tanium Core Platform"
- Conditions = [ """"table":"TraceExports"""" ]
+ Conditions = [ """"table":"TraceExports"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
 
 tanium-template-1 {
     Vendor= Tanium

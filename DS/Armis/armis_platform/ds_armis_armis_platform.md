@@ -4,11 +4,11 @@ Product: Armis Platform
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   2    |         1          |       1        |    2    |
+|   3   |   2    |         1          |       1        |    4    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP          | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (alert-iot)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation.md)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation-1](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation1.md)<br> ↳[armis-a-cef-alert-trigger-success-systempolicyviolation](Ps/pC_armisacefalerttriggersuccesssystempolicyviolation.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>3 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_armis_armis_platform_Compromised_Credentials.md) |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (alert-iot)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation.md)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation-1](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation1.md)<br> ↳[armis-a-cef-alert-trigger-success-systempolicyviolation](Ps/pC_armisacefalerttriggersuccesssystempolicyviolation.md)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation.md)<br> ↳[armis-a-json-alert-trigger-success-systempolicyviolation-1](Ps/pC_armisajsonalerttriggersuccesssystempolicyviolation1.md)<br> ↳[armis-a-cef-alert-trigger-success-systempolicyviolation](Ps/pC_armisacefalerttriggersuccesssystempolicyviolation.md)<br> ↳[armis-a-cef-alert-trigger-success-systempolicyviolation-1](Ps/pC_armisacefalerttriggersuccesssystempolicyviolation1.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>3 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_armis_armis_platform_Compromised_Credentials.md) |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

@@ -5,6 +5,7 @@ Name = openldap-o-str-user-success-op
     Conditions = [ """slapd[""", """conn=""", """op=""" ]
   
 openldap-kv-parser}{
+    # Keep this parser below openldap-o-str-user-success-searchresult
     Name = openldap-o-str-user-success-err
     Conditions = [ """slapd[""", """conn=""", """op=""", """ RESULT """, """err=""" ]
     Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[

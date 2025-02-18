@@ -4,7 +4,7 @@ Product: Cisco ISE
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  208  |   96   |         32         |       8        |   27    |
+|  208  |   96   |         32         |       8        |   35    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

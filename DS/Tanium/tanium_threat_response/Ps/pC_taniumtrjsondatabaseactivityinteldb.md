@@ -4,7 +4,7 @@
 Name = tanium-tr-json-database-activity-inteldb
  ParserVersion = v1.0.0
  Product = Tanium Threat Response
- Conditions = [ """"table":"IntelDb"""" ]
+ Conditions = [ """"table":"IntelDb"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
  Vendor = Tanium
  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
  Fields=[

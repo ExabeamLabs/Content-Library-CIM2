@@ -7,7 +7,7 @@ Vendor: Lumension
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  14   |   4    |         3          |       2        |    2    |
+|  14   |   4    |         3          |       2        |    4    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

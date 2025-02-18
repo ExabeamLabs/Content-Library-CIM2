@@ -15,6 +15,7 @@ Name = microsoft-mssql-xml-database-logout-success-lgo
     """\Wserver_principal_sid:({db_user_sid}[^\s]+)""",
     """\Wserver_instance_name:({dest_host}[\w\-.]+)""",
     """\Wdatabase_name:({db_name}[^\s]+)""",
+    """<Level>({run_level}[^<]+)<"""
    ]
 
 

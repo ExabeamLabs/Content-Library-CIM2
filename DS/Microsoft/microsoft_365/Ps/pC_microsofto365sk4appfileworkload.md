@@ -37,6 +37,12 @@ Fields = [
 """("Value":"({os}[^"]+)",)?"Key":"OsName"(,"Value":"({=os}[^"]+)")?"""
 """"UserType":({user_type}[^,\}"]+)"*"""
 """"correlationId":\s*"({correlation_id}[^"]+)""""
+""""SensitivityLabelId":"({sensitivity_label}[^",]+)""""
+""""OldSensitivityLabelId":"({old_sensitivity_label}[^",]+)""""
+""""documentEncrypted":({encrypted}[^",]+)""""
+""""ObjectId":"({object_id}[^",]+)""""
+""""JustificationText":"({additional_info}[^",]+)""""
+""""LabelId":"({label_id}[^",]+)"""
 ]
 
 

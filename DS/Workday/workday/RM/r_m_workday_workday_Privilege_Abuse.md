@@ -7,7 +7,7 @@ Vendor: Workday
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   2    |         3          |       3        |    2    |
+|   6   |   2    |         3          |       3        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

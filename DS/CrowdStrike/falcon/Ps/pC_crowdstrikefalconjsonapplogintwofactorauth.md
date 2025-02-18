@@ -21,6 +21,10 @@ Fields = [
     """"ServiceName":\s*"({app}[^"]+)"""
     """"Success":\s*({result}[^",}]+)"""
     """"OperationName":"({operation}[^"]+)""""
+    """"cid":"({cid}[^"]+)""""
+    """"customerIDString":"({cid}[^"]+)""""
+    """exa_json_path=$..cid,exa_field_name=cid""",
+    """exa_json_path=$..customerIDString,exa_field_name=cid""",
     """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",
     """exa_regex="timestamp":"({time}\d{10})"""",
     """exa_json_path=$.event.UTCTimestamp,exa_field_name=time""",

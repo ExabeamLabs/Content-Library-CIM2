@@ -7,7 +7,7 @@ Name = "atlassian-atlassian-json-app-activity-success"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   ExtractionType = json
   ParserVersion = "v1.0.0"
-  Conditions = [ """"accountType":""", """"atlassian"""", """"action":""" ]
+  Conditions = [ """"type":""", """"events"""", """api.atlassian""", """"action":""" ]
   Fields = [
     """exa_json_path=$.attributes.time,exa_field_name=time"""
     """exa_json_path=$.attributes.action,exa_field_name=action"""

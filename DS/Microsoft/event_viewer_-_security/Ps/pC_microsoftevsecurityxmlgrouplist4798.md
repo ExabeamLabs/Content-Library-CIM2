@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-xml-group-list-4798
     """<Computer>({host}[^<>]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_name}A user's local group membership was enumerated)""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 windows-events-3 = {

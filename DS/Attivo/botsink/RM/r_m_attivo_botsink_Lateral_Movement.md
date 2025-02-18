@@ -7,7 +7,7 @@ Vendor: Attivo
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  41   |   17   |         8          |       2        |    1    |
+|  41   |   17   |         8          |       2        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

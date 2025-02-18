@@ -24,6 +24,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   """Failure Code(:|=)((?-i)\\+[rnt])*\s*({result_code}[^\s:;\\]+)((?-i)\\+[rnt])*\s*[\s;]*[\w\s]+(:|=)"""
   """Ticket Options(:|=)\s*({ticket_options}[^\s;:]+)[\s;]*[\w\s]+(:|=)"""
   """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}[^\s:;]+)[\s;]*[\w\s]+(:|=)"""
+  """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [
     "result_code->failure_code"

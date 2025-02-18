@@ -15,6 +15,9 @@ Name = microsoft-evdnsserver-kv-process-create-success-800
     """Details:[^@]+?CommandInvocationParameterBinding[^@]+?value="+\s*({command_module}[^"]*?)\s*"+""",
     """Details:[^@]+?CommandInvocation\([^\)]+\):\s*\\*"+\s*({command_invocation}[^"\\]+)\s*""",
     """\(EventID ({event_code}800)"""
+    """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+    """\sMessage=({event_name}\S+)"""
+    """\sEventCode=({event_code}\d+)"""
   ]
   ParserVersion = "v1.0.0"
 

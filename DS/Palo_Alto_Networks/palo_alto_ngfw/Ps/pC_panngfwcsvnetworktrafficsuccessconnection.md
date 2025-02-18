@@ -30,6 +30,10 @@ Name = pan-ngfw-csv-network-traffic-success-connection
     """,(any|unknown|({category}[^,]+?)),Informational,client to server,"""
     """THREAT,([^,]*,){31}({direction}[^,]+)"""
     """THREAT,([^,]*,){35}(((\d{1,3}\.){3}\d{1,3})\-((\d{1,3}\.){3}\d{1,3})|({dest_country}[^,]+?))\s*,"""
+    """THREAT,([^,]*,){14}({src_interface}[^,]+),""",
+    """THREAT,([^,]*,){15}({dest_interface}[^,]+),""",
+    """({serial_num}[^,]+),THREAT,""",
+    """THREAT,([^,]*,){27}("[^"]+")?,([^,]*,){27}({device_name}({host}[^",]+))"""
     ]
 
 

@@ -7,7 +7,6 @@ Name = microsoft-evtaskscheduler-xml-scheduled-task-disable-success-taskdisabled
   Conditions = [ """<EventID>142</EventID>""", """<Channel>Microsoft-Windows-TaskScheduler/Operational</Channel>""", """Microsoft-Windows-TaskScheduler""", """<Computer>""", """TaskDisabled""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
     """<Computer>({host}[\w\-\.]+)<"""
-    """<Data Name =('|")UserName('|")>({user}[^<]+)<"""
   ]
 
 xml-windows-eventviewer-events = {
@@ -19,7 +18,7 @@ xml-windows-eventviewer-events = {
 	  """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)""",
 	  """<Execution ProcessID=('|")({process_id}\d+)""",
 	  """<Security UserID=('|")({user_sid}[\w\-]+)('|")/>""",
-	  """ThreadID=('|")({thread_id}[^']+)""",
+	  """ThreadID=('|")({thread_id}[^'"]+)""",
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",

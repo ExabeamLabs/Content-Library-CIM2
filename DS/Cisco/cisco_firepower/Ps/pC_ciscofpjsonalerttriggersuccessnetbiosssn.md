@@ -17,7 +17,7 @@ Fields = [
   """\sSrcPort:\s*({src_port}\d+)"""
   """\sDstPort:\s*({dest_port}\d+)"""
   """\sProtocol:\s*({protocol}[^,]+?)(,|\s*$)"""
-  """\sUser:\s*(Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,|\s*$)"""
+  """\sUser:\s*(Unknown|(({domain}[^\\\/"]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(,|\s*$)"""
   """\sFileAction:\s*({alert_type}[^,]+?)(,|\s*$)"""
   """\sFilePolicy:\s*({alert_name}[^,]+?)(,|\s*$)"""
   """\sFileName:\s*({file_path}({file_dir}[^,]*?[\\\/]+)?({file_name}[^,\\\/]*?(\.({file_ext}\w+))?))(,|\s*$)"""

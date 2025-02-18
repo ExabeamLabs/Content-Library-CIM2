@@ -50,12 +50,13 @@ s-mssql-database-login = {
     """additional_information:.*?<address>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wdatabase_name:({db_name}[^\s]+)""",
     """\Wstatement:(-+|({failure_reason}[^.:]+))"""
+    """<Level>({run_level}[^<]+)<"""
   ]
  },
 
   cef-defender-atp-2 = {
      Vendor = Microsoft
-     Product = Microsoft Defender for Endpoint
+     Product = Microsoft Defender
      TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
      Fields = [
        """time"+:\s*"+({time}[^"]+)"""",

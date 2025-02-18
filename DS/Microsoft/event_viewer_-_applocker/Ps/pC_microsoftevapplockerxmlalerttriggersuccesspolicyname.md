@@ -23,6 +23,7 @@ Fields = [
   """<Message>({additional_info}[^"<]+)"""
   """<FileHash>({hash_md5}[^"<]+)"""
   """<EventID>({event_code}[^<]+)<"""
+  """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = [
   "malware_url->process_name"

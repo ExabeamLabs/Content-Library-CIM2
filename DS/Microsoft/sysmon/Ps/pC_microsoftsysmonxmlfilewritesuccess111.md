@@ -23,6 +23,7 @@ Fields = [
 """<EventData>.*?Image:\s*({process_path}({process_dir}.*?)({process_name}[^.\\]+\.exe))\s*TargetFilename:"""
 """<EventData>.*?Image:\s*({path}.+?)\s*TargetFilename:"""
 """TargetFilename:\s*({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s*CreationUtcTime:"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

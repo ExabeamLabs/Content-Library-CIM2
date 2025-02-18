@@ -33,8 +33,13 @@ Fields = [
   """({event_category}THREAT)"""
   """,THREAT,({alert_type}[^,]+),([^,]*,){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),"""
   """,THREAT,([^,]*,){20}(|({src_port}\d+)),(|({dest_port}\d+)),(|({src_translated_port}\d+)),(|({dest_translated_port}\d+)),"""
-  """THREAT,virus,([^,]*,){26}("[^"]+")?,([^,]*,){27}({device_name}({host}[^",]+))"""
-  """({serial_num}[^,]+),THREAT,"""
+  """THREAT,virus,([^,]*,){26}("[^"]+")?,([^,]*,){27}({device_name}({host}[^",]+))""",
+  """({serial_num}[^,]+),THREAT,""",
+  """THREAT,([^,]*,){10}(not-applicable|({network_app}[^,]+)),""",
+  """THREAT,([^,]*,){12}({src_network_zone}[^,]+),""",
+  """THREAT,([^,]*,){13}({dest_network_zone}[^,]+),""",
+  """THREAT,([^,]*,){14}({src_interface}[^,]+),""",
+  """THREAT,([^,]*,){15}({dest_interface}[^,]+),""",
   ]
 SOAR {
   IncidentType = "malware"

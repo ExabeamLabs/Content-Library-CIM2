@@ -4,7 +4,7 @@ Product: Cloudflare WAF
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  152  |   56   |         26         |       5        |    5    |
+|  152  |   56   |         26         |       5        |    7    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

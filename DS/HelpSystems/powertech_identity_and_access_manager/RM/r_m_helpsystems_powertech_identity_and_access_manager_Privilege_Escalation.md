@@ -7,7 +7,7 @@ Vendor: HelpSystems
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  56   |   14   |         58         |       4        |    1    |
+|  56   |   14   |         58         |       4        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -7,7 +7,7 @@ Vendor: Zoom
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  11   |   5    |         5          |       4        |    0    |
+|  11   |   5    |         5          |       4        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

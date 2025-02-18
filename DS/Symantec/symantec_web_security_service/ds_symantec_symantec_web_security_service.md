@@ -4,7 +4,7 @@ Product: Symantec Web Security Service
 --------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  210  |   78   |         37         |       7        |   29    |
+|  210  |   78   |         37         |       7        |   33    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

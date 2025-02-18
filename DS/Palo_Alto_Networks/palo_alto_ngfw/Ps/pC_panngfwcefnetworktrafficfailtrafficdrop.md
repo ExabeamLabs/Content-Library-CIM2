@@ -38,7 +38,11 @@ cef-palo-alto-network-event = {
     """externalId=({alert_id}[^\s]+)""",
     """\sreason=(?:n\/a|({result_reason}[^=]+?))\s+(\w+=|$)""",
     """\sPanOSThreatID="*({alert_name}[^"=\(]+?)(\s*\([^\)]+?\)?)"*\s+\w+=""",
-    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-   
+    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
+    """deviceInboundInterface=({src_interface}[^\s]+)""",
+    """deviceOutboundInterface=({dest_interface}[^\s]+)""",
+    """deviceExternalId=({serial_num}\d+)""",
+   ]
+   DupFields = ["host->device_name"
 }
 ```

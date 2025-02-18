@@ -4,7 +4,7 @@
 Name = proofpoint-tap-sk4-email-routedirection
 Vendor = Proofpoint
 Product = Targeted Attack Platform
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
   """routeDirection"""
   """ProofPointMessageLog_CL"""
@@ -25,6 +25,7 @@ Fields = [
   """"detectedName":\s*"({email_attachment}(?!text)[^"]+)"""
   """"filter_isMsgReinjected_b":[\s"]*({is_consolidated}\w+)[\s"]*,"""
   """"rule":\s*"({rule}[^"]+)""""
+  """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]
 DupFields = [
   "email_attachment->email_attachments"

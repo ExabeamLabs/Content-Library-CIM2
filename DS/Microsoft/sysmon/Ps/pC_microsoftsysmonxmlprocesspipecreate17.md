@@ -19,6 +19,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-17
     """<Data Name\\*='EventType'>({event_name}[^<]+)<\/Data>""",
     """<Security UserID\\*='({user_sid}[^']+)'"""
     """({log_name}Microsoft-Windows-Sysmon)""" 
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

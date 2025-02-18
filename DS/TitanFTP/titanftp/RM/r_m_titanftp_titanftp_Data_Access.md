@@ -7,7 +7,7 @@ Vendor: TitanFTP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  43   |   24   |         2          |       3        |    4    |
+|  43   |   24   |         2          |       3        |    6    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

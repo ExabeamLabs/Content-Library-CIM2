@@ -10,7 +10,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetodeleteditems-2
     """\WfilePath=(((?i)N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?(\.({file_ext}[^\/=\.\s]+?))?)))\s*(\w+=|$)""",
     """\sfname=\s*(N\/A|({object}[^=\s]+))""",
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)""",
-    """"Folder":\{[^\}]*?"Path":"({folder_name}[^"]+)""""
+    """"Folder":\{[^\}]*?"Path":"([^"]*\\+)?({folder_name}[^"]+)""""
   ]
 
 cef-microsoft-o365-app-activity = {

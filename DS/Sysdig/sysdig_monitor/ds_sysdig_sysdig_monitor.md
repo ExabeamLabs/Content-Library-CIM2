@@ -4,12 +4,12 @@ Product: Sysdig Monitor
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  30   |   8    |         8          |       1        |    0    |
+|  30   |   8    |         8          |       1        |    1    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (process-alert)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>TA0002 - TA0002<br>    | [<ul><li>7 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_sysdig_sysdig_monitor_Compromised_Credentials.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (process-alert)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> | T1053 - Scheduled Task/Job<br>T1053.003 - T1053.003<br>T1190 - Exploit Public Fasing Application<br>T1562 - Impair Defenses<br>T1562.004 - Impair Defenses: Disable or Modify System Firewall<br>TA0002 - TA0002<br> | [<ul><li>25 Rules</li></ul><ul><li>7 Models</li></ul>](RM/r_m_sysdig_sysdig_monitor_Malware.md)    |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (process-alert)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>TA0002 - TA0002<br>    | [<ul><li>7 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_sysdig_sysdig_monitor_Compromised_Credentials.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (process-alert)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> ↳[sysdig-monitor-json-alert-trigger-success-syscall](Ps/pC_sysdigmonitorjsonalerttriggersuccesssyscall.md)<br> | T1053 - Scheduled Task/Job<br>T1053.003 - T1053.003<br>T1190 - Exploit Public Fasing Application<br>T1562 - Impair Defenses<br>T1562.004 - Impair Defenses: Disable or Modify System Firewall<br>TA0002 - TA0002<br> | [<ul><li>25 Rules</li></ul><ul><li>7 Models</li></ul>](RM/r_m_sysdig_sysdig_monitor_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

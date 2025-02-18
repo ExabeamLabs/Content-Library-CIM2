@@ -6,13 +6,13 @@ Name = microsoft-o365-cef-app-file-success-filerenamed
   Product = Microsoft 365
   Conditions= [ """"Workload":""", """"Operation":""", """"FileRenamed""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
-    """"ObjectId":"({src_file_path}({src_file_dir}[^~"]+[\\\/])({src_file_name}[^"]+?(\.({src_file_ext}[^\\\."]+))?))"""",
-    """filePath=\{"ObjectUrl":"({src_file_path}({src_file_dir}[^"]+\/)?({src_file_name}[^"]+(\.({src_file_ext}[^"]+))?)?)"""",
-    """"SourceFileExtension":"({src_file_ext}\w+)"""",
-    """"FileSizeBytes":({bytes}\d+)""",
-    """"DestinationRelativeUrl":"({file_path}[^"]+)"""",
-    """"DestinationFileName":"(({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))"""",
-    """"TargetFilePath":"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))""""
+    """"ObjectId":\s*"({src_file_path}({src_file_dir}[^~"]+[\\\/])({src_file_name}[^"]+?(\.({src_file_ext}[^\\\."]+))?))"""",
+    """filePath=\{"ObjectUrl":\s*"({src_file_path}({src_file_dir}[^"]+\/)?({src_file_name}[^"]+(\.({src_file_ext}[^"]+))?)?)"""",
+    """"SourceFileExtension":\s*"({src_file_ext}\w+)"""",
+    """"FileSizeBytes":\s*({bytes}\d+)""",
+    """"DestinationRelativeUrl":\s*"({file_path}[^"]+)"""",
+    """"DestinationFileName":\s*"(({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))"""",
+    """"TargetFilePath":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.({file_ext}[^\\\."]+))?))""""
   ]
   DupFields = [ "src_file_ext->file_ext"]
 

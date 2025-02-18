@@ -22,6 +22,10 @@ json-crowdstrike-app-login = {
     """"FalconHostLink":"({additional_info}[^"]+)""",
     """"OperationName":"({operation}[^"]+)""",
     """"EventType":"({event_category}[^"]+)""",
+    """"cid":"({cid}[^"]+)""""
+    """"customerIDString":"({cid}[^"]+)""""
+    """exa_json_path=$..cid,exa_field_name=cid""",
+    """exa_json_path=$..customerIDString,exa_field_name=cid""",
     """exa_json_path=$.event.UserIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 	  """exa_json_path=$.event.Success,exa_field_name=result""",
     """exa_json_path=$.event.ServiceName,exa_field_name=service_name""",

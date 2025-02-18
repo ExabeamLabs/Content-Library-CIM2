@@ -7,7 +7,7 @@ Vendor: AssetView
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   6    |         5          |       3        |    0    |
+|  18   |   6    |         5          |       3        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

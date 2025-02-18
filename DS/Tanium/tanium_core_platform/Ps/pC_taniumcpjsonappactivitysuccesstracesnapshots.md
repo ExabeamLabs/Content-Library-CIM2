@@ -4,7 +4,7 @@
 Name = tanium-cp-json-app-activity-success-tracesnapshots
  ParserVersion = "v1.0.0"
  Product = "Tanium Core Platform"
- Conditions = [ """"table":"TraceSnapshots"""" ]
+ Conditions = [ """"table":"TraceSnapshots"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
 
 tanium-template-1 {
     Vendor= Tanium

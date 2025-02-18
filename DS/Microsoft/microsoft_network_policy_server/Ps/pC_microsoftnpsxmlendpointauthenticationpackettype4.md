@@ -15,6 +15,7 @@ Name = microsoft-nps-xml-endpoint-authentication-packettype4
     """Proxy-Policy-Name[^>]+>({additional_info}[^<]+)<""",
     """<Packet-Type[^>]+>({result}\d+)""",
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "result->event_code" ]
   ParserVersion = "v1.0.0"

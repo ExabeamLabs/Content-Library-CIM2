@@ -7,7 +7,7 @@ Vendor: LogMeIn
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  28   |   12   |         10         |       1        |    0    |
+|  28   |   12   |         10         |       1        |    1    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

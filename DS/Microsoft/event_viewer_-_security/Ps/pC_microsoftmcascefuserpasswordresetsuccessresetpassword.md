@@ -423,7 +423,7 @@ ParserVersion = "v1.0.0"
 Name = "microsoft-o365-json-email-send-fail-advancedhunting"
 ExtractionType = json
 Vendor = "Microsoft"
-Product = "Microsoft Defender for Endpoint"
+Product = "Microsoft Defender"
 TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
   """EmailAttachmentInfo""""
@@ -440,6 +440,7 @@ Fields = [
   """"FileType":\s*"({file_type}[^"]+?)""""
   """"NetworkMessageId":\s*"({message_id}[^"]+?)""""
   """"FileSize":({bytes}\d+)"""
+  """"SHA256":\s*"({file_hash}[^",]+)"""
   """exa_json_path=$..Timestamp,exa_field_name=time"""
   """exa_json_path=$..time,exa_field_name=time"""
   """exa_json_path=$..RecipientEmailAddress,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
@@ -449,6 +450,7 @@ Fields = [
   """exa_json_path=$..FileType,exa_field_name=file_type"""
   """exa_json_path=$..NetworkMessageId,exa_field_name=message_id"""
   """exa_json_path=$..FileSize,exa_field_name=bytes"""
+  """exa_json_path=$..SHA256,exa_field_name=file_hash"""
 ]
 DupFields = [
   "file_name->email_attachment"

@@ -7,7 +7,7 @@ Vendor: Teradata
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   10   |         1          |       2        |    1    |
+|  18   |   10   |         1          |       2        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

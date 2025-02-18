@@ -6,7 +6,7 @@ Name = wiz-w-json-alert-trigger-success-issue
   Product = Wiz
   ExtractionType = json
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ" ]
-  Conditions = [ """"source":"ISSUE"""", """"updatedFields":"""", """"status":"""", """"subscriptionName":"""", """"changedBy":"Wiz"""" ]
+  Conditions = [ """"source":"ISSUE"""", """"updatedFields":"""", """"status":"""", """"subscriptionName":"""", """"changedBy":"""" ]
   Fields = [
          """exa_json_path=$.issue.created,exa_field_name=time"""
          """exa_json_path=$.issue.severity,exa_field_name=alert_severity"""

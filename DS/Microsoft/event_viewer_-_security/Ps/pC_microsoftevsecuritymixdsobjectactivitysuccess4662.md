@@ -13,6 +13,7 @@ Fields = [
 """({event_code}4662)"""
 """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+"""
 """"time":({time}\d{13})"""
+""""(?i)Computer(Name)?":\s*"({host}[^"]+)""""
 """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+)"""
 """Security ID:\s*((?-i)\\+[rnt])*(|({user_sid}.+?))\s*((?-i)\\+[rnt])*Account Name:"""
 """Account Name:\s*((?-i)\\+[rnt])*(({full_name}[^:]+?\s[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*((?-i)\\+[rnt])*Account Domain:"""

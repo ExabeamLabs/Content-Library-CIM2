@@ -10,13 +10,14 @@ Conditions = [
 ExtractionType = json
 ParserVersion = "v1.0.0"
 
-json-windows-events-1.Fields}[
-    """"(?:winlog\.)?computer_name"+:"+({src_host}[\w\-.]+)""",
-    """"hostname"+:"+({host}[\w\-.]+)""",
-    """exa_json_path=$.winlog.computer_name,exa_field_name=src_host""",
-    """exa_json_path=$.host.hostname,exa_field_name=host""",
-    """({event_name}A user account was disabled)""",
-    """"hostname"+:"+(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({host}[^"]+))""",
+microsoft-json-events.Fields}[
+    """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
+    """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """Account Domain:\s+({domain}[^\s]+)""",
+    """Logon ID:\s+({login_id}[^\s]+)""",  
+    """Share Information:\s+Object Type:\s+({file_type}[^:]+?)\s+Share Name:""",
+    """Share Name:\s+(?:[\\\*]+)?({share_name}[^\s]+)\s+Share Path:""",
+    """Share Path:\s*[\\\?]*({share_path}(({d_parent}[^@]+?)\\)?(|({d_name}[^\\]+?)))\s*Old Remark:"""
   
 }
 ```

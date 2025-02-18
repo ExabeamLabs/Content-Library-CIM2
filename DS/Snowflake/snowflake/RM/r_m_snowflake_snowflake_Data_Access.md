@@ -7,7 +7,7 @@ Vendor: Snowflake
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  18   |   10   |         1          |       2        |    3    |
+|  18   |   10   |         1          |       2        |    5    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

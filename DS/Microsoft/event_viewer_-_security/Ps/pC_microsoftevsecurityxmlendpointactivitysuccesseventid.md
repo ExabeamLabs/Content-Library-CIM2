@@ -3,10 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-endpoint-activity-success-eventid
   Product = Event Viewer - Security
-  Conditions = [ """<EventID""", """<Computer>""", """<Provider Name ='Microsoft""" ]
-  Fields = ${MSEventViewerTemplates.xml-ms-event-viewer.Fields}[
-    """<Computer>({host}[\w\-.]+)"""
-  ]
+  Conditions = [ """<EventID""", """<Computer>""", """<Provider Name ='Microsoft""", """<Channel>Security<""" ]
 
 xml-ms-event-viewer = {
     Vendor = Microsoft
@@ -24,9 +21,10 @@ xml-ms-event-viewer = {
       """<Execution ProcessID\\*=('|")({process_id}\d+)""",
       """<Task>({sub_category}[^<]+)"""
       """<Level>({run_level}[^<]+)<"""
-      """<Data Name\\*=('|")ErrorCode('|")>({error_code}\d+)<""",
+      """<Data Name\\*=('|")Error\s*Code('|")>({error_code}[^<]+)<""",
       """<Data Name =('|")ClientName('|")>({client_name}[^<]+)<""".
       """<Channel>({channel}[^<]+)<"""
+      """<Computer>({host}[\w\-.]+)"""
     ]
     DupFields = [ "result->result_code" 
 }

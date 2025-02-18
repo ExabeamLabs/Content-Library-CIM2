@@ -21,6 +21,9 @@ Name = microsoft-windows-kv-process-create-success-started
     """\sHostApplication=({process_path}({process_dir}[^.]+)\\\\({process_name}[^\s]+))\s*EngineVersion=""",
     """\sHostApplication=({process_command_line}.+?)\s+EngineVersion="""
     """"event_id"\s*:\s*({event_code}\d+)"""
+    """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+    """\sMessage=({event_name}\S+)"""
+    """\sEventCode=({event_code}\d+)"""
 ]
   DupFields = [ "host->dest_host" ]
 

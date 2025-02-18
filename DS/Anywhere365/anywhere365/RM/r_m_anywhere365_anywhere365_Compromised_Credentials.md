@@ -7,7 +7,7 @@ Vendor: Anywhere365
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   24   |         2          |       1        |    4    |
+|  39   |   24   |         2          |       1        |    5    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

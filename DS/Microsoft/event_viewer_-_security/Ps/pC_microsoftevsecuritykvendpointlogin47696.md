@@ -14,7 +14,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-6"
   Fields = [
     """({event_name}A Kerberos service ticket was requested)"""
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d(T|\s)\d\d:\d\d:\d\d)""",
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*[a-zA-Z]+"""
+    """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*[a-zA-Z]+"""
     """(::ffff:)?({host}[\w\-\.]+)\/Microsoft-Windows-Security-Auditing \(4769\)"""
     """"Computer(Name)?":"({host}[\w\-\.]+)"""
     """({event_code}4769)"""

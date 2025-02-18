@@ -4,7 +4,7 @@ Product: Ivanti Pulse Secure
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  204  |   94   |         41         |       9        |   131   |
+|  204  |   94   |         41         |       9        |   141   |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

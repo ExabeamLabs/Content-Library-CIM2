@@ -19,12 +19,9 @@ Fields = [
   """\spriority=({alert_severity}\d+)"""
   """\stimestamp=({time}\d{10})"""
   """\sdirection=({direction}\S+)"""
-  """\smessage:\s*({alert_name}.+?)\s*$"""
+  """\smessage:\s*({alert_name}({alert_type}[^\s]+).+?)\s*$"""
   """\sdhost=(({dest_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({dest_host}[\w\-\.]+))"""
   """\sshost=(({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({src_host}[\w\-\.]+))"""
-]
-DupFields = [
-  "alert_name->alert_type"
 ]
 ParserVersion = "v1.0.0"
 

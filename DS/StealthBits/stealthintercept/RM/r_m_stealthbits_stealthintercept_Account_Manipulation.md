@@ -7,7 +7,7 @@ Vendor: StealthBits
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  59   |   28   |         4          |       4        |    0    |
+|  59   |   28   |         4          |       4        |    3    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

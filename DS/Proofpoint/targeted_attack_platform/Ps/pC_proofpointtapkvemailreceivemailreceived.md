@@ -4,7 +4,7 @@
 Name = proofpoint-tap-kv-email-receive-mailreceived
 Vendor = Proofpoint
 Product = Targeted Attack Platform
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
   """ - ProofpointTAP - """
 ]
@@ -25,6 +25,7 @@ Fields = [
   """\sspamScore="*({spam_score}\d+)"""
   """\sphishScore="*({phishing_score}\d+)"""
   """\smessageSize="*({bytes}\d+)"""
+  """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]
 DupFields = [
   "dest_email_address->email_recipients"

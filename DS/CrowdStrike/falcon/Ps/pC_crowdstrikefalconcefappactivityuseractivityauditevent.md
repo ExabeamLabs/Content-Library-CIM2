@@ -24,6 +24,10 @@ Fields = [
 """"AuditKeyValues":[^\]]+?(,|\}),[^\]]+?"ValueString":"({object}[^"]+?)\s*"(,|\})"""
 """"AuditKeyValues":[^\]]+?((_name")|(_id")|(Id"+)),"ValueString":"({object}[^"]+?)\s*"(,|\})"""
 """"aid":\s*"({aid}[^"]+)"""
+""""cid":"({cid}[^"]+)""""
+""""customerIDString":"({cid}[^"]+)""""
+"""exa_json_path=$..cid,exa_field_name=cid""",
+"""exa_json_path=$..customerIDString,exa_field_name=cid""",
 """exa_json_path=$..eventCreationTime,exa_field_name=time""",
 """exa_regex="UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 """exa_regex="UserId":\s*"(Crowdstrike|CrowdStrike|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user_id}[^"@]+))"""",

@@ -13,8 +13,6 @@ Conditions = [
 Fields = [
 """"+created_at"+:"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d([\+\-]\d\d:\d\d)?)"""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""created_by":[^\}]+?"login":"(anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""created_by":[^\}]+?"login":"({email_address}[^\s@"]+@[^\s@"]+)"""
 """\ssuser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""
 """"item_name":"({file_name}[^"]+)""""
@@ -30,8 +28,9 @@ Fields = [
 """"shared_link_id":"({resource}[^,"\s]+?)""""
 """\smsg=({additional_info}.*?)\s\w+="""
 """owned_by"+:.+?"login"+:"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-"""[^\w]created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+(Unknown User|({full_name}[^":,]+))[",\]\}]"""
 """"user":\{[^\}]+?"name":"({full_name}[^"]+)","email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+"""created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":,]+)[",\]\}]""",
+"""created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 DupFields = [
     "file_name->src_file_name"

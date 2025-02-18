@@ -4,7 +4,7 @@
 Name = "cisco-asa-kv-vpn-login-fail-113005"
 Vendor = "Cisco"
 Product = "Cisco Adaptive Security Appliance"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","yyyy MMM dd HH:mm:ss"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","yyyy MMM dd HH:mm:ss", "MMM dd yyyy HH:mm:ss"]
 Conditions = [
 """-113005:"""
 """AAA user authentication Rejected :"""
@@ -12,6 +12,8 @@ Conditions = [
 """: reason ="""
 ]
 Fields = [
+"""({time}(\w+\s)?\d+\s+(\w+\s+)?\d+\s+\d+:\d+:\d+)\s+(UTC\s+)?({host}[^\s]+)\s+:\s+%\w+\-"""
+"""({event_code}130005)\s*:\s*({event_name}[^:]+?)\s*:\s\w+"""
 """({time}\d+\s+\w+\s+\d+\s+\d+:\d+:\d+)\s+UTC\s+({host}[^\s]+)\s+:\s+({event_code}[^\s]+):\s+({event_name}.+?)\s+:"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\s*(({host}[\w.\-]+))?.*?({event_code}[^\s]+):\s+({event_name}.+?)\s+:"""
 """reason\s+=\s+({failure_reason}.+?)\s+:"""

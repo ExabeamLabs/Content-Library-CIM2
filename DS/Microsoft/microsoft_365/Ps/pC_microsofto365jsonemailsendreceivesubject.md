@@ -23,7 +23,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"Direction":"({direction}[^"]+)"""",
     """"SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """"RecipientAddress":"({email_recipients}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
-    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""",
     """"Size":"?({bytes}\d+)""",
 		""""VerdictSource":"({result}[^",]+)"""",
     """"Status":"({result}[^"]+)"""",
@@ -32,7 +32,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """"EventType":"({result_reason}[^"]+)"""",
     """"MessageTraceId":"({message_id}[^"]+)"""",
     """"MessageId":"({message_id}[^"]+)"""",
-    """"triggered-by":\{"user-email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"triggered-by":\{"user-email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """Category\s+\[({category}[^\]]+)\]""",
     """"Action":"({action}[^",]+)"""",
     """"ToIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
@@ -46,7 +46,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """exa_json_path=$.Direction,exa_field_name=direction"""
     """exa_regex="SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """exa_regex="RecipientAddress":"({email_recipients}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
-    """exa_regex="RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_regex="RecipientAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""",
     """exa_json_path=$.Size,exa_field_name=bytes"""
     """exa_json_path=$.VerdictSource,exa_field_name=result"""
     """exa_json_path=$.Status,exa_field_name=result"""
@@ -55,7 +55,7 @@ Name = microsoft-o365-json-email-send-receive-subject
     """exa_json_path=$.EventType,exa_field_name=result_reason"""
     """exa_json_path=$.MessageTraceId,exa_field_name=message_id"""
     """exa_json_path=$.MessageId,exa_field_name=message_id"""
-    """exa_regex="triggered-by":\{"user-email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """exa_regex="triggered-by":\{"user-email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """exa_json_path=$.Category,exa_field_name=category"""
     """exa_json_path=$.Action,exa_field_name=action"""
     """exa_regex="ToIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""

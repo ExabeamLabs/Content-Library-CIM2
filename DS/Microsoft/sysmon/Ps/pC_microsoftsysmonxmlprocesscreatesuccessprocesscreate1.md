@@ -27,6 +27,7 @@ Fields = [
     """<Data Name\\*='CommandLine'>({process_command_line}.+?)\s*</Data>""",
     """<Data Name\\*='SourceImage'>({process_path}(({process_dir}[^<]*)\\+)?({process_name}.+?))</Data>""",
     """<Data Name\\*='TargetImage'>({dest_process_path}(({dest_process_dir}[^<]*)\\+)?({dest_process_name}.+?))</Data>""",
+    """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -4,7 +4,7 @@ Product: Sonicwall
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  230  |  104   |         46         |       6        |   12    |
+|  230  |  104   |         46         |       6        |   18    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

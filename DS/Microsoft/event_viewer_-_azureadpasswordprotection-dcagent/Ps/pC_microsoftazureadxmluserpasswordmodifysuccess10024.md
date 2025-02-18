@@ -17,6 +17,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-10024
     """<Keywords>({result}[^<]+)</Keywords>""",
     """Security UserID\\*='({user_sid}[^']+)'""",
     """<Message>({additional_info}({event_name}[^<\.]+?)\.[^<]+?)\s+</Message>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "user->dest_user" ]
   

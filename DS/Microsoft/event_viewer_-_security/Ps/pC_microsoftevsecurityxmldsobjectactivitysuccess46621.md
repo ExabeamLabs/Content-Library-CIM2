@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4662-1
     """('|")OperationType('|")>({operation}[^<]+)<""",
     """('|")HandleId('|")>({handle_id}[^<]+)<""",
     """('|")Properties('|")>[\-\\r\\n\s]*({properties}[^<]+?)[\-\\r\\n\s]*<""",
+    """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

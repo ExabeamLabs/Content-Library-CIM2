@@ -7,7 +7,7 @@ Vendor: LanScope
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  27   |   14   |         9          |       6        |    2    |
+|  27   |   14   |         9          |       6        |    7    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

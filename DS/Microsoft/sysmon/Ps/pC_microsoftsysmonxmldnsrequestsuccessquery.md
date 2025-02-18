@@ -25,6 +25,7 @@ Name = microsoft-sysmon-xml-dns-request-success-query
     """<Data Name\\*='QueryName'>({dns_query}.+?)\s*</Data>""",
     """<Data Name\\*='QueryResults'>({dns_response}.+?)\s*</Data>""",
     """<Data Name\\*='Image'>({process_path}(({process_dir}[^<]*)\\+)?({process_name}.+?))</Data>"""
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

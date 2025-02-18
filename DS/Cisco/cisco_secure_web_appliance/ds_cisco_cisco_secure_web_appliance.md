@@ -4,7 +4,7 @@ Product: Cisco Secure Web Appliance
 -----------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   27   |         21         |       2        |    6    |
+|  75   |   27   |         21         |       2        |    7    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

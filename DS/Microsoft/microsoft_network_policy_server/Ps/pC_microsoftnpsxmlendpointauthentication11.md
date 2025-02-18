@@ -19,6 +19,7 @@ Name = "microsoft-nps-xml-endpoint-authentication-11"
     """<NP-Policy-Name[^>]+>({network}[^<]+)""",
     """<SAM-Account-Name[^>]+>(({domain}[^<\\]+)\\)?({account}[^<]+)""",
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<""",
+    """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "result->event_code" ]
 

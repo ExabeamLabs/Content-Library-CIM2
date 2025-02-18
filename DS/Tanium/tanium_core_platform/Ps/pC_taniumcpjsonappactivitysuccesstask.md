@@ -4,7 +4,7 @@
 Name = tanium-cp-json-app-activity-success-task
  Product = "Tanium Core Platform"
  ParserVersion = "v1.0.0"
- Conditions = [ """"table":"Task"""" ]
+ Conditions = [ """"table":"Task"""", """"action":"""", """"rowId":""", """"revision":""", """"state":""" ]
 
 tanium-template-1 {
     Vendor= Tanium

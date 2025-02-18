@@ -7,7 +7,7 @@ Vendor: Netwrix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  21   |   6    |         3          |       8        |    1    |
+|  21   |   6    |         3          |       8        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

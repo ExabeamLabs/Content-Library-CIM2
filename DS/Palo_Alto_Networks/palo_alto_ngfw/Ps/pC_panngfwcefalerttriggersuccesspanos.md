@@ -31,6 +31,14 @@ Fields = [
   """\sspt=({src_port}\d+)"""
   """\sdpt=({dest_port}\d+)"""
   """\scs1="*({rule}[^="]+?)"*\s+\w+="""
+  """\scs4=({src_network_zone}[^\s]+)""",
+  """\scs5=({dest_network_zone}[^\s]+)""",
+  """deviceInboundInterface=({src_interface}[^\s]+)""",
+  """deviceOutboundInterface=({dest_interface}[^\s]+)""",
+  """deviceExternalId=({serial_num}\d+)""",
+  """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
+	"""sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
+  """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
 ]
 DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = "v1.0.0"

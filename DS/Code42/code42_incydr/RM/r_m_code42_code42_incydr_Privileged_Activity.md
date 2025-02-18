@@ -7,7 +7,7 @@ Vendor: Code42
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   4   |   1    |         2          |       9        |    6    |
+|   4   |   1    |         2          |       9        |   10    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

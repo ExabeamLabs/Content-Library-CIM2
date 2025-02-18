@@ -18,6 +18,7 @@ Name = microsoft-evdnsserver-xml-network-notification-6001
      """<Security UserID\\*='({user_sid}[^']+)""",
      """Guid\\*='\{({process_guid}[^}']+?)\}'""",
      """ProcessID\\*='({process_id}\d+)""",
+     """<Level>({run_level}[^<]+)<"""
   ]
 
 

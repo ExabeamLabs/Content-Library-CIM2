@@ -7,7 +7,7 @@ Vendor: Quest Software
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  107  |   50   |         16         |       9        |    4    |
+|  107  |   50   |         16         |       9        |   13    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -28,6 +28,7 @@ xml-sysmon-activity = {
     """<Data Name\\*='ProcessId'>({process_id}\d+)""",
     """<Data Name\\*='State'>({state}[^<]+)<""",
     """({log_name}Microsoft-Windows-Sysmon)"""    
+    """<Level>({run_level}[^<]+)<"""
    
 }
 ```

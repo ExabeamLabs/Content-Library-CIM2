@@ -4,7 +4,7 @@ Product: Azure ATP
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  120  |   46   |         18         |       8        |   41    |
+|  120  |   46   |         18         |       8        |   49    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

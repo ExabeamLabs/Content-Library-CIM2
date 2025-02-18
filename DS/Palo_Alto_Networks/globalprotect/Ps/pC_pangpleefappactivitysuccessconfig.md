@@ -37,6 +37,13 @@ leef-paloalto-vpn-event-1 = {
 	    """proto=({protocol}[^\s]+)\s"""
 	    """\sAction=({action}[^\s]+)"""
 	    """"host":"({host}[^"]+)""""
+      """FromZone=({src_network_zone}[^=]+?)\s\w+="""
+      """ToZone=({dest_network_zone}[^=]+?)\s\w+="""
+      """InboundInterface=({src_interface}[^=]+?)\s\w+="""
+      """OutboundInterface=({dest_interface}[^=]+?)\s\w+="""
+      """Application=({network_app}[^=]+?)\s\w+="""
+      """\ssrcPostNAT=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """\sdstPostNAT=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     
 }
 ```

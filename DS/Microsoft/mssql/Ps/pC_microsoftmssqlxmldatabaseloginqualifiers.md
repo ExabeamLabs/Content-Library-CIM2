@@ -27,9 +27,11 @@ Name = microsoft-mssql-xml-database-login-qualifiers
     """\sserver_principal_name:(({domain}[^\\\/:]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sserver_principal_sid""",
     """database_name:({db_name}[^\s]+)""",
     """\Wserver_principal_name:(({domain}[^\\\/:]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",
-    """\Waction_id:({db_operation}[^\s]+)""",
+    """\Waction_id:({action}[^\s]+)""",
+    """statement:[^:=]*\s*({db_operation}\b(Select|alter|BACKUP|RESTORE|dbcc|drop|CREATE|update|insert|delete|set|show|RECONFIGURE)\b).+?\s*additional_information:"""
     """schema_name:({db_schema}[^\s]+)""",
     """\Wobject_name:({table_name}[^\s]+)""",
+    """<Level>({run_level}[^<]+)<"""
     """\Wstatement:(|-- network|Login failed.+?|Network error code.+?|({db_query}.+?))(\s+\w+:|\s*$)""",
 
   ]

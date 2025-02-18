@@ -44,11 +44,11 @@ Fields = [
 """\"deviceDetail\":\{[^\}]+?\"operatingSystem\":\"({os}[^\"]+)"""
 """\"deviceDetail\":\{[^\}]+?\"trustType\":\"({trust_type}[^\"]+)"""
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
+"""({operation}Sign-In)"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
 """"browser":"(|({browser}[^"]+))"""",
-""""riskState":"(none|({action}[^"]+))""",
+""""riskState":"({action}[^"]+)""",
 """"correlationId":\s*"({correlation_id}[^"]+)""""
-
 ]
 DupFields = ["error_code->failure_code"]
 ParserVersion = "v1.0.0"

@@ -7,7 +7,7 @@ Vendor: Zendesk
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         2          |       1        |    1    |
+|   3   |   1    |         2          |       1        |    2    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

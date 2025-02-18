@@ -19,6 +19,7 @@ Fields = [
 """({event_code}\d+)<\/EventID>"""
 """<Keywords>({result}[^<]+)"""
 """<EventRecordID>({event_id}[^<]+)"""
+"""<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -302,12 +302,6 @@ ParserVersion = "v1.0.0"
   ParserVersion = "v1.0.0"
 }
 
-${GravityzoneParsersTemplates.gravityzone-security-alert}{
-  Name = bitdefender-gz-json-alert-trigger-success-hd
-  Conditions = [ """gravityzone:""", """"module":"hd"""" ]
-  ParserVersion = "v1.0.0"
-},
-
 {
   Name = sophos-invincea-kv-alert-trigger-success-invincea
   Vendor = Sophos

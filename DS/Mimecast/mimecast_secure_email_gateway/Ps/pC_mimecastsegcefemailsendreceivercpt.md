@@ -12,7 +12,8 @@ Name = mimecast-seg-cef-email-send-receive-rcpt
 """"aCode":"""" 
 """"Dir":""""
 """"Sender":""""
-""""Rcpt":""""
+""""Rcpt":"""",
+""""Delivered":"""
 ]
   Fields = [
     """"acc":"({host}[^",]+)"""",

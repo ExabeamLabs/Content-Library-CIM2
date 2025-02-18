@@ -7,7 +7,7 @@ Vendor: APC
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  57   |   25   |         11         |       2        |    0    |
+|  57   |   25   |         11         |       2        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

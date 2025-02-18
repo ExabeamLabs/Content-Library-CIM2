@@ -37,6 +37,7 @@ Name = microsoft-evapp-xml-endpoint-notification-3009
     """Group:\s*(|-|({group_name}.+?))\s*Security ID:\s*(|-|({group_id}.+?))\s*Group Name:\s*(|-|({=group_name}.+?))\s*Group Domain:\s*(|-|({group_domain}.+?))\s""",
     """<Data Name\\*='RuleId'>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*='RuleName'>({rule}[^<]+)""",
+    """<Level>({run_level}[^<]+)<"""
   ]
 
 

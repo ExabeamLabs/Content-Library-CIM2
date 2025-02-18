@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-endpoint-time-modify-fail-129
   ParserVersion = v1.0.0
   Product = Event Viewer - System
-  Conditions = [ """<EventID>129</EventID>""" ]
+  Conditions = [ """<EventID>129</EventID>""" , """<Channel>System<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

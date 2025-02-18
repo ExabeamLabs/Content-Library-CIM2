@@ -5,7 +5,7 @@ Name = servicenow-s-sk4-app-logout-success-impersonationend
   Vendor = ServiceNow
   ParserVersion = "v1.0.0"
   Product = ServiceNow
-  Conditions = [ """destinationServiceName =ServiceNow""", """"name":"impersonation.end"""" ]
+  Conditions = [ """"sys_created_by":""", """"sys_created_on":""", """"name":"impersonation.end"""" ]
 
 servicenow-auth-template = {
     Vendor = ServiceNow

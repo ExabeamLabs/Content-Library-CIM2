@@ -7,7 +7,7 @@ Vendor: Osquery
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  37   |   21   |         2          |       2        |    2    |
+|  37   |   21   |         2          |       2        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

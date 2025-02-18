@@ -66,6 +66,14 @@ Fields = [
 """"Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_path}[^"]+)"\}"""
 """"destinationServiceName":"({alert_source}[^"]+)""""
 """"Description":"({additional_info}[^"]+)""""
+""""Hostname":\s*"({src_host}[\w\-\.]+)"""
+""""AgentId":"({aid}[^"]+)"""
+""""cid":"({cid}[^"]+)""""
+""""customerIDString":"({cid}[^"]+)""""
+"""exa_json_path=$..cid,exa_field_name=cid""",
+"""exa_json_path=$..customerIDString,exa_field_name=cid""",
+"""exa_json_path=$..Hostname,exa_field_name=src_host"""
+"""exa_json_path=$..AgentId,exa_field_name=aid"""
 """exa_json_path=$.metadata.eventCreationTime,exa_field_name=time""",
 """exa_json_path=$..eventType,exa_field_name=event_category""",
 """exa_json_path=$..DetectName,exa_field_name=alert_type""",

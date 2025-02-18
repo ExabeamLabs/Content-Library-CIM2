@@ -7,7 +7,6 @@ Name = amazon-awscloudwatch-sk4-http-session-awscloudfront
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [
     """CEF:"""
-    """ https """
     """AWS_CLOUDFRONT"""
   ]
   Fields = [

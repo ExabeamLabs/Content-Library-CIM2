@@ -7,7 +7,7 @@ Vendor: Nozomi Networks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  41   |   18   |         5          |       2        |    1    |
+|  41   |   18   |         5          |       2        |    2    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

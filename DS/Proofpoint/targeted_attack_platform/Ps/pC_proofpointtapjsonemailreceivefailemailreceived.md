@@ -4,7 +4,7 @@
 Name = "proofpoint-tap-json-email-receive-fail-emailreceived"
 Vendor = "Proofpoint"
 Product = "Targeted Attack Platform"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [
   """'subject':"""
   """'from':"""
@@ -33,6 +33,7 @@ Fields = [
   """'detectedName':\s*'({email_attachment}[^']+)"""
   """'x-originating-ip':\s*\['\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """'host':\s*'\[?({host}[\w\-.]+)"""
+  """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]
 DupFields = [
   "email_attachment->email_attachments"

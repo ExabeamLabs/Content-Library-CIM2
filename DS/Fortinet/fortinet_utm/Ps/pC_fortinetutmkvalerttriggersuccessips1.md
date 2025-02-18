@@ -26,6 +26,7 @@ Fields = [
   """\Wmsg="({additional_info}[^"]+)""""
   """\Waction="({action}[^"]+)"""",
   """\Wtz="?({tz}[+-]\d+)"""
+  """forwardedfor="*({more_info}[^"=]+)"""
 ]
 DupFields = [
   "alert_name->alert_subject"

@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-handle-close-4658
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """The handle to an object was closed""" ]
   Fields = [
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4658\s""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """"(?i)HostName":\s*"({host}[^"]+)"""",

@@ -7,7 +7,7 @@ Vendor: RangerAudit
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  62   |   34   |         3          |       6        |    6    |
+|  62   |   34   |         3          |       6        |   11    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |
