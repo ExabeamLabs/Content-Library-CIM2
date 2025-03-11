@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-downloadreport
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"DownloadReport""" ]
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

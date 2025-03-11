@@ -43,6 +43,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768"
     """exa_regex=Account Name:((?-i)\\+[rnt])*\s*({account}.+?)((?-i)\\+[rnt])*Supplied Realm"""
     """exa_regex=({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""
   ]
+  DupFields = [ "email_address->dest_email_address", "user->dest_user", "domain->dest_domain" ]
 
 
 }

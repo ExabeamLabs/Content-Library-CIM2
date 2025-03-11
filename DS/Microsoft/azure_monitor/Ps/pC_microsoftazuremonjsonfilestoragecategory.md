@@ -18,12 +18,14 @@ Name = microsoft-azuremon-json-file-storagecategory
     """"location":"({location}[^"]+)"""
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}Z)"""
     """"category":"({category}[^"]+)""""
-    """"properties":[^\\}]"+accountName":"({storage_account}[^"]+)""""
-    """"properties":[^\\}]"+userAgentHeader":"({user_agent}[^"]+)""""
+    """"properties":[^\\}]+"+accountName":"({storage_account}[^"]+)""""
+    """"properties":[^\\}]+"+userAgentHeader":"({user_agent}[^"]+)""""
     """"serviceType":"({service_type}[^"]+)""""
     """"statusCode":({result_code}\\d+)"""
-    """"resourceType":"({resource_type}[^"]+)"""
+    """"resourceType":"({resource_type}({service_name}[^"\/]+)\/[^"]+)""""
+    """"location"+:\s*"+({region}[^"]+)""""
   ]
+  DupFields = [ "region->location" ]
 
 
 }

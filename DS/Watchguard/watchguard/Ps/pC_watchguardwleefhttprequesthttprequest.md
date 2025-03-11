@@ -35,7 +35,7 @@ watchguard-events = {
    }
   }
 DLWatchguard-parser-template = {
-  watchguard-events = {
+  watchguard-events-dl = {
   Vendor = "Watchguard"
   Product = "Watchguard"
   TimeFormat = ["MMM dd yyyy HH:mm:ss z","MMM dd yyyy HH:mm:ss Z"]

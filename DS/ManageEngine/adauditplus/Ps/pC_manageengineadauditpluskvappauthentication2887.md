@@ -4,14 +4,14 @@
 Name = manageengine-adauditplus-kv-app-authentication-2887
   ParserVersion = v1.0.0
   Conditions = [ """ [ EVENT_NUMBER = 2887 ] """, """ ADAuditPlus: """, """ [ SOURCE = """, """ [ FORMAT_MESSAGE = """ ]
-  Fields = ${WindowsParsersTemplates.ad-audit-plus.Fields}[
+  Fields = ${WindowsParsersTemplates.ad-audit-plus-2.Fields}[
     """({host}[\w\-.]+) ADAuditPlus""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
     """Category\s*=\s*({category}[^\s]+)"""
   ]
   DupFields = [ "host->dest_host" ]
 
-ad-audit-plus = {
+ad-audit-plus-2 = {
   Vendor = ManageEngine
   Product = ADAuditPlus
   TimeFormat = "epoch_sec"

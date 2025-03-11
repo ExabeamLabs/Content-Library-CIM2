@@ -12,15 +12,17 @@ Name = cisco-ios-str-app-notification-success-isis
   ]
 
 cisco-system-info = {
-  Vendor = "Cisco"
-  Product = "Cisco Adaptive Security Appliance"
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd yyyy HH:mm:ss.SS","yyyy MMM dd HH:mm:ss","MMM dd yyyy HH:mm:ss.SSS","epoch_sec","epoch", "MMM dd HH:mm:ss"]
+  Vendor = Cisco
+  Product = Cisco Network Infrastructure and Management
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "yyyy MMM dd HH:mm:ss", "yyyy MMM dd HH:mm:ss.SSSSSS"]
   Fields = [
-    """\s({time}\w+ \d+ \d+:\d+:\d+)"""
-     """({time}\d+ \w+ \d+ \d+:\d+:\d+)\s+\w+:\s+\%""",
-     """\Wrt=({time}\d{13})""",
+    """(\d+|({host}[\w\-\.]+))\s*:\s*(\d+\s)?\w+\s\d+\s\d\d:\d\d:\d\d""",
+    """\s({time}\w+ \d+ \d+:\d+:\d+)""",
+    """({time}\d+ \w+ \d+ \d+:\d+:\d+(\.\d{6})?)\s+\w+:\s+\%\w+-""",
     """({event_code}%\w+\-[^:]+)""",
-    """\%[\w+-.]+:\s*({additional_info}[^\$]+?)\s*$"""
+    """\%[\w+-.]+:\s*({additional_info}[^\$]+?)\s*$""",
+    """\sinterface\s({interface}\w+\/\d+)(,|\s)""",
+    """:\s*%\w+\-({priority}\d+)-({event_name}[^:]+)\s*:"""
   
 }
 ```

@@ -3,8 +3,8 @@
 {
 Name = snort-s-str-alert-trigger-success-snortids
   ParserVersion = v1.0.0
-  Vendor = Snort
-  Product = Snort
+  Vendor = "Snort"
+  Product = "Snort"
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ snort[""", """[SNORTIDS[""", """ || """ ]
   Fields = [

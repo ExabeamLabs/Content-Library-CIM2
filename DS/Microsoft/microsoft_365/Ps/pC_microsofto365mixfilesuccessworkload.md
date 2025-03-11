@@ -41,6 +41,9 @@ Fields = [
   """"UserType":"*\s*({user_type}[^,}"]+)"*"""
   """"DestinationLabel":"({tag}[^"]+)""""
   """"CorrelationId":\s*"({correlation_id}[^"]+)""""
+  """"SensitivityLabelJustificationText":\s*"({operation_details}[^"]+)""""
+  """"SensitivityLabelId":\s*"({sensitivity_label}[^"]+)""""
+  """"OldSensitivityLabelId":\s*"({old_sensitivity_label}[^"]+)""""
 ]
 DupFields = [
   "operation->action"

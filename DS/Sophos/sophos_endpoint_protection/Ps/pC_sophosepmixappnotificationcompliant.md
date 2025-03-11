@@ -7,7 +7,7 @@ Name = sophos-ep-mix-app-notification-compliant
   ExtractionType = json
   Conditions = [ """"Event::Endpoint::Compliant"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

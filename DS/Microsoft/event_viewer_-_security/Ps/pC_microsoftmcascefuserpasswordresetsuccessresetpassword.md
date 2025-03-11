@@ -9,18 +9,18 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-account-password-activity.Fields}[
+account-password-activity-1.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 	"""<EventID>({event_code}30009)</EventID>"""
   ]
  },
-${MicrosoftParserTemplates.account-password-activity}{
+${MicrosoftParserTemplates.account-password-activity-1}{
   Name = microsoft-azuread-xml-user-password-reset-success-30029
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>30029</EventID>""","""'Microsoft-AzureADPasswordProtection-DCAgent'""", """ UserName:""" ]
-  Fields = ${MicrosoftParserTemplates.account-password-activity.Fields}[
+  Fields = ${MicrosoftParserTemplates.account-password-activity-1.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<EventID>({event_code}30029)</EventID>"""
@@ -462,25 +462,8 @@ ${MicrosoftParserTemplates.cef-sysmon-file-write}{
   Name = microsoft-sysmon-cef-registry-modify-success-registryvalueset
   Conditions = [ """CEF:""", """|Microsoft Sysmon|Sysmon NXLog|""", """|SysmonTask-SYSMON_REG_SETVALUE|Registry value set|""" ]
   ParserVersion = "v1.0.0"
-},
-
-{
-  Name = microsoft-o365-kv-app-login-fail-workload
-  Vendor = Microsoft
-  Product = Microsoft 365
-  ParserVersion = "v1.0.0"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """SESSID=""", """RESULTCODE=""", """WORKLOAD=""", """COMMAND=UserLoginFailed""", """OBJECT=""" ]
-  Fields = [
-    """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
-    """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
-    """WORKLOAD=({app}[^=]+?)\s+\w+=""",
-    """COMMAND=({event_name}[^=]+?)\s+\w+=""",
-    """OBJECT=(Unknown|({object}[^=]+?))\s+\w+=""",
-    """SIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """RESULTCODE=({result}[^=]+?)\s+\w+=""",
-    """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)"""
+  Fields = ${MicrosoftParserTemplates.cef-sysmon-file-write.Fields} [
+    """cs2=({registry_value}[^=]+)\s+\w+="""
   
 }
 ```

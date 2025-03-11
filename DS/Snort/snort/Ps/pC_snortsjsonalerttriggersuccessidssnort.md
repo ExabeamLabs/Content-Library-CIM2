@@ -4,8 +4,8 @@
 Name = snort-s-json-alert-trigger-success-idssnort
   ExtractionType = json
   ParserVersion = v1.0.0
-  Vendor = Snort
-  Product = Snort
+  Vendor = "Snort"
+  Product = "Snort"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [ """"program":"snort"""", """"logT":"IDS-Snort"""", """[Classification:""" ]
   Fields = [

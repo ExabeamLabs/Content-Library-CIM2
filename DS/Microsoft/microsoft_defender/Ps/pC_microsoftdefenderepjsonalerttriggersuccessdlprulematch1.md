@@ -33,7 +33,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-dlprulematch-1
     """exa_json_path=$.PolicyDetails.[0].Severity,exa_field_name=alert_severity"""
     """exa_regex="SensitiveInformation":\s*\[\{[^\}]*?"Location":\s*"(|({additional_info}[^"]+))"(,|\})"""
     """exa_json_path=$.IncidentId,exa_field_name=alert_id"""
-    """exa_json_path=$.PolicyDetails.[0].Rules.[0].Actions,exa_field_name=result"""
+    """exa_json_path=$.PolicyDetails.[0].Rules.[0].Actions[0],exa_field_name=result"""
     """exa_json_path=$.PolicyDetails.[0].RuleName,exa_field_name=alert_name"""
     """exa_json_path=$.ExchangeMetaData.From,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@"]+))?)"""
     """exa_regex="To":\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?")\]"""

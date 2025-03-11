@@ -9,7 +9,8 @@ Name = zscaler-fwzc-kv-network-traffic-success-cloud
   Conditions = [ """orig=FW Zscaler Cloud|""" , """|datetime=""", """|action=""", """|rule=""", """|durationms=""" ]
   Fields = [
     """\|datetime=({time}\w\w\w \w\w\w\s*\d+\s*\d\d:\d\d:\d\d \d\d\d\d)"""
-    """\|user=((\w+_)[^"\|]+|({user}\w+))"""
+    """\|user=((\w+_)[^"\|]+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """\|user=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^@\"\|]+)@)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^\"@\|]+))\|"""
     """\|location=({location}[^\=]+?)\s+\w+="""
     """\|department=({department}[^\=]+?)\s+\w+="""
     """\|dest_port=({dest_port}\d+)"""

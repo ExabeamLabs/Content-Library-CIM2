@@ -5,7 +5,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetodeleteditems-2
   ParserVersion = v1.0.0
   Product = Microsoft 365
   Conditions= [ """"Workload":""", """"Operation":"MoveToDeletedItems"""", """"UserId":"""" ]
-  Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-o365-app-activity.Fields} [
+  Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-o365-app-activity-1.Fields} [
     """\WfilePath=(((?i)N\/A)|({file_path}[^=]+?))\s*(\w+=|$)""",
     """\WfilePath=(((?i)N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?(\.({file_ext}[^\/=\.\s]+?))?)))\s*(\w+=|$)""",
     """\sfname=\s*(N\/A|({object}[^=\s]+))""",
@@ -13,7 +13,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetodeleteditems-2
     """"Folder":\{[^\}]*?"Path":"([^"]*\\+)?({folder_name}[^"]+)""""
   ]
 
-cef-microsoft-o365-app-activity = {
+cef-microsoft-o365-app-activity-1 = {
   Vendor = Microsoft
   Product = Microsoft 365
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"

@@ -26,6 +26,7 @@ cef-sophos-security-alert-1 {
     """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
     """"description":"({additional_info}[^:"]+:?([^"]+? at '({malware_url}[^"]+)')?)"""",
     """"descriptor":"({process_path}[^"]+\\({process_name}[^"]+))"""",
+    """"endpoint_platform":"({os}[^"]+)"""
   ]
   DupFields = ["host->src_host"
 }

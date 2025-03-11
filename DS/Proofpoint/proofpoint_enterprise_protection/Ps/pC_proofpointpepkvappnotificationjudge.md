@@ -32,6 +32,7 @@ proofpoint-dlp-log = {
     """malwarescore=({malware_score}[\d]+)\s""",
     """value=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
     """from=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("+|\s+\w+=)""",
-  
+  ]
+  DupFields = [ "xid->alert_id"
 }
 ```

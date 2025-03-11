@@ -15,7 +15,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cef-defender-atp.Fields} [
+cef-defender-atp-3.Fields} [
     """"FolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
     """DeviceName"+:\s*"+({dest_host}({host}[\w\-.]+))""",
     """MD5"+:"+({hash_md5}[^"]+)""",

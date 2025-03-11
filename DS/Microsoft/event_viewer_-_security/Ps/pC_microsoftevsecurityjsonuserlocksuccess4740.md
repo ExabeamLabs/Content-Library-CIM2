@@ -9,7 +9,9 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
 """"EventID":"""
 """4740"""
-"""A user account was locked out"""
+"""Microsoft-Windows-Security-Auditing"""
+""""TargetUserName":""""
+""""SubjectUserName":""""
 ]
 Fields = [
   """({event_name}A user account was locked out)"""
@@ -17,7 +19,7 @@ Fields = [
   """"EventTime\\?":\s*\\?"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\""""
   """computer":"({host}[\w.\-]+)""""
   """"Hostname\\?":\\?"({host}[\w\-.]+)"""
-  """"ComputerName\\?":\\?"({host}[\w\-\.]+)"""
+  """"Computer(Name)?\\?":\\?"({host}[\w\-\.]+)"""
   """({event_code}4740)"""
   """Security ID:\s*(\\t|\\r|\\n)*({user_sid}[^\s\\"]+)\s*(\\t|\\r|\\n)*Account Name:\s*(\\t|\\r|\\n)*({src_user}[^\s\\"]+)\s*(\\t|\\r|\\n)*Account Domain:\s*(\\t|\\r|\\n)*({src_domain}[^\s\\"]+)\s*(\\t|\\r|\\n)*Logon ID:\s*(\\t|\\r|\\n)*({login_id}[^\s"\\]+)\s*(\\t|\\r|\\n)*"""
   """"SubjectUserName\\?":\\?"({src_user}[^\\"]+)"""
@@ -45,10 +47,7 @@ Fields = [
   """exa_json_path=$.Message,exa_regex=Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """exa_json_path=$.TargetDomainName,exa_regex=\\*({dest_domain}[^"]+)$"""
 ]
-DupFields = [
-"src_domain->domain"
-"user->dest_user"
-]
+DupFields = [ "src_domain->domain", "user->dest_user", "user_sid->dest_user_sid" ]
 ParserVersion = "v1.0.0"
 
 

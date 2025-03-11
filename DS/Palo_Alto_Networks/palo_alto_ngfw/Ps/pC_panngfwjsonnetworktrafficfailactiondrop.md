@@ -35,6 +35,7 @@ Name = pan-ngfw-json-network-traffic-fail-actiondrop
       """exa_json_path=$.TimeGenerated,exa_field_name=time"""
   """exa_json_path=$.host,exa_regex=^({host}[\w.-]+)$"""
   """exa_json_path=$.DeviceName,exa_regex=^({host}[\w.-]+)$"""
+  """exa_json_path=$..DeviceName,exa_field_name=device_name"""
   """exa_json_path=$.PrivateIPv4,exa_regex=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.PrivateIPv6,exa_regex=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.PublicIPv4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""

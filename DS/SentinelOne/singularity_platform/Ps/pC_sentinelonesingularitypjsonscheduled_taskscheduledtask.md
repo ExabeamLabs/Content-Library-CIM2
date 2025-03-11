@@ -6,7 +6,7 @@ Name = sentinelone-singularityp-json-scheduled_task-scheduledtask
   Conditions = [""""dataSource.name":"SentinelOne"""", """"event.category":"scheduled_task"""", """"event.type":""""]
   Fields = ${SentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
     """"agent.version":\s*"+({user_agent}[^"]+)"""",
-    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))"""",
+    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"src.process.image.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""",
     """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""",
     """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""",
@@ -15,7 +15,7 @@ Name = sentinelone-singularityp-json-scheduled_task-scheduledtask
     """"task.name":"({task_name}[^"]+)""",
     """"src.process.parent.image.path":"\s*({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
     """exa_json_path=$.['agent.version'],exa_field_name=user_agent""",
-    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
+    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.['src.process.image.sha256'],exa_field_name=hash_sha256""",
     """exa_json_path=$.['src.process.image.sha1'],exa_field_name=hash_sha1""",
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5""",
@@ -44,7 +44,7 @@ json-sentinelone-edr-events = {
       """"src\.process\.pid":({process_id}\d+)""",
       """"src\.process\.cmdline":"({process_command_line}.+?)",""",
       """"account\.id":"({account_id}[^"]+)""",
-      """"src.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))"""",
+      """"src.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"tgt.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))"""",
       """exa_json_path=$..timestamp,exa_field_name=time""",
       """exa_json_path=$..['event.type'],exa_field_name=event_name""",
@@ -57,7 +57,7 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..['src.process.pid'],exa_field_name=process_id""",
       """exa_json_path=$..['src.process.cmdline'],exa_field_name=process_command_line""",
       """exa_json_path=$..['account.id'],exa_field_name=account_id""",
-      """exa_json_path=$..['src.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))($|")""",
+      """exa_json_path=$..['src.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))($|")""",
       """exa_json_path=$..['tgt.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
     
 }

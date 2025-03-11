@@ -4,13 +4,13 @@
 Name = microsoft-azuremon-sk4-database-login-connectionlog
   Product = Azure Monitor
   Conditions = [ """"category":"MySqlAuditLogs"""", """"event_class":"connection_log"""" ]
-  Fields = ${MicrosoftParserTemplates.cef-azure-db-for-mysql.Fields}[
+  Fields = ${MicrosoftParserTemplates.cef-azure-db-for-mysql-1.Fields}[
     """"db":"({db_name}[^",]+)""",
     """"connection_id":({connection_id}\d+)"""
   ]
   ParserVersion = "v1.0.0"
 
-cef-azure-db-for-mysql = {
+cef-azure-db-for-mysql-1 = {
    Vendor = Microsoft
    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
    Fields = [

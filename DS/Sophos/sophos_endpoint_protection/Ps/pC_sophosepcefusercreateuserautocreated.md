@@ -4,11 +4,11 @@
 Name = sophos-ep-cef-user-create-userautocreated
   ParserVersion = "v1.0.0"
   Conditions = [ """CEF:""", """"type":"Event::Endpoint::UserAutoCreated"""" ]
-   Fields=${DLSophosParsersTemplates.cef-sophos-security-alert-1.Fields}[
+   Fields=${DLSophosParsersTemplates.cef-sophos-security-alert-1-dl.Fields}[
     """"name"*:"*({alert_name}[^":]+)"""
   ]
 
-cef-sophos-security-alert-1 = {
+cef-sophos-security-alert-1-dl = {
   Vendor = Sophos
   Product = Sophos Endpoint Protection
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -24,7 +24,7 @@ cef-sophos-security-alert-1 = {
     """"name":"({alert_name}[^":]+?)\s*(:\s*({app}[^":,\\]+))?"""",
     """"threat":"?(null|({alert_name}[^",:]+))""",
     """"type":"({alert_type}Event::Endpoint::[^"]+)""",
-    """"source":"(n\/a|({full_name}[^"\\\(\)]+))","""",
+    """"source":"(n\/a|({full_name}[^"\\\(\),]+))",""",
     """"source":"(n\/a|(([^\\\s"]*\s+[^\\"]*|({domain}[^\\"]+?))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"source":"(n\/a|([\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",

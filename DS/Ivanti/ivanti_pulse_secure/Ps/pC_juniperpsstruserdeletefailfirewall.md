@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """time=\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """vpn=({host}[^\s]+)"""
-"""\suser=(\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-]+))(\s+\w+=|\s*$)"""
+"""\suser=(\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
 """realm=*"({realm}[^\"]+)?\\*"""
 """roles="({role}[^\"]+)?\\*"""
 """Removed username ((({dest_domain}[^\\]+)\\)?(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\\\s]+)))"""

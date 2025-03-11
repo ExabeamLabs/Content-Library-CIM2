@@ -6,7 +6,7 @@ Name = mcafee-wg-json-http-session-mwg
     Product = McAfee Web Gateway
     ParserVersion = "v1.0.0"
     TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
-    Conditions = ["""mwg:""" ]
+    Conditions = [""" mwg:""" ]
     Fields = [
       """\[({time}[^\]]+)""",
       """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s+mwg:""",

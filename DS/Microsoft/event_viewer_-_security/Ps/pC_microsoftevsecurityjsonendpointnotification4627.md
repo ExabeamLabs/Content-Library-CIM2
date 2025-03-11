@@ -39,6 +39,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """exa_json_path=$..TargetLogonId,exa_field_name=login_id"""
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
   ]
+  DupFields = ["login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user"]
 
 
 }

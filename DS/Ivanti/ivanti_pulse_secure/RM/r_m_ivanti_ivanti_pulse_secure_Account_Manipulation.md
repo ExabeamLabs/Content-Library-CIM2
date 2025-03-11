@@ -7,7 +7,7 @@ Vendor: Ivanti
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  12   |   8    |         5          |       3        |   46    |
+|  12   |   8    |         5          |       3        |   47    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

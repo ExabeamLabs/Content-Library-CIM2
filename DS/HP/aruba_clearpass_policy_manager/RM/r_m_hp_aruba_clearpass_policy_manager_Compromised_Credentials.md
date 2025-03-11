@@ -7,7 +7,7 @@ Vendor: HP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  85   |   45   |         9          |       6        |   27    |
+|  85   |   45   |         9          |       6        |   31    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

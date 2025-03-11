@@ -7,7 +7,7 @@ Vendor: FileAuditor
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         1          |       3        |    6    |
+|   1   |   0    |         1          |       3        |    7    |
 
 | Event Type  | Rules    | Models |
 | ---- | ---- | ------ |

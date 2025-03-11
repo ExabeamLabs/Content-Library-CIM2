@@ -28,10 +28,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((?i)(workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [
-    "result_code->failure_code"
-    "result_code->error_code"
-    ]
+  DupFields = [ "result_code->failure_code", "result_code->error_code", "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
   ParserVersion = "v1.0.0"
 
 

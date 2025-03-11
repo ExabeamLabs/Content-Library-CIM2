@@ -12,6 +12,7 @@ Name = microsoft-evapp-str-endpoint-notification-1202
     """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
     """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+    """"Computer":"({host}[\w\.\-]+)"""",
     """({event_code}1202)""",
     """({event_name}Security policies were propagated with warning)\.\s*({result_code}[\w]+)\s:"""
     """exa_json_path=$.Id,exa_field_name=event_code"""

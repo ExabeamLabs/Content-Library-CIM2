@@ -19,9 +19,7 @@ Name = microsoft-evsecurity-cef-endpoint-login-fail-4771-1
     """"serviceName":"([\w\-.]+)\/({domain}[^\\\/\s"]+?)\s*"""",
     """"status":"({result_code}[^"]+?)\s*""""
   ]
-  DupFields = [
-    "result_code->failure_code"
-  ]
+  DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
 
 
 }

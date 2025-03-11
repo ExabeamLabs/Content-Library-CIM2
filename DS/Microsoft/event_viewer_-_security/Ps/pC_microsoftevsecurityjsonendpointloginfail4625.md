@@ -11,7 +11,8 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625"
     """"FailureReason":"""
     """"EventID":"""
     """4625"""
-    """An account failed to log on"""
+    """"LogonProcessName":""""
+    """"AuthenticationPackageName":""""
   ]
   Fields = [
     """({event_name}An account failed to log on)"""
@@ -63,10 +64,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625"
     """exa_regex=Account Name:((?-i)\\+[rnt])*(-|({account}.+?))((?-i)\\+[rnt])*Account Domain"""
     """exa_regex="FailureReason":"({failure_reason}[^"]+)""""
   ]
-  DupFields = [
-    "host->dest_host"
-    "result_code->failure_code"
-  ]
+  DupFields = [ "host->dest_host", "result_code->failure_code", "email_address->dest_email_address", "user->dest_user", "domain->dest_domain" ]
 
 
 }

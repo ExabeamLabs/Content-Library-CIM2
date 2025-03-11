@@ -6,7 +6,7 @@ Name = sophos-ep-cef-app-notification-outofdate
   Product = Sophos Endpoint Protection
   Conditions = [ """Event::Endpoint::OutOfDate""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

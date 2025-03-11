@@ -5,11 +5,11 @@ Name = "crowdstrike-falcon-json-dll-load-imagehash"
   ParserVersion = "v1.0.0"
   ExtractionType = json
   Conditions = [ """"event_simpleName":""", """"ImageHash"""" ]
-  Fields = ${DLCrowdStrikeParserTemplates.crowdstrike-process-info.Fields} [
+  Fields = ${DLCrowdStrikeParserTemplates.crowdstrike-process-info-dl.Fields} [
     """exa_json_path=$.ImageFileName,exa_regex=({file_path}({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s"]+))?))("|$)""",
   ]
 
-crowdstrike-process-info = {
+crowdstrike-process-info-dl = {
   Vendor = CrowdStrike
   Product = Falcon
   TimeFormat = ["epoch_sec","epoch"]

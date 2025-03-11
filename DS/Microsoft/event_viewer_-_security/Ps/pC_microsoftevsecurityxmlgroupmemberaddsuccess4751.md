@@ -16,12 +16,12 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4751
     """<Data Name =('|")TargetDomainName('|")>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-    """<Data Name =('|")SubjectUserName('|")>({user}[^<]+)</Data>""",
+    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<System>.*?Guid(\\)?=('|")\{({process_guid}[^}]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}\d+)""",
-    """<Data Name ="MemberSid">({account_id}(?=[^\\<]+\\)({domain}[^\\]+)\\({user}[^\s]+)|(?:[^\s\<]+))</Data>""",
+    """<Data Name ="MemberSid">({account_id}(?=[^\\<]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:[^\s\<]+))</Data>""",
     """<Level>({run_level}[^<]+)<"""
       ]
 

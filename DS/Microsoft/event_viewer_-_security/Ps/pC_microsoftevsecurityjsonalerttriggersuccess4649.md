@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-alert-trigger-success-4649
   """exa_json_path=$.Channel,exa_field_name=channel""",
   """exa_json_path=$.Message,exa_regex=({event_name}[^\.]+).\s*Subject""",
   """exa_json_path=$.EventType,exa_field_name=event_category""",
-  """exa_json_path=$.SeverityValue,exa_field_name=severity""",
+  """exa_json_path=$.SeverityValue,exa_field_name=alert_severity""",
   """exa_json_path=$.SourceName,exa_field_name=app""",
   """exa_json_path=$.ProviderGuid,exa_field_name=process_guid""",
   """exa_json_path=$.Task,exa_field_name=task_name""",

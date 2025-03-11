@@ -27,12 +27,14 @@ azure-classicblob-json = {
       """exa_json_path=$..accountName,exa_field_name=storage_account""", 
       """exa_json_path=$..userAgentHeader,exa_field_name=user_agent""", 
       """exa_json_path=$..lastModifiedTime,exa_field_name=file_modify_time""", 
-      """exa_json_path=$..requestBodySize,exa_field_name=bytes_in""", 
+      """exa_json_path=$..requestBodySize,exa_field_name=bytes_in""",
+      """exa_json_path=$..responseBodySize,exa_field_name=bytes_out""",
       """exa_json_path=$..uri,exa_field_name=file_path""",
       """exa_json_path=$..uri,exa_regex=({url}({file_path}[^"]+\\/({file_name}[^\\?"]+))[^"]*|[^"]+)""",
       """exa_json_path=$..protocol,exa_field_name=protocol""",
       """exa_json_path=$..resourceType,exa_regex=({resource_type}({service_name}[^"\/]+)\/[^"]+)""",
-      """exa_json_path=$..serviceType,exa_field_name=service_type"""      
+      """exa_json_path=$..serviceType,exa_field_name=service_type""",
+      """exa_json_path=$..upn,exa_field_name=user_upn""",
       """"+time"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+resourceId"+:\s*"+({resource}[^"]+)"+""",
       """"+category"+:\s*"+({operation_type}[^"]+)"+""",
@@ -49,11 +51,13 @@ azure-classicblob-json = {
       """"+properties"+:[^\}]+"+userAgentHeader"+:\s*"+({user_agent}[^"]+)"+""",
       """"+properties"+:[^\}]+"+lastModifiedTime"+:\s*"+({file_modify_time}[^"]+)"+""",
       """"+properties"+:[^\}]+"+requestBodySize"+:\s*({bytes_in}\d+)""",
+      """"+properties"+:[^\}]+"+responseBodySize"+:\s*({bytes_out}\d+)""",
       """"+uri"+:\s*"+({file_path}[^"]+)"+""",
       """"+uri"+:\s*"+({url}({file_path}[^"]+\\/({file_name}[^\\?"]+))[^"]*|[^"]+)"+""",
       """"+protocol"+:\s*"+({protocol}[^"]+)"+""",
       """"+resourceType"+:\s*"+({resource_type}({service_name}[^"\/]+)\/[^"]+)"+""",
       """"+serviceType"+:\s*"+({service_type}[^"]+)"+"""
+      """"upn":"({user_upn}[^"]+)""""
     ]
     DupFields = [ "operation->operation_name", "region->location", "operation_type->category" 
 }

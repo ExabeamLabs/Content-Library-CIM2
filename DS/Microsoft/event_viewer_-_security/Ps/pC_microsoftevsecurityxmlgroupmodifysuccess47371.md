@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737-1
     """<Task>({sub_category}[^<]+)""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",

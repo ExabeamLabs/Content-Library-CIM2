@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
   Conditions = ["""attempted to validate the credentials for an account""", """Authentication Package""", """computer_name""", """event_id\":4776""", """"audit-event""""]
-  Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
+  Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
@@ -13,8 +13,9 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
     """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
+  DupFields = [ "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
 
-json-windows-events-2 = {
+json-windows-events-2-aa = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

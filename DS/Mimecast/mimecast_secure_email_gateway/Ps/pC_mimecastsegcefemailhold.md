@@ -7,9 +7,11 @@ Name = mimecast-seg-cef-email-hold
   Product = Mimecast Secure Email Gateway
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ 
-"""destinationServiceName =Mimecast Email Security"""
 """"recipientAddress":""""
-""""senderAddress":"""" 
+""""senderAddress":""""
+""""fileType":""""
+""""result":""""
+""""route":""""
 ]
   Fields = [
     """"date":"({time}\d+-\d+-\d+T\d+:\d+:\d+\+\d+)""",

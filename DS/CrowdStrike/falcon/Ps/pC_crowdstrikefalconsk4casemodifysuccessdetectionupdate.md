@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-sk4-case-modify-success-detectionupdate
   ParserVersion = v1.0.0
   Conditions = [ """"event-name":""", """"audit-event"""", """"OperationName":"detection_update"""" ]
 
-crowdstrike-app-activity = {
+crowdstrike-app-activity-dl = {
     Vendor = CrowdStrike
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [

@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4647
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)"""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

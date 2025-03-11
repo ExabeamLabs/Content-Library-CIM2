@@ -26,7 +26,7 @@ Fields = [
 """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = [
-"src_domain->domain","user->dest_user"
+"src_domain->domain","user->dest_user", "user_sid->dest_user_sid"
 ]
 ParserVersion = "v1.0.0"
 

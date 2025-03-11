@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-str-policy-apply-4954
         """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+        """"Computer":"({host}[\w\-\.]+)"""",
         """({event_code}4954)""",
         """({event_name}Group Policy settings for Windows Firewall were changed, and the new settings were applied)""",
   ]

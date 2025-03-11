@@ -7,8 +7,9 @@ Vendor: Juniper Networks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         1          |       1        |    2    |
+|   2   |   0    |         2          |       2        |    3    |
 
-| Event Type      | Rules    | Models |
+| Event Type       | Rules    | Models |
 | ---- | ---- | ------ |
-| process-created | <b>T1003 - OS Credential Dumping</b><br> ↳ <b>A-CP-Sensitive-Files</b>: Copying sensitive files with credential data on this asset |        |
+| failed-app-login | <b>T1078 - Valid Accounts</b><br> ↳ <b>APP-F-FL</b>: Failed login to application    |        |
+| process-created  | <b>T1003 - OS Credential Dumping</b><br> ↳ <b>A-CP-Sensitive-Files</b>: Copying sensitive files with credential data on this asset |        |

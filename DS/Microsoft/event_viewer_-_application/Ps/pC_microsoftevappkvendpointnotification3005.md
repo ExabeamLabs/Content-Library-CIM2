@@ -24,6 +24,7 @@ Name = microsoft-evapp-kv-endpoint-notification-3005
     """exa_regex=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}\S+)\s({alert_severity}\S+)""",
     """exa_regex=Event time:\s*({time}\d+\/\d+\/\d\d\d\d\s\d+:\d\d:\d\d\s(AM|PM|am|pm))""",
     """exa_json_path=$.Id,exa_field_name=event_code"""
+    """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_regex=Event code:\s*({event_code}\d+)"""
     """exa_regex=Event message:\s*({event_name}[^=]+?)\s*Event time:"""
     """exa_regex=Account name:\s*(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s|\\[rnt])+Exception information:""",

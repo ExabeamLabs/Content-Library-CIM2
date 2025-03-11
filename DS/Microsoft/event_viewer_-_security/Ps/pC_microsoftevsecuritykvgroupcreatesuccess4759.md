@@ -6,14 +6,14 @@ Name = microsoft-evsecurity-kv-group-create-success-4759
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   Conditions = [ """ [ EVENT_NUMBER = 4759 ] """, """ ADAuditPlus: """, """ [ SOURCE = """, """ [ FORMAT_MESSAGE = """ ]
-  Fields = ${MicrosoftParserTemplates.ad-audit-plus.Fields}[
+  Fields = ${MicrosoftParserTemplates.ad-audit-plus-1.Fields}[
     """({host}[\w\-.]+) ADAuditPlus""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
     """Category\s*=\s*({category}[^\s]+)"""
   ]
   DupFields = [ "host->dest_host" ]
 
-ad-audit-plus = {
+ad-audit-plus-1 = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "epoch_sec"

@@ -16,9 +16,7 @@ openldap-kv-parser = {
     Fields = [
       """conn=({connection_id}\d+)""",
       """({host}[^\s]+)\s+slapd""",
-      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""
-      """dn="({user_ou}[^"]+)"""
-      """uid=({user_id}\w+)"""
+      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""      
       """cn=({profile}\w+),ou=profile"""
       """dc=({domain_controller}\w+),"""
       """method=({auth_method}[^\s"]+)"""

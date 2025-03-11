@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4797
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(am|AM|pm|PM))""",
     """({event_code}4797)""",
     """({event_name}An attempt was made to query the existence of a blank password for an account)""",
-    """Account Name:\s*({user}[^\s:]+)""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Account Domain:\s*({domain}[^\s:]+)""",
     """Logon ID:\s*({login_id}[^\s:]+)""",   
     """Additional Information:\s*({additional_info}.+?)$"""

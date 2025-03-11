@@ -24,6 +24,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768-2"
     """TargetDomainNam":"(?:-|({domain}[^"]+?))""""
     """TargetSid":"({user_sid}[^"\\]+)""""
   ]
+  DupFields = [ "user_sid->dest_user_sid", "domain->dest_domain", "user->dest_user" ]
 
 
 }

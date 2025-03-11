@@ -11,7 +11,7 @@ Name = venofi-tlp-json-app-activity-success-tls
       """"time_stamp":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\dZ)"""
       """({host}[\w\-\.]+)\s*\{"data""""
       """"description":"({additional_info}[^"]+)"""
-      """"text1":\{"name".+?"value":"[^:]+:({user}[\w\-\.]+)"\}"""
+      """"text1":\{"name".+?"value":"[^:]+:({user}[\w\.\-\!\#\^\~]{1,40}\$?)"\}"""
       """"event_id":"({event_code}[^"]+)""""
       """""grouping":\{.+?"object":"({object}[^"]+)"""
       """"severity":({severity}\d)"""

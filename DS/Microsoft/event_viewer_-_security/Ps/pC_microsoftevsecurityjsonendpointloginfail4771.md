@@ -7,7 +7,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
   Product = "Event Viewer - Security"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "dd/MM/yyyy hh:mm:ss a"]
   ExtractionType = json
-  Conditions = [ """4771""", """Kerberos pre-authentication failed.""", """"TicketOptions""", """"ServiceName""", """"TargetUserName""" ]
+  Conditions = [ """4771""", """Kerberos """, """"TicketOptions""", """"ServiceName""", """"TargetUserName""" ]
   Fields = [
     """({event_name}Kerberos pre-authentication failed)"""
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
@@ -53,9 +53,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_json_path=$..IpAddress,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..ip,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
   ]
-  DupFields = [
-    "result_code->failure_code"
-  ]
+  DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
 
 
 }

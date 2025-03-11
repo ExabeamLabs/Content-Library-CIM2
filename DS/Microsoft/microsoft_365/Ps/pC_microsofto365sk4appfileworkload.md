@@ -39,10 +39,11 @@ Fields = [
 """"correlationId":\s*"({correlation_id}[^"]+)""""
 """"SensitivityLabelId":"({sensitivity_label}[^",]+)""""
 """"OldSensitivityLabelId":"({old_sensitivity_label}[^",]+)""""
-""""documentEncrypted":({encrypted}[^",]+)""""
+""""documentEncrypted":({encrypted}[^",]+)"""
 """"ObjectId":"({object_id}[^",]+)""""
 """"JustificationText":"({additional_info}[^",]+)""""
 """"LabelId":"({label_id}[^",]+)"""
+""""UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 ]
 
 

@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4627
     """<Level>({run_level}[^<]+)<"""
 # user_groups is removed
   ]
+  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]  
 
 
 }

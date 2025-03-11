@@ -27,19 +27,19 @@ forcepoint-network-connection-template = {
   ]
  }
 
- forcepoint-template= {
+ forcepoint-template-aa= {
   Vendor = Forcepoint
   Product = Forcepoint Next-Gen Firewall
-  TimeFormat = "epoch"
+  TimeFormat = ["epoch","MMM dd yyyy HH:mm:ss"]
   Fields=[
-    """CEF:\s+\d+\|([^\|]+\|){4}({operation}[^\|]+)""",
+    """CEF:\s*\d+\|([^\|]+\|){4}({operation}[^\|]+)""",
     """ahost=\s*({host}.+?)(\s\w+=)""",
     """\Wrt=({time}\d{13})""",
     """src=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""".
     """dhost=\s*({dest_host}.+?)(\s\w+=)""",
     """dst=\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?(\s\w+=)""",
     """amac=\s*({src_mac}.+?)(\s\w+=)""",
-    """dvc=\s*({src_host}.+?)(\s\w+=)""",
+    """dvc=\s*({host}.+?)(\s\w+=)""",
     """app=\s*({protocol}.+?)(\s\w+=)""",
     """proto=\s*({additional_info}.+?)(\s\w+=)""",
     """\Win=({bytes_in}\d+)""",
@@ -49,6 +49,7 @@ forcepoint-network-connection-template = {
     """\sdeviceInboundInterface=({src_interface}.+?)\s*\w+=""",
     """\sdeviceOutboundInterface=({dest_interface}.+?)\s*\w+=""",
     """\sproto=({protocol}.+?)\s*\w+=""",
+    """rt=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
     ]
  }
 

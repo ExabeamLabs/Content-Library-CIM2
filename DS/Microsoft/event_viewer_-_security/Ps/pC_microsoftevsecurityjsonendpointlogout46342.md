@@ -36,6 +36,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """exa_json_path=$..severityValue,exa_field_name=action""",
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
   ]
+  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

@@ -48,6 +48,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """exa_json_path=$..IpAddress,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?$""",
     """exa_regex=Account Name:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Account Domain"""
   ]
+  DupFields = [ "email_address->dest_email_address", "user->dest_user", "domain->dest_domain", "email_domain->dest_email_domain" ]
 
 
 }

@@ -31,9 +31,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"eventRecordID":"({event_id}\d+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
   ]
-  DupFields = [
-    "result_code->failure_code"
-  ]
+  DupFields = [ "result_code->failure_code", "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
 
 
 }

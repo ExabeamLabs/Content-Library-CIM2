@@ -4,12 +4,12 @@
 Name = zscaler-ia-csv-network-traffic-oneclickrule
   ParserVersion = "v1.0.0"
   Conditions = [ """One Click Rule"""" ]
-  Fields = ${ZscalerWeakParsersTemplates.zscaler-ia-csv-events.Fields}[
+  Fields = ${ZscalerWeakParsersTemplates.zscaler-ia-csv-events-2.Fields}[
     """ \d\d:\d\d:\d\d \d\d\d\d","({location}[^"\-]+)"""
     """ \d\d:\d\d:\d\d \d\d\d\d",("[^"]*",)"({department}[^"\-]+)"""
   ]
 
-zscaler-ia-csv-events = {
+zscaler-ia-csv-events-2 = {
     Vendor = Zscaler
     Product = Zscaler Internet Access
     TimeFormat = "MMM dd HH:mm:ss yyyy"

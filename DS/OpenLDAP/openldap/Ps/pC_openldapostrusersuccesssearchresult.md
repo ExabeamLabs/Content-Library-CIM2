@@ -6,6 +6,8 @@ Name = openldap-o-str-user-success-searchresult
     Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[
       """err=({error_code}\d+)\s"""
       """tag=({result_code}\d+)"""
+      """dn="({user_dn}[^"]+)"""
+      """uid=({user_id}\w+)"""
     ]
   
 openldap-kv-parser = {
@@ -16,9 +18,7 @@ openldap-kv-parser = {
     Fields = [
       """conn=({connection_id}\d+)""",
       """({host}[^\s]+)\s+slapd""",
-      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""
-      """dn="({user_ou}[^"]+)"""
-      """uid=({user_id}\w+)"""
+      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""      
       """cn=({profile}\w+),ou=profile"""
       """dc=({domain_controller}\w+),"""
       """method=({auth_method}[^\s"]+)"""

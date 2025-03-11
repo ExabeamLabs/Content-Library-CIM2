@@ -9,7 +9,7 @@ Name = extremenetworks-exos-str-endpoint-login-success-aaa
  Conditions = [ """AAA: """, """Login passed for user""", """through ssh""" ]
  Fields = [
     """({time}\w+\s+\d{1,2}\s+\d\d:\d\d:\d\d)"""
-    """user\s+({user}\w+)"""
+    """user\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """({event_name}Login passed)"""
     """ssh\s+\(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
  ]

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-3
     """TicketEncryptionType="+({ticket_encryption_type}[^"]+)""""
     """TicketOptions="+({ticket_options}[^"]+)""""
   ]
+  DupFields = [ "login_id->dest_login_id", "domain->dest_domain", "user->dest_user" ]
 
 
 }

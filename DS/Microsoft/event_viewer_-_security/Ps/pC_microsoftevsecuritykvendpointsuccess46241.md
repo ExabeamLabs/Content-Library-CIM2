@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-kv-endpoint-success-4624-1
       """IpAddress:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """IpPort:({src_port}\d+)"""
     ]
-    DupFields = [ "src_host_windows->src_host" ]
+    DupFields = [ "src_host_windows->src_host", "login_id->dest_login_id", "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
     ParserVersion = "v1.0.0"
   
 

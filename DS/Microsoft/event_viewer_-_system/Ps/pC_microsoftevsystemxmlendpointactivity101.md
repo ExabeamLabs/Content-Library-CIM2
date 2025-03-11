@@ -5,18 +5,17 @@ Name = microsoft-evsystem-xml-endpoint-activity-101
   ParserVersion = "v1.0.0"
   Product = Event Viewer - System
   Conditions = [ """<EventID Qualifiers""", """>101<""", """<Channel>System<""" ]
-  Fields = ${DLWindowsParsersTemplates.s-xml-object-access-1.Fields}[
+  Fields = ${DLWindowsParsersTemplates.s-xml-object-access-dl.Fields}[
     """<Computer>({host}[\w\-.]+?)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
   DupFields = [ "host->dest_host" ]
 
-s-xml-object-access-1 = {
+s-xml-object-access-dl = {
   Vendor = Microsoft
-  Product = Event Viewer - System
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Fields = [
-    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Message>({event_name}[^.<]+?)\s*<\/Message>""",
     """<Message>({event_name}[^<]+?)\s*\.(\s|<\/Message>)""",
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",

@@ -11,7 +11,7 @@ Name = cisco-duo-str-endpoint-authentication-bypassedduo2fa
     """\s\d\d:\d\d:\d\d\s+({host}[\w.-]+)""",
     """({operation_type}login_duo)"""
     """({event_name}User.+?group)"""
-    """User ({user}[^\s]+)"""
+    """User ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """({operation}bypassed Duo 2FA)"""
     """user's ({group_name}.+?)\sgroup"""
   ]

@@ -34,11 +34,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625-4"
     """Subject(:|=).+?Account Name(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_user}[^\s@]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Account Domain(:|=)"""
     """Subject(:|=).+?Account Domain(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_domain}[^:;]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Logon ID(:|=)"""
   ]
-  DupFields = [
-    "host->dest_host"
-    "result_code->failure_code",
-    "src_host_windows->src_host"
-  ]
+  DupFields = [ "host->dest_host", "result_code->failure_code", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user", "domain->dest_domain" ]
 
 
 }

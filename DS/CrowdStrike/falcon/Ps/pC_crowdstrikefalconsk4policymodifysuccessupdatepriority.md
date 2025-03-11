@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-sk4-policy-modify-success-updatepriority
   ParserVersion = v1.0.0
   Conditions = [ """"event-name":""", """"audit-event"""", """"OperationName":"update_priority"""" ]
 
-crowdstrike-app-activity = {
+crowdstrike-app-activity-dl = {
     Vendor = CrowdStrike
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [

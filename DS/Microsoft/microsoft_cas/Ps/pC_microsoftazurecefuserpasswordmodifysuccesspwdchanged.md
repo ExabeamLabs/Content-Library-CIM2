@@ -11,11 +11,11 @@ Name = microsoft-azure-cef-user-password-modify-success-pwdchanged
 """description":"Change password:"""
 """"type":"changePassword""""
   ]
-  Fields = ${MicrosoftAzureParsersTemplates.cef-azure-app-activity-1.Fields}[
+  Fields = ${MicrosoftAzureParsersTemplates.cef-azure-app-activity-2.Fields}[
 """\"description\":\"[^\"]*?device <b>({src_host}[^\"<]+)"""
  ]
 
-cef-azure-app-activity-1 = {
+cef-azure-app-activity-2 = {
 Vendor = Microsoft
 Product = Azure
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

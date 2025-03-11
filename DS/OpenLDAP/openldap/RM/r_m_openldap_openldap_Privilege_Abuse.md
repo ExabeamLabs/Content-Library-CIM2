@@ -7,7 +7,7 @@ Vendor: OpenLDAP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  25   |   9    |         7          |       4        |    7    |
+|  25   |   9    |         7          |       4        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

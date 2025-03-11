@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-json-audit-policy-modify-success-5449
   Conditions = [ """"EventID":5449,""", """A Windows Filtering Platform provider context has been changed""", """"Channel":"Security"""" ]
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
     """Subject:\s*Security ID:\s*({user_sid}[^:]+?)(\s+\w+){1,2}:\s"""
-    """Subject:[^"]+?Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[^:\\]+?)(\s+\w+){1,2}:\s"""
+    """Subject:[^"]+?Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s"""
     """Subject:[^"]+?Account Domain:\s*({domain}[^:]+?)(\s+\w+){1,2}:\s"""
     """Subject:[^"]+?Logon ID:\s*({login_id}[^:]+?)(\s+\w+){1,2}:\s"""
   ]

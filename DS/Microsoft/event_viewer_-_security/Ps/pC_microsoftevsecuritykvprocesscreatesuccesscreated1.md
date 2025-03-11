@@ -27,7 +27,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Process Name:(\\*[nrt]|\s)*({process_path}({process_dir}(\w+:)?[^:]+?[\\\/]+)?({process_name}[^:\\\/]+?))(\\*[nrt]|\s)+(Token Elevation Type:|Requested Operation:|%\{S-)"""
     """Target Subject:.+?Account Name:((\\)*(\\r|\\t|\\n))*\s*(-|SYSTEM|({dest_user}[^\\\s]+))((\\)*(\\r|\\t|\\n))*\s*""",
     """Subject:.+?Account Name:\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+\s\w+:""",
-    """Creator Subject:.+?Account Name:(\\+[rnt]|\s)*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """Creator Subject:.+?Account Name:(\\+[rnt]|\s)*'?(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Account Domain:(\\+[rnt]|\s)*(-|({domain}[^\s]+?))(\\+[rnt]|\s|;)*Logon ID:""",
     """Logon ID:(\\[nrt]|\s)*({login_id}[^\s\\;]+?)(\\[nrt]|\s)*(Target|Process)""",
     """Creator Subject:.+?Account Domain:(\\+[rnt]|\s)*(-|({domain}[^\s]+?))(\\+[rnt]|\s|;)*Logon ID:""",

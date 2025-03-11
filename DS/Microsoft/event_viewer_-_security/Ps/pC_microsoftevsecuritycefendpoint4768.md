@@ -26,9 +26,7 @@ Fields = [
   """ticketOptions":"({ticket_options}[^"]+)"""
   """"serviceName":"({service_name}[^"]+)"""
 ]
-DupFields = [
-  "result_code->failure_code"
-]
+DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

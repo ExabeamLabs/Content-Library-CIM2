@@ -5,29 +5,33 @@ Name = microsoft-evsecurity-xml-group-list-4798
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4798<""", """Microsoft-Windows-Security-Auditing""", """<Data Name\=""", """TargetUserName""" ]
-  Fields = ${DLWindowsParsersTemplates.windows-events-3.Fields}[
+  Fields = ${DLWindowsParsersTemplates.windows-events-3-dl.Fields}[
     """<Computer>({host}[^<>]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_name}A user's local group membership was enumerated)""",
     """<Level>({run_level}[^<]+)<"""
   ]
 
-windows-events-3 = {
-      Vendor = Microsoft
-      Product = Event Viewer - Security
-      TimeFormat = "epoch"
-      Fields = [
-        """\Wrt=({time}\d{13})""",
-        """\sagt=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-        """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-        """\Wdntdom=({domain}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-        """\Wduser=\s*((?i)local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"=]+))(\s+(\w+|\w+\.\w+)=|\s*$)""",
-        """\Wduid=(-|({login_id}[^=]+))\s\w+=""",
-        """\WfilePath=(?:[\\\*]+)?({share_name}.+?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-        """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-        """\said=({aid}[^\s\\]+)""",
-        """categoryOutcome=\/({result}[^\s]+)"""
-        """Source Port(=|:)\s*({src_port}\d+)"""
-        
+windows-events-3-dl = {
+  Vendor = Microsoft
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+  Fields = [
+    """<TimeCreated SystemTime\\='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3})""",
+    """<Keywords>({result}[^<>]+)</Keywords>""",
+    """<Data Name\\='(Caller)?ProcessName'>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<""",
+    """<Data Name\\='(Caller)?ProcessId'>({process_id}[^<]+?)\s*<""",
+    """<Execution ProcessID\\='({process_id}[^'"]+)""",
+    """<EventID>({event_code}\d+)""",
+    """<Data Name\\='TargetUserName'>(SYSTEM|({dest_user}[^<]+))<""",
+    """<Data Name\\='TargetDomainName'>({dest_domain}[^<]+)<""",
+    """<Data Name\\='LogonType'>({login_type}\d+)<""",
+    """<Data Name\\='TargetUserSid'>({dest_user_sid}[^<]+)<""",
+    """<Data Name\\='TargetLogonId'>({dest_login_id}[^<]+)<"""
+    """<Data Name\\='SubjectUserSid'>(-|({user_sid}[^<>]+))<""",
+    """<Data Name\\='SubjectUserName'>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """<Data Name\\='SubjectDomainName'>(-|({domain}[^<>]+))<""",
+    """<Data Name\\='SubjectLogonId'>(-|({login_id}[^<>]+))<"""
+    """Source Port(=|:)\s*({src_port}\d+)"""
+  
 }
 ```

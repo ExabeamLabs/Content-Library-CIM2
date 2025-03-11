@@ -24,7 +24,7 @@ Name = zscaler-ia-cef-network-traffic-oneclickrule
     """reason=({rule}[^=]+?)\s+destination""",
     """in=({bytes_in}\d+)""",
     """out=({bytes_out}\d+)""",
-    """cat=(Miscellaneous or Unknown|({ip_category}[^=]+?))\s+(\w+=|$)"""
+    """cat=(Miscellaneous or Unknown|({category}[^=]+?))\s+(\w+=|$)"""
   ]
 
 

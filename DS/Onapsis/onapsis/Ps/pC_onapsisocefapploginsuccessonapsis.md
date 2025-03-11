@@ -94,23 +94,6 @@ ${OnapsisParsersTemplates.cef-onapsis-activity}{
 },
 
 {
-  Name = cofense-pm-cef-alert-trigger-success-rulematch
-  Vendor = Cofense
-  Product = Cofense Phishme
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
-  Conditions = [ """CEF:""", """|Cofense|Triage|""", """|Rule Match|""" ]
-  Fields = [
-    """({alert_type}Rule Match)""",
-    """\Wrt=({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)""",
-    """\Wduser=(|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))(\s+\w+=|\s*$)""",
-    """\Wsuser=(|({malware_url}.+?))(\s+\w+=|\s*$)""",
-    """\Wcs2=(|({alert_name}.+?))(\s+\w+=|\s*$)""",
-    """\Wcs4=(|({additional_info}.+?))(\s+\w+=|\s*$)""",
-  ]
-  ParserVersion = "v1.0.0"
-},
-
-{
   Name = juniper-jn-cef-alert-trigger-success-cyphort
   Vendor = Juniper Networks
   Product = Juniper Advanced Threat Protection
@@ -596,28 +579,10 @@ ParserVersion = "v1.0.0"
   ParserVersion = "v1.0.0"
 },
 
-${PamParsersTemplates.pam-authentication}{
-  Name = ca-pamsc-kv-user-switch-success-0023
-  Conditions = [ """Transaction: xsso""", """PAM-CLNT-0023:""", """, Access/Protocol:""" ]
-  Fields = ${PamParsersTemplates.pam-authentication.Fields}[
-    """({event_name}Executed 'sudo su' using transparent login)""",
-  ]
-  ParserVersion = "v1.0.0"
-},
-
-${PamParsersTemplates.pam-authentication}{
-  Name = ca-pamsc-kv-user-switch-success-0016
-  Conditions = [ """Transaction: xsso""", """PAM-PRX-0016:""", """, Access/Protocol:""" ]
-  Fields = ${PamParsersTemplates.pam-authentication.Fields}[
-    """({event_name}Executed ""sudo su -"" using transparent login)""",
-  ]
-  ParserVersion = "v1.0.0"
-},
-
-${F5ParsersTemplates.f5-waf-activity}{
+${F5ParsersTemplates.f5-waf-activity-aa}{
   Name = f5-waf-kv-user-switch-success-sessionopened
   Conditions = [ """"log_type":"WAF"""", """"log_vendor":"f5"""", """session opened for user""", """(uid=""", """sshd:""", """_unix""" ]
-  Fields = ${F5ParsersTemplates.f5-waf-activity.Fields} [
+  Fields = ${F5ParsersTemplates.f5-waf-activity-aa.Fields} [
     """\(uid=({user_uid}\d+)\)""",
     """session opened for user ({dest_user}[^\s]+) by""",
     """sshd\[({login_id}\d+)""",

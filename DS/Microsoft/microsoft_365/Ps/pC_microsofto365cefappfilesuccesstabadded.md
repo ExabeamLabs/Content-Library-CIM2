@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-tabadded
   Product = Microsoft 365
   Conditions= [ """"Operation":"TabAdded"""",  """"Workload":""" ]
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

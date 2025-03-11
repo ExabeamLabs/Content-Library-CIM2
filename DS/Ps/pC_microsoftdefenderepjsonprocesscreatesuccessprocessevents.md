@@ -5,7 +5,7 @@ Name = microsoft-defenderep-json-process-create-success-processevents
   Conditions = [  """"Type":"AdvancedHuntingDeviceProcessEvents_CL""", """TimeGenerated""", """TenantId""" ]
 ParserVersion = "v1.0.0"
 
-defender-atp-events {
+defender-atp-events-dl {
    Vendor = Microsoft
    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
    Fields = [

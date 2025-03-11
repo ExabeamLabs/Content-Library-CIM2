@@ -5,13 +5,7 @@ Name = "mimecast-seg-cef-app-activity-success-messageviewlogs"
 Vendor = "Mimecast"
 Product = "Mimecast Secure Email Gateway"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-Conditions = [
-  """destinationServiceName =Mimecast Email Security"""
-  """"viewer":""""
-  """"discoveryCase":"""
-  """"contentViewed":"""
-  """dproc="""
-]
+Conditions = [ """"subject":""", """"viewer":"""", """"discoveryCase":""", """"contentViewed":""" ]
 Fields = [
   """"viewed":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)""""
   """"viewer":"\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""

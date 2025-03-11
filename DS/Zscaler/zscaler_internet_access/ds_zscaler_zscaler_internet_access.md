@@ -4,7 +4,7 @@ Product: Zscaler Internet Access
 --------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  248  |   99   |         35         |       10       |   40    |
+|  248  |   99   |         35         |       10       |   41    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

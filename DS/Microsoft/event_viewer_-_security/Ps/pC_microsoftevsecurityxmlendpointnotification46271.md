@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627-1
     """<Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["email_address->dest_email_address", "user->dest_user", "domain->dest_domain", "user_sid->dest_user_sid"]
 
 
 }

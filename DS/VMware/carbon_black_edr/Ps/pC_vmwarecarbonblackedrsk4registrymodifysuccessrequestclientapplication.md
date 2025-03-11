@@ -3,12 +3,12 @@
 {
 Name = vmware-carbonblackedr-sk4-registry-modify-success-requestclientapplication
   Conditions = [ """"type":"endpoint.event.regmod"""", """"process_username":"""", """"event_origin":"EDR"""" ]
-  Fields = ${DLCarbonBlackParsersTemplates.carbonblack-edr.Fields} [
+  Fields = ${DLCarbonBlackParsersTemplates.carbonblack-edr-dl.Fields} [
     """"regmod_name":"({registry_path}[^"]+(\\|\/)+?({registry_key}[^"]+))""""
     ]
   ParserVersion = "v1.0.0"
 
-carbonblack-edr = {
+carbonblack-edr-dl = {
     Vendor = VMware
     Product = Carbon Black EDR
     ExtractionType = json

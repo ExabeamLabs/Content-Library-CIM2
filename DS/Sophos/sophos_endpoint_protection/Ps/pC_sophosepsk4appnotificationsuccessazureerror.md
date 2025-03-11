@@ -6,7 +6,7 @@ Name = sophos-ep-sk4-app-notification-success-azureerror
   Product = Sophos Endpoint Protection
   Conditions = [""""type":"Event::IaasAzure::AzureError"""", """"severity":"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

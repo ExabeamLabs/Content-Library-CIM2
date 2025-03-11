@@ -5,7 +5,7 @@ Name = "fortinet-fortisiem-kv-endpoint-login-kevent"
   ParserVersion = "v1.0.0"
   Conditions = [ """devname="FortiMail"""", """type="kevent"""", """action="login"""", """user="""" ]
   Fields = ${FortinetParsersTemplates.fortisiem-fortimail-email-traffic-activity.Fields}[
-    """\Wuser="(\[[^\]]+\])?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~\_]{1,40}\$?)(@({domain}[^"]+))?))"""",  
+    """\Wuser="(\[[^\]]+\])?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))"""",  
     """\Waction="({operation}[^"]+)"""",
     """\Wstatus="({result}[^"]+)"""",
     """\Wreason="({failure_reason}[^"]+)"""",

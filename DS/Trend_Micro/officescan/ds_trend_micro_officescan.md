@@ -4,7 +4,7 @@ Product: OfficeScan
 -------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  176  |   75   |         33         |       6        |   22    |
+|  230  |   93   |         34         |       8        |   23    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

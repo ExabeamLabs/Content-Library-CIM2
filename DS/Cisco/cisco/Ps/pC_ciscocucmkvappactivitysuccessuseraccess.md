@@ -9,7 +9,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cisco-events = {
+cisco-events-2 = {
   Vendor = Cisco
   Product = Cisco
   TimeFormat = "MMM dd yyyy hh:mm:ss a"

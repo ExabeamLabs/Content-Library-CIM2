@@ -17,8 +17,8 @@ Fields = [
   """,THREAT,([^,]*?,){9}(?:\w+\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?),"""
   """,THREAT,([^,]*,){8}(({email_address}[^@,]+@[^\.,]+\.[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
   """,({alert_severity}(?i)(low|medium|high|critical|informational)),"""
-  """,THREAT,([^,]*,){20}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),([^,]*,){3}(?:|({protocol}[^,]+)),(?:|({action}[^,]*)),"""
-  """(?i),THREAT,(("[^"]*?",)|([^,]*,)){30,31}(?i)(low|medium|high|critical|informational),({direction}[^,]*),([^,]+,){3}({src_location}[^\d,]+)"""
+  """,THREAT,([^,]*,){20}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),([^,]*,){3}(?:|({protocol}[^,]+)),(?:|({action}[^,]*)),\\*"*(({url}https?:\/\/[^\s\/\\$.?#].[^\s,]*?)|({file_name}[^\\\/,]+?(\.({file_ext}\w+))?))\\?"*,"""
+  """(?i),THREAT,(("[^"]*?",)|([^,]*,)){30,31}(?i)(low|medium|high|critical|informational),({direction}[^,]*),(([^,]+,){3}({src_location}[^\d,]+))?"""
   """,THREAT,(([^"]+?"[^"]+",)|([^,]*,){28})(({alert_name}[^,]+?)\()?({alert_id}\d+)?\)?,"""
   """,THREAT,(?:[^,]*,){46}({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),(([\/\\"]*({alert_subject}[^"]+?)[\/\\"]+)|(|({=alert_subject}[^,]+?))),({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),""",
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",

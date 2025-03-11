@@ -4,7 +4,7 @@
 Name = "box-ccm-json-file-activity-success-event"
 Vendor = "Box"
 Product = "Box Cloud Content Management"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "EEE MMM dd HH:mm:ss zzz yyyy"]
 Conditions = [
    """created_by""""
    """created_at""""
@@ -14,6 +14,7 @@ Conditions = [
 Fields = [
     """\d+:\d+ ({host}[^\s]+) \{""",
     """[^\w]created_at":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d-\d\d:\d\d)""",
+    """"created_at":"({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \w+ \d+)""""
     """[^\w]ip_address"+\s*:\s*"+(Unknown IP|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[",\]\}]""",
     """[^\w]event_type"+\s*:\s*"+({access}[^",]+)[",\]\}]""",
     """({app}Box|Okta)""",

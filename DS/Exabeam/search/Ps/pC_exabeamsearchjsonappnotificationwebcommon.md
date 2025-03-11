@@ -3,7 +3,7 @@
 {
 Name = exabeam-search-json-app-notification-webcommon
     ParserVersion = "v1.0.0"
-    Conditions = [""" Exabeam """, """exabeam-web-common"""]
+    Conditions = [""" Exabeam """, """ exabeam-web-common""", """"event_subtype":"""]
     Fields = ${ExabeamDlParserTemplates.exabeam-system-health-alert.Fields} [
     """user":"(Unknown|(\[saml\])?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     ]

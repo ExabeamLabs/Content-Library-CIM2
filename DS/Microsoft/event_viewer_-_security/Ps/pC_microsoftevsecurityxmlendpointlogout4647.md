@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4647
     """<Data Name\\*=('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

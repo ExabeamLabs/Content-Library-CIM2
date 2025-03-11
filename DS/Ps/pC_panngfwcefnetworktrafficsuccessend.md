@@ -8,7 +8,7 @@ Name = pan-ngfw-cef-network-traffic-success-end
 """|end|TRAFFIC|"""
   ]
 
-cef-palo-alto-networks-firewall = {
+cef-palo-alto-networks-firewall-dl = {
     Vendor = Palo Alto Networks
     TimeFormat = "epoch"
     Fields = [

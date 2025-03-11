@@ -78,7 +78,7 @@ windows-events-1 = {
   
 },
 
-json-windows-events-2 = {
+json-windows-events-2-aa = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

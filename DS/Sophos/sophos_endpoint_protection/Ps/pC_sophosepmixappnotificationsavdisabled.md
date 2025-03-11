@@ -7,7 +7,7 @@ Name = sophos-ep-mix-app-notification-savdisabled
   ParserVersion = "v1.0.0"
   Conditions = [ """Event::Endpoint::SavDisabled""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

@@ -5,7 +5,7 @@ Name = "trendmicro-vone-cef-app-activity-inviteuseraccount"
    ParserVersion = v1.0.0
    Conditions = [ """CEF:""", """|Trend Micro|Trend Vision One|""", """|900003|""", """ cs3=Invite user account""" ]
    Fields = ${TrendMicroParserTemplates.trendmicro-vision-one-account-audit.Fields}[
-     """'User account':\s*'(({full_name}[^'\s]+\s+[^\s']+)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))|({user}[^']+))'"""
+     """'User account':\s*'(({full_name}[^'\s]+\s+[^\s']+)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'"""
    ]
  
 trendmicro-vision-one-account-audit = { 
@@ -20,7 +20,7 @@ trendmicro-vision-one-account-audit = {
     """({app}Trend Vision One)""",
     """ \d\d:\d\d:\d\d ({host}[\w.-]+)\s""",
     """ cn1=({result}\d)""", 
-    """ cs1=(({user}[\w\.\-\!\#\^\~]{1,40})|({full_name}[^=]+?))((\s+\w+=)|\s*$)""",
+    """ cs1=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^=]+?))((\s+\w+=)|\s*$)""",
     """ cs2=({role}[^=]+?)((\s+\w+=)|\s*$)""",
     """ cs3=({event_name}[^=]+?)((\s+\w+=)|\s*$)""",
     """ msg=\{({additional_info}[^=]+?)\}\s*(\s*$|(\s+\w+=))"""

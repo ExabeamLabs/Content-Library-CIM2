@@ -20,9 +20,7 @@ Fields = [
   """TargetSid=\"+({user_sid}[^\"]+)\""""
   """TargetUserName =\"+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 ]
-DupFields = [
-  "result_code->failure_code"
-]
+DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

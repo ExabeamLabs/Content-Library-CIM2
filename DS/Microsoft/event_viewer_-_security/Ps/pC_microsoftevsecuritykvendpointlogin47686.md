@@ -24,6 +24,7 @@ Fields = [
   """TicketEncryptionType="({ticket_encryption_type}[^"]+)"""
   """TicketOptions="({ticket_options}[^"]+)"""
 ]
+DupFields = [ "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

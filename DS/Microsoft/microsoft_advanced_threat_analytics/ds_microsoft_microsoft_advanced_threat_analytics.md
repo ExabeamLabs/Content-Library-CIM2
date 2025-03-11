@@ -4,7 +4,7 @@ Product: Microsoft Advanced Threat Analytics
 --------------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  85   |   37   |         11         |       2        |   23    |
+|  103  |   46   |         11         |       3        |   24    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

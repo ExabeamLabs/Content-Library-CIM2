@@ -19,6 +19,7 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"computer":"({host}[\w\-.]+)"""",
       """(?i)Computer_name(\\*")?:(\\*")?({host}[\w\-\.]+)"""
       """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
+      """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)""",
       """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing""",
       """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group""",

@@ -3,7 +3,7 @@
 {
 Name = exabeam-search-kv-app-notification-serverhealth
     ParserVersion = "v1.0.0"
-    Conditions = [""" Exabeam """, """exabeam-lms-server-health"""]
+    Conditions = [""" Exabeam """, """ exabeam-lms-server-health"""]
     Fields = ${ExabeamDlParserTemplates.exabeam-system-health-alert.Fields} [
     """user":"(Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     ]

@@ -17,17 +17,44 @@ json-windows-events-2 = {
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
-    """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
-    """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
-    """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?"""",
-    """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",
-    """event_id\\?"+:({event_code}\d+)""",
-    """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?"""",
-    """Status\\?"+:\\?"+({result_code}[^\\]+)\\?"""",
-    """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?"""",
-    """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?"""",
-    """AuthenticationPackageName\\?"+:\\?"+({auth_package}[^\s\\]+)\\?""""
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s""",
+    """"created\\*":\\*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """requestClientApplication=({app}[^=]+?)\s\w+=""",
+    """({event_name}An account was logged off)""",
+    """"keywords"+:\["+({result}[^"]+)""",
+    """"pid"+:({process_id}\d+)""",
+    """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
+    """"TargetUserName"+:"+({dest_user}[^"]+)""",
+    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
+    """"TargetLogonId"+:"+({login_id}[^"]+)""",
+    """"LogonType"+:"+({login_type}\d+)""",
+    """"TargetUserSid"+:"+({user_sid}[^"]+)""",
+    """"record_id"+:({event_id}\d+)""",
+    """"task"+:"+({task_name}[^"]+)""",
+    """"event_id"+:({event_code}\d+)""",
+    """"action"+:"+({action}[^"]+)""",
+    """"os"+:[^=]+?"name"+:"+({os}[^"]+)""",
+    """"SubjectLogonId"+:"+({login_id}[^"]+)""",
+    """"+activity_id"+:"+\{({activity_id}[^}]+)""",
+    """"+ProviderName"+:"+({provider_name}[^"]+)""",
+    """"+SubjectUserSid"+:"+({user_sid}[^"]+)""",
+    """"+SubjectDomainName"+:"+({domain}[^"]+)""",
+# algorithm_name is removed
+    """"+Operation"+:"+({operation}[^"]+)""",
+    """"+KeyType"+:"+({key_type}[^"]+)""",
+    """"+KeyName"+:"+({key_name}[^"]+)""",
+    """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+SubjectUserName"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
+    """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
+    """exa_json_path=$.EventData.SubjectUserSid,exa_field_name=user_sid"""
+    """exa_json_path=$.EventData.SubjectUserName,exa_field_name=user"""
+    """exa_json_path=$.EventData.SubjectDomainName,exa_field_name=domain"""
+    """exa_json_path=$.EventData.SubjectLogonId,exa_field_name=login_id"""
+    """exa_json_path=$.EventID,exa_field_name=event_code"""
+    """exa_json_path=$.EventData.ProviderName,exa_field_name=provider_name"""
+    """exa_regex=@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """exa_json_path=$.EventData.KeyType,exa_field_name=key_type"""
   
 }
 ```

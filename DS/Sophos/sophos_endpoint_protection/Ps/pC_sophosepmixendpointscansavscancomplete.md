@@ -7,7 +7,7 @@ Name = sophos-ep-mix-endpoint-scan-savscancomplete
   ExtractionType = json
   Conditions = [ """"Event::Endpoint::SavScanComplete"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

@@ -23,6 +23,7 @@ Fields = [
 """Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""
 """<Level>({run_level}[^<]+)"""
 ]
+DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

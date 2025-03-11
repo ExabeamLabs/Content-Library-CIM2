@@ -7,7 +7,7 @@ Name = sophos-ep-json-app-notification-savenabled
   ParserVersion = "v1.0.0"
   Conditions = [ """Event::Endpoint::SavEnabled""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

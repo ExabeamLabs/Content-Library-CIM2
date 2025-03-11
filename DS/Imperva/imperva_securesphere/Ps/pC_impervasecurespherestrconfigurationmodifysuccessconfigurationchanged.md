@@ -5,7 +5,7 @@ Name = imperva-securesphere-str-configuration-modify-success-configurationchange
   ParserVersion = "v1.0.0"
   Conditions = ["""|Imperva Inc""" , """SecureSphere""" , """cat=SystemEvent""" , """ConfigurationChanged|"""]
 
-securesphere-system = {
+securesphere-system-1 = {
   Vendor = Imperva
   Product = Imperva SecureSphere
   TimeFormat = "yyyy-MM-dd HH:mm:ss"

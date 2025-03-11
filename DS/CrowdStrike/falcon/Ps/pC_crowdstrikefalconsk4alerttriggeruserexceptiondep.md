@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-sk4-alert-trigger-userexceptiondep
   ParserVersion = "v1.0.0"
   Conditions = [ """"event_simpleName":"UserExceptionDEP"""" ]
 
-crowdstrike-process-info = {
+crowdstrike-process-info-dl = {
   Vendor = CrowdStrike
   Product = Falcon
   TimeFormat = ["epoch_sec","epoch"]

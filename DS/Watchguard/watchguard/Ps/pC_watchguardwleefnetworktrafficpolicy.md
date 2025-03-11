@@ -10,32 +10,7 @@ Conditions = [
 """policy="""
 ]
 
-watchguard-events = {
-  Vendor = "Watchguard"
-  Product = "Watchguard"
-  TimeFormat = ["MMM dd yyyy HH:mm:ss z","MMM dd yyyy HH:mm:ss Z"]
-  Fields = [
-		"""\sdevTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d [\+\-]\d+)"""
-		"""serial=({serial_num}[^\s]+)"""
-		"""sys_name=({host}[\w\-.]+)"""
-		"""\spolicy=({policy_name}[^\s]+)"""
-		"""\sdisp=({action}[^\s]+)"""
-		"""\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"""
-		"""\ssrcPort=({src_port}\d+)"""
-		"""\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s"""
-		"""\sdstPort=({dest_port}\d+)"""
-		"""proto=({protocol}[^\s]+)\s"""
-		"""proxy_act=({proxy_action}[^\s]+)"""
-		"""rule_name=({rule}[^\s]+)"""
-		"""\smsg=({additional_info}[^:,]+)"""
-		"""\stcp_flag=({tcp_flags}[^\s]+)"""
-		"""\ssent_bytes=({bytes_out}\d+)"""
-		"""\srcvd_bytes=({bytes_in}\d+)"""
-    ] 
-   }
-  }
-DLWatchguard-parser-template = {
-  watchguard-events = {
+watchguard-events-dl = {
   Vendor = "Watchguard"
   Product = "Watchguard"
   TimeFormat = ["MMM dd yyyy HH:mm:ss z","MMM dd yyyy HH:mm:ss Z"]

@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4803
   """<Data Name =('|")TargetDomainName('|")>({domain}[^<]+)<\/Data"""
   """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["login_id->dest_login_id", "domain->dest_domain", "user->dest_user"]
   ParserVersion = "v1.0.0"
 
 

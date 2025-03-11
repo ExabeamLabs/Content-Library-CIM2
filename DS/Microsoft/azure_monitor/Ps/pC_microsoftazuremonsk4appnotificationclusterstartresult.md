@@ -7,11 +7,11 @@ Name = microsoft-azuremon-sk4-app-notification-clusterstartresult
     """"resourceId":""",
     """operationName":"Microsoft.Databricks/clusters/startResult"""
   ]
-  Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-app-activity.Fields}[
+  Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-app-activity-2.Fields}[
     """"sourceIPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

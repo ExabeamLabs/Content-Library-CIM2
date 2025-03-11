@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-json-endpoint-login-fail-4625-2
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
   Conditions = ["""An account failed to log on""", """Failure Reason""", """event_id\":4625""", """computer_name"""]
-  Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
+  Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """({event_name}An account failed to log on)""",
@@ -17,12 +17,9 @@ Name = microsoft-evsecurity-json-endpoint-login-fail-4625-2
     """IpAddress\\?"+:\\?"(?:-|(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """SubStatus\\?"+:\\?"+({result_code}[^\\]+)\\?"""
   ]
-  DupFields=[ 
-    "host->dest_host"
-    "result_code->failure_code"
-  ]
+  DupFields = [ "host->dest_host", "result_code->failure_code", "email_address->dest_email_address", "user->dest_user", "domain->dest_domain", "user_sid->dest_user_sid" ]
 
-json-windows-events-2 = {
+json-windows-events-2-aa = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

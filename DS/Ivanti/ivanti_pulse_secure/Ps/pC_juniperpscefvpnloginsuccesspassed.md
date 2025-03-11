@@ -33,7 +33,7 @@ Name = juniper-ps-cef-vpn-login-success-passed
       """\sagent="({agent}[^"]+)""",
       """\sduration=({session_duration}\d+)""",
       """\smsg="({additional_info}[^"]+)""",
-      """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-]+))(\s+\w+=|\s*$)"""
+      """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
     ]
     DupFields = [ "dest_ip->host" , "user->account" ]
   

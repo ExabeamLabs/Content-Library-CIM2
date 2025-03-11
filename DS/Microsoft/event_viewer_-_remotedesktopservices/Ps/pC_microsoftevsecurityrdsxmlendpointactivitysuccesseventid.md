@@ -16,7 +16,7 @@ xml-ms-event-viewer = {
       """<EventRecordID>({event_id}.+?)<""",
       """<Keywords>({result}[^<]+)""",
       """<EventID>({event_code}\d+)""",
-      """<EventID Qualifiers='\d+'>({event_code}\d+)<""",
+      """<EventID Qualifiers=('|")\d+('|")>({event_code}\d+)<""",
       """<Data>({additional_info}[^<]+)<""",
       """<Execution ProcessID\\*=('|")({process_id}\d+)""",
       """<Task>({sub_category}[^<]+)"""

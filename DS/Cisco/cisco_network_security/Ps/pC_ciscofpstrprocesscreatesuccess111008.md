@@ -1,0 +1,20 @@
+#### Parser Content
+```Java
+{
+Name = cisco-fp-str-process-create-success-111008
+  ParserVersion = v1.0.0
+  Vendor = Cisco
+  Product = Cisco Network Security
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  Conditions = [ """-111008""", """%FTD-""" ]
+  Fields = [
+    """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s*:\s*%FTD""",
+    """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
+    """%FTD\-({priority}\d+)\-({event_code}\d+)""",
+    """User\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """({event_name}executed)\s+the\s+'({process_command_line}[^']+?)\s*'"""
+  ]
+
+
+}
+```

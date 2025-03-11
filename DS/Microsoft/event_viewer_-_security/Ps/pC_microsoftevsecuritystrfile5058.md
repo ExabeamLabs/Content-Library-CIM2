@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-str-file-5058
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_name}Key file operation)""",
+    """({event_code}5058)"""
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
     """File Path:\s*({file_path}(({file_dir}[^=]+[^\\])\\+)?({file_name}[^\s]+?(\.({file_ext}[^\s\.]+))?))\s*Operation:"""
@@ -17,10 +18,11 @@ Name = microsoft-evsecurity-str-file-5058
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "epoch"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+""",
     """\WexternalId=({event_code}\d+)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

@@ -7,7 +7,7 @@ Vendor: Citrix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   2    |         9          |       4        |    8    |
+|   6   |   2    |         9          |       4        |    9    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

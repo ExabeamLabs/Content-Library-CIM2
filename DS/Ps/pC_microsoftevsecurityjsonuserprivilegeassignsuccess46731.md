@@ -7,15 +7,10 @@ ExtractionType = json
 ParserVersion = "v1.0.0"
 
 windows-events-2.Fields}[
-    """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
-    """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
-    """SubjectUserName\\?"+:\\?"({src_user}[^\\]+)\\?"""",
-    """SubjectDomainName\\?"+:\\?"({src_domain}[^\\]+)\\?"""",
-    """SubjectLogonId\\?"+:\\?"({login_id}[^\\]+)\\?"""",
-    """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?"""",
-    """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
-  ]
-  DupFields=[ "src_domain->domain" 
+       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)(\.\d+Z)?\s*({host}[^\s]+)\s""",
+       """"Computer"+:"+({host}[^"]+)""",
+       """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host""",
+       """exa_json_path=$.log.jsonPayload.privileges,exa_field_name=privileges"""
+    
 }
 ```

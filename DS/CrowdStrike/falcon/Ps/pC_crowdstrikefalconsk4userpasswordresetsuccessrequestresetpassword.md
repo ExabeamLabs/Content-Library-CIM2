@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-sk4-user-password-reset-success-requestresetpassword
   ParserVersion = v1.0.0
   Conditions = [ """"event-name":""", """"audit-event"""", """"OperationName":"requestResetPassword"""" ]
 
-crowdstrike-app-activity = {
+crowdstrike-app-activity-dl = {
     Vendor = CrowdStrike
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [

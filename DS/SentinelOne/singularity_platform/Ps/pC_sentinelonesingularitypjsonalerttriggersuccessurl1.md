@@ -17,7 +17,7 @@ Name = sentinelone-singularityp-json-alert-trigger-success-url-1
     """exa_json_path=$.['process.name'],exa_field_name=process_name""",
     """exa_json_path=$.['endpoint.os'],exa_field_name=os""",
     """exa_json_path=$.['agent.version'],exa_field_name=user_agent""",
-    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
+    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.['src.process.image.sha256'],exa_field_name=hash_sha256""",
     """exa_json_path=$.['src.process.image.sha1'],exa_field_name=hash_sha1""",
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5""",

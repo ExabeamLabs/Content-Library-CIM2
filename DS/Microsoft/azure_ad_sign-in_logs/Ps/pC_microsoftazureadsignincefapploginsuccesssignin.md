@@ -10,6 +10,7 @@ Name = microsoft-azureadsignin-cef-app-login-success-signin
   Fields = [
     """"detectedDateTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+(\.\d{1,7})?Z)"""
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
+    """"lastUpdatedDateTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+(\.\d{1,7})?Z)"""
 	"""destinationServiceName =({app}Azure)""",
 	"""OperationName":"({operation}[^"]+)""",
 	"""({event_name}signin)""",

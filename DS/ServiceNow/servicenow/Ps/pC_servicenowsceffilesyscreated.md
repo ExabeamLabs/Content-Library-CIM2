@@ -10,7 +10,7 @@ Name = servicenow-s-cef-file-syscreated
   Fields = [
     """"sys_created_on"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """({app}ServiceNow)""",
-    """"sys_created_by":"({user}[^",]+)"""",
+    """"sys_created_by":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"link":"({url}[^"]+)"""",
     """"impact":"({severity}\d+)""",
     """"priority":"({priority}\d+)""",

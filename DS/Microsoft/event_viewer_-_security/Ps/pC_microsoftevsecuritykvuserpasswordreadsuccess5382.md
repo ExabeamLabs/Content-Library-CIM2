@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-user-password-read-success-5382
      """Keywords=({result}[^=]+?)\s\w+="""
      """TaskCategory=({task}[^=]+?)\s*\w+="""
      """({event_name}Vault credentials were read)"""
-     """Subject:\s*Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*({user}[^:]+?)\s*Account Domain:\s*({domain}[^:]+?)\s*Logon ID:\s*({login_id}[^:]+?)\s"""
+     """Subject:\s*Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^:]+?)\s*Logon ID:\s*({login_id}[^:]+?)\s"""
      ]
    
 

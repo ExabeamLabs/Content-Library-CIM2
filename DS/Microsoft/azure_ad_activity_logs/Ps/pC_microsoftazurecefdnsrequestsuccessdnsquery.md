@@ -61,7 +61,7 @@ o365-dlp-email-out = {
   DupFields = [ "alert_name->alert_type" ]
  },
 
-cef-azure-app-activity-1 = {
+cef-azure-app-activity-2 = {
 Vendor = Microsoft
 Product = Azure
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

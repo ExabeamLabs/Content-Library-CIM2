@@ -5,7 +5,7 @@ Name = microsoft-adfs-cef-http-response-success-404
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|AD FS Auditing:404""" ]
 
-cef-ad-fs-audit = {
+cef-ad-fs-audit-dl = {
   Vendor = Microsoft
   Product = Active Directory Federation Services
   TimeFormat = "epoch"

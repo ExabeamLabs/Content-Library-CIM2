@@ -4,7 +4,7 @@
 Name = "box-ccm-cef-file-success-box"
 Vendor = "Box"
 Product = "Box Cloud Content Management"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "EEE MMM dd HH:mm:ss zzz yyyy"]
 Conditions = [
 """destinationServiceName =Box"""
 """"item_type":""""
@@ -12,6 +12,7 @@ Conditions = [
 ]
 Fields = [
 """"+created_at"+:"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d([\+\-]\d\d:\d\d)?)"""
+""""created_at":"({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \w+ \d+)""""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\ssuser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)"""

@@ -5,10 +5,11 @@ Name = microsoft-o365-json-alert-trigger-success-graphidentity
   ExtractionType = json
   Vendor = "Microsoft" 
   Product = "Microsoft 365"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [ """"riskEventType":"adminConfirmedUserCompromised"""", """"detectedDateTime":"""" ]
   Fields = [
     """exa_json_path=$.activityDateTime,exa_field_name=time"""
+    """exa_json_path=$.lastUpdatedDateTime,exa_field_name=time"""
     """exa_json_path=$.tokenIssuerType,exa_field_name=token_issuer_type"""
     """exa_regex=({alert_type}({alert_name}graph-identity-protection-risk-detection))"""
     """exa_json_path=$.riskLevel,exa_field_name=alert_severity"""

@@ -12,7 +12,7 @@ Name = juniper-ps-str-vpn-logout-success-sessiontimedout
     """\- \[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\s+([\w\s]+?::)?(({email_address}[^@\s]+@[^.\s]+\.[^\s]+)|({full_name}[^,\[]+,[^\[]+)|(({domain}[^\\\(]+)\\)?(System|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\(({realm}[^\)]+)?\)\[({resource}[^\]]+)?\]""",
     """session timeout for (({email_address}[^@\s\/]+@[^.\s\/]+\.[^\s\/]+)|({full_name}[^,\/]+,[^\/]+)|(({domain}[^\\\/]+)\\)?|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/""",
     """\s\(({additional_info}session:[^\)]+)\)"""
-    """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\/]+)[\/\\]+)?({user}[\w\.\-]{1,40}))(\s+\w+=|\s*$)"""
+    """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\/]+)[\/\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
     """\stime="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """\ssrc=({src_ip}[A-Fa-f\d:.]+)\s""",
     """\suser=(({user}[\w\.\-]{1,40}\$?)(@({domain}[^=]+?))?)\s\w+=""",

@@ -16,7 +16,7 @@ Fields = [
 """"TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""",
 """"EventTime\\?":\s*\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\\?""""
 """"Host(N|n)ame\\?":\\?"({host}[^"]+)""""
-""""hostname":"({host}[^"]+)""""
+""""(hostname|Computer)":"({host}[^"]+)""""
 """"SeverityValue\\?":\\?"({severity}[^,]+)""""
 """"TargetUserName\\?":\\?"({dest_user}[^"\\]+)"""
 """"TargetDomainName\\?":\\?"({dest_domain}[^"\\]+)"""

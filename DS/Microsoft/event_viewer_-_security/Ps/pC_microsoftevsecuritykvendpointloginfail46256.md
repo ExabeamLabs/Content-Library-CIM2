@@ -27,9 +27,7 @@ Fields = [
 """WorkstationName ="+(-|({src_host_windows}[^"]+))""""
 """FailureReason="+({failure_reason}[^"]+)""""
 ]
-DupFields = [
-"host->dest_host", "src_host_windows->src_host"
-]
+DupFields = [ "host->dest_host", "src_host_windows->src_host", "user_sid->dest_user_sid", "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

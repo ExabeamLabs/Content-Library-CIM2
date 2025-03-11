@@ -11,7 +11,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-azure-event-hub-network-events = {
+azure-event-hub-network-events-aa = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

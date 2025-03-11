@@ -6,7 +6,7 @@ Name = microsoft-azure-kv-network-traffic-eventhubbeat
   Product = Microsoft Defender
   Conditions = ["""|beatname=eventhubbeat|""", """|device_type=eventhubbeat|""", """|subject=AdvancedHunting-DeviceNetworkEvents|""", """vmid=""", """@timestamp""", """@metadata"""]
 
-azure-event-hub-network-events = {
+azure-event-hub-network-events-aa = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

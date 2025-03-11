@@ -5,7 +5,7 @@ Name = mimecast-ttp-sk4-http-session-emailsecurity
   Vendor = Mimecast
   Product = Mimecast Targeted Threat Protection - URL
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = ["""destinationServiceName =Mimecast Email Security""", """"action":"""", """"url":"""", """"category":""","""dproc=""" ]
+  Conditions = [""""ttpDefinition":""", """"action":"""", """"url":"""", """"category":""", """"userEmailAddress":""" ]
   Fields = [
     """"date":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """"userEmailAddress":"({email_address}[^\s@"]+@[^\s@"]+)""",

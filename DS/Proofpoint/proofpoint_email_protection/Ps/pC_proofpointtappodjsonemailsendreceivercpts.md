@@ -52,6 +52,10 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """"connection":.+?"resolveStatus":"({connection_status}[^"]+)"""",
       """"msg".+?"normalizedHeader":.+?"reply-to":\["[^",<>]+\s<({reply_to}[^>"]+)>"""",
       """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
+      """"(classification|triggeredClassification|triggeredClassifier)":\s*"({alert_type}[^",]+)""",
+      """exa_json_path=$.filter..triggeredClassifier,exa_field_name=alert_type""",
+      """exa_json_path=$.filter..triggeredClassification,exa_field_name=alert_type""",
+      """exa_json_path=$.filter..classification,exa_field_name=alert_type""",
       """exa_json_path=$.ts,exa_field_name=time""",
       """exa_regex="from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"],""",
       """exa_json_path=$.envelope.from,exa_regex=({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({src_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*($|")""",

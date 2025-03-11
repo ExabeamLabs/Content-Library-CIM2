@@ -30,6 +30,7 @@ Fields = [
 """"userAgent\\?",[^,]*?"Value\\?":\\?"(|({user_agent}[^"\\]+?))\s*\\?"""",
 """destinationServiceName =({app}[^=]+?)\s*\w+="""
 """"detectedDateTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+(\.\d{1,7})?Z)"""
+""""lastUpdatedDateTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+(\.\d{1,7})?Z)"""
 """"tokenIssuerType":"({token_issuer_type}[^"]+)"""
 """"+activity":"({action}[^"]+)"""
 """"+additionalInfo":"\[\{+({more_info}[^]]+?)\s*\}\]""",

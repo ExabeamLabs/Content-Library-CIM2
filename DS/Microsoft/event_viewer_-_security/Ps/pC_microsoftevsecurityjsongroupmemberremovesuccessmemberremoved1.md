@@ -13,6 +13,7 @@ Conditions = [
 Fields = [
 """"created\\*":\\*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
+"""({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_name}A member was removed from a security-enabled [\w\s]+ group)"""
 """"_raw":"({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
 """"agent_hostname":"({host}[^"]+)""""
@@ -26,7 +27,7 @@ Fields = [
 """Member:\s*Security ID\s*:\s*(({dest_user_sid}S-\d+-[^:\s]+)|({account_domain}[^\\\s]+)\\+({account_name}[^\\\s]+)|(?:.*?))\s*Account Name:"""
 """Account Name\s*:\s*(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
 """Group\s*:\s*Security ID\s*:\s*({group_id}[^\s]+)\s*"""
-"""Group:.+?(Group|Account) Name\s*:(\\*(r|n|t|\s))*({group_name}.+?)?(\\*(r|n|t|\s))*(Group|Account) Domain\s*:(\\*(r|n|t))*({group_domain}.+?)?(\\*(r|n|t|\s))*Additional Information:"""
+"""Group:.+?(Group|Account) Name\s*:(\\*(r|n|t|\s))*({group_name}.+?)?(\\*(r|n|t|\s))*(Group|Account) Domain\s*:(\\*(r|n|t))*\s*({group_domain}.+?)?(\\*(r|n|t|\s))*Additional Information:"""
 ]
 DupFields = [
 "host->dest_host"

@@ -8,7 +8,7 @@ Name = microsoft-azuremon-sk4-secret-read-getsecret
     """operationName":"Microsoft.Databricks/secrets/getSecret"""
   ]
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

@@ -21,7 +21,7 @@ Fields = [
   """\Wdvc=({host}[A-Fa-f:\d.]+)"""
   """\Wdvchost=({host}[\w\-.]+)"""
   """\Wrt=({time}\d{13})"""
-  """\Wsuser=(({user}[\w\-.]+?)|({full_name}[^=]+?))\s+(\w+=|$)"""
+  """\Wsuser=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^=]+?))\s+(\w+=|$)"""
 ]
 DupFields = [
   "user->full_name"

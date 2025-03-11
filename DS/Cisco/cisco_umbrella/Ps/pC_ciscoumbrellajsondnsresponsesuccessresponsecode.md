@@ -16,9 +16,9 @@ Name = cisco-umbrella-json-dns-response-success-responsecode
     """,ResponseCode":"({dns_response_code}[^,]+),""",
     """,Domain":"({dns_query}[^,]+),""",
     """,Categories":"({categories}({category}[^,"]+)[^"]*),""",
-    """,Identities":"(({user}[^\s,"\(]+)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),)?(({src_network_zone}[^,]+),)?(({src_host}[\w\-\.]+),)InternalIp.*?IdentityTypes":"AD Users,(Networks,)?Anyconnect Roaming Client,BlockedCategories"""",
-    """,Identities":"({user}[^\s,"\(]+)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),({dest_host}[\w\-\.]+),({src_location}[^,]+),({src_network_zone}[^,]+),InternalIp.*?IdentityTypes":"AD Users,AD Computers,Sites,Networks,BlockedCategories"""",
-	  """,Identities":"(({user}[^\s,"\(]+)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),)?({src_location}[^,]+),({src_network_zone}[^,]+),InternalIp.*?IdentityTypes":"(AD Users,)?Sites,Networks,BlockedCategories"""",
+    """,Identities":"(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),)?(({src_network_zone}[^,]+),)?(({src_host}[\w\-\.]+),)InternalIp.*?IdentityTypes":"AD Users,(Networks,)?Anyconnect Roaming Client,BlockedCategories"""",
+    """,Identities":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),({dest_host}[\w\-\.]+),({src_location}[^,]+),({src_network_zone}[^,]+),InternalIp.*?IdentityTypes":"AD Users,AD Computers,Sites,Networks,BlockedCategories"""",
+	  """,Identities":"(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\),)?({src_location}[^,]+),({src_network_zone}[^,]+),InternalIp.*?IdentityTypes":"(AD Users,)?Sites,Networks,BlockedCategories"""",
 	  """,Identities":"({src_host}[\w\-\.]+),(({src_network_zone}[^,]+),)?InternalIp.*?IdentityTypes":"Anyconnect Roaming Client(,Networks)?,BlockedCategories"""",
 	  """,Identities":"({src_network_zone}[^,]+),InternalIp.*?IdentityTypes":"Networks,BlockedCategories""""
   ]

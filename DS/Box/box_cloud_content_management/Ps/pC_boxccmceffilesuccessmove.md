@@ -4,13 +4,14 @@
 Name = "box-ccm-cef-file-success-move"
   Vendor = "Box"
   Product = "Box Cloud Content Management"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "EEE MMM dd HH:mm:ss zzz yyyy"]
   Conditions = [
     """"event_type":"MOVE""""
     """"type":"event""""
   ]
   Fields = [
     """"created_at":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
+    """"created_at":"({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \w+ \d+)""""
     """"source":.*?"item_name":"({file_name}[^"]+?(\.({file_ext}[^"\s]+))?)"""",
     """"source":.*?"item_type":"({file_type}[^",]+)""",
     """"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",

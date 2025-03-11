@@ -10,7 +10,7 @@ Name = extremenetworks-exos-str-endpoint-login-fail-aaa
  Fields = [
     """({time}\w+\s+\d{1,2}\s+\d\d:\d\d:\d\d)"""
     """\d\d:\d\d:\d\d\s+({host}\w+)\s+AAA:"""
-    """user\s+({user}\w+)"""
+    """user\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """({event_name}Login ({result}failed))"""
     """({failure_reason}invalid username/password)"""
     """ssh\s+\(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""

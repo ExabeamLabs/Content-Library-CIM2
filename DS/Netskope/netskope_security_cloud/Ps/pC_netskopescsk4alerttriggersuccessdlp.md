@@ -34,6 +34,8 @@ Name = netskope-sc-sk4-alert-trigger-success-dlp
       """"sha256"+:"+({hash_sha256_at}[^"]+)"""",
       """"site"+:"+({site_at}[^"]+)""""
       """"dlp_rule_severity":"({alert_severity}[^"]+)""""
+      """"dlp_rule_count":({rule_count}\d+)"""
+      """"dlp_rule":"({rule}[^"]+)"""
     ]
 
 

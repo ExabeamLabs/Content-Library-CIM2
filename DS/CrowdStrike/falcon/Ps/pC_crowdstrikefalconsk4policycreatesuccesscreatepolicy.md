@@ -5,11 +5,11 @@ Name = crowdstrike-falcon-sk4-policy-create-success-createpolicy
   Product = Falcon
   ParserVersion = v1.0.0
   Conditions = [ """"event-name":""", """"audit-event"""", """"OperationName":"create_policy"""" ]
-  Fields = ${DLCrowdStrikeParsersTemplates.crowdstrike-app-activity.Fields}[
+  Fields = ${DLCrowdStrikeParsersTemplates.crowdstrike-app-activity-dl.Fields}[
     """ValueString":"({policy_name}[^"]+)","Key":"policy_name"""",
   ]
 
-crowdstrike-app-activity = {
+crowdstrike-app-activity-dl = {
     Vendor = CrowdStrike
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
     Fields = [

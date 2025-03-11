@@ -21,7 +21,7 @@ cisco-secureendpoint-sk4-alert = {
     """"detection":"(|({alert_name}[^"]+?))""""
     """detection":\s*"({alert_name}[^"]+)"""
     """\Wsuser=((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
-    """\Wsuser=((?i)(anonymous|system)|({email_address}[^@\s]+?@[^@\s\.=]+?\.[^@\s\.=]+?)|({user}[\w\.\-]+?@(NT AUTHORITY|({domain}[^@\s\.=]+?))))(\s+\w+=|\s*$)"""
+    """\Wsuser=((?i)(anonymous|system)|({email_address}[^@\s]+?@[^@\s\.=]+?\.[^@\s\.=]+?)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@(NT AUTHORITY|({domain}[^@\s\.=]+?))))(\s+\w+=|\s*$)"""
     """user":\s*"((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """user"+:\s*"+((?i)(anonymous|system)|({email_address}[^@]+@[^@"]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@(NT AUTHORITY|({domain}[^"]+)))"""
     """hostname":\s*"({src_host}[^"]+)"""

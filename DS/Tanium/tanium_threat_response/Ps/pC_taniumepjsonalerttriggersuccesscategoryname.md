@@ -25,9 +25,9 @@ Fields = [
   """exa_json_path=$.['Match Details'].finding.whats..additional_fields.category_name,exa_field_name=alert_type"""
   """exa_json_path=$.['Match Details'].finding.whats..additional_fields.severity_name,exa_field_name=alert_severity"""
   """exa_json_path=$.['Match Details'].match..file.fullpath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
-  """exa_regex="user"+:\{.+?"user"+:.+?"name"+:"+({user}\w+)""""
-  """exa_json_path=$.['Match Details']..detection_user,exa_regex=((({domain}[^\\"]+)\\+)?({user}[\w\-\.]+))"""
-  """exa_regex="detection_user":"((({domain}[^\\"]+)\\+)?({user}[\w\-\.]+))"""
+  """exa_regex="user"+:\{.+?"user"+:.+?"name"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+  """exa_json_path=$.['Match Details']..detection_user,exa_regex=((({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """exa_regex="detection_user":"((({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.['Match Details']..system_info.platform,exa_field_name=os"""
 ]
 DupFields = [

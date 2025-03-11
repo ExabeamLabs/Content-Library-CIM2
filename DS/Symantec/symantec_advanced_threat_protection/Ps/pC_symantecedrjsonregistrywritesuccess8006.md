@@ -6,9 +6,11 @@ Name = symantec-edr-json-registry-write-success-8006
   ExtractionType = json
   Conditions = [  """"product_name":"Symantec Endpoint""", """"event_data_type":"fdr"""",""""type_id":8006""" ]
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
-    """exa_json_path=$.reg_value_result.data,exa_field_name=registry_value""",
+    """exa_json_path=$.reg_value.path,exa_field_name=registry_value""",
     """exa_json_path=$.reg_value.path,exa_field_name=registry_path""",
-    """exa_json_path=$.type_id,exa_field_name=event_code"""
+    """exa_json_path=$.type_id,exa_field_name=event_code""",
+    """exa_json_path=$.reg_value_result.data,exa_field_name=registry_details""",
+    """exa_json_path=$.reg_value_result.type_id,exa_field_name=registry_details_type"""
   ]
 
 symantec-parser-template = {

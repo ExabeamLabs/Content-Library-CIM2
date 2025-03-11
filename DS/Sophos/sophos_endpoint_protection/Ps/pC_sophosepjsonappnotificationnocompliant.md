@@ -7,7 +7,7 @@ Name = sophos-ep-json-app-notification-nocompliant
   Product = Sophos Endpoint Protection
   Conditions = [ """Event::Endpoint::NonCompliant""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

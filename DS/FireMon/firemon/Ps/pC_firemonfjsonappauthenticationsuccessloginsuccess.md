@@ -12,7 +12,7 @@ Name = firemon-f-json-app-authentication-success-loginsuccess
    """Event Name:\s*({event_name}[^:]+) User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+:"""
    """({operation}Login)"""
    """({result}Success)"""
-   """"username":"\s*(({user}[^\@"]+)@({domain}[^"]+))""""
+   """"username":"\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))""""
    """"username":"\s*(({domain}[^"\\]+)\\+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
  ]
  ParserVersion = "v1.0.0"

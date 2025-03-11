@@ -6,7 +6,7 @@ Name = crowdstrike-falcon-json-registry-modify-success-reggenericvalueupdate
     Conditions = [ """"event_simpleName":"RegGenericValueUpdate"""" ]
 	  Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
       """exa_json_path=$.RegObjectName,exa_regex=registry_path""",
-      """exa_json_path=$.RegStringValue,exa_regex=registry_value""",
+      """exa_json_path=$.RegStringValue,exa_regex=registry_details""",
       """exa_json_path=$.ConfigStateHash,exa_regex=old_hash""",
       """exa_json_path=$.RegValueName,exa_regex=registry_value"""
 	]
@@ -41,7 +41,7 @@ Fields = [
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
-"""exa_json_path=$.SourceFileName,exa_regex=({src_file_path}({src_file_dir}[^"]*[\\\/]+)({src_file_name}[^\\\/"]+?(\.(\d+|({src_file_ext}[^\\\/"\-\.\_]{1,10}?)))?))"""
+"""exa_json_path=$.SourceFileName,exa_regex=^({src_file_path}({src_file_dir}[^"]*[\\\/]+)({src_file_name}[^\\\/"]+?(\.(\d+|({src_file_ext}[^\\\/"\-\.\_]{1,10}?)))?))$"""
 """exa_json_path=$.TargetFileName,exa_field_name=file_path""",
 """exa_regex="TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\-\.\_\$]{1,10}?)))?)\s*""""
 """exa_regex="((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^\"]+)""""

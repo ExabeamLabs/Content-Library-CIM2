@@ -4,7 +4,7 @@
 Name = crowdstrike-falcon-cef-scheduled-task-modify-win
   ParserVersion = "v1.0.0"
   Conditions = [ """"event_simpleName":""", """"ScheduledTaskModified"""", """"event_platform":""", """"Win""""]
-  Fields = ${CrowdStrikeParsersTemplates.cef-crowdstrike-app-activity-temp-dl.Fields} [
+  Fields = ${CrowdStrikeParsersTemplates.cef-crowdstrike-app-activity-temp-aa.Fields} [
     """"TaskName":\s*"({task_name}[^"]+)"""
     """"TaskExecCommand":\s*"({file_path}[^"]+)""",
     """"TaskExecCommand":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
@@ -13,7 +13,7 @@ Name = crowdstrike-falcon-cef-scheduled-task-modify-win
 
   ]
 
-cef-crowdstrike-app-activity-temp-dl = {
+cef-crowdstrike-app-activity-temp-aa = {
   Vendor = CrowdStrike
   Product = Falcon
   TimeFormat = "epoch_sec"

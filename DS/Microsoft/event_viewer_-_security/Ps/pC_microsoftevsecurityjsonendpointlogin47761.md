@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """"event_data"\s*:\s*\{.*?"Status"\s*:\s*"({result_code}[\w\-]+)"""",
     """"TargetUserName"\s*:\s*"(?![^\s"@]+@[^\s"@]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"TargetUserName"\s*:\s*"({email_address}[^@"]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"@]+))?"""",
-    """"TargetUserName"\s*:\s*"({email_address}({user}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+)@({domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"TargetUserName"\s*:\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s"@]+))?)""",
     """"(record_number|record_id)"\s*:\s*"*({event_id}\d+)""",
     """exa_json_path=$.message,exa_regex=({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
@@ -30,6 +30,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """exa_json_path=$..record_number,exa_field_name=event_id""",
     """exa_json_path=$..record_id,exa_field_name=event_id"""
   ]
+  DupFields = [ "domain->dest_domain", "user->dest_user", "email_address->dest_email_address", "email_domain->dest_email_domain" ]
 
 
 }

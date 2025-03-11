@@ -21,9 +21,9 @@ Name = "microsoft-evsecurity-json-registry-create-success-4657"
 	""""NewValueType":"({registry_details_type}[^"]+)""""
 	""""NewValue":"({registry_details}[^"]+)""""
 	""""ProcessName":"({process_path}({process_dir}[^"]+[\\\\]+)({process_name}[^"]+))""""
-  """"OperationType":"({operation}[^"]+)""""
-	]
-	ParserVersion = "v1.0.0"
+	""""OperationType":"({operation}[^"]+)""""
+  ]
+  ParserVersion = "v1.0.0"
   DupFields = [ "host->src_host" ]
 
 

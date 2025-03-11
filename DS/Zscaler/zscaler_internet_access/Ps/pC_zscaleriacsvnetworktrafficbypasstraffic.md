@@ -4,13 +4,13 @@
 Name = zscaler-ia-csv-network-traffic-bypasstraffic
   ParserVersion = "v1.0.0"
   Conditions = [ ""","Zscaler Bypass Traffic",""" ]
-  Fields = ${ZscalerWeakParsersTemplates.zscaler-ia-csv-events.Fields}[
+  Fields = ${ZscalerWeakParsersTemplates.zscaler-ia-csv-events-2.Fields}[
     """ \d\d:\d\d:\d\d \d\d\d\d","({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""""
     """ \d\d:\d\d:\d\d \d\d\d\d",("[^"]*",)"({department}[^"]+)""""
     """ \d\d:\d\d:\d\d \d\d\d\d",("[^"]*",){2}"({location}[^"]+)""""
   ]
 
-zscaler-ia-csv-events = {
+zscaler-ia-csv-events-2 = {
     Vendor = Zscaler
     Product = Zscaler Internet Access
     TimeFormat = "MMM dd HH:mm:ss yyyy"

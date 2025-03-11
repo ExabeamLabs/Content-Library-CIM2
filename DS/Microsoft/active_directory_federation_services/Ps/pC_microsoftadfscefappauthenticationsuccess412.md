@@ -5,7 +5,7 @@ Name = microsoft-adfs-cef-app-authentication-success-412
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|AD FS Auditing:412""" ]
 
-cef-ad-fs-audit = {
+cef-ad-fs-audit-dl = {
   Vendor = Microsoft
   Product = Active Directory Federation Services
   TimeFormat = "epoch"

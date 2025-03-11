@@ -2,11 +2,11 @@
 ```Java
 {
 Name = snort-s-str-alert-trigger-success-priority
-  Vendor = Snort
-  Product = Snort
+  Vendor = "Snort"
+  Product = "Snort"
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """[Classification:""","""[Priority:""","""] [""" ]
+  Conditions = [ """] [Classification:""","""[Priority:""","""] [""" ]
   Fields = [
     """\[Classification:\s+({alert_type}[^\]]+)""",
     """\[Priority:\s+({alert_severity}[^\]]+)""",

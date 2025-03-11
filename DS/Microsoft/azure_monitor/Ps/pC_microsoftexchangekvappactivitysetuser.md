@@ -5,7 +5,7 @@ Name = "microsoft-exchange-kv-app-activity-setuser"
 Conditions = [ """WORKLOAD=Exchange""", """COMMAND=Set-User""", """CLIENTPROCESSNAME=""", """TS=""" ]
 ParserVersion = "v1.0.0"
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

@@ -39,7 +39,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """Logon Type:\s*({login_type}\d+)"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "src_host_windows->src_host"]
+  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

@@ -9,7 +9,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-cef-azure-app-activity-1.Fields}[
+cef-azure-app-activity-2.Fields}[
 """\"description\":\"[^\"]*?device <b>({src_host}[^\"<]+)"""
  
 }

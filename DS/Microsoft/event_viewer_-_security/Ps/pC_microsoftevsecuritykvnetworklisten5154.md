@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-kv-network-listen-5154
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """"(TimeGenerated|created)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+        """"Computer":"({host}[^"]+)"""",
         """({event_code}5154)""",
         """({event_name}The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections)""",
         """Application Name:(\s|\\[rnt])*(|-|({app}.+?))(\s|\\[rnt])*Network Information""",

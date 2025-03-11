@@ -55,9 +55,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """exa_regex=Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""",
     """exa_regex=Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
   ]
-  DupFields = [
-    "result_code->failure_code"
-  ]
+  DupFields = [ "result_code->failure_code", "email_address->dest_email_address", "user->dest_user", "domain->dest_domain" ]
 
 
 }

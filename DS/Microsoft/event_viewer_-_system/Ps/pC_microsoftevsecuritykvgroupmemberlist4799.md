@@ -32,7 +32,7 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_regex=({event_name}A security-enabled local group membership was enumerated)""",
     """exa_json_path=$..SubjectUserSid,exa_regex=(SYSTEM|({user_sid}\S+))"""
-    """exa_json_path=$..SubjectUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}\S+))"""
+    """exa_json_path=$..SubjectUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$..TargetSid,exa_field_name=group_id"""

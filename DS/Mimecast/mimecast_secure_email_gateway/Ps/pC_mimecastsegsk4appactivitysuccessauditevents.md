@@ -4,9 +4,8 @@
 Name = mimecast-seg-sk4-app-activity-success-auditevents
   Vendor = Mimecast
   Product = Mimecast Secure Email Gateway
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """"auditType":""", """destinationServiceName =Mimecast Email Security""", """dproc=Audit Events""", """"category":""" ]
-  Fields = [
+  Conditions = [ """"auditType":""", """"eventTime":""", """"eventInfo":""", """"category":""" ]
+  Fields = ${mimecast-json-template.mimecast-json-event.Fields}[
     """"eventTime":"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}(\+|-)\d+?)"""",
     """"user":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^,"]+)[^"]*)?)"""",
     """"eventInfo":"({additional_info}[^"]*?)("|\s*$)""",

@@ -24,7 +24,8 @@ Fields = [
 """<Data Name\\*='ServiceName'>({dest_host}[\w\-.]+\$)</Data>"""
 """<Data Name\\*='TicketOptions'>({ticket_options}[^<]+)</Data>"""
 """<Data Name\\*='TicketEncryptionType'>({ticket_encryption_type}[^<]+)</Data>"""
-]
+]  
+DupFields = [ "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

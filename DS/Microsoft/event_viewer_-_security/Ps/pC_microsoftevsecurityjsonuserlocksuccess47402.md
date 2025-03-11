@@ -24,9 +24,7 @@ Fields = [
 """"TargetUserName\\?":\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
 ]
-DupFields = [
-"src_domain->domain"
-]
+DupFields = [ "src_domain->domain", "user_sid->dest_user_sid", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

@@ -15,7 +15,7 @@ Name = microsoft-azuresc-json-alert-trigger-success-security
     """"category":\{"value":"({alert_type}[^"]+)"""",
     """"UserSID":"({user_sid}[^"]+)"""",
     """"processName":"({process_name}[^"]+)"""",
-    """"userName":"({user}[^"]+)""""
+    """"userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
  ]
 
 

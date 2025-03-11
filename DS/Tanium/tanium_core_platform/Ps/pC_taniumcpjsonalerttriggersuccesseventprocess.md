@@ -27,7 +27,7 @@ Name = "tanium-cp-json-alert-trigger-success-eventprocess"
     """exa_regex="name\\":\\"({file_name}[^"]+?)\\*""""
     """exa_regex="md5\\":\\"({hash_md5}[^"]+?)\\*""""
     """exa_regex="payload=\{({additional_info}.+?[^\\]")\}"""
-    """exa_regex="user\\?":\\?"(({domain}[^\\]+)\\+)?({user}[^"\\]+)"""
+    """exa_regex="user\\?":\\?"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

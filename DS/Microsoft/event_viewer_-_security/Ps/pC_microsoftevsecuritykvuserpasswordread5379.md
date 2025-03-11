@@ -13,6 +13,7 @@ Name = "microsoft-evsecurity-kv-user-password-read-5379"
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog""",
     """"(?i)Computer(Name)?":\s*"({host}[^"]+)"""",
     """ComputerName =({host}[^\s]+)\sSourceName =""",
+    """({event_code}5379)""",
     """EventCode=({event_code}\d+)\s*EventType=""",
     """Logon ID:\s*({login_id}[^\s]+)\s+Read Operation:""",
     """Security ID:\s*(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({user_sid}[^:]+?))\s+Account Name:""",

@@ -5,9 +5,9 @@ Name = sentinelone-singularityp-json-driver-load-success-driverload
   ExtractionType = json
   ParserVersion = "v1.0.0"
   Conditions = [""""dataSource.name":"SentinelOne"""",""""event.category":"driver"""",""""event.type":"Driver Load""""]
-  Fields = ${DLSentinelOneParsersTemplates.json-sentinelone-edr-events.Fields} [
+  Fields = ${DLSentinelOneParsersTemplates.json-sentinelone-edr-events-dl.Fields} [
     """"agent.version":\s*"+({user_agent}[^"]+)"""",
-    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))"""",
+    """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"src.process.image.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""",
     """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""",
     """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""",
@@ -15,7 +15,7 @@ Name = sentinelone-singularityp-json-driver-load-success-driverload
     """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*"""",
 
     """exa_json_path=$.['agent.version'],exa_field_name=user_agent""",
-    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
+    """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.['src.process.image.sha256'],exa_field_name=hash_sha256""",
     """exa_json_path=$.['src.process.image.sha1'],exa_field_name=hash_sha1""",
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5""",
@@ -24,38 +24,28 @@ Name = sentinelone-singularityp-json-driver-load-success-driverload
   ]
   DupFields = [ "host->dest_host"]
 
-json-sentinelone-edr-events = {
-    Vendor = SentinelOne
-    Product = "Singularity Platform"
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    ExtractionType = json
-    Fields = [
-      """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
-      """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({host}[^"]+)""",
-      """"task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
-      """process\.name":"({process_name}[^"]+)""",
-      """"endpoint.os":"({os}[^"]+)""",
-      """"event\.category":"({additional_info}[^"]+)"""",
-      """"endpoint\.type":"({host_type}[^"]+)"""
-      """"src\.process\.pid":({process_id}\d+)""",
-      """"src\.process\.cmdline":"({process_command_line}.+?)",""",
-      """"account\.id":"({account_id}[^"]+)""",
-      """"src.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))"""",
-      """"tgt.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))"""",
-      """exa_json_path=$..timestamp,exa_field_name=time""",
-      """exa_json_path=$..['event.type'],exa_field_name=event_name""",
-      """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
-      """exa_regex="task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
-      """exa_json_path=$..['src.process.name'],exa_field_name=process_name""",
-      """exa_json_path=$..['endpoint.os'],exa_field_name=os""",
-      """exa_json_path=$..['event.category'],exa_field_name=additional_info""",
-      """exa_json_path=$..['endpoint.type'],exa_field_name=host_type""",
-      """exa_json_path=$..['src.process.pid'],exa_field_name=process_id""",
-      """exa_json_path=$..['src.process.cmdline'],exa_field_name=process_command_line""",
-      """exa_json_path=$..['account.id'],exa_field_name=account_id""",
-      """exa_json_path=$..['src.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|({user}[^\\"$\s]+?))($|")""",
-      """exa_json_path=$..['tgt.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
+json-sentinelone-edr-events-dl = {
+  Vendor = SentinelOne
+  Product = "Singularity Platform"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  ExtractionType = json
+  Fields = [
+    """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
+    """"event\.type":"({event_name}[^"]+)""",
+    """"endpoint\.name":"({host}[^"]+)""",
+    """"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
+    """process\.name":"({process_name}[^"]+)""",
+    """"endpoint.os":"({os}[^"]+)"""
+    """"src.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"tgt.process.user":"((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s]+)))""""
+    """exa_json_path=$..timestamp,exa_field_name=time""",
+    """exa_json_path=$..['event.type'],exa_field_name=event_name""",
+    """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
+    """exa_regex"task\.path":"({file_path}({file_dir}[^"]*?)({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
+    """exa_regex=process\.name":"({process_name}[^"]+)"""
+    """exa_json_path=$..['endpoint.os'],exa_field_name=os"""
+    """exa_json_path=$..['src.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))($|")"""
+    """exa_json_path=$..['tgt.process.user'],exa_regex=((NT AUTHORITY|NT-AUTORITAT|AUTORITE NT|({dest_domain}[^\\\s"$]+))\\+)?(system|Système|LOCAL SERVICE|(({dest_user}[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
     
 }
 ```

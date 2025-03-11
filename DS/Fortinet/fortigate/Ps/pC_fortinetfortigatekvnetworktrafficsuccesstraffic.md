@@ -26,7 +26,7 @@ fortinet-fortigate-cef-network-traffic-info {
     """\WdeviceInboundInterface=({src_interface}.+?)(\s+\w+=|\s*$)""",
     """\Wout=({bytes_out}\d+)""",
     """\Win=({bytes_in}\d+)""",
-    """xauthuser=(N\/A|({user}\w+))""",
+    """xauthuser=(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\Wsrccountry=((?i)reserved|({src_country}\w+))""",
     """\Wdstcountry=((?i)reserved|({dest_country}\w+))"""
   

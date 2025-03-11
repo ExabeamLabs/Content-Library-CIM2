@@ -36,7 +36,7 @@ Fields = [
 """"FailureReason":"({failure_reason}[^"]+)""""
 """exa_json_path=$..Timestamp,exa_field_name=time"""
 """exa_json_path=$..DeviceName,exa_field_name=host"""
-"""exa_json_path=$..AccountName,exa_regex=(-|system|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?$)|({full_name}[^",]+))"""
+"""exa_json_path=$..AccountName,exa_regex=(-|system|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""
 """exa_json_path=$..AccountDomain,exa_field_name=domain"""
 """exa_json_path=$..AccountSid,exa_field_name=user_sid,exa_match_expr=Contains($..AccountSid,"null")"""
 """exa_json_path=$..RemoteIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

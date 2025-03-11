@@ -6,7 +6,7 @@ Name = sophos-ep-cef-app-notification-resumed
   ParserVersion = "v1.0.0"
   Conditions = [""""endpoint_type":""", """"type":"Event::Endpoint::Management::Resumed"""", """"severity":"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

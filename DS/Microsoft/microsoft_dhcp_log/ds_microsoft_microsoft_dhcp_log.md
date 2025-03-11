@@ -4,7 +4,7 @@ Product: Microsoft DHCP Log
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  111  |   46   |         12         |       3        |   13    |
+|  111  |   46   |         12         |       3        |   16    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

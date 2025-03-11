@@ -44,7 +44,7 @@ cef-defender-atp-1 = {
      DupFields = ["category->event_name"]
    }
 
-cef-defender-atp {
+cef-defender-atp-3 {
    Vendor = "Microsoft"
    Product = "Microsoft Defender"
    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"

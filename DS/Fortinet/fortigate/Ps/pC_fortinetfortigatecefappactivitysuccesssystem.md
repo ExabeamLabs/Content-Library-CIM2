@@ -27,7 +27,7 @@ fortinet-network-info = {
     """FTNTFGTapp=({app}[^=]+?)(\s+\w+=|$)"""
     """dhost=({dest_host}[^=]+?)(\s+\w+=|$)"""
     """msg=({additional_info}[^=]+?)(\s+\w+=|$)"""
-    """FTNTFGTdstuser=({user}[^=]+?)(\s+\w+=|$)"""
+    """FTNTFGTdstuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|$)"""
     """FTNTFGTapprisk=({alert_severity}[^=]+?)(\s+\w+=|$)"""
     """act=({action}[^=]+?)(\s+\w+=|$)"""
     """dpt=({dest_port}\d+)"""

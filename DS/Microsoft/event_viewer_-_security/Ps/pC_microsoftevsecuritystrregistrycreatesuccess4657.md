@@ -11,6 +11,7 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)""",
+    """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """EventCode=({event_code}\d+)""",
     """<Computer>({host}[\w\-.]+?)<\/Computer>"""
     """ComputerName =({host}[^\s]+)""",
@@ -25,7 +26,7 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """Process Information:\s*Process ID:\s*({process_id}[^\s]+)"""
     """Process Name:\s*(?:|({process_path}({process_dir}(\w:)?(?:[^:;]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*Change Information:"""
     """New Value Type:((?-i)\\+[rnt])*\s*(-|({registry_details_type}[^"]+?))((?-i)\\+[rnt])*\s*New Value:"""
-    """New Value:\s*<({registry_details}.+?)\s*("|>|$)"""
+    """New Value:(\\+[rnt]|\s)*(-|({registry_details}.+?))(\\+[rnt]|\s)*("|<|$)"""
     """Operation Type:((?-i)\\+[rnt])*\s*({operation}[^:]+?)((?-i)\\+[rnt])*\s*Process Information:"""
     """Logon ID:\s*({login_id}[^\s]+)\s"""
     """Process ID(:|=)((?-i)\\+[rnt])*\s*({process_id}[^=:]+?)((?-i)\\+[rnt])*\s*Process Name(:|=)"""

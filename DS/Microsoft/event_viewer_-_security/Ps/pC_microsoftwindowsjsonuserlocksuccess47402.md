@@ -4,7 +4,7 @@
 Name = microsoft-windows-json-user-lock-success-4740-2
   ParserVersion = v1.0.0
   Conditions = [ """Account That Was Locked Out""", """event_id\":4740""", """computer_name""" ]
-  Fields = ${WindowsParsersTemplates.json-windows-events-2.Fields}[
+  Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """SubjectUserName\\?"+:\\?"({src_user}[^\\]+)\\?"""",
@@ -14,9 +14,9 @@ Name = microsoft-windows-json-user-lock-success-4740-2
     """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
   ]
-  DupFields=[ "src_domain->domain" ]
+  DupFields=[ "src_domain->domain", "user_sid->dest_user_sid", "user->dest_user" ]
 
-json-windows-events-2 = {
+json-windows-events-2-aa = {
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"

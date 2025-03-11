@@ -8,7 +8,7 @@ Name = microsoft-azuremon-sk4-app-logout-sshlogout
     """operationName":"Microsoft.Databricks/ssh/logout"""
   ]
 
-cef-microsoft-app-activity = {
+cef-microsoft-app-activity-2 = {
   Vendor = Microsoft
   Product = Azure Monitor
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]

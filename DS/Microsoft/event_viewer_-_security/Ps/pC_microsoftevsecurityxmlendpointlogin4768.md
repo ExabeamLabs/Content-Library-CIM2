@@ -30,6 +30,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   """<Opcode>(0|({opcode}[^<]+))""",
   """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = [ "email_address->dest_email_address", "domain->dest_domain", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

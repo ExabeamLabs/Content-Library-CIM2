@@ -4,13 +4,13 @@
 Name = microsoft-evsecurity-sk4-file-write-success-4663
   Product = Event Viewer - Security
   Conditions = [ """EventID': 4663""", """'NetApp-Security-Auditing'""", """'Computer'""" ]
-  Fields = ${WindowsParsersTemplates.netapp-json-windows-events.Fields}[
+  Fields = ${WindowsParsersTemplates.netapp-json-windows-events-1.Fields}[
     """'Computer':\s+'({host}[\w\-\.]+)""",
   ]
   DupFields = [ "access->event_name","object_class->file_type" ]
   ParserVersion = "v1.0.0"
 
-netapp-json-windows-events = {
+netapp-json-windows-events-1 = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSSSS"
   Fields = [

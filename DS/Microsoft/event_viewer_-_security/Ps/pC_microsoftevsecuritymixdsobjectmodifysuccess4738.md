@@ -4,13 +4,14 @@
 Name = "microsoft-evsecurity-mix-ds-object-modify-success-4738"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss"]
 Conditions = [
 """A user account was changed"""
 ]
 Fields = [
 """({event_name}A user account was changed)"""
-"""({event_code}4738)(<|\s|")"""
+"""({event_code}4738)(<|\s|"|\|)"""
+"""({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?({host}[\w\.-]+)(\s|,|"|</Computer>|$)"""
 """\sComputerName =(::ffff:)?({host}.+?)(\s+\w+=|\s*$)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""

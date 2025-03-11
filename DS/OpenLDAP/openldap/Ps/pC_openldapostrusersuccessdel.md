@@ -3,6 +3,10 @@
 {
 Name = openldap-o-str-user-success-del
     Conditions = [ """slapd[""", """conn=""", """op=""", """ DEL """ ]
+    Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[
+      """uid=({dest_user}\w+)"""
+      """dn="({dest_user_dn}[^"]+)"""
+    ]
   
 openldap-kv-parser = {
     Vendor = OpenLDAP
@@ -12,9 +16,7 @@ openldap-kv-parser = {
     Fields = [
       """conn=({connection_id}\d+)""",
       """({host}[^\s]+)\s+slapd""",
-      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""
-      """dn="({user_ou}[^"]+)"""
-      """uid=({user_id}\w+)"""
+      """op=({operation_id}\d+)\s+({operation}[\w\-\.]+)"""      
       """cn=({profile}\w+),ou=profile"""
       """dc=({domain_controller}\w+),"""
       """method=({auth_method}[^\s"]+)"""

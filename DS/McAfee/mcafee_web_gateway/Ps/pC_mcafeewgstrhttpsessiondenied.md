@@ -8,7 +8,7 @@ Name = mcafee-wg-str-http-session-denied
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ ""","DENIED",""" , ""","http""" ]
   Fields = [
-  """^(?:\\"|"{4}|"{2}|").*?(?:\\"|")*,(?:\\"|"{4}|"{2}|")({user}.*?)(\\"|")*,""",
+  """^(?:\\"|"{4}|"{2}|").*?(?:\\"|")*,(?:\\"|"{4}|"{2}|")({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\"|")*,""",
  ""","DENIED",("(|[^"]+)",){18}"({dest_port}\d+)"""",
  ""","DENIED",("(|[^"]+)",){17}"({dest_ip}[a-fA-F\d:.]+)"""",
  ""","DENIED",("(|[^"]+)",){15}"[^"]+?\(({os}iOS|Android|BlackBerry|iPhone OS|Windows Phone|BeOS|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)""",
@@ -29,7 +29,7 @@ Name = mcafee-wg-str-http-session-denied
  ""","({bytes_in}\d+)",("[^"]+",){3}"DENIED"""",
  ""","({method}[^"]+)",("[^"]+",){4}"DENIED"""",
  ""","({src_ip}[a-fA-F\d:.]+)",("[^"]+",){5}"DENIED"""",
- ""","({domain}[^\\]+)\\({user}[^"]+)",("[^"]+",){6}"DENIED""""
+ ""","({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)",("[^"]+",){6}"DENIED""""
  ]
 
  

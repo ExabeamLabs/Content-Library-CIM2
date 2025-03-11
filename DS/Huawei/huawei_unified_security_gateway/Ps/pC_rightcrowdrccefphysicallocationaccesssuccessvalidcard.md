@@ -10,7 +10,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-f5-waf-activity.Fields} [
+f5-waf-activity-aa.Fields} [
     """\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\) CMD""",
     """\sCMD \(\s*({process_command_line}[^\)]+)\)""",
     """\sCMD \(\s*[^\/]*?({process_path}({process_dir}\/[^\)]*?)({process_name}[^\/]*?[^\\]))((\\\\)*\s|\))"""

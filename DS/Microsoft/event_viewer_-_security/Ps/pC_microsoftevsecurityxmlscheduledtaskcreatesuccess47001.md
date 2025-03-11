@@ -16,7 +16,8 @@ Fields = [
 """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """\srt=({time}\d{13})""",
 """<Computer>({host}[^<]+?)</Computer>"""
- """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+""""Computer":"({host}[^"]+)""""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """({event_code}4700)"""
 """({event_name}A scheduled task was enabled)"""
 """\sAccount Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:"""

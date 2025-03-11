@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-kv-file-fileoperation
     """Logon ID:\s+({login_id}[^\s]+)\s+\w+""",
     """Operation:\s+({operation}[^$]+?)\s+Return Code:"""
     """"Computer":"({host}[^"]+)""""
+    """"EventID":({event_code}\d+)"""
   ]
 
 

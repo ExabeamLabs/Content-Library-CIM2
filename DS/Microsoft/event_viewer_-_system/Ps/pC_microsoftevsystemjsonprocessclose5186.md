@@ -18,6 +18,7 @@ Name = microsoft-evsystem-json-process-close-5186
      """EventType":\s*"({event_category}[^"]+)""",
      """Severity":\s*"({severity}[^"]+)""""
   ]
+  DupFields = ["additional_info->event_name"]
 
 
 }

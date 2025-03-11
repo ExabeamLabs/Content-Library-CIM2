@@ -23,7 +23,8 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """operationName":\s*"({action}[^"]+)""",
        """"RegistryKey":"({registry_path}({registry_key}[^"]+))"""",
        """"RegistryValueName":"({registry_value}[^"]+)"""",
-       """"RegistryValueData":"({registry_details}[^"]+)""""
+       """"RegistryValueData":"({registry_details}[^"]+)"""",
+       """"RegistryValueType":"({registry_details_type}[^"]+)"""",
        """exa_json_path=$.time,exa_field_name=time"""
        """exa_regex="(time|TimeGenerated)"+:\s*"+({time}[^"]+)"""",
        """exa_json_path=$.category,exa_field_name=operation"""
@@ -40,6 +41,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """exa_json_path=$..RegistryKey,exa_regex=({registry_path}({registry_key}[^"]+))"""
        """exa_json_path=$..RegistryValueName,exa_field_name=registry_value"""
        """exa_json_path=$..RegistryValueData,exa_field_name=registry_details"""
+       """exa_json_path=$..RegistryValueType,exa_field_name=registry_details_type"""
     ]
     DupFields = ["operation_type->event_name", "file_path->process_path", "file_dir->process_dir"]
 

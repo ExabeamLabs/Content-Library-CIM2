@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-str-policy-apply-fail-6145
   Fields = [
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+        """"Computer":"({host}[\w\-\.]+)"""",
         """({event_code}6145)""",
         """({event_name}One or more errors occured while processing security policy in the group policy objects)""",
         """Error Code:\s*({error_code}\d+)""",

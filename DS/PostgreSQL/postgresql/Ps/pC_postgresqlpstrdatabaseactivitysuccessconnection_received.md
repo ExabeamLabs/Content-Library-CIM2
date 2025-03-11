@@ -19,66 +19,52 @@ postgresql-parser-str = {
     }
   }
 
-#============================================== Start of DefaultParsersAA section ==================================================================
-DefaultParsersAA = [
+  1Password-template = {
+    1password-app-activity = {
+    Vendor = 1password
+    Product = 1password
+    ExtractionType = json
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    Fields = [
+       """exa_json_path=$.date,exa_field_name=time"""
+       """exa_json_path=$.source,exa_field_name=app"""
+       """exa_json_path=$.session_uuid,exa_field_name=session_id"""
+       """exa_json_path=$.attributes.evt.name,exa_field_name=action"""
+       """exa_json_path=$.attributes.evt.type,exa_field_name=operation"""
+       """exa_json_path=$.attributes.usr.name,exa_field_name=full_name"""
+       """exa_json_path=$.attributes.usr.email,exa_field_name=email_address"""
+       """exa_json_path=$.attributes.object_details.email,exa_field_name=dest_email_address"""
+       """exa_json_path=$.attributes.network.client.ip,exa_field_name=src_ip"""
+       """exa_json_path=$.attributes.network.client.geoip.country.name,exa_field_name=country"""
+       """exa_json_path=$.attributes.network.client.geoip.subdivision.name,exa_field_name=location_state"""
+       """exa_json_path=$.attributes.network.client.geoip.city.name,exa_field_name=location_city"""
+       """exa_json_path=$.attributes.session.uuid,exa_field_name=session_id"""
+       """exa_json_path=$.attributes.object_type,exa_field_name=object_type"""
+       """exa_json_path=$.attributes.aux_details.uuid,exa_field_name=user_uid"""
+       ]
+     }
+  }
 
-{
-Name = "appsense-am-leef-alert-trigger-success-warning"
-Vendor = "AppSense"
-Product = "AppSense Application Manager"
-TimeFormat = ["MM/dd/yyyy hh:mm:ss a","M/dd/yyyy hh:mm:ss a"]
-Conditions = [
-"""AppSense Application Manager"""
-"""SourceName ="""
-"""Message="""
-"""EventCode="""
-]
-Fields = [
-"""({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))"""
-"""ComputerName =({dest_host}[^\s]+)"""
-"""Sid=({dest_user_sid}[^\s]+)"""
-"""\s+Type=({alert_severity}[^\s]+)"""
-"""\'\w+:\\+(?i)users\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-"""Hash:({hash_md5}[^\s\]]+)"""
-"""Vendor:\s+({process_vendor}[^\]]+)"""
-"""Message=AppSense Application Manager ({alert_name}.+?)\s+(of [^\w]|\'|for)"""
-"""Message=(The file )?\'.+?\'( has had)?\s+({alert_name}.+?)\s*(\.|of|for)"""
-"""Message=\'(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\'"""
-"""\'({process_path}({process_dir}(?:(\w+:)*([\\\/]+[^\\\/'\]\"]+)+)?[\\\/]+)({process_name}[^\\\/\"\]]*?))(\s+\[\w+:|')"""
-]
-DupFields = [
-"process_path->path"
-"dest_host->host"
-"alert_name->alert_type"
-"user_sid->account_id"
-]
-ParserVersion = "v1.0.0"
-}
-
-
-{
-  Name = openvpn-ov-json-vpn-login-success-connection
-  ParserVersion = v1.0.0
-  Vendor = Open VPN
-  Product = Open VPN
+mimecast-json-template = {
+  mimecast-json-event = {
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd HH:mm:ss"]
-  Conditions = [ 
-""" openvpn[""" 
-"""MULTI_sva: pool returned """
-"""IPv4=""" 
-]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Fields = [
-    """({time}\w+\s+\d+ \d+:\d+:\d+)"""
-    """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """ openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
-    """IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
-    """hostname":"({host}[^"]+)""",
-    """exa_json_path=$.@timestamp,exa_field_name=time""",
-    """exa_regex= openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
-    """exa_regex=IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
-    """exa_json_path=$.beat.hostname,exa_field_name=host"""
-  ]
-  DupFields = [ "user->account" 
+      """exa_json_path=$.eventTime,exa_field_name=time"""
+      """exa_json_path=$.auditType,exa_field_name=operation"""
+      """exa_json_path=$.category,exa_field_name=category"""
+      """exa_json_path=$.event.action,exa_field_name=action"""
+      """exa_json_path=$.event.category[0],exa_field_name=event_category"""
+      """exa_json_path=$.event.outcome,exa_field_name=result"""
+      """exa_json_path=$.event.reason,exa_field_name=result_reason"""
+      """exa_json_path=$.eventInfo,exa_field_name=additional_info"""
+      """exa_json_path=$.id,exa_field_name=event_id"""
+      """exa_json_path=$.network.application,exa_field_name=app"""
+      """exa_json_path=$.source.ip,exa_field_name=src_ip"""
+      """exa_json_path=$.user.domain,exa_field_name=domain"""
+      """exa_json_path=$.user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$.user.name,exa_field_name=user"""
+      """exa_json_path=$.user.fullname,exa_field_name=full_name"""
+      
 }
 ```

@@ -4,14 +4,8 @@
 Name = "mimecast-seg-cef-app-login-success-audittype"
 Vendor = "Mimecast"
 Product = "Mimecast Secure Email Gateway"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-Conditions = [
-""""auditType":"""
-""""User Logged On""""
-"""destinationServiceName =Mimecast Email Security"""
-"""dproc="""
-]
-Fields = [
+Conditions = [ """"auditType":"User Logged On"""", """"eventInfo":""", """"eventTime":""", """"category":""" ]
+Fields = ${mimecast-json-template.mimecast-json-event.Fields}[
 """\"eventTime\":\"({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+)"""
 """\WdestinationServiceName =(|({event_subtype}[^=]+?))(\s+\w+=|\s*$)"""
 """\Wdproc=(|({dproc}[^=]+?))(\s+\w+=|\s*$)"""

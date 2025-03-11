@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627
 # sequence_num is removed
 # user_groups is removed
   ]
+  DupFields = ["login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user"]
 
 
 }

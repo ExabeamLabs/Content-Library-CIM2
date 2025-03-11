@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-kv-user-privilege-modify-tokenadjust
   Conditions = ["""A token right was adjusted.""", """Enabled Privileges:""", """Disabled Privileges:"""]
   Fields = [
     """ComputerName =({host}[\w\-\.]+)""",
+    """({event_code}4703)""",
     """({event_name}A token right was adjusted)""",
     """Subject:[^:]+Security ID:\s*({user_sid}[^:<]+?)\s*(<14>)?\s*Account Name:""",
     """Subject:[^:]+Security ID:[^:]+Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(<14>)?\s*Account Domain:\s*({domain}[^:<]+?)\s*(<14>)?\s*Logon ID:\s+({login_id}[^\s]+)""",

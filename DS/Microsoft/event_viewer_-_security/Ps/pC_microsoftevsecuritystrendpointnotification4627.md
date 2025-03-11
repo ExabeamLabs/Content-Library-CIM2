@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-str-endpoint-notification-4627
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""",
     """"(?i)Computer(Name)?":\s*"({host}[^"]+)"""",
+    """({event_code}4627)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w.\-]+)""",
     """EVENT_ID="({event_code}\d+)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",

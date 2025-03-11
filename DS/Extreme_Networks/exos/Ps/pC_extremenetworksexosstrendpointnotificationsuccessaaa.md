@@ -9,7 +9,7 @@ Name = extremenetworks-exos-str-endpoint-notification-success-aaa
  Conditions = [ """AAA: """, """Msg from Master :""", """password authentication""" ]
  Fields = [
     """({time}\w+\s+\d{1,2}\s+\d\d:\d\d:\d\d)"""
-    """user\s+({user}\w+)"""
+    """user\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """Msg from Master\s*:\s*({event_name}.+?)$"""
     """\s+\(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
  ]

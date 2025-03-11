@@ -5,7 +5,7 @@ Name = microsoft-adfs-cef-app-notification-success-431
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|AD FS Auditing:431""" ]
 
-cef-ad-fs-audit = {
+cef-ad-fs-audit-dl = {
   Vendor = Microsoft
   Product = Active Directory Federation Services
   TimeFormat = "epoch"

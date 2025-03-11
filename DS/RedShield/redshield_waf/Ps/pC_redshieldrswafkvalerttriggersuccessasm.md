@@ -17,7 +17,7 @@ Name = redshield-rswaf-kv-alert-trigger-success-asm
     """;VIOLATION_DETAILS=({additional_info}.+?);VIOLATIONS="""
     """;IP_CLIENT=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """;METHOD=({method}[^;]+)"""
-    """;USERNAME=(N\/A|({user}[^;]+))"""
+    """;USERNAME=(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """;POLICY=({policy_name}[^;]+)"""
     """;PROTO=({protocol}[^;]+)"""
     """;REQ_STATUS=({status_msg}[^;]+)"""

@@ -22,9 +22,7 @@ Fields = [
 """"workstation":"({src_host}[^"\s]+?)\s*""""
 """"status":"({result_code}[^"]+?)\s*""""
 ]
-DupFields = [
-  "result_code->failure_code"
-]
+DupFields = [ "result_code->failure_code", "email_address->dest_email_address", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

@@ -7,7 +7,7 @@ Name = sophos-ep-mix-app-notification-servicerestored
   ExtractionType = json
   Conditions = [ """"Event::Endpoint::ServiceRestored"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

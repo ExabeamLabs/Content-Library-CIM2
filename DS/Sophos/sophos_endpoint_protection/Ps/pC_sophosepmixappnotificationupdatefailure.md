@@ -7,7 +7,7 @@ Name = sophos-ep-mix-app-notification-updatefailure
   ExtractionType = json
   Conditions = [ """Event::Endpoint::UpdateFailure""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

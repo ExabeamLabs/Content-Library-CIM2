@@ -6,7 +6,7 @@ Name = "xps-x-cef-print-activity-printer-activity-success-xpsprint"
   Product = "XPS"
   TimeFormat = "yyyy-MM-dd HH:mm:ss a"
   Conditions = [
-    """XPS"""
+    """ XPS """
     """ PRINT"""
   ]
   Fields = [

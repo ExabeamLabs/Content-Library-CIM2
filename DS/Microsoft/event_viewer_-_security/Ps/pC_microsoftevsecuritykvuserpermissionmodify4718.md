@@ -16,6 +16,8 @@ Name = microsoft-evsecurity-kv-user-permission-modify-4718
     """Subject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*Account Modified:""",
     """Account Modified:.*?Account Name:\s*(|(({dest_domain}\S[^\\\/]*?)?[\\\/]+)?(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_sid}[^\s]+)))\s*Access Removed:""",
     """Access Removed:.*?Access Right:\s*({access_type}.+?)\s*("|<|$)""",
+    """<Computer>({host}[^>]+)<""",
+    """"Computer":"({host}[^"]+)""""
   ]
 
 

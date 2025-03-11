@@ -54,7 +54,7 @@ json-defender-atp {
      """exa_json_path=$..ActionType,exa_field_name=action"""
      """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
      """exa_json_path=$..DeviceName,exa_field_name=host"""
-     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?$)|({full_name}[^",]+))"""
+     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""
      """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
      """exa_json_path=$..InitiatingProcessFolderPath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"\\\/]+))"""
      """exa_json_path=$..InitiatingProcessParentId,exa_field_name=parent_process_id"""

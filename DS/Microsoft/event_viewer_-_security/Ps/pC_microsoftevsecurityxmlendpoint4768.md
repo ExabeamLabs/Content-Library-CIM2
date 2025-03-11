@@ -24,6 +24,7 @@ Fields = [
   """"Activity":"({event_name}[^"]+)"""
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = [ "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

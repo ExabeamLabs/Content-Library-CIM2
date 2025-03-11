@@ -12,17 +12,18 @@ Name = microsoft-evsecurity-kv-key-migrate-5059
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9})-\d\d:\d\d\s[^\s]+""",
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({host}[^\s]+)\sMicrosoft-Windows-Security-Auditing""",
-    """EventID="*({event_code}\d+)""",
+    """({event_code}5059)""",
     """({event_name}Key migration operation)""",
-    """"(?i)HostName":\s*"({host}[^"]+)""""
+    """"(?i)(HostName|Computer)":\s*"({host}[^"]+)""""
   ]
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "epoch"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+""",
     """\WexternalId=({event_code}\d+)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

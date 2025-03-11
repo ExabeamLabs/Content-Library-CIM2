@@ -6,7 +6,7 @@ Name = sophos-ep-sk4-app-notification-success-sophoscentral
   Product = Sophos Endpoint Protection
   Conditions = [""""endpoint_type":""", """"type":"Event::Endpoint::HmpaPrivGuardResolved"""", """"severity":"""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

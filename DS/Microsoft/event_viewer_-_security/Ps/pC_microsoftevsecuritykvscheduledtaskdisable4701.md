@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-scheduled-task-disable-4701
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
     """({event_code}4701)""",
     """({event_name}A scheduled task was disabled)""",
-    """Account Name:\s*({user}[^\s:]+)""",
+    """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Account Domain:\s*({domain}[^\s:]+)""",
     """Logon ID:\s*({login_id}[^\s:]+)""",
     """Task Name:\s*({task_name}[^\s]+)\s*Task Content:""",   

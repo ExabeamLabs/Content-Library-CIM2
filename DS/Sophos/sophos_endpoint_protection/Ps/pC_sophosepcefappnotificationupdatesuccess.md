@@ -7,7 +7,7 @@ Name = sophos-ep-cef-app-notification-updatesuccess
   ExtractionType = json
   Conditions = [ """Event::Endpoint::UpdateSuccess""" ]
 
-sophos-events = {
+sophos-events-aa = {
   Vendor = Sophos
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [

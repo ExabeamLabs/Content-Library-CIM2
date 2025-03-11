@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-kv-user-modify-4717
   Conditions = [ """4717""", """System security access was granted to an account""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w.\-]+)""",
+    """"Computer":"({host}[\w\-\.]+)"""",
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
     """({event_code}4717)""",

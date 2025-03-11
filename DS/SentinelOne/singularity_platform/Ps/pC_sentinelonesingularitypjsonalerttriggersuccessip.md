@@ -19,7 +19,7 @@ Fields = [
   """process\.name":"({process_name}[^"]+)""",
   """"endpoint.os":"({os}[^"]+)"""
   """"agent.version":\s*"+({user_agent}[^"]+)""""
-  """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
+  """"src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """"src.process.image.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""
   """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""
   """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""
@@ -37,7 +37,7 @@ Fields = [
   """exa_regex=process\.name":"({process_name}[^"]+)""",
   """exa_json_path=$..['endpoint.os'],exa_field_name=os""",
   """exa_json_path=$..['agent.version'],exa_field_name=user_agent""",
-  """exa_regex="src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[^"]+?))""""
+  """exa_regex="src.process.user":"*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """exa_json_path=$..['src.process.image.sha256'],exa_field_name=hash_sha256""",
   """exa_json_path=$..['src.process.image.sha1'],exa_field_name=hash_sha1""",
   """exa_json_path=$..['src.process.image.md5'],exa_field_name=hash_md5""",

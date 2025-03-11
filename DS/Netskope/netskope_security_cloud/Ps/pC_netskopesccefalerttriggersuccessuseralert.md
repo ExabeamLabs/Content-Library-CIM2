@@ -28,6 +28,9 @@ Name = netskope-sc-cef-alert-trigger-success-useralert
   """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """"src_location":\s*"({src_location}[^"]+)"""
   """"src_country":\s*"({src_country}[^"]+)"""
+  """"dlp_rule_severity":"({alert_severity}[^"]+)""""
+  """"dlp_rule_count":({rule_count}\d+)"""
+  """"dlp_rule":"({rule}[^"]+)"""
   ]
   DupFields = [ "object->file_name" ]
   ParserVersion = "v1.0.0"

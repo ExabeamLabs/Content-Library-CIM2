@@ -6,7 +6,7 @@ Name = pan-ngfw-cef-network-traffic-starttraffic
   Product = Palo Alto NGFW
   Conditions = [ """|Palo Alto Networks|PAN-OS|""", """start|TRAFFIC|""" ]
 
-cef-palo-alto-networks-firewall = {
+cef-palo-alto-networks-firewall-dl = {
     Vendor = Palo Alto Networks
     TimeFormat = "epoch"
     Fields = [

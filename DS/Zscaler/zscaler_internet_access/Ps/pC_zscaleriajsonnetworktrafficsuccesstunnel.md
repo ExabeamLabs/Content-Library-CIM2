@@ -13,7 +13,7 @@ Name = zscaler-ia-json-network-traffic-success-tunnel
 	"""exa_json_path=$..Recordtype,exa_field_name=event_name""",
 	"""exa_json_path=$..sourceip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
 	"""exa_json_path=$..destinationip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-	"""exa_json_path=$..tunneltype,exa_field_name=tunnel_type""",
+	"""exa_json_path=$..tunneltype,exa_field_name=vpn_client_type""",
 	"""exa_json_path=$..location,exa_field_name=location""", 
 	"""exa_json_path=$.event.event,exa_field_name=additional_info""",
 	"""exa_json_path=$..eventreason,exa_field_name=result_reason,exa_match_expr=!InList(toLower($..eventreason), "none")""",

@@ -37,7 +37,7 @@ Name = microsoft-evsecurity-json-endpoint-4624
       """WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}[^",\s\\]+))\\?""""
       """"+mac\\"+:\[\\"+({src_mac}[^\\"]+)"""
     ]
-    DupFields = ["host->dest_host","src_host_windows->src_host"]
+    DupFields = ["host->dest_host","src_host_windows->src_host", "domain->dest_domain", "user->dest_user"]
   
 
 }

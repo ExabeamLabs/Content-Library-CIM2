@@ -15,7 +15,7 @@ Conditions = [
 ExtractionType = json
 ParserVersion = "v1.0.0"
 
-defender-atp-events {
+defender-atp-events-dl {
    Vendor = Microsoft
    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
    Fields = [

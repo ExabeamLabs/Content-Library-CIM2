@@ -7,7 +7,7 @@ Vendor: CrowdStrike
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  51   |   10   |         60         |       6        |   16    |
+|  51   |   10   |         60         |       6        |   40    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

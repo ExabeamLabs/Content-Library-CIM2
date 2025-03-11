@@ -9,7 +9,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
   Conditions = [ """"eventType":"group.user_membership.add"""", """"Add user to group membership"""", """"actor":""", """"alternateId":"""" ]
   Fields=[
     """"published":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
-    """"actor":\{[^\}]*?("type":"User",)?"alternateId":"((({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"actor":\{[^\}]*?("type":"User",)?"alternateId":"((({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"actor":\{[^\}]*?("type":"User"[^\}]*?)?"displayName":"(Okta System|({full_name}({first_name}[^"]+?)\s({last_name}[^"\s]+)))"""",
     """"type":"User".*?"displayName":"({group_name}[^"]+)".*?"id":"({group_id}[^"]+)".*?"type":"UserGroup"""",
     """\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",
@@ -37,7 +37,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",
     """exa_json_path=$..client.userAgent.os,exa_field_name=os""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name"""
-    """exa_regex="actor":\{[^\}]*?("type":"User",)?"alternateId":"((({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """exa_regex="actor":\{[^\}]*?("type":"User",)?"alternateId":"((({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """exa_regex="actor":\{[^\}]*?("type":"User"[^\}]*?)?"displayName":"(Okta System|({full_name}({first_name}[^"]+?)\s({last_name}[^"\s]+)))"""",
     """exa_regex="type":"User".*?"displayName":"({group_name}[^"]+)".*?"id":"({group_id}[^"]+)".*?"type":"UserGroup"""",
     """exa_regex=\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",

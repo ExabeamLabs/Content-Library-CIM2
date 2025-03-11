@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-kv-key-5061
     """TimeCreated":"\/Date\(({time}\d{13})\)\/""""
     """\srt=({time}\d{13})""",
     """({event_name}Cryptographic operation)""",
+    """({event_code}5061)""",
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+)\S+\s({host}[^\s]+)""",
@@ -20,10 +21,11 @@ Name = microsoft-evsecurity-kv-key-5061
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "epoch"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
+    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+""",
     """\WexternalId=({event_code}\d+)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",

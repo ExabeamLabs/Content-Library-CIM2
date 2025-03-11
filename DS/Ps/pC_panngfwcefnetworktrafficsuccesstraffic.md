@@ -5,7 +5,7 @@ Name = pan-ngfw-cef-network-traffic-success-traffic
   ParserVersion = v1.0.0
   Conditions = [ """|Palo Alto Networks|PAN-OS|""", """end|TRAFFIC|""" ]
 
-cef-palo-alto-networks-firewall = {
+cef-palo-alto-networks-firewall-dl = {
     Vendor = Palo Alto Networks
     TimeFormat = "epoch"
     Fields = [

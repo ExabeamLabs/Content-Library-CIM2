@@ -29,7 +29,7 @@ q-okta-app-login = {
     """exa_regex="displayName"+:"+((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))",[^\{\}]*?"objectType"+:"+User""""
     """exa_regex="login"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\{\}]*?"objectType"+:"+User""""
     """exa_json_path=$.actors[*].ipAddress,exa_field_name=src_ip""",
-    """exa_json_path=$.actors[*].login,exa_regex=(?:(({user}[\w\.\-]{1,40})@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
+    """exa_json_path=$.actors[*].login,exa_regex=(?:(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
     """exa_json_path=$.actors[1].id,exa_field_name=user_agent"""
     """exa_regex=({app}Okta)"""
     """exa_json_path=$.targets.[?(@.objectType == 'AppInstance')].displayName,exa_field_name=app"""

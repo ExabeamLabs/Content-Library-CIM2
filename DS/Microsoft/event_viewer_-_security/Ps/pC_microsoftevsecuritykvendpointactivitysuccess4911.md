@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-success-4911
     """Keywords=({result}[^=]+?)\s\w+="""
     """TaskCategory=({task}[^=]+?)\s*\w+="""
     """({event_name}Resource attributes of the object were changed)"""
-    """Subject:\s*Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*({user}[^:]+?)\s*Account Domain:\s*({domain}[^:]+?)\s*Logon ID:\s*({login_id}[^:]+?)\s*Object:"""
+    """Subject:\s*Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^:]+?)\s*Logon ID:\s*({login_id}[^:]+?)\s*Object:"""
     """Object Type:\s*({object_type}File)\s*Object Name:\s*(-|({file_path}({file_dir}[^<]+?)({file_name}[^<\\\/]+?(\.({file_ext}[^<\\\/\.]+?))?)))\s* Handle ID:"""
   ]
   

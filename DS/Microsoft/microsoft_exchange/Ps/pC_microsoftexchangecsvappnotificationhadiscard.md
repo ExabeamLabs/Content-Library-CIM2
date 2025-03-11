@@ -5,7 +5,7 @@ Name = microsoft-exchange-csv-app-notification-hadiscard
   ParserVersion = "v1.0.0"
   Conditions = [ """,SMTP,HADISCARD,""" ]
 
-exchange-dlp-email-alert = {
+exchange-dlp-email-alert-3 = {
   Vendor = Microsoft
   Product = Microsoft Exchange
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
