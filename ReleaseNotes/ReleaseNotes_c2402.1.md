@@ -1,16 +1,17 @@
  Security Content c2402.1 Release Notes
-======================================
+=======================================
 
 These Release Notes document security content updates from content package c2304.1_63.6 to c2402.1.
 
 The security content updates listed below include changes to the following areas:
 
 
+
 * [Models](#Models)
 
 * [Rules](#Rules)
 
-In the lists below, each item represents a specific parser, model, or rule that has been added, updated, or deprecated. To facilitate finding every data source where the changed content items are referenced, a content library query has been created for each changed parser, model, or rule. To view the results of each query, click on the link for the relevant content item.
+In the lists below, each item represents a specific  model, or rule that has been added, updated, or deprecated. To facilitate finding every data source where the changed content items are referenced, a content library query has been created for each changed parser, model, or rule. To view the results of each query, click on the link for the relevant content item.
 
 
 
@@ -31,6 +32,10 @@ Models
 
 #### Updated Models
 * [EPA-PDir](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=EPA-PDir) &#8211; Process executable directories in the organization
+
+* [EPA-PG-PS](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=EPA-PG-PS) &#8211; Powershell executions for the peer group
+
+* [EPA-PU-PS](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=EPA-PU-PS) &#8211; Powershell executions for the user
 
 * [EPA-Powershell-Invoke-WebRequest-Domain](https://github.com/ExabeamLabs/Content-Library-CIM2/search?q=EPA-Powershell-Invoke-WebRequest-Domain) &#8211; Domains called with Powershell executions using invoke-webrequest for the organization
 
