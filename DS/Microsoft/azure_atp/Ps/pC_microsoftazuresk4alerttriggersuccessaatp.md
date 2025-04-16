@@ -19,7 +19,7 @@ Fields = [
   """"severity":"({alert_severity}[^"]+)"""
   """"id":"({alert_id}[^"]+)"""
   """"sourceMaterials":\["({malware_url}[^"]+)"""
-  """"title":"({alert_name}[^"]+)"""
+  """"title":"({alert_name}[^"]+?)(\\u200b)?""""
   """"userPrincipalName":"((?i)null|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   """"userPrincipalName":"((?i)null|({email_user}[^\@"]+\@([^\."]+\.)*\w+))"""
   """"logonLocation":((?i)null|({src_location}[^"]+))"""

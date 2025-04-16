@@ -4,6 +4,9 @@
 Name = crowdstrike-falcon-json-process-create-success-classifiedmoduleload
   ExtractionType = json
   Conditions = [ """"event_simpleName":"ClassifiedModuleLoad"""",  """"aid":""", """"aip":""" ]
+  Fields = ${DLCrowdStrikeParserTemplates.crowdstrike-process-info-1.Fields}[
+    """"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
+  ]
   ParserVersion = "v1.0.0"
 
 crowdstrike-process-info-1 = {

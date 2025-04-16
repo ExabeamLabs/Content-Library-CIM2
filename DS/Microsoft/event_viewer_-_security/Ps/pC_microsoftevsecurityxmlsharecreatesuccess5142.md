@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-share-create-success-5142
     """({event_name}A network share object was added)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -12,7 +12,7 @@ Name = microsoft-windows-sk4-endpoint-notification-success-4797
      """"TargetSid":"({dest_user_sid}[^"]+)"""",
      """"Workstation":"({src_host_windows}[^"]+)""""
    ]
-   DupFields = [ "src_host_windows->src_host" ]
+   DupFields = ${DLWindowsParsersTemplates.json-windows-system-info.DupFields}[ "src_host_windows->src_host" ]
  
 json-windows-system-info = {
   Vendor = Microsoft
@@ -28,6 +28,7 @@ json-windows-system-info = {
     """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
-  
+  ]
+  DupFields = [ "user->src_user" , "domain->src_domain" 
 }
 ```

@@ -3,7 +3,7 @@
 {
 Name = microsoft-evbitsclient-xml-endpoint-activity-success-eventid
   Product = Event Viewer - BITS-Client
-  Conditions = [ """<EventID""", """<Computer>""", """<Provider Name ='Microsoft""", """<Channel>Microsoft-Windows-Bits-Client""" ]
+  Conditions = [ """<EventID""", """<Computer>""",  """<Provider Name =""", """Microsoft""", """<Channel>Microsoft-Windows-Bits-Client""" ]
 
 xml-ms-event-viewer = {
     Vendor = Microsoft
@@ -18,13 +18,15 @@ xml-ms-event-viewer = {
       """<EventID>({event_code}\d+)""",
       """<EventID Qualifiers=('|")\d+('|")>({event_code}\d+)<""",
       """<Data>({additional_info}[^<]+)<""",
-      """<Execution ProcessID\\*=('|")({process_id}\d+)""",
-      """<Task>({sub_category}[^<]+)"""
-      """<Level>({run_level}[^<]+)<"""
-      """<Data Name\\*=('|")Error\s*Code('|")>({error_code}[^<]+)<""",
+      """ProcessID\\*=('|")({process_id}\d+)""",
+      """<Task>({sub_category}[^<]+)""",
+      """<Level>({run_level}[^<]+)<""",
+      """('|")Error\s*Code('|")>({error_code}[^<]+)<""",
       """<Data Name =('|")ClientName('|")>({client_name}[^<]+)<""".
-      """<Channel>({channel}[^<]+)<"""
-      """<Computer>({host}[\w\-.]+)"""
+      """<Channel>({channel}[^<]+)<""",
+      """<Computer>({host}[\w\-.]+)""",
+      """<EventData Name =('|")({event_name}[^>'"]+)('|")>""",
+      """<Security UserID=('|")({user_sid}[^'"<]+?)('|")"""
     ]
     DupFields = [ "result->result_code" 
 }

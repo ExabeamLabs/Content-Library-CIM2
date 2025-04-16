@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  Conditions = [ """<EventID>4756</EventID>""", """<Provider Name ="Microsoft-Windows-Security-Auditing"""" ]
+  Conditions = [ """<EventID>4756</EventID>""", """<Provider Name =""", """Microsoft-Windows-Security-Auditing""" ]
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """SystemTime(\\)?=\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d)""",
@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
     """<Data Name(\\)?="MemberSid">(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Level>({run_level}[^<]+)<"""
       ]
+  DupFields = ["user->src_user", "domain->src_domain"]    
 
 
 }

@@ -8,6 +8,7 @@ Name = "microsoft-defenderep-json-scheduled-task-delete-success-scheduledtaskdel
     """"SubjectUserName\\?":\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"TaskName\\?":\\?"({task_name}[^"\\]+)""",
   ]
+  DupFields = ${MicrosoftParserTemplates.json-defender-atp.DupFields}["user->src_user"]
   ParserVersion = "v1.0.0"
 
 json-defender-atp {

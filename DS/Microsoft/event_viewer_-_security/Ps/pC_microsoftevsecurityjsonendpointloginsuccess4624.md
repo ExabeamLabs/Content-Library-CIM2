@@ -40,7 +40,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
     """"SubjectUserSid":"({subject_sid}[^"]+)"""
     """"Process":"(-|({process_name}[^"]+))""""
   ]
-  DupFields = [ "host->dest_host", "domain->dest_domain", "user->dest_user" ]
+  DupFields = [ "host->dest_host", "domain->dest_domain", "user->dest_user", "login_id->dest_login_id", "user_sid->dest_user_sid" ]
 
 
 }

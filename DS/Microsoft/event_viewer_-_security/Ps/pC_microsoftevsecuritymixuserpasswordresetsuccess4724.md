@@ -33,18 +33,19 @@ Fields = [
   """Target Account[^=]+?Security ID:(\\t|\\r|\\n|\s)*(|({dest_user_sid}[^:]+?))(\\t|\\r|\\n|\s)+Account Name:(\\t|\\r|\\n|\s)*(|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^\s]+))(\\t|\\r|\\n|\s)+Account Domain:(\\t|\\r|\\n|\s)*({dest_domain}[^",\s]+)"""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
   """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)\\?""""
-  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
+  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\"]+)\\?""""
   """TargetDomainName\\?"+:\\?"({dest_domain}[^\s\\"]+)\\?""""
   """"TargetSid\\?"+:\\?"({dest_user_sid}[^\\"]+)"""
   """TargetUserName\\?"+:\\?"(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))\\?""""
-  """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\"]+))\\?""""
+  """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\"]+))\\?""""
   """"Hostname\\?":\\?"({host}[\w\-.]+)\\?""""
   """"source_ip"\s*:\s*"(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*""""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
   """Keywords=({result}[^=]+?)\s+([\\tnr])*((Task)|(Message))\w*="""
   """"keywords":\[?"({result}[^"]+)"""  
 ]
+DupFields = ["src_user->user", "src_domain->domain"]
 ParserVersion = "v1.0.0"
 
 

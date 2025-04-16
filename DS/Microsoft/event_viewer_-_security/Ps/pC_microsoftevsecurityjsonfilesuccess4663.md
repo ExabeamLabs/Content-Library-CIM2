@@ -27,6 +27,7 @@ Fields = [
   """Access Request Information:[rnt\\]*Accesses:[rnt\\]*({access}[^:]+?)[rnt\\]*Access Mask:[rnt\\]*({access_mask}\w+)"""
 ]
 ParserVersion = "v1.0.0"
+DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

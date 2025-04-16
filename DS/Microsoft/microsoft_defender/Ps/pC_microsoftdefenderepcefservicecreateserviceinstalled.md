@@ -4,6 +4,9 @@
 Name = microsoft-defenderep-cef-service-create-serviceinstalled
   ParserVersion = "v1.0.0"
   Conditions = ["""requestClientApplication=""", """AdvancedHunting-DeviceEvents""","""ServiceInstalled"""]
+  Fields = ${MicrosoftParserTemplates.cef-defender-atp-3.Fields} [
+      """AdditionalFields":[^\}]*?ServiceName\\+?":\\+?"({service_name}[^,]+)\\+?","""
+	]
 
 cef-defender-atp-3 {
    Vendor = "Microsoft"

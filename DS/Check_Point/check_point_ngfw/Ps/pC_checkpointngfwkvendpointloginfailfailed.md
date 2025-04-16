@@ -31,6 +31,7 @@ Fields = [
   """reason:"({failure_reason}[^"]+?)\s*""""
   """\Wsrc_machine_name:"({src_host}[\w\-.]+)"""
   """description:"({failure_reason}({additional_info}[^";]+))""""
+  """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 ]
 
 

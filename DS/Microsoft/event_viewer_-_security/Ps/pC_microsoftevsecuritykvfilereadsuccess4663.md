@@ -18,14 +18,14 @@ Name = microsoft-evsecurity-kv-file-read-success-4663
     """SubjectDomainName ="+({domain}[^"]+)"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",
     """ObjectType="+({file_type}[^"]+)""",
-    """ObjectName ="+({src_file_path}[^"]+)""",
-    """ObjectName ="+.*\\({src_file_name}(?:[^\\:]+(?=\.))({src_file_ext}\.[^\\:]+)?|[^\\:]+)"+,\s*ObjectServer=""",
-    """ObjectName ="+(?:({file_dir}.+?)\\+[^\\]+)",""",
+    """ObjectName ="+(({registry_path}\\+REGISTRY[^"]+?(\\\{({registry_key}[^\}"]+)\})?)|({src_file_path}[^"]+))""",
+    """ObjectName ="+(?!\\+REGISTRY).*\\({src_file_name}(?:[^\\:]+(?=\.))({src_file_ext}\.[^\\:]+)?|[^\\:]+)"+,\s*ObjectServer=""",
+    """ObjectName ="+(?!\\+REGISTRY)(?:({file_dir}.+?)\\+[^\\]+)",""",
     """ProcessName ="+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))"""",
     """AccessList="({access}[^"]+)""",
     """AccessMask="({access_mask}[^"]+)"""
   ]
-  DupFields = [ "host->src_host" ]
+  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

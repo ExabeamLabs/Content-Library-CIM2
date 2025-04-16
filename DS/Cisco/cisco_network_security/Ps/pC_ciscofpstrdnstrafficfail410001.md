@@ -5,10 +5,10 @@ Name = cisco-fp-str-dns-traffic-fail-410001
   Vendor = Cisco
   Product = Cisco Network Security
   ParserVersion = v1.0.0
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = ["MMM dd yyyy HH:mm:ss","MMM dd HH:mm:ss"]
   Conditions = [ """%FTD-""", """-410001""" ]
   Fields = [
-    """({time}\w+ \d+ \d+ \d\d:\d\d:\d\d)\s*(::ffff:)?({host}[\w\-.]+)?\s*""",
+    """({time}\w+ \d+ (\d+ )?\d\d:\d\d:\d\d)\s*(\w+\s)?(::ffff:)?({host}[\w\-.]+)?\s*""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
 	  """%FTD-\d+-\d+:\s*({event_name}[^:].+?)\s+from"""

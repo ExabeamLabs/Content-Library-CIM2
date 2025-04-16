@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4877
   Product = Event Viewer - Security
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4877</EventID>""", """<Provider""", """'Microsoft-Windows-Security-Auditing'""" ]
+  Conditions = [ """<EventID>4877</EventID>""", """<Provider""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
   """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)('|")"""
   """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4877
   """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
 	]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

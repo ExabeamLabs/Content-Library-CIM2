@@ -4,6 +4,10 @@
 Name = "microsoft-defenderep-json-service-create-serviceinstalled"
   Conditions = [  """DeviceEvents"""", """"ActionType":"ServiceInstalled"""" ]
   ParserVersion = "v1.0.0"
+  Fields = ${MicrosoftParserTemplates.json-defender-atp.Fields} [
+      """exa_json_path=$..AdditionalFields,exa_regex=ServiceName\\":\\"({service_name}[^,]+)\\",""",
+      """AdditionalFields":[^\}]*?ServiceName\\+?":\\+?"({service_name}[^,]+)\\+?","""
+	]
 
 json-defender-atp {
    Vendor = "Microsoft"

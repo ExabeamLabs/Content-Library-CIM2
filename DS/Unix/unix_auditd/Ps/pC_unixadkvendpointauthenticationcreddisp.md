@@ -16,7 +16,7 @@ Name = unix-ad-kv-endpoint-authentication-creddisp
     """\sres=({result}[^']+)\'""",
     """\sses=({session_id}\d+)""",
     """exe="({process_name}[^"]*)"""",
-    """exe="({process_dir}.+\/)({process_name}.+?)"""",
+    """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+=""",
     """\sauid=({account_id}\d+)\s""",
     """\suid=({user_uid}\d+)""",
     """op=({action}[^\s]+)""",

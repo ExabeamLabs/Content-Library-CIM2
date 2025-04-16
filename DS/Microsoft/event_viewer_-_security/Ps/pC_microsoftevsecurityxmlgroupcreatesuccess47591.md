@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>4759</EventID>""", """<Event xmlns""", """<Provider Name""","""'Microsoft-Windows-Security-Auditing'""" , """<Channel>Security</Channel>""" ]
+  Conditions = [ """<EventID>4759</EventID>""", """<Event xmlns""", """<Provider Name""","""Microsoft-Windows-Security-Auditing""" , """<Channel>Security</Channel>""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """Provider Name\\*='({provider_name}[^\']+)""",
@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
     """<Data Name[^<>]+?TargetUserName[^<>]+?>({group_name}[^<>]+?)</Data>"""
     """<Level>({run_level}[^<]+)<"""
    ]
+   DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

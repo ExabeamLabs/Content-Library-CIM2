@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985-1
     """ProcessName ="+({process_path}({process_dir}[^.]+)\\({process_name}[^"]+))""",
     """Computer="+({host}[^"]+)"""
   ]
-   DupFields = [ "host-> dest_host" ]
+   DupFields = [ "host-> dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

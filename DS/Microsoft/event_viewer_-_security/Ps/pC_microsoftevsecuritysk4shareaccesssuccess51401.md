@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-sk4-share-access-success-5140-1
     """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.\s]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
   ]
-  DupFields = ["host->dest_host"]
+  DupFields = ${WindowsParsersTemplates.json-windows-events-3.DupFields}["host->dest_host"]
 
 json-windows-events-3 = {
   Vendor = Microsoft
@@ -30,6 +30,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

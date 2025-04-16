@@ -13,7 +13,7 @@ Name = cisco-asa-str-vpn-logout-722023
   Fields = [
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
-    """({time}\w+\s\d+\s\d+\s\d\d:\d\d:\d\d)"""
+    """({time}\w+\s+\d+\s+\d+\s+\d\d:\d\d:\d\d)"""
     """%ASA-({priority}\d+)-({event_code}\d+)"""
     """\sGroup\s*<({group_name}.*?)>"""
     """User <(({user_ou}\w+=[^<]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^>@]+))?))>"""

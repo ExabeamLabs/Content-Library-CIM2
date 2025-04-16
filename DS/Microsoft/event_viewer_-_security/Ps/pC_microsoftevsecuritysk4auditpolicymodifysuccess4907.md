@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-success-4907
     """Computer':\s+[^\/]+\/({host}[^']+)'""",
     """Result':\s+'({action}[^']+)'"""
   ]
-  DupFields = ["host->dest_host"]
+  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

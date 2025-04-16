@@ -8,12 +8,13 @@ Name = microsoft-mssql-xml-database-login-qualifiers
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [
 """<Event xmlns=""",
-"""<Provider Name ='MSSQL""",
+"""<Provider Name =""",
+"""MSSQL""",
 """<Keyword>Audit """
   ]
   Fields = [
     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """<Provider Name ='({db_name}[^']+)'""",
+    """<Provider Name =('|")({db_name}[^']+)('|")""",
     """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventData><Data>(({domain}[^\\\/<>]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",

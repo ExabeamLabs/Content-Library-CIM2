@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-kv-user-password-modify-4723-3
       """TargetUserName ="+({dest_user}[^"]+)"""",
       """ProviderGuid="+({process_guid}[^"]+)""""
     ]
+    DupFields = ["user->src_user", "domain->src_domain"]
     ParserVersion = "v1.0.0"
   
 

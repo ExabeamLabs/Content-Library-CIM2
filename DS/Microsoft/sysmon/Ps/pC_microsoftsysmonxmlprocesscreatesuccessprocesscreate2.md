@@ -7,7 +7,7 @@ Product = "Sysmon"
 TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd HH:mm:ss.SSS"]
 Conditions = [
 """<Provider Name"""
-"""'Microsoft-Windows-Sysmon'""",
+"""Microsoft-Windows-Sysmon""",
 """<EventID>10</EventID>""",
 """<Channel>Microsoft-Windows-Sysmon/Operational</Channel>""",
 """<Data Name"""

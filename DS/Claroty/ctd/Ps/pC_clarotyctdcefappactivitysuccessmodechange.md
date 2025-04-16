@@ -3,7 +3,7 @@
 {
 Name = claroty-ctd-cef-app-activity-success-modechange
   ParserVersion = "v1.0.0"
-  Conditions = [ """CEF:""", """|Schneider|CTD|""", """|Mode Change|""", """|CtdSourceIp=""" ]
+  Conditions = [ """CEF:""", """|CTD|""", """|Mode Change|""", """|CtdSourceIp=""" ]
   Fields = ${ClarotyParserTemplates.claroty-schneider-events.Fields}[
     """({app}CTD)"""
   ]

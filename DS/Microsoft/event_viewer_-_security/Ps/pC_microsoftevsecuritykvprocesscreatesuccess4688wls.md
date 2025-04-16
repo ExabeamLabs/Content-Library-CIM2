@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-process-create-success-4688wls
       """CommandLine="+({process_command_line}[^"]+)"""",
       """CommandLine="+(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= ({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))""",
     ]
+    DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-sk4-service-create-success-4622
     """({event_name}A security package has been loaded by the Local Security Authority)""",
     """ <Data Name\\?="SecurityPackageName">({service_name}[^<]+)<"""
   ]
-  DupFields = ["host->dest_host"]
+  DupFields = ${WindowsParsersTemplates.json-windows-events-3.DupFields}["host->dest_host"]
 
 json-windows-events-3 = {
   Vendor = Microsoft
@@ -26,6 +26,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

@@ -25,6 +25,7 @@ Name = "checkpoint-ngfw-str-network-traffic-fail-drop-2"
 """\Wproto:({protocol}[^\"\;]+)"""
 """\Wrule_uid:\{?({rule_id}[^\"\}\;]+)"""
 """\Wpolicy_name=({rule}[^\"]+?)\\]"""
+"""\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 

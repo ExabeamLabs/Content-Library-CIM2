@@ -26,6 +26,7 @@ Name = "unix-unix-kv-ssh-traffic-audispd"
     """({event_code}ssh)"""
     """op=({action}[^\s]+)"""
     """\smsg='({additional_info}[^']+)'""",
+    """type=({login_type_text}[^=]+?)\s+\w+="""
   ]
   DupFields = [
     "dest_host->host",

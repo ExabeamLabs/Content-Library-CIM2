@@ -5,11 +5,9 @@ Name = "pan-wildfire-csv-alert-trigger-success-correlationalert"
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto WildFire"
 TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
-Conditions = [
-  """,CORRELATION,"""
-]
+Conditions = [ """,CORRELATION,""", """,compromised-host,""" ]
 Fields = [
-  """\d\d:\d\d:\d\d(\.\d+Z)? ({host}[\w\-.]+)"""
+  """\d\d:\d\d:\d\d(\.\d+Z)? ({host}[\w\-.]+)\s"""
   """\s*({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d+Z)"""
   """,CORRELATION,([^,]*,){2}({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)"""
   """,CORRELATION,([^,]*,){4}(|(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
@@ -18,33 +16,17 @@ Fields = [
   """,CORRELATION,([^,]*,){6}({alert_type}[^,]+)"""
   """,CORRELATION,([^,]*,){7}({alert_severity}[^,]+)"""
   """,CORRELATION,([^,]*,){17}\\?"*\s*({additional_info}({alert_name}[^\.,]+)[^\.]*)\."""
-  """\d\d:\d\d:\d\d,({alert_id}[^,]+),"""
+  """\d\d:\d\d:\d\d,({alert_id}[^,]+),CORRELATION"""
   """Process Name: ({malware_url}[^,]+),""",
   """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]
-SOAR {
-  IncidentType = "malware"
-  DupFields = [
-    "time->startedDate"
-    "vendor->source"
-    "rawLog->sourceInfo"
-    "alert_name->malwareName"
-    "alert_severity->sourceSeverity"
-    "alert_id->sourceId"
-    "src_ip->malwareVictimHost"
-    "alert_type->description"
-    "malware_url->malwareAttackerUrl"
-  ]
-  NameTemplate = "Palo Alto Alert ${alert_name} found"
-  ProjectName = "SOC"
-  EntityFields = [
-    {
-      EntityType = "device"
-      Name = "src_address"
-      Fields = [
-        "src_ip->ip_address"
-      ]
-    
+DupFields = [
+  "alert_name->app"
+  "alert_type->category"
+  "alert_name->alert_subject"
+]
+ParserVersion = "v1.0.0"
+
 
 }
 ```

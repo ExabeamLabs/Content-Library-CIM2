@@ -7,6 +7,10 @@ Name = "crowdstrike-falcon-cef-file-write-success-written"
 """"event_simpleName":"""
 """Written""""
 ]
+Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields} [
+""""(ImageFileName|TargetFileName)":\s*"({file_path}({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?))\s*"""",
+"""exa_regex="(ImageFileName|TargetFileName)":\s*"({file_path}({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?))\s*""""
+]
   
 crowdstrike-file-operations = {
 Vendor = "CrowdStrike"

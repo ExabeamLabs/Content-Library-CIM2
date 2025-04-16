@@ -3,7 +3,7 @@
 {
 Name = sophos-ep-cef-user-create-userautocreated
   ParserVersion = "v1.0.0"
-  Conditions = [ """CEF:""", """"type":"Event::Endpoint::UserAutoCreated"""" ]
+  Conditions = [ """"endpoint_id":""", """"type":"Event::Endpoint::UserAutoCreated"""", """"endpoint_type":""" ]
    Fields=${DLSophosParsersTemplates.cef-sophos-security-alert-1-dl.Fields}[
     """"name"*:"*({alert_name}[^":]+)"""
   ]

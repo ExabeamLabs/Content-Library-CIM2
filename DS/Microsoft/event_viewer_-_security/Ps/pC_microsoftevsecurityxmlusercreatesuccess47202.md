@@ -24,7 +24,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720-2"
 """({event_name}A user account was created)"""
 """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "account_name->dest_user", "account_domain->dest_domain" ]
+  DupFields = [ "account_name->dest_user", "account_domain->dest_domain", "user->src_user", "domain->src_domain" ]
 
 
 }

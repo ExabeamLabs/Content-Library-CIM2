@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-4660
     """"HandleId":"({object_id}[^"]+)""""
     """"ProcessName":"(|-|({process_path}({process_dir}.*?)({process_name}[^\\\/]+?)))""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4731
     """<Data Name\\?='TargetSid'>({group_id}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

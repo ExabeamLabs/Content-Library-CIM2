@@ -8,7 +8,7 @@ Name = "microsoft-defenderep-json-peripheral_storage-remove-success-usbdriveunmo
     """exa_regex="ProductName\\?":\\?"({device_description}[^\\"]+)""",
     """exa_regex="SerialNumber\\?":\\?"({device_id}[^\\"]+)"""    
   ]
-  DupFields = ["action->operation"]
+  DupFields = ${MicrosoftParserTemplates.json-defender-atp.DupFields}["action->operation"]
   ParserVersion = "v1.0.0"
 
 json-defender-atp {

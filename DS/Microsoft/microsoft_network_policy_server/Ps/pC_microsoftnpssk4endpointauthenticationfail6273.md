@@ -31,6 +31,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

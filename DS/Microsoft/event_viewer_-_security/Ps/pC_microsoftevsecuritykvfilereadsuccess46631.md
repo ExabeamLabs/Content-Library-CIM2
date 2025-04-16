@@ -17,11 +17,12 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-1
     """SubjectLogonId:({login_id}[^\s,]+),""",
     """ObjectServer:({object_server}[^\s,]+),""",
     """ObjectType:({file_type}[^\s,]+),""",
-    """ObjectName:(|({file_path}({file_dir}[^,]+?)[\\\/]+({file_name}[^\\\/;,]+?(\.({file_ext}[^\.\\\/;,]+?))?)))\s*,""",
+    """ObjectName:(|({registry_path}\\+REGISTRY[^:]+?(\\\{({registry_key}[^\}:]+)\})?)|({file_path}({file_dir}[^,]+?)[\\\/]+({file_name}[^\\\/;,]+?(\.({file_ext}[^\.\\\/;,]+?))?)))\s*,""",
     """AccessList:({access}[^,]+?),""",
     """AccessMask:({access_mask}[^,]+?),""",
     """ProcessName:(|({process_path}({process_dir}(?:[^";,]+?))?[\\\/]+?({process_name}[^\\\/";,]+?)))\s*,"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

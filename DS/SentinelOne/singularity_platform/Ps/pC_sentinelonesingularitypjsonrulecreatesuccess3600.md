@@ -23,7 +23,7 @@ json-sentinelone-activitytype = {
   """exa_json_path=$..filePath,exa_field_name=file_path""" 
   """exa_json_path=$..fileDisplayName,exa_field_name=file_name""" 
   """exa_json_path=$.groupName,exa_field_name=group_name""",
-  """exa_json_path=$..fileContentHash,exa_field_name=hash_md5""",
+  """exa_json_path=$..fileContentHash,exa_regex=^(({hash_md5}\w{32})|({hash_sha1}\w{40})|({hash_sha256}\w{64}))$""",
   """exa_json_path=$.accountId,exa_field_name=account_id""",
   """exa_json_path=$.activityType,exa_field_name=event_code""",
   """exa_json_path=$.threatId,exa_field_name=alert_id""",

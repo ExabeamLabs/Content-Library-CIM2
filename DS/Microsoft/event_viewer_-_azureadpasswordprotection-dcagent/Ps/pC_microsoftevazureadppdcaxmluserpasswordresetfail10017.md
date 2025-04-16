@@ -5,7 +5,7 @@ Name = microsoft-evazureadppdca-xml-user-password-reset-fail-10017
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>10017</EventID>""", """<Provider Name""","""'Microsoft-AzureADPasswordProtection-DCAgent'""" ]
+  Conditions = [ """<EventID>10017</EventID>""", """<Provider Name""","""Microsoft-AzureADPasswordProtection-DCAgent""" ]
   Fields = ${DLWindowsParsersTemplates.account-password-reset.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

@@ -6,6 +6,7 @@ Conditions = [
 """<EventID>4304</EventID>"""
 """<EventRecordID>"""
 ]
+DupFields = ["user->src_user" , "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -55,9 +55,7 @@ Fields = [
   """exa_json_path=$.event_data.AccessMask,exa_regex=((\\)*(\\r|\\t|\\n))*\s*({access_mask}[^\\\s]+)((\\)*(\\r|\\t|\\n))*$""",
   """exa_json_path=$.task,exa_field_name=task_name"""
 ]
-DupFields = [
-  "host->dest_host"
-]
+DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

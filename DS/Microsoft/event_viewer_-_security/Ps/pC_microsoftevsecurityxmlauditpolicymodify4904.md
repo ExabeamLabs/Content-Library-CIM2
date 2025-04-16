@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904
     """({event_name}An attempt was made to register a security event source)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

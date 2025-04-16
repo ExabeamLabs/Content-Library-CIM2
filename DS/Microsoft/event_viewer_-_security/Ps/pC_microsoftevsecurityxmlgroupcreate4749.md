@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-group-create-4749
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<>]+?)</Data>""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<>]+?)<\/Data>"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

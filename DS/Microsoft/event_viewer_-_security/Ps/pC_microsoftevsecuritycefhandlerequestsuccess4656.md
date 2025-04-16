@@ -29,7 +29,7 @@ Name = microsoft-evsecurity-cef-handle-request-success-4656
     """"ObjectServer":"({object_server}[^"]+)"""",
     """"HandleId":"({object_id}[^"]+)"""",
   ]
-  DupFields = [ "host->dest_host", "access->privileges" ]
+  DupFields = [ "host->dest_host", "access->privileges", "user->src_user", "domain->src_domain" ]
 
 
 }

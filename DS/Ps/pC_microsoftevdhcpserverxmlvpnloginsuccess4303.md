@@ -7,6 +7,7 @@ Conditions = [
 """<EventRecordID>"""
 """<Channel>Microsoft-Windows-Iphlpsvc/Operational</Channel>"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

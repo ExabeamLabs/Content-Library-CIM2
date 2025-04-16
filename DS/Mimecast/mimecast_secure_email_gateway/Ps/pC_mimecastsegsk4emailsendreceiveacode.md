@@ -11,7 +11,6 @@ Name = mimecast-seg-sk4-email-send-receive-acode
     """"aCode":"(|({alert_id}[^"]+?))"""",
     """"Dir":"({direction}[^"]+?)"""",
     """dproc=({dproc}[^=]+)\s\w+=""",
-    """requestClientApplication=({user_agent}.+?)\s\w+=""",
     """"Rcpt":"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^"]*)"""",
     """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",

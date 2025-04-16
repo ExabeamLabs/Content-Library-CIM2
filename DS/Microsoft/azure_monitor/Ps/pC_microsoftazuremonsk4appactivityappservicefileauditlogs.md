@@ -53,6 +53,7 @@ cef-microsoft-app-activity-3 = {
     """"tenantId"\s*:\s*"({tenant_id}[^",]+)""",
     """"level"\s*:\s*"({severity}[^",]+)""",
     """Location"\s*:\s*"({location}[^"]+)""",
+    """exa_regex=Location"\s*:\s*"({location}[^"]+)""",
     """"resourceId"\s*:\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
     """exa_json_path=$.category,exa_field_name=category"""
     """exa_json_path=$.EventTimeString,exa_field_name=time"""
@@ -63,6 +64,41 @@ cef-microsoft-app-activity-3 = {
     """exa_json_path=$.SubscriptionId,exa_field_name=subscription_id"""
     """exa_regex="resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
+
+    """exa_json_path=$.time,exa_field_name=time"""
+    """exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """
+    """exa_json_path=$..Host,exa_field_name=host"""
+    """exa_regex=destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
+    """exa_json_path=$..message,exa_field_name=event_name"""
+    """exa_json_path=$..description,exa_field_name=additional_info"""
+    """exa_json_path=$..category,exa_field_name=category"""
+    """exa_regex=Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
+    """exa_regex=EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
+    """"exa_regex=(?i)resourceId":\s*"({object}[^"]{1,249})""",
+    """exa_json_path=$..operationName,exa_field_name=operation"""
+    """exa_json_path=$..name,exa_field_name=full_name"""
+    """exa_json_path=$..action,exa_field_name=action"""
+    """exa_regex=IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_regex=MacAddress\\?"+\s*:\s*\\?"({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+)""",
+    """exa_regex=((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """exa_regex=claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_regexemail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_regex=duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_regex=({app}Databricks)""",
+    """exa_regex=serviceName\\*":\s*\\*"({app}[^"]+)""",
+    """exa_json_path=$..userAgent,exa_field_name=user_agent"""
+    """exa_json_path=$..statusCode,exa_field_name=result_code"""
+    """exa_json_path=$..actionName,exa_field_name=operation"""
+    """exa_regex=userId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
+    """exa_regex=\[Namespace:\s*({host}\S+) ; EventHub name:"""
+    """exa_json_path=$..ResourceGroup,exa_field_name=resource_group"""
+    """exa_json_path=$..resourceId,exa_field_name=resource_id"""
+    """exa_json_path=$..LogicalServerName,exa_field_name=server_name"""
+    """exa_json_path=$..UserType,exa_field_name=user_type"""
+    """exa_json_path=$..tenantId,exa_field_name=tenant_id"""
+    """exa_json_path=$..level,exa_field_name=severity"""
+    """exa_json_path=$..location,exa_field_name=location"""
+    """exa_json_path=$..CorrelationId,exa_field_name=correlation_id"""
     ]
   DupFields = [ "object->resource" 
 }

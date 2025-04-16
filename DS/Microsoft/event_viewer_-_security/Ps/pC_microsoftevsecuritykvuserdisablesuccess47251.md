@@ -24,6 +24,7 @@ Fields = [
   """TargetUserName ="+({dest_user}[^"]+)""""
   """ProviderGuid="+({process_guid}[^"]+)""""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

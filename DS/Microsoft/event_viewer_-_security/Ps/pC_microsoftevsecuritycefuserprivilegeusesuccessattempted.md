@@ -25,9 +25,7 @@ Fields = [
 """"processName":\"(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))\s*""""
 """"privilegeList":\"({privileges}[^\"]+?)\s*""""
 ]
-DupFields = [
-"host->dest_host"
-]
+DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

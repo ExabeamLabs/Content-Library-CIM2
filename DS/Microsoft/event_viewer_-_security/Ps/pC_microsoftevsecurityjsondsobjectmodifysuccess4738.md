@@ -29,9 +29,7 @@ Fields = [
 """"+Message\\?"+:\\?"+({additional_info}[^"\\]+)"""
 """"+EventType\\?"+:\\?"+({result}[^"\\]+)"""
 ]
-DupFields = [
-"event_name->additional_info"
-]
+DupFields = [ "event_name->additional_info", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

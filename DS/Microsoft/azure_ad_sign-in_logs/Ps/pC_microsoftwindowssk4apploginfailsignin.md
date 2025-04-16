@@ -38,6 +38,7 @@ Fields = [
 """"resultType":\s*"({error_code}\d+)""""
 """"countryOrRegion\\*":\\*"({country_code}[^\\"]+)\\*""""
 """"authenticationMethod\\*":\\*"({auth_method}[^\\"]+)\\*""""
+""""authenticationProtocol\\*":\\*"(none|({auth_method}[^\\"]+))\\*""""
 """"category":\s*"({category}[^"]+)""""
 """"riskLevelAggregated":\s*"(none|({severity}[^"]+))""""
 """exa_regex="+time"+:"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}\w+)"+"""
@@ -103,6 +104,8 @@ Fields = [
 """exa_regex="LocationDetails_string":".+?"city\\":\\"({city}[^\\",]+)\\""""
 """exa_regex="LocationDetails_string":".+?"state\\":\\"({state}[^\\",]+)\\""""
 """exa_regex=deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*""",
+"""exa_json_path=$..authenticationMethod,exa_field_name=auth_method""",
+"""exa_regex="authenticationProtocol\\*":\\*"(none|({auth_method}[^\\"]+))\\*""""
 ]
 DupFields = [ "operation->event_name" ]
 ParserVersion = "v1.0.0"

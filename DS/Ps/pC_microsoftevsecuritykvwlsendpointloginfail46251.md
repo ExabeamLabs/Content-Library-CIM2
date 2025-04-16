@@ -17,6 +17,6 @@ json-windows-events-3.Fields}[
     """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
   ]
-  DupFields = ["host->dest_host"
+  DupFields = ${WindowsParsersTemplates.json-windows-events-3.DupFields}["host->dest_host"
 }
 ```

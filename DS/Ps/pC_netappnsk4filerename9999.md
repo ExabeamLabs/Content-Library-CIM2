@@ -7,6 +7,7 @@ Name = netapp-n-sk4-file-rename-9999
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields}[
     """'Computer':\s+'({host}[\w\-\.]+)"""
   ]
+  DupFields = ["src_user->user", "src_domain->domain"]
 
 
 }

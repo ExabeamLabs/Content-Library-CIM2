@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-group-member-add-4761-1
     """<Data Name(\\)?='MemberName'>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

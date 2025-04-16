@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4985-1
   Vendor = Microsoft
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """<EventID>4985<""", """<Provider Name""","""'Microsoft-Windows-Security-Auditing'""" , """<Data Name""" ]
+  Conditions = [ """<EventID>4985<""", """<Provider Name""","""Microsoft-Windows-Security-Auditing""" , """<Data Name""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<]+)""",
@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4985-1
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
     """<Level>({run_level}[^<]+)<"""
 	]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

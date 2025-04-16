@@ -40,7 +40,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """exa_regex="EventTime":({time}\d{10})""",
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -43,6 +43,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-521
       """exa_regex=Status code:\s*[\\t]*({result_code}\w+)[\rn]*"""
       """exa_json_path=$.Level,exa_field_name=run_level"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

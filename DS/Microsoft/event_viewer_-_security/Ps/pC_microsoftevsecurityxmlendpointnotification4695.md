@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4695
     """({event_name}Unprotection of auditable protected data was attempted)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

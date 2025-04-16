@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4750
     """({event_code}4750)""",
     """<Level>({run_level}[^<]+)<"""
      ]
+     DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

@@ -4,7 +4,7 @@
 Name = "mcafee-es-kv-alert-trigger-success-analyzername"
 Vendor = "McAfee"
 Product = "McAfee Endpoint Security"
-TimeFormat = ["yyyy-MM-dd HH:mm:ss", "dd/MM/yyyy HH:mm:ss a"]
+TimeFormat = ["yyyy-MM-dd HH:mm:ss", "dd/MM/yyyy HH:mm:ss a","M/dd/yyyy H:mm:ss a"]
 Conditions = [
   """AnalyzerName ="""
   """ThreatCategory="""

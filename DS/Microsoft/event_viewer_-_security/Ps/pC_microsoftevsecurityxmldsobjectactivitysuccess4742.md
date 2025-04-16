@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4742
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

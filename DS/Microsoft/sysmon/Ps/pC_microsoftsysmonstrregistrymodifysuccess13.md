@@ -19,7 +19,6 @@ Name = microsoft-sysmon-str-registry-modify-success-13
     """\sImage:\s*({process_path}({process_dir}.*?)({process_name}[^.\\]+\.exe))\s*""",
 # target_object is removed
   ]
-  DupFields = ["event_id->event_code"]
 
 
 }

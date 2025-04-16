@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-key-5061-2
     """<Data Name(\\)?=('|")ReturnCode('|")>({return_code}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

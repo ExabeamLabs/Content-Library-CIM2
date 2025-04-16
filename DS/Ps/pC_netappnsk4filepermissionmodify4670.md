@@ -7,6 +7,7 @@ Name = netapp-n-sk4-file-permission-modify-4670
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields}[
     """'Computer':\s+'({host}[\w\-\.]+)"""
   ]
+  DupFields = ["src_user->user", "src_domain->domain"]
 
 
 }

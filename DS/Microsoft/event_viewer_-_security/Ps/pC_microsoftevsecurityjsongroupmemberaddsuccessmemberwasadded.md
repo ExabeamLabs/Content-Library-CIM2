@@ -29,9 +29,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-memberwasadded"
       """"TargetSid":"({group_id}[^\s"]+)""",
       """"EventType":"({result}[^"]+)""""
   ]
-  DupFields = [
-    "host->dest_host"  
-  ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

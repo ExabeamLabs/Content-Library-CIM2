@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-xml-key-5061-1
     """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 s-xml-object-access = {
   Vendor = Microsoft

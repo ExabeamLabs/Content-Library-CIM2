@@ -27,9 +27,7 @@ Fields = [
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
 """"memberSid":"({dest_user_sid}S-\d+-[^\s"]+)""""
 ]
-DupFields = [
-"host->src_host"
-]
+DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

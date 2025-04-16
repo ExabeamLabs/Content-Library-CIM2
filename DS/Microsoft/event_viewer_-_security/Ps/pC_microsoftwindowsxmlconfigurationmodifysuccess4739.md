@@ -21,6 +21,7 @@ Name = microsoft-windows-xml-configuration-modify-success-4739
     """<Data Name\\?=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user" , "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

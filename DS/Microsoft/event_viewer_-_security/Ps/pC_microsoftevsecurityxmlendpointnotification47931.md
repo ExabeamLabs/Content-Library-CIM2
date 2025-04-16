@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4793-1
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "src_host_windows->src_host" ]
+  DupFields = [ "src_host_windows->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

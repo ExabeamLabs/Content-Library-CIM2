@@ -64,6 +64,8 @@ Fields = [
   """({event_code}6272)"""
   """'SubjectUserName'>(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """'SubjectDomainName'>(?:-|({domain}[^\s\<]+))"""
+  """'SubjectUserName'>(?:({user_type}host)/)?(({src_domain}[^\\]+)\\+)?({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """'SubjectDomainName'>(?:-|({src_domain}[^\s\<]+))"""  
   """'FullyQualifiedSubjectUserName'>(({domain}[^\\]+)\\+)?(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """'NASIdentifier'>(?:-|({location}[\w\-.]+))"""
   """'CallingStationID'>(?:-|({src_mac}[^\<]+))"""
@@ -308,9 +310,7 @@ Fields = [
 """TargetUserName ="+({dest_user}[^\"]+)""""
 """TargetSid="+({dest_user_sid}[^\"]+)""""
 ]
-DupFields = [
-"dest_user->account_name"
-]
+DupFields = ["dest_user->account_name", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 },
 

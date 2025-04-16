@@ -14,15 +14,15 @@ Name = microsoft-evsecurity-sk4-user-password-reset-success-4724
     """"EventID":"({event_code}\d+)"""",
     """({event_name}An attempt was made to reset an account's password)""",
     """"SubjectAccount":"(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectDomainName":"({src_domain}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """"SubjectUserName":"({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"TargetDomainName":"({dest_domain}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)"""",
     """"TargetUserName":"({dest_user}[^"]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "src_domain->domain", "src_user->user" ]
 
 
 }

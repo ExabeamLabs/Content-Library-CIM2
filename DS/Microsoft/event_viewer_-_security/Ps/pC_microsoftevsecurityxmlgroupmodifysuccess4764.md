@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4764
     """<Data Name =('|")GroupTypeChange('|")>({additional_info}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

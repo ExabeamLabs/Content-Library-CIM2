@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-xml-endpoint-activity-fail-5605
   Vendor = Microsoft
   Product = Event Viewer - Application
-  Conditions = [ """<EventID>5605<""", """<Provider Name ="Microsoft-Windows-WMI"""" ]
+  Conditions = [ """<EventID>5605<""", """<Provider Name =""", """Microsoft-Windows-WMI""" ]
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Fields = [
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",

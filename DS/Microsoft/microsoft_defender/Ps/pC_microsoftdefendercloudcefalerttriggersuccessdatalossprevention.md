@@ -16,7 +16,7 @@ cef-azure-alert = {
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
     Fields = [
     """"eventDateTime":"({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{2}(\.\d{1,7})?Z)"""
-    """"title":"({alert_name}[^"]+)""""
+    """"title":"({alert_name}[^"]+?)(\\u200b)?""""
     """"userPrincipalName":\s*"([-|\\|<]|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@[^"]+)?))>?""""
     """"severity":"({alert_severity}[^"]+)""""
     """"domainName":"({domain}[^"]+)""""

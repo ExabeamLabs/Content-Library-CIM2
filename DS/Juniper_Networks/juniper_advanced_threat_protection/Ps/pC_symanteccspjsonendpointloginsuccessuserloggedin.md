@@ -42,34 +42,6 @@ cef-onapsis-activity.Fields}[
 },
 
 {
-  Name = fortinet-fortiedr-kv-alert-trigger-success-ensilo
-  Vendor = Fortinet
-  Product = EnSilo
-  TimeFormat = "dd-MMM-yyyy', 'HH:mm:ss"
-  Conditions = [ """ enSilo """, """;Raw Data ID:""", """;Rules List:""", """;Severity:""" ]
-  Fields = [
-    """\s({host}[\w\-.]+)\s+enSilo""",
-    """\WFirst Seen:\s*({time}\d+-\w+-\d+,\s*\d+:\d+:\d+)""",
-    """\WEvent ID:\s*({event_code}[^;]+)""",
-    """\WRaw Data ID:\s*({alert_id}[^;]+)""",
-    """\WDevice Name:\s*({src_host}[\w\-.]+)""",
-    """\WProcess Name:\s*({process_name}[^;]+)""",
-    """\WProcess Path:\s*({process_path}[^;]+)""",
-    """\WProcess Type:\s*({process_type}[^;]+)""",
-    """\WSeverity:\s*({alert_severity}[^;]+)""",
-    """\WClassification:\s*({category}[^;]+)""",
-    """\WRules List:\s*({alert_type}[^;]+)""",
-    """\WDestination:\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({alert_type}[^;]+));""",
-    """\WAction:\s*({action}[^;]+)""",
-    """\WCount:\s*({rule_count}\d+)""",
-    """\WRules List:\s*({alert_name}[^;]+)""",
-    """\WUsers:\s*(({domain}[^\\\s;]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """\WMAC Address:\s*({src_mac}[^;,\s]+)""",
-   ]
-   ParserVersion = "v1.0.0"
-},
-
-{
 Name = "msdhcp-m-str-dhcp-session-success-dnsupdate"
 Vendor = "MSDHCP"
 Product = "MSDHCP"
@@ -484,25 +456,6 @@ DupFields = [
 ]
 ParserVersion = "v1.0.0"
 },
-
-{
-  Name = dell-oim-cef-user-switch-success-retrievepassword
-  Vendor = Dell
-  Product = One Identity Manager
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """CEF:""", """|SCB|PAM|""", """|Retrieve Password|""" ]
-  Fields = [
-    """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)""",
-    """\sdhost=({dest_host}.+?)(\s+\w+=|\s*$)""",
-    """\sduser=({dest_user}.+?)(\s+\w+=|\s*$)""",
-    """\sdvc=({host}.+?)(\s+\w+=|\s*$)""",
-    """\sdvchost=({host}.+?)(\s+\w+=|\s*$)""",
-    """\srt=({time}\d+)""",
-  ]
-  DupFields = [ "dest_user->account" ]
-  ParserVersion = "v1.0.0"
-},
-
 ${F5ParsersTemplates.f5-waf-activity-aa}{
   Name = f5-waf-kv-user-switch-success-sessionopened
   Conditions = [ """"log_type":"WAF"""", """"log_vendor":"f5"""", """session opened for user""", """(uid=""", """sshd:""", """_unix""" ]
@@ -575,31 +528,6 @@ Fields = [
 ]
 ParserVersion = "v1.0.0"
 },
-
-{
-Name = "delinea-centrifyas-kv-endpoint-login-fail-6034"
-Vendor = "Delinea"
-Product = "Centrify Authentication Service"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-Conditions = [
-  """SourceName =Centrify AuditTrail"""
-  """AUDIT_TRAIL|Centrify Suite|DirectAuthorize - Windows|"""
-  """|Remote login failure|"""
-  """EventCode=6034"""
-]
-Fields = [
-  """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
-  """entityname=({domain}[^\\]+)\\({dest_host}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """Sid=({user_sid}[^\s]+?)\sSidType"""
-  """EventCode=({event_code}6034)"""
-  """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}Remote login failure)"""
-  """reason=({failure_reason}[^=]+)\.(\s+\w+=)?"""
-  """Message:\s*({additional_info}[^:]+)\.\s+"""
-]
-ParserVersion = "v1.0.0"
-},
-
 {
 Vendor = "Sybase"
 Product = "Sybase"
@@ -649,31 +577,6 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 },
-
-{
-Name = "delinea-centrifyas-kv-endpoint-login-fail-6049"
-Vendor = "Delinea"
-Product = "Centrify Authentication Service"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-Conditions = [
-  """SourceName =Centrify AuditTrail"""
-  """AUDIT_TRAIL|Centrify Suite|DirectAuthorize - Windows|"""
-  """|PowerShell remote connection failure|"""
-  """EventCode=6049"""
-]
-Fields = [
-  """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
-  """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """Sid=({user_sid}[^\s]+?)\sSidType"""
-  """EventCode=({event_code}6049)"""
-  """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}PowerShell remote connection failure)"""
-  """reason=({failure_reason}[^=]+)\.(\s+\w+=)?"""
-  """Message:\s*({additional_info}[^:]+)\.\s+"""
-]
-ParserVersion = "v1.0.0"
-},
-
 {
 Vendor = "Apache"
 Product = "Cassandra db"
@@ -699,30 +602,6 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 },
-
-{
-Name = "delinea-centrifyas-kv-endpoint-login-success-6033"
-Vendor = "Delinea"
-Product = "Centrify Authentication Service"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-Conditions = [
-  """SourceName =Centrify AuditTrail"""
-  """AUDIT_TRAIL|Centrify Suite|DirectAuthorize - Windows|"""
-  """|Remote login success|"""
-  """EventCode=6033"""
-]
-Fields = [
-  """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
-  """entityname=({domain}[^\\]+)\\({dest_host}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """Sid=({user_sid}[^\s]+?)\sSidType"""
-  """EventCode=({event_code}6033)"""
-  """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}Remote login success)"""
-  """Message:\s*({additional_info}[^:]+)\.\s+"""
-]
-ParserVersion = "v1.0.0"
-},
-
 {
 Name = "mariadb-m-str-database-delete-success-drop"
 Vendor = "MariaDB"
@@ -738,30 +617,6 @@ Fields = [
 ]
 ParserVersion = "v1.0.0"
 },
-
-{
-Name = "delinea-centrifyas-kv-endpoint-login-success-6048"
-Vendor = "Delinea"
-Product = "Centrify Authentication Service"
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
-Conditions = [
-  """SourceName =Centrify AuditTrail"""
-  """AUDIT_TRAIL|Centrify Suite|DirectAuthorize - Windows|"""
-  """|PowerShell remote connection success|"""
-  """EventCode=6048"""
-]
-Fields = [
-  """:\d\d\s\w+\s*({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))"""
-  """ComputerName =({dest_host}[^\.]+)\.({domain}[^\s]+)"""
-  """User=(NULL|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """Sid=({user_sid}[^\s]+?)\sSidType"""
-  """EventCode=({event_code}6048)"""
-  """AUDIT_TRAIL\|Centrify Suite\|DirectAuthorize - Windows[^=]+?({event_name}PowerShell remote connection success)"""
-  """Message:\s*({additional_info}[^:]+)\.\s+"""
-]
-ParserVersion = "v1.0.0"
-},
-
 {
 Vendor = "Apache"
 Product = "Cassandra db"
@@ -980,33 +835,9 @@ DupFields = [
 ParserVersion = "v1.0.0"
 },
 
-${GoAnywhereParsersTemplates.goanywhere-events}{
-  Name = goanywhere-gamft-kv-endpoint-login-fail-loginfailed
-  Conditions = [ """GoAnywhereServicesevent_type="Login Failed"""","""GoAnywhereServicescommand="Login"""","""GoAnywhereServicesremote_ip="""" ]
-  ParserVersion = v1.0.0
-},
-
-${GoAnywhereParsersTemplates.goanywhere-events}{
-  Name = goanywhere-gamft-kv-endpoint-login-success-loginsuccessful
-  Conditions = [ """GoAnywhereServicesevent_type="Login Successful"""","""GoAnywhereServicescommand="Login"""","""GoAnywhereServicesremote_ip="""" ]
-  ParserVersion = v1.0.0
-},
-
-${GoAnywhereParsersTemplates.goanywhere-events}{
-  Name = goanywhere-gamft-kv-endpoint-login-success-connectionsuccessful
-  Conditions = [ """GoAnywhereServicesevent_type="Connection Successful"""","""GoAnywhereServicesremote_ip="""" ]
-  ParserVersion = v1.0.0
-},
-
 ${GoAnywhereParsersTemplates.goanywhere-events-2}{
   Name = goanywhere-gamft-kv-endpoint-login-success-loginsuccessful-1
   Conditions = [ """GoACHevent_type="Login Successful"""", """GoACHcommand="Login"""", """GoACHremote_ip="""", """GoACHuser_name="""" ]
-  ParserVersion = v1.0.0
-},
-
-${GoAnywhereParsersTemplates.goanywhere-events-2}{
-  Name = goanywhere-gamft-kv-endpoint-login-success-connectionsuccessful-1
-  Conditions = [ """GoACHevent_type="Connection Successful"""", """GoACHcommand="Connect"""", """GoACHremote_ip="""", """GoACHremarks="Connection established"""" ]
   ParserVersion = v1.0.0
 },
 

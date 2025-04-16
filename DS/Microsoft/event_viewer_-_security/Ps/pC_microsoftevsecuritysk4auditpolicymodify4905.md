@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4905
 # src_name is removed
 # src_id is removed
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

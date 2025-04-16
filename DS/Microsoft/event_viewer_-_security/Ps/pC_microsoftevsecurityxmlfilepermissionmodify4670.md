@@ -23,13 +23,13 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670
     """Object:\s*[^$]+Object Name:(\\t|\\r|\\n|-)*\s*(-|({object_name}[^:"]+?))\s""",
     """Process:\s*Process ID:\s*({process_id}[^\s]+)""",
     """Process:\s*([^$]+?)Process Name:\s*({process_path}(?:({process_dir}.+?)[\\\/]+)?({process_name}[^\s\\\/]+))\s+Permissions Change:""",
-    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
+    """<Data Name =('|")SubjectUserName('|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """Permissions Change:(\\+[rnt]|\s)*({attribute}[^<]+?)\s*<""",
     """Permissions Change:[\s\S]*?New Security Descriptor:\s*(\\t|\\r|\\n)*({permissions}[^<]+?)\s*<""",
     """<Data Name(\\)?=(\\)?("|')+ObjectName(\\)?("|')+>(-|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?))|[^\\:<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["process_name -> file_name"]
+  DupFields = ["process_name -> file_name", "src_user->user"]
 
 
 }

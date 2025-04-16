@@ -31,6 +31,7 @@ Fields = [
   """"Category"*:"*({category}[^"]+)"""
   """"Opcode"*:"*({severity}[^"]+)"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-sk4-handle-request-success-4659
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [
     """'Computer':\s+'({host}[\w\-\.]+)"""
   ]
+  DupFields = [ "src_user->user", "src_domain->domain" ]
 
 netapp-json-windows-events = {
   Vendor = NetApp
@@ -24,8 +25,8 @@ netapp-json-windows-events = {
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
-    """'SubjectDomainName':\s+'({domain}[^']+)""",
-    """'SubjectUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """'SubjectDomainName':\s+'({src_domain}[^']+)""",
+    """'SubjectUserName':\s+'({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """'ObjectServer':\s+'({object_server}[^']+)""",
     """'ObjectType':\s+'({object_class}[^']+)""",
     """'HandleID':\s+'({handle_id}[^']+)""",

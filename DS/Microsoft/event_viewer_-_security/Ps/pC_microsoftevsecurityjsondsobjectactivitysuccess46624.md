@@ -22,10 +22,10 @@ Fields = [
 """"pid"+:({process_id}\d+)"""
 """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
 """"TargetUserName"+:"+(None|({dest_user}[^"]+))"""
-""""TargetDomainName"+:"+({domain}[^"]+)"""
-""""TargetLogonId"+:"+({login_id}[^"]+)"""
+""""TargetDomainName"+:"+({dest_domain}[^"]+)"""
+""""TargetLogonId"+:"+({dest_login_id}[^"]+)"""
 """"LogonType"+:"+({login_type}\d+)"""
-""""TargetUserSid"+:"+({user_sid}[^"<,]+)"""
+""""TargetUserSid"+:"+({dest_user_sid}[^"<,]+)"""
 """"record_id"+:({event_id}\d+)"""
 """"task"+:"+({task_name}[^"]+)"""
 """"event_id"+:({event_code}\d+)"""
@@ -37,9 +37,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({domain}[^"]+)"""
+""""+SubjectDomainName"+:"+({src_domain}[^"]+)"""
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """"+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
 """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
 """"Keywords":"({result}[^"]+)"""
@@ -63,18 +63,16 @@ Fields = [
 """exa_json_path=$..ObjectServer,exa_field_name=object_server"""
 """exa_json_path=$..OperationType,exa_field_name=operation"""
 """exa_json_path=$..AdditionalInfo,exa_regex="(?:-|({additional_info}[^"]+))"""
-"""exa_json_path=$..SubjectUserName,exa_field_name=user"""
+"""exa_json_path=$..SubjectUserName,exa_field_name=src_user"""
 """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
 """exa_json_path=$.ProviderName,exa_field_name=provider_name"""
 """exa_regex=({event_code}4662)"""
 """exa_json_path=$..ObjectType,exa_field_name=object_type"""
-"""exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
+"""exa_json_path=$..SubjectDomainName,exa_field_name=src_domain"""
 """exa_json_path=$.Hostname,exa_field_name=host"""
 """exa_json_path=$.Computer,exa_field_name=host"""
 ]
-DupFields = [
-"object_name->object"
-]
+DupFields = [ "object_name->object", "src_user->user", "src_domain->domain" ]
 
 
 }

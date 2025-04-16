@@ -26,7 +26,6 @@ Fields = [
   """\|headerFrom=(|<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\|"""
   """\|Recipient=(|<>|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\|"""
   """\|Rcpt=(|<>|({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\|"""
-  """\|Rcpt=(|<>|({email_recipients}\S+?))\|"""
   """\|Subject=\\?(|({email_subject}[^\|$]+?))\s*(\||$)"""
   """\|Snt=({bytes}\d+)\|"""
   """\|SpamScore=({spam_score}\d+)"""

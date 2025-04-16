@@ -11,7 +11,7 @@ Name = "cisco-asa-str-file-success-client"
     """Client: """
   ]
   Fields = [
-    """({time}\w+\s\d+\s+\d+\s+\d+:\d+:\d+)\s+(UTC\s+)?({host}[^\s]+)\s+:\s+%\w+\-""",
+    """({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+)\s+(UTC\s+)?({host}[^\s]+)\s+:\s+%\w+\-""",
     """:\s*%\w+-\d+-({event_code}\d+)\s*:"""
     """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s+({host}[\w\-.]+)?\s*(\(|\%|:)"""
     """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

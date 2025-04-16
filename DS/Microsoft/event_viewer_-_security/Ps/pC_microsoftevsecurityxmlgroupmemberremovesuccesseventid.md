@@ -33,9 +33,7 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
       """<Level>({run_level}[^<]+)<"""
       ]
-  DupFields = [
-    "user_dn->member"
-   ]
+  DupFields = [ "user_dn->member", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

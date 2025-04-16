@@ -41,6 +41,7 @@ json-xml-object-access = {
     """<Data Name[^<>]+?Operation[^<>]+?>({operation}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ReturnCode[^<>]+?>({return_code}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

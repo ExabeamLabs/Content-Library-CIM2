@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-log-clear-success-logfileclear
     """ThreadID\\*='({thread_id}\d+)""",
     """<Execution ProcessID(\\)?='({process_id}[^']+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

@@ -29,10 +29,7 @@ Name = "microsoft-evsecurity-str-group-member-remove-success-memberwasremoved"
       """A member was removed from a security-enabled ({group_type}[^\s]+) group.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Account Domain:\s+({domain}[^\s]+).+?Logon ID:\s+({login_id}[^\s]+)\s+""",
       """Member:\s+Security ID:\s+(({dest_user_sid}S-\d+-[^\s:]+)|(({account_domain}[^\\:]+)\\({account_name}[^:]+?))|(?:[^:]+?))\s+Account Name:\s+({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))?[\w-]*\s+Group:\s+Security ID:\s+({group_id}.+?)?\s+(Group|Account) Name:\s+({group_name}.+?)?\s+(Group|Account) Domain:\s+({group_domain}[^\s]+)""",
   ]
-  DupFields = [
-    "host->dest_host"
-    "account_id->member"
-  ]
+  DupFields = [ "host->dest_host", "account_id->member", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

@@ -20,6 +20,7 @@ Name = microsoft-windows-mix-configuration-modify-success-4739
     """<Data Name\\?='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\?='SubjectLogonId'>({login_id}[^<]+)<\/Data>"""
   ]
+  DupFields = ["user->src_user" , "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

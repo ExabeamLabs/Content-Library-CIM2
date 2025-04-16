@@ -7,6 +7,7 @@ Name = vectra-cd-json-alert-trigger-success-detection
   ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   time_createdFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
+  start_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
   Conditions = [ """"detection":""",""""threat":""",""""grouped_details":""",""""detection_url":""", """"certainty":""", """"detection_type":""", """"type":""" ]
   Fields =[
   	"""exa_json_path=$.last_timestamp,exa_field_name=time""",
@@ -39,7 +40,16 @@ Name = vectra-cd-json-alert-trigger-success-detection
     """exa_json_path=$.state,exa_field_name=state""",
     """exa_json_path=$.created_timestamp,exa_field_name=time_created""",
     """exa_json_path=$.src_account.id,exa_field_name=account_id""",
-    """exa_json_path=$..summary.suspicious_flow_connectors[:1],exa_field_name=connectors"""
+    """exa_json_path=$..summary.suspicious_flow_connectors[:1],exa_field_name=connectors""",
+    """exa_json_path=$.src_account.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$.src_account.privilege_level,exa_field_name=user_privilege_level""",
+    """exa_json_path=$.src_account.privilege_category,exa_field_name=user_privilege_category""",
+    """exa_json_path=$.src_account.certainty,exa_field_name=user_threat_certainty""",
+    """exa_json_path=$.src_account.threat,exa_field_name=user_threat_level""",
+    """exa_json_path=$.src_account.url,exa_field_name=user_url""",
+    """exa_json_path=$..src_accounts[:1].privilege_level,exa_field_name=user_privilege_level""",
+    """exa_json_path=$..src_accounts[:1].privilege_category,exa_field_name=user_privilege_category""",
+    """exa_json_path=$.first_timestamp,exa_field_name=start_time"""
   ]
   ParserVersion = "v1.0.0"
  

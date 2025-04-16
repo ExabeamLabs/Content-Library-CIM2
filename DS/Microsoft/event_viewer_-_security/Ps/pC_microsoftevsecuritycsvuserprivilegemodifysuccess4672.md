@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-csv-user-privilege-modify-success-4672
     """PrivilegeList:({privileges}[^\d]+?)\s\d+""",
     """({result}(Success|Failure) Audit)"""
   ]
+  DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

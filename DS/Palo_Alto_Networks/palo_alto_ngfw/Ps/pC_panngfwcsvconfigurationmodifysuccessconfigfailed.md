@@ -7,7 +7,7 @@ Name = "pan-ngfw-csv-configuration-modify-success-configfailed"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Conditions = [
     """,CONFIG,""",
-    """Failed"""
+    """,Failed,"""
   ]
   Fields = [
     """\d\d:\d\d:\d\d\s(?:-|({host}[^:\s]+))\s\d+,\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d,"""

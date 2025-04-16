@@ -18,7 +18,7 @@ ${MicrosoftParserTemplates.account-password-activity-1}{
   Name = microsoft-azuread-xml-user-password-reset-success-30029
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>30029</EventID>""","""'Microsoft-AzureADPasswordProtection-DCAgent'""", """ UserName:""" ]
+  Conditions = [ """<EventID>30029</EventID>""","""Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""" ]
   Fields = ${MicrosoftParserTemplates.account-password-activity-1.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -63,9 +63,7 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [
-"dest_host->host"
-]
+DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-password-reset-success-4724-1"
 Conditions = [
 """LogType="WLS""""
@@ -267,6 +265,7 @@ Fields = [
 """TargetDomainName ="+({dest_domain}[^"]+)""""
 """TargetUserName ="+({dest_user}[^"]+)""""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 },
 
@@ -307,9 +306,7 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [
-"dest_host->host"
-]
+DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-enable-success-4722-1"
 Conditions = [
 """LogType="WLS""""
@@ -354,9 +351,7 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [
-"dest_host->host"
-]
+DupFields = [ "dest_host->host", "user->src_user" , "domain->src_domain" ]
 Name = "microsoft-windows-kv-user-enable-success-626"
 Conditions = [
 """LogType="WLS""""

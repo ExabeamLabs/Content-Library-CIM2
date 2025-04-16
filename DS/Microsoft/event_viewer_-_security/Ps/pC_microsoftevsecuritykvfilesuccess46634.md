@@ -19,7 +19,7 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4663)"""
   """Subject(:|=).*?Security ID(:|=)\s*({user_sid}.+?)[\s;]*Account Name(:|=)\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)\s*(NT AUTHORITY|({domain}.+?))[\s;]*Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*((Object|\w+\s+\w+)(:|=)|%\{S-)"""
-  """Object(:|=).*?Object Type(:|=)\s*({file_type}.+?)[\s;]*Object Name(:|=)\s*({file_path}({file_dir}.*?)(|({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\\(]+?))?)))[\s;]+(\w+\s+\w+(:|=)|\w+=|ReadGeneralInformation|ChangePassword|%\{S-)""",
+  """Object(:|=).*?Object Type(:|=)\s*({file_type}[^:=]+?)[\s;]*Object Name(:|=)\s*(({registry_path}\\+REGISTRY[^:]+?(\\\{({registry_key}[^\}:]+)\})?)|({file_path}({file_dir}.*?)(|({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\\(]+?))?))))[\s;]+(\w+\s+\w+(:|=)|\w+=|ReadGeneralInformation|ChangePassword|%\{S-)"""
   """Process Name(:|=)\s*(?:|({process_path}[^;=]+?))[\s;]*Access Request Information(:|=)"""
   """Process Name(:|=).*\\({process_name}[^\\;=]+?)[\s;]*Access Request Information(:|=)"""
   """Process Name(:|=)\s*(?:|({process_path}({process_dir}(\w:)?(?:[^:;]+)?[\\\/])?({process_name}[^\\\/";=]+?)))[\s;]*Access Request Information(:|=)"""
@@ -28,7 +28,7 @@ Fields = [
   """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"SubjectUserSid":"({user_sid}[^\s"]+)"""
   """"SubjectLogonId":"({login_id}[^\s"]+)"""
-  """"ObjectName":"(-|({src_file_path}({file_dir}.*?)({src_file_name}[^\\\/;]+?(\.({src_file_ext}[^\.;]+?))?)))\s*"""
+  """"ObjectName":"(-|({registry_path}\\+REGISTRY[^"]+?(\\\{({registry_key}[^\}"]+)\})?)|({src_file_path}({file_dir}.*?)({src_file_name}[^\\\/;]+?(\.({src_file_ext}[^\.;]+?))?)))\s*"""
   """"ObjectType":"(-|({file_type}[^\s"]+))"""
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
 ]

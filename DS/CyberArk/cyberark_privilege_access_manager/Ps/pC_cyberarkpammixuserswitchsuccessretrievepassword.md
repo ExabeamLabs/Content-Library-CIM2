@@ -21,7 +21,7 @@ Fields = [
   """\sFile=(({domain}[^\\]+)\\)?[^\-]+\-({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
   """\sSafe=({safe_value}[^=]+?)\s+\w+=""",
   """\sGatewayStation=({gateway_station}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
-  """\sReason=({result_reason}[^=]+?)\s+\w+=""",
+  """\sReason=(|({result_reason}[^$]+?))\s*(ExtraDetails|PvwaDetails)=""",
   """\sAction=({action}[^=]+?)\s+\w+=""",
 ]
 DupFields = [

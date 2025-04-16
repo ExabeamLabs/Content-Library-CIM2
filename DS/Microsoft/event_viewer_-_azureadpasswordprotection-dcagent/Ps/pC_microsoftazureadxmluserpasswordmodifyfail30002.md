@@ -3,7 +3,7 @@
 {
 Name = microsoft-azuread-xml-user-password-modify-fail-30002
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>30002</EventID>""", """<Provider Name""","""'Microsoft-AzureADPasswordProtection-DCAgent'""" ]
+  Conditions = [ """<EventID>30002</EventID>""", """<Provider Name""","""Microsoft-AzureADPasswordProtection-DCAgent""" ]
   Fields = ${WindowsParsersTemplates.account-password-activity.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

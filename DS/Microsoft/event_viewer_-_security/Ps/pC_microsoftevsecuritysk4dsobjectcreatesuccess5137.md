@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-sk4-ds-object-create-success-5137
   """<Data Name\\?=\\?"ObjectClass\\?">({object_type}[^<]+?)<\/Data>"""
   """<Data Name\\?=\\?"ObjectDN\\?">({ds_object_dn}[^<]+?)<\/Data>"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

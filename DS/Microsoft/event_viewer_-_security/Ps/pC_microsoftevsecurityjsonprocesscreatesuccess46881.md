@@ -49,7 +49,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-1
       """exa_json_path=$..ComputerName,exa_field_name=host"""
       """exa_json_path=$..ParentProcessName,exa_regex=({parent_process_path}({parent_process_dir}[^"]+[\\\/]+)?({parent_process_name}[^"\\\/]+))"""
   ]
-  DupFields = [ "host->src_host" ]
+  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

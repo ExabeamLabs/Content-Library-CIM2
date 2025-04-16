@@ -4,7 +4,7 @@
 Name = microsoft-azuread-xml-user-password-reset-success-30029
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
-  Conditions = [ """<EventID>30029</EventID>""","""'Microsoft-AzureADPasswordProtection-DCAgent'""", """ UserName:""" ]
+  Conditions = [ """<EventID>30029</EventID>""","""Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""" ]
   Fields = ${MicrosoftParserTemplates.account-password-activity-1.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

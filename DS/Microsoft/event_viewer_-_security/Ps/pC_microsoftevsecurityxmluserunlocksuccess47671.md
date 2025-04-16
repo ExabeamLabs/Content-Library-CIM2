@@ -21,9 +21,10 @@ Fields = [
 """<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>"""
 """<Data Name\\*=('|")SubjectUserSid('|")>\s*({user_sid}[^\s]+?)\s*</Data>"""
 """<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
-"""<Data Name ='SubjectUserName'>\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*</Data>"""
+"""<Data Name ='SubjectUserName'>\s*(SYSTEM|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*</Data>"""
 """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["src_user->user"]
 ParserVersion = "v1.0.0"
 
 

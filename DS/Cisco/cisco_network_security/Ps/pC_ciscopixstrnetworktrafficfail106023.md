@@ -8,7 +8,7 @@ Name = cisco-pix-str-network-traffic-fail-106023
   TimeFormat = "MMM dd yyyy HH:mm:ss"
   Conditions = [ """%PIX""" , """-106023""", """Deny """,""" by access-group""" ]
   Fields = [
-        """({time}\w+\s\d+\s\d+\s\d+:\d+:\d+)\s+({host}[^\s]+)""",
+        """({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+)\s+({host}[^\s]+)""",
         """%PIX-({priority}\d+)-({event_code}\d+)""",
         """\ssrc\s+({src_interface}[^:]+):({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({src_port}\d+))?""",
         """({event_name}({result}Deny)\s+({protocol}\w+))"""

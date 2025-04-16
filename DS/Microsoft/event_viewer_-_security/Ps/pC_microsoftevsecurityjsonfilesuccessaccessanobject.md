@@ -49,9 +49,7 @@ Fields = [
 """exa_json_path=$.event_data.AccessMask,exa_field_name=access_mask"""
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id"""
 ]
-DupFields = [
-"host->dest_host"
-]
+DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

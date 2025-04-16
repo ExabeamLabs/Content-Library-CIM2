@@ -8,7 +8,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
 Conditions = [
 """<EventID>6200</EventID>"""
 """<Provider Name""",
-"""'Microsoft-Windows-IIS-Logging'"""
+"""Microsoft-Windows-IIS-Logging"""
 ]
 Fields = [
 """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)'"""

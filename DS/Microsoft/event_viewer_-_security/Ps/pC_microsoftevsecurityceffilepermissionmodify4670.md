@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-cef-file-permission-modify-4670
     """"Level":"({run_level}[^"]+)"""",
     """"_ResourceId":"({resource}[^"]+)""""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]  
   ParserVersion = v1.0.0
 
 

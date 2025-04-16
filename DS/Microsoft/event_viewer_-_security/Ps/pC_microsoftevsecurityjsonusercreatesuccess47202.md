@@ -30,11 +30,7 @@ Fields = [
 """TargetDomainName\\?"+:\\?"+({account_domain}[^"\\]+)"""
 """(\\+t)+'({user_type}[^']+)'\s*-\s*Enabled"""
 ]
-DupFields = [
-"account_name->dest_user",
-"src_host_windows->src_host",
-"account_domain->dest_domain"
-]
+DupFields = [ "account_name->dest_user", "src_host_windows->src_host", "account_domain->dest_domain", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

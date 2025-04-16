@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-group-modify-success-4755
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

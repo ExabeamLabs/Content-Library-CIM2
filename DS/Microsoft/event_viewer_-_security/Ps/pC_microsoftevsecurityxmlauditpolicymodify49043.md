@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-3
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)<"""
    ]
+   DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

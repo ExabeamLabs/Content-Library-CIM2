@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """({operation_type}closed)""",
     """<Data Name\\*='HandleId'>({object_id}[^<>]+)</Data>"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

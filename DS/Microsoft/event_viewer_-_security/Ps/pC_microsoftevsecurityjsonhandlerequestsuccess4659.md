@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-json-handle-request-success-4659
     """"HandleId":"({object_id}[^"]+)"""",
     """"ProcessID":({process_id}[^,]+),""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

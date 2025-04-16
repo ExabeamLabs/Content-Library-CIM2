@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-network-session-fail-10028-1
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<Provider Name ='Microsoft-Windows-DistributedCOM'""", """<EventID Qualifiers='""", """>10028<""", """<Computer>""", """<Data Name ='param3'>""" ]
+  Conditions = [ """<Provider Name =""", """Microsoft-Windows-DistributedCOM""", """<EventID Qualifiers='""", """>10028<""", """<Computer>""", """<Data Name ='param3'>""" ]
   Fields = [
     """<Computer>({host}[\w\.\-]+)<""",
 	  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

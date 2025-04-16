@@ -25,6 +25,9 @@ Name = trendmicro-vone-json-alert-trigger-success-workbench
     """exa_json_path=$.id,exa_field_name=event_id""",
     """exa_json_path=$.model,exa_field_name=rule""",
     """exa_json_path=$.score,exa_field_name=original_risk_score"""
+    """exa_json_path=$.matchedRules[0].name,exa_field_name=alert_name"""
+    """exa_json_path=$.impactScope.entities[0][?(@.entityType == 'account')].entityValue,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """exa_regex="entities":[^\$]+?"entityType":"host"[^\$]+?"entityValue":[^\$]+?"name":"({dest_host}[^,":]+)"""
   ]
 
 

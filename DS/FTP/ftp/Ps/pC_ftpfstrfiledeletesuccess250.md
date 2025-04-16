@@ -17,7 +17,6 @@ Name = ftp-f-str-file-delete-success-250
     """\]dele\s+\/\S+\.({file_ext}[^\/\.\s]+)\s""",
     """\]dele\s+(\S+\s+){2}({result}\d+)""",
   ]
-  DupFields = [ "host->dest_host", "file_ext->host_file_ext" ]
 
 
 }

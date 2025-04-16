@@ -22,7 +22,7 @@ Fields = [
 """"Category":\s*"({category}[^"]+)""""
 """"AlertType":\s*"({alert_type}[^"]+)""""
 """"Severity":\s*"({alert_severity}[^"]+)""""
-""""Name":\s*"({alert_name}[^"]+)""""
+""""Name":\s*"({alert_name}[^"]+?)(\\u200b)?""""
 """"trc\\":\s*\\"({email_address}[^"\s@]+@[^"\s@\\]+)\\""""
 """"AlertId":\s*"({alert_id}[^"]+)"""",
 """"Source":\s*"({alert_source}[^"]+)""""

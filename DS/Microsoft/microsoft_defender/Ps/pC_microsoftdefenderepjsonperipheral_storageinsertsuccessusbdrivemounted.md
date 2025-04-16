@@ -8,7 +8,7 @@ Name = "microsoft-defenderep-json-peripheral_storage-insert-success-usbdrivemoun
     """exa_regex="ProductName\\?":\\?"({device_description}[^\\"]+)""",
     """exa_regex="DeviceId\\?":\\?"({device_id}[^\\"]+)"""   
   ]
-  DupFields = ["action->operation"]
+  DupFields = ${MicrosoftParserTemplates.json-defender-atp.DupFields}["action->operation"]
   ParserVersion = "v1.0.0"
 
 json-defender-atp {

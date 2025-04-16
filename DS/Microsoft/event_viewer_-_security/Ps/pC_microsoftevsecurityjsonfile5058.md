@@ -28,7 +28,7 @@ Name = microsoft-evsecurity-json-file-5058
     """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"Operation"+:"+({operation}[^"]+)"""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -6,7 +6,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-17
   Vendor = Microsoft
   Product = Sysmon
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
-  Conditions = [ """<EventID>17<""", """'Microsoft-Windows-Sysmon'""", """<Data Name ='PipeName'"""]
+  Conditions = [ """<EventID>17<""", """Microsoft-Windows-Sysmon""", """<Data Name ='PipeName'"""]
   Fields = [
     """<Data Name\\*='UtcTime'>({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d+)<\/Data>""",
     """<Computer>({host}[^<]+)<\/Computer>""",

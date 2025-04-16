@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-5033-1
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<EventID>5033<""" , """<Provider Name""","""'Microsoft-Windows-Security-Auditing'""" ,"""<Event xmlns""","""<Channel>Security</Channel>""" ]
+  Conditions = [ """<EventID>5033<""" , """<Provider Name""","""Microsoft-Windows-Security-Auditing""" ,"""<Event xmlns""","""<Channel>Security</Channel>""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",

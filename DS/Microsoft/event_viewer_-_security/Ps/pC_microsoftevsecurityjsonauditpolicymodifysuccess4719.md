@@ -22,6 +22,7 @@ Fields = [
     """Subcategory:(?:\\t|\\n|\\r|\s)*%*({sub_category}[^:]+?)(?:\\t|\\n|\\r|\s)*Subcategory GUID:""",
     """Changes:(?:\\t|\\n|\\r|\s)*%*({audit_policy_name}[^:"]+?)(?:\\t|\\n|\\r|\s)*"""",
   ]
+  DupFields = [ "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

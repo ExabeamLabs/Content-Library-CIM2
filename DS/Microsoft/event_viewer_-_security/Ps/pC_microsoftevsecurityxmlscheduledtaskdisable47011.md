@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-disable-4701-1
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = v1.0.0
 
 

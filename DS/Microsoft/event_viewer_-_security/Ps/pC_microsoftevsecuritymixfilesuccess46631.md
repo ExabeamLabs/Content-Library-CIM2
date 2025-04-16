@@ -31,21 +31,19 @@ Fields = [
   """<Computer>([^<>]+?[\\\/]+)?({host}[\w\-.]+)<"""
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name =("|')SubjectUserSid("|')>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-  """<Data Name =("|')SubjectUserName("|')>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name =("|')SubjectDomainName("|')>(?=\w)({domain}[^<]+)<"""
+  """<Data Name =("|')SubjectUserName("|')>(?=\w)({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
+  """<Data Name =("|')SubjectDomainName("|')>(?=\w)({src_domain}[^<]+)<"""
   """<Data Name =("|')SubjectLogonId("|')>({login_id}[^<]+)<"""
   """<Data Name =("|')ObjectType("|')>({file_type}[^<]+)<"""
-  """<Data Name =("|')ObjectName("|')>({src_file_path}[^<]+)<"""
-  """<Data Name =("|')ObjectName("|')>[^<]+[\\\/]+({src_file_name}(?:[^<\\\/:]+?)(\.({src_file_ext}\w+))?|[^\\:<]+)<"""
-  """<Data Name =("|')ObjectName("|')>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)<"""
+  """<Data Name =("|')ObjectName("|')>(({registry_path}\\+REGISTRY[^<]+?(\\\{({registry_key}[^\}<]+)\})?)|({src_file_path}[^<]+))<"""
+  """<Data Name =("|')ObjectName("|')>(?!\\+REGISTRY)[^<]+[\\\/]+({src_file_name}(?:[^<\\\/:]+?)(\.({src_file_ext}\w+))?|[^\\:<]+)<"""
+  """<Data Name =("|')ObjectName("|')>(?!\\+REGISTRY)({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)<"""
   """<Data Name =("|')ProcessName("|')>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/\"'<]+?))<"""
   """<Data Name =("|')AccessList("|')>\s*({access}[^<]+?)\s*<"""
   """<Data Name =("|')AccessMask("|')>({access_mask}[^<\s"']+)"""
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
-DupFields = [
-  "host->src_host"
-]
+DupFields = [ "host->src_host", "src_user->user", "src_domain->domain" ]
 ParserVersion = "v1.0.0"
 
 

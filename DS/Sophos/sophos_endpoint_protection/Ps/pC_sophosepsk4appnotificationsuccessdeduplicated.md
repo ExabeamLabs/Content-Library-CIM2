@@ -2,7 +2,7 @@
 ```Java
 {
 Name = sophos-ep-sk4-app-notification-success-deduplicated
-  Conditions = [ """"endpoint_type":""",  """"type":"Event::Endpoint::Deduplicated"""", """"group":"PROTECTION"""", """"severity":"""" ]
+  Conditions = [ """"endpoint_type":""",  """"type":"Event::Endpoint::Deduplicated"""", """"group":""", """"severity":"""" ]
    Fields=${SophosParsersTemplates.cef-sophos-security-alert-1.Fields}[
     """"type":"({alert_name}[^"]+)"""",
     """"group":"({alert_type}[^"]+)"""",

@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
     """<Task>({sub_category}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

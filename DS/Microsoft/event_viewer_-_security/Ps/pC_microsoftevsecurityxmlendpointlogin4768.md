@@ -7,7 +7,8 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
   """<EventID>4768</EventID>"""
-  """<Provider Name ='Microsoft-Windows-Security-Auditing'"""
+  """<Provider Name ="""
+  """Microsoft-Windows-Security-Auditing"""
   """<Channel>Security</Channel>"""
   ]
   Fields = [

@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-user-privilege-use-success-4672
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->src_host" ]
+  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

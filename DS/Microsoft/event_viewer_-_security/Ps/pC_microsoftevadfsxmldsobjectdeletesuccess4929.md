@@ -23,8 +23,9 @@ Name = microsoft-evadfs-xml-ds-object-delete-success-4929
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
     """({event_code}4929)""",
     """<Level>({run_level}[^<]+)<"""
-     ]
-  
+  ]
+  DupFields = ["user->src_user" , "domain->src_domain"]
+
 
 }
 ```

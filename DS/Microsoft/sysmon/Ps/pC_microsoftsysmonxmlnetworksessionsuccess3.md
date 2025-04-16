@@ -8,7 +8,7 @@ Name = microsoft-sysmon-xml-network-session-success-3
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
   Conditions = [
 """<Provider Name"""
-"""'Microsoft-Windows-Sysmon'""",
+"""Microsoft-Windows-Sysmon""",
 """<EventID>3</EventID>"""
   ]
   Fields = [

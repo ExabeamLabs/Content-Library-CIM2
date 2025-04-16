@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-app-notification-500
     """<Computer>({host}[\w\-.]+?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """Issued identity:.*claims/UPN\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+)""",
-    """Issued identity:.*/authenticationmethod/({auth_method}[^\s]+)"""
+    """Issued identity:.*?/authenticationmethod/({auth_method}[^\s<>]+)\s"""
   ]
 
 s-xml-events = {
@@ -23,7 +23,7 @@ s-xml-events = {
     """<Security UserID='({user_sid}[^']+)'\/>""",
     """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>""",
     """<Level>({run_level}[^<]+)<""",
-    """<Provider Name ='({provider_name}[^']+)'""",
+    """<Provider Name =('|")({provider_name}[^']+)('|")""",
     """Guid='\{({process_guid}[^}]+?)\}""",
     """<Task>({task_name}[^<]+)""",
     """<Opcode>(0|({opcode}[^<]+))<""",

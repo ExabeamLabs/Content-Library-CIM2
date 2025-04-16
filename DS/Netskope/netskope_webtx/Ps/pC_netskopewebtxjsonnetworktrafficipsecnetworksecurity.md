@@ -50,6 +50,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """"x-cs-access-method":\s*"({auth_method}[^":,]+)""""
         """"x-transaction-id":\s*"({transaction_id}[^:",]+)""""
         """"x-category-id":\s*"({category_id}[^:",]+)""""
+        """"x-other-category-id":\s*"({category_ids}[^:"\}]+)""""
         """"cs-uri":\s*"({uri}[^"]+)""""
         """"x-cs-session-id":\s*"({session_id}[^"]+)""""
         """"x-c-country":\s*"({location_country}[^"]+)""""

@@ -10,7 +10,7 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalyticscr
   Fields=[
   """"timeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)""",
 	""""severity":"({alert_severity}[^"]+)""""
-	"""properties":\{"title":"({alert_name}[^"]+)"""
+	"""properties":\{"title":"({alert_name}[^"]+?)(\\u200b)?""""
 	"""incidentUrl":({malware_url}[^"]+)"""
 	""""Query"*:"({additional_info}.+?)",""""
 	""""Analytic Rule Name":"({rule}[^"]+)""",

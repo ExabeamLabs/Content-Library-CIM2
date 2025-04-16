@@ -11,7 +11,7 @@ Fields = [
   """"viewer":"\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""
   """({app}Mimecast Email Security)"""
   """({operation}Archive Message View Logs)"""
-  """"subject":"({object}[^"]+?)""""
+  """"subject":"({email_subject}[^"]+?)""""
   """"to":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({target}[^"]+)")""",
   """"source":"({log_source}[^"]+?)""""
   """"from":"\s*(({src_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({src_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)))""""

@@ -12,7 +12,7 @@ ParserVersion = "v1.0.0"
 windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  },
 
 ${WindowsParsersTemplates.windows-events-wls} {
@@ -23,6 +23,6 @@ ${WindowsParsersTemplates.windows-events-wls} {
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" 
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" 
 }
 ```

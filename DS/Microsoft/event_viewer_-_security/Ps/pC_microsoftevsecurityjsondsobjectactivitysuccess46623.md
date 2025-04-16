@@ -21,10 +21,10 @@ Fields = [
 """"pid"+:({process_id}\d+)"""
 """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
 """"TargetUserName"+:"+(None|({dest_user}[^"]+))"""
-""""TargetDomainName"+:"+({domain}[^"]+)"""
-""""TargetLogonId"+:"+({login_id}[^"]+)"""
+""""TargetDomainName"+:"+({dest_domain}[^"]+)"""
+""""TargetLogonId"+:"+({dest_login_id}[^"]+)"""
 """"LogonType"+:"+({login_type}\d+)"""
-""""TargetUserSid"+:"+({user_sid}[^"<,]+)"""
+""""TargetUserSid"+:"+({dest_user_sid}[^"<,]+)"""
 """"record_id"+:({event_id}\d+)"""
 """"task"+:"+({task_name}[^"]+)"""
 """"event_id"+:({event_code}\d+)"""
@@ -36,9 +36,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({domain}[^"]+)"""
+""""+SubjectDomainName"+:"+({src_domain}[^"]+)"""
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
 """"+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
 """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
 """"Keywords":"({result}[^"]+)"""
@@ -55,9 +55,7 @@ Fields = [
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [
-"object_name->object"
-]
+DupFields = [ "object_name->object", "src_user->user", "src_domain->domain" ]
 
 
 }

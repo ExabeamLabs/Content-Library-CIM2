@@ -28,6 +28,7 @@ Name = checkpoint-ngfw-kv-http-session-ifname
     """\Wproduct:"({product_name}[^"]+)""",
     """\Wsrc_machine_name:"({src_host}[^"@]+)@({domain}[^"]+)""",
     """\Wuser:"(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"=]+?))\s*"""",
+    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   ParserVersion = "v1.0.0"
 

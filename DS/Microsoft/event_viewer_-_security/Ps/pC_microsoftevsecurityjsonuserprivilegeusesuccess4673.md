@@ -24,7 +24,7 @@ Name = microsoft-evsecurity-json-user-privilege-use-success-4673
       """({event_name}An account was logged off)""",
       """({event_name}A privileged service was called)"""
     ]
-    DupFields = ["host->dest_host"]
+    DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
   
 
 }

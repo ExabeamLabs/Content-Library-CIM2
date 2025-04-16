@@ -15,8 +15,8 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4674)"""
   """<Data Name\\*=('|")SubjectUserSid('|")>\s*(({domain}[^\\<]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
-  """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+?)<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+  """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+?)<"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+?)<"""
   """<Data Name\\*=('|")ObjectServer('|")>(-|({object_server}[^<]+?))<"""
   """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<"""
@@ -24,6 +24,7 @@ Fields = [
   """({event_name}An operation was attempted on a privileged object)"""
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["src_domain->domain", "src_user->user"]
 ParserVersion = "v1.0.0"
 
 

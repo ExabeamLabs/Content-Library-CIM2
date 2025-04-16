@@ -10,7 +10,7 @@ Name = microsoft-m365auditlogs-sk4-alert-trigger-adminrelatedactivityalert
   Fields = [
     """\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[\w\-.]+)\s""",
     """"eventDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
-    """"title":"({alert_name}[^"]+)"""",
+    """"title":"({alert_name}[^"]+?)(\\u200b)?"""",
     """"category":"({alert_type}[^"]+)"""",
     """"severity":"({alert_severity}[^"]+)"""",
     """"userPrincipalName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+)"""",

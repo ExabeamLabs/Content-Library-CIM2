@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-json-share-access-success-5140-3
       """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
       """exa_json_path=$..action,exa_field_name=operation"""
     ]
-    DupFields=[ "host->dest_host" ]
+    DupFields=[ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

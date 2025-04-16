@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-kv-user-privilege-success-467
       """ObjectType="+(?:-|({object_type}[^"]+))"""",
       """ObjectServer="+(?:-|({object_server}[^"]+))""""
     ]
-    DupFields = ["host->dest_host","directory->process_dir"]
+    DupFields = ["host->dest_host","directory->process_dir","user->src_user", "domain->src_domain"]
   
 
 }

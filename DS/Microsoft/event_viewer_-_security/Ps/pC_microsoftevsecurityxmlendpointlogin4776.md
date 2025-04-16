@@ -22,13 +22,13 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
   """<EventID>({event_code}\d+)</EventID>"""
   """<Computer>(?!(?:[A-Fa-f:\d.]+))[^<.]+(\.({domain}[^<]+)[^<]*)?</Computer>""",
-  """<Data Name(\\)?=('|")TargetUserName('|")>\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)|(({domain}[^<\\]+)\\+)?(null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(?:@({=domain}[^<.]+)[^<]*)?)<\/Data>"""
+  """<Data Name(\\)?=('|")TargetUserName('|")>\s*((({domain}[^<\\]+)\\+)?(null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({user_upn}[\w\.\-\!\#\^\~]{1,40}\$?@[^<]+?))<\/Data>"""
   """<Data Name(\\)?=('|")Status('|")>((?-i)\\+[rnt])*\s*({result_code}[^<]+)<\/Data>"""
   """<Keywords><Keyword>({result}[^<]+)<""",
   """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((?i)(workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "result_code->failure_code", "result_code->error_code", "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
+  DupFields = [ "result_code->failure_code", "result_code->error_code", "domain->dest_domain", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

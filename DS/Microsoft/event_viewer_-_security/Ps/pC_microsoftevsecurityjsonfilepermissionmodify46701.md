@@ -38,6 +38,7 @@ json-windows-system-events = {
     """exa_json_path=$..TransactionId,exa_field_name=transaction_id""",
     """exa_json_path=$..Category,exa_field_name=event_name""",
     """exa_json_path=$..Message,exa_regex=({event_name}[^.]+)"""
-  
+  ]
+  DupFields = [ "user->src_user", "domain->src_domain" 
 }
 ```

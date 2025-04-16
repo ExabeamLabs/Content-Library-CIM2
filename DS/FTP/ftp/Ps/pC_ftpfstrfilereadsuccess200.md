@@ -18,7 +18,6 @@ Name = ftp-f-str-file-read-success-200
     """\]sent\s+(\S+\s+){2}({result}\d+)""",
     """\]sent\s+(\S+\s+){3}({bytes}\d+)""",
   ]
-  DupFields = [ "host->dest_host", "file_ext->host_file_ext" ]
 
 
 }

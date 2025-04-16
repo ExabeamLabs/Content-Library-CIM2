@@ -18,9 +18,9 @@ Fields = [
   """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<"""
   """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<"""
   """<Data Name\\*='ObjectType'>({file_type}[^<]+)<"""
-  """<Data Name\\*='ObjectName'>({file_path}[^<]+)<"""
-  """<Data Name\\*='ObjectName'>[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)<"""
-  """<Data Name\\*='ObjectName'>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)<"""
+  """<Data Name\\*='ObjectName'>(({registry_path}\\+REGISTRY[^<]+?(\\\{({registry_key}[^\}<]+)\})?)|({file_path}[^<]+))<"""
+  """<Data Name\\*='ObjectName'>(?!\\+REGISTRY)[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)<"""
+  """<Data Name\\*='ObjectName'>(?!\\+REGISTRY)({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)<"""
   """<Data Name\\*='ProcessName'>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/\"<]+?))<"""
   """<Data Name\\*='AccessList'>([^\d\w]+)?({access}[\d\w]+)"""
   """<Data Name\\*='AccessMask'>({access_mask}[^<\s"]+)"""
@@ -28,6 +28,7 @@ Fields = [
   """({event_name}An attempt was made to access an object)"""
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

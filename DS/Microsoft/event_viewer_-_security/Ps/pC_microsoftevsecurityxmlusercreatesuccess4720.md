@@ -26,11 +26,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720"
 """<Data Name\\*=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ 
-  "account_name->dest_user"
-  "account_domain->dest_domain"
-  "host->src_host"
-  ]
+  DupFields = [ "account_name->dest_user", "account_domain->dest_domain", "host->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

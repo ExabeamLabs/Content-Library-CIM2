@@ -55,6 +55,7 @@ checkpoint-firewall-1 = {
     """\Wapp_category:"({category}[^"]+)"""
     """\Wresource:"\s*({url}[^"]+)"""
     """\Wuser_agent:"\s*({user_agent}[^"]+)"""
+    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   DupFields = [ "action->event_name" 
 }

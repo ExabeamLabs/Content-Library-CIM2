@@ -21,9 +21,7 @@ Fields = [
 """TargetUserName ="+({dest_user}[^\"]+)""""
 """TargetSid="+({dest_user_sid}[^\"]+)""""
 ]
-DupFields = [
-"dest_user->account_name"
-]
+DupFields = ["dest_user->account_name", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

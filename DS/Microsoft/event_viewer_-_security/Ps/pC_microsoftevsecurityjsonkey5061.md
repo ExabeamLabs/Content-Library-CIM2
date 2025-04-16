@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-json-key-5061
     """"KeyName":"({key_name}[^"]+)"""",
     """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

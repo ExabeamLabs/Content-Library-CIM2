@@ -70,6 +70,7 @@ Name = "checkpoint-ngfw-str-network-traffic-firewall"
   """layer_name:"({alert_name}[^"]+)"""
   """user_agent:"\s*({user_agent}[^"]+)"""
   """vendor_list:"({vendor_name}[^"]+)"""
+  """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   DupFields = [
 "action->result"

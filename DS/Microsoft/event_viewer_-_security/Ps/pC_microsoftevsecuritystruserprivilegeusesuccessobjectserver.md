@@ -22,7 +22,7 @@ Fields = [
 """ObjectName:(-|({object}[^,]+)),""",
 """HandleId:({handle_id}[^,]+),"""
 ]
-DupFields = ["host->dest_host"]
+DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

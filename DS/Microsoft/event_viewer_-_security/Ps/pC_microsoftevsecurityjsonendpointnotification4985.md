@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4985
     """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",
     """exa_json_path=$..TransactionId,exa_field_name=transaction_id"""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

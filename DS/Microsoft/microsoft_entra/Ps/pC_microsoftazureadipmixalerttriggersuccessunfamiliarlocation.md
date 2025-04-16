@@ -10,7 +10,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
   Conditions = [ """"category":""", """"UnfamiliarLocation"""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":""", """"IPC""""  ]
   Fields = [
     """"id":\s*"({alert_id}[^"]+)"""",
-    """"title":\s*"({alert_name}[^"]+)"""",
+    """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
     """"severity":\s*"({alert_severity}[^"]+)"""",
     """"category":\s*"({alert_type}[^"]+)"""",
     """"description":\s*"({additional_info}[^"]+)"""",

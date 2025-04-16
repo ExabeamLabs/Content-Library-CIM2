@@ -22,8 +22,8 @@ Name = microsoft-evsecurity-cef-endpoint-logout-4634
     """<Data Name\\='TargetUserSid'>({dest_user_sid}[^<]+)<""",
     """<Data Name\\='TargetLogonId'>({dest_login_id}[^<]+)<"""
     """<Data Name\\='SubjectUserSid'>(-|({user_sid}[^<>]+))<""",
-    """<Data Name\\='SubjectUserName'>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
-    """<Data Name\\='SubjectDomainName'>(-|({domain}[^<>]+))<""",
+    """<Data Name\\='SubjectUserName'>(-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """<Data Name\\='SubjectDomainName'>(-|({src_domain}[^<>]+))<""",
     """<Data Name\\='SubjectLogonId'>(-|({login_id}[^<>]+))<""",
     """({event_name}An account was logged off)"""
   ]

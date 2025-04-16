@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-certificate-request-success-4898
   Product = Event Viewer - Security
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   ParserVersion = v1.0.0
-  Conditions = [ """<EventID>4898</EventID>""", """<Data Name =""", """'Microsoft-Windows-Security-Auditing'""" ]
+  Conditions = [ """<EventID>4898</EventID>""", """<Data Name =""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)('|")""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",

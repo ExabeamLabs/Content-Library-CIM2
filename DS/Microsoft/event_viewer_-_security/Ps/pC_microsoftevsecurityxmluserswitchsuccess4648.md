@@ -34,7 +34,7 @@ Name = "microsoft-evsecurity-xml-user-switch-success-4648"
 """<Keyword>({result}[^<]+)</Keyword>""",
 """<Level>({run_level}[^<]+)<"""
   ]
-   DupFields = ["dest_user->account", "dest_domain->account_domain"]
+   DupFields = ["dest_user->account", "dest_domain->account_domain", "user->src_user" , "domain->src_domain"]
 
 
 }

@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4904
     """"ProcessID":({process_id}[^"]+)"""",
 # audit_name is removed
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

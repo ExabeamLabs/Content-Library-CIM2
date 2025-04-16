@@ -5,10 +5,10 @@ Name = microsoft-sysmon-xml-dns-request-success-query
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Sysmon
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd HH:mm:ss.SSS"]
   Conditions = [
 """<Provider Name"""
-"""'Microsoft-Windows-Sysmon'""",
+"""Microsoft-Windows-Sysmon""",
 """<EventID>22</EventID>""",
 """<Channel>Microsoft-Windows-Sysmon/Operational</Channel>""",
 """<Data Name"""
@@ -26,6 +26,7 @@ Name = microsoft-sysmon-xml-dns-request-success-query
     """<Data Name\\*='QueryResults'>({dns_response}.+?)\s*</Data>""",
     """<Data Name\\*='Image'>({process_path}(({process_dir}[^<]*)\\+)?({process_name}.+?))</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Data Name\\*='Image'>(<|&lt;)({process_path}(({process_dir}[^<]*)\\+)?({process_name}.+?))(<|&gt;)<\/Data>"""
   ]
 
 

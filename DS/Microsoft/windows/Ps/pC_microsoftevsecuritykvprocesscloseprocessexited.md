@@ -31,6 +31,7 @@ Name = microsoft-evsecurity-kv-process-close-processexited
     """Exit Status:\s*(\\+[rnt])*({result}[^\s"]+?)(?:\\t|\\n|\\r|\s)*("|\s)"""
     """Process Name:(\s|\\t|\\n|\\r)*({process_path}({process_dir}(?:[^\s]+?)?[\\\/])?({process_name}[^\\\/\s]+?))(?:\\t|\\n|\\r|\s)*Exit"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 windows-events = {
   Vendor = Microsoft

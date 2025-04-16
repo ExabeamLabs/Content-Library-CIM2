@@ -6,7 +6,9 @@ Name = sentinelone-singularityp-json-registry-modify-success-regvaluemodify
   Conditions = [ """"s1ql":""", """"eventType":"REGVALUEMODIFIED"""", """"incidentStatus":""" ]
   Fields = ${SentinelOneParsersTemplates.sentinelone-json-api-alerts.Fields} [
     """exa_json_path=$.alertInfo.registryKeyPath,exa_regex=({registry_path}[^"]+(\\|\/)+?({registry_key}[^"]+))""",
-    """exa_json_path=$.alertInfo.registryValue,exa_field_name=registry_value"""
+    """exa_json_path=$.alertInfo.registryValue,exa_field_name=registry_value""",
+    """exa_json_path=$.alertInfo.registryOldValue,exa_field_name=old_registry_details""",
+    """exa_json_path=$.alertInfo.registryOldValueType,exa_field_name=old_registry_details_type"""
   ]
 
 sentinelone-json-api-alerts {

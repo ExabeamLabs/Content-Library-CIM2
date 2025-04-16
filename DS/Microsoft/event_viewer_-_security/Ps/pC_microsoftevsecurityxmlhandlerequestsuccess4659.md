@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-handle-request-success-4659
     """<Data Name\\*='HandleID'>({object_id}[^<]+)<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -6,7 +6,7 @@ Vendor = "Imperva"
 Product = "Imperva SecureSphere"
 TimeFormat = "dd MMMM yyyy HH:mm:ss"
 Conditions = [
-  """Authenticated=True"""
+  """Authenticated="""
   """Event Type=Login"""
   """LEEF:"""
   """|SecureSphere|"""
@@ -21,6 +21,8 @@ Fields = [
   """Service Name =({service_name}[^|]+)"""
   """Server Group=({server_group}[^|]+)"""
   """Database=({db_name}[^|]+)"""
+  """Error=({result_reason}[^"|]+)\|"""
+  """Authenticated=({result}[^|]+)"""
 ]
 DupFields = [
   "src_ip->host"

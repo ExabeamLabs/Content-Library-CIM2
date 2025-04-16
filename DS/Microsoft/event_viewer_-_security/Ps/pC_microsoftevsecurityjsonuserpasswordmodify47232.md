@@ -29,7 +29,7 @@ Fields = [
 """TargetDomainName\\?"+:\\?"+({dest_domain}[^\s"\\]+)\\?""""
 """"TargetSid\\?"+:\\?"+({dest_user_sid}[^"\\]+)"""
 ]
-DupFields = [ "src_host_windows->src_host" ]
+DupFields = [ "src_host_windows->src_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

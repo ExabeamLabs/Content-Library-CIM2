@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-endpoint-time-modify-4616-1
     """<Data Name\\*=('|")NewTime('|")>({additional_info}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

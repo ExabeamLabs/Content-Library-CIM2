@@ -27,8 +27,8 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """\"system_name\":\"({host}[\w\-.]+)\"""",
 """Security(,|\srn=|\s+)({event_id}\d+)""",
 """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Account Domain:\s+({domain}[\w\-\.]+).+?Logon ID:\s+({login_id}[\w\-\.]+).+?Account Name:\s+({account_name}[\w\-\.]+).+?Account Domain:\s+({account_domain}[\w\.\-]+).+?Attributes""",
-"""Subject:.+?Security ID:\s+({user_sid}[^\s]+).+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Account Domain:\s+({domain}[\w\-\.]+).+?Logon ID:\s+({login_id}[\w\-\.]+).*?New Account""",
-"""New Account:.+?Security ID:\s+({account_id}[^\s]+)\s+Account Name:\s+({account_name}[\w.'\-]+).+?Account Domain:\s+({account_domain}[\w.\-]+)""",
+"""Subject:.+?Security ID:\s*({user_sid}[^\s]+).+?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Account Domain:\s*({domain}[\w\-\.]+).+?Logon ID:\s*({login_id}[\w\-\.]+).*?New Account""",
+"""New Account:.+?Security ID:\s*({account_id}[^\s]+)\s+Account Name:\s*({account_name}[\w.'\-]+).+?Account Domain:\s*({account_domain}[\w.\-]+)""",
 """Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*.+?Account Domain:\s*(\\t|\\r|\\n)*({domain}[\w\-\.]+).+?Logon ID:\s*(\\t|\\r|\\n)*({login_id}[\w\-\.]+).+?Account Name:\s*(\\t|\\r|\\n)*({account_name}[\w\-\.]+).+?Account Domain:\s*(\\t|\\r|\\n)*({account_domain}[\w\.\-]+).+?Attributes"""
 """(Enabled.+?|Account Control:)\s*'({user_type}.*?)'\s-\sEnabled"""
   ]

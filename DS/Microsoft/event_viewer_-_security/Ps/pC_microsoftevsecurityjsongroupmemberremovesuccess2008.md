@@ -15,10 +15,10 @@ Name = microsoft-evsecurity-json-group-member-remove-success-2008
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^@]+?"+id"+:({thread_id}\d+)""",
     """"TargetUserName"+:"+(None|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))"""",
-    """"TargetDomainName"+:"+({domain}[^"]+)""",
-    """"TargetLogonId"+:"+({login_id}[^"]+)""",
+    """"TargetDomainName"+:"+({dest_domain}[^"]+)""",
+    """"TargetLogonId"+:"+({dest_login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
-    """"TargetUserSid"+:"+({user_sid}[^"<,]+)""",
+    """"TargetUserSid"+:"+({dest_user_sid}[^"<,]+)""",
     """"record_id"+:({event_id}\d+)""",
     """"task"+:"+({task_name}[^"]+)""",
     """"event_id"+:({event_code}\d+)""",
@@ -43,6 +43,7 @@ Name = microsoft-evsecurity-json-group-member-remove-success-2008
     """"+MemberName"+:"+CN\\*=({account_id}[^,"]+)""",
     """"+MemberName"+:"+CN\\*=({user_dn}[^,"]+)""",
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

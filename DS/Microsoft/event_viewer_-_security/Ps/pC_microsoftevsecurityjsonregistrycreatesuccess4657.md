@@ -20,11 +20,13 @@ Name = "microsoft-evsecurity-json-registry-create-success-4657"
 	""""HandleId":"({object_id}[^"]+)""""
 	""""NewValueType":"({registry_details_type}[^"]+)""""
 	""""NewValue":"({registry_details}[^"]+)""""
+	""""OldValueType":"({old_registry_details_type}[^"]+)""""
+	""""OldValue":"({old_registry_details}[^"]+)""""
 	""""ProcessName":"({process_path}({process_dir}[^"]+[\\\\]+)({process_name}[^"]+))""""
 	""""OperationType":"({operation}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host->src_host" ]
+  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

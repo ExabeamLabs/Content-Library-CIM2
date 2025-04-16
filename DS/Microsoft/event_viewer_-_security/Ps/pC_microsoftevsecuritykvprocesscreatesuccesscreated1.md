@@ -49,12 +49,12 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_exe}.+?\.exe)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
     """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
     """SubjectLogonId\\?"+:\\?"+(\\[nrt]|\s)*({login_id}[^\\]+)(\\[nrt]|\s)*\\?""""
-    """\"SubjectDomainName\\?":\\?"({domain}[^\\"]+)"""
+    """\"SubjectDomainName\\?":\\?"({src_domain}[^\\"]+)"""
   ]
-  DupFields = [ "process_guid->process_id" ,"parent_process_guid->parent_process_id"]
+  DupFields = [ "process_guid->process_id" ,"parent_process_guid->parent_process_id", "src_user->user", "src_domain->domain" ]
 
 
 }

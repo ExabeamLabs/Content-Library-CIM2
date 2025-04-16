@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
     """({event_name}An object was deleted.)"""
     """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

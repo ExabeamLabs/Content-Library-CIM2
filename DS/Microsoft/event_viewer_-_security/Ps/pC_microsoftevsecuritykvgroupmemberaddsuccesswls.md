@@ -27,10 +27,7 @@ Fields = [
 """MemberName ="+.*?OU=({user_ou}[^,]+)?"""
 """TargetSid="({group_id}[^"]+)"""
 ]
-DupFields = [
-"event_code->group_type"""
-"host->dest_host"""
-]
+DupFields = [ "event_code->group_type""", "host->dest_host""", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -12,7 +12,7 @@ Name = microsoft-azuresc-json-alert-trigger-success-geoanomaly
      """"securityResources":[\{"resource":"[^"]+\/databases\/({db_name}[^"\/]+)","resourceType":""attacked""""
      """"Someone logged on to your SQL server \'({server_group}[^\']+)\' from an unusual location.""""
      """"id":\s*"({alert_id}[^"]+)"""",
-     """"title":\s*"({alert_name}[^"]+)"""",
+     """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
      """"severity":\s*"({alert_severity}[^"]+)"""",
      """"category":\s*"({alert_type}[^"]+)"""",
      """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]""",

@@ -17,13 +17,14 @@ Name = "mcafee-es-xml-alert-trigger-success-analyzerversion"
        """<DomainName>({domain}[^<]+)""",
        """<UserName>(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((|NT AUTHORITY|NT-AUTORITÄT|AUTORIDADE NT|({domain}[^\\\s]+))\\+)?(|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$))<\/UserName>"""
        """<TargetUserName>((NT-AUTORITÄT|AUTORIDADE NT|NT AUTHORITY|({domain}[^\\\s]+))\\+)?((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/TargetUserName>""",
+       """<Severity>({alert_severity}[^<]+)""",
        """<ThreatCategory>({threat_category}[^<]+)""",
        """<ThreatEventID>({event_code}[^<]+)""",
        """<ThreatSeverity>({alert_severity}[^<]+)""",
        """<ThreatCategory>({alert_name}[^<]+)""",
-       """<ThreatName>(-|_|(?i)none|({alert_name}[^<]+))<\/ThreatName>"""
-       """<ThreatCategory>((?i)none|({alert_type}[^<]+))""",
-       """<ThreatType>((?i)none|({alert_type}[^<]+))""",
+       """<ThreatName>(-|_|(?i)none|unknown|({alert_name}[^<]+))<\/ThreatName>"""
+       """<ThreatCategory>((?i)none|unknown|({alert_type}[^<]+))""",
+       """<ThreatType>((?i)none|unknown|({alert_type}[^<]+))""",
        """<TargetFileName>({malware_url}[^=]*?[\\\/]*\s*({malware_file_name}[^\s\\\/<][^\\\/<]*?))\\?<""",
        """<AnalyzerDetectionMethod>({additional_info}[^<]+)""",
        """<OSName>({os}[^<]+)""",
@@ -35,6 +36,8 @@ Name = "mcafee-es-xml-alert-trigger-success-analyzerversion"
        """<SourceProcessName>({src_process_name}[^<]+)<""",
        """<TargetHash>\s*({hash_md5}[^\s<][^<]*)<""",
        """<Cleanable>({cleanable}[^<]+)<""",
+       """<SoftwareInfo ProductName ="({product_name}[^"]+)"""",
+       """\starget="({target}[^"]+)""""
     ]
     SOAR {
       IncidentType = "malware"

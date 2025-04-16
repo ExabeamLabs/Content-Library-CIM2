@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """"subjectDomainName":"({domain}[^"\s]+?)\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
   ]
-  DupFields = ["host->dest_host"]
+  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

@@ -21,9 +21,13 @@ Fields = [
   """proto="*({protocol}[^\s"]+)"""
   """http_agent="(none|({user_agent}[^"]+))"\s\w+="""
   """http_method=({method}[^=]+?)\s\w+="""
-  """http_refer="({malware_url}[^"]+)"""
+  """http_refer="({referrer}[^"]+)"""
   """\Waction="({action}[^"]+)""""
   """msg="({additional_info}[^"=]+)"\s\w+="""
+  """http_url="({uri_path}\/[^?\s"]+)?(\?({uri_query}[^"]+))?""""
+  """http_host="(none|({web_domain}[^\s]+))""""
+  """signature_subclass="({alert_reason}[^"]+)""""
+  """\spolicy="({policy_name}[^"]+)""""
   ]
 
 

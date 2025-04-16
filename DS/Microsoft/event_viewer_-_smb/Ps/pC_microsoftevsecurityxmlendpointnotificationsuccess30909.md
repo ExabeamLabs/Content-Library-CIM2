@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-endpoint-notification-success-30909
   Product = "Event Viewer - SMB"  
-  Conditions = [ """<Channel>Microsoft-Windows-SMBClient""", """<EventID>30909</EventID>""", """<Computer>""", """<EventID>""" ]
+  Conditions = [ """<Channel>Microsoft-Windows-SMBClient""", """<EventID>30909</EventID>""", """<Computer>""" ]
   ParserVersion = "v1.0.0"
 
 windows-xml-events = {
@@ -17,7 +17,7 @@ windows-xml-events = {
     """<Security UserID='({user_sid}[^']+)'\/>""",
     """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>""",
     """<Level>({run_level}[^<]+)<""",
-    """<Provider Name ='({provider_name}[^']+)'""",
+    """<Provider Name =('|")({provider_name}[^']+)('|")""",
     """Guid='\{({process_guid}[^}]+?)\}""",
     """<Task>({task_name}[^<]+)""",
     """<Opcode>(0|({opcode}[^<]+))<""",

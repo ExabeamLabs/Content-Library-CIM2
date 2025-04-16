@@ -7,7 +7,7 @@ Vendor: FTP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  75   |   38   |         8          |       6        |   24    |
+|  75   |   38   |         8          |       6        |   20    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

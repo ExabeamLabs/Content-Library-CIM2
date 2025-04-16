@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-handle-request-4656
     """<Keywords>({result}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

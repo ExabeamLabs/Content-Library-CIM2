@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-sk4-endpoint-logout-success-anaccountwasloggedoff-1
     """({event_name}An account was logged off)""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
   ]
+  DupFields = [ "src_user->user", "src_domain->domain" ]
 
 json-windows-events-2 = {
   Vendor = Microsoft
@@ -39,18 +40,18 @@ json-windows-events-2 = {
     """"+activity_id"+:"+\{({activity_id}[^}]+)""",
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"]+)""",
-    """"+SubjectDomainName"+:"+({domain}[^"]+)""",
+    """"+SubjectDomainName"+:"+({src_domain}[^"]+)""",
 # algorithm_name is removed
     """"+Operation"+:"+({operation}[^"]+)""",
     """"+KeyType"+:"+({key_type}[^"]+)""",
     """"+KeyName"+:"+({key_name}[^"]+)""",
     """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+SubjectUserName"+:"+(SYSTEM|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
     """exa_json_path=$.EventData.SubjectUserSid,exa_field_name=user_sid"""
-    """exa_json_path=$.EventData.SubjectUserName,exa_field_name=user"""
-    """exa_json_path=$.EventData.SubjectDomainName,exa_field_name=domain"""
+    """exa_json_path=$.EventData.SubjectUserName,exa_field_name=src_user"""
+    """exa_json_path=$.EventData.SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$.EventData.SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.EventData.ProviderName,exa_field_name=provider_name"""

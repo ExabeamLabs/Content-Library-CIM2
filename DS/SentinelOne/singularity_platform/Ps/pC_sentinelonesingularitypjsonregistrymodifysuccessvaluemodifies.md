@@ -6,6 +6,8 @@ ParserVersion = "v1.0.0"
 Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"registry"""", """"event.type":"Registry Value Modified""""]
 DupFields = [ "host->dest_host", "alert_name->event_name" ]
 Fields = ${SentinelOneParsersTemplates.json-sentinelone-singularityp-events.Fields}[
+  """exa_json_path=$..['registry.oldValue'],exa_field_name=old_registry_details""",
+  """exa_json_path=$..['registry.oldValueType'],exa_field_name=old_registry_details_type""",
   """exa_json_path=$..['registry.value'],exa_field_name=registry_details""",
   """exa_json_path=$..['registry.valueType'],exa_field_name=registry_details_type"""
 ]

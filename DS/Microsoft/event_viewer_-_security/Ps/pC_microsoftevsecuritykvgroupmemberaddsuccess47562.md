@@ -34,7 +34,8 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Data Name(\\)?='RemoteMachineAccount'>({dest_host}[\w\-.]+)"""
     """<Data Name ='MemberName('>|":")CN\\?=({member}[^>]+)<\/Data>""",
     """<Data Name(\\)?='MemberSid'>(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
-      ]
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

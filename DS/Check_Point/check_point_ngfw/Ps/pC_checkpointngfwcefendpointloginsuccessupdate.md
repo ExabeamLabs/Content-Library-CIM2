@@ -47,6 +47,7 @@ cef-checkpoint-firewall = {
     """tunnel_protocol=({tunnel_protocol}[^=]+?)\s*\w+=""",
     """deviceDirection=({direction}[^=]+)\s\w+=""",
     """proto=({protocol}[^=]+?)\s\w+="""
+    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   
 }
 ```

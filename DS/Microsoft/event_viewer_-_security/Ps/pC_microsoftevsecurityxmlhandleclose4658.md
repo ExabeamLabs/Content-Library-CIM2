@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-handle-close-4658
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

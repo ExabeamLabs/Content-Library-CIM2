@@ -30,6 +30,7 @@ Name = microsoft-evsecurity-xml-app-notification-success-5056
   """<Message>({event_name}[^.<]+)\s*""",
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

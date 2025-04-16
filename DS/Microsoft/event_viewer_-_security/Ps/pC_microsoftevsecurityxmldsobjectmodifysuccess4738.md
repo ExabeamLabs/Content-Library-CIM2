@@ -27,6 +27,7 @@ Fields = [
 """User Account Control:\s*(\\r|\\t|\\n)*(-|({uac_status}[^:]+?))\s*(\\r|\\t|\\n)*User Parameters:"""
 """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

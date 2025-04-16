@@ -33,9 +33,7 @@ Fields = [
 """<Arguments>("+)?({arg}[^<\"]+)"""
 """Subject:.+?Security ID:(\\r|\\n|\\t)*({user_sid}[^:]+?)(\\r|\\n|\\t)*Account Name:"""
 ]
-DupFields = [
-"host->dest_host"
-]
+DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

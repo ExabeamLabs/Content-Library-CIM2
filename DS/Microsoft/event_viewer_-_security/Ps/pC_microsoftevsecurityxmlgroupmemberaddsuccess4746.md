@@ -37,6 +37,7 @@ s-xml-windows-member = {
     """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
     """<Message>({event_name}[^:=<.]+)\."""
     """<Level>({run_level}[^<]+)<"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

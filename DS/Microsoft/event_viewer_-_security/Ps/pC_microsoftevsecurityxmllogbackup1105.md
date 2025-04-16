@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-xml-log-backup-1105
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """'Microsoft-Windows-Eventlog'""", """<EventID>1105<""" ]
+  Conditions = [ """Microsoft-Windows-Eventlog""", """<EventID>1105<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Computer>({host}[\w\-.]+?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -21,7 +21,7 @@ s-xml-events = {
     """<Security UserID='({user_sid}[^']+)'\/>""",
     """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>""",
     """<Level>({run_level}[^<]+)<""",
-    """<Provider Name ='({provider_name}[^']+)'""",
+    """<Provider Name =('|")({provider_name}[^']+)('|")""",
     """Guid='\{({process_guid}[^}]+?)\}""",
     """<Task>({task_name}[^<]+)""",
     """<Opcode>(0|({opcode}[^<]+))<""",

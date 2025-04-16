@@ -16,6 +16,8 @@ Fields = [
   """({event_code}6272)"""
   """'SubjectUserName'>(?:({user_type}host)/)?(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """'SubjectDomainName'>(?:-|({domain}[^\s\<]+))"""
+  """'SubjectUserName'>(?:({user_type}host)/)?(({src_domain}[^\\]+)\\+)?({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """'SubjectDomainName'>(?:-|({src_domain}[^\s\<]+))"""  
   """'FullyQualifiedSubjectUserName'>(({domain}[^\\]+)\\+)?(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """'NASIdentifier'>(?:-|({location}[\w\-.]+))"""
   """'CallingStationID'>(?:-|({src_mac}[^\<]+))"""

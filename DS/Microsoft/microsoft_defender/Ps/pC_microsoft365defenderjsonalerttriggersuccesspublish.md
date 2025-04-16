@@ -28,7 +28,7 @@ Name = "microsoft-365defender-json-alert-trigger-success-publish"
     """"Application\\?":\\?"({app}[^"]+)""",
     """"Urls\\?":\[\\?"({malware_url}[^\s,"]+)""",
     """"ProcessCommandLine":"({process_command_line}[^\n]+?)",""",
-    """"Title":"({alert_name}[^"]+)"""",
+    """"Title":"({alert_name}[^"]+?)(\\u200b)?"""",
     """"(C|c)ategory":"({alert_type}[^"]+)"""",
     """"Severity":"({alert_severity}[^"]+)"""",
     """"DetectionSource":"({alert_source}[^"]+)""""

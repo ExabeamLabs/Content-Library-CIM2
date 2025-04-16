@@ -51,6 +51,7 @@ Name = "checkpoint-ngfw-str-network-traffic-success-decrypt"
 """\W(user|src_user_name|dst_user_name):"(?:[^_"\s]+_)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*"""",
 """resource:"({url}[^";,]+)"""",
 """ dns_query:"({dns_query}[^"]+?)\s*""""
+"""\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   DupFields = [
 "action->event_name"

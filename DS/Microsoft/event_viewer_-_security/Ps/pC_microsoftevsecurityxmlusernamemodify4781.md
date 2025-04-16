@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-xml-user-name-modify-4781
     """<Data Name\\*=('|")PrivilegeList('|")>(-|({privileges}[^<]+))<""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "new_user_name->dest_user" ]
+  DupFields = [ "new_user_name->dest_user", "user->src_user", "domain->src_domain" ]
 
 
 }

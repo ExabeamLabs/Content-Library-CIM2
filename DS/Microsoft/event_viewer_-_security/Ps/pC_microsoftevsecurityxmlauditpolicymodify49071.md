@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4907-1
     """<Level>({run_level}[^<]+)<"""
     """<Data Name\\*=('|")NewSd('|")>({audit_policy_name}[^<]+)</Data>"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -2,12 +2,14 @@
 ```Java
 {
 Name = exabeam-audit-json-alert-case-success
+    ParserVersion = v1.0.0
+    Conditions = [""""activity_type":""", """"application":""", """"subject":""", """"outcome":""", """"operation":"""]
+  
+exabeam-audit-json-events = {
     Vendor = Exabeam
     Product = Audit Log
-    ParserVersion = v1.0.0
     TimeFormat = "epoch"
     ExtractionType = json
-    Conditions = [""""activity_type":""", """"application":""", """"subject":""", """"outcome":""", """"operation":"""]
     Fields = [
       """"application":"({app}[^"]+)"""",
       """"subject":"({additional_info}.+?)","""",
@@ -27,7 +29,6 @@ Name = exabeam-audit-json-alert-case-success
       """"api_endpoint":"({url}[^"]+)"""",
       """"user":"({email_address}[^\@]+@[^"]+)"""",
       """"time":"({time}\d{13})""""
-      """"user":"({dest_user}[\w\.\-]+)"""
       """"user":"({user_info}[^"]+)"""
       """exa_json_path=$..application,exa_field_name=app"""
       """exa_json_path=$..subject,exa_field_name=additional_info"""
@@ -48,12 +49,8 @@ Name = exabeam-audit-json-alert-case-success
       """exa_json_path=$.api_endpoint,exa_field_name=url,exa_match_expr=!InList($.api_endpoint,"")""",
       """exa_json_path=$..user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$..time,exa_field_name=time"""
-      """exa_json_path=$..user,exa_regex=({dest_user}[\w\.\-]+)"""
       """exa_json_path=$..user,exa_regex=({user_info}[^"]+)"""
-
     ]
-    DupFields = [ "object_name->object" ]
-  
-
+    DupFields = [ "object_name->object" 
 }
 ```

@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-json-group-member-list-4799
     """"CallerProcessId":"({process_id}[^"]+)"""",
     """"CallerProcessName":"({process_path}({process_dir}[^,"]+?[\\\/]+)?({process_name}[^\\\/\s"]+?))""""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

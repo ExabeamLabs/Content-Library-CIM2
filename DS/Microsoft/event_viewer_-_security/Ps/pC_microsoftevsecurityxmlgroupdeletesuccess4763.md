@@ -22,7 +22,7 @@ Name = microsoft-evsecurity-xml-group-delete-success-4763
      """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)""",
      """<Level>({run_level}[^<]+)<"""
    ]
-   DupFields = [ "host->dest_host" ]
+   DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  
 
 }

@@ -66,10 +66,7 @@ Fields = [
 """exa_regex=<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
 
 ]
-DupFields = [
-"host->dest_host",
-"event_name->additional_info"
-]
+DupFields = [ "host->dest_host", "event_name->additional_info", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

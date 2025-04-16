@@ -31,7 +31,6 @@ Use Case: Physical Security
 | [Cisco Identity and Access Management](../DS/Cisco/cisco_identity_and_access_management/ds_cisco_cisco_identity_and_access_management.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Cisco/cisco_identity_and_access_management/RM/r_m_cisco_cisco_identity_and_access_management_Physical_Security.md) |
 |                      [Cisco Network Security](../DS/Cisco/cisco_network_security/ds_cisco_cisco_network_security.md)                      | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Cisco/cisco_network_security/RM/r_m_cisco_cisco_network_security_Physical_Security.md)                             |
 |             [Cisco Remote Access Security](../DS/Cisco/cisco_remote_access_security/ds_cisco_cisco_remote_access_security.md)             | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Cisco/cisco_remote_access_security/RM/r_m_cisco_cisco_remote_access_security_Physical_Security.md)                 |
-|                                        [Duo Access](../DS/Cisco/duo_access/ds_cisco_duo_access.md)                                        | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Cisco/duo_access/RM/r_m_cisco_duo_access_Physical_Security.md)                                                     |
 ### Vendor: Citrix
 |                                  Product                                  | MITRE ATT&CK® TTP                    | Content                                                                                                                              |
 |:-------------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -58,23 +57,15 @@ Use Case: Physical Security
 |:--------------------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------- |
 | [FortiClient](../DS/Fortinet/forticlient/ds_fortinet_forticlient.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/forticlient/RM/r_m_fortinet_forticlient_Physical_Security.md) |
 |    [FortiGate](../DS/Fortinet/fortigate/ds_fortinet_fortigate.md)    | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Fortinet/fortigate/RM/r_m_fortinet_fortigate_Physical_Security.md)     |
-### Vendor: Galaxy
-|                      Product                      | MITRE ATT&CK® TTP          | Content                                                                                                              |
-|:-------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [Galaxy](../DS/Galaxy/galaxy/ds_galaxy_galaxy.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Galaxy/galaxy/RM/r_m_galaxy_galaxy_Physical_Security.md) |
 ### Vendor: Gallagher
 |                                                    Product                                                    | MITRE ATT&CK® TTP          | Content                                                                                                                                                        |
 |:-------------------------------------------------------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Gallagher Access Control](../DS/Gallagher/gallagher_access_control/ds_gallagher_gallagher_access_control.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Gallagher/gallagher_access_control/RM/r_m_gallagher_gallagher_access_control_Physical_Security.md) |
-### Vendor: Genetec
-|                                 Product                                  | MITRE ATT&CK® TTP          | Content                                                                                                                              |
-|:------------------------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| [Genetec Badge](../DS/Genetec/genetec_badge/ds_genetec_genetec_badge.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Genetec/genetec_badge/RM/r_m_genetec_genetec_badge_Physical_Security.md) |
 ### Vendor: Honeywell
 |                                            Product                                             | MITRE ATT&CK® TTP          | Content                                                                                                                                              |
 |:----------------------------------------------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [Honeywell Pro-Watch](../DS/Honeywell/honeywell_pro-watch/ds_honeywell_honeywell_pro-watch.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Honeywell/honeywell_pro-watch/RM/r_m_honeywell_honeywell_pro-watch_Physical_Security.md) |
-|    [Honeywell WIN-PAK](../DS/Honeywell/honeywell_win-pak/ds_honeywell_honeywell_win-pak.md)    | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Honeywell/honeywell_win-pak/RM/r_m_honeywell_honeywell_win-pak_Physical_Security.md)     |
+|    [Honeywell WIN-PAK](../DS/Honeywell/honeywell_win-pak/ds_honeywell_honeywell_win-pak.md)    | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Honeywell/honeywell_win-pak/RM/r_m_honeywell_honeywell_win-pak_Physical_Security.md)     |
 |       [Honeywell siama](../DS/Honeywell/honeywell_siama/ds_honeywell_honeywell_siama.md)       | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/Honeywell/honeywell_siama/RM/r_m_honeywell_honeywell_siama_Physical_Security.md)         |
 ### Vendor: Huawei
 |                                                           Product                                                            | MITRE ATT&CK® TTP                                              | Content                                                                                                                                                                 |
@@ -87,7 +78,7 @@ Use Case: Physical Security
 ### Vendor: ICPAM
 |                   Product                    | MITRE ATT&CK® TTP          | Content                                                                                                          |
 |:--------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| [ICPAM](../DS/ICPAM/icpam/ds_icpam_icpam.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/ICPAM/icpam/RM/r_m_icpam_icpam_Physical_Security.md) |
+| [ICPAM](../DS/ICPAM/icpam/ds_icpam_icpam.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/ICPAM/icpam/RM/r_m_icpam_icpam_Physical_Security.md) |
 ### Vendor: Identiv
 |                        Product                         | MITRE ATT&CK® TTP          | Content                                                                                                                  |
 |:------------------------------------------------------:| -------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -107,7 +98,7 @@ Use Case: Physical Security
 ### Vendor: KABA EXOS
 |                             Product                              | MITRE ATT&CK® TTP          | Content                                                                                                                          |
 |:----------------------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [KABA EXOS](../DS/KABA_EXOS/kaba_exos/ds_kaba_exos_kaba_exos.md) | T1078 - Valid Accounts<br> | [<ul><li>7 Rules</li></ul><ul><li>3 Models</li></ul>](../DS/KABA_EXOS/kaba_exos/RM/r_m_kaba_exos_kaba_exos_Physical_Security.md) |
+| [KABA EXOS](../DS/KABA_EXOS/kaba_exos/ds_kaba_exos_kaba_exos.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/KABA_EXOS/kaba_exos/RM/r_m_kaba_exos_kaba_exos_Physical_Security.md) |
 ### Vendor: Lenel
 |                      Product                       | MITRE ATT&CK® TTP          | Content                                                                                                              |
 |:--------------------------------------------------:| -------------------------- | -------------------------------------------------------------------------------------------------------------------- |

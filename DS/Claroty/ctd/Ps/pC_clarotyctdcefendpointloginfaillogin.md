@@ -3,7 +3,7 @@
 {
 Name = claroty-ctd-cef-endpoint-login-fail-login
   ParserVersion = "v1.0.0"
-  Conditions = [ """CEF:""", """|Schneider|CTD|""", """|Login|""", """|CtdSourceIp=""" ]
+  Conditions = [ """CEF:""", """|CTD|""", """|Login|""", """|CtdSourceIp=""" ]
   Fields = ${ClarotyParserTemplates.claroty-schneider-events.Fields}[
     """CtdMessage=[^:=]+?:\s*({failure_reason}[^:=,]+),[^:=]*?\s\w+="""
     """({app}CTD)"""

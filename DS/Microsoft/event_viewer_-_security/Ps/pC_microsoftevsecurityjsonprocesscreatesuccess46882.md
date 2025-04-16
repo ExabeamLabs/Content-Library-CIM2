@@ -38,6 +38,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-2
       """exa_json_path=$.SubjectUserName,exa_field_name=user"""
       """exa_json_path=$.SubjectDomainName,exa_field_name=domain"""
     ]
+    DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

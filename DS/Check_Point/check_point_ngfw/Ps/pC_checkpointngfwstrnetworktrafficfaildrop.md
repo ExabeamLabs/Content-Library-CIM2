@@ -49,6 +49,7 @@ Name = "checkpoint-ngfw-str-network-traffic-fail-drop"
 """\Wsent_bytes:\"+({bytes_out}\d+)"""
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):\"+(?:[^_\"\s]+_)?(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\""""
+"""\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   DupFields = [
 "action->event_name"

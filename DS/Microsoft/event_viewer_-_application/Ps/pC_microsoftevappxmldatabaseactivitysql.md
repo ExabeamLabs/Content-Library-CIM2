@@ -6,7 +6,7 @@ Name = microsoft-evapp-xml-database-activity-sql
   Product = Event Viewer - Application
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   ParserVersion = "v1.0.0"
-  Conditions = [ """<Provider Name""","""'MSSQLSERVER'""" ]
+  Conditions = [ """<Provider Name""","""MSSQLSERVER""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({host}[^<>]+)<""",

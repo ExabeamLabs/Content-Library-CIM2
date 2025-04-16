@@ -28,6 +28,7 @@ Fields = [
 """"subjectDomainName":"({domain}[^"\s]+?)\s*""""
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

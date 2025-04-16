@@ -17,7 +17,7 @@ Name = unix-auditd-kv-endpoint-logout-userend
     """\sres=({result}[^']+)\'""",
     """\sses=({session_id}\d+)""",
     """exe="({process_path}[^"]*)"""",
-    """exe="({process_dir}.+\/)({process_name}.+?)"""",
+    """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+=""",
     """\sauid=({account_id}\d+)\s""",
     """\suid=({user_id}\d+)""",
     """op=({action}[^\s]+)"""

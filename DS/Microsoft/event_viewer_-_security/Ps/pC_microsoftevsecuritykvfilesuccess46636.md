@@ -19,8 +19,8 @@ Fields = [
 """Logon ID:\s+({login_id}[^\s]+)\s+Object:"""
 """Security ID:\s+({user_sid}[^\s]+)\s"""
 """Accesses:\s+(?:|({access}.+?))\s+Access Mask:\s*({access_mask}\w+)?"""
-"""Object Name:.*\\({src_file_name}(?:[^\\:]+(?=\.))({src_file_ext}\.[^\\:\s]+)?|[^\\:\s]+)\s+Handle ID:"""
-"""Object Name:\s+(?:|({file_dir}.+?)\\(?:[^\\]+?))\s+Handle ID:"""
+"""Object Name:(?!\\+REGISTRY).*\\({src_file_name}(?:[^\\:]+(?=\.))({src_file_ext}\.[^\\:\s]+)?|[^\\:\s]+)\s+Handle ID:"""
+"""Object Name:\s+(?!\\+REGISTRY)(?:|({file_dir}.+?)\\(?:[^\\]+?))\s+Handle ID:"""
 """Object Type:\s+(?:|({file_type}.+?))\s+Object Name:"""
 ]
 DupFields = [

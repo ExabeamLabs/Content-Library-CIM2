@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-key-migrate-5059-1
     """<Data Name(\\)?=('|")KeyType('|")>({key_type}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

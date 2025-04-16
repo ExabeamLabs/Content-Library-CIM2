@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4745
     """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<""",
     """<Level>({run_level}[^<]+)<"""
     ]
+    DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

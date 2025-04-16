@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-configuration-modify-success-4716
     """<Data Name ='SubjectLogonId'>({login_id}[^<]+)</Data>"""   
     """<Level>({run_level}[^<]+)<""",
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

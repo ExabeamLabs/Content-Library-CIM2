@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4648-4
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  
 
 }

@@ -24,9 +24,7 @@ Fields = [
 """exa_json_path=$.SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$.SubjectLogonId,exa_field_name=login_id"""
 ]
-DupFields = [
-"dest_user->account_name"
-]
+DupFields = [ "dest_user->account_name", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

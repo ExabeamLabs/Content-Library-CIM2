@@ -20,10 +20,10 @@ Fields = [
 """"pid"+:({process_id}\d+)"""
 """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
 """"TargetUserName"+:"+(None|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))""""
-""""TargetDomainName"+:"+({domain}[^"]+)"""
-""""TargetLogonId"+:"+({login_id}[^"]+)"""
+""""TargetDomainName"+:"+({dest_domain}[^"]+)"""
+""""TargetLogonId"+:"+({dest_login_id}[^"]+)"""
 """"LogonType"+:"+({login_type}\d+)"""
-""""TargetUserSid"+:"+({user_sid}[^"<,]+)"""
+""""TargetUserSid"+:"+({dest_user_sid}[^"<,]+)"""
 """"record_id"+:({event_id}\d+)"""
 """"task"+:"+({task_name}[^"]+)"""
 """"event_id"+:({event_code}\d+)"""
@@ -46,8 +46,8 @@ Fields = [
 """exa_json_path=$..pid,exa_field_name=process_id""",
 """exa_json_path=$..thread.id,exa_field_name=thread_id""",
 """exa_json_path=$..TargetUserName,exa_regex=^(None|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))$""",
-"""exa_json_path=$..TargetDomainName,exa_field_name=domain""",
-"""exa_json_path=$..TargetSid,exa_field_name=user_sid""",
+"""exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
+"""exa_json_path=$..TargetSid,exa_field_name=dest_user_sid""",
 """exa_json_path=$..record_id,exa_field_name=event_id""",
 """exa_json_path=$..task,exa_field_name=task_name""",
 """exa_json_path=$..event_id,exa_field_name=event_code""",
@@ -61,7 +61,7 @@ Fields = [
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
 ]
-DupFields = [ "domain->dest_domain" ]
+DupFields = [ "domain->dest_domain", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

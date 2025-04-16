@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-share-modify-success-5143
     """<Message>({event_name}A network share object was modified)""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

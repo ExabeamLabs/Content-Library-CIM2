@@ -21,7 +21,6 @@ Fields = [
 ]
 DupFields = [
 "host->dest_host"
-"file_ext->host_file_ext"
 ]
 ParserVersion = "v1.0.0"
 

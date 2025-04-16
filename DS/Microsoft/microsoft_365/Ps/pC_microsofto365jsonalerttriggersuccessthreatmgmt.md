@@ -12,7 +12,7 @@ Name = microsoft-o365-json-alert-trigger-success-threatmgmt
     """"severity":"({alert_severity}[^"]+)"""",
     """privateIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """publicIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"title":"({alert_name}[^"]+)"""",
+    """"title":"({alert_name}[^"]+?)(\\u200b)?"""",
     """"category":"({alert_type}[^"]+)"""",
     """"description":"({additional_info}[^\n]+?)\s*","""",
     """userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",

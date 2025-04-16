@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-cef-user-privilege-use-success-4674-1"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
   """An operation was attempted on a privileged object."""
   """<EventID>4674</EventID>"""

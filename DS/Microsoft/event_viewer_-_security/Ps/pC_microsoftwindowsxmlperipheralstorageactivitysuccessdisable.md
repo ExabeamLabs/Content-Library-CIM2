@@ -25,6 +25,7 @@ Fields = [
 """<Level>({run_level}[^<]+)<"""
 """<Data Name ='DeviceId'>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)""""
 ]
+DupFields = ["user->src_user" , "domain->src_domain"]
 
 
 }

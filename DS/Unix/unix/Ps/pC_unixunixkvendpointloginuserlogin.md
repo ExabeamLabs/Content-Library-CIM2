@@ -26,6 +26,7 @@ Name = unix-unix-kv-endpoint-login-userlogin
     """\suid=({user_id}\d+)""",
     """\sses=({session_id}\d+)""",
     """\sauid=({account_id}\d+)\s"""
+    """type=({login_type_text}[^=]+?)\s+\w+="""
   ]
   DupFields = [ "host->dest_host" ]
 

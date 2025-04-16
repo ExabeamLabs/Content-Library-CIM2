@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)</Data>""",
     """<Data Name\\*=('|")AccessGranted('|")>({access_type}[^<]+)</Data>"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

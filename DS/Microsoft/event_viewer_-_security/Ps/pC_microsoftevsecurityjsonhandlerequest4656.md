@@ -29,7 +29,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"HandleId"+:"+({object_id}[^",]+)"""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
-  DupFields = [ "host->dest_host", "access->privileges" ]
+  DupFields = [ "host->dest_host", "access->privileges", "user->src_user", "domain->src_domain" ]
 
 
 }

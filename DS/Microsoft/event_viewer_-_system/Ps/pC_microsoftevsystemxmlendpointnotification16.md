@@ -6,7 +6,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
   Vendor = Microsoft
   Product = Event Viewer - System
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """<EventID>16</EventID>""", """<Provider Name""","""'Microsoft-Windows-Kernel-General'""" ]
+  Conditions = [ """<EventID>16</EventID>""", """<Provider Name""","""Microsoft-Windows-Kernel-General""" ]
   Fields = [
     """<Computer>({host}[^<]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
@@ -22,6 +22,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
     """Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user" , "domain->src_domain"]
 
 
 }

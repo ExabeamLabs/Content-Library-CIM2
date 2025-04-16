@@ -13,7 +13,7 @@ json-microsoft-security-events-1 = {
       Fields = [
       """"incidentId":\s*({alert_id}\d+)""",
       """"alertId":\s*"({alert_id}[^"]+)"""",
-      """"title":\s*"({alert_name}[^"]+)"""",
+      """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
       """"severity":\s*"({alert_severity}[^"]+)"""",
       """"category":\s*"({alert_type}[^"]+)"""",
       """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]""",

@@ -22,7 +22,7 @@ Fields = [
   """<Data Name\\*=('|")ObjectGUID('|")>\{({object_id}[^<\}]+)\}<"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = [ "src_ds_object_dn->ds_object_dn" ]
+DupFields = [ "src_ds_object_dn->ds_object_dn", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

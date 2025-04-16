@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-cef-user-privilege-modify-fail-4673
     """"objectServer":"({object_server}[^"]+?)\s*"""",
     """"privilegeList":"({privileges}[^"]+?)\s*"""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

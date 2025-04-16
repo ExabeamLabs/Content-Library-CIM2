@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4735-1
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

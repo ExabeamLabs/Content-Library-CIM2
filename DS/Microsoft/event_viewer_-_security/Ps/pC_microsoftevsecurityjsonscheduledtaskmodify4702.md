@@ -39,7 +39,7 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """exa_regex=<Command>({process_path}({process_dir}[^<]+)\\\\({process_name}[^<]+))<""",
     """exa_regex=<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

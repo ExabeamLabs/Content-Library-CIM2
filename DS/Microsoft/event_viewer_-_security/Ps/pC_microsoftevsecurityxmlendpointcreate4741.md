@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-endpoint-create-4741
     """<Keywords>({result}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
 	 ]
+   DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

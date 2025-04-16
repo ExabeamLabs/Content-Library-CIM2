@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
     """"TransactionId":"({transaction_id}[^"]+)"""",
     """"Message":"({event_name}[^.]+)""",
   ]
+  DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

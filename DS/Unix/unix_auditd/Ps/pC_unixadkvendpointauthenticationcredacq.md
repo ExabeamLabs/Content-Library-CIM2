@@ -22,6 +22,7 @@ Name = unix-ad-kv-endpoint-authentication-credacq
     """\suid=({user_uid}\d+)""",
     """op=({action}[^\s]+)"""
     """type=({operation_type}\S+)"""
+    """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+="""
   ]
   DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"

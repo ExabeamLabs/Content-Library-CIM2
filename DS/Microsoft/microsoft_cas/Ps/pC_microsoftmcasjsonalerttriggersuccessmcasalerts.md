@@ -17,7 +17,7 @@ Fields = [
   """\Wsuser=(|({email_address}[^@=]+?@[^@=]+)|({user_uid}(?i)s[^\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
   """"timestamp":({time}\d{13})"""
   """"description":"(|\s*({additional_info}[^\}]+?))\s*","""
-  """"title":"({alert_name}[^"]+)"""
+  """"title":"({alert_name}[^"]+?)(\\u200b)?""""
   """"URL":"({malware_url}[^"]+)"""
   """"severityValue":({alert_severity}\d+)"""
   """"_id":"({alert_id}[^"]+)"""

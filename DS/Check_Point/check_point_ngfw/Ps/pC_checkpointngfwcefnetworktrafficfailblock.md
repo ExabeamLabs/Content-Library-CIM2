@@ -58,6 +58,7 @@ Name = "checkpoint-ngfw-cef-network-traffic-fail-block"
     """\sbytes:"({bytes}\d+)""""
     """\Waction_reason:"({failure_reason}[^"]+?)""""
     """\Wreason:"({failure_reason}[^"]+?)""""
+    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
   DupFields = [
     "action->event_name"

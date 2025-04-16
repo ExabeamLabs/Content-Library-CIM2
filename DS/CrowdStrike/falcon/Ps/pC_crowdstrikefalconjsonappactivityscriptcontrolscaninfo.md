@@ -19,6 +19,7 @@ Fields = [
 """"ContextProcessId":"({process_id}[^"]+)"""",
 """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
 """"name":"({event_name}[^"]+)"""",
+"""'Content-Type:\s*({web_content_type}[^']+)'"""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -30,6 +31,7 @@ Fields = [
 """exa_json_path=$.name,exa_field_name=event_name""",
 """exa_json_path=$.ScriptContentName,exa_field_name=command_invocation"""
 """exa_json_path=$.ScriptContent,exa_field_name=scriptblock_text"""
+"""exa_regex='Content-Type:\s*({web_content_type}[^']+)'"""
 ]
 ParserVersion = "v1.0.0"
 

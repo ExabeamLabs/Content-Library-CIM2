@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-file-5058-1
     """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+(\.({file_ext}[^\s<]+))?)<"""
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

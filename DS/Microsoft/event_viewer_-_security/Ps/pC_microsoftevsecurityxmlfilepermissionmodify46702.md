@@ -30,7 +30,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-2
     """<Keywords>({result}[^<>]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["process_name -> file_name", "process_path -> file_path", "process_dir -> file_dir"]
+  DupFields = ["process_name -> file_name", "process_path -> file_path", "process_dir -> file_dir", "user->src_user", "domain->src_domain"]
 
 
 }

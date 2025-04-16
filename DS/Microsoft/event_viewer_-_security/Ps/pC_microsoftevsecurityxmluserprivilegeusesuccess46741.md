@@ -16,14 +16,14 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4674)"""
   """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*({user_sid}[^<]+)</Data>"""
-  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
+  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
+  """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({src_domain}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")ObjectServer('|")>(-|({object_server}[^<]+?))</Data>"""
   """<Data Name[\\\/]*=('|")PrivilegeList('|")>({privileges}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")ProcessName('|")>({process_path}({process_dir}[^<]*?)({process_name}[^\\<]+?))</Data>"""
   """Object Type:\s*((?-i)\\+[rnt])*(?:-|({object_type}[^:]+?))[\\rnt\s]*Object Name:""",
-  """Desired Access:\s*((?-i)\\+[rnt])*({access}[^:]+?)[\\rnt\s]*Privileges:"""
   """({event_name}An operation was attempted on a privileged object)"""
   """Object Name:\s*((?-i)\\+[rnt])*(?:|-|({object}[^<>]+?))[\\rnt\s]*Object Handle""",
   """Logon ID:\s*((?-i)\\+[rnt])*({login_id}[^:]+?)[\\rnt\s]*Object:""",
@@ -31,6 +31,7 @@ Fields = [
   """Creator Process ID:((?-i)\\+[rnt])*({process_id}.+?)((?-i)\\+[rnt])*Creator"""
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["src_user->user"]
 ParserVersion = "v1.0.0"
 
 

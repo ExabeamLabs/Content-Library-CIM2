@@ -10,7 +10,3 @@ Vendor: Dell
 | UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
 | UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
 | UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |

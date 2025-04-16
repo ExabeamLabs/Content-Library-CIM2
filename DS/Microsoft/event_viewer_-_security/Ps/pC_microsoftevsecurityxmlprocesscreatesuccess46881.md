@@ -22,8 +22,8 @@ Name = microsoft-evsecurity-xml-process-create-success-4688-1
    """Account Name:\s*(|-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:""",
    """Account Domain:\s*(|-|NT AUTHORITY|({domain}[^:]+?))\s*Logon ID:""",
    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<""",
-   """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
-   """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({domain}[^<]+))<""",
+   """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+   """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({src_domain}[^<]+))<""",
    """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<""",
    """New Process ID:\s*({process_guid}[x\da-f]+)""",
    """<Data Name\\*=('|")NewProcessId('|")>\s*({process_guid}[x\da-f]+)<""",
@@ -41,7 +41,7 @@ Name = microsoft-evsecurity-xml-process-create-success-4688-1
    """<Level>({run_level}[^<]+)<"""
    """<Data Name(\\)?\s*=('|")TargetUserName('|")>(-|({dest_user}[^<]+))"""
   ]
-  DupFields = [ "process_guid->process_id" , "host->src_host" ]
+  DupFields = [ "process_guid->process_id" , "host->src_host", "src_user->user", "src_domain->domain" ]
 
 
 }

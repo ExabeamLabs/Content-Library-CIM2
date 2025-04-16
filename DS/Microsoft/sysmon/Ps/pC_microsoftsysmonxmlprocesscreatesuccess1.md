@@ -7,7 +7,7 @@ Product = "Sysmon"
 TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 Conditions = [
 """<Provider Name"""
-"""'Microsoft-Windows-Sysmon'"""
+"""Microsoft-Windows-Sysmon"""
 """<EventID>1</EventID>"""
 ]
 Fields = [

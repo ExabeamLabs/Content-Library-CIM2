@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-group-member-remove-success-4757-1
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>"""
   ]
-  DupFields = [ "user_dn->member" ]
+  DupFields = ${WindowsParsersTemplates.s-xml-windows-member.DupFields}[ "user_dn->member" ]
 
 s-xml-windows-member = {
   Vendor = Microsoft
@@ -39,6 +39,7 @@ s-xml-windows-member = {
     """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
     """<Message>({event_name}[^:=<.]+)\."""
     """<Level>({run_level}[^<]+)<"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

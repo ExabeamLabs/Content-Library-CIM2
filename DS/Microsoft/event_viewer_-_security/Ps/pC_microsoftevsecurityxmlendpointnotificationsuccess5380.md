@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-5380
       """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<"""
       """<Level>({run_level}[^<]+)<"""
      ]
+     DupFields = ["user->src_user", "domain->src_domain"]
    
 
 }

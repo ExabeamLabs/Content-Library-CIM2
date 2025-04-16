@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4735-3
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 xml-windows-events = {
   Vendor = Microsoft

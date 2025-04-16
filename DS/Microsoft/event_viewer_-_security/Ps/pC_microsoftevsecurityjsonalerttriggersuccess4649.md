@@ -36,7 +36,7 @@ Name = microsoft-evsecurity-json-alert-trigger-success-4649
   """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",
   """exa_json_path=$..WorkstationName,exa_field_name=src_host_windows,exa_match_expr=!InList($.WORKSTATION_NAME,"-")"""
   ]
-  DupFields = [ "event_name->alert_name", "auth_process->alert_type" ]
+  DupFields = [ "event_name->alert_name", "auth_process->alert_type", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

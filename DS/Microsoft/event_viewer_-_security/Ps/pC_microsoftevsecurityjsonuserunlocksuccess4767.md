@@ -35,6 +35,7 @@ Fields = [
 """exa_json_path=$.TargetUserName,exa_field_name=dest_user"""
 """exa_json_path=$.TargetSid,exa_field_name=dest_user_sid"""
 ]
+DupFields = ["src_user->user", "src_domain->domain"]
 ParserVersion = "v1.0.0"
 
 

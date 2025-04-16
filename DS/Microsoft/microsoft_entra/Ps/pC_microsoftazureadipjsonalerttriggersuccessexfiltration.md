@@ -9,7 +9,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
   Conditions = [ """"category":""", """"Exfiltration"""", """"title":""", """"detectionSource"""", """"microsoftDataLossPrevention"""", """"severity":""" ]
   Fields = [
     """"id":\s*"({alert_id}[^"]+)"""",
-    """"title":\s*"({alert_name}[^"]+)"""",
+    """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
     """"severity":\s*"({alert_severity}[^"]+)"""",
     """"category":\s*"({alert_type}[^"]+)"""",
     """"description":\s*"({additional_info}[^"]+)"""",

@@ -41,9 +41,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """exa_json_path=$.MemberName,exa_field_name=user_dn"""
     """exa_regex="MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""
   ]
-  DupFields = [
-    "host->dest_host"
-  ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

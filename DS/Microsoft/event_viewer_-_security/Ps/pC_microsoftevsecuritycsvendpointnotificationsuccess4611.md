@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-csv-endpoint-notification-success-4611
       """SubjectDomainName ="+(?=\w)({domain}[^"]+)"""",
       """SubjectLogonId="+({login_id}[^"]+)""""
     ]
+    DupFields = [ "user->src_user", "domain->src_domain" ]
   
 
 }

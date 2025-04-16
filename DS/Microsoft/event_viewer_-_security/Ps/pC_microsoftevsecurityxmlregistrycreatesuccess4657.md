@@ -22,13 +22,15 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<Data Name\\*='OperationType'>({operation}[^\<]+)</Data>""",
     """<Data Name\\*='NewValueType'>(-|({registry_details_type}[^\<]+))</Data>""",
     """<Data Name\\*='NewValue'>(-|({registry_details}[^\<]+))</Data>""",
+    """<Data Name\\*='OldValueType'>(-|({old_registry_details_type}[^\<]+))</Data>""",
+    """<Data Name\\*='OldValue'>(-|({old_registry_details}[^\<]+))</Data>""",
     """<Data Name\\*='ProcessId'>({process_id}[^\<]+)</Data>""",
     """<Data Name\\*='ProcessName'>({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))</Data>""",
     """<Data Name\\*='ObjectName'>({registry_key}[^\<]+)<\/Data>""",
     """<Data Name\\*='ObjectValueName'>({registry_value}[^\<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "host->src_host" ]
+  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

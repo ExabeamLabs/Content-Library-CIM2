@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-sk4-endpoint-activity-success-microsoftwindowssecuri
     """exa_json_path=$..Category,exa_field_name=event_name""",
     """exa_json_path=$..Message,exa_regex=({event_name}[^.]+)"""
     ]
-   
+    DupFields = ["user->src_user", "domain->src_domain"]
  
 
 }

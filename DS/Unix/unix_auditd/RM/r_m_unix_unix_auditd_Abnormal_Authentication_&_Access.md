@@ -7,7 +7,7 @@ Vendor: Unix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   19   |         6          |       13       |   34    |
+|  45   |   19   |         6          |       13       |   37    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

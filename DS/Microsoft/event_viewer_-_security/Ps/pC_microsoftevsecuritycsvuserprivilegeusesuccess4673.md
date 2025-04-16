@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-csv-user-privilege-use-success-4673
     """ProcessName:({process_path}(({process_dir}[^"]+)[\\\/])?({process_name}[^"\\]+?))\s+\d+""",
     """({result}(Success|Failure) Audit)"""
   ]
+  DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

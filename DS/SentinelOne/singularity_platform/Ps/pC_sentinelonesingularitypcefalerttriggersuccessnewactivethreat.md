@@ -20,7 +20,7 @@ Fields = [
 """\WeventSeverity=({alert_severity}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """\Wrt=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+)"""
 """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-"""\WfileHash=(N/A|({hash_md5}[^\|]+?))((\||\s+)\w+=|\s*$)"""
+"""\WfileHash=(N/A|(({hash_md5}\w{32})|({hash_sha1}\w{40})|({hash_sha256}\w{64})))((\||\s+)\w+=|\s*$)"""
 """\WfilePath=(N/A|({file_path}[^\|]+?))((\||\s+)\w+=|\s*$)"""
 """\WfileName =({file_dir}[^\|]*?\\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\Desktop\\)?)({file_name}[^\\\|]+?({file_ext}[^\\\|\.]+)?)((\||\s+)\w+=|\s*$)"""
 """\WthreatClassification=({alert_name}[^\|]+?)((\||\s+)\w+=|\s*$)"""

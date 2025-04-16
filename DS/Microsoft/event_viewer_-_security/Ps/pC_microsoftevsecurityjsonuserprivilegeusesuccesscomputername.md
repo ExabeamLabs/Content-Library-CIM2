@@ -21,14 +21,15 @@ Fields = [
   """Computer(\w+)?[\"\s]*(:|=)\s*\"?({src_host}({host}[\w\-.]+))"""
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """({event_code}4672)"""
-  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
   """Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)"""
   """\s*Logon ID(:|=)\s*({login_id}.+?)[\s;]*Privileges(:|=)\s*({privileges}.+?)(<|\s*User:|\s+\d+|,|\s*\"|;|\s*$)"""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
   """PrivilegeList\\?\"+:\\?\"({privileges}[^\"]+?)\\?\""""
-  """SubjectDomainName\\?\"+:\\?\"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?\""""
+  """SubjectDomainName\\?\"+:\\?\"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\]+))\\?\""""
 ]
+DupFields = ["src_user->user", "src_domain->domain"]
 ParserVersion = "v1.0.0"
 
 

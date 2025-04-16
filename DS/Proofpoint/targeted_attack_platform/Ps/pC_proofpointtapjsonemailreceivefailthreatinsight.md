@@ -10,6 +10,10 @@ Name = proofpoint-tap-json-email-receive-fail-threatinsight
 """"senderIP":""",
 """recipient":"""
   ]
+  Fields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.Fields}[
+""""threatID":\s*"({threat_id}[^",]+?)\s*("|,)""",
+"""eventType=({event_name}[^\s]+)"""
+]
   DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_type->alert_name"]
 
 s-proofpoint-email-in-1 = {

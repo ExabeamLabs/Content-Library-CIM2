@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4691
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 xml-windows-events = {
   Vendor = Microsoft

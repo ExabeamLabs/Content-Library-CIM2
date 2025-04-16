@@ -35,9 +35,7 @@ Fields = [
 """exa_json_path=$..AccessList,exa_field_name=access""",
 """exa_regex=Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [
-"object_name->object"
-]
+DupFields = ["object_name->object", "user->src_user", "domain->src_domain"]
 
 
 }

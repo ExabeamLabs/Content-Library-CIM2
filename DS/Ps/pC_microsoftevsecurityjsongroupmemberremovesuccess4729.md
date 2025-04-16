@@ -10,10 +10,7 @@ Conditions = [
 """event_id\":4729"""
 """computer_name"""
 ]
-DupFields = [
-"user_dn->member",
-"src_host_windows->src_host"
-]
+DupFields = [ "user_dn->member", "src_host_windows->src_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -25,11 +25,7 @@ Fields = [
   """Enabled.*?'({user_type}[^']+)"""
   """ProviderGuid="+({process_guid}[^"]+)""""
 ]
-DupFields = [
-  "account_name->dest_user"
-  "account_domain->dest_domain"
-  "dest_user->account_name"
-]
+DupFields = [ "account_name->dest_user", "account_domain->dest_domain", "dest_user->account_name", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

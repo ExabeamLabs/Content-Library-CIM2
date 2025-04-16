@@ -5,10 +5,10 @@ Name = cisco-fp-str-network-start-success-710002
   Vendor = Cisco
   Product = Cisco Network Security
   ParserVersion = v1.0.0
-  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  TimeFormat = ["MMM dd yyyy HH:mm:ss","MMM dd HH:mm:ss"]
   Conditions = [ """-710002""", """%FTD-""" ]
   Fields = [
-    """({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d)\s+({host}[\w\-.]+)\s*:\s*%FTD""",
+    """({time}\w+ \d+ (\d\d\d\d )?\d\d:\d\d:\d\d)\s(\w+\s)?({host}[\w\-.]+)\s*:\s*(\w+\s|%\w+\-)""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD\-({priority}\d+)\-({event_code}\d+)""",
     """({protocol}[^\s:]+?)\s+({event_name}access permitted .+?)\s+$""",

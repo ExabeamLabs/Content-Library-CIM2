@@ -5,7 +5,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
   Vendor = Google
   Product = Google Cloud Platform
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"insertId":"""" ] 
   Fields = [
@@ -15,13 +15,14 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"status":.+"code":\s*({result_code}\d+)""",
     """"status":.+"message":\s*"?({failure_reason}[^},]+)"""",
     """"principalEmail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))"""",
-    """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"(callerIp|src_ip)":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","src_port")?(:({src_port}\d+))?"?""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
     """"methodName":\s*"({operation}[^"]+)""",
     """"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"""",
     """"serviceName":\s*"({service_name}[^"]+)""",
     """"resource":\s*\{\s*"type":\s*"({resource_type}[^"\\\/]+)"""",
     """"resource"+:[^\}]*labels[^\}]*"+project_id"+:\s*"+({project_id}[^"\\\/\}]+)"+""",
+    """"+zone"+:\s*"+({zone}[^"\\\/\}]+)"+""",
     """"resource"+:[^\}]*labels[^\}]*"+zone"+:\s*"+({zone}[^"\\\/\}]+)"+""",
     """"resource"+:[^\}]*labels[^\}]*"+location"+:\s*"+({region}[^"\\\/\}]+)"+""",
     """"resource"+:[^\}]*labels[^\}]*"+bucket_name"+:\s*"+({bucket_name}[^"\\\/\}]+)"+""",
@@ -29,6 +30,12 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
     """"user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"callerUserAgent":"({user_agent}[^"]+)""""
+    """"vpc":({vpc}[^\}]*"})"""
+    """"vm_name":"({vm_host_name}[^",]*)""""
+    """"subnetwork_name":"({subnetwork}[^",]*)""""
+    """"resource":({resource}[^\}]*"})"""
+    """"resource"+:[^\}]*labels[^\}]*"+region"+:\s*"+({region}[^"\\\/\}]+)"+"""
+    """"dest_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","dest_port")?(:({dest_port}\d+))?"?"""
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.logName,exa_field_name=event_category""",
     """exa_json_path=$.log-name,exa_field_name=event_category""",
@@ -48,6 +55,16 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """exa_json_path=$.resource.type,exa_field_name=resource_type""",
     """exa_json_path=$.resource.labels.project_id,exa_field_name=project_id""",
     """exa_json_path=$.resource.labels.zone,exa_field_name=zone""",
+    """exa_json_path=$..endpoint.zone,exa_field_name=zone""",
+    """exa_json_path=$..vpc,exa_field_name=vpc""",
+    """exa_json_path=$..vpc.subnetwork_name,exa_field_name=subnetwork""",
+    """exa_json_path=$..endpoint.vm_name,exa_field_name=vm_host_name""",
+    """exa_json_path=$.jsonPayload..src_ip,exa_field_name=src_ip""",
+    """exa_json_path=$.jsonPayload..src_port,exa_field_name=src_port""",
+    """exa_json_path=$.jsonPayload..dest_ip,exa_field_name=dest_ip""",
+    """exa_json_path=$.jsonPayload..dest_port,exa_field_name=dest_port""",
+    """exa_json_path=$.resource,exa_field_name=resource""",
+    """exa_json_path=$.resource.labels.region,exa_field_name=region""",
     """exa_json_path=$.resource.labels.location,exa_field_name=region""",
     """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name""",
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",

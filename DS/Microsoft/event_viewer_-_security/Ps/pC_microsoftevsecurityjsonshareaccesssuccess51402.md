@@ -24,10 +24,7 @@ Fields = [
 """'IpPort'>({src_port}\d+)"""
 """Source Port(=|:)\s*(\\t)*({src_port}\d+)"""
 ]
-DupFields = [
-"host->dest_host"
-"accesses_code->access"
-]
+DupFields = [ "host->dest_host", "accesses_code->access", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

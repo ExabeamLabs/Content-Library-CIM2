@@ -20,16 +20,14 @@ Fields = [
   """<Data Name(\\)?=(\\)?"+SubjectDomainName(\\)?"+>(NT AUTHORITY|({domain}[^<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectLogonId(\\)?"+>({login_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectType(\\)?"+>({file_type}[^<]+)<\/Data>"""
-  """<Data Name(\\)?=(\\)?"+ObjectName(\\)?"+>({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?)|[^\\:<]+)<\/Data>"""
+  """<Data Name(\\)?="ObjectName">(({registry_path}\\+REGISTRY[^<]+?(\\\{({registry_key}[^\}<]+)\})?)|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?)|[^\\:<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ProcessName(\\)?"+>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/"<]+?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+AccessList(\\)?"+>({access}.+?)\s(\\t)*"""
   """AccessMask"+:"+({access_mask}[^"]+)"""
   """<Level>({run_level}[^<]+)<"""
   """"Activity":"({event_name}[^"]+)""""
 ]
-DupFields = [
-  "host->src_host"
-]
+DupFields = [ "host->src_host", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -31,7 +31,7 @@ Fields = [
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [ "object_name->object" ]
+DupFields = [ "object_name->object", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

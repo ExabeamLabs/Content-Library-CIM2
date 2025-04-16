@@ -9,11 +9,12 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-6278
     """<Computer>({host}[\w\.\-]+)<""",
     """<Security UserID\\*='({user_sid}[^']+)""",
     """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)</Data>""",
-    """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",
+    """<Data Name\\*='SubjectDomainName'>({src_domain}[^<]+)</Data>""",
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)</Data>""",
-    """<Data Name\\*='SubjectUserName'>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*='SubjectUserName'>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
+  DupFields = ["src_user->user", "src_domain->domain"]
 
 s-xml-object-access = {
   Vendor = Microsoft

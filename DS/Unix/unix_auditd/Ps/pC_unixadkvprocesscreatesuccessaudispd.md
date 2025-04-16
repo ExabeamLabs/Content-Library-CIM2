@@ -24,6 +24,7 @@ Name = unix-ad-kv-process-create-success-audispd
     """cmd="?({process_dir}[^"=]*\/)?({process_name}[^"=]+?)\s*("|\(?\w+=|$)""",
     """res=({result}[^\s'"\)]+)"""  
     """cmd=({process_command_line}[^=]+?)\s*\w+="""
+    """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+="""
   ]
   DupFields = ["host->src_host"]
 

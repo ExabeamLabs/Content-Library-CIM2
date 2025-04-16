@@ -6,7 +6,7 @@ Vendor = "Microsoft"
 Product = "Event Viewer - Security"
 ParserVersion = v1.0.0
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-Conditions = [ """<EventID>4743</EventID>"""  ,"""<Provider Name""","""'Microsoft-Windows-Security-Auditing"""]
+Conditions = [ """<EventID>4743</EventID>"""  ,"""<Provider Name""","""Microsoft-Windows-Security-Auditing"""]
 Fields = [
   """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
   """<Computer>({host}[\w\-.]+)</Computer>""",
@@ -27,6 +27,7 @@ Fields = [
   """<Data Name[^<>]+?TargetUserName[^<>]+?>({dest_user}[^<>]+?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

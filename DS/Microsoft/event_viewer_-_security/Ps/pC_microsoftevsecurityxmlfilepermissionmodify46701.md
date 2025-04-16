@@ -39,6 +39,7 @@ windows-events-3-dl = {
     """<Data Name\\='SubjectDomainName'>(-|({domain}[^<>]+))<""",
     """<Data Name\\='SubjectLogonId'>(-|({login_id}[^<>]+))<"""
     """Source Port(=|:)\s*({src_port}\d+)"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

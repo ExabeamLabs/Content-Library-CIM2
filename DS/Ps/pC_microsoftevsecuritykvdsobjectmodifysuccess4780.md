@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-4780
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

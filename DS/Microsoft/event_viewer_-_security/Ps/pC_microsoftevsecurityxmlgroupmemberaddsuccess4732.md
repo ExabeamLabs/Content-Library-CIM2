@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4732
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>"""
   ]
-  DupFields = [ "host->src_host" ]
+  DupFields = ${WindowsParsersTemplates.s-xml-windows-member.DupFields}[ "host->src_host" ]
 
 s-xml-windows-member = {
   Vendor = Microsoft
@@ -38,6 +38,7 @@ s-xml-windows-member = {
     """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
     """<Message>({event_name}[^:=<.]+)\."""
     """<Level>({run_level}[^<]+)<"""
-  
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

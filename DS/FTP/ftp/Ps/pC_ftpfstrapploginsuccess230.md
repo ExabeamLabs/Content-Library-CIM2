@@ -14,7 +14,6 @@ Name = ftp-f-str-app-login-success-230
     """(-|(({domain}\S+)[\/\\])?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\[\d+\]""",
     """\]pass\s+(\S+\s+){2}({result}\d+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

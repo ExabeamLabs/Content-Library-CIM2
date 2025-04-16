@@ -27,9 +27,7 @@ Fields = [
   """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({dest_domain}[^<]+)</Data>"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = [
-  "dest_user->account_name"
-]
+DupFields = [ "dest_user->account_name", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

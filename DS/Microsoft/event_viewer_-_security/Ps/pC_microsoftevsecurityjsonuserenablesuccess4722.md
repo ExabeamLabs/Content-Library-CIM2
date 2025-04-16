@@ -21,6 +21,7 @@ Fields = [
 """\"TargetUserName\":\"({dest_user}[^\"]+)"""
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

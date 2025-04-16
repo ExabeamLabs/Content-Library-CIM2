@@ -28,8 +28,8 @@ windows-events-5 = {
     """Data Name\\*='Ipaddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<\/Data>""",
     """Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
     """\WCLSID\s*\{({cls_id}[^}\s]+)\}\s*"""
-    """<Level>({run_level}[^<]+)<"""
-    
-  
+    """<Level>({run_level}[^<]+)<"""    
+  ]
+  DupFields = ["user->src_user", "domain->src_domain"
 }
 ```

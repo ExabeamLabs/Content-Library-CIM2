@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-delete-4699
     """<Computer>({src_host}({host}[^<>]+))<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 s-xml-events = {
   ParserVersion = "v1.0.0"
@@ -27,7 +28,7 @@ s-xml-events = {
     """<Security UserID='({user_sid}[^']+)'\/>""",
     """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>""",
     """<Level>({run_level}[^<]+)<""",
-    """<Provider Name ='({provider_name}[^']+)'""",
+    """<Provider Name =('|")({provider_name}[^']+)('|")""",
     """Guid='\{({process_guid}[^}]+?)\}""",
     """<Task>({task_name}[^<]+)""",
     """<Opcode>(0|({opcode}[^<]+))<""",

@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-3
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   ParserVersion = v1.0.0
-  Conditions = ["""<EventID>4760</EventID>""", """<Provider Name ="Microsoft-Windows-Security-Auditing"""" ]
+  Conditions = ["""<EventID>4760</EventID>""", """<Provider Name =""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<TimeCreated SystemTime(\\)?="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-3
     """<Data Name\\*="PrivilegeList">({privileges}[^<]+?)<""",
     """<Level>({run_level}[^<]+)<"""
   ]
+  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -24,13 +24,13 @@ Fields = [
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}\S+)</Data>"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)<"""
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "host->src_host" ]
+DupFields = [ "host->src_host", "src_user->user", "src_domain->domain" ]
 
 
 }

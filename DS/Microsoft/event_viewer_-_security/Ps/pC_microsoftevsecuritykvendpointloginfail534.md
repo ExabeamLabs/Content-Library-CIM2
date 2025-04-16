@@ -296,9 +296,7 @@ Fields = [
   """AuthenticationPackageName ="({auth_package}[^"]+)""""
   """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [
-  "dest_host->host"
-]
+DupFields = [ "dest_host->host", "user->src_user", "domain->src_domain" ]
 Name = "microsoft-evsecurity-kv-endpoint-login-fail-534"
 Conditions = [
   """LogType="WLS""""
@@ -660,7 +658,7 @@ ${WindowsParsersTemplates.windows-events-wls} {
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  },
 
 ${WindowsParsersTemplates.windows-events-wls} {
@@ -671,6 +669,6 @@ ${WindowsParsersTemplates.windows-events-wls} {
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
     """Computer="+({host}[\w\-.]+)""""
   ]
-  DupFields = [ "host->dest_host" 
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" 
 }
 ```

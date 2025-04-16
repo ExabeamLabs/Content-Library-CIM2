@@ -18,7 +18,7 @@ Fields = [
 """exa_json_path=$..pid,exa_field_name=process_id""",
 """exa_json_path=$..thread.id,exa_field_name=thread_id""",
 """exa_json_path=$..TargetUserName,exa_regex=^(None|({dest_user}[^"]+))$""",
-"""exa_json_path=$..TargetDomainName,exa_field_name=domain""",
+"""exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
 """exa_json_path=$..record_id,exa_field_name=event_id""",
 """exa_json_path=$..task,exa_field_name=task_name""",
 """exa_json_path=$..event_id,exa_field_name=event_code""",
@@ -37,6 +37,7 @@ Fields = [
 """exa_regex="MemberSid":"(({dest_user_sid}S-\d+-[^"]+)|({account_id}[^"]+))"""",
 """exa_json_path=$..TargetSid,exa_field_name=group_id"""
 ]
+DupFields = [ "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

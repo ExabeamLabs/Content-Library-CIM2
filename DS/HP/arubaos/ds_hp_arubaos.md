@@ -4,13 +4,13 @@ Product: ArubaOS
 ----------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  13   |   6    |         3          |       2        |    3    |
+|  13   |   6    |         3          |       2        |    5    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  endpoint-login:success (nac-logon)<br> ↳[hp-arubaos-str-endpoint-login-success-00179](Ps/pC_hparubaosstrendpointloginsuccess00179.md)<br> ↳[hp-arubaos-str-endpoint-login-success-03362](Ps/pC_hparubaosstrendpointloginsuccess03362.md)<br>    | T1021 - Remote Services<br>T1078 - Valid Accounts<br>    | [<ul><li>8 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_hp_arubaos_Abnormal_Authentication_&_Access.md) |
-|          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  endpoint-login:success (nac-logon)<br> ↳[hp-arubaos-str-endpoint-login-success-00179](Ps/pC_hparubaosstrendpointloginsuccess00179.md)<br> ↳[hp-arubaos-str-endpoint-login-success-03362](Ps/pC_hparubaosstrendpointloginsuccess03362.md)<br>    | T1021 - Remote Services<br>T1078 - Valid Accounts<br>    | [<ul><li>6 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_hp_arubaos_Compromised_Credentials.md)          |
-|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  endpoint-logout:success (logout-remote)<br> ↳[hp-arubaos-str-endpoint-logout-success-03363](Ps/pC_hparubaosstrendpointlogoutsuccess03363.md)<br><br> endpoint-login:success (nac-logon)<br> ↳[hp-arubaos-str-endpoint-login-success-00179](Ps/pC_hparubaosstrendpointloginsuccess00179.md)<br> ↳[hp-arubaos-str-endpoint-login-success-03362](Ps/pC_hparubaosstrendpointloginsuccess03362.md)<br> | T1021 - Remote Services<br>T1078 - Valid Accounts<br>T1210 - Exploitation of Remote Services<br> | [<ul><li>5 Rules</li></ul><ul><li>2 Models</li></ul>](RM/r_m_hp_arubaos_Lateral_Movement.md)    |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  endpoint-login:success (nac-logon)<br> ↳[hp-arubaos-str-endpoint-login-success-5209](Ps/pC_hparubaosstrendpointloginsuccess5209.md)<br> ↳[hp-arubaos-str-endpoint-login-success-00179](Ps/pC_hparubaosstrendpointloginsuccess00179.md)<br> ↳[hp-arubaos-str-endpoint-login-success-03362](Ps/pC_hparubaosstrendpointloginsuccess03362.md)<br> | T1021 - Remote Services<br>T1078 - Valid Accounts<br> | [<ul><li>8 Rules</li></ul><ul><li>4 Models</li></ul>](RM/r_m_hp_arubaos_Abnormal_Authentication_&_Access.md) |
+|          [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md)          |  endpoint-login:success (nac-logon)<br> ↳[hp-arubaos-str-endpoint-login-success-5209](Ps/pC_hparubaosstrendpointloginsuccess5209.md)<br> ↳[hp-arubaos-str-endpoint-login-success-00179](Ps/pC_hparubaosstrendpointloginsuccess00179.md)<br> ↳[hp-arubaos-str-endpoint-login-success-03362](Ps/pC_hparubaosstrendpointloginsuccess03362.md)<br> | T1021 - Remote Services<br>T1078 - Valid Accounts<br> | [<ul><li>6 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_hp_arubaos_Compromised_Credentials.md)          |
+[Next Page -->>](2_ds_hp_arubaos.md)
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

@@ -26,7 +26,7 @@ Name = "microsoft-evsecurity-xml-scheduled-task-create-success-4700-2"
     """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host-> dest_host"]
+  DupFields = [ "host-> dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

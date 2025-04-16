@@ -28,9 +28,7 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
     """Member:(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [
-    "host->dest_host"
-  ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

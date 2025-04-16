@@ -32,6 +32,7 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """Source Port(=|:)\s*({src_port}\d+)"""
       """<Level>({run_level}[^<]+)<"""
     ]
+    DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

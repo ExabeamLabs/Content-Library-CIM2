@@ -24,7 +24,7 @@ Name = microsoft-evsecurity-kv-share-access-5145
     """({result}(Success|Failure) Audit)"""
     """Source Port(=|:)\s*({src_port}\d+)"""
   ]
-  DupFields = ["host->dest_host"]
+  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

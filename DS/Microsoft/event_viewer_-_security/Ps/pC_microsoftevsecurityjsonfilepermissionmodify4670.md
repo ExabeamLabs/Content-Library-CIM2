@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670
     """exa_json_path=$..NewSd,exa_field_name=attribute""",
     """exa_json_path=$.Opcode,exa_field_name=severity"""
 ]
+DupFields = ["user->src_user", "domain->src_domain"]  
 
 
 }

@@ -17,6 +17,7 @@ Name = "microsoft-evsecurity-json-ds-object-modify-success-4738-2"
     """"Category"+:"+({category}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)""""
   ]
+  DupFields = [ "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

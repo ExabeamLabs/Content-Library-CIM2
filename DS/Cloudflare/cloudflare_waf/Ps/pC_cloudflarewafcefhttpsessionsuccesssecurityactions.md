@@ -6,7 +6,7 @@ Name = cloudflare-waf-cef-http-session-success-securityactions
   Product = Cloudflare WAF
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """destinationServiceName =Cloudflare""", """ResponseStatus"""", """SecurityActions""" ]
+  Conditions = [ """destinationServiceName =Cloudflare""", """ResponseStatus"""", """SecurityActions""", """"ClientRequestMethod":""" ]
   Fields = [
     """"EdgeStartTimestamp"+:"*({time}\d+)""",
     """"EdgeStartTimestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",

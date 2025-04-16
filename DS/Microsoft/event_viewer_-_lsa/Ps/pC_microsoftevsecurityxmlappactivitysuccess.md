@@ -24,7 +24,7 @@ windows-xml-events = {
     """<Security UserID='({user_sid}[^']+)'\/>""",
     """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>""",
     """<Level>({run_level}[^<]+)<""",
-    """<Provider Name ='({provider_name}[^']+)'""",
+    """<Provider Name =('|")({provider_name}[^']+)('|")""",
     """Guid='\{({process_guid}[^}]+?)\}""",
     """<Task>({task_name}[^<]+)""",
     """<Opcode>(0|({opcode}[^<]+))<""",

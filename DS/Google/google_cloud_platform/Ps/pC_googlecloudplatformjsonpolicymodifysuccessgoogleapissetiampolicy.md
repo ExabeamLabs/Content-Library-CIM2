@@ -6,7 +6,7 @@ Name = google-cloudplatform-json-policy-modify-success-googleapissetiampolicy
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"SetIamPolicy"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
-    """exa_regex="response"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
+    """exa_regex="(response|request)"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
     """exa_regex="bindingDeltas"+:\s*\[\s*({policy_delta}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+)""",
     """exa_regex="action"+:\s*"+ADD"+,\s*"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*""",
     """exa_regex="action"+:\s*"+ADD"+,\s*"+member"+:\s*"+({added_member_type}user|serviceAccount|group):?({added_member}[^"@,]+@({added_member_domain}[^@"]+)|[^"@,]+)"+\s*,"+role"+:\s*"+({added_role}[^",]+\/({added_role_name}[^",]+))"+""",
@@ -21,7 +21,7 @@ gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss"]
     Fields = [
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
@@ -42,6 +42,11 @@ gcp-cloudaudit-json = {
     """"resource"+:[^\}]*labels[^\}]*"+bucket_name"+:\s*"+({bucket_name}[^"\\\/\}]+)"+""",
     """"operation"+:[^\}]*first"+:\s*({operation_first}[^"\\\/\}\s,]+)""",
     """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
+    """"severity":"({severity}[^"]+)""",
+    """etag":"({tag}[^"]+)""",
+    """""(response|request)"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
+    """"authorizationInfo":\[\{[^\}]+"permissionType":"({operation_type}[^"]+)""",
+    """"authorizationInfo":\[\{[^\}]+"permission":"({permission}[^"]+)""",
     """exa_json_path=$..logEntries..timestamp,exa_field_name=time""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.logName,exa_field_name=event_category""",
@@ -70,6 +75,10 @@ gcp-cloudaudit-json = {
     """exa_json_path=$.operation.last,exa_field_name=operation_last"""
     """exa_json_path=$..request.storageLocations[0],exa_field_name=location""",
     """exa_json_path=$..response.operationType,exa_field_name=operation_type"""
+    """exa_json_path=$.protoPayload.request.policy.etag,exa_field_name=tag"""
+    """exa_json_path=$.severity,exa_field_name=severity"""
+    """exa_json_path=$.protoPayload.authorizationInfo[:1].permission,exa_field_name=permission"""
+    """exa_json_path=$.protoPayload.authorizationInfo[:1].permissionType,exa_field_name=operation_type"""
     
 }
 ```

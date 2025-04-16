@@ -33,9 +33,7 @@ Fields = [
   """Access Check Results:.*({result}Granted|Denied)\s+by"""
   """Source Port(=|:)\s*((?-i)\\+[rnt])*({src_port}\d+)"""
 ]
-DupFields = [
-  "host->dest_host"
-]
+DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

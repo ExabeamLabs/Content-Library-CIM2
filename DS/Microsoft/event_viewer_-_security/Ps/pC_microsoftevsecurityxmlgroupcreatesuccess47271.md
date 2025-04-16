@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4727-1
     """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)</Data>"""	
     """<Level>({run_level}[^<]+)<"""
 ] 
+DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4742
     """TargetDomainName"\s*:\s*"({ds_object_dn}[^"]+)""",
     """TargetUserName"\s*:\s*"({src_host}[^\s$]+)\$"""
   ]
-  DupFields = [ "host->dest_host"]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

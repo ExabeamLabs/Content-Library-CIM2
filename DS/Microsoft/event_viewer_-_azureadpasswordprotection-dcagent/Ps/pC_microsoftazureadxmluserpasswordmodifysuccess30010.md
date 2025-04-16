@@ -6,7 +6,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-30010
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>30010</EventID>""", """'Microsoft-AzureADPasswordProtection-DCAgent'""", """ UserName:""" ]
+  Conditions = [ """<EventID>30010</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""" ]
   Fields = [
     """<EventID>({event_code}30010)</EventID>"""
     """<Computer>({host}[^<]+)</Computer>""",

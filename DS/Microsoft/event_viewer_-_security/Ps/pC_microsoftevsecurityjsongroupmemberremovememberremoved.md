@@ -28,9 +28,7 @@ Name = "microsoft-evsecurity-json-group-member-remove-memberremoved"
     """"TargetDomainName":"({group_domain}[^"]+)""",
     """"TargetSid":"({group_id}[^"]+)"""
   ]
-  DupFields = [
-    "host->dest_host"
-  ]
+  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 
