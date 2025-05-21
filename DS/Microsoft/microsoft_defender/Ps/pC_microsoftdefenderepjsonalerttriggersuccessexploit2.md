@@ -34,7 +34,8 @@ json-microsoft-security-events-1 = {
       """"entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
       """"entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
       """"entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
-      """ipAddress\":\"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\""""
+      """ipAddress\":\"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\""""
+      """recipientEmailAddress":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_json_path=$.alertId,exa_field_name=alert_id"""
       """exa_json_path=$.title,exa_field_name=alert_name"""
@@ -53,11 +54,12 @@ json-microsoft-security-events-1 = {
       """exa_regex="deviceDnsName":\s*"+({src_host}[\w.-]+)""""
       """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.threatFamilyName,exa_field_name=malware_family"""
-      """exa_regex="ipAddress":\s*"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
+      """exa_regex="ipAddress":\s*"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
       """exa_regex="entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
       """exa_regex="entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
       """exa_regex="entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
       """exa_regex="entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
+      """exa_json_path=$.evidence[:1].recipientEmailAddress,exa_field_name=email_address"""
       ]
  },
 

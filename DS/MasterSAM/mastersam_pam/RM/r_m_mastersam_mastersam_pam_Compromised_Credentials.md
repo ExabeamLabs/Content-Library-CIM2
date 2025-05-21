@@ -7,7 +7,7 @@ Vendor: MasterSAM
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  49   |   29   |         3          |       3        |   10    |
+|  49   |   29   |         3          |       3        |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -5,7 +5,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-graphsecurityalert
   Product = Microsoft Entra
   Conditions = [ """"category":"UnfamiliarLocation"""", """vendor":"Microsoft"""", """"sourcetype":"GraphSecurityAlert"""", """provider":"IPC"""" ]
   Fields = ${MicrosoftParserTemplates.defender-atp-security-alert-events.Fields} [
-  """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"logonIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"logonLocation"+:\s*"+({location}[^"]+)""""
   """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
   """"id":\s*"({alert_id}[^"]+)"""",
@@ -19,8 +19,8 @@ defender-atp-security-alert-events = {
       """"(timestamp|firstActivityDateTime)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)"""",
       """"hostname":"({host}[^"]+)"""",
       """"severity":"({alert_severity}[^"]+)"""",
-      """(privateIpAddress|ipAddress)":"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
-      """publicIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+      """(privateIpAddress|ipAddress)":"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
+      """publicIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """"title":"({alert_name}[^"]+?)(\\u200b)?"""",
       """"category":"({alert_type}[^"]+)"""",
       """"description":"({additional_info}[^\n]+?)\s*","""",
@@ -31,8 +31,8 @@ defender-atp-security-alert-events = {
       """exa_json_path=$.firstActivityDateTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)""",
       """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
       """exa_json_path=$.severity,exa_field_name=alert_severity""",
-      """exa_regex=privateIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-      """exa_regex=publicIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """exa_regex=privateIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """exa_regex=publicIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """exa_json_path=$.category,exa_field_name=alert_type""",
       """exa_json_path=$.title,exa_field_name=alert_name""",
       """exa_json_path=$.description,exa_field_name=additional_info""",

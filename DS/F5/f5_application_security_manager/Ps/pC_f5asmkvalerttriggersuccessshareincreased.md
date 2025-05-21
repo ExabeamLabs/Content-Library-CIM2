@@ -11,7 +11,7 @@ Name = f5-asm-kv-alert-trigger-success-shareincreased
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{6}(\+|-)\d{2}:\d{2})\s({host}[\w.-]+)""",
     """dos_attack_event="({event_name}[^"]+)"""",
     """dos_attack_name="({alert_name}[^"]+)"""", 
-    """source_ip="((N\/A)|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
+    """source_ip="((N\/A)|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
 	  """client_ip_geo_location="(N\/A|({country}[^"]+))""""
   ]
 

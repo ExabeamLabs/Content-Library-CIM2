@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627-1
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """<EventID>4627<""" ]
   Fields = [
-    """({event_name}GroupMembership)""",
+    """({event_name}(Group membership information|GroupMembership))""",
     """<TimeCreated SystemTime(\\)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

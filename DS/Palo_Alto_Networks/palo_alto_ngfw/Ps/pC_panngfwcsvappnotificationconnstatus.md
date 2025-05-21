@@ -7,7 +7,7 @@ Name = pan-ngfw-csv-app-notification-connstatus
   Conditions = [ """,SYSTEM,""", """,syslog-conn-status,""" ]
   Fields = ${DLPaloAltoParsersTemplates.pan-system-1.Fields}[
     """({event_name}Syslog connection.+?server)\[""",
-    """\['AF_INET\.({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)""",
+    """\['AF_INET\.({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({dest_port}\d+)""",
   ]
 
 pan-system-1 {

@@ -31,7 +31,7 @@ Fields = [
 """Locked Out:(\\[rnt]|\s)*Security ID:(\\[rnt]|\s)*(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+?))\}?(\\[rnt]|\s)*Account Name:(\\[rnt]|\s)*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\[rnt]|\s)*Additional""",
 """Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"targetUserName":"({dest_user}[^"]+)"""",
-"""Caller Computer Name:\s*(\\[rnt]|\s)*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
+"""Caller Computer Name:\s*(\\[rnt]|\s)*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
 """\Weventrecordid="({event_id}\d+)""""
 """Subject(:|=).+?Logon ID(:|=)(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*Account""",
 """Subject(:|=).+?Account Name(:|=)(\\[rnt]|\s)*({src_user}[^\s]*?)(\\[rnt]|\s)*[\s;]*Account Domain(:|=)""",

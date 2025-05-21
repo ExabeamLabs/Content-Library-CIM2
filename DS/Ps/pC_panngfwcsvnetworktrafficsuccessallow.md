@@ -10,7 +10,7 @@ Conditions = [
 ParserVersion = "v1.0.0"
 
 cef-palo-alto-networks-firewall.Fields}[
-     """\sreason=(?:n\/a|({failure_reason}.+?))\s+(\w+=|$)"""
- 
+     """\sapp=({action}(incomplete|insufficient-data))\s+(\w+=|$)"""
+
 }
 ```

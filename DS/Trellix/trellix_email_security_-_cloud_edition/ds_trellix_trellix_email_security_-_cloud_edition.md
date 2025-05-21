@@ -1,0 +1,19 @@
+Vendor: Trellix
+===============
+Product: Trellix Email Security - Cloud Edition
+-----------------------------------------------
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|   2   |   0    |         2          |       2        |    2    |
+
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|:----:| ---- | ---- | ---- |
+|    [Malware](../../../UseCases/uc_malware.md)    |  email-receive:success (dlp-email-alert-in)<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> ↳[fireeye-etp-json-email-receive-success-fireeyeetp](Ps/pC_fireeyeetpjsonemailreceivesuccessfireeyeetp.md)<br>    | T1190 - Exploit Public Fasing Application<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_trellix_trellix_email_security_-_cloud_edition_Malware.md)    |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  email-receive:success (dlp-email-alert-in)<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> ↳[fireeye-etp-json-email-receive-success-fireeyeetp](Ps/pC_fireeyeetpjsonemailreceivesuccessfireeyeetp.md)<br><br> email-receive:fail (dlp-email-alert-in-failed)<br> ↳[fireeye-etp-json-email-receive-success-fireeyeetp](Ps/pC_fireeyeetpjsonemailreceivesuccessfireeyeetp.md)<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_trellix_trellix_email_security_-_cloud_edition_Privilege_Abuse.md)     |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  email-receive:success (dlp-email-alert-in)<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> ↳[fireeye-etp-json-email-receive-success-fireeyeetp](Ps/pC_fireeyeetpjsonemailreceivesuccessfireeyeetp.md)<br><br> email-receive:fail (dlp-email-alert-in-failed)<br> ↳[fireeye-etp-json-email-receive-success-fireeyeetp](Ps/pC_fireeyeetpjsonemailreceivesuccessfireeyeetp.md)<br> ↳[fireeye-etp-kv-email-receive-fenotify](Ps/pC_fireeyeetpkvemailreceivefenotify.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_trellix_trellix_email_security_-_cloud_edition_Privileged_Activity.md) |
+
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
+| Initial Access                                                                                                                                            | Execution | Persistence                                                         | Privilege Escalation                                                | Defense Evasion                                                     | Credential Access | Discovery | Lateral Movement | Collection | Command and Control | Exfiltration | Impact |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------- | ------------ | ------ |
+| [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>[Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br> |                   |           |                  |            |                     |              |        |

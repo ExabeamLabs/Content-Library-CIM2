@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
-  Conditions = [ """4656""", """A handle to an object was requested""", """Computer""" ]
+  Conditions = [ """4656""", """A handle to an object was requested""", """Computer""", """Resource Attributes:""" ]
   Fields = [
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|<[\\\/]+Computer>|$)""",
     """({event_code}4656)""",

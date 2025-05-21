@@ -11,7 +11,7 @@ Name = microsoft-defenderep-json-network-notification-advancedhunting
   Fields = ${MicrosoftParserTemplates.json-defender-atp.Fields} [
     """exa_regex=operationName"+:\s*"+({operation}[^"]+)""",
     """exa_regex=DeviceId":"({device_id}[^"]+)"""",
-    """exa_regex=IPAddress\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
+    """exa_regex=IPAddress\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
     """exa_regex=MacAddress":"({src_mac}[^"]+)"""",
   ]
 
@@ -25,8 +25,8 @@ json-defender-atp {
      """operationName":\s*"({operation}[^"]+)""",
      """category":\s*"({category}[^"]+)""",
      """RemotePort":\s*({dest_port}\d+)""",
-     """RemoteIP":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-     """LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """RemoteIP":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+     """LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """LocalPort":\s*({src_port}\d+)""",
      """ActionType":\s*"({action}[^"]+)""",
      """"DeviceId":"({device_id}[^"]+)"""",
@@ -58,8 +58,8 @@ json-defender-atp {
      """exa_json_path=$.category,exa_field_name=category"""
      """exa_json_path=$.ActionType,exa_field_name=action"""
      """exa_json_path=$..RemotePort,exa_field_name=dest_port"""
-     """exa_json_path=$..RemoteIP,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-     """exa_json_path=$..LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+     """exa_json_path=$..RemoteIP,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+     """exa_json_path=$..LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
      """exa_json_path=$..LocalPort,exa_field_name=src_port"""
      """exa_json_path=$..ActionType,exa_field_name=action"""
      """exa_json_path=$..DeviceName,exa_field_name=dest_host"""

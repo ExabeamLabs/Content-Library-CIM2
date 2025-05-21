@@ -18,8 +18,8 @@ Name = sunone-s-kv-endpoint-authentication-bind
       """\WtargetHost="+({dest_host}[^"]+?)"+(\s+\w+=|\s*$)""",
       """\WtargetPort=({dest_port}\d+)""",
       """\WtargetProtocol="+({protocol}[^"]+?)"+(\s+\w+=|\s*$)""",
-      """\WclientIP='?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """\WrequesterIP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """\WclientIP='?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """\WrequesterIP="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\WinstanceName ="({host}[\w\-\.]+)"""",
       """\WauthDN="({user_ou}[^"]+)""",
       """\Wapp='({app}[^']+?)'\s\w+="""

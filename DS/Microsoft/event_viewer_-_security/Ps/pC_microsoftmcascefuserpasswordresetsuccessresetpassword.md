@@ -62,7 +62,7 @@ Fields = [
 """LogonProcessName ="({auth_process}[^"]+)""""
 """KeyLength="({key_length}\d+)""""
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
-"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
 DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-password-reset-success-4724-1"
@@ -84,7 +84,7 @@ Fields = [
 """\WdestinationServiceName =({app}.+?)\s+(\w+=|$)"""
 """\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
 """\Wsuser=({email_address}[^@\s]+@[^@\s]+)\s+(\w+=|$)"""
-"""\Wc6a1=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+"""\Wc6a1=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 """\Wmsg=({additional_info}.*?)\s+(\w+=|$)"""
 ]
 Name = "microsoft-mcas-cef-user-password-reset-success-resetpassword"
@@ -160,9 +160,9 @@ Fields = [
 """"country_code2":"({src_external_country}[^"]+)"""
 """"domain":"({domain}[^"]+)"""
 """"source":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"host":"({src_host}[^"]+)"""
-""""source":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"ipv4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"ipv4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"destination":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"host":"({dest_host}[\w\-.]+)"""
-""""destination":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"ipv4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+""""destination":\{([^\}]*?\{([^\}]*?\{[^\{\}]*?\})*[^\}]*?\})*[^\}]*?"ipv4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"logon-type":({login_type}\d+)"""
 """"logon-id":"({login_id}[^"]+)"""
 """"event-type":"({result}[^"]+)"""
@@ -237,7 +237,7 @@ Fields = [
 """duser=({dest_user}.+?)\s+\w+="""
 """nitroSource_Logon_ID=({login_id}.+?)(\s|0\|)"""
 """nitroSecurity_ID=({user_sid}[^\s]+)"""
-"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 DupFields = [
 "host->dest_host"
@@ -305,7 +305,7 @@ Fields = [
 """LogonProcessName ="({auth_process}[^"]+)""""
 """KeyLength="({key_length}\d+)""""
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
-"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
 DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-enable-success-4722-1"
@@ -350,7 +350,7 @@ Fields = [
 """LogonProcessName ="({auth_process}[^"]+)""""
 """KeyLength="({key_length}\d+)""""
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
-"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+"""IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
 DupFields = [ "dest_host->host", "user->src_user" , "domain->src_domain" ]
 Name = "microsoft-windows-kv-user-enable-success-626"
@@ -372,8 +372,8 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A user account was enabled)"""
-""""src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-""""dst_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+""""src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""dst_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"id":\d*({event_code}4722)"""
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 """"DomainID":"({domain}[^"]+)"""
@@ -398,7 +398,7 @@ Fields = [
 """({event_name}A user account was enabled)"""
 """\|McAfee\|[^|]+?\|[^|]+?\|43-2630({event_code}\d+)(0|1)\|"""
 """\srt=({time}\d{13})(\s|0\||$)"""
-"""\ssrc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?(\s|0\||$)"""
+"""\ssrc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?(\s|0\||$)"""
 """\sshost=({dest_host}[\w\-.]+?)(\s|0\||$)"""
 """\ssntdom=({domain}[^\s]+?)(\s|0\||$)"""
 """\sdntdom=({dest_domain}[^\s]+?)(\s|0\||$)"""
@@ -459,6 +459,7 @@ ${MicrosoftParserTemplates.cef-sysmon-file-write}{
   ParserVersion = "v1.0.0"
   Fields = ${MicrosoftParserTemplates.cef-sysmon-file-write.Fields} [
     """cs2=({registry_value}[^=]+)\s+\w+="""
+    """cs1=({registry_path}[^=]*?\\+({registry_key}[^=\\\/]+?)\\+({registry_value}[^\\=]+))\s\w+="""
   
 }
 ```

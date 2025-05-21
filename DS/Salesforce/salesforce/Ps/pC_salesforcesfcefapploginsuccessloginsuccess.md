@@ -12,7 +12,7 @@ Name = "salesforce-sf-cef-app-login-success-loginsuccess"
     """CreatedDate\\*=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """suser=(({domain}[^\\\s@;=]+)\\+)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)""",
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """SourceIp\\*=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SourceIp\\*=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """Status\\*=({result}[^;]+)""",
     """Platform\\*=(Onbekend|Unknown|({os}[^;]+))""",
     """deviceNtDomain=({os}[^=]+?)\s+\w+=""",

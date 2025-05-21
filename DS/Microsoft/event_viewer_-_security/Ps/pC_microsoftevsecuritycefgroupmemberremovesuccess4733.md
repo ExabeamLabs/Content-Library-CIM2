@@ -15,7 +15,7 @@ Fields = [
 """(\||\s)rt=({time}\d{13})"""
 """(\||\s)dvchost=({host}[\w\-.]+)\s*(\w+=|$)"""
 """(\||\s)dhost=({dest_host}[\w\-.]+)\s*(\w+=|$)"""
-"""(\||\s)dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)"""
+"""(\||\s)dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)"""
 """(\||\s)Microsoft-Windows-Security-Auditing:\s*({event_code}\d+)"""
 """(\||\s)A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group"""
 """(\||\s)suser=(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=|$)"""

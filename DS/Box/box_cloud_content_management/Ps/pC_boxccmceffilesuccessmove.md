@@ -17,7 +17,7 @@ Name = "box-ccm-cef-file-success-move"
     """"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"login":"({email_address}[^\s",@]+@[^\s",@]+)""",
     """"event_type":"({access}[^",]+)""",
-    """"ip_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ip_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"parent":.*?"name":"({file_dir}[^",]+)""",
     """"file_path":"({file_dir}[^"]+)"""",
     """"service_name":"({process_name}[^",]+)""",

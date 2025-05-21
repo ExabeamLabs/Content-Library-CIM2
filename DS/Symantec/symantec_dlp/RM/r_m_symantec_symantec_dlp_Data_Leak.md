@@ -7,7 +7,7 @@ Vendor: Symantec
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  84   |   39   |         10         |       8        |   51    |
+|  84   |   39   |         10         |       8        |   48    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

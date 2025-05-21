@@ -5,7 +5,7 @@ Name = skyhighsecurity-swg-cef-app-login-fail-userloginfailed
   Conditions = [ """ mwg:""", """ CEF:""", """|Skyhigh Security|WebGateway|""", """ Action=USER_LOGIN_FAILED """ ]
   ParserVersion = "v1.0.0"
   Fields = ${McAfeeParsersTemplates.cef-skyhigh_security-secure_web_gateway.Fields}[
-    """\sSource_ID=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
+    """\sSource_ID=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
     """\sUser-Agent=({user_agent}[^=]+)\s\w+=""",
     """\sRole=({role}[^"=]+)\s*($|"|\s\w+=)""",
     """\sAppliance=({dest_host}[\w\-.]+)\s*(\s\w+=|$|")""",

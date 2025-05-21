@@ -11,9 +11,9 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
     """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
     """Workstation\\?"+:\\?"+({src_host}[^\\]+)\\?"""",
-    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
+    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({user_upn}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?""""
   ]
-  DupFields = [ "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
+  DupFields = [ "domain->dest_domain", "user->dest_user" ]
 
 json-windows-events-2-aa = {
   Vendor = Microsoft

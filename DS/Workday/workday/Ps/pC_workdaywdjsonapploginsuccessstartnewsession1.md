@@ -15,7 +15,7 @@ Name = workday-wd-json-app-login-success-startnewsession-1
     """exa_json_path=$.wd_task,exa_field_name=operation""",
     """exa_json_path=$.wd_target,exa_field_name=object""",
     """exa_json_path=$.wd_useragent,exa_field_name=user_agent""",
-    """exa_json_path=$.wd_ipaddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.wd_ipaddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
    ]
    ParserVersion = v1.0.0
 

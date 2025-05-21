@@ -11,7 +11,7 @@ Name = "unix-unix-str-endpoint-authentication-fail-authfail"
   ]
   Fields = [
   """({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """({host}[\w\.\-]+)?:?\s*sudo"""
+  """\s({host}[\w\.\-]+)?:?\s*sudo"""
   """\suser\s*((NT AUTHORITY|({domain}[^\\"]+))[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """({result}failure)"""
   ]

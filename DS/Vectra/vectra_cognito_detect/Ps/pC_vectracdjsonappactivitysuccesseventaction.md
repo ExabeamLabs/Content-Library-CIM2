@@ -10,7 +10,7 @@ Name = vectra-cd-json-app-activity-success-eventaction
   Fields =[
   	"""exa_json_path=$.event_timestamp,exa_field_name=time""",
   	"""exa_json_path=$.message,exa_field_name=event_name""",
-  	"""exa_json_path=$.source_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+  	"""exa_json_path=$.source_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   	"""exa_json_path=$.user_role,exa_field_name=role""",
   	"""exa_json_path=$.event_action,exa_field_name=operation""",
   	"""exa_json_path=$.user_type,exa_field_name=user_type""",

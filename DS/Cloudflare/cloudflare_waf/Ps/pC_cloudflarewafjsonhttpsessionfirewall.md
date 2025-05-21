@@ -12,7 +12,7 @@ Name = cloudflare-waf-json-http-session-firewall
     """"ClientRequestHost":"({host}[\w\-.]+)""",
     """"RayID":"({alert_id}[^"]+)""",
     """"ClientCountry":"({src_country}[^"]+)""",
-    """"ClientIP":"(?:["]+|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """"ClientIP":"(?:["]+|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """"ClientSrcPort":({src_port}\d+)""",
     """"ClientRequestUserAgent":"({user_agent}[^"]+)""",
     """"EdgeResponseStatus":({edge_response_status}({http_response_code}\d\d\d))"""
@@ -26,7 +26,7 @@ Name = cloudflare-waf-json-http-session-firewall
     """exa_json_path=$.ClientRequestHost,exa_field_name=host""",
     """exa_json_path=$.RayID,exa_field_name=alert_id""",
     """exa_json_path=$.ClientCountry,exa_field_name=src_country""",
-    """exa_json_path=$.ClientIP,exa_regex=(?:["]+|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """exa_json_path=$.ClientIP,exa_regex=(?:["]+|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """exa_json_path=$.ClientSrcPort,exa_field_name=src_port""",
     """exa_json_path=$.ClientRequestUserAgent,exa_field_name=user_agent""",
     """exa_json_path=$.EdgeResponseStatus,exa_regex=({edge_response_status}({http_response_code}\d\d\d))"""

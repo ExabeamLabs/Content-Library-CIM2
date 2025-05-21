@@ -14,8 +14,8 @@ Name = "zeek-z-json-file-read-success-fuid"
   Fields = [
     """exa_json_path=$._system_name,exa_field_name=host""",
     """exa_json_path=$.ts,exa_field_name=time""",
-    """exa_json_path=$.tx_hosts[:1],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.rx_hosts[:1],exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.tx_hosts[:1],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.rx_hosts[:1],exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.conn_uids[:1],exa_field_name=connection_uid""",
     """exa_json_path=$.source,exa_field_name=protocol""",
     """exa_json_path=$.analyzers,exa_field_name=analyzers""",

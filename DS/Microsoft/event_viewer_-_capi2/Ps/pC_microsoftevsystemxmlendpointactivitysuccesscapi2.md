@@ -2,7 +2,7 @@
 ```Java
 {
 Name = "microsoft-evsystem-xml-endpoint-activity-success-capi2"
-  Conditions = [ """<Provider Name =""", """Microsoft-Windows-CAPI2""", """<Execution ProcessID=""", """<EventID>""" ]  
+  Conditions = [ """<Provider Name ='Microsoft-Windows-CAPI2'""", """<Execution ProcessID=""", """<EventID>""" ]
   Vendor = "Microsoft"
   Product = "Event Viewer - CAPI2"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"

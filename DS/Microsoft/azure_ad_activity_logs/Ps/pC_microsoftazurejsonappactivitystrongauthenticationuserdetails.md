@@ -6,7 +6,7 @@ Vendor = "Microsoft"
 Product = "Azure AD Activity Logs"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
 ExtractionType = json
-Conditions = [ """"activityDisplayName":"Update user"""", """"operationType":"Update"""", """"activityDateTime":"""", """StrongAuthenticationUserDetails""", """VoiceOnlyPhoneNumber""" ]
+Conditions = [ """"activityDisplayName":""", """"Update user"""", """"operationType":""", """"Update"""", """"activityDateTime":""", """StrongAuthenticationUserDetails""", """VoiceOnlyPhoneNumber""" ]
 Fields = [
   """exa_json_path=$..activityDateTime,exa_field_name=time""",
   """exa_json_path=$..result,exa_field_name=result""",

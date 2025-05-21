@@ -16,7 +16,7 @@ Name = saviynt-savy-json-app-activity-success-message
       """exa_json_path=$.['FIRST NAME'],exa_field_name=first_name"""
       """exa_json_path=$.['LAST NAME'],exa_field_name=last_name"""
       """exa_json_path=$.MESSAGE,exa_field_name=additional_info""" 
-      """exa_json_path=$.['IP ADDRESS'],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """exa_json_path=$.['IP ADDRESS'],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     ]
 
 

@@ -23,7 +23,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """New Logon:[\s\S]*?Account Name:\s*((?-i)\\+[rnt])*(-|({account}[^\s:\\]*))((?-i)\\+[rnt])*\s*[\w\s]+""",
   """<Data Name\\*=('|")TargetDomainName('|")>(-|({domain}[^<]+))<"""
   """<Data Name\\*=('|")ProcessName('|")>(?:-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<"""
-  """<Data Name\\*=('|")IpAddress('|")[^<>]*?>(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)<"""
+  """<Data Name\\*=('|")IpAddress('|")[^<>]*?>(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)<"""
   """<Data Name\\*=('|")IpPort('|")>({src_port}\d+)"""
   """<Data Name\\*=('|")LogonProcessName('|")>({auth_process}[^\s<]+)"""
   """<Data Name\\*=('|")AuthenticationPackageName('|")>({auth_package}[^<]+)<"""

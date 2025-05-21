@@ -39,7 +39,7 @@ Fields = [
 """\"\"signinErrorCode\":\"*({error_code}\d+)"""
 """userId\":\"({user_upn}[^\"]+)"""
 """\"appId\":\"({app_id}[^\"]+)"""
-"""\"deviceDetail\".+?"deviceId\":\"({device_id}[^\"]+)"""
+"""\"deviceDetail\".+?"deviceId\":\"({device_id}[\w\.\-]+)"""
 """\"deviceDetail\":\{[^\}]*?\"displayName\":\"({device_name}[^\"]+?)\$?""""
 """\"deviceDetail\":\{[^\}]+?\"operatingSystem\":\"({os}[^\"]+)"""
 """\"deviceDetail\":\{[^\}]+?\"trustType\":\"({trust_type}[^\"]+)"""

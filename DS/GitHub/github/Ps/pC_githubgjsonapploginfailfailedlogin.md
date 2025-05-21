@@ -7,7 +7,7 @@ Name = github-g-json-app-login-fail-failedlogin
   Fields = ${GithubParsersTemplates.json-github-actions-1.Fields} [
       """exa_json_path=$..host,exa_field_name=host"""
       """exa_json_path=$..audit.action,exa_field_name=operation"""
-      """exa_json_path=$..audit.actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """exa_json_path=$..audit.actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_json_path=$..audit.user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
@@ -20,7 +20,7 @@ json-github-actions-1 = {
       """exa_json_path=$..@timestamp,exa_field_name=time"""
       """exa_json_path=$..action,exa_field_name=operation"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
-      """exa_json_path=$..actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """exa_json_path=$..actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_json_path=$..repo,exa_field_name=object"""
       """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""

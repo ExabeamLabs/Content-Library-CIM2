@@ -22,19 +22,19 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625-4"
     """"SubjectUserName\\*":\\*"(?:-|({src_user}[^"\\]+))"""
     """"SubjectDomainName\\*":\\*"(?:-|({src_domain}[^"\\]+))"""
     """"LogonType\\*":\\*"({login_type}\d+)"""
-    """"TargetUserName\\?":\\?"\s*(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^'\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"TargetUserName\\?":\\?"\s*(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^'\]\s"\\,\|]+)?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"TargetDomainName\\*":\\*"({domain}[^."\\]+)"""
     """"SubStatus\\*":\\*"({result_code}[^"\\]+)"""
     """"WorkstationName\\*":\\*"({src_host_windows}[^"\\]+)"""
     """"LogonProcessName\\*":\\*"({auth_process}[^."\\]+?)\s*\\*""""
     """"AuthenticationPackageName\\*":\\*"({auth_package}[^"\\]+)"""
-    """"IpAddress\\*":\\*"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+    """"IpAddress\\*":\\*"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
     """"KeyLength\\*":\\*"({key_length}\d+)"""
     """"SubjectUserSid\\*":\\*"({subject_sid}[^"\\]+)"""
     """Subject(:|=).+?Account Name(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_user}[^\s@]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Account Domain(:|=)"""
     """Subject(:|=).+?Account Domain(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_domain}[^:;]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Logon ID(:|=)"""
   ]
-  DupFields = [ "host->dest_host", "result_code->failure_code", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user", "domain->dest_domain" ]
+  DupFields = [ "host->dest_host", "result_code->failure_code", "src_host_windows->src_host", "user->dest_user", "domain->dest_domain" ]
 
 
 }

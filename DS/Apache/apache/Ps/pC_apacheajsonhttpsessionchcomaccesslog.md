@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """exa_json_path=$.@timestamp,exa_field_name=time"""
 """exa_json_path=$.host.name,exa_field_name=host"""
-"""exa_json_path=$.remote_addr,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.remote_addr,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.verb,exa_field_name=method"""
 """exa_json_path=$.request,exa_regex=({uri_path}[^"\?\s]+)(?:\?({uri_query}[^?\s"]+))?"""
 """exa_json_path=$.response,exa_field_name=http_response_code"""

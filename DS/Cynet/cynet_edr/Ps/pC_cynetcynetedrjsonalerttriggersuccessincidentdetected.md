@@ -11,7 +11,7 @@ Name = cynet-cynetedr-json-alert-trigger-success-incidentdetected
        Fields = [
           """exa_json_path=$.NetworkRisk,exa_field_name=risk_level""",
           """exa_regex=Hostname:\s*({host}[^\s\\]+)((?-i)\\+[rnt])+?""",
-          """exa_regex=Host IP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+          """exa_regex=Host IP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
           """exa_regex=Process Path:\s*({process_path}\w+:[^:]+?)[(?i)\\+(rtn)+]*\s*Process Params:"""
           """exa_regex=OS Version:\s({os}[^"\\]+)"""
           """exa_regex=Alert Name:\s*({alert_name}[^"\\]+)"""

@@ -5,7 +5,7 @@ Name = fortinet-fortigate-cef-app-activity-success-router
   ParserVersion = "v1.0.0"
   Conditions = [ """|Fortinet|Fortigate|""", """|event:router|""", """FTNTFGTlogdesc=""" ]
   Fields = ${DLFortinetParsersTemplates.fortinet-network-info.Fields} [
-    """: From ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? via """
+    """: From ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? via """
   ]
 
 fortinet-network-info = {
@@ -32,8 +32,8 @@ fortinet-network-info = {
     """act=({action}[^=]+?)(\s+\w+=|$)"""
     """dpt=({dest_port}\d+)"""
     """spt=({src_port}\d+)"""
-    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
-    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   
 }
 ```

@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-str-process-create-success-592
     Vendor = Microsoft
     Product = Event Viewer - Security
     TimeFormat = "MMM dd HH:mm:ss yyyy"
-    Conditions = ["""A new process has been created:""", """Detailed Tracking""", """592""" ]
+    Conditions = ["""A new process has been created:""", """Detailed Tracking""", """592""", """Image File Name:""" ]
     Fields = [
       """({event_name}A new process has been created)""",
       """Security\s*\d+\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)""",

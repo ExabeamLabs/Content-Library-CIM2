@@ -19,7 +19,7 @@ aruba-clearpass-policy = {
   """User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Role:\s*({role}[^\\]+)\s*(\\n)Authentication"""
   """Session ID:\s*({session_id}[^\\]+)\s*(\\n)Client IP Address"""
-  """Client IP Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """Client IP Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   ]
  }
  aruba-clearpass-tacacs-events = {

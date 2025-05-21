@@ -6,6 +6,7 @@ Name = microsoft-sysmon-cef-registry-modify-success-registryvalueset
   ParserVersion = "v1.0.0"
   Fields = ${MicrosoftParserTemplates.cef-sysmon-file-write.Fields} [
     """cs2=({registry_value}[^=]+)\s+\w+="""
+    """cs1=({registry_path}[^=]*?\\+({registry_key}[^=\\\/]+?)\\+({registry_value}[^\\=]+))\s\w+="""
   ]
 
 cef-sysmon-file-write = {

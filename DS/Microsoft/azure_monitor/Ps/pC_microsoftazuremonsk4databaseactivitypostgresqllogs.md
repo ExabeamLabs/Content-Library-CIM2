@@ -4,7 +4,7 @@
 Name = microsoft-azuremon-sk4-database-activity-postgresqllogs
   Vendor = Microsoft
   Product = Azure Monitor
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   ParserVersion = v1.0.0
   Conditions=[
     """CEF""",
@@ -14,6 +14,7 @@ Name = microsoft-azuremon-sk4-database-activity-postgresqllogs
   ]
   Fields=[
      """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
+     """"TimeGenerated":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
      """ResourceGroup":"({server_group}[^"]+)""",
      """schemaName":"({db_schema}[^"]+)""",
      """"message":"({db_operation}[^"]+)""",
@@ -30,6 +31,8 @@ Name = microsoft-azuremon-sk4-database-activity-postgresqllogs
      """"resourceId":\s*"({object}[^"]{1,249})"""
      """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
      """"operationName":"({operation}[^"]+)"""
+     """"_?ResourceId":\s*"({resource_id}[^"]+)""""
+     """"SubscriptionId":\s*"({subscription_id}[^"]+)""""
   ]
   DupFields= ["event_hub_namespace->host", "object->resource" , "db_operation->additional_info"]
 

@@ -20,7 +20,7 @@ Fields = [
   """<Data Name(\\)?=(\\)?"+SubjectDomainName(\\)?"+>(NT AUTHORITY|({domain}[^<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+SubjectLogonId(\\)?"+>({login_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectType(\\)?"+>({file_type}[^<]+)<\/Data>"""
-  """<Data Name(\\)?="ObjectName">(({registry_path}\\+REGISTRY[^<]+?(\\\{({registry_key}[^\}<]+)\})?)|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?)|[^\\:<]+))<\/Data>"""
+  """<Data Name(\\)?="ObjectName">(({registry_path}\\+REGISTRY[^<]+?({registry_key}[^\\\/<]+))|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?)|[^\\:<]+))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ProcessName(\\)?"+>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/"<]+?))<\/Data>"""
   """<Data Name(\\)?=(\\)?"+AccessList(\\)?"+>({access}.+?)\s(\\t)*"""
   """AccessMask"+:"+({access_mask}[^"]+)"""

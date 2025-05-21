@@ -28,7 +28,7 @@ Fields = [
   """(?i)endpoint_user_name="*\s*(N\/A|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))("|,|\s*$)"""
   """(?i)endpoint_user_name="*\s*(N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",@]+))"""
   """(?i)incident_snapshot=[^,]*?({alert_id}\d+),"""
-  """(?i)machineIP="*(N\/A|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
+  """(?i)machineIP="*(N\/A|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 ]
 DupFields = [
   "alert_name->alert_type", "dest_email_address->email_recipients"

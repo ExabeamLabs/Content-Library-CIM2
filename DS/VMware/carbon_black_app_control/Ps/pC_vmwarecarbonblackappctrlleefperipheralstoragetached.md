@@ -20,7 +20,7 @@ Fields = [
   """msg=Device\s+'({device_id}[^']+)'"""
   """msg=({operation_details}[^=]+?)\.\s"""
   """sev=({severity}\d+)"""
-  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """srcHostName =(({domain}[^\\\s]+)\\+)?({src_host}[^\s]+)"""
   """usrName =(({domain}[^\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """dstHostName =({dest_host}[^\s]+)"""

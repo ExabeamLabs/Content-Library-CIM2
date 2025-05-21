@@ -22,6 +22,7 @@ Fields = [
   """"MessageId":"({message_id}[^"]+)"""",
   """"EventType":"({alert_type}[^"]+)""""
   """"Action":"({action}[^"]+)"""
+  """"BulkComplaintLevel":"({spam_score}[^"]+)""""
 ]
 DupFields = [
   "alert_type->alert_name"

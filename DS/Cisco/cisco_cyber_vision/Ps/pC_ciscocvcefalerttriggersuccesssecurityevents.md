@@ -14,7 +14,7 @@ Name = cisco-cv-cef-alert-trigger-success-securityevents
     """Cisco\|([^\|]+\|){4}({alert_severity}\d)""",
     """\|cat=({category}[^=]+?)\s\w+=""",
     """\smsg=({additional_info}[^=]+?)\s\w+=""",
-    """SCVSensorIp=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SCVSensorIp=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """SCVSensorId=({sensor_id}[^\s]+)"""
   ]
 

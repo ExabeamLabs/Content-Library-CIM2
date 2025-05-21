@@ -18,11 +18,11 @@ Fields = [
 """"eventRecordID":"({event_id}\d+)""""
 """"severityValue":"({result}[^"]+?)\s*""""
 """"targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
-""""targetUserName":"({email_address}[^"\s@]+@[^"\s@]+?)\s*""""
+""""targetUserName":"({user_upn}}[^"\s@]+@[^"\s@]+?)\s*""""
 """"workstation":"({src_host}[^"\s]+?)\s*""""
 """"status":"({result_code}[^"]+?)\s*""""
 ]
-DupFields = [ "result_code->failure_code", "email_address->dest_email_address", "user->dest_user" ]
+DupFields = [ "result_code->failure_code", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

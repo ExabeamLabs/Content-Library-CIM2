@@ -4,7 +4,7 @@
 Name = unix-unix-str-dns-record-create-success-registeringnewaddress
   Conditions = [ """avahi-daemon[""", """]: Registering new address record for""" ]
   Fields = ${DLUnixParserTemplates.unix-system-info.Fields}[
-    """Registering new address record for\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """Registering new address record for\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """({event_name}Registering new address record)"""
   ]
   ParserVersion = "v1.0.0"

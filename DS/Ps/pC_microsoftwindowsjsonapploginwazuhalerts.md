@@ -23,7 +23,7 @@ wazuh-common-fields {
       """exa_json_path=$.['agent.name'],exa_field_name=agent_name""",
       """exa_json_path=$.['predecoder.hostname'],exa_field_name=host""",
       """exa_json_path=$.['data.dstuser'],exa_field_name=dest_user""",
-      """exa_regex="agent\.labels\.network\.ipv4\.primary":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """exa_regex="agent\.labels\.network\.ipv4\.primary":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     ]
     DupFields=["host->dest_host", "description->event_name"
 }

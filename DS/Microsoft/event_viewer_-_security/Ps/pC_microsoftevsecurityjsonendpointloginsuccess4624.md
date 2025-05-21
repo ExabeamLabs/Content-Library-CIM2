@@ -7,7 +7,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
   Product = "Event Viewer - Security"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [
-    """4624"""
+    """"EventID":4624"""
     """"AuthenticationPackageName":""""
   ]
   Fields = [
@@ -28,8 +28,8 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
     """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """"TargetDomainName":"({domain}[^"]*)"""
     """"ProcessName":"(?:-|({process_path}[^"]*))"""
-    """"IpAddress":"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
-    """"hostip":"(?:-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
+    """"IpAddress":"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+    """"hostip":"(?:-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
     """"LogonProcessName":"(-|({auth_process}.+?))\s*""""
     """"AuthenticationPackageName":"(-|({auth_package}[^"]*))"""
     """"TargetLogonId":"({login_id}[^"]*)"""

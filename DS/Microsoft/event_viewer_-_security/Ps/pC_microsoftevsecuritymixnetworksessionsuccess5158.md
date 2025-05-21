@@ -8,6 +8,7 @@ TimeFormat = ["EEE MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 Conditions = [
   """5158"""
   """The Windows Filtering Platform has permitted a bind to a local port"""
+  """Microsoft-Windows-Security-Auditing"""
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""

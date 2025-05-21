@@ -6,7 +6,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss"]
-  Conditions = [ """service entered the stopped state""" ]
+  Conditions = [ """service entered the stopped state""", """7036""", """Service Control Manager""" ]
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({event_code}7036)""",

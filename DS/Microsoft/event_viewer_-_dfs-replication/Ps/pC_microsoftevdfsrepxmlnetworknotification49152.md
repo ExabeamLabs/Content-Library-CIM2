@@ -8,7 +8,7 @@ Name = microsoft-evdfsrep-xml-network-notification-49152
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """>({event_code}\d+)<\/EventID>""",
-    """<Data Name\\*='Endpoint'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?</Data>""",
+    """<Data Name\\*='Endpoint'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?</Data>""",
   ]
 
 s-xml-object-access = {

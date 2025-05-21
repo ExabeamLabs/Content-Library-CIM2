@@ -12,10 +12,10 @@ cisco-firepower-template = {
   Product = Cisco Network Security
   Fields = [
     """\Wrt=({time}\d{13})"""
+    """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s*({host}[\w\-.]+)?\s*"""
     """\w+\s+\d+ \d\d:\d\d:\d\d ({host}[\w.\-]+)""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """({time}\w+ \d\d (\d\d\d\d )?\d\d:\d\d:\d\d)""",
-    """({time}\d+-\d+-\d+T\d+:\d+:\d+Z)\s*({host}[\w\-.]+)?\s*"""
     """AccessControlRuleName:\s*({rule}[^,]+),""",
     """ACPolicy:\s*({policy_name}[^,]+)""",
     """ApplicationProtocol:\s*({app_protocol}[^,]+),""",
@@ -34,7 +34,7 @@ cisco-firepower-template = {
     """NAPPolicy:\s*({nap_policy}[^,"\n:]+)"""
     """Priority:\s*({priority}[^,]+),"""
     """\s+Protocol:\s*({protocol}[^,]+)"""
-    """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """SrcIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """SrcPort:\s*({src_port}\d+)""",
     """User:\s*(Unknown|No Authentication Required|Not Found|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """AccessControlRuleAction:\s*({action}[^,]+)""",

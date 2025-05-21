@@ -24,7 +24,7 @@ Fields = [
 """Accesses:\s+({access}.+?)\s+Access Mask:"""
 """Image File Name:\s*.*?\\?({src_file_name}([^\\]*?)({src_file_ext}\.[^\\]*?)?|[^\\]+)\s+Accesses:"""
 """Image File Name:\s*({file_dir}.+?)\\(?:[^\\]+?)\s+Accesses:"""
-"""\s+Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""\s+Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]
 DupFields = [
 "host->dest_host"

@@ -8,8 +8,8 @@ Name = claroty-ctd-cef-alert-trigger-success-knownthreatalert
     TimeFormat = "MMM dd yyyy HH:mm:ss"
     Conditions = ["""CEF:0|Schneider""","""|CTD|""", """Known Threat Alert""", """CtdSignaturePoweredBy=Claroty"""]
     Fields = [
-       """CtdSourceIp=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"""
-       """CtdDestinationIp=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s"""
+       """CtdSourceIp=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"""
+       """CtdDestinationIp=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s"""
        """CtdSourceMac=({src_mac}[^\s]+)"""
        """CtdDestinationMac=({dest_mac}[^\s]+)"""
        """CtdSourceHost=({src_host}[\w.-]+)"""

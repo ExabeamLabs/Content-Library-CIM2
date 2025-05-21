@@ -10,7 +10,7 @@ Name = symantec-dlp-kv-alert-trigger-success-policyviolated
     """Message\s*=\s*The user\s* (?:[^\\]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*has""",
     """\d\d:\d\d:\dd\s*({host}[^\s]+)""",
     """\s*Endpoint Name:\s*({dest_host}[^\s]+)""",
-    """\s*Endpoint IP:\s*\(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\s*Endpoint IP:\s*\(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\s*filename:\s*({file_name}[^,]+?(\.({file_ext}[^\.\s:,]+))?),\s*\w+:""",
     """\s*dir:\s*({file_dir}.+?)\s*Device Instance ID:""",
     """\s*Device Instance ID:\s*({device_id}.+?)\s+(\w+=|$)""",

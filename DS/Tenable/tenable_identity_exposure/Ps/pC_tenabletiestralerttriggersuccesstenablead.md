@@ -26,6 +26,7 @@ Name = tenable-tie-str-alert-trigger-success-tenablead
     """"ComputerCn"="?({host}[\w\-.]+)"?"""
     """"OperatingSystem"="?({os}[^"]+)"?"""
     """"OperatingSystemVersion"="?({os_version}[^"]+)"?"""
+    """"AccountList"="({users}[^"]+)"""
   ]
   DupFields = [ alert_subject->result_reason ]
 

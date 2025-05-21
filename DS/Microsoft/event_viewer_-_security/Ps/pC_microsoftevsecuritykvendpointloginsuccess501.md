@@ -10,6 +10,7 @@ Conditions = [
 """501"""
 """MSWinEventLog"""
 """Caller identity:"""
+"""Security"""
 ]
 Fields = [
 """({event_code}501)"""

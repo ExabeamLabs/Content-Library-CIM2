@@ -3,6 +3,7 @@
 {
 Name = proofpoint-tap-json-email-receive-fail-threatinsight
   ExtractionType = json
+  log_timeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   ParserVersion = v1.0.0  
   Conditions = [
 """threatinsight.proofpoint.com""",
@@ -11,8 +12,10 @@ Name = proofpoint-tap-json-email-receive-fail-threatinsight
 """recipient":"""
   ]
   Fields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.Fields}[
+"""exa_json_path=$.threatID,exa_field_name=threat_id""",
+"""exa_json_path=$.clickTime,exa_field_name=log_time""",
 """"threatID":\s*"({threat_id}[^",]+?)\s*("|,)""",
-"""eventType=({event_name}[^\s]+)"""
+""""clickTime":"({log_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 ]
   DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_type->alert_name"]
 
@@ -37,7 +40,7 @@ s-proofpoint-email-in-1 = {
     """recipient":\s*\[?"({email_recipients}[^",;]+@[^",;]+[^"]*)""",
     """recipient":\s*\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """GUID":\s*"({alert_id}[^",]+?)\s*(,|")""",
-    """senderIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """senderIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """url":\s*"([A-Fa-f\d]{64}|[^@,"]+@[^\.,"]+\.[^,"]+|({malware_url}[^",]+?))\s*(,|")""",
     """\scs1=Policy \[id: [^\]]*? ; name: ({alert_name}[^\]]+?) ; category: ({category}[^\]]+?)]""",
     """threat":\s*"\s*([A-Fa-f\d]{64}|[^@,]+@[^\.]+\.[^",]+|({malware_url}[^",]+?))\s*(,|")""",
@@ -63,7 +66,7 @@ s-proofpoint-email-in-1 = {
     """exa_regex=recipient":\s*\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_regex=recipient":\s*\[?"({email_recipients}[^",;]+@[^",;]+[^"]*)""",
     """exa_json_path=$.GUID,exa_field_name=alert_id""",
-    """exa_json_path=$.senderIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.senderIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_regex=url":\s*"({malware_url}[^",]+?)\s*(,|")""",
     """exa_regex=threat":\s*"\s*({malware_url}[^",]+?)\s*(,|")""",
     """exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)$""",

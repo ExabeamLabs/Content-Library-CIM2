@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-mix-audit-policy-modify-4905
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "epoch", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
-  Conditions = [ """An attempt was made to unregister a security event source""", """4905""" ]
+  Conditions = [ """An attempt was made to unregister a security event source""", """4905""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """({event_name}An attempt was made to unregister a security event source)""",
     """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",

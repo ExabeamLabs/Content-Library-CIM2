@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627-1
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Conditions = [ """"event_id":"4627"""", """"new_logon-AccountName":""", """"group_membership":""" ]
   Fields = [
-    """({event_name}The subject fields indicate the account on the local system which requested the logon)""",
+    """({event_name}(Group membership information|The subject fields indicate the account on the local system which requested the logon))""",
     """({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))""",
     """"computer":"({host}[^"]+)""",
     """"new_logon-AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",

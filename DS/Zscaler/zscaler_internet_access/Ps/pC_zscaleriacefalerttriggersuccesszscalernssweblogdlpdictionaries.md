@@ -10,7 +10,7 @@ Name = zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries
   Fields = [
     """\srt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """\d\d:\d\d:\d\d ({host}\S+) CEF:""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*(\w+=|$)""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*(\w+=|$)""",
     """([^\|]*\|){5}({action}[^\|]+)\|""",
     """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
     """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
@@ -23,7 +23,7 @@ Name = zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries
     """\srequest=({url}[^\s]+?)\s+(\w+=|$)""",
     """\srequest=(\w+:\/{2})?[^\/]+({uri_path}\/[^?\s]+)(\?\S+)?\s+(\w+=|$)""",
     """\srequest=[^=|?]+({uri_query}\?[^\s]+)\s""",
-    """\srequest=(?:[^:?]+:\/+)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^\/:\s]+))""",
+    """\srequest=(?:[^:?]+:\/+)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^\/:\s]+))""",
     """\srequestMethod=(NA|({method}[^=]+?))\s*(\w+=|$)""",
     """\srequestClientApplication=([uU]nknown|({user_agent}[^=]+?))\s*(\w+=|$)""",
     """\scn1=({risk_level}\d+)""",
@@ -39,8 +39,8 @@ Name = zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries
     """devicehostname=(NA|({src_host}[^\s"]+?))\s*(\w+=|$)""",
     """ZscalerNSSWeblogDLPDictionaries=({alert_name}[^=]+?)\s*([\w.]+=|$)""",
     """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)""",
-    """\sdhost=[^=]*?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({top_domain}[^\.]+\.\w+))\s+\w+=""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
+    """\sdhost=[^=]*?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({top_domain}[^\.]+\.\w+))\s+\w+=""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
     """\sspriv=({location}[^=]+?)\s*(\w+=|$)"""
     """DownloadFileName =(NA|None|({src_file_name}[^=\s]+))\s+"""
     """UploadFileName =(NA|None|({file_name}[^=\s]+))\s+"""

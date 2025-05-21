@@ -6,9 +6,9 @@ Vendor = "Okta"
 Product = "Okta Adaptive MFA"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 Conditions = [
-"""eventType"""
-"""client"""
-"""target"""
+""""eventType""""
+""""client""""
+""""target""""
 """securityContext"""
 """actor"""
 ]
@@ -33,7 +33,7 @@ Fields = [
 """"country"+:"+({location_country}[^",]+)"""
 """"type"+:"+AppInstance"+[^\}\]]*"displayName"+:"+({app}[^"]+?)\s*""""
 """"outcome"+:[^\]]*?"+result"+:"+({result}[^",]+)""""
-""""client"+:[^\]]*?"+ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""client"+:[^\]]*?"+ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"client"+:[^\]]*?"+rawUserAgent"+:"+((?i)unknown|({user_agent}[^"]+?))""""
 """"target"+:\[\{[^\}\]]+"+type"+:"+({object_type}[^",]+)""""
 ]

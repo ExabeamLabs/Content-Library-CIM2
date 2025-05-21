@@ -10,8 +10,8 @@ ParserVersion = "v1.0.0"
 Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"ip"""", """"event.type":"IP Connect""""]
 Fields = [
   """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
-  """"dst.ip.address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-  """"src.ip.address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"dst.ip.address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """"src.ip.address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"src.port.number":\s*({src_port}\d+)"""
   """"dst.port.number":\s*({dest_port}\d+)"""
   """"event\.type":"({event_name}[^"]+)"""
@@ -28,8 +28,8 @@ Fields = [
   """"endpoint.type":"({host_type}[^"]+)"""
   """"event.network.connectionStatus":"({result}[^"]+)"""
   """exa_json_path=$..timestamp,exa_field_name=time""",
-  """exa_regex="dst.ip.address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-  """exa_regex="src.ip.address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_regex="dst.ip.address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+  """exa_regex="src.ip.address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """exa_json_path=$..['src.port.number'],exa_field_name=src_port""",
   """exa_json_path=$..['dst.port.number'],exa_field_name=dest_port""",
   """exa_json_path=$..['event.type'],exa_field_name=event_name""",

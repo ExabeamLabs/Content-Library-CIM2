@@ -7,7 +7,7 @@ Name = tanium-cpp-json-app-login-success-createobject-1
     """exa_json_path=$.details,exa_field_name=additional_info"""
     """exa_json_path=$.object_type_name,exa_field_name=object_type"""
     """exa_json_path=$.details,exa_regex=UserID:\s*({user_id}[^;]+)"""
-    """exa_regex=IP Address\s*:\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_regex=IP Address\s*:\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   ParserVersion = v1.0.0
 

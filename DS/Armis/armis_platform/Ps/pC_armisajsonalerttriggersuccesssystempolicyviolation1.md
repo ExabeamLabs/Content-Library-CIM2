@@ -20,7 +20,7 @@ Name = armis-a-json-alert-trigger-success-systempolicyviolation-1
 	  """exa_json_path=$.policy.actionParams.alertDescription,exa_field_name=alert_description"""
 	  """exa_json_path=$.hostname,exa_field_name=host""",
     """exa_regex="user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    """exa_json_path=$..sourceEndpoints[*].ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$..sourceEndpoints[*].ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     ]
 
 

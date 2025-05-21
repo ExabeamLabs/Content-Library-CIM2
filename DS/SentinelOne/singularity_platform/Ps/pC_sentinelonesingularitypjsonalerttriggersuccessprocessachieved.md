@@ -22,15 +22,15 @@ Fields = [
 """exa_json_path=$.description,exa_field_name=alert_type""",
 """exa_json_path=$.agentComputerName,exa_regex=^({src_host}[\w\-.]+)$""",
 """exa_json_path=$.computerName,exa_regex=^({src_host}[\w\-.]+)$""",
-"""exa_json_path=$.agentIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
-"""exa_json_path=$.externalIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
+"""exa_json_path=$.agentIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
+"""exa_json_path=$.externalIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
 """exa_json_path=$.agentOsType,exa_field_name=os""",
 """exa_json_path=$.osName,exa_field_name=os""",
 """exa_json_path=$.fileDisplayName,exa_field_name=file_name""",
 """exa_json_path=$.filePath,exa_field_name=malware_url""",
 """exa_json_path=$.domain,exa_field_name=domain""",
 """exa_json_path=$.uuid,exa_field_name=user_uid""",
-"""exa_json_path=$..inet[0],exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
+"""exa_json_path=$..inet[0],exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
 """exa_json_path=$.mitigationStatus,exa_field_name=alert_severity"""
 ]
 DupFields = [

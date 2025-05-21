@@ -7,7 +7,7 @@ Name = oracle-db-json-database-logout-userhost
   ParserVersion = "v1.0.0"
   ExtractionType = json
   TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.S", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss.SSSSS", "yyyy-MM-dd HH:mm:ss.SSSSSS"]
-  Conditions = [ """action_name""", """LOGOFF""", """os_username""", """userhost""" ]
+  Conditions = [ """action_name""", """LOGOFF""", """os_username""", """userhost""", """return_code""" ]
   Fields=[
     """exa_json_path=$.os_username,exa_field_name=user"""
     """exa_json_path=$.username,exa_field_name=db_user"""

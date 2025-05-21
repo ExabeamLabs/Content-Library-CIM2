@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})"""
   """ipaddress\s:\s({host}[^|]+)\s\|"""
-  """ipaddress\s:\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))? \|"""
+  """ipaddress\s:\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))? \|"""
   """applicationtype\s:\s({app}[^|]+)\s\|"""
   """fileextension\s:\s({file_ext}[^|]+)\s\|"""
   """domain\s:\s({domain}[^|]+)\s\|"""

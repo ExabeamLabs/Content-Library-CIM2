@@ -12,10 +12,10 @@ Name = netwrix-ntp-kv-endpoint-authentication-success
 	"""({event_name}Kerberos Login succeed)""",
 	"""PolicyName ="({policy_name}[^"]+)"""",
 	"""Server="(({domain}[^"\\]+)\\)?({dest_host}[\w\-\.]+)"""",
-	"""ServerAddress="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+	"""ServerAddress="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
 	"""Perpetrator="(({domain}[^"\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 	"""Domain="({domain}[^"]+)"""",
-	"""ClientAddress="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+	"""ClientAddress="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 	"""DistinguishedName ="({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))""""
   ]
 

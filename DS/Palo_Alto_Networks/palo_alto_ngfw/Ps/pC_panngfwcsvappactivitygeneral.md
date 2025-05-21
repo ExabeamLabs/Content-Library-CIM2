@@ -10,7 +10,7 @@ Name = pan-ngfw-csv-app-activity-general
 # job_id is removed
     """User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
 # commit_description is removed
-    """({event_name}Failed password for root)\s+\w+\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+port\s+({src_port}\d+)\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """({event_name}Failed password for root)\s+\w+\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+port\s+({src_port}\d+)\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 pan-system-1 {

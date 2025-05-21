@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-4
     """Account Domain(:|=)(\s|\\[rnt])*(|({domain}[^\\:=]+?))(\s|\\[rnt]|;)*Logon GUID(:|=)"""
     """Service Name(:|=)(\s|\\[rnt])*({dest_host}[\w\-.]+)\$(\s|\\[rnt]|;)*Service ID""",
     """Service Name(:|=)(\s|\\[rnt])*({service_name}[^\\\s;]+)(\s|\\[rnt]|;)*Service ID""",
-    """Client Address(:|=)\s*(\\[rnt])*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """Client Address(:|=)\s*(\\[rnt])*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """Failure Code(:|=)(\s|\\[rnt])*({result_code}[^\s]+)(\s|\\[rnt]|;)*.+?Transited Services(:|=)"""
     """Ticket Options(:|=)(\s|\\[rnt])*({ticket_options}[^\s]+)(\s|\\[nrt]|;)*.+?Ticket Encryption Type(:|=)"""
     """Ticket Encryption Type(:|=)(\s|\\[rnt])*({ticket_encryption_type}[^\s]+)(\s|\\[nrt]|;)*.+?Failure Code(:|=)"""

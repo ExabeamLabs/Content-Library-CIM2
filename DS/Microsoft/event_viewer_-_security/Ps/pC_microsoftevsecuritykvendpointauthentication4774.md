@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-authentication-4774
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [ """4774""", """An account was mapped for logon""" ]
+  Conditions = [ """4774""", """An account was mapped for logon""", """Credential Validation""" ]
   Fields = [
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",

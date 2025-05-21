@@ -16,13 +16,13 @@ Name = microsoft-o365-mix-app-login-success-teamssessionstarted
     """sourceDnsDomain=({domain}[^=]+?)\s+\w+=""",
     """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s"]+))?)""",
     """"Operation":"({operation}[^"]+)"""",
-    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
     """exa_json_path=$.Workload,exa_field_name=app"""
     """exa_json_path=$.Operation,exa_field_name=operation"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
-    """exa_regex=ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """exa_regex=ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """UserId"*:\s*"*({user_upn}[^",]+)"*"""
     """ObjectId"*:\s*"*((?i)(Unknown)|({object}[^"]+))"*"""
     """exa_regex=ObjectId"*:\s*"*((?i)(Unknown)|({object}[^"]+))"*"""

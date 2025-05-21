@@ -4,10 +4,11 @@
 Name = microsoft-evsecurity-json-certificate-create-success-4887
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "epoch"
+  TimeFormat = ["epoch", "MMM dd HH:mm:ss"]
   ParserVersion = v1.0.0
   Conditions = [ """"Id":4887""", """"ProviderName":""", """Microsoft-Windows-Security-Auditing""", """Certificate Services approved a certificate request""" ]
   Fields = [
+    """({time}\w+\s+\d+\s+\d\d:\d\d:\d\d)\s"""
     """"Id":({event_code}\d+)"""
     """"Task":({task_id}\d+)"""
     """"ProviderName":"({provider_name}[^"]+)""""
@@ -21,6 +22,9 @@ Name = microsoft-evsecurity-json-certificate-create-success-4887
     """"Message":"({event_name}[^"\.]+)"""
     """Requester:(({domain}[^<\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """"LevelDisplayName":"({run_level}[^"]+)""""
+    """\sDisposition:({disposition}\d+)"""
+    """\sSubject:CN=({client_cert_subject}[^"\}]+)"""
+    """CertificateTemplate:\s*({additional_info}[^\s:]+?)(\\n)?\s*\w+:"""
   ]
 
 

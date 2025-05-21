@@ -23,13 +23,13 @@ Fields = [
 """dns_resp=({dns_response_code}((?i)NOERROR|NXDOMAIN|SERVFAIL|REFUSED))"""
 """dns_req=({dns_query}[^\s]+)"""
 """reqrulelabel=({rule}[^\=]+?)\s+\w+="""
-"""srv_dip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""srv_dip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """srv_dport=({dest_port}\d+)\s+"""
 """department=({department}[^\=]+?)\s+\w+="""
 """location=({location}[^\=]+?)\s+\w+="""
 """deviceowner=(NA|({owner_id}[^\s]+))"""
 """devicehostname=({host}[\w\-.]+?)\s*(\w+=|"*$)"""
-"""clt_sip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""clt_sip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -15,7 +15,7 @@ Name = microsoft-azuremon-json-app-activity-success-azurefrontdoor
     """"operationName":"({operation}[^"]+)""""
     """"category":"({category}[^"]+)""""
     """"(time|TimeGenerated)":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""
-    """"IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
+    """"IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
     """"resourceProvider":"({service_name}[^"]+)"""
     """"ActivityObjects":\[.+?"Type":"Resource","Id":"({resource}({resource_path}[^"]+)\/({resource_name}[^"]+)|[^"]+)""""
     """"Application":"({app}[^"]+)"""

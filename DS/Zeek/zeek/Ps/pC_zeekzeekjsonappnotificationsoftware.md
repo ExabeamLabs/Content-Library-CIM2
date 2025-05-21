@@ -10,7 +10,7 @@ Name = "zeek-zeek-json-app-notification-software"
   Fields = [
     """"ts":"({time}\d\d\d\d-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+Z)"""",
     """"_system_name":"({host}[\w\-.]+)"""",
-    """"host":"({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"host":"({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"name":"({app}[^"]+)"""",
 # software_type is removed
   ]

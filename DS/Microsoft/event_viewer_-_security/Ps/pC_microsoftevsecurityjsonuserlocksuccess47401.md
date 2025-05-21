@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-user-lock-success-4740-1
     """"hostname"+:"+({host}[\w\-.]+)""",
     """exa_json_path=$.winlog.computer_name,exa_field_name=src_host""",
     """exa_json_path=$.host.hostname,exa_field_name=host""",
-    """exa_regex=({event_name}Account That Was Locked Out)""",
+    """exa_regex=({event_name}(A user account was locked out|Account That Was Locked Out))""",
   ]
 
 json-windows-events-1 = {

@@ -8,6 +8,7 @@ TimeFormat = ["MMM dd HH:mm:ss yyyy","epoch_sec"]
 Conditions = [
 """User Account Disabled"""
 """629"""
+"""Target Account ID:"""
 ]
 Fields = [
 """({event_name}User Account Disabled)"""

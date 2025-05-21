@@ -27,7 +27,7 @@ Name = "exabeam-search-kv-alert-trigger-success-alertscount"
       """\szones=\"({src_network_zone}[^\"]+)\""""
       """\stop_reasons=\"(|({alert_reason}[^\"]*))\"*\s+\w+="""
       """\stop_reasons=\"(|({alert_name}[^\"]*))\"*\s+\w+="""
-      """\ssrc_ip=\"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """\ssrc_ip=\"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
       """\ssrc_host=\"(|NA|-|({src_host}[^\"]*))\"*\s+\w+=""",
       """end_time=\"({end_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """labels=\"({asset_labels}[^\"]+)\""""

@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-handle-request-success-4659-1
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = "MM/dd/yyyy HH:mm:ss"
-  Conditions = ["""A handle to an object was requested with intent to delete""", """4659""", """Computer"""]
+  Conditions = ["""A handle to an object was requested with intent to delete""", """EventCode=4659""", """Computer"""]
   Fields = [
     """({event_name}A handle to an object was requested with intent to delete)""",
     """({event_code}4659)""",

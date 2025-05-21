@@ -5,8 +5,8 @@ Name = microsoft-evsecurity-json-endpoint-authentication-success-4768
   Conditions = [ """"EVENT_NUMBER":"4768"""", """"REMARKS":"A Kerberos authentication ticket (TGT) was requested."""" ]
   Fields = ${ADAuditParserTemplates.ad-audit-json-events.Fields}[
     """exa_json_path=$.WORKSTATION_NAME,exa_field_name=src_host_windows,exa_match_expr=!InList($.WORKSTATION_NAME,"-")""",
-    """exa_json_path=$.CLIENT_HOST_NAME,exa_regex=^(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
-    """exa_json_path=$.CLIENT_IP_ADDRESS,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
+    """exa_json_path=$.CLIENT_HOST_NAME,exa_regex=^(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
+    """exa_json_path=$.CLIENT_IP_ADDRESS,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$.SOURCE,exa_regex=^(-|({src_host}[\w\-.]+))$""",
     """exa_json_path=$.TICKET_OPTIONS,exa_field_name=ticket_options""",
     """exa_json_path=$.LOGON_SERVICE,exa_field_name=service_name""",

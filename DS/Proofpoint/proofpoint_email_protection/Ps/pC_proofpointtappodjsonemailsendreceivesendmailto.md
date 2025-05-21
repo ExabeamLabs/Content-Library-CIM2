@@ -15,7 +15,7 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailto
 """:"""
   ]
   Fields = [
-    """"relay"+:\s*"+({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"relay"+:\s*"+({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"sizeBytes"+:\s*"*({bytes}\d+)""",
     """"ts"+:\s*"+({time}[^"]+)""",
     """"cipher"+:\s*"+(NONE|({auth_method}[^"]+))""",
@@ -23,7 +23,7 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailto
     """"dsn"+:\s*"+({result}[^"]+)""",
     """"stat"+:\s*"+({action}(Sent|Deferred|User unknown|queued))""",
     """"return-path":\["(<>|({return_path}[^"]+))"""",
-    """exa_json_path=$.sm.relay,exa_regex=({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.sm.relay,exa_regex=({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.sm.to[1:],exa_regex=(\\u\d+)?<(([^<@\]]+<|<|\\"+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@([^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)(?<!local)))\s*>"""
     """exa_regex="to":\s*\["?<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))"""
     """exa_json_path=$.sm.sizeBytes,exa_field_name=bytes""",

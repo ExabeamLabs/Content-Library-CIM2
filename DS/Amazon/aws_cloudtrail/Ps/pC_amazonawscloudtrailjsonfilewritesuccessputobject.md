@@ -11,7 +11,7 @@ Name = amazon-awscloudtrail-json-file-write-success-putobject
   Fields = [
     """exa_json_path=$.time,exa_field_name=time""",
     """exa_json_path=$.detail.reason,exa_field_name=operation""",
-    """exa_json_path=$.detail.source-ip-address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.detail.source-ip-address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.detail.object.key,exa_field_name=object""",
     """exa_json_path=$.detail.bucket.name,exa_field_name=bucket_name""",
     """exa_json_path=$.region,exa_field_name=region""",

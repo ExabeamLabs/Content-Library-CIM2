@@ -15,7 +15,7 @@ Fields = [
 """accesslog_syslog:(\s\S+){7}\s(\w+:\/+)?({web_domain}(?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|[^\s\/:]+))"""
 """accesslog_syslog:(\s\S+){11}\s(-|({action}[^\s-]+))"""
 """accesslog_syslog:(\s\S+){10}\s(["-]+|({mime}[^\s]+))"""
-"""\Wdst\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""\Wdst\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\WdstPort\s*({dest_port}\d+)"""
 """accesslog_syslog:(\s\S+){12}\s<(["-]+|nc|({category}[^,>]+?))\s*[,>]"""
 """\Wuserag\s*"*(?:[\s-]|({user_agent}[^"]+))"""

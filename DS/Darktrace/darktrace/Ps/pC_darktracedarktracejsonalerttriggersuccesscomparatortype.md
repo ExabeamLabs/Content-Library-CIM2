@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """"+hostname"+:"+({src_host}[^"]+)"""
   """"+creationTime"+:({time}\d{13})"""
-  """"+ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"+ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"+breachUrl"+:"+({malware_url}[^"]+)"""
   """"+name"+:"+({alert_name}[^"]+)"""
   """"+macaddress"+:\"+({src_mac}[^"]+)"""
@@ -22,11 +22,11 @@ Fields = [
   """"priority"+:({alert_severity}\d+)"""
   """"+typename"+:"+({alert_type}[^"]+)"""
   """"os"+:"+({os}[^"]+)"""
-  """filterType"+:?"+Destination IP.+?value"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"\}""",
+  """filterType"+:?"+Destination IP.+?value"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"\}""",
   """"+description"+:"+({additional_info}[^"]+)"""
   """exa_json_path=$..hostname,exa_field_name=src_host"""
   """exa_json_path=$.creationTime,exa_field_name=time"""
-  """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """exa_json_path=$.breachUrl,exa_field_name=malware_url"""
   """exa_json_path=$.model.name,exa_field_name=alert_name"""
   """exa_json_path=$..macaddress,exa_field_name=src_mac"""
@@ -34,7 +34,7 @@ Fields = [
   """exa_json_path=$..priority,exa_field_name=alert_severity"""
   """exa_json_path=$..typename,exa_field_name=alert_type"""
   """exa_json_path=$.os,exa_field_name=os"""
-  """exa_json_path=$.value,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """exa_json_path=$.value,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """exa_json_path=$.model.description,exa_field_name=additional_info"""
 ]
 ParserVersion = "v1.0.0"

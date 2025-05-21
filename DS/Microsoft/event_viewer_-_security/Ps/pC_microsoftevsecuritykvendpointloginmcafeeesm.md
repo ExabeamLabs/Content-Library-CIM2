@@ -18,7 +18,7 @@ Fields = [
 """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
 """sntdom=({domain}[^\s]+)"""
 """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
-"""suser=({email_address}[^\s]+@[^\s]+)\s+\w+="""
+"""suser=({user_upn}[^\s]+@[^\s]+)\s+\w+="""
 """shost=({dest_host}[\w\-.]+?)\s+\w+="""
 ]
 ParserVersion = "v1.0.0"

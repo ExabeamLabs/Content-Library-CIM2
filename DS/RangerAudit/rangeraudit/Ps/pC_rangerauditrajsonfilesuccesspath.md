@@ -19,7 +19,7 @@ Fields = [
     """access"*:"({access}[^"]+)"""
     """resource"*:"({file_path}[^"]+)"""
     """action"*:"({action}[^"]+)"""
-    """cliIP"*:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """cliIP"*:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """cluster_name"*:"({dest_host}[^"]+)"""
 
     """exa_json_path=$.evtTime,exa_field_name=time""",
@@ -29,7 +29,7 @@ Fields = [
     """exa_json_path=$.access,exa_field_name=access""",
     """exa_json_path=$.resource,exa_field_name=file_path""",
     """exa_json_path=$.action,exa_field_name=action""",
-    """exa_json_path=$.cliIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.cliIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.cluster_name,exa_field_name=dest_host"""
 ]
 ParserVersion = "v1.0.0"

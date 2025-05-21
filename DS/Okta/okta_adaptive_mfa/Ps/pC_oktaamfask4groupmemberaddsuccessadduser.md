@@ -15,8 +15,8 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",
     """"target":\[[^\]]*?("type":"User",)?"alternateId":"({account_id}[^"]+)"""",
     """"target":\[[^\]]*?("type":"User",)?"alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"ipAddress":"?(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),?"?""",
+    """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ipAddress":"?(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),?"?""",
     """"outcome":\{"result":"({result}[^"]+)"""",
     """duser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""",
     """"target(s)?":[^\]]+?"displayName":"({member}[^",]+)[^\]\}]+?("type":"User")?"""
@@ -28,7 +28,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """"displayMessage"\s*:\s*"((?i)null|({event_name}[^",]+))"""
     """exa_json_path=$.published,exa_field_name=time""",
     """exa_json_path=$.target[1:].alternateId,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=Contains($.target.type,"User")""",
-    """exa_json_path=$..client.ipAddress,exa_regex=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """exa_json_path=$..client.ipAddress,exa_regex=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """exa_json_path=$..outcome.result,exa_field_name=result""",
     """exa_json_path=$..target[1:].displayName,exa_field_name=member,exa_match_expr=Contains($.target.type,"User")""",
     """exa_json_path=$..eventType,exa_field_name=operation""",

@@ -21,7 +21,7 @@ Name = microsoft-evsystem-kv-endpoint-notification-success-notification
     """Attributes:\s*({attributes}[^"$]+)\s*$"""
     """Client Port:\s*(\\r|\\n|\\t)*({src_port}\d+)"""
     """Failure Code(:|=)\s*(\\r|\\n|\\t)*({result_code}[\w]+)"""
-    """Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """Service Name(:|=)\s*(\\[rnt])*(\w+\/(?=\w))?({domain}[^\s]+?)\s*;*(\\+[rnt]|\s)*Network Information"""
     """Service Name(:|=)\s*(\w+\/(?=\w))?(\\t)+?(({account}[^\\\/"]+)[\\\/]+)?({domain}[^\\\/].+?)\s*;*(\\[rnt]|\s)*Network Information:"""
     """Account Name(:|=)\s*(\\r|\\n|\\t)*?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\\r\s\\r\s\\n)?Service Information:"""

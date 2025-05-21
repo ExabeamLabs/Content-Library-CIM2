@@ -11,8 +11,8 @@ ParserVersion = "v1.0.0"
 
 unix-activity-json.Fields}[
     """exa_json_path=$.jsonPayload.message,exa_regex=(I|i)nvalid user (({domain}[^\\:]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """exa_json_path=$.jsonPayload.message,exa_regex=from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.jsonPayload.message,exa_regex=\s+from\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.jsonPayload.message,exa_regex=from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.jsonPayload.message,exa_regex=\s+from\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
   ParserVersion = "v1.0.0"
 },
@@ -66,46 +66,6 @@ ParserVersion = "v1.0.0"
 },
 
 {
-Vendor = "Unix"
-Product = "Unix"
-TimeFormat = "epoch_sec"
-Fields = [
-""""end":({time}\d{10})"""
-""""actor":\{.*?\"secondary\":\"(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
-""""actor":\{.*?\"primary\":\"(|({account}[^\"]+))\""""
-""""user":\{.*?\"uid\":\"({user_id}\d+)\""""
-""""user":\{.*?\"gid\":\"({group_id}\d+)\""""
-""""pid":({process_id}\d+)"""
-""""ppid":({parent_process_id}\d+)"""
-""""process":\{.*?\"name\":\"(|({process_name}[^\"]+))\""""
-""""process":\{.*?\"args\":\[({arg}[^\[\]]+?)\]"""
-""""process":\{.*?\"title\":\"({process_command_line}.*?)\"(\}|,)"""
-""""host":\{.*?\"name\":\"(|({dest_host}[^\"]+))\""""
-""""data":\{.*?\"hostname\":\"(eth\d+\.)?(|({src_host}[^\"]+))\""""
-""""result":\"({result}[^\"]+)\""""
-""""event":\{.*?\"type\":\"(|({operation_type}[^\"]+))\""""
-""""event":\{.*?\"action\":\"(|({event_category}[^\"]+))\""""
-""""event":\{.*?\"category\":\"(|({event_subtype}[^\"]+))\""""
-""""event":\{.*?\"result\":\"(|({result}[^\"]+))\""""
-""""source":\{\"ip\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-""""process":\{.*?\"executable\":\"(|({service_name}[^\"]+))\""""
-""""file":\{.*?\"path\":\"(|({file_path}[^\"]+))\""""
-""""file":\{.*?\"owner\":\"(|({file_owner}[^\"]+))\""""
-]
-DupFields = [
-"process_path->path"
-"dest_host->host"
-]
-Name = "unix-unix-json-ssh-traffic-success-process"
-Conditions = [
-"""logstash-auditbeat"""
-""""process""""
-""""op":"PAM:authentication""""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
 Vendor = Unix
 Product = Unix
 TimeFormat = "epoch_sec"
@@ -127,7 +87,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -167,7 +127,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -207,7 +167,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -247,7 +207,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -287,7 +247,7 @@ Fields = [
   """"event":\{.*?"action":"(|({event_category}[^"]+))""""
   """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
   """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
   """"file":\{.*?"path":"(|({file_path}[^"]+))""""
   """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -326,7 +286,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -366,7 +326,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -409,7 +369,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -448,7 +408,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({src_file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -488,7 +448,7 @@ Fields = [
 """"event":\{.*?"action":"(|({event_category}[^"]+))""""
 """"event":\{.*?"category":"(|({event_subtype}[^"]+))""""
 """"event":\{.*?"outcome":"(|({result}[^"]+))""""
-""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""source":\{"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"process":\{.*?"executable":"(|({service_name}[^"]+))""""
 """"file":\{.*?"path":"(|({file_path}[^"]+))""""
 """"file":\{.*?"owner":"(|({file_owner}[^"]+))""""
@@ -519,12 +479,12 @@ Fields = [
   """\d\d:\d\d:\d\d(\.\d+Z?)? (::ffff:)?({host}[\w\.-]+)""",
   """({time}\w{3}\s+\d{1,2}\s+\d\d:\d\d:\d\d)""",
   """({time}\d\d-\w+-\d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-  """\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))#({src_port}\d+)(?:)""",
+  """\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))#({src_port}\d+)(?:)""",
   """query:\s*({dns_query}\S+)\s"""
   """\sIN\s({dns_query_type}\w{1,5})\s""",
   """\s+IN\s.+?\s+({dns_query_flags}[^\d\w].*?)\s""",
   """response:\s*({dns_response_code}[^\s]+)\s""",
-  """\sIN\s+.+?\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(;|$|"|\.|\))""",
+  """\sIN\s+.+?\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(;|$|"|\.|\))""",
   """ CNAME ({additional_info}[^;]+?)\.?;""",
   ]
 ParserVersion = "v1.0.0"
@@ -570,34 +530,7 @@ DupFields = [
 ]
 ParserVersion = "v1.0.0"
 },
-${UnixParsersTemplates.cef-unix-template-1}{
-  Name = unix-unixauditd-cef-process-create-success-execve
-  Conditions = [ """CEF""", """Unix|auditd""", """EXECVE""" ]
-  Fields = ${UnixParsersTemplates.cef-unix-template-1.Fields}[
-    """CEF:([^\|]*\|){4}({event_name}[^|]+)\\""",
-    """Arguments:\s*({process_command_line}.*?)\s*cs1Label="""
-  ]
-  ParserVersion = "v1.0.0"
-},
 
-${UnixParsersTemplates.cef-unix-template-1}{
-  Name = unix-unixauditd-cef-process-create-success-syscall
-  Conditions = [ """CEF""", """Unix|auditd""", """|SYSCALL""" ]
-  Fields = ${UnixParsersTemplates.cef-unix-template-1.Fields}[
-    """CEF:([^\|]*\|){5}({event_name}[^\\\|]+)\|({result}[^\|]+)"""
-  ]
-  ParserVersion = "v1.0.0"
-},
-
-${UnixParsersTemplates.cef-unix-template-1}{
-  Name = unix-unixauditd-cef-process-create-success-usercmd
-  Conditions = [ """CEF""", """Unix|auditd""", """USER_CMD""" ]
-  Fields = ${UnixParsersTemplates.cef-unix-template-1.Fields}[
-    """cmd\\=({command}[^\s]+)""",
-    """CEF:([^\|]*\|){4}({event_name}[^|]+)\\"""
-  ]
-  ParserVersion = "v1.0.0"
-},
 {
   Name = unix-ad-cef-endpoint-login-success-userauth
   ParserVersion = v1.0.0
@@ -610,9 +543,9 @@ ${UnixParsersTemplates.cef-unix-template-1}{
     """\soutcome=({result}.+?)\s+\w+=""",
     """\sdvc=({host}\S+)""",
     """\sdvchost=({host}\S+)""",
-    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\saddr\\=(?:\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\shostname\\=(?:\?|(src_host)\S+)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sshost=({src_host}\S+)""",
     """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
     """\sact=({auth}\S.+?)\s+\w+=""",

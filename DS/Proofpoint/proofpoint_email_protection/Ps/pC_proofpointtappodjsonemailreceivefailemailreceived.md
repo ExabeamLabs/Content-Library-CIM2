@@ -30,7 +30,7 @@ Fields = [
 """msgParts":[^\n]*?"detectedName":"({email_attachment}[^"]+)""""
 """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
 """msgParts":[^\n]*?"sizeDecodedBytes":({bytes}\d+),"""
-""""ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"host":"({host}[^"]+)""""
 """"rule":"({rule}[^"]+)""""
 """fromDisplayNames":\["({full_name}[^"]+)""""
@@ -42,8 +42,8 @@ Fields = [
 """exa_regex=rcpts":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"[^\]]*)\]"""
 """exa_json_path=$.msg.header.subject[1:],exa_field_name=email_subject""",
 """exa_regex="subject"+:\s*\["+({email_subject}[^"]+)""",
-"""exa_regex="ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-"""exa_json_path=$.connection.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_regex="ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+"""exa_json_path=$.connection.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.filter.disposition,exa_field_name=result""",
 """exa_json_path=$.filter.routeDirection,exa_field_name=direction""",
 """exa_regex="message-id":\["<({message_id}[^">]+?)\s*>"""",

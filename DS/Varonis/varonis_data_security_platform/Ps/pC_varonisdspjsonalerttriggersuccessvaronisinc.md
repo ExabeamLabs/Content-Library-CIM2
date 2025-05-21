@@ -14,7 +14,7 @@ Fields = [
    """\|rt=({time}\w{3} \d+ \d\d\d\d \d\d:\d\d:\d\d)"""
    """({host}[\w.\-]+)\s+CEF:"""
    """\d\d:\d\d\s({host}[^\s]+)\sVaronis-DatAlert:"""
-   """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+   """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
    """\sdvchost=(?:|({dest_ip}\d+\.\d+\.\d+\.\d+)|({dest_host}[\w\-.]+))\s\w+="""
    """\sduser=(?:|((Abstract|({domain}[^\\]+))\\+)?(Nobody|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
    """\sduser=(?:|((Abstract|({domain}[^\\]+))\\+)?(Nobody|SYSTEM|({full_name}[^\\\s,=]+\s+[^\\,=]+?)))\s+\w+="""

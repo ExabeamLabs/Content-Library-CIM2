@@ -10,9 +10,9 @@ Name = aws-waf-json-http-session-httprequest
   Fields = [
     """"timestamp":({time}\d{13}),""",
     """\s\d\d\s\d\d:\d\d:\d\d\s({host}[\w\-\.]+)""",
-    """"clientIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"clientIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"name":"user-agent","value":"({user_agent}[^"]+)"""",
-    """"name"+:"+(?i)Host"+,"+value"+:"+({web_domain}[^="]+?({top_domain}[^\/\.\s"]+?))[\\\/\s:"]"""
+    """"name"+:"+(?i)Host"+,"+value"+:"+(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^="]+?\.(\d+|({top_domain}[^\/\.\s"]+?)))|({dest_host}[\w\-\.]+))[\\\/\s:"]"""
     """"uri":"({uri_path}[^"]+)"""",
     """"args":"({uri_query}[^"]+)"""",
     """"action":"({action}[^"]+)"""",

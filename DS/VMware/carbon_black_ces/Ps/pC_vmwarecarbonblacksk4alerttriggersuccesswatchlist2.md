@@ -20,7 +20,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-watchlist-2
     """"parent_name"+:"+({parent_process_path}({parent_process_dir}[^"]*?[\\\/]+)?({parent_process_name}[^"\\\/]+))"""",
     """"org_key"+:"+({primary_key}[^"]+)"""",
     """"device_name"+:"+(\w+\\+)?({host}[\w\-.]+)"""",
-    """"device_internal_ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"device_internal_ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"device_username"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"process_username"+:"+(NT AUTHORITY\\+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """"device_os"+:"+({os}[^"]+)""""

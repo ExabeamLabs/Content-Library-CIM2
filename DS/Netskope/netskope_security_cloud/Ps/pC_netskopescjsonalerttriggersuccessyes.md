@@ -13,7 +13,7 @@ Name = netskope-sc-json-alert-trigger-success-yes
     """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.policy,exa_field_name=alert_name"""
     """exa_json_path=$.alert_type,exa_field_name=alert_type"""
-    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.url,exa_field_name=target"""
     """exa_json_path=$.shared_with,exa_field_name=additional_info"""
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""
@@ -28,6 +28,7 @@ Name = netskope-sc-json-alert-trigger-success-yes
     """exa_json_path=$.domain,exa_field_name=web_domain"""
     """exa_json_path=$.file_size,exa_field_name=bytes"""
     """exa_json_path=$.object,exa_field_name=object"""
+    """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
     """"alert_name":\s*"({alert_name}[^",]+)"""
     """"alert_type":\s*"({alert_type}[^",]+)"""
     """"severity":\s*"({alert_severity}[^",]+)"""
@@ -53,6 +54,7 @@ Name = netskope-sc-json-alert-trigger-success-yes
     """"md5":\s*"({hash_md5}[^",]+)"""
     """"file_type":\s*"({file_type}[^",]+)"""
     """"policy":\s*"({policy_name}[^",]+)"""
+    """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
   ]
   DupFields = [ "file_path->file_path_at", "additional_info->shared_with_at","alert_name"->"alert_subject" ]
 

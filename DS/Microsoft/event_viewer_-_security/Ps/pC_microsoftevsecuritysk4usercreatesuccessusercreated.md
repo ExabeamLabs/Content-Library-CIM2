@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-sk4-user-create-success-usercreated
     """"Category":"({category}[^"]+)"""
     """({event_code}4720)"""
     """"TargetSid":"+({dest_user_sid}[^"]+)"""
-    """"UserPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""""
+    """"UserPrincipalName":"({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+))?)""""
     """"SubjectLogonId":"({login_id}[^\s"]+)"""
     """"TargetUserName":"({account_name}[^"]+)"""
     """"TargetDomainName":"({account_domain}[^"]+)"""

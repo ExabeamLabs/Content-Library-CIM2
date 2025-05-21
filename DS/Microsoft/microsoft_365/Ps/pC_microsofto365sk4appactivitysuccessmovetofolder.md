@@ -13,7 +13,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
     """MoveToFolder",.+?Value":"({target}[^\s"]+)""""
     """"ResultStatus":"({result}[^"]+)"""",
-    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({operation}MoveToFolder)""",
     """additional_info="({additional_info}[^=]+?)(\s+\w+="|$)""",
     """msg=({additional_info}[^=]+?)\srequest=""",
@@ -32,7 +32,7 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """exa_json_path=$..CreationTime,exa_field_name=time""",
     """exa_json_path=$..Parameters[?(@.Name == 'MoveToFolder')].Value,exa_field_name=target""",
     """exa_json_path=$..ResultStatus,exa_field_name=result""",
-    """exa_json_path=$..ClientIP,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
+    """exa_json_path=$..ClientIP,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_regex=({operation}MoveToFolder)""",
     """exa_json_path=$..UserId,exa_regex=\/(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=\/]+))(\\)?\\"\s*on behalf""",
     """exa_json_path=$..UserId,exa_regex=\/({last_name}[^,\\\/]+),\s*({first_name}[^\\\/"]+)\\"\s*on behalf""",

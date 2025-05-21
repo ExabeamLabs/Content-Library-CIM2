@@ -15,8 +15,8 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """exa_json_path=$.cs-bytes,exa_field_name=bytes_in"""
         """exa_json_path=$.sc-bytes,exa_field_name=bytes_out"""
         """exa_json_path=$.bytes,exa_field_name=bytes"""
-        """exa_json_path=$.c-ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-        """exa_json_path=$.s-ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+        """exa_json_path=$.c-ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+        """exa_json_path=$.s-ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
         """exa_json_path=$.cs-username,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
         """exa_json_path=$.cs-user-agent,exa_field_name=user_agent""",
         """exa_json_path=$.sc-content-type,exa_field_name=mime""",
@@ -30,6 +30,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """exa_json_path=$.x-c-browser,exa_field_name=browser"""
         """exa_json_path=$.x-c-os,exa_field_name=os"""
         """exa_json_path=$.x-category,exa_field_name=category"""
+        """exa_json_path=$.x-other-category,exa_field_name=categories"""
         """exa_json_path=$.x-cs-timestamp,exa_field_name=time"""
         """exa_json_path=$.cs-uri-query,exa_field_name=uri_query"""
         """exa_json_path=$.x-type,exa_field_name=connection_type"""
@@ -41,8 +42,8 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """"cs-bytes":\s*"({bytes_in}\d+)""""
         """"sc-bytes":\s*"({bytes_out}\d+)""""
         """"bytes":\s*"({bytes}\d+)""""
-        """"c-ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-        """"s-ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+        """"c-ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+        """"s-ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
         """"cs-username":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
         """"cs-user-agent":\s*"({user_agent}[^"]+)""""
         """"sc-content-type":\s*"({mime}[^"]+)""""
@@ -65,6 +66,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """"x-type":\s*"({connection_type}[^"]+)""""
         """"x-cs-traffic-type":\s*"({traffic_type}[^"]+)""""
         """"cs-referer":\s*"({referrer}[^"]+)""""
+        """"x-other-category":\s*"({categories}[^:"]+)"""
     ]
 
 

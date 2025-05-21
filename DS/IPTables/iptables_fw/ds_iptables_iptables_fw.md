@@ -4,12 +4,12 @@ Product: IPTables FW
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  56   |   20   |         6          |       2        |    3    |
+|  56   |   20   |         6          |       2        |    2    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-traffic:fail (network-connection-failed)<br> ↳[iptables-i-kv-network-traffic-fail-deny](Ps/pC_iptablesikvnetworktrafficfaildeny.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[iptables-fw-json-network-traffic-fwiptable](Ps/pC_iptablesfwjsonnetworktrafficfwiptable.md)<br> ↳[iptables-i-kv-network-traffic-success-accept](Ps/pC_iptablesikvnetworktrafficsuccessaccept.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_iptables_iptables_fw_Lateral_Movement.md) |
-|          [Malware](../../../UseCases/uc_malware.md)          |  network-traffic:fail (network-connection-failed)<br> ↳[iptables-i-kv-network-traffic-fail-deny](Ps/pC_iptablesikvnetworktrafficfaildeny.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[iptables-fw-json-network-traffic-fwiptable](Ps/pC_iptablesfwjsonnetworktrafficfwiptable.md)<br> ↳[iptables-i-kv-network-traffic-success-accept](Ps/pC_iptablesikvnetworktrafficsuccessaccept.md)<br> | TA0011 - TA0011<br>    | [<ul><li>4 Rules</li></ul>](RM/r_m_iptables_iptables_fw_Malware.md)    |
+| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-traffic:fail (network-connection-failed)<br> ↳[iptables-i-kv-network-traffic-fail-deny](Ps/pC_iptablesikvnetworktrafficfaildeny.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[iptables-i-kv-network-traffic-success-accept](Ps/pC_iptablesikvnetworktrafficsuccessaccept.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_iptables_iptables_fw_Lateral_Movement.md) |
+|          [Malware](../../../UseCases/uc_malware.md)          |  network-traffic:fail (network-connection-failed)<br> ↳[iptables-i-kv-network-traffic-fail-deny](Ps/pC_iptablesikvnetworktrafficfaildeny.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[iptables-i-kv-network-traffic-success-accept](Ps/pC_iptablesikvnetworktrafficsuccessaccept.md)<br> | TA0011 - TA0011<br>    | [<ul><li>4 Rules</li></ul>](RM/r_m_iptables_iptables_fw_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

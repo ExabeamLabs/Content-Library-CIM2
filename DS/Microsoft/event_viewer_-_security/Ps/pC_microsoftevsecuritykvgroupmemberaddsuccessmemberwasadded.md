@@ -5,9 +5,7 @@ Name = "microsoft-evsecurity-kv-group-member-add-success-memberwasadded"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
-  Conditions = [
-    """A member was added to a security-enabled"""
-  ]
+  Conditions = ["""A member was added to a security-enabled""","""Subject:""","""Security ID:"""]
   Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",

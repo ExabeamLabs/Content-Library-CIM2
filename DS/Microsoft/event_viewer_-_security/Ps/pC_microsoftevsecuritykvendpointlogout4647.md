@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4647
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
-  Conditions = [""" User initiated logoff""", """ 4647 """]
+  Conditions = [""" User initiated logoff""", """ 4647 """, """Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """({event_name}User initiated logoff)""",
     """({event_code}4647)""",

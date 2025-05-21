@@ -14,7 +14,6 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769"
   """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """({event_name}A Kerberos service ticket was requested)"""
   """<Computer>({host}[\w\-.]+)</Computer>"""
-  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>"""
   """<Data Name\\*=('|")Status('|")>({result_code}[^<]+)</Data>"""
   """<Data Name\\*=('|")ServiceName('|")>({src_host}[\w\-.]+\$)</Data>"""
@@ -23,7 +22,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769"
   """<Data Name\\*=('|")TicketEncryptionType('|")>({ticket_encryption_type}[^<]+)</Data>"""
   """<Data Name\\*=('|")TargetUserName('|")>(([^\/<@]+\/+)({src_host}[^<@]+)(@({domain}[^<]+))?|(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({=domain}[^<@\s]+?))?)<\/Data>""",
   """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
-  """<Data Name\\*=('|")IpAddress('|")>((::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)</Data>"""
+  """<Data Name\\*=('|")IpAddress('|")>((::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "result_code->failure_code", "domain->dest_domain", "user->dest_user" ]

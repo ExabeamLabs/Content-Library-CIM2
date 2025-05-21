@@ -11,7 +11,7 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[\w\-.]+)\s\d+\s""",
     """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{3,9}Z)""",
-    """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"serviceName":"({service_name}[^"]+)"""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
     """"principalEmail":\s*"(?:({email_address}[^"@]+?@({email_domain}[^"@]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
@@ -30,8 +30,8 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"status":.+"code":\s*({result_code}\d+)""",
     """"status":.+"message":\s*"?({failure_reason}[^},]+)"""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
-    """exa_json_path=$.protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """exa_regex="callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """exa_json_path=$.protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """exa_regex="callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_json_path=$.protoPayload.serviceName,exa_field_name=service_name""",
     """exa_json_path=$.protoPayload.requestMetadata.callerSuppliedUserAgent,exa_field_name=user_agent""",
     """exa_json_path=$.protoPayload.authenticationInfo.principalEmail,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
@@ -48,7 +48,8 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$.resource.labels.project_id,exa_field_name=project_id""",
     """exa_json_path=$.protoPayload.status.code,exa_field_name=result_code""",
-    """exa_json_path=$.protoPayload.status.message,exa_field_name=failure_reason"""
+    """exa_json_path=$.protoPayload.status.message,exa_field_name=failure_reason""",
+    """exa_json_path=$.protoPayload.metadata.event[0].eventName,exa_field_name=action"""
   ]
 
 

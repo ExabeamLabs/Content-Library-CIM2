@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-xml-user-name-modify-4781
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
-  Conditions = [ """The name of an account was changed""", """4781""" ]
+  Conditions = [ """The name of an account was changed""", """<EventID>4781<""", """NewTargetUserName""" ]
   Fields = [
     """({event_name}The name of an account was changed)""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",

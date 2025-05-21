@@ -28,7 +28,7 @@ exabeam-audit-json-events = {
       """"old_value":"({old_value}\[.*?\])","\w+":""",
       """"new_value":"({new_value}\[.*?\])","\w+":""",
       """"outcome":"({result}[^"]+)"""",
-      """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+      """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
       """"api_method":"({method}[^"]+)"""",
       """"api_endpoint":"({url}[^"]+)"""",
       """"user":"({email_address}[^\@]+@[^"]+)"""",
@@ -47,7 +47,7 @@ exabeam-audit-json-events = {
       """exa_json_path=$.old_value,exa_field_name=old_value,exa_match_expr=!InList($.old_value,"")""",
       """exa_json_path=$.new_value,exa_field_name=new_value,exa_match_expr=!InList($.new_value,"")""",
       """exa_json_path=$..outcome,exa_field_name=result"""
-      """exa_json_path=$..src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """exa_json_path=$..src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_json_path=$..api_method,exa_field_name=method,exa_match_expr=!InList($..api_method,"")""",
       """exa_json_path=$..api_endpoint,exa_field_name=url,exa_match_expr=!InList($..api_endpoint,"")""",
       """exa_json_path=$.api_endpoint,exa_field_name=url,exa_match_expr=!InList($.api_endpoint,"")""",

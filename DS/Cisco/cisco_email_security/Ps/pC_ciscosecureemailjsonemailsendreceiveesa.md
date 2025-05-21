@@ -15,7 +15,7 @@ Name = cisco-secureemail-json-email-send-receive-esa
     """\sdeviceDirection=({direction}[^=]+)\s\w+=""",
     """\scs4='({message_id}[^']+)'""",
     """\sshost=({src_host}[\w\-.]+)\s""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
     """\smsg='({email_subject}[^']+)'\s""",
     """\scs1=({policy_name}[^=]+)\s\w+="""
   ]

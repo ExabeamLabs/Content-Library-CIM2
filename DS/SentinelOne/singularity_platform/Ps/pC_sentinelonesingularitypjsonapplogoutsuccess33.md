@@ -13,7 +13,7 @@ json-sentinelone-activitytype = {
   Fields = [
   """exa_json_path=$.createdAt,exa_field_name=time""",
   """exa_json_path=$..computerName,exa_field_name=src_host""",
-  """exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+  """exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   """exa_json_path=$..confidenceLevel,exa_field_name=additional_info""",
   """exa_json_path=$.accountName,exa_field_name=account_name"""
   """exa_json_path=$..filePath,exa_field_name=file_path""" 

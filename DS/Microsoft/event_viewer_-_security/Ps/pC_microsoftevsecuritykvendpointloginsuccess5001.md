@@ -10,6 +10,7 @@ Conditions = [
 """500"""
 """MSWinEventLog"""
 """Issued identity:"""
+"""Security"""
 ]
 Fields = [
 """({event_code}500)"""

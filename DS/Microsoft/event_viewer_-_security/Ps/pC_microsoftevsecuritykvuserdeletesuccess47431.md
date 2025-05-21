@@ -7,7 +7,6 @@ Product = "Event Viewer - Security"
 TimeFormat = "MMM dd HH:mm:ss yyyy"
 Conditions = [
 """A computer account was deleted"""
-"""4743"""
 """(EventID 4743)"""
 """Microsoft Windows security auditing"""
 ]

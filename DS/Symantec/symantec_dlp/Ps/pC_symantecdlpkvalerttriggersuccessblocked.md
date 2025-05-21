@@ -13,7 +13,7 @@ Name = symantec-dlp-kv-alert-trigger-success-blocked
     """\WProtocol:\s+({alert_type}.+?)(,\s*\w+:|\s*$)""",
     """\WProtocol:\s+({protocol}.+?)(,\s*\w+:|\s*$)""",
     """\WRecipient:\s+(?:N\/A|({target}.+?))(,\s*\w+:|\s*$)""",
-    """\WRecipient:\s+({account}[^@]+)@({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\WRecipient:\s+({account}[^@]+)@({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\WSender:\s+(?:N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\WSender:\s+({os}[^:]+):\/+({domain}[^/]+)\/({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """\WSeverity:\s+({alert_severity}.+?)(,\s*\w+:|\s*$)""",

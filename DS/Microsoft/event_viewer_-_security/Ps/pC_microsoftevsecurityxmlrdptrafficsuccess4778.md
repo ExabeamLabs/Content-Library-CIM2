@@ -19,7 +19,7 @@ Name = "microsoft-evsecurity-xml-rdp-traffic-success-4778"
   """('|")AccountDomain('|")>({domain}[^"\s<]+)<"""
   """('|")LogonID('|")>({login_id}[^"\s<]+)<"""
   """('|")ClientName('|")>({src_host}[\w\-.]+)<"""
-  """('|")ClientAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<"""
+  """('|")ClientAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<"""
   """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"

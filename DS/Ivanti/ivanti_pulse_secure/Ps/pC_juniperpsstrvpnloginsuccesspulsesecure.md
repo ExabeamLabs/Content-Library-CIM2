@@ -7,9 +7,9 @@ Conditions = [
   """PulseSecure: """
 ]
 Fields = ${JuniperParsersTemplates.ivanti-pulsesecure-events.Fields}[
-  """PulseSecure:[\s\-]{0,100}({time}\d\d\d\d\-\d\d\-\d\d\s*\d\d:\d\d:\d\d)\s+\-\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+)))\s*"""
-  """({event_name}Login succeeded) for ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\/({realm}[^\s]+) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """PulseSecure:[^\[]+\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\s+(({domain}[^\\]+)\\)?(?:({email_address}[^@\s]+@[^@\(]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\(({realm}[^\)]+)?"""
+  """PulseSecure:[\s\-]{0,100}({time}\d\d\d\d\-\d\d\-\d\d\s*\d\d:\d\d:\d\d)\s+\-\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+)))\s*"""
+  """({event_name}Login succeeded) for ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\/({realm}[^\s]+) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """PulseSecure:[^\[]+\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\s+(({domain}[^\\]+)\\)?(?:({email_address}[^@\s]+@[^@\(]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\(({realm}[^\)]+)?"""
 ]
 DupFields = [
   "user->account"
@@ -21,7 +21,7 @@ ivanti-pulsesecure-events = {
   Product = Ivanti Pulse Secure
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
-    """\s({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+)))\sPulseSecure:""",
+    """\s({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+)))\sPulseSecure:""",
     """\stime="({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """\ssrc=({src_ip}[A-Fa-f\d:.]+)\s""",
     """\suser=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^=]+?))?)\s\w+=""",

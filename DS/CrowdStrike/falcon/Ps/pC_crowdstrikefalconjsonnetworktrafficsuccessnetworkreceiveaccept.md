@@ -10,7 +10,7 @@ Name = crowdstrike-falcon-json-network-traffic-success-networkreceiveaccept
   Conditions = [ """"event_simpleName":"NetworkReceiveAcceptIP4"""" , """"aip":""", """aid":""" ]
   Fields =[
     """"OciContainerId":"({container_id}[^"]+)"""",
-    """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"aid":"({aid}[^"]+)"""",
     """"cid":"({cid}[^"]+)"""",
     """"timestamp":"({time}\d{13})"""",
@@ -18,8 +18,8 @@ Name = crowdstrike-falcon-json-network-traffic-success-networkreceiveaccept
     """"event_platform":"({os}[^"]+)"""",
     """"event_simpleName":"({event_name}[^"]+)"""",
     """"name":"({event_name}[^"]+)"""",
-    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
-    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"RemoteAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"LocalPort":"({src_port}\d+)"""",
     """"RemotePort":"({dest_port}\d+)"""",
     """"ConnectionDirection":"({direction}[^"]+)""""

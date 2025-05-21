@@ -20,7 +20,7 @@ azure-classicblob-json = {
       """exa_json_path=$..schemaVersion,exa_field_name=schema_version""",
       """exa_json_path=$..statusCode,exa_field_name=result_code""",
       """exa_json_path=$..statusText,exa_field_name=result""",
-      """exa_json_path=$..callerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"""
+      """exa_json_path=$..callerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"""
       """exa_json_path=$..correlationId,exa_field_name=correlation_id""",
       """exa_json_path=$..identity.type,exa_field_name=auth_type""",
       """exa_json_path=$..location,exa_field_name=region""",
@@ -43,7 +43,7 @@ azure-classicblob-json = {
       """"+schemaVersion"+:\s*"+({schema_version}[^"]+)"+""",
       """"+statusCode"+:\s*({result_code}[^,"]+)""",
       """"+statusText"+:\s*"+({result}[^"]+)"+""",
-      """"+callerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
+      """"+callerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
       """"+correlationId"+:\s*"+({correlation_id}[^"]+)"+""",
       """"+identity"+:[^\}]+"+type"+:\s*"+({auth_type}[^"]+)"+""",
       """"+location"+:\s*"+({region}[^"]+)"+""",

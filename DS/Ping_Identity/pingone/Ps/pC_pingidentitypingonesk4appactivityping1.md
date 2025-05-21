@@ -10,7 +10,7 @@ Name = pingidentity-pingone-sk4-app-activity-ping-1
   Fields = [
     """end=({time}\d{13})""",
     """cat=({category}[^\s]+)""",
-    """IP\sAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """IP\sAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """Requested\sApplication\sID:\s*({requested_app_id}.*?)(\\n)*\s*Requested\sApplication\sName""",
     """Requested\sApplication\sName:\s*(N\/A|({requested_app}.*?))(\\n)*\s*Password\sReset""",
     """request=({action}[^\s]+)""",

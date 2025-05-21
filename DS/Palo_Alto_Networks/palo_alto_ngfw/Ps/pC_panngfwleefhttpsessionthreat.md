@@ -16,9 +16,9 @@ Name = "pan-ngfw-leef-http-session-threat"
     """\|\s*ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)"""
     """({host}[\w\.-]+)\s+LEEF:"""
     """usrName =({domain}[^\\\|]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    """\|src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?((\|\w+=|\s*$))"""
+    """\|src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?((\|\w+=|\s*$))"""
     """\|srcPort=({src_port}\d+)((\|\w+=|\s*$))"""
-    """\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?((\|\w+=|\s*$))"""
+    """\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?((\|\w+=|\s*$))"""
     """\|dstPort=({dest_port}\d+)((\|\w+=|\s*$))"""
     """\|action=({action}[^\|]+)((\|\w+=|\s*$))"""
     """\|URLCategory=((\w+\-risk)|({category}[^\|]+))((\|\w+=|\s*$))"""
@@ -36,8 +36,8 @@ Name = "pan-ngfw-leef-http-session-threat"
     """EgressInterface=({dest_interface}[^\|]+)""",
     """Application=({network_app}[^\|]+)""",
     """SerialNumber=({serial_num}\d+)""",
-    """srcPostNAT=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """dstPostNAT=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """srcPostNAT=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """dstPostNAT=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   ]
   ParserVersion = "v1.0.0"
 

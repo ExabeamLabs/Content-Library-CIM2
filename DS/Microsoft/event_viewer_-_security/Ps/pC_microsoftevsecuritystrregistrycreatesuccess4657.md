@@ -32,7 +32,7 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """Operation Type:((?-i)\\+[rnt])*\s*({operation}[^:]+?)((?-i)\\+[rnt])*\s*Process Information:"""
     """Logon ID:\s*({login_id}[^\s]+)\s"""
     """Process ID(:|=)((?-i)\\+[rnt])*\s*({process_id}[^=:]+?)((?-i)\\+[rnt])*\s*Process Name(:|=)"""
-    """Object Name:((?-i)\\+[rnt])*\s*({registry_path}[^"]+?({registry_key}[^"]+?))((?-i)\\+[rnt])*\s*Object Value Name"""
+    """Object Name:((?-i)\\+[rnt])*\s*({registry_path}[^"]+?({registry_key}[^"\\]+?))((?-i)\\+[rnt])*\s*Object Value Name"""
     """Object Value Name:((?-i)\\+[rnt])*\s*({registry_value}[^"]+?)((?-i)\\+[rnt])*\s*Handle ID:"""
     """\(EventID\s({event_code}\d+)\)"""
   ]

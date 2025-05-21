@@ -16,7 +16,7 @@ sap-events-2 = {
       """exa_json_path=$.EVENT_TYPE,exa_field_name=event_name""",
       """exa_json_path=$.ALGUSER,exa_field_name=user""",
       """exa_json_path=$.ALGTEXT,exa_field_name=additional_info""",
-      """exa_json_path=$.ALGLTERM,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """exa_json_path=$.ALGLTERM,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """exa_json_path=$.ALGSYSTEM,exa_field_name=src_host""",
       """exa_json_path=$.TXSEVERITY,exa_field_name=severity""",
       """exa_json_path=$.TXSUBCLSID,exa_field_name=operation"""

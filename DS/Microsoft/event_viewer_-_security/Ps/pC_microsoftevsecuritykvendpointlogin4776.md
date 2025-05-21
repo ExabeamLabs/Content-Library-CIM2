@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776
   Conditions = [ """4776""", """コンピューターがアカウントの資格情報の確認を試行しました。""" ]
   Fields = [
     """({time}\d\d\d\d\/\d\d\/\d\d[\s\t]+\d\d:\d\d:\d\d)\s+Microsoft-Windows-Security-Auditing""",
-    """\s+ソース ワークステーション:\s+(\\+)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|(?:(?!NULL)({dest_host}[^\s]+)))\s+エラー コード:""",
+    """\s+ソース ワークステーション:\s+(\\+)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|(?:(?!NULL)({dest_host}[^\s]+)))\s+エラー コード:""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4776,""",
     """ComputerName =({host}({computer_name}[\w.\-]+))""",
     """\W4776\s+({host}[\w\-.]+)""",

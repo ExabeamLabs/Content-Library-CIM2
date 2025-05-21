@@ -26,7 +26,7 @@ carbonblack-edr-dl = {
       """"+alert_id"+:"+({alert_id}[^,]"+)?\,""",
       """"+type"+:"+({operation_type}[^"]+)"+""",
       """"device_id"+:"+({device_id}[^",]+)""",
-      """"device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """"device_external_ip"+:"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """"device_os"+:"+({os}[^",]+)""",
       """"device_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
       """"parent_path":"({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""",
@@ -44,7 +44,7 @@ carbonblack-edr-dl = {
     """exa_json_path=$.alert_id,exa_field_name=alert_id"""
     """exa_json_path=$.type,exa_field_name=operation_type"""
     """exa_json_path=$.device_id,exa_field_name=device_id"""
-    """exa_json_path=$.device_external_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.device_external_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.device_timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
     """exa_json_path=$.device_os,exa_field_name=os"""
     """exa_regex=parent_path":"({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""

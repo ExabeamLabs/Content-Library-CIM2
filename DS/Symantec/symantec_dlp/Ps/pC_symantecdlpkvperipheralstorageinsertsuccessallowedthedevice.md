@@ -9,7 +9,7 @@ Name = symantec-dlp-kv-peripheral-storage-insert-success-allowedthedevice
   Fields = [
     """SymantecServer:\s*({host}[\w\-.]+)""",
     """(\s|,)({dest_host}[^,\s]+),("Event Description: )?Device Manager Message""",
-    """,Local( Host IP)?: (0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+    """,Local( Host IP)?: (0\.0\.0\.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
     """Begin:\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """User( Name)?:\s+(none|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),Domain""",
     """({operation}Allowed the device)""",

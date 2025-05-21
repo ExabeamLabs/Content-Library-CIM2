@@ -14,7 +14,7 @@ Name = pan-wildfire-leef-alert-trigger-success-threat
     """(URLCategory|Severity)=({alert_severity}benign|informational)""",
     """usrName =(({domain}[^\\]+)\\)?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|(SerialNumber|SourceUser)""",
     """DestinationUser=(?:[^\\/]+[\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|Application=""",
-    """\|src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\|""",
+    """\|src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\|""",
     """SessionID=({alert_id}[^|]+)\|""",
     """LEEF[^|]+?\|([^\|]+\|){3}({alert_name}[^|]+)\|""",
     """\|URLCategory=({category}[^\|]*)\|""",

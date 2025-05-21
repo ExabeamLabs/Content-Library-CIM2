@@ -12,7 +12,7 @@ Name = "amazon-awscloudwatch-cef-network-traffic-success-reject"
   ]
   Fields = [
     """requestClientApplication=({host}[^\s]+)\s"""
-    """(unknown|({account_id}\S+)) ({interface_id}\S+) ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) ({src_port}\d+) ({dest_port}\d+) ({protocol}\S+) ({packets}\d+) ({bytes}\d+) ({time}\d{10})(\d+)? \S+ ({action}\S+) ({result}[^\"\\\s]+)"""
+    """(unknown|({account_id}\S+)) ({interface_id}\S+) ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})) ({src_port}\d+) ({dest_port}\d+) ({protocol}\S+) ({packets}\d+) ({bytes}\d+) ({time}\d{10})(\d+)? \S+ ({action}\S+) ({result}[^\"\\\s]+)"""
   ]
 
 

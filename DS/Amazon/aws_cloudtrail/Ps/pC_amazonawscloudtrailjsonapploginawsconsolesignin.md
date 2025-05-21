@@ -13,8 +13,8 @@ Conditions = [
 ]
 Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
 """"+eventTime"+\s*:\s*"+?(|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ?))"+\s*[,\]\}]"""
-""""+sourceIPAddress"+\s*:\s*"+?(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+\s*[,\]\}]"""
-""""+eventName"+\s*:\s*"+?(|({action}[^"].+?))"+\s*[,\]\}]"""
+""""+sourceIPAddress"+\s*:\s*"+?(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+\s*[,\]\}]"""
+""""+eventName"+\s*:\s*"+?(|({operation}[^"].+?))"+\s*[,\]\}]"""
 """"+eventSource"+\s*:\s*"+?(|({host}[^"].+?))"+\s*[,\]\}]"""
 """"errorMessage"\s*:\s*"({failure_reason}[^"]+)""""
 """responseElements\\?"\s*:\s*"?\{.*?\\?"(ConsoleLogin|CheckMfa|GetSigninToken|RenewRole)\\?":\\?\s*"({result}[^"\\]+?)\\?""""
@@ -29,8 +29,8 @@ Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
 """"accessKeyId":"({key_id}[^"]+?)""""
 """exa_json_path=$.userIdentity.userName,exa_regex=(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
 """exa_json_path=$.eventTime,exa_field_name=time""",
-"""exa_json_path=$.sourceIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-"""exa_json_path=$.eventName,exa_field_name=action""",
+"""exa_json_path=$.sourceIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$.eventName,exa_field_name=operation""",
 """exa_json_path=$.eventSource,exa_field_name=host""",
 """exa_json_path=$.errorMessage,exa_field_name=failure_reason""",
 """exa_json_path=$.eventType,exa_field_name=app""",

@@ -11,7 +11,7 @@ Name = symantec-endpointprotection-cef-alert-trigger-success-hostprocessdetectio
   """\w{3,4} \d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}\s({host}[\w\-.]+)\s"""
   """dvchost=({src_host}[\w\-.]+)"""
   """suser=(none|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """cs3Label=({alert_name}[^=]+?)\s*\w+="""
   """"type":"({alert_type}[^"]+)""""
   """"process":[^\}]+"path":"({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))""""

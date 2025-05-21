@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4611
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "MMM dd HH:mm:ss"]
-  Conditions = [ """4611""", """A trusted logon process has been registered""", """(EventID 4611)""", """Microsoft Windows security auditing"""]
+  Conditions = [ """A trusted logon process has been registered""", """(EventID 4611)""", """Microsoft Windows security auditing"""]
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({event_name}A trusted logon process has been registered)""",

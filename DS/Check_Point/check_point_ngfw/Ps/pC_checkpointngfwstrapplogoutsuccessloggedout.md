@@ -8,7 +8,7 @@ Name = checkpoint-ngfw-str-app-logout-success-loggedout
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """]: """ , """][""", """ logged out """ ]
   Fields = [
-    """\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\[[^\]]*\]\[[^\]]*\]\[[^\]]*\]\s*<\d+>(({src_host}[\w\-.]+)\s+)?({process_name}.+?)\[({process_id}\d+)\]:\s*({additional_info}User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+logged out.*?)\s*$""",
+    """\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\[[^\]]*\]\[[^\]]*\]\[[^\]]*\]\s*<\d+>(({src_host}[\w\-.]+)\s+)?({process_name}.+?)\[({process_id}\d+)\]:\s*({additional_info}User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+logged out.*?)\s*$""",
   ]
 }  
 
@@ -27,11 +27,11 @@ Name = checkpoint-ngfw-str-app-logout-success-loggedout
     """status":"({alert_status}[^"]+)""",
     """"alertId":({alert_id}\d+)""",
     """"description":"({additional_info}[^"]+)"""",
-    """"sourceEndpoints":\[\{[^\}]*?"ip":\[?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"sourceEndpoints":\[\{[^\}]*?"ip":\[?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"sourceEndpoints":\[\{[^\}]*?"macAddress":\[?"({src_mac}[^"]+)"\]""",
     """"sourceEndpoints":\[\{[^\}]*?"name":"({src_host}[\w\-\.]+)"""",
-    """"destinationEndpoints":\[\{[^\}]*?"name":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-\.]+))"""",
-    """"destinationEndpoints":\[\{[^\}]*?"ip":\[?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"destinationEndpoints":\[\{[^\}]*?"name":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-\.]+))"""",
+    """"destinationEndpoints":\[\{[^\}]*?"ip":\[?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"destinationEndpoints":\[\{[^\}]*?"macAddress":\[?"({dest_mac}[^"]+)""""
   ]
   

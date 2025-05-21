@@ -5,7 +5,7 @@ Name = pan-ngfw-csv-endpoint-login-success-system
   Vendor = Palo Alto Networks
   Product = Palo Alto NGFW
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss"]
-  Conditions = [ """,SYSTEM,""" , """,User""" ,  """ logged in """ ]
+  Conditions = [ """,SYSTEM,""" , """User""" ,  """ logged in """ ]
   Fields = [
     """SYSTEM,.+?({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
     """User ({user}[\w\.\-\!\#\^\~]{1,40}\$?) logged in .+?from (({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^,]+))""",

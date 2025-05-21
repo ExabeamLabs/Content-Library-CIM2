@@ -4,7 +4,7 @@ Product: Microsoft Defender
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  931  |  299   |        180         |       41       |   239   |
+|  895  |  288   |        180         |       40       |   238   |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

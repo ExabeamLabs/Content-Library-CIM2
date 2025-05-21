@@ -18,7 +18,7 @@ Fields = [
   """<Data Name(\\\/)?=('|")SubjectUserName('|")>(-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
   """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({src_domain}[^<]+?)</Data>""",
   """<Data Name(\\\/)?=('|")ObjectType('|")>({file_type}[^<]+?)</Data>""",
-  """<Data Name(\\\/)?=('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
+  """<Data Name(\\\/)?=('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
   """<Data Name(\\\/)?=('|")ShareName('|")>(?:[\\\*]*)?({share_name}[^<]+?)</Data>""",
   """<Data Name(\\\/)?=('|")ShareLocalPath('|")>(?:[\\\\/?]+)?(|({share_path}({d_parent}[^<]+?[\\\/])?({d_name}[^\\\/<]+?)?[\\\/]?))</Data>""",
   """({access}4416)""",
@@ -28,7 +28,7 @@ Fields = [
   """Account Name:\s*((\\)*(\\r|\\t|\\n))*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((\\)*(\\r|\\t|\\n))*\s*Account Domain:"""
   """Account Domain:\s*((\\)*(\\r|\\t|\\n))*({domain}\S+?)((\\)*(\\r|\\t|\\n))*\s*Logon ID:""",
   """Object Type:\s*((\\)*(\\r|\\t|\\n))*({file_type}[^:]+?)((\\)*(\\r|\\t|\\n))*\s*Source Address:""",
-  """Source Address:\s*((\\)*(\\r|\\t|\\n))*(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+?))((\\)*(\\r|\\t|\\n))*\s*Source Port:""",
+  """Source Address:\s*((\\)*(\\r|\\t|\\n))*(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+?))((\\)*(\\r|\\t|\\n))*\s*Source Port:""",
   """({access}Read)""",
   """Share Name:\s*((\\)*(\\r|\\t|\\n))*(?:\\\\\*\\)?({share_name}[^:]+?)((\\)*(\\r|\\t|\\n))*\s*Share Path:""",
   """Share Path:\s*((\\)*(\\r|\\t|\\n))*(?:\\+\?+)(?:\s*|({share_path}(({d_parent}[^"]+?)[\\\/])?(|({d_name}[^\\\/]+?)))[\\\/]?)((\\)*(\\r|\\t|\\n))*\s*Access Request Information:""",

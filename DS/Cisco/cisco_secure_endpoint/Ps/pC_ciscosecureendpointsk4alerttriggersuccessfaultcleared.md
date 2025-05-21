@@ -15,7 +15,6 @@ s-cisco-amp-alert-dl-1 = {
   Vendor = Cisco
   Product = Cisco Secure Endpoint
   TimeFormat = "epoch_sec"
-  ExtractionType = json
   Fields = [
     """\Wact=(|({action}[^=]+?))(\s+\w+=|\s*$)""",
     """\Wdproc=(|({process_path}[^=]+?))(\s+\w+=|\s*$)""",
@@ -29,8 +28,8 @@ s-cisco-amp-alert-dl-1 = {
     """user"+:\s*"+((?i)(anonymous|system)|({email_address}[^@]+@[^@"]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@(NT AUTHORITY|({domain}[^"]+)))""",
     """hostname":\s*"({src_host}[^"]+)""",
     """file_path":\s*"(\\+\?\\+)?({src_file_path}[^"]+)""",
-    """external_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """"network_addresses":.+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """external_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"network_addresses":.+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"trajectory":\s*"({additional_info}[^"]+)""",
     """,\s*"disposition":\s*"(Unknown|({alert_severity}[^"\s]+))"""",
     """,\s*"disposition":.+?file_name":\s*"({src_file_name}[^"]+)""",
@@ -39,8 +38,8 @@ s-cisco-amp-alert-dl-1 = {
     """"md5":\s*"({hash_md5}[^"]+)""",
     """,\s*"disposition":.+?md5":\s*"({hash_md5}[^"]+)""",
     """\sdestinationServiceName =({product_name}[^=]+?)(\s+\w+=|\s*$)""",
-    """"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"mac":\s*"({src_mac}[^"]+)""",
     """"file_name":\s*"({src_file_name}[^"]+)""",
     """"event_type":\s*"({event_name}[^"]+)""",

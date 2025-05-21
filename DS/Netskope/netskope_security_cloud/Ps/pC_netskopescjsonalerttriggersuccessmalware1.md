@@ -15,8 +15,8 @@ json-netskope-alert = {
     """"timestamp":({time}\d{10}),""",
     """"hostname":\s*"({host}[\w\-\.]+)"""",
     """"incident_id":({alert_id}\d+),""",
-    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"dsthost":\s*"({dest_host}[\w\-\.]+)"""",
     """"alert_type":\s*"({alert_name}({alert_type}[^"]+))"""",
     """"alert_name":\s*"({alert_name}[^"]+)"""",
@@ -26,12 +26,13 @@ json-netskope-alert = {
     """"severity":\s*"(unknown|({alert_severity}[^"]+))"""",
     """"numbytes":({bytes}\d+),""",
     """"page":\s*"({web_domain}[^\\\/"]+)""",
-    """"url":\s*"({malware_url}[^"]+)""""
+    """"url":\s*"({malware_url}[^"]+)"""",
+    """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.hostname,exa_field_name=host"""
     """exa_json_path=$.incident_id,exa_field_name=alert_id"""
-    """exa_json_path=$.srcip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.srcip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.dsthost,exa_field_name=dest_host"""
     """exa_json_path=$.alert_type,exa_field_name=alert_type"""
     """exa_json_path=$.alert_type,exa_field_name=alert_name"""
@@ -43,6 +44,7 @@ json-netskope-alert = {
     """exa_json_path=$.numbytes,exa_field_name=bytes"""
     """exa_regex="page":\s*"({web_domain}[^\\\/"]+)"""
     """exa_json_path=$.url,exa_field_name=malware_url"""
+    """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
   
 }
 ```

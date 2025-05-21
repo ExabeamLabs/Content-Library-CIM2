@@ -21,7 +21,7 @@ Name = google-workspace-cef-email-receive
     """"success":({result}true|false)""",
     """"rfc2822_message_id"+:"+({message_id}[^",]+)""",
     """"payload_size":({bytes}\d+)""",
-    """"client_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"client_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """\sdestinationServiceName =({app}[^=]+?)\s*\w+=""",
     """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})""",
     """num_message_attachments":({attachment_count}\d+)"""

@@ -5,7 +5,7 @@ Name = "trendmicro-vone-cef-app-login-logon"
    ParserVersion = v1.0.0
    Conditions = [ """CEF:""", """|Trend Micro|Trend Vision One|""", """|900003|""", """ cs3=Log on""" ]
    Fields = ${TrendMicroParserTemplates.trendmicro-vision-one-account-audit.Fields}[
-     """'Endpoint IP address':\s*'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'""",
+     """'Endpoint IP address':\s*'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'""",
      """'Appliance name':\s*'({src_host}[\w.-]+)'""",
      """'Device ID':\s*'({device_id}[^']+)'"""
    ]

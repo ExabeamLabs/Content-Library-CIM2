@@ -21,7 +21,7 @@ Name = symantec-dlp-cef-alert-trigger-success-contentsecurity
     """\Wsuser=\w+:\/+({domain}[^\/\\=]+)[\\\/]+(?:({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}\w+(?:\s+\w+)+))(\s+\w+=|\s*$)""",
     """\WdestinationDnsDomain=({web_domain}.+?)\s*(\w+=|$)""",
     """\Wduser=(?:N\/A|({target}.+?))\s*(\w+=|$)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wshost=(?:N\/A|({src_host}.+?))\s*(\w+=|$)""",
     """\Wfname=(?:N\/A|({file_name}.+?))\s*(\w+=|$)""",
     """\Wcs2=(None|({action}.+?))(\s+\w+=|\s*$)""",

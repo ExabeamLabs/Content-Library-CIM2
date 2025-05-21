@@ -5,11 +5,11 @@ Name = sentinelone-evsentinelone-xml-app-notification-5
   ParserVersion = "v1.0.0"
   Vendor = SentinelOne
   Product = Event Viewer - Sentinelone
-  Conditions = [ """<EventID>5</EventID>""", """<TimeCreated SystemTime""", """<Channel>SentinelOne""" ]
+  Conditions = [ """<EventID>""", """<TimeCreated SystemTime""", """<Channel>SentinelOne""", """Failed to register""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-dl.Fields}[
     """<Computer>({host}[\w\-.]+?)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<EventID>({event_code}5)"""
+    """<EventID>({event_code}\d+)"""
   ]
   DupFields = [ "host->dest_host" ]
 
@@ -23,13 +23,13 @@ s-xml-object-access-dl = {
     """<EventID Qualifiers\\*='\d+'>({event_code}\d+)<\/EventID>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
-    """<Security UserID\\*='({user_sid}[^']+)""",
+    """<Security UserID\\*=['"]({user_sid}[^'"]+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
     """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
-    """<Execution ProcessID\\*='({process_id}[^']+)""",
+    """<Execution ProcessID\\*=['"]({process_id}[^'"]+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",
-    """ThreadID\\*='({thread_id}[^']+)""",
+    """ThreadID\\*=['"]({thread_id}[^'"]+)""",
     """File Name:\s*({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<\s]+?))))\s+\w+:""",
     """Hash:\s*((&lt;None&gt;)|({file_hash}[^\s]+))""",
     """<Level>({run_level}[^<]+)<"""

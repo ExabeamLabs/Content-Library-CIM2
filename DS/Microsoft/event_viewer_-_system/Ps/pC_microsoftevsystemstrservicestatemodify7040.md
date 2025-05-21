@@ -6,7 +6,7 @@ Name = microsoft-evsystem-str-service-state-modify-7040
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [""" 7040 """,""" MSWinEventLog """,""" The start type of the Background Intelligent Transfer Service service was changed """ ]
+  Conditions = [""" 7040 """,""" MSWinEventLog """,""" The start type of """, """ service was changed """ ]
   Fields = [
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
    """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",

@@ -9,7 +9,7 @@ Name = rsa-netwitness-cef-app-login-success-httpsrequest
   Conditions = [ """custom-condition-cont-10052""", """DATA_ACCESS|HttpRequest"""]
   Fields = [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d\d:\d\d)\s*({host}[^\s]+)""",
-    """\ssrc=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+    """\ssrc=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """\sspt=({src_port}\d+)""",
     """\ssuser=(Unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\ssourceServiceName =({app}.+?)\s*\w+=""",
@@ -17,7 +17,7 @@ Name = rsa-netwitness-cef-app-login-success-httpsrequest
     """\sdeviceProcessName =({process_name}.+?)\s*\w+=""",
     """\soutcome=({result}.+?)\s*\w+=""",
     """\smsg=(null|({result}.+?))\s*\w+=""",
-    """\scs1=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*\w+=""",
+    """\scs1=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*\w+=""",
     """\scs2=(null|({group_name}.+?))\s*\w+=""",
     """\sactionType=(null|({operation}.+?))\s*\w+=""",
     """\smethod\\*=({method}[^,\s]+)""",

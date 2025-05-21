@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-process-create-success-4688-1
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
-  Conditions = [ """4688""", """新しいプロセスが作成されました。""" ]
+  Conditions = [ """ EventCode=4688 """, """新しいプロセスが作成されました。""", """Microsoft Windows security auditing""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM|am|pm))"""
     """Computer(Name)?=({host}[\w.\-]+)""",

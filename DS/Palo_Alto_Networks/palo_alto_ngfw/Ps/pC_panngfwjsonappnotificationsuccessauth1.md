@@ -4,7 +4,7 @@
 Name = pan-ngfw-json-app-notification-success-auth-1
  Conditions = [ """"LogType":"SYSTEM"""", """"Subtype":"auth"""", """"EventName":"""]
  Fields = ${DLPaloAltoParserTemplates.json-pan-system.Fields}[
-    """exa_json_path=$.EventDescription,exa_regex=Client '({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))' redirected to"""
+    """exa_json_path=$.EventDescription,exa_regex=Client '({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))' redirected to"""
     """exa_regex=({operation}saml-client-redirect)""",
  ]
 

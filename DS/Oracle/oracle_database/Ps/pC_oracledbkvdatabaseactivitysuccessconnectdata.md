@@ -14,7 +14,7 @@ Fields = [
   """({time}\d+-\w+-\d+\s+\d\d:\d\d:\d\d)\s"""
   """PORT=({dest_port}\d+)"""
   """HOST=({dest_host}[\w\-.]+)\)\(USER="""
-  """HOST=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\)\(PORT="""
+  """HOST=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\)\(PORT="""
   """PROGRAM=({process_name}[^\)]+)"""
   """PROTOCOL=({protocol}[^\)]+)"""
   """SERVICE_NAME=({app}[^\)]+)"""

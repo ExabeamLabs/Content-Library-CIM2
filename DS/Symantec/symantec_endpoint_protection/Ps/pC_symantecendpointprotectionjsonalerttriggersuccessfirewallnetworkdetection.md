@@ -16,8 +16,8 @@ Name = symantec-endpointprotection-json-alert-trigger-success-firewallnetworkdet
     """exa_json_path=$.severity_id,exa_field_name=alert_severity"""
     """exa_json_path=$.connection.protocol_id,exa_field_name=protocol"""
     """"attacks":\[({attack_info}.+?\})\]""",
-    """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"dst_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"src_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"dst_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"src_port":({src_port}\d+)""",
     """"dst_port":({dest_port}\d+)""",
     """"protocol_id":({protocol}\d+)""",
@@ -39,7 +39,7 @@ json-symantec-endpoint-protection = {
       """"uuid":"({user_uid}[^"]+)""",
       """"destinationServiceName":"({app}[^"]+)""",
       """"session_id":"({session_id}[^"]+)""",
-      """"device_public_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"device_public_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"device_os_name":"({os}[^"]+)""",
       """"device_name":"({host}[\w\-.]+)""",
       """"device_domain":"({domain}[^"]+)""",

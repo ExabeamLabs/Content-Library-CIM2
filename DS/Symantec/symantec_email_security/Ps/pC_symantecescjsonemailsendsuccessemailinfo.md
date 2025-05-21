@@ -17,7 +17,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
      """"headerTo":\[({email_recipients}[^\]]+)\],""",
      """"headerTo":\["({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
      """"isOutbound":({direction}[^,]+),""",
-     """"senderIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """"senderIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """\[\{"fileNameOrURL":"({email_attachment}[^\.]+\.({file_ext}[^"]+))"""
 
      """exa_json_path=$.emailInfo.mailProcessingStartTime,exa_field_name=time""",
@@ -28,7 +28,7 @@ Name = symantec-esc-json-email-send-success-emailinfo
      """exa_json_path=$.emailInfo.headerTo,exa_field_name=email_recipients""",
      """exa_json_path=$.emailInfo.headerTo[0],exa_regex=^({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
      """exa_json_path=$.emailInfo.isOutbound,exa_field_name=direction""",
-     """exa_json_path=$.emailInfo.senderIp,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
+     """exa_json_path=$.emailInfo.senderIp,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
      """exa_json_path=$.emailInfo.filesAndLinks[0].fileNameOrURL,exa_regex=^({email_attachment}[^\.]+\.({file_ext}[^"]+))$"""
    ]
   DupFields = [ "email_attachment->file_name" ]

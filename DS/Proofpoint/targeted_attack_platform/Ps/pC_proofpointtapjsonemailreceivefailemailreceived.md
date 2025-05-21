@@ -18,7 +18,7 @@ Fields = [
   """'from':\s*\[?'[^@]*?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,\';\|]+))"""
   """'subject':\s*\['\s*({email_subject}.+?)\s*'"""
   """'envelope':\s*\{.*'rcpts':\s*\['({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\'\|]+)).*?)'\]"""
-  """'ip':\s*'({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """'ip':\s*'({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """'filter'.*?'action':\s*'({result}[^']+)'.*?'isFinal':\s*True"""
   """'filter'.*'isFinal':\s*True,\s*.*'action':\s*'({result}[^']+)'"""
   """'rule':\s*'({rule}[^']+)'"""
@@ -31,7 +31,7 @@ Fields = [
   """'routeDirection':\s*'({direction}[^']+)"""
   """'message-id':\s*\['({message_id}[^']+)"""
   """'detectedName':\s*'({email_attachment}[^']+)"""
-  """'x-originating-ip':\s*\['\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """'x-originating-ip':\s*\['\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """'host':\s*'\[?({host}[\w\-.]+)"""
   """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 ]

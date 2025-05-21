@@ -17,7 +17,7 @@ Fields = [
 """Event Type\s*:\s*({result}.+?)\.\s+Log Type"""
 """Type\s*=\s*\"({result}[^\";]+)\""""
 """Keywords=({result}.+?);?\s*Message="""
-"""\s*Source Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*Source Port(:|=)"""
+"""\s*Source Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*Source Port(:|=)"""
 """({event_code}4674)"""
 """Process Name(:|=)\s*(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))[\s;]*Requested"""
 """\s*Account Name(:|=)\s*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)\s*({domain}.+?)[\s;]*Logon ID(:|=)\s*({login_id}.+?)[\s;]*Object(:|=)"""

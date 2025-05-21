@@ -17,9 +17,9 @@ Conditions = [
 Fields = [
 """"timestamp\\?":\\?"({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+\+\d+)"""
 """exa_json_path=$.message,exa_regex="timestamp\\?":\\?"({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+\+\d+)"""
-"""exa_json_path=$.message,exa_regex="src_ip\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.message,exa_regex="src_ip\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.message,exa_regex="src_port\\?":\\?({src_port}\d+)"""
-"""exa_json_path=$.message,exa_regex="dest_ip\\?":\\?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""exa_json_path=$.message,exa_regex="dest_ip\\?":\\?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """exa_json_path=$.message,exa_regex="dest_port\\?":\\?({dest_port}\d+)"""
 """exa_json_path=$.message,exa_regex="proto\\?":\\?"({protocol}[^""\\]+)"""
 """exa_json_path=$.message,exa_regex="flow_id\\?":\\?({alert_id}\d+)"""

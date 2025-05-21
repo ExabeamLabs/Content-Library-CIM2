@@ -21,7 +21,7 @@ Fields = [
 """\Wfname=(|({process_path}({process_dir}(?:(\w+:)*([\\\/]+[^\\\/"]+?)+?)?[\\\/]+)({process_name}[^"\\\/]+?)))\s+(\w+=|$)"""
 """\Wproto=(|({file_name}.+?))(\s+\w+=|\s*$)"""
 """\Wmsg=(|({additional_info}.+?))(\s+\w+=|\s*$)"""
-"""\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"cylance_score":({alert_severity}[^",]+)"""
 """\WdestinationServiceName =(|({device_name}.+?))(\s+\w+=|\s*$)"""
 """"md5":"({hash_md5}[^"]+)"""

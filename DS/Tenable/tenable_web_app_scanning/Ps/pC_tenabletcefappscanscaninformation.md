@@ -13,7 +13,7 @@ Name = tenable-t-cef-app-scan-scaninformation
 # scan_name is removed
     """"severity":({alert_severity}\d+),""",
     """"description":"({additional_info}[^"]+)"""",
-    """"assetIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"assetIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"netBios":"({src_host}[^",]+)"""",
     """"pluginOutput":"({result}[^"]+?)\s*"""",
 # start_scan_time is removed

@@ -22,7 +22,7 @@ azure-workspaceblob-json = {
     """"+StatusCode"+:\s*"+({result_code}[^"]+)"+""",
     """"+StatusText"+:\s*"+({result}[^"]+)"+""",
     """"+Uri"+:\s*"+({url}({file_path}[^"]+\/({file_name}[^\?"\/]+))[^"]*|[^"]+)"+""",
-    """"+CallerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
+    """"+CallerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
     """"+CorrelationId"+:\s*"+({correlation_id}[^"]+)"+""",
     """"+SchemaVersion"+:\s*"+({schema_version}[^"]+)"+""",
     """"+OperationVersion"+:\s*"+({operation_version}[^"]+)"+""",
@@ -34,6 +34,7 @@ azure-workspaceblob-json = {
     """"+Category"+:\s*"+({operation_type}[^"]+)"+""",
     """"+Type"+:\s*"+({event_category}[^"]+)"+""",
     """"+RequesterUpn"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
+    """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
     ]
     DupFields = [ "operation->operation_name", "storage_account->dest_host" 
 }

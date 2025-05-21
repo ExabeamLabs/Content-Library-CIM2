@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-cef-file-download-success-loadconfirmation
 """"event_simpleName":"LFODownloadConfirmation""""
 ]
 Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
-"""\"+aip\"+:\"+({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\"+aip\"+:\"+({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """DownloadPort\"+:\"+({dest_port}\d+)"""
 """DownloadServer\"+:\"+({dest_host}[^\"]+)"""
 """\"ConfigStateHash\":\"({old_hash}[^\"]+)"""
@@ -17,7 +17,7 @@ Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
 """"DownloadPath":"({file_url}({src_file_path}(({file_dir}[^"]+)[\\\/]+)?(({src_file_name}[^"\\\/]+?(\.({src_file_ext}[^\."]+))?))))"""",
 """"TargetFileName":"({file_path}(({file_dir}[^"]+)[\\\/]+)?(({file_name}[^"\\\/]+?(\.({file_ext}[^\."]+))?)))"""",
 """"cid":"({cid}[^"]+)"""
-"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.DownloadPort,exa_field_name=dest_port""",
 """exa_json_path=$.DownloadServer,exa_field_name=dest_host""",
 """exa_json_path=$.ConfigStateHash,exa_field_name=old_hash""",
@@ -43,7 +43,7 @@ Fields = [
 """"name":"({event_name}[^"]+)""""
 """"UserName":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"ContextProcessId":"({process_guid}[^"]+)""""
-""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"Size":"({bytes}\d+)"""",
 """"cid":"({cid}[^"]+)""",
 """"event_platform":\s*"({os}[^"]+)"""",
@@ -64,7 +64,7 @@ Fields = [
 """exa_json_path=$.name,exa_field_name=event_name""",
 """exa_json_path=$.UserName,exa_regex=(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """exa_json_path=$.ContextProcessId,exa_field_name=process_guid""",
-"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.Size,exa_field_name=bytes"""
 """exa_json_path=$.cid,exa_field_name=cid"""
 """exa_json_path=$.event_platform,exa_field_name=os""",

@@ -9,8 +9,8 @@ Name = cisco-netsec-json-alert-trigger-success-ids_alert
   Conditions = [ """"eventType":""", """"IDS Alert"""", """"signature":""", """"classification":""" ]
   Fields = [
     """exa_json_path=$.ts,exa_field_name=time""",
-    """exa_json_path=$.srcIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.destIp,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.srcIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.destIp,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.clientMac,exa_field_name=src_mac""",
     """exa_json_path=$.eventType,exa_field_name=alert_type""",
     """exa_json_path=$.priority,exa_field_name=alert_severity""",

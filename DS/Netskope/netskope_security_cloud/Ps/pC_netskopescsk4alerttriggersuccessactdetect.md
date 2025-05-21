@@ -6,7 +6,7 @@ Name = netskope-sc-sk4-alert-trigger-success-actdetect
   Product = Netskope Security Cloud
   Conditions = [ """"alert":"yes"""", """"object_type":""", """"ccl":""", """"action":""", """"access_method":""" ]
   Fields = ${NetskopeParsersTemplates.cef-netskope-alert.Fields}[
-    """"srcip":"({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """"srcip":"({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """"malsite_category":\["({threat_category}[^"]+)"[^\]]*?\]""",
     """"type":"({alert_type}[^"]+)"""
     """"category":"(n\/a|({alert_type}[^"]+))"""
@@ -51,6 +51,7 @@ Name = netskope-sc-sk4-alert-trigger-success-actdetect
     """"activity":\s*"File\w+"[^\}]*?"object":\s*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"""",
     """"shared_with":"({shared_with_at}[^"]+)"""",
     """"policy":"({policy_name}[^"]+)"""
+    """"ccl":"({confidence_level}[^"]+)""""
 
   ]
 
@@ -60,11 +61,12 @@ cef-netskope-alert = {
   Fields = [
     """"hostname":"({host}[^",]+)"""",
     """"timestamp":({time}\d{10})""",
+    """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)""",
     """"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"alert_name":"({alert_name}[^"]+)""",
     """"url":"({malware_url}[^"]+)""",
-    """"userip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"userip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   SOAR {
     IncidentType = "malware"

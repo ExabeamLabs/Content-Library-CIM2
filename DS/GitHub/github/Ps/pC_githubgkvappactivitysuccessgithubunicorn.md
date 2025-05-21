@@ -11,7 +11,7 @@ Name = github-g-kv-app-activity-success-githubunicorn
     """\sTimestamp="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\dZ)""",
     """({host}\S+)\s+github-unicorn""",
     """\sgh.actor.login="(?:nil|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """\shttp.client_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\shttp.client_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """user_agent="({user_agent}[^"]+)"""",
     """\sgh.context.url="({url}[^"]+)""",
     """\sservice.name="({service_name}[^"]+)""",

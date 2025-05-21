@@ -19,7 +19,7 @@ Fields = [
   """ComputerName =({host}({dest_host}[\w\-\.]+))([^\s]*\s|;)""",
   """({event_code}4624)""",
   """Logon Type(:|=)\s*({login_type}\d+)""",
-  """New Logon(:|=)[\s;]*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)""",
+  """New Logon(:|=)[\s;]*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)""",
   """New Logon(:|=)[^\}]*?Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)""",
   """Process Name(:|=)\s*(?:-|({process_path}({process_dir}[^\}]*?)(\\+({process_name}[^\\]+?))?))\s+(Network Information:|Additional Information:)""",
   """Workstation Name(:|=)\s*(-|[A-Fa-f:\d.]+|({src_host_windows}[^\s;]+))[\s;]*Source Network Address(:|=)""",

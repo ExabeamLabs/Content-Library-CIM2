@@ -11,7 +11,7 @@ Name = google-cloudplatform-json-app-activity-success-catchall_dprocpubsub
     Fields = [
     """exa_json_path=$.alert_severity,exa_field_name=alert_severity"""
     """exa_json_path=$.src_host,exa_field_name=src_host"""
-    """exa_json_path=$.src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d).?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d).?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$.additional_info,exa_field_name=additional_info"""
     """exa_json_path=$.alert_id,exa_field_name=alert_id"""
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""

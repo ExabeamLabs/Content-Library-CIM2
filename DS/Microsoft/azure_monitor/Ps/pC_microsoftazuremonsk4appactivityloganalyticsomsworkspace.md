@@ -37,7 +37,7 @@ cef-cloud-system-info = {
 # full_log is removed
     """"\$table":"({table}[^"]+)""",
     """User Agent - ({user_agent}.+?)\s+\[""",
-    """"sourceIPs":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"sourceIPs":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"userAgent":"({user_agent}[^"]+)"""",
     """"code":({result_code}\d+)""",
     """"AlertSeverity":"({alert_severity}[^",]+)""",
@@ -47,6 +47,7 @@ cef-cloud-system-info = {
     """"OSName":"({os}[^"]+)""""
     """"OperationName":"({operation}[^"]+)""""
     """"EventID":({event_code}\d+)"""
+    """"SubscriptionId":"({subscription_id}[^"]+)""""
   ]
   DupFields = [ "resource_id->object"]
  

@@ -14,8 +14,8 @@ paloalto-vpn-event = {
    TimeFormat = "epoch"
    Fields = [
        """\srt=({time}\d{13})""",
-       """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-       """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+       """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+       """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
        """\ssuser=(({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
        """\sdvchost=({host}[\w\-.]+?)\s+\w+=""",
        """\scs2=({result}[^=]+)\s+\w+=""",
@@ -46,8 +46,8 @@ cef-palo-alto-networks-firewall = {
     """\scs1=({rule}.+?)\s+(\w+=|$)""",
     """\sshost=({src_host}.+?)\s+(\w+=|$)""",
     """\sdhost=({dest_host}.+?)\s+(\w+=|$)""",
-    """\ssrc=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+(\w+=|$)""",
-    """\sdst=(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s+(\w+=|$)""",
+    """\ssrc=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+(\w+=|$)""",
+    """\sdst=(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\s+(\w+=|$)""",
     """\ssourceTranslatedAddress=(0.0.0.0|({src_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}))\s+(\w+=|$)""",
     """\sdestinationTranslatedAddress=(0.0.0.0|({dest_translated_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}))\s+(\w+=|$)""",
     """\sspt=(0|({src_port}\d+))\s+(\w+=|$)""",
@@ -65,7 +65,7 @@ cef-palo-alto-networks-firewall = {
     """\sseverity=({severity}.+?)\s+(\w+=|$)""",
     """\sdeviceDirection=({direction}.+?)\s+(\w+=|$)""",
     """\scategoryOutcome=\/?({result}.+?)\s+(\w+=|$)""",
-    """\sreason=(?:n\/a|({result_reason}.+?))\s+(\w+=|$)""",
+    """\sreason=(?:n\/a|({result_reason}.+?))\s+(\w+=|$)"""
   ]
   DupFields = [ "subtype->action" 
 }

@@ -9,7 +9,7 @@ Name = f5-bigip-kv-network-traffic-success-irule
   Conditions = [ """ type = irule,""", """,service_id = """, """,client_ip = """ ]
   Fields = [
     """service_id\s*=\s*({service_id}[^,]+)""",
-    """client_ip\s*=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """client_ip\s*=\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """client_port\s*=\s*({src_port}\d+)""",
   ]
 

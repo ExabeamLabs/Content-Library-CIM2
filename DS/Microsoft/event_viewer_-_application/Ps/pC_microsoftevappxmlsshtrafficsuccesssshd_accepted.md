@@ -12,7 +12,7 @@ Name = microsoft-evapp-xml-ssh-traffic-success-sshd_accepted
     """<Computer>({host}({dest_host}[\w\-.]+))<\/Computer>""",
     """\<Security UserID\\?=('|")({user_sid}[^']+)'"""
     """\sPID\s({process_id}\d+):""",
-    """\s({additional_info}Accepted \w+ for\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sfrom\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\sport\s({src_port}\d+)?\s\S+?)<""",
+    """\s({additional_info}Accepted \w+ for\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sfrom\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\sport\s({src_port}\d+)?\s\S+?)<""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """({protocol}ssh)""",
     """<EventRecordID>({event_id}\d+)<""",

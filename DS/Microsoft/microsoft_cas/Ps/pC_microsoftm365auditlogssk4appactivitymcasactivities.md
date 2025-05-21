@@ -13,7 +13,7 @@ Name = microsoft-m365auditlogs-sk4-app-activity-mcasactivities
      """EventId":({event_code}\d+)""",
      """"userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[\w-]+?))"""",
      """appName":"({app}[^"]+)""",
-     """src-ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """src-ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """"location"[^}]+?city":"({location_city}[^",]+)""",
      """"location"[^}]+?countryCode":"({location_country}[^",]+)""",
      """"location"[^}]+?region":"({region}[^",]+)""",

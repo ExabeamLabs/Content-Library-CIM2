@@ -17,7 +17,7 @@ cef-netskope-web = {
   Fields = [
     """"timestamp":({time}\d{10})""",
     """"hostname":\s*"({src_host}[\w\.\-]+)"""",
-    """"userip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"userip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"appcategory":\s*"(-|none|({categories}({category}[^",;:]+)[^"]*?))"""",
     """"other_categories":\[({categories}[^\]]+?)\]"""
     """"action":\s*"({action}[^"]+)""",
@@ -25,7 +25,7 @@ cef-netskope-web = {
     """"policy":\s*"({additional_info}[^"]+)"""",
     """"page":\s*"(\w+:\/\/)?({web_domain}[^\\\/"]+)""",
     """"user":\s*"\s*({email_address}[^\s"@]+?@[^\s"]+\.[^\s"]+)"""",
-    """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"browser":\s*"(unknown|({browser}[^"]+))"""",
     """"src_location":\s*"({src_location}[^"]+)"""",
     """"src_country":\s*"({src_country}[^"]+)"""",

@@ -31,7 +31,7 @@ Fields = [
 """\WsourceFqdn=({src_fqdn}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """\WsourceDnsDomain=({src_domain}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """\WsourceHostName =({src_host}[^\|]+?)((\||\s+)\w+=|\s*$)"""
-"""\WsourceAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?((\||\s+)\w+=|\s*$)"""
+"""\WsourceAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?((\||\s+)\w+=|\s*$)"""
 """\WsourceNetInterfaceName =({src_interface}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """\WsourceMacAddress=({src_mac}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """threatClassification=({alert_type}[^\|]+)"""

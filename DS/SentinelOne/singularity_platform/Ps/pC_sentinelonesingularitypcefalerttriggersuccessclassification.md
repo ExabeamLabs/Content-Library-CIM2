@@ -13,7 +13,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"updatedAt":\s*"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
      """"title":\s*"({alert_name}[^"]+)""",
      """"classification":\s*"({alert_name}({alert_type}[^"]+))""",
-     """"agentIp(V4|V6)?":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+     """"agentIp(V4|V6)?":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """"fileDisplayName":\s*"({file_name}[^"]+)""",
      """"filePath":\s*"({file_path}[^"]+)""", 
      """"agentDomain":\s*"(unknown|({src_domain}[^"]+))""",
@@ -45,7 +45,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"confidenceLevel":"({category}[^"]+)""",
      """"filePath":\s*"([^"\(\)]+[\\\/]+?)?({malware_file_name}[^"]+)"""",
      """"sha1":"({hash_sha1}[^",]+)""",
-     """"externalIp":\s*\"({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_translated_port}\d+))?"""",
+     """"externalIp":\s*\"({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_translated_port}\d+))?"""",
      """"fileSize":({bytes}\d+)"""
   ]
    SOAR {

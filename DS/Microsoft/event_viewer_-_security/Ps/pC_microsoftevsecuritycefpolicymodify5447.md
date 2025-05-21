@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-cef-policy-modify-5447
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """5447""", """A Windows Filtering Platform filter has been changed""" ]
+  Conditions = [ """5447""", """A Windows Filtering Platform filter has been changed""", """Microsoft-Windows-Security-Auditing""", """Change Information:""" ]
   Fields = [
     """({event_name}A Windows Filtering Platform filter has been changed)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",

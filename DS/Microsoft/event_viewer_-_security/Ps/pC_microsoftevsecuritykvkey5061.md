@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-key-5061
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """5061""", """Cryptographic operation""" ]
+  Conditions = [ """5061""", """Cryptographic operation""", """Algorithm Name:""", """Key Name:""", """Microsoft Software Key Storage Provider""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-kv-key-5061
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch", "MM/dd/yyyy HH:mm:ss a"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",

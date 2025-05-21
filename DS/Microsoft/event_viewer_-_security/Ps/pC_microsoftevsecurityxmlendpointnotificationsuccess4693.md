@@ -10,7 +10,8 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4693
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
     """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Data Name\\*='FailureId'>({result}[^<]+)<\/Data>"""
   ] 
   DupFields = ["user->src_user", "domain->src_domain"]
 

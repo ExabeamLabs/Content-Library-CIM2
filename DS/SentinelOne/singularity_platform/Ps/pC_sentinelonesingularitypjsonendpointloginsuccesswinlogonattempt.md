@@ -7,6 +7,7 @@ Name = sentinelone-singularityp-json-endpoint-login-success-winlogonattempt
   Fields = ${SentinelOneParsersTemplates.sentinelone-json-api-alerts.Fields} [
     """exa_json_path=$..loginType,exa_field_name=login_type_text""",
     """exa_json_path=$..loginsUserName,exa_field_name=user"""
+    """exa_json_path=$..alertInfo.loginIsSuccessful,exa_field_name=result"""
   ]
 
 sentinelone-json-api-alerts {
@@ -18,9 +19,9 @@ sentinelone-json-api-alerts {
       """exa_json_path=$..createdAt,exa_field_name=time""",
       """exa_json_path=$.sourceProcessInfo.user,exa_regex=(({domain}[^\"\\]+)\\{1,2})?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$..eventType,exa_field_name=event_name""",
-      """exa_json_path=$..srcIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """exa_json_path=$..srcIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """exa_json_path=$..srcPort,exa_field_name=src_port""",
-      """exa_json_path=$..dstIp,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """exa_json_path=$..dstIp,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """exa_json_path=$..dstPort,exa_field_name=dest_port""",
       """exa_json_path=$..os,exa_field_name=os""",
       """exa_json_path=$.agentDetectionInfo.name,exa_field_name=src_host""",

@@ -7,7 +7,7 @@ Vendor: Okta
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         2          |       5        |   41    |
+|   3   |   1    |         2          |       5        |   21    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

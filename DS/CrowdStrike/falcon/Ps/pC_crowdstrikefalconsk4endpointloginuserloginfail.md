@@ -14,7 +14,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """"event_simpleName":"({event_code}[^"]+)""",
     """"aid":"({aid}[^"]+)""",
     """"aip":\s*"({aip}[a-fA-F:\d.]+)"""",
-    """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"LogonType":"({login_type}\d+)"""",
     """"name":"({event_name}[^"]+)"""",
     """"LogonDomain":"\s*({domain}[^\"]+?)\s*"""",
@@ -31,7 +31,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """exa_json_path=$..event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$..aid,exa_field_name=aid""",
     """exa_json_path=$..aip,exa_field_name=aip""",
-    """exa_json_path=$.aip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.aip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$..LogonType,exa_field_name=login_type""",
     """exa_json_path=$..name,exa_field_name=event_name""",
     """exa_regex="LogonDomain":"\s*({domain}[^\"]+?)\s*"""",

@@ -9,7 +9,7 @@ ExtractionType = json
 Conditions = [ """"signinDateTimeInMillis":""", """"loginStatus": """", """"mfaAuthDetail":""" ]
 Fields = [
   """exa_json_path=$.signinDateTimeInMillis,exa_field_name=time""",
-  """exa_json_path=$.ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """exa_json_path=$.loginStatus,exa_field_name=result""",
   """exa_json_path=$.mfaResult,exa_field_name=additional_info""",
   """exa_json_path=$.signinErrorCode,exa_field_name=error_code""",

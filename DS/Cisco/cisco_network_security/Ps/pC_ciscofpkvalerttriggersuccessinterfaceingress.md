@@ -20,7 +20,7 @@ Fields = [
   """Interface Egress:\s*(Unknown|({egress_interface}[^,]+))"""
   """Security Zone Ingress:\s*(Unknown|({ingress_zone}[^,]+))"""
   """Security Zone Egress:\s*(Unknown|({egress_zone}[^,]+))"""
-  """(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))(:({src_port}\d+))?\s*->\s*(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))(:({dest_port}\d+))?"""
+  """(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))(:({src_port}\d+))?\s*->\s*(0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))(:({dest_port}\d+))?"""
   """\[Priority:\s*({alert_severity}\d+)\]"""
 ]
 ParserVersion = "v1.0.0"

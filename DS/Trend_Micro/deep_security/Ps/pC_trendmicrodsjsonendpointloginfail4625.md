@@ -14,7 +14,7 @@ Name = trendmicro-ds-json-endpoint-login-fail-4625
     """Logon Failed(:|=).+?Account Domain(:|=)\s*(|-|\?|({domain}[^\s]+?))[\s;]*Failure Information""" 
     """Sub Status(:|=)\s*({result_code}[^\s;]+?)[\s;]*Process Information(:|=)""" 
     """Workstation Name(:|=)\s*(?:-|(::ffff:)?({src_host_windows}[^\s;]+))[\s;]*Source Network Address(:|=)"""  
-    """Source Network Address(:|=)\s*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s;]*Source Port(:|=)"""  
+    """Source Network Address(:|=)\s*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s;]*Source Port(:|=)"""  
     """Logon Process(:|=)\s*({auth_process}[^\s;]+)[\s;]*Authentication Package(:|=)""" 
     """Authentication Package(:|=)\s*({auth_package}[^\s;]+?)[\s;]*Transited Services(:|=)"""
     """Failure Reason:\s*({failure_reason}[^\.]+)\s*"""
@@ -30,7 +30,7 @@ trendmicro-ds-ossecevents = {
    Fields = [
       """"LogDate\\*":\\*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"EventType\\*":\\*"({event_category}LogInspectionEvent)""",
-      """"Hostname\\*":\\*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))""",
+      """"Hostname\\*":\\*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))""",
       """"HostOS\\*":\\*"({os}[^\\"]+)""",
       """"OSSEC_Hostname\\*":\\*"({host}[\w.-]+)""",
       """"OSSEC_SystemName\\*":\\*"({host}[\w.-]+)""",

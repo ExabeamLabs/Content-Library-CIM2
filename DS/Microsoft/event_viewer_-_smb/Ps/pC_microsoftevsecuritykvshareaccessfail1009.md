@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-kv-share-access-fail-1009
   Product = Event Viewer - SMB
-  Conditions = [ """The server denied anonymous access to the client""", """Microsoft-Windows-SMBServer""", """ 1009 """ ]
+  Conditions = [ """The server denied anonymous access to the client""", """Microsoft-Windows-SMBServer""", """ 1009 """, """Client Name:""" ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-events-share.Fields}[
     """({host}[\w\-\.]+)\s+None"""
@@ -19,7 +19,7 @@ windows-events-share = {
     """({time}\d{1,4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """\d+\s+({event_code}\d+)\s+Microsoft-Windows-SMB(Server|Client)"""
     """None\s+({event_name}[^\:]+?)\s+Client Name"""
-    """Client Address(:|=)\s*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """Client Address(:|=)\s*(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """User Name:\s*(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Session ID"""
     """Session ID:\s*({session_id}[^\s]+)"""
     """Status:\s*({failure_reason}[^:.]+)\.\s+({failure_code}[^:]+?)\s+SPN"""

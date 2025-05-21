@@ -17,7 +17,7 @@ Fields = [
   """Common\.Service=({network}.*?)\s*([\w\-.]+=|$)"""
   """Common\.Host-MAC-Address=({src_mac}\w+)\s*([\w\-.]+=|$)"""
   """Common\.Auth-Type=(|({auth_type}.+?))\s*([\w\-.]+=|$)"""
-  """Common\.NAS-IP-Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """Common\.NAS-IP-Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """AD status:({failure_reason}[^\(]+)\s"""
 ]
 DupFields = [

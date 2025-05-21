@@ -8,7 +8,7 @@ Name = microsoft-nps-sk4-endpoint-authentication-fail-6273
   Fields = ${WindowsParsersTemplates.json-windows-events-3.Fields}[
     """"Computer":"({host}[^"]+)"""",
     """({event_name}Network Policy Server denied access to a user)""",
-    """"NASIPv(4|6)Address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"NASIPv(4|6)Address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """<Data Name\\?="Reason">({failure_reason}[^<]+)""",
     """"AuthenticationProvider":({auth_server}[^"]+)"""",
     """"FullyQualifiedSubjectMachineName":"(-|({user_type}[^"]+))"""",
@@ -27,7 +27,7 @@ json-windows-events-3 = {
     """"SubjectUserName":"(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectDomainName":"(-|({domain}[^"]+))""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
-    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""

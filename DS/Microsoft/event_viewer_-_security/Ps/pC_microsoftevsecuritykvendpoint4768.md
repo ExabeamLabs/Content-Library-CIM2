@@ -10,16 +10,16 @@ Name = microsoft-evsecurity-kv-endpoint-4768
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Authentication Service""",
     """({event_code}4768)""",
-    """TargetUserName:(({email_address}[^@,]+@[^,]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
+    """TargetUserName:(({user_upn}[^@,]+@[^,]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
     """TargetSid:({user_sid}[^,]+),""",
     """ServiceName:({service_name}[^,]+)""",
     """TicketOptions:({ticket_options}[^,]+),""",
     """TicketEncryptionType:({ticket_encryption_type}[^,]+),""",
     """Status:({result_code}[^,]+),""",
-    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
+    """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
     """({result}(Success|Failure) Audit)"""
   ]
-  DupFields = [ "result_code->failure_code", "email_address->dest_email_address", "user_sid->dest_user_sid", "user->dest_user" ]
+  DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

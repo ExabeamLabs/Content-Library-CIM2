@@ -9,10 +9,10 @@ Name = beyondtrust-bi-cef-app-logout-success-logout
   Conditions = [ """CEF:""", """act=Logout""", """|BeyondTrust|BeyondInsight|""", """fileType=Logout""", """|AppAudit|Logout|""" ]
   Fields = [
   """start=({time}\w{3,4}\s\d{1,2}\s\d{4}\s\d{1,2}:\d{1,2}:\d{1,2})"""
-  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """act=({event_name}[^\s]+)"""
-  """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """shost=({host}[\w\-.]+)"""
   """BeyondTrustBeyondInsightEventSeverity=({severity}[^\s]+)"""
   ]

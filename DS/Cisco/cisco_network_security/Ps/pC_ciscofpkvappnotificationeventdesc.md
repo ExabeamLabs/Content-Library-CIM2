@@ -12,7 +12,7 @@ Name = cisco-fp-kv-app-notification-eventdesc
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """sensor=({host}[\w\-\.]+)""",
     """event_subtype=({event_subtype}\d+)""",
-    """src_host=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))""",
+    """src_host=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))""",
     """mac_address=({src_mac}[^=]+?)\s\w+=""",
     """app_proto=({app_protocol}[^\s]+)""",
     """ip_proto=({protocol}[^\s]+)""",

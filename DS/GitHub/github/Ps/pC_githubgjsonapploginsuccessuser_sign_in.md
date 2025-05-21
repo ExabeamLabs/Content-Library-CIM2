@@ -16,7 +16,7 @@ Name = "github-g-json-app-login-success-user_sign_in"
         """exa_json_path=$.session_id,exa_field_name=session_id"""
         """exa_json_path=$.action,exa_field_name=event_name"""
         """exa_json_path=$.actor_location.country_code,exa_field_name=country_code"""
-        """exa_json_path=$.actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+        """exa_json_path=$.actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
         """exa_json_path=$._document_id,exa_field_name=doc_id"""        
     ]
     ParserVersion = "v1.0.0"

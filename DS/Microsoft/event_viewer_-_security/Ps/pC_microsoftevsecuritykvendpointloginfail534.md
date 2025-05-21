@@ -34,7 +34,7 @@ Fields = [
 """\scn1=({login_type}\d+)"""
 """\sdvchost=({host}[^\s]+)"""
 """ dntdom=({domain}[^\s]+)"""
-""" src=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
+""" src=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
 ]
 DupFields = [
 "host->dest_host"
@@ -226,8 +226,8 @@ ParserVersion = "v1.0.0"
     """\scategoryOutcome=(|/({result}.+?))(\s+\w+=|\s*$)""",
     """\scategoryObject=(|({object}.+?))(\s+\w+=|\s*$)""",
     """\sdhost=(|({dest_host}[\w\-.]+?))(\s+\w+=|\s*$)""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sduser=(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
     """\sdproc=(|({process_path}(({process_dir}[^=]*?)[\\\/]+)?({process_name}[^=\\\/]+)))(\s+\w+=|\s*$)""",
     """Process ID\\=({process_id}\d+)""",
@@ -294,7 +294,7 @@ Fields = [
   """LogonProcessName ="({auth_process}[^"]+)""""
   """KeyLength="({key_length}\d+)""""
   """AuthenticationPackageName ="({auth_package}[^"]+)""""
-  """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+  """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
 DupFields = [ "dest_host->host", "user->src_user", "domain->src_domain" ]
 Name = "microsoft-evsecurity-kv-endpoint-login-fail-534"
@@ -340,7 +340,7 @@ ParserVersion = "v1.0.0"
       """<Data Name(\\)?=('|")AccountName('|")>(?=\w)?(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
       """<Data Name(\\)?=('|")AccountDomain('|")>(-|({domain}[^<]+))<\/Data>""",
       """<Data Name(\\)?=('|")LogonID('|")>({login_id}\w+)<\/Data>""",
-      """<Data Name(\\)?=('|")ClientAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))<\/Data>""",
+      """<Data Name(\\)?=('|")ClientAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))<\/Data>""",
       """<Message>({event_name}A user was denied the access to Remote Desktop).""",
       """<Level>({run_level}[^<]+)<"""
     ]
@@ -357,7 +357,7 @@ ParserVersion = "v1.0.0"
       """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(am|AM|pm|PM))""",
       """EventCode=({event_code}\d+)\s*""",
       """User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+""",
-      """Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """Message=({event_name}A user was denied the access to Remote Desktop).""",
       """ComputerName =({host}[\w.\-]+)"""
       """RecordNumber=({event_id}\w+)"""
@@ -379,7 +379,7 @@ Fields = [
   """({event_name}A logon was attempted using explicit credentials)"""
   """\sexternalId=({event_code}\d+)"""
   """\srt=({time}\d{13})"""
-  """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\sdvchost=({dest_host}[\w\-.]+)"""
   """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
@@ -387,7 +387,7 @@ Fields = [
   """\sdntdom=({domain}[^\s]+)"""
   """\sduid=({login_id}[^\s]+)"""
   """dproc=(?: |({process_path}({process_dir}(?:[^=]+)?[\\\/])?({process_name}[^\\\/=]+)))\s+\w+="""
-  """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 DupFields = [
   "dest_ip->host"
@@ -413,8 +413,8 @@ Fields = [
   """duser=({account}[\w\-\.]+(?:\w+)?\$?)\s+\w+="""
   """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """dntdom=({domain}.+?)\s+\w+="""
-  """OriginalAgentAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """OriginalAgentAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """dvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -432,7 +432,7 @@ Fields = [
   """({event_name}Account Logon)"""
   """({event_code}672)"""
   """\srt=({time}\d{13})"""
-  """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\scs4=({result_code}[^\s]+)"""
   """\sdvchost=({host}[^\s]+)"""
@@ -469,8 +469,8 @@ ParserVersion = "v1.0.0"
 
 {
 Name = "microsoft-windows-kv-endpoint-login-esm"
-Vendor = "McAfee"
-Product = "McAfee Enterprise Security Manager"
+Vendor = "Trellix"
+Product = "Trellix Enterprise Security Manager"
 TimeFormat = "epoch"
 Conditions = [
   "|McAfee|ESM"
@@ -491,8 +491,8 @@ ParserVersion = "v1.0.0"
 
 {
 Name = "microsoft-windows-kv-endpoint-login-fail-failure"
-Vendor = "McAfee"
-Product = "McAfee Enterprise Security Manager"
+Vendor = "Trellix"
+Product = "Trellix Enterprise Security Manager"
 TimeFormat = "epoch"
 Conditions = [
   """|McAfee|ESM"""
@@ -510,7 +510,7 @@ Fields = [
   """suser=({src_user}.+?)\s+\w+="""
   """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """duser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
-  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """nitroSource_Logon_ID=\([^,]+,({login_id}[^\)]+)"""
   """nitroDestination_Logon_ID=({login_id}\d+)"""
 ]
@@ -596,58 +596,10 @@ Fields = [
   """ComputerName =({host}[\w.\-]+)"""
   """EventCode=({event_code}\w+)"""
   """User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Supplied Realm Name:\s+({domain}[^\s]+)"""
-  """Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """Result Code:\s+({result_code}[\w\-]+)"""
   """Sid=({user_sid}[^\s]+)\s+SidType"""
 ]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "microsoft-evsecurity-kv-endpoint-login-fail-675-2"
-Vendor = "Microsoft"
-Product = "Event Viewer - Security"
-TimeFormat = "MM/dd/yyyy hh:mm:ss a"
-Conditions = [
-  """EventCode=675"""
-  """Pre-authentication failed:"""
-]
-Fields = [
-  """({event_name}Pre-authentication failed)"""
-  """ComputerName =({host}[\w.\-]+)"""
-  """EventCode=({event_code}\d+)"""
-  """User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+User ID:\s+({user_sid}.+?)\s+Service Name"""
-  """Service Name:\s+\w+\/(?=\w)({domain}.+?)\s+Pre-Authentication"""
-  """Failure Code:\s+({result_code}[\w]+)"""
-  """Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-]
-DupFields = [
-  "result_code->failure_code"
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "microsoft-evsecurity-kv-endpoint-login-fail-675"
-Vendor = "Microsoft"
-Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
-Conditions = [
-  """LogType=\"WLS\""""
-  """EventID=\"675\""""
-]
-Fields = [
-  """({event_name}Pre-authentication failed)"""
-  """Computer=\"+({dest_host}[\w\-.]+)\""""
-  """EventID=\"+({event_code}[^\"]+)\""""
-  """EventRecordID=\"+({event_id}[^\"]+)\""""
-  """IpAddress=\"+(?:::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
-  """ServiceName =\"+\w+\/(?=\w)({domain}[^\"]+)\""""
-  """Status=\"+({result_code}[^\"]+)\""""
-  """TargetSid=\"+({user_sid}[^\"]+)\""""
-  """TargetUserName =\"+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
-]
-DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 },
 

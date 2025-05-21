@@ -11,8 +11,8 @@ Name = cisco-fp-json-alert-trigger-success-502
   Fields = [
     """exa_json_path=$.connectionTimestamp,exa_regex=({time}\d{10})""",
     """exa_json_path=$.@computed.sensor,exa_field_name=host""",
-    """exa_json_path=$.sourceIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.destinationIpAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.sourceIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.destinationIpAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.fileSize,exa_field_name=bytes""",
     """exa_json_path=$.@computed.recordTypeDescription,exa_field_name=alert_name""",
     """exa_json_path=$.@computed.filePolicy,exa_field_name=rule""",

@@ -4,7 +4,6 @@
 Name = exabeam-nganalytics-json-rule-trigger-success-nganalytics
   Product = NG Analytics
   Conditions = [ """"product":"NG Analytics"""" , """subscription_code""" , """"vendor":"Exabeam"""" ]
-  ExtractionType = json
   Fields = ${EXAParsersTemplates.exa-events-ns.Fields} [
     """exa_json_path=$.rules[*].rule_id,exa_field_name=rule_id"""
   ]

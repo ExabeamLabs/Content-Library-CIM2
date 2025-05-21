@@ -7,8 +7,8 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4653-1
   Conditions = [ """<EventID>4653<""","""<Channel>Security</Channel>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Computer>({host}[\w\-.]+?)<""",
-    """Local Endpoint:.*?Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({src_port}\d+)""",
-    """Remote Endpoint:.*?Network Address:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({dest_port}\d+)""",
+    """Local Endpoint:.*?Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({src_port}\d+)""",
+    """Remote Endpoint:.*?Network Address:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*Keying Module Port:\s*({dest_port}\d+)""",
     """Authentication Method:\s*(-|({auth_method}\S.*?))\s*Role:""",
     """Failure Reason:\s*(-|({failure_reason}.+?))\s*State:""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

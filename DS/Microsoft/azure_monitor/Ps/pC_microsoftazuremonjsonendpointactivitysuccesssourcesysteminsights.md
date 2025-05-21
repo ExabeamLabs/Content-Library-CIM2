@@ -22,7 +22,7 @@ microsoft-azure-endpoint-json = {
       """exa_json_path=$.Category,exa_field_name=category""",
       """exa_json_path=$.RequestBodySize,exa_field_name=bytes_in""",
       """exa_json_path=$.ResponseBodySize,exa_field_name=bytes_out""",
-      """exa_json_path=$.CallerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?""",
+      """exa_json_path=$.CallerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?""",
       """exa_json_path=$.OperationName,exa_field_name=operation""",
       """exa_json_path=$.Protocol,exa_field_name=protocol""",
       """exa_json_path=$.Location,exa_field_name=region""",

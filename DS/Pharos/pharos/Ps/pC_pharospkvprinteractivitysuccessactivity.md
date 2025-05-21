@@ -17,7 +17,7 @@ Fields = [
 """\sPages=({num_pages}\d+)(\s+\w+=|\s*$)"""
 """\sFileSize=({bytes}\d+)(\s+\w+=|\s*$)"""
 """\sDeviceName =({printer_name}.+?)(\s+\w+=|\s*$)"""
-"""\sDeviceName =({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?(\s+\w+=|\s*$)"""
+"""\sDeviceName =({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?(\s+\w+=|\s*$)"""
 """\sApplicationName =(Unknown|({process_name}.+?))(\s+\w+=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"

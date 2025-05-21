@@ -15,7 +15,7 @@ Fields = [
   """\W__li_source_path=\"({host}[\w\.-]+)\""""
   """({event_code}4768)"""
   """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@([^\s]+))?\s+Supplied Realm Name"""
-  """Client Address:\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """Client Address:\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """Result Code:\s+({result_code}[\w]+)"""
   """Supplied Realm Name:\s+({domain}[^\s]+)"""
   """User ID:\s+(?:NULL SID|({user_sid}.+?))\s+Service Information"""

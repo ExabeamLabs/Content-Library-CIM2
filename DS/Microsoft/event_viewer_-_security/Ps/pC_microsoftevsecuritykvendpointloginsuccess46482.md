@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4648-2
     """"+process_information.process_name"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
     """"+process_information.process_id"+:"+({process_id}[^"]+)""",
     """"+Computer"+:"+({host}[\w\-.]+)""",
-    """"+subject.account_name"+:"+(-|({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
+    """"+subject.account_name"+:"+(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
     """"+network_information.source_port"+:"+(-|({src_port}\d+))""",
     """"+new_logon.account_domain"+:"+({domain}[^"]+)""",
     """"message"+:"+({additional_info}[^"]+)""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4648-2
     """account_whose_credentials_were_used.account_domain":"({account_domain}[^"]+)""",
     """account_whose_credentials_were_used.account_name":"({account}[^"]+)""",
     """account_whose_credentials_were_used.logon_guid":"({session_id}[^"]+)""",
-    """network_information.network_address:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """network_information.network_address:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 	]
 	ParserVersion = "v1.0.0"
 

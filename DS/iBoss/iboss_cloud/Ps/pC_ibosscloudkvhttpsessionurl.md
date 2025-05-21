@@ -18,7 +18,7 @@ Fields = [
 """URL=({url}(\w+:\/\/)?({web_domain}[^\/]+?)({uri_path}\/[^\?]*?)?({uri_query}\?[^,]+)?)(,|")"""
 """CATEGORIES_NAMES=({categories}({category}[^,;\=]+)[^\=]*?),\w+="""
 """ACTION=({action}[^,]+),"""
-"""SRC_IPADDR=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,"""
+"""SRC_IPADDR=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,"""
 """COMP_NAME=({src_host}[\w\-.]+),"""
 """USER=(({email_address}[^@=]+@[^.]+\.[^,\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """REQUEST_METHOD=({method}[^,]+),"""

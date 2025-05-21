@@ -14,7 +14,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
   Fields = [
     """"OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
     """"aip":\s*"({aip}[^"]+)""",
-    """"aip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""" #Endpoints are monitored and managed by deploying a single lightweight sensor. The aip is the sensor's public IP, which can be used to pinpoint a computer's location depending on your network. Hence, in all CrowdStrike parsers, it is parsed as src_ip.
+    """"aip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""" #Endpoints are monitored and managed by deploying a single lightweight sensor. The aip is the sensor's public IP, which can be used to pinpoint a computer's location depending on your network. Hence, in all CrowdStrike parsers, it is parsed as src_ip.
     """"ProcessStartTime":\s*"({time}\d{10,13})""",
     """"timestamp":\s*"({time}\d{10,13})"""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
@@ -43,7 +43,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """'Content-Type:({web_content_type}[^']+)'"""
     """exa_json_path=$.OciContainerId,exa_field_name=container_id""",
     """exa_json_path=$..aip,exa_field_name=aip""",
-    """exa_json_path=$..aip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$..aip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$..timestamp,exa_field_name=time""",
     """exa_json_path=$.raw-event.timestamp,exa_field_name=time""",
     """exa_json_path=$..event_simpleName,exa_field_name=event_code""",

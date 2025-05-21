@@ -17,7 +17,7 @@ Fields = [
 """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
 """<Data Name\\*='SubjectDomainName'>({domain}.+?)</Data>"""
 """<Data Name\\*='ObjectType'>({file_type}.+?)</Data>"""
-"""<Data Name\\*='IpAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>"""
+"""<Data Name\\*='IpAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>"""
 """<Data Name\\*='ShareName'>(?:[\\\*]+)?({share_name}.+?)</Data>"""
 """<Data Name\\*='ShareLocalPath'>(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+)\\)?({d_name}\s*\S[^\\<]+?))\\?)</Data>"""
 """({accesses_code}4416)"""

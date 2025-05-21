@@ -11,7 +11,7 @@ Name = code42-incydr-json-file-delete-success-deviceaddress
   Fields = [
     """exa_json_path=$.processOwner,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.fileOwnerUsername,exa_regex=(\w+\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """exa_json_path=$.deviceAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.deviceAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.deviceRemoteAddress,exa_regex=({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """exa_json_path=$.deviceRemoteAddress,exa_regex=({src_translated_ip}\w{0,4}:\w{0,4}:\w{0,4}:\w{0,4}:\w{0,4}:\w{0,4}:\w{0,4}:\w{0,4})""",
     """exa_json_path=$.files[0].fileName,exa_field_name=file_name""",

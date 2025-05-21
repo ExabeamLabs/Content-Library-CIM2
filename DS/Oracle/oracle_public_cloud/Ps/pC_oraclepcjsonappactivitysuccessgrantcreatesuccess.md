@@ -20,7 +20,7 @@ oracle-public-cloud-events = {
           """exa_json_path=$..ssoApplicationName,exa_field_name=app""",
           """exa_json_path=$..message,exa_field_name=additional_info""",
           """exa_json_path=$..serviceName,exa_field_name=service_name""",
-          """exa_json_path=$..clientIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+          """exa_json_path=$..clientIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
           """exa_json_path=$..actorType,exa_field_name=user_type"""
           """exa_json_path=$..ssoUserAgent,exa_field_name=user_agent"""
           """exa_json_path=$..resourceType,exa_field_name=resource_type"""

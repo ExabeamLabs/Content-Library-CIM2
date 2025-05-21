@@ -12,9 +12,9 @@ Name = pan-ngfw-cef-http-session-url-1
     """({event_category}THREAT)""",
     """\sact=({action}[^\s]+)""",
     """\sproto=({protocol}[^\s]+)""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """\ssuser=(|({email_address}[^@\s=]+@[^\s=\.]+\.[^\s=]+)|(({domain}[^\s=\\]+)[\\]{1,20})?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s\w+=""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s{1,100}\w+=""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s{1,100}\w+=""",
     """\sdpt=({dest_port}\d+)""",
     """\sspt=({src_port}\d+)""",
     """\scs2=({category}[^=]+?)\scs2Label=URLCategory""",
@@ -28,8 +28,8 @@ Name = pan-ngfw-cef-http-session-url-1
     """deviceOutboundInterface=({dest_interface}[^\s]+)""",
     """deviceExternalId=({serial_num}\d+)""",
     """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
-	  """sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
-    """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
+	  """sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
+    """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
   ]
   DupFields = ["host->device_name"]
   ParserVersion = v1.0.0

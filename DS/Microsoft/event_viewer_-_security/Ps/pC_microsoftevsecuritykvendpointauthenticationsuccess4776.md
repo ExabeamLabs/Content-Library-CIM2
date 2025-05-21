@@ -32,7 +32,7 @@ spanish-windows-events = {
 	  """RecordNumber=\s*({event_id}\d+)"""
 	  """Sujeto:(\\t|\\r|\\n|\s)*Id. de seguridad:(\\t|\\r|\\n|\s)*({user_sid}\S+)(\\t|\\r|\\n|\s)*"""
 	  """Id. de proceso:\s*({process_id}[^\s]+)(\\t|\\r|\\n|\s)*"""
-	  """Tipo de objeto:(\\t|\\r|\\n|\s)*({object_type}Key)(\\t|\\r|\\n|\s)*Nombre del objeto:\s*(-|({registry_key}[^:]+?))(\\t|\\r|\\n|\s)*Identificador del objeto"""
+	  """Tipo de objeto:(\\t|\\r|\\n|\s)*({object_type}Key)(\\t|\\r|\\n|\s)*Nombre del objeto:\s*(-|({registry_path}[^:]+?({registry_key}[^:\\\/]+?)))(\\t|\\r|\\n|\s)*Identificador del objeto"""
 	  """Información de red:(\\t|\\r|\\n|\s)*Dirección de red:(\\t|\\r|\\n|\s|\-)*Puerto:(\\t|\\r|\\n|\s|\-)*({additional_info}.+?)\.(\w+=|$|")"""
 	  """Código de error:(\\t|\\r|\\n|\s)*({error_code}[^"]+)"""
   

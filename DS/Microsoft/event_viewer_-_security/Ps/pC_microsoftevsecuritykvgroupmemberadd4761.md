@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-group-member-add-4761
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [ """4761""", """(EventID 4761)""" , """A member was added to a security-disabled universal group""" , """Microsoft Windows security auditing""" ]
+  Conditions = [ """(EventID 4761)""" , """A member was added to a security-disabled universal group""" , """Microsoft Windows security auditing""" ]
   Fields = [
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog""",

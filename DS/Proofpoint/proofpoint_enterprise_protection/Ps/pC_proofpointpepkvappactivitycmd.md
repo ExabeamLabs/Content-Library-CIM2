@@ -6,7 +6,7 @@ Name = proofpoint-pep-kv-app-activity-cmd
   Product = Proofpoint Enterprise Protection
   Conditions = [ """mod=""","""cmd=""" ]
   Fields = ${ProofpointDLPParsersTemplates.proofpoint-dlp-log.Fields}[
-    """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   ]
  
 proofpoint-dlp-log = {
@@ -17,7 +17,7 @@ proofpoint-dlp-log = {
     """"+host"+:"+({host}[^"]+)""",
     """({time}\w+ \d+ \d+:\d+:\d+)(\s+({host}[\w\-.]+)\s+)?"""
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """Original Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """Original Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sx=({xid}[^\s]+)\s""",
 # mode is removed
     """cmd=(?:\s|({command}[^\s]+))\s""",

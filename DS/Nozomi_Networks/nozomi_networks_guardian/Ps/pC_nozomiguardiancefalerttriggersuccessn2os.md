@@ -12,7 +12,7 @@ Name = nozomi-guardian-cef-alert-trigger-success-n2os
       """\scs1=({alert_severity}[^\s]+)""",
       """\|Nozomi Networks\|([^\|]+\|){2}({alert_type}[^\|]+)""",
       """\scs3=({alert_id}[^\s]+)""",
-      """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
+      """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
       """\sspt=({src_port}\d+)""",
       """\sdpt=({dest_port}\d+)""",
       """\sflexString3=({alert_name}.+?)(?=(?:\s|\||,|;)[\w.-]+=)""",
@@ -23,7 +23,7 @@ Name = nozomi-guardian-cef-alert-trigger-success-n2os
       """\sflexString2=({mitre_labels}[^\s]+)""",
       """\sstart=({time}\d{13})""",
       """\sproto=((?i)UNKNOWN|({protocol}[^\s]+))""",
-      """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """\sdhost=({dest_host}[\w.-]+)""",
       """\Sapp=({app}[^\s]+)"""
   ]

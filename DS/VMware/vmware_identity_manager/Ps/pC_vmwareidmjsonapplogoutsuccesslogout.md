@@ -24,7 +24,7 @@ Fields = [
 """exa_json_path=$.result._raw,exa_regex=actorUserName\\*":\s*\\*"(Not Available|({full_name}\w+(\s+\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""
 """exa_json_path=$.result._raw,exa_regex=uuid\\*":\s*\\*"({user_uid}[^\\"]+)\\*"""
 """exa_json_path=$.result._raw,exa_regex=actorUuid\\*":\s*\\*"({suid}[^\\"]+)\\*"""
-"""exa_json_path=$.result._raw,exa_regex=sourceIp\\*":\s*\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*"""
+"""exa_json_path=$.result._raw,exa_regex=sourceIp\\*":\s*\\*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*"""
 """exa_json_path=$.result._raw,exa_regex=authMethods\\*":\s*\\*"({auth_method}[^\\"]+)\\*"""
 """exa_json_path=$.result._raw,exa_regex=redirect_url\\*":\s*\\*"({redirect_url}[^\\"]+)\\*"""
 """exa_json_path=$.result._raw,exa_regex=failureMessage\\*":\s*\\*"({failure_reason}[^\\"]+)\\*"""

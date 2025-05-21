@@ -17,7 +17,7 @@ Fields = [
 """\Wsuid=(?!\S+@\S+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\w+=|$)"""
 """\Wsuid=({email_address}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@[^\s]+)\s*(\w+=|$)"""
 """\Wshost=({src_host}[\w\-.]+)"""
-"""\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """({operation}PasswordLogonInitialAuthUsingPassword)"""
 ]
 ParserVersion = "v1.0.0"

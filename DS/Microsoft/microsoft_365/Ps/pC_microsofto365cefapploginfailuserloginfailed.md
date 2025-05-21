@@ -37,7 +37,7 @@ cef-o365-app-login-2 = {
     """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """"UserId":\s*"({user_upn}[^",]+)"""",
-    """"ClientIP":\s*"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(\]:({src_port}\d+))?"""",
+    """"ClientIP":\s*"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(\]:({src_port}\d+))?"""",
     """"Operation":\s*"({event_name}[^"]+)""",
     """"ResultStatus":\s*"({result}[^"]+)"""",
     """destinationServiceName =({app}Office 365)""",

@@ -35,7 +35,7 @@ Fields = [
   """<Data Name =("|')SubjectDomainName("|')>(?=\w)({src_domain}[^<]+)<"""
   """<Data Name =("|')SubjectLogonId("|')>({login_id}[^<]+)<"""
   """<Data Name =("|')ObjectType("|')>({file_type}[^<]+)<"""
-  """<Data Name =("|')ObjectName("|')>(({registry_path}\\+REGISTRY[^<]+?(\\\{({registry_key}[^\}<]+)\})?)|({src_file_path}[^<]+))<"""
+  """<Data Name =("|')ObjectName("|')>(({registry_path}\\+REGISTRY[^<]+?({registry_key}[^\\\/<]+))|({src_file_path}[^<]+))<"""
   """<Data Name =("|')ObjectName("|')>(?!\\+REGISTRY)[^<]+[\\\/]+({src_file_name}(?:[^<\\\/:]+?)(\.({src_file_ext}\w+))?|[^\\:<]+)<"""
   """<Data Name =("|')ObjectName("|')>(?!\\+REGISTRY)({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)<"""
   """<Data Name =("|')ProcessName("|')>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/\"'<]+?))<"""

@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-group-modify-success-4735
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy"]
-  Conditions = [ """4735""", """A security-enabled local group was changed""" ]
+  Conditions = [ """4735""", """A security-enabled local group was changed""", """Group Domain""" ]
   Fields = [
     """({event_name}A security-enabled local group was changed)""",
     """({event_code}4735)""",

@@ -20,8 +20,8 @@ Fields = [
 """protocol=\"({protocol}[^\"]+)"""
 """protocol=\"FTP\"\s+inspected_document=\"({file_name}[^\"]+)"""
 """action_taken=\"({action}[^\"]+)"""
-"""source_ip=\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""destination_ip=\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""source_ip=\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""destination_ip=\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """matched_policies_by_severity=\"*({alert_severity}[^\"]+)"""
 """matched_policies_by_severity=\"\w+:({alert_name}[^,;\/]+)"""
 ]

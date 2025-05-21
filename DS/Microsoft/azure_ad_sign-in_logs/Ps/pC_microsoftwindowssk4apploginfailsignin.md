@@ -12,7 +12,7 @@ Fields = [
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""
 """"TIMEGENERATED=({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d.\d\d\d)""""
 """"TIMEGENERATED":"({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d(\.\d{1,3})?)""""
-""""IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"UserPrincipalName":"({email_address}[^"\s@]+@({email_domain}[^"\s@]+))""""
 """"ConditionalAccessStatus":"({result}[^"]+)""""
 """destinationServiceName =\s*({app}[^=]+?)\s+\w+=""",
@@ -28,9 +28,10 @@ Fields = [
 """"+operationName"+:"+({operation}[^"]+)"+"""
 """"+identity"+:"+({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?""""
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
-""""geoCoordinates\\*"+:\{(|({additional_info}.+?))\}"""
+""""geoCoordinates\\*"+:\{(|({location}.+?))\}"""
+"""additionalDetails\\*":\s*\\*"({additional_info}[^"\\]+)"""
 """(?i)deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*"""
-"""(?i)deviceDetail(_string)?\\*":"?\{[^\}]*"deviceId\\*":\\*"({device_id}[^\\"]+)"""
+"""(?i)deviceDetail(_string)?\\*":"?\{[^\}]*"deviceId\\*":\\*"({device_id}[\w\.\-]+)"""
 """(?i)deviceDetail(_string)?\\*":"?\{[^\}]*"browser\\*":\\*"({browser}[^\\"]+)"""
 """(?i)deviceDetail(_string)?\\*":"?\{[^\}]*"operatingSystem\\*":\\*"({os}[^\\"]+)"""
 """"resourceId":\s*"({resource}[^"]+)""""
@@ -46,7 +47,7 @@ Fields = [
 """exa_regex="TIMEGENERATED=({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d.\d\d\d)""""
 """exa_regex="TIMEGENERATED":"({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d(\.\d{1,3})?)""""
 """exa_json_path=$.eventHubsAzureRecord.time,exa_field_name=time""",
-"""exa_json_path=$.eventHubsAzureRecord..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$.eventHubsAzureRecord..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.eventHubsAzureRecord..userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 """exa_json_path=$.eventHubsAzureRecord..conditionalAccessStatus,exa_field_name=result""",
 """exa_json_path=$.eventHubsAzureRecord..appDisplayName,exa_field_name=app""",
@@ -61,7 +62,7 @@ Fields = [
 """exa_json_path=$.eventHubsAzureRecord.category,exa_field_name=category"""
 """exa_json_path=$.eventHubsAzureRecord..riskLevelAggregated,exa_field_name=severity,exa_match_expr=!Contains($.eventHubsAzureRecord..riskLevelAggregated,"none")"""
 """exa_json_path=$.time,exa_field_name=time""",
-"""exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$..userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 """exa_json_path=$..conditionalAccessStatus,exa_field_name=result""",
 """exa_json_path=$..appDisplayName,exa_field_name=app""",
@@ -76,7 +77,8 @@ Fields = [
 """exa_json_path=$.category,exa_field_name=category""",
 """exa_json_path=$..riskLevelAggregated,exa_field_name=severity,exa_match_expr=!Contains($..riskLevelAggregated,"none")""",
 """exa_regex="riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes"""",
-"""exa_regex="location":(\{"geoCoordinates":\{\}\}|({additional_info}\{.*?\}))""",
+"""exa_regex="location":(\{"geoCoordinates":\{\}\}|({location}\{.*?\}))""",
+"""exa_regex=additionalDetails\\*":\s*\\*"({additional_info}[^"\\]+)"""
 """exa_regex=deviceDetail\".+?"deviceId":"[^"]+".+?"displayName":"({src_host}[^"]+)"""",
 """exa_regex=TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""",
 """exa_regex="resourceId":\s*"({resource}[^"]+)"""",
@@ -89,7 +91,7 @@ Fields = [
 """exa_regex="(Device)?(o|O)peratingSystem":"({os}[^"]+)"""
 """exa_regex=\\*"(F|f)ailureReason\\*":\\*"({failure_reason}.+?)(\.)?\\*""""
 """exa_regex="ConditionalAccessStatus":"({result}[^"]+)""""
-"""exa_regex="IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+"""exa_regex="IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """exa_regex="+operationName"+:"+({operation}[^"]+)"+"""
 """exa_regex="+identity"+:"+({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?""""
 """exa_regex="status":\s*\{[^\}]*?"errorCode":\s*(0|({failure_code}\d+))(,|\})"""

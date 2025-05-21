@@ -21,7 +21,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)""",
        """"InitiatingProcessId"+:({process_id}\d+)""",
        """operationName":\s*"({action}[^"]+)""",
-       """"RegistryKey":"({registry_path}({registry_key}[^"]+))"""",
+       """"RegistryKey":"({registry_path}[^"]*?({registry_key}[^"\\]+))"""",
        """"RegistryValueName":"({registry_value}[^"]+)"""",
        """"RegistryValueData":"({registry_details}[^"]+)"""",
        """"PreviousRegistryValueData":"({old_registry_details}[^"]+)"""",
@@ -39,7 +39,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """exa_json_path=$..InitiatingProcessCommandLine,exa_field_name=process_command_line"""
        """exa_json_path=$..InitiatingProcessId,exa_field_name=process_id"""
        """exa_json_path=$.operationName,exa_field_name=action"""
-       """exa_json_path=$..RegistryKey,exa_regex=({registry_path}({registry_key}[^"]+))"""
+       """exa_json_path=$..RegistryKey,exa_regex=^({registry_path}[^"]*?({registry_key}[^"\\]+))$"""
        """exa_json_path=$..RegistryValueName,exa_field_name=registry_value"""
        """exa_json_path=$..RegistryValueData,exa_field_name=registry_details"""
        """exa_json_path=$..PreviousRegistryValueData,exa_field_name=old_registry_details"""

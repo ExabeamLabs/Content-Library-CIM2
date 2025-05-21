@@ -20,7 +20,7 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
     """\sis_8021x='({is_8021x}[^']+)""",
 # full_conn is removed
 # ip_resp is removed
-    """\sip_src='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\sip_src='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 # http_resp is removed
 # arp_resp is removed
 # arp_src is removed
@@ -42,7 +42,7 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
     """\svlan_id='({vlan_id}[^']+)""",
 # rssi is removed
 # fc_type is removed
-    """original_server_ip='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'""",
+    """original_server_ip='({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'""",
     """'Sess-ID\[({session_id}\d+)\]\s""",
     """\sUser\[(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\]:""",
     """\sUser\[[^\]]+\]:\s({additional_info}[^"]+?)(\s(Reason:\s({result_reason}[^']+?))?)\s*'""",

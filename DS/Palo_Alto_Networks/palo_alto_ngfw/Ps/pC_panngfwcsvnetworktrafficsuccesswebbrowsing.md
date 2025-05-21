@@ -10,7 +10,7 @@ Name = pan-ngfw-csv-network-traffic-success-webbrowsing
   Fields = [
    """:\d\d:\d\d\s+({host}[\w\-\.]+)\s"""
    """({event_category}DECRYPTION)""" 
-   """,DECRYPTION,([^,]*,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({src_translated_ip}[a-fA-F\d.:]+),""",
+   """,DECRYPTION,([^,]*,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),({src_translated_ip}[a-fA-F\d.:]+),""",
    """,DECRYPTION,([^,]*,){6,9}(({domain}[^\\,]+)\\+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
    """,DECRYPTION,([^,]*,){20}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),(?:[^,]*,){3}(?:|({protocol}[^,]+)),({result}[^,]+),"""
    """DECRYPTION,([^,]*,){39}({policy_name}[^,]+),"""

@@ -7,7 +7,7 @@ Name = servicenow-s-sk4-app-logout-success-logout
   Product = ServiceNow
   Conditions = [ """"sys_created_by":""", """"sys_created_on":""", """"name":"logout"""" ]
   Fields = ${ServiceNowParsersTemplates.servicenow-auth-template.Fields}[
-    """"parm2":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"parm2":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
 
 servicenow-auth-template = {

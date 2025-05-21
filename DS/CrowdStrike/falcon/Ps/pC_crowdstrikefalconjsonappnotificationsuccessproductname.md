@@ -15,7 +15,7 @@ Name = "crowdstrike-falcon-json-app-notification-success-productname"
     """exa_json_path=$.aid,exa_field_name=aid""",
     """exa_json_path=$.cid,exa_field_name=cid""",
     """exa_json_path=$.FileName,exa_regex=({file_name}[^"$]+?(\.({file_ext}[^\."$]+))?)$""",
-    """exa_json_path=$.externalIP,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.externalIP,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.dproc,exa_field_name=dproc""",
     """exa_json_path=$.SHA256HashData,exa_field_name=hash_sha256"""
   ]

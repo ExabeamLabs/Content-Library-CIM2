@@ -12,7 +12,7 @@ Name = microsoft-mssql-str-endpoint-login-logon
    """Login\s+({result}[^\s]+)"""
    """Reason:\s({failure_reason}[^\[]+)\s\["""
    """for user '(((NT \w+|({domain}[^\\']+))\\+)?(ANONYMOUS LOGON|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))'"""
-   """\[CLIENT:\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\]"""
+   """\[CLIENT:\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\]"""
    """Logon\s+({event_name}[^']+?)\s*'"""
  ]
  ParserVersion = "v1.0.0"

@@ -11,7 +11,7 @@ Name = dell-sw-mix-app-activity-assignedipaddress
     """time=\\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """"host":\{[^\}]*"name":"({host}[^\s"]+)""",
     """msg=\\"({event_name}[^"]+?)\\*"""",
-    """Assigned IP address ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """Assigned IP address ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """ to MAC address ({dest_mac}[A-Fa-f:\d.]+)""",
     """\spri=({alert_severity}\d+)""",
     """\sfw=({firewall}[a-fA-F\d.:]+)""",

@@ -23,13 +23,13 @@ Name = symantec-wss-cef-http-session-request
     """\Wsuser=(({domain}[^\\\s]+)\\+)?(non-interactive-user|anonymous|system-process({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\sapp=({category}.+?)\s\w+=""",
     """\sdhost=({web_domain}.+?)\s\w+=""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*(\w+=|$)""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*(\w+=|$)""",
     """\sflexString1=({proxy_action}.+?)\s\w+=""",
-    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*(\w+=|$)""",
+    """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s*(\w+=|$)""",
     """\Wdproc=(|({process_name}.+?))(\s+\w+=|\s*$)""",
-    """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,?\s+(({domain}[^\s\\]+)\\)?(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),?\s+(\S+\s){2}({action}OBSERVED|PROXIED|DENIED),?\s+"?({categories}({category}[^";,]+)[^,"]*)"?,?\s+(-|({referrer}[^\s]+?)),?\s+({http_response_code}\d{1,100}),?\s+(-|({proxy_action}[^\s]+?)),?\s+({method}[^\s]+?),?\s+(-|({mime}[^\s]+?)),?\s+({protocol}[^\s]+?),?\s+({web_domain}[^\s]+?),?\s+({dest_port}\d{1,100}),?\s+({uri_path}[^,\s]+)?,?\s*(-||({uri_query}[^\s]+?))?,?\s+\S+,?(\s+\S+,)?\s+(none|-|"?({user_agent}[^"]+?)"?),?\s+(\d{1,3}\.){3}\d{1,3},?\s+({bytes_out}\d{1,100}),?\s+({bytes_in}\d{1,100})"""
-    """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){26},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
-    """OBSERVED(,\s+[^,]+){25},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
+    """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,?\s+(({domain}[^\s\\]+)\\)?(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),?\s+(\S+\s){2}({action}OBSERVED|PROXIED|DENIED),?\s+"?({categories}({category}[^";,]+)[^,"]*)"?,?\s+(-|({referrer}[^\s]+?)),?\s+({http_response_code}\d{1,100}),?\s+(-|({proxy_action}[^\s]+?)),?\s+({method}[^\s]+?),?\s+(-|({mime}[^\s]+?)),?\s+({protocol}[^\s]+?),?\s+({web_domain}[^\s]+?),?\s+({dest_port}\d{1,100}),?\s+({uri_path}[^,\s]+)?,?\s*(-||({uri_query}[^\s]+?))?,?\s+\S+,?(\s+\S+,)?\s+(none|-|"?({user_agent}[^"]+?)"?),?\s+(\d{1,3}\.){3}\d{1,3},?\s+({bytes_out}\d{1,100}),?\s+({bytes_in}\d{1,100})"""
+    """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){26},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
+    """OBSERVED(,\s+[^,]+){25},\s+(-,\s)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(,\s+[^,]+){28},\s+(-|({src_host}[\w.-]+))"""
     """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){2},\s+({http_response_code}\d+),"""
     """,\s*(-|({additional_info}[^,]+)),?\s*(OBSERVED|PROXIED|DENIED)"""
     """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){65},\s+(-,\s)?(?:-|({transaction_id}[^,"\]]+))"""

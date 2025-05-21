@@ -22,7 +22,7 @@ Name = "microsoft-sysmon-json-registry-create-success-valuesettask13"
     """\"RuleName\":\s*\"(-|({access}[^\"]+))"""
     """\"AccountName\":\s*\"((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """\"Domain\":\s*\"((?i)NT AUTHORITY|({domain}[^\"]+))"""
-    """TargetObject:\s*({object}({registry_path}({registry_key}.*)\\({registry_value}[^\\.]+(\.[^\\.]+?)?)))\s+Details:"""
+    """"TargetObject":\s*"({object}({registry_path}[^"]*?\\+({registry_key}[^"\\\/]+?)\\+({registry_value}[^\\"]+)))""""
     """"({log_name}Microsoft-Windows-Sysmon)"""
   ]
   DupFields = [

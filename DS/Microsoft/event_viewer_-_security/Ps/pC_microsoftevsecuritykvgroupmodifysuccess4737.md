@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-group-modify-success-4737
   Product = Event Viewer - Security
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE MMM dd HH:mm:ss yyyy","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","MM/dd/yyyy HH:mm:ss a" ]
   ParserVersion = "v1.0.0"
-  Conditions = [ """A security-enabled global group was changed""", """4737""" ]
+  Conditions = [ """A security-enabled global group was changed""", """4737""", """Security Group Management""", """Group:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
     """({time}\w{3}\s\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+\d+\s+""",

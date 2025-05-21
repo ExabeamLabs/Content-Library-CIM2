@@ -18,7 +18,7 @@ Skudonet-app-activity = {
         """\[uri\s*"({uri_path}[^"]+)"\]"""
         """\[hostname\s*"({host}[\w.-]+)"\]"""
         """\[severity\s*"({alert_severity}[^"]+)"\]"""
-        """client:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+        """client:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
         """\[file\s*"({file_url}[^"]+)"\]"""
         """\[msg\s*"({additional_info}[^"]+)"\]""""
         """REQUEST_METHOD'\s*\(Value:\s*`?({method}[^"'\)]+)"""

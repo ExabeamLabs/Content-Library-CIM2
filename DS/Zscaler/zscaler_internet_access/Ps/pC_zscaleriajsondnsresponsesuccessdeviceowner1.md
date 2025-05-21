@@ -19,8 +19,8 @@ Name = zscaler-ia-json-dns-response-success-deviceowner-1
     """exa_json_path=$.dns_response,exa_field_name=dns_response""",
     """exa_json_path=$.dns_request,exa_field_name=dns_query""",
     """exa_json_path=$.dest_port,exa_field_name=dest_port""",
-    """exa_json_path=$.dest_ip,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
-    """exa_json_path=$.src_ip,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
+    """exa_json_path=$.dest_ip,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?$""",
+    """exa_json_path=$.src_ip,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$.durationms,exa_field_name=duration""",
     """exa_json_path=$.category,exa_field_name=category""",
     """exa_json_path=$.device_owner,exa_field_name=owner_id"""

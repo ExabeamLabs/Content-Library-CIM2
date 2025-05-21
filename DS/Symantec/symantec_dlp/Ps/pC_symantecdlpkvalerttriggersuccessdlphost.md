@@ -18,7 +18,7 @@ Name = symantec-dlp-kv-alert-trigger-success-dlphost
     """blocked=({action}[^,]+)""",
     """recipients=({target}.+), severity=""",
     """file_name=({file_name}[^,]+)\s*""",
-    """endpoint_machine_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """endpoint_machine_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """endpoint_user_id=({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
    ]
    ParserVersion = "v1.0.0"

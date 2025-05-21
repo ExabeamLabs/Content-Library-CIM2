@@ -6,7 +6,7 @@ Name = "microsoft-evsecurity-kv-group-modify-4755"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """4755""", """A security-enabled universal group was changed""" ]
+  Conditions = [ """4755""", """A security-enabled universal group was changed""", """Group Domain""" ]
   Fields = [
     """({event_name}A security-enabled universal group was changed)""",
     """({event_code}4755)""",

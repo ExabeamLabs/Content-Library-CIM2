@@ -16,7 +16,7 @@ aws-web-activity-event = {
       """"terminatingRuleId"+:"+({rule_id}[^"]+)"""",
       """"terminatingRuleType"+:"+({rule}[^"]+)"""",
       """"action"+:"+({action}[^"]+)"""",
-      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"clientIp"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"httpMethod"+:"+({method}[^"]+)"""",
       """"name"+:"+(?i)Referer"+,"+value"+:"+({referrer}[^"]+)"""",
       """"name"+:"+(?i)User-Agent"+,"+value"+:"+({user_agent}[^"]+)"""",
@@ -33,7 +33,7 @@ aws-web-activity-event = {
       """exa_json_path=$.uri,exa_field_name=uri_path""",
       """exa_json_path=$.responseCodeSent,exa_field_name=http_response_code""",
       """exa_json_path=$.webaclId,exa_regex=arn:aws:waf([^:]+:){2}({account_id}\d+):""",
-      """exa_json_path=$.httpRequest.clientIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+      """exa_json_path=$.httpRequest.clientIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """exa_json_path=$.httpRequest.headers[?(@.name == 'Host')].value,exa_regex=({web_domain}[^="]+?({top_domain}[^\/\.\s"]+?(?i)(\.(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ai|ms|mx|))+))[\\\/\s:"]""",
       """exa_json_path=$.httpRequest.headers[*].value,exa_field_name=user_agent,exa_match_expr=Contains(toLower($.httpRequest.headers[*].name),"referer")"""
       """exa_json_path=$.httpRequest.headers[*].value,exa_field_name=user_agent,exa_match_expr=Contains(toLower($.httpRequest.headers[*].name),"user-agent")"""

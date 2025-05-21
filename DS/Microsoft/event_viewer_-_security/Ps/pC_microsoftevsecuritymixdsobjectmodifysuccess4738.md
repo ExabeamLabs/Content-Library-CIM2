@@ -25,7 +25,7 @@ Fields = [
 """Target\sAccount[\s\S]*?Account Domain:\s*({dest_domain}[^\s:]+?)\s"""
 """User Account Control:\s*(-|({uac_status}[^:]+?))\s+User Parameters:"""
 """Changed Attributes:\s*(|({attribute}.+?))\s+SAM Account Name"""
-"""(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s*Account Expires:"""
+"""(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s*Account Expires:"""
 """"agent.id":"({agent_id}\d+)"""
 """"location":"({log_location}[^"]+)"""
 """"decoder.name":"({decoder_name}[^"]+)"""

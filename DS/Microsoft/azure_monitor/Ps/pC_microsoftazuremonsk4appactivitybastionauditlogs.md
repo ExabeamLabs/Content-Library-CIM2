@@ -10,9 +10,9 @@ Name = microsoft-azuremon-sk4-app-activity-bastionauditlogs
     """OperationName":"({operation}[^"]+)""",
     """Process":"({process_name}[^"]+)""",
     """ResourceId":"({resource}[^"]+)""",
-    """"targetVMIPAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"targetVMIPAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"targetResourceId":"(\S+\/)?({dest_host}[\w\-.]+)",""",
-    """"clientIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"clientIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"clientPort":({src_port}\d+)""",
     """"userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"protocol":"({protocol}[^"]+)""",
@@ -26,9 +26,9 @@ Name = microsoft-azuremon-sk4-app-activity-bastionauditlogs
     """exa_json_path=$..OperationName,exa_field_name=operation"""
     """exa_json_path=$..Process,exa_field_name=process_name"""
     """exa_json_path=$..ResourceId,exa_field_name=resource"""
-    """exa_regex=targetVMIPAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_regex=targetVMIPAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_regex=targetResourceId":"(\S+\/)?({dest_host}[\w\-.]+)",""",
-    """exa_regex=clientIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_regex=clientIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$..clientPort,exa_field_name=src_port"""
     """exa_regex=userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$..protocol,exa_field_name=protocol"""
@@ -43,6 +43,7 @@ Name = microsoft-azuremon-sk4-app-activity-bastionauditlogs
 cef-microsoft-app-activity-3 = {
   Vendor = Microsoft
   Product = Azure Monitor
+  ExtractionType = json
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "M/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy h:mm:ss Z", "M/dd/yyyy h:mm:ss Z", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Fields = [
     """"time"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
@@ -56,11 +57,10 @@ cef-microsoft-app-activity-3 = {
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"(?i)resourceId":\s*"({object}[^"]{1,249})""",
     """"operationName":\s*"({operation}[^"]+)""",
-    """"name":\s*"({full_name}[^"]+)"""",
     """action":\s*"({action}[^"]+)""",
-    """"IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"MacAddress\\?"+\s*:\s*\\?"({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+)""",
-    """"((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -82,13 +82,15 @@ cef-microsoft-app-activity-3 = {
     """Location"\s*:\s*"({location}[^"]+)""",
     """exa_regex=Location"\s*:\s*"({location}[^"]+)""",
     """"resourceId"\s*:\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
+    """"_?ResourceId":\s*"({resource_id}[^"]+)""""
+    """exa_json_path=$.._ResourceId,exa_field_name=resource_id"""
     """exa_json_path=$.category,exa_field_name=category"""
     """exa_json_path=$.EventTimeString,exa_field_name=time"""
     """exa_json_path=$.EventName,exa_field_name=event_name"""
     """exa_json_path=$.resourceId,exa_field_name=object"""
     """exa_regex=Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """exa_regex=EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """exa_json_path=$.SubscriptionId,exa_field_name=subscription_id"""
+    """exa_json_path=$..SubscriptionId,exa_field_name=subscription_id"""
     """exa_regex="resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
 
@@ -103,11 +105,10 @@ cef-microsoft-app-activity-3 = {
     """exa_regex=EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
     """"exa_regex=(?i)resourceId":\s*"({object}[^"]{1,249})""",
     """exa_json_path=$..operationName,exa_field_name=operation"""
-    """exa_json_path=$..name,exa_field_name=full_name"""
     """exa_json_path=$..action,exa_field_name=action"""
-    """exa_regex=IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_regex=IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_regex=MacAddress\\?"+\s*:\s*\\?"({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+)""",
-    """exa_regex=((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """exa_regex=((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_regex=claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_regexemail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_regex=duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -126,6 +127,8 @@ cef-microsoft-app-activity-3 = {
     """exa_json_path=$..level,exa_field_name=severity"""
     """exa_json_path=$..location,exa_field_name=location"""
     """exa_json_path=$..CorrelationId,exa_field_name=correlation_id"""
+    """exa_json_path=$..correlationId,exa_field_name=correlation_id"""
+    """exa_regex=message":\s*"({additional_info}[^"]+)""",
     ]
   DupFields = [ "object->resource" 
 }

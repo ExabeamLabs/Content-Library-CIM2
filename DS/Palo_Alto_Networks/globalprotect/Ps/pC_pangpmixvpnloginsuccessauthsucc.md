@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """User name:\s+(({domain}[^,"\\\/]+)[\\\/]+)?(({email_address}({full_name}[^,]+)@({email_domain}[^,]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[,"]"""
-"""Login from:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""Login from:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """({time}\d\d\d\d/\d\d/\d\d \d+:\d+:\d+)"""
 """DeviceName =({host}[\w\-.]+)"""
 """globalprotect\w*-\S+?,({host}.+?),"""

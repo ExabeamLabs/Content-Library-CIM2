@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-cef-file-write-success-4663
     """\scs1=({access}.+?)\s+\w+=""",
     """\sdvc=({host}[a-fA-F:\d.]+)""",
     """\sdvchost=({host}[^\s]+)""",
-    """\sfname=(({registry_path}\\+REGISTRY[^:=]+?(\\\{({registry_key}[^\}:=]+)\})?)|({file_path}.+?))\s+(?:$|\w+=)""",
+    """\sfname=(({registry_path}\\+REGISTRY[^:=]+?({registry_key}[^\\\/:=]+))|({file_path}.+?))\s+(?:$|\w+=)""",
     """\sfname=(?!\\+REGISTRY)({file_dir}.+?)\\+(?:[^\\=]+?)\s+(?:$|\w+=)""",
     """\sfname=(?!\\+REGISTRY)[^=]*\\({file_name}.*?(\.({file_ext}[^\\:\s.]+))?)\s+(?:$|\w+=)""",
     """\scs3=({access_mask}\w+)""",

@@ -12,7 +12,7 @@ Name = magento-waf-sk4-http-session-wafseverity
     """"status":"({http_response_code}\d+)"""",
     """"url":"({url}[^"]+)"""",
     """"protocol":"({protocol}[^"]+)"""",
-    """"client_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
+    """"client_ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"request":"({request}[^"]+)"""",
 # request_referer is removed
 # content_type is removed

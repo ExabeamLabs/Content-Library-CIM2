@@ -5,7 +5,7 @@ Name = "microsoft-evsecurity-json-user-privilege-assign-success-4672"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
 TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
-Conditions = [ """4672""", """"PrivilegeList":"""" ]
+Conditions = [ """"EventID":4672""", """"PrivilegeList":"""" ]
 Fields = [
   """({event_name}Special privileges assigned to new logon)""",
   """"EventReceivedTime":\s*({time}\d+)""",

@@ -8,7 +8,7 @@ TimeFormat = "MMM dd HH:mm:ss"
 Conditions = [ """,EventMessage""" , """Cyber-Ark Vault""" , """,ActingUserName""" ]
 Fields = [
   """({time}\w+\s+\d\d(\s+\d\d\d\d)?\s+\d\d:\d\d:\d\d)"""
-  """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+ProductName"""
+  """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+ProductName"""
   """({app}Cyber-Ark Vault)"""
   """ProductAccount="(({domain}[^\s"]+)\\+)?({account}[^\s"]+)"""
   """Process="?(NULL|({process_name}[^"\s;,]+))"""

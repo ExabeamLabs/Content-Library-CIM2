@@ -11,7 +11,7 @@ Name = "crowdstrike-falcon-cef-app-notification-stramstarted"
      """"OperationName":"({event_name}[^"]+)""",
      """"Success":\s*({result}[^",}]+)""",
      """"ServiceName":"({service_name}[^@"]+)"""",
-     """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 # cid is removed
      """"timestamp":"({time}[^"]+)""",
      """"UserId":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",

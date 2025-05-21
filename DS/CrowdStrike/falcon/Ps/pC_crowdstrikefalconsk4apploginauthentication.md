@@ -14,7 +14,7 @@ json-crowdstrike-app-login = {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","epoch"]
   Fields = [
     """\Wsuser=(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
-    """"UserIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"UserIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"Success":({result}\w+)""",
     """"ServiceName":"({service_name}[^"]+)""",
     """"UserId":"({user_id}[^"]+)""",
@@ -26,7 +26,7 @@ json-crowdstrike-app-login = {
     """"customerIDString":"({cid}[^"]+)""""
     """exa_json_path=$..cid,exa_field_name=cid""",
     """exa_json_path=$..customerIDString,exa_field_name=cid""",
-    """exa_json_path=$.event.UserIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.event.UserIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 	  """exa_json_path=$.event.Success,exa_field_name=result""",
     """exa_json_path=$.event.ServiceName,exa_field_name=service_name""",
     """exa_json_path=$.event.UserId,exa_field_name=user_id""",

@@ -24,7 +24,7 @@ Name = microsoft-azure-json-key-success-keyvault
     """"+SubscriptionId"+:\s*"+({subscription_id}[^"]+)"+""",
     """"+ResourceType"+:\s*"+({resource_type}[^"]+)"+""",
     """"+requestUri_s"+:\s*"+({url}[^"]+)"+""",
-    """"+CallerIPAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
+    """"+CallerIPAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
     """"+id_s"+:\s*"+({creds_path}[^"]+\/({creds_name}[^\/"]+)|[^"]+)"+""",
     """"+clientInfo"+:\s*"+({user_agent}[^"]+)"+""",
     """"+clientInfo_s"+:\s*"+({user_agent}[^"]+)"+""",

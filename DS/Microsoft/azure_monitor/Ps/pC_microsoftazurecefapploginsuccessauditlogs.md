@@ -22,6 +22,7 @@ Fields = [
 """"Result":\s*"({result}[^"]+)""""
 """"CsHost":\s*"({host}[\w\-.]+)""""
 """"Details":\s*"({additional_info}[^"]+)""""
+""""_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
 ]
 DupFields = [
 "event_hub_namespace->host"

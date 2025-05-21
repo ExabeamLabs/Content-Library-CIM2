@@ -17,7 +17,7 @@ tanium-template-1 {
       """"directoryPath":"({process_dir}[^"]+)"""",
       """"userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
       """"action":"({action}[^"]+)"""",
-      """"dst":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({dest_host}[^"]+))"""",
+      """"dst":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({dest_host}[^"]+))"""",
 # ids is removed
       """"path":"({file_path}({file_dir}.*?)({file_name}[^\\\/;"]+?(\.({file_ext}[^\.;\\"]+?))?))"""",
       """"name":"({alert_name}[^"]+)"""",
@@ -34,7 +34,7 @@ tanium-template-1 {
       """exa_regex="directoryPath":"({process_dir}[^"]+)"""",
       """exa_json_path=$.userName,exa_field_name=user"""
       """exa_json_path=$.action,exa_field_name=action"""
-      """exa_regex="dst":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({dest_host}[^"]+))"""",
+      """exa_regex="dst":"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))|({dest_host}[^"]+))"""",
       """exa_regex="path":"({file_path}({file_dir}.*?)({file_name}[^\\\/;"]+?(\.({file_ext}[^\.;\\"]+?))?))"""",
       """exa_json_path=$..name,exa_field_name=alert_name"""
       """exa_json_path=$..query,exa_field_name=query"""

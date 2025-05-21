@@ -24,7 +24,7 @@ Name = microsoft-o365-cef-app-activity-success-addmailboxpermission
     """exa_json_path=$..ClientAppId,exa_field_name=app_id"""
     """exa_json_path=$..AppId,exa_field_name=app_id"""
     """exa_json_path=$..SessionId,exa_field_name=session_id"""
-    """exa_json_path=$..ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$..ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$..OrganizationName,exa_field_name=company"""
     """exa_json_path=$..Parameters[?(@.Name == 'AccessRights')].Value,exa_field_name=access"""
     """exa_json_path=$..Parameters[?(@.Name == 'Identity')].Value,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
@@ -36,7 +36,7 @@ Name = microsoft-o365-cef-app-activity-success-addmailboxpermission
      """ResultStatus":"({result}[^"]*)"""",
      """Name":"AccessRights","Value":"({additional_info}[^"]*)"""",
      """destinationServiceName =({app}[^\<"=,:]+)\s+""",
-     """ClientIP":"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]?(:\d{5})""",
+     """ClientIP":"\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]?(:\d{5})""",
      """duser=([^=]+\/)?({object}.+?)(\s+\w+=|\s*$)""",
      """"OriginatingServer":"({host}[\w\-.]+)\s""",
      """"Operation":"({operation}[^"]+)"""",

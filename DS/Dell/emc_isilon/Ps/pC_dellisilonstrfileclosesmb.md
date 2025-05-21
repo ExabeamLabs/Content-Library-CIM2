@@ -9,7 +9,7 @@ Name = dell-isilon-str-file-close-smb
   Conditions = [ """|SMB|""","""|CLOSE|""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+(Z|[\+\-]\d+:\d+))""",
-     """\d+-\d+-\d+T\d+:\d+:\d+(Z|\+\d+:\d+)?\s*({host}[\w\-.]+)\s+[^\]]*\]:?\s*({user_sid}[^\s\|]+)\|({user_uid}[^\|]*)\|({server_name}[^\|]+)\|({zone_id}[^\|]*)\|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|({protocol}[^\|]*)\|({event_name}CLOSE)\|({result}[^\|\s]*)\|({file_type}[^\|]*)\|({bytes_out}\d+):(\d+)\|({bytes_in}\d+):(\d+)\|({inode}[^\|]*)\|({path}[^\|]*?)\s*$"""#dl fields removed
+     """\d+-\d+-\d+T\d+:\d+:\d+(Z|\+\d+:\d+)?\s*({host}[\w\-.]+)\s+[^\]]*\]:?\s*({user_sid}[^\s\|]+)\|({user_uid}[^\|]*)\|({server_name}[^\|]+)\|({zone_id}[^\|]*)\|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\|({protocol}[^\|]*)\|({event_name}CLOSE)\|({result}[^\|\s]*)\|({file_type}[^\|]*)\|({bytes_out}\d+):(\d+)\|({bytes_in}\d+):(\d+)\|({inode}[^\|]*)\|({path}[^\|]*?)\s*$"""#dl fields removed
   ]
 
 

@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-kv-user-switch-success-4648-1"
 """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))\s+[a-zA-Z]+""",
 """({event_code}4648)""",
 """Subject(:|=)[\s;]*(\\t|\\r|\\n)*Security ID(:|=)\s*(\\t|\\r|\\n)*({user_sid}S-.*?)[\s;]*(\\t|\\r|\\n)*Account Name(:|=)""",
-"""Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
+"""Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
 """Subject(:|=).+?Account Domain(:|=)\s*(\\t|\\r|\\n)*(?:-|NT Service|({domain}[^\s]*?))[\s;]*(\\t|\\r|\\n)*Logon ID(:|=)""",
 """Subject(:|=).+?Logon ID(:|=)\s*(\\r|\\t|\\n)*({login_id}.*?)[\s;]*(\\r|\\t|\\n)*Logon GUID(:|=)""",
 """Subject(:|=).+?Logon GUID(:|=)\s*(\\r|\\t|\\n)*\{({user_login_guid}[^}]+)\}[\s;]*(\\r|\\t|\\n)*Account Whose""",
@@ -32,8 +32,8 @@ Name = "microsoft-evsecurity-kv-user-switch-success-4648-1"
 """Additional Information(:|=)\s*(\\r|\\t|\\n)*({dest_service_name}.*?)[\s;]*(\\r|\\t|\\n)*(Network Information|Process Information|\w+=)""",
 """Process ID(:|=)\s*(\\r|\\t|\\n)*({process_id}.*?)[\s;]*(\\r|\\t|\\n)*Process Name(:|=)""",
 """Process Name(:|=)\s*(\\r|\\t|\\n)*(?: |({process_path}({process_dir}(\w+:)(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))[\s;]*Network Information(:|=)""",
-"""Network Address(:|=)\s*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
-""""source_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""  
+"""Network Address(:|=)\s*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+""""source_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""  
 ]
 DupFields = [
 "dest_user->account",

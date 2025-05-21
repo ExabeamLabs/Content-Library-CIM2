@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4768-3
     """"hostname"+:"+({host}[^"]+)""",
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)""",
     """TargetUserName\\?"+:\\?"(?:-|(?i)(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
-    """IpAddress\\?"+:\\?"(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
+    """IpAddress\\?"+:\\?"(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
     """Status\\?"+:\\?"({result_code}[\w\-]+)\\?"""",
     """TargetDomainName\\?"+:\\?"(?:-|({domain}[^\s\\]+?))\\?"""",
     """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?""""

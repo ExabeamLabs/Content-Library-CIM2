@@ -12,10 +12,10 @@ Name = "cisco-netflow-kv-network-traffic-success-nfc-id"
   ]
   Fields = [
     """\w+ \d\d \d\d:\d\d:\d\d ({host}[\w.\-]+)"""
-    """\ssrc_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\ssrc_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\ssrc_host=(unknown|({src_host}.+?))(\s+\w+=|\s*$)"""
     """\ssrc_port=({src_port}\d+)"""
-    """\sdest_ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """\sdest_ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """\sdest_host=(unknown|({dest_host}.+?))(\s+\w+=|\s*$)"""
     """\sdest_port=({dest_port}\d+)"""
     """\stcp_flag=\"({tcp_flags}[^\"]+)"""

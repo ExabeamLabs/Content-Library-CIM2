@@ -17,7 +17,7 @@ Name = "tanium-cp-kv-dns-response-success-tanium"
     """\sQuery=\"(-|({dns_query}[^\"]+))\""""
     """\sOperation=\"(-|({operation}[^\"]+))\""""
     """\sProcess-Name =\"(-|({process_path}({process_dir}[^\"]*?[\\\/]+)?({process_name}[^\"\\\/]+)))\""""
-    """\sResponse=\"(\[unresolved\]|(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\""""
+    """\sResponse=\"(\[unresolved\]|(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)\""""
   ]
   ParserVersion = "v1.0.0"
 

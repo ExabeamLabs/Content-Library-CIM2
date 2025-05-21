@@ -24,7 +24,7 @@ Fields = [
 """"ProcessCommandLine"+:"+\s*({process_command_line}.+?)\s*","(FolderPath|FileName)":"""
 """"FolderPath":"({process_path}({process_dir}[^"]*?[\\/]+)?({process_name}[^"\\/]+?))\s*""""
 """"LogonId":({login_id}[^",]+)"""
-""""DeviceId":"({device_id}[^"]+)""""
+""""DeviceId":"({device_id}[\w\-\.]+)""""
 ]
 
 

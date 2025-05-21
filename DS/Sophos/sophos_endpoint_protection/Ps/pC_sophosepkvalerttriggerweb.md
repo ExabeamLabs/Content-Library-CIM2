@@ -16,7 +16,7 @@ Name = sophos-ep-kv-alert-trigger-web
      """;\s*Action=({action}[^;]+);""",
      """;\s*({additional_info}SubType=[^;]+)""",
      """;\s*ComputerName =({src_host}[^;]+);""",
-     """;\s*ComputerIPAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+     """;\s*ComputerIPAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """ComputerDomain=({domain}[^;]+)""",
   ]
 DupFields = ["event_name->alert_name"]

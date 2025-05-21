@@ -27,7 +27,7 @@ Name = "vmware-carbonblackedr-cef-network-session-success-netconn"
     """\"+alert_id\"+:\"+({alert_id}[^,]\"+)?\,"""
     """\"+type\"+:\"+({operation_type}[^\"]+)\"+"""
     """\"device_id\"+:\"+({device_id}[^\",]+)"""
-    """\"device_external_ip\"+:\"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """\"device_external_ip\"+:\"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """\"device_timestamp\"+:\"+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
     """\"parent_path\":\"({parent_process_path}({parent_process_dir}[^\"]+(\\|\/)+)?({parent_process_name}[^\"]+))\""""
   ]

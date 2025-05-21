@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-xml-configuration-load-4826-1
     """<Task>({sub_category}[^<]+)""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
+    """<EventID>({event_code}[^<]+)<""",
     """<Execution ProcessID\\*=('|")({process_id}[^'"]+)""",
     """ThreadID\\*=('|")({thread_id}[^"']+)""",
     """Guid\\*=('|")\{({process_guid}[^\'"\}]+)""",

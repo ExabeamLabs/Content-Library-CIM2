@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"Computer"+:"+({host}[\w\-.]+)""""
     """"Computer"+:"+({host}[\w\-.]+)""""
     """({event_code}4776)"""
-    """"TargetUserName":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""   
+    """"TargetUserName":"(({user_upn}[^@"]+@[^\."]+(\.[^"]+)?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""   
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
     """"(Hostname|MachineName)":"(?!(?:[A-Fa-f:\d.]+))[^."]*\.({domain}[^.]*)"""
     """"TargetUserName":"[^"@]+(?:@({domain}[^"@\s]+)[^"]*)?"""
@@ -31,7 +31,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"eventRecordID":"({event_id}\d+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
   ]
-  DupFields = [ "result_code->failure_code", "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
+  DupFields = [ "result_code->failure_code", "domain->dest_domain", "user->dest_user" ]
 
 
 }

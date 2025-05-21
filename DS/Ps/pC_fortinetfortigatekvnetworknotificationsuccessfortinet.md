@@ -11,13 +11,14 @@ fortinet-fortigate-cef-network-traffic-info}{
    Conditions = [ """CEF:""", """|Fortinet|FortiGate-""", """ logver=""", """ deviceExternalId=""", """ cat=""" ]
  }
 
-  ${openldapParserTemplates.openldap-kv-parser}{
-    # Keep this parser below openldap-o-str-user-success-searchresult
-    Name = openldap-o-str-user-success-err
-    Conditions = [ """slapd[""", """conn=""", """op=""", """ RESULT """, """err=""" ]
-    Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[
-      """err=({error_code}\d+)\s"""
-      """tag=({result_code}\d+)"""
-    
+${IbmLotusNotesTemplates.ibm-lotus-notes}{
+  Name = ibm-hclnotes-str-file-upload-success-pushing
+  ParserVersion = "v1.0.0"
+  Conditions = ["""  Pushing """, """ to """]
+  Fields = ${IbmLotusNotesTemplates.ibm-lotus-notes.Fields}[
+# system_info is removed
+    """Pushing\s*({src_file_path}(({file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))\"*"""
+  ]
+  DupFields = ["src_file_name -> file_name","src_file_ext -> file_ext"
 }
 ```

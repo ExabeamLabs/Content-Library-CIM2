@@ -9,7 +9,7 @@ Name = pan-ngfw-cef-app-notification-success-auth
   Fields = [
     """\sdvchost=({host}[\w.-]+?)\s+(\w+=|$)""",
     """rt=({time}\w{3}\s\d{2}\s\d{4}\s(\d{2}:){2}\d{2})\s""",
-    """Client '({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))' redirected to""",
+    """Client '({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))' redirected to""",
     """act=({operation}saml-client-redirect)""",
     """msg=({additional_info}[^=]+)\s+(\w+=|$)""",
     """fname=({authentication_profile}[^=]+)\s+(\w+=|$)""",

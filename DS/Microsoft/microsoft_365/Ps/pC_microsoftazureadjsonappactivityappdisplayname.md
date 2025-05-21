@@ -12,7 +12,7 @@ Name = microsoft-azuread-json-app-activity-appdisplayname
     """({event_name}Sign-In)""",
     """"userId":"({user_id}[^"]+)"""
     """"appDisplayName":"({app}[^"]+)"""
-    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d{1,20}))?"""
+    """"ipAddress":"({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d{1,20}))?"""
     """"clientAppUsed":"({object}[^"]+)"""
     """"resourceDisplayName":"({resource}[^",]+)"""
     """"additionalDetails":"({additional_info}[^"]+)"""

@@ -33,7 +33,7 @@ json-sentinelone-singularityp-events = {
       """"src.process.pid":\s*({process_id}\d+)"""
       """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
       """"registry.value":"({registry_value}[^"]+)""",
-      """"registry.keyPath":"({object}({registry_path}({registry_key}[^"]+?)\\+({registry_value}[^"\\]+)))"""",
+      """"registry.keyPath":"({object}({registry_path}[^"]*?\\+({registry_key}[^"\\]+)))"""",
       """event\.name":"({operation}[^"]+)"""",
       """"endpoint\.type":"({host_type}[^"]+)"""
       """exa_json_path=$..timestamp,exa_field_name=time"""
@@ -51,7 +51,7 @@ json-sentinelone-singularityp-events = {
       """exa_json_path=$..['src.process.pid'],exa_field_name=process_id"""
       """exa_regex="src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
       """exa_json_path=$..['registry.value'],exa_field_name=registry_value"""
-      """exa_regex="registry.keyPath":"({object}({registry_path}({registry_key}[^"]+?)\\+({registry_value}[^"\\]+)))"""",
+      """exa_regex="registry.keyPath":"({object}({registry_path}[^"]*?\\+({registry_key}[^"\\]+)))"""",
       """exa_regex=event\.name":"({operation}[^"]+)"""",
       """exa_json_path=$..['endpoint.type'],exa_field_name=host_type"""
     

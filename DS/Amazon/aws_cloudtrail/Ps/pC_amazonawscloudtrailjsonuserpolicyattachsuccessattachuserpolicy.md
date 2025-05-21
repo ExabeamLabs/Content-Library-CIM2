@@ -5,11 +5,16 @@ Name = amazon-awscloudtrail-json-user-policy-attach-success-attachuserpolicy
   #TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """AwsApiCall""", """"eventName":""", """"AttachUserPolicy"""" ]
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
+  """"requestParameters":\{.*?userName":"({identities}[^"]+)""""
+  """"requestParameters":\{("[^,]+,)*"policyArn\\?":\s*\\?"?[^"]*?:policy\/([^\/"]+\/)?({policy_name}[^"\/]+)\\?""""
+  """"policyArn":"({policy_arn}[^"]+)""""
+  """"policyName":"({policy_name}[^"]+)""""
   """exa_json_path=$.requestParameters.userName,exa_field_name=identities"""
   """exa_json_path=$.requestParameters.policyArn,exa_field_name=policy_arn"""
+  """exa_json_path=$.requestParameters.policyName,exa_field_name=policy_name"""
+  """exa_json_path=$.requestParameters.policyArn,exa_regex=^[^"]*?:policy\/([^\/"]+\/)?({policy_name}[^"\/]+)$"""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["policy_arn->policy_name"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -31,7 +36,7 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_code}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
@@ -69,7 +74,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventSource,exa_field_name=service_name""",
       """exa_json_path=$..eventName,exa_field_name=operation""",
       """exa_json_path=$.awsRegion,exa_field_name=region""",
-      """exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
+      """exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
       """exa_json_path=$..userAgent,exa_regex=\[?({user_agent}.*?)\]?$""",
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_code""",

@@ -39,7 +39,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """Workload"*:\s*"*({resource}[^"]+)"""",
     """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
     """Recipients":\[?"({target}[^\s,;@"]+@({dest_domain}[^\s;,"]+))""",
-    """"ResultStatus":\s*"({result}Success|Succeeded|Failed|Failure)"""
+    """"ResultStatus":\s*"({result}Success|Succeeded|Failed|Failure|Dismissed)"""
     """"DeviceProperties":\s*\[\{[^\]]+?(("Value":\s*"({src_host}[^"]+)",\s*"Name":\s*"DisplayName")|("Name":\s*"DisplayName",\s*"Value":\s*"({=src_host}[^"]+)"))\},"""
     """"ApplicationId":({app_id}\d+)""",
     """"ServiceObjectType":"({role_name}[^",\}]+)""",
@@ -60,6 +60,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"UserId":\s*"({user_upn}[^",]+)""""
     """"SizeInBytes":\s*({bytes_in}\d+)"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
+    """AlertSeverity":"+({alert_severity}[^"]+)"""
   ]
   DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"

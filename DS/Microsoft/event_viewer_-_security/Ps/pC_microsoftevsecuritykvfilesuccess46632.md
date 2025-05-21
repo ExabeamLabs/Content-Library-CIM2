@@ -17,7 +17,7 @@ Fields = [
   """({time}\w+\s\d+\s\d+:\d+:\d+\s\d+)"""
   """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
   """Subject(:|=)[^:=]*?Security ID(:|=)\s*((NT AUTHORITY|([^\\=]+?))\\+)?(SYSTEM|({user_sid}[^=\s]+?))[\s;]*Account Name(:|=)\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*Account Domain(:|=)\s*(NT AUTHORITY|({domain}[^:=]+?))[\s;]*Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*Object(:|=)"""
-  """Object Type(:|=)\s*({file_type}[^:=]+?)[\s;]*Object Name(:|=)\s*(({registry_path}\\+REGISTRY[^:]+?(\\\{({registry_key}[^\}:]+)\})?)|({file_path}({file_dir}(\w:)?[^:=]+[\\\/]+)?({file_name}[^:=\\\/]+?(\.({file_ext}\w+))?)))[\s;]*Handle ID(:|=)"""
+  """Object Type(:|=)\s*({file_type}[^:=]+?)[\s;]*Object Name(:|=)\s*(({registry_path}\\+REGISTRY[^:]+?({registry_key}[^\\\/:]+))|({file_path}({file_dir}(\w:)?[^:=]+[\\\/]+)?({file_name}[^:=\\\/]+?(\.({file_ext}\w+))?)))[\s;]*Handle ID(:|=)"""
   """Process Name(:|=)\s*(?:|({process_path}({process_dir}(\w:)?(?:[^:;]+)?[\\\/])?({process_name}[^\\\/";]+?)))[\s;]*Access Request Information(:|=)"""
   """Accesses(:|=)\s*({access}[^:]+?)[\s;]*Access Mask(:|=)\s*({access_mask}\w+)"""
   """"AccessList":"({access}[^"]+?)\s*""""

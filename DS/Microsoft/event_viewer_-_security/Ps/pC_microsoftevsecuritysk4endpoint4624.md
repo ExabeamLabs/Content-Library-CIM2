@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-sk4-endpoint-4624
   Conditions = [ """EventID': 4624""", """'NetApp-Security-Auditing'""", """'LogonType'"""  ]
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [
     """'Computer':\s+'({host}[\w\-\.]+)""",
-    """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   DupFields = [ "dest_user->user","dest_domain->domain","host->dest_host" ]
 
@@ -24,7 +24,7 @@ netapp-json-windows-events = {
     """'Result':\s+'({result}[^']+)""",
     """'Computer':\s+'({host}[^']+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
-    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'SubjectDomainName':\s+'({src_domain}[^']+)""",
     """'SubjectUserName':\s+'({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
@@ -47,7 +47,7 @@ netapp-json-windows-events = {
     """'ObjectName':\s+'[^.]+\/({file_name}[^']+?(\.({file_ext}[^\s\.']+))?)'""",
     """'OldSD':\s+'({old_sd}[^']+)""",
     """'NewSD':\s+'({new_sd}[^']+)"""
-        """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+        """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     
 }
 ```

@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-group-modify-success-4760
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
-  Conditions = [ """4760""", """(EventID 4760)""", """A security-disabled universal group was changed""" , """Microsoft Windows security auditing""" ]
+  Conditions = [ """(EventID 4760)""", """A security-disabled universal group was changed""" , """Microsoft Windows security auditing""" ]
   Fields = ${DLWindowsParsersTemplates.windows-group-membership-events.Fields}[
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog""",
     """({event_name}A security-disabled universal group was changed)""",

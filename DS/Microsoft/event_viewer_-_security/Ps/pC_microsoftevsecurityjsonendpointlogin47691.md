@@ -9,17 +9,17 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-1
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """({event_name}A Kerberos service ticket was requested)""",
-    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({email_address}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?))\\?"""",
+    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({user_upn}[^@\s]+?@[^\s\.]+?(\.[^\s\\]+?)?))\\?"""",
     """TargetDomainName\\?"+:\\?"+({web_domain}[^\\]+)""",
     """ServiceName\\?"+:\\?"+({dest_host}[\w\-.]+\$)""",
     """ServiceName\\?"+:\\?"+({service_name}[\w\-.]+)""",
-    """IpAddress\\?"+:\\?"+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
+    """IpAddress\\?"+:\\?"+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
     """Status\\?"+:\\?"+({result_code}[^\s\\]+)""",
     """TicketOptions\\?"+:\\?"+({ticket_options}[^\s\\]+)""",
     """TicketEncryptionType\\?"+:\\?"+({ticket_encryption_type}[^\s\\]+)"""
     """"event_id[\\]?"+:({event_code}\d+)"""
  ]
- DupFields = [ "domain->dest_domain", "user->dest_user", "email_address->dest_email_address" ]
+ DupFields = [ "domain->dest_domain", "user->dest_user" ]
 
 json-windows-events-2-aa = {
   Vendor = Microsoft

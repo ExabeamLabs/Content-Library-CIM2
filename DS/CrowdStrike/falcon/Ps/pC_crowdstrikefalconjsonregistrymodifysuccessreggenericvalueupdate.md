@@ -5,10 +5,10 @@ Name = crowdstrike-falcon-json-registry-modify-success-reggenericvalueupdate
     ParserVersion = "v1.0.0"
     Conditions = [ """"event_simpleName":"RegGenericValueUpdate"""" ]
 	  Fields = ${CrowdStrikeParsersTemplates.crowdstrike-file-operations.Fields}[
-      """exa_json_path=$.RegObjectName,exa_regex=registry_path""",
-      """exa_json_path=$.RegStringValue,exa_regex=registry_details""",
-      """exa_json_path=$.ConfigStateHash,exa_regex=old_hash""",
-      """exa_json_path=$.RegValueName,exa_regex=registry_value"""
+      """exa_json_path=$.RegObjectName,exa_regex=^({registry_path}[^"]*?({registry_key}[^"\\\/]+))$""",
+      """exa_json_path=$.RegStringValue,exa_field_name=registry_details""",
+      """exa_json_path=$.ConfigStateHash,exa_field_name=old_hash""",
+      """exa_json_path=$.RegValueName,exa_field_name=registry_value"""
 	]
 
 crowdstrike-file-operations = {
@@ -27,7 +27,7 @@ Fields = [
 """"name":"({event_name}[^"]+)""""
 """"UserName":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"ContextProcessId":"({process_guid}[^"]+)""""
-""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"Size":"({bytes}\d+)"""",
 """"cid":"({cid}[^"]+)""",
 """"event_platform":\s*"({os}[^"]+)"""",
@@ -48,7 +48,7 @@ Fields = [
 """exa_json_path=$.name,exa_field_name=event_name""",
 """exa_json_path=$.UserName,exa_regex=(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """exa_json_path=$.ContextProcessId,exa_field_name=process_guid""",
-"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.Size,exa_field_name=bytes"""
 """exa_json_path=$.cid,exa_field_name=cid"""
 """exa_json_path=$.event_platform,exa_field_name=os""",

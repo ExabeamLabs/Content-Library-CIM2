@@ -18,7 +18,7 @@ Fields = [
   """exa_json_path=$.user_agent_CF,exa_regex=(-|({user_agent}[^"]+))"""
   """exa_json_path=$.country_CF,exa_field_name=country"""
   """exa_json_path=$.app_CF,exa_regex=(none|({app}[^"]+))"""
-  """exa_json_path=$.src_CF,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.src_CF,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.action_CF,exa_regex=(-|({proxy_action}[^"]+))"""
   """exa_json_path=$.method_CF,exa_field_name=method"""
   """exa_json_path=$.status_CF,exa_field_name=http_response_code"""

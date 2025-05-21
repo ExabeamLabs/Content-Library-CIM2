@@ -16,7 +16,7 @@ Name = "crowdstrike-falcon-json-alert-trigger-success-cspmsearchstreamingevent"
     """exa_json_path=$.event.UserName,exa_field_name=user"""
     """exa_json_path=$.event.Technique,exa_field_name=alert_type"""
     """exa_json_path=$.event.PolicyStatement,exa_field_name=alert_name"""
-    """exa_json_path=$.event.UserSourceIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """exa_json_path=$.event.UserSourceIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """exa_json_path=$.event.Disposition,exa_field_name=disposition"""
     """exa_json_path=$.event.Finding,exa_field_name=additional_info"""
     """exa_json_path=$.event.SeverityName,exa_field_name=alert_severity""",

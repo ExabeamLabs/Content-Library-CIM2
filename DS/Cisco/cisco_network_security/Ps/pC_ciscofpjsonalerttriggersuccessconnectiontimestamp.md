@@ -24,8 +24,8 @@ Fields = [
   """"user":\s*"(?:Unknown|No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """"destinationPortOrIcmpType":\s*({dest_port}\d+)"""
   """"transportProtocol":\s*"({protocol}[^"]+)"""
-  """"sourceIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """"destinationIpAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """"sourceIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """"destinationIpAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """"applicationProtocol":\s*"(Unknown|({app_protocol}[^"]+))"""
   """"classificationDescription":\s*"({alert_description}[^"]+)"""
   """"clientApplication":\s*"(Unknown|({process_name}[^"]+))"""
@@ -62,8 +62,8 @@ Fields = [
   """exa_json_path=$.@computed.user,exa_regex=(?:Unknown|No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """exa_json_path=$.destinationPortOrIcmpType,exa_field_name=dest_port""",
   """exa_json_path=$.@computed.transportProtocol,exa_field_name=protocol""",
-  """exa_json_path=$.sourceIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-  """exa_json_path=$.destinationIpAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+  """exa_json_path=$.sourceIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+  """exa_json_path=$.destinationIpAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   """exa_regex="applicationProtocol":\s*"(Unknown|({app_protocol}[^"]+))""",
   """exa_json_path=$.@computed.classificationDescription,exa_field_name=alert_description""",
   """exa_regex="clientApplication":\s*"(Unknown|({process_name}[^"]+))""",

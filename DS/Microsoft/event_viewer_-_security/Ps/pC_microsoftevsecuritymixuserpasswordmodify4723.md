@@ -33,7 +33,7 @@ Fields = [
   """Account Domain:\s*({domain}[^:]+?)(\\[nrt]\s+|\s+)Logon ID:\s*({login_id}\w+)"""
   """Target Account.+?Security ID:\s*(\\r|\\n|\\t)*({dest_user_sid}S-[^:\s]+?)(\\n|\\r|\\t)*\s*Account Name:"""
   """Target Account.+?Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*({dest_domain}[^:]+?)(\\t|\\r|\\n|\s)*Additional"""
-  """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\Wsntdom=({domain}.+?)(\\[nrt]\s+|\s+)(\w+=|$)"""
   """\Wshost=({src_host}.+?)\s+(\w+=|$)"""
   """\Wduser=(({domain}[^\\=]+)\\+)?({dest_user}[^\s\\=]+)"""

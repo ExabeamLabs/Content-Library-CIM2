@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-kv-file-read-success-4663
     """SubjectDomainName ="+({domain}[^"]+)"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",
     """ObjectType="+({file_type}[^"]+)""",
-    """ObjectName ="+(({registry_path}\\+REGISTRY[^"]+?(\\\{({registry_key}[^\}"]+)\})?)|({src_file_path}[^"]+))""",
+    """ObjectName ="+(({registry_path}\\+REGISTRY[^"]+?({registry_key}[^\\\/"]+))|({src_file_path}[^"]+))""",
     """ObjectName ="+(?!\\+REGISTRY).*\\({src_file_name}(?:[^\\:]+(?=\.))({src_file_ext}\.[^\\:]+)?|[^\\:]+)"+,\s*ObjectServer=""",
     """ObjectName ="+(?!\\+REGISTRY)(?:({file_dir}.+?)\\+[^\\]+)",""",
     """ProcessName ="+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))"""",

@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """"date":"({time}\d{13})""""
   """"user":"({db_user}[^"]+)""""
-  """"ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
+  """"ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   """"host":"({dest_host}[^"]+)""""
   """"_os":"({os}[^"]+)""""
   """"_client_name":"({app}[^"]+)""""
@@ -27,7 +27,7 @@ Fields = [
   """"query":"({db_query}[^"]+)""""
   """exa_json_path=$.date,exa_field_name=time""",
   """exa_json_path=$.user,exa_field_name=db_user""",
-  """exa_json_path=$.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+  """exa_json_path=$.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   """exa_json_path=$.host,exa_field_name=dest_host""",
   """exa_json_path=$.connect_attrs._os,exa_field_name=os""",
   """exa_json_path=$.connect_attrs._client_name,exa_field_name=app""",

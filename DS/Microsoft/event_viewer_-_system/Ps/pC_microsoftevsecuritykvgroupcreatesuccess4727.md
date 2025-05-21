@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-group-create-success-4727
   Product = Event Viewer - System
   TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSS", "EEE MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" ]
   ParserVersion = "v1.0.0"
-  Conditions = [ """A security-enabled global group was created""", """4727""" ]
+  Conditions = [ """A security-enabled global group was created""", """4727""", """Microsoft-Windows-Security-Auditing""", """New Group:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
     """({time}\w{3}\s\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+\d+\s+""",

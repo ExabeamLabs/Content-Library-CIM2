@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<Data Name\\*='OldValue'>(-|({old_registry_details}[^\<]+))</Data>""",
     """<Data Name\\*='ProcessId'>({process_id}[^\<]+)</Data>""",
     """<Data Name\\*='ProcessName'>({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))</Data>""",
-    """<Data Name\\*='ObjectName'>({registry_key}[^\<]+)<\/Data>""",
+    """<Data Name\\*='ObjectName'>({registry_path}[^\<]*?({registry_key}[^\<\\\/]+))<\/Data>""",
     """<Data Name\\*='ObjectValueName'>({registry_value}[^\<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]

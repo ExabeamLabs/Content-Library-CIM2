@@ -7,8 +7,7 @@ Vendor = "Microsoft"
 Product = "Event Viewer - Security"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
-""""EventID":"""
-"""4740"""
+""""EventID":4740"""
 """Microsoft-Windows-Security-Auditing"""
 """"TargetUserName":""""
 """"SubjectUserName":""""
@@ -27,7 +26,7 @@ Fields = [
   """"SubjectLogonId\\?":\\?"({login_id}[^\\"]+)"""
   """"TargetSid\\?":\\?"({user_sid}[^\\"]+)"""
   """"TargetUserName\\?":\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
+  """Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
   """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """"TargetDomainName":"\\*({dest_domain}[^"]+)""""
   """exa_regex=({event_name}A user account was locked out)""",
@@ -43,7 +42,7 @@ Fields = [
   """exa_json_path=$.SubjectLogonId,exa_field_name=login_id"""
   """exa_json_path=$.TargetSid,exa_field_name=user_sid"""
   """exa_json_path=$.TargetUserName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
-  """exa_json_path=$.Message,exa_regex=Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
+  """exa_json_path=$.Message,exa_regex=Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
   """exa_json_path=$.Message,exa_regex=Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """exa_json_path=$.TargetDomainName,exa_regex=\\*({dest_domain}[^"]+)$"""
 ]

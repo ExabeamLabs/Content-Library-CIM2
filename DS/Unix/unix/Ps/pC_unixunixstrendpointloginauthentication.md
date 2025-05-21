@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """({time}\w+\s\d+\s\d+:\d+:\d+)?\s*({host}[\w.\-]+):?\s*su\[""",
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-]\d+:\d+)\s+""",
-  """\d\d:\d\d:\d\d(\.\S+)?\s(::ffff:)?({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
+  """\d\d:\d\d:\d\d(\.\S+)?\s(::ffff:)?({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
   """({host}({dest_host}[\w\-\.]+))\ssu\[\d+\]:""",
   """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\+\d\d:\d\d)\s({host}({dest_host}[\w\-\.]+))\s\w+\_\w+:""",
   """\sAuthentication\s*<({result}[^\s>]+)>"""

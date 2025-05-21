@@ -18,7 +18,7 @@ Fields = [
 """exa_json_path=$.return_code,exa_field_name=return_code"""
 """exa_json_path=$.os_username,exa_field_name=user"""
 """exa_json_path=$.dbusername,exa_field_name=db_user"""
-"""exa_regex=IP_ADDRESS=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_regex=IP_ADDRESS=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({src_host}[^"]+)"""
 """exa_json_path=$.terminal,exa_field_name=app"""
 """exa_json_path=$.object_schema,exa_field_name=db_schema"""

@@ -12,7 +12,8 @@ Name = microsoft-windows-json-user-lock-success-4740-2
     """SubjectLogonId\\?"+:\\?"({login_id}[^\\]+)\\?"""",
     """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?"""",
     """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?"""",
-    """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?""""
+    """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?"""",
+    """"message\\*":\\*"({event_name}A user account was locked out)"""
   ]
   DupFields=[ "src_domain->domain", "user_sid->dest_user_sid", "user->dest_user" ]
 

@@ -19,7 +19,7 @@ Name = "pan-cortex-cef-alert-trigger-success-alert"
     """\Wcs1=({process_name}.*?)\s+"""
     """fileHash=({hash_sha256}[A-Za-z0-9]+)\s"""
     """\Wcs2=\"({process_dir}.*?)\"\s+"""
-    """\Wshost=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}.*?))\s+"""
+    """\Wshost=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}.*?))\s+"""
     """\Wsuser=(N/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
     """\Wrequest=({additional_info}.*?)\s+""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""

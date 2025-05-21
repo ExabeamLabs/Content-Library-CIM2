@@ -16,7 +16,7 @@ Name = rubrik-cdm-json-app-success-cloudsummary
     """exa_json_path=$..objectType,exa_field_name=object_type""",
     """exa_json_path=$..objectId,exa_field_name=object_id""",
     """exa_json_path=$.summary,exa_field_name=additional_info""",
-    """exa_regex="summary":".*?Host\s*'(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({host}[\w\-\.]+))'""",
+    """exa_regex="summary":".*?Host\s*'(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({host}[\w\-\.]+))'""",
     """exa_json_path=$..errorCode,exa_field_name=error_code""",
     """exa_json_path=$..url,exa_field_name=url""",
     """exa_regex="location":"({host}[\w\-\.]+)"""

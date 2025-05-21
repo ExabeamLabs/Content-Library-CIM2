@@ -16,7 +16,7 @@ Fields = [
   """ReportingName =({alert_type}.+?)\s+(\w+=|$)"""
   """usrName =[^\\]*\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
   """ComputerName =({src_host}.+?)\s+(\w+=|$)"""
-  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 ]
 ParserVersion = "v1.0.0"
 },	
@@ -41,7 +41,7 @@ Fields = [
   """ReportingName =({additional_info}.+?);"""
   """({additional_info}SubType=[^;]+)"""
   """ComputerName =({src_host}[^;]+);"""
-  """ComputerIPAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """ComputerIPAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """ComputerDomain=({domain}[^;]+)"""
 ]
 DupFields = [

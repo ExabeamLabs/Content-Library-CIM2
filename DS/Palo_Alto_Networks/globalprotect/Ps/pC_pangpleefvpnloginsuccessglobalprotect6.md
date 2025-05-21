@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """\|\s*ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)"""
 """DeviceName =({host}[^\s"]+)"""
-"""Private IP:\s*({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+"""Private IP:\s*({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 """User name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """Severity=({severity}[^\s|]+)"""
 """cat=({category}[^\s|]+)"""

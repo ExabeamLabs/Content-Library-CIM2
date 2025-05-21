@@ -16,7 +16,7 @@ Name = "pan-gp-csv-endpoint-authentication-success-authsuccess"
 """,auth-success,({auth_method}[^,]+)"""
 """\suser '(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^@.,']+\.lan)|({email_address}[^@\s']+@[^.']+\.[^']+)|(({=domain}[^\s'\\]+)\\+)?({=user}[^\s']+))'""",
 """"authenticated for user '(({email_address}[^@\s']+@[^\.']+\.[^']+)|(({domain}[^\s'\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
-"""From:\s*(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)|({src_host}[\w\-\.]+?))\.?\""""
+"""From:\s*(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)|({src_host}[\w\-\.]+?))\.?\""""
 """({event_name}auth-success)"""
 """auth-success,([^,]*,){5}\"?({additional_info}[^,']+?)\s'"""
 """,SYSTEM,(\"[^\"]+\",|[^,]*,){18}({host}[\w\-.]+)""",

@@ -14,7 +14,7 @@ Name = "citrix-netscalerwaf-str-ssl-traffic-ssllog"
     """\s+({time}\d\d\/\d\d\/\d\d\d\d:\d\d:\d\d:\d\d)"""
     """\s+({host}[\w\-\.]+)\s+\d+-PPE-\d+\s+:"""
     """-PPE-\d+\s+:(\s+\w+)?\s+({event_name}SSLLOG\s.+?)\s+\d+\s"""
-    """\sClientIP\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\sClientIP\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\sClientPort\s+({src_port}\d+)"""
   ]
   ParserVersion = "v1.0.0"

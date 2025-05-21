@@ -21,7 +21,7 @@ wazuh-catch-all-template {
       """exa_json_path=$.['decoder.name'],exa_field_name=decoder_name"""
       """exa_json_path=$.['rule.id'],exa_field_name=rule_id"""
       """exa_json_path=$.['agent.name'],exa_field_name=agent_name""",
-      """exa_json_path=$.['data.srcip'],exa_regex="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """exa_json_path=$.['data.srcip'],exa_regex="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
       """exa_json_path=$.['data.status'],exa_field_name=result""",
       """exa_json_path=$.['data.data'],exa_field_name=data""",
       """exa_json_path=$.['predecoder.hostname'],exa_field_name=host""",

@@ -16,7 +16,7 @@ Name = microsoft-mssql-kv-database-login-success-impersonate
     """\sfname=(?:({domain}[^\\]+)\\+)?({account}.+?)\s+\w+=""",
     """\ssourceServiceName =(?: |({service_name}.+?))\s+\w+=""",
     """\scs3=(?: |({db_name}.+?))\s+\w+=""",
-    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sdhost=({dest_host}[\w\-.]+)"""
   ]
 

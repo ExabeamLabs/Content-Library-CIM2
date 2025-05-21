@@ -12,7 +12,7 @@ Name = 1password-1pwd-json-endpoint-authentication-fail-password_secret_bad
     """exa_json_path=$.target_user.uuid,exa_field_name=user_uid"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.session_uuid,exa_field_name=session_id"""
-    """exa_json_path=$.client.ip_address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.client.ip_address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$.client.app_name,exa_field_name=app"""
     """exa_json_path=$.client.os_name,exa_field_name=os"""
     """exa_json_path=$.target_user.email,exa_field_name=email_address"""

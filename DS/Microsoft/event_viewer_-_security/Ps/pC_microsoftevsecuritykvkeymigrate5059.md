@@ -4,8 +4,9 @@
 Name = microsoft-evsecurity-kv-key-migrate-5059
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """5059""", """Key migration operation""" ]
+  Conditions = [ """5059""", """Key migration operation""", """Microsoft Software Key Storage Provider""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
+    """\d\d:\d\d:\d\d\s[\w\-\.]+\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(am|pm))""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
@@ -19,7 +20,7 @@ Name = microsoft-evsecurity-kv-key-migrate-5059
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch", "MM/dd/yyyy HH:mm:ss a"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",

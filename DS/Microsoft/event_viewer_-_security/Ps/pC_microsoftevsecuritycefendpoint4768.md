@@ -21,7 +21,7 @@ Fields = [
   """"targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
   """"targetDomainName":"({domain}[^"\s]+?)\s*""""
   """"status":"({result_code}[^"]+?)\s*""""
-  """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+  """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"ticketEncryptionType":"({ticket_encryption_type}[^"]+)"""
   """ticketOptions":"({ticket_options}[^"]+)"""
   """"serviceName":"({service_name}[^"]+)"""

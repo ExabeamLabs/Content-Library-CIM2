@@ -17,7 +17,7 @@ Name = "crowdstrike-itdr-json-rdp-traffic-success-rdp"
     """exa_json_path=$.userEntity.secondaryDisplayName,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """exa_json_path=$.targetEntity.primaryDisplayName,exa_field_name=dest_host"""
     """exa_json_path=$.targetServiceType,exa_field_name=tgs_service_name"""
-    """exa_json_path=$.ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """exa_json_path=$.ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """exa_json_path=$.userEntity.emailAddresses,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
   ParserVersion = "v1.0.0"
