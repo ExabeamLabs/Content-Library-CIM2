@@ -11,8 +11,8 @@ Name = microsoft-azuremon-json-app-activity-success-runreadevent
   ]
   Fields = ${MicrosoftAzureParsersTemplates.cef-azure-db-for-mysql.Fields} [
     """"CorrelationId":"({correlation_id}[^"]+)"""
-    """""Identity":"\{\\*"UserName\\":\\*"({full_name}[^"\\]+)"""
-    """""Identity":"\{[^\}]+\\*"UserObjectId\\":\\*"({object}[^"\\]+)""""
+    """"Identity":"\{\\*"UserName\\":\\*"({full_name}[^"\\]+)"""
+    """"Identity":"\{[^\}]+\\*"UserObjectId\\":\\*"({object}[^"\\]+)""""
   ]
 
 

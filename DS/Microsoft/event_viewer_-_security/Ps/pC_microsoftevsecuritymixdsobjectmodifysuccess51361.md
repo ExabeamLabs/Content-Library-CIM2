@@ -8,8 +8,6 @@ TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:m
 Conditions = [
 """5136"""
 """A directory service object was modified"""
-"""Directory Service:"""
-"""Application Correlation ID:"""
 ]
 Fields = [
 """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""

@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-xml-dll-load-4610
     """ProcessID\\*=('|")({process_id}\d+)('|")""",
     """ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """<Keyword>({result}[^<]+)<""",
-    """<Data Name\\*=('|")AuthenticationPackageName('|")>({auth_package}[^<]+)<""",
+    """<Data Name\\*=('|")AuthenticationPackageName('|")>({file_path}({file_dir}[^<]+)\\({file_name}[^:]+?))\s*:\s*({auth_package}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
 

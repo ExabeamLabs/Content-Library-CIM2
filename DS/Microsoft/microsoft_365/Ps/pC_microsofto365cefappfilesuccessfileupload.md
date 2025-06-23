@@ -20,6 +20,8 @@ Name = microsoft-o365-cef-app-file-success-fileupload
     """"Sha256":"({hash_sha256}[^"]+)""""
     """"Application":"({process_name}[^"]+)""""
     """"EnforcementMode":({result_code}\d+)"""
+    """"TargetPrinterName":"({printer_name}[^"]+)""""
+    """"RuleName":"({rule}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {
@@ -79,6 +81,7 @@ cef-microsoft-app-activity = {
     """"Application":\s*"({app}[^"]+)"""
     """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
+    """appId":"({app_id}[^"]+)""""
  
 }
 ```

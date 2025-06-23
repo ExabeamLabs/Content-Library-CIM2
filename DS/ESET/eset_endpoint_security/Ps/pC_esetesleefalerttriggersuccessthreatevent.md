@@ -17,6 +17,7 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """threatName =({alert_name}[^=]+?)\s*(\w+=|$)""",
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
+      """objectUri=({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))\s*(\w+=|$)""",
       """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
       """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
@@ -27,7 +28,7 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """firstseen=({firstseen}[^=]+?)\s*(\w+=|$)""",
       """hash=({hash_sha256}[^\s]+)"""
     ]
-    DupFields = ["action->additional_info", "host->dest_host", "malware_url->process_name"]
+    DupFields = ["action->additional_info", "host->dest_host"]
 	ParserVersion = "v1.0.0"
   
 

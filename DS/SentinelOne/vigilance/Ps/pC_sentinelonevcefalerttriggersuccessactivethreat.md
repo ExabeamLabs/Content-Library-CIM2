@@ -18,7 +18,7 @@ sentinelone-vigilance-alerts {
       """\|SentinelOne\|Mgmt\|([^\|]+\|){3}({alert_severity}\d{1,2})""",
       """activityID=({alert_id}\d+)\s\w+=""",
       """\scat=({alert_type}\S+)""",
-      """fileHash=(({hash_md5}\w{32})|({hash_sha1}\w{40})|({hash_sha256}\w{64}))\s\w+=""",
+      """fileHash=(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))\s\w+=""",
       """filePath=({file_path}({file_dir}[^=]+?)[\\\/]+({file_name}[^=\/\\]+?(\.({file_ext}[^=\/\\]+))?))\s\w+="""
     
 }

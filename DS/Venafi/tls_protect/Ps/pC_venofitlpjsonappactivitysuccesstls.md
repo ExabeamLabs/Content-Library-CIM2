@@ -13,7 +13,7 @@ Name = venofi-tlp-json-app-activity-success-tls
       """"description":"({additional_info}[^"]+)"""
       """"text1":\{"name".+?"value":"[^:]+:({user}[\w\.\-\!\#\^\~]{1,40}\$?)"\}"""
       """"event_id":"({event_code}[^"]+)""""
-      """""grouping":\{.+?"object":"({object}[^"]+)"""
+      """"grouping":\{.+?"object":"({object}[^"]+)"""
       """"severity":({severity}\d)"""
       """"object_id":({object_id}\d+)"""
       """"dvc_ip":"({device_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""

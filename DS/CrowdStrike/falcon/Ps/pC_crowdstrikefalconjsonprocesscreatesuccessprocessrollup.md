@@ -57,7 +57,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """exa_regex=log-severity\\=({log_severity}\S+)""",
     """exa_json_path=$.src-account-name,exa_field_name=account_name""",
     """exa_json_path=$..SHA256String,exa_field_name=hash_sha256"""
-    """exa_json_path=$..SHA256HashData,exa_field_name=hash_sha256"""",
+    """exa_json_path=$..SHA256HashData,exa_field_name=hash_sha256""",
     """exa_json_path=$..ParentBaseFileName,exa_field_name=file_name""",
     """exa_json_path=$..ContextProcessId,exa_field_name=process_guid""",
     """exa_json_path=$..ParentBaseFileName,exa_field_name=parent_process_name""",

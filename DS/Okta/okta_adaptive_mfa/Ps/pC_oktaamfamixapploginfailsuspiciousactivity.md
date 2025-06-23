@@ -18,6 +18,7 @@ Name = okta-amfa-mix-app-login-fail-suspiciousactivity
       """exa_json_path=$.targets[:1].displayName,exa_field_name=full_name""",
       """exa_json_path=$.targets[:1].displayName,exa_regex=({last_name}[^,"]+),\s*({first_name}[^,"\}\]]+)""",
       """exa_json_path=$.targets[:1].login,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_regex=behaviors":"\{({more_info}[^\}]+)"""
     ]
     ParserVersion = "v1.0.0"
     DupFields = [ "additional_info->failure_reason" ]

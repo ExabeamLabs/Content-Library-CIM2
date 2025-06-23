@@ -21,6 +21,7 @@ Fields = [
 """cs2=({alert_id}[^\s]+)"""
 """CEF[^|]+?\|[^|]+?\|({alert_type}[^\|]+)"""
 """CEF[^|]+?\|[^|]+?\|[^|]+?\|[^|]+?\|[^|]+?\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)"""
+"""Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

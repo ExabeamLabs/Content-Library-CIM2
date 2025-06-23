@@ -9,7 +9,7 @@ Name = "microsoft-365defender-json-alert-trigger-success-publish-1"
   Conditions = [ """"category":"AdvancedHunting-AlertInfo"""", """"operationName":"Publish"""", """"Severity":""", """"Title":""" ]
   Fields = [
     """exa_regex="Timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"exa_json_path=$.hostname,exa_field_name=host""""
+    """exa_json_path=$.hostname,exa_field_name=host"""
     """exa_json_path=$..AlertId,exa_field_name=alert_id"""
     """exa_json_path=$.category,exa_field_name=alert_type"""
     """exa_json_path=$..Severity,exa_field_name=alert_severity"""

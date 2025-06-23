@@ -21,7 +21,7 @@ Name = cisco-duo-json-endpoint-authentication-result-1
     """"browser_version":"({browser_version}[^"]+)"""",
     """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"factor":"(?:n\/a|({factor}[^"]+))"""",
-    """"user":[^\}]+?"name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+    """"user":[^\}]*"name":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"application".+?"name":\s*"({service_name}[^"]+)"""
     """"access_device":\{.*?"location":\{[^\}]*?"country":"(null|({src_country}[^"]+))"""",
     """"access_device":\{.*?"location":\{[^\}]*?"country":"(null|({mfa_country}[^"]+))"""",
@@ -39,7 +39,7 @@ Name = cisco-duo-json-endpoint-authentication-result-1
     """exa_json_path=$.access_device.browser,exa_field_name=browser""",
     """exa_json_path=$.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.factor,exa_field_name=factor,exa_match_expr=!Contains($.factor,"n/a")""",
-    """exa_json_path=$.user.name,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$.user.name,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.application.name,exa_field_name=service_name""",
     """exa_json_path=$.access_device.location.country,exa_field_name=src_country""",
     """exa_json_path=$.access_device.location.country,exa_field_name=mfa_country""",

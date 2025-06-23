@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-endpoint-success-4624-1
     Vendor = Microsoft
     Product = Event Viewer - Security
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    Conditions = ["""4624""", """LogonType:""","""TargetUserName:""","""Logon""","""TransmittedServices:"""]
+    Conditions = ["""4624""", """LogonType:""","""TargetUserName:""","""Logon"""]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d[+-]\d\d:\d\d)\s({host}[\w\-.]+)"""
       """Audit\s+({host}[\w\-.]+)\s+Logon""",

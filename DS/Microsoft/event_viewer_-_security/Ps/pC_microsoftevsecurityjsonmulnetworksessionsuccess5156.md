@@ -9,7 +9,6 @@ Name = microsoft-evsecurity-json-mul-network-session-success-5156
   Conditions = [
 """5156""",
 """The Windows Filtering Platform has permitted a connection"""
-"""Filter Information:"""
   ]
   Fields = [
     """EventTime\":\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\""""

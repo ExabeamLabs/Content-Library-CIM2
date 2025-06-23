@@ -20,7 +20,7 @@ microsoft-azuread-json-events = {
       """exa_regex="initiatedBy":\s*\{[^\]]+?ipAddress":\s*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
       """exa_json_path=$..result,exa_field_name=result"""
       """exa_json_path=$.category,exa_field_name=category""",
-      """exa_json_path=$[?(@.loggedByService nin ['Core Directory','Account Provisioning'])].loggedByService,exa_field_name=app""",
+      """exa_json_path=$.[?(@.loggedByService nin ['Core Directory','Account Provisioning'])].loggedByService,exa_field_name=app""",
       """exa_json_path=$..initiatedBy.app.displayName,exa_field_name=app""",
       """exa_regex=resultReason":\s*"({additional_info}[^"]+)""""
       """exa_json_path=$..operationType,exa_field_name=operation""",
@@ -32,7 +32,7 @@ microsoft-azuread-json-events = {
       """exa_regex="InitiatedBy":\s*\{[^\]]+?ipAddress":\s*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
       """exa_json_path=$..Result,exa_field_name=result"""
       """exa_json_path=$.Category,exa_field_name=category""",
-      """exa_json_path=$[?(@.LoggedByService nin ['Core Directory','Account Provisioning'])].LoggedByService,exa_field_name=app""",
+      """exa_json_path=$.[?(@.LoggedByService nin ['Core Directory','Account Provisioning'])].LoggedByService,exa_field_name=app""",
       """exa_json_path=$..InitiatedBy.app.displayName,exa_field_name=app""",
       """exa_json_path=$.ResultReason,exa_field_name=additional_info""",
       """exa_json_path=$..AADOperationType,exa_field_name=operation""",

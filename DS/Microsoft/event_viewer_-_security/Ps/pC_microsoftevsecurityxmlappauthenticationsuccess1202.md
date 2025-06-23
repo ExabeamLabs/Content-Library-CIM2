@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-xml-app-authentication-success-1202
   ParserVersion = "v1.0.0"
-  Conditions = [ """(EventID 1202)""", """MSWinEventLog""", """AD FS Auditing""" ]
+  Conditions = [ """ 1202""", """MSWinEventLog""", """AD FS Auditing""", """The Federation Service validated a new credential""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
     """({host}[\w.-]+)\sMSWinEventLog\s"""
   ]

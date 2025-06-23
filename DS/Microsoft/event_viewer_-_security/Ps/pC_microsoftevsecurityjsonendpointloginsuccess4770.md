@@ -11,7 +11,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """4770"""
     """"A Kerberos service ticket was renewed."""
     """"TicketEncryptionType"""
-    """"TicketOptions":"""
   ]
   Fields = [
     """({event_name}A Kerberos service ticket was renewed)"""

@@ -6,7 +6,7 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
   Product = Event Viewer - ADFS
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """1644""", """A client issued a search operation with the following options""", """Client:""" ]
+  Conditions = [ """1644""", """A client issued a search operation with the following options""" ]
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)(\S*\s+({host}[\w\-.]+)\s+EvntSLog)?""",
     """({event_code}1644)""",

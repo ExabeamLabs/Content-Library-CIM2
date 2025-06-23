@@ -24,7 +24,8 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """<Execution ProcessID\\*='({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Data Name ='MemberName'>CN=({member}[^=]+?),CN=Users,"""
   ]
   DupFields = ["user->src_user", "domain->src_domain"]
 

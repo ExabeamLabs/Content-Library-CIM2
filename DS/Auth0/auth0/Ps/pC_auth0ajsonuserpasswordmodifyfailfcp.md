@@ -4,7 +4,7 @@
 Name = auth0-a-json-user-password-modify-fail-fcp
   Conditions = [ """"type":"fcp"""", """"user_id"""", """"client_name"""", """"client_id"""" ]
   Fields=${Auth0AAParsersTemplates.auth0-authentication-template.Fields}[
-    """"exa_regex=({operation_type}fcp)"""",
+    """exa_regex=({operation_type}fcp)""",
   ]
   ParserVersion = "v1.0.0"
   DupFields = [ "user->dest_user" ]
@@ -19,9 +19,9 @@ auth0-authentication-template = {
       """hostname"+:"+({host}[^"]+)""",
       """description"+:"+({additional_info}[^"]+)\s*"+""",
       """"+ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """user_name"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",     
-      """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|({user}[\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))"""
+      """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|([\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))"""
       """user_id":"([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+      """user_name"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
       """client_name"+:"+({app}[^"]+)""",
       """user_agent"+:"+({user_agent}[^"]+)""",         
       """severity"+:"+({alert_severity}[^"]+)""", 
@@ -30,14 +30,14 @@ auth0-authentication-template = {
       """exa_json_path=$..hostname,exa_field_name=host"""
       """exa_json_path=$.message.description,exa_field_name=additional_info"""
       """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-      """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
-      """exa_json_path=$..user_id,exa_regex=((({auth_type}[^|"]+)\|({domain}[^|"]+)\|({user}[\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))"""
+      """exa_json_path=$..user_id,exa_regex=((({auth_type}[^|"]+)\|({domain}[^|"]+)\|([\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))"""
       """exa_json_path=$..user_id,exa_regex=([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
       """exa_json_path=$..client_name,exa_field_name=app"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
       """exa_json_path=$..severity,exa_field_name=alert_severity"""
       """exa_json_path=$.message.type,exa_regex=({operation_type}[^",]+)"""
       """exa_json_path=$.data..user.email,exa_field_name=email_address"""
+      """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
       """exa_json_path=$.data..request.userAgent,exa_field_name=user_agent"""
       """exa_json_path=$.data..request.path,exa_field_name=uri_path"""
       """exa_json_path=$.data..request.method,exa_field_name=method"""

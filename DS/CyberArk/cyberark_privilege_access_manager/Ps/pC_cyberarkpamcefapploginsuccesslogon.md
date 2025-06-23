@@ -4,11 +4,11 @@
 Name = "cyberark-pam-cef-app-login-success-logon"
 Vendor = "CyberArk"
 Product = "CyberArk Privilege Access Manager"
-TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ssZ", "MMM dd HH:mm:ss"]
+TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ssZ", "MMM dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss"]
 Conditions = [
   """|Cyber-Ark|Vault|"""
   """|Logon|"""
-  """Safe"""
+  """|7|"""
 ]
 Fields = [
   """({time}\w+\s+\d+\s+\d\d:\d\d:\d\d)[^:]+CEF:"""
@@ -25,6 +25,10 @@ Fields = [
   """act=Logon\s+duser=(({domain}[^\\=]+)[\\\/]+)?(-|({email_address}[^@"\s]+@[^@"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """({app}Vault)"""
   """({operation}Logon)"""
+  """EventSeverity=({severity}\d+)"""
+  """ActingAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """ActionSourceUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

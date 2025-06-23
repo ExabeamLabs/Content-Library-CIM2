@@ -21,7 +21,7 @@ Fields = [
   """(\||\s)dhost=(|(\S+\\+)?({dest_host}.+?))\s+(\w+=|$)"""
   """(\||\s)duser=(|(({domain}[^\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
   """(\||\s)dvchost=(|({host}.+?))(\s\w+=|\s*$)"""
-  """(\||\s)msg=.+?for process\s+'.+?'\s+\[({hash_md5}[a-fA-F0-9]+)\]"""
+  """(\||\s)msg=.+?for process\s+'.+?'\s+\[(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))\]"""
   """(\||\s)sproc=({process_guid}.+?)(\s+[\w-]+=|\s*$)"""
 ]
 DupFields = [

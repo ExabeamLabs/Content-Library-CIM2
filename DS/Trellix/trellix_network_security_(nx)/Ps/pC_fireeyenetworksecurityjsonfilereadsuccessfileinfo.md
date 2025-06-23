@@ -14,7 +14,7 @@ Name = "fireeye-networksecurity-json-file-read-success-fileinfo"
       """exa_json_path=$.http.status,exa_field_name=http_response_code""",
       """exa_json_path=$.http.http_user_agent,exa_field_name=user_agent""",
       """exa_json_path=$.http.protocol,exa_field_name=protocol""",
-      """exa_json_path=$.http.url,exa_field_name=url""",
+      """exa_json_path=$.http.url,exa_field_name=file_path""",
       """exa_json_path=$.http.hostname,exa_field_name=web_domain""",
     	"""exa_json_path=$.http.http_port,exa_field_name=dest_port"""
       """exa_json_path=$.http.http_content_type,exa_field_name=mime"""

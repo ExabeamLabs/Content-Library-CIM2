@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-group-member-remove-success-4762
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
-  Conditions = [ """(EventID 4762)""" , """A member was removed from a security-disabled universal group""" , """Microsoft Windows security auditing""" ]
+  Conditions = [ """4762""", """(EventID 4762)""" , """A member was removed from a security-disabled universal group""" , """Microsoft Windows security auditing""" ]
   Fields = ${DLWindowsParsersTemplates.windows-group-membership-events.Fields}[
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog""",
     """({event_name}A member was removed from a security-disabled universal group)""",

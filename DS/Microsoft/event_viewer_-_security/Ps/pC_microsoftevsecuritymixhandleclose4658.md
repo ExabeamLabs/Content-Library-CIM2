@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-mix-handle-close-4658
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """4658""", """<Data Name""", """The handle to an object was closed""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """4658""", """<Data Name""", """The handle to an object was closed""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

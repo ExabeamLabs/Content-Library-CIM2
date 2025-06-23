@@ -26,6 +26,7 @@ Fields = [
   """\sIntrusionPolicy:\s*({alert_name}[^,]+?)(,|\s*$)"""
   """\sMessage:\s*({alert_name}[^,]+?)(,|\s*$)"""
   """\sPriority:\s*({alert_severity}\d+)"""
+  """InlineResult:\s*({action}[^,"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

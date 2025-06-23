@@ -18,10 +18,11 @@ Name = microsoft-o365-cef-app-file-success-displayname
     """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"displayName"\s*:\s*"({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))"""
     """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"userPrincipalName"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
-    """"DeviceOSType".*?newValue":"\[?\\?"({os}[^"\\]+)\\?"\]?"""
+    """"DeviceOSType"[^\}]+?"newValue":"[\[\\"]*({os}[\w\s]+?)[\\"\]]*\},"""
     """"Device OS.*?value":"({os}[^"]+)""""
     """\"key\":\"User-Agent\",\"value\":\"({user_agent}[^\"]+)\""""
     """"value":"({os}[^"]+)","key":"Device OS"""
+    """appId":"({app_id}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {
@@ -81,6 +82,7 @@ cef-microsoft-app-activity = {
     """"Application":\s*"({app}[^"]+)"""
     """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
+    """appId":"({app_id}[^"]+)""""
  
 }
 ```

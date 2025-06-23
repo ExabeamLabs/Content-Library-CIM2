@@ -6,7 +6,7 @@ Name = "microsoft-evsecurity-cef-network-session-fail-5157"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss"]
-  Conditions = [ """5157""", """The Windows Filtering Platform has blocked a connection""", """Microsoft-Windows-Security-Auditing""", """Filter Information:""" ]
+  Conditions = [ """5157""", """The Windows Filtering Platform has blocked a connection""" ]
   Fields = [
 """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\Wrt=({time}\d+)"""

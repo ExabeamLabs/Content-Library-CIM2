@@ -8,7 +8,6 @@ TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm
 Conditions = [
 """The workstation was locked"""
 """4800"""
-"""Session ID:"""
 ]
 Fields = [
 """({event_name}The workstation was locked)"""

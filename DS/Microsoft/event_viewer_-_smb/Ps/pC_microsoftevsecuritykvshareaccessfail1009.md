@@ -3,7 +3,7 @@
 {
 Name = microsoft-evsecurity-kv-share-access-fail-1009
   Product = Event Viewer - SMB
-  Conditions = [ """The server denied anonymous access to the client""", """Microsoft-Windows-SMBServer""", """ 1009 """, """Client Name:""" ]
+  Conditions = [ """The server denied anonymous access to the client""", """Microsoft-Windows-SMBServer""", """ 1009 """ ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-events-share.Fields}[
     """({host}[\w\-\.]+)\s+None"""

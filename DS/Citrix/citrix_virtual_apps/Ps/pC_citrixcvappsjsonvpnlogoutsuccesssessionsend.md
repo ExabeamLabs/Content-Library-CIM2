@@ -24,6 +24,7 @@ citrix-json-virtual-apps {
       """exa_json_path=$.city,exa_field_name=city""",
       """exa_json_path=$.country,exa_field_name=country""",
       """exa_json_path=$.app_name,exa_field_name=app"""
+      """exa_json_path=$.server_name,exa_field_name=server_name"""
     
 }
 ```

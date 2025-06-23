@@ -6,7 +6,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036-4
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [""" 7036 """,""" MSWinEventLog """,""" service entered the paused state.""", """Service Control Manager""" ]
+  Conditions = [""" 7036 """,""" MSWinEventLog """,""" service entered the paused state.""" ]
   Fields = [
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
    """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",

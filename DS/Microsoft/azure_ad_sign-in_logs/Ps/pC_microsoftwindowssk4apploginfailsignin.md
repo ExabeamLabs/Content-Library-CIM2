@@ -108,6 +108,10 @@ Fields = [
 """exa_regex=deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*""",
 """exa_json_path=$..authenticationMethod,exa_field_name=auth_method""",
 """exa_regex="authenticationProtocol\\*":\\*"(none|({auth_method}[^\\"]+))\\*""""
+"""exa_json_path=$..servicePrincipalName,exa_field_name=attribute""",
+"""exa_json_path=$..servicePrincipalId,exa_field_name=principal_id"""
+""""servicePrincipalId":\s*"({principal_id}[^"]+)""""
+"""servicePrincipalName":"({attribute}[^",]+)""""
 ]
 DupFields = [ "operation->event_name" ]
 ParserVersion = "v1.0.0"

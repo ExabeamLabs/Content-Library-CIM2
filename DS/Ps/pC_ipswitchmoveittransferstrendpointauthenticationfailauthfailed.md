@@ -8,6 +8,8 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-
+forcepoint-template-aa.Fields} [
+    """proto=\s*({protocol}.+?)(\s\w+=)""",
+    
 }
 ```

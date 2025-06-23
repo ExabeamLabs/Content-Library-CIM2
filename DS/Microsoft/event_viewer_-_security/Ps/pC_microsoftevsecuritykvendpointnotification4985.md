@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985
   ParserVersion = "v1.0.0"
   Product = Event Viewer - Security
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "MM/dd/yyyy HH:mm:ss"]
-  Conditions = [ """The state of a transaction has changed""", """4985""", """Account Name:""", """Transaction Information:""" ]
+  Conditions = [ """The state of a transaction has changed""", """4985""", """Account Name:""" ]
   Fields = [
     """TimeGenerated=({time}\d{13})"""
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)\s"""

@@ -3,7 +3,7 @@
 {
 Name = unix-unix-kv-process-create-success-execve
   ParserVersion = v1.0.0
-  Conditions = [ """type=EXECVE""", """msg=audit(""" ]
+  Conditions = [ """EXECVE""", """msg=""" ,"""audit""" ]
   Fields = ${DLUnixParsersTemplates.unix-kv-template.Fields}[
     """audit\([^\)]+\):\s+({additional_info}[^~]+)"""
   ]
@@ -23,9 +23,9 @@ unix-kv-template = {
       """\sres=({result}[^"']+)""",
       """\ssubj=({additional_info}[^=]+)\s+\w+\\?=""",
       """\sacct="({account_name}[^"]+)"""",
-      """\sexe="({process_path}({process_dir}[^"]+?)\/[^"\\\/]+)""""
+      """\sexe="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
       """\scomm="({process_name}[^\\"]+)"""",
-      """\sa0="({process_name}[^"]+)"""",
+      """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
       """\ssaddr=({src_port}\d+)""",
       """op=({operation}[^\s]+)""",
       """type=(?:({audispd_type}USER_\S+)|({operation_type}\S+))"""

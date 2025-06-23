@@ -4,11 +4,12 @@
 Name = fortinet-fortiweb-kv-alert-trigger-success-attack
 Vendor = Fortinet
 Product = Fortiweb Web Application Firewall
-TimeFormat = "epoch_sec"
+TimeFormat = [ "epoch_sec", "yyyy-MM-dd 'time='HH:mm:ss"]
 ParserVersion = "v1.0.0"
 Conditions = [ """type="attack"""", """sub_type=""", """severity_level=""", """action="Alert""" ]
 Fields = [
   """timestamp=({time}\d{10})"""
+  """date="*({time}\d\d\d\d-\d\d-\d\d time=\d\d:\d\d:\d\d)"""
   """\Wdevname="*({host}[^\s"]+)"*(\s|")"""
   """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
@@ -26,8 +27,14 @@ Fields = [
   """msg="({additional_info}[^"=]+)"\s\w+="""
   """http_url="({uri_path}\/[^?\s"]+)?(\?({uri_query}[^"]+))?""""
   """http_host="(none|({web_domain}[^\s]+))""""
-  """signature_subclass="({alert_reason}[^"]+)""""
+  """signature_subclass="(N\/A|({alert_reason}[^"]+))""""
   """\spolicy="({policy_name}[^"]+)""""
+  """\Wtype=({category}[^"]+)\s"""
+  """\ssrccountry=\\?"?({src_country}[^=]+?)\\?"?\s+(\w+=|$)""",
+  """http_session_id="(none|({session_id}[^"]+))"""
+  """http_version="({version}[^"]+)"""
+  """false_positive_mitigation="(none|({threat_handled}[^"]+))""""
+  """server_pool_name="(none|({vm_pool_name}[^"]+))""""
   ]
 
 

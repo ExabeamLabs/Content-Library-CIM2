@@ -4,7 +4,7 @@
 Name = microsoft-evsystem-json-ssl-start-fail-36874
   Product = Event Viewer - System
   ParserVersion = v1.0.0
-  Conditions = [ """"ProviderName":"Schannel"""", """"EventID":36874,""", """"Channel":"System"""" ]
+  Conditions = [ """"ProviderName":"""", """"EventID":36874,""", """"Channel":"System"""" ]
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
     """({event_name}The \w+ connection request has failed)""",
   ]  

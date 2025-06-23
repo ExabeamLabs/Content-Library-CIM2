@@ -36,6 +36,8 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """exa_json_path=$.domain,exa_field_name=top_domain"""
     """exa_json_path=$.file_size,exa_field_name=bytes"""
     """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
+    """exa_json_path=$.computer_name,exa_field_name=host"""
+    """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.domain,exa_field_name=domain"""
     """"alert_name":\s*"({alert_name}[^",]+)"""
     """"alert_type":\s*"({alert_type}[^",]+)"""
@@ -62,7 +64,8 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """"md5":\s*"({hash_md5}[^",]+)"""
     """"file_type":\s*"({file_type}[^",]+)"""
     """"policy":\s*"({policy_name}[^",]+)"""
-    """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""    
+    """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
+    """"computer_name":\s*"({host}[^",]+)"""    
   ]
   DupFields = [
 "alert_name"->"alert_subject"

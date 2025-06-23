@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-str-endpoint-activity-4660
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "MM/dd/yyyy HH:mm:ss a"]
-  Conditions = ["""An object was deleted""", """4660""", """Object Server:""" ]
+  Conditions = ["""An object was deleted""", """4660"""]
   Fields = [
     """({event_name}An object was deleted)""",
     """({event_code}4660)""",

@@ -36,7 +36,7 @@ Fields = [
   """exa_json_path=$.Operation,exa_field_name=operation"""
   """exa_regex=destinationServiceName =({app}[^=]+?)\s+\w+="""
   """exa_json_path=$.Workload,exa_field_name=app"""
-  """exa_regex"Workload"*:\s*"*({app}[^"]+)"""
+  """exa_regex="Workload"*:\s*"*({app}[^"]+)"""
   """exa_json_path=$..['Workload'],exa_field_name=app"""
   """exa_regex="f3u\\?":\\?"({email_address}[^@"]+@[^",\.]+\.[^",]+?)\\?""""
   """exa_regex=trc\\*"+:\\*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""

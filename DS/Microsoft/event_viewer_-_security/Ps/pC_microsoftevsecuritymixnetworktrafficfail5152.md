@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-mix-network-traffic-fail-5152
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MMM dd HH:mm:ss yyyy"]
-  Conditions = [ """5152""", """The Windows Filtering Platform has blocked a packet""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """5152""", """The Windows Filtering Platform has blocked a packet""" ]
   Fields = [
     """({event_name}The Windows Filtering Platform has blocked a packet)""",
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",

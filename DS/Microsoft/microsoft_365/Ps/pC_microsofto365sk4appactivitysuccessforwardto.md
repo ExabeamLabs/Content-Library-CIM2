@@ -6,7 +6,7 @@ Name = microsoft-o365-sk4-app-activity-success-forwardto
   Product = Microsoft 365
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = ["""New-InboxRule""" , """ForwardTo""" ]
+  Conditions = [""""New-InboxRule"""" , """ForwardTo"""", """"Operation":""" ]
   Fields = [
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
     """Forward.+?Value":"(smtp:)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""

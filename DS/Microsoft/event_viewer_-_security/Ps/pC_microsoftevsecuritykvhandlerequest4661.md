@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-handle-request-4661
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
-  Conditions = [ """4661""", """A handle to an object was requested""", """Properties:""", """Access Reasons:""", """Process Name: """ ]
+  Conditions = [ """4661""", """A handle to an object was requested""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s+EvntSLog""",

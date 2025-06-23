@@ -9,9 +9,9 @@ Name = "okta-amfa-cef-app-login-success-coreuserauthloginsuccess"
     """({result}(?i)success)""",
     """"browser":"((?i)UNKNOWN|({browser}[^"]+))"""",
     """"deviceFingerprint":"({fingerprint}[^"]+)"""",
-    """"device":.+?"id":"({device_id}[^"]+)"""",
     #""""device":.+?"name":"({dest_host}[^"]+)"""",
     """"device":.+?"os_version":"({os_version}[^"]+)"""",
+    """"device":\s*\{[^\}]+"id":"({device_id}[^"]+)""""
     """"screen_lock_type":"({identity_type}[^"]+)"""",
     """"risk\\*":.+?"level\\*":\\*"({severity}[^"]+?)\\*"""",
     """"risk":"\{reasons=({failure_reason}[^=]+?),\s\w+=""",
@@ -19,7 +19,7 @@ Name = "okta-amfa-cef-app-login-success-coreuserauthloginsuccess"
     """exa_regex=({result}(?i)success)""",
     """exa_json_path=$..client.userAgent.browser,exa_regex=((?i)UNKNOWN|({browser}[^"]+))""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint"""
-    """exa_regex="device":.+?"id":"({device_id}[^"]+)"""",
+    """exa_json_path=$.device.id,exa_field_name=device_id"""
     #"""exa_regex="device":.+?"name":"({dest_host}[^"]+)"""",
     """exa_regex="device":.+?"os_version":"({os_version}[^"]+)"""",
     """exa_regex="screen_lock_type":"({identity_type}[^"]+)"""",

@@ -19,7 +19,9 @@ cef-beyondtrust-app-activity-events = {
     """Operation=({operation}[^=]+?)\s\w+=""",
     """ObjectType=({object_type}[^=]+?)\s\w+=""",
     """ObjectID=({object_id}[^=]+)\s\w+="""",
-    """({app}BeyondInsight)"""
+    """({app}BeyondInsight)""",
+    """BeyondTrustBeyondInsightResult=({result}F|S)""",
+    """msg=({additional_info}[^=]+?)\s+(\w+=|$)"""
   
 }
 ```

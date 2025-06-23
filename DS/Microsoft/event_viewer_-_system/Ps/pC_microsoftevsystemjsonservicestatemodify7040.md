@@ -6,7 +6,7 @@ Name = microsoft-evsystem-json-service-state-modify-7040
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """"SourceName":"Service Control Manager"""", """"EventID":""", """7040""", """The start type of""", """service was changed from""" ]
+  Conditions = [ """"SourceName":"Service Control Manager"""", """"EventID":""", """7040""" ]
   Fields = [
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """"Hostname":"({host}[^"]+)"""",

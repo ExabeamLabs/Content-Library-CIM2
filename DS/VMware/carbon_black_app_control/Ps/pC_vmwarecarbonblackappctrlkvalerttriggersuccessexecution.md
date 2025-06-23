@@ -19,10 +19,9 @@ Fields = [
 """\susername="(({domain}[^"\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
 """\sip_address="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sprocess="({process_path}(({process_dir}[^"]+?)\\)?({process_name}[^"\\]+?))""""
-"""\sfile_hash="({hash_md5}[^"]+)""""
+"""\sfile_hash="(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))""""
 """\srule_name="({alert_name}[^"]+)""""
 """\sprocess_threat="({alert_severity}[^"]+)""""
-"""\sfile_hash="({hash_md5}[^"]+)""""
 """\sfile_path="({file_path}[^"]+)""""
 """\sfile_name="({file_name}[^"]+)""""
 ]

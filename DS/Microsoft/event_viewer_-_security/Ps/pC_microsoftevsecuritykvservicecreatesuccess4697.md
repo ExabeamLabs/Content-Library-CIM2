@@ -8,7 +8,6 @@ TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd HH:
 Conditions = [
 """4697"""
 """A service was installed in the system"""
-"""Security System Extension"""
 ]
 Fields = [
 """\srt=({time}\d{13})"""

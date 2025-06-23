@@ -14,7 +14,8 @@ Name = crowdstrike-falcon-sk4-app-activity-eventsimplename
     """"aid":\s*"({aid}[^"]+)""",
     """"UserSid":"({user_sid}[^"]+)"""",
     """"UserPrincipal":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)@([^"]+)""""
-    """"(OriginalUserName|UserName)":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"OriginalUserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
     """"event_platform":"({os}[^"]+)""""
     """"cid":"({cid}[^"]+)"""
@@ -32,7 +33,8 @@ crowdstrike-process-info-2 = {
     """"event_platform":\s*"({os}[^"]+)""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
-    """"(OriginalUserName|UserName)":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?\s*(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """"OriginalUserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?\s*(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?\s*(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """"NewUsername":\s*"(?:SYSTEM|LOCAL SERVICE|-|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
     """CommandLine":"({process_command_line}.+?)","\w+":"""",
@@ -46,8 +48,10 @@ crowdstrike-process-info-2 = {
     """"ContextBaseFileName":"({file_name}[^"]+)""""
     """"timestamp":\s*"({time}\d{10})""",
     """"name":\s*"({event_name}[^"]+)"""
-    """"(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
-    """"(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
+    """"ImageFileName":\s*"({file_path}[^"]+)""",
+    """"TargetFileName":\s*"({file_path}[^"]+)""",
+    """"ImageFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
+    """"TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.MD5HashData,exa_field_name=hash_md5""",
     """exa_json_path=$.ContextProcessId,exa_field_name=process_id""",
@@ -70,8 +74,10 @@ crowdstrike-process-info-2 = {
     """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.name,exa_field_name=event_name"""
-    """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
-    """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
+    """exa_regex="ImageFileName":\s*"({file_path}[^"]+)""",
+    """exa_regex="TargetFileName":\s*"({file_path}[^"]+)""",
+    """exa_regex="ImageFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
+    """exa_regex="TargetFileName":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
   
 }
 ```

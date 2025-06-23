@@ -18,7 +18,7 @@ microsoft-sentinel = {
       """exa_json_path=$.SourceIPAddress,exa_field_name=src_ip"""
       """exa_json_path=$.UserName,exa_field_name=user"""
       """exa_json_path=$.ActivityType,exa_field_name=operation"""
-      """exa_json_path=$.$.UsersInsights.AccountObjectID,exa_field_name=object"""
+      """exa_json_path=$.UsersInsights.AccountObjectID,exa_field_name=object"""
       """exa_json_path=$.UserPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$.SourceIPLocation,exa_field_name=location"""
       """exa_json_path=$.TenantId,exa_field_name=tenant_id"""

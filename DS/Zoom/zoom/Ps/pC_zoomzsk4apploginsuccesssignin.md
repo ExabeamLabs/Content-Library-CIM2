@@ -10,7 +10,7 @@ Name = "zoom-z-sk4-app-login-success-signin"
     """destinationServiceName =Zoom"""
   ]
   Fields = [
-    """\WdestinationServiceName =({app}.+?)(\s+\w+=|\s*$)"""
+    """({app}Zoom)"""
     """time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
     """\"type\":\"({operation}[^\"]+)\""""
     """\"email\":\"({email_address}[^\"]+)\""""

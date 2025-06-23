@@ -36,7 +36,7 @@ symantec-epp-cef-alert-1 = {
     """\|Symantec\|Endpoint Protection\|([^|]*?\|){2}({alert_type}[^|(]+?)\s*(\([^|]*?)?\|(Unknown|({alert_severity}[^|]+))\|""",
     """\scat=({scan_type}[^=]+?)\s+(\w+=|$)""",
     """\sfilePath=({malware_url}[^=]+?)\s+\w+=""",
-    """\sfileHash=({hash_md5}[^\s]+)""",
+    """\sfileHash=(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))\s+""",
     """\scs2=({result}[^=]+?)\s+(\w+=|$)""",
     """\scs3=({secondary_action}[^=]+?)\s+(\w+=|$)""",
     """\scs5=((?i)(\(Unknown\) \[-1\])|({process_name}[^=]+?))\s+(\w+=|$)""",

@@ -25,6 +25,8 @@ Name = microsoft-m365auditlogs-json-app-activity-operationname
     """"correlationId":"({correlation_id}[^"]+?)"""",
     """"tenantId":"({tenant_id}[^"]+?)"""",
     """"ErrorCode":"({error_code}[^"]+?)""""
+    """servicePrincipalName":"({attribute}[^",]+)""""
+    """"servicePrincipalId":\s*"(null|({principal_id}[^"]+))""""
   ]
   ParserVersion = "v1.0.0"
 

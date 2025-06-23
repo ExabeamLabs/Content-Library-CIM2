@@ -2,7 +2,7 @@
 ```Java
 {
 Name = unix-unixauditd-kv-endpoint-authentication-success-cryptokeyuser
-  Conditions = [ """ msg=audit(""", """ type=CRYPTO_KEY_USER""", """ res=""", """ msg=""" ]
+  Conditions = [ """ msg=""", """CRYPTO_KEY_USER""", """ res=""",  """audit""" ]
   Fields = ${LMSUnixParserTemplates.unix-audispd-events.Fields}[
     """\sladdr=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\slport=({dest_port}\d{1,5})""",

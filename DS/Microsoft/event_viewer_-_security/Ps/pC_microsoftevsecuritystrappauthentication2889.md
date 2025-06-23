@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-str-app-authentication-2889
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """ (2889) """, """The following client performed a SASL""" ]
+  Conditions = [ """2889""", """The following client performed a SASL""" ]
   Fields = [
     """({event_code}2889)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w.\-]+)\s+EvntSLog""",

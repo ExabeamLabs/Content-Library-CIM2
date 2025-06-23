@@ -20,7 +20,7 @@ gravityzone-security-alert = {
       """"computer_ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"last_blocked":"({last_blocked_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"(detection_name|malware_name)":"({alert_name}[^"]+)""",
-      """"hash":"({hash_md5}[^"]+)""",
+      """"hash":"(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))"""",
       """"(file_path|exploit_path)":"({malware_file_name}[^"]+)""",
       """"main_action":"({result}[^"]+)"""",
       """"status":"({result}[^"]+)""",

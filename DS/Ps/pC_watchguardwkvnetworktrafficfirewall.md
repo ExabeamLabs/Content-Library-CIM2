@@ -9,8 +9,11 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-netwrix-app-activity-2.Fields}[
-    """CEF:0\|Netwrix\|(AD FS|Logon Activity|Self-audit)\|[^\|]+\|[^\|]+\|({operation}[^\|]+)\|""",
+moveit-activity.Fields}[
+    """\sFileID:\s*({file_id}[^,]+)"""
+    """\sFileName:\s*({file_name}[^.,]+\.({file_ext}[^,]+))"""
+    """\sFolderPath:\s*({file_path}[^,]+)"""
+    """\sXFerSize:\s*({bytes}\d+)"""
   
 }
 ```

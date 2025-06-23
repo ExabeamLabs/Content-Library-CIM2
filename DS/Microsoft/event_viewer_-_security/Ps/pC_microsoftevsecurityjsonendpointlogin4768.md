@@ -11,7 +11,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768"
     """:4768"""
     """"ServiceName":""""
     """Pre-Authentication"""
-    """A Kerberos authentication ticket (TGT) was requested"""
   ]
   Fields = [
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""

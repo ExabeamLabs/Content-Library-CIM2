@@ -29,7 +29,7 @@ Name = cisco-duo-cef-vpn-login-fail-loginfailure
     """"state":\s*"({state}[^"]+)""",
     """"country":\s*"({country}[^"]+)""",
     """"integration":\s*"({service_name}[^"]+)"""",
-    """""reason":"({failure_reason}[^"]+)""""
+    """"reason":"({failure_reason}[^"]+)"[^=]+?"result":"(?i)(denied|fraud|failure|error)""""
   ]
 
 

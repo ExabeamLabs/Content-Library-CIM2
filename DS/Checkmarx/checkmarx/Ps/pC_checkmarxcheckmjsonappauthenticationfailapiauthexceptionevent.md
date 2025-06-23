@@ -5,8 +5,8 @@ Name = checkmarx-checkm-json-app-authentication-fail-apiauthexceptionevent
   ParserVersion = v1.0.0
   Conditions = [ """"Type": "ApiAuthExceptionEvent"""", """"UserName":""", """"UserId":""", """"Details":"""  ]
   Fields = ${CheckmarxParserTemplates.checkmarx-json-template.Fields}[
-    """exa_json_path=Details,exa_regex=\\*"(Info|Message)\\*":\s*\\*"({failure_reason}[^"\{\\]+?)\\*""""
-    """exa_json_path=Details,exa_regex=\\?"RequestPath\\?":\s*\\?"({resource_path}[^"]+?)\\?""""
+    """exa_json_path=$.Details,exa_regex=\\*"(Info|Message)\\*":\s*\\*"({failure_reason}[^"\{\\]+?)\\*""""
+    """exa_json_path=$.Details,exa_regex=\\?"RequestPath\\?":\s*\\?"({resource_path}[^"]+?)\\?""""
   ]
 
 checkmarx-json-template = {

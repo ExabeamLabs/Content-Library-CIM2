@@ -49,7 +49,7 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
     """exa_regex=({event_name}Creating Scriptblock text)""",
     """exa_regex=({process_name}PowerShell)""",
     """exa_regex=<Data Name\\*=('|")ScriptBlockText('|")>\s*({scriptblock_text}[^<]+?)\s*<[\\\/]+Data>""",
-    """exa_regex-"ScriptBlockText":"({scriptblock_text}[^"]+?)\s*""""
+    """exa_regex="ScriptBlockText":"({scriptblock_text}[^"]+?)\s*""""
     """exa_regex=<Level>({run_level}[^<]+)<"""
 ]
 

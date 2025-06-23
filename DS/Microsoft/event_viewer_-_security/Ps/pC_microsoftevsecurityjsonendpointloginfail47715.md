@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-json-endpoint-login-fail-4771-5
     """"Status":"({result_code}[^"]+)"""",
     """"IpAddress":"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"EventType":"({result}[^"]+)""""
+    """({event_name}Kerberos pre-authentication failed)"""
   ]
   DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
   ParserVersion = "v1.0.0"

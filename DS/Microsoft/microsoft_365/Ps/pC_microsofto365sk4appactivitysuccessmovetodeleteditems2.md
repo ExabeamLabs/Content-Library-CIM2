@@ -39,6 +39,9 @@ cef-microsoft-o365-app-activity-1 = {
     """"ClientProcessName":"({process_name}[^"]+)""",
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
+    """"ClientInfoString":\s*"({user_agent}[^"]+)","""
+    """"OrganizationId":"({tenant_id}[^"]+)","""
+    """"AffectedItems".+"Subject":"\s*({email_subject}[^"]+?)\s*""""
   
 }
 ```

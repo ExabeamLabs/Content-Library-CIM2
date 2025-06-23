@@ -155,68 +155,6 @@ ParserVersion = "v1.0.0"
 },
 
 {
-Name = "pan-ngfw-str-alert-trigger-success-paseries"
-Vendor = "Palo Alto Networks"
-Product = "Palo Alto NGFW"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-Conditions = [
-"""A device has stopped emitting events"""
-"""'PaSeries @"""
-]
-Fields = [
-"""'PaSeries @ ({src_host}[^\s']+)( \(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\))?'"""
-"""({alert_name}A device has stopped emitting events)""",
-"""((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "pan-aperture-kv-alert-trigger-success-incident"
-Vendor = "Palo Alto Networks"
-Product = "Palo Alto Aperture"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-Conditions = [
-""" Aperture """
-""",incident,"""
-]
-Fields = [
-"""({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)\s({host}[\w\-.]+)\s"""
-"""incident,\"*({app}[^\",]+)\",({alert_severity}\d(\.\d)?)\"*,({alert_id}[\dA-Fa-f]+)\"*\"*,"""
-"""\d+:\d+Z,([^,]*,){3}\"?({email_address}[^@]+@[^\.]+[^,\"]+)"""
-"""\"+({alert_name}[^\"]+)\"+,EXTERNAL,"""
-""",incident,\"?({alert_type}[^\",]+)"""
-"""incident,\"*({app}[^\",]+)\",({alert_severity}\d(\.\d)?)\"*,({alert_id}[\dA-Fa-f]+)\"*,[\dA-Fa-f]+\"*,\"*\s*({additional_info}[^,\s\"]+)\s*\"*,([^,]*,)""",
-"""((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "pan-aperture-csv-alert-trigger-success-policyviolation"
-Vendor = "Palo Alto Networks"
-Product = "Palo Alto Aperture"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-Conditions = [
-""" Aperture """
-""",policy_violation,"""
-]
-Fields = [
-"""({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)\s({host}[^\s]+)"""
-""",policy_violation,\"*({app}[^,\"]+)\"*,"""
-""",policy_violation,\"*([^,]*,){1}({alert_severity}\d+(\.\d)?)"""
-""",policy_violation,\"*([^,]*,){2}({alert_id}[^,]+)\"*,"""
-""",policy_violation,\"*([^,]*,){4}\"*({email_address}[^@]+@[^,\"]+)\"*,([^,]*,){3}\"*({additional_info}[^\",]+)\s*\"*,"""
-"""({alert_name}policy_violation)""",
-"""((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
-]
-DupFields = [
-"alert_name->alert_type"
-]
-ParserVersion = "v1.0.0"
-},
-
-{
 Vendor = "Palo Alto Networks"
 Product = "Palo Alto NGFW"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
@@ -278,12 +216,6 @@ ${PaloAltoParsersTemplates.leef-paloalto-vpn-event}{
  Name = pan-gp-leef-vpn-logout-success-globalprotect
  Conditions = [ """LEEF:""", """|Palo Alto Networks|""", """|gateway-logout|""", ]
  ParserVersion = "v1.0.0"
-},
-
-${PaloAltoParsersTemplates.leef-pan-vpn-event} {
-  Name = pan-gp-leef-vpn-logout-success-gatewaylogout
-  Conditions = [ """LEEF:""", """|Palo Alto Networks|""", """|PAN-OS Syslog Integration|""", """|gateway-logout-success|""", """|Type=GLOBALPROTECT|""" ]
-  ParserVersion = "v1.0.0"
 },
 
 ${PaloAltoParsersTemplates.paloalto-vpn} {

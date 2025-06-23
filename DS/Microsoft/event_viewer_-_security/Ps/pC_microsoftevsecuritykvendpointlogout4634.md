@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "epoch_sec", "MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy"]
-  Conditions = [ """4634""", """An account was logged off""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """4634""", """An account was logged off""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d ((?i)am|pm))""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?((?i)am|pm|\d{4}|({host}[\w.\-]+))\s""",

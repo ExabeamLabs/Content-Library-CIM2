@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656
   Product = Event Viewer - Security
   ParserVersion = "v1.0.0"
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
-  Conditions = [ """4656""", """A handle to an object was requested""", """Access Reasons: """, """ Process Name: """ ]
+  Conditions = [ """4656""", """A handle to an object was requested""" ]
   Fields = [
     """(?i)\w+\s*\d+\s*\d\d:\d\d:\d\d (::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",

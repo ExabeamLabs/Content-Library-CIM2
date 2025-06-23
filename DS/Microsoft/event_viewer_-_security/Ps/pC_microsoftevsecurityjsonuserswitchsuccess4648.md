@@ -9,9 +9,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
   TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Conditions = [
 """4648""",
-""""TargetServerName":""",
-"""Microsoft-Windows-Security-Auditing""",
-"""A logon was attempted using explicit credentials"""
+""""TargetServerName":"""
   ]
   Fields = [
 """"TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""

@@ -25,6 +25,7 @@ Fields = [
   """\sduser="?(({domain}[^\\="\s]+)[\\\/]+)?(-|({email_address}[^@"\s]+@[^@"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\s+\w+="""
   """({app}Cyber-Ark)"""
   """({operation}Failure: User Authentication)"""
+  """Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

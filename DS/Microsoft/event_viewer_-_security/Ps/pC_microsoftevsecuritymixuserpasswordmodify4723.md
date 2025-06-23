@@ -42,7 +42,7 @@ Fields = [
   """"TargetAccount":"(({dest_domain}[^\\\s"]+)\\+)?({dest_user}[^\\\s"]+)"""
   """"SubjectUserSid":"({user_sid}S-[^\s"]+)"""
   """"SubjectLogonId":"({login_id}[^\s"]+)"""
-  """""TargetSid":"({dest_user_sid}S-[^\s"]+)""""
+  """"TargetSid":"({dest_user_sid}S-[^\s"]+)""""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
   """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}S-[^\\"]+)\\?""""

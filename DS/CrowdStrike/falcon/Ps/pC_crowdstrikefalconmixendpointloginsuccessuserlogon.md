@@ -25,11 +25,10 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-userlogon"
 """"ClientComputerName"+:"+(-|({src_host}[\w\-.]+))""",
 """"UserSid":"({user_sid}[^\"]+)""",
 """"aid":"({aid}[^\"]+)""",
-""""event_simpleName":"({event_code}[^\"]+)""",
+""""event_simpleName":"({event_name}[^\"]+)""",
 """"LogonDomain":"(NT AUTHORITY|({domain}[^\"]+))""",
-""""RemoteAddressIP4":"({dest_ip}[A-Fa-f:\d\.]+)"""",
+""""RemoteAddressIP4":"({src_ip}[A-Fa-f:\d\.]+)"""",
 """"event_platform":"({os}[^"\\]+)"""
-""""aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """"cid":"({cid}[^"]+)"""
 """exa_json_path=$.aip,exa_field_name=aip"""
 """exa_regex="suser=((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -44,11 +43,11 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-userlogon"
 """exa_json_path=$.ClientComputerName,exa_field_name=src_host,exa_match_expr=!InList($.ClientComputerName,"-")""",
 """exa_json_path=$.UserSid,exa_field_name=user_sid"""
 """exa_json_path=$.aid,exa_field_name=aid"""
-"""exa_json_path=$.event_simpleName,exa_field_name=event_code"""
+"""exa_json_path=$.event_simpleName,exa_field_name=event_name"""
 """exa_json_path=$.LogonDomain,exa_field_name=domain,exa_match_expr=!InList($.LogonDomain,"NT AUTHORITY")""",
-"""exa_json_path=$.RemoteAddressIP4,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""exa_json_path=$.RemoteAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """exa_json_path=$.event_platform,exa_field_name=os"""
-"""exa_json_path=$.aip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.cid,exa_field_name=cid"""
   ]
   DupFields = [ "user->account" ]

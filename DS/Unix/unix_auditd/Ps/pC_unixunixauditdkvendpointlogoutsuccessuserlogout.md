@@ -2,7 +2,7 @@
 ```Java
 {
 Name = unix-unixauditd-kv-endpoint-logout-success-userlogout
-  Conditions = [ """ msg=audit(""", """ type=USER_LOGOUT""", """ res=success""", """ msg=""" ]
+  Conditions = [ """ msg=""", """USER_LOGOUT""", """ res=success""", """audit""" ]
   ParserVersion = v1.0.0
 
 unix-audispd-events = {

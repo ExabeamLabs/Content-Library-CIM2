@@ -24,7 +24,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-requestedaction
 			"""Source IP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 			"""Confidence:\s*({additional_info}[^,]+)"""
 			"""Actual action:\s*({action}[^,]+)"""
-			"""Application hash:\s*(|({file_hash}[^,]+)),"""
+			"""Application hash:\s*(|({file_hash}(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32})))),"""
 			"""Hash type:\s*(|({hash_type}[^,]+)),"""
 			"""Application name:\s\"*({process_name}[^\",]+)"""
 			"""File size \(bytes\):\s*({bytes}\d+)"""

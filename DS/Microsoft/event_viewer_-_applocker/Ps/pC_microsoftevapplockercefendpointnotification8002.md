@@ -17,7 +17,7 @@ Name = microsoft-evapplocker-cef-endpoint-notification-8002
     """"TargetLogonId":"({login_id}[^"]+)""",
     """"TargetUserSid":"({user_sid}[^"]+)""",
     """"TargetUser":"(({user_sid}S-[^\"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"FileHash":"({hash_md5}[^"]+)""",
+    """"FileHash":"(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))"""",
     """"FilePath":"({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\\\/]+))?))"""",
 # fqbn is removed
     """"Process":"({process_name}[^"]+)"""

@@ -6,7 +6,7 @@ Name = unix-auditd-kv-user-create-success-addgroup
   Product = "Unix Auditd"
   TimeFormat = ["epoch_sec", "MMM dd HH:mm:ss"]
   Conditions = [
-"""type=ADD_GROUP"""
+"""ADD_GROUP"""
 """op=add-group"""
 """res=success"""
   ]

@@ -37,6 +37,7 @@ Name = microsoft-evpowershell-kv-process-create-success-executing
     """"event_id":({event_code}\d+)"""
     """"user"\s*:\s*\{[^\}]*"identifier"\s*:\s*"({user_sid}[^"]+)"""
     """"process_id":({process_id}\d+)"""
+    """\sUser = (({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\\s){0,5}\s{1,100}Connected User ="""
 ]
 
 

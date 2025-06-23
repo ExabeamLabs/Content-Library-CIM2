@@ -32,7 +32,8 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """exa_json_path=$.target[?(@.type == 'UserGroup')].displayName,exa_field_name=group_name""",
     """exa_json_path=$.target[?(@.type == 'UserGroup')].id,exa_field_name=group_id""",
     """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """exa_regex="target":\[[^\]]+?"type":"({object_type}[^"]+)"""",    """exa_json_path=$.displayMessage,exa_field_name=event_name"""
+    """exa_regex="target":\[[^\]]+?"type":"({object_type}[^"]+)"""",
+    """exa_json_path=$.displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
     """exa_json_path=$..eventType,exa_field_name=event_code""",
     """exa_json_path=$..legacyEventType,exa_field_name=operation_details,exa_match_expr=!Contains($.legacyEventType,"null")""",

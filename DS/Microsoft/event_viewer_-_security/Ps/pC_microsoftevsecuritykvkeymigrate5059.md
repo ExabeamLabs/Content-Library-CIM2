@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-key-migrate-5059
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
-  Conditions = [ """5059""", """Key migration operation""", """Microsoft Software Key Storage Provider""" ]
+  Conditions = [ """5059""", """Key migration operation""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
     """\d\d:\d\d:\d\d\s[\w\-\.]+\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(am|pm))""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",

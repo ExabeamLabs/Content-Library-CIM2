@@ -5,10 +5,11 @@ Name = microsoft-evsecurity-cef-policy-modify-5447
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-  Conditions = [ """5447""", """A Windows Filtering Platform filter has been changed""", """Microsoft-Windows-Security-Auditing""", """Change Information:""" ]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "MM/dd/yyyy hh:mm:ss a"]
+  Conditions = [ """5447""", """A Windows Filtering Platform filter has been changed""" ]
   Fields = [
     """({event_name}A Windows Filtering Platform filter has been changed)""",
+    """({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (?:(?i)am|pm))"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_code}5447)""",

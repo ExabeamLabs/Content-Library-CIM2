@@ -3,7 +3,7 @@
 {
 Name = unix-unix-kv-endpoint-activity-success-sockaddr
   ParserVersion = v1.0.0
-  Conditions = [ """type=SOCKADDR""", """msg=audit(""", """saddr=""" ]
+  Conditions = [ """SOCKADDR""", """msg=""", """saddr=""" , """audit""" ]
 
 unix-kv-template = {
   Vendor = Unix
@@ -20,9 +20,9 @@ unix-kv-template = {
       """\sres=({result}[^"']+)""",
       """\ssubj=({additional_info}[^=]+)\s+\w+\\?=""",
       """\sacct="({account_name}[^"]+)"""",
-      """\sexe="({process_path}({process_dir}[^"]+?)\/[^"\\\/]+)""""
+      """\sexe="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
       """\scomm="({process_name}[^\\"]+)"""",
-      """\sa0="({process_name}[^"]+)"""",
+      """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
       """\ssaddr=({src_port}\d+)""",
       """op=({operation}[^\s]+)""",
       """type=(?:({audispd_type}USER_\S+)|({operation_type}\S+))"""

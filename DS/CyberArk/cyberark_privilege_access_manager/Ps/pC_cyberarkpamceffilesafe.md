@@ -33,7 +33,7 @@ Fields = [
 """\Wact="?({operation}[^"=\[\]]+?)"?(\[|\]|\s+\w+=|\s*$)""",
 """msg="*\[*({additional_info}[^"\]]+)?\]*\s*""""
 """fname=({additional_info}[^=]+?)\s+\w+=""",
-"""Error:\s*({failure_reason}[^:]+?)\s*\w+:""",
+"""Error:\s*({error_info}[^:]+?)\s*\w+:""",
 """(C|c)ode:\s*({failure_code}\d+),"""
 """CEF:\d+\|([^\|]+\|){3}({event_code}[^\|]+)"""
 """CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
@@ -41,6 +41,7 @@ Fields = [
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs1="*(|({client_name}[^="]+?))(\s*\w+|")="""
 """\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""Failure Description:\s({failure_reason}[^:]+?)\s*\w+:"""
 ]
 DupFields = [
 "src_file_name->object"

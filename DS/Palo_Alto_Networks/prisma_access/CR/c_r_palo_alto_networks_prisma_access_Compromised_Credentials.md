@@ -7,5 +7,5 @@ Vendor: Palo Alto Networks
 
 | Name    | Description    | Activity Type | MITRE Tactic      | Severity | Overlap with AA |
 | ---- | ---- | ---- | ---- | -------- | ---- |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
-| UBA: Multiple VPN logins from single IP. | Multiple VPN login attempts were detected from a single IP address within a specific time frame. | vpn-login     | Credential Access | 2        | false    |
+| Multiple VPN logins from a single IP address | 10 successful VPN logins have been observed from a single IP address within 1 minute. | vpn-login     | Credential Access | 2        | false    |
+| Multiple VPN logins from a single IP address | 10 successful VPN logins have been observed from a single IP address within 1 minute. | vpn-login     | Credential Access | 2        | false    |

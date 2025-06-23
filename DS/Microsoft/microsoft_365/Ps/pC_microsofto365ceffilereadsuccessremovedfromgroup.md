@@ -76,7 +76,7 @@ azure-app-activity-skyfromation= {
     """exa_json_path=$.subscriptionId,exa_field_name=subscription_id"""
     """exa_json_path=$.operationName.localizedValue,exa_field_name=operation"""
     """"(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
-    """"exa_regex=(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
+    """exa_regex=(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
 
 }
 ```

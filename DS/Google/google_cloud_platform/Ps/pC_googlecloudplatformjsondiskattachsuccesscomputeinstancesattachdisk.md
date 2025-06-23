@@ -39,7 +39,7 @@ gcp-cloudaudit-json = {
     """"operation"+:[^\}]*last"+:\s*({operation_last}[^"\\\/\}\s,]+)""",
     """"severity":"({severity}[^"]+)""",
     """etag":"({tag}[^"]+)""",
-    """""(response|request)"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
+    """"(response|request)"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
     """"authorizationInfo":\[\{[^\}]+"permissionType":"({operation_type}[^"]+)""",
     """"authorizationInfo":\[\{[^\}]+"permission":"({permission}[^"]+)""",
     """exa_json_path=$..logEntries..timestamp,exa_field_name=time""",

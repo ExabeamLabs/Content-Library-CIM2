@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
   Product = Event Viewer - System
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss", "MM/dd/yyyy hh:mm:ss a"]
   ParserVersion = "v1.0.0"
-  Conditions = [ """4799""", """A security-enabled local group membership was enumerated""", """Security Group Management""" ]
+  Conditions = [ """4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""",
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",

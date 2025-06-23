@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-kv-network-listen-5154
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy"]
-  Conditions = [ """5154""", """The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections""", """Application Name:""", """Microsoft-Windows-Security-Auditing""" ]
+  Conditions = [ """5154""", """The Windows Filtering Platform has permitted an application or service to listen on a port for incoming connections""" ]
   Fields = [
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """"(TimeGenerated|created)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

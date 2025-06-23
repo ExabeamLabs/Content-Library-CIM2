@@ -30,6 +30,7 @@ Name = citrix-csa-json-app-notification-success-entitytypeuser
     """exa_json_path=$.indicator_category_id,exa_field_name=category_id"""
     """exa_json_path=$.event_id,exa_field_name=event_id""",
     """exa_json_path=$.occurrence_event_type,exa_field_name=event_name""",
+    """exa_json_path=$.server_name,exa_field_name=server_name"""
   ]
   ParserVersion = "v1.0.0"
 

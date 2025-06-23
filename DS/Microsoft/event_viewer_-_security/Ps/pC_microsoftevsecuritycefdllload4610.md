@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-cef-dll-load-4610
       """\sahost=({host}[^\s]+)""",
       """({event_name}An authentication package has been loaded by the Local Security Authority)""",
       """({event_code}4610)""",
-	  """cs5=({auth_package}[^=]+?)\s\w+=""",
+	  """cs5=({file_path}({file_dir}[^<=]+?)[\\\/]+)({file_name}[^\\\/<=:]+?)\s*:\s*({auth_package}[^=]+)\s\w+=""",
 	  """ad\.ProcessID=({process_id}\d+)""",
 	  """ad\.ThreadID=({thread_id}\d+)"""
    ]

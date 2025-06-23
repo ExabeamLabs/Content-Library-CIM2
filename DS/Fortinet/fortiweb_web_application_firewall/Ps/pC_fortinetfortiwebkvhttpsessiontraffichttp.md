@@ -24,6 +24,12 @@ Name = fortinet-fortiweb-kv-http-session-traffic-http
     """http_url="*(\w+:\/{2})?[^\/]+({uri_path}\/[^?\s"]+)?(\?({uri_query}[^"]+))?"""",
     """http_retcode=({http_response_code}\d+)""",
     """msg="({additional_info}[^"=]+)"\s\w+="""
+    """\Wtype=({category}[^"]+)\s"""
+    """\ssrccountry=\\?"?({src_country}[^=]+?)\\?"?\s+(\w+=|$)""",
+    """http_session_id="(none|({session_id}[^"]+))"""
+    """http_version="({version}[^"]+)"""
+    """false_positive_mitigation="(none|({threat_handled}[^"]+))""""
+    """server_pool_name="(none|({vm_pool_name}[^"]+))""""
   ]
 
 

@@ -6,7 +6,7 @@ Name = symantec-endpointprotection-json-alert-trigger-success-firewallnetworkdet
   ParserVersion = "v1.0.0"
   Conditions = [ """"feature_name":"FIREWALL"""", """"type":"NETWORK_DETECTION"""", """"product_name":"Symantec Endpoint """ ]
   Fields = ${SymantecParsersTemplates.json-symantec-endpoint-protection.Fields}[
-    """exa_json_path=$.attacks,exa_field_name=:\[({attack_info}.+?\})\]"""
+    """exa_json_path=$.attacks,exa_regex=\[({attack_info}.+?\})\]"""
     """exa_json_path=$.connection.src_ip,exa_field_name=src_ip"""
     """exa_json_path=$.connection.dst_ip,exa_field_name=dest_ip"""
     """exa_json_path=$.connection.src_port,exa_field_name=src_port"""

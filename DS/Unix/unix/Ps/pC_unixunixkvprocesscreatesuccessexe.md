@@ -5,9 +5,9 @@ Name = unix-unix-kv-process-create-success-exe
   ParserVersion = v1.0.0
   Vendor = Unix
   Product = Unix
-  TimeFormat = "epoch_sec"
+  TimeFormat = ["epoch_sec","MM/dd/yyyy HH:mm:ss.SSS"]
   Conditions = [
-"""type=SYSCALL""",
+"""SYSCALL""",
 """ uid=""",
 """syscall=""",
 """ exe="""
@@ -18,7 +18,7 @@ Name = unix-unix-kv-process-create-success-exe
     """\w+\s*\d{1,2} \d\d:\d\d:\d\d\s+({host}[\w\-.]+)""",
     """({host}[\w\-.]+)\s*(vcsa-audit|audispd:)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w\-.]+)""",
-    """msg=audit\(({time}\d{10})""",
+    """msg=audit\(({time}(\d{10})|\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\.\d+)""",
     """\sppid=({parent_process_id}[^=]+?)\s+(\w+=|$)""",
     """\sexe=\\?"({process_command_line}[^"\\]+)\\?"""",
     """\sexe=\\?"({process_path}(({process_dir}[^\"]*?/+))?({process_name}[^"\\\/]+))\\?"""",
@@ -31,6 +31,7 @@ Name = unix-unix-kv-process-create-success-exe
     """\skey=({additional_info}[^\s"\\]+)"""    
     """node=({dest_host}[\w\-.]+)"""
     """type=({operation_type}\S+)"""
+    """exit=(\d|({failure_code}[^\(=]+?)\(({failure_reason}[^=]+?))\)\s+\w+="""
   ]
 
 

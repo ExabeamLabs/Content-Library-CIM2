@@ -9,7 +9,6 @@ Conditions = [
 """MSWinEventLog"""
 """5136"""
 """A directory service object was modified"""
-"""Microsoft-Windows-Security-Auditing"""
 ]
 Fields = [
 """({event_name}A directory service object was modified)"""

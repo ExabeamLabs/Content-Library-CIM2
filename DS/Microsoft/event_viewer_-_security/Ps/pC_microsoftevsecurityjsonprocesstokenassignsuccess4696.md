@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-json-process-token-assign-success-4696
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   ExtractionType = json
-  Conditions = [ """subject.logon_id""", """EventID""", """4696""", """A primary token was assigned to process""" ]
+  Conditions = [ """subject.logon_id""", """EventID""", """4696""" ]
   Fields = [
     """exa_json_path=$..EventID,exa_field_name=event_code""",
     """exa_json_path=$..timestamp,exa_field_name=time""",

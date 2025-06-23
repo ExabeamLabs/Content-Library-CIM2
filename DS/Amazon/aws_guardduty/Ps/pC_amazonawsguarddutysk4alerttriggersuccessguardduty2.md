@@ -12,7 +12,7 @@ json-aws-guardduty-security-alert-template = {
     Vendor = Amazon
     Product = AWS GuardDuty
     ExtractionType = json
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
     Fields = [
       """"updatedAt":\s*"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}\.\d+Z)"""",
       """"ipAddressV4":\s*"({src_ip}(\d{1,3}\.){3}\d{1,3})"""",
@@ -47,7 +47,7 @@ json-aws-guardduty-security-alert-template = {
       """"key":"ProductOwner","value":"({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
       """"accessKeyId":"({key_id}[^"]+?)""""
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
-      """"tags":\[({tags}.+"\})\]\}""",
+      """"tags":\s*({tags}[^$]+?)\]""",
       """exa_json_path=$.updatedAt,exa_field_name=time"""
       """exa_json_path=$.awsRegion,exa_field_name=region"""
       """exa_regex="ipAddressV4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
@@ -78,7 +78,7 @@ json-aws-guardduty-security-alert-template = {
       """exa_json_path=$.resource.instanceDetails.instanceId,exa_field_name=instance_id"""
       """exa_regex="accessKeyId":"({key_id}[^"]+?)""""
       """dhost=({dest_host}[\w\-.]+)"""
-      """exa_json_path=$.resource.tags,exa_field_name=tags"""
+      """exa_regex="tags":\s*({tags}[^$]+?)\]"""
     
 }
 ```

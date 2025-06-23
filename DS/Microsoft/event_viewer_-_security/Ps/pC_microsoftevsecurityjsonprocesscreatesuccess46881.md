@@ -42,7 +42,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-1
       """exa_json_path=$.CommandLine,exa_field_name=process_command_line"""
       """exa_json_path=$..NewProcessId,exa_field_name=process_guid"""
       """exa_json_path=$..NewProcessName,exa_regex=({process_path}({process_dir}[^"]+[\\\/]+)?({process_name}[^"\\\/]+))"""
-      """exa_regex"Creator Subject:.+?Account Name:\s*((\\)*(\\r|\\t|\\n))*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))((\\)*(\\r|\\t|\\n))*\s*Account Domain:((\\)*(\\r|\\t|\\n))*\s*(?:-|({domain}.+?))((\\)*(\\r|\\t|\\n))*\s*Logon ID:((\\)*(\\r|\\t|\\n))*\s*({login_id}[^\\\s]+)"""
+      """exa_regex="Creator Subject:.+?Account Name:\s*((\\)*(\\r|\\t|\\n))*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))((\\)*(\\r|\\t|\\n))*\s*Account Domain:((\\)*(\\r|\\t|\\n))*\s*(?:-|({domain}.+?))((\\)*(\\r|\\t|\\n))*\s*Logon ID:((\\)*(\\r|\\t|\\n))*\s*({login_id}[^\\\s]+)"""
       """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
       """exa_json_path=$..SubjectUserName,exa_field_name=user"""
       """exa_json_path=$..SubjectDomainName,exa_field_name=domain"""

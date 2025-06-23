@@ -11,7 +11,12 @@ Name = microsoft-evsecurity-xml-group-list-4798-1
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
     """Process Name:\s*(-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))("|,|<|$)""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Data Name(\\)?=('|")TargetUserName('|")>(-|({dest_user}[^<]+))""",
+    """<Data Name(\\)?=('|")TargetDomainName('|")>\s*(-|({dest_domain}[^\s]+?))\s*</Data>""",
+    """<Data Name(\\)?=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*""",
+    """<Data Name(\\)?=('|")CallerProcessName('|")>({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+))<\/Data>"""
+    """<Data Name(\\)?=('|")CallerProcessId('|")>({process_id}[^<]+)"""
   ]
 
 s-xml-events = {

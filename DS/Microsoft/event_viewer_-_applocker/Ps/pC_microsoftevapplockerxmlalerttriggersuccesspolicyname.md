@@ -21,12 +21,10 @@ Fields = [
   """<PolicyName>({alert_type}[^"<]+)"""
   """<PolicyName>({alert_name}[^"<]+)"""
   """<Message>({additional_info}[^"<]+)"""
-  """<FileHash>({hash_md5}[^"<]+)"""
+  """<FileHash>(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))"""
   """<EventID>({event_code}[^<]+)<"""
   """<Level>({run_level}[^<]+)<"""
-]
-DupFields = [
-  "malware_url->process_name"
+  """<FilePath>({process_path}({process_dir}[^<]*[\\\/]+)?({process_name}[^<]+?))<"""
 ]
 ParserVersion = "v1.0.0"
 

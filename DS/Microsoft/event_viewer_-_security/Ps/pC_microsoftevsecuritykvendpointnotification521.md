@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-521
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
-  Conditions = [ """Unable to log events to security log:""", """521""", """Status code:""" ]
+  Conditions = [ """Unable to log events to security log:""", """521""" ]
   Fields = [
     """"EventID"*:"*({event_code}[^,"]+)""",
     """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""

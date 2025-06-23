@@ -63,6 +63,7 @@ crowdstrike-process-info-1 = {
     """exa_regex="(ImageFileName|TargetFileName)\\*"+:\\*"+(({file_path}[^"]+?))\\*"""",
     """exa_regex="(ImageFileName|TargetFileName)\\*"+:\\*"+({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
     """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
+    """exa_regex="TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
   ]
   DupFields = ["event_name->event_code"
 }

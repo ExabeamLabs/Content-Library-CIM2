@@ -5,7 +5,7 @@ Name = checkmarx-checkm-json-app-login-fail-failedlogin
   ParserVersion = v1.0.0
   Conditions = [ """"Type": "FailedLogin"""", """"UserName":""", """"UserId":""", """"Details":"""  ]
   Fields = ${CheckmarxParserTemplates.checkmarx-json-template.Fields}[
-    """exa_json_path=Details,exa_regex=\\?"Details\\?":\s*\\?"({failure_reason}[^"]+?)\\?""""
+    """exa_json_path=$.Details,exa_regex=\\?"Details\\?":\s*\\?"({failure_reason}[^"]+?)\\?""""
   ]
 
 checkmarx-json-template = {

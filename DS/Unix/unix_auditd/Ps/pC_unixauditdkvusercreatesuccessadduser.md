@@ -6,7 +6,7 @@ Name = unix-auditd-kv-user-create-success-adduser
   Product = "Unix Auditd"
   TimeFormat = ["epoch_sec", "MMM dd HH:mm:ss"]
   Conditions = [
-"""type=ADD_USER"""
+"""ADD_USER"""
 """op=add-user"""
 """res=success"""
   ]

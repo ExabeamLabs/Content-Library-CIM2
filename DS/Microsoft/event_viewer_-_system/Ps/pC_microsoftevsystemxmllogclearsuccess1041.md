@@ -23,6 +23,7 @@ Fields = [
 """ThreadID=('|")({thread_id}[^']+)"""
 """<Channel>({channel}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
+"""<UserData>.+?<Channel>({channel_name}[^<]+)"""
 ]
 DupFields = ["user->src_user" , "domain->src_domain"]
 ParserVersion = "v1.0.0"

@@ -7,7 +7,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
   Product = "Event Viewer - Security"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "dd/MM/yyyy hh:mm:ss a"]
   ExtractionType = json
-  Conditions = [ """Kerberos pre-authentication failed""", """4771""", """Kerberos """, """"TicketOptions""", """"ServiceName""", """"TargetUserName""" ]
+  Conditions = [ """4771""", """Kerberos """, """"TicketOptions""", """"ServiceName""", """"TargetUserName""" ]
   Fields = [
     """({event_name}Kerberos pre-authentication failed)"""
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",

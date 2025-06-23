@@ -22,6 +22,7 @@ Fields = [
   """\ssuser=(({domain}[^\\=]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
   """act=Set Password\s+duser=(({domain}[^\\=]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """({app}Vault)"""
+  """Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

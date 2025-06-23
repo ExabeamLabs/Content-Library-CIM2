@@ -4,7 +4,7 @@
 Name = microsoft-evsecurity-kv-key-5061
   Product = Event Viewer - Security
   ParserVersion = v1.0.0
-  Conditions = [ """5061""", """Cryptographic operation""", """Algorithm Name:""", """Key Name:""", """Microsoft Software Key Storage Provider""" ]
+  Conditions = [ """5061""", """Cryptographic operation""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",

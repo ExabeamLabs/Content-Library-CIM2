@@ -12,7 +12,7 @@ Name = microsoft-azuremon-json-endpoint-logout-success-linuxsessionclosed
     """exa_json_path=$.TimeGenerated,exa_field_name=time""",
     """exa_json_path=$.Type,exa_field_name=event_category""",
     """exa_json_path=$.ProcessName,exa_field_name=process_name""",
-    """exa_json_path=$.ProcessID,exa_field_name=$.ProcessID""",
+    """exa_json_path=$.ProcessID,exa_field_name=process_id""",
     """exa_json_path=$.TenantId,exa_field_name=tenant_id""",
     """exa_json_path=$.Computer,exa_field_name=src_host""",
     """exa_json_path=$.CollectorHostName,exa_field_name=host""",

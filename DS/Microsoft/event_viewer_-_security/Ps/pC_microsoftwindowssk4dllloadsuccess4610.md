@@ -7,7 +7,7 @@ Name = microsoft-windows-sk4-dll-load-success-4610
    Fields = ${DLWindowsParsersTemplates.json-windows-system-info.Fields}[
      """"Computer":"({host}[^"]+)"""",
      """({event_name}An authentication package has been loaded by the Local Security Authority)""",
-     """"AuthenticationPackageName":"({auth_package}[^"]+)""""
+     """"AuthenticationPackageName":"({file_path}({file_dir}[^<]+)\\({file_name}[^:]+?))\s*:\s*({auth_package}[^<]+)""""
    ]
  
 json-windows-system-info = {

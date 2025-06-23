@@ -17,7 +17,7 @@ Name = airlock-allowlisting-json-app-activity-success-fileactivity
     """exa_json_path=$.event,exa_field_name=operation""",
     """exa_json_path=$.sha256,exa_field_name=hash_sha256""",
     """exa_json_path=$.md5,exa_field_name=hash_md5""",
-    """exa_json_path=$.parentprocess,exa_field_name=process_name""",
+    """exa_json_path=$.parentprocess,exa_regex=^({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))$""",
     """exa_json_path=$.commandline,exa_field_name=process_command_line""",
     """exa_json_path=$.group,exa_field_name=group_name""",
     """exa_json_path=$.execution_type,exa_field_name=event_name"""

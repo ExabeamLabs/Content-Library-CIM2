@@ -27,6 +27,7 @@ Fields = [
 """act=({operation}Retrieve password)"""
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs3=({device_type}[^=]+)\s+\w+="""
+"""Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"

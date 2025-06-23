@@ -6,7 +6,7 @@ Name = microsoft-evsystem-str-dcom-activate-fail-10016
   Product = Event Viewer - System
   ParserVersion = "v1.0.0"
   TimeFormat = "MMM dd HH:mm:ss yyyy"
-  Conditions = [  """ 10016 """, """ This security permission can be modified using the Component Services administrative tool.""",""" Microsoft-Windows-DistributedCOM """ ]
+  Conditions = [ """ 10016 """, """ This security permission can be modified using the Component Services administrative tool.""",""" MSWinEventLog """ ]
   Fields = [
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",

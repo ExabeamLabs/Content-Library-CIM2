@@ -27,6 +27,8 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}""",
     """"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},""",
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
+    """"Name":"RequestType","Value":"({request_type}[^"]+?)\s*""""
+    """"Value":"({request_type}[^"]+?)\s*","Name":"RequestType""""
     ]
   DupFields = [ "error_code->failure_code" ]
 

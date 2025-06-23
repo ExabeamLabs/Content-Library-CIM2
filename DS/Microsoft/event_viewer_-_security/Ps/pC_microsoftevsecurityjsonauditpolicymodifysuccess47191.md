@@ -18,7 +18,7 @@ Fields = [
 """exa_json_path=$.logon_id,exa_field_name=login_id""",
 """exa_json_path=$.event_data.CategoryId,exa_field_name=audit_category""",
 """exa_json_path=$.message,exa_regex=Category:(\\t|\\n|\s)*({audit_category}.+?)(\\t|\\n|\s)+Subcategory:""",
-"""exa_json_path=$.$.event_data.SubcategoryId,exa_field_name=sub_category""",
+"""exa_json_path=$.event_data.SubcategoryId,exa_field_name=sub_category""",
 """exa_json_path=$.message,exa_regex=Subcategory:(\\t|\\n|\s)*({sub_category}.+?)(\\t|\\n|\s)+Subcategory GUID:""",
 """exa_json_path=$.event_data.AuditPolicyChanges,exa_field_name=policy_name""",
 """exa_json_path=$.message,exa_regex=Changes:(\\t|\\n|\s)*({policy_name}.+?)(\\t|\\n|")"""

@@ -27,7 +27,7 @@ proofpoint-dlp-log = {
     """policy=(?:\s|({policy_name}[^\s]+))""",
     """file=(?:\s|({file_name}[^\s]+))""",
     """size=(?:\s|({bytes}\d+))\s""",
-    """sha256=(?:\s|({hash_md5}[^\s]+))\s""",
+    """sha256=(?:\s|({hash_sha256}[^\s]+))\s""",
     """value=(?:\s|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
     """prot=(?:\s|({protocol}[^:\s]+))""",
     """\sscore=({original_risk_score}[\d.]+)\s""",

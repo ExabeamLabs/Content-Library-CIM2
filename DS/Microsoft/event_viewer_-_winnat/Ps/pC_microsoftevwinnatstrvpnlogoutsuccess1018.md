@@ -6,7 +6,7 @@ Name = microsoft-evwinnat-str-vpn-logout-success-1018
   Product = "Event Viewer - WinNat"
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   ParserVersion = "v1.0.0"
-  Conditions = [  """ 1018 """, """session deleted""",""" Microsoft-Windows-WinNat""" ]
+  Conditions = [ """ 1018 """, """session deleted""",""" MSWinEventLog """ ]
   Fields = [
     """({time}\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+\d+\s+(({provider_name}[^\s]+))?""",
     """({event_code}1018)""",

@@ -21,7 +21,7 @@ Fields = [
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
   """exa_json_path=$.['Match Details'].match..file.fullpath,exa_regex=({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+))"""
-  """exa_json_path=$.['Match Details'].match..file.md5,exa_field_name=hash_md5"""
+  """exa_json_path=$.['Match Details'].match.properties.file.md5,exa_field_name=hash_md5"""
   """exa_json_path=$.['Match Details'].match.properties,exa_regex=[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","""
   """exa_regex="user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+\}\,"+source"+:"""
   """exa_json_path=$.['Match Details'].match.properties.user,exa_regex=([^\\]+\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""

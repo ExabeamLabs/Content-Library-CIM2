@@ -11,7 +11,7 @@ Name = "zoom-z-sk4-app-activity-success-operator"
     """"operator":""""
   ]
   Fields = [
-    """\WdestinationServiceName =({app}.+?)(\s+\w+=|\s*$)"""
+    """({app}Zoom)"""
     """time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
     """\"operator\":\"({email_address}[^\s@\"]+@[^\s@\"]+)\""""
     """\"operation_detail\"\s*:\s*\"({additional_info}[^\"]+)"""

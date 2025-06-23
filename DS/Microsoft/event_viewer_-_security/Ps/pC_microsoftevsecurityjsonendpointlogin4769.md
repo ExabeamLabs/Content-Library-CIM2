@@ -10,7 +10,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
   Conditions = [
     """4769"""
     """"TransmittedServices":""""
-    """A Kerberos service ticket was requested"""
   ]
   Fields = [
     """({event_name}A Kerberos service ticket was requested)"""
@@ -37,7 +36,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
     """exa_json_path=$.Message,exa_regex=({event_name}A Kerberos service ticket was requested)""",
     """exa_json_path=$.message,exa_regex=({event_name}A Kerberos service ticket was requested)""",
-    """exa_json_path=$.EventTime,exa_regex=time""",
+    """exa_json_path=$.EventTime,exa_field_name=time""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$..created,exa_field_name=time""",
     """exa_json_path=$..Computer,exa_regex=^({host}[\w\-.]+)$""",

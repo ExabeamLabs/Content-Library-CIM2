@@ -8,7 +8,6 @@ TimeFormat = "MMM dd HH:mm:ss yyyy"
 Conditions = [
 """     4719    """
 """System audit policy was changed"""
-"""Audit Policy Change"""
 ]
 Fields = [
 """({event_name}System audit policy was changed)"""

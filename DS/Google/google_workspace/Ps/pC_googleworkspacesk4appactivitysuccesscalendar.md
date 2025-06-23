@@ -42,6 +42,7 @@ cef-google-app-activity = {
     """"name":"PRIVILEGE_NAME","value":"({privileges}[^",\}]+)"""
     """"etag":"({tag}[^,]+)","""
     """"customerId":"({resource_id}[^"]+)""""
+    """destinationServiceName =({app}[^=]+?)\s*(\w+=|$)"""
   ]
   DupFields = [ "operation->event_name" 
 }

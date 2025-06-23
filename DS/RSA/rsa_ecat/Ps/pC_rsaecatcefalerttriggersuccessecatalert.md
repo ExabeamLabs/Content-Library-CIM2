@@ -16,8 +16,9 @@ Name = rsa-ecat-cef-alert-trigger-success-ecatalert
     """\smoduleSignature=({additional_info}.+?)\s+(\w+=|$)""",
     """\sos=({threat_category}.+?)\s+(\w+=|$)""",
     """\stargetModule=({malware_url}.+?)\s+(\w+=|$)""",
+    """\stargetModule=({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))\s+(\w+=|$)"""
   ]
-  DupFields = [ "dest_host->host" , "malware_url->process_name"]
+  DupFields = [ "dest_host->host"]
   ParserVersion = "v1.0.0"
 
 

@@ -46,7 +46,7 @@ Fields = [
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
 """({operation}Sign-In)"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
-""""browser":"(|({browser}[^"]+))"""",
+""""browser":"({browser}[^\d\"]+?)\s*([\d\.]+)?""""
 """"riskState":"({action}[^"]+)""",
 """"correlationId":\s*"({correlation_id}[^"]+)""""
 ]

@@ -29,6 +29,7 @@ Name = netskope-sc-json-alert-trigger-success-yes
     """exa_json_path=$.file_size,exa_field_name=bytes"""
     """exa_json_path=$.object,exa_field_name=object"""
     """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
+    """exa_json_path=$.hostname,exa_field_name=dest_host"""
     """"alert_name":\s*"({alert_name}[^",]+)"""
     """"alert_type":\s*"({alert_type}[^",]+)"""
     """"severity":\s*"({alert_severity}[^",]+)"""
