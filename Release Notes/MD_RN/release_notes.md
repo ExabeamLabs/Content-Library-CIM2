@@ -78,6 +78,9 @@
 - Updated parser `netskope-sc-json-alert-trigger-success-yes` with `hostname` extraction for JSON format.
 
 
+
+## Code Changes
+
 ### ℹ️ How to Read This Document
 
 Each item listed under **Code Changes** includes:
@@ -86,10 +89,8 @@ Each item listed under **Code Changes** includes:
   Click the filename (e.g., `Carbon Black.md`) to open a full table showing what changed in this resource, including the exact fields and values before and after the update.
 
 - **A search icon 🔍**  
-  Click the 🔍 icon next to the filename to search for this resource in the [Exabeam Content Library on GitHub](https://github.com/ExabeamLabs/Content-Library-CIM2). This is helpful if you want to explore the source files, implementation, or history of this resource.
+  Click the 🔍 icon next to the filename to search for this resource in the [Exabeam Content Library](https://github.com/ExabeamLabs/Content-Library-CIM2). This is helpful if you want to explore the source files, implementation, or history of this resource.
 
-
-## Code Changes
 
 <details>
 <summary><strong id="event-builder">Event Builder (158)</strong></summary>
