@@ -27,39 +27,57 @@
 
 
 
-## Addressed Issues
-- Fixed the app field parsing issue with Google parsers.
-- Updated 4648 EB to create user-switch:success when dest_user != user, earlier both EBs were creating endpoint-login:success
-- Fixedtemplate-create activity_typein cim file.
-- Revert the Windows parser condition changes introduced in the last release as part of proactive fixes.
-- Fixed the issue with microsoft-evsecurity-kv-user-switch-success-4648-2 parsers.
-- Added new time regex and timeformat in parser - fortinet-fortiweb-kv-alert-trigger-success-attack
-- Updated the parser "crowdstrike-falcon-mix-alert-trigger-success-detection" to extract SourceProducts, SourceAccountName, SourceEndpointIpAddress, SourceEndpointHostName, SourceAccountDomain
-- Updated event-builders logic for windows event-id 4648
-- Updated microsoft-o365-cef-app-file-success-fileupload parser to parse additional fields.
-- Enhanced the user parsing regex for parserpan-cortex-mix-alert-trigger-success-xdrto filter parsing N/A value
-- Added regex to parse request_type field in parsers - microsoft-o365-cef-app-login-success-user and microsoft-o365-cef-app-login-fail-userloginfailed
-- Added support for Zoom new event logs also fixed few issues with OOTB Zoom parsers.
-- Added member field for parser microsoft-evsecurity-xml-member-remove-success-4762-1
-- Enhanced the parser microsoft-evsecurity-xml-group-list-4798-1 and incorporated parsing for user , domain, dest_user, dest_domain and dest_user_sid fields
-- Updated the condition of parser - microsoft-evsecurity-xml-app-authentication-success-1202 to accommodate the incoming unparsed logs.
-- Fixed the user field related issue in Microsoft parsers.
-- Fixed regex of device_id in parser - okta-amfa-cef-app-login-success-coreuserauthloginsuccess
-- Enhanced the EB for parserunix-unix-kv-process-create-success-exeto createprocess-create:successandprocess-create:failbased onsuccess=yesorsuccess=novalues respectively
-- User & domain regex fixed for Cisco Duo parsers.
-- Prioritize parsing user details from user_name rather than user_id for several Auth0 parsers
-- Added regex for parsing fields - email_subject, user_agent and tenant_id in parser - microsoft-o365-sk4-app-activity-success-movetodeleteditems-2.
-- Fix the OS field misparsing for the Microsoft parsermicrosoft-o365-cef-app-file-success-displayname.
-- Moved parser barracuda-waf-str-http-request-success-valid,barracuda-waf-str-http-request-success-internalpassive and other barcudda parsers to lower precedence.
-- Updated EB condition and supported category,src_country,session_id,version,threat_handled,vm_pool_name fields for fortinet-fortiweb-kv-http-session-traffic,fortinet-fortiweb-kv-http-session-traffic-http parser.
+# Addressed Issues
+
+- Fixed the `app` field parsing issue with Google parsers.
+- Updated 4648 EB to create `user-switch:success` when `dest_user != user`; earlier both EBs were creating `endpoint-login:success`.
+- Fixed `template-create` `activity_type` in CIM file.
+- Reverted the Windows parser condition changes introduced in the last release as part of proactive fixes.
+- Fixed the issue with `microsoft-evsecurity-kv-user-switch-success-4648-2` parsers.
+- Added new time regex and time format in parser: `fortinet-fortiweb-kv-alert-trigger-success-attack`.
+- Updated the parser `crowdstrike-falcon-mix-alert-trigger-success-detection` to extract `SourceProducts`, `SourceAccountName`, `SourceEndpointIpAddress`, `SourceEndpointHostName`, and `SourceAccountDomain`.
+- Updated event builder logic for Windows event ID 4648.
+- Updated `microsoft-o365-cef-app-file-success-fileupload` parser to parse additional fields.
+- Enhanced the user parsing regex for parser `pan-cortex-mix-alert-trigger-success-xdr` to filter parsing `N/A` values.
+- Added regex to parse `request_type` field in parsers:
+  - `microsoft-o365-cef-app-login-success-user`
+  - `microsoft-o365-cef-app-login-fail-userloginfailed`
+- Added support for new Zoom event logs and fixed several issues with OOTB Zoom parsers.
+- Added `member` field to parser: `microsoft-evsecurity-xml-member-remove-success-4762-1`.
+- Enhanced the parser `microsoft-evsecurity-xml-group-list-4798-1` to parse `user`, `domain`, `dest_user`, `dest_domain`, and `dest_user_sid` fields.
+- Updated the condition of parser `microsoft-evsecurity-xml-app-authentication-success-1202` to accommodate unparsed logs.
+- Fixed the `user` field issue in Microsoft parsers.
+- Fixed regex for `device_id` in parser: `okta-amfa-cef-app-login-success-coreuserauthloginsuccess`.
+- Enhanced the EB for parser `unix-unix-kv-process-create-success-exe` to create:
+  - `process-create:success` and  
+  - `process-create:fail`  
+  based on `success=yes` or `success=no` values respectively.
+- Fixed `user` and `domain` regex for Cisco Duo parsers.
+- Prioritized parsing user details from `user_name` over `user_id` for several Auth0 parsers.
+- Added regex for parsing fields `email_subject`, `user_agent`, and `tenant_id` in parser:  
+  `microsoft-o365-sk4-app-activity-success-movetodeleteditems-2`.
+- Fixed the `OS` field misparsing in parser: `microsoft-o365-cef-app-file-success-displayname`.
+- Moved the following parsers to lower precedence:
+  - `barracuda-waf-str-http-request-success-valid`
+  - `barracuda-waf-str-http-request-success-internalpassive`
+  - Other Barracuda parsers
+- Updated EB conditions and supported fields (`category`, `src_country`, `session_id`, `version`, `threat_handled`, `vm_pool_name`) for:
+  - `fortinet-fortiweb-kv-http-session-traffic`
+  - `fortinet-fortiweb-kv-http-session-traffic-http`
 - Added support for additional UNIX logs.
-- Updated the parser "netskope-sc-json-alert-trigger-success-alertname" regex to extract only browser without version info
-- Fixed the issue with microsoft-evsystem-xml-log-clear-success-104-1 parser.
-- Avoid mapping values such as "-" to the user field.
-- Updated Parser "crowdstrike-falcon-mix-alert-trigger-success-detection" regex to extract pattern_disposition_descriptionparent_image_filename
-- Parsed tags field for multiple AWS parser
-- updated the parser "microsoft-o365-sk4-app-file-workload" withAttendees.DisplayName mapped with "members"Attendees.InviterInfo.DisplayName mapped with "additional_info"
-- updated the parser netskope-sc-json-alert-trigger-success-yes with hostname extraction for Json format
+- Updated the parser `netskope-sc-json-alert-trigger-success-alertname` regex to extract only the browser name (without version info).
+- Fixed the issue with parser: `microsoft-evsystem-xml-log-clear-success-104-1`.
+- Avoided mapping values such as `"-"` to the `user` field.
+- Updated parser `crowdstrike-falcon-mix-alert-trigger-success-detection` regex to extract:
+  - `pattern_disposition_description`
+  - `parent_image_filename`
+- Parsed the `tags` field for multiple AWS parsers.
+- Updated parser `microsoft-o365-sk4-app-file-workload`:
+  - `Attendees.DisplayName` mapped to `members`
+  - `Attendees.InviterInfo.DisplayName` mapped to `additional_info`
+- Updated parser `netskope-sc-json-alert-trigger-success-yes` with `hostname` extraction for JSON format.
+
+
 ### ℹ️ How to Read This Document
 
 Each item listed under **Code Changes** includes:
