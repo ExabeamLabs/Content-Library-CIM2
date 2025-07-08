@@ -10,13 +10,13 @@
 - Added support for JSON extractions of process-related fields for the CrowdStrike parser.
 
 - Beam Rules That Were Updated
--- Rule IDs: `NumCP-WebReqF-EC-U-IdNew`
+  Rule IDs: `NumCP-WebReqF-EC-U-IdNew`
 
 - Beam Rules Introduced
--- Rule IDs: `Cntx-EL-ET-Wrkstn`
+  Rule IDs: `Cntx-EL-ET-Wrkstn`
 
-### Beam Rules That Have Been Removed
-- Rule IDs: `Cntx-ELF-ET-Wrkstn`
+- Beam Rules That Have Been Removed
+  Rule IDs: `Cntx-ELF-ET-Wrkstn`
 
 - Added support for Netskope new format logs.
 - Removed `exists(http_response_code)` from the EB block because integer fields do not function properly with `exists()`.
