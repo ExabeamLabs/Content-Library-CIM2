@@ -1,0 +1,5 @@
+# Code Changes for pingidentity-pi-cef-app-authentication-success-authnattempt (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| removed_parser | N/A | {"Vendor": "Ping Identity", "Product": "Ping Identity", "TimeFormat": "MMM dd yyyy HH:mm:ss.SSS", "Fields": ["dvchost=({host}[^\s]+)", "rt=({time}\w+\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d.\d\d\d)", "src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "msg=({result}[^\s]+)", "cs3=\(\w+:({protocol}[^\s]+)\)", "cs5=({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "CEF:([^\|]*\|){3}({event_name}[^\|]+)\|", "cs8=({user_agent}[^=]+?)\s+\w+=", "cs7=(|({additional_info}[^\n]+?))\s+cs8Label="], "Name": "pingidentity-pi-cef-app-authentication-success-authnattempt", "Conditions": ["CEF:", "|EAMAuth|", "|AUTHN_ATTEMPT|"], "ParserVersion": "v1.0.0"} | N/A |

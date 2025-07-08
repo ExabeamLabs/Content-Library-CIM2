@@ -1,0 +1,8 @@
+# Code Changes for crowdstrike-falcon-json-process-create-success-classifiedmoduleload (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | process_dir | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"', 'exa_regex="TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] |
+| edit_regex_field | process_name | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"', 'exa_regex="TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] |
+| edit_regex_field | process_path | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] | ['"TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"', 'exa_regex="TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))"'] |
+| edit_attribute | Platform | ['Falcon', 'Windows'] | ['Falcon', 'Linux', 'MacOS', 'Windows'] |

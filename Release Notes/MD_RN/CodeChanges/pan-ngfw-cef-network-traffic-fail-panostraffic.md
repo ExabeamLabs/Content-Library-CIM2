@@ -1,0 +1,5 @@
+# Code Changes for pan-ngfw-cef-network-traffic-fail-panostraffic (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| removed_parser | N/A | {"Name": "pan-ngfw-cef-network-traffic-fail-panostraffic", "ParserVersion": "v1.0.0", "Vendor": "Palo Alto Networks", "Product": "Palo Alto NGFW", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Conditions": ["|McAfee|ESM|", "PANOS TRAFFIC"], "Fields": ["({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d).", "PANOS\sTRAFFIC\s({operation}.+?)\|", "proto=({protocol}[^\s].+?)\s", "src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s", "dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s", "spt=({src_port}\d*)\s", "dpt=({dest_port}\d*)\s", "nitroInterface_Dest=({dest_interface}[^\s]*)\s", "nitroInterface=({src_interface}[^\s]*)\s", "suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s", "cat=({object}.+?)\snitro", "((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"]} | N/A |
