@@ -3,19 +3,29 @@
 **Release Date:** 2025-06-11
 
 
-## Enhancements
-- Fixed auth_package parsing for all parsers of event id 4610
-- Added event builder blocks to map the event_platform field to the correct platform values in the parser- crowdstrike-falcon-json-dll-load-imagehash.
-- Added support for json extractions of process related fields for Crowdstrike parser.
-- Beam Rules That Were Updated:Rule ID's:  NumCP-WebReqF-EC-U-IdNew Beam Rules Introduced:Rule ID's: Cntx-EL-ET-WrkstnBeam Rules That Have Been Removed:Rule ID's: Cntx-ELF-ET-Wrkstn
+# Enhancements
+
+- Fixed `auth_package` parsing for all parsers of event ID 4610.
+- Added event builder blocks to map the `event_platform` field to the correct platform values in the parser: `crowdstrike-falcon-json-dll-load-imagehash`.
+- Added support for JSON extractions of process-related fields for the CrowdStrike parser.
+
+## Beam Rules That Were Updated
+- Rule IDs: `NumCP-WebReqF-EC-U-IdNew`
+
+## Beam Rules Introduced
+- Rule IDs: `Cntx-EL-ET-Wrkstn`
+
+## Beam Rules That Have Been Removed
+- Rule IDs: `Cntx-ELF-ET-Wrkstn`
+
 - Added support for Netskope new format logs.
-- Removed exists(http_response_code) from EB block because Integer fields do not function properly with exists().
-- Added new parser for  product is turbine of vendor Swimalane.
-- Developed new parser content for Sophos logs
-- Added support for Portnox for new formatted logs
-- Need to add release Notes.
-- Add a new parser support for the Island Browser events.
-- Need to add release Notes.
+- Removed `exists(http_response_code)` from the EB block because integer fields do not function properly with `exists()`.
+- Added new parser for product **Turbine** of vendor **Swimalane**.
+- Developed new parser content for **Sophos** logs.
+- Added support for **Portnox** for newly formatted logs.
+- Added new parser support for **Island Browser** events.
+
+
 
 ## Addressed Issues
 - Fixed the app field parsing issue with Google parsers.
