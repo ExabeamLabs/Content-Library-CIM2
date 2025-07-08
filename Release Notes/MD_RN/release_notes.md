@@ -9,13 +9,13 @@
 - Added event builder blocks to map the `event_platform` field to the correct platform values in the parser: `crowdstrike-falcon-json-dll-load-imagehash`.
 - Added support for JSON extractions of process-related fields for the CrowdStrike parser.
 
-## Beam Rules That Were Updated
+### Beam Rules That Were Updated
 - Rule IDs: `NumCP-WebReqF-EC-U-IdNew`
 
-## Beam Rules Introduced
+### Beam Rules Introduced
 - Rule IDs: `Cntx-EL-ET-Wrkstn`
 
-## Beam Rules That Have Been Removed
+### Beam Rules That Have Been Removed
 - Rule IDs: `Cntx-ELF-ET-Wrkstn`
 
 - Added support for Netskope new format logs.
