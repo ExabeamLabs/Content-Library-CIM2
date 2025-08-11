@@ -64,7 +64,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1071.004 | [Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004)<br><br>                                                                  | 1     |
 | T1072     | [Software Deployment Tools](https://attack.mitre.org/techniques/T1072)<br><br>                                                                            | 1     |
 | T1074     | [Data Staged](https://attack.mitre.org/techniques/T1074)<br><br>                                                                                          | 4     |
-| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 222   |
+| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 225   |
 | T1078.002 | [T1078.002](https://attack.mitre.org/techniques/T1078/002)<br><br>                                                                                        | 10    |
 | T1078.003 | [Valid Accounts: Local Accounts](https://attack.mitre.org/techniques/T1078/003)<br><br>                                                                   | 7     |
 | T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 26    |
