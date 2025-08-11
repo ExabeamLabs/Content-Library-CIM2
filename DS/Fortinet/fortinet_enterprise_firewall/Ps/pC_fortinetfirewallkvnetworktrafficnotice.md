@@ -41,6 +41,7 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\ssrcname=\"*({src_host}[\w\-.]+)\"*"""
     """\sdstname=\"*({dest_host}[\w\-.]+)\"*"""
     """policyname="({policy_name}[^"]+)""""
+    """url="({url}[^"]+)""""
 ]
  DupFields = [ "bytes_in->bytes"]
 

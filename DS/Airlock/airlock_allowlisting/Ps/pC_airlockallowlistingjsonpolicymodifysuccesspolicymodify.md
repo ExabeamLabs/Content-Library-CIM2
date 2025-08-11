@@ -1,0 +1,20 @@
+#### Parser Content
+```Java
+{
+Name = airlock-allowlisting-json-policy-modify-success-policymodify
+  Vendor = Airlock
+  Product = Airlock Allowlisting
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  ExtractionType = json
+  Conditions = [ """"description":""", """"task":""", """"Policy Modify"""", """"checkpoint":""" ]
+  Fields = [
+    """exa_json_path=$.datetime,exa_field_name=time""",
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$.description,exa_field_name=event_name""",
+    """exa_json_path=$.description,exa_regex=^(User\s*({operation}[^\s]+[^$]*on\s({group_name}[^$]*)\sgroup)$)"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

@@ -13,13 +13,13 @@ Name = okta-amfa-json-app-login-success-evaluatesignon-1
     """"device":.+?"os_version":"({os_version}[^"]+)"""",
     """"screen_lock_type":"({identity_type}[^"]+)"""",
     """"risk\\*":.+?"level\\*":\\*"({severity}[^"]+?)\\*"""",
-    """"behaviors\\*":\{({additional_info}[^\}]+)""",
+    """"behaviors\\*":"*\{({more_info}[^\}]+)""",
+    """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """"target":\s*\[.*?\{.*?"alternateId":\s*"({app_id}[^"]+)"[^\{\}]*?"type":\s*"AppInstance"""",
     """exa_json_path=$..device.screen_lock_type,exa_field_name=identity_type""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..transaction.id,exa_field_name=device_id""",
     """exa_json_path=$..debugContext.debugData.logOnlySecurityData,exa_regex=risk\\*":.+?"level\\*":\\*"({severity}[^"]+?)\\*"""",
-    """exa_json_path=$..debugContext.debugData.logOnlySecurityData,exa_regex=behaviors\\*":\{({additional_info}[^\}]+)""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint""",
     """exa_json_path=$..target[?(@.type == 'AppInstance')].alternateId,exa_field_name=app_id"""
   ]
@@ -135,8 +135,9 @@ s-okta-app-login = {
     """"target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance""""
     """"device":"(Unknown|({device_type}[^"]+))""""
     """"tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
-    """"behaviors":"\{({more_info}[^\}"]+)\}"""",
     """"pushOnlyResponseType":"({response_type}[^"]+)"""",
+    """"behaviors\\*":"*\{({more_info}[^\}]+)""",
+    """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..destinationServiceName,exa_field_name=app""",
@@ -171,7 +172,6 @@ s-okta-app-login = {
     """exa_json_path=$..client.device,exa_field_name=device_type,exa_match_expr=!Contains($.client.device,"Unknown")"""
     #"""exa_json_path=$.target[?(@.type == 'AppInstance')].displayName,exa_field_name=app""",
     #"""exa_json_path=$.target[?(@.type == 'AppInstance')].alternateId,exa_field_name=app_id"""
-    """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
     """exa_json_path=$.debugContext.debugData.pushOnlyResponseType,exa_field_name=response_type"""
    ]
    DupFields = ["failure_reason->additional_info", "location_country->mfa_country"]

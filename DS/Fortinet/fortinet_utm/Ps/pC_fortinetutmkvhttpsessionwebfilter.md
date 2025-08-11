@@ -38,10 +38,11 @@ Name = fortinet-utm-kv-http-session-webfilter
     """\Wmsg="*({result_reason}[^=]+?)["\s]*(\w+=|$)[^=]+?\Waction="*blocked"*""",
     """\Wurl="({url}[^"]+)"""",
     """policyid=({policy_id}\d+)""",
-    """cat=({http_response_code}\d+)""",
+    """cat=({category_id}\d+)""",
     """method="({method}[^"]+)"""",
     """\Wtz="?({tz}[+-]\d+)"""
     """direction="*({direction}[^="\s]+?)"*\s*\w+="""
+    """url="({url}[^"]+)""""
   ]
 
 

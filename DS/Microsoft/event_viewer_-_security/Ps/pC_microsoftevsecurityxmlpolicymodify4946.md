@@ -51,7 +51,7 @@ s-xml-object-access = {
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
-    """<\/Data><Data Name ='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
+    """<\/Data><Data Name =('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
   
 }
 ```

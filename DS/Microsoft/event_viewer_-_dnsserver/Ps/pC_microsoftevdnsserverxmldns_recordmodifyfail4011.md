@@ -9,9 +9,9 @@ Name = microsoft-evdnsserver-xml-dns_record-modify-fail-4011
     """<Computer>({host}[\w\-\.]+)<"""
     """({provider_name}Microsoft-Windows-DNS-Server-Service)"""
     """({additional_info}The DNS server[^<]+?)\s*<"""
-    """<Data Name ="param1">({domain}[^\s<]+)"""
-    """<Data Name ="param2">({dest_network_zone}[^<]+)"""
-    """<Data Name ="param3">({failure_reason}[^<]+?)\s*<"""
+    """<Data Name =('|")param1('|")>({domain}[^\s<]+)"""
+    """<Data Name =('|")param2('|")>({dest_network_zone}[^<]+)"""
+    """<Data Name =('|")param3('|")>({failure_reason}[^<]+?)\s*<"""
   ]
 
 xml-windows-eventviewer-events = {

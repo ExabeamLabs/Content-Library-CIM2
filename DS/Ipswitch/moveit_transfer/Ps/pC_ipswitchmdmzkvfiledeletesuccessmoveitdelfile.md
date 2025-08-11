@@ -7,7 +7,7 @@ Name = "ipswitch-mdmz-kv-file-delete-success-moveitdelfile"
   Fields = ${MoveITParsersTemplates.moveit-activity.Fields}[
     """\sFileID:\s*({file_id}[^,]+)"""
     """\sFileName:\s*({file_name}[^.,]+\.({file_ext}[^,]+))"""
-    """\sFolderPath:\s*({file_path}[^,]+)"""
+    """\sFolderPath:\s*({file_dir}[^,]+)"""
     """\sXFerSize:\s*({bytes}\d+)"""
   ]
 

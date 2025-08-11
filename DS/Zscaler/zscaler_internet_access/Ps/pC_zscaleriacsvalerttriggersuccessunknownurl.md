@@ -14,7 +14,7 @@ Name = zscaler-ia-csv-alert-trigger-success-unknownurl
     """"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))",("[^"]*",){10}"Unknown URL"""",
     """"({department}[^"]+)",("[^"]*",){9}"Unknown URL"""",
     """"({file_name}[^"]+)",("[^"]*",){7}"Unknown URL"""",
-    """"({file_path}[^"]+)",("[^"]*",){6}"Unknown URL"""",
+    """"({file_dir}[^"]+)",("[^"]*",){6}"Unknown URL"""",
     """({alert_name}Unknown URL)""",
     """"Unknown URL",("[^"]*",)"({bytes_in}\d+)""",
     """"Unknown URL",("[^"]*",){2}"({bytes_out}\d+)"""

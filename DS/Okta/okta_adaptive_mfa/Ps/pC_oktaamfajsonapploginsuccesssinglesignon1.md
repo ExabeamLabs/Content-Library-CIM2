@@ -116,8 +116,9 @@ s-okta-app-login = {
     """"target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance""""
     """"device":"(Unknown|({device_type}[^"]+))""""
     """"tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
-    """"behaviors":"\{({more_info}[^\}"]+)\}"""",
     """"pushOnlyResponseType":"({response_type}[^"]+)"""",
+    """"behaviors\\*":"*\{({more_info}[^\}]+)""",
+    """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..destinationServiceName,exa_field_name=app""",
@@ -152,7 +153,6 @@ s-okta-app-login = {
     """exa_json_path=$..client.device,exa_field_name=device_type,exa_match_expr=!Contains($.client.device,"Unknown")"""
     #"""exa_json_path=$.target[?(@.type == 'AppInstance')].displayName,exa_field_name=app""",
     #"""exa_json_path=$.target[?(@.type == 'AppInstance')].alternateId,exa_field_name=app_id"""
-    """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
     """exa_json_path=$.debugContext.debugData.pushOnlyResponseType,exa_field_name=response_type"""
    ]
    DupFields = ["failure_reason->additional_info", "location_country->mfa_country"]

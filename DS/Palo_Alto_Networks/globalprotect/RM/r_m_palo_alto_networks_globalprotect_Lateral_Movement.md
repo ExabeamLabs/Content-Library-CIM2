@@ -7,7 +7,7 @@ Vendor: Palo Alto Networks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  49   |   20   |         12         |       6        |   56    |
+|  49   |   20   |         12         |       6        |   57    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

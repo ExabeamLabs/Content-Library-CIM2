@@ -25,7 +25,7 @@ Fields = [
 """exa_json_path=$.datetime,exa_field_name=time""",
 """exa_json_path=$.tenant,exa_field_name=tenant_id""",
 """exa_json_path=$.fullurl,exa_field_name=url""",
-"""exa_json_path=$.filesource,exa_field_name=file_path""",
+"""exa_json_path=$.filesource,exa_field_name=file_dir""",
 """exa_json_path=$.filename,exa_field_name=file_name""",
 """exa_json_path=$.file_ext,exa_field_name=file_ext""",
 """exa_json_path=$.accesses,exa_field_name=access""",

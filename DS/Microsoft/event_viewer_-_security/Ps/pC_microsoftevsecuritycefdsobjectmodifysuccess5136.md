@@ -20,6 +20,8 @@ Name = microsoft-evsecurity-cef-ds-object-modify-success-5136
     """fileType=({object_type}[^=]+)\s\w+=""",
     """cs5=({object_type}[^=]+)\s\w+=""",
     """cs6=({ds_object_dn}.+?)\s\w+="""
+    """AttributeLDAPDisplayName =({attribute}[^\s]+)"""
+    """AttributeValue=<({attribute_value}[^>]+)"""
   ]
 
 

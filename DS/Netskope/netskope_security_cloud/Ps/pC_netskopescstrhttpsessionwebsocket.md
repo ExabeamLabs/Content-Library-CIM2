@@ -7,6 +7,8 @@ Product = "Netskope Security Cloud"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
   """ WebSocket """
+  """ HTTP"""
+  """ GET """
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""

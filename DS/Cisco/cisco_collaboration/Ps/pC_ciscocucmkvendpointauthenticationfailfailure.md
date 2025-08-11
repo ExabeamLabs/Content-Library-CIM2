@@ -6,9 +6,11 @@ Vendor = Cisco
 Product = Cisco Collaboration
 TimeFormat = "MMM dd yyyy hh:mm:ss a"
 Conditions = [
-  """EventType =UserLogging"""
+  """EventType"""
+  """=UserLogging"""
   """EventStatus =Failure"""
   """Failed to Log into Cisco CCM Webpages"""
+  """ %UC_AUDITLOG-"""
 ]
 Fields = [
   """\s({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+\s+(AM|PM|am|pm))"""

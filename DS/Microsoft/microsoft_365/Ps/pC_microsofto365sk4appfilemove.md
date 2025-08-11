@@ -19,6 +19,7 @@ Name = microsoft-o365-sk4-app-file-move
     """exa_json_path=$.Item.ParentFolder.Path,exa_regex=^(\\+)?(\?+|({target}[^"\}\]]+?))$""",
     """exa_json_path=$.ResultStatus,exa_field_name=result""",
     """exa_json_path=$.ClientInfoString,exa_field_name=user_agent""",
+    """exa_json_path=$.ActorInfoString,exa_field_name=user_agent""",
     """exa_json_path=$.UserType,exa_field_name=user_type""",
     """exa_json_path=$.OperationProperties[?(@.Name == 'RuleName')].Value,exa_field_name=rule"""
   ]
@@ -66,6 +67,7 @@ o365-activity-template = {
     """"os":"({os}[^"]+)"""",
     """"(browser|BrowserName)":"({browser}[^"]+)""""
     """"ClientInfoString":"({user_agent}[^"]+)","""
+    """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
   ]

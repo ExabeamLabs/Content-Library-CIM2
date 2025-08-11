@@ -7,7 +7,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
     ParserVersion = "v1.0.0"
     ExtractionType = json
     TimeFormat = "epoch_sec"
-    Conditions = [ """"x-type": "http_transaction"""" , """"cs-bytes":""" , """"cs-host":""", """"x-request-id":""", """"x-cs-access-method":""" ]
+    Conditions = [ """"x-type":""", """"cs-username":""" , """"cs-bytes":""", """"x-request-id":""", """"x-cs-access-method":""" ]
     Fields = [
         """exa_json_path=$.cs-method,exa_field_name=method""",
         """exa_json_path=$.cs-uri-scheme,exa_field_name=protocol""",

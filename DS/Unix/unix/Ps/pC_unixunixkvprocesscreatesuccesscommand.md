@@ -25,6 +25,7 @@ Name = unix-unix-kv-process-create-success-command
     """"hostname":"({src_host}[^"]+)""""
     """({error_code}user NOT in sudoers)""",
     """\WPWD\\?=({process_dir}[^\s;=]+?)[\s;]*\w+="""
+    """\WCOMMAND\\?=({process_path}({process_dir}[^\s]+[\\\/]+)?({process_name}[^;\\\/\s]+))\s(?:|;|$)"""
   ]
   DupFields = [ "host->dest_host" ]
 

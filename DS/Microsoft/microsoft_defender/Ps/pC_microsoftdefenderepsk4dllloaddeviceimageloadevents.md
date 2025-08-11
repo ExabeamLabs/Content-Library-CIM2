@@ -32,7 +32,7 @@ Name = "microsoft-defenderep-sk4-dll-load-deviceimageloadevents"
 # azure_event_hub_namespace is removed
 # azure_event_hub_name is removed
        """"FolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))""""
-       """"InitiatingProcessParentFileName"+:"((({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+))?({parent_process_name}[^"]+)))""""
+       """"InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+?[\\\/]+)?({parent_process_name}[^"\\\/]+))""""
        """"InitiatingProcessIntegrityLevel"+:"+({process_integrity}[^"]+)"""
        """"InitiatingProcessParentId"+:({parent_process_id}\d+)"""
        """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)"""

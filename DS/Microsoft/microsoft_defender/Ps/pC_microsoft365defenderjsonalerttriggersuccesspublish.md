@@ -33,6 +33,7 @@ Name = "microsoft-365defender-json-alert-trigger-success-publish"
     """"(C|c)ategory":"({alert_type}[^"]+)"""",
     """"Severity":"({alert_severity}[^"]+)"""",
     """"DetectionSource":"({alert_source}[^"]+)""""
+    """"verdict\\*":\\*"({result}[^"\\]+)"""
   ]
   ParserVersion = "v1.0.0"
 

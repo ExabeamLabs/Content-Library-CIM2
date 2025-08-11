@@ -45,16 +45,18 @@ json-aws-guardduty-security-alert-template = {
       """"accessKeyId":"({key_id}[^"]+?)""""
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
       """"tags":\s*({tags}[^$]+?)\]""",
+      """exa_regex=AssumedRole\/({role}[^\s]+)"""
       """exa_json_path=$.updatedAt,exa_field_name=time"""
       """exa_json_path=$.awsRegion,exa_field_name=region"""
       """exa_regex="ipAddressV4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
       """exa_json_path=$.resource.resourceType,exa_field_name=resource_type"""
       """exa_json_path=$.description,exa_field_name=additional_info"""
-      """exa_json_path=$.accountId,exa_field_name=account_id""",
+      """exa_json_path=$..accountId,exa_field_name=account_id""",
       """exa_json_path=$.resource.accessKeyDetails.userName,exa_field_name=user""",
+      """exa_json_path=$.detail.severity,exa_field_name=alert_severity""",
       """exa_json_path=$.severity,exa_field_name=alert_severity""",
       """exa_json_path=$.region,exa_field_name=region""",
-      """exa_json_path=$.resource.accessKeyDetails.userType,exa_field_name=user_type"""
+      """exa_json_path=$..resource.accessKeyDetails.userType,exa_field_name=user_type"""
       """exa_json_path=$.readOnly,exa_field_name=readonly""",
       """exa_regex="userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"[^\}]+?"userType":\s*"(?!AssumedRole)[^"]+"""",
       """exa_regex="userType":\s*"(?!AssumedRole)[^"]+"[^\}]+?"userName":"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",

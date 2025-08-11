@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-success-4714
   Conditions = [ """<EventID>4714<""", """<Event xmlns""", """<Provider Name""","""Microsoft-Windows-Security-Auditing""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
     """<EventRecordID>({event_id}.+?)<\/EventRecordID>"""
     """<Keywords>({result}[^<]+)""",

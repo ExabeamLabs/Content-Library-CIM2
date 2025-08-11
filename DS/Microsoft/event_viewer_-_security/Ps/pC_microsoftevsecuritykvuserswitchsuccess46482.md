@@ -12,7 +12,7 @@ Fields = [
 """TimeGenerated=({time}\d{10})"""
 """EventIDCode=({event_code}\d+)"""
 """\s+Computer=({host}[\w.\-]+)"""
-"""Message=.+?\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s({domain}[^\s]+)\s({login_id}[^\s]+)\s\{([^\}]+)\}\s({dest_user}[^\s]+)\s({dest_domain}[^\s]+)\s\{.*?\}\s({dest_service_name}[^\s]+)\w.*?\s.*?\s({process_path}[^\s]+)\\({process_name}[^\s]+)""",
+"""Message=.+?\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s({domain}[^\s]+)\s({login_id}[^\s]+)\s\{([^\}]+)\}\s({dest_user}[^\s]+)\s({dest_domain}[^\s]+)\s\{.*?\}\s({dest_service_name}[^\s]+)\w.*?\s.*?\s({process_path}({process_dir}[^\s]+[\\\/]+)({process_name}[^\s\\\/]+))""",
 """\sKeywords=({result}[^=]+?)\s\w+="""
 """\sSubjectUserName =({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\sSubjectDomainName =({src_domain}[^=]+?)\s\w+="""

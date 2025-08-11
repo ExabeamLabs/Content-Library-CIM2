@@ -16,11 +16,11 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
     """<Computer>({host}[^<]+)</Computer>""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """A member was added to a security-enabled ({group_type}[^\s]+) group""",
-    """<Data Name ='SubjectUserSid'>({user_sid}[^<]+)<"""
-    """<Data Name ='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """<Data Name ='SubjectDomainName'>({domain}[^<]+)<""",
-    """<Data Name ='SubjectLogonId'>({login_id}[^<]+)<""",
-    """<Data Name ='MemberSid'>(({dest_user_sid}S-\d+\-[^<]+)|({account_id}[^<]+))<""",
+    """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)<"""
+    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)<""",
+    """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)<""",
+    """<Data Name =('|")MemberSid('|")>(({dest_user_sid}S-\d+\-[^<]+)|({account_id}[^<]+))<""",
     """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)<"""
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)<""",

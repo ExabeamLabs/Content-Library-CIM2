@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-log-clear-success-logfileclear
   Vendor = Microsoft
   Product = Event Viewer - Security
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [""">1102</EventID>""",  """<Channel>Security</Channel>""" ]
+  Conditions = [""">1102</EventID>""",  """<Channel>Security</Channel>""", """<LogFileCleared""" ]
   Fields = [
     """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)""",
     """<Computer>({host}[\w\-.]+)""",

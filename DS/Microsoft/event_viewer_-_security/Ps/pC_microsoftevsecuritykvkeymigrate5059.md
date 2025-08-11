@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-key-migrate-5059
 
 raw-object-access = {
   Vendor = Microsoft
-  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch", "MM/dd/yyyy HH:mm:ss a"]
+  TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ", "epoch", "MM/dd/yyyy HH:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS"]
   Fields = [
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
@@ -39,6 +39,7 @@ raw-object-access = {
     """Return Code:\s*({return_code}.+?)\s*(User:|<\/Message>)""",
     """EventID="*({event_code}\d+)""",
     """EventType="*({result}[^"\s]+)"""
+    """<TimeCreated SystemTime(\\)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
   
 }
 ```

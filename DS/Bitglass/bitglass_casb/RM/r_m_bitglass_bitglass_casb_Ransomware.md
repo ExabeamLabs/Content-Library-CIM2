@@ -7,7 +7,7 @@ Vendor: Bitglass
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         2          |       3        |    5    |
+|   3   |   0    |         2          |       3        |    4    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

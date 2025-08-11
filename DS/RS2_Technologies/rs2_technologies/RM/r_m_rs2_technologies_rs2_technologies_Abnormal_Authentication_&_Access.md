@@ -7,7 +7,7 @@ Vendor: RS2 Technologies
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   2    |         1          |       1        |    4    |
+|   3   |   2    |         1          |       1        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

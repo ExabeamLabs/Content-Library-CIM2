@@ -19,7 +19,7 @@ Fields = [
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")ObjectServer('|")>({object_server}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")PrivilegeList('|")>({privileges}[^<]+?)</Data>""",
-  """<Data Name[\\\/]*=('|")ProcessName('|")>({process_path}({process_dir}(?:[^"<]*?)?[\\\/])?)({process_name}[^\\\/"<]+?)</Data>""",
+  """<Data Name[\\\/]*=('|")ProcessName('|")>({process_path}({process_dir}(?:[^"<]*?)?[\\\/])?({process_name}[^\\\/"<]+?))</Data>""",
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<>\s=]+)"""
   """({event_name}A privileged service was called)"""
   """<Level>({run_level}[^<]+)<"""

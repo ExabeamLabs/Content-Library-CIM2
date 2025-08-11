@@ -4,7 +4,7 @@ Product: AWS CloudWatch
 -----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  196  |   75   |         37         |       5        |    9    |
+|  196  |   75   |         37         |       5        |    8    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

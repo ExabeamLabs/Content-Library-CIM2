@@ -26,7 +26,7 @@ Fields = [
 """"Severity":\s*({alert_severity}\d+)"""
 """"SeverityName":\s*"({alert_severity}[^"]+?)""""
 """"FileName":"({file_name}[^"]+?)""""
-""""FilePath":"({file_path}[^"]+?)\\?""""
+""""FilePath":"({file_dir}[^"]+?)\\?""""
 """"CommandLine"+:"+\\*"*({process_command_line}[^,"]+?)\\*""""
 """"CommandLine"+:"+\\*"*({process_path}({process_dir}[^",]+\\\\)?({process_name}[^"\\,]+))\\*""""
 """"LocalIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -83,7 +83,7 @@ Fields = [
 """exa_json_path=$.Severity,exa_field_name=severity""",
 """exa_json_path=$.SeverityName,exa_field_name=alert_severity""",
 """exa_json_path=$.FileName,exa_field_name=file_name""",
-"""exa_json_path=$.FilePath,exa_field_name=file_path""",
+"""exa_json_path=$.FilePath,exa_field_name=file_dir""",
 """exa_regex="CommandLine\"+:\s*\"+\\*\"*({process_command_line}[^\n]+?)\\*\s*\"+,""",
 """exa_regex="CommandLine\":\s*\"\\\"({process_path}({process_dir}[^\",]+\\\\)?({process_name}[^\"\\,]+))\\\"""",
 """exa_json_path=$.LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

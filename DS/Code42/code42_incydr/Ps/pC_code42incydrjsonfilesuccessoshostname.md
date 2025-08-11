@@ -22,7 +22,7 @@ Name = "code42-incydr-json-file-success-oshostname"
     """"publicIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"domainName"+:\s*"(({host}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[^"]+))"""",
     """"eventTimestamp"+:\s*"+({time}[^"]+)"""",
-    """"filePath"+:\s*"+({file_path}[^"]+)"""",
+    """"filePath"+:\s*"+({file_dir}[^"]+)"""",
     """"fileName"+:\s*"+({src_file_name}[^"]+?(\.({src_file_ext}[^"\s\.]+))?)"""",
     """"fileCategory"+:\s*"+({file_type}[^"]+)"""",
     """"fileCategoryByExtension"+:\s*"+({file_ext}[^"]+)"""",
@@ -44,7 +44,7 @@ Name = "code42-incydr-json-file-success-oshostname"
     """exa_json_path=$.publicIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.domainName,exa_regex=(({host}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[^"]+))""",
     """exa_json_path=$.eventTimestamp,exa_field_name=time""",
-    """exa_json_path=$.filePath,exa_field_name=file_path""",
+    """exa_json_path=$.filePath,exa_field_name=file_dir""",
     """exa_json_path=$.fileName,exa_regex=({src_file_name}[^"]+?(\.({src_file_ext}[^"\s\.]+))?)$""",
     """exa_json_path=$.fileCategory,exa_field_name=file_type""",
     """exa_json_path=$.fileCategoryByExtension,exa_field_name=file_ext""",
@@ -58,7 +58,6 @@ Name = "code42-incydr-json-file-success-oshostname"
     """exa_regex="actor"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""
   ]
   DupFields = [
-    "file_path->file_dir"
     "dest_host->device_name"
     "src_file_name->file_name"
     "src_file_ext->file_ext"

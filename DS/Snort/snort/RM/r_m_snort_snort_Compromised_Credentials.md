@@ -7,7 +7,7 @@ Vendor: Snort
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  41   |   18   |         5          |       2        |    8    |
+|  41   |   18   |         5          |       2        |    5    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

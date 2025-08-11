@@ -6,7 +6,7 @@ Name = claroty-c-cef-network-notification-success-commevent
     Product = Claroty
     ParserVersion = v1.0.0
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
-    Conditions = ["""CEF:0|Claroty|Claroty|""","""|comm_event|"""]
+    Conditions = ["""CEF:0|Claroty|""","""|comm_event|"""]
     Fields = [
        """\sevent_timestamp=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d)""",
        """00\s+({host}[^\s]+)\s+Claroty\s+\d+\s+-""",

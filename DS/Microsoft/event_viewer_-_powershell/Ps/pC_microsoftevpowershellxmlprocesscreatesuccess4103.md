@@ -28,7 +28,7 @@ Fields = [
 """Details:.+?CommandInvocation.+?ParameterBinding.+?value="(function\s)?({command_module}[^\s,"]+)""",
 """Context[^@]+?User\s*=\s*(({domain}[^=]+?)[\\\/]+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\r|\\n|\\t)*\s*(Connected User|Shell ID) ="""
 """Context[^@]+?Host Application\s*=\s*({process_command_line}.+?)(\\r|\\n|\\t)*\s*Engine Version ="""
-"""Context[^@]+?Host Application\s*=\s*({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+))[^\n]+?\s+Engine Version =""",
+"""Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}(([^\;=\\\/-]*?)\s*[^\;=\\\/\s-]+?[\\\/]+)+))?({process_name}[^\s\\\/]+)))[^\n]+?\s+Engine Version ="""
 """Context[^@]+?Command Type\s*=\s*(|({command_type}[^=]+?))(\\r|\\n|\\t)*\s*Script Name ="""
 """Context[^@]+?Command Name\s*=\s*(|({command}[^=]+?))(\\r|\\n|\\t)*\s*Command Type ="""
 """Context[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path ="""
@@ -49,7 +49,7 @@ Fields = [
 """exa_regex=Details:.+?CommandInvocation.+?ParameterBinding.+?value="(function\s)?({command_module}[^\s,"]+)""",
 """exa_regex=Context[^@]+?User\s*=\s*(({domain}[^=]+?)[\\\/]+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\r|\\n|\\t)*\s*(Connected User|Shell ID) ="""
 """exa_regex=Context[^@]+?Host Application\s*=\s*({process_command_line}.+?)(\\r|\\n|\\t)*\s*Engine Version ="""
-"""exa_regex=Context[^@]+?Host Application\s*=\s*({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+))[^\n]+?\s+Engine Version =""",
+"""exa_regex=Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version =""",
 """exa_regex=Context[^@]+?Command Type\s*=\s*(|({command_type}[^=]+?))(\\r|\\n|\\t)*\s*Script Name ="""
 """exa_regex=Context[^@]+?Command Name\s*=\s*(|({command}[^=]+?))(\\r|\\n|\\t)*\s*Command Type ="""
 """exa_regex=Context[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path ="""

@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-evsecurity-json-ds-replication-stop-4933
+  Vendor = Microsoft
+  Product = Event Viewer - Security
+  ParserVersion = v1.0.0
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd HH:mm:ss Z"]
+  ExtractionType = json
+  Conditions = [ """Synchronization of a replica of an Active Directory naming context has ended""", """"ProviderName":"Microsoft-Windows-Security-Auditing"""" , """"Channel":"Security"""", """"EventID":4933"""]
+  Fields = [
+    """exa_json_path=$.TimeCreated,exa_field_name=time"""
+    """exa_json_path=$.Computer,exa_field_name=host"""
+    """exa_json_path=$.ProcessID,exa_field_name=process_id"""
+    """exa_json_path=$.EventID,exa_field_name=event_code"""
+    """exa_json_path=$.Keywords,exa_field_name=result"""
+    """exa_json_path=$.Level,exa_field_name=run_level"""
+    """exa_regex=Destination DRA: .+?CN=({dest_dra}[^,]+)"""
+    """exa_regex=Source DRA: .+?CN=({src_dra}[^,]+)"""
+    """exa_regex=({event_name}Synchronization of a replica of an Active Directory naming context has ended)"""
+    ]
+
+
+}
+```

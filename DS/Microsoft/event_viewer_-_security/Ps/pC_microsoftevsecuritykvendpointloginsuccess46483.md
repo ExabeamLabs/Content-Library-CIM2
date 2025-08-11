@@ -33,7 +33,7 @@ Fields = [
   """Target Server Name(:|=)(\\[rnt]|\s)*({dest_host}[\w\-\.]+)""",
   """Additional Information(:|=)\s*(\\r|\\t|\\n)*({dest_service_name}[^=:\s;\\]+)"""
   """Process ID(:|=)\s*(\\t)*({process_id}[^=:\s;\\]+)[\s;\\]*""",
-  """Process Name(:|=)\s*(\\r|\\t|\\n)*(-|({process_path}({process_dir}\w:([^:=]+)?)[\\\/])?\s*(|({process_name}[^\\\/;\s]+\.\w+)))(;|\s|\\[rnt]|\s)+|Process Name"""
+  """Process Name(:|=)\s*(\\r|\\t|\\n)*(-|({process_path}({process_dir}\w:([^:=]+)?[\\\/])?\s*(|({process_name}[^\\\/;\s]+\.\w+))))(;|\s|\\[rnt]|\s)+"""
   """Network Address(:|=)(\\[rnt]|\s)*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
   """Used(:|=);?\s*.+?Account Name(:|=)\s*(\\t|\\r|\\n)*\s*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*(\\t|\\r|\\n)*\s*"""
   """Used(:|=);?\s*.+?Account Name(:|=)\s*(({dest_domain}[^\/"]+?)[\/]+?)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*(\\t|\\r|\\n)*\s*Account Domain"""

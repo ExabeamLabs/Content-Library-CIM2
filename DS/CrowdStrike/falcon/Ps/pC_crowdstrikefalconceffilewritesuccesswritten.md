@@ -38,7 +38,8 @@ Fields = [
 """"FileAttributes":"({attributes}[^"]+)""""
 """"(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
 """"(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*"""",
-""""ContextBaseFileName":"({file_name}[^"]+)"""",
+""""ContextBaseFileName":"({process_name}({file_name}[^"]+))""""
+""""ContextImageFileName":\s*"({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^\\\/"]+?))\s*""""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -60,6 +61,8 @@ Fields = [
 """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_path}[^"]+)""",
 """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*""""
 """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
+"""exa_json_path=$.ContextBaseFileName,exa_field_name=process_name"""
+"""exa_regex="ContextImageFileName":\s*"({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^\\\/"]+?))\s*""""
 
 }
 ```

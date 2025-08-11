@@ -23,6 +23,7 @@ Name = "amazon-awscloudwatch-cef-network-traffic-success-cloudwatch"
     """\Wproto=(|({protocol}[^=]+?))(\s+\w+=|\s*$)"""
     """\Wsuser=(|anonymous|({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|\s*$)"""
     """\Wact=(|({action}[^=]+?))(\s+\w+=|\s*$)"""
+    """\WResources":.+?"Region":"({region}[^"]+)""""
   ]
 
 

@@ -61,7 +61,6 @@ cef-microsoft-app-activity = {
     """"user":\{[^}]+?displayName":"(Microsoft Teams Services|({full_name}[^"]+))"""",
     """"result":\s*"failure"[^\}]+?"resultReason":\s*"({failure_reason}[^"]+?)\s*",""""
     """"ClientProcessName":\s*"({process_name}[^"]+)"""
-    """"ObjectId":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))""""
     """"UserType":\s*"*\s*({user_type}[^,}"]+)"*"""
     """"(os|Platform)":\s*"({os}[^"]+)""""
     """"(browser|BrowserName)":\s*"({browser}[^"]+)""""
@@ -70,6 +69,7 @@ cef-microsoft-app-activity = {
     """"category":\s*"({category}[^"]+)"""
     """"Platform":\s*"({os}[^"]+)""""
     """"ClientInfoString":\s*"({user_agent}[^"]+)","""
+    """"ActorInfoString":\s*"({user_agent}[^"]+)","""
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
     """"Application":\s*"({app}[^"]+)"""

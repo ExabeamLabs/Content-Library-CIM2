@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4872
   """<Message>({event_name}[^<\.]+)""",
   """<Task>({sub_category}[^<]+)""",
   """<Keywords>({result}[^<]+)""",
-  """Provider Name\\*='({provider_name}[^\']+)""",
+  """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
   """Guid\\*='\{({process_guid}[^\'\}]+)""",
   """<Execution ProcessID(\\)?='({process_id}[^']+)""",
   """ThreadID(\\)?='({thread_id}\d+)"""

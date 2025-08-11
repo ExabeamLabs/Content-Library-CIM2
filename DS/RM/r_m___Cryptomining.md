@@ -7,7 +7,7 @@ Vendor:
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   2   |   0    |         3          |       3        |   14    |
+|   2   |   0    |         3          |       3        |   10    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

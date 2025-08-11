@@ -16,7 +16,7 @@ Name = "salesforce-sf-cef-file-download-success-cloud"
     """\Wfname=({file_name}.+?(?:\.(null|({file_ext}[^.\s=]+?)))?)\s+(\w+=|$)""",
     """\WfileType=({file_type}.+?)\s+(\w+=|$)""",
     """\WdestinationServiceName =({app}.+?)\s*(\w+=|$)"""
-    """filePath=({file_path}[^=]+?)\s+\w+="""
+    """filePath=({file_id}[^=]+?)\s+\w+="""
     """Owner\.Name\\?=({full_name}({first_name}[^\s]+)\s({last_name}[^;]+))"""
     """msg=({additional_info}[^=]+?)\s\w+="""
   ]

@@ -52,10 +52,9 @@ aws-cloudtrail-json = {
       """\\?"type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
       ""","userIdentity\\?":.+?,"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/({role}[^\/"]+)\/(AssumeRoleSession|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"]+)|({aws_user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?"""",
       """"sourceIdentity\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
-      ""","userIdentity\\?":.+?"AssumedRole\\?".+?"principalId\\?":\s*\\?"[A-Z\d]{1,25}:({aws_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"\s*[,\]\}]""",
-      ""","userIdentity\\?":.+?"AssumedRole\\?".+?"sessionIssuer\\?":\s*\{[^\}]+?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
+      ""","userIdentity\\?":\{[^\}]+"AssumedRole\\?"[^\}]+"principalId\\?":\s*\\?"[A-Z\d]{1,25}:({aws_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"\s*[,\]\}]""",
       ""","userIdentity\\?":.+?"IAMUser\\?".+?"userName\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
-      ""","userIdentity\\?":\s*\{.*?"type\\?":\s*\\?"({aws_user}({user}Root))\\?""""
+      ""","userIdentity\\?":\s*\{[^\}]+"type\\?":\s*\\?"({aws_user}({user}Root))\\?""""
       """requestParameters":"({additional_info}.+?),"\w+"?:"""
       """"RestrictPublicBuckets\\*":({restrict_public_buckets}[^",\\\}]+)"""
       """"BlockPublicPolicy\\*":({block_public_policy}[^",\\\}]+)"""
@@ -75,7 +74,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventName,exa_field_name=operation""",
       """exa_json_path=$.awsRegion,exa_field_name=region""",
       """exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
-      """exa_json_path=$..userAgent,exa_regex=\[?({user_agent}.*?)\]?$""",
+      """exa_json_path=$..userAgent,exa_regex=\[?({user_agent}[^\]]+)\]?$""",
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
@@ -84,7 +83,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",
       #"""exa_json_path=$.userIdentity.userName,exa_regex=(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?,exa_match_expr=Contains(toLower($.userIdentity.type),"iamuser")""",
       """exa_json_path=$.userIdentity,exa_regex="type\\?":\\?"IAMUser\\?"[^\}]+?"userName\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
-      """exa_json_path=$.userIdentity.arn,exa_regex=arn:aws:sts::\d+:assumed-role\/({role}[^\/"]+)\/(AssumeRoleSession|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"]+)|({aws_user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?""",
+      """exa_regex="userIdentity":.+?"arn":\s*"arn:aws:sts::\d+:assumed-role\/({role}[^\/"]+)\/(AssumeRoleSession|\d{19}"|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"\s]+)|({aws_user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?""",
       """exa_json_path=$.userIdentity.type,exa_regex=({aws_user}({user}Root))""",
       """exa_json_path=$.requestParameters.bucketName,exa_field_name=bucket_name""",
       """exa_json_path=$.requestParameters.Host,exa_field_name=bucket_host""",

@@ -40,6 +40,7 @@ cef-microsoft-o365-app-activity-1 = {
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"ClientInfoString":\s*"({user_agent}[^"]+)","""
+    """"ActorInfoString":\s*"({user_agent}[^"]+)","""
     """"OrganizationId":"({tenant_id}[^"]+)","""
     """"AffectedItems".+"Subject":"\s*({email_subject}[^"]+?)\s*""""
   

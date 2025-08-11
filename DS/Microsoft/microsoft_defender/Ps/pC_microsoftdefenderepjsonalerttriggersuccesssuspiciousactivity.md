@@ -22,6 +22,9 @@ defender-atp-security-alert-events = {
       """accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """domainName":"({domain}[^"]+)""",
       """"status":"({incident_status}[^"]+)"""
+      """"incidentId":"({alert_id}\d+)"""
+      """"mitreTechniques":\[({technique}[^\]]+)\]"""
+      """"evidence".+?"verdict":"({result}[^"]+)"""
       """exa_json_path=$.firstActivityDateTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)""",
       """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
       """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -34,6 +37,9 @@ defender-atp-security-alert-events = {
       """exa_regex=accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_regex=domainName":"({domain}[^"]+)"""
       """exa_json_path=$.status,exa_field_name=incident_status"""
+      """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
+      """exa_json_path=$.incidentId,exa_field_name=alert_id"""
+      """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
     
 }
 ```

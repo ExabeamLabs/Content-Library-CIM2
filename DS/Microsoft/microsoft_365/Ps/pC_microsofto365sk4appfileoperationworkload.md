@@ -35,6 +35,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"Subject":"\s*({additional_info}[^"]+?)\s*"""",
     """"trc":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """src-account-name":"({account_name}[^"]+)""",
+    """"Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)""""
     """"OriginatingServer":"({host}[\w\-.]+?)\s*\(""",
     """Workload"*:\s*"*({resource}[^"]+)"""",
     """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
@@ -55,12 +56,14 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"SessionID":\s*"({session_id}[^"]+)""""
     """"ClientProcessName":\s*"({process_name}[^"]+)"""
     """"ClientInfoString":\s*"({user_agent}[^"]+)","""
+    """"ActorInfoString":\s*"({user_agent}[^"]+)","""
     """MailboxOwnerUPN":\s"({user_upn}[^"]+)",""",
     """ClientIPAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"UserId":\s*"({user_upn}[^",]+)""""
     """"SizeInBytes":\s*({bytes_in}\d+)"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
     """AlertSeverity":"+({alert_severity}[^"]+)"""
+    """"InternalLogonType":({login_type}\d+)"""
   ]
   DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"

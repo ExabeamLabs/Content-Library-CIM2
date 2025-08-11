@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4750
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
-    """<Data Name ='TargetSid'>({group_id}[^<]+)""",
+    """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
     """({event_code}4750)""",
     """<Level>({run_level}[^<]+)<"""
      ]

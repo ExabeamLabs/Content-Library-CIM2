@@ -14,7 +14,7 @@ Name = unix-unix-kv-alert-trigger-anomloginfailures
     """\sacct="({account_name}[^"]+)"""",
     """\sses=({session_id}\d+)""",
     """\spid=({process_id}\d+)""",
-    """\sexe="({process_dir}.+\/)({process_name}.+?)"""",
+    """\sexe="({process_dir}[^"]+[\/\\])({process_name}[^"\\\/]+?)"""",
     """\suid=({user_id}[^\s]*)\s""",
     """\sauid=({account_id}[^\s]+)\s"""
     """\shostname=(\?|({src_host}[\w\.-]+))\s+\w+=""", 

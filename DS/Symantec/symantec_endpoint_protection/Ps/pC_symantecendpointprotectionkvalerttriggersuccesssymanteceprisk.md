@@ -25,7 +25,9 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-symanteceprisk
     """,\s*Remote Port:\s*(0|({dest_port}\d+))""",
     """,\s*CIDS Signature string:\s*({alert_name}[^,]+?)\s*,""",
     """,\s*Intrusion URL:\s*({malware_url}[^,\s]+?)\s*,""",
-    """,\s*Event Type:\s*({alert_type}[^,]+?)\s*,"""
+    """,\s*Event Type:\s*({alert_type}[^,]+?)\s*,""",
+    """Remote Host MAC:([^,]+,){2}({protocol}[^,]+)""",
+    """Remote Host MAC:([^,]+,){3}({action}[^,]+)"""
   ]
 
 

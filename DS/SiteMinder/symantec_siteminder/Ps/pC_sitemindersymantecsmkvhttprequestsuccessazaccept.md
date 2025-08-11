@@ -12,9 +12,9 @@ siteminder-web-activity = {
   Vendor = SiteMinder
   TimeFormat = "dd/MMM/yyyy:HH:mm:ss Z"
   Fields = [
-    """({action}AzAccept|ValidateAccept|AzReject) ({host}[\w\-.]+) \[({time}\d+\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d [+-]\d+)\] "({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """({action}AzAccept|ValidateAccept|AzReject)\s+({host}[\w\-.]+)\s+\[({time}\d+\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d [+-]\d+)\]\s+"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+.*?((CN|cn)|((({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({user}[\w\.\-\!\#\^\~\@\[\`]{1,40}\$?)|({full_name}[\w\s]+)|))\")\s+\"(({app}[^\s]+)\s+\S+\s+(({resource}({uri_path}[^"\s\?]+)({uri_query}\?[^"]*)*))))"""
     """(uid=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=]+)),o=({group_name}[^,]+),dc=({domain}[^,"]+)|cn=(({=user}[\w\.\-\!\#\^\~]{1,40}\$?)|({=full_name}[^"\\=]+)),ou=({=domain}[^,]+),o=({=group}[^,"]+)).*?"\s+"({web_domain}\S+) ({method}\S+) ({uri_path}[^"\s\?]+)({uri_query}\?[^"]*)?""""
-    """\sCN=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=]+)),OU=({group_name}[^,]+),DC=({domain}[^,]+),DC=({top_domain}[^,]+),DC=({process_name}[^"]+)["\s]+({user_agent}[^"]+)\s+({method}(GET|POST))\s+({uri_path}[^"\s\?]+)({uri_query}\?[^"]*)?""""
+    """\sCN=(({user}[\w\.\-\!\#\^\~\@\[\`]{1,40}\$?)|({full_name}([^=]+))),OU=({group_name}[^,]+)(.+?DC=({domain}[^,]+),DC=([^,"]+))(.?DC=({process_name}[^"]+)|["\s])+({user_agent}[^"]+)\s+(\S+|({method}(GET|POST)))\s+({uri_path}[^"\s\?]+)({uri_query}\?[^"]*)?""""
   
 }
 ```

@@ -9,9 +9,11 @@ Name = sentinelone-singularityp-json-process-create-success-process
     """"endpoint.type":"({device_type}[^"]+)"""",
     """"src.process.image.sha256":\s*\\?"+({hash_sha256}[^"\\]+)"""",
     """"src.process.image.sha1":\s*\\?"+({hash_sha1}[^"\\]+)"""",
+    """src.process.name":"({process_name}[^"]+)""""
     """"src.process.parent.image.path":"+\s*({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"""",
     """process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))""""
     """"src.process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"""",
+    """tgt.process.name":"({dest_process_name}[^"]+)""""
     """"tgt.process.image.path":"({dest_process_path}({dest_process_dir}(:?[\w:]+)?[^"]*\\)({dest_process_name}[^"]+))"""",
     """"src.process.pid":({process_id}\d+)""",
     """process.cmdline":"[\\]*({process_command_line}.+?)","""
@@ -20,8 +22,6 @@ Name = sentinelone-singularityp-json-process-create-success-process
     """"tgt.process.publisher":"({dest_process_publisher}[^"]+)""""
     """"src.process.publisher":"({process_publisher}[^"]+)""""
     """"src.process.parent.publisher":"({parent_process_publisher}[^"]+)""""
-    """tgt.process.name":"({process_name}[^"]+)""""
-    """src.process.name":"({parent_process_name}[^"]+)""""
     """"src.process.parent.name":"({grandparent_process_path}[^"]+)"""
     """"src.process.signedStatus":"({process_signed}[^"]+)"""",
     """exa_json_path=$.['src.process.signedStatus'],exa_field_name=process_signed""",
@@ -31,7 +31,9 @@ Name = sentinelone-singularityp-json-process-create-success-process
     """exa_regex="src.process.user":"*((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\"]+))[\\\/]+)?(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.['src.process.parent.image.path'],exa_regex=({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))$""",
     """exa_regex=process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"""",
+    """exa_json_path=$.['src.process.name'],exa_field_name=process_name""",
     """exa_json_path=$.['src.process.image.path'],exa_regex=({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))$""",
+    """exa_json_path=$.['tgt.process.name'],exa_field_name=dest_process_name""",
     """exa_json_path=$.['tgt.process.image.path'],exa_regex=({dest_process_path}({dest_process_dir}(:?[\w:]+)?[^"]*\\)({dest_process_name}[^"]+))$""",
     """exa_json_path=$.['src.process.pid'],exa_field_name=process_id""",
     """exa_regex=process.cmdline":"[\\]*({process_command_line}.+?)"""",
@@ -40,8 +42,6 @@ Name = sentinelone-singularityp-json-process-create-success-process
     """exa_json_path=$.['tgt.process.publisher'],exa_field_name=dest_process_publisher""",
     """exa_json_path=$.['src.process.publisher'],exa_field_name=process_publisher""",
     """exa_json_path=$.['src.process.parent.publisher'],exa_field_name=parent_process_publisher""",
-    """exa_json_path=$.['tgt.process.name'],exa_field_name=process_name""",
-    """exa_json_path=$.['src.process.name'],exa_field_name=parent_process_name""",
     """exa_json_path=$.['src.process.parent.name'],exa_field_name=grandparent_process_path""",
   ]
   DupFields = [ "host->dest_host" ]

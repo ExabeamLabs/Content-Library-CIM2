@@ -12,7 +12,7 @@ ParserVersion = "v1.0.0"
 moveit-activity.Fields}[
     """\sFileID:\s*({file_id}[^,]+)"""
     """\sFileName:\s*({file_name}[^.,]+\.({file_ext}[^,]+))"""
-    """\sFolderPath:\s*({file_path}[^,]+)"""
+    """\sFolderPath:\s*({file_dir}[^,]+)"""
     """\sXFerSize:\s*({bytes}\d+)"""
   
 }

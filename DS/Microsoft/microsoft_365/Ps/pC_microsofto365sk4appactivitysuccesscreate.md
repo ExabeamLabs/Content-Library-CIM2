@@ -40,6 +40,7 @@ cef-microsoft-o365-app-activity = {
     """"os":"({os}[^"]+)"""",
     """"(browser|BrowserName)":"({browser}[^"]+)""""
     """"ClientInfoString":"({user_agent}[^"]+)",""",
+    """"ActorInfoString":"({user_agent}[^"]+)","""
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"f3u\\*"*:\\*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""

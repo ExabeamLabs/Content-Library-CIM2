@@ -45,6 +45,7 @@ Fields = [
   """exa_json_path=$.DSName,exa_field_name=ds_name""",
   """exa_json_path=$.Message,exa_regex=Directory Service:(\s*)Name:\s*({ds_name}[^\s]+)\s+Type:\s*({ds_type}[^:]*?Services)"""
   """exa_json_path=$.DSType,exa_field_name=ds_type"""
+  """exa_json_path=$.Computer,exa_field_name=host"""
 ]
 DupFields = [
 "host->dest_host"

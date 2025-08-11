@@ -29,11 +29,7 @@ Name = microsoft-o365-cef-email-success-subject
     """"TransportRule":"({alert_name}[^"]+)""",
     """"EventType":"({alert_type}[^"]+)""",
     """Category\s+\[({category}[^\]]+)\]"""
-
- ]
- DupFields = [ 
-  "email_attachment"->"file_name"
- ]
+  ]
  
 
 }

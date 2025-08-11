@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-json-alert-trigger-success-4649
   """exa_json_path=$.EventTime,exa_field_name=time""",
   """exa_json_path=$.EventID,exa_field_name=event_code""",
   """exa_json_path=$.Hostname,exa_field_name=host""",
+  """exa_json_path=$.Computer,exa_field_name=host"""
   """exa_json_path=$.Channel,exa_field_name=channel""",
   """exa_json_path=$.Message,exa_regex=({event_name}[^\.]+).\s*Subject""",
   """exa_json_path=$.EventType,exa_field_name=event_category""",
@@ -35,6 +36,10 @@ Name = microsoft-evsecurity-json-alert-trigger-success-4649
   """exa_json_path=$.AuthenticationPackage,exa_field_name=auth_package"""
   """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",
   """exa_json_path=$..WorkstationName,exa_field_name=src_host_windows,exa_match_expr=!InList($.WORKSTATION_NAME,"-")"""
+  """exa_regex=Subject: Security ID:\s*({user_sid}S-[^\s]+)\s*Account Name: ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s* Logon ID:\s*({login_id}[^\s]+)"""
+  """exa_regex=Process Name:\s+({process_path}(({process_dir}[^\s]+)\\+)?({process_name}[^\s]+))\s+Network Information:"""
+  """exa_regex=Authentication Package:\s+({auth_package}[^\s]+)""",
+  """exa_regex=Logon Process:\s+({auth_process}[^\s]+)"""
   ]
   DupFields = [ "event_name->alert_name", "auth_process->alert_type", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"

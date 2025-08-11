@@ -9,7 +9,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
   Conditions = [ """ vd=""", """ devname=""", """ devid=""", """ logid=""", """ level=""" ]
   Fields = [
     """date=({time}\d\d\d\d-\d\d-\d\d[\s,]*time=\d\d:\d\d:\d\d)""",
-    """eventtime=({time}\d{10})""",
+    """eventtime="*({time}\d{10})""",
 # logtype is removed
     """\ssubtype=\\?"?({subtype}[^\s"\\]+)""",
     """\slogid=\\?"?({event_id}[^\s"\\]+)""",
@@ -63,6 +63,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\sdevice=\\?"?({device_name}[^=]+?)\\?"?\s+(\w+=|$)""",
     """\Wtz=\\?"?({tz}[+-]\d+)"""
     """forwardedfor="*({more_info}[^"=]+)"""
+    """url="({url}[^"]+)""""
   ]
   DupFields = [
     "bytes_in->bytes"

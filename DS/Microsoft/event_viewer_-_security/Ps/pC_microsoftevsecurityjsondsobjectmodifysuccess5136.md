@@ -17,7 +17,7 @@ Fields = [
 """"+EventTime\\?"+:\\?"+({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})\\?"+"""
 """({event_name}A directory service object was modified)"""
 """"+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+"""
-""""ComputerName":"({host}[\w\-.]+)""""
+""""Computer(|Name)":"({host}[\w\-.]+)""""
 """"+EventType\\?"+:\\?"+({result}[^"\\]+)\\?"+"""
 """"+Severity\\?"+:\\?"+({severity}[^"\\]+)\\?"+"""
 """"+EventID\\?"+:({event_code}\d+)"""
@@ -28,7 +28,7 @@ Fields = [
 """"+Message\\?"+:\\?"+({additional_info}[^"\.\\]+)\s*"""
 """"+Category\\?"+:\\?"+({category}[^"\\]+)"""
 """Subject:.+?Security ID:((\\)*(\\r|\\t|\\n))*({user_sid}[^:]+?)((\\)*(\\r|\\t|\\n))*Account Name:(\\n|\\r|\\t)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((\\)*(\\r|\\t|\\n))*Account Domain:((\\)*(\\r|\\t|\\n))*({domain}[^:]+?)((\\)*(\\r|\\t|\\n))*Logon ID:((\\)*(\\r|\\t|\\n))*({login_id}[^\s]+?)\s*((\\)*(\\r|\\t|\\n))*\w+\s"""
-"""Object:.+?Class:((\\)*(\\r|\\t|\\n))*({object_type}[^:]+?)((\\)*(\\r|\\t|\\n))*\w+:"""
+"""Object:.+?Class:((\\)*(\\r|\\t|\\n))*(\s*|)({object_type}[^:]+?)(\s*|)((\\)*(\\r|\\t|\\n))*\w+:"""
 """"SubjectUserName\\?"+:\\?"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
 """"SubjectUserSid\\?"+:\\?"+({user_sid}[^"\\]+)\\?""""
 """"SubjectLogonId\\?"+:\\?"+({login_id}[^"\\]+)\\?""""
@@ -43,7 +43,7 @@ Fields = [
 """exa_regex="+EventTime\\?"+:\\?"+({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})\\?"+"""
 """exa_regex=({event_name}A directory service object was modified)"""
 """exa_regex="+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+"""
-"""exa_regex="ComputerName":"({host}[\w\-.]+)""""
+"""exa_regex="Computer(|Name)":"({host}[\w\-.]+)""""
 """exa_regex="+EventType\\?"+:\\?"+({result}[^"\\]+)\\?"+"""
 """exa_regex="+Severity\\?"+:\\?"+({severity}[^"\\]+)\\?"+"""
 """"+EventID\\?"+:({event_code}\d+)"""
@@ -54,7 +54,7 @@ Fields = [
 """"+Message\\?"+:\\?"+({additional_info}[^"\.\\]+)\s*"""
 """exa_regex="+Category\\?"+:\\?"+({category}[^"\\]+)"""
 """exa_regex=Subject:.+?Security ID:((\\)*(\\r|\\t|\\n))*({user_sid}[^:]+?)((\\)*(\\r|\\t|\\n))*Account Name:(\\n|\\r|\\t)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((\\)*(\\r|\\t|\\n))*Account Domain:((\\)*(\\r|\\t|\\n))*({domain}[^:]+?)((\\)*(\\r|\\t|\\n))*Logon ID:((\\)*(\\r|\\t|\\n))*({login_id}[^\s]+?)\s*((\\)*(\\r|\\t|\\n))*\w+\s"""
-"""exa_regex=Object:.+?Class:((\\)*(\\r|\\t|\\n))*({object_type}[^:]+?)((\\)*(\\r|\\t|\\n))*\w+:"""
+"""exa_regex=Object:.+?Class:((\\)*(\\r|\\t|\\n))*(\s*|)({object_type}[^:]+?)(\s*|)((\\)*(\\r|\\t|\\n))*\w+:"""
 """exa_regex="SubjectUserName\\?"+:\\?"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
 """exa_regex="SubjectUserSid\\?"+:\\?"+({user_sid}[^"\\]+)\\?""""
 """exa_regex="SubjectLogonId\\?"+:\\?"+({login_id}[^"\\]+)\\?""""
@@ -64,7 +64,19 @@ Fields = [
 """exa_regex=<Data Name\\*=('|")ObjectDN('|")>\s*({ds_object_dn}[^<]+?)\s*</Data>"""
 """exa_regex=<Data Name\\*=("|')DSName("|')>(|({ds_name}[^<]+?))</Data>"""
 """exa_regex=<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
-
+"""AttributeValue("|')>({attribute_value}[^"'<]+)</Data>"""
+"""exa_regex=AttributeValue("|')>({attribute_value}[^"'<]+)</Data>"""
+"""<Data Name(\\)?=('|")OperationType('|")>({operation_type}[^<]+)"""
+"""exa_regex=<Data Name(\\)?=('|")OperationType('|")>({operation_type}[^<]+)"""
+"""exa_json_path=$.AttributeValue,exa_field_name=attribute_value""",
+"""exa_json_path=$.OperationType,exa_field_name=operation_type""",
+"""exa_json_path=$.AttributeLDAPDisplayName,exa_field_name=attribute""",
+"""AttributeValue(\\)?":(\\)?"({attribute_value}[^"'>\\]+)""",
+"""OperationType(\\)?":(\\)?"({operation_type}[^"\\]+)"""
+"""<Data Name\\*=('|")AttributeLDAPDisplayName('|")>\s*({attribute}[^<]+?)\s*</Data>"""
+"""exa_regex=<Data Name\\*=('|")AttributeLDAPDisplayName('|")>\s*({attribute}[^<]+?)\s*</Data>"""
+"""AttributeLDAPDisplayName(\\)?":(\\)?"({attribute}[^"\\]+)"""
+"""exa_json_path=$.EventID,exa_field_name=event_code""",
 ]
 DupFields = [ "host->dest_host", "event_name->additional_info", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"

@@ -18,7 +18,7 @@ Name = "salesforce-sf-cef-file-upload-success-cloud"
     """\WoldFileName =({src_file_name}.+?)\s*(\w+=|$)"""
     """\WfileType=({file_type}.+?)\s+(\w+=|$)""",
     """\WdestinationServiceName =({app}.+?)\s*(\w+=|$)""",
-    """filePath=({file_path}[^=]+?)\s+\w+="""
+    """filePath=({file_id}[^=]+?)\s+\w+="""
     """dproc=({action}[\w-]+)"""
     """Owner\.Name\\?=({full_name}({first_name}[^\s]+)\s({last_name}[^;]+))"""
     """msg=({additional_info}[^=]+?)\s\w+="""

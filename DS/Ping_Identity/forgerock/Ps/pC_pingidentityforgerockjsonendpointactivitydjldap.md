@@ -1,0 +1,31 @@
+#### Parser Content
+```Java
+{
+Name = "pingidentity-forgerock-json-endpoint-activity-djldap"
+  Vendor = "Ping Identity"
+  Product = "ForgeRock"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+  ExtractionType = json
+  Conditions = [ """"eventName":"DJ-LDAP"""", """"operation":"""", """"status":"""" ]
+  Fields = [
+    """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_json_path=$.eventName,exa_field_name=event_name"""    
+    """exa_json_path=$.client.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.client.port,exa_field_name=src_port"""
+    """exa_json_path=$.server.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.server.port,exa_field_name=dest_port"""
+    """exa_json_path=$..protocol,exa_field_name=protocol"""
+    """exa_json_path=$..operation,exa_field_name=operation"""
+    """exa_json_path=$..msgId,exa_field_name=message_id"""
+    """exa_json_path=$..scope,exa_field_name=search_scope"""
+    """exa_json_path=$..filter,exa_field_name=filter"""
+    """exa_json_path=$..attrs,exa_field_name=additional_info"""    
+    """exa_json_path=$.transactionId,exa_field_name=message_id"""
+    """exa_json_path=$..status,exa_field_name=result"""
+    """exa_json_path=$.userId,exa_field_name=user_id"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

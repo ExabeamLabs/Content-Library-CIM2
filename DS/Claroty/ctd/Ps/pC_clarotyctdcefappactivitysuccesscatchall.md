@@ -8,8 +8,7 @@ Name = claroty-ctd-cef-app-activity-success-catch-all
   Conditions = [ """CEF:""", """|CTD|""" ]
   Fields = [
       """CtdTimeGenerated=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-      """start=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
-      """({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)\s\w{3}\sCEF:""",
+      """({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)\s\w+\sCEF:""",
       """\|CTD\|([^\|]+\|){2}({alert_name}[^\|]+)\|({alert_severity}[^\|]+)""",
       """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
       """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",

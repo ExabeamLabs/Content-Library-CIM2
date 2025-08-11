@@ -10,7 +10,7 @@ Name = microsoft-o365-sk4-alert-trigger-threatmanagement
   Fields = ${MicrosoftParserTemplates.json-microsoft-security-events.Fields}[
     """msg=.*?Alert Detected by \[?({alert_source}[^\]:]+)\]?:?"""
   ]
-  DupFields = [ "alert_name->alert_subject", "domain->top_domain" ]
+  DupFields = [ "alert_name->alert_subject" ]
 
 json-microsoft-security-events = {
      Vendor = Microsoft
@@ -40,6 +40,9 @@ json-microsoft-security-events = {
        """"destinationServiceName":"({app}[^"]+)""""
        """"status":"({incident_status}[^"]+)"""",
        """"logonLocation"+:\s*"+({location}[^"]+)""""
+       """"incidentId":\s*"({alert_id}\d+)"""
+      """"mitreTechniques":\[({technique}[^\]]+)\]"""
+      """"evidence".+?"verdict":"({result}[^"]+)"""
        """exa_json_path=$.id,exa_field_name=alert_id""",
        """exa_json_path=$.title,exa_field_name=alert_name""",
        """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -62,6 +65,9 @@ json-microsoft-security-events = {
        """exa_json_path=$.status,exa_field_name=incident_status""",
        """exa_json_path=$.logonLocation,exa_field_name=location"""
        """exa_regex="domainName"+:\s*"+(-|({domain}[^"]+))[^}\]]+?userPrincipalName"""
+       """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
+       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
+       """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
      
 }
 ```

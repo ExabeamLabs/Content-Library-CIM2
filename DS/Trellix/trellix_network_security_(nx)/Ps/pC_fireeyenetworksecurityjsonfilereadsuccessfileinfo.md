@@ -4,19 +4,19 @@
 Name = "fireeye-networksecurity-json-file-read-success-fileinfo"
 	Conditions = [ """"event_type":"fileinfo"""", """"flow_id":""", """"fileinfo":{""", """"filename":"""", """"md5":"""", """"state":""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
-  	  """exa_json_path=$.fileinfo.filename,exa_field_name=file_path""",
-    	"""exa_json_path=$.fileinfo.filename,exa_regex=({file_path}((|({file_dir}[^"]*?)[\\\/]+))?({file_name}[^"\\\/]+?(\.({file_ext}[^"\/\\\.]+))?))("|$)""",
-    	"""exa_json_path=$.fileinfo.state,exa_field_name=state""",
-    	"""exa_json_path=$.fileinfo.md5,exa_field_name=hash_md5""",
-    	"""exa_json_path=$.fileinfo.size,exa_field_name=bytes""",
-    	"""exa_json_path=$.fileinfo.file_id,exa_field_name=file_id""",
+      """exa_json_path=$.http.url,exa_field_name=file_path""",
+      """exa_json_path=$.fileinfo.filename,exa_field_name=file_path""",
+      """exa_json_path=$.fileinfo.filename,exa_regex=({file_path}((|({file_dir}[^"]*?)[\\\/]+))?({file_name}[^"\\\/]+?(\.({file_ext}[^"\/\\\.]+))?))("|$)""",
+      """exa_json_path=$.fileinfo.state,exa_field_name=state""",
+      """exa_json_path=$.fileinfo.md5,exa_field_name=hash_md5""",
+      """exa_json_path=$.fileinfo.size,exa_field_name=bytes""",
+      """exa_json_path=$.fileinfo.file_id,exa_field_name=file_id""",
       """exa_json_path=$.http.http_method,exa_field_name=method""",
       """exa_json_path=$.http.status,exa_field_name=http_response_code""",
       """exa_json_path=$.http.http_user_agent,exa_field_name=user_agent""",
       """exa_json_path=$.http.protocol,exa_field_name=protocol""",
-      """exa_json_path=$.http.url,exa_field_name=file_path""",
       """exa_json_path=$.http.hostname,exa_field_name=web_domain""",
-    	"""exa_json_path=$.http.http_port,exa_field_name=dest_port"""
+      """exa_json_path=$.http.http_port,exa_field_name=dest_port""",
       """exa_json_path=$.http.http_content_type,exa_field_name=mime"""
     ]
 	ParserVersion = "v1.0.0"

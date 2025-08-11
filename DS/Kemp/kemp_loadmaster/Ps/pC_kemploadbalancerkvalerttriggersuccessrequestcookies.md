@@ -14,7 +14,7 @@ Fields = [
   """\[severity\s+"({alert_severity}[^"]+)"""
   """({time}\d\d\d\d\-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d:\d\d)\s+({host}[\w\-\.]+) wafd"""
   """ModSecurity: Warning. Pattern match\s+"({additional_info}.+?)"\s+at REQUEST_COOKIES"""
-  """\[file "(({file_path}({file_dir}[^\]]+)\/)?({file_name}[^"]+))"""
+  """\[file "({file_path}(({file_dir}[^\]]+)\/)?({file_name}[^"\\\/]+))""""
   """\[msg "({alert_name}[^"]+)"""
   """found within REQUEST_COOKIES:roHistory: \[({request_cookie}[^\]]+)"""
 ]

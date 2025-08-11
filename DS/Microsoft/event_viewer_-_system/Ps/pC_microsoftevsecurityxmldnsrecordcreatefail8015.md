@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-dns-record-create-fail-8015
   Conditions = [ """<EventID>8015</EventID>""", """Data Name""","""'AdapterSuffixName'""" , """<Channel>System</Channel>""" ]
   Fields = ${WindowsParsersTemplates.windows-events-5.Fields}[
     """IP Address\(es\) :\s*[^\s]+\s*({failure_reason}[^>]+?)\.""",
-    """<Data Name ='ErrorCode'>({failure_code}[^<]+)<\/Data>""",
+    """<Data Name =('|")ErrorCode('|")>({failure_code}[^<]+)<\/Data>""",
     """<Computer>({host}[^<]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

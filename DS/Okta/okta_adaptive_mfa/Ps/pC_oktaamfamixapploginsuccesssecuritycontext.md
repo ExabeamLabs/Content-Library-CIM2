@@ -50,11 +50,12 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
     """"deviceFingerprint":\s*"({fingerprint}[^"]+)""""
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
-    """"debugData":.*?"risk":\s*"[^"]*?level=\s*({severity}[^"\}]+)("|\})"""
+    """"debugData":.*?"risk":\s*"[^"]*?level=\s*({severity}\w+)("|,|\})"""
     """"target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance""""
     """"target":.+?"type":"(App)?User".+?"displayName":"({full_name}\w+(,\s+\w+)+)"""
     """"tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """"behaviors":"\{({more_info}[^\}"]+)\}"""",
+    """"target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_regex=({event_name}(Kerberos[^",]+user)|([^"]+))""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
@@ -87,7 +88,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..client.userAgent.os,exa_field_name=os,exa_match_expr=!Contains($.client.userAgent.os,"unknown")""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint""",
     """exa_json_path=$..target[1:].detailEntry.methodTypeUsed,exa_field_name=auth_method""",
-    """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",
+    """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}\w+)("|,|\})""",
     """exa_regex="domain"+:"+(null|\.|({domain}[^"\/,]+))""",
     """exa_regex=({app}(?i)Okta|Microsoft Office 365)""",
     """exa_json_path=$..actor.displayName,exa_field_name=app,exa_match_expr=Contains($.actor.type,"PublicClientApp")""",
@@ -99,8 +100,14 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"[^"]*","displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
-    """exa_regex=behaviors":"\{({more_info}[^\}]+)"""
-    """behaviors":"\{({more_info}[^\}]+)"""
+    """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
+    """"behaviors\\*":"*\{({more_info}[^\}]+)""",
+    """"actor":[^\]\}]*?"alternateId"\s*:"({src_user}[^"]+)""""
+    """"target":[^\]\}]*?"alternateId"\s*:"({target}[^"]+)""""
+    """exa_json_path=$..actor.alternateId,exa_field_name=src_user""",
+    """exa_json_path=$..target.alternateId,exa_field_name=target""",
+    """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
+
   ]
   DupFields = ["operation->alert_name"]
 

@@ -1,0 +1,22 @@
+#### Parser Content
+```Java
+{
+Name = keepersecurity-keeper-json-app-activity-access-auditevent
+  Vendor = Keeper Security
+  Product = Keeper
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Conditions = [ """ keeper """, """"audit_event":"""", """"remote_address":"""", """"username":"""" ]
+  Fields = [
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
+    """"audit_event":"({event_name}[^"]+)"""",
+    """"channel":"({channel}[^"]+)"""",
+    """"remote_address"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"category":"({category}[^"]+)"""",
+    """"client_version":"({client_version}[^"]+)"""",
+    """"username"+:"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s"@]+))?)""""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

@@ -12,6 +12,12 @@ Name = microsoft-evsecurity-sk4-ds-object-modify-success-5136
     """({event_name}A directory service object was modified)""",
     """"ObjectDN"+:"+({ds_object_dn}[^"]+)""",
     """"ObjectClass"+:"+({object_type}[^"]+)""",
+    """AttributeValue(\\)?":(\\)?"({attribute_value}[^"'>\\]+)"""
+    """OperationType(\\)?":(\\)?"({operation_type}[^"\\]+)"""
+    """AttributeLDAPDisplayName(\\)?":(\\)?"({attribute}[^"\\]+)"""
+    """exa_json_path=$.AttributeValue,exa_field_name=attribute_value""",
+    """exa_json_path=$.OperationType,exa_field_name=operation_type""",
+    """exa_json_path=$.AttributeLDAPDisplayName,exa_field_name=attribute""",
   ]
 
 json-windows-events-1 = {

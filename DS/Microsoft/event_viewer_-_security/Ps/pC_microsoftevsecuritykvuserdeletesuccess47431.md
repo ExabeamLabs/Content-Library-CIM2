@@ -7,8 +7,10 @@ Product = "Event Viewer - Security"
 TimeFormat = "MMM dd HH:mm:ss yyyy"
 Conditions = [
 """A computer account was deleted"""
-"""(EventID 4743)"""
-"""Microsoft Windows security auditing"""
+""" 4743 """
+""" MSWinEventLog """
+""" Microsoft"""
+"""auditing"""
 ]
 Fields = [
 """({event_name}A computer account was deleted)"""

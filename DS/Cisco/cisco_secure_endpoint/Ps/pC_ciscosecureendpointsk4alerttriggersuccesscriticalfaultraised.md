@@ -16,7 +16,6 @@ s-cisco-amp-alert = {
   TimeFormat = "epoch_sec"
   Fields = [
     """\Wact=(|({action}[^=]+?))(\s+\w+=|\s*$)""",
-    """\Wdproc=(|({process_path}[^=]+?))\s*(\w+=|$|"|')""",
     """\Woutcome=(|({result}[^=]+?))(\s+\w+=|\s*$)""",
     """"timestamp":\s*({time}\d{10})""",
     """dpriv=({alert_name}[^=]+?)\s\w+=""",
@@ -53,6 +52,7 @@ s-cisco-amp-alert = {
     """exa_json_path=$.computer.external_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.computer.network_addresses..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$.event_type,exa_field_name=event_name"""
+    """exa_json_path=$.event_type,exa_field_name=alert_type"""
     """exa_json_path=$..computer.network_addresses[:1].Mac,exa_field_name=src_mac"""
     """exa_json_path=$.event.computer.network_addresses[:1].mac,exa_field_name=src_mac"""
     """exa_json_path=$.event.file.identity.sha256,exa_field_name=hash_sha256"""
@@ -66,6 +66,6 @@ s-cisco-amp-alert = {
     """exa_json_path=$.event.file.identity.sha256,exa_field_name=hash_sha256"""
     """exa_json_path=$.event.file.file_path,exa_field_name=file_path"""
   ]
-  DupFields = [ "file_path->malware_file_name", "event_name->alert_type", "alert_type->category" 
+  DupFields = [ "file_path->malware_file_name", "alert_type->category" 
 }
 ```

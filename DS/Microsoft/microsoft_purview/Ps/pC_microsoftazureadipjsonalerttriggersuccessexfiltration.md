@@ -20,6 +20,9 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
     """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
     """"userAccount":\{[^\}]+?displayName":"({full_name}[^\s"]+\s[^"\(\s]+)\s\([^)"]+\)"""",
     """"userSid":"({user_sid}[^"]+)""""
+    """"incidentId":"({alert_id}\d+)"""
+    """"mitreTechniques":\[({technique}[^\]]+)\]"""
+    """"evidence".+?"verdict":"({result}[^"]+)"""
     """exa_json_path=$.id,exa_field_name=alert_id""",
     """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -32,6 +35,9 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
     """exa_json_path=$.evidence[0].userAccount.userPrincipalName,exa_field_name=user_upn""",
     """exa_json_path=$.evidence[0].userAccount.displayName,exa_regex="({full_name}[^\s"]+\s[^"\(\s]+)\s\([^)"]+\)"""",
     """exa_json_path=$.evidence[0].userAccount.userSid,exa_field_name=user_sid"""
+    """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
+    """exa_json_path=$.incidentId,exa_field_name=alert_id"""
+    """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
   ]
   ParserVersion = v1.0.0
 

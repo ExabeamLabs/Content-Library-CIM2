@@ -28,7 +28,7 @@ Fields = [
   """\s+Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain"""
   """\s+Domain Name:\s+({domain}[^\s]+)"""
   """\s+Logon ID:\s+({login_id}[^\s]+)"""
-  """SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""
+  """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""
   """\s+Logon ID:\s+({login_id}[^<>\s=]+)"""
   """<Computer>({host}[\w\-.]+?)<\/Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""

@@ -18,6 +18,7 @@ Name = sailpoint-identitynow-json-app-authentication-login
     """exa_json_path=$.attributes.sourceName,exa_regex=((?i:null|NONE)|({app}[^"]+))""",
     """exa_json_path=$.attributes.info,exa_regex=((?i:null|NONE)|({additional_info}[^"]+))"""
     """exa_json_path=$.status,exa_regex=((?i:null|NONE)|({result}[^"]+))$"""
+    """exa_json_path=$.trackingNumber,exa_field_name=tracking_id"""
   ]
   ParserVersion = "v1.0.0"
 

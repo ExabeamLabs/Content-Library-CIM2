@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
   """Common\.Request-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d[^\s]+)"""
   """({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s+(LEEF|CEF):"""
-  """Common\.Username=(?:({user_type}host)\/)?(({email_address}[^@\s]+@[^\.\s]+\.[^\s]+)|(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s\w+\.\w+=)"""
+  """Common\.Username=(({user_type}host)\/({src_host}[\w\-.]+)|([\d]{14})|({host}[A-Z\d]{15})|({=host}[A-Z\d]{10})|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_mac}([a-fA-F\d]{2}[\-:]?){5}[a-fA-F\d]{2})|({user}[a-z\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[a-z\.\-\!\#\^\~]{1,40}\$?))(\s+\w+\.\w+=)"""
   """Common\.Service=({network}.*?)\s*([\w\-.]+=|$)"""
   """Common\.Host-MAC-Address=({src_mac}\w+)\s*([\w\-.]+=|$)"""
   """Common\.Auth-Type=(|({auth_type}.+?))\s*([\w\-.]+=|$)"""

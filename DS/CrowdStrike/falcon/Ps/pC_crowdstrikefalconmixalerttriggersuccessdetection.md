@@ -19,7 +19,6 @@ Fields = [
 """"DetectId":\s*"({alert_id}[^"]+)"""
 """({additional_info_1}"DocumentsAccessed":\s*[^\]]+\]).*?({additional_info_2}"ExecutablesWritten":\s*[^\]]+\])"""
 """"FileName":\s*"\s*({process_name}[^"]+?)""""
-""""FilePath":\s*"(|({file_path}[^"]+))""""
 """"CommandLine"+:\s*"+\\*"*\s*({process_command_line}[^\n]+?)\\*\s*"+,"""
 """"SensorId":\s*"({sensor_id}[^"]+)"""
 """"ComputerName":\s*"({src_host}[^"]+)"""
@@ -62,8 +61,9 @@ Fields = [
 """"RemoteAddressIP(4|6)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":"({src_port}\d+)".+?"ConnectionDirection":"1""""
 """"RemoteAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":({dest_port}\d+),.+?"Protocol":"({protocol}[^"]+)",.+?"ConnectionDirection""""
 """"ComputerName":\s*"({dest_host}[\w\-\.]+)"""
-""""FileName":"({file_name}[^"]+(\.)({file_ext}[^"]+))","""
-""""Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_path}[^"]+)"\}"""
+""""FileName":\s*"({file_name}[^"]+?(\.({file_ext}\w+))?)","""
+""""FilePath":\s*"(|(({file_dir}[^"]+?[\\\/]+)({file_name}[^"\\\/]+(\.({file_ext}[a-zA-Z]+))))|({=file_dir}[^"]+))""""
+""""Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_dir}[^"]+)"\}"""
 """"destinationServiceName":"({alert_source}[^"]+)""""
 """"Description":"({additional_info}[^"]+)""""
 """"Hostname":\s*"({src_host}[\w\-\.]+)"""
@@ -83,7 +83,6 @@ Fields = [
 """exa_json_path=$..DetectId,exa_field_name=alert_id""",
 """exa_regex=({additional_info_1}"DocumentsAccessed":\s*[^\]]+\]).*?({additional_info_2}"ExecutablesWritten":\s*[^\]]+\])""",
 """exa_json_path=$.event.FileName,exa_field_name=process_name""",
-"""exa_json_path=$.event.FilePath,exa_field_name=file_path""",
 """exa_json_path=$..CommandLine,exa_field_name=process_command_line""",
 """exa_json_path=$..SensorId,exa_field_name=sensor_id""",
 """exa_json_path=$.event.ComputerName,exa_field_name=src_host""",
@@ -130,8 +129,9 @@ Fields = [
 """exa_json_path=$..Name,exa_field_name=alert_name"""
 """exa_json_path=$.SourceAccountName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """exa_json_path=$.UTCTimestamp,exa_field_name=time"""
-"""exa_regex="FileName":"({file_name}[^"]+(\.)({file_ext}[^"]+))","""
-"""exa_regex="Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_path}[^"]+)"\}"""
+"""exa_regex="FileName":\s*"({file_name}[^"]+?(\.({file_ext}\w+))?)","""
+"""exa_json_path=$.event.FilePath,exa_regex=^(|({file_path}({file_dir}[^"]+?[\\\/]+)({file_name}[^"\\\/]+(\.({file_ext}[a-zA-Z]+))))|({=file_dir}[^"]+))$""",
+"""exa_regex="Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_dir}[^"]+)"\}"""
 """exa_json_path=$..Hostname,exa_field_name=host"""
 """exa_json_path=$.event.SourceProducts,exa_field_name=src_product"""
 """exa_json_path=$.event.SourceEndpointIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

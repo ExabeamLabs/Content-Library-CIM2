@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4902-1
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Task>({sub_category}[^<]+)""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<EventID>({event_code}[^<]+)<""",
     """<Execution ProcessID\\*='({process_id}[^']+)""",

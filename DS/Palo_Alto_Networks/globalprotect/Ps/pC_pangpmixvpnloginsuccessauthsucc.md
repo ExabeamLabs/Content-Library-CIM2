@@ -17,7 +17,7 @@ Fields = [
 """DeviceName =({host}[\w\-.]+)"""
 """globalprotect\w*-\S+?,({host}.+?),"""
 """:\d\d:\d\d\s+({host}[^\s]+)"""
-"""SYSTEM,({vpn_client}[^,]+),"""
+""",SYSTEM,({vpn_client}[^,]+),"""
 """Source region:\s*({src_country}[^,]+)?""",
 """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]

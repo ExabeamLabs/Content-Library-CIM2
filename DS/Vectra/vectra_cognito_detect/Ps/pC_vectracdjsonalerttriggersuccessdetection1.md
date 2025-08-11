@@ -25,7 +25,11 @@ Name = vectra-cd-json-alert-trigger-success-detection-1
     """exa_json_path=$.detail.bytes_received,exa_field_name=bytes_in""",
     """exa_json_path=$.detail.bytes_sent,exa_field_name=bytes_out""",
     """exa_json_path=$.triaged,exa_field_name=additional_info""",
-    """exa_json_path=$.mitre,exa_field_name=mitre_labels"""    
+    """exa_json_path=$.mitre,exa_field_name=mitre_labels"""
+    """exa_json_path=$.detail.dst_host.ip,exa_field_name=dest_ip"""
+    """exa_json_path=$.detail.dst_host.name,exa_field_name=dest_host"""
+    """exa_json_path=$.detail.dst_port,exa_field_name=dest_port"""
+    """exa_json_path=$.category,exa_field_name=tactic"""
   ]
   ParserVersion = "v1.0.0"  
 

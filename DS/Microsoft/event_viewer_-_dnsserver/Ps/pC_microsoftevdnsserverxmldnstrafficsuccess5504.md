@@ -7,7 +7,7 @@ Name = microsoft-evdnsserver-xml-dns-traffic-success-5504
   Conditions = [ """<EventID>5504</EventID>""", """<Channel>DNS Server</Channel>""", """Microsoft-Windows-DNS-Server-Service""", """DNS_EVENT_INVALID_PACKET_DOMAIN_NAME""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
     """<Computer>({host}[\w\-\.]+)<"""
-    """<Data Name ='param1'>(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+))</Data>"""
+    """<Data Name =('|")param1('|")>(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+))</Data>"""
   ]
 
 xml-windows-eventviewer-events = {

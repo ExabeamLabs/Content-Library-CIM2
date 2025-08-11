@@ -26,7 +26,7 @@ Name = unix-unix-mix-user-switch-success-sudo
 """({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({dest_user}[^;\s]+)""",
 """\/(user(add|del)|passwd)\s([^"]*?\s*)?({dest_user}\w+?)\s*(\d\d\d\d\-|$)""",
 """\WPWD\\?=({process_dir}[^\s;]+)""",
-"""\WCOMMAND\\?=({process_path}([^\s]+[\\\/]+)?({process_name}[^;\\\/\s]+))\s(?:|;|$)""",
+"""\WCOMMAND\\?=({process_path}({process_dir}[^\s]+[\\\/]+)?({process_name}[^;\\\/\s]+))\s(?:|;|$)""",
 """\WCOMMAND\\?=({process_command_line}[^\"]+)(\"|$|\s(?:|;|$))""",
 """\"description\":\"({event_name}[^\"]+)\"""",
 """\"level\":({severity}[^\",]+)""",

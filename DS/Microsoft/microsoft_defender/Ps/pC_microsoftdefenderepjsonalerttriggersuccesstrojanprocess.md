@@ -16,7 +16,7 @@ Fields = [
 """exa_json_path=$.threatid,exa_field_name=threat_id"""
 """exa_json_path=$.targethost,exa_field_name=src_host"""
 """exa_json_path=$.severityid,exa_field_name=alert_severity"""
-"""exa_json_path=$.process,exa_regex=(({process_path}({process_dir}[^"]+[\\\/]+))?({process_name}[^"]+))"""
+"""exa_json_path=$.process,exa_regex=({process_path}({process_dir}[^"]+[\\\/]+)?({process_name}[^"\\\/]+))"""
 """exa_json_path=$.path,exa_field_name=malware_url"""
 """exa_json_path=$.ntdomain,exa_field_name=domain"""
 """exa_json_path=$.name,exa_field_name=alert_type"""

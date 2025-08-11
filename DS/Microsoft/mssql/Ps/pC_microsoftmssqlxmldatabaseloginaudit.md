@@ -16,7 +16,7 @@ Name = microsoft-mssql-xml-database-login-audit
   Fields = [
     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<EventID Qualifiers=[^>]+>({event_code}\d+)""",
-    """<Provider Name =('|")({db_name}[^']+)('|")""",
+    """<Provider Name =('|")({db_name}[^'"]+)('|")""",
     """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Message>({additional_info}[^<]+)""",

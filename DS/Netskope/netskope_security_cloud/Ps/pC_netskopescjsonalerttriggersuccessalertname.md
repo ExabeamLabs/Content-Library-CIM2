@@ -33,7 +33,7 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """exa_json_path=$.shared_with,exa_field_name=shared_with_at"""
     """exa_json_path=$.site,exa_field_name=site_at"""
     """exa_json_path=$.protocol,exa_field_name=protocol"""
-    """exa_json_path=$.domain,exa_field_name=top_domain"""
+    """exa_json_path=$.domain,exa_field_name=web_domain"""
     """exa_json_path=$.file_size,exa_field_name=bytes"""
     """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
     """exa_json_path=$.computer_name,exa_field_name=host"""

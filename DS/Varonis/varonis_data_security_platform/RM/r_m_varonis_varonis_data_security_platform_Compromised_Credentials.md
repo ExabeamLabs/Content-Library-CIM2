@@ -7,7 +7,7 @@ Vendor: Varonis
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  55   |   23   |         10         |       5        |    4    |
+|  55   |   23   |         10         |       5        |    3    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

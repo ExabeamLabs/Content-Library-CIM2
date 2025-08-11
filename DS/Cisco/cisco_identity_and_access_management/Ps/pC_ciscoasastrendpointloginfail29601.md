@@ -9,6 +9,7 @@ Name = cisco-asa-str-endpoint-login-fail-2960-1
   ]
   Fields = ${CiscoParsersTemplates.cisco-2960-auth-events.Fields} [
     """({failure_reason}Authentication[^"]+?)\s*"*$"""
+    """Username:\s*host\/({src_host}[\w\-]+)"""
   ]
 
 cisco-2960-auth-events = {

@@ -4,7 +4,7 @@
 Name = cisco-cucm-kv-endpoint-login-success-authsuccess
   Product = Cisco Collaboration
   ParserVersion = v1.0.0
-  Conditions = [ """EventType =UserLogging""", """=Login Authentication Successful]""" ]
+  Conditions = [ """EventType""", """=UserLogging""", """=Login Authentication Successful]""", """ %UC_AUDITLOG-""" ]
 
 cisco-events-2 = {
   Vendor = Cisco

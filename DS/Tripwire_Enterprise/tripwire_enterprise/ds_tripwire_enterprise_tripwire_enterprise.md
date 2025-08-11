@@ -4,14 +4,14 @@ Product: Tripwire Enterprise
 ----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   2    |         2          |       1        |    1    |
+|   5   |   2    |         2          |       1        |    2    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP          | Content    |
 |:----:| ---- | ---- | ---- |
-|   [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)   |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> | TA0002 - TA0002<br>        | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Data_Exfiltration.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> | TA0002 - TA0002<br>        | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Malware.md)    |
-|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Privilege_Abuse.md)    |
-| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Privileged_Activity.md)    |
+|   [Data Exfiltration](../../../UseCases/uc_data_exfiltration.md)   |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> ↳[tripwire-t-cef-alert-trigger-success-filemodified](Ps/pC_tripwiretcefalerttriggersuccessfilemodified.md)<br> | TA0002 - TA0002<br>        | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Data_Exfiltration.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> ↳[tripwire-t-cef-alert-trigger-success-filemodified](Ps/pC_tripwiretcefalerttriggersuccessfilemodified.md)<br> | TA0002 - TA0002<br>        | [<ul><li>2 Rules</li></ul><ul><li>1 Models</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Malware.md)    |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> ↳[tripwire-t-cef-alert-trigger-success-filemodified](Ps/pC_tripwiretcefalerttriggersuccessfilemodified.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Privilege_Abuse.md)    |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  alert-trigger:success (file-alert)<br> ↳[tripwire-t-kv-alert-trigger-success-accessed](Ps/pC_tripwiretkvalerttriggersuccessaccessed.md)<br> ↳[tripwire-t-cef-alert-trigger-success-filemodified](Ps/pC_tripwiretcefalerttriggersuccessfilemodified.md)<br> | T1078 - Valid Accounts<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_tripwire_enterprise_tripwire_enterprise_Privileged_Activity.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

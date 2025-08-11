@@ -9,7 +9,7 @@ wiz-w-json-audit-log = {
   Vendor = Wiz
   Product = Wiz
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ"]
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.sourceIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

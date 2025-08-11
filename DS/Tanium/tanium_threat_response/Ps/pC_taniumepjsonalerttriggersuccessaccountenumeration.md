@@ -15,8 +15,8 @@ Conditions = [
 Fields = [
   """exa_json_path=$.['Alert Id'],exa_field_name=alert_id"""
   """exa_json_path=$.Timestamp,exa_field_name=time"""
-  """exa_json_path=$.['Computer Name'],exa_field_name=host"""
-  """exa_json_path=$.['Computer IP'],exa_field_name=dest_ip"""
+  """exa_json_path=$.['Computer Name'],exa_field_name=src_host"""
+  """exa_json_path=$.['Computer IP'],exa_field_name=src_ip"""
   """exa_json_path=$.['Intel Type'],exa_field_name=alert_type"""
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
   """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""

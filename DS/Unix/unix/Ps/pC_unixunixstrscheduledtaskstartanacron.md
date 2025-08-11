@@ -5,7 +5,7 @@ Name = unix-unix-str-scheduled-task-start-anacron
   Vendor = Unix
   Product = Unix
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","MMM dd HH:mm:ss"]
-  Conditions = [ """anacron""", """run-parts""" ]
+  Conditions = [ """cron""", """run-parts""" ]
   Fields = [
     """\d\d:\d\d:\d\d\s((::ffff:)?({dest_ip}[A-Fa-f:\d.]*)\s+)?(::ffff:)?({host}[^\s]+)\s*({additional_info}.+?)\s*$""",
     """({time}\w{3}\s*\d\d?\s\d\d:\d\d:\d\d)\s(::ffff:)?({host}[\w\-.]+)\s""",

@@ -5,7 +5,7 @@ Name = google-cloudplatform-json-app-activity-success-catchall_dprocpubsub
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ" ]
     ParserVersion = "v1.0.0"
     Conditions = [ """destinationServiceName =Google Cloud""", """dproc=Cloud PubSub""",  ]
     Fields = [

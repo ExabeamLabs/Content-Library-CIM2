@@ -6,7 +6,7 @@ Name = "google-cloudplatform-json-network-traffic-success-payload"
   Vendor = "Google"
   Product = "Google Cloud Platform"
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" ]
   Conditions = [
 """"jsonPayload":"""
 """"vm_name":"""

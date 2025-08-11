@@ -2,14 +2,14 @@
 ```Java
 {
 Name = servicenow-s-sk4-app-authentication-success-externalauthenticationsucceeded
-  Vendor = ServiceNow
-  ParserVersion = "v1.0.0"
-  Product = ServiceNow
-  Conditions = [ """"sys_created_by":""", """"sys_created_on":""", """"name":"external.authentication.succeeded"""" ]
-  Fields = ${ServiceNowParsersTemplates.servicenow-auth-template.Fields}[
-    """"parm2":"({additional_info}[^"]+)"""
-  ]
-
+   Vendor = ServiceNow
+   ParserVersion = "v1.0.0"
+   Product = ServiceNow
+   Conditions = [ """"sys_created_by":""", """"sys_created_on":""", """"name":"external.authentication.succeeded"""" ]
+   Fields = ${ServiceNowParsersTemplates.servicenow-auth-template.Fields}[
+     """"parm2":"({additional_info}[^"]+)"""
+   ]
+ 
 servicenow-auth-template = {
     Vendor = ServiceNow
     Product = ServiceNow

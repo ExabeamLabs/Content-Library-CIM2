@@ -4,7 +4,7 @@
 Name = google-cloudplatform-json-http-session-httploadbalancer
   Vendor = Google
   Product = Google Cloud Platform
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSZ"]
   Conditions = [""""type":"http_load_balancer"""",  """"requestMethod":"""","""google.cloud.loadbalancing""", """"target_proxy_name":"""]
   Fields = [
     """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",

@@ -40,6 +40,7 @@ cef-microsoft-app-activity-2 = {
     """"Platform":"({os}[^"]+)""""
     """"OriginatingServer":"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?""""
     """"ClientInfoString":"({user_agent}[^"]+)","""
+    """"ActorInfoString":"({user_agent}[^"]+)","""
     """"BrowserName":"({browser}[^"]+)"""
     """"(Client|Source)IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
     """"Workload":\s*"({app}[^"]+)""""

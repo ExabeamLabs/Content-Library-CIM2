@@ -11,7 +11,6 @@ ParserVersion = "v1.0.0"
 
 cef-defender-atp-2.Fields} [
      """ProcessId":({process_id}\d+)""",
-     """InitiatingProcessFileName":\s*"({process_name}[^"]+)""",
      """"FileName":"({file_name}[^"]+?(\.({file_ext}[^".]+))?)"""",
      """"FolderPath":"({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
      """DeviceName":\s*"({dest_host}[\w\-.]+)""",

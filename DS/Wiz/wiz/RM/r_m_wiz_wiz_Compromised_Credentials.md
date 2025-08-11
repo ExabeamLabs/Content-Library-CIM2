@@ -7,7 +7,7 @@ Vendor: Wiz
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  66   |   33   |         5          |       4        |   15    |
+|  66   |   33   |         5          |       4        |   13    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

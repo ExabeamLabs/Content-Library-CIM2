@@ -16,6 +16,8 @@ json-crowdstrike-endpoint-activity = {
     """"SHA256HashData":"({hash_sha256}[^"]+)""",
     """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
 # cid is removed
+    """"cid":"({cid}[^"]+)"""",
+    """"IssuerDN":"({object_dn}[^"]+)""""
     
 }
 ```

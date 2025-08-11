@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-leef-file-write-success-executableswritten
   Fields = ${CrowdStrikeParsersTemplates.leef-crowdstrike-alert-t.Fields} [
     """CrowdStrike\|([^|]+\|){2}({alert_name}[^|]+)""",
     """\WexeWrittenFileName =({file_name}[^|"]+?)(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
-    """\WexeWrittenFilePath=({file_path}[^=]+?)(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
+    """\WexeWrittenFilePath=({file_path}({file_dir}[^=]+?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))(\t|\s+\w+=|\s*\||\s*$|\s*"+\s*$)""",
   ]
 
 leef-crowdstrike-alert-t = {

@@ -20,7 +20,7 @@ gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
     Fields = [
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
     """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",

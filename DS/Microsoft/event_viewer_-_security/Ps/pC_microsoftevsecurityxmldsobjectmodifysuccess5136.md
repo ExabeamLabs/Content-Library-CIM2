@@ -25,6 +25,8 @@ Fields = [
 """<Data Name\\*=('|")DSName('|")>(|({ds_name}[^<]+?))</Data>"""
 """<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""AttributeValue("|')>({attribute_value}[^"'<]+)</Data>"""
+"""<Data Name(\\)?=('|")OperationType('|")>({operation_type}[^<]+)"""
 ]
 DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"

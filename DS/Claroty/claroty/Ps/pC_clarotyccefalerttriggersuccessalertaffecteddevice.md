@@ -6,8 +6,9 @@ Name = claroty-c-cef-alert-trigger-success-alertaffecteddevice
     Product = Claroty
     ParserVersion = v1.0.0
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
-    Conditions = ["""CEF:0|Claroty|Claroty|""","""|alert_affected_device|"""]
+    Conditions = ["""CEF:0|Claroty|""","""|alert_affected_device|"""]
     Fields = [
+       """\s({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d)""",
        """\salert_timestamp=({time}[^\s]*)""",
        """00\s+({host}[^\s]+)\s+Claroty\s+\d+\s+-""",
        """\s+alert_name=({alert_name}.+)\s+alert_category=""",

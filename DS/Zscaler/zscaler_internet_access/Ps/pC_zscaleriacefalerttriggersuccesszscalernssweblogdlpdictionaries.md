@@ -39,7 +39,7 @@ Name = zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries
     """devicehostname=(NA|({src_host}[^\s"]+?))\s*(\w+=|$)""",
     """ZscalerNSSWeblogDLPDictionaries=({alert_name}[^=]+?)\s*([\w.]+=|$)""",
     """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)""",
-    """\sdhost=[^=]*?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({top_domain}[^\.]+\.\w+))\s+\w+=""",
+    """\sdhost=(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^=\s]+\.\w+))\s+\w+=""",
     """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
     """\sspriv=({location}[^=]+?)\s*(\w+=|$)"""
     """DownloadFileName =(NA|None|({src_file_name}[^=\s]+))\s+"""

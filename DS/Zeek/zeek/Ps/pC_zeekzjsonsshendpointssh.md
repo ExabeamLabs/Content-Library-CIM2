@@ -24,19 +24,6 @@ Name = zeek-z-json-ssh-endpoint-ssh
     """exa_json_path=$.auth_success,exa_field_name=result"""
    ]
    ParserVersion = "v1.0.0"
-},  
-
-${ZeekParsersTemplates.json-bro-activity}{
-  Name = zeek-z-json-endpoint-login-success-clientaddr
-  ParserVersion = v1.0.0
-  Product = Zeek
-  Conditions = [ """client_addr":""", """"duration":""", """"msg_types":"""]
-  Fields = ${ZeekParsersTemplates.json-bro-activity.Fields}[
-    """"host_name":"({host}[\w.-]+)""",
-    """"client_addr":"({assigned_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
-    """"domain":"({domain}[^"]+)""",
-    """"duration":({duration}[^\}]+)"""
-  ]
 
 
 }

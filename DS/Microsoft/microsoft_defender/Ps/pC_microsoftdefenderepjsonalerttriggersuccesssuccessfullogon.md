@@ -23,8 +23,8 @@ json-microsoft-security-events-1 = {
       Product = Microsoft Defender
       TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
       Fields = [
-      """"incidentId":\s*({alert_id}\d+)""",
       """"alertId":\s*"({alert_id}[^"]+)"""",
+      """"incidentId":\s*({alert_id}\d+)""",
       """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
       """"severity":\s*"({alert_severity}[^"]+)"""",
       """"category":\s*"({alert_type}[^"]+)"""",
@@ -45,8 +45,10 @@ json-microsoft-security-events-1 = {
       """"entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
       """"entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
       """"entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
-      """"entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
+      """"entityType":\s*"File"[^\}]+?"filePath":\s*"({file_dir}[^"]+)"""",
       """ipAddress\":\"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\""""
+      """"mitreTechniques":\[({technique}[^\]]+)\]"""
+      """"evidence".+?"verdict":"({result}[^"]+)"""
       """recipientEmailAddress":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_json_path=$.alertId,exa_field_name=alert_id"""
@@ -70,8 +72,11 @@ json-microsoft-security-events-1 = {
       """exa_regex="entityType":\s*"Process"[^\}]+?"fileName":\s*"({process_name}[^"]+)"""",
       """exa_regex="entityType":\s*"Process"[^\}]+?"processId":\s*"({process_id}[^"]+)"""",
       """exa_regex="entityType":\s*"File"[^\}]+?"fileName":\s*"({file_name}[^"]+?(\.({file_ext}[^".]+?)?))"""",
-      """exa_regex="entityType":\s*"File"[^\}]+?"filePath":\s*"({file_path}[^"]+)"""",
+      """exa_regex="entityType":\s*"File"[^\}]+?"filePath":\s*"({file_dir}[^"]+)"""",
       """exa_json_path=$.evidence[:1].recipientEmailAddress,exa_field_name=email_address"""
+      """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
+      """exa_json_path=$.incidentId,exa_field_name=alert_id"""
+      """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
       ]
  },
 

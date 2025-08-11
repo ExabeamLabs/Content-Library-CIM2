@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-file-5058
   Conditions = [ """<EventID>5058</EventID>""", """<Message>Key file operation""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
-    """<Data Name =('|")KeyFilePath('|")>({file_path}(?:({file_dir}[^<]+)[\\\/]+)?)?({file_name}[^<]+(\.({file_ext}[^\s<]+))?)<""",
+    """<Data Name =('|")KeyFilePath('|")>({file_path}({file_dir}[^<]+[\\\/]+)?({file_name}[^<\\\/]+(\.({file_ext}[^\s<\\\/]+))?))<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
   DupFields = ["host->dest_host"]
@@ -50,7 +50,7 @@ s-xml-object-access = {
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
-    """<\/Data><Data Name ='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
+    """<\/Data><Data Name =('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
   
 }
 ```

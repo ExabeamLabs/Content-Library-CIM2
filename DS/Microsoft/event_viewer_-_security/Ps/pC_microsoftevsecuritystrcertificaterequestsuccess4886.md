@@ -1,0 +1,23 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-evsecurity-str-certificate-request-success-4886
+  Vendor = Microsoft
+  Product = Event Viewer - Security
+  TimeFormat = ["epoch", "EEE MMM dd HH:mm:ss yyyy"]
+  ParserVersion = v1.0.0
+  Conditions = [ """ 4886 """, """Microsoft-Windows-Security-Auditing""", """Certificate Services received a certificate request""", """ Security """ ]
+  Fields = [
+    """({event_code}4886)"""
+    """({event_name}Certificate Services received a certificate request)"""
+    """({provider_name}Microsoft-Windows-Security-Auditing)"""
+    """({task_name}Certification Services)"""
+    """\s(({time})\w+\s+\d+\s+\d+:\d+:\d+\s+\d\d\d\d)\s"""
+    """Requester:\s*(({domain}[^<\\\s]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """Microsoft-Windows-Security-Auditing\s+([^\s]+\s){2}({result}\w+)"""
+    """({host}[^\s]+?)\s+Certification Services  Certificate Services received a certificate"""
+  ]
+
+
+}
+```

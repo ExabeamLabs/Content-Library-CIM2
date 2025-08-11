@@ -4,7 +4,7 @@ Product: Forescout CounterACT
 -----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  136  |   57   |         15         |       4        |    7    |
+|  136  |   57   |         15         |       4        |    8    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

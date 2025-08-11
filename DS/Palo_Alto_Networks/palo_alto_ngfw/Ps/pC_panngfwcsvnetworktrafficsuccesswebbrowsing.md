@@ -20,6 +20,7 @@ Name = pan-ngfw-csv-network-traffic-success-webbrowsing
    """,DECRYPTION,([^,]*,){12}({src_network_zone}[^,]+),({dest_network_zone}[^,]+),"""
    """({time}\w+ \d+ \d+:\d+:\d+)"""
    """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+   """,DECRYPTION,([^,]*,){11}({virtual_station_name}[^,]+?)\s*,"""
   ]
 
 

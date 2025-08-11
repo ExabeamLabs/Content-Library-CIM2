@@ -15,7 +15,6 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
      """"event_simpleName":"({event_code}[^"]+)""",
      """"event_platform":"({os}[^"]+)"""",
      """"aid":"({aid}[^"]+)""",
-     """"DomainName":"([^"]+\.)?({top_domain}[^\."]+\.[^\."]+)"""",
      """"cid":"({cid}[^"]+)""",
      """"OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
      """exa_json_path=$.aip,exa_field_name=host""",
@@ -24,7 +23,6 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
      """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
      """exa_json_path=$.event_platform,exa_field_name=os""",
      """exa_json_path=$.aid,exa_field_name=aid""",
-     """exa_json_path=$.DomainName,exa_regex=([^"]+\.)?({top_domain}[^\."]+\.[^\."]+)""",
      """exa_json_path=$.cid,exa_field_name=cid"""
      """exa_json_path=$.OciContainerId,exa_field_name=container_id"""
     ]

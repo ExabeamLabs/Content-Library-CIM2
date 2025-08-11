@@ -43,6 +43,8 @@ Name = amazon-awscloudwatch-sk4-app-activity-aws
     """"AlertName":"({alert_name}[^",]+)""",
     """"RiskScore"+:\s*"+({alert_severity}[^",]+)""",
     """"Process":"({process_name}[^"]+)"""
+    """\WRegion\\*":\\*"({region}[^\\"]+?)\\*""""
+    """\WResources":.+?"Region":"({region}[^"]+)""""
   ]
 
 

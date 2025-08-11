@@ -7,6 +7,9 @@ Name = cisco-asa-str-endpoint-login-fail-2960
 """%MAB-5-FAIL:"""
 """Authentication failed"""
 ]
+  Fields = ${CiscoParsersTemplates.cisco-2960-auth-events.Fields} [
+    """Username:\s*host\/({src_host}[\w\-]+)"""
+  ]
 
 cisco-2960-auth-events = {
   Vendor = "Cisco"

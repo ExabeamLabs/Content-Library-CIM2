@@ -7,7 +7,7 @@ Name = skyhighsecurity-swg-cef-file-upload-success-fileupload
   Fields = ${McAfeeParsersTemplates.cef-skyhigh_security-secure_web_gateway.Fields}[
     """\sAppliance=({dest_host}[\w\-.]+)\s*(\s\w+=|$|")""",
     """\sSource_Type=({file_type}[^=]+)\s\w+=""",
-    """\sSource_ID=({file_path}({file_dir}[^"]*?))[\\\/]*({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\.\s"]+))?)\s"""
+    """\sSource_ID=({file_path}({file_dir}[^"]*?[\\\/]+)({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\.\s"]+))?))\s"""
   ]
 
 cef-skyhigh_security-secure_web_gateway = {

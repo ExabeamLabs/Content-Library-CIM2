@@ -44,6 +44,7 @@ Fields = [
 """exa_json_path=$..IsSuccess,exa_field_name=result"""
 """exa_json_path=$..TargetUserOrGroupName,exa_field_name=target"""
 """exa_json_path=$..DatasetName,exa_field_name=file_name"""
+"""exa_json_path=$.Attendees[0:].UPN,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
 """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",

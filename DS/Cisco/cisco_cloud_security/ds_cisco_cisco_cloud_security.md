@@ -4,7 +4,7 @@ Product: Cisco Cloud Security
 -----------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  114  |   42   |         23         |       4        |    9    |
+|  114  |   42   |         23         |       4        |    8    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

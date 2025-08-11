@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
    """<Provider Name\\*='({provider_name}[^']+)""",
    """<EventID Qualifiers\\*='16640'>({event_code}[^<]+)""",
    """<Keywords>({result}[^<]+)""",
-   """<TimeCreated SystemTime\\*='({time}.+?)'""",
+   """<TimeCreated SystemTime\\*=('|")({time}.+?)('|")""",
    """<EventRecordID>({event_id}[^<]+)""",
    """<Computer>({dest_host}({host}[\w\-.]+))""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

@@ -14,7 +14,7 @@ Name = cribl-cribl-json-app-activity-catchall
     """exa_json_path=$.level,exa_field_name=severity""",
     """exa_json_path=$.message,exa_field_name=additional_info""",
     """exa_json_path=$..bucket,exa_field_name=bucket_name"""
-    """exa_regex="file":"(({file_path}[^"]*\/)?({file_name}[^"]+))"""
+    """exa_regex="file":"({file_path}({file_dir}[^"]*\/)?({file_name}[^"]+))"""
     """exa_json_path=$..receiveCount,exa_field_name=count"""
     """exa_json_path=$..messageId,exa_field_name=msg_id"""
     """exa_json_path=$..serviceId,exa_field_name=service_id"""

@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
   Vendor = "Microsoft"
   Product = "Event Viewer - Security"
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "epoch_sec","MM/dd/yyyy HH:mm:ss a"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MMM dd HH:mm:ss yyyy", "epoch_sec","MM/dd/yyyy HH:mm:ss a", "yyyy-MM-dd HH:mm:ss Z"]
   Conditions = [
     """A Kerberos service ticket was requested"""
     """Account Name"""
@@ -18,9 +18,10 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
     """TimeGenerated=({time}\d{10})"""
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d\s+\-\d{4})""""
     """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s*[a-zA-Z]+"""
     """(::ffff:)?({host}[\w\-\.]+)\/Microsoft-Windows-Security-Auditing \(4769\)"""
-    """"ComputerName":"({host}[\w\-\.]+)"""
+    """"Computer(|Name)":"({host}[\w\-\.]+)"""
     """({event_code}4769)"""
     """Account Name(:|=)\s*((?-i)\\+[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*((?-i)\\+[rnt])*Account Domain(:|=)"""
     """Service Name(:|=)\s*((?-i)\\+[rnt])*(::ffff:)?({dest_host}[\w\-.]+\$)[\s;]*((?-i)\\+[rnt])*Service ID"""

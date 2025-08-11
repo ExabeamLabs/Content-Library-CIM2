@@ -19,7 +19,7 @@ Name = microsoft-evsystem-xml-process-create-success-5861
     """<Security UserID\\*='({user_sid}[^']+)""",
     """({process_name}WMI)""",
     """Query\s*=\s*"*({process_command_line}[^";]+)""",
-    """Consumer:\s* instance of\s*({process_path}.+?)\s*\{""",
+    """Consumer:\s* instance of\s*({additional_info}.+?)\s*\{""",
     """<Level>({run_level}[^<]+)<"""
   ]
 

@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = tenable-tcs-json-app-activity-ermetic
+  Vendor = Tenable
+  Product = Tenable Cloud Security
+  ExtractionType = json
+  TimeFormat = [ """yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ""" ]
+  Conditions = [ """"source":""", """"Ermetic""", """"action":"""", """"result":""" ]
+  Fields = [      
+         """exa_json_path=$.source,exa_field_name=log_source""",
+         """exa_json_path=$.action,exa_field_name=operation""",
+         """exa_json_path=$.result,exa_field_name=result""",
+         """exa_json_path=$.time,exa_field_name=time""",
+         """exa_json_path=$.user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+         """exa_json_path=$.details.role,exa_field_name=role_name""",
+         """exa_json_path=$.details.user,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+         """exa_json_path=$.scope,exa_field_name=additional_info"""
+  ]
+  DupFields = ["log_source->app"]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

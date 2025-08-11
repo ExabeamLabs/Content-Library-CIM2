@@ -10,7 +10,7 @@ Name = "pan-gp-csv-endpoint-authentication-success-authsuccess"
 """,auth-success,"""
   ]
   Fields = [
-"""SYSTEM,auth,[^,]+,({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),"""
+""",SYSTEM,auth,[^,]+,({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),"""
 """:\d\d:\d\d\s+({host}[\w.-]+)\s"""
 """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+\d+,({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+),"""
 """,auth-success,({auth_method}[^,]+)"""

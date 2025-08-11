@@ -9,8 +9,8 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
   Conditions = ["""<EventID>4762</EventID>""", """<Data Name""", """<Channel>Security</Channel>""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
-    """Guid\\*='\{({process_guid}[^\'\}]+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\}"]+)""",
     """<Data Name\\*='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<""",
     """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)</Data>""",
@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
     """<Level>({run_level}[^<]+)<""",
-    """<Data Name ='MemberName'>CN=({member}[^=]+?),CN=Users,"""
+    """<Data Name =('|")MemberName('|")>CN=({member}[^=]+?),CN=Users,"""
   ]
   DupFields = ["user->src_user", "domain->src_domain"]
 

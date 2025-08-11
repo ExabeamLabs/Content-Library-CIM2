@@ -17,7 +17,7 @@ Fields = [
 """Private IP:\s?({src_translated_ip}[^,\s]+)"""
 """User name:\s+(({domain}[^,"\\\/]+)[\\\/]+)?(({email_address}[^,]+@({email_domain}[^,]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
 """Client OS( version)?:\s+({os}[^":]+)(,|\.)"""
-"""SYSTEM,({vpn_client}[^,]+),"""
+""",SYSTEM,({vpn_client}[^,]+),"""
 """Source region:\s*({src_country}[^,]+)"""
 """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
 ]

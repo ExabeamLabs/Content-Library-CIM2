@@ -23,7 +23,7 @@ Fields = [
 """>({event_code}6419)<\/EventID>"""
 """({event_name}A request was made to disable a device.)"""
 """<Level>({run_level}[^<]+)<"""
-"""<Data Name ='DeviceId'>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)""""
+"""<Data Name =('|")DeviceId('|")>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)""""
 ]
 DupFields = ["user->src_user" , "domain->src_domain"]
 

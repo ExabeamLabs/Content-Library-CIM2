@@ -23,7 +23,6 @@ Name = "f5-bigipdns-mix-http-request-http"
     """path=({uri_path}[^=]+)\s+\w+=""",
     """query=({uri_query}[^\s]+)\s+\w+=""",
     """dest_host=({web_domain}[^\s]+)""",
-    """dest_host=[^\=\s]*?({top_domain}[^\/\.\s]+(?:\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ms))+)\s+\w+=""",
     """user_agent="({user_agent}[^"=]+)"""",
     """user_agent="({browser}[^\/";]+)[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)"""
   ]

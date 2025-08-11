@@ -4,7 +4,7 @@
 Name = google-cloudplatform-sk4-http-session-http
 Vendor = "Google"
 Product = "Google Cloud Platform"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ" ]
 Conditions = [ """"httpRequest":{"""", """"insertId":"""" ]
 Fields = [
 """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""

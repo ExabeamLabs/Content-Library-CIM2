@@ -7,7 +7,7 @@ Vendor: Forescout
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  60   |   33   |         5          |       2        |    5    |
+|  60   |   33   |         5          |       2        |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

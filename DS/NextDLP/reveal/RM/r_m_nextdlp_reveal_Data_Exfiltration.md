@@ -7,7 +7,7 @@ Vendor: NextDLP
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  38   |   20   |         10         |       3        |    5    |
+|  38   |   20   |         10         |       3        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

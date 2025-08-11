@@ -7,7 +7,7 @@ Name = sentinelone-singularityp-json-file-write-success-filecreation
   Fields = ${SentinelOneParsersTemplates.sentinelone-json-api-alerts.Fields} [
     """exa_json_path=$.alertInfo.netEventDirection,exa_field_name=direction"""
     """exa_json_path=$.targetProcessInfo.tgtFileOldPath,exa_regex=({src_file_path}({src_file_dir}[^"]+[\\\/]+)?({src_file_name}[^\\\/"]+?(\.({src_file_ext}\w+))?))$""",
-    """exa_json_path=$.targetProcessInfo.tgtFilePath,exa_field_name=file_path""" 
+    """exa_json_path=$.targetProcessInfo.tgtFilePath,exa_regex=({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\\/"]+?(\.({file_ext}\w+))?))$"""
   ]
 
 sentinelone-json-api-alerts {
@@ -29,7 +29,7 @@ sentinelone-json-api-alerts {
       """exa_json_path=$.sourceProcessInfo.name,exa_field_name=process_name""",
       """exa_json_path=$.sourceParentProcessInfo.commandline,exa_field_name=parent_process_command_line""",
       """exa_json_path=$.sourceParentProcessInfo.name,exa_field_name=parent_process_name""",
-      """exa_json_path=$.sourceProcessInfo.filePath,exa_field_name=file_path""",
+      """exa_json_path=$.sourceProcessInfo.filePath,exa_regex=^(({file_path}({file_dir}[^"]+?[\\\/]+)({file_name}[^"\\\/]+(\.([a-zA-Z]+))))|({=file_dir}[^"]+))""",
       """exa_json_path=$.sourceProcessInfo.name,exa_field_name=file_name""",
       """exa_json_path=$.sourceProcessInfo.fileHashSha1,exa_field_name=hash_sha1""",
       """exa_json_path=$.sourceProcessInfo.fileHashMd5,exa_field_name=hash_md5""",

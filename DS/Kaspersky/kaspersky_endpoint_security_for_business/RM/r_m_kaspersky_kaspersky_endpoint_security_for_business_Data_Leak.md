@@ -7,7 +7,7 @@ Vendor: Kaspersky
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  45   |   21   |         8          |       3        |    3    |
+|  45   |   21   |         8          |       3        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

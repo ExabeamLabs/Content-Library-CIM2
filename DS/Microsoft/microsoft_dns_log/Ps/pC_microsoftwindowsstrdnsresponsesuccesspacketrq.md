@@ -30,11 +30,13 @@ Fields = [
   """\Wevent_time:({time}\d+\-\d+\-\d+ \d+:\d+:\d+\.\d{3})"""
   """\WUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s*$)"""
   """\WSid=({user_sid}[^\s]+?)(\s+\w+=|\s*$)"""
-  """\Wserver_principal_name:(({domain}[^\\\/]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)"""
-  """\Wserver_principal_sid:({db_user_sid}[^\s]+)"""
+  """\Wserver_principal_name:(({domain}[^\\\/:]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+:|\s*$)"""
+  """\Wserver_principal_sid:({user_sid}[^\s]+)"""
   """\Wserver_instance_name:({dest_host}[\w\-.]+)"""
   """\Wadditional_information:.*?<address>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\Wdatabase_name:({db_name}[^\s]+)"""
+  """\Wdatabase_principal_name:(({db_domain}[^\\\/:]+?)[\\\/]+)?({db_user}[^\s]+)(\s+\w+:|\s*$)"""
+  """\Wsession_server_principal_name:(({src_domain}[^\\\/:]+?)[\\\/]+)?({src_user}[^\s]+)(\s+\w+:|\s*$)"""
 ]
 Name = microsoft-mssql-kv-database-login-success-33205
 Conditions = [

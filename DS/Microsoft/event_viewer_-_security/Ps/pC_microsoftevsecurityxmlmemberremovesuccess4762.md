@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762
   Conditions = [ """<EventID>4762</EventID>""", """<Message>A member was removed from a security-disabled universal group""" , """<Channel>Security</Channel>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
 # src_handle_id is removed
     """Source Process ID:\s*({src_process_id}[^\s]+)\s+New Handle Information:""",
@@ -54,7 +54,7 @@ s-xml-object-access = {
     """<Data Name\\*=('|")RuleId('|")>\{?({rule_id}[^}<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
-    """<\/Data><Data Name ='MemberSid'>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
+    """<\/Data><Data Name =('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<"""
   
 }
 ```

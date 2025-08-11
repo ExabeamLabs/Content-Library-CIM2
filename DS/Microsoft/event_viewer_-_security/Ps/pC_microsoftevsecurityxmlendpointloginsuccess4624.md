@@ -30,7 +30,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """<Data Name\\*=('|")LmPackageName('|")>(-|({auth_package}[^<]+))<"""
   """('|")TargetLogonId('|")>({login_id}[^<]+)<"""
   """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<"""
-  """<Data Name\\*=('|")WorkstationName('|")>([A-Fa-f:\d.]+|-|({src_host_windows}[^<]+?))\s*<"""
+  """<Data Name\\*=('|")WorkstationName('|")>([A-Fa-f:\d.]+|-|({src_host}({src_host_windows}[^<]+?)))\s*<"""
   """EventRecordID>({event_id}[^<]+)<"""
   """<Keywords>({result}.+?)</Keywords>"""
   """<Data Name\\*=('|")SubjectUserSid('|")>({subject_sid}[^<]+)<"""
@@ -39,7 +39,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """Logon Type:\s*({login_type}\d+)"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user" ]
+  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "email_address->dest_email_address", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

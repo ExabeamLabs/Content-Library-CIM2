@@ -1,0 +1,19 @@
+Vendor: Zyxel Networks
+======================
+Product: Zyxel USG FLEX
+-----------------------
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  81   |   31   |         9          |       3        |    4    |
+
+|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|:----:| ---- | ---- | ---- |
+| [Compromised Credentials](../../../UseCases/uc_compromised_credentials.md) |  alert-trigger:success (network-alert)<br> ↳[zyxel-usgflex-kv-alert-trigger-success-ips](Ps/pC_zyxelusgflexkvalerttriggersuccessips.md)<br>    | T1027 - Obfuscated Files or Information<br>T1027.005 - Obfuscated Files or Information: Indicator Removal from Tools<br>T1190 - Exploit Public Fasing Application<br>    | [<ul><li>21 Rules</li></ul><ul><li>9 Models</li></ul>](RM/r_m_zyxel_networks_zyxel_usg_flex_Compromised_Credentials.md) |
+|        [Lateral Movement](../../../UseCases/uc_lateral_movement.md)        |  network-traffic:fail (network-connection-failed)<br> ↳[zyxel-usgflex-kv-network-session-fail-accessblock](Ps/pC_zyxelusgflexkvnetworksessionfailaccessblock.md)<br> ↳[zyxel-usgflex-kv-network-session-fail-sessionlimit](Ps/pC_zyxelusgflexkvnetworksessionfailsessionlimit.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[zyxel-usgflex-kv-network-traffic-success-trafficlog](Ps/pC_zyxelusgflexkvnetworktrafficsuccesstrafficlog.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_zyxel_networks_zyxel_usg_flex_Lateral_Movement.md)       |
+[Next Page -->>](2_ds_zyxel_networks_zyxel_usg_flex.md)
+
+MITRE ATT&CK® Framework for Enterprise
+--------------------------------------
+| Initial Access                                                                         | Execution | Persistence | Privilege Escalation | Defense Evasion                                                                                                                                                                                            | Credential Access | Discovery | Lateral Movement | Collection | Command and Control                                                                                                                                                                                                      | Exfiltration | Impact |
+| -------------------------------------------------------------------------------------- | --------- | ----------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------- | --------- | ---------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | ------ |
+| [Exploit Public Fasing Application](https://attack.mitre.org/techniques/T1190)<br><br> |           |             |                      | [Obfuscated Files or Information: Indicator Removal from Tools](https://attack.mitre.org/techniques/T1027/005)<br><br>[Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027)<br><br> |                   |           |                  |            | [Proxy: Multi-hop Proxy](https://attack.mitre.org/techniques/T1090/003)<br><br>[Application Layer Protocol](https://attack.mitre.org/techniques/T1071)<br><br>[Proxy](https://attack.mitre.org/techniques/T1090)<br><br> |              |        |

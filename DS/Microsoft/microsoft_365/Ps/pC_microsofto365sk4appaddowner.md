@@ -48,6 +48,7 @@ o365-activity-template = {
     """"os":"({os}[^"]+)"""",
     """"(browser|BrowserName)":"({browser}[^"]+)""""
     """"ClientInfoString":"({user_agent}[^"]+)","""
+    """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
   ]

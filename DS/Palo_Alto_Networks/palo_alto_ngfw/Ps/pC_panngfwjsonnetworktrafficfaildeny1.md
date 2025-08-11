@@ -37,7 +37,6 @@ paloalto-vpn = {
   """exa_json_path=$.Protocol,exa_field_name=protocol"""
   """exa_json_path=$.LogType,exa_field_name=event_category"""
   """exa_json_path=$.EndpointOSVersion,exa_field_name=os"""
-  """exa_regex=Source(Address|IP)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """exa_json_path=$.DestinationAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.event.DestinationAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
   """exa_json_path=$.event.TimeGenerated,exa_field_name=time"""

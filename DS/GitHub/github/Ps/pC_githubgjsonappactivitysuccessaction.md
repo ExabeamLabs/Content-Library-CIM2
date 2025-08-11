@@ -1,0 +1,30 @@
+#### Parser Content
+```Java
+{
+Name = github-g-json-app-activity-success-action
+  Vendor = GitHub
+  Product = GitHub
+  ParserVersion = "v1.0.0"
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """"action":""", """"repos_url":""", """"sender":""", """api.github.com""", """"avatar_url":""", """"organization":{""" ]
+  Fields = [
+    """exa_json_path=$..timestamp,exa_field_name=time""",
+    """exa_json_path=$.action,exa_field_name=operation""",
+    """exa_regex=({app}github)""",
+    """exa_json_path=$.repository.name,exa_field_name=repository_name""",
+    """exa_json_path=$..head.repo.name,exa_field_name=repository_name""",
+    """exa_json_path=$..status,exa_field_name=result""",
+    """exa_json_path=$..actor.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..actor.id,exa_field_name=user_id""",
+    """exa_json_path=$..user.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..user.id,exa_field_name=user_id""",
+    """exa_json_path=$..message,exa_field_name=additional_info""",
+    """exa_json_path=$..pull_request_url,exa_field_name=url""",
+    """exa_json_path=$.workflow_run.name,exa_field_name=activity_details""",
+    """exa_json_path=$.changes.repository.name.from,exa_field_name=old_attribute"""
+  ]
+
+
+}
+```

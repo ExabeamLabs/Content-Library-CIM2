@@ -27,14 +27,14 @@ cef-defender-atp-3 {
      """InitiatingProcessAccountName"+:\s*"+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
      """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
      """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
-     """"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]*?)\\+({process_name}[^"\\\/]+))""""
      """InitiatingProcessFileName"+:\s*"+({process_name}[\w\.\-]+)"""",
+     """"InitiatingProcessFolderPath":\s*"(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.[a-zA-Z]+)))|({=process_dir}[^"]+))""""
      """MD5"+:"+({hash_md5}[^"]+)""",
      """"FileName"+:\s*"+({file_name}[^"]+)""",
 # azure_event_hub_namespace is removed
 # azure_event_hub_name is removed
      """"FolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
-     """"InitiatingProcessParentFileName"+:"((({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+))?({parent_process_name}[^"]+)))""",
+     """"InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+?[\\\/]+)?({parent_process_name}[^"\\\/]+))"""",
      """"InitiatingProcessIntegrityLevel"+:"+({process_integrity}[^"]+)""",
      """"InitiatingProcessParentId"+:({parent_process_id}\d+)""",
      """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)""",

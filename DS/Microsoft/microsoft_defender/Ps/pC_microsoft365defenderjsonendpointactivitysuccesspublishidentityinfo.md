@@ -6,7 +6,7 @@ Name = "microsoft-365defender-json-endpoint-activity-success-publish-identityinf
   Product = Microsoft Defender
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   ExtractionType = "json"
-  Conditions = [ """"category":"AdvancedHunting-IdentityInfo"""", """"operationName":"Publish"""", """"AccountUpn":""" ]
+  Conditions = [ """"category":"AdvancedHunting-IdentityInfo"""", """"AccountName":""" ]
   Fields = [
     """exa_json_path=$.operationName,exa_field_name=operation"""
     """exa_json_path=$.time,exa_field_name=time"""

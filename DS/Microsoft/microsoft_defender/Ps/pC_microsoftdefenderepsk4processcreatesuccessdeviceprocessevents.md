@@ -5,7 +5,6 @@ Name = microsoft-defenderep-sk4-process-create-success-deviceprocessevents
   Conditions = [""""FileName":""", """requestClientApplication=""", """AdvancedHunting-DeviceProcessEvents"""]
   Fields = ${MicrosoftParserTemplates.cef-defender-atp-2.Fields} [
      """ProcessId":({process_id}\d+)""",
-     """InitiatingProcessFileName":\s*"({process_name}[^"]+)""",
      """"FileName":"({file_name}[^"]+?(\.({file_ext}[^".]+))?)"""",
      """"FolderPath":"({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
      """DeviceName":\s*"({dest_host}[\w\-.]+)""",
@@ -38,8 +37,8 @@ cef-defender-atp-2 = {
        """InitiatingProcessAccountName"+:\s*"+((?i)SYSTEM|(?i)network service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
-       """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)\\+)?({process_name}[^"\\]+))""""
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
+       """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
      ]
      DupFields = ["category->event_name"
 }

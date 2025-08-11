@@ -42,7 +42,7 @@ Fields = [
 """\"deviceDetail\".+?"deviceId\":\"({device_id}[\w\.\-]+)"""
 """\"deviceDetail\":\{[^\}]*?\"displayName\":\"({device_name}[^\"]+?)\$?""""
 """\"deviceDetail\":\{[^\}]+?\"operatingSystem\":\"({os}[^\"]+)"""
-"""\"deviceDetail\":\{[^\}]+?\"trustType\":\"({trust_type}[^\"]+)"""
+"""\"deviceDetail\":\{[^\}]+?\"trustType\":\"({device_type}[^\"]+)"""
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
 """({operation}Sign-In)"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)"""

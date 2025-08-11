@@ -6,8 +6,8 @@ Name = crowdstrike-falcon-json-alert-trigger-success-idpdetection
   ExtractionType = json
   Conditions = [ """"eventType":"IdpDetectionSummaryEvent"""", """"Severity":""", """"FalconHostLink":"""", """"DetectName":"""", """"FalconHostLink":""" ]
   Fields = ${CrowdStrikeParsersTemplates.json-crowdstrike-alert.Fields} [
-    """exa_regex="SourceAccountDomain":"({top_domain}[^"]+)""""
-    """"SourceAccountDomain":"({top_domain}[^"]+)""""
+    """exa_regex="SourceAccountDomain":"({src_domain}[^"]+)""""
+    """"SourceAccountDomain":"({src_domain}[^"]+)""""
   ]
 
 json-crowdstrike-alert = {

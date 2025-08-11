@@ -7,7 +7,7 @@ Vendor: SecureLink
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  15   |   4    |         2          |       6        |    9    |
+|  15   |   4    |         2          |       6        |    8    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

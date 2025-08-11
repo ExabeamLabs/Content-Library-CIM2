@@ -28,8 +28,10 @@ json-sentinelone-activitytype = {
   """exa_json_path=$.activityType,exa_field_name=event_code""",
   """exa_json_path=$.threatId,exa_field_name=alert_id""",
   """exa_json_path=$..email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
-  """exa_json_path=$..username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}[^\s"]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
-  """exa_json_path=$..userName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}[^\s"]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+  """exa_json_path=$..username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}\w+\s+\w+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+  """exa_json_path=$..userName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}\w+\s+\w+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+  """exa_json_path=$..username,exa_regex=[^\(]+\(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))\)""",
+  """exa_json_path=$..userName,exa_regex=[^\(]+\(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))\)""",
   """exa_json_path=$.primaryDescription,exa_field_name=additional_info""",
   """exa_json_path=$..osType,exa_field_name=os"""
   

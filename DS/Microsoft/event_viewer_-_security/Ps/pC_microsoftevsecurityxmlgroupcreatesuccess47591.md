@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
   Conditions = [ """<EventID>4759</EventID>""", """<Event xmlns""", """<Provider Name""","""Microsoft-Windows-Security-Auditing""" , """<Channel>Security</Channel>""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
-    """Provider Name\\*='({provider_name}[^\']+)""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*='\{({process_guid}[^\'\}]+)""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",

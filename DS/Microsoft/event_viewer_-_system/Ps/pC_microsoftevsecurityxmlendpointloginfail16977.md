@@ -13,8 +13,8 @@ Fields = [
   """({event_code}\d+)<\/EventID>"""
   """<Keywords>({result}[^<]+)"""
   """<EventRecordID>({event_id}[^<]+)"""
-  """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)'\/>"""
-  """<Security UserID='({user_sid}[^']+)'\/>"""
+  """<Execution ProcessID=('|")({process_id}\d+)('|") ThreadID=('|")({thread_id}\d+)('|")\/>"""
+  """<Security UserID=('|")({user_sid}[^']+)('|")\/>"""
   """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"

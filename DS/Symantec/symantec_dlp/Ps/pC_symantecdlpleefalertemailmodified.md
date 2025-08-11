@@ -30,7 +30,7 @@ Fields = [
   """\|subject=({protocol}TCP:Pop3|SFTP)\|"""
   """\|Protocol=.+?({protocol}SMTP|FTP|HTTP|HTTPS)\|"""
   """\|fileName =(N\/A|({file_name}[^\|]+))"""
-  """\|parentPath=(N\/A|({file_path}[^\|]+))"""
+  """\|parentPath=(N\/A|({file_dir}[^\|]+))"""
   """\|blocked=(None|({action}[^\|]+?))\s*\|"""
 ]
 SOAR {

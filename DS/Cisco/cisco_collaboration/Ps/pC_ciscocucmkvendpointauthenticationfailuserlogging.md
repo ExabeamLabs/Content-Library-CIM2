@@ -3,7 +3,7 @@
 {
 Name = cisco-cucm-kv-endpoint-authentication-fail-userlogging
   Product = Cisco Collaboration
-  Conditions = [ """EventType =UserLogging""", """=Login Authentication Failed]""" ]
+  Conditions = [ """EventType""", """=UserLogging""", """=Login Authentication Failed]""", """%UC_AUDITLOG-""" ]
   ParserVersion = "v1.0.0"
 
 cisco-events-2 = {

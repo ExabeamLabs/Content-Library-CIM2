@@ -4,7 +4,7 @@ Product: Deep Security
 ----------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  534  |  134   |        152         |       9        |   12    |
+|  534  |  134   |        152         |       9        |   13    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

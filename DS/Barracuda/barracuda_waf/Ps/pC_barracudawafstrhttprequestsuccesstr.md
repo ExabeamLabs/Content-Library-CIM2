@@ -18,8 +18,6 @@ Name = barracuda-waf-str-http-request-success-tr
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}(?:-|({method}[^\s]+))""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}[^\s]+\s+(?:-|({protocol}[^\s]+))""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){2}(?:-|({web_domain}[^\s]+))""",
-      """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){2}({top_domain}(?!(?:\d+\.){3}\d+)[^\.\s\/:]+(?=(?:\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za))+(\s|\/|$))[^\s\/]+)""",
-      
 # protocol_version is removed
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){4}(?:-|({http_response_code}\d+))""",
       """ barracuda TR ([^\s]+\s+){4}("[^"]+"\s+){2}([^\s]+\s+){5}(?:-|({bytes_out}\d+))""",

@@ -20,7 +20,6 @@ Name = unix-ad-kv-process-create-success-audispd
     """\suid=({user_id}[^\s]+)""",
     """auid=({account_id}[^\s]+)""",
     """pid=({process_id}[^\s]+)""",
-    """cmd=({process_path}[^\s]+)\s+[\w\=]+""",
     """cmd="?({process_dir}[^"=]*\/)?({process_name}[^"=]+?)\s*("|\(?\w+=|$)""",
     """res=({result}[^\s'"\)]+)"""  
     """cmd=({process_command_line}[^=]+?)\s*\w+="""

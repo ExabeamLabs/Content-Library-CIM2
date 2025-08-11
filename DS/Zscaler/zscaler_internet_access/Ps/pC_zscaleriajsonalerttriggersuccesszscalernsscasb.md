@@ -26,7 +26,7 @@ Name = "zscaler-ia-json-alert-trigger-success-zscalernsscasb"
  """exa_json_path=$.event.datetime,exa_field_name=time""",
  """exa_json_path=$.event.tenant,exa_field_name=tenant_id""",
  """exa_json_path=$.event.fullurl,exa_field_name=url""",
- """exa_json_path=$.event.filesource,exa_field_name=file_path""",
+ """exa_json_path=$.event.filesource,exa_field_name=file_dir""",
  """exa_json_path=$.event.filename,exa_field_name=file_name""",
  """exa_json_path=$.event.severity,exa_field_name=alert_severity""",
  """exa_json_path=$.event.malwaretype,exa_field_name=alert_type""",

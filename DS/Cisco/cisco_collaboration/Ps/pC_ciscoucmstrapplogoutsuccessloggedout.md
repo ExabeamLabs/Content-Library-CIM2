@@ -4,7 +4,7 @@
 Name = cisco-ucm-str-app-logout-success-loggedout
   ParserVersion = v1.0.0
   Product = Cisco Collaboration
-  Conditions = [ """EventType =UserLogging""", """Successfully Logged out""" ]
+  Conditions = [ """EventType""", """=UserLogging""", """Successfully Logged out""", """ %UC_AUDITLOG-""" ]
 
 cisco-events-2 = {
   Vendor = Cisco

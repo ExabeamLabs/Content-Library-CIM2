@@ -10,7 +10,7 @@ Name = "unix-unix-str-endpoint-login-fail-failedpassword"
     """]: Failed password for """
   ]
   Fields = [
-    """\w+\s+\d+\s+\d+:\d+:\d+\s+(::ffff:)?({host}[\w\-.]+)\s+"""
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+)\s+(::ffff:)?({host}[\w\-.]+)\s+"""
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s+({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
     """Message forwarded from ({host}[^\s:]+)"""
     """({event_code}ssh)"""

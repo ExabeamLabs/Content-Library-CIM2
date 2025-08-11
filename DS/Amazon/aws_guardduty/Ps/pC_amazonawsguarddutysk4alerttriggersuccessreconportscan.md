@@ -26,7 +26,7 @@ cef-aws-guardduty-security-alert-template = {
       """"resourceType":\s*"({resource_type}[^"]+)"""",
       """s3BucketDetails:\s*\[\{Arn:\s*({object}[^,]+),Name:""",
       """"resource":[^=]+?privateIpAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-      """"service".*?"action".*?"portProbeAction".*?"portProbeDetails".*?"localPortDetails".*?"port":"({dest_port}\d+)"""",
+      """"service"[^\}]+"action"[^\}]+"portProbeAction"[^\}]+"portProbeDetails"[^\}]+"localPortDetails"[^\}]+"port":"?({dest_port}\d+)""",
       """"instanceId":"({instance_id}[^"]+)""",
       """"city":\{"cityName":"((?i)UNKNOWN|({location_city}[^"]+))"""
       """"key":"ProductOwner","value":"({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""

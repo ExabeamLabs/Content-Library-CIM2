@@ -27,6 +27,7 @@ o365-dlp-email-out = {
     """"Attachments\\*"+:[\s\\]*"+\s*(-|none|({email_attachments}({email_attachment}[^",;:]+)[^"\\:]*))\s*""",
     """"Subject\\*"+:[\s\\]*"+\s*({email_subject}[^"]+?)\s*\\?"""",
     """"ClientInfoString\\*"+:[\s\\]*"+Client\\*=({alert_name}[^"\\;]+)""",
+    """"ActorInfoString\\*"+:[\s\\]*"({user_agent}[^"\\]+)"""
     """src-account-name":"({account_name}[^"]+)""",
     """"SizeInBytes":({bytes}\d+)""",
     """"Workload":\s*"({app}[^"]+)""""

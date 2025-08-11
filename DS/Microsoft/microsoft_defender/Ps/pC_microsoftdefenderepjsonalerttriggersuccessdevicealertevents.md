@@ -11,6 +11,7 @@ Fields = ${MicrosoftParserTemplates.cef-defender-atp-2.Fields} [
 """Severity":\s*"({alert_severity}[^"]+)""",
 """AlertId":\s*"({alert_id}[^"]+)"""
 """DeviceName":\s*"({src_host}[^"]+)""",
+""""MitreTechniques":"\[({technique}[^\]]+)\]"""
 ]
 DupFields = [ "category->alert_type" ]
 
@@ -32,8 +33,8 @@ cef-defender-atp-2 = {
        """InitiatingProcessAccountName"+:\s*"+((?i)SYSTEM|(?i)network service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
-       """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)\\+)?({process_name}[^"\\]+))""""
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
+       """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
      ]
      DupFields = ["category->event_name"
 }

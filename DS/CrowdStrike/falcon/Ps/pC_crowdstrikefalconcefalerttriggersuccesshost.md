@@ -4,7 +4,7 @@
 Name = "crowdstrike-falcon-cef-alert-trigger-success-host"
 Vendor = "CrowdStrike"
 Product = "Falcon"
-TimeFormat = "epoch_sec"
+TimeFormat = ["epoch_sec","yyyy-MM-dd HH:mm:ss"]
 Conditions = [
 """CEF"""
 """|CrowdStrike|FalconHost|"""
@@ -26,7 +26,8 @@ Fields = [
 """(\s|\|)dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """CrowdStrike\|([^|]+\|){3}({alert_name}[^|]+)"""
 """CrowdStrike\|([^|]+\|){2}({alert_type}[^|]+)"""
-"""CrowdStrike\|([^|]+\|){4}({alert_severity}[^|]+)"""
+"""({alert_severity}\d+)\|\s*(cat=|externalId=)"""
+"""severityName =({alert_severity}[^\s]+)"""
 """(\s|\|)cat=({alert_name}.+?)\s+(\w+=|$)"""
 """(\s|\|)cs3=({alert_name}.+?)\s+\w+=.*?cs3Label=ScanResultName"""
 """cs3Label=ScanResultName.*?cs3=({alert_name}.+?)\s+(\w+=|$)"""
@@ -34,15 +35,16 @@ Fields = [
 """cs1Label=ScanResultName.*?cs1=({alert_name}.+?)\s+(\w+=|$)"""
 """(\s|\|)msg=({additional_info}.+?)\s+(\w+=|$)"""
 """(\s|\|)fname=({file_name}.+?)\s+(\w+=|$)"""
-"""(\s|\|)filePath=({file_path}.+?)\s+(\w+=|$)"""
+"""(\s|\|)filePath=({file_dir}.+?)\s+(\w+=|$)"""
 """(\s|\|)cs1=("+)?({process_command_line}.+?)("+)?\s\w+=.*(?=cs1Label=CommandLine)"""
 """(?=cs1Label=CommandLine).*cs1=("+)?({process_command_line}.+?)("+)?\s+(\w+=|$)"""
 """(\s|\|)cs5=("+)?({process_command_line}.+?)("+)?\s\w+=.*(?=cs5Label=CommandLine)"""
 """(?=cs5Label=CommandLine).*cs5=("+)?({process_command_line}.+?)("+)?\s+(\w+=|$)"""
 """(\s|\|)cs6=({falcon_host_link}.+?)\s\w+=.*(?=cs6Label=FalconHostLink)"""
 """(?=cs6Label=FalconHostLink).*cs6=({falcon_host_link}.+?)\s+(\w+=|$)"""
+"""cs1=({alert_name}[^=]+)\s\w+="""
 ]
-DupFields = [ "falcon_host_link->additional_info", "file_name->process_name", "file_path->process_dir" ]
+DupFields = [ "falcon_host_link->additional_info", "file_name->process_name", "file_dir->process_dir" ]
 ParserVersion = "v1.0.0"
 
 

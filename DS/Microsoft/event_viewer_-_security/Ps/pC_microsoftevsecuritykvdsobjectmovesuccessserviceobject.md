@@ -21,6 +21,7 @@ Fields = [
   """Operation:\s*Correlation ID:\s*\{({correlation_id}[^\}]+)""",
   """Object:\s+Old DN:[^\{\}]+?\s*({old_attribute}[^:]+?)\s+New DN:\s*({new_attribute}[^:]+?)\s+GUID:""",
   """({event_code}5139)"""
+  """"Computer":"({host}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

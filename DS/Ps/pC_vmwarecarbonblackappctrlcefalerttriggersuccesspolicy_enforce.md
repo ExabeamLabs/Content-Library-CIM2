@@ -10,7 +10,16 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-carbonblack-edr.Fields}[
-    """"parent_path":"({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))""""
+carbonblack-edr.Fields}[ 
+     """exa_json_path=$.parent_path,exa_regex=({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""
+     """"parent_path":"({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))""""    
+  ]
+  ParserVersion = v1.0.0
+},
+
+${CarbonBlackParsersTemplates.carbonblack-endpoint}{
+  Name = "vmware-carbonblackedr-mix-file-filemod"
+  ParserVersion = "v1.0.0"
+  Conditions = [ """filemod""" , """carbonblack""" , """sensor_action""" 
 }
 ```

@@ -19,14 +19,13 @@ defender-atp-events = {
       """"LogonType":"({login_type_text}[^"]+)"""",
       """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"AccountDomain":"({domain}[^"]+)"""",
-      """"InitiatingProcessFileName":"({process_name}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",
       """"ActionType":"({result}[^"]+)"""",
       """"RemoteIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """"Protocol":"({protocol}[^"]+)"""",
       """LogonId":(null|({login_id}[^:]+?)),""",
-      """InitiatingProcessFolderPath":"({process_path}[^"]+?)",""",
-      """InitiatingProcessFileName":"({process_name}[^:]+?)",""",
+      """InitiatingProcessFileName":"({process_name}[^"]+?)",""",
+      """InitiatingProcessFolderPath":"(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))",""",
       """InitiatingProcessCommandLine":"({process_command_line}[^<]+?)\s*","InitiatingProcess""",
       """InitiatingProcessId":({process_id}[^:]+?),""",
       """DeviceId":"({device_id}[^:]+?)",""",
@@ -51,8 +50,8 @@ defender-atp-events = {
       """exa_json_path=$.Protocol,exa_field_name=protocol"""
       """exa_json_path=$.LogonId,exa_regex=(null|({login_id}[^",]+))"""
       """exa_json_path=$..LogonId,exa_regex=(null|({login_id}[^",]+))"""
-      """exa_json_path=$..InitiatingProcessFolderPath,exa_field_name=process_path"""
-      """exa_json_path=$.InitiatingProcessFolderPath,exa_field_name=process_path"""
+      """exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))$"""
+      """exa_json_path=$.InitiatingProcessFolderPath,exa_regex=^(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))$"""
       """exa_json_path=$..InitiatingProcessCommandLine,exa_field_name=process_command_line"""
       """exa_json_path=$.InitiatingProcessCommandLine,exa_field_name=process_command_line"""
       """exa_json_path=$..InitiatingProcessId,exa_field_name=process_id"""

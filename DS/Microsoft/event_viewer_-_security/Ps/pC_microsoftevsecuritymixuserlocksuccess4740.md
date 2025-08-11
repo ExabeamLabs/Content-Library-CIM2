@@ -52,6 +52,10 @@ Fields = [
   """exa_json_path=$..channel,exa_field_name=channel"""
   """exa_json_path=$..action,exa_field_name=action"""
   """exa_json_path=$..created,exa_field_name=time"""
+  """exa_regex=({event_name}A user account was locked out)"""
+  """exa_json_path=$..EventID,exa_field_name=event_code"""
+  """exa_json_path=$..Computer,exa_field_name=host"""
+
 ]
 ParserVersion = "v1.0.0"
 

@@ -13,6 +13,9 @@ Name = azure-azuread-json-app-activity-useractivitydisplayname
     """exa_json_path=$.TargetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
     """exa_json_path=$.TargetResources[:1].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^@",\s]+))"""",
     """exa_json_path=$.TargetResources[:1].id,exa_field_name=user_sid""",
+    """exa_regex=initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"displayName"\s*:\s*"({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))"""
+    """exa_json_path=$.operationType,exa_field_name=operation_type""",
+    """exa_json_path=$..appId,exa_field_name=app_id"""
   ]
 
 microsoft-azuread-json-events = {
@@ -45,6 +48,9 @@ microsoft-azuread-json-events = {
       """exa_json_path=$..AADOperationType,exa_field_name=operation""",
       """exa_json_path=$..CorrelationId,exa_field_name=correlation_id""",
       """exa_json_path=$..ActivityDisplayName,exa_field_name=event_name""",
+      """exa_json_path=$.resultReason,exa_field_name=result_reason""",
+      """exa_json_path=$.targetResources[:1].displayName,exa_field_name=target""",
+      """exa_json_path=$..loggedByService,exa_field_name=service_name""",
 
       """"activityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+([+-]\d\d:\d\d|Z))"""",
       """"initiatedBy":\s*[^\}]+?userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
@@ -56,7 +62,9 @@ microsoft-azuread-json-events = {
       """"category":\s*"({category}[^"]+)"""",
       """"properties".*?"category":\s*"({category}[^"]+)"""",
       """"loggedByService":\s*"(Account Provisioning|Core Directory|({app}[^"]+))"""",
-      """"initiatedBy":\s*\{"app":\s*\{[^\}]*?"displayName":\s*"({app}[^"]+)"""",
+      """"app":\s*\{[^\}]*?"displayName":\s*"({app}[^"]+)"""",
+      """"targetResources"+:\[[^\]]+?"+displayName"+:"+({target}[^"]+?)\s*"""",
+      """"loggedByService":\s*"({service_name}[^"]+)""""
       """"operationType":\s*"({operation}[^"]+)"""",
       """"correlationId":\s*"({correlation_id}[^"]+)"""",
       """"activityDisplayName":\s*"({operation}({event_name}[^"]+))"""",

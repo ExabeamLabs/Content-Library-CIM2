@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = "qualys-q-json-app-activity-success-action"
+  Vendor = "Qualys"
+  Product = "Qualys AssetView"
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """destinationServiceName =Qualys""", """"Action":"""", """"User Name":"""", """"Module":"""" ]
+  Fields = [
+    """exa_json_path=$.Action,exa_field_name=action""",
+    """exa_json_path=$.Details,exa_field_name=additional_info""",
+    """exa_json_path=$.['User Name'],exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}\w+(\s+\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.Module,exa_field_name=category""",
+    """exa_json_path=$.['User Role'],exa_field_name=role""",
+    """exa_json_path=$.Date,exa_field_name=time""",
+    """exa_json_path=$.['User IP'],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_regex=({app}Qualys)"""
+  ]
+  DupFields = [ "action->operation" ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

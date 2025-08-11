@@ -11,7 +11,7 @@ Fields = [
   """({event_code}4950)""",
   """<Computer>({host}[\w\-.]+)</Computer>"""
   """<Keywords>({result}[^<]+)</Keywords>""",
-  """<Execution ProcessID='({process_id}\d+)' ThreadID='({thread_id}\d+)""",
+  """<Execution ProcessID=('|")({process_id}\d+)('|") ThreadID=('|")({thread_id}\d+)""",
   """<Data Name =('|")SettingType('|")>({additional_info}[^<]+)</Data>"""
   """<Level>({run_level}[^<]+)<"""
 ]

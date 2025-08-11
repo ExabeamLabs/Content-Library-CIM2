@@ -10,7 +10,7 @@ Name = box-ccm-json-file-download-success-manageddevice
   Fields = [
     """"createTimestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)"""",
     """"fileName":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"""",
-    """"filePath":"({file_path}[^"]+)"""",
+    """"filePath":"({file_dir}[^"]+)"""",
     """"fileType":"({file_type}[^"]+)"""",
     """"mimeTypeByBytes":"({mime}[^"]+)"""",
     """"eventType":"({operation}[^"]+)"""",
@@ -27,7 +27,7 @@ Name = box-ccm-json-file-download-success-manageddevice
     """"tabUrl":"({url}[^"]+)"""",
     """"deviceUid":"({device_id}[^"]+)""""
   ]
-  DupFields = [ "operation->access_type", "file_path->file_dir", "dest_host->device_name"]
+  DupFields = [ "operation->access_type", "dest_host->device_name"]
 
 
 }

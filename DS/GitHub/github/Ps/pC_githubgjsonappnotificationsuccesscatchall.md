@@ -1,0 +1,34 @@
+#### Parser Content
+```Java
+{
+Name = github-g-json-app-notification-success-catchall
+  Vendor = GitHub
+  Product = GitHub
+  ParserVersion = "v1.0.0"
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """api.github.com""", """"avatar_url":""", """"organization":""", """"sender":""" ]
+  Fields = [
+    """exa_regex=({app}github)""",
+    """exa_json_path=$.build.created_at,exa_field_name=time""",
+    """exa_json_path=$.build.status,exa_field_name=status_msg""",
+    """exa_json_path=$.build.error.message,exa_field_name=error_info,exa_match_expr=!Contains($.build.error.message,"null")""",
+    """exa_json_path=$..head.repo.name,exa_field_name=repository_name""",
+    """exa_json_path=$.repository.name,exa_field_name=repository_name""",
+    """exa_json_path=$..status,exa_field_name=result""",
+    """exa_json_path=$..message,exa_field_name=additional_info""",
+    """exa_json_path=$.branches..name,exa_field_name=branch_name"""
+    """exa_json_path=$..pusher.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..pusher.id,exa_field_name=user_id""",
+    """exa_json_path=$..sender.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..sender.id,exa_field_name=user_id""",
+    """exa_json_path=$..actor.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..actor.id,exa_field_name=user_id""",
+    """exa_json_path=$..user.login,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..user.id,exa_field_name=user_id""",
+    """exa_json_path=$..url,exa_field_name=url"""
+  ]
+
+
+}
+```

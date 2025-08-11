@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-json-endpoint-4624
       """Logon Process(:|=)\s*({auth_process}[^\s;]+)[\s;]*Authentication Package(:|=)\s*({auth_package}[^\s;]+)""",
       """Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*(Linked Logon|Logon GUID)""",
       """New Logon(:|=)[\s;]*Security ID(:|=)\s*({user_sid}[^\s;]+)(\s|;)""",
+      """"record_id":"({event_id}\d+)"""",
       """EventRecordID>({event_id}[^<]+)<""",
       """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
       """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^"\\]+))\\?""""
@@ -36,6 +37,7 @@ Name = microsoft-evsecurity-json-endpoint-4624
       """TargetDomainName\\?"+:\\?"({domain}[^\s",\\]+)\\?""""
       """WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}[^",\s\\]+))\\?""""
       """"+mac\\"+:\[\\"+({src_mac}[^\\"]+)"""
+      """keywords":\["({result}[^"]+)""""
     ]
     DupFields = ["host->dest_host","src_host_windows->src_host", "domain->dest_domain", "user->dest_user"]
   
