@@ -1,0 +1,7 @@
+# Code Changes for microsoft-defenderep-cef-network-session-devicenetworkevents (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | process_dir |  | ['"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))"', 'exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$', 'exa_json_path=$.InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$'] |
+| edit_regex_field | process_name |  | ['"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))"', 'InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)', 'exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$', 'exa_json_path=$.InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$'] |
+| edit_regex_field | process_path |  | ['"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))"', 'exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$', 'exa_json_path=$.InitiatingProcessFolderPath,exa_regex=^({process_path}({process_dir}[^"]+?[\\\/]+)?({process_name}[^"\\\/]+))$'] |

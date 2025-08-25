@@ -1,0 +1,10 @@
+# Code Changes for unix-unix-mix-endpoint-logout-sessionclosed (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| COULD_NOT_COMPARE | TimeFormat |  | ['MMM dd HH:mm:ss', 'yyyy-MM-dd HH:mm:ss'] |
+| changed_parsed_fields | N/A |  | ['email_address', 'event_code', 'event_name', 'host', 'priority', 'src_host', 'src_ip', 'time', 'user'] |
+| edit_regex_field | host |  | ['({time}\w+\s+\d+\s+\d+:\d+:\d+)\s+(::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+)))\s+', '\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d (::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))) ({event_code}\S+)'] |
+| edit_regex_field | src_host |  | ['({time}\w+\s+\d+\s+\d+:\d+:\d+)\s+(::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+)))\s+', '\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d (::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))) ({event_code}\S+)'] |
+| edit_regex_field | src_ip |  | ['({time}\w+\s+\d+\s+\d+:\d+:\d+)\s+(::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+)))\s+', '\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d (::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))) ({event_code}\S+)'] |
+| added_regex_field | time |  | ['({time}\w+\s+\d+\s+\d+:\d+:\d+)\s+(::ffff:)?({host}(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+)))\s+'] |

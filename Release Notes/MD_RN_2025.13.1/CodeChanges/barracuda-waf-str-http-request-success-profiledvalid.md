@@ -1,0 +1,7 @@
+# Code Changes for barracuda-waf-str-http-request-success-profiledvalid (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'browser', 'bytes_in', 'bytes_out', 'dest_port', 'dest_translated_ip', 'host', 'http_response_code', 'method', 'os', 'protocol', 'src_ip', 'src_port', 'time', 'uri_path', 'uri_query', 'url', 'user', 'user_agent', 'web_domain'] |
+| removed_regex_field | top_domain |  | [] |
+| edit_regex_field | web_domain |  | ['(POST|GET)\s+\S+\s+({web_domain}[^\s]*(?:\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))+)\s', '({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+ (\+|\-)\d+)\s+(?:-|({host}\S+))\s+(\S+\s+){2}(?:-|({dest_port}\d+))\s+(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+(?:-|({=src_port}\d+))\s+(\S+\s+){2}(?:-|({method}(GET|POST)))\s+(?:-|({protocol}\S+))\s+(?:-|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}\S+))\s+\S+\s+(?:-|({http_response_code}\d+))\s+(?:-|({bytes_out}\d+))\s+(?:-|({bytes_in}\d+))\s+(\S+\s+){2}(?:-|({dest_translated_ip}\S+))\s+(?:-|({=dest_port}\d+))\s+(\S+\s+){5}(?:-|({action}\S+))\s+(?:-|({uri_path}\S+))\s+(?:"-"|({uri_query}[^"]+?))\s+(?:"-"|({url}[\w\-]+:\/\/\S+))\s+(?:"-"|([^"]*?))\s+"(?:-|({user_agent}[^"]+))"\s+(\S+\s+){2}(?:"-"|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |

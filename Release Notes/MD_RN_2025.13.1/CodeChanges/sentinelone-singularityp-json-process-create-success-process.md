@@ -1,0 +1,7 @@
+# Code Changes for sentinelone-singularityp-json-process-create-success-process (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_process_name |  | ['"tgt.process.image.path":"({dest_process_path}({dest_process_dir}(:?[\w:]+)?[^"]*\\)({dest_process_name}[^"]+))"', 'exa_json_path=$.[\'tgt.process.image.path\'],exa_regex=({dest_process_path}({dest_process_dir}(:?[\w:]+)?[^"]*\\)({dest_process_name}[^"]+))$', 'tgt.process.name":"({dest_process_name}[^"]+)"'] |
+| edit_regex_field | parent_process_name |  | ['"src.process.parent.image.path":"+\s*({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))"', 'exa_json_path=$.[\'src.process.parent.image.path\'],exa_regex=({parent_process_path}({parent_process_dir}[^@]+?)[\\\/]*({parent_process_name}[^"\\\/]+))$'] |
+| edit_regex_field | process_name |  | ['"src.process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"', 'exa_json_path=$.[\'src.process.image.path\'],exa_regex=({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))$', 'exa_regex=process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"', 'process.image.path":"({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))"', 'process\.name":"({process_name}[^"]+)', 'src.process.name":"({process_name}[^"]+)"'] |

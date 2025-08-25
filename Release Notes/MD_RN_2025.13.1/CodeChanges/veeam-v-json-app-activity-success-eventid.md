@@ -1,0 +1,5 @@
+# Code Changes for veeam-v-json-app-activity-success-eventid (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "veeam-v-json-app-activity-success-eventid", "Vendor": "Veeam", "Product": "Veeam", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["Veeam", "\"Hostname\"", "\"SourceModuleName\"", "\"SourceName\"", "\"EventID\""], "Fields": ["\"EventTime\":\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)", "\"Hostname\":\"({host}[\w\-.]+)\"", "\"Severity\":\"({severity}[^\"]+)\"", "\"SourceName\":\"({app}[^\"]+)\"", "\"EventID\":({event_id}\d+)", "\"OpcodeValue\":({opcode}\d+)", "\"ProcessID\":({process_id}\d+)", "\"ThreadID\":({thread_id}\d+)", "\"Channel\":\"({channel}[^\"]+)\"", "\"SourceModuleName\":\"({resource_name}[^\"]+)\""], "ParserVersion": "v1.0.0"} |

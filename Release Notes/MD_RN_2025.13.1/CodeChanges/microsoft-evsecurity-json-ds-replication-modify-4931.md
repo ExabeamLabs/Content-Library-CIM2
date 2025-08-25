@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsecurity-json-ds-replication-modify-4931 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "microsoft-evsecurity-json-ds-replication-modify-4931", "ParserVersion": "v1.0.0", "Vendor": "Microsoft", "Product": "Event Viewer - Security", "ExtractionType": "json", "TimeFormat": "yyyy-MM-dd HH:mm:ss Z", "Conditions": ["\"EventID\":4931", "An Active Directory replica destination naming context was modified"], "Fields": ["exa_json_path=$.ProcessID,exa_field_name=process_id", "exa_json_path=$.ProviderName,exa_field_name=provider_name", "exa_json_path=$.Computer,exa_field_name=host", "exa_regex=({event_name}An Active Directory replica destination naming context was modified)", "exa_regex=Destination DRA:\s*({dest_dra}[\w\-.]+)", "exa_json_path=$.Level,exa_field_name=run_level", "exa_json_path=$.Keywords,exa_field_name=result", "exa_json_path=$.TimeCreated,exa_field_name=time"]} |

@@ -1,0 +1,5 @@
+# Code Changes for zerofox-zerofoxprotect-json-alert-trigger-success (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "zerofox-zerofoxprotect-json-alert-trigger-success", "Vendor": "ZeroFox", "Product": "ZeroFox Protection", "ExtractionType": "json", "TimeFormat": ["yyyy-MM-dd'T'HH:mm:ssZ"], "Conditions": ["\"alert_type\":", "\"offending_content_url\":", "\"rule_name\":", "\"darkweb_term\":", "\"perpetrator\":"], "Fields": ["exa_json_path=$.timestamp,exa_field_name=time", "exa_json_path=$.rule_name,exa_field_name=alert_name", "exa_json_path=$.alert_type,exa_field_name=alert_type", "exa_json_path=$.severity,exa_field_name=alert_severity", "exa_json_path=$.status,exa_field_name=alert_status", "exa_json_path=$.actor,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s\"\\,\|]+\.[^\]\s\"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))", "exa_json_path=$.alert_reasons,exa_field_name=additional_info"], "ParserVersion": "v1.0.0"} |

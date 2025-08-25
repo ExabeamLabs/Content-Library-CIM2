@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsystem-json-endpoint-authentication-fail-5723 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "microsoft-evsystem-json-endpoint-authentication-fail-5723", "ParserVersion": "v1.0.0", "Vendor": "Microsoft", "Product": "Event Viewer - System", "ExtractionType": "json", "TimeFormat": ["yyyy-MM-dd HH:mm:ss Z"], "Conditions": ["\"EventID\":5723", "\"ProviderName\":\"NETLOGON\"", "failed because the security database does not contain"], "Fields": ["exa_json_path=$.TimeCreated,exa_field_name=time", "exa_json_path=$.ProviderName,exa_field_name=provider_name", "exa_json_path=$.EventID,exa_field_name=event_code", "exa_json_path=$.Keywords,exa_field_name=result", "exa_json_path=$.Computer,exa_field_name=host", "exa_regex=({event_name}The session setup from computer.+?)\.", "exa_json_path=$.Level,exa_field_name=run_level", "exa_regex=trust account\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"]} |
