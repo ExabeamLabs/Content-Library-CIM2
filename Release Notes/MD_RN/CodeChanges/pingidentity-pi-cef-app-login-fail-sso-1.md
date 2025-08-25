@@ -1,5 +1,0 @@
-# Code Changes for pingidentity-pi-cef-app-login-fail-sso-1 (Parser)
-
-| Code Change | Field Name | Before | After |
-|-------------|------------|--------|-------|
-| removed_parser | N/A | {"Vendor": "Ping Identity", "Product": "Ping Identity", "TimeFormat": "epoch", "Fields": ["\Wrt=({time}\d{13})", "\Wdvc=({host}[A-Fa-f:\d.]+)", "\Wdvchost=({host}[\w\-.]+)", "\Wshost=({src_host}[\w\-.]+)", "\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "\Wdhost=({dest_host}[\w\-.]+)", "\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?", "\Wcs2=({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\\\=]*\s+(\w+=|$)", "\Wcs2=({email_address}[^\s@]+@[^\s@]+)", "\Wcs3=({app}.+?)\s+(\w+=|$)", "\Wcs4=({protocol}.+?)\s+(\w+=|$)", "\Wcs6=({result}.+?)\s+(\w+=|$)"], "Name": "pingidentity-pi-cef-app-login-fail-sso-1", "Conditions": ["CEF:", "|Ping Identity|Ping Federate|", "|SSO|", "cs6=failure"], "ParserVersion": "v1.0.0"} | N/A |

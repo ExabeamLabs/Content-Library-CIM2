@@ -1,0 +1,5 @@
+# Code Changes for pan-gp-cef-vpn-login-login (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Palo Alto Networks", "Product": "GlobalProtect", "TimeFormat": "epoch", "Fields": ["\srt=({time}\d{13})", "\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?", "\ssuser=(({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=", "\sdvchost=({host}[\w\-.]+?)\s+\w+=", "\scs2=({result}[^=]+)\s+\w+=", "\smsg=({event_name}[^=]+?)\s+\w+=", "cs6=({os}[^=]+?)\s+\w+=", "sourceGeoCountryCode=({src_country}[^=]+?)\s+\w+=", "({app}GLOBALPROTECT)"], "Name": "pan-gp-cef-vpn-login-login", "Conditions": ["CEF:", "|Palo Alto Networks|PAN-OS|", "|GLOBALPROTECT|", "msg=login"], "ParserVersion": "v1.0.0"} | N/A |

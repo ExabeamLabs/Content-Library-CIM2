@@ -1,0 +1,5 @@
+# Code Changes for procad-p-json-app-activity-appactivity (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "procad-p-json-app-activity-appactivity", "Vendor": "Procad", "Product": "Pro.File DMS", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Conditions": ["\"pdmobjectsubtypename\":\"", "\"pdmobjecttypename\":\""], "Fields": ["autodatetime\":\"({time}[^\"]+)", "pdmobjecttypename\":\"({resource}[^\"]+)", "pdmusername\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "pdmserverlocation\":\"({host}[^\"]+)", "pdmobjectsubtypename\":\"({object}[^\"]+)", "pdmobjectactionname\":\"({operation}[^\"]+)"], "DupFields": ["host->dest_host"], "ParserVersion": "v1.0.0"} | N/A |

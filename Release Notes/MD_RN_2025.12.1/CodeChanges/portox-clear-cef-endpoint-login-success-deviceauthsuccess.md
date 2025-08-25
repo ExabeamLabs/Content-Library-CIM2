@@ -1,0 +1,5 @@
+# Code Changes for portox-clear-cef-endpoint-login-success-deviceauthsuccess (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Portnox", "Product": "Portnox CLEAR", "TimeFormat": "epoch", "Fields": ["start=({time}\d{13})", "CEF:([^|]*\|){4}({event_code}\d+)", "CEF:([^|]*\|){5}({event_name}[^|]+)", "src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?", "cs4=(unknown|({auth_method}[^=]+?))\s\w+=", "cs2=({policy_name}[^=]+?)\s\w+=", "msg=({additional_info}[^=]+?)\s\w+=", "duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"], "Name": "portox-clear-cef-endpoint-login-success-deviceauthsuccess", "Conditions": ["|Portnox", "|CLEAR|", "authentication success", "act=Access ", "The device was successfully authenticated"], "ParserVersion": "v1.0.0"} | N/A |

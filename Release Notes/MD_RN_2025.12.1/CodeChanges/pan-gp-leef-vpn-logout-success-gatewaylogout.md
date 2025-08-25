@@ -1,0 +1,5 @@
+# Code Changes for pan-gp-leef-vpn-logout-success-gatewaylogout (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Palo Alto Networks", "Product": "GlobalProtect", "TimeFormat": ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy/MM/dd HH:mm:ss"], "Fields": ["\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d\s({host}[\w\-.]+)", "ReceiveTime=({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)", "usrName=(({domain}[^\\|]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "PrivateIP=({src_translated_ip}[A-Fa-f\d:.]+)", "PublicIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "Machinename=({src_host}[\w\-.]+)", "EventID=({event_name}[^|]+)", "Status=({result}[^|]+)", "((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"], "Name": "pan-gp-leef-vpn-logout-success-gatewaylogout", "Conditions": ["LEEF:", "|Palo Alto Networks|", "|PAN-OS Syslog Integration|", "|gateway-logout-success|", "|Type=GLOBALPROTECT|"], "ParserVersion": "v1.0.0"} | N/A |

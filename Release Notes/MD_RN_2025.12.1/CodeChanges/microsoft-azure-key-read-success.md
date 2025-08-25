@@ -1,0 +1,5 @@
+# Code Changes for microsoft-azure-key-read-success (Event Builder)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| edit_conditions | expression | InList(type, 'microsoft-azure-json-key-success-keyvault', 'microsoft-azuremon-sk4-app-activity-auditevent', 'microsoft-azure-sk4-file-read-success-keyget') && InList(toLower(operation), 'keyget', 'keylist', 'keygetdeleted', 'keylistdeleted') && (!exists(http_response_code) || !startsWithAny(http_response_code,'4', '5', '6')) | InList(type, 'microsoft-azure-json-key-success-keyvault', 'microsoft-azuremon-sk4-app-activity-auditevent', 'microsoft-azure-sk4-file-read-success-keyget') && InList(toLower(operation), 'keyget', 'keylist', 'keygetdeleted', 'keylistdeleted') && !startsWithAny(http_response_code,'4', '5', '6') |

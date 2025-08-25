@@ -1,0 +1,5 @@
+# Code Changes for microsoft-adfs-kv-app-authentication-fail-324 (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "microsoft-adfs-kv-app-authentication-fail-324", "ParserVersion": "v1.0.0", "Vendor": "Microsoft", "Product": "Active Directory Federation Services", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": [" AD_FS_Auditing[", " AUDIT_FAILURE 324 "], "Fields": ["({host}[\w\-.]+)\s+AD_FS_Auditing\[\d+\]:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)", "AUDIT_FAILURE\s+({event_code}\d+)\s+(({domain}[^\\\s]+)\\+)?({service_name}[^\\\s]+)\s+({failure_reason}[^\.]+?)\.", "caller\s+'(({domain}[^\\\s']+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "User:\s*({email_address}[^\s@]+@[^\s@]+)"]} | N/A |

@@ -1,5 +1,0 @@
-# Code Changes for pan-tesm-csv-service-state-modify-success-statuschange (Parser)
-
-| Code Change | Field Name | Before | After |
-|-------------|------------|--------|-------|
-| removed_parser | N/A | {"Vendor": "Palo Alto Networks", "TimeFormat": ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "MMM dd yyyy HH:mm:ss"], "Fields": ["\d\d:\d\d ({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) .+?({time}\w+ \d+ \d\d\d\d \d\d:\d\d:\d\d),([^,]*,){3}({event_name}[^,]+),({host}[^,]+),(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),", "((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))", ",Traps Service Status Change,([^,]*,){2}({result}[^,]+)"], "DupFields": ["host->dest_host"], "Name": "pan-tesm-csv-service-state-modify-success-statuschange", "Product": "Traps Endpoint Security Manager", "ParserVersion": "v1.0.0", "Conditions": [",Traps", ",Traps Service Status Change,"]} | N/A |

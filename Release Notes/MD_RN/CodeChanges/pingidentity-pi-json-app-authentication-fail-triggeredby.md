@@ -1,5 +1,0 @@
-# Code Changes for pingidentity-pi-json-app-authentication-fail-triggeredby (Parser)
-
-| Code Change | Field Name | Before | After |
-|-------------|------------|--------|-------|
-| removed_parser | N/A | {"Name": "pingidentity-pi-json-app-authentication-fail-triggeredby", "Vendor": "Ping Identity", "Product": "Ping Identity", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss", "Conditions": ["\"application-msg\":", "SSO Invalid SMS Passcode", "\"triggered-by\":", "Ping"], "Fields": ["time\"+:\"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)", "\"+hostname\"+:\"+({host}[^\"]+)", "app-username\"+:\"+(({email_address}[^@\s\"]+@[^\"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))", "\"src-application-name\"+:\"+({app}[^\"]+)", "\"application-msg\"+:\"+({failure_reason}[^}\]]+?)\s*\"[,\]}]"], "ParserVersion": "v1.0.0"} | N/A |

@@ -1,7 +1,0 @@
-# Code Changes for cisco-duo-json-endpoint-authentication-result-1 (Parser)
-
-| Code Change | Field Name | Before | After |
-|-------------|------------|--------|-------|
-| changed_parsed_fields | N/A | ['action', 'browser', 'browser_version', 'email_address', 'email_domain', 'factor', 'failure_reason', 'host', 'mfa_country', 'mfa_device', 'os', 'os_version', 'service_name', 'src_country', 'src_ip', 'src_port', 'time', 'user'] | ['action', 'browser', 'browser_version', 'domain', 'email_address', 'email_domain', 'factor', 'failure_reason', 'host', 'mfa_country', 'mfa_device', 'os', 'os_version', 'service_name', 'src_country', 'src_ip', 'src_port', 'time', 'user'] |
-| edit_regex_field | user | ['"user":[^\}]+?"name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"', 'exa_json_path=$.user.name,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)'] | ['"user":[^\}]*"name":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"', 'exa_json_path=$.user.name,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'] |
-| added_regex_field | domain | [] | ['"user":[^\}]*"name":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"', 'exa_json_path=$.user.name,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'] |

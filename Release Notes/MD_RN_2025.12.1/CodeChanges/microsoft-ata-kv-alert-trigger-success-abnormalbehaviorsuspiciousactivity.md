@@ -1,0 +1,5 @@
+# Code Changes for microsoft-ata-kv-alert-trigger-success-abnormalbehaviorsuspiciousactivity (Parser)
+
+| Code Change | Field Name | 2025.11.1 | 2025.12.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "microsoft-ata-kv-alert-trigger-success-abnormalbehaviorsuspiciousactivity", "Vendor": "Microsoft", "Product": "Microsoft Advanced Threat Analytics", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss", "Conditions": ["|Microsoft|ATA|", "|AbnormalBehaviorSuspiciousActivity|"], "Fields": ["CEF:([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|", "\Wstart=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)", "\Wapp=({service_name}.+?)\s+(\w+=|$)", "\Wmsg=({additional_info}.+?)\s+(\w+=|$)", "\Wmsg=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+", "\Wsuser=(?:(({last_name}[\w\']+), ({first_name}\w+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"], "ParserVersion": "v1.0.0"} | N/A |
