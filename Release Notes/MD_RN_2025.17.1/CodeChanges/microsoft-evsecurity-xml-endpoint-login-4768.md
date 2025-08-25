@@ -1,0 +1,7 @@
+# Code Changes for microsoft-evsecurity-xml-endpoint-login-4768 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['<Data Name\\*=(\'|")TargetDomainName(\'|")>(?=\w)({domain}[^<]+)</Data>', '<Data Name\\*=(\'|")TargetUserName(\'|")>\s*(?=\w)([^"\'<]+?(\'|"))?(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s<"\\,\|]+)|(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(@({domain}[^@<=]+))?)"?<\/Data>'] |
+| edit_regex_field | email_address |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>\s*(?=\w)([^"\'<]+?(\'|"))?(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s<"\\,\|]+)|(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(@({domain}[^@<=]+))?)"?<\/Data>'] |
+| edit_regex_field | user |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>\s*(?=\w)([^"\'<]+?(\'|"))?(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s<"\\,\|]+)|(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(@({domain}[^@<=]+))?)"?<\/Data>', 'Account Name(:|=)\s*(\\t|\\r|\\n)*(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@.+?)?[\s;]*(\\t|\\r|\\n)*"?\s*Supplied Realm Name'] |
