@@ -1,0 +1,9 @@
+# Code Changes for microsoft-azuremon-sk4-app-activity-bastionauditlogs (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | category | ['Category":"({category}[^"]+)', 'category":\s*"({category}[^"]+)"'] | ['Category":"({category}[^"]+)', 'category":\s*"({category}[^"]+)"', 'exa_regex=category":\s*"({category}[^"]+)"'] |
+| edit_regex_field | correlation_id | ['"CorrelationId":\s*"({correlation_id}[^"]+)"'] | ['"CorrelationId":\s*"({correlation_id}[^"]+)"', 'exa_regex="CorrelationId":\s*"({correlation_id}[^"]+)"'] |
+| edit_regex_field | operation | ['"actionName":\s*"({operation}[^"]+)', '"operationName":\s*"({operation}[^"]+)', 'OperationName":"({operation}[^"]+)'] | ['"actionName":\s*"({operation}[^"]+)', '"operationName":\s*"({operation}[^"]+)', 'OperationName":"({operation}[^"]+)', 'exa_regex="actionName":\s*"({operation}[^"]+)', 'exa_regex="operationName":\s*"({operation}[^"]+)'] |
+| edit_regex_field | resource_id | ['"_?ResourceId":\s*"({resource_id}[^"]+)"', '"resourceId":\s*"({resource_id}[^"]+)', '"resourceId"\s*:\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)"', 'exa_regex="resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)"'] | ['"_?ResourceId":\s*"({resource_id}[^"]+)"', '"resourceId":\s*"({resource_id}[^"]+)', '"resourceId"\s*:\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)"', 'exa_regex="resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)"', 'exa_regex=resourceId":\s*"({resource_id}[^"]+)'] |
+| edit_regex_field | tenant_id | ['"tenantId"\s*:\s*"({tenant_id}[^",]+)'] | ['"tenantId"\s*:\s*"({tenant_id}[^",]+)', 'exa_regex="tenantId"\s*:\s*"({tenant_id}[^",]+)'] |

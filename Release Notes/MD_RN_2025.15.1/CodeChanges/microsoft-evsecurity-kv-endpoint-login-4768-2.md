@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-4768-2 (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | time | ['({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})', '({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))', '({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)', 'TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"', 'TimeGenerated=({time}\d{10})'] | ['"TimeCreated":"({time}\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d\s+\-\d{4})"', '"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"', '({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})', '({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))', '({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)', 'TimeGenerated=({time}\d{10})'] |

@@ -1,0 +1,5 @@
+# Code Changes for github-repository-modify-success-1 (Event Builder)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| edit_conditions | expression | InList(type, 'github-g-json-repository-modify-success-repo') && InList(toLower(operation), 'repo.update_member', 'repo.change_merge_setting', 'repo.update_actions_secret', 'repo.advanced_security_disabled','repo.add_topic','repo.actions_enabled') | InList(type, 'github-g-json-repository-modify-success-repo','github-g-json-app-activity-success-action') && InList(toLower(operation), 'repo.update_member', 'repo.change_merge_setting', 'repo.update_actions_secret', 'repo.advanced_security_disabled','repo.add_topic','repo.actions_enabled','archived','added_to_repository','released','published','prereleased','removed_from_repository','transferred','unpublished','disabled','enabled','renamed') |

@@ -1,0 +1,5 @@
+# Code Changes for citrix-cgateway-cef-app-activity-79916606 (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "citrix-cgateway-cef-app-activity-79916606", "ParserVersion": "v1.0.0", "Vendor": "Citrix", "Product": "Citrix Gateway", "TimeFormat": "epoch", "Conditions": ["CEF: ", "|NetScaler|NetScaler||", "eventId=", "msg="], "Fields": ["\srt=({time}\d{13})\s", "spriv=({app}[^\s]+)", "eventId=({event_code}\d+)\s", "NetScaler\|\|({event_name}[^|]+)\|({event_category}[^|]+)\|", "flexString1=.+?(U|u)ser\s+(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s", "flexString1=.+?SessionId:\s*(\d+)[-\s]*({domain}[^\s]+)\s*(U|u)ser", "flexString1=.+?SSO is ON[:\s]*({method}[^\s]+)\s*({query}[^\s]+)", "deviceSeverity=({severity}[^\s]+)", "for <({domain}[^\\]+)\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"]} | N/A |

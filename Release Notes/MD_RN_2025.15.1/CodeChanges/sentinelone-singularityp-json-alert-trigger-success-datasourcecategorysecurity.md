@@ -1,0 +1,12 @@
+# Code Changes for sentinelone-singularityp-json-alert-trigger-success-datasourcecategorysecurity (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | account_name | ['exa_json_path=$.resources,exa_regex=.+?"account_name\\?":\\?"({account_name}[^\\"]+)'] | ['exa_json_path=$.resources,exa_regex="account_name\\?":\\?"({account_name}[^\\"]+)'] |
+| edit_regex_field | alert_severity | ['exa_json_path=$.[\'finding_info.related_events\'],exa_regex=.+?"severity\\?":\\?"({alert_severity}[^\\"]+)'] | ['exa_json_path=$.[\'finding_info.related_events\'],exa_regex="severity\\?":\\?"({alert_severity}[^\\"]+)'] |
+| edit_regex_field | group_name | ['exa_json_path=$.resources,exa_regex=.+?"group_name\\?":\\?"({group_name}[^\\"]+)'] | ['exa_json_path=$.resources,exa_regex="group_name\\?":\\?"({group_name}[^\\"]+)'] |
+| edit_regex_field | process_dir | ['exa_json_path=$.evidences,exa_regex=.+?"process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] | ['exa_json_path=$.evidences,exa_regex="process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] |
+| edit_regex_field | process_name | ['exa_json_path=$.[\'finding_info.related_events\'],exa_regex=.+?"process.name\\?".+?\\?"value\\?":\\?"({process_name}[^\\"]+)', 'exa_json_path=$.evidences,exa_regex=.+?"process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] | ['exa_json_path=$.[\'finding_info.related_events\'],exa_regex="process.name\\?",\\?"value\\?":\\?"({process_name}[^\\"]+)', 'exa_json_path=$.evidences,exa_regex="process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] |
+| edit_regex_field | process_path | ['exa_json_path=$.evidences,exa_regex=.+?"process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] | ['exa_json_path=$.evidences,exa_regex="process\\?".+?"path\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/;])?({process_name}[^\\\/";]+?))\\?"'] |
+| edit_regex_field | site_name | ['exa_json_path=$.resources,exa_regex=.+?"site_name\\?":\\?"({site_name}[^\\"]+)'] | ['exa_json_path=$.resources,exa_regex="site_name\\?":\\?"({site_name}[^\\"]+)'] |
+| edit_attribute | Platform | ['SentinelOne', 'Windows'] | ['Linux', 'MacOS', 'SentinelOne', 'Windows'] |

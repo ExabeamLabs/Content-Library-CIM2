@@ -1,0 +1,5 @@
+# Code Changes for cloudfare-waf-sk4-http-request-cloudflareaws (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "cloudfare-waf-sk4-http-request-cloudflareaws", "ParserVersion": "v1.0.0", "Vendor": "Cloudflare", "Product": "Cloudflare WAF", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["requestClientApplication=cloudflareAWS"], "Fields": ["\"ClientDeviceType\":\"({device_type}[^\"]+)", "\"ClientCountry\":\"({src_country}[^\"]+)", "\"ClientIP\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\"", "\"ClientRequestUserAgent\":\"({user_agent}[^\"]+)", "\"ClientRequestURI\":\"({uri_path}[^\"]+)", "ClientRequestBytes\"+:({bytes}\d+)", "\"ClientRequestMethod\":\"({method}[^\"]+)", "WAFAction\"+:\"+({action}[^\"]+)", "ClientRequestProtocol\"+:\"+({protocol}[^\"]+)"]} | N/A |

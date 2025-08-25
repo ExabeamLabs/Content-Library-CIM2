@@ -1,0 +1,5 @@
+# Code Changes for cisco-iws-csv-http-session-tcp (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Cisco", "Fields": ["(IronPort-Web|LogRythm):.+?({time}\d+).+?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s({proxy_action}[^\/]+)\/({http_response_code}\d+)\s\d+\s({method}\S+)\s(-|(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:({dest_port}\d+))?)|({url}(({protocol}[^:\\\/\s,\\"]+):[\\\/]+)?({web_domain}[^\\\/\s:,\\"]+)(:\d+)?({uri_path}\/[^\s\?\\",]*)?({uri_query}\?[^\\"\s]*)?))\s(-|\\"*(\w+\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^\s\\"]*\\"*))\s(\w+\/)?(-|({=web_domain}\S+))\s(-|({mime}[^\s]+))\s.+?<(-|({category}[^,>]+))", "IronPort-Web:.+?({time}\d\d\/\w+\/\d\d\d\d:\d\d:\d\d:\d\d [-+]\d+)\\"\s\d+\s\\"({user_agent}[^\\"]+)"], "Name": "cisco-iws-csv-http-session-tcp", "Product": "Cisco Web Security", "TimeFormat": "dd/MMM/yyyy:HH:mm:ss Z", "Conditions": ["IronPort-Web:", " TCP_"], "ParserVersion": "v1.0.0"} | N/A |

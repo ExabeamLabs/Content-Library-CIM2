@@ -1,0 +1,15 @@
+# Code Changes for microsoft-o365-sk4-file-app-userkey (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| changed_parsed_fields | N/A | ['app', 'email_address', 'email_domain', 'object', 'object_id', 'object_type', 'operation', 'src_file_ext', 'src_file_name', 'src_file_path', 'src_ip', 'src_port', 'time', 'user_agent', 'user_type'] | ['app', 'email_address', 'email_domain', 'file_dir', 'file_ext', 'file_name', 'file_path', 'object', 'object_id', 'object_type', 'operation', 'policy_name', 'removable_media_serial_number', 'removable_media_vendor', 'src_file_ext', 'src_file_name', 'src_file_path', 'src_host', 'src_ip', 'src_port', 'time', 'user_agent', 'user_type'] |
+| edit_regex_field | app | ['"Workload":\s*"({app}[^"]+)"'] | ['"Application":\s*"({app}[^"]+)"', '"Workload":\s*"({app}[^"]+)"'] |
+| added_regex_field | file_dir | [] | ['"ObjectId":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))"', 'exa_json_path=$.ObjectId,exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))$'] |
+| added_regex_field | file_ext | [] | ['"FileExtension":\s*"({file_ext}[^"]+)"', '"ObjectId":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))"', 'exa_json_path=$.ObjectId,exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))$'] |
+| added_regex_field | file_name | [] | ['"ObjectId":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))"', 'exa_json_path=$.ObjectId,exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))$'] |
+| added_regex_field | file_path | [] | ['"ObjectId":\s*"({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))"', 'exa_json_path=$.ObjectId,exa_regex=({file_path}({file_dir}[^"]+[\\\/])({file_name}[^"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s)"]+))?))$'] |
+| added_regex_field | policy_name | [] | ['"PolicyName":\s*"({policy_name}[^"]+)"'] |
+| added_regex_field | removable_media_serial_number | [] | ['"RemovableMediaDeviceAttributes.SerialNumber":\s*"({removable_media_serial_number}[^"]+)"'] |
+| added_regex_field | removable_media_vendor | [] | ['"RemovableMediaDeviceAttributes.Manufacturer":\s*"({removable_media_vendor}[^"]+)"'] |
+| added_regex_field | src_host | [] | ['"DeviceName":\s*"({src_host}[^"]+)"'] |
+| edit_attribute | legacy_activity_type | ['app-activity', 'app-activity-failed', 'app-login', 'file-delete', 'file-download', 'file-read', 'file-upload', 'file-write'] | ['app-activity', 'app-activity-failed', 'app-login', 'file-delete', 'file-download', 'file-read', 'file-upload', 'file-write', 'usb-write'] |

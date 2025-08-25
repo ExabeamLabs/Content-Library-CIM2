@@ -1,0 +1,6 @@
+# Code Changes for microsoft-evsecurity-json-ds-object-modify-success-5136 (Parser)
+
+| Code Change | Field Name | 2025.14.1 | 2025.15.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | host | ['"+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+', '"ComputerName":"({host}[\w\-.]+)"', 'exa_regex="+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+', 'exa_regex="ComputerName":"({host}[\w\-.]+)"'] | ['"+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+', '"Computer(|Name)":"({host}[\w\-.]+)"', 'exa_regex="+Hostname\\?"+:\\?"+({host}[\w\-.]+)\\?"+', 'exa_regex="Computer(|Name)":"({host}[\w\-.]+)"'] |
+| edit_regex_field | object_type | ['"ObjectClass\\?":\\?"({object_type}[^"\\]+)\\?"', 'Object:.+?Class:((\\)*(\\r|\\t|\\n))*({object_type}[^:]+?)((\\)*(\\r|\\t|\\n))*\w+:', 'exa_regex="ObjectClass\\?":\\?"({object_type}[^"\\]+)\\?"', 'exa_regex=Object:.+?Class:((\\)*(\\r|\\t|\\n))*({object_type}[^:]+?)((\\)*(\\r|\\t|\\n))*\w+:'] | ['"ObjectClass\\?":\\?"({object_type}[^"\\]+)\\?"', 'Object:.+?Class:((\\)*(\\r|\\t|\\n))*(\s*|)({object_type}[^:]+?)(\s*|)((\\)*(\\r|\\t|\\n))*\w+:', 'exa_regex="ObjectClass\\?":\\?"({object_type}[^"\\]+)\\?"', 'exa_regex=Object:.+?Class:((\\)*(\\r|\\t|\\n))*(\s*|)({object_type}[^:]+?)(\s*|)((\\)*(\\r|\\t|\\n))*\w+:'] |
