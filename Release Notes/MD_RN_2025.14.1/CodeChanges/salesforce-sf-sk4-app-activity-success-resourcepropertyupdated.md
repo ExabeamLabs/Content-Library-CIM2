@@ -1,0 +1,5 @@
+# Code Changes for salesforce-sf-sk4-app-activity-success-resourcepropertyupdated (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "salesforce-sf-sk4-app-activity-success-resourcepropertyupdated", "Vendor": "Salesforce", "Product": "Salesforce", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Conditions": ["OldValue\=", "NewValue\=", "type\=AccountHistory;"], "Fields": ["({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ) \S+ ", "([^\|]*\|){5}({operation}[^\|]+)", "\Wsuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)", "\Wsuser=({email_address}[^@\s;]+?@[^@\s;]+)\s*(\w+=|$)", "\Wfname=({object}.+?)\s+(\w+=|$)", "\Wcs1=\{({new_value}[^\}]+)", "\Wcs2=\{({old_value}[^\}]+)", "\WdestinationServiceName=({app}.+?)\s*(\w+=|$)"], "DupFields": ["object->resource"], "ParserVersion": "v1.0.0"} | N/A |

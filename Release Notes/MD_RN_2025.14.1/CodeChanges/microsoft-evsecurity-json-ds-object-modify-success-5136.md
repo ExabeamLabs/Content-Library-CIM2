@@ -1,0 +1,8 @@
+# Code Changes for microsoft-evsecurity-json-ds-object-modify-success-5136 (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| changed_parsed_fields | N/A | ['activity_id', 'additional_info', 'category', 'domain', 'ds_name', 'ds_object_dn', 'ds_type', 'event_code', 'event_name', 'host', 'log_source', 'login_id', 'object_type', 'process_guid', 'process_id', 'result', 'severity', 'time', 'user', 'user_sid'] | ['activity_id', 'additional_info', 'attribute', 'attribute_value', 'category', 'domain', 'ds_name', 'ds_object_dn', 'ds_type', 'event_code', 'event_name', 'host', 'log_source', 'login_id', 'object_type', 'operation_type', 'process_guid', 'process_id', 'result', 'severity', 'time', 'user', 'user_sid'] |
+| added_regex_field | attribute | [] | ['<Data Name\\*=(\'|")AttributeLDAPDisplayName(\'|")>\s*({attribute}[^<]+?)\s*</Data>', 'AttributeLDAPDisplayName(\\)?":(\\)?"({attribute}[^"\\]+)', 'exa_regex=<Data Name\\*=(\'|")AttributeLDAPDisplayName(\'|")>\s*({attribute}[^<]+?)\s*</Data>'] |
+| added_regex_field | attribute_value | [] | ['AttributeValue("|\')>({attribute_value}[^"\'<]+)</Data>', 'AttributeValue(\\)?":(\\)?"({attribute_value}[^"\'>\\]+)', 'exa_regex=AttributeValue("|\')>({attribute_value}[^"\'<]+)</Data>'] |
+| added_regex_field | operation_type | [] | ['<Data Name(\\)?=(\'|")OperationType(\'|")>({operation_type}[^<]+)', 'OperationType(\\)?":(\\)?"({operation_type}[^"\\]+)', 'exa_regex=<Data Name(\\)?=(\'|")OperationType(\'|")>({operation_type}[^<]+)'] |

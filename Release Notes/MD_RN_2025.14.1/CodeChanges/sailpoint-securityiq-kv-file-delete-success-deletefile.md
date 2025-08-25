@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-kv-file-delete-success-deletefile (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "ipaddress\s:\s({host}[^|]+) \|", "ipaddress\s:\s({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) \|", "applicationtype\s:\s({app}[^|]+)\s\|", "fileextension\s:\s({file_ext}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "objectname\s:\s({file_name}[^|]+)\s\|", "\spath\s:\s({file_dir}[^|]+)\s\|", "actiontype\s:\s({event_name}[^|]+)\sFile\s\|"], "Name": "sailpoint-securityiq-kv-file-delete-success-deletefile", "Conditions": ["| applicationtype : Netapp - CIFS |", "actiontype : Delete File"], "ParserVersion": "v1.0.0"} | N/A |

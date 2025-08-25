@@ -1,0 +1,5 @@
+# Code Changes for o365-activity-template (ParserTemplate)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | user_agent | ['"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},', '"ClientInfoString":"({user_agent}[^"]+)",', '"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)', '"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)', '"User-?Agent\\*"+:[\s\\]*"(|({user_agent}[^\\"]+))\\*"', '\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}'] | ['"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},', '"ActorInfoString":"({user_agent}[^"]+)",', '"ClientInfoString":"({user_agent}[^"]+)",', '"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)', '"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)', '"User-?Agent\\*"+:[\s\\]*"(|({user_agent}[^\\"]+))\\*"', '\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}'] |

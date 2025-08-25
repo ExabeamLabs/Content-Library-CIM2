@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-str-user-delete-fail-accountlock (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "servername\s:\s({host}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "actiontype\s:\s({event_name}[^|]+)\s\|", "originatingserver\s:\s({host}[^|]+)\s\|", "extradetails\s:\sCaller Computer Name::[\W]*({dest_host}[^|]+)\s\|"], "Name": "sailpoint-securityiq-str-user-delete-fail-accountlock", "Conditions": ["| applicationtype : Active Directory |", "actiontype : Account Lock", "| objectclass : user |"], "ParserVersion": "v1.0.0"} | N/A |

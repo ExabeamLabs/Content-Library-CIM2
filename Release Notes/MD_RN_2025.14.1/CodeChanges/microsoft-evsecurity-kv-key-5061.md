@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsecurity-kv-key-5061 (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | time | ['({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+)\S+\s({host}[^\s]+)', '({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)', 'EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"', 'TimeCreated":"\/Date\(({time}\d{13})\)\/"', '\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+', '\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s', '\srt=({time}\d{13})'] | ['({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+)\S+\s({host}[^\s]+)', '({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)', '<TimeCreated SystemTime(\\)?=(\'|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)', 'EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"', 'TimeCreated":"\/Date\(({time}\d{13})\)\/"', '\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+', '\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s', '\srt=({time}\d{13})'] |

@@ -1,0 +1,5 @@
+# Code Changes for rs2-t-kv-physical-location-access-eventlocation (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "rs2-t-kv-physical-location-access-eventlocation", "Vendor": "RS2 Technologies", "Product": "RS2 Technologies", "TimeFormat": "yyyy-MM-dd HH:mm:ss.S", "Conditions": ["CardNumber=", "SiteName=", "EventLocation="], "Fields": ["\sEventDate=\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d)", "\sSiteName=\"({location_building}[^\"]+)", "\sEventLocation=\"({location_door}[^\"]+)", "\sEventDescription=\"({action}[^\"]+)", "\sEID=\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "\sCardNumber=\"({badge_id}[^\"]+)", "\sFirstName=\"\s*({first_name}[^\"]+?)\s*\"", "\sLastName=\"\s*({last_name}[^\"]+?)\s*\""], "ParserVersion": "v1.0.0"} | N/A |

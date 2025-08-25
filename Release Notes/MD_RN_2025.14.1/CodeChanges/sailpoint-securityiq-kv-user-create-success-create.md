@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-kv-user-create-success-create (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "servername\s:\s({host}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "actiontype\s:\s({event_name}[^|]+)\s\|", "originatingserver\s:\s({host}[^|]+)\s\|", "objectcn\s:\s({account_name}[^|]+)\s\|"], "Name": "sailpoint-securityiq-kv-user-create-success-create", "Conditions": ["| applicationtype : Active Directory |", "actiontype : Create", "| objectclass : user |"], "DupFields": ["host->dest_host", "domain->account_used_domain", "user->account", "account_name->dest_user"], "ParserVersion": "v1.0.0"} | N/A |

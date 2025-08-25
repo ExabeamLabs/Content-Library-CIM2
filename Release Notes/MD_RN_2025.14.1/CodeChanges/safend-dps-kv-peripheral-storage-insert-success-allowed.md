@@ -1,0 +1,5 @@
+# Code Changes for safend-dps-kv-peripheral-storage-insert-success-allowed (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "safend-dps-kv-peripheral-storage-insert-success-allowed", "Vendor": "Safend", "Product": "Data Protection Suite (DPS)", "TimeFormat": "MM dd yyyy HH:mm:ss", "Conditions": ["[Safend Data Protection]", "Action: Read"], "Fields": ["Action:\s*({operation}[^,]+)", "User:\s*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))", "Computer:\s*({host}[^,]+)", "Operating System:\s*({os}[^,]+)", "Device Type:\s*({device_class}[^,]+)", "Distinct ID:\s*(|({device_id}[^,]+)),", "Policy:\s*({operation_details}[^,]+)"], "ParserVersion": "v1.0.0"} | N/A |

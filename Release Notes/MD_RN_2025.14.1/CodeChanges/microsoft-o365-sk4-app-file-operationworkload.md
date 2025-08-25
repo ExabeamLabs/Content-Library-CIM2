@@ -1,0 +1,5 @@
+# Code Changes for microsoft-o365-sk4-app-file-operationworkload (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| edit_regex_field | user_agent | ['"(U|u)serAgent\\*"+:[\s\\]*"(|({user_agent}[\s\S]*?))\\*",', '"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},', '"ClientInfoString":\s*"({user_agent}[^"]+)",', '"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)', '"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)', '"User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*"', '\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}'] | ['"(U|u)serAgent\\*"+:[\s\\]*"(|({user_agent}[\s\S]*?))\\*",', '"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},', '"ActorInfoString":\s*"({user_agent}[^"]+)",', '"ClientInfoString":\s*"({user_agent}[^"]+)",', '"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)', '"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)', '"User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*"', '\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}'] |

@@ -1,0 +1,5 @@
+# Code Changes for ibm-ln-str-network-traffic-success-connected (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| added_parser | N/A | N/A | {"Name": "ibm-ln-str-network-traffic-success-connected", "ParserVersion": "v1.0.0", "Vendor": "IBM", "Product": "HCL Notes", "TimeFormat": "MM/dd/yyyy HH:mm:ss a", "Conditions": ["  SMTP Server: ", " connected"], "Fields": ["({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (am|AM|PM|pm))", "SMTP Server:\s*({dest_host}.+?) \(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\)"]} |

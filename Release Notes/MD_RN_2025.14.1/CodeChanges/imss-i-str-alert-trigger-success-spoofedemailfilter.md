@@ -1,0 +1,5 @@
+# Code Changes for imss-i-str-alert-trigger-success-spoofedemailfilter (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| added_parser | N/A | N/A | {"Name": "imss-i-str-alert-trigger-success-spoofedemailfilter", "ParserVersion": "v1.0.0", "Vendor": "IMSS", "Product": "IMSS", "Conditions": ["\u8a50\u79f0\u30e1\u30fc\u30eb\u30d5\u30a3\u30eb\u30bf"], "TimeFormat": "yyyy/MM/dd HH:mm:ss zZ", "Fields": ["({time}\d{4}\/\d\d\/\d\d \d+:\d+:\d+ \w+(\+|\-)\d+:\d+)\s\S+\s(|({email_address}[^\s]+))\s(|\"?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))[^\s]*?)\"?)\s(|\"?({email_subject}.+?)\"?)\s\d\s(|({alert_name}[^\s]+))\s\d+\s[^\s]*?\s({bytes}\d+\.?\d*)\s([^\s]*?\s){19}(|({email_attachments}[^\s]+))"]} |

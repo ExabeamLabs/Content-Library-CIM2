@@ -1,0 +1,5 @@
+# Code Changes for sentinelips-sips-cef-alert-trigger-success-outpost (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "sentinelips-sips-cef-alert-trigger-success-outpost", "Vendor": "Sentinel IPS", "Product": "Sentinel IPS", "ParserVersion": "v1.0.0", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss", "Conditions": ["CEF:0|Sentinel IPS|Outpost"], "Fields": ["\srt=({time}\d+-\d+-\d+T\d+:\d+:\d+)", "src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?", "\sspt=({src_port}\d+)", "\sdpt=({dest_port}\d+)", "\ssentinel_ip=({host}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})", "\ssentinel_loc=({location}[^\s]+)", "\sproto=({protocol}[^\s]+)", "msg=({alert_name}.+)\sproto", "flow=({direction}[^\s]+)"]} | N/A |

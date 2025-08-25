@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-kv-group-member-remove-success-memberremoved (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "servername\s:\s({host}[^|]+)\s\|", "applicationtype\s:\s({app}[^|]+)\s\|", "fileextension\s:\s({file_ext}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "membername\s:\s({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}\S+)|(?:.+?))\s$", "membername\s:\s({account_id}.+?[^\"\s]+)", "actiontype\s:\s({event_name}[^|]+)\s\|", "objectname\s:\s({group_id}(?=[^\\]+\\)({group_domain}[^\\]+)\\({group_name}.+?)|(?:.+?)) \|"], "Name": "sailpoint-securityiq-kv-group-member-remove-success-memberremoved", "Conditions": ["| applicationtype : Windows File Server (Agent) |", "actiontype : Member Removed"], "DupFields": ["host->dest_host"], "ParserVersion": "v1.0.0"} | N/A |

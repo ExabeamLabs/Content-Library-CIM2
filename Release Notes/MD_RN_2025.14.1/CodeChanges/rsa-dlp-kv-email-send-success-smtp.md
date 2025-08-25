@@ -1,0 +1,5 @@
+# Code Changes for rsa-dlp-kv-email-send-success-smtp (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Name": "rsa-dlp-kv-email-send-success-smtp", "Vendor": "RSA", "Product": "RSA DLP", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["DLP_EM:", "protocol=smtp", "RiskFactor=", "dlp_event_link"], "Fields": ["DLP_EM:\s*({host}[^\s]+)", "Incident\s*:*\s*\"({alert_name}[^\"]+)", "Severity=({alert_severity}[^\s]+)", "User=(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=", "Policy=({alert_type}.+?)\s+\w+=", "userEmail=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))", "sessionEmailMailto=({email_recipients}.+?)\s+\w+=", "sessionEmailSubject=({email_subject}.+?)\s+\w+="], "ParserVersion": "v1.0.0"} | N/A |

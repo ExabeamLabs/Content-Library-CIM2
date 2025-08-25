@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-str-user-delete-fail-user (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "servername\s:\s({host}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "actiontype\s:\s({event_name}[^|]+)\s\|", "originatingserver\s:\s({host}[^|]+)\s\|", "objectcn\s:\s({dest_user}[^|]+)\s\|"], "Name": "sailpoint-securityiq-str-user-delete-fail-user", "Conditions": ["| applicationtype : Active Directory |", "actiontype : Delete", "| objectclass : user |"], "DupFields": ["host->src_host", "dest_user->account_name"], "ParserVersion": "v1.0.0"} | N/A |

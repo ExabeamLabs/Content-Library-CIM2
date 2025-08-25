@@ -1,0 +1,5 @@
+# Code Changes for rs2-t-xml-physical_location-access-fail-accessdenied (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "RS2 Technologies", "Product": "RS2 Technologies", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Fields": ["<ACTIVITYID>({event_code}\d+)<\/ACTIVITYID>", "<DESCNAME><!\[CDATA\[({event_name}[^\]]+)\]+><\/DESCNAME>", "<CDT>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\.\d+<\/CDT>", "<PERSONNAME><!\[CDATA\[({full_name}({last_name}[^,]+),\s({first_name}[^\]]+))\]+><\/PERSONNAME>", "<PERSONID>\s*({badge_id}[^>]+?)\s*<\/PERSONID>", "<RDRNAME><!\[CDATA\[({location_door}[^\]]+)\]+><\/RDRNAME>", "<DESCNAME><!\[CDATA\[({action}[^>]+?)\]+><\/DESCNAME>"], "Name": "rs2-t-xml-physical_location-access-fail-accessdenied", "Conditions": ["<DESCNAME><![CDATA[Access denied]]></DESCNAME>", "<RDRNAME><"], "ParserVersion": "v1.0.0"} | N/A |

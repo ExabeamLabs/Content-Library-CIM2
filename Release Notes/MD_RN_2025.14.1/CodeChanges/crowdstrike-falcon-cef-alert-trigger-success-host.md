@@ -1,0 +1,7 @@
+# Code Changes for crowdstrike-falcon-cef-alert-trigger-success-host (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| COULD_NOT_COMPARE | TimeFormat | epoch_sec | ['epoch_sec', 'yyyy-MM-dd HH:mm:ss'] |
+| edit_regex_field | alert_name | ['(\s|\|)cat=({alert_name}.+?)\s+(\w+=|$)', '(\s|\|)cs1=({alert_name}.+?)\s+\w+=.*?cs1Label=ScanResultName', '(\s|\|)cs3=({alert_name}.+?)\s+\w+=.*?cs3Label=ScanResultName', 'CrowdStrike\|([^|]+\|){3}({alert_name}[^|]+)', 'cs1Label=ScanResultName.*?cs1=({alert_name}.+?)\s+(\w+=|$)', 'cs3Label=ScanResultName.*?cs3=({alert_name}.+?)\s+(\w+=|$)'] | ['(\s|\|)cat=({alert_name}.+?)\s+(\w+=|$)', '(\s|\|)cs1=({alert_name}.+?)\s+\w+=.*?cs1Label=ScanResultName', '(\s|\|)cs3=({alert_name}.+?)\s+\w+=.*?cs3Label=ScanResultName', 'CrowdStrike\|([^|]+\|){3}({alert_name}[^|]+)', 'cs1=({alert_name}[^=]+)\s\w+=', 'cs1Label=ScanResultName.*?cs1=({alert_name}.+?)\s+(\w+=|$)', 'cs3Label=ScanResultName.*?cs3=({alert_name}.+?)\s+(\w+=|$)'] |
+| edit_regex_field | alert_severity | ['CrowdStrike\|([^|]+\|){4}({alert_severity}[^|]+)'] | ['({alert_severity}\d)\|\s*(cat=|externalId=)', 'severityName=({alert_severity}[^\s]+)'] |

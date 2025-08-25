@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-kv-file-delete-success-folderdeleted (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "ipaddress\s:\s({host}[^|]+)\s\|", "ipaddress\s:\s({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))? \|", "applicationtype\s:\s({app}[^|]+)\s\|", "fileextension\s:\s({file_ext}[^|]+)\s\|", "userfullname\s:\s({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))\s\|", "objectname\s:\s({file_name}[^|]+) \|", "\spath\s:\s({file_dir}[^|]+)\s\|", "actiontype\s:\sFolder\s({operation}[^|]+)\s\|", "itemtype\s:\s({file_type}[^|]+)\s\|"], "Name": "sailpoint-securityiq-kv-file-delete-success-folderdeleted", "Conditions": ["| applicationtype : OneDrive ", "actiontype : Folder Deleted"], "ParserVersion": "v1.0.0"} | N/A |

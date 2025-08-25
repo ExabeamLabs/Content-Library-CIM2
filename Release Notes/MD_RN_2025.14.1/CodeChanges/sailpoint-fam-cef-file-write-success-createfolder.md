@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-fam-cef-file-write-success-createfolder (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "Sailpoint FAM", "TimeFormat": "epoch", "Fields": ["\srt=({time}\d{13})", "shost=({host}[\w\-.]+)", "CEF:([^|]*\|){4}({event_name}[^|]+)\|", "src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?", "sntdom=({domain}[^=]+)\s+\w+=", "suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=", "sproc=({app}[^=]+)\s+\w+=", "fname=({file_name}[^=]+(\.({file_ext}[^=\.\s]+?))?)\s+\w+=", "filePath=({file_path}({file_dir}[^=]+)\\\\[^=]+)\s+\w+=", "cs3=({file_ext}[^=]+)\s+\w+=", "fileType=({file_type}[^=]+)\s+\w+=", "({access}Create)"], "DupFields": ["event_name->operation"], "Name": "sailpoint-fam-cef-file-write-success-createfolder", "Conditions": ["CEF:", "|Sailpoint|FAM|", "|Create Folder|", "sproc=Netapp - CIFS"], "ParserVersion": "v1.0.0"} | N/A |

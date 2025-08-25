@@ -1,0 +1,5 @@
+# Code Changes for ibm-sbi-str-app-activity-systemname (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| added_parser | N/A | N/A | {"Name": "ibm-sbi-str-app-activity-systemname", "Conditions": ["Modified:System Name", "sterling"], "ParserVersion": "v1.0.0", "Vendor": "IBM", "Product": "Sterling B2B Integrator", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSSSS", "Fields": ["\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d)\+\d\d:\d\d\s+sterling", "sterling(\s-){3}\s+({host}[^,]+)", "sterling(?:\s-){3}\s+(?:[^,]+,)({sub_category}[^,]+)", "sterling(?:\s-){3}\s+(?:[^,]+,){2}({object}[^,]+)", "sterling(?:\s-){3}\s+(?:[^,]+,){3}({action}[^,]+\w+)", "sterling(?:\s-){3}\s+(?:[^,]+,){4}({description}[^,]+)", "sterling(?:\s-){3}\s+(?:[^,]+,){5}({user_id}[^,]+)"]} |

@@ -1,0 +1,5 @@
+# Code Changes for imss-i-str-alert-trigger-success-capacityregulation (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| added_parser | N/A | N/A | {"Name": "imss-i-str-alert-trigger-success-capacityregulation", "ParserVersion": "v1.0.0", "Vendor": "IMSS", "Product": "IMSS", "TimeFormat": "yyyy/MM/dd HH:mm:ss zZ", "Conditions": ["\u30e1\u30fc\u30eb\u5bb9\u91cf\u898f\u5236"], "Fields": ["({time}\d{4}\/\d\d\/\d\d \d+:\d+:\d+ \w+(\+|\-)\d+:\d+)\s\S+\s(|({email_address}[^\s]+))\s(|\"?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))[^\s]*?)\"?)\s(|\"?({email_subject}.+?)\"?)\s\d\s(|({alert_name}[^\s]+))\s\d+\s[^\s]*?\s({bytes}\d+\.?\d*)\s([^\s]*?\s){19}(|({email_attachments}[^\s]+))"]} |

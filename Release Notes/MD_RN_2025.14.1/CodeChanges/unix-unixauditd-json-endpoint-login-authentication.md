@@ -1,0 +1,5 @@
+# Code Changes for unix-unixauditd-json-endpoint-login-authentication (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| added_parser | N/A | N/A | {"Vendor": "Unix", "Product": "Unix Auditd", "ExtractionType": "json", "TimeFormat": "epoch", "Fields": ["exa_json_path=$.time,exa_field_name=time", "exa_json_path=$.node,exa_field_name=src_host", "exa_json_path=$.raw_event.object_type,exa_field_name=operation_type", "exa_json_path=$.raw_event,exa_regex=(executable|exe)\":\s*\"({process_path}({process_dir}[^\"]*?[\\\/]+)?({process_name}[^\"\\\/]+))\"", "exa_json_path=$.raw_event.actor_primary,exa_field_name=user", "exa_json_path=$.raw_event.actor_secondary,exa_field_name=account", "exa_json_path=$.raw_event.pid,exa_field_name=process_id", "exa_json_path=$.raw_event.op,exa_field_name=action", "exa_json_path=$.raw_event.result,exa_field_name=result"], "Name": "unix-unixauditd-json-endpoint-login-authentication", "Conditions": ["audit_id", "PAM:authentication"], "ParserVersion": "v1.0.0"} |

@@ -1,0 +1,5 @@
+# Code Changes for sailpoint-securityiq-kv-file-permission-modify-success-removefile (Parser)
+
+| Code Change | Field Name | 2025.13.1 | 2025.14.1 |
+|-------------|------------|-----------|------------|
+| removed_parser | N/A | {"Vendor": "Sailpoint", "Product": "SecurityIQ", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSS", "Fields": ["creation_timestamp\s:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3})", "servername\s:\s({host}[^|]+)\s\|", "applicationtype\s:\s({app}[^|]+)\s\|", "fileextension\s:\s({file_ext}[^|]+)\s\|", "userfullname\s:\s({user_sid}(?=[^\\]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:.+?))\s\|", "membername\s:\s({account_id}(?=[^\\]+\\)({sid_domain}[^\\]+)\\({dest_user_sid}\S+)|(?:.+?))\s$", "actiontype\s:\s({event_name}[^|]+)\s\|", "objectname\s:\s({file_name}[^|]+)\s\|", "actiontype\s:\sPermission\s({access}[^|]+)\sFile\s\|", "\spath\s:\s({file_dir}[^|]+)\s\|"], "Name": "sailpoint-securityiq-kv-file-permission-modify-success-removefile", "Conditions": ["| applicationtype : Windows File Server (Agent) |", "actiontype : Permission Remove File"], "DupFields": ["host->dest_host"], "ParserVersion": "v1.0.0"} | N/A |
