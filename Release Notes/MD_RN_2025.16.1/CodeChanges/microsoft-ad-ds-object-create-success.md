@@ -1,0 +1,5 @@
+# Code Changes for microsoft-ad-ds-object-create-success (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'microsoft-evsecurity-kv-ds-object-create-success-5137-1', 'microsoft-evsecurity-cef-ds-object-create-success-5137', 'microsoft-evsecurity-xml-ds-object-create-success-5137', 'microsoft-evsecurity-json-ds-object-modify-success-5137', 'microsoft-evsecurity-kv-ds-object-activity-success-5137', 'microsoft-evsecurity-kv-ds-object-create-success-5137', 'microsoft-evsecurity-kv-ds-object-activity-success-5137-1', 'microsoft-evsecurity-sk4-ds-object-create-success-5137', 'microsoft-evsecurity-cef-ds-object-create-success-5137-1') && (!exists(object_type) || !containsAny(toLower(object_type), 'user', 'computer', 'server', 'group')) |

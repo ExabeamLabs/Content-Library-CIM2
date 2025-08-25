@@ -1,0 +1,7 @@
+# Code Changes for microsoft-evpowershell-xml-process-create-success-4103 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | process_dir |  | ['Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version =', 'exa_regex=Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version ='] |
+| edit_regex_field | process_name |  | ['Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version =', 'exa_regex=Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version ='] |
+| edit_regex_field | process_path |  | ['Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version =', 'exa_regex=Context[^@]+?Host Application\s*=\s*(\-\w+|({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+)))[^\n]+?\s+Engine Version ='] |

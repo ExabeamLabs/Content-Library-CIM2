@@ -1,0 +1,5 @@
+# Code Changes for servicenow-s-sk4-app-authentication-success-sessionestablished (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Vendor": "ServiceNow", "Product": "ServiceNow", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Fields": ["\"sys_created_on\":\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)", "destinationServiceName=({app}ServiceNow)", "\"user(_name)?\":\"(({email_address}[^@\"]+@[^.]+\.[^\"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))", "\"name\":\"({object}[^\"]+)", "\"parm1\":\"\s*(|-|({resource}[^\",]+?[^\\\s])\s*)\",", "\"parm2\":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"], "Name": "servicenow-s-sk4-app-authentication-success-sessionestablished", "ParserVersion": "v1.0.0", "Conditions": ["\"sys_created_by\":", "\"sys_created_on\":", "\"name\":\"session.established\""]} |
