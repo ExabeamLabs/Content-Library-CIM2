@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsecurity-mix-user-enable-success-4722 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_user |  | ['Account Name:(\\t|\\r|\\n|\s)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*({domain}[^\s"\\]+)(\\t|\\r|\\n|\s)*Logon ID:(\\t|\\r|\\n|\s)*({login_id}[^\s\\]+)(\\t|\\r|\\n|\s)*Target.+?Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain:(\\t|\\r|\\n|\s)*({dest_domain}[^\s\\"]+)(\\t|\\r|\\n|\s)*', 'Account Name:\s*\\?({user}[\w\.\-\!\#\^\~]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:\s*({domain}[^\s\\]+).+?Logon ID:\s*({login_id}[^\\\s]+)((?-i)\\+[rnt])*\s*Target.+?Account Name:\s*({dest_user}[^\\\s]+)((?-i)\\+[rnt])*\s*Account Domain:\s*({dest_domain}[^\s\"]+)', 'Target Account.+?Account Name:\s*(\\t|\\r|\\n|\s)*({dest_user}[^:].+?)\s*(\\n|\\r\s\\t)*?[rnt\\]*?\s*Account Domain:\s*', '\"TargetAccount\":\"(({dest_domain}[^\\\s\"]+)\\+)?({dest_user}[^\\\s\"]+)'] |

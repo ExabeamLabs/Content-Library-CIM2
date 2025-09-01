@@ -1,0 +1,5 @@
+# Code Changes for servicenow-s-json-user-role-assign-removed-success-operation (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "servicenow-s-json-user-role-assign-removed-success-operation", "Vendor": "ServiceNow", "Product": "ServiceNow", "ParserVersion": "v1.0.0", "ExtractionType": "json", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["\"sys_created_on\":", "\"sys_created_by\":", "\"role\":", "\"operation\":"], "Fields": ["exa_json_path=$.sys_created_on,exa_field_name=time", "exa_json_path=$.role.display_value,exa_field_name=role", "exa_json_path=$.changed_by.display_value,exa_field_name=dest_user_full_name", "exa_json_path=$.granted_by_group.display_value,exa_field_name=group_name", "exa_json_path=$.user.display_value,exa_field_name=full_name", "exa_json_path=$.sys_created_by,exa_field_name=dest_user", "exa_json_path=$.operation,exa_field_name=operation"]} |

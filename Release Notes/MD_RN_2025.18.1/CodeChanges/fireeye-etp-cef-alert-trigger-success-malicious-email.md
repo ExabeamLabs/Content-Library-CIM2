@@ -1,0 +1,5 @@
+# Code Changes for fireeye-etp-cef-alert-trigger-success-malicious-email (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "fireeye-etp-cef-alert-trigger-success-malicious-email", "Vendor": "Trellix", "Product": "Trellix Email Security - Cloud Edition", "TimeFormat": "EEE, dd MMM yyyy HH:mm:ss Z", "Conditions": ["CEF:", "|Trellix|", "|ETP|"], "ParserVersion": "v1.0.0", "Fields": ["rt=({time}[a-zA-Z]{3}, \d\d \w{3} \d\d\d\d \d\d:\d\d:\d\d [+-]\d\d\d\d)", "\|Trellix\|([^\|]+\|){3}({alert_type}[^\|]+)\|({alert_severity}[^\|]+)\|", "\|Trellix\|([^\|]+\|){3}({alert_name}[^\|]+)\|", "suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s\"\\,\|]+\.[^\]\s\"\\,\|]+)", "duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s\"\\,\|]+\.[^\]\s\"\\,\|]+)", "emailsubj=({email_subject}[^=]+?)\s(\w+=|$)", "malfename=({malware_name}[^=]+)\s(\w+=|$)", "malname=({malware_url}[^\s]+)\s(\w+=|$)", "fileHash=({file_hash}[^\s]+)\s(\w+=|$)", "etpurl=({additional_info}[^\s]+)\s(\w+=|$)", "act=({malware_action}[^\s]+)"]} |

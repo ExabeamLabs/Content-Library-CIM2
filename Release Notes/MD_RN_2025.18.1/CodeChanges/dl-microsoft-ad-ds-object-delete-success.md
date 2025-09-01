@@ -1,0 +1,5 @@
+# Code Changes for dl-microsoft-ad-ds-object-delete-success (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'microsoft-evsecurity-kv-ds-object-delete-success-5141-1', 'microsoft-evsecurity-cef-ds-object-delete-success-5141', 'microsoft-evsecurity-kv-ds-object-activity-success-5141', 'microsoft-evsecurity-xml-ds-object-delete-success-5141', 'microsoft-evsecurity-kv-ds-object-activity-success-5141-2', 'microsoft-evsecurity-json-ds-object-modify-success-5141', 'microsoft-evsecurity-xml-ds-object-delete-success-5141-1', 'microsoft-evsecurity-json-ds-object-delete-success-5141-1', 'microsoft-evsecurity-kv-ds-object-delete-success-5141', 'microsoft-evsecurity-kv-ds-object-activity-success-5141-1', 'microsoft-evsecurity-cef-ds-object-delete-success-5141-1') && (!exists(object_type) || !containsAny(toLower(object_type), 'user', 'computer', 'server', 'group')) |

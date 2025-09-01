@@ -1,0 +1,9 @@
+# Code Changes for microsoft-o365-sk4-alert-trigger-success-graphidentity (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'alert_id', 'alert_name', 'alert_severity', 'alert_source', 'alert_subject', 'alert_type', 'app', 'correlation_id', 'country_code', 'domain', 'email_address', 'email_domain', 'full_name', 'location_city', 'location_state', 'more_info', 'operation', 'result', 'src_ip', 'src_port', 'threat_category', 'time', 'token_issuer_type', 'user', 'user_agent'] |
+| edit_regex_field | email_address |  | ['"f3u\\*"*:\\*"*({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))', '"suid":"(anonymous|\\|({email_address}[^@="\\]+@({email_domain}[^"\\]+?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"', '"tsd\\*"+:\\*"+({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', '"userPrincipalName":\s*"(-|({email_address}[^@"]+@[^".]+\.[^"]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))"', '\ssuser=({email_address}[^@]+@[^\s]+)\s'] |
+| edit_regex_field | email_domain |  | ['"f3u\\*"*:\\*"*({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))', '"suid":"(anonymous|\\|({email_address}[^@="\\]+@({email_domain}[^"\\]+?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"', '"tsd\\*"+:\\*"+({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| removed_regex_field | src_email_address |  | [] |
+| removed_regex_field | src_email_domain |  | [] |

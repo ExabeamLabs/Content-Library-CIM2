@@ -1,0 +1,12 @@
+# Code Changes for microsoft-evsecurity-mix-user-disable-success-4725 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_domain |  | ['<Data Name\\*=(\'|")TargetDomainName(\'|")>({dest_domain}[^<]+)<', 'Target Account.+?Account Domain:(\\t|\\r|\\n|\s)*(({dest_domain}[^\t\s\^\r\n$\",]+)|)(\s+[^\t\r\n$])?', 'Target Account.+?Account Domain:\s*(?=\w)(({dest_domain}[^\s\^\r\n$\",]+)|)(\s+[^\^\r\n$])?', 'Target Account.+?Account Name:\s*(\\t)?({dest_user}[^:].+?)\s*(\\n|\\r\s\\t)*?\s*Account Domain:\s*(\\t)?({dest_domain}[^:]+?)\s+', '\"TargetDomainName\":\"({dest_domain}[^\"]+)'] |
+| edit_regex_field | dest_user |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>({dest_user}[^<]+)<', 'Target Account.+?Account Name:(\\t|\\r|\\n|\s)*({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*Account Domain', 'Target Account.+?Account Name:\s*(\\t)?({dest_user}[^:].+?)\s*(\\n|\\r\s\\t)*?\s*Account Domain:\s*(\\t)?({dest_domain}[^:]+?)\s+', '\"TargetUserName\":\"({dest_user}[^\"]+)'] |
+| edit_regex_field | dest_user_sid |  | ['<Data Name\\*=(\'|")TargetSid(\'|")>(?:NONE_MAPPED|({dest_user_sid}S-[^<]+))<', 'Target Account.+?Security ID:\s*(%\{)?(\\t|\\r|\\n|\s)*({dest_user_sid}S-[^\s]+?)\}?(\\t|\\r|\\n|\s)*Account Name:', '\"TargetSid\":\"({dest_user_sid}S-[^\"]+)?'] |
+| edit_regex_field | login_id |  | ['<Data Name\\*=(\'|")SubjectLogonId(\'|")>({login_id}[^<]+)<', 'Logon ID:(\s|\\[nrt])*({login_id}.+?)(\s|\\[nrt])', 'Logon ID:\s+(\\t)?({login_id}.+?)\s*(\\n|\\r\s\\r\s\\n)*?Target Account:', '\"SubjectLogonId\":\"({login_id}[^\"]+)'] |
+| edit_regex_field | src_domain |  | ['<Data Name\\*=(\'|")SubjectDomainName(\'|")>({src_domain}[^<]+)<'] |
+| edit_regex_field | src_user |  | ['<Data Name\\*=(\'|")SubjectUserName(\'|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)<'] |
+| edit_regex_field | time |  | ['({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})', '({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)', 'SystemTime=(\'|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)', 'TimeGenerated=({time}\d{10})'] |
+| edit_regex_field | user_sid |  | ['<Data Name\\*=(\'|")SubjectUserSid(\'|")>(?:NONE_MAPPED|({user_sid}S-[^<]+))<', 'Subject:.+?Security ID:\s+({user_sid}S-.+?)(\\[nrt]\s+|\s+)Account Name:', '\"SubjectUserSid\":\"({user_sid}S-[^\"]+)'] |

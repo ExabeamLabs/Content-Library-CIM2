@@ -1,0 +1,5 @@
+# Code Changes for pingidentity-forgerock-csv-endpoint-authentication-success-amlogin (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "pingidentity-forgerock-csv-endpoint-authentication-success-amlogin", "Vendor": "Ping Identity", "Product": "ForgeRock", "TimeFormat": ["yyyy-MM-dd'T'HH:mm:ss.SSSZ"], "Conditions": ["FrockAuth", "AM-", "-LOGIN-", "Authentication"], "Fields": ["\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\",\"({event_name}[^\",]+)\",\"({message_id}[^\",]+)\",\"({user_id}[^\"]+)\",\"\[\"({tracking_id}[^\"]+)\"\]\",\"({result}[^\"]+)\",\"\[\"({principal_name}[^\"]+)\"\]", "info\":[^\]]+?\"ipAddress\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\"", "info\":[^\]]+?\"authLevel\":\"({auth_level}[^\",]+)\"", "({category}Authentication)"], "ParserVersion": "v1.0.0"} |

@@ -1,0 +1,19 @@
+# Code Changes for microsoft-sysmon-xml-network-session-success-3 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_host |  | ['<EventData>.*?<Data Name\\*=(\'|")DestinationHostname(\'|")>(-|({dest_host}[\w\-.]+))</Data>'] |
+| edit_regex_field | dest_ip |  | ['<EventData>.*?<Data Name\\*=(\'|")DestinationIp(\'|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?'] |
+| edit_regex_field | dest_port |  | ['<EventData>.*?<Data Name\\*=(\'|")DestinationIp(\'|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', '<EventData>.*?<Data Name\\*=(\'|")DestinationPort(\'|")>({dest_port}\d+)'] |
+| edit_regex_field | domain |  | ['<EventData>.*?<Data Name\\*=(\'|")User(\'|")>(({domain}[^\>]+?\w+))?\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>', "<Security UserID\\*='(({domain}[^\\]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s*\/>"] |
+| edit_regex_field | process_dir |  | ['<EventData>.*?<Data Name\\*=(\'|")Image(\'|")>({process_path}({process_dir}(?:[^<>]+)?[\\]+)?({process_name}[^\\<>]+))<\/Data>', '<EventData>.*?Image:\s*({process_path}({process_dir}.*?)({process_name}[^.\\\/]+\.exe))\s*User:'] |
+| edit_regex_field | process_guid |  | ['<EventData>.*?<Data Name\\*=(\'|")ProcessGuid(\'|")>\{({process_guid}[^}]+)\}<\/Data>', "<Provider Name\\*='Microsoft-Windows-Sysmon' Guid='\{({process_guid}[^}]+?)\}"] |
+| edit_regex_field | process_id |  | ['<EventData>.*?<Data Name\\*=(\'|")ProcessId(\'|")>({process_id}\d+)', "<Execution ProcessID\\*='({process_id}\d+)"] |
+| edit_regex_field | process_name |  | ['<EventData>.*?<Data Name\\*=(\'|")Image(\'|")>({process_path}({process_dir}(?:[^<>]+)?[\\]+)?({process_name}[^\\<>]+))<\/Data>', '<EventData>.*?Image:\s*({process_path}({process_dir}.*?)({process_name}[^.\\\/]+\.exe))\s*User:'] |
+| edit_regex_field | process_path |  | ['<EventData>.*?<Data Name\\*=(\'|")Image(\'|")>({process_path}({process_dir}(?:[^<>]+)?[\\]+)?({process_name}[^\\<>]+))<\/Data>', '<EventData>.*?Image:\s*({process_path}({process_dir}.*?)({process_name}[^.\\\/]+\.exe))\s*User:'] |
+| edit_regex_field | protocol |  | ['<EventData>.*?<Data Name\\*=(\'|")Protocol(\'|")>({protocol}[^<>]+)<\/Data>'] |
+| edit_regex_field | src_host |  | ['<EventData>.*?<Data Name\\*=(\'|")SourceHostname(\'|")>(-|({src_host}[^<>]+))</Data>', 'SourceHostname:\s*({src_host}.*?)\s*(Source|$)'] |
+| edit_regex_field | src_ip |  | ['<EventData>.*?<Data Name\\*=(\'|")SourceIp(\'|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?', 'SourceIp:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |
+| edit_regex_field | src_port |  | ['<EventData>.*?<Data Name\\*=(\'|")SourceIp(\'|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?', '<EventData>.*?<Data Name\\*=(\'|")SourcePort(\'|")>({src_port}\d+)', 'SourceIp:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |
+| edit_regex_field | time |  | ['<EventData>.*?<Data Name\\*=(\'|")UtcTime(\'|")>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)', 'UtcTime:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)'] |
+| edit_regex_field | user |  | ['<EventData>.*?<Data Name\\*=(\'|")User(\'|")>(({domain}[^\>]+?\w+))?\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>', "<Security UserID\\*='(({domain}[^\\]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s*\/>"] |
