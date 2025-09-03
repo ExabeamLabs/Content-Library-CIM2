@@ -1,0 +1,50 @@
+#### Parser Content
+```Java
+{
+Name = pan-ngfw-json-network-traffic-fail-decryption
+  ParserVersion = v1.0.0
+  Vendor = Palo Alto Networks
+  Product = Palo Alto NGFW
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  ExtractionType = json
+  Conditions = [ """"source":"Palo Alto Networks FLS LF"""", """"LogType":"DECRYPTION"""", """"SubType":"start"""", """"FromZone":"""", """"ToZone":"""" ]
+  Fields = [
+  """exa_json_path=$.event.TimeGenerated,exa_field_name=time"""
+  """exa_json_path=$.host,exa_regex=^({host}[\w.-]+)$"""
+  """exa_json_path=$.event.DeviceName,exa_regex=^({host}[\w.-]+)$"""
+  """exa_json_path=$.event.PrivateIPv6,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.event.PrivateIPv4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.event.PublicIPv4,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.PublicIPv6,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.LogType,exa_field_name=app"""
+  """exa_json_path=$.event.EventStatus,exa_field_name=result"""
+  """exa_json_path=$.event.EndpointDeviceName,exa_field_name=src_host"""
+  """exa_json_path=$.event.SourceRegion,exa_field_name=src_country"""
+  """exa_json_path=$.event.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """exa_json_path=$.event.EndpointOSType,exa_field_name=os"""
+  """exa_json_path=$.event.EventIDValue,exa_field_name=event_name"""
+  """exa_json_path=$.event.EventIDValue,exa_field_name=auth_method"""
+  """exa_json_path=$.event.SourcePort,exa_field_name=src_port"""
+  """exa_json_path=$.event.DestinationPort,exa_field_name=dest_port"""
+  """exa_json_path=$.event.Protocol,exa_field_name=protocol"""
+  """exa_json_path=$.event.LogType,exa_field_name=event_name"""
+  """exa_json_path=$.event.EndpointOSVersion,exa_field_name=os"""
+  """exa_regex=Source(Address|IP)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.event.DestinationAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  """exa_json_path=$.event.SourceUser,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """exa_json_path=$.event.SourceAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.event.NATSource,exa_regex=({src_translated_ip}[a-fA-F\d:.]+)"""
+  """exa_json_path=$.event.NATDestination,exa_regex=({dest_translated_ip}[a-fA-F\d:.]+)"""
+  """exa_json_path=$.event.NATSourcePort,exa_field_name=src_translated_port"""
+  """exa_json_path=$.event.NATDestinationPort,exa_field_name=dest_translated_port"""
+  """exa_json_path=$.event.SubType,exa_field_name=operation"""
+  """exa_json_path=$.event.Action,exa_field_name=result"""
+  """exa_json_path=$.event.Rule,exa_field_name=rule"""
+  """exa_json_path=$.event.PolicyName,exa_field_name=additional_info"""
+  """exa_json_path=$.event.FromZone,exa_field_name=src_network_zone"""
+  """exa_json_path=$.event.ToZone,exa_field_name=dest_network_zone"""
+  ]
+
+
+}
+```

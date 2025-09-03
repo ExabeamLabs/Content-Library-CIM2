@@ -1,0 +1,24 @@
+#### Parser Content
+```Java
+{
+Name = "checkpoint-ngfw-str-network-traffic-success-allow-2"
+  ParserVersion = "v1.0.0"
+  Vendor = "Check Point"
+  Product = "Check Point NGFW"
+  TimeFormat = "epoch_sec"
+  Conditions = [""" CheckPoint """, """action:Allow""", """product=VPN-1 & FireWall-1""", """origin:"""]
+  Fields = [
+"""\Wtime:({time}\d{10})"""
+"""\W({host}[\w\-.]+) CheckPoint"""
+"""\Wsrc:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""\Wdst:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""({result}Allow)"""
+"""\Ws_port:({src_port}\d+)"""
+"""\Wservice:({dest_port}\d+)"""
+"""\Wproto:({protocol}[^\"]+)"""
+"""\Wpolicy_name=({rule}[^\"]+?)\\]"""
+  ]
+
+
+}
+```

@@ -1,0 +1,33 @@
+#### Parser Content
+```Java
+{
+Name = claroty-c-json-alert-trigger-success-alertaffecteddevice
+    Vendor = Claroty
+    Product = Claroty
+    ParserVersion = v1.0.0
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+    Conditions = [""" Claroty """ , """affected_device""" , """"event":""" , """device_type_family"""]
+    Fields = [
+        """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,6}[+-]\d\d:\d\d)"""
+        """geo_location":"(N\/A|({country}[^"]+))""""
+        """"domain":"(null|({domain}[^\",]+))"""
+        """"device_category":"({category}[^",]+)""""
+        """"device_subcategory":"({device_subcategory}[^",]+)""""
+        """"manufacturer":"({system_manufacturer}[^",]+)""""
+        """"device_type":"({device_type}[^",]+)""""
+        """"os":"({os}[^",]+)""""
+        """site_name":"({site_name}[^",]+)""""
+        """"asset_id":"({asset_id}[^",]+)""""
+        """ip_list":\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+        """"alert_id":({alert_id}[^\s,\}]+)""""
+        """"type":"({alert_type}[^"]+)""""
+        """"description":"({description}[^"]+)"""
+        """"severity":"({alert_severity}[^"]+)""""
+        """"confidence":({confidence_level}[^"]+)""""
+        """"threat_type":"({threat_type}[^"]+)""""
+        """"source":"({alert_source}[^"]+)""""
+    ]
+    
+
+}
+```

@@ -64,10 +64,10 @@ MITRE ATT&CK® Framework for Enterprise
 | T1071.004 | [Application Layer Protocol: DNS](https://attack.mitre.org/techniques/T1071/004)<br><br>                                                                  | 1     |
 | T1072     | [Software Deployment Tools](https://attack.mitre.org/techniques/T1072)<br><br>                                                                            | 1     |
 | T1074     | [Data Staged](https://attack.mitre.org/techniques/T1074)<br><br>                                                                                          | 4     |
-| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 225   |
+| T1078     | [Valid Accounts](https://attack.mitre.org/techniques/T1078)<br><br>                                                                                       | 218   |
 | T1078.002 | [T1078.002](https://attack.mitre.org/techniques/T1078/002)<br><br>                                                                                        | 10    |
 | T1078.003 | [Valid Accounts: Local Accounts](https://attack.mitre.org/techniques/T1078/003)<br><br>                                                                   | 7     |
-| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 26    |
+| T1078.004 | [Valid Accounts: Cloud Accounts](https://attack.mitre.org/techniques/T1078/004)<br><br>                                                                   | 19    |
 | T1082     | [System Information Discovery](https://attack.mitre.org/techniques/T1082)<br><br>                                                                         | 5     |
 | T1083     | [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)<br><br>                                                                         | 25    |
 | T1087     | [Account Discovery](https://attack.mitre.org/techniques/T1087)<br><br>                                                                                    | 10    |
@@ -96,10 +96,10 @@ MITRE ATT&CK® Framework for Enterprise
 | T1134.001 | [Access Token Manipulation: Token Impersonation/Theft](https://attack.mitre.org/techniques/T1134/001)<br><br>                                             | 2     |
 | T1134.002 | [T1134.002](https://attack.mitre.org/techniques/T1134/002)<br><br>                                                                                        | 2     |
 | T1135     | [Network Share Discovery](https://attack.mitre.org/techniques/T1135)<br><br>                                                                              | 5     |
-| T1136     | [Create Account](https://attack.mitre.org/techniques/T1136)<br><br>                                                                                       | 30    |
+| T1136     | [Create Account](https://attack.mitre.org/techniques/T1136)<br><br>                                                                                       | 27    |
 | T1136.001 | [Create Account: Create: Local Account](https://attack.mitre.org/techniques/T1136/001)<br><br>                                                            | 8     |
 | T1136.002 | [T1136.002](https://attack.mitre.org/techniques/T1136/002)<br><br>                                                                                        | 2     |
-| T1136.003 | [Create Account: Create: Cloud Account](https://attack.mitre.org/techniques/T1136/003)<br><br>                                                            | 4     |
+| T1136.003 | [Create Account: Create: Cloud Account](https://attack.mitre.org/techniques/T1136/003)<br><br>                                                            | 1     |
 | T1140     | [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140)<br><br>                                                              | 3     |
 | T1187     | [Forced Authentication](https://attack.mitre.org/techniques/T1187)<br><br>                                                                                | 1     |
 | T1189     | [Drive-by Compromise](https://attack.mitre.org/techniques/T1189)<br><br>                                                                                  | 1     |
@@ -139,7 +139,7 @@ MITRE ATT&CK® Framework for Enterprise
 | T1505.003 | [Server Software Component: Web Shell](https://attack.mitre.org/techniques/T1505/003)<br><br>                                                             | 5     |
 | T1518     | [Software Discovery](https://attack.mitre.org/techniques/T1518)<br><br>                                                                                   | 1     |
 | T1518.001 | [T1518.001](https://attack.mitre.org/techniques/T1518/001)<br><br>                                                                                        | 1     |
-| T1530     | [Data from Cloud Storage Object](https://attack.mitre.org/techniques/T1530)<br><br>                                                                       | 13    |
+| T1530     | [Data from Cloud Storage Object](https://attack.mitre.org/techniques/T1530)<br><br>                                                                       | 11    |
 | T1531     | [Account Access Removal](https://attack.mitre.org/techniques/T1531)<br><br>                                                                               | 3     |
 | T1534     | [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)<br><br>                                                                               | 2     |
 | T1535     | [Unused/Unsupported Cloud Regions](https://attack.mitre.org/techniques/T1535)<br><br>                                                                     | 7     |

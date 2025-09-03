@@ -1,0 +1,14 @@
+Rules by Product and UseCase
+============================
+Vendor: Netwrix
+---------------
+### Product: [Netwrix Threat Prevention](../ds_netwrix_netwrix_threat_prevention.md)
+### Use-Case: [Compromised Credentials](../../../../UseCases/uc_compromised_credentials.md)
+
+| Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
+|:-----:|:------:|:------------------:|:--------------:|:-------:|
+|  15   |   5    |         5          |       1        |    1    |
+
+| Event Type     | Rules    | Models    |
+| ---- | ---- | ---- |
+| kerberos-logon | <b>T1078 - Valid Accounts</b><br> ↳ <b>AL-UT-F</b>: Logon to New Asset Type<br> ↳ <b>AL-UT-A</b>: Logon to Abnormal asset type<br> ↳ <b>AL-F-F-DC-G</b>: First logon to a Domain Controller for peer group<br> ↳ <b>AL-F-A-DC-G</b>: Abnormal logon to a Domain Controller for Peer Group<br> ↳ <b>AL-UH-F-DC</b>: First logon to this Domain Controller for user<br> ↳ <b>AL-UH-A-DC</b>: Abnormal logon to a Domain Controller that user has not accessed often previously<br> ↳ <b>AL-UH-DC-NC</b>: Logon to a Domain Controller for user with no information<br> ↳ <b>AL-UZ-F</b>: First logon to network zone<br> ↳ <b>AL-UZ-A</b>: Abnormal logon to network zone<br> ↳ <b>AL-GZ-F-new</b>: First logon to network zone for new user of group<br> ↳ <b>AL-GZ-A-new</b>: Abnormal logon to network zone for group of new user<br> ↳ <b>A-AL-DhU-F</b>: First user per asset<br> ↳ <b>A-AL-DhU-A</b>: Abnormal user per asset<br><br><b>T1558 - Steal or Forge Kerberos Tickets</b><br> ↳ <b>EXPERT-PENTEST-DOMAINS</b>: Possible credentials theft attack detected<br> ↳ <b>ATP-AS-REP-3</b>: First Kerberos logon for abnormal pre-authentication type for the user<br><br><b>T1078.002 - T1078.002</b><br> ↳ <b>AL-F-F-DC-G</b>: First logon to a Domain Controller for peer group<br> ↳ <b>AL-F-A-DC-G</b>: Abnormal logon to a Domain Controller for Peer Group<br> ↳ <b>AL-UH-F-DC</b>: First logon to this Domain Controller for user<br> ↳ <b>AL-UH-A-DC</b>: Abnormal logon to a Domain Controller that user has not accessed often previously<br> ↳ <b>AL-UH-DC-NC</b>: Logon to a Domain Controller for user with no information<br><br><b>T1550 - Use Alternate Authentication Material</b><br> ↳ <b>EXPERT-PENTEST-DOMAINS</b>: Possible credentials theft attack detected<br><br><b>T1550.003 - Use Alternate Authentication Material: Pass the Ticket</b><br> ↳ <b>EXPERT-PENTEST-DOMAINS</b>: Possible credentials theft attack detected |  • <b>A-AL-DhU</b>: Users per Host<br> • <b>AL-GZ</b>: Network zones accessed by this peer group<br> • <b>RA-UH</b>: Assets accessed by this user remotely<br> • <b>AL-UH-DC</b>: Logons to Domain Controllers<br> • <b>AL-UT</b>: Types of hosts |
