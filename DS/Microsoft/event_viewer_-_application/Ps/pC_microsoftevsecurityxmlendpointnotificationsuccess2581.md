@@ -6,9 +6,9 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-2581
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>2581</EventID>""", """<TimeCreated SystemTime""", """<Provider>Microsoft-SharePoint Products-SharePoint Server Search""" , """<Channel>Application</Channel>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='string0'>({additional_info}[^<]+)<""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Security UserID\\*='({user_sid}[^<']+)""",
+    """<Data Name\\*=('|")string0('|")>({additional_info}[^<]+)<""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Security UserID\\*=('|")({user_sid}[^<'"]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

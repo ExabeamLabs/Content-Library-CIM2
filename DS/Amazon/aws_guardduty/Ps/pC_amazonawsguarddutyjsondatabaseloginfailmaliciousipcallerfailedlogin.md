@@ -46,6 +46,7 @@ json-aws-guardduty-security-alert-template = {
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
       """"tags":\s*({tags}[^$]+?)\]""",
       """exa_regex=AssumedRole\/({role}[^\s]+)"""
+      """exa_regex=AssumedRole\s+:\s+({role}[^\s]+)"""
       """exa_json_path=$.updatedAt,exa_field_name=time"""
       """exa_json_path=$.awsRegion,exa_field_name=region"""
       """exa_regex="ipAddressV4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""

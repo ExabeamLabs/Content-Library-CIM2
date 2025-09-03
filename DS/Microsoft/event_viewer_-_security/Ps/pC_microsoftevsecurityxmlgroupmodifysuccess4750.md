@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4750
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)"""
     """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
     """<Data Name =('|")PrivilegeList('|")>(-|({privileges}[^<]+?))<""",
-    """<Execution ProcessID\\*='({process_id}\d+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",

@@ -64,6 +64,10 @@ json-microsoft-security-events-1 = {
       """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
+      """"entityType":\s+"Process",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+      """exa_regex="entityType":\s+"Process",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+      """"entityType":\s+"User",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+      """exa_regex="entityType":\s+"User",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
       ]
  },
 

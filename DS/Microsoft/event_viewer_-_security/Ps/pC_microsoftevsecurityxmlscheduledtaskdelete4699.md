@@ -7,11 +7,11 @@ Name = microsoft-evsecurity-xml-scheduled-task-delete-4699
   Conditions = [ """<EventID>4699<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
     """<Computer>({host}[\w\-.]+?)<""",
-    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)""",
-    """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)""",
-    """<Data Name\\*='TaskName'>({task_name}[^<]+)""",
+    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)""",
+    """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
+    """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)""",
     """<Computer>({src_host}({host}[^<>]+))<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

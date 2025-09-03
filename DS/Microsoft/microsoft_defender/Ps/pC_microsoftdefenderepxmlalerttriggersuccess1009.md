@@ -11,15 +11,15 @@ Name = microsoft-defenderep-xml-alert-trigger-success-1009
     """<Computer>({host}[^<]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)<\/EventID>""",
-    """<Security UserID\\*='({user_sid}[^'>]+)'\/>""",
-    """<Data Name\\*='Domain'>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*='User'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
-    """<Data Name\\*='Detection User'>(({domain}[^\<]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
-    """<Data Name\\*='Severity ID'>({alert_severity}\d+)<\/Data>""",
-    """<Data Name\\*='Severity Name'>({alert_severity}[^<]+)<\/Data>""",
-    """<Data Name\\*='Type Name'>({alert_type}[^<]+)<\/Data>""",
-    """<Data Name\\*='Threat Name'>({alert_name}[^<]+)<\/Data>""",
-    """<Data Name\\*='Threat ID'>({threat_id}\d+)<\/Data>"""
+    """<Security UserID\\*=('|")({user_sid}[^'">]+)('|")\/>""",
+    """<Data Name\\*=('|")Domain('|")>({domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")User('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")Detection User('|")>(({domain}[^\<]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")Severity ID('|")>({alert_severity}\d+)<\/Data>""",
+    """<Data Name\\*=('|")Severity Name('|")>({alert_severity}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")Type Name('|")>({alert_type}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")Threat Name('|")>({alert_name}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")Threat ID('|")>({threat_id}\d+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"

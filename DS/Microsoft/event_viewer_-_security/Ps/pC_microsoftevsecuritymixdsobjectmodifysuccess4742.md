@@ -16,7 +16,7 @@ Fields = [
 """"computer":"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|({dest_host}[\w\-.]+)))"""",
 """<Computer>(::ffff:)?((?i)(am|pm)|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))</Computer>""",
 """"ComputerName"+:"+({dest_host}({host}[\w\-\.]+))""""
-"""SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+"""SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)"""
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\srt=({time}\d{13})""",

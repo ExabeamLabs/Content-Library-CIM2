@@ -6,8 +6,8 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-success-4651
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4651<""", """<TimeCreated SystemTime""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='LocalMMPrincipalName'>({src_host}[^<]+)""",
-    """<Data Name\\*='RemoteMMPrincipalName'>({dest_host}[\w\-.]+)""",
+    """<Data Name\\*=('|")LocalMMPrincipalName('|")>({src_host}[^<]+)""",
+    """<Data Name\\*=('|")RemoteMMPrincipalName('|")>({dest_host}[\w\-.]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

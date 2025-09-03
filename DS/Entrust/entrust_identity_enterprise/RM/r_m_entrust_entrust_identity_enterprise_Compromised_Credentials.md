@@ -7,7 +7,7 @@ Vendor: Entrust
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   24   |         2          |       2        |    8    |
+|  39   |   24   |         2          |       2        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

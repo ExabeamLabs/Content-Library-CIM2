@@ -7,8 +7,8 @@ Name = microsoft-windows-xml-endpoint-notification-success-98
   Conditions = [ """<EventID>98</EventID>""", """<Provider Name =""", """<Execution ProcessID=""", """<Channel>System</Channel>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Message>({additional_info}[^<]+)</Message>""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Security UserID\\*='({user_sid}[^<']+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Security UserID\\*=('|")({user_sid}[^<'"]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

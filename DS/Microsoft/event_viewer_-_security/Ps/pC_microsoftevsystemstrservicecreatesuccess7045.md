@@ -19,7 +19,7 @@ Fields = [
 """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
 """\]\s+\w{3}\s({time}\w{3}\s\d+\s\d\d:\d\d:\d\d\s\d\d\d\d)"""
 """TimeGenerated=({time}\d+)"""
-"""<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
+"""<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
 """({event_code}7045)"""
 """AccountName\":\"((?i)SYSTEM|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """User=((?i)NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""

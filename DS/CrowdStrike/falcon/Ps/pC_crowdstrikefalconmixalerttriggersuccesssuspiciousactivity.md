@@ -23,8 +23,6 @@ Fields = [
 """"Technique":"({alert_type}[^"]+)"""
 """({additional_info_1}"DocumentsAccessed":\s*[^\]]+\]).*?({additional_info_2}"ExecutablesWritten":\s*[^\]]+\])"""
 """"FileName":\s*"({process_name}[^"]+)""""
-""""CommandLine":"+({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+\.exe))[^"]*?""""
-""""CommandLine":"\\"({process_path}({process_dir}[^"]+?)\\{1,2}({process_name}[^\\"]+))\\""""
 """"FilePath":\s*"({file_path}[^"]+)""""
 """"CommandLine":"({process_command_line}[^,]+?)\\?",""""
 """"SensorId":\s*"({sensor_id}[^"]+)""""

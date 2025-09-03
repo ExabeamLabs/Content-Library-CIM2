@@ -15,16 +15,16 @@ Name = microsoft-evsecurity-xml-driver-load-fail-5038
     """SystemTime='?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<EventTime>({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)<""",
     """({event_code}5038)""",
-    """ProcessID\\*='({process_id}\d+)'""",
-    """ThreadID\\*='({thread_id}\d+)'""",
+    """ProcessID\\*=('|")({process_id}\d+)('|")""",
+    """ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """({result}AUDIT_FAILURE)<""",
     """<Keyword>({result}[^<]+)<""",
-    """<Data Name\\*='param1'>({additional_info}[^<]+)<""",
+    """<Data Name\\*=('|")param1('|")>({additional_info}[^<]+)<""",
     """Guid='({process_guid}.+?)'"""
     """<ProviderGuid>({process_guid}[^<]+)<"""
-    """<Data Name\\*='param1'>({file_path}[^<]+)</Data>""",
-    """<Data Name\\*='param1'>[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)</Data>""",
-    """<Data Name\\*='param1'>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)</Data>""",
+    """<Data Name\\*=('|")param1('|")>({file_path}[^<]+)</Data>""",
+    """<Data Name\\*=('|")param1('|")>[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)</Data>""",
+    """<Data Name\\*=('|")param1('|")>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)</Data>""",
     """<param1>(-|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?))|[^\\:<]+)<"""
     """<Level>({run_level}[^<]+)<"""
   ]

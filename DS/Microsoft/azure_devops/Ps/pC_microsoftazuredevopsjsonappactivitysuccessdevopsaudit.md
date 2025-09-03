@@ -26,7 +26,8 @@ Name = microsoft-azuredevops-json-app-activity-success-devopsaudit
     """exa_json_path=$.data.ActorDisplayName,exa_field_name=full_name"""
     """exa_regex="ActorUPN":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """exa_json_path=$.data.ActorUPN,exa_field_name=user_upn""",
-    """exa_json_path=$.data.IpAddress,exa_field_name=src_ip"""
+    """exa_json_path=$.data.IpAddress,exa_field_name=src_ip""",
+    """exa_json_path=$.data.UserAgent,exa_field_name=user_agent"""
   ]
 
 

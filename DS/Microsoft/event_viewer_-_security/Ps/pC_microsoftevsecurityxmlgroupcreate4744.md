@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-xml-group-create-4744
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
     """<Keywords>({result_code}[^<]+)""",
     """<Task>({sub_category}[^<]+)""",
-    """<Execution ProcessID\\*='({process_id}\d+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
     """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)""",

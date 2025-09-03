@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """({event_name}A handle to an object was requested)""",
     """Security ID:(\s|\\[rnt])*({user_sid}\S+?)(\s|\\[rnt])*Account Name:""",
-    """Account Name:(\s|\\[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s|\\[rnt])*Account Domain:""",
+    """Account Name:(\s|\\[rnt])*(-|({user}LOCAL SERVICE|SYSTEM|Administrator|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))(\s|\\[rnt])*Account Domain:"""
     """Account Domain:(\s|\\[rnt])*({domain}\S+?)(\s|\\[rnt])*Logon ID:""",
     """Logon ID:(\s|\\[rnt])*({login_id}\S+?)(\s|\\[rnt])*Object:""",
     """Object Server:(\s|\\[rnt])*({object_server}\S.*?)(\s|\\[rnt])*Object Type:""",

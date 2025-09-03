@@ -6,9 +6,9 @@ Name = microsoft-sysmon-xml-dll-load-7
   Conditions = [ """<EventID>7</EventID>""", """<Provider Name""", """Microsoft-Windows-Sysmon""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields} [
     """<Computer>({host}.+?)</Computer>""",
-    """<Data Name\\*='Hash(es)?'>[^<>]*?MD5=({hash_md5}[^,<]+)""",
-    """<Data Name\\*='Signed'>({signed}[^<>]+?)<\/Data>""",
-    """<Data Name\\*='Signature'>({signature}[^<>]+?)<\/Data>""",
+    """<Data Name\\*=('|")Hash(es)?('|")>[^<>]*?MD5=({hash_md5}[^,<]+)""",
+    """<Data Name\\*=('|")Signed('|")>({signed}[^<>]+?)<\/Data>""",
+    """<Data Name\\*=('|")Signature('|")>({signature}[^<>]+?)<\/Data>""",
     """<Data Name\\*=('|")ImageLoaded('|")>({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<]+))))<\/Data>"""
 # signature_status is removed
     """({log_name}Microsoft-Windows-Sysmon)""",

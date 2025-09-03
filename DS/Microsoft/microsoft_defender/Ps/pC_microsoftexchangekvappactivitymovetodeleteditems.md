@@ -49,13 +49,13 @@ cef-microsoft-app-activity-3.Fields}[
 }
 
 {
-  Name = microsoft-azureeh-json-alert-trigger-success-threat
+  Name = microsoft-md-json-alert-trigger-success-threat
   Vendor = Microsoft
-  Product = Azure Event Hub
+  Product = Microsoft Defender
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
   ParserVersion = "v1.0.0"
   ExtractionType = json
-  Conditions = [ """destinationServiceName =Azure""", """"SourceSystem":"Microsoft Defender Threat Intelligence"""", """"Action":"alert"""" ]
+  Conditions = [ """Azure""", """"SourceSystem":"Microsoft Defender Threat Intelligence"""", """"Action":"alert"""" ]
   Fields = [
      """exa_json_path=$.Action,exa_field_name=action""",
      """exa_json_path=$.Description,exa_field_name=alert_description""",

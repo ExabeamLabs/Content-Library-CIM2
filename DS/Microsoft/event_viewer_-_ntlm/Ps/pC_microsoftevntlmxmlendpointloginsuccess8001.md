@@ -8,7 +8,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8001
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [ """<EventID>8001<""", """<Message>NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked""", """<Channel>Microsoft-Windows-NTLM/Operational<""" ]
   Fields = [
-    """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
     """<Computer>({host}[^<]+?)<\/Computer>"""
     """Security UserID=('|")({user_sid}[^'\/>"]+)"""
     """({event_code}8001)"""

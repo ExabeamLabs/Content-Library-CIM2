@@ -20,7 +20,7 @@ account-password-activity = {
     """<Message>({event_name}[^.<]+)""",
     """UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
-    """Security UserID\\*='({user_sid}[^']+)'""",
+    """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""
   

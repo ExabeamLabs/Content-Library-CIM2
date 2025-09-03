@@ -5,7 +5,7 @@ Name = google-cloudplatform-json-app-activity-success-catchall_dprocpubsub-1
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ" ,"yyyy-MM-dd'T'HH:mm:ss.SSSSZ" ]
+    TimeFormat = ["epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss" ]
     ParserVersion = "v1.0.0"
     Conditions = [ """destinationServiceName =Google Cloud""", """dproc=Cloud PubSub""",  """"insertId":"""","""googleapis""" ,"""instance""" ]
     Fields = [
@@ -15,9 +15,9 @@ Name = google-cloudplatform-json-app-activity-success-catchall_dprocpubsub-1
     """exa_json_path=$.additional_info,exa_field_name=additional_info"""
     """exa_json_path=$.alert_id,exa_field_name=alert_id"""
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""
-    """exa_json_path=$.time,exa_field_name=time"""
-    """exa_json_path=$.scan_result,exa_field_name=result"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_regex="timestamp":"({time}\d\d.\d\d.\d\d\d\d\s\d\d:\d\d:\d\d)""""
+    """exa_regex="timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.time,exa_regex=({time}\d{10})"""
     """exa_json_path=$.severity,exa_field_name=severity"""

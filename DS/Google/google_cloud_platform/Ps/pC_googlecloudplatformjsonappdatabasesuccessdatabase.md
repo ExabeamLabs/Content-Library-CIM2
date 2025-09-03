@@ -5,10 +5,10 @@ Name = google-cloudplatform-json-app-database-success-database
   Vendor = Google
   Product = Google Cloud Platform
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSZ" , "yyyy-MM-dd'T'HH:mm:ss.SSZ"]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [""""database_id":"""",  """"type":"cloudsql_database"""",""""project_id":"""","""dproc=Cloud PubSub"""]
   Fields = [
-    """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
+    """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"service_name":"({service_name}[^"]+)"""",
     """destinationServiceName =({app}[^=]+?)\s\w+=""",
 	  """"region":"({region}[^"]+)"""",
@@ -21,7 +21,7 @@ Name = google-cloudplatform-json-app-database-success-database
     """exa_json_path=$..region,exa_field_name=region"""
     """exa_json_path=$..project_id,exa_field_name=project_id"""
     """exa_json_path=$..resource.type,exa_field_name=category"""
-    """exa_json_path=$..timestamp,exa_field_name=time"""
+    """exa_json_path=$..timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """exa_json_path=$..serviceName,exa_field_name=service_name"""
     """exa_regex="resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"""",
     """exa_json_path=$..methodName,exa_field_name=operation""",

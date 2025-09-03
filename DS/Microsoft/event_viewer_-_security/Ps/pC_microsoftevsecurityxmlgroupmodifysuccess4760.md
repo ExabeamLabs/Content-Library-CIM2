@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
-    """Guid\\*='\{({process_guid}[^\'\}]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",
 # src_handle_id is removed
     """Source Process ID:\s*({src_process_id}[^\s]+)\s+New Handle Information:""",
 # target_handle_id is removed

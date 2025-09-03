@@ -5,11 +5,11 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
   Vendor = Google
   Product = Google Cloud Platform
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"insertId":"""" ] 
   Fields = [
-    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"logName"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"status":.+"code":\s*({result_code}\d+)""",
@@ -36,7 +36,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"resource":({resource}[^\}]*"})"""
     """"resource"+:[^\}]*labels[^\}]*"+region"+:\s*"+({region}[^"\\\/\}]+)"+"""
     """"dest_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","dest_port")?(:({dest_port}\d+))?"?"""
-    """exa_json_path=$.timestamp,exa_field_name=time""",
+    """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.logName,exa_field_name=event_category""",
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$.protoPayload.status.code,exa_field_name=result_code""",

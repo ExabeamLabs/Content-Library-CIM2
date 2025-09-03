@@ -14,7 +14,7 @@ cef-defender-atp-events = {
       """"(time|TimeGenerated)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
       """"DeviceName":"({host}[\w\-.]+)""""
       """"LogonType":"({login_type_text}[^"]+)"""",
-      """"AccountName":"(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """"AccountName":"(-|NA|({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"AccountDomain":"({domain}[^"]+)"""",
       """"category":"({event_name}[^"]+)"""",
       """"ActionType":"({result}[^"]+)"""",
@@ -34,8 +34,8 @@ cef-defender-atp-events = {
       """exa_json_path=$.DeviceName,exa_field_name=host"""
       """exa_json_path=$..LogonType,exa_field_name=login_type_text"""
       """exa_json_path=$.LogonType,exa_field_name=login_type_text"""
-      """exa_json_path=$..AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-      """exa_json_path=$.AccountName,exa_regex=(({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_json_path=$..AccountName,exa_regex=(-|NA|({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_json_path=$.AccountName,exa_regex=(-|NA|({full_name}[^"\s]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """exa_json_path=$..AccountDomain,exa_field_name=domain"""
       """exa_json_path=$.AccountDomain,exa_field_name=domain"""
       """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""

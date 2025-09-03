@@ -15,9 +15,9 @@ xml-windows-defender-av = {
    TimeFormat = "yyyy-MM-dd HH:mm:ss"
    Fields = [
      """<EventID>({event_code}\d+)""",
-     """UserID\\*='({user_sid}[^']+)'""",
+     """UserID\\*=('|")({user_sid}[^'"]+)('|")""",
      """<Keywords>({result}[^<]+)<""",
-     """Guid\\*='\{({provider_guid}[^}']+)"""
+     """Guid\\*=('|")\{({provider_guid}[^}']+)"""
      """<Level>({run_level}[^<]+)<"""
   
 }

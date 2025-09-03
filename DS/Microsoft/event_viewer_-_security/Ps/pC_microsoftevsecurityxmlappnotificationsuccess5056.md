@@ -21,12 +21,12 @@ Name = microsoft-evsecurity-xml-app-notification-success-5056
   """ThreadID\\*=('|")({thread_id}[^'"]+)"""
   """<Computer>({host}[^<]+?)<"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
-  """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)<"""
-  """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<"""
-  """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<"""
-  """<Data Name\\*='TargetSid'>(?:NONE_MAPPED|({dest_user_sid}[^<]+))<"""
-  """<Data Name\\*='PrivilegeList'>({privileges}[^<]+?)<"""
+  """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
+  """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
+  """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
+  """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({dest_user_sid}[^<]+))<"""
+  """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<"""
   """<Message>({event_name}[^.<]+)\s*""",
   """<Level>({run_level}[^<]+)<"""
 ]

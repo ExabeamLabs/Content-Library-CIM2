@@ -16,7 +16,7 @@ Name = proofpoint-tappod-cef-email-send-receive-msg
     """\sx=({alert_id}.+?)\s+(\w+=|$)""",
     """\saction=({action}[^=]+?)\s+(\w+=|$)""",
     """\srcpts=({num_recipients}\d+)""",
-    """\sroutes=({routes}[^=]+?)\s+(\w+=|$)""",
+    """\sroutes=({direction}[^=]+?)\s+(\w+=|$)""",
     """\ssize=({bytes}\d+)""",
     """\ssubject=\\*"+({email_subject}[^"=]+?)\\*"*\s+(\w+=|$)""",
     """\svirusname=({alert_name}[^=]+?)\s+(\w+=|$)"""

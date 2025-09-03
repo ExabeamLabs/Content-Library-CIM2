@@ -5,15 +5,16 @@ Name = "google-cloudplatform-json-http-session-jsonpayload"
 Vendor = "Google"
 Product = "Google Cloud Platform"
 ExtractionType = json
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [
 """"jsonPayload":"""
 """"gce_instance""""
 """googleapis.com"""
-"""resource_name"""
+"""resource_name":"""
+""""project_id":"""
 ]
 Fields = [
-"""exa_json_path=$.timestamp,exa_field_name=time""",
+"""exa_regex=timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """exa_json_path=$.jsonPayload.bytes,exa_field_name=bytes"""
 """exa_json_path=$.jsonPayload.client,exa_regex=(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
 """exa_json_path=$.jsonPayload.method,exa_field_name=method""",

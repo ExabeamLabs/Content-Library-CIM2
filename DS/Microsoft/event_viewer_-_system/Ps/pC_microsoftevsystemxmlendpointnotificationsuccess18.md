@@ -15,7 +15,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-18
     """Guid=('|")\{({process_guid}[^"'\}]+)"""
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",
-    """ThreadID\\*='({thread_id}[^']+)""",
+    """ThreadID\\*=('|")({thread_id}[^'"]+)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
   ]
 

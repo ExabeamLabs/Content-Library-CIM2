@@ -28,7 +28,6 @@ Fields = [
 """"FileName":"({file_name}[^"]+?)""""
 """"FilePath":"({file_dir}[^"]+?)\\?""""
 """"CommandLine"+:"+\\*"*({process_command_line}[^,"]+?)\\*""""
-""""CommandLine"+:"+\\*"*({process_path}({process_dir}[^",]+\\\\)?({process_name}[^"\\,]+))\\*""""
 """"LocalIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"RemoteAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"IOCValue":\s*"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[a-zA-Z\.\-]+))""""
@@ -85,7 +84,6 @@ Fields = [
 """exa_json_path=$.FileName,exa_field_name=file_name""",
 """exa_json_path=$.FilePath,exa_field_name=file_dir""",
 """exa_regex="CommandLine\"+:\s*\"+\\*\"*({process_command_line}[^\n]+?)\\*\s*\"+,""",
-"""exa_regex="CommandLine\":\s*\"\\\"({process_path}({process_dir}[^\",]+\\\\)?({process_name}[^\"\\,]+))\\\"""",
 """exa_json_path=$.LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.LocalAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.LocalPort,exa_field_name=src_port""",

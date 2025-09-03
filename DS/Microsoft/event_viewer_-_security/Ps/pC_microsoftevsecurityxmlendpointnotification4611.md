@@ -14,11 +14,11 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4611
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """({event_code}4611)""",
     """<EventRecordID>({event_id}[^<]+)""",
-    """'LogonProcessName'>({auth_process}[^<"]+)<""",
-    """'SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-    """'SubjectUserSid'>({user_sid}[^"\s<]+)<""",
-    """'SubjectDomainName'>({domain}[^"\s<]+)<""",
-    """'SubjectLogonId'>({login_id}[^"\s<]+)<"""
+    """('|")LogonProcessName('|")>({auth_process}[^<"]+)<""",
+    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
+    """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
+    """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+    """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<"""
     """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = ["user->src_user", "domain->src_domain"]

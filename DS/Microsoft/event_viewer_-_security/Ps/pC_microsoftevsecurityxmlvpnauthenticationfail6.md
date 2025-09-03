@@ -7,8 +7,8 @@ Name = microsoft-evsecurity-xml-vpn-authentication-fail-6
   Conditions = [ """>6</EventID>""", """<Execution ProcessID=""", """<Event xmlns=""", """<Message>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """>({event_code}\d+)</EventID>""",
-    """<Data Name\\*='Context'>({account}[^<]+?)</Data>""",
-    """<Data Name\\*='ErrorCode'>({failure_reason}[^<]+?)</Data>""",
+    """<Data Name\\*=('|")Context('|")>({account}[^<]+?)</Data>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({failure_reason}[^<]+?)</Data>""",
     """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

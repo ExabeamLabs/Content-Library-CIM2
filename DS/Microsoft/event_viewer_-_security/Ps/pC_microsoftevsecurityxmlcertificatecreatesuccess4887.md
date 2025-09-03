@@ -6,12 +6,12 @@ Name = microsoft-evsecurity-xml-certificate-create-success-4887
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4887</EventID>""", """<Data Name =""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='Requester'>(({domain}[^<\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-    """<Data Name\\*='Attributes'>\s*({attributes}[^<]+?)\s*<"""
-    """<Data Name\\*='Disposition'>({disposition}[^<]+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Data Name\\*=('|")Requester('|")>(({domain}[^<\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
+    """<Data Name\\*=('|")Attributes('|")>\s*({attributes}[^<]+?)\s*<"""
+    """<Data Name\\*=('|")Disposition('|")>({disposition}[^<]+)""",
 # subject_key is removed
-    """<Data Name\\*='Subject'>({client_cert_subject}[^<]+)""",
+    """<Data Name\\*=('|")Subject('|")>({client_cert_subject}[^<]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

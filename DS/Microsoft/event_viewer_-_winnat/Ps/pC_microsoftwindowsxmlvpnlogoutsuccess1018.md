@@ -3,7 +3,7 @@
 {
 Name = microsoft-windows-xml-vpn-logout-success-1018
   Product = "Event Viewer - WinNat"
-  Conditions = [ """<EventID>1018</EventID>""", """<Data Name""","""'TransportProtocol'>""" , """<Channel>Microsoft-Windows-WinNat""" ]
+  Conditions = [ """<EventID>1018</EventID>""", """<Data Name""","""TransportProtocol""" , """<Channel>Microsoft-Windows-WinNat""" ]
   Fields = ${WindowsParsersTemplates.s-xml-windows-member.Fields}[
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>"""

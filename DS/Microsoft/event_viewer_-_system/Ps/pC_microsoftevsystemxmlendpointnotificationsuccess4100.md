@@ -22,8 +22,8 @@ xml-windows-events-dl = {
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Security UserID\\*='({user_sid}[^<']+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Security UserID\\*=('|")({user_sid}[^<'"]+)""",
     """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<"""
     """<Level>({run_level}[^<]+)<""",
     """<Channel>({channel}[^<]+)<\/Channel>"""

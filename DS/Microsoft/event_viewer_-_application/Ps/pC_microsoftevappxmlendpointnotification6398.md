@@ -6,7 +6,7 @@ Name = microsoft-evapp-xml-endpoint-notification-6398
   Product = Event Viewer - Application
   Conditions = [ """<EventID>6398</EventID>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<Data Name\\*='string2'>({additional_info}.+?)</Data>""",
+    """<Data Name\\*=('|")string2('|")>({additional_info}.+?)</Data>""",
     """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

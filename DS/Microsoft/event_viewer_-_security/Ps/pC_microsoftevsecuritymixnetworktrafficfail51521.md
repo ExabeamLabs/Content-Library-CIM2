@@ -12,12 +12,12 @@ Name = microsoft-evsecurity-mix-network-traffic-fail-5152-1
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Computer":"({host}[^"]+)""",
     """"EventID":"({event_code}\d+)""",
-    """<Data Name\\*='Direction'>({direction}[^<>]+?)</Data>""",
-    """<Data Name\\*='SourceAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """<Data Name\\*='SourcePort'>(0|({src_port}\d+))""",
-    """<Data Name\\*='DestAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """<Data Name\\*='DestPort'>(0|({dest_port}\d+))""",
-    """<Data Name\\*='Protocol'>({protocol}[^<>]+?)</Data>"""
+    """<Data Name\\*=('|")Direction('|")>({direction}[^<>]+?)</Data>""",
+    """<Data Name\\*=('|")SourceAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """<Data Name\\*=('|")SourcePort('|")>(0|({src_port}\d+))""",
+    """<Data Name\\*=('|")DestAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """<Data Name\\*=('|")DestPort('|")>(0|({dest_port}\d+))""",
+    """<Data Name\\*=('|")Protocol('|")>({protocol}[^<>]+?)</Data>"""
   ]
 
 

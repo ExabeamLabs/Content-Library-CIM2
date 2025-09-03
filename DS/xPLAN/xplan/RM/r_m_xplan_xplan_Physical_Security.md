@@ -7,7 +7,7 @@ Vendor: xPLAN
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   4    |         1          |       1        |    6    |
+|   9   |   4    |         1          |       1        |    4    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

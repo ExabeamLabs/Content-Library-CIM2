@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-file-permission-modify-4670
     """Account Domain:\s*({domain}[^\s]+)\s""",
     """Logon ID:\s*({login_id}[^\s]+)\s""",
     """Process ID:\s*({process_id}[^\s]+)\s""",
-    """Process Name:\s*({process_path}(?:({process_dir}.+?)[\\\/]+)?({process_name}[^\s\\\/]+))\s+""",
+    """Process Name:\s*(-|({process_path}({process_dir}.+?[\\\/])?({process_name}[^\\\/\s"]+)))(?:\s+[\w\s]+:|$|")""",
     """Process Name:\s*(.+?[\\\/]+)?({file_name}[^\s\\\/]+?(\.({file_ext}[^\s\\.\/]+?))?)\s""",
     """Handle ID:\s*({object_id}.+?)\s""",
     """Object Type:\s*({object_type}[^\s]+)\s""",

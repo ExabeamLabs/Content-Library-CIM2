@@ -16,17 +16,14 @@ Fields = [
 """<Computer>({host}[\w\-.]+)</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<EventID>({event_code}[^<]+)</EventID>"""
-"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}[^<]+)</Data>"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)</Data>"""
+"""<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-"""<Data Name\\*=('|")TargetUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
+"""<Data Name\\*=('|")TargetUserName('|")>(?=\w)({account}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
-"""<Data Name =('|")TargetDomainName('|")>(?:\\+)?({host}[\w\-\.]+)</Data>"""
+"""<Data Name =('|")TargetDomainName('|")>(?:\\+)?({src_host}[\w\-\.]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""
-]
-DupFields = [
-"src_domain->domain","user->dest_user", "user_sid->dest_user_sid"
 ]
 ParserVersion = "v1.0.0"
 

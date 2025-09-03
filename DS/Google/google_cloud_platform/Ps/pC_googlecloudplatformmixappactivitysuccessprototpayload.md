@@ -6,11 +6,11 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
   Product = Google Cloud Platform
   ExtractionType = json
   ParserVersion = v1.0.0
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ" ,"yyyy-MM-dd'T'HH:mm:ssZ" ,"yyyy-MM-dd'T'HH:mm:ssz","yyyy-MM-dd'T'HH:mm:ss.SSZ" ,"yyyy-MM-dd'T'HH:mm:ss.SSSSZ"]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"protoPayload":""", """googleapis.com""", """"resourceName":""" ]
   Fields = [
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[\w\-.]+)\s\d+\s""",
-    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{3,9}Z)""",
+    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"serviceName":"({service_name}[^"]+)"""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
@@ -30,7 +30,7 @@ Name = google-cloudplatform-mix-app-activity-success-prototpayload
     """"status":.+"code":\s*({result_code}\d+)""",
     """"status":.+"message":\s*"?({failure_reason}[^},]+)"""",
     """principalEmail":"({principal_name}[^"\@}]+)""""
-    """exa_json_path=$.timestamp,exa_field_name=time""",
+    """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_regex="callerIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """exa_json_path=$.protoPayload.serviceName,exa_field_name=service_name""",

@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-xml-group-delete-success-4734
      """<EventID>({event_code}\d+)""",
       """({event_name}A security-enabled local group was deleted)""",
      """<Computer>({host}[^<]+)""",
-     """<Execution ProcessID(\\)?='({process_id}\d+)' ThreadID(\\)?='({thread_id}\d+)'""",
+     """<Execution ProcessID(\\)?=('|")({process_id}\d+)('|") ThreadID(\\)?=('|")({thread_id}\d+)('|")""",
      """<EventRecordID>({event_id}\d+)""",
      """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)""",
      """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)""",

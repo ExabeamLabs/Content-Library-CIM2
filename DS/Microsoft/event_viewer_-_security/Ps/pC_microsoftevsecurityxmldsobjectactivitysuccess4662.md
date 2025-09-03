@@ -24,10 +24,10 @@ Fields = [
 """<Data Name(\\)?=('|")OperationType('|")>({operation}[^<]+)"""
 """<Data Name(\\)?=('|")Properties('|")>\s*(-|({properties}[^<]+?))\s*<"""
 """<Keyword>({result}[^<]+)<"""
-"""<Data Name\\*='AccessList'>(-|({access}[^<]+?))\s*<"""
+"""<Data Name\\*=('|")AccessList('|")>(-|({access}[^<]+?))\s*<"""
 """Accesses:\s*(-|({access}[^:]+?))\s+Access Mask:"""
-"""<Data Name\\*='AccessMask'>(-|({access_mask}[^<]+?))\s*<"""
-"""<Data Name\\*='AccessList'>(-|({access_list}[^<]+?))\s*<"""
+"""<Data Name\\*=('|")AccessMask('|")>(-|({access_mask}[^<]+?))\s*<"""
+"""<Data Name\\*=('|")AccessList('|")>(-|({access_list}[^<]+?))\s*<"""
 """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = ["user->src_user", "domain->src_domain"]

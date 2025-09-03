@@ -13,7 +13,7 @@ Name = microsoft-evazureadppdca-xml-app-authentication-success-30030
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<EventID>({event_code}30030)</EventID>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """Security UserID\\*='({user_sid}[^']+)'""",
+    """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Message>({event_name}[^<\.:]+?)(<|\.|:)"""
     """<Level>({run_level}[^<]+)<"""
   ]

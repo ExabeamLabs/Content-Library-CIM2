@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-success-4907
     """({event_name}Auditing Settings Changed)""",
     """SubjectUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """SubjectDomainName':\s+'({domain}[^']+)'""",
-    """SubjectUserSid':\s+'({user_sid}[^']+)'""",
+    """SubjectUserSid':\s+('|")({user_sid}[^'"]+)('|")""",
     """SubjectIP':\s+'({src_ip}[a-dA-F\d:\.]+)'""",
     """ObjectServer':\s+'({object_server}[^']+)'""",
     """ObjectType':\s+'({object_type}[^']+)'""",

@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-xml-policy-apply-success-4954
   Conditions = [ """<EventID>4954</EventID>""", """Microsoft-Windows-Security-Auditing""", """<TimeCreated SystemTime""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

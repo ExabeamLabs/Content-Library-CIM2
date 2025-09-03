@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-xml-certificate-request-fail-4888
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)('|")""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
     """<Data Name\\*=('|")Requester('|")>(({domain}[^<\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Data Name\\*=('|")Attributes('|")>\s*({attributes}[^<]+?)\s*<""",
     """<EventID>({event_code}\d+)<\/EventID>""",

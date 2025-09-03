@@ -13,7 +13,7 @@ Fields = [
 """<Computer>({host}[\w\-.]+)"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<Computer>(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w\-\.]+))"""
-"""<Security UserID\\*='({user_sid}[^'<\/]+)"""
+"""<Security UserID\\*=('|")({user_sid}[^'<\/"]+)"""
 """<SubjectUserName>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """<SubjectDomainName>(NT AUTHORITY|({domain}[^<]+))"""
 """<Level>({alert_severity}[^<]+)"""

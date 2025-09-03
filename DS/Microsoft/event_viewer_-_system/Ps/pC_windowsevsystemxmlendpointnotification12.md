@@ -14,9 +14,9 @@ Name = windows-evsystem-xml-endpoint-notification-12
     """<EventID>({event_code}12)<""",
     """<Message>({event_name}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<""",
-    """<Execution ProcessID\\*='({process_id}\d+)'""",
-    """ThreadID\\*='({thread_id}\d+)'""",
-    """<Security UserID\\*='({user_sid}[^']+)'""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|")""",
+    """ThreadID\\*=('|")({thread_id}\d+)('|")""",
+    """<Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Provider>({provider_name}[^<]+)<""",
     """<Message>({process_name}\S+)\swas started as a protected process with level"""
     """<Level>({run_level}[^<]+)<"""

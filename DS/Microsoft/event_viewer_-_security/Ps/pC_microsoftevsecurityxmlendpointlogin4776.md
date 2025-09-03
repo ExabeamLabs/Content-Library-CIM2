@@ -22,7 +22,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
   """<EventID>({event_code}\d+)</EventID>"""
   """<Computer>(?!(?:[A-Fa-f:\d.]+))[^<.]+(\.({domain}[^<]+)[^<]*)?</Computer>""",
-  """<Data Name(\\)?=('|")TargetUserName('|")>\s*((({domain}[^<\\]+)\\+)?(null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({user_upn}[\w\.\-\!\#\^\~]{1,40}\$?@[^<]+?))<\/Data>"""
+  """<Data Name(\\)?=('|")TargetUserName('|")>\s*((({domain}[^<\\]+)\\+)?(null|-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({user_upn}[\w\.\-\!\#\^\~]{1,40}\$?@[^<]+?))<\/Data>"""
   """<Data Name(\\)?=('|")Status('|")>((?-i)\\+[rnt])*\s*({result_code}[^<]+)<\/Data>"""
   """<Keywords><Keyword>({result}[^<]+)<""",
   """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((?i)(workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""

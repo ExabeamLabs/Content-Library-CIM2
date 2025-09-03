@@ -14,20 +14,21 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<EventRecordID>({event_id}[^\<]+)</EventRecordID>""",
     """<Computer>({host}[^\<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*='SubjectUserSid'>({user_sid}[^\<]+)</Data>""",
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name\\*='SubjectDomainName'>({domain}[^\<]+)</Data>""",
-    """<Data Name\\*='SubjectLogonId'>({login_id}[^\<]+)</Data>""",
-    """<Data Name\\*='HandleId'>({object_id}[^\<]+)</Data>""",
-    """<Data Name\\*='OperationType'>({operation}[^\<]+)</Data>""",
-    """<Data Name\\*='NewValueType'>(-|({registry_details_type}[^\<]+))</Data>""",
-    """<Data Name\\*='NewValue'>(-|({registry_details}[^\<]+))</Data>""",
-    """<Data Name\\*='OldValueType'>(-|({old_registry_details_type}[^\<]+))</Data>""",
-    """<Data Name\\*='OldValue'>(-|({old_registry_details}[^\<]+))</Data>""",
-    """<Data Name\\*='ProcessId'>({process_id}[^\<]+)</Data>""",
-    """<Data Name\\*='ProcessName'>({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))</Data>""",
-    """<Data Name\\*='ObjectName'>({registry_path}[^\<]*?({registry_key}[^\<\\\/]+))<\/Data>""",
-    """<Data Name\\*='ObjectValueName'>({registry_value}[^\<]+)<\/Data>"""
+    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")HandleId('|")>({object_id}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")OperationType('|")>({operation}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")NewValueType('|")>(-|({registry_details_type}[^\<]+))</Data>""",
+    """<Data Name\\*=('|")NewValue('|")>(-|({registry_details}[^\<]+))</Data>""",
+    """<Data Name\\*=('|")OldValueType('|")>(-|({old_registry_details_type}[^\<]+))</Data>""",
+    """<Data Name\\*=('|")OldValue('|")>(-|({old_registry_details}[^\<]+))</Data>""",
+    """<Data Name\\*=('|")ProcessId('|")>({process_id}[^\<]+)</Data>""",
+    """<Data Name\\*=('|")ProcessName('|")>({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))</Data>""",
+    """<Data Name\\*=('|")ObjectName('|")>({registry_path}[^\<]*?({registry_key}[^\<\\\/]+))<\/Data>""",
+    """<Data Name\\*=('|")ObjectValueName('|")>({registry_value}[^\<]+)<\/Data>"""
+    """<Data Name\\*=('|")OperationType('|").+?(1906|delete).+?('|")OldValueType('|")>({registry_details_type}[^<]+?)<.+?('|")OldValue('|")>({registry_details}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]

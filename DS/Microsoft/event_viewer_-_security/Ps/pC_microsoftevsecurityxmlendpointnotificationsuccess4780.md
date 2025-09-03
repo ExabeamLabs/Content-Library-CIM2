@@ -6,12 +6,12 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4780
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4780</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
-    """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*='TargetUserName'>({dest_user}[^<]+)""",
-    """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)""",
+    """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

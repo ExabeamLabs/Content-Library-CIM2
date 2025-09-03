@@ -14,7 +14,7 @@ Name = microsoft-evsystem-xml-policy-apply-1500
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)<"""
 # dc_name is removed

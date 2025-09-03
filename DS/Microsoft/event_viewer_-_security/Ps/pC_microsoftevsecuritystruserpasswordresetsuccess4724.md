@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """({event_name}An attempt was made to reset an account's password)""",
-  """SystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+  """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventID>({event_code}[^<]+)</EventID>""",

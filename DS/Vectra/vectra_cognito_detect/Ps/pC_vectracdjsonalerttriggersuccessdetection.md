@@ -15,8 +15,8 @@ Name = vectra-cd-json-alert-trigger-success-detection
   	"""exa_json_path=$.src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   	"""exa_json_path=$.grouped_details[:1].src_host.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   	"""exa_json_path=$.src_host.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-  	"""exa_json_path=$.detection_url,exa_field_name=threat_url""",
-  	"""exa_json_path=$.src_host.name,exa_regex=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-\.]+))$""",
+  	"""exa_json_path=$.detection_url,exa_field_name=file_url""",
+  	"""exa_json_path=$.src_host.name,exa_regex=(({src_mac}([a-fA-F\d]{2}:?){5}[a-fA-F\d]{2})|(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)|({src_host}[\w\-\.]+))$""",
   	"""exa_json_path=$..src_accounts[:1].name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
   	"""exa_json_path=$.detection,exa_field_name=alert_name""",
   	"""exa_json_path=$.detection_type,exa_field_name=alert_type""",
@@ -29,10 +29,10 @@ Name = vectra-cd-json-alert-trigger-success-detection
   	"""exa_json_path=$.grouped_details[:1].bytes_sent,exa_field_name=bytes_out""",
   	"""exa_json_path=$.grouped_details[:1].dst_ports[:1],exa_field_name=dest_port""",
   	"""exa_json_path=$.grouped_details[:1].dst_ips[:1],exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-  	"""exa_json_path=$.data_source.connection_id,exa_field_name=connection_id""",
+  	"""exa_json_path=$.data_source.connection_id,exa_field_name=connection_id,exa_match_expr=!InList(toLower($.data_source.connection_id), "none")""",
     """exa_json_path=$.data_source.type,exa_field_name=alert_source""",
-    """exa_json_path=$..sensor_name,exa_field_name=sensor_name""",
-    """exa_json_path=$..sensor,exa_field_name=sensor""",
+    """exa_json_path=$.sensor_name,exa_field_name=sensor_name""",
+    """exa_json_path=$.sensor,exa_field_name=sensor,exa_match_expr=!InList(toLower($.sensor), "none")""",
     """exa_json_path=$..summary.operations[:1],exa_field_name=operation""",
     """exa_json_path=$..summary.reasons[:1],exa_field_name=alert_reason""",
     """exa_json_path=$.id,exa_field_name=alert_id""",
@@ -52,7 +52,7 @@ Name = vectra-cd-json-alert-trigger-success-detection
     """exa_json_path=$.first_timestamp,exa_field_name=start_time"""
   ]
   ParserVersion = "v1.0.0"
- 
+
 
 }
 ```

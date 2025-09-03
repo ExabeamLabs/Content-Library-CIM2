@@ -34,9 +34,9 @@ Fields = [
 """"manager.name":"({wazuh_manager}[^"]+)"""
 """"rule.description":"({description}[^"]+)"""
 """"path":"({log_path}[^"]+)"""
-"""<Data Name\\*='TargetSid'>({dest_user_sid}[^<]+)"""
-"""<Data Name\\*='OldUacValue'>({old_attribute}[^<]+)"""
-"""<Data Name\\*='NewUacValue'>({new_attribute}[^<]+)"""
+"""<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)"""
+"""<Data Name\\*=('|")OldUacValue('|")>({old_attribute}[^<]+)"""
+"""<Data Name\\*=('|")NewUacValue('|")>({new_attribute}[^<]+)"""
 ]
 ParserVersion = "v1.0.0"
 

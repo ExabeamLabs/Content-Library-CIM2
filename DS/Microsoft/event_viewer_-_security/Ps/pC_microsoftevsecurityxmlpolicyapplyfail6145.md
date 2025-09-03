@@ -13,13 +13,13 @@ Name = microsoft-evsecurity-xml-policy-apply-fail-6145
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """<EventRecordID>({event_id}\d+)""",
-    """<Data Name\\*='ErrorCode'>({error_code}\d+)<\/Data>""",
+    """<Data Name\\*=('|")ErrorCode('|")>({error_code}\d+)<\/Data>""",
     """<Keywords>({action}[^<]+)<\/Keywords>""",
     """<Opcode>({severity}[^<]+)<\/Opcode>""",
     """<Message>\s*({additional_info}[^<]+?)\s*<\/Message>""",
-    """<Data Name\\*='GPOList'>({policy_name}[^<]+)<""",
+    """<Data Name\\*=('|")GPOList('|")>({policy_name}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "error_code->failure_code" ]

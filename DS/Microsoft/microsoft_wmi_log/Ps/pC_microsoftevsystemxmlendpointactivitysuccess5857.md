@@ -17,11 +17,11 @@ Name = "microsoft-evsystem-xml-endpoint-activity-success-5857"
 		"""<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""", 
 		"""<Level>({run_level}[^<]+)<""" ,
     """<Keywords>({result}[^<]+)""",
-    """Guid='\{({process_guid}[^}]+?)\}"""
-    """<Execution ProcessID\\*='({process_id}\d+)"""
+    """Guid=('|")\{({process_guid}[^}]+?)\}"""
+    """<Execution ProcessID\\*=('|")({process_id}\d+)"""
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Channel>({channel}[^<]+)<\/Channel>"""
-    """<Security UserID\\*='({user_sid}[^']+)'"""
+    """<Security UserID\\*=('|")({user_sid}[^'"]+)('|")"""
   ]
 
 

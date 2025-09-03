@@ -6,7 +6,7 @@ Name = microsoft-sysmon-xml-file-stream-create-15
   Product = Sysmon
   Conditions = [ """<EventID>15</EventID>""", """<Provider Name""","""Microsoft-Windows-Sysmon""" ]
   Fields = ${DLWindowsParsersTemplates.xml-sysmon-activity.Fields}[
-    """<Data Name\\*='Hashes'>MD5=({hash_md5}[^,]+)""",
+    """<Data Name\\*=('|")Hashes('|")>MD5=({hash_md5}[^,]+)""",
     """<Computer>({dest_host}({host}[\w\-.]+?))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

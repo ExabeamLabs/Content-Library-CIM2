@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-xml-handle-request-4659
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """ThreadID\\*='({thread_id}\d+)'""",
+    """ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """<Keyword>({result}[^<]+)<""",
     """<Task>({operation}File System)"""
     """<Provider>({provider_name}[^<]+)"""

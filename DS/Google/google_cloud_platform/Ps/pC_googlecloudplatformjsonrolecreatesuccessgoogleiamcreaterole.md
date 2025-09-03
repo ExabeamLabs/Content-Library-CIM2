@@ -2,7 +2,7 @@
 ```Java
 {
 Name = google-cloudplatform-json-role-create-success-googleiamcreaterole
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"google.iam.admin""", """CreateRole"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
@@ -14,10 +14,10 @@ gcp-cloudaudit-json = {
     Vendor = Google
     Product = Google Cloud Platform
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
+    TimeFormat = ["epoch","MM.dd.yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss"]
     Fields = [
-    """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
-    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3,9}Z)""",
+    """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """"timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"logName"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"status":.+"code":\s*({result_code}\d+)""",
@@ -40,8 +40,8 @@ gcp-cloudaudit-json = {
     """"(response|request)"+:.+"+bindings"+:\s*\[\s*({policy_bindings}.+)\s*\],?[\s\]\},]+(?:"+resourceLocation"+|"+resource"+|"+@type"+|"+etag"+|"+version"+|"+serviceName"+)""",
     """"authorizationInfo":\[\{[^\}]+"permissionType":"({operation_type}[^"]+)""",
     """"authorizationInfo":\[\{[^\}]+"permission":"({permission}[^"]+)""",
-    """exa_json_path=$..logEntries..timestamp,exa_field_name=time""",
-    """exa_json_path=$.timestamp,exa_field_name=time""",
+    """exa_json_path=$..logEntries..timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.logName,exa_field_name=event_category""",
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$..status.code,exa_field_name=result_code""",

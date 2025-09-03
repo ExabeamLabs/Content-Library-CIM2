@@ -8,9 +8,9 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4952
   Conditions = [ """<EventID>4952</EventID>""", """<Computer>""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)'""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='RuleId'>({rule_id}[^<]+)""",
-    """<Data Name\\*='RuleName'>({rule}[^<]+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Data Name\\*=('|")RuleId('|")>({rule_id}[^<]+)""",
+    """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

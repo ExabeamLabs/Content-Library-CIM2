@@ -8,8 +8,8 @@ Name = microsoft-evapp-xml-certificate-request-fail-33370
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """({event_code}33370)""",
     """policy id:\s*({policy_id}[^\s]+)""",
-    """<Data Name\\*='ErrorCode'>({failure_reason}[^<]+?)</Data>""",
-    """<Security UserID\\*='(({user_sid}S-[^\']+)|({user_id}[^\']+))""",
+    """<Data Name\\*=('|")ErrorCode('|")>({failure_reason}[^<]+?)</Data>""",
+    """<Security UserID\\*=('|")(({user_sid}S-[^\'"]+)|({user_id}[^\'"]+))""",
     """<Computer>({src_host}({host}[^<>]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

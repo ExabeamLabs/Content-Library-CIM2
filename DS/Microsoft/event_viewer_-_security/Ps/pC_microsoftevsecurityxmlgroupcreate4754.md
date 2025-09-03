@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-group-create-4754
     """<Message>({event_name}[^\.:]+?)\.""",
     """<Computer>(::ffff:)?({dest_host}({host}[\w\-.]+))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)""",
     """<EventID>({event_code}\d+)""",
     """Subject:.+?Security ID:\s*(|-|({user_sid}.+?))\s*Account Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}.+?))\s*Logon ID:\s*(|-|({login_id}\S+))\s""",

@@ -39,7 +39,7 @@ Fields = [
 """<Data Name\\=('|")SubjectUserSid('|")>({subject_sid}[^<]+)</Data>"""
 """<Data Name\\=('|")KeyLength('|")>({key_length}\d+)</Data>"""
 ]
-DupFields = [ "email_address->src_email_address", "domain->src_domain", "email_domain->src_email_domain" ]
+DupFields = [ "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

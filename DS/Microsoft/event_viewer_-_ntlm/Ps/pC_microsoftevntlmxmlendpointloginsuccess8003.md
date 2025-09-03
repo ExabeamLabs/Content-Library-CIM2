@@ -8,7 +8,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8003
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Conditions = [ """<EventID>8003<""", """security policy Network Security:""", """: Restrict NTLM:""", """<Channel>Microsoft-Windows-NTLM/Operational<""" ]
   Fields = [
-    """SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""
+    """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""
     """<Computer>({host}[^<]+?)<\/Computer>"""
     """Security UserID=('|")({user_sid}[^'\/>"]+)"""
     """({event_code}8003)"""

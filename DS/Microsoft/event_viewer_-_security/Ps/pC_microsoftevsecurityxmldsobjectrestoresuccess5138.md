@@ -22,8 +22,8 @@ Fields = [
   """Object:\s+Old DN:\s*({old_attribute}[^\{\}]+?({ds_object_ou}OU[^\s]+?)?)\s+New DN:"""
   """Object:\s+Old DN:[^\{\}]+?({ds_object_ou}OU[^\s]+?)\s+GUID:"""
   """Directory Service:\s*Name:\s*({ds_name}[^\s]+)\s+Type:\s*({ds_type}[^:]*?Services)"""
-  """<Data Name\\*='ObjectGUID'>\{({object_id}[^<\}]+)\}<"""
-  """<Data Name\\*='OpCorrelationID'>\{({correlation_id}[^\}<]+)\}<"""
+  """<Data Name\\*=('|")ObjectGUID('|")>\{({object_id}[^<\}]+)\}<"""
+  """<Data Name\\*=('|")OpCorrelationID('|")>\{({correlation_id}[^\}<]+)\}<"""
   """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"

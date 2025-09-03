@@ -13,14 +13,14 @@ Fields = [
   """<Computer>({host}[\w\-\.]+)</Computer>""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<Keywords>({result}[^<]+)</Keywords>""",
-  """<Data Name\\*='SubjectUserSid'>(|({user_sid}[^<]+?))</Data>""",
-  """<Data Name\\*='SubjectUserName'>(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-  """<Data Name\\*='SubjectDomainName'>(|({domain}[^<]+?))</Data>""",
-  """<Data Name\\*='SubjectLogonId'>(|({login_id}[^<]+?))</Data>""",
-  """<Data Name\\*='ObjectDN'>(|({ds_object_dn}[^<]+?))</Data>""",
-  """<Data Name\\*='ObjectClass'>(|({object_type}[^<]+?))</Data>"""
-  """<Data Name\\*='DSName'>(|({ds_name}[^<]+?))</Data>"""
-  """<Data Name\\*='DSType'>(|({ds_type}[^<]+?))</Data>"""
+  """<Data Name\\*=('|")SubjectUserSid('|")>(|({user_sid}[^<]+?))</Data>""",
+  """<Data Name\\*=('|")SubjectUserName('|")>(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+  """<Data Name\\*=('|")SubjectDomainName('|")>(|({domain}[^<]+?))</Data>""",
+  """<Data Name\\*=('|")SubjectLogonId('|")>(|({login_id}[^<]+?))</Data>""",
+  """<Data Name\\*=('|")ObjectDN('|")>(|({ds_object_dn}[^<]+?))</Data>""",
+  """<Data Name\\*=('|")ObjectClass('|")>(|({object_type}[^<]+?))</Data>"""
+  """<Data Name\\*=('|")DSName('|")>(|({ds_name}[^<]+?))</Data>"""
+  """<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
   """<Level>({run_level}[^<]+)<"""
 ]
 DupFields = ["user->src_user", "domain->src_domain"]

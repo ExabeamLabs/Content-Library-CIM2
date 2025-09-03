@@ -15,11 +15,11 @@ Name = microsoft-sysmon-xml-dll-load-6
     """({event_name}Driver loaded)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
-    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
     """<Data Name\\*=('|")ImageLoaded('|")>({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<]+))))<\/Data>""",
     """<Data Name\\*=('|")Hashes('|")>[^<>]*?MD5=({hash_md5}[^,<]+)""",
     """({log_name}Microsoft-Windows-Sysmon)"""
-    """ThreadID(\\)?='({thread_id}\d+)"""
+    """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
   DupFields = [ "event_name->operation" ]

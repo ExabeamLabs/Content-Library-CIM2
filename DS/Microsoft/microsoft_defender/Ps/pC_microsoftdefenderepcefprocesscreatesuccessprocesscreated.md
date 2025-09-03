@@ -26,15 +26,15 @@ Fields = [
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
 """InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?",""""
 """ProcessId\\?"+:({process_id}\d+)"""
-""""FileName\\?"+:\s*\\?"+(|({process_name}[^"]+?))\\?,""""
 """"InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
 """"ProcessCommandLine\\?"+:\s*[\\"]*?"\s*(|({process_command_line}.*?))\s*[\\"]*",\s*""""
 """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?""""
 """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
-""""FolderPath"+:"+({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))""""
 """"AccountDomain":"({domain}[^:]+?)",""",
 """"InitiatingProcessFolderPath":\s*"({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+))""",
-""""InitiatingProcessParentFileName":"({parent_process_name}[^"]+)""",
+""""FolderPath"+:\s*"+({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))""""
+""""FileName\\?"+:\s*\\?"+(|({process_name}[^"]+?))\\?,*""""
+""""InitiatingProcessParentFileName":\s*"({parent_process_name}[^"]+)""",
 """"InitiatingProcessParentId"+:({parent_process_id}\d+)""",
 """"SHA1":"({hash_sha1}[^"]+)"""",
 """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",

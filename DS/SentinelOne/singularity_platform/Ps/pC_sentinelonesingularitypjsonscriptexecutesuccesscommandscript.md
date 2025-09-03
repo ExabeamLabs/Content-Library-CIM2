@@ -19,6 +19,7 @@ Name = sentinelone-singularityp-json-script-execute-success-commandscript
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5"""
     """exa_json_path=$.['src.process.pid'],exa_field_name=process_id"""
     """exa_json_path=$.['src.process.cmdline'],exa_field_name=process_command_line"""
+    """exa_json_path=$.['cmdScript.content'],exa_field_name=scriptblock_text"""
     """exa_regex="src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
   ]
   DupFields = [ "host->dest_host"]

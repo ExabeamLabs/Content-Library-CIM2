@@ -6,14 +6,14 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4691
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4691</EventID>""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*='SubjectUserName'>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
-    """<Data Name\\*='SubjectDomainName'>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*='ObjectType'>({object_type}[^<]+)""",
-    """<Data Name\\*='ObjectName'>({object}[^<]+)""",
-    """<Data Name\\*='AccessList'>({access}[^<]+?)\s*<""",
-    """<Data Name\\*='SubjectLogonId'>({login_id}[^<]+)<\/Data>""",
-    """<Execution ProcessID\\*='({process_id}\d+)' ThreadID\\*='({thread_id}\d+)'\/>""",
-    """<Data Name\\*='SubjectUserSid'>({user_sid}[^<]+)""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")ObjectType('|")>({object_type}[^<]+)""",
+    """<Data Name\\*=('|")ObjectName('|")>({object}[^<]+)""",
+    """<Data Name\\*=('|")AccessList('|")>({access}[^<]+?)\s*<""",
+    """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")\/>""",
+    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]

@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4624-4
     """ログオン プロセス:\s+({auth_process}[^\s]+)\s+認証パッケージ:\s+({auth_package}[^\s]+)""",
     """ログオン ID:\s+({login_id}[^\s]+)""",
     """新しいログオン:\s+セキュリティ ID:\s+({user_sid}[^\s]+)\s"""
+    """移行されたサービス:\s+-\s+パッケージ名\s+\(NTLM\s+のみ\):\s+({auth_package}.+?)\s+キーの長さ"""
   ]
   DupFields = [ "host->dest_host" ]
 

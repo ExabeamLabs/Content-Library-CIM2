@@ -10,7 +10,7 @@ Name = microsoft-evpowershell-xml-script-execute-fail-4100
   Fields =[
     """<Computer>({host}[^<]+)<"""
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)"""
-    """<Security UserID='({user_sid}[^'<]+)"""
+    """<Security UserID=('|")({user_sid}[^'<"]+)"""
     """<Data Name =('|")ContextInfo('|")>\s*Severity = ({alert_severity}[^\s]+)"""
     """<Data Name =('|")ContextInfo('|")>[^@]+?User\s*=\s*(({domain}[^=]+?)[\\\/]+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\r|\\n|\\t)*\s*(Connected User|Shell ID) ="""
     """<Data Name =('|")ContextInfo('|")>[^@]+?Host Application\s*=\s*({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+))[^\n]+?\s+Engine Version ="""
@@ -18,7 +18,7 @@ Name = microsoft-evpowershell-xml-script-execute-fail-4100
     """<Data Name =('|")ContextInfo('|")>[^@]+?Command Name\s*=\s*(|({command}[^=]+?))\s*Command Type ="""
     """<Data Name =('|")ContextInfo('|")>[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path ="""
     """Engine Version\s*=\s*({engine_version}[^\s]+)\s"""
-    """Data Name ='Payload'>Error Message = ({failure_reason}[^<]+?)\s*<"""
+    """Data Name =('|")Payload('|")>Error Message = ({failure_reason}[^<]+?)\s*<"""
     """<Level>({run_level}[^<]+)<"""
   ]
   

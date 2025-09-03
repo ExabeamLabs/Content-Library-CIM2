@@ -24,8 +24,8 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """Group:\s*[^"]+?Security ID:\s+({group_id}[^\s]+)""",
     """Group:\s*[^"]+?(Group|Account) Name:\s+({group_name}.+?)?\s+(Group|Account) Domain:""",
     """Group:\s*[^"]+?(Group|Account) Domain:\s+({group_domain}[^\s]+)""",
-    """Process ID:\s*[^"]+?\s+({process_id}[^\s]+)""",
-    """Process Name:\s+({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^\s]+))""",
+    """Process ID:\s*({process_id}[\w]+)\s+""",
+    """Process Name:\s*(-|({process_path}({process_dir}.*?[\\\/])?({process_name}[^\\\/\s"]+)))(?:\s+[\\w\s]+|:|$|")"""
 
     """exa_json_path=$.times[0].EventTime,exa_field_name=time"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""

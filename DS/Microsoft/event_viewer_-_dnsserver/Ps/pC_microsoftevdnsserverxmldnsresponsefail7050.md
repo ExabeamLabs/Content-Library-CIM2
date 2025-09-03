@@ -15,9 +15,9 @@ Name = microsoft-evdnsserver-xml-dns-response-fail-7050
      """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
      """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
      """<EventRecordID>({event_id}[^<]+)""",
-     """<Security UserID\\*='({user_sid}[^']+)""",
-     """Guid\\*='\{({process_guid}[^}']+?)\}'""",
-     """ProcessID\\*='({process_id}\d+)""",
+     """<Security UserID\\*=('|")({user_sid}[^'"]+)""",
+     """Guid\\*=('|")\{({process_guid}[^}']+?)\}'""",
+     """ProcessID\\*=('|")({process_id}\d+)""",
      """<Level>({run_level}[^<]+)<"""
   ]
 

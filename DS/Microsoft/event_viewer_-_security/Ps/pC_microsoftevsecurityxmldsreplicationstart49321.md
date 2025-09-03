@@ -12,14 +12,14 @@ Name = microsoft-evsecurity-xml-ds-replication-start-4932-1
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Execution ProcessID\\*='({process_id}\d+)""",
+    """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
-    """<Data Name\\*='DestinationDRA'>.+?CN=({dest_dra}[^<]+)""",
-    """<Data Name\\*='SourceDRA'>({src_dra}[^<]+)<""",
-    """<Data Name\\*='SessionID'>({session_id}\d+)<""",
-    """<Data Name\\*='DestinationDRA'>.+?CN=({dest_dc}[^\s,]+)""",
-    """<Data Name\\*='SourceDRA'>.+?CN=({src_dc}[^\s,]+)""",
+    """<Data Name\\*=('|")DestinationDRA('|")>.+?CN=({dest_dra}[^<]+)""",
+    """<Data Name\\*=('|")SourceDRA('|")>({src_dra}[^<]+)<""",
+    """<Data Name\\*=('|")SessionID('|")>({session_id}\d+)<""",
+    """<Data Name\\*=('|")DestinationDRA('|")>.+?CN=({dest_dc}[^\s,]+)""",
+    """<Data Name\\*=('|")SourceDRA('|")>.+?CN=({src_dc}[^\s,]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
 

@@ -13,11 +13,11 @@ Name = microsoft-evsecurity-xml-network-listen-5154
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*='Protocol'>({protocol}[^<>]+?)<\/Data>""",
-    """<Data Name\\*='SourceAddress'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """<Data Name\\*='SourcePort'>(0|({src_port}\d+))""",
-    """<Data Name\\*='DestAddress'>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """<Data Name\\*='DestPort'>(0|({dest_port}\d+))""",
+    """<Data Name\\*=('|")Protocol('|")>({protocol}[^<>]+?)<\/Data>""",
+    """<Data Name\\*=('|")SourceAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """<Data Name\\*=('|")SourcePort('|")>(0|({src_port}\d+))""",
+    """<Data Name\\*=('|")DestAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """<Data Name\\*=('|")DestPort('|")>(0|({dest_port}\d+))""",
     """\sProcess ID:\s*(|-|({process_id}.+?))\s*Application Name:.+?\s*(({process_path}(({process_dir}[^"\/:]*)\\)?({process_name}[^":]+?)))\s*Network Information:""",
     """<Level>({run_level}[^<]+)<"""
   ]

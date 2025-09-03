@@ -12,7 +12,7 @@ Name = microsoft-evsystem-xml-policy-apply-1502
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'\/>""",
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Security UserID\\*='({user_sid}.+?)'\/>""",
+    """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)"""
   ]

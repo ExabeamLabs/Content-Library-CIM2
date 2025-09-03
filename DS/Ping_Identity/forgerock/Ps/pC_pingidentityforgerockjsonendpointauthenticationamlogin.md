@@ -24,21 +24,32 @@ Name = "pingidentity-forgerock-json-endpoint-authentication-amlogin"
 }, 
 
 {
-  Name = "pingidentity-forgerock-json-http-amsession"
+  Name = "pingidentity-forgerock-csv-endpoint-authentication-success-amlogin"
   Vendor = "Ping Identity"
   Product = "ForgeRock"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
-  ExtractionType = json
-  Conditions = [ """"eventName":"AM-SESSION-""", """"operation":"""", """"component":"Session"""" ]
+  Conditions = [ """FrockAuth""","""AM-""", """-LOGIN-""", """Authentication""" ]
   Fields = [
-    """exa_json_path=$.timestamp,exa_field_name=time"""
-    """exa_json_path=$.eventName,exa_field_name=event_name"""   
-    """exa_json_path=$.transactionId,exa_field_name=message_id"""
-    """exa_json_path=$.operation,exa_field_name=operation"""
-    """exa_json_path=$.realm,exa_field_name=realm"""
-    """exa_json_path=$.component,exa_field_name=category"""
-    """exa_json_path=$.userId,exa_field_name=user_id"""
-    """exa_json_path=$.userId,exa_regex=id=({user}[\w\.\-\!\#\^\~]{1,40}\$?),ou=user,o=({group_name}[^,]+),ou=services,dc=({domain}[^,]+),"""
+    """"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)","({event_name}[^",]+)","({message_id}[^",]+)","({user_id}[^"]+)","\["({tracking_id}[^"]+)"\]","({result}[^"]+)","\["({principal_name}[^"]+)"\]"""
+    """info":[^\]]+?"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """info":[^\]]+?"authLevel":"({auth_level}[^",]+)""""
+    """({category}Authentication)"""  
+  ]
+  ParserVersion = "v1.0.0"
+}, 
+
+{
+  Name = "pingidentity-forgerock-str-endpoint-authentication-success-amlogin"
+  Vendor = "Ping Identity"
+  Product = "ForgeRock"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss"]
+  Conditions = [ """Login Success""", """Authentication""", """FrockAuth""" ]
+  Fields = [
+    """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"\s"({event_name}[^"\|]+)"""
+    """"\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s"({user_id}[^"]+)"\s"""
+    """DataStore\s({tracking_id}[^"\s]+)"""
+    """({result}Success)"""
+    """({category}Authentication)"""  
   ]
   ParserVersion = "v1.0.0"
 

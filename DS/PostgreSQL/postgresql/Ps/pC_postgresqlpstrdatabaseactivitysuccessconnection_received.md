@@ -2,18 +2,20 @@
 ```Java
 {
 Name = postgresql-p-str-database-activity-success-connection_received
- Conditions = [""":LOG:""", """ connection received:""", """ host=""" ]
+ Conditions = ["""LOG:""", """ connection received:""", """ host=""" ]
 
 postgresql-parser-str = {
     Vendor = PostgreSQL
     Product = PostgreSQL
     ParserVersion = "v1.0.0"
-    TimeFormat = ["yyyy-MM-dd HH:mm:ss"]
+    TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*\w\w\w:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\(({src_port}\d+)\))?"""
-      """:(LOG|FATAL):\s*({operation}[^:]+)"""
+      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,6}Z)"""
+      """(LOG|FATAL):\s*({operation}[^:]+)"""
       """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """database=({db_name}[^\s]+)"""
+      """client=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\(({src_port}\d+)\))?"""
     ]
     DupFields = ["operation->action"]
     }

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """({event_name}Special privileges assigned to new logon)"""
-  """\WSystemTime=\'({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+  """\WSystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """<Computer>({src_host}({host}[\w\-\.]+))</Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<Keywords>({result}[^<]+)</Keywords>"""

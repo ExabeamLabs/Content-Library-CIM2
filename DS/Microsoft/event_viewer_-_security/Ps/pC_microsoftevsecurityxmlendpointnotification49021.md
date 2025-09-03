@@ -15,9 +15,9 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4902-1
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<EventID>({event_code}[^<]+)<""",
-    """<Execution ProcessID\\*='({process_id}[^']+)""",
-    """ThreadID\\*='({thread_id}[^']+)""",
-    """Guid\\*='\{({process_guid}[^\'\}]+)""",
+    """<Execution ProcessID\\*=('|")({process_id}[^"']+)""",
+    """ThreadID\\*=('|")({thread_id}[^'"]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]

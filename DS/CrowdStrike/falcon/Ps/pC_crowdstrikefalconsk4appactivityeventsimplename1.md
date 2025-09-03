@@ -14,10 +14,12 @@ Name = crowdstrike-falcon-sk4-app-activity-eventsimplename-1
       """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
       """"ClientComputerName":\s*"(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))""""
       """"cid":"({cid}[^"]+)"""
+      """ComputerName":"({host}[^"]+)"""
       """exa_json_path=$.UserPrincipal,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)@([^"]+)""",
       """exa_regex="((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""",
       """exa_json_path=$.ClientComputerName,exa_regex=^(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-.]+))$""",
       """exa_json_path=$.cid,exa_field_name=cid"""
+      """exa_json_path=$..ComputerName,exa_field_name=host"""
     ]
   
 crowdstrike-process-info-2 = {

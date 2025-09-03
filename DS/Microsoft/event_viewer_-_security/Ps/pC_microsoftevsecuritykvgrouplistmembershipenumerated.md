@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """\sSubject:.*?Security ID:\s*(|({user_sid}.+?))\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*User:""",
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
-    """Process Name:\s+(?:|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/]+?)))\s*("|,|$)""",
+    """Process Name:\s+(-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/]+?)))\s*(?:\d+|"|,|$)"""
 
     """exa_json_path=$..created,exa_field_name=time""",
     """exa_json_path=$.EventTime,exa_field_name=time""",

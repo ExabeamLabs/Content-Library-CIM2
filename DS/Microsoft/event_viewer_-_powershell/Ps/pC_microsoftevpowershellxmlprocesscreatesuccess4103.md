@@ -17,8 +17,8 @@ Fields = [
 """({event_code}4103)"""
 """<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-"""<Execution ProcessID\\*='({process_id}\d+)"""
-"""<Security UserID\\*='({user_sid}[\w\-]+)'/>"""
+"""<Execution ProcessID\\*=('|")({process_id}\d+)"""
+"""<Security UserID\\*=('|")({user_sid}[\w\-]+)('|")/>"""
 """User = (({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\r|\\n|\\t)*\s*(Connected User|Shell ID)\s*=""",
 """CommandInvocation(.+?):\s*"({command_invocation}[^"\\]+)""",
 """value="*(?:function\s)?({command_module}[^\s"\\]+)""",
@@ -38,8 +38,8 @@ Fields = [
 """exa_regex=({event_code}4103)"""
 """exa_regex=<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
 """exa_regex=<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-"""exa_regex=<Execution ProcessID\\*='({process_id}\d+)"""
-"""exa_regex=<Security UserID\\*='({user_sid}[\w\-]+)'/>"""
+"""exa_regex=<Execution ProcessID\\*=('|")({process_id}\d+)"""
+"""exa_regex=<Security UserID\\*=('|")({user_sid}[\w\-]+)('|")/>"""
 """exa_regex=User = (({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\r|\\n|\\t)*\s*(Connected User|Shell ID)\s*=""",
 """exa_regex=CommandInvocation(.+?):\s*"({command_invocation}[^"\\]+)""",
 """exa_regex=value="*(?:function\s)?({command_module}[^\s"\\]+)""",

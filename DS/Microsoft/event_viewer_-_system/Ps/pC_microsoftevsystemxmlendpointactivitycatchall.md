@@ -4,6 +4,10 @@
 Name = microsoft-evsystem-xml-endpoint-activity-catchall
   Product = Event Viewer - System
   Conditions = [ """<EventID""", """<Channel>System<""", """<Provider Name =""" ]
+  Fields = ${MSEventViewerTemplates.xml-ms-event-viewer.Fields}[
+    """<Data Name =('|")AccountName('|")>(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s"\\,\|<]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^<]+))<"""
+    """<Data Name =('|")Subject('|")>({additional_info}[^<]+?)\s*<"""
+  ]
 
 xml-ms-event-viewer = {
     Vendor = Microsoft

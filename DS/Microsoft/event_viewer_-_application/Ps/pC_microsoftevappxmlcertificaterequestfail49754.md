@@ -8,8 +8,8 @@ Name = "microsoft-evapp-xml-certificate-request-fail-49754"
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
     """<Computer>({host}[\w\.\-]+)<""",
     """({event_code}49754)""",
-    """<Data Name\\*='TemplateName'>({host_type}[^<]+?)</Data>""",
-    """<Data Name\\*='RequestId'>({additional_info}({src_host}[^<\\]+)\\+({domain}\w+)[^<]*?)</Data>""",
+    """<Data Name\\*=('|")TemplateName('|")>({host_type}[^<]+?)</Data>""",
+    """<Data Name\\*=('|")RequestId('|")>({additional_info}({src_host}[^<\\]+)\\+({domain}\w+)[^<]*?)</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 

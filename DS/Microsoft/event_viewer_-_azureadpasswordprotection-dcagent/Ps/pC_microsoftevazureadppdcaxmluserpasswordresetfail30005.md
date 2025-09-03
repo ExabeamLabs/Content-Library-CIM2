@@ -17,11 +17,11 @@ account-password-reset = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
-    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)'/>""",
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)('|")/>""",
     """<Message>({event_name}[^.<]+)""",
     """UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
-    """Security UserID\\*='({user_sid}[^']+)'""",
+    """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""
   

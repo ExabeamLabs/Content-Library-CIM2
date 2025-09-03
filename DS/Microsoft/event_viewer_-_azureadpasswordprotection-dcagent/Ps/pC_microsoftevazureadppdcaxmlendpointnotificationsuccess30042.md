@@ -18,7 +18,7 @@ azure-ad-system-info = {
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """Security UserID\\*='({user_sid}[^']+)'""",
+    """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Message>({event_name}[^<\.:]+?)(<|\.|:)"""
     """<Level>({run_level}[^<]+)<"""
   

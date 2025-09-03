@@ -18,7 +18,7 @@ Fields = [
   """Computer(\w+)?["\s]*(:|=)\s*"?({src_host}({host}[\w\-.]+?))("|\s|;)"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4663)"""
-  """Subject(:|=).*?Security ID(:|=)\s*({user_sid}.+?)[\s;]*Account Name(:|=)\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)\s*(NT AUTHORITY|({domain}.+?))[\s;]*Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*((Object|\w+\s+\w+)(:|=)|%\{S-)"""
+  """Subject(:|=).*?Security ID(:|=)\s*({user_sid}.+?)[\s;]*Account Name(:|=)\s*(LOCAL SERVICE|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)\s*(NT AUTHORITY|({domain}.+?))[\s;]*Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*((Object|\w+\s+\w+)(:|=)|%\{S-)"""
   """Object(:|=).*?Object Type(:|=)\s*({file_type}[^:=]+?)[\s;]*Object Name(:|=)\s*(({registry_path}\\+REGISTRY[^:]+?({registry_key}[^\\\/:]+))|({file_path}({file_dir}.*?)(|({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\\(]+?))?))))[\s;]+(\w+\s+\w+(:|=)|\w+=|ReadGeneralInformation|ChangePassword|%\{S-)"""
   """Process Name(:|=)\s*(?:|({process_path}[^;=]+?))[\s;]*Access Request Information(:|=)"""
   """Process Name(:|=).*\\({process_name}[^\\;=]+?)[\s;]*Access Request Information(:|=)"""

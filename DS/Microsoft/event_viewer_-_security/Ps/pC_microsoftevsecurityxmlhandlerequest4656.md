@@ -25,7 +25,7 @@ Name = microsoft-evsecurity-xml-handle-request-4656
     """<Data Name(\\)?=('|")DesiredAccess('|")>\s*({access}[^<>]+)\s*<""",
     """<Data Name(\\)?=('|")ProcessName('|")>\s*({process_path}({process_dir}(?:[^<]+)?[\\\/]+)?({process_name}[^\\\/"<]+?))\s*</Data>""",
     """<Message>({event_name}[^\.]+)""",
-    """<Data Name(\\)?='SubjectLogonId'>({login_id}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Keywords>({result}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
     """Transaction ID:\s*\{({transaction_id}[^\s\}]+)\}?\s*Accesses:""",

@@ -19,7 +19,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-6
     """><Data Name =("|')ExtraInfoString("|')>({additional_info}[^<]+?)\s*<"""
     """Guid=('|")\{({process_guid}[^"'\}]+)"""
     """<Provider>({provider_name}[^<]+?)</Provider>""",
-    """ThreadID\\*='({thread_id}[^']+)""",
+    """ThreadID\\*=('|")({thread_id}[^'"]+)""",
   ]
   
 

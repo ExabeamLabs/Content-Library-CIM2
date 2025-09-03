@@ -13,7 +13,7 @@ Name = "microsoft-evsecurity-mix-endpoint-login-4769"
   ]
   Fields = [
     """({event_name}A Kerberos service ticket was requested)"""
-    """TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)'\/>"""
+    """TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\d\d\dZ)'\/>"""
     """Computer>({host}[\w\-.]+)<\/Computer"""
     """({event_code}4769)"""
     """Account Name(:|=)\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[\w._\-]+))?[\s;]*Account Domain(:|=)"""
