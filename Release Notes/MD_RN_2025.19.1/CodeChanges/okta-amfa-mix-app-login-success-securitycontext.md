@@ -1,0 +1,9 @@
+# Code Changes for okta-amfa-mix-app-login-success-securitycontext (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'alert_reason', 'alert_severity', 'alert_subject', 'alert_type', 'app', 'app_id', 'auth_method', 'browser', 'dest_user_full_name', 'device_name', 'domain', 'email_address', 'email_domain', 'event_name', 'failure_reason', 'fingerprint', 'first_name', 'full_name', 'group_name', 'last_name', 'location_city', 'location_country', 'location_state', 'more_info', 'object', 'object_type', 'operation', 'operation_details', 'operator_name', 'os', 'result', 'result_reason', 'severity', 'src_ip', 'src_port', 'src_user', 'target', 'time', 'uri_path', 'user', 'user_agent'] |
+| edit_regex_field | failure_reason |  | ['"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)', 'exa_regex="outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)'] |
+| edit_regex_field | severity |  | ['"debugData":.*?"risk":\s*"[^"]*?\Wlevel=\s*({severity}\w+)("|,|\})', 'exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^\}]*?\Wlevel\=({severity}[^=]+?)\s*((,\s\w+=)|\})'] |
+| added_regex_field | alert_reason |  | ['"risk":"[^\}]+?\Wreasons=({alert_reason}[^=]+?)\s*((,\s\w+=)|\})', 'exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\Wreasons\=({alert_reason}[^=]+?)\s*((,\s\w+=)|\})'] |
+| added_regex_field | alert_subject |  | ['exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})'] |
