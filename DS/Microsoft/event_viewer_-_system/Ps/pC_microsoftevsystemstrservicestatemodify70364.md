@@ -13,6 +13,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036-4
    """\s({event_code}7036)\s""",
    """({event_name}service entered the paused state)""",
    """Information\s+\S+\s+\S+\s+(The )?({service_name}.+?)\sservice """,
+   """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
   ]
 
 

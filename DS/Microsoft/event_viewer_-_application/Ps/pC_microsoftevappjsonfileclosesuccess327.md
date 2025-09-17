@@ -6,8 +6,8 @@ Name = microsoft-evapp-json-file-close-success-327
   Product = Event Viewer - Application
   Conditions = [ """"EventID":327,""", """"Channel":"Application"""", """"ProviderName":"""", """The database engine detached a database""" ]
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
-    """({event_name}The database engine detached a database)""",
-    """({operation}The database engine detached a database)\s+\(\d+,\s+({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))\)\."""      
+    """exa_regex=({event_name}The database engine detached a database)""",
+    """exa_regex=({operation}The database engine detached a database)\s+\(\d+,\s+({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))\)\."""      
   ]    
   DupFields = [ "host->dest_host" ] 
 
@@ -31,6 +31,10 @@ microsoft-json-events {
     """exa_json_path=$.Message,exa_field_name=additional_info"""    
     """exa_json_path=$.UserID,exa_regex=(({user_sid}S-[^"]+?)|(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.Message,exa_regex=(S-[^"]+|({event_name}[^\."]+))"""
+    """exa_regex=Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
+    """exa_regex=Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s""",
+    """exa_regex=Account Domain:\s+({domain}[^\s]+)""",
+    """exa_regex=Logon ID:\s+({login_id}[^\s]+)"""
   
 }
 ```

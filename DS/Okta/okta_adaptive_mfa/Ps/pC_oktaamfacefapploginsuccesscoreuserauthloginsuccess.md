@@ -15,6 +15,8 @@ Name = "okta-amfa-cef-app-login-success-coreuserauthloginsuccess"
     """"screen_lock_type":"({identity_type}[^"]+)"""",
     """"risk\\*":.+?"level\\*":\\*"({severity}[^"]+?)\\*"""",
     """"risk":"\{reasons=({failure_reason}[^=]+?),\s\w+=""",
+    """serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
+    """exa_regex=serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
     """exa_regex=({result}(?i)success)""",
     """exa_json_path=$..client.userAgent.browser,exa_regex=((?i)UNKNOWN|({browser}[^"]+))""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint"""

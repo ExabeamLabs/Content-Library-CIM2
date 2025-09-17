@@ -22,6 +22,7 @@ Name = microsoft-evsystem-json-service-state-modify-7040
     """"Message":"({additional_info}[^,]+)"""",
     """"param2":"({old_value}[^"]+?)"""",
     """"param3":"({new_value}[^"]+?)"""",
+    """The start type of the ({service_name}[^\.="]+) service was changed from[^\.="]+ to ({service_state}[^\.="]+)"""
   ]
 
 

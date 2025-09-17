@@ -1,0 +1,37 @@
+#### Parser Content
+```Java
+{
+Name = humansecurity-botdefender-json-app-activity-botdefender
+  Vendor = HUMAN Security
+  Product = HUMAN Bot Defender
+  ExtractionType = json
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
+  Conditions = [ """"event_type":""", """"incident_types":""", """"ivt":""", """"px_app_id":""", """"px_client_uuid":""", """"px_vid":""" ]
+  Fields = [
+    """exa_json_path=$.timestamp,exa_field_name=time""",
+    """exa_json_path=$.browser_family,exa_field_name=browser""",
+    """exa_json_path=$.city,exa_field_name=city""",
+    """exa_json_path=$.client_ip,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
+    """exa_json_path=$.country,exa_field_name=country""",
+    """exa_json_path=$.domain,exa_field_name=domain""",
+    """exa_json_path=$.event_type,exa_field_name=action""",
+    """exa_json_path=$.filter_category,exa_field_name=rule_type""",
+    """exa_json_path=$.filter_id,exa_field_name=rule_id""",
+    """exa_json_path=$.filter_origin,exa_field_name=rule""",
+    """exa_json_path=$.filter_type,exa_field_name=rule_action""",
+    """exa_json_path=$.full_url,exa_field_name=url""",
+    """exa_json_path=$.http_method,exa_field_name=method""",
+    """exa_json_path=$.os_name,exa_field_name=os""",
+    """exa_json_path=$.os_version,exa_field_name=os_version""",
+    """exa_json_path=$.path,exa_field_name=path""",
+    """exa_json_path=$.px_app_id,exa_field_name=app_id""",
+    """exa_json_path=$.risk_score,exa_field_name=risk_score""",
+    """exa_json_path=$.true_ip,exa_field_name=origin_ip""",
+    """exa_json_path=$.user_agent,exa_field_name=user_agent""",
+  ]
+  ParserVersion = v1.0.0
+  DupFields = [ "action->operation" ]
+
+
+}
+```

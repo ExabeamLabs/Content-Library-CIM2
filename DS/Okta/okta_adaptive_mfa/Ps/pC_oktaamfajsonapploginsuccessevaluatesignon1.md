@@ -16,12 +16,14 @@ Name = okta-amfa-json-app-login-success-evaluatesignon-1
     """"behaviors\\*":"*\{({more_info}[^\}]+)""",
     """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """"target":\s*\[.*?\{.*?"alternateId":\s*"({app_id}[^"]+)"[^\{\}]*?"type":\s*"AppInstance"""",
+    """serialNumber":"({serial_num}[^"]+)""""
     """exa_json_path=$..device.screen_lock_type,exa_field_name=identity_type""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..transaction.id,exa_field_name=device_id""",
     """exa_json_path=$..debugContext.debugData.logOnlySecurityData,exa_regex=risk\\*":.+?"level\\*":\\*"({severity}[^"]+?)\\*"""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint""",
     """exa_json_path=$..target[?(@.type == 'AppInstance')].alternateId,exa_field_name=app_id"""
+    """exa_json_path=$..target[?(@.type == 'UDDevice')]..serialNumber,exa_field_name=serial_num"""
   ]
 
 s-okta-app-login = {

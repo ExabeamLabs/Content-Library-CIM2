@@ -13,6 +13,7 @@ Name = microsoft-evsystem-str-service-state-modify-7040
    """\s({event_code}7040)\s""",
    """The start type of the ({service_name}.+?)\sservice""",
    """({event_name}The start type of the Background Intelligent Transfer Service service was changed from auto start to demand start)"""
+   """The start type of the ({service_name}[^\.="]+) service was changed from[^\.="]+ to ({service_state}[^\.="]+)"""
   ]
 
 

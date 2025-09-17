@@ -15,6 +15,7 @@ Name = microsoft-evdirservice-xml-app-notification-success-directoryservice
     """<Keywords>({result}[^<]+)""",
     """<EventID>({event_code}\d+)""",
     """<EventID Qualifiers=('|")\d+('|")>({event_code}\d+)<""",
+    """<EventData><Data>\d+\.\d+\.\d+\.\d+:\d+<\/Data><Data>(({domain}[^<]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """<EventData>({additional_info}.+?)<\/EventData>""",
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",

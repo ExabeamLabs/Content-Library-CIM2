@@ -26,6 +26,9 @@ Microsoft-CAS-Event-Category= {
       """\WReason:\s*({additional_info}[^;\)]+)"""
       """\Wdvc=(|({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}))"""
       """\WrequestClientApplication=(|({user_agent}.*?))\s+(\w+=)"""
+      """\Wmsg=\s*({action}[^\s]+)\sa company ({file_type}[^:]+):"""
+      """\Wmsg=\s*({action}[^\s]+)\sowner to group: user.+?\sto group\s({group_name}.+?)\ssuser="""
+      """\Wmsg=\s*({action}Trash)\s({file_type}[^:]+):"""
     
 }
 ```

@@ -1,0 +1,21 @@
+#### Parser Content
+```Java
+{
+Name = f5-bigip-str-network-notification-success
+  Vendor = F5
+  Product = F5 BIG-IP
+  TimeFormat = "MMM dd HH:mm:ss"
+  ParserVersion = v1.0.0
+  Conditions = [ """tmm""", """]:""", """RST sent from""" ]
+  Fields = [
+  """<\d+>({time}\w+\s+\w+\s+\d+:\d+:\d+)"""
+  """\d+:\d+:\d+\s+\S+\s+({severity}[^\s]+)""",
+  """\d+:\d+:\d+\s+\S+\s+\w+\s+({process_name}[^\[]+)\[\d+]:""",
+  """\d+:\d+:\d+\s+\S+\s+\w+\s+tmm\d?\[({process_id}[^\]]+)\]:"""
+  """\d+:\d+:\d+\s+({host}[^\s]+)""",
+  """tmm\d?\[\d+\]:\s+\d+:\d+:\s+RST sent from\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+to\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,\s+\S+\s+({additional_info}[\S\s]+)\s+$"""
+  ] 
+
+
+}
+```

@@ -47,7 +47,7 @@ ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events}{
 
 ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events}{
 	Name = "fireeye-networksecurity-json-http-session-success-http"
-	Conditions = [ """"event_type":"http"""", """"flow_id":""", """"http":{""", """"http_method":"""", """"http_port":""" ]
+	Conditions = [ """"event_type":"http"""", """"flow_id":""", """"http":{""", """"http_method":"""", """"proto":""", """"iface":""" ]
   	Fields = ${FireEyeParsersTemplates.fireeye-networksecurity-nx-events.Fields}[
   	  """exa_json_path=$.http.hostname,exa_field_name=web_domain""",
     	"""exa_json_path=$.http.http_port,exa_field_name=dest_port""",

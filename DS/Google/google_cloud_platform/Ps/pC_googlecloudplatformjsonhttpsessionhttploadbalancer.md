@@ -17,6 +17,7 @@ Name = google-cloudplatform-json-http-session-httploadbalancer
 	  """"status":({http_response_code}\d+)""",
 	  """"outcome":"({result}[^"]+)"""",
 	  """"statusDetails":"({additional_info}[^"]+)""""
+    """"requestSize":({bytes_in}\d+)"""
   ]
   ParserVersion = v1.0.0
 

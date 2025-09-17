@@ -14,6 +14,7 @@ Name = cisco-netsec-json-network-traffic-success-categorytype
     """exa_json_path=$.description,exa_field_name=additional_info""",
     """exa_json_path=$.type,exa_field_name=event_category""",
     """exa_json_path=$.title,exa_field_name=event_name""",
+    """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.network.name,exa_field_name=network""",
     """exa_json_path=$.categoryType,exa_field_name=category""",
     """exa_json_path=$.scope.devices[:1].name,exa_field_name=device_name""",

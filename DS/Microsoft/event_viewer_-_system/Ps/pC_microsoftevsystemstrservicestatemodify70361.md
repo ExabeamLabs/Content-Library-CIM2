@@ -13,6 +13,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036-1
    """\w+\s\d+\s\d+:\d+:\d+\s({host}[^\s]+)\sMSWinEventLog""",
    """\s({event_code}7036)\s""",
    """({event_name}The.+?)\s*("|$)"""
+   """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
   ]
 
 

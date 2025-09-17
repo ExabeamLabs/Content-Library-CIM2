@@ -22,7 +22,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """logInfo.request.ipChain.ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"risk":"\{reasons=({failure_reason}[^=]+?),\s\w+=""",
+    """"risk":"[^\}]+?\Wreasons=({alert_reason}[^=]+?)\s*((,\s\w+=)|\})""",
     """"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
@@ -50,7 +50,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
     """"deviceFingerprint":\s*"({fingerprint}[^"]+)""""
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
-    """"debugData":.*?"risk":\s*"[^"]*?level=\s*({severity}\w+)("|,|\})"""
+    """"debugData":.*?"risk":\s*"[^"]*?\Wlevel=\s*({severity}\w+)("|,|\})"""
     """"target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance""""
     """"target":.+?"type":"(App)?User".+?"displayName":"({full_name}\w+(,\s+\w+)+)"""
     """"tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
@@ -70,7 +70,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..client.userAgent.rawUserAgent,exa_field_name=user_agent""",
     """exa_json_path=$..client.ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$..request.ipChain[:1].ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.debugContext.debugData.risk,exa_regex=^\{reasons=({failure_reason}[^=]+?),\s\w+=""",
+    """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\Wreasons\=({alert_reason}[^=]+?)\s*((,\s\w+=)|\})""",
     """exa_regex="outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)""",
     """exa_regex="outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """exa_regex="outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
@@ -88,7 +88,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..client.userAgent.os,exa_field_name=os,exa_match_expr=!Contains($.client.userAgent.os,"unknown")""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint""",
     """exa_json_path=$..target[1:].detailEntry.methodTypeUsed,exa_field_name=auth_method""",
-    """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}\w+)("|,|\})""",
+    """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^\}]*?\Wlevel\=({severity}[^=]+?)\s*((,\s\w+=)|\})""",
     """exa_regex="domain"+:"+(null|\.|({domain}[^"\/,]+))""",
     """exa_regex=({app}(?i)Okta|Microsoft Office 365)""",
     """exa_json_path=$..actor.displayName,exa_field_name=app,exa_match_expr=Contains($.actor.type,"PublicClientApp")""",
@@ -106,8 +106,8 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":[^\]\}]*?"alternateId"\s*:"({target}[^"]+)""""
     """exa_json_path=$..actor.alternateId,exa_field_name=src_user""",
     """exa_json_path=$..target.alternateId,exa_field_name=target""",
-    """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
-
+    """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
+    """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
   ]
   DupFields = ["operation->alert_name"]
 

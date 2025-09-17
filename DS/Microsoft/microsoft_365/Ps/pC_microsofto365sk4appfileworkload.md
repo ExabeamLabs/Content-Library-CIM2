@@ -13,7 +13,7 @@ Fields = [
 """exa_json_path=$.Attendees[0:].DisplayName,exa_field_name=members""",
 """exa_json_path=$.Attendees[0:].InviterInfo.DisplayName,exa_field_name=additional_info""",
 """exa_json_path=$..CreationTime,exa_field_name=time"""
-"""exa_json_path=$..DeviceName,exa_field_name=host"""
+"""exa_json_path=$..DeviceName,exa_regex=^({host}[\w\-.]+)$"""
 """exa_json_path=$..Operation,exa_field_name=operation"""
 """exa_json_path=$..UserId,exa_field_name=user_upn"""
 """exa_json_path=$..Workload,exa_field_name=app"""

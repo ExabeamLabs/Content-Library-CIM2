@@ -16,20 +16,21 @@ Name = vectra-cd-json-alert-trigger-success-detection-1
     """exa_json_path=$.detection_id,exa_field_name=alert_id""",
     """exa_json_path=$.detail.app_protocol,exa_field_name=app_protocol"""
     """exa_json_path=$.detail.target_domain,exa_field_name=dest_domain"""
-    """exa_json_path=$.detail.dst_hosts.ip,exa_field_name=dest_ip""",
-    """exa_json_path=$.detail.src_hosts.ip,exa_field_name=src_ip""",
+    """exa_json_path=$.detail.dst_hosts.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.detail.src_hosts.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.detail.src_hosts.name,exa_field_name=src_host""",
-    """exa_json_path=$.detail.dst_ip,exa_field_name=dest_ip""",
+    """exa_json_path=$.detail.dst_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.detail.dst_hosts.name,exa_field_name=dest_host""",
     """exa_json_path=$.entity_uid,exa_field_name=src_host""",
     """exa_json_path=$.detail.bytes_received,exa_field_name=bytes_in""",
     """exa_json_path=$.detail.bytes_sent,exa_field_name=bytes_out""",
     """exa_json_path=$.triaged,exa_field_name=additional_info""",
     """exa_json_path=$.mitre,exa_field_name=mitre_labels"""
-    """exa_json_path=$.detail.dst_host.ip,exa_field_name=dest_ip"""
+    """exa_json_path=$.detail.dst_host.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.detail.dst_host.name,exa_field_name=dest_host"""
     """exa_json_path=$.detail.dst_port,exa_field_name=dest_port"""
     """exa_json_path=$.category,exa_field_name=tactic"""
+    """exa_json_path=$.detail.src_host.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   ParserVersion = "v1.0.0"  
 

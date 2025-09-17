@@ -3,7 +3,7 @@
 {
 Name = microsoft-wdac-str-endpoint-notification-success-3033
   Vendor = Microsoft
-  Product = Windows Defender Application Control
+  Product = Event Viewer - CodeIntegrity
   TimeFormat = ["EEE MMM dd HH:mm:ss yyyy", "MMM dd HH:mm:ss yyyy"]
   Conditions = [ """MSWinEventLog""", """Microsoft-Windows-CodeIntegrity""", """3033""", """did not meet the""", """signing level requirements""" ]
   Fields = [

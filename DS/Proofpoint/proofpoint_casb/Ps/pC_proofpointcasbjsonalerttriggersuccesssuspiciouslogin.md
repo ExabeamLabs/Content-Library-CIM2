@@ -23,6 +23,6 @@ proofpoint-casb-json-alert-trigger-events = {
       """exa_json_path=$.description,exa_field_name=additional_info""",
       """exa_json_path=$.related_events[0].cloud_service,exa_field_name=target""",
       """exa_json_path=$.related_events[0].user_agent,exa_field_name=user_agent"""
-    
+  
 }
 ```

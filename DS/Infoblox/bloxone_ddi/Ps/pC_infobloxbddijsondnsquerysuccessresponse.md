@@ -23,6 +23,8 @@ Name = infoblox-bddi-json-dns-query-success-response
       """exa_json_path=$.qport,exa_field_name=src_port"""
       """exa_json_path=$.protocol,exa_field_name=protocol"""
       """exa_json_path=$.opcode,exa_field_name=opcode"""
+      """exa_json_path=$.extra.threat_indicator,exa_field_name=ioc"""
+
     ]
     ParserVersion = "v1.0.0"
   

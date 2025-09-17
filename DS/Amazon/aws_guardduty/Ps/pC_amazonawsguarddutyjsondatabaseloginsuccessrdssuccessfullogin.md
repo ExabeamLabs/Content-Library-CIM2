@@ -83,6 +83,8 @@ json-aws-guardduty-security-alert-template = {
       """exa_regex="accessKeyId":"({key_id}[^"]+?)""""
       """dhost=({dest_host}[\w\-.]+)"""
       """exa_regex="tags":\s*({tags}[^$]+?)\]"""
+      """exa_regex="+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?""""
+      """exa_json_path=$.id,exa_field_name=alert_id"""      
     
 }
 ```

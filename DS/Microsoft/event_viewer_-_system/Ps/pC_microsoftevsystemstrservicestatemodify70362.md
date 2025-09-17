@@ -15,6 +15,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036-2
     """({event_name}[^\.=]+service entered the running state)""",
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}\S+)\s({alert_severity}\S+)\s({event_code}\d+)\s({event_name}[^=]+?)\s*$""",
     """:\s\[[^\]]+\]\s({event_name}[^\.=]+service entered the running state)\.\s+\(EventID\s({event_code}\d+)\)"""
+    """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
   ]
 
 

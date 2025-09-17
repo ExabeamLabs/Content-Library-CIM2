@@ -24,7 +24,9 @@ Name = "netskope-sc-json-network-session-success-typenetwork"
     """exa_json_path=$.ip_protocol,exa_field_name=protocol"""
     """exa_json_path=$.client_bytes,exa_field_name=bytes_in"""
     """exa_json_path=$.server_bytes,exa_field_name=bytes_out"""
-    """exa_json_path=$.flow_status,exa_field_name=result"""
+    """exa_json_path=$.flow_status,exa_field_name=result""",
+    """exa_json_path=$.hostname,exa_regex=({src_host}[\w\-\.]+)""",
+    """exa_json_path=$.dsthost,exa_regex=(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-\.]+))"""
   ]
   ParserVersion = "v1.0.0"
 

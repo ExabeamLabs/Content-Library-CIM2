@@ -39,6 +39,8 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """exa_json_path=$.computer_name,exa_field_name=host"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.domain,exa_field_name=domain"""
+    """exa_json_path=$.category,exa_field_name=category"""
+    """exa_json_path=$.action,exa_field_name=action"""    
     """"alert_name":\s*"({alert_name}[^",]+)"""
     """"alert_type":\s*"({alert_type}[^",]+)"""
     """"severity":\s*"({alert_severity}[^",]+)"""

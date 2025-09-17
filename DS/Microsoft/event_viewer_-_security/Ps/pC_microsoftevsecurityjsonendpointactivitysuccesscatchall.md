@@ -5,13 +5,21 @@ Name = microsoft-evsecurity-json-endpoint-activity-success-catchall
   ParserVersion = v1.0.0
   Product = Event Viewer - Security
   Conditions = [ """"EventID":""", """"Channel":"Security"""", """"ProviderName":"""" ]  
+
+microsoft-json-events}{
+  Name = microsoft-evsecurity-json-endpoint-activity-success-catchall
+  ParserVersion = v1.0.0
+  Product = Event Viewer - Security
+  Conditions = [ """"EventID":""", """"Channel":"Security"""", """"ProviderName":"""" ]  
+},
+
+${WindowsParsersTemplates.microsoft-json-events}{
+  Name = microsoft-evapp-json-endpoint-activity-success-catchall
+  ParserVersion = v1.0.0
+  Product = Event Viewer - Application
+  Conditions = [ """"EventID":""", """"Channel":"Application"""", """"ProviderName":"""" ]
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
-    """Subject:\s*Security ID:\s*({user_sid}[^:]+?)(\s+\w+){1,2}:\s"""
-    """Subject:[^"]+?Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s"""
-    """Subject:[^"]+?Account Domain:\s*({domain}[^:]+?)(\s+\w+){1,2}:\s"""
-    """Subject:[^"]+?Logon ID:\s*({login_id}[^:]+?)(\s+\w+){1,2}:\s"""
-  ]  
-
-
+    """exa_json_path=$.StringInserts,exa_regex=(\[\]|.+?"({additional_info}[^"]+))"""
+  
 }
 ```

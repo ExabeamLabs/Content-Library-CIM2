@@ -4,6 +4,7 @@
 Name = microsoft-o365-sk4-app-file-operationworkload
   Vendor = Microsoft
   Product = Microsoft 365
+  ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
   Conditions = [ """"Workload""", """"ResultStatus""", """"Operation""" ]
   Fields = [
@@ -64,6 +65,32 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"correlationId":\s*"({correlation_id}[^"]+)""""
     """AlertSeverity":"+({alert_severity}[^"]+)"""
     """"InternalLogonType":({login_type}\d+)"""
+    """exa_regex="Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)"""
+    """exa_regex="Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
+    """exa_regex="User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*""""
+    """exa_regex="FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)""""
+    """exa_json_path=$.CreationTime,exa_field_name=time"""
+    """exa_json_path=$.Operation,exa_field_name=operation"""
+    """exa_json_path=$.OrganizationId,exa_field_name=tenant_id"""
+    """exa_json_path=$.RecordType,exa_field_name=object_type"""
+    """exa_json_path=$.UserId,exa_field_name=user_upn"""
+    """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.Workload,exa_field_name=app"""
+    """exa_json_path=$.Workload,exa_field_name=resource"""
+    """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
+    """exa_json_path=$.ObjectId,exa_field_name=object_id"""
+    """exa_json_path=$.ExtendedProperties,exa_field_name=more_info"""
+    """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.ClientIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.OriginatingServer,exa_regex=({host}[\w\-.]+)"""
+    """exa_json_path=$.ResultStatus,exa_field_name=result"""
+    """exa_json_path=$.SessionId,exa_field_name=session_id"""
+    """exa_json_path=$.ClientProcessName,exa_field_name=process_name"""
+    """exa_json_path=$.ClientInfoString,exa_field_name=user_agent""",
+    """exa_json_path=$.ActorInfoString,exa_field_name=user_agent""",
+    """exa_json_path=$.InternalLogonType,exa_field_name=login_type""",
+    """exa_json_path=$.OrganizationName,exa_field_name=company"""
+    """exa_json_path=$.UserType,exa_field_name=user_type"""
   ]
   DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"

@@ -10,9 +10,8 @@ Name = auth0-a-json-app-login-success-s
   ]
   Fields = ${Auth0AAParsersTemplates.auth0-authentication-template.Fields}[
   """exa_regex=({operation_type}s)""",
-  """exa_json_path=$.data.user_id,exa_regex=(({auth_type}[^|"]+)\|[^|"]+\|[\w\.\-]{1,40}\$?|({=auth_type}[^|"]+)\|)""",
-  """exa_json_path=$.data.user_name,exa_regex=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)""",
-]
+  """exa_json_path=$.data.user_id,exa_regex=(({auth_type}[^|"]+)\|[^|"]+\|[\w\.\-]{1,40}\$?|({=auth_type}[^|"]+)\|)"""
+  ]
     ParserVersion = "v1.0.0"
 
 auth0-authentication-template = {
@@ -43,6 +42,7 @@ auth0-authentication-template = {
       """exa_json_path=$..severity,exa_field_name=alert_severity"""
       """exa_json_path=$.message.type,exa_regex=({operation_type}[^",]+)"""
       """exa_json_path=$.data..user.email,exa_field_name=email_address"""
+      """exa_json_path=$..user_name,exa_regex=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?|)"""
       """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
       """exa_json_path=$.data..request.userAgent,exa_field_name=user_agent"""
       """exa_json_path=$.data..request.path,exa_field_name=uri_path"""

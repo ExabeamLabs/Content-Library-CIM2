@@ -6,14 +6,10 @@ Name = microsoft-evsecurity-json-endpoint-activity-success-4691
   Product = Event Viewer - Security
   Conditions = [ """"EventID":4691,""", """"Channel":"Security"""", """"ProviderName":"""" ]  
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
-    """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """Account Domain:\s+({domain}[^\s]+)""",
-    """Logon ID:\s+({login_id}[^\s]+)""", 
-    """Object Type:\s*({operation_type}[^"]+?)\s*Object Name:""",
-    """Object Name:\s*({object}[^"]+?)\s*Process Information:""",
-    """Object Name:\s*({file_path}({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\."]+?))))\s*Process Information:""",
-    """Accesses:\s*({access}[^"]+?)\s*Access Mask:""" 
+    """exa_regex=Object Type:\s*({operation_type}[^"]+?)\s*Object Name:""",
+    """exa_regex=Object Name:\s*({object}[^"]+?)\s*Process Information:""",
+    """exa_regex=Object Name:\s*({file_path}({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\."]+?))))\s*Process Information:""",
+    """exa_regex=Accesses:\s*({access}[^"]+?)\s*Access Mask:""" 
   ]  
 
 microsoft-json-events {
@@ -36,6 +32,10 @@ microsoft-json-events {
     """exa_json_path=$.Message,exa_field_name=additional_info"""    
     """exa_json_path=$.UserID,exa_regex=(({user_sid}S-[^"]+?)|(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.Message,exa_regex=(S-[^"]+|({event_name}[^\."]+))"""
+    """exa_regex=Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
+    """exa_regex=Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s""",
+    """exa_regex=Account Domain:\s+({domain}[^\s]+)""",
+    """exa_regex=Logon ID:\s+({login_id}[^\s]+)"""
   
 }
 ```
