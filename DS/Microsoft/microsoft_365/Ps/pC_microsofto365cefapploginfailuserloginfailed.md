@@ -13,12 +13,16 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"Operation":\s*"({operation}[^"]+)""",
     """"ErrorNumber":\s*"({error_code}\d+)"""",
     """"OS.*?Value":\s*"({os}[^"]+)|"Value":\s*"({=os}[^"]+)",\s*"Name":\s*"OS"""",
-    """"BrowserType.*?Value":\s*"({browser}[^"]+)|"Value":\s*"({=browser}[^"]+)",\s*"Name":\s*"BrowserType""""
+    """"BrowserType.*?Value":\s*"({browser}[^"]+)|"Value":\s*"({=browser}[^"]+)",\s*"Name":\s*"BrowserType"""",
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-    """"UserId":\s*"({user_upn}[^",]+)""""
+    """"Actor":\[[^\]]+?"Type":5,"ID":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\}\]""",
+    """"Actor":\[[^\]]+?"ID":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))","Type":5\}\]""",
+    """"Actor":\[[^\]]+?"Type":0,"ID":"({user_id}[^"]+)"""",
+    """"Actor":\[[^\]]+?"ID":"({user_id}[^"]+)","Type":0\}""",
+    """"UserId":\s*"({user_upn}[^",]+)"""",
     """"ObjectId":\s*"({object_id}[^"]+?)"""",
-    """"ApplicationId":\s*"({app_id}[^"]+)""""
-    """"UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})"""
+    """"ApplicationId":\s*"({app_id}[^"]+)"""",
+    """"UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})""",
     """"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)""",
     """Workload"*:\s*"*({resource}[^"]+)"""",
     """"ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}[^"\\]{0,249}?))\s*"""",
@@ -27,7 +31,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}""",
     """"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\},""",
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
-    """"Name":"RequestType","Value":"({request_type}[^"]+?)\s*""""
+    """"Name":"RequestType","Value":"({request_type}[^"]+?)\s*"""",
     """"Value":"({request_type}[^"]+?)\s*","Name":"RequestType""""
     ]
   DupFields = [ "error_code->failure_code" ]

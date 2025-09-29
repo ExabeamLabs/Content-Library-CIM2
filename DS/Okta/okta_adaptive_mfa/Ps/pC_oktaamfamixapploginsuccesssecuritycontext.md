@@ -55,6 +55,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":.+?"type":"(App)?User".+?"displayName":"({full_name}\w+(,\s+\w+)+)"""
     """"tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """"behaviors":"\{({more_info}[^\}"]+)\}"""",
+    """"target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """"target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_regex=({event_name}(Kerberos[^",]+user)|([^"]+))""",
@@ -106,6 +107,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":[^\]\}]*?"alternateId"\s*:"({target}[^"]+)""""
     """exa_json_path=$..actor.alternateId,exa_field_name=src_user""",
     """exa_json_path=$..target.alternateId,exa_field_name=target""",
+    """exa_regex="target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
   ]

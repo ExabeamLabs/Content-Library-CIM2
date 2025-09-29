@@ -11,6 +11,7 @@ Name = unix-unix-str-scheduled-task-start-runningprogram
     """running program\s*({task_name}[^\s,=]+)"""
     """({event_name}[^\s:]+?)\[({event_id}\d+)\]\:\s*running program"""
     """running program\s+\S+\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

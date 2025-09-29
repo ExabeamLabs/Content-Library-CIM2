@@ -20,7 +20,6 @@ Fields = [
     """<Data Name\\*=('|")User('|")>((NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\<]+?))\\)?(SYSTEM|(NETWORK|LOCAL) SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<EventID>({event_code}\d+)""",
     """<Security UserID\\*=('|")({user_sid}[^>]+?)('|")/>""",
-    """<Data Name\\*=('|")LogonId('|")>({login_id}[^<]+?)</Data>""",
     """<Data Name\\*=('|")Hashes('|")>[^=]*?MD5=({hash_md5}[A-F0-9a-f]+)[^<]*?<\/Data>""",
     """<Data Name\\*=('|")Hashes('|")>[^=]*?SHA256=({hash_sha256}[^<]+)<"""
     """<Data Name\\*=('|")ProcessGuid('|")>\{({process_guid}[A-F0-9a-f-]+)\}</Data>""",
@@ -31,9 +30,8 @@ Fields = [
     """<Data Name\\*=('|")Image('|")>({process_path}(({process_dir}[^<]+?)[\\\/]+)?({process_name}[^\/\\<]+))<"""
     """<Data Name\\*=('|")Image('|")>(({process_dir}[^<]+)\\)?({process_name}[^<]+?)</Data>""",
     """<Data Name\\*=('|")Image('|")>({process_path}[^<]+?)</Data>""",
-    """<Data Name\\*=('|")ParentImage('|")>({parent_process_path}(({parent_process_dir}[^<]+)\\)?({parent_process_name}[^<]+?))<\/Data>""",
-    """<Data Name\\*=('|")ParentCommandLine('|")>({parent_process_command_line}[^<]+)<""",
-    """<Data Name\\*=('|")ParentCommandLine('|")>({parent_process_command_line}[^<]+)<""",
+    """<Data Name\\*=('|")ParentImage('|")>(-|({parent_process_path}(({parent_process_dir}[^<]+)\\)?({parent_process_name}[^<]+?)))<\/Data>""",
+    """<Data Name\\*=('|")ParentCommandLine('|")>(-|({parent_process_command_line}[^<]+))<""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Execution.*?ThreadID=('|")({thread_id}\d+)""",
     """<Level>({run_level}[^<]+)<""",

@@ -7,7 +7,7 @@ Name = microsoft-evnetworkprofile-xml-endpoint-activity-success-networkprofile
   Conditions = [ """Microsoft-Windows-NetworkProfile""", """<Computer>""", """<EventID>""", """<Channel>Microsoft-Windows-NetworkProfile/Operational</Channel>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
     """<Computer>({host}[\w\-\.]+)<"""
-    """<Data Name =('|")State('|")>({state}[^<]+)</Data>"""
+    """<Data Name =('|")State('|")>({service_state}[^<]+)</Data>"""
   ]
 
 xml-windows-eventviewer-events = {

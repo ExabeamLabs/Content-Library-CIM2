@@ -12,6 +12,7 @@ Name = unix-unix-str-endpoint-activity-sshd
     """>({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+[-+]\d+:\d+)\s*(::ffff:)?({host}[\w\-.]+)\ssshd\["""
     """({time}\w+\s\d+\s\d\d:\d\d:\d\d)?\s*(::ffff:)?({host}\S+)? sshd\[""",
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

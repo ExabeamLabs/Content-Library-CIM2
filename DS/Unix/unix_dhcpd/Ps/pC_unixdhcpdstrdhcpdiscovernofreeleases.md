@@ -15,6 +15,7 @@ Name = unix-dhcpd-str-dhcp-discover-nofreeleases
     """\d\d:\d\d:\d\d\s\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}\s({app}[^\[]+)\[""",
     """ from (({dest_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({dest_mac}\S\S:\S\S:\S\S:\S\S:\S\S:\S\S)) """,
     """via ({dest_interface}[^\s"]+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

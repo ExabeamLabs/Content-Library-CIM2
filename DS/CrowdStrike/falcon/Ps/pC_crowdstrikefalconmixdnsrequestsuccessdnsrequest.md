@@ -13,6 +13,7 @@ Conditions = [
 ]
 Fields = [
   """"OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
+  """"ComputerName":"({host}[\w\-\.]+)""""
   """"hostname":"({host}[\w\-.]+)"""",
   """"timestamp":\s*"({time}\d{10})""",
   """"DomainName":\s*"({dns_query}[^\"]+?)\s*"""",
@@ -36,6 +37,7 @@ Fields = [
   """"ContextBaseFileName":"({file_name}[^"]+)""""
   """"name":\s*"({event_name}[^"]+)"""
   """exa_json_path=$.OciContainerId,exa_field_name=container_id"""
+  """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
   """exa_json_path=$.hostname,exa_regex=({host}[\w\-.]+)"""
   """exa_json_path=$.timestamp,exa_field_name=time"""
   """exa_json_path=$.DomainName,exa_regex=({dns_query}[^\"]+?)\s*"""

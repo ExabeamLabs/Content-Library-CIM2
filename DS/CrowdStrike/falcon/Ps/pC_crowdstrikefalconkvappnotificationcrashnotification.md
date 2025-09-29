@@ -12,7 +12,10 @@ Name = "crowdstrike-falcon-kv-app-notification-crashnotification"
     """"event_simpleName":"({event_name}[^"]+)""",
     """"CrashDumpFilePath":"(|({file_path}({file_dir}[^"]*?)[\\\/]*({file_name}[^\\"]+?(\.({file_ext}[^\\\.\s"]+))?)))""",
     """"aid":"({aid}[^"]+)""",
+    """"aip":\s*"({aip}[^"]+)""""
     """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"ComputerName":"({host}[\w\-\.]+)""""
 # cid is removed
     """"event_platform":"({os}[^"]+)""",
   ]

@@ -10,6 +10,7 @@ Name = infoblox-bddi-str-dns-request-successresolving
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """]: ({event_name}success resolving) '({dns_query}[^'\/]+?)\/({dns_query_type}[^']+)' \(in '(\.|({result}[^']+))'"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

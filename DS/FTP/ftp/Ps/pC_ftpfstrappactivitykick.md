@@ -17,6 +17,7 @@ s-common-ftp-app-activity = {
 	"""\[\d+\]\w+\s+({object}\S+)"""
 	"""\[\d+\]\w+\s+(\S+\s+){2}({result}\d+)"""
 	"""\[\d+\]\w+\s+(\S+\s+){4}({bytes}\d+)"""
+  """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
     
 }
 ```

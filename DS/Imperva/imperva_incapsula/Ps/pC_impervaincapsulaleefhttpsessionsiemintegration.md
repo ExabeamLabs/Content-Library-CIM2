@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """\d:\d\d:\d\d\.\d+Z\s({host}[^\s]+)"""
 """\Wstart=({time}\d{13})"""
-"""siteid=({site_id}\d+)"""
+"""siteid=({client_id}\d+)"""
 """requestMethod=({method}[^\s]+)"""
 """\WsourceServiceName =({web_domain}.+?)\s+(\w+=|$)"""
 """\WrequestClientApplication=({user_agent}[^=]+?)\s+(\w+=|$)"""

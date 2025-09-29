@@ -10,6 +10,7 @@ Name = infoblox-bddi-str-dhcp-discover-dhcpd
   Fields = [
     """({host}\S+) dhcpd\[""",
     """({event_name}DHCPDISCOVER) from ({dest_mac}[A-Fa-f:\d.]+)(\s+\(({dest_host}[\w\-.]+)\))? via ({dest_interface}[^\s:"]+)(\sTransID\s({transaction_id}\w+))?""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "transaction_id->trans_id"]
 

@@ -12,6 +12,7 @@ Name = unix-unix-str-user-modify-usermod
     """\w{3}\s*\d\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[^\s]+)\s({event_code}[^:\s]+)\s*:\s*({event_name}.+?)\s*$""",
     """usermod.+?user\s'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """usermod[^:]+:\s({additional_info}[^:]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

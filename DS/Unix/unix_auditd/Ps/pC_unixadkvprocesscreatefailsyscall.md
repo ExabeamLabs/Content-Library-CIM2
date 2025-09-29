@@ -29,6 +29,11 @@ Name = unix-ad-kv-process-create-fail-syscall
     """\stype=({operation_type}.+?)\s+(\w+=|$)""",
     """\skey="({failure_reason}[^"]+)""""
     """node=({dest_host}[\w\-.]+)"""
+    """\sUID="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+    """SYSCALL=({syscall_name}[^"\s]+)"""
+    """syscall=({syscall_number}\d+)"""
+    """comm="({process_command_line}[^"\\]+)"""
+    """arch=({system_architecture}[^"\s]+)"""
   ]
 
 

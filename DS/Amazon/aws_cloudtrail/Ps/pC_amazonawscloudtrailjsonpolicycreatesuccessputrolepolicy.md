@@ -76,7 +76,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventName,exa_field_name=operation""",
       """exa_json_path=$.awsRegion,exa_field_name=region""",
       """exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
-      """exa_json_path=$..userAgent,exa_regex=\[?({user_agent}[^\]]+)\]?$""",
+      """exa_regex="userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
@@ -101,6 +101,29 @@ aws-cloudtrail-json = {
       """exa_json_path=$..IgnorePublicAcls,exa_field_name=ignore_public_acls"""
       """exa_json_path=$..Host,exa_field_name=bucket_host"""
       """exa_json_path=$..ARN,exa_field_name=bucket_arn"""
+      """exa_json_path=$.UserIdentityType,exa_field_name=user_type""",
+      """exa_json_path=$.UserIdentityArn,exa_field_name=user_arn""",
+      """exa_json_path=$.UserIdentityArn,exa_regex=role\/({role}[^\/"]+)\/?""",
+      """exa_json_path=$.UserIdentityAccountId,exa_field_name=aws_account""",
+      """exa_json_path=$.UserIdentityPrincipalid,exa_field_name=principal_id""",
+      """exa_json_path=$..EventSource,exa_field_name=service_name""",
+      """exa_json_path=$..EventName,exa_field_name=operation""",
+      """exa_json_path=$.AWSRegion,exa_field_name=region""",
+      """exa_json_path=$..SourceIpAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$""",
+      """exa_json_path=$..UserAgent,exa_regex=\[?({user_agent}[^\]]+)\]?$""",
+      """exa_json_path=$..EventTypeName,exa_field_name=event_category""",
+      """exa_json_path=$..AwsEventId,exa_field_name=event_id""",
+      """exa_json_path=$..ErrorCode,exa_field_name=result""",
+      """exa_json_path=$..ErrorMessage,exa_field_name=failure_reason""",
+      """exa_json_path=$..ReadOnly,exa_field_name=readonly""",
+      """exa_json_path=$..VpcEndpointId,exa_field_name=vpc""",
+      """exa_json_path=$.UserIdentityType,exa_regex=({aws_user}({user}Root))""",
+      """exa_json_path=$.RequestParameters.BucketName,exa_field_name=bucket_name""",
+      """exa_json_path=$.RequestParameters.Host,exa_field_name=bucket_host""",
+      """exa_json_path=$.Resources..ARN,exa_field_name=bucket_arn"""
+      """exa_json_path=$.UserIdentityAccessKeyId,exa_field_name=key_id"""
+      """exa_json_path=$..RecipientAccountId,exa_field_name=aws_account"""
+      """exa_regex=RequestParameters":"({additional_info}.+?),"\w+"?:"""
     
 }
 ```

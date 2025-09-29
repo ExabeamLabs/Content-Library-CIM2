@@ -17,6 +17,7 @@ Name = "infoblox-bddi-str-endpoint-login-success-dhcpoffer"
 """({time}\w+\s+\d+\s+\d+:\d+:\d+)\s""",
 """lease-duration\s+({ip_lease_time}\d+)""",
 """uid\s+({user_id}[^\n\s"]+)"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

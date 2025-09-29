@@ -1,0 +1,27 @@
+#### Parser Content
+```Java
+{
+Name = checkpoint-ngfw-kv-network-traffic-success-checkpoint
+  ParserVersion = v1.0.0
+  Vendor = Check Point
+  Product = Check Point NGFW
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [ """High connection rate from internal host on service""", """CheckPoint""","""product:"VPN-1 & FireWall-1"""" ]
+  Fields = [
+    """cu_rule_category:"({category}[\w-]+)""",
+    """cu_rule_id:"({rule_id}[\w-]+)""",
+    """({event_name}High connection rate from internal host on service)"""
+    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """src:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """severity:({alert_severity}[^",]+)"""
+    """\Wservice:\s*(|({dest_port}\d+)),"""
+    """proto:({protocol}[^",]+)"""
+    """product:"({product_name}[^"]+)"""
+    """\Wdst:"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """domain:"({domain}[^";]+)"""
+    """loguid:"({log_uid}[^"]+)""""
+  ]
+
+
+}
+```

@@ -6,6 +6,7 @@ Name = unix-unixnamed-str-network-notification-transferstarted
   Fields = ${DLUnixParserTemplates.named-dns-event.Fields}[
     """zone ({dns_query}[^:\/]+)/({record_type}[^:/]+)""",
     """({event_name}Transfer started)""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

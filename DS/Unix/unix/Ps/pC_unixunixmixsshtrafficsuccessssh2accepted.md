@@ -36,6 +36,7 @@ Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
     """\"computer_name\":\"(::ffff:)?({host}({dest_host}[\w\-.]+))\"""",
     """\sfrom[^:]+?\sport\s({src_port}\d+)"""
     """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [
     "dest_host->original_dest_host"

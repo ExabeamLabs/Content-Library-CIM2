@@ -12,6 +12,7 @@ Name = unix-unix-str-endpoint-notification-passwordexpire
     """password for user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """pam_unix\(sshd:account\):\s*({event_name}[^$]*?)\s*$""",
     """({event_code}ssh)""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

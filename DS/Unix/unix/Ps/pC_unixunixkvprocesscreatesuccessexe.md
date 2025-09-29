@@ -32,6 +32,11 @@ Name = unix-unix-kv-process-create-success-exe
     """node=({dest_host}[\w\-.]+)"""
     """type=({operation_type}\S+)"""
     """exit=(\d|({failure_code}[^\(=]+?)\(({failure_reason}[^=]+?))\)\s+\w+="""
+    """\sUID="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+    """SYSCALL=({syscall_name}[^"\s]+)"""
+    """syscall=({syscall_number}\d+)"""
+    """comm="({process_command_line}[^"\\]+)"""
+    """arch=({system_architecture}[^"\s]+)"""
   ]
 
 

@@ -17,6 +17,8 @@ crowdstrike-file-operations.Fields}[
 """"DownloadPath":"({file_url}({src_file_path}(({src_file_dir}[^"]+)[\\\/]+)?(({src_file_name}[^"\\\/]+?(\.({src_file_ext}[^\."]+))?))))"""",
 """"TargetFileName":"({file_path}(({file_dir}[^"]+)[\\\/]+)?(({file_name}[^"\\\/]+?(\.({file_ext}[^\."]+))?)))"""",
 """"cid":"({cid}[^"]+)"""
+""""LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ComputerName":"({host}[\w\-\.]+)""""
 """exa_json_path=$.aip,exa_regex=({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.DownloadPort,exa_field_name=dest_port""",
 """exa_json_path=$.DownloadServer,exa_field_name=dest_host""",
@@ -25,6 +27,8 @@ crowdstrike-file-operations.Fields}[
 """exa_regex="DownloadPath":"({file_url}({src_file_path}(({src_file_dir}[^"]+)[\\\/]+)?(({src_file_name}[^"\\\/]+?(\.({src_file_ext}[^\."]+))?))))"""",
 """exa_regex="TargetFileName":"({file_path}(({file_dir}[^"]+)[\\\/]+)?(({file_name}[^"\\\/]+?(\.({file_ext}[^\."]+))?)))"""",
 """exa_json_path=$.cid,exa_field_name=cid"""
+"""exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
 
 }
 ```

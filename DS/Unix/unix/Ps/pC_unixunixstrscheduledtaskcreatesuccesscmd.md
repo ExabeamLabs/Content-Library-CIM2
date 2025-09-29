@@ -18,6 +18,7 @@ Fields = [
     """\sCMD\s+\(({task_name}[^"]+?\s*\)\s+\]?)\s+""",
     """\sCMD\s+\(({process_command_line}.+?)\)\s*("|$)""",
     """\sCMD\s\(([\w\-]+\s)?({process_path}(\/[^\/\)\s]+)+)(\s|\))"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 ]
 ParserVersion = "v1.0.0"
 

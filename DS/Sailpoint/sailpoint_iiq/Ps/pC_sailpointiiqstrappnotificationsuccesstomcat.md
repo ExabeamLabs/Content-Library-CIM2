@@ -1,0 +1,25 @@
+#### Parser Content
+```Java
+{
+Name = sailpoint-iiq-str-app-notification-success-tomcat
+  Vendor = Sailpoint
+  Product = Sailpoint IIQ
+  TimeFormat="yyyy-MM-dd'T'HH:mm:ss,SSS"
+  response_timeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Conditions = [ """sailpoint.""", """stdout.log""" ]
+  Fields = [
+    """^({host}[\w\-\.]+)""",
+    """({file_path}({file_dir}\w:\\(?:[^\\]+\\)*)({file_name}[^\\\s]+))""",
+    """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2},\d{3})\s+""",
+    """\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2},\d{3}\s+({severity}\w+)\s+({additional_info}\S+)\s+({object_class}\S+):\d+\s?\-\s?({more_info}[\S\s]+)"""
+    """rule\s+({rule}[\S]+)\s+({user_id}[\w\-\.]+)\s+""",
+    """---inside\s+\w+\s+\w+\s+({rule}[\w\-]+)\s+({user_id}[\w\-\.]+)""",
+    """For user\s+({full_name}[\w\.\-\s]{1,40}\$?)\(({user_id}[^\)]+)\)""",
+    """response session='({session_id}\d+)'\s+timestamp='({response_time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\w+)'\s+\S+\s+status='({http_response_code}\d+)'\}({result}\S+)\<""",
+    """\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2},\d{3}\s+\w+\s+\S+\s+\S+\s+\-\s?({event_id}\d+)\s?[\S\s]+group\s?({object_dn}[^\.]+)\.\s?({failure_reason}[^\.]+)\.\s?({result_code}\w+)\:[\S\s]+\(({error_info}[^\)]+)\)"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

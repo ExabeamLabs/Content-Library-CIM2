@@ -65,6 +65,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"correlationId":\s*"({correlation_id}[^"]+)""""
     """AlertSeverity":"+({alert_severity}[^"]+)"""
     """"InternalLogonType":({login_type}\d+)"""
+    """"LogonType":({login_type}\d+)"""
     """exa_regex="Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)"""
     """exa_regex="Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
     """exa_regex="User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*""""
@@ -89,6 +90,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_json_path=$.ClientInfoString,exa_field_name=user_agent""",
     """exa_json_path=$.ActorInfoString,exa_field_name=user_agent""",
     """exa_json_path=$.InternalLogonType,exa_field_name=login_type""",
+    """exa_json_path=$.LogonType,exa_field_name=login_type"""
     """exa_json_path=$.OrganizationName,exa_field_name=company"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
   ]

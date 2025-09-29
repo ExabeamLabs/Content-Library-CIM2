@@ -12,6 +12,7 @@ Name = unix-unix-str-scheduled-task-start-crond
     """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)? crond\[""",
     """\scrond\[\d+\]:\s*({additional_info}.+?)\s*$""",
     """USER\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*pid"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

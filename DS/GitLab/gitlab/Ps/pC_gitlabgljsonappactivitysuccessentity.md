@@ -12,13 +12,12 @@ Name = gitlab-gl-json-app-activity-success-entity
     """exa_json_path=$.created_at,exa_field_name=time"""
     """exa_json_path=$.entity_type,exa_field_name=entity_type""",
     """exa_json_path=$.ip_address,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """exa_json_path=$.author_name,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_regex="author_name":"(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
     """exa_json_path=$.entity_path,exa_field_name=process_path""",
     """exa_json_path=$.target_details,exa_field_name=operation_details""",
     """exa_json_path=$.target_type,exa_field_name=operation"""
     """exa_json_path=$.event_type,exa_field_name=event_name""",
     """exa_json_path=$.details.event_name,exa_field_name=event_name""",
-    """exa_json_path=$.details.author_name,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.details.author_class,exa_field_name=class_name""",
     """exa_json_path=$.details.target_type,exa_field_name=operation""",
     """exa_json_path=$.details.target_details,exa_field_name=operation_details""",

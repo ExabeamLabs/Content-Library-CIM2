@@ -18,6 +18,7 @@ Name = "unix-unix-str-endpoint-login-fail-invaliduser"
     """\sfrom\s+(::[\w]+:)?({src_ip}(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|::1))(\s+port\s+({src_port}\d+))?\s*"""
     """sshd\[({login_id}\d+)"""
     """({event_code}ssh)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [
     "host->dest_host"

@@ -11,6 +11,7 @@ Name = sentinelone-singularityp-json-alert-trigger-success-url-1
   Fields = [    
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.['event.type'],exa_field_name=alert_name""",
+    """exa_json_path=$.['meta.event.name'],exa_field_name=event_name""",
     """exa_json_path=$.['event.category'],exa_field_name=alert_type""",
     """exa_json_path=$.['src.process.integrityLevel'],exa_field_name=alert_severity"""
     """exa_json_path=$.['endpoint.name'],exa_field_name=host""",

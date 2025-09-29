@@ -15,6 +15,7 @@ s-xml-windows-member.Fields}[
     """A member was added to a security-enabled ({group_type}[^\s]+) group""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>"""
+    """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)</Data>""",
     
 }
 ```

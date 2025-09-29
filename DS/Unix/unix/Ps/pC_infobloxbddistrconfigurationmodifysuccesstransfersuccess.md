@@ -12,6 +12,7 @@ Name = infoblox-bddi-str-configuration-modify-success-transfersuccess
     """transfer of '({zone}[^']+?)(\/[^']+)?'""",
     """({additional_info}transfer of[^=]+?)\s*$""",
     """Transfer status:\s({action}[^\s]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [
   "action->result"

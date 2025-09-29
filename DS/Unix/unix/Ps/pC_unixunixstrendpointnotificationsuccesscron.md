@@ -13,6 +13,7 @@ Name = unix-unix-str-endpoint-notification-success-cron
     """({time}\w{3}\s+\d+\s+\d\d:\d\d:\d\d)\s+(::ffff:)?({host}[\w\-.]+)""",
     """\(({account}[^\)]+?)\) CMD""",
     """\sCMD \(\s*({process_command_line}.+?)\)($|\s|")"""
+    """\s+.*\/({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

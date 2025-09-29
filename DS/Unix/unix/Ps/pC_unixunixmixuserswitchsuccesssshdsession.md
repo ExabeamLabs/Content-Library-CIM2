@@ -30,6 +30,7 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""""
 """({time}\w\w\w \d\d \d\d:\d\d:\d\d) \[({host}[\w\.\-]+)\]"""
 """({event_name}session opened)"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "user_id->user_uid", "account->dest_user"]
 

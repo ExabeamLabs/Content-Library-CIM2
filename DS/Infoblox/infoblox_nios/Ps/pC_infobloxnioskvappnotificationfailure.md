@@ -13,7 +13,7 @@ Name = "infoblox-nios-kv-app-notification-failure"
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """({operation}Event: A named daemon monitoring failure has occurred.)""",
     """Type: ({event_category}[^,\s]+)""",
-    """State: ({state}[^,\s]+)""",
+    """State: ({status_msg}[^,\s]+)""",
   ]
 
 

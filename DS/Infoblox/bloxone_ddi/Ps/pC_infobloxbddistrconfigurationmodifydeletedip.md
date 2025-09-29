@@ -12,6 +12,7 @@ Name = infoblox-bddi-str-configuration-modify-deletedip
     """: ({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """({operation}Deleted IPv4Address)""",
     """({event_name}Deleted IPv4Address) ({ipv4_address_deleted}\S+)\s""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 # network_view is removed
   ]
 

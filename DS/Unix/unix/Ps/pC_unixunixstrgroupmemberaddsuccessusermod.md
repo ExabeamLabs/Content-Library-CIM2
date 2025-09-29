@@ -16,6 +16,7 @@ Fields = [
 """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-][^\s]+)""",
 """(T|\s)\d\d:\d\d:\d\d(\.?\S+)? ({host}[\w.\-]+)(\s\S+)?\susermod\[""",
 """add \'({account_name}[^']+)\' to group \'({group_name}[^']+)\'"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 ]
 DupFields = [
 "host->dest_host"

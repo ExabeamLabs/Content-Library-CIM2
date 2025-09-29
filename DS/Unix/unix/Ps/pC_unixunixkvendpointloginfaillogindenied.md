@@ -15,6 +15,7 @@ Name = "unix-unix-kv-endpoint-login-fail-logindenied"
     """ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """auth=({event_name}[^\"\"]+)"""
     """apparentlyi_via=({login_type_text}[^\s]+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

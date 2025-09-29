@@ -23,6 +23,8 @@ crowdstrike-json-app-notification = {
     """"RemoteAddressIP4":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"destinationServiceName":"({app}CrowdStrike)""""
     """"LogonDomain":"(NT AUTHORITY|({domain}[^\"]+))""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"ComputerName":"({host}[\w\-\.]+)""""
     """exa_regex="eventCreationTime":({time}\d{13})""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.aid,exa_field_name=aid""",
@@ -36,7 +38,9 @@ crowdstrike-json-app-notification = {
     """exa_json_path=$.UserSid,exa_field_name=user_sid""",
     """exa_json_path=$.RemoteAddressIP4,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.destinationServiceName,exa_field_name=app""",
-    """exa_json_path=$.LogonDomain,exa_field_name=domain"""
+    """exa_json_path=$.LogonDomain,exa_field_name=domain""",
+    """exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
   
 }
 ```

@@ -11,6 +11,7 @@ Name = unix-unix-str-app-activity-sftp-server
     """\ssftp-server\[\d+\]:\s*({additional_info}.+?)\s*$""",
     """\d\d:\d\d:\d\d ({host}[^\s]+) sftp-server\[""",
     """\d\d:\d\d:\d\d\s({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s*({host}[^\s]+)\s*sftp-server""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

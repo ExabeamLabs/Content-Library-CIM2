@@ -10,6 +10,7 @@ Name = infoblox-bddi-str-file-write-success-backupsuccess
     """\d\d:\d\d:\d\d\s+({host}[\w.-]+)\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?\s+({additional_info}[^~]+?)\s*$""",
     """Backup file ({file_path}({file_dir}[^"]+\/)?({file_name}([^\/.]+)(\.({file_ext}[^\."\s]+))?([\.\w]*)))""",
     """({event_name}Backup to LOCAL was successful)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
    ]
   DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"

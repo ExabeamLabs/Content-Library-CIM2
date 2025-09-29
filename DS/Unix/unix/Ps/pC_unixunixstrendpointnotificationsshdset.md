@@ -9,6 +9,7 @@ Name = unix-unix-str-endpoint-notification-sshdset
   Fields = [
     """({host}\S+) sshd\[""",
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

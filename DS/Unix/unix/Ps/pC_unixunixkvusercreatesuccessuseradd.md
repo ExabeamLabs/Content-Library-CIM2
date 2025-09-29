@@ -13,6 +13,7 @@ Name = unix-unix-kv-user-create-success-useradd
 """(\s|T)\d\d:\d\d:\d\d(\.?\S+)? ({host}[\w.\-]+)\suseradd""",
 """new user: name\\*=({account_name}[^,]+),""",
 """new user: .+?UID\\*=({account_id}[^,]+),""",
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "host->src_host", "account_name->dest_user" ]
 

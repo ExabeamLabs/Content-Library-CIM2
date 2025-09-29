@@ -13,6 +13,8 @@ Name = infoblox-bddi-str-configuration-modify-success-named
     """transfer of '[^']+'\sfrom\s({host_record}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})""",
     """({additional_info}transfer of[^=]+?)\s*$""",
     """Transfer status:\s({action}[^\s]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

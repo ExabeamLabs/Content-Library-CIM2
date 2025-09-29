@@ -11,6 +11,8 @@ Name = infoblox-bddi-str-configuration-modify-success-policyzone
     """({operation}\(re\)loaded policy zone)""",
     """\(re\)({event_name}loaded policy zone) '({zone}[^']+)""",
     """({additional_info}\(re\)loaded policy zone[^=]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -26,6 +26,7 @@ Name = "unix-unix-kv-endpoint-login-sshdauth"
     """(\d+[-+]\d+:\d+)\s+({dest_host}[\w\.-]+)\s+"""
     """\"+_time\"+:\"+({time}[^\"]+)\"+"""
     """\suid=({user_id}[^\s]+)\s"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

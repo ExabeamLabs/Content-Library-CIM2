@@ -28,7 +28,7 @@ unix-kv-template = {
       """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
       """\ssaddr=({src_port}\d+)""",
       """op=({operation}[^\s]+)""",
-      """type=(?:({audispd_type}USER_\S+)|({operation_type}\S+))"""
+      """type=(?:({event_name}USER_\S+)|({operation_type}\S+))"""
 
     ]
   DupFields = [ "host->dest_host" ]

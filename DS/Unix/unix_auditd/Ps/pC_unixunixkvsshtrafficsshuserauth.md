@@ -26,12 +26,9 @@ Name = "unix-unix-kv-ssh-traffic-sshuserauth"
     """op=({auth}[^\s=]+)\s"""
     """\sses=({session_id}[^\s=]+?)\s*(\w+=|")"""
     """hostname="*(\?|(({src_ip}(\d{1,3}\.){3}\d{1,3})|({src_host}[^\s]+?)))\s*(\w+=|")"""
-    """\stype=({audispd_type}USER_\S+)\s+\w+="""
+    """\stype=({event_name}USER_\S+)\s+\w+="""
     """\sterminal=(\?|({login_type_text}[^=]+?))\s+\w+="""
     """\sexe="({auth_process}[^"]+?)"\s+\w+="""
-  ]
-  DupFields = [
-    "audispd_type->event_name"
   ]
   ParserVersion = "v1.0.0"
 

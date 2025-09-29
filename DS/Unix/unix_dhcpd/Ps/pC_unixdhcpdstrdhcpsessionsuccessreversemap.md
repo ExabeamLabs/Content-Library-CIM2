@@ -11,6 +11,7 @@ Name = "unix-dhcpd-str-dhcp-session-success-reversemap"
   Fields = [
     """\s({host}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\s\w+\["""
     """Added reverse map from (({ip4}\d{1,3})\.({ip3}\d{1,3})\.({ip2}\d{1,3})\.({ip1}\d{1,3})).+? to ({dest_host}[^\s\"$]+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

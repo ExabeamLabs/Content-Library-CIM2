@@ -7,7 +7,7 @@ Vendor: Skyhigh Security
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   4   |   2    |         2          |       1        |   18    |
+|   4   |   2    |         2          |       1        |   17    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -24,7 +24,7 @@ Name = servicenow-s-json-http-session-success-transcation
     """exa_json_path=$.url,exa_regex=sys_display.incident.assignment_group=({group_name}.*?)\&sysparm_ck"""
     """exa_json_path=$.url,exa_regex=sys_original.incident.priority=({priority}.*?)\&sys_original.incident.comments"""
     """exa_json_path=$.url,exa_regex=sys_original.incident.subcategory=({sub_category}.*?)\&incident.caused_by"""
-    """exa_json_path=$.url,exa_regex=sys_original.incident.state=({state}.*?)\&incident.reopen_count"""
+    """exa_json_path=$.url,exa_regex=sys_original.incident.state=({status_msg}.*?)\&incident.reopen_count"""
     """exa_json_path=$.url,exa_regex=\&incident.work_notes=({activity_details}.*?)\&sys_display.incident.comments""",
     """exa_json_path=$.url,exa_regex=sys_original.incident.sys_updated_by=({operator_name}.*?)\&sys_display.original.incident.caller_id"""
   ]

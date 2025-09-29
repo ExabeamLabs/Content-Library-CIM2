@@ -12,7 +12,7 @@ Name = vmware-carbonblackceedr-sk4-network-session-success-edr
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+reason"+:\s*"+({additional_info}[^"]+?)"+""",
     """"+device_os"+:\s*"+({os}[^"]+?)"+""",
-    """"+state"+:\s*"+({state}[^"]+?)"+""",
+    """"+state"+:\s*"+({status_msg}[^"]+?)"+""",
     """"+type"+:\s*"+({event_name}[^"]+?)"+""",
     """"+process_pid"+:\s*({process_id}\d+)""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+)\\({process_name}[^"]+))"""",

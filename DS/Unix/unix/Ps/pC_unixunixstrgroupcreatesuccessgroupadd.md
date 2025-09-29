@@ -13,6 +13,7 @@ Name = unix-unix-str-group-create-success-groupadd
     """name=({group_name}\w+)""",
     """\s({additional_info}group\s[^"]+?)\s*"*$"""
     """(LEEF|CEF):([^\|]*\|){1}({provider_name}[^\|]+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "host->dest_host" ]
 

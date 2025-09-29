@@ -2,8 +2,15 @@
 ```Java
 {
 Name = crowdstrike-falcon-sk4-alert-trigger-firewallmatchevent
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","epoch"]
   ParserVersion = "v1.0.0"
   Conditions = [ """"offset":""", """destinationServiceName =CrowdStrike""", """"eventType":"FirewallMatchEvent"""", """"RuleName"""" ]
+  Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-alert-1.Fields} [
+  """"(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*""""
+    """"CommandLine":"({process_command_line}[^"]+)""""
+    """exa_regex="(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*""""
+    """exa_json_path=$..CommandLine,exa_field_name=process_command_line"""
+  ]
 
 json-crowdstrike-alert-1 = {
   Vendor = CrowdStrike

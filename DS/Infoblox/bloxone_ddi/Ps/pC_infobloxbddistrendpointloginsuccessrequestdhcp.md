@@ -15,6 +15,7 @@ Name = "infoblox-bddi-str-endpoint-login-success-requestdhcp"
 """\w+ \d+ \d\d:\d\d:\d\d ({host}[\w.\-]+) dhcpd\["""
 """({event_name}REQUEST DHCP) packet from relay-agent ({dest_interface}\S+) with """,
 """ for ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))? \(({dest_mac}\S+)\)"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "dest_host->user" ]
 

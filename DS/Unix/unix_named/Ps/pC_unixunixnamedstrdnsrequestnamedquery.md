@@ -11,6 +11,7 @@ Name = unix-unixnamed-str-dns-request-namedquery
     """client\s*(@[^\s]+)?\s*({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})\#({src_port}\d+)""",
     """query\s*.+?(\([^\)]*\))?(for)?\s*'?({dns_query}[^\s'\/]+)\/({dns_query_type}[^\/']+)[^']*'?\s*({result}\S+)""",
     """query ({result}failed)\s*(\([^\)]*\))?\s*for ({dns_query}[^\s'\/]+)\/(?:[^\/']+)\/({dns_query_type}[^\s]+) at"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -13,6 +13,7 @@ Name = "unix-unix-str-endpoint-login-sshdrefusedconnect"
     """({time}\w+\s*\d+ \d\d:\d\d:\d\d)? ({host}[\w.\-]+) sshd\["""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """refused connect from (({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}\S+))(\s+\(({=src_ip}[a-fA-F\d.:]+)\))?"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

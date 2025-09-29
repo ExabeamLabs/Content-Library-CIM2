@@ -19,7 +19,7 @@ Fields = [
      """"Domain":"(NT AUTHORITY|({domain}[^"]+))""",
      """"AccountName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
      """"ProcessID":({process_id}\d+)""",
-     """"ProcessGuid":"({process_guid}[^"]+)""",
+     """"*ProcessGuid"*:"*({process_guid}[^"\s\}]+)""",
      """"ParentProcessGuid":"({parent_process_guid}[^"]+)""",
      """"LogonId":"({login_id}[^"]+)""",
      """"Hashes":"[^]]+MD5=({hash_md5}[^,\s]+),""",
@@ -34,6 +34,9 @@ Fields = [
      """"LogonGuid":"({logon_guid}[^"]+)""",
      """"Hashes":"[^]]+SHA256=({hash_sha256}[^",]+)""",
      """"ParentCommandLine":"\s*({parent_process_command_line}[^,]+?)\s*",""",
+     """"UserID\":\s*\"({user_sid}[^\"]+)""",
+     """"ParentProcessId\":\s*\"({parent_process_id}[^\"]+)""",
+     """"Description":\s*"({additional_info}[^"]+)"""",
   """exa_json_path=$..UtcTime,exa_field_name=time"""
   """exa_json_path=$.EventTime,exa_field_name=time"""
   """exa_json_path=$..Image,exa_regex=({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
@@ -60,6 +63,9 @@ Fields = [
   """exa_json_path=$.winlog.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
   """exa_json_path=$.winlog.user.domain,exa_field_name=domain"""
   """exa_json_path=$.winlog.user.identifier,exa_field_name=user_sid"""
+  """exa_json_path=$.UserID,exa_field_name=user_sid"""
+  """exa_json_path=$.ParentProcessId,exa_field_name=parent_process_id"""
+  """exa_json_path=$.Description,exa_field_name=additional_info"""
 ]
 DupFields = [ "host->src_host" ]
 ParserVersion = "v1.0.0"

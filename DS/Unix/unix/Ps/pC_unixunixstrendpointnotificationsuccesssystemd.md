@@ -14,6 +14,7 @@ Name = "unix-unix-str-endpoint-notification-success-systemd"
     """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({host}[\w.\-]+)""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+)\s*({host}[\w\-.]+)(\s\w+)?\s*(systemd-)"""
     """\ssystemd(-\w+)?(\[\d+\])?:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
   ]
   ParserVersion = "v1.0.0"
 

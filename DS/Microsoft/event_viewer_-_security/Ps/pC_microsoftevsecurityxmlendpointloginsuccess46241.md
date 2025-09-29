@@ -36,8 +36,9 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624-1"
   """<Keywords>({result}.+?)</Keywords>"""
   """<Data Name(\\)?=('|")ObjectName('|")>({object}[^<>]+)<"""
   """<Level>({run_level}[^<]+)<"""
+  """Linked Logon ID(:|=)\s*(\\[nrt])*({dest_login_id}[^\s\\;]+)\s*"""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user" ]
+  DupFields = [  "user_sid->dest_user_sid" , "domain->dest_domain", "src_host_windows->src_host", "email_address->dest_email_address", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

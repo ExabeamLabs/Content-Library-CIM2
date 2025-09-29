@@ -12,6 +12,7 @@ Name = unix-unix-str-endpoint-login-success-authsucceede
   ]
   Fields = [
 """AD authentication ({result}succeeded) for user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

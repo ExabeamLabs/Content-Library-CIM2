@@ -1,0 +1,22 @@
+#### Parser Content
+```Java
+{
+Name = juniper-srx-kv-network-traffic-success-udpflood
+  Vendor = Juniper Networks
+  Product = Juniper SRX Series
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Conditions = [ """UDP flood white-list hit""", """attack-name=""", """interface-name=""" ]
+  Fields = [
+    """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z)\s+""",
+    """({host}[^\s]+)\s+({app}[^\s]+)\s+-\s+({event_name}[^\s]+)\s+\[""",
+    """attack-name="({attack}[^"]+)"""",
+    """source-address=\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\""""
+    """destination-address=\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
+    """source-zone-name="({src_zone}[^\"]+)"""",
+    """interface-name="({interface}[^\]"]+)""""
+  ]
+  ParserVersion = v1.0.0
+
+
+}
+```

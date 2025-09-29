@@ -17,6 +17,7 @@ Name = "unix-unix-str-endpoint-login-sshdconnectionfrom"
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
     """Connection from.*?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))((\]?:({src_port}\d+))? port\s*({=src_port}\d+))?"""
     """Connection from .*?({dest_mac}([A-Fa-f\d]+:){7}[A-Fa-f\d]+)\s*"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields=["host->dest_host"]
   ParserVersion = "v1.0.0"

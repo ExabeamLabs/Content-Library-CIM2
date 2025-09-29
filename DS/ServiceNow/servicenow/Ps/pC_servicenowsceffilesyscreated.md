@@ -30,7 +30,7 @@ Name = servicenow-s-cef-file-syscreated
     """"oldvalue"+:"+\s*({old_value}[^"]+?)\s*",""",
     """newvalue"+:"\s*({new_value}[^"]+?)\s*"+,""",
     """dproc=({dproc}[^=]+)\s+\w+""",
-	  """"state":"({state}[^"]+)"""",
+	  """"state":"({status_msg}[^"]+)"""",
 	  """"sys_updated_by":"({operator_name}[^"]+)"""",
 	  """"work_notes":"({activity_details}[^"]+)"""",
 	  """"category":"({category}[^"]+)"""",

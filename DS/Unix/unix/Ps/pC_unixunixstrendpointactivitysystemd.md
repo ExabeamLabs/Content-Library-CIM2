@@ -14,6 +14,7 @@ Name = "unix-unix-str-endpoint-activity-systemd"
     """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({host}[\w.\-]+)""",
     """\d\d:\d\d:\d\d\s*({host}[\w\-.]+)(\s\w+)?\s*(systemd\[|dmesg:)"""
     """\ssystemd(-logind)?\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

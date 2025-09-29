@@ -15,6 +15,7 @@ Name = unix-unix-str-user-password-modify-fail-keyringpassword
 """({time}\w+\s*\d+ \d\d:\d\d:\d\d)?\s*({host}[\w.\-]+)\s+passwd(:|\[)"""
 """couldn't update the '({account}[^']+)"""
 """keyring password: ({failure_reason}.+?)\s*$"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   
   DupFields = ["account->dest_user"]

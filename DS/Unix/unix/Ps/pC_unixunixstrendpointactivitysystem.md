@@ -14,6 +14,7 @@ Name = "unix-unix-str-endpoint-activity-system"
     """\[system\]\s({event_name}[^:]+)\s*:"""
     """\d\d:\d\d:\d\d \d+\s({event_code}[^\s:]+):\s({event_name}[^:]+)\s*:"""
     """destination\\*="({dest_host}[^"]+)""""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

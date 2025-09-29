@@ -26,6 +26,8 @@ Fields = [
 """"ContextProcessId":"({process_guid}[^\"]+)""""
 """"aip":"({aip}[a-fA-F\d:.]+)""""
 """"event_platform":"({os}[^"]+)""""
+""""LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ComputerName":"({host}[\w\-\.]+)""""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -38,6 +40,8 @@ Fields = [
 """exa_json_path=$.ContextProcessId,exa_field_name=process_guid""",
 """exa_json_path=$.aip,exa_regex=({aip}[a-fA-F\d:.]+)""",
 """exa_json_path=$.event_platform,exa_field_name=os"""
+"""exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
 ]
 
 

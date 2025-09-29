@@ -4,7 +4,7 @@ Product: Juniper SRX Series
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  213  |   82   |         31         |       8        |   13    |
+|  213  |   82   |         31         |       8        |   14    |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

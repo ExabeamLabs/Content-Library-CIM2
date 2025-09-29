@@ -20,6 +20,8 @@ Name = crowdstrike-falcon-json-endpoint-logout-success-userlogoff
     """"UserSid":"({user_sid}[^"]+)""",
     """"UserPrincipal":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!(local))(?<!(loc))(?<!(localdomain))"""",
     """"event_platform":"({os}[^"]+)"""",
+    """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"ComputerName":"({host}[\w\-\.]+)"""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_name""",
     """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({linked_service_account}OVService[^"]+)|({user_sid}S-[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
@@ -31,7 +33,9 @@ Name = crowdstrike-falcon-json-endpoint-logout-success-userlogoff
     """exa_json_path=$.UserSid,exa_field_name=user_sid""",
     """exa_json_path=$.UserPrincipal,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!(local))(?<!(loc))(?<!(localdomain))""",
     """exa_regex="UserPrincipal":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!(local))(?<!(loc))(?<!(localdomain))"""",
-    """exa_json_path=$.event_platform,exa_field_name=os"""
+    """exa_json_path=$.event_platform,exa_field_name=os""",
+    """exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
   ]
 
 

@@ -20,7 +20,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-cbanalytics
     """"+threat_indicators":[^\}\]]*?"sha256"+:\s*"+({hash_sha256}[^"]+?)"+""",
     """"+threat_indicators"+:[^\}\]]*?"+ttps"+:\s*\["+({dest_process_path}[^"]+?)"+\]""",
     """"+policy_name"+:\s*"+({policy_name}[^"]+?)"+""",
-    """"+state"+:\s*"+({state}[^"]+?)"+""",
+    """"+state"+:\s*"+({status_msg}[^"]+?)"+""",
     """"+type"+:\s*"+({alert_type}[^"]+?)"+""",
     """"+legacy_alert_id"+:\s*"+({alert_id}[^"]+?)"+""",
     """"+org_key"+:\s*"+({primary_key}[^"]+?)"+""",

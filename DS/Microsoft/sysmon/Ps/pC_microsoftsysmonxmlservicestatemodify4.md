@@ -16,7 +16,7 @@ Name = microsoft-sysmon-xml-service-state-modify-4
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
-    """<Data Name\\*=('|")State('|")>({state}.+?)<\/Data>""",
+    """<Data Name\\*=('|")State('|")>({service_state}.+?)<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
     """<Level>({run_level}[^<]+)<"""
   ]

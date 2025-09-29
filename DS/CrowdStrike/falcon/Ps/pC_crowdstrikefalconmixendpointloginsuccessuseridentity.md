@@ -22,9 +22,12 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-useridentity"
 """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """\"+AuthenticationPackage\"+:\s*\"+({auth_package}[^\"]+)\"+,"""
 """"event_platform\\?":\\?"({os}[^"]+)\\?""""
+""""aip":\s*"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """"cid":"({cid}[^"]+)"""
 """"LogonDomain":"\s*({domain}[^\"]+?)\s*""""
+""""LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ComputerName":"({host}[\w\-\.]+)""""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_regex="UserPrincipal\":\s*\"\s*(?:[^\"@]+@)?({domain}[^\"]+?)\s*""""
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
@@ -34,9 +37,12 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-useridentity"
 """exa_regex="UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """exa_json_path=$.AuthenticationPackage,exa_field_name=auth_package""",
 """exa_json_path=$.event_platform,exa_field_name=os""",
+"""exa_json_path=$.aip,exa_field_name=aip""",
 """exa_regex="aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.cid,exa_field_name=cid""",
 """exa_json_path=$.LogonDomain,exa_field_name=domain""",
+"""exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+"""exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
   ]
 
 

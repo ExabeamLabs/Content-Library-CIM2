@@ -9,6 +9,7 @@ Name = infoblox-bddi-str-network-notification-success-nopeer
   Conditions = [ """ntpd[""", """: no peer for too long""" ]
   Fields = [      
 	  """\d\d:\d\d:\d\d\s+({host}[\w.-]+)\s+({src_ip}[a-fA-F\d.:]+?)\s+({additional_info}[^~]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

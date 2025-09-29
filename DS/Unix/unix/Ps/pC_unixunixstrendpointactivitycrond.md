@@ -12,6 +12,7 @@ Fields = [
         """({time}\w+\s\d+\s\d\d:\d\d:\d\d)?\s*(::ffff:)?({host}[\w\-\.]+)?(\s\w+)?\s*crond\[""",
         """\scrond\[\d+\]:\s*({additional_info}.+?)\s*$"""
         """\d\d:\d\d:\d\d (::ffff:)?({host}[\w\-\.]+)?(\s\w+)?\s*crond\["""
+        """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
       ]
 
 

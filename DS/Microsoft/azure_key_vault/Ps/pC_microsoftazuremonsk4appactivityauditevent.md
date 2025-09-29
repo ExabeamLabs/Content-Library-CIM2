@@ -25,8 +25,8 @@ Name = microsoft-azuremon-sk4-app-activity-auditevent
     """exa_json_path=$.identity.claim.appid,exa_field_name=app_id"""
     """exa_json_path=$..clientInfo,exa_field_name=user_agent"""
     """exa_json_path=$.properties,exa_field_name=properties"""
-    """exa_regex="claims":.+?idtyp":"user".+?name":"({full_name}[^"]+)"""
-    """exa_regex=claims".+?"http:.+?identity\/claims\/name":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+    """exa_regex="idtyp":"user"[^\}]+"name":"({full_name}[^"]+)"""
+    """exa_regex=identity\/claims\/name":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   ]
   ParserVersion = "v1.0.0"
 

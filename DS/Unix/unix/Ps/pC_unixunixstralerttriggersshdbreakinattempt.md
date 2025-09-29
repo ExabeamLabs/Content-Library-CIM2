@@ -12,6 +12,7 @@ Name = unix-unix-str-alert-trigger-sshdbreakinattempt
     """ Address ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? maps to ({src_host}[\w\-\.]+)""",
     """({host}[\w.\-]+) ({process_name}sshd)\[""",
     """({additional_info}Address .+?- POSSIBLE BREAK-IN ATTEMPT!)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "alert_name->alert_type" ]
 

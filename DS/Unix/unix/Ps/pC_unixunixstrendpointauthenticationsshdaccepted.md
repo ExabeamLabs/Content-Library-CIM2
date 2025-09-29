@@ -12,6 +12,7 @@ Name = unix-unix-str-endpoint-authentication-sshdaccepted
     """(\d\d:|(\+|-))\d\d:\d\d (::ffff:)?({host}[\w\-.]+)\s""",
     """\d\d:\d\d:\d\d (::ffff:)?({host}\S+)? sshd\[""",
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

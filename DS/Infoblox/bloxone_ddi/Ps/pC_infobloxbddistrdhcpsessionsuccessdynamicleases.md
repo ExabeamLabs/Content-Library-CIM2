@@ -12,6 +12,7 @@ Name = infoblox-bddi-str-dhcp-session-success-dynamicleases
     """\sdhcpd\[\d+\]:\s+BOOTREQUEST from ({dest_mac}\S+) via ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?:?\s""",
     """({event_name}BOOTP from dynamic client and no dynamic leases)""",
     """({operation}BOOTREQUEST)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

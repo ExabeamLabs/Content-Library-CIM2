@@ -44,6 +44,8 @@ Fields = [
 """\"deviceDetail\":\{[^\}]+?\"operatingSystem\":\"({os}[^\"]+)"""
 """\"deviceDetail\":\{[^\}]+?\"trustType\":\"({device_type}[^\"]+)"""
 """\"additionalDetails\":\"({additional_info}[^\}\"]+?)\"\}"""
+"""\"deviceDetail\":\{[^\}]+?({device_class}"isCompliant":((?i)false|true))"""
+"""\"deviceDetail\":\{[^\}]+?({device_description}"isManaged":((?i)false|true))"""
 """({operation}Sign-In)"""
 """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
 """"browser":"({browser}[^\d\"]+?)\s*([\d\.]+)?""""

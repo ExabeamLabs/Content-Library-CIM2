@@ -36,6 +36,8 @@ Fields = [
 """"(ImageFileName|TargetFileName)":\s*"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(\d+|({file_ext}\w{1,10}?)))?)\s*"""",
 """"ContextBaseFileName":"({process_name}({file_name}[^"]+))""""
 """"ContextImageFileName":\s*"({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^\\\/"]+?))\s*""""
+""""LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""ComputerName":"({host}[\w\-\.]+)""""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -59,6 +61,8 @@ Fields = [
 """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
 """exa_json_path=$.ContextBaseFileName,exa_field_name=process_name"""
 """exa_regex="ContextImageFileName":\s*"({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^\\\/"]+?))\s*""""
+"""exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
 
 }
 ```

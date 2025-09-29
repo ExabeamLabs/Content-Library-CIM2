@@ -5,6 +5,7 @@ Name = unix-unixnamed-str-app-notification-transferredserial
   Conditions = [ """ named[""", """transferred serial""" ]
   Fields = ${DLUnixParserTemplates.named-dns-event.Fields}[
     """zone ({dns_query}[^:\/]+)/({record_type}[^:/]+)""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 # serial is removed
   ]
   ParserVersion = "v1.0.0"

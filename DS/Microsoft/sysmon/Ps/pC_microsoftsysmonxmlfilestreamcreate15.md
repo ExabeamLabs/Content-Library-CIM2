@@ -29,7 +29,7 @@ xml-sysmon-activity = {
     """<Keywords>({result}.+?)<\/Keywords>""",
     """<Data Name\\*=('|")ProcessGuid('|")>\{({process_guid}.+?)\}<\/Data>""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}\d+)""",
-    """<Data Name\\*=('|")State('|")>({state}[^<]+)<""",
+    """<Data Name\\*=('|")State('|")>({service_state}[^<]+)<""",
     """({log_name}Microsoft-Windows-Sysmon)"""    
     """<Level>({run_level}[^<]+)<"""
    

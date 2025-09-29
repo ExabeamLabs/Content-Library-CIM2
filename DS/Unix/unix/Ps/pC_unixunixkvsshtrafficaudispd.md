@@ -22,7 +22,7 @@ Name = "unix-unix-kv-ssh-traffic-audispd"
     """\sterminal=(\?|({login_type_text}[^=]+?))\s+\w+="""
     """\sexe="({auth_process}[^"]+?)"\s+\w+="""
     """\sgrantors=({auth_process}[^=]+?)\s+\w+="""
-    """\stype=({audispd_type}USER_\S+)\s+\w+="""
+    """\stype=({event_name}USER_\S+)\s+\w+="""
     """\sres=({result}[^\(\)]+?)('\s*$|'?\s+\w+=)"""
     """({event_code}ssh)"""
     """op=({action}[^\s]+)"""
@@ -30,8 +30,7 @@ Name = "unix-unix-kv-ssh-traffic-audispd"
     """type=({login_type_text}[^=]+?)\s+\w+="""
   ]
   DupFields = [
-    "dest_host->host",
-    "audispd_type->event_name"
+    "dest_host->host"
   ]
   ParserVersion = "v1.0.0"
 

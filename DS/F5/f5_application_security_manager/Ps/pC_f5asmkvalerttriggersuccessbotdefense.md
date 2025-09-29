@@ -22,7 +22,7 @@ Fields = [
   """http_protocol_info="({version}[^"]+)""",
   """host="({web_domain}[^"]+)""",
   """,action="({action}[^"]+)""",
-  """,request_status="({state}[^"]+)""",
+  """,request_status="({status_msg}[^"]+)""",
   """session_id="({session_id}[^"]+)""",
   """http_request="({additional_info}[\S\s]+)"""",
   """User-Agent:\s({user_agent}[^"]+)\\r\\nAccept:""",

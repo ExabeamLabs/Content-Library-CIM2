@@ -25,6 +25,7 @@ Name = unix-unix-str-user-switch-success-pam_unix
 """({time}\w\w\w \d\d \d\d:\d\d:\d\d) \[({host}[\w\.\-]+)\]"""
 """session opened for user ({dest_user}[^\s]+?)(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?(\(uid=({user_uid}\d+)\))?"""
 """({event_name}session opened)"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "host->dest_host", "user_id->user_uid", "account->dest_user"]
 

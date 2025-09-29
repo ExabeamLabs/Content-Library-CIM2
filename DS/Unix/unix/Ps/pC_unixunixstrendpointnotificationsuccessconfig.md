@@ -14,7 +14,8 @@ Name = "unix-unix-str-endpoint-notification-success-config"
     """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({host}[\w.\-]+)""",
     """\d\d:\d\d:\d\d\s*({host}[\w\-.]+)(\s\w+)?\s*(:config)"""
     """\ssystemd(-\w+)?\[\d+\]:\s*({additional_info}.+?)\s*$"""
-    """\sconfig\[\d+\]:\s*({additional_info}.+?)\s*$"""   
+    """\sconfig\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+""" 
 
   ]
   ParserVersion = "v1.0.0"

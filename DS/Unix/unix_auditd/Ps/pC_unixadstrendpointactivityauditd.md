@@ -9,6 +9,7 @@ Name = unix-ad-str-endpoint-activity-auditd
   Fields = [
     """\d\d:\d\d:\d\d ({host}[\w\-.]+).+?auditd""",
     """\sauditd\[\d+\]:\s*({additional_info}.+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -14,6 +14,7 @@ Name = unix-unix-str-group-member-add-success-useradd
     """\sgroup\s'({group_name}[^']+)'""",
     """new group: name=({group_name}[^,]+),""",
     """new group:[^$]+?GID=({group_id}\d+)""",
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   DupFields = [ "host->dest_host" ]
 

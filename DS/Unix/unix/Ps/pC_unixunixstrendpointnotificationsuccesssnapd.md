@@ -9,6 +9,7 @@ Name = unix-unix-str-endpoint-notification-success-snapd
   Fields = [
     """\d\d:\d\d:\d\d\s+({host}[\w.-]+)\s+({event_category}[^:]+):\s+""",
     """\]:\s*({additional_info}[^$]+?)\s*$"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = v1.0.0
 

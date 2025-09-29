@@ -194,7 +194,7 @@ This table lists the out-of-the-box supported Data Sources. This list is auto-ge
 | RS2 Technologies     | [RS2 Technologies](DS/RS2_Technologies/rs2_technologies/ds_rs2_technologies_rs2_technologies.md)<br>            |
 | RSA                  | [RSA Authentication Manager](DS/RSA/rsa_authentication_manager/ds_rsa_rsa_authentication_manager.md)<br>[RSA NetWitness Platform](DS/RSA/rsa_netwitness_platform/ds_rsa_rsa_netwitness_platform.md)<br>[SecurID](DS/RSA/securid/ds_rsa_securid.md)<br>                    |
 | Rubrik               | [Rubrik Cloud Data Management](DS/Rubrik/rubrik_cloud_data_management/ds_rubrik_rubrik_cloud_data_management.md)<br>                  |
-| Sailpoint            | [IdentityNow](DS/Sailpoint/identitynow/ds_sailpoint_identitynow.md)<br>[SecurityIQ](DS/Sailpoint/securityiq/ds_sailpoint_securityiq.md)<br>                 |
+| Sailpoint            | [IdentityNow](DS/Sailpoint/identitynow/ds_sailpoint_identitynow.md)<br>[Sailpoint IIQ](DS/Sailpoint/sailpoint_iiq/ds_sailpoint_sailpoint_iiq.md)<br>[SecurityIQ](DS/Sailpoint/securityiq/ds_sailpoint_securityiq.md)<br>      |
 | Salesforce           | [Salesforce](DS/Salesforce/salesforce/ds_salesforce_salesforce.md)<br>                    |
 | Sangfor              | [Sangfor NGAF](DS/Sangfor/sangfor_ngaf/ds_sangfor_sangfor_ngaf.md)<br>                    |
 | SAP                  | [SAP](DS/SAP/sap/ds_sap_sap.md)<br>[SuccessFactors](DS/SAP/successfactors/ds_sap_successfactors.md)<br>         |

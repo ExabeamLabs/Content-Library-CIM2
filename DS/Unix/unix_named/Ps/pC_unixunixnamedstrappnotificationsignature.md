@@ -8,6 +8,7 @@ Name = unix-unixnamed-str-app-notification-signature
     """client ({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\#({dest_port}\d+)""",
     """({event_name}request has invalid signature)""",
     """({time}\w+\s\d+\s\d+:\d+:\d+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 named-dns-event-1 = {

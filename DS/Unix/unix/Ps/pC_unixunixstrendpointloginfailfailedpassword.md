@@ -18,6 +18,7 @@ Name = "unix-unix-str-endpoint-login-fail-failedpassword"
     """ port ({src_port}\d+)"""
     """({failure_reason}Failed password)"""
     """\s(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-\.]+))\ssshd\["""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -17,6 +17,7 @@ Name = "unix-unix-str-endpoint-login-fail-sshdauthfailed"
     """Failed (none|publickey|keyboard-interactive) for <({failure_reason}[^>]+)>"""
     """({event_code}ssh)"""
     """({protocol}ssh(d)?)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -13,6 +13,7 @@ Name = infoblox-bddi-kv-endpoint-login-success-loginallow
     """auth=({auth_method}[^\s]+)""",
     """Transfer status:\s({action}[^\s]+?)\s*$"""
     """group=({group_name}.+?)(\w+=|$)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -21,6 +21,7 @@ Name = unix-sm-kv-email-delay
     """\srelay=({dest_host}[^\s\[]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?""",
     """({bytes}\d+)\sbytes"""
     """(sendmail|sm-mta)\s*\[?\d+\]?[\s\-:]+({alert_id}\w+)"""
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

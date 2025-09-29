@@ -10,6 +10,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4728
     """A member was added to a security-enabled ({group_type}[^\s]+) group""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>"""
+    """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)</Data>""",
     ]
 
 s-xml-windows-member = {

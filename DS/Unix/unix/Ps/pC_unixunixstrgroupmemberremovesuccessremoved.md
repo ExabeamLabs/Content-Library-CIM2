@@ -9,6 +9,7 @@ Conditions = [ """removed by""", """from group""", """user""", """gpasswd""" ]
 Fields = [
 """\d\d:\d\d:\d\d ({host}[\w.\-]+)\sgpasswd"""
 """user ({account_name}.+?) removed by ({user}[\w\.\-\!\#\^\~]{1,40}\$?) from group ({group_name}.+?)\s*$"""
+"""\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 ]
 DupFields = [
 "host->dest_host"

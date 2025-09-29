@@ -10,6 +10,7 @@ Name = unix-unixnamed-str-app-notification-resolving
   Fields = [
     """\d\d:\d\d:\d\d ({host}\S+) named""",
     """({event_name}timed out resolving)\s+\'({dns_query}[^'\/]+?)\/({dns_query_type}[^'\/]+?)\/.*?\':\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\#({dest_port}\d+)""", # name_server is removed
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
 
 

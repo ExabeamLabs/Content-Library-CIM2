@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-xml-network-session-fail-4984
     """<Data Name\\*=('|")RemoteKeyModPort('|")>({dest_port}\d+)""",
     """<Data Name\\*=('|")FailureReason('|")>({failure_reason}[^<]+)"""
 # em_auth_method is removed
-    """<Data Name\\*=('|")State('|")>({state}[^<]+)""",
+    """<Data Name\\*=('|")State('|")>({service_state}[^<]+)""",
     """<Data Name\\*=('|")Role('|")>({role}[^<]+)""",
     """<Keywords>({action}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""

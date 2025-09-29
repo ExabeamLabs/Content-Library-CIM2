@@ -23,6 +23,7 @@ Fields = [
   """\saccount:\s*<(({domain}[^\\\s>]+)\\+)?({account}[^\\\s>]+)>"""
   """\sservice:\s*<({event_code}[^>]+)>"""
   """Caused by:\s*({failure_reason}[^\s\(:>]+)"""
+  """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 ]
 DupFields = [ "account->dest_user" ]
 ParserVersion = "v1.0.0"

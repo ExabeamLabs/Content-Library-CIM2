@@ -26,7 +26,7 @@ Name = "unix-unix-kv-endpoint-login-success-userauth"
     """res=\\?"*({result}[^'\s]+)"""
     """\s*({host}[\w\-.]+)\s(auditlog|audispd|audisp-syslog)"""
     """hostname="*(\?|({src_ip}(\d{1,3}\.){3}\d{1,3})|({src_host}[^\s]+?))\s*(\w+=|")"""
-    """\stype=({audispd_type}USER_\S+)\s+\w+="""
+    """\stype=({event_name}USER_\S+)\s+\w+="""
   ]
   ParserVersion = "v1.0.0"
 
