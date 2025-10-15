@@ -6,6 +6,7 @@ Name = "exabeam-search-kv-alert-trigger-success-rulename"
     Product = "Search"
     TimeFormat = ["epoch", "yyyy-MM-dd'T'HH:mm:ss"]
     log_timeFormat = ["epoch"]
+    event_timeFormat = ["epoch", "yyyy-MM-dd'T'HH:mm:ss"]
     Conditions = [
       """rule_name="""
       """rule_reason="""
@@ -14,8 +15,8 @@ Name = "exabeam-search-kv-alert-trigger-success-rulename"
       """exabeam-analytics-master"""
     ]
     Fields = [
-      """\Wevent_time="({time}\d{13})"""
-      """timestamp="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+      """\Wevent_time="({event_time}({time}\d{13}))"""
+      """timestamp="({event_time}({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d))""",
       """query_key_value:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\|""",
       """\Wuser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """\Wdomain="({domain}[^"]+)"""
@@ -26,7 +27,7 @@ Name = "exabeam-search-kv-alert-trigger-success-rulename"
       """\Wscore="({original_risk_score}\d+)"""
       """\Wevent_type="({alert_type}[^"]+)"""
       """\Wrule_name="({alert_name}[^"]+)"""
-      """\Wrule_reason="({rule_reason}[^"]+)"""
+      """\Wrule_reason="({alert_reason}({rule_reason}[^"]+))"""
       """\Wsrc(_ip)?="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
       """\Wdest_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
       """\Wsrc_host="({src_host}[^"]+)"""
@@ -35,9 +36,6 @@ Name = "exabeam-search-kv-alert-trigger-success-rulename"
       """\Wusecases="({rule_usecases}[^"]+)""""
       """\Wevent_code="({event_id}[^"]+)""""
       """\Wrawlog_time="({log_time}[^"]+)""""
-    ]
-    DupFields = [
-      "time->event_time", "rule_reason->alert_reason"
     ]
     SOAR {
       IncidentType = "ueba"

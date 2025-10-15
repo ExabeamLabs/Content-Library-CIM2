@@ -8,6 +8,7 @@ Name = cisco-asa-str-app-notification-success-ssh
     Fields = ${DLCiscoParsersTemplates.cisco-system-info.Fields} [
       """({time}\d{4} \w{3,4}\s\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2})"""
       """\d+:\d+:\d+\s+({host}[\w\-.]+)\s"""
+      """({host}[\w\.\-]+):\s*(\d+:)?\s*({time}\w\w\w\s*\d+\s*\d\d:\d\d:\d\d\.\d\d\d): %SSH"""
       ]
   
 

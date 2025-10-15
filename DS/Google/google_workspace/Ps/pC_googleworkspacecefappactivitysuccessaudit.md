@@ -24,7 +24,6 @@ Name = google-workspace-cef-app-activity-success-audit
   """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
   """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
   ]
-  DupFields = [ "result_code->action_type" ]
 
 
 }

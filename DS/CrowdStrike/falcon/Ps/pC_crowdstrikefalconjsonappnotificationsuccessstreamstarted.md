@@ -13,7 +13,7 @@ Name = crowdstrike-falcon-json-app-notification-success-streamstarted
   """"OperationName":"streamStarted""""
 ]
 Fields = [
-     """"OperationName":"({event_name}[^"]+)""",
+     """"OperationName":"({operation}({event_name}[^"]+))""",
      """"Success":\s*({result}[^",}]+)""",
      """"ServiceName":"({service_name}[^@"]+)"""",
      """"UserIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -22,6 +22,7 @@ Fields = [
      """"EventType":"({event_category}[^"]+)""",
      """"cid":"({cid}[^"]+)"""
      """exa_json_path=$.OperationName,exa_field_name=event_name""",
+     """exa_json_path=$.OperationName,exa_field_name=operation""",
      """exa_json_path=$.Success,exa_field_name=result""",
      """exa_json_path=$.ServiceName,exa_field_name=service_name""",
      """exa_json_path=$.UserIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -30,7 +31,6 @@ Fields = [
      """exa_json_path=$.EventType,exa_field_name=event_category""",
      """exa_json_path=$.cid,exa_field_name=cid""",
   ]
-  DupFields = [event_name->operation]
 
 
 }

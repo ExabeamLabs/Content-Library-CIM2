@@ -17,7 +17,7 @@ Name = ibm-guardium-leef-database-query-success-sql-1
     """\|devTime=({time}\d\d\d\d-\d+-\d+ \d\d:\d\d:\d\d)""",
     """\|ruleDesc=({rule_description}[^\|]+)""",
     """\|serverType=({server_type}[^\|]+)""",
-    """\|dbUser=(({domain}[^\|\\]+)\\)?({db_user}[^\|\\]+)""",
+    """\|dbUser=(({domain}[^\|\\]+)\\)?({account}({db_user}[^\|\\]+))""",
     """\|usrName =(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\|sourceProgram=({src_interface}[^\|]+)""",
     """\|dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
@@ -30,7 +30,6 @@ Name = ibm-guardium-leef-database-query-success-sql-1
     """\WdbName =({db_name}[^\|]+)"""
     """\Wsql=\s*({db_query}[^\|]+?)\s*\|"""
   ]
-  DupFields = [ "db_user->account" ]
 
 
 }

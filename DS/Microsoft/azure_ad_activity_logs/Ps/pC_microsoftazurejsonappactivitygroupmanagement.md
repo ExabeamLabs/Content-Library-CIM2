@@ -66,6 +66,16 @@ ms-azure-eventhubs-activity = {
     """exa_regex=object=({object}[^\|=\s]+)(\||\s\w+=)"""
     """exa_regex=(?i)"+result"+:\s*"+({result}[^"]+)"+""",
     """exa_json_path=$.TimeGenerated,exa_field_name=time"""
+    """TargetResources":"\[.+?"displayName\\":\\"Group.DisplayName\\",.+?\\"newValue\\":\\"\\*"({group_name}[^"\\]+)"""
+    """Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)"""
+    """TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)"""
+    """groupType\\":\\"({group_type}[^"\\]+)"""
+    """GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)"""
+    """exa_regex=TargetResources":"\[.+?"displayName\\":\\"Group.DisplayName\\",.+?\\"newValue\\":\\"\\*"({group_name}[^"\\]+)"""
+    """exa_regex=Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)"""
+    """exa_regex=groupType\\":\\"({group_type}[^"\\]+)"""
+    """exa_regex=GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)"""
+   """exa_regex=TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)"""
   ]
   DupFields = [ "event_name->operation" 
 }

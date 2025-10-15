@@ -18,9 +18,9 @@ Fields = [
 """"UserName":"(N/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({src_host}[^"]+))?""""
 """"ComputerName":"({src_host}[^"]+)""""
 """\\*"DetectDescription\\*":\\*"({alert_name}[^"]+?)(\.\s+|")"""
-""""DetectName":"({alert_type}[^"]+)""""
+""""DetectName":"({technique}({alert_type}[^"]+))""""
 """"IOARuleName":"({alert_name}[^"]+)""""
-""""ExternalApiType":"({alert_type}[^"]+)""""
+""""ExternalApiType":"({technique}({alert_type}[^"]+))""""
 """"DetectDescription":"({additional_info}[^"]+)""""
 """"PatternDispositionDescription":"({additional_info}[^"]+)""""
 """"Severity":\s*({alert_severity}\d+)"""
@@ -31,7 +31,7 @@ Fields = [
 """"LocalIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"RemoteAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """"IOCValue":\s*"(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[a-zA-Z\.\-]+))""""
-""""Technique":"({alert_type}[^"]+)"""
+""""Technique":"({technique}({alert_type}[^"]+))"""
 """"LocalAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"DetectId"+:"+({alert_id}[^"]+)""""
 """"MD5String"+:"+({hash_md5}[^",]+)""""
@@ -42,7 +42,7 @@ Fields = [
 """"ParentImageFileName\\*":\s*\\*"({parent_image_filename}[^,]+?)\\*"+,"""
 """"ParentCommandLine\\*":\s*\\*"({parent_process_command_line}[^,]+?)"+,"""
 """"PatternDispositionDescription\\*":\s*\\*"({pattern_disposition_description}[^"]+)"""
-""""FalconHostLink\\*":\s*\\*"({falcon_host_link}[^"]+)"""
+""""FalconHostLink\\*":\s*\\*"({additional_info}({falcon_host_link}[^"]+))"""
 """"BootupSafeguardEnabled":\s*({bootup_safeguard_enabled}true|false)"""
 """"QuarantineFile"+:\s*({quarantine_file}true|false)"""
 """"QuarantineMachine"+:\s*({quarantine_machine}true|false)"""
@@ -72,11 +72,14 @@ Fields = [
 """exa_json_path=$.ComputerName,exa_field_name=src_host""",
 """exa_json_path=$.DetectDescription,exa_field_name=alert_name""",
 """exa_json_path=$.DetectName,exa_field_name=alert_type""",
+"""exa_json_path=$.DetectName,exa_field_name=technique""",
 """exa_json_path=$.IOARuleName,exa_field_name=alert_name""",
 """exa_json_path=$.ExternalApiType,exa_field_name=alert_type""",
+"""exa_json_path=$.ExternalApiType,exa_field_name=technique""",
 """exa_json_path=$.DetectDescription,exa_field_name=additional_info""",
 """exa_json_path=$.PatternDispositionDescription,exa_field_name=additional_info""",
 """exa_json_path=$.Technique,exa_field_name=alert_type""",
+"""exa_json_path=$.Technique,exa_field_name=technique""",
 """exa_json_path=$.IOCValue,exa_regex=^(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[a-zA-Z\.\-]+))$""",
 """exa_json_path=$.DetectId,exa_field_name=alert_id""",
 """exa_json_path=$.Severity,exa_field_name=severity""",
@@ -97,6 +100,7 @@ Fields = [
 """exa_json_path=$.ParentImageFileName,exa_field_name=parent_image_filename""",
 """exa_json_path=$.ParentCommandLine,exa_field_name=parent_process_command_line""",
 """exa_json_path=$.FalconHostLink,exa_field_name=falcon_host_link""",
+"""exa_json_path=$.FalconHostLink,exa_field_name=additional_info""",
 """exa_json_path=$.PatternDispositionFlags.BootupSafeguardEnabled,exa_field_name=bootup_safeguard_enabled""",
 """exa_json_path=$.PatternDispositionFlags.QuarantineFile,exa_field_name=quarantine_file""",
 """exa_json_path=$.PatternDispositionFlags.QuarantineMachine,exa_field_name=quarantine_machine""",
@@ -114,10 +118,6 @@ Fields = [
 """exa_json_path=$.PatternDispositionFlags.Rooting,exa_field_name=rooting""",
 """exa_json_path=$.PatternDispositionFlags.InddetMask,exa_field_name=inddet_mask""",
 """exa_json_path=$.PatternDispositionFlags.Indicator,exa_field_name=indicator""",
-]
-DupFields = [
-"alert_type->technique"
-"falcon_host_link->additional_info"
 ]
 ParserVersion = "v1.0.0"
 

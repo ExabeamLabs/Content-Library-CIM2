@@ -16,10 +16,9 @@ Name = beyondtrust-bi-cef-user-create-success-add
   """\w+\s\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}\s({host}[\w\-.]+)"""
   """BeyondTrustBeyondInsightEventSeverity=({severity}[^\s]+)"""
   """({app}BeyondInsight)"""
-  """dhost=(({account_domain}[^\/,\s]+?)[\\\/]+)?({account_name}[^,\s]+)"""
-  """dhost=(Asset:({src_host}[^\s]+)\sAccount:)(({account_domain}[\w\.\-]+?)[\\]+)?({account_name}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """dhost=(({account_domain}[^\/,\s]+?)[\\\/]+)?({dest_user}({account_name}[^,\s]+))"""
+  """dhost=(Asset:({src_host}[^\s]+)\sAccount:)(({account_domain}[\w\.\-]+?)[\\]+)?({dest_user}({account_name}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
-  DupFields = [ "account_name->dest_user" ]
 
 
 }

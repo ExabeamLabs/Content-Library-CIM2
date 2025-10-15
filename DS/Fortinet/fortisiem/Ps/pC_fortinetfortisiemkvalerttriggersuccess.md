@@ -6,9 +6,12 @@ Name = "fortinet-fortisiem-kv-alert-trigger-success"
   Conditions = [ """devname="FortiMail"""", """type="virus"""", """subtype="infected"""" ]
   Fields = ${FortinetParsersTemplates.fortisiem-fortimail-email-traffic-activity.Fields}[
     """\Wsignature_id="({additional_info}[^"]+)"""",
-    """\Wvirus_name="({malware_file_name}[^"]+)""""  
+    """\Wvirus_name="({malware_file_name}[^"]+)"""",
+    """\Wpri="({alert_severity}[^"]+)"""",
+    """\Wmsg="({alert_name}[^"]+)""",
+    """\Wtype=({alert_type}[^"]+)""",
+    """\Wsubtype="({alert_subject}[^"]+)""""
   ]
-  DupFields = ${FortinetParsersTemplates.fortisiem-fortimail-email-traffic-activity.DupFields}[ "severity->alert_severity", "event_name->alert_name", "category->alert_type", "event_category->alert_subject" ]  
 
 fortisiem-fortimail-email-traffic-activity = {
   Vendor = Fortinet
@@ -16,7 +19,7 @@ fortisiem-fortimail-email-traffic-activity = {
   TimeFormat = "epoch_sec"
   Fields = [
     """\Wtimestamp=({time}\d{10})""",
-    """\Wdevname="({host}[\w\-.]+)""",
+    """\Wdevname="({dest_host}({host}[\w\-.]+))""",
     """\Wdevice_id="({device_id}[^"]+)""",
     """\Wtype=({category}[^"]+)""",
     """\Wsubtype="({event_category}[^"]+)"""",
@@ -28,7 +31,6 @@ fortisiem-fortimail-email-traffic-activity = {
     """\Wdst_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """\Wfrom="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\Wto="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-  ]
-  DupFields = [ "host->dest_host" 
+  
 }
 ```

@@ -12,7 +12,7 @@ Name = cisco-asa-str-app-notification-success-ttyexpire
 cisco-system-info = {
   Vendor = Cisco
   Product = Cisco Network Infrastructure and Management
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "yyyy MMM dd HH:mm:ss", "yyyy MMM dd HH:mm:ss.SSSSSS"]
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "MMM dd HH:mm:ss", "MMM dd yyyy HH:mm:ss.SSS", "yyyy MMM dd HH:mm:ss", "yyyy MMM dd HH:mm:ss.SSSSSS", "MMM dd HH:mm:ss.SSS", "MMM  d HH:mm:ss.SSS"]
   Fields = [
     """(\d+|({host}[\w\-\.]+))\s*:\s*(\d+\s)?\w+\s\d+\s\d\d:\d\d:\d\d""",
     """\s({time}\w+ \d+ \d+:\d+:\d+)""",

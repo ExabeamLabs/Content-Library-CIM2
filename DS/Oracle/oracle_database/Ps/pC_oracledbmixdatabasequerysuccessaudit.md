@@ -25,12 +25,9 @@ Fields = [
 """ACTION\s+:\[\d+\]\s+'({db_operation}alter \w+)"""
 """\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'"""
 """\sDBID:\[\d+\]\s*'(|({db_id}[^']+))'"""
-"""\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\/\s]+))'"""
+"""\sDATABASE USER:\[\d+\]\s*'(\/|({db_user}({account}[^'\\/\s]+)))'"""
 """\sPRIVILEGE\s*:\[\d+\]\s*'({privileges}[^']+)'"""
 """(?i:((create|drop) user))\s+({dest_user}[^\s]+)"""
-]
-DupFields = [
-"account->db_user"
 ]
 
 

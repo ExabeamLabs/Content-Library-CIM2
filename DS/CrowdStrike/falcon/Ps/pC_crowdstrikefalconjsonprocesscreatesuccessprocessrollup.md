@@ -19,8 +19,8 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"timestamp":\s*"({time}\d{10,13})"""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
     """"aid":\s*"({aid}[^"]+)""",
-    """"CommandLine":\s*"\s*({process_command_line}[^\n]+?)\s*"?,"""",
-    """"ImageFileName":\s*"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
+    """"CommandLine":\s*"\s*({dest_process_command_line}({process_command_line}[^\n]+?))\s*"?,"""",
+    """"ImageFileName":\s*"({dest_process_path}({process_path}({dest_process_dir}({process_dir}[^"]*?[\\\/]+))?({dest_process_name}({process_name}[^"\\\/]+))))"""",
     """"MD5HashData":\s*"({hash_md5}[^"]+)""",
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"TargetProcessId":\s*"({process_id}[^"]+)""",
@@ -51,7 +51,8 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """exa_json_path=$..event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$..aid,exa_field_name=aid""",
     """exa_json_path=$..CommandLine,exa_field_name=process_command_line""",
-    """exa_regex="ImageFileName":\s*"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
+    """exa_json_path=$..CommandLine,exa_field_name=dest_process_command_line""",
+    """exa_regex="ImageFileName":\s*"({dest_process_path}({process_path}({dest_process_dir}({process_dir}[^"]*?[\\\/]+))?({dest_process_name}({process_name}[^"\\\/]+))))"""",
     """exa_json_path=$..MD5HashData,exa_field_name=hash_md5""",
     """exa_json_path=$..ParentProcessId,exa_field_name=parent_process_id""",
     """exa_json_path=$..TargetProcessId,exa_field_name=process_id""",
@@ -77,7 +78,6 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """exa_json_path=$..ComputerName,exa_field_name=src_host"""
     """exa_regex="UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   ]
-  DupFields = ["process_path->dest_process_path","process_dir->dest_process_dir","process_name->dest_process_name","process_command_line->dest_process_command_line"]
 
 
 }

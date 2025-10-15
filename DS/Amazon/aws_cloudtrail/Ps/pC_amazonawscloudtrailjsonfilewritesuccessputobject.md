@@ -37,7 +37,6 @@ ${AwsParserTemplates.aws-cloudtrail-json}{
       """exa_json_path=$..description,exa_field_name=description"""
       """exa_json_path=$..imageId,exa_field_name=resource_id"""
   ]
-  DupFields = [ "result->failure_code", "src_resource->source_resource", "src_resource_type->source_resource_type" ]
 
 
 }

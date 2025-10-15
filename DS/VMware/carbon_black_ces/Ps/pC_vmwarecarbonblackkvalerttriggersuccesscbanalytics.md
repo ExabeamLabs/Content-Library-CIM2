@@ -14,9 +14,8 @@ Name = vmware-carbonblack-kv-alert-trigger-success-cbanalytics
     """\Wcat=({category}[^\|]+?)\s*(\||\w+=|$|"+\s*$)""",
     """\Wact=({action}[^\|]+?)\s*(\||\w+=|$|"+\s*$)""",
     """\Woutcome=({result}.+?)\s*(\w+=|$)""",
-    """\WthreatAttackID=({threat_id}[^:]+?)\s*(\w+=|$|:)"""
+    """\WthreatAttackID=({alert_id}({threat_id}[^:]+?))\s*(\w+=|$|:)"""
   ]
-  DupFields = [ "threat_id->alert_id" ]
   ParserVersion = "v1.0.0"
 
 

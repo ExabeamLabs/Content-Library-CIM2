@@ -1,0 +1,26 @@
+#### Parser Content
+```Java
+{
+Name = servicenow-s-json-app-activity-success-install_status
+  Vendor = ServiceNow
+  Product = ServiceNow
+  ParserVersion = v1.0.0
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions= [ """"sys_created_on":""", """"sys_created_by":""", """"install_status":""" ]
+  Fields =[
+  	"""exa_json_path=$.install_status,exa_field_name=result""",
+  	"""exa_json_path=$.model_category.display_value,exa_field_name=category""",
+  	"""exa_json_path=$.sys_created_on,exa_field_name=time""",
+  	"""exa_json_path=$.serial_number,exa_field_name=serial_num""",
+  	"""exa_json_path=$.display_name,exa_field_name=device_name""",
+  	"""exa_json_path=$.model.display_value,exa_field_name=device_model""",
+  	"""exa_json_path=$.location.display_value,exa_field_name=location""",
+    """exa_json_path=$.['assigned_to.u_region'].display_value,exa_field_name=region""",
+  	"""exa_json_path=$.sys_created_by,exa_field_name=dest_user""",
+    """exa_json_path=$.assigned_to.display_value,exa_field_name=full_name"""
+  ]
+
+
+}
+```

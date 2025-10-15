@@ -17,11 +17,10 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720"
 """EVENT_NUMBER\s*=\s*({event_code}\d+)"""
 """CALLER_USER_SID\s*=\s*({user_sid}[^\s]+)"""
 """CALLER_LOGON_ID\s*=\s*({login_id}[^\s]+)"""
-"""ACCOUNT_NAME\s*=\s*({account_name}[^\s]+)"""
-"""ACCOUNT_DOMAIN\s*=\s*({account_domain}[^\s]+)"""
+"""ACCOUNT_NAME\s*=\s*({dest_user}({account_name}[^\s]+))"""
+"""ACCOUNT_DOMAIN\s*=\s*({dest_domain}({account_domain}[^\s]+))"""
 """ACCOUNT_SID\s*=\s*\%\{({account_id}[^\s\}]+)"""
   ]
-  DupFields = [ "account_name->dest_user", "account_domain->dest_domain" ]
 
 
 }

@@ -57,6 +57,8 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"behaviors":"\{({more_info}[^\}"]+)\}"""",
     """"target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """"target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
+    """serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
+    """exa_regex=serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_regex=({event_name}(Kerberos[^",]+user)|([^"]+))""",
     """exa_json_path=$..eventType,exa_field_name=operation""",

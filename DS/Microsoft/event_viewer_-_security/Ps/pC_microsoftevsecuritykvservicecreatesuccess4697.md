@@ -19,16 +19,15 @@ Fields = [
 """({event_name}A service was installed in the system)"""
 """\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
-"""Security ID:\s*(|({user_sid}.+?))(\\[nrt]\s+|\s*)Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]\s+|\s*)Account Domain:\s*(|({domain}.+?))(\\[nrt]\s+|\s*)Logon ID:\s*(|({login_id}.+?))((\\[nrt])+\s*|\s*)Service Information:"""
+"""Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:"""
 """\sdestinationServiceName =({service_name}[^=]+?)\s+\w+="""
-"""\sService Name:\s*(|({service_name}[^:]+?)(_[0-9a-f]+)?)\s"""
+"""Service Name:(\\[nrt]|\s)*(|({service_name}[^:]+?)(_[0-9a-f]+)?)(\\[nrt]|\s)*Service File Name:"""
 """Service File Name:\s*((?-i)\\+[rnt]\\*)*({process_command_line}[^=]+?)\s*(\\t|\\r|\\n)*Service Type:"""
-"""\sService Type:\s*(|({service_type}.+?))(\\[nrt]\s+|\s)"""
+"""(\\[nrt]|\s)*Service Type:(\\[nrt]|\s)*({service_type}[^\s]+?)(\\[nrt]|\s)*Service Start Type:(\\[nrt]|\s)*({service_start_type}.+?)(\\[nrt]|\s)*"""
 """filePath=\s*\"*(?:|-|({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}.*?)))\\?\"""",
 """\sService File Name:\s*\"*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\"*\s"""
-"""\sService Start Type:\s*(|({service_start_type}.+?))(\\[nrt]\s+|\s)"""
 """Service Account:\s*(({account_domain}[^\\"\s]+)\\)?((?-i)\\+[rnt])*({account_name}[^"\s]+)"""
-"""Account Domain:\s*((?-i)\\+[rnt])*({domain}\S+?)((?-i)\\+[rnt])*\s*Logon ID:"""
+"""Service Account:(\\[nrt]|\s)*(({account_domain}[^\\"\s]+?)\\+)?(?!(\\*[nrt]\\+[nrt]))({account_name}[^"\s\\]+)(\\[nrt]|\s)*""""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""
 ]
 DupFields = [

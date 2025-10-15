@@ -17,9 +17,8 @@ Name = zeek-z-json-file-success-sbmfiles
     """"id\.resp_h":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"id\.resp_p":({dest_port}\d+)""",
     """"path":"({share_path}[^"]+)"""",
-    """"name":"({file_path}(({file_dir}[^\"]+?)[\\\/]+?)?({file_name}[^"\\\/]+?(\.({file_ext}[^\.\"\\\/]+))?)?)\\?""""
+    """"name":"({src_file_path}({file_path}(({src_file_dir}({file_dir}[^\"]+?))[\\\/]+?)?({src_file_name}({file_name}[^"\\\/]+?(\.({src_file_ext}({file_ext}[^\.\"\\\/]+)))?))?))\\?""""
   ]
-  DupFields = [ "file_name->src_file_name", "file_ext->src_file_ext", "file_path->src_file_path", "file_dir->src_file_dir" ]
 
 
 }

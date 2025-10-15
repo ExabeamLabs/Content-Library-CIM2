@@ -10,15 +10,14 @@ Name = amazon-awscloudtrail-json-file-read-getobject
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
 """exa_json_path=$.requestParameters.bucketName,exa_field_name=bucket_name""",
 """exa_json_path=$.requestParameters.Host,exa_field_name=bucket_host""",
+"""exa_json_path=$.requestParameters.Host,exa_field_name=src_host""",
 """exa_regex=requestParameters.+?key\\?":\s*\\?"({file_path}(({file_dir}[^\"]+?)[\\\/]+?)?({file_name}[^"\\\/]+?(\.({file_ext}[^\.\"\\\/]+))?)?)\\?"""",
 """exa_json_path=$.requestParameters.x-amz-copy-source,exa_regex=({src_file_path}(({src_file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))"""
 """exa_json_path=$..bytesTransferredIn,exa_field_name=bytes_in""",
 """exa_json_path=$..bytesTransferredOut,exa_field_name=bytes_out""",
 """exa_json_path=$..resources[*],exa_regex=Object.+?(?:ARN|arn)\\?":\s*\\?"({file_arn}[^"]+?)\\?""""
 """exa_json_path=$..resources[*],exa_regex=Bucket.+?(?:ARN|arn)\\?":\s*\\?"({bucket_arn}[^"]+?)\\?""""
-
   ]
-  DupFields = ["result->failure_code", "bucket_host->src_host"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -40,11 +39,11 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_id}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -82,6 +81,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
+      """exa_json_path=$..errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..errorMessage,exa_field_name=failure_reason""",
       """exa_json_path=$..readOnly,exa_field_name=readonly""",
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",

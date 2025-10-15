@@ -19,7 +19,7 @@ Name = trendmicro-ds-cef-network-traffic-fail-idsdeny
     """dvchost=({dest_host}[^\s]+)""",
     """act=IDS:({operation}[^\s]+)""",
     """cs2=({method}[^\s]+)""",
-    """CEF.*?\|(.*?\|){4}({rule}.+?)\|"""
+    """CEF.*?\|(.*?\|){4}({failure_reason}({rule}.+?))\|"""
     """dpt=({dest_port}\d+)"""
     """spt=({src_port}\d+)"""
     """cs1=({additional_info}.+?)\s\w+=""",
@@ -28,7 +28,6 @@ Name = trendmicro-ds-cef-network-traffic-fail-idsdeny
     """suid=({suid}.+?)\s\w+=""",
     """filePath=({file_path}({file_dir}[^,]*?)[\\\/]*({file_name}[^\\]+?(\.({file_ext}[^\.\s]+))?))\s\w+="""
   ]
-  DupFields = ["rule->failure_reason"]
 
 
 }

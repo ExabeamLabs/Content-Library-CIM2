@@ -6,7 +6,10 @@ Name = microsoft-o365-cef-app-file-success-addtogroup
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Add member to group""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields}[
+    """"NewValue":"({group_name}[^"]+)"[^\}]+?"Name":"Group\.DisplayName""""
+    """"Name":"Group\.DisplayName"[^\}]+?"NewValue":"({group_name}[^"]+)""""    
     """"targetResources":\[.+?"newValue":"\\*"({group_name}[^\\"]+)\\*"+,"displayName":"Group.DisplayName""""
+    """"Target":\[[^\]]+?"Type"\s*:1,\s*"ID":\s*"({target}[^"]+)"""
   ]
 
 cef-microsoft-app-activity = {

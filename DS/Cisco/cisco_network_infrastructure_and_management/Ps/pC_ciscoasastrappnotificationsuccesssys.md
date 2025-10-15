@@ -7,6 +7,7 @@ Name = cisco-asa-str-app-notification-success-sys
     Conditions = [ """: %SYS-""" ]
     Fields = ${DLCiscoParsersTemplates.cisco-system-info.Fields} [
       """\d+:\d+:\d+\s+({host}[\w\-.]+)\s"""
+      """({host}[\w\.\-]+):\s*(\d+:)?\s*({time}\w\w\w\s*\d+\s*\d\d:\d\d:\d\d\.\d\d\d): %SYS-5"""
     ]
  
 

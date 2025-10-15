@@ -27,8 +27,8 @@ Fields = [
   """\W(process_)?path=(|({path}[^=]+?))(\s+\w+=|\s*$)"""
   """\W(process_)?path=(|({process_path}({process_dir}(?:[^=]+)?[\\\/])?({process_name}[^\\\/=]+?)))(\s+\w+=|\s*$)"""
   """\Wprocess_guid=(|({process_guid}[^=]+?))(\s+\w+=|\s*$)"""
-  """\Wioc_value=(|({ioc}[^=]+?))(\s+\w+=|\s*$)"""
-  """\Wioc_query_string=(|({ioc}[^=]+?))(\s+\w+=|\s*$)"""
+  """\Wioc_value=(|({additional_info}({ioc}[^=]+?)))(\s+\w+=|\s*$)"""
+  """\Wioc_query_string=(|({additional_info}({ioc}[^=]+?)))(\s+\w+=|\s*$)"""
   """\Wparent_guid=(|({parent_process_guid}[^=]+?))\s*(\w+=|$)"""
   """\Wparent_name=(|({parent_process_name}[^=]+?))\s*(\w+=|$)"""
   """\Wcmdline=\s*({process_command_line}[^=]+?)\s*(\w+=|$)"""
@@ -36,9 +36,6 @@ Fields = [
   """\Wreport_score=({alert_severity}\d+)"""
   """\Whost_type=(|({host_type}[^\"]+?))(\s+\w+=|\s*$)"""
   """feed_name=(|({alert_name}[^\"]+?))(\s+\w+=|\s*$)"""
-]
-DupFields = [
-  "ioc->additional_info"
 ]
 SOAR {
   IncidentType = "generic"

@@ -21,15 +21,15 @@ ${AwsParserTemplates.aws-cloudtrail-json}{
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """AwsApiCall""", """"eventName":""", """"RunInstances"""" ] 
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
-  """"+requestParameters.+?imageId\\?":\s*\\?"({src_resource}[^"]+?)\\?"""",
-  """"+requestParameters.+?keyName\\?":\s*\\?"({key_name}[^"]+?)\\?"""",
-  """"+requestParameters.+?instanceType\\?":\s*\\?"({instance_type}[^"]+?)\\?"""",
-  """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
-  """"+responseElements.+?instanceId\\?":\s*\\?"({resource_id}[^"]+?)\\?"""",
-  """"+responseElements.+?privateDnsName\\?":\s*\\?"({new_host}[^"]+?)\\?"""",
-  """"+responseElements.+?availabilityZone\\?":\s*\\?"({availabilty_zone}[^"]+?)\\?"""",
-  """"+responseElements.+?privateIpAddress\\?":\s*\\?"({new_ip}[^"]+?)\\?"""",
-  """"+responseElements.+?groupName\\?":\s*\\?"({security_group}[^"]+?)\\?"""",
+  """imageId\\?":\s*\\?"({src_resource}[^"]+?)\\?"""",
+  """keyName\\?":\s*\\?"({key_name}[^"]+?)\\?"""",
+  """instanceType\\?":\s*\\?"({instance_type}[^"]+?)\\?"""",
+  """arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
+  """instanceId\\?":\s*\\?"({resource_id}[^"]+?)\\?"""",
+  """privateDnsName\\?":\s*\\?"({new_host}[^"]+?)\\?"""",
+  """availabilityZone\\?":\s*\\?"({availabilty_zone}[^"]+?)\\?"""",
+  """privateIpAddress\\?":\s*\\?"({new_ip}[^"]+?)\\?"""",
+  """groupName\\?":\s*\\?"({security_group}[^"]+?)\\?"""",
   """exa_json_path=$.requestParameters..imageId,exa_field_name=src_resource""",
   """exa_json_path=$.requestParameters..keyName,exa_field_name=key_name""",
   """exa_json_path=$.requestParameters..instanceType,exa_field_name=instance_type""",
@@ -41,7 +41,6 @@ ${AwsParserTemplates.aws-cloudtrail-json}{
   """exa_json_path=$.responseElements.instancesSet.items[*].groupSet.items[*].groupName,exa_field_name=security_group""",
   """exa_json_path=$.responseElements..instanceId,exa_field_name=instance_id""",
   ]
-  DupFields = ["result->failure_code", "src_resource->source_resource"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -63,11 +62,11 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_id}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -105,6 +104,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
+      """exa_json_path=$..errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..errorMessage,exa_field_name=failure_reason""",
       """exa_json_path=$..readOnly,exa_field_name=readonly""",
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",

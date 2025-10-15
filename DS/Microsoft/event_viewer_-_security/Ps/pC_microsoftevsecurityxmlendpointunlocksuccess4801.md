@@ -17,13 +17,12 @@ Fields = [
 """<Computer>({dest_host}({host}[\w\-.]+))<"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<EventID>({event_code}4801)"""
-"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-"""Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)"""
-"""Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)"""
-"""Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""
+"""Data Name(\\)?=('|")TargetUserName('|")>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""Data Name(\\)?=('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))"""
+"""Data Name(\\)?=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))"""
+"""Data Name(\\)?=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))"""
 """<Level>({run_level}[^<]+)"""
 ]
-DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

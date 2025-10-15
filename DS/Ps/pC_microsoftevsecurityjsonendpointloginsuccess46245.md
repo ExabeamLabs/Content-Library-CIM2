@@ -8,7 +8,6 @@ Conditions = [
 """"decoder.parent":"windows""""
 ]
 ExtractionType = json
-DupFields = [ "src_host_windows->src_host" ]
 ParserVersion = "v1.0.0"
 
 

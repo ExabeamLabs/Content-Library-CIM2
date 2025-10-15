@@ -16,7 +16,7 @@ json-github-actions = {
       """"transport_protocol_name":\s*"({protocol}[^"]+)""",
       """"user_agent":\s*"({user_agent}[^"]+)""",
       """"actor_ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """"repo":\s*"({object}[^"]+)""",
+      """"repo":\s*"({repository_name}({object}[^"]+))""",
       """"actor":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"operation_type":\s*"({operation_type}[^"]+)""",
@@ -32,6 +32,7 @@ json-github-actions = {
       """exa_json_path=$..user_agent,exa_field_name=user_agent""",
       """exa_json_path=$..actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """exa_json_path=$..repo,exa_field_name=object""",
+      """exa_json_path=$..repo,exa_field_name=repository_name""",
       """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$..operation_type,exa_field_name=operation_type""",
@@ -42,6 +43,7 @@ json-github-actions = {
       """exa_json_path=$.user_agent,exa_field_name=user_agent""",
       """exa_json_path=$.actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """exa_json_path=$.repo,exa_field_name=object""",
+      """exa_json_path=$.repo,exa_field_name=repository_name""",
       """exa_json_path=$.actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$.user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_json_path=$.operation_type,exa_field_name=operation_type""",
@@ -52,7 +54,6 @@ json-github-actions = {
       """exa_json_path=$..external_identity_username,exa_regex=^[^@"]+?@({domain}[^"]+)$""",
       """exa_json_path=$..external_identity_nameid,exa_regex=^[^@"]+?@({domain}[^"]+)$"""
       """exa_json_path=$.business,exa_field_name=company"""
-    ]
-    DupFields = [ "object->repository_name" 
+    
 }
 ```

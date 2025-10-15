@@ -21,7 +21,6 @@ Name = amazon-awscloudtrail-json-bucket-policy-modify-putbucketpolicy
   """exa_json_path=$.requestParameters.Host,exa_field_name=bucket_host""",
   """exa_json_path=$.resources..ARN,exa_field_name=bucket_arn"""
   ]
-  DupFields = ["result->failure_code"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -43,11 +42,11 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_id}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -85,6 +84,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
+      """exa_json_path=$..errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..errorMessage,exa_field_name=failure_reason""",
       """exa_json_path=$..readOnly,exa_field_name=readonly""",
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",

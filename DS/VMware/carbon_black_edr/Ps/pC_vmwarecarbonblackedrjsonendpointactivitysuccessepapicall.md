@@ -3,7 +3,7 @@
 {
 Name = vmware-carbonblackedr-json-endpoint-activity-success-epapicall
   ParserVersion = v1.0.0
-  Conditions = [ """"type":"endpoint.event.apicall"""", """"process_username":"""", """"event_origin":"NGAV"""" ]
+  Conditions = [ """"type":"endpoint.event.apicall"""", """"process_username":"""", """"event_origin":"""" ]
 
 carbonblack-edr-dl = {
     Vendor = VMware

@@ -22,11 +22,8 @@ Fields = [
 """service-name=({service_name}[^\^]+)(\^+|$)"""
 """server-type=({server_group}[^\^]+)(\^+|$)"""
 """src-program=({process_path}({process_dir}(?:[^\^]+)?[\\\/]+)?({process_name}[^\\\/\^]+))(\^+|$)"""
-"""db-user=([^\\\^]+\\)?({db_user}[^\^]+)(\^+|$)"""
+"""db-user=([^\\\^]+\\)?({account}({db_user}[^\^]+))(\^+|$)"""
 """os-user=([^\\\^]+\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\^\^"""
-]
-DupFields = [
-"db_user->account"
 ]
 ParserVersion = "v1.0.0"
 

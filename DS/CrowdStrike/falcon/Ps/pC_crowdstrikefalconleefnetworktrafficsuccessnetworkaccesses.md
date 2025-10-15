@@ -22,7 +22,7 @@ leef-crowdstrike-alert-t = {
       """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """\WsrcPort=({src_port}\d+)""",
       """\WdstPort=({dest_port}\d+)""",
-      """\Wcat=({category}[^\|]+?)\s*(\||\w+=|$|"+\s*$)""",
+      """\Wcat=({alert_type}({category}[^\|]+?))\s*(\||\w+=|$|"+\s*$)""",
       """\Wproto=({protocol}[^\s]+?)\s*(\||\w+=|$|"+\s*$)""",
       """\WfileName =({src_file_name}.+?)\s*(\||\w+=|$|"+\s*$)""",
       """\Wresource=({src_host}.+?)\s*(\||\w+=|$|"+\s*$)""",
@@ -31,7 +31,6 @@ leef-crowdstrike-alert-t = {
       """\Wurl=({additional_info}[^\|]+?)\s*(\||\w+=|$|"+\s*$)""",
       """\Wmd5=({hash_md5}[^\s]+?)\s*(\||\w+=|$|"+\s*$)""",
       """({app}FalconHost)"""
-    ]
-  DupFields = [ "category->alert_type" 
+    
 }
 ```

@@ -29,10 +29,7 @@ Fields = [
 """\WeventId=(|({alert_id}.+?))(\s+\w+=|\s*$)"""
 """\Wcs5=(|({malware_url}.+?))(\s+\w+=|\s*$)"""
 """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-"""CEF:([^\|]*\|){5}({alert_name}[^\|]+)\|({alert_severity}[^\|]+)"""
-]
-DupFields = [
-"alert_name->alert_type"
+"""CEF:([^\|]*\|){5}({alert_type}({alert_name}[^\|]+))\|({alert_severity}[^\|]+)"""
 ]
 ParserVersion = "v1.0.0"
 

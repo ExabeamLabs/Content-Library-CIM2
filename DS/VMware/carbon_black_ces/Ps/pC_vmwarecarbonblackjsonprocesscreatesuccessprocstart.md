@@ -6,10 +6,11 @@ Name = vmware-carbonblack-json-process-create-success-procstart
   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSSSSS"
   Conditions = [ """"type":"endpoint.event.procstart"""", """"process_username":"""", """"event_origin":"NGAV"""" ]
   Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields} [
+    """"type":"({event_name}[^"]+)"""",
+    """exa_json_path=$.type,exa_field_name=event_name"""
     """exa_json_path=$.parent_path,exa_regex=({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""
     """exa_json_path=$.device_timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d{7})"""
   ]
-  DupFields = ["operation_type->event_name"]
   ParserVersion = "v1.0.0"
 
 carbonblack-edr {

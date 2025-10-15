@@ -11,8 +11,8 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
    Fields = [
      """"aip":"({host}[^"]+)"""
      """"timestamp":"({time}\d{10})""",
-     """"DomainName":"({web_domain}[^"]+)""",
-     """"event_simpleName":"({event_code}[^"]+)""",
+     """"DomainName":"({dns_query}({web_domain}[^"]+))""",
+     """"event_simpleName":"({alert_subject}({alert_type}({alert_name}({event_code}[^"]+))))""",
      """"event_platform":"({os}[^"]+)"""",
      """"aid":"({aid}[^"]+)""",
      """"cid":"({cid}[^"]+)""",
@@ -23,7 +23,11 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
      """exa_json_path=$.aip,exa_field_name=host""",
      """exa_json_path=$.timestamp,exa_field_name=time""",
      """exa_json_path=$.DomainName,exa_field_name=web_domain""",
+     """exa_json_path=$.DomainName,exa_field_name=dns_query""",
      """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
+     """exa_json_path=$.event_simpleName,exa_field_name=alert_name""",
+     """exa_json_path=$.event_simpleName,exa_field_name=alert_type""",
+     """exa_json_path=$.event_simpleName,exa_field_name=alert_subject""",
      """exa_json_path=$.event_platform,exa_field_name=os""",
      """exa_json_path=$.aid,exa_field_name=aid""",
      """exa_json_path=$.cid,exa_field_name=cid""",
@@ -32,7 +36,6 @@ Name = crowdstrike-falcon-sk4-alert-trigger-suspiciousdnsrequest
      """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)""",
      """exa_json_path=$.aip,exa_field_name=aip"""
     ]
-    DupFields = ["event_code->alert_name", "event_code->alert_type", "event_code->alert_subject", "web_domain->dns_query"]
 
 
 }

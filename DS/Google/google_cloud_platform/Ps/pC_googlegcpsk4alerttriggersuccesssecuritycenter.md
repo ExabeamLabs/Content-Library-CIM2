@@ -9,7 +9,7 @@ Name = google-gcp-sk4-alert-trigger-success-securitycenter
   Conditions = [ """finding_class:""", """resource_name:""", """category:""", """"security"""", """security_marks"""]
   Fields = [
     """event_time\s*\{.+?seconds:\s*({time}\d{10})""",
-    """category:\s*"({alert_name}[^"]+)""",
+    """category:\s*"({event_name}({alert_name}[^"]+))""",
     """finding_class:\s*({alert_type}[^\s\\]+)""",
     """severity:\s*({alert_severity}[^\s\\]+)""",
     """resource_name:\s*"({resource_path}[^"]+)""",
@@ -17,7 +17,6 @@ Name = google-gcp-sk4-alert-trigger-success-securitycenter
     """37:\s*"({additional_info}[^"]+)"""",
     """"security".+?1:\s*\{.+?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   ]
-  DupFields = [ "alert_name->event_name", "resource->object"] 
 
 
 }

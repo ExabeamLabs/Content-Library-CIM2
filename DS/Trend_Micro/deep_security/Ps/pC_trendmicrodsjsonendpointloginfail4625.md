@@ -12,15 +12,12 @@ Name = trendmicro-ds-json-endpoint-login-fail-4625
     """Account For[\s;]*Which Logon Failed(:|=)[\s;]*Security ID(:|=)\s*([\/\\]{0,9}NULL SID|({user_sid}[^=:]+?))[\s;]*Account Name"""  
     """Logon Failed(:|=).+?Account Name(:|=)\s*(-|SYSTEM|d2\/|({email_address}[^\s@;]+?@[^\s@;]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)"""  
     """Logon Failed(:|=).+?Account Domain(:|=)\s*(|-|\?|({domain}[^\s]+?))[\s;]*Failure Information""" 
-    """Sub Status(:|=)\s*({result_code}[^\s;]+?)[\s;]*Process Information(:|=)""" 
-    """Workstation Name(:|=)\s*(?:-|(::ffff:)?({src_host_windows}[^\s;]+))[\s;]*Source Network Address(:|=)"""  
+    """Sub Status(:|=)\s*({failure_code}({result_code}[^\s;]+?))[\s;]*Process Information(:|=)""" 
+    """Workstation Name(:|=)\s*(?:-|(::ffff:)?({src_host}({src_host_windows}[\w\-\.]+)))[\s;]*Source Network Address(:|=)"""  
     """Source Network Address(:|=)\s*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s;]*Source Port(:|=)"""  
     """Logon Process(:|=)\s*({auth_process}[^\s;]+)[\s;]*Authentication Package(:|=)""" 
     """Authentication Package(:|=)\s*({auth_package}[^\s;]+?)[\s;]*Transited Services(:|=)"""
     """Failure Reason:\s*({failure_reason}[^\.]+)\s*"""
-  ]
-  DupFields = [
-    "result_code->failure_code", "src_host_windows->src_host"
   ]
 
 trendmicro-ds-ossecevents = {

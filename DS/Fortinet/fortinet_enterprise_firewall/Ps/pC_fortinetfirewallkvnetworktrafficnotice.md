@@ -25,6 +25,7 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\Wuser="\s*((?:host\/({src_host}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)\s*"""",
     """\Wsentbyte=({bytes_out}\d+)""",
     """\Wrcvdbyte=({bytes_in}\d+)""",
+    """\Wrcvdbyte=({bytes}\d+)""",
     """\Waction=\"*({action}[^\"]+?)\"*(\s+\w+=|\s*$)""",
     """\Wsentpkt=({packets_sent}\d+)""",
     """policyid=({policy_id}\d+)""",
@@ -43,7 +44,6 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """policyname="({policy_name}[^"]+)""""
     """url="({url}[^"]+)""""
 ]
- DupFields = [ "bytes_in->bytes"]
 
 
 }

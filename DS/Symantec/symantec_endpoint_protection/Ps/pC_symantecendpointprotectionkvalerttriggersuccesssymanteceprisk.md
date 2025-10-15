@@ -8,6 +8,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-symanteceprisk
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ SymantecServer: """, """Event Description:""", """Web Attack:""" ]
   Fields = [
+    """(<({alert_severity}({priority}\d+))>)?({time}\w+\s\d+\s\d+:\d+:\d+)\s""",
     """Begin:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """\d\d:\d\d:\d\d\s({host}[\w.\-]+)\s+SymantecServer:\s*({src_host}[^,]+)""",
     """\s*\w+,({host}[\w\-.]+),"*Event Description:""",

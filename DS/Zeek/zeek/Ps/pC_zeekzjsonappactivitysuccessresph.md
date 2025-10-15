@@ -13,7 +13,6 @@ Name = zeek-z-json-app-activity-success-resph
     """"reply_msg":\s*"({additional_info}[^=]+?)",""",
     """"data_channel\.resp_p":\s*({dest_port}\d+)""",
   ]
-  DupFields = ["transaction_id->trans_id"]
 
 json-bro-activity = {
   Vendor = Zeek

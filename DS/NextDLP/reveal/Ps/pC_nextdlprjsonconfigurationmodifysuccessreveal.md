@@ -9,7 +9,7 @@ Name = nextdlp-r-json-configuration-modify-success-reveal
   Conditions = [ """reveal""",""""sensor_type":"""", """"tags":""" ]
   Fields = [
     """"timestamp"+:\s*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """"agent_hostname":\s*"({host}[\w\-\.]+)""""
+    """"agent_hostname":\s*"({src_host}({host}[\w\-\.]+))""""
     """"description"+:\s*"+({additional_info}[^\n]+?)\s*","""
     """"username"+:\s*"+(({full_name}[^\\\s"]+\s[^"\\]+)|(({domain}[^"\s\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))","""
     """"user_name":\s*"(({full_name}({first_name}[^\s"]+)\s({last_name}[^\s"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -30,7 +30,6 @@ Name = nextdlp-r-json-configuration-modify-success-reveal
     """size (({bytes}\d+(\.\d+)?)({bytes_unit}(?i)kb|mb|gb))"""
     """"score":\s*"?({alert_severity}\w+),"""
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

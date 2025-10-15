@@ -76,7 +76,9 @@ s-okta-app-login = {
     """exa_json_path=$..displayMessage,exa_field_name=event_name"""
     """exa_json_path=$.detail.client.userAgent.rawUserAgent,exa_field_name=user_agent"""
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^\{reasons=({failure_reason}[^=]+?),\s\w+="""
-   ] 
+    """"zone":"(null|({src_network_zone}[^",]+))""""
+    """exa_json_path=$.client.zone,exa_field_name=src_network_zone,exa_match_expr=!Contains($.client.zone,"null")"""
+       ] 
  },
 
   json-okta-auth = {

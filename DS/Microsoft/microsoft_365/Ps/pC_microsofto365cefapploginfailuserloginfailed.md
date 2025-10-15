@@ -14,6 +14,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"ErrorNumber":\s*"({error_code}\d+)"""",
     """"OS.*?Value":\s*"({os}[^"]+)|"Value":\s*"({=os}[^"]+)",\s*"Name":\s*"OS"""",
     """"BrowserType.*?Value":\s*"({browser}[^"]+)|"Value":\s*"({=browser}[^"]+)",\s*"Name":\s*"BrowserType"""",
+    """"UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """suser=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"Actor":\[[^\]]+?"Type":5,"ID":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\}\]""",
     """"Actor":\[[^\]]+?"ID":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))","Type":5\}\]""",

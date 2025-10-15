@@ -20,6 +20,9 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """"subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """"subjectDomainName":"({domain}[^"\s]+?)\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
+    """UserAccountControl":"(-|({uac_status}[^"]+))","UserParameters""""
+    """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
+    """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
   ]
   DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"

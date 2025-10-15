@@ -22,14 +22,11 @@ Fields = [
   """\Whostname="(((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|((www\.)?({web_domain}[\w\-\.]+)))""""
   """\Wservice="?({protocol}\w+)"""
   """\Wuser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """\Wattack="({alert_name}[^"]+)""""
+  """\Wattack="({alert_subject}({alert_name}[^"]+))""""
   """\Wmsg="({additional_info}[^"]+)""""
   """\Waction="({action}[^"]+)"""",
   """\Wtz="?({tz}[+-]\d+)"""
   """forwardedfor="*({more_info}[^"=]+)"""
-]
-DupFields = [
-  "alert_name->alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

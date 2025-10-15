@@ -26,10 +26,9 @@ Fields = [
 """\sfileType=({file_type}\w+)"""
 """"+parent"+:\{.+?"+name"+:"+({file_dir}[^"]+)"""
 """"file_path":"({file_dir}[^"]+)""""
-""""+event_type"+:"+({access}[^"]+)"+"""
+""""+event_type"+:"+({operation}({access}[^"]+))"+"""
 """(\||\s)requestClientApplication=({app}.+?)(\s+\w+=|\s*$)"""
 ]
-DupFields = [ "access->operation"]
 ParserVersion = "v1.0.0"
 
 

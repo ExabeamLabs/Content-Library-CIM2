@@ -6,11 +6,10 @@ Name = "trendmicro-ddi-cef-alert-trigger-success-473"
    ParserVersion = v1.0.0
    Conditions = [ """CEF:""", """|Trend Micro|Apex Central|""" ]
    Fields = ${TrendMicroParserTemplates.cef-trendmicro-security-alert.Fields}[
-     """\Wcs1=(?:N\/A|({alert_name}[^=]+?))\s+\w+=""",
-     """CEF:([^\|]*\|){5}({alert_name}[^\|]+)\|(Unknown|({alert_severity}[^\|]+))""",
+     """\Wcs1=(?:N\/A|({alert_type}({alert_name}[^=]+?)))\s+\w+=""",
+     """CEF:([^\|]*\|){5}({alert_type}({alert_name}[^\|]+))\|(Unknown|({alert_severity}[^\|]+))""",
      """cn2=({cn2}[^\s"]+)""",
    ]
-   DupFields = [ "result->action", "alert_name->alert_type" ]
  
 cef-trendmicro-security-alert = {
   Vendor = Trend Micro
@@ -28,7 +27,7 @@ cef-trendmicro-security-alert = {
     """\Wdpt=({dest_port}\d+)""",
     """\Wsrc=(::|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s""",
     """\Wspt=({src_port}\d+)""",
-    """\Wact=(Unknown|({result}[^=]+?))(?:\s+\w+=|\s*$|\s*")""",
+    """\Wact=(Unknown|({action}({result}[^=]+?)))(?:\s+\w+=|\s*$|\s*")""",
     """\Wcn3=({threat_type}[^=]+?)(\s+\w+=|\s*$|\s*")""",
     """\Wrequest="*(|({malware_url}[^"]+?))(\s+\w+=|\s*$|\s*"|”\]+\s+\w+=)""",
     """\WdeviceProcessName =({process_path}({process_dir}[^=]*?)({process_name}[^\/\\=]+?))(\s+\w+=|\s*$|\s*")""",

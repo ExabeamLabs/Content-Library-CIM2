@@ -9,6 +9,7 @@ Name = cisco-asa-str-ssh-start-session
 ]
   Fields = ${CiscoParsersTemplates.cisco-system-info-aa.Fields} [
     """({time}\d\d\d\d\-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s({host}[\w\-\.]+)"""
+    """({host}[\w\.\-]+): ({time}\w\w\w\s*\d+\s*\d\d:\d\d:\d\d\.\d\d\d): %SSH-5-SSH2_SESSION:"""
     """SSH2_SESSION:\s({event_name}SSH2 Session request) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?(.+? for user '({user}[\w\.\-\!\#\^\~]{1,40}\$?))?"""
     """({result}Succeeded|Failed)"""
   ]

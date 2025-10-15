@@ -23,6 +23,7 @@ Name = zscaler-ia-json-http-session-transactionsize
     """"useragent":"(Unknown|({user_agent}[^"]+))"""",
     """"clientip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
     """"status":"({result_code}\d{1,3})"""",
+    """"status":"({http_response_code}\d{1,3})"""",
     """"user":"(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """"url":"({url}(\w{1,5}:\/\/)?[^"\/\?]+({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)"""",
     """"hostname":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}[^"]+))"""",
@@ -45,6 +46,7 @@ Name = zscaler-ia-json-http-session-transactionsize
     """exa_json_path=$..useragent,exa_field_name=user_agent,exa_match_expr=!InList(toLower($.[useragent]),"unknown")""",
     """exa_json_path=$..ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """exa_json_path=$..status,exa_field_name=result_code""",
+    """exa_json_path=$..status,exa_field_name=http_response_code""",
     """exa_json_path=$..user,exa_regex=(({email_address}[^@"]+@[^\."]+\.[^"]+)|(AWS|([^"]+?->[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """exa_json_path=$..url,exa_regex=({url}(\w{1,5}:\/\/)?[^"\/\?]+({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)"""
     """exa_json_path=$..hostname,exa_regex=(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({web_domain}[^"]+))""",
@@ -54,7 +56,6 @@ Name = zscaler-ia-json-http-session-transactionsize
     """exa_json_path=$..location,exa_field_name=location""",
     """exa_json_path=$..department,exa_field_name=department"""
   ]
-  DupFields = [ "result_code->http_response_code" ]
 
 
 }

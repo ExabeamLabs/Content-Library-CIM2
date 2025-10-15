@@ -8,7 +8,7 @@ Name = symantec-endpointprotection-kv-app-notification-eventdescription
   TimeFormat = ["yyyy-MM-dd HH:mm:ss","MMM dd HH:mm:ss"]
   Conditions = [ """ SymantecServer: """, """,Event Description: """ ]
   Fields = [
-    """({time}\w+\s\d+\s\d+:\d+:\d+)?\s*({host}[\w\-.]+)\s+SymantecServer:""",
+    """(<({alert_severity}({priority}\d+))>)?({time}\w+\s\d+\s\d+:\d+:\d+)?\s*({host}[\w\-.]+)\s+SymantecServer:""",
     """Event time:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """Category:\s*({category}[^,]+)""",
     """Event Description:\s*({event_name}[^,]+?)\.?\s*(,|$)"""

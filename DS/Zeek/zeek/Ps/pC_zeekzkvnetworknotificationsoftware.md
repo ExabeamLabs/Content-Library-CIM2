@@ -12,7 +12,6 @@ Name = zeek-z-kv-network-notification-software
     """({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident)[^\s]*?""",
     """({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)[^\s]*?""",
 	]
-  DupFields = [ "name->app", "unparsed_version->user_agent" ]
   ParserVersion = "v1.0.0"
 
 

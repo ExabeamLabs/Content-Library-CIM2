@@ -18,7 +18,7 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
 Fields = [
   """"time":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"""
   """"category":\s*"({category}[^"]+)"""
-  """"Action":\s*"({action}[^"]+)"""
+  """"Action":\s*"({result}[^"]+)"""
   """"SourcePort":\s*({src_port}\d+)"""
   """"DestinationPort":\s*({dest_port}\d+)"""
   """"Protocol":\s*"({protocol}[^"]+)""""

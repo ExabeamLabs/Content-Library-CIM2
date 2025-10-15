@@ -5,17 +5,17 @@ Name = amazon-awscloudtrail-json-role-policy-attach-success-attachrolepolicy
   #TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """AwsApiCall""", """"eventName":""", """"AttachRolePolicy"""" ]
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
-  """"requestParameters":\{[^\}]+userName":"({identities}[^"]+)""""
+  """"requestParameters":\{[^\}]+userName":"({role}({identities}[^"]+))""""
   """"requestParameters":\{("[^,]+,)*"policyArn\\?":\s*\\?"?[^"]*?:policy\/([^\/"]+\/)?({policy_name}[^"\/]+)\\?""""
   """"policyArn":"({policy_arn}[^"]+)""""
   """"policyName":"({policy_name}[^"]+)""""
   """exa_json_path=$.requestParameters.roleName,exa_field_name=identities""",
+  """exa_json_path=$.requestParameters.roleName,exa_field_name=role""",
   """exa_json_path=$.requestParameters.policyArn,exa_field_name=policy_arn""",
   """exa_json_path=$.requestParameters.policyName,exa_field_name=policy_name""",
   """exa_json_path=$.requestParameters.policyArn,exa_regex=[^"]*?:policy\/([^\/"]+\/)?({policy_name}[^"\/]+)$"""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["identities->role"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -37,11 +37,11 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_id}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -79,6 +79,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
+      """exa_json_path=$..errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..errorMessage,exa_field_name=failure_reason""",
       """exa_json_path=$..readOnly,exa_field_name=readonly""",
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",

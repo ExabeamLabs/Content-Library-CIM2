@@ -17,9 +17,8 @@ Name = zscaler-ia-cef-http-session-spriv
     """([^\|]*\|){5}({action}[^\|]+)""",
     """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
     """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
-    """\slogin=({email_address}[^@\s]+@[^@\s]+)\s\w+=""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+    """\slogin=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s\w+=""",
+    """\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """\|({severity}\d+)\|act=""",
     """proto=({protocol}[^\s]+)""",
     """\seurl=({url}[^\s\/\?]+({uri_path}\/[^\?\s]+)?({uri_query}\?[^\s]+)?)""",
@@ -51,7 +50,7 @@ Name = zscaler-ia-cef-http-session-spriv
     """requestContext=(None|({referrer}[^\s]+?))(\|[\w-]+\||\s\w+=|\s*$)""",
     """\sdhost=(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^=\s]+\.\w+))\s+\w+=""",
     """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(\w+=|$)""",
-    """\sspriv=({location}[^=]+?)\s\w+="""
+    """\sspriv=({location_area}({location}[^=]+?))\s\w+="""
     """DownloadFileName =(NA|None|({src_file_name}[^=\s]+))\s+"""
     """UploadFileName =(NA|None|({file_name}[^=\s]+))\s+"""
     """UploadFileName =(NA|None|({file_name}[^"]+?(\.({file_ext}[^"]+)))?) dlpdict"""
@@ -67,7 +66,6 @@ Name = zscaler-ia-cef-http-session-spriv
     """devicehostname=(NA|({src_host}[\w\-\.]+))(\s\w+=|$)"""
     """\scs4=(None|({malware_family}[^=]+?))\scs4Label=malwarecat"""
   ]
-  DupFields = ["ransomware_name->threat_category", "risk_level->suspicious_content","location->location_area"]
 
 
 }

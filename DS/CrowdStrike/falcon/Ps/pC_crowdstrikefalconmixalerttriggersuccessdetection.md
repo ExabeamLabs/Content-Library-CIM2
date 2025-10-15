@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """"eventCreationTime":\s*({time}\d{10})"""
 """"DetectName":\s*"({alert_type}[^"]+)"""
-""""Technique":"({alert_name}[^"]+)""""
+""""Technique":"({alert_subject}({alert_name}[^"]+))""""
 """"Severity":\s*({alert_severity}[^",]+)"""
 """"SeverityName":\s*"({alert_severity}[^"]+?)""""
 """"DetectId":\s*"({alert_id}[^"]+)"""
@@ -28,8 +28,8 @@ Fields = [
 """"IOCValue":\s*"({ioc}[^"]+)""""
 """"MD5String":\s*"(|({hash_md5}[^"]+))""""
 """"UserName":\s*"(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-""""FalconHostLink":\s*"({falcon_host_link}[^"]+)""""
-""""DetectDescription":\s*"\s*({alert_description}[^"]+?)\s*""""
+""""FalconHostLink":\s*"({malware_url}({falcon_host_link}[^"]+))""""
+""""DetectDescription":\s*"\s*({additional_info}({alert_description}[^"]+?))\s*""""
 """"GrandparentImageFileName\\*"+:\s*\\*"+({grandparent_image_filename}[^,]+?)\\*"+,"""
 """"GrandparentCommandLine\\*"+:\s*\\*"+({grandparent_command_line}[^},]+?)\\*\s*"+(,|})"""
 """"ParentImageFileName\\*"+:\s*\\*"+({parent_image_filename}[^,]+?)\\*"+,"""
@@ -78,6 +78,7 @@ Fields = [
 """exa_json_path=$..eventType,exa_field_name=event_category""",
 """exa_json_path=$..DetectName,exa_field_name=alert_type""",
 """exa_json_path=$..Technique,exa_field_name=alert_name""",
+"""exa_json_path=$..Technique,exa_field_name=alert_subject""",
 """exa_json_path=$..Severity,exa_field_name=alert_severity""",
 """exa_json_path=$..SeverityName,exa_field_name=alert_severity""",
 """exa_json_path=$..DetectId,exa_field_name=alert_id""",
@@ -93,7 +94,9 @@ Fields = [
 """exa_json_path=$..MD5String,exa_field_name=hash_md5""",
 """exa_json_path=$..UserName,exa_regex=(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """exa_json_path=$..FalconHostLink,exa_field_name=falcon_host_link""",
+"""exa_json_path=$..FalconHostLink,exa_field_name=malware_url""",
 """exa_json_path=$..DetectDescription,exa_field_name=alert_description""",
+"""exa_json_path=$..DetectDescription,exa_field_name=additional_info""",
 """exa_json_path=$..GrandparentImageFileName,exa_field_name=grandparent_image_filename""",
 """exa_json_path=$..GrandparentCommandLine,exa_field_name=grandparent_command_line""",
 """exa_json_path=$..ParentImageFileName,exa_field_name=parent_image_filename""",
@@ -127,6 +130,7 @@ Fields = [
 """exa_json_path=$.event.ComputerName,exa_regex=^({dest_host}[\w\-.]+)$""",
 """exa_regex="destinationServiceName":"({alert_source}[^"]+)""""
 """exa_json_path=$..Name,exa_field_name=alert_name"""
+"""exa_json_path=$..Name,exa_field_name=alert_subject"""
 """exa_json_path=$.SourceAccountName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """exa_json_path=$.UTCTimestamp,exa_field_name=time"""
 """exa_regex="FileName":\s*"({file_name}[^"]+?(\.({file_ext}\w+))?)","""
@@ -143,11 +147,6 @@ Fields = [
 """"SourceEndpointIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """"SourceProducts":"({src_product}[^"]+)"""",
 """"SourceAccountName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-]
-DupFields = [
-"falcon_host_link->malware_url"
-"alert_description->additional_info"
-"alert_name->alert_subject"
 ]
 SOAR {
   IncidentType = "malware"

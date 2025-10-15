@@ -20,6 +20,7 @@ Name = exabeam-aa-kv-rule-trigger-success-anomaly
       """\salert_source="({alert_source}anomaly)""""
       """\sid="({container_id}[^"]+)"""",
       """\sscore="({risk_score}\d+)"""",
+      """\sscore="({original_risk_score}\d+)"""",
       """\suser="({user}[^"]+)"""",
       """\sevent_type="({event_category}[^"]+)"""",
       """\srule_id="({rule_id}[^"]+)"""",
@@ -55,7 +56,6 @@ Name = exabeam-aa-kv-rule-trigger-success-anomaly
       """\sweb_domain="({web_domain}[^"]+)"""",
       """rule_description="({observed_activity}[^"]+)"""
     ]
-    DupFields = [  "risk_score -> original_risk_score" ]
   
 
 }

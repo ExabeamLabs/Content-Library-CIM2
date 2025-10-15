@@ -4,7 +4,9 @@
 Name = github-g-json-repository-member-add-success-teamaddmember
   ParserVersion = "v1.0.0"
   Conditions = [ """"action":""", """"team.add_member"""", """"operation_type":""", """"create"""" ]
-  DupFields = ${GithubParsersTemplates.json-github-actions-1.DupFields}[ "operation_type->operation" ]
+  Fields = ${GithubParsersTemplates.json-github-actions-1.Fields} [
+    """exa_json_path=$..operation_type,exa_field_name=operation"""
+  ]
 
 json-github-actions-1 = {
     Vendor = GitHub
@@ -17,6 +19,7 @@ json-github-actions-1 = {
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
       """exa_json_path=$..actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_json_path=$..repo,exa_field_name=object"""
+      """exa_json_path=$..repo,exa_field_name=repository_name"""
       """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..operation_type,exa_field_name=operation_type"""
@@ -37,7 +40,6 @@ json-github-actions-1 = {
       """exa_json_path=$.request_method,exa_field_name=method"""
       """exa_json_path=$.url_path,exa_field_name=uri_path"""
       """exa_json_path=$.query_string,exa_field_name=query"""
-    ]
-    DupFields = [ "object->repository_name" 
+    
 }
 ```

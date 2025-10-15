@@ -7,7 +7,7 @@ Name = beyondtrust-privmgmt-kv-process-create-success-processstarted
     TimeFormat = "MM/dd/yyyy HH:mm:ss a"
     Conditions = [ """SourceName =Avecto Defendpoint Service""", """Message=Process started"""]
     Fields = [
-      """ComputerName =({host}[^\s]+)""",
+      """ComputerName =({dest_host}({host}[^\s]+))""",
       """Message=({operation_type}.+?)\s+Command Line:""",
       """User Name:\s*(?:[A-F\d\-]{36}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+User Domain SID:""",
       """User Domain Name:\s*({domain}[\w\.\-]{1,40}?)\s+User Domain Name""",
@@ -15,12 +15,11 @@ Name = beyondtrust-privmgmt-kv-process-create-success-processstarted
       """Token:\s*({token}.*?)\s+Token Description:""",
       """MD5:\s*({hash_md5}[^\s]+)""",
       """Command Line:\s*({process_command_line}.+?)\s*Process Id:""",
-      """Message Description:\s*(<.+?>)?\s+(Unique Process ID:)?\s*({process_guid}[^\s]+)\s+Workstyle ID:""",
+      """Message Description:\s*(<.+?>)?\s+(Unique Process ID:)?\s*({process_id}({process_guid}[^\s]+))\s+Workstyle ID:""",
       """Parent Process Unique ID:\s*(?:<None>|({parent_process_guid}[^\s]+))\s+Parent Process File Name:""",
       """File Name:\s*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?)))\s+Hash:"""
       """Parent Process File Name:\s*(|({parent_process_path}({parent_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({parent_process_name}.+?)))\s+COM CLSID:"""
     ]
-  DupFields = [ "host->dest_host","process_guid->process_id" ]
   ParserVersion = "v1.0.0"
   
 

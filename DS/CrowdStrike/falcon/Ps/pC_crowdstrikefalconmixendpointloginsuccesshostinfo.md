@@ -13,7 +13,7 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-hostinfo"
 ]
   Fields = [      
     """"timestamp":\s*"*({time}\d{13})"""",
-    """"+MachineDn"+:"+CN\\*(=|u003d)?({dest_host}[^,]+)""",
+    """"+MachineDn"+:"+CN\\*(=|u003d)?({host}({dest_host}[\w\-\.]+))""",
     """"aid":"({aid}[^"]+)""",
     """"event_simpleName":"({event_code}[^"]+)""",
     """suser=(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
@@ -26,7 +26,7 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-hostinfo"
     """"ComputerName":"({host}[\w\-\.]+)"""",
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_regex="timestamp":\s*"*({time}\d{13})""""
-	  """exa_json_path=$.MachineDn,exa_regex=CN\\*(=|u003d)?({dest_host}[^,]+)""",
+	  """exa_json_path=$.MachineDn,exa_regex=CN\\*(=|u003d)?({host}({dest_host}[\w\-\.]+))""",
 	  """exa_json_path=$.aid,exa_field_name=aid""",
 	  """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 	  """exa_json_path=$.MachineDomain,exa_field_name=domain""",
@@ -37,7 +37,6 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-hostinfo"
     """exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
   ]
-  DupFields = [ "dest_host->host" ]
 
 
 }

@@ -31,10 +31,8 @@ Name = "vmware-carbonblackedr-json-network-session-success-netconn-2"
     """exa_json_path=$.remote_port,exa_field_name=dest_port"""
     """exa_json_path=$.local_port,exa_field_name=src_port"""
     """exa_json_path=$.type,exa_field_name=operation_type"""
+    """exa_json_path=$.type,exa_field_name=event_name"""
     """exa_json_path=$.netconn_protocol,exa_regex=(PROTO_)?({protocol}[^\"]+)"""
-  ]
-  DupFields = [
-    "operation_type->event_name"
   ]
 
 

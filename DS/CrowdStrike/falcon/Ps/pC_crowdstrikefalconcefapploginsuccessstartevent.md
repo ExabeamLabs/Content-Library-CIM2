@@ -20,18 +20,14 @@ Fields = [
   """"Success":\s*({result}[^",}]+)"""
   """"UserName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"UserName":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """"HostnameField":\s*"({host}[^"@]+)""""
+  """"HostnameField":\s*"({dest_host}({host}[^"@]+))""""
   """destinationServiceName =({app}[^=]+)\s\w+="""
   """"destinationServiceName":"({app}[^=]+?)"(\s\w+=)?"""
-  """({event_name}RemoteResponseSessionStartEvent)"""
+  """({operation}({event_name}RemoteResponseSessionStartEvent))"""
   """"SessionId":"({session_id}[^",]+)""""
   """"(?i)EventType":\s*"({operation_details}[^",]+)""""
   """"cid":"({cid}[^"]+)""""
   """"customerIDString":"({cid}[^"]+)""""
-]
-DupFields = [
-  "event_name->operation"
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

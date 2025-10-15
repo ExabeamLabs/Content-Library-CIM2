@@ -1,0 +1,33 @@
+#### Parser Content
+```Java
+{
+Name = "vmware-carbonblackedr-json-alert-trigger-success-watchlist"
+  Vendor = "VMware"
+  Product = "Carbon Black EDR"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ" 
+  ExtractionType = json
+  Conditions = [ """"type":"watchlist.hit"""", """"process_username":"""", """"severity":""" ]
+  Fields = [
+    """exa_json_path=$.create_time,exa_field_name=time"""
+    """exa_json_path=$.process_pid,exa_field_name=process_id"""
+    """exa_json_path=$.process_cmdline,exa_field_name=process_command_line"""
+    """exa_json_path=$.process_username,exa_regex=(({domain}[^\\,]+)\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.device_name,exa_regex=^(\w+\\+)?({host}[^."]+)$"""
+    """exa_json_path=$.process_path,exa_regex=({path}({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""
+    """exa_json_path=$.parent_cmdline,exa_field_name=parent_process_command_line"""
+    """exa_json_path=$.parent_pid,exa_field_name=parent_process_id"""
+    """exa_json_path=$.process_guid,exa_field_name=process_guid"""
+    """exa_json_path=$.parent_guid,exa_field_name=parent_process_guid"""
+    """exa_json_path=$.severity,exa_field_name=alert_severity"""
+    """exa_json_path=$.watchlists[0].name,exa_field_name=alert_name"""
+    """exa_json_path=$.watchlists[0].id,exa_field_name=alert_id"""
+    """exa_json_path=$.type,exa_field_name=alert_type"""
+    """exa_json_path=$.ioc_hit,exa_field_name=ioc""",
+    """exa_json_path=$.report_tags,exa_field_name=tags""",
+    """exa_json_path=$.process_publisher,exa_field_name=additional_info"""    
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

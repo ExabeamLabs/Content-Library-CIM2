@@ -26,6 +26,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\ssentpkt=({packets_out}\d+)""",
     """\ssentbyte=({bytes_out}\d+)""",
     """\srcvdbyte=({bytes_in}\d+)""",
+    """\srcvdbyte=({bytes}\d+)""",
     """\sproto=({protocol}[^\s]+)""",
     """\sduration=({duration}[^\s]+)""",
     """\sdstintf=\\?"?({dest_interface}[^=]+?)\\?"?\s+(\w+=|$)""",
@@ -64,9 +65,6 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\Wtz=\\?"?({tz}[+-]\d+)"""
     """forwardedfor="*({more_info}[^"=]+)"""
     """url="({url}[^"]+)""""
-  ]
-  DupFields = [
-    "bytes_in->bytes"
   ]
 
 

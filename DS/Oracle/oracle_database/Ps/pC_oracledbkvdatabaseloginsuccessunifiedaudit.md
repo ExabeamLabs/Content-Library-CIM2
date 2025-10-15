@@ -9,13 +9,12 @@ Name = oracle-db-kv-database-login-success-unifiedaudit
    Conditions = [ """ACTION:"100"""", """DBUSER:"""", """DBID:"""", """Oracle Unified Audit"""]
    Fields = [
      """({host}[\w\-.]+)\s+(?:journal:)?\s+Oracle Unified Audit""",
-     """DBID:\s*"+({db_name}\d+)""",
+     """DBID:\s*"+({db_id}({db_name}\d+))""",
      """DBUSER:\s*"+({db_user}[^":]+)""",
      """CURUSER:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """ACTION:"({db_operation}100)"""",
      """RETCODE:"({return_code}\d+)""""
     ]
-   DupFields = [ "db_name->db_id" ]
  
 
 }

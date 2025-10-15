@@ -20,7 +20,7 @@ sailpoint-iiq-events = {
     """"TARGET\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"SOURCE\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"APPLICATION\\?":\\?"({app}[^"]+?)\\?"""",
-    """"ACTION\\?":\\?"({operation}[^"]+?)\\?""""
+    """"ACTION\\?":\\?"({event_name}({operation}[^"]+?))\\?""""
   
 }
 ```

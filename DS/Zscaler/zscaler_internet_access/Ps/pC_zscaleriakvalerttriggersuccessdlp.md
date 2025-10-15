@@ -12,7 +12,7 @@ Name = zscaler-ia-kv-alert-trigger-success-dlp
     """\saction=({result}.+?)\s+(\w+=|$)""",
     """\sprotocol=({protocol}.+?)\s+(\w+=|$)""",
     """\sserverip=(?:0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",
-    """\suseragent=({user_agent}.+?)\s+(\w+=|$)""",
+    """\suseragent=({browser}({user_agent}.+?))\s+(\w+=|$)""",
     """\sClientIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\suser=({domain}[\w.\-]+)->({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|\s+$)""",
     """\suser=(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
@@ -22,7 +22,6 @@ Name = zscaler-ia-kv-alert-trigger-success-dlp
     """\sprotocol=({alert_type}.+?)\s+(\w+=|$)""",
     """\surl=({target}.+?)\s+(\w+=|$)""",
   ]
-  DupFields = [ "user_agent->browser" ]
 
 
 }

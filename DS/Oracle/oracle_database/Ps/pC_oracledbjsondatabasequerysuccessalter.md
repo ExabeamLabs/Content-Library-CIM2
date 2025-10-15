@@ -21,15 +21,13 @@ Fields = [
 """exa_json_path=$.event_timestamp,exa_field_name=time"""
 """exa_json_path=$..timestamp,exa_field_name=time"""
 """exa_json_path=$..username,exa_field_name=db_user"""
+"""exa_json_path=$..username,exa_field_name=account"""
 """exa_json_path=$..os_username,exa_field_name=user"""
 """exa_json_path=$..action_name,exa_field_name=db_operation"""
 """exa_json_path=$..exa_jdbc_database,exa_field_name=db_name"""
 """exa_json_path=$..exa_jdbc_type,exa_field_name=app"""
 """exa_json_path=$..exa_jdbc_hostname,exa_field_name=dest_host"""
 """exa_json_path=$..exa_jdbc_port,exa_field_name=dest_port"""
-]
-DupFields = [
-"db_user->account"
 ]
 ParserVersion = "v1.0.0"
 

@@ -5,7 +5,7 @@ Name = zscaler-ia-csv-network-traffic-ipsecnetworksecurity
   ParserVersion = "v1.0.0"
   Conditions = [ """IPSEC",""" ]
   Fields = ${ZscalerWeakParsersTemplates.zscaler-ia-csv-events-1.Fields}[
-    """\d\s\d\d:\d\d:\d\d\s\d\d\d\d","({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""""
+    """\d\s\d\d:\d\d:\d\d\s\d\d\d\d","({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
   ]
 
 zscaler-ia-csv-events-1 = {

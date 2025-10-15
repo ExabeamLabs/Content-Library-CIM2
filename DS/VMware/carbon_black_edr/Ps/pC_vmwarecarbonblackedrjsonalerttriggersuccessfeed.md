@@ -22,17 +22,14 @@ Fields = [
   """exa_json_path=$.docs[*].unique_id,exa_field_name=alert_id"""
   """exa_json_path=$.docs[*].os_type,exa_field_name=os"""
   """exa_json_path=$.docs[*].process_name,exa_field_name=process_name"""
-  """exa_json_path=$.docs[*].path,exa_regex=({process_path}({process_dir}([^\"]+)?[\\\/])?({process_name}[^\\\/\"]+))"""
+  """exa_json_path=$.docs[*].path,exa_regex=({path}({process_path}({process_dir}([^\"]+)?[\\\/])?({process_name}[^\\\/\"]+)))"""
   """exa_json_path=$.process_guid,exa_field_name=process_guid"""
   """exa_json_path=$.ioc_query_string,exa_field_name=ioc"""
+  """exa_json_path=$.ioc_query_string,exa_field_name=alert_name"""
   """exa_json_path=$.docs[*].parent_guid,exa_field_name=parent_process_guid"""
   """exa_json_path=$.docs[*].parent_name,exa_field_name=parent_process_name"""
   """exa_json_path=$.docs[*].cmdline,exa_field_name=process_command_line"""
   """exa_json_path=$.docs[*].host_type,exa_field_name=host_type"""
-]
-DupFields = [
-  "process_path->path"
-  "ioc->alert_name"
 ]
 SOAR {
   IncidentType = "generic"

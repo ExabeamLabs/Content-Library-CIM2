@@ -7,6 +7,8 @@ ParserVersion = v1.0.0
 Vendor = Microsoft
 Product = Microsoft 365
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+end_timeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+start_timeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [ """"Workload""", """"Operation""", """destinationServiceName =Office 365""" ]
 Fields = [
 """exa_json_path=$..Members[0:].DisplayName,exa_field_name=members""",
@@ -45,6 +47,9 @@ Fields = [
 """exa_json_path=$..TargetUserOrGroupName,exa_field_name=target"""
 """exa_json_path=$..DatasetName,exa_field_name=file_name"""
 """exa_json_path=$.Attendees[0:].UPN,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""exa_json_path=$..LeaveTime,exa_field_name=end_time"""
+"""exa_json_path=$..JoinTime,exa_field_name=start_time"""
+"""exa_json_path=$..MeetingDetailId,exa_field_name=meeting_number"""
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
 """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",

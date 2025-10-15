@@ -19,10 +19,7 @@ Fields = [
   """applicationtype\s:\s({app}[^|]+)\s\|"""
   """\spath\s:\s({file_dir}[^|]+)\s\|"""
   """fileextension\s:\s({file_ext}[^|]+)\s\|"""
-  """actiontype\s:\s({operation}[^\ ]+)(\s|\s\([^\)]+\)\s)\|"""
-]
-DupFields = [
-  "operation->access"
+  """actiontype\s:\s({access}({operation}[^\ ]+))(\s|\s\([^\)]+\)\s)\|"""
 ]
 ParserVersion = "v1.0.0"
 

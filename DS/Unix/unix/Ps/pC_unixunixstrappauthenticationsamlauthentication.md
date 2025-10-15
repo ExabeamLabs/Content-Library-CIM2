@@ -1,0 +1,32 @@
+#### Parser Content
+```Java
+{
+Name = "unix-unix-str-app-authentication-samlauthentication"
+  Vendor = "Unix"
+  Product = "Unix"
+  TimeFormat = ["MMM dd HH:mm:ss"]
+  Conditions = [ 
+    """docker:"""
+    """logincore["""
+  ]
+  Fields = [
+    """({time}\w\w\w \d\d \d\d:\d\d:\d\d)\s({host}[\w\-\.]+)\s({process_name}[^\[]+)\[({process_id}[^\]]+)]"""
+    """\W\(\s*Host:({url}[^\)]+)\)"""
+    """\WAction","Value":"({action}[^"]+)""""
+    """\WUrl","Value":"({url}[^"]+)""""
+    """\WHost","Value":"({url}[^"]+)""""
+    """\WUserAgent","Value":"({user_agent}[^"]+)""""
+    """\WUserHostAddress","Value":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """\WUsername":(null|"({user}[\w\.\-\!\#\^\~]{1,40}\$?)")"""
+    """\WEmail":(null|"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))")"""
+    """\WUserType":"({user_type}[^"]+)""""
+    """\W\] Login\s+({severity}[\w]+):\s+({additional_info}[^\(]+)\s"""
+    """\WTenantID","Value":"({account_id}[^"]+)""""
+    """\WTenantName","Value":"({account_name}[^"]+)""""
+    """\WSubjectNameID","Value":"({user_id}[^"]+)""""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

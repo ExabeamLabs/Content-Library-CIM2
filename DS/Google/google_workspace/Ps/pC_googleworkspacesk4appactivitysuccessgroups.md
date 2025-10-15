@@ -16,7 +16,7 @@ cef-google-app-activity = {
     """"profileId":"({user_id}\d+)""",
     """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+""",
     """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"events":\[\{[^\[\]\{\}]*"name"\s*:\s*"({operation}[^"]+)"""",
+    """"events":\[\{[^\[\]\{\}]*"name"\s*:\s*"({event_name}({operation}[^"]+))"""",
     """"name":"event_id","value":"({additional_info}[^"]+)"""",
     """"name":"EMAIL_LOG_SEARCH_RECIPIENT","value":"(unknown|({object}[^"]+))"""",
     """"name":"EMAIL_LOG_SEARCH_MSG_ID","value":"<?(unknown|({object}[^"]+?))>?"""",
@@ -37,7 +37,6 @@ cef-google-app-activity = {
     """"etag":"({tag}[^,]+)","""
     """"customerId":"({resource_id}[^"]+)""""
     """destinationServiceName =({app}[^=]+?)\s*(\w+=|$)"""
-  ]
-  DupFields = [ "operation->event_name" 
+  
 }
 ```

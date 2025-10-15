@@ -18,13 +18,10 @@ Fields = [
 """({operation}resource-deleted)"""
 """suser=(({email_address}[^@\s;=]+?@[^@\s;\.]+\.[^@\s;]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)"""
 """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^@",\s]+))"""
-"""fname=({object}.+?)\s+(\w+=|$)"""
+"""fname=({resource}({object}.+?))\s+(\w+=|$)"""
 """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
 """({app}Sales Cloud)"""
 """Owner\.Name\\?=({full_name}({first_name}[^\s]+)\s({last_name}[^;]+))"""
-]
-DupFields = [
-"object->resource"
 ]
 ParserVersion = "v1.0.0"
 

@@ -7,13 +7,13 @@ Product = "Event Viewer - Security"
 TimeFormat = "epoch_sec"
 Conditions = [ """ADAuditPlus""", """EVENT_NUMBER = 5140""", """REMARKS = A network share object was accessed.""" ]
 Fields = [
-  """({host}[\w\-.]+)\s+ADAuditPlus""",
+  """({dest_host}({host}[\w\-.]+))\s+ADAuditPlus""",
   """\WTIME_GENERATED\s*=\s*({time}\d{10})""",
   """\WREMARKS\s*=\s*({event_name}[^\]]+?)\s*\]""",
   """\WEVENT_NUMBER\s*=\s*({event_code}\d+)""",
   """\WEVENT_TYPE_TEXT\s*=\s*(null|({result}[^\]]+?))\s*\]""",
   """\WSOURCE\s*=\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[\w\-.]+))""",
-  """\WOBJECT_NAME\s*=\s*(?:[\\?]*)(null|({object}[^\]]+?))\s*\]""",
+  """\WOBJECT_NAME\s*=\s*(?:[\\?]*)(null|({file_path}({object}[^\]]+?)))\s*\]""",
   """\WFILE_NAME\s*=\s*(null|({file_name}[^\\\/]+?(\.({file_ext}[^\.]+?))?))\s*\]""",
   """\WFILE_LOCATION\s*=\s*(?:[\\?]*)(null|({file_dir}[^\]]+?))\s*\]""",
   """\WLOGON_ID\s*=\s*(null|({login_id}[^\]]+?))\s*\]""",
@@ -26,10 +26,6 @@ Fields = [
   """\WACCESSES\s*=\s*(null|({access}[^\]]+?))\s*\]""",
   """\WUNC_NAME\s*=\s*(?:[\\?*]*)(|null|({share_name}[^\]]+?))\s*\]"""
   """Source Port(=|:)\s*({src_port}\d+)"""
-]
-DupFields = [
-  "host->dest_host"
-  "object->file_path"
 ]
 ParserVersion = "v1.0.0"
 

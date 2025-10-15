@@ -19,7 +19,14 @@ s-xml-windows-member = {
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""
-    """<Data Name(\\)?=('|")TargetUserName('|")>(?=\w)({group_name}[^<]+)</Data>""",
+    """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
+    """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",
+    """<Task>({task_name}[^<]+)<"""
+    """<Opcode>({opcode}[^<]+?)<""",
+    """<Keywords>({result}[^<]+)<"""
+    """<EventRecordID>({event_id}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<""",
+    """<Data Name(\\)?=('|")TargetUserName('|")>(?=\w)?({group_name}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetDomainName('|")>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}S-[^<]+)</Data>""",

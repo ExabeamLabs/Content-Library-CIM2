@@ -30,7 +30,7 @@ cef-cloud-system-info = {
 # full_log is removed
 # full_log is removed
     """Activity":"({event_name}[^"]+?)\s*"""",
-    """message":"({event_name}[^"]+?)\s*"""",
+    """message":"({event_name}[^"\{}]+?)\s*"""",
     """errorCode":"({error_code}[^"]+)""",
 # full_log is removed
     """"Message":"\[({additional_info}[^\]]+?)\s*\]""",

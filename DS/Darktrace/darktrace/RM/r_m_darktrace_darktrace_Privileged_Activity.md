@@ -7,7 +7,7 @@ Vendor: Darktrace
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         2          |       6        |    8    |
+|   3   |   1    |         2          |       6        |   10    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

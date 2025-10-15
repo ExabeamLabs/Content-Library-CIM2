@@ -22,11 +22,10 @@ Name = cisco-duo-json-vpn-login-vpn
     """"factor":"(?:n\/a|({factor}[^"]+))"""",
     """"user":[^\}]*"name":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"application".+?"name":\s*"({service_name}[^"]+)"""
-    """"location":.+?"country":\s*"({src_country}[^"]+)"""
+    """"location":.+?"country":\s*"({mfa_country}({src_country}[^"]+))"""
     """"access_device":.+?"hostname":"({mfa_device}[^"]+)"""
     """"event_type":"({event_name}[^"]+)""""   
   ]
-   DupFields = ["src_country->mfa_country"]
 
 
 }

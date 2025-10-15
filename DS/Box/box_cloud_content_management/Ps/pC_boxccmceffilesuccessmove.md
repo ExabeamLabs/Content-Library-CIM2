@@ -12,7 +12,7 @@ Name = "box-ccm-cef-file-success-move"
   Fields = [
     """"created_at":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """"created_at":"({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \w+ \d+)""""
-    """"source":.*?"item_name":"({file_name}[^"]+?(\.({file_ext}[^"\s]+))?)"""",
+    """"source":.*?"item_name":"({src_file_name}({file_name}[^"]+?(\.({src_file_ext}({file_ext}[^"\s]+)))?))"""",
     """"source":.*?"item_type":"({file_type}[^",]+)""",
     """"login":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"login":"({email_address}[^\s",@]+@[^\s",@]+)""",
@@ -27,7 +27,6 @@ Name = "box-ccm-cef-file-success-move"
     """created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",										  
     """owned_by"+:.+?"login"+:"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
-  DupFields = [ "file_name->src_file_name" , "file_ext->src_file_ext"]
   ParserVersion = "v1.0.0"
 
 

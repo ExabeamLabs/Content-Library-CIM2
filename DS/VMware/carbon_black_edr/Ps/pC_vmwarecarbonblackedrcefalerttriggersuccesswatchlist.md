@@ -25,9 +25,9 @@ Fields = [
 """exa_json_path=$.unique_id,exa_field_name=alert_id""",
 """exa_json_path=$.os_type,exa_field_name=os""",
 """exa_json_path=$.process_name,exa_field_name=process_name""",
-"""exa_json_path=$.path,exa_regex=^({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+))$""",
-"""exa_json_path=$.process_path,exa_regex=^({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+))$""",
-"""exa_json_path=$.observed_filename,exa_regex=\[?"({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+))""",
+"""exa_json_path=$.path,exa_regex=^({path}({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+)))$""",
+"""exa_json_path=$.process_path,exa_regex=^({path}({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+)))$""",
+"""exa_json_path=$.observed_filename,exa_regex=\[?"({path}({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+)))""",
 """exa_json_path=$.process_guid,exa_field_name=process_guid""",
 """exa_json_path=$.ioc_attr,exa_regex=({ioc}([^"\\]|(\\\\)*\\"|\\)+)""",
 """exa_json_path=$.ioc_value,exa_field_name=ioc""",
@@ -35,9 +35,6 @@ Fields = [
 """exa_json_path=$.parent_name,exa_field_name=parent_process_name""",
 """exa_json_path=$.cmdline,exa_field_name=process_command_line""",
 """exa_json_path=$.host_type,exa_field_name=host_type"""
-]
-DupFields = [
-"process_path->path"
 ]
 SOAR {
   IncidentType = "generic"

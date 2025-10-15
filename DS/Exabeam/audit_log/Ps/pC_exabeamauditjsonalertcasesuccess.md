@@ -13,7 +13,7 @@ exabeam-audit-json-events = {
     Fields = [
       """"application":"({app}[^"]+)"""",
       """"subject":"({additional_info}.+?)","""",
-      """"object_name":"({object_name}.+?)",""",
+      """"object_name":"({object}({object_name}.+?))",""",
       """"object_name":"({rule}.+?)",""",
       """"object_id":"({object_id}[^"]+)"""",
       """"activity_type":"({operation_type}[^"]+)"""",
@@ -33,6 +33,7 @@ exabeam-audit-json-events = {
       """exa_json_path=$..application,exa_field_name=app"""
       """exa_json_path=$..subject,exa_field_name=additional_info"""
       """exa_json_path=$..object_name,exa_field_name=object_name"""
+      """exa_json_path=$..object_name,exa_field_name=object"""
       """exa_json_path=$..object_name,exa_field_name=rule"""
       """exa_json_path=$..activity_type,exa_field_name=operation_type"""
       """exa_json_path=$..object_id,exa_field_name=object_id"""
@@ -50,7 +51,6 @@ exabeam-audit-json-events = {
       """exa_json_path=$..user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$..time,exa_field_name=time"""
       """exa_json_path=$..user,exa_regex=({user_info}[^"]+)"""
-    ]
-    DupFields = [ "object_name->object" 
+    
 }
 ```

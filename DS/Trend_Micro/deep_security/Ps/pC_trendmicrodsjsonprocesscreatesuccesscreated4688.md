@@ -7,11 +7,10 @@ Name = trendmicro-ds-json-process-create-success-created-4688
   Fields = ${TrendMicroParserTemplates.trendmicro-ds-ossecevents.Fields}[
     """({event_name}A new process has been created)""",
     """New Process Name:(\\*[nrt]|\s)*({dest_process_path}({dest_process_dir}[^"]+?)?[\\]*?({dest_process_name}[^"\\]+?))(\\*[nrt]|\s)*Token Elevation Type:""",
-    """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
-    """Creator Process ID:\s*({parent_process_guid}[^\\\s;]+)(\s|;|\\)""",
+    """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_id}({process_guid}[^\\\s;]+))(\s|;|\\)""",
+    """Creator Process ID:\s*({parent_process_id}({parent_process_guid}[^\\\s;]+))(\s|;|\\)""",
     """Creator Process Name:(\\*[nrt]|\s)*(|({parent_process_path}({parent_process_dir}[^"]+?)?[\\]*?({parent_process_name}[^"\\]+?)))(\\*[nrt]|\s)*Process"""
   ]
-  DupFields = [ "process_guid->process_id" ,"parent_process_guid->parent_process_id"]
 
 trendmicro-ds-ossecevents = {
    Product = Deep Security

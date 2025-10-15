@@ -10,7 +10,7 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-cbanalytics-1
     """"detection_timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)""",
     """"type"+:"+({alert_type}[^"]+)"""",
     """"reason_code"+:"+({alert_name}[^"]+)"""",
-    """"threat_id"+:"+({threat_id}[^"]+)"""",
+    """"threat_id"+:"+({alert_id}({threat_id}[^"]+))"""",
     """"severity"+:({alert_severity}\d+)""",
     """"reason"+:"+({alert_reason}[^,]+)"+,""",
     """"alert_url"+:"+({url}[^"]+)"""",
@@ -24,7 +24,6 @@ Name = vmware-carbonblack-sk4-alert-trigger-success-cbanalytics-1
     """"process_username"+:"+(NT AUTHORITY\\+(SYSTEM|NETWORK SERVICE|LOCAL SERVICE)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^"]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """"device_os"+:"+({os}[^"]+)""""
   ]
-  DupFields = [ "threat_id->alert_id" ]
   ParserVersion = "v1.0.0"
 
 

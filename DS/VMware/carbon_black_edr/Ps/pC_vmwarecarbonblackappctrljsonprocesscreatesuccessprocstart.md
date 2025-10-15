@@ -12,14 +12,14 @@ carbonblack-endpoint = {
     ExtractionType = json
     Fields = [
     """({time}\d+-\d+-\d+ \d+:\d+:\d+.\d\d\d)""",
-    """"+process_cmdline"+:"+({process_command_line}[^"]+)"+""",
+    """"+process_cmdline"+:"+({process_command_line}.+?)\s*(",\s*"|"\s*})"""
     """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+sensor_action"+:"+({result}[^"]+)"+""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))"""",
     """"+action"+:"+({action}[^"]+)?"*""",
-    """"+parent_cmdline"+:"+({parent_process_command_line}[^,]+"+)?"\,""",
+    """"+parent_cmdline"+:"+({parent_process_command_line}.+?)\s*(",\s*"|"\s*})""",
     """"+parent_pid"+:({parent_process_id}\d+)""",
     """"+process_guid"+:"+({process_guid}[^"]+)?"*\,""",
     """"+parent_guid"+:"+({parent_process_guid}[^"]+)?"*\,""",
@@ -33,7 +33,7 @@ carbonblack-endpoint = {
     """exa_json_path=$.sensor_action,exa_field_name=result"""
     """exa_json_path=$.process_path,exa_regex=({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))"""
     """exa_json_path=$.action,exa_field_name=action"""
-    """exa_json_path=$.parent_cmdline,exa_regex=({parent_process_command_line}[^,]+"+)?"\,"""
+    """exa_json_path=$.parent_cmdline,exa_field_name=parent_process_command_line"""
     """exa_json_path=$.parent_pid,exa_field_name=parent_process_id"""
     """exa_json_path=$.process_guid,exa_field_name=process_guid"""
     """exa_json_path=$.parent_guid,exa_field_name=parent_process_guid"""

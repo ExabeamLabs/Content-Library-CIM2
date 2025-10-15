@@ -5,10 +5,9 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-5136
   ParserVersion = "v1.0.0"
   Conditions = [ """ADAuditPlus""", """EVENT_NUMBER = 5136""" ]
   Fields = ${ADAuditParsersTemplates.ad-audit-ds-access.Fields}[
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+))\s+ADAuditPlus""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)"""
   ]
-  DupFields = ${ADAuditParsersTemplates.ad-audit-ds-access.DupFields}[ "host->dest_host" ]
 
 ad-audit-ds-access = {
   Vendor = Microsoft
@@ -27,11 +26,10 @@ ad-audit-ds-access = {
     """ATTRIBUTES_TEXT\s*=\s*(-|null|({attribute}[^\s]+))""",
     """ACCOUNT_NAME\s*=\s*(null|-|({object_name}[^\s]+))""",
     """FORMAT_MESSAGE\s*=\s*(null|-|({object_type}[^\']+?))\s*'""",
-    """REMARKS\s*=\s*(null|-|({operation_type}[^\]]+?))\s*\]""",
+    """REMARKS\s*=\s*(null|-|({event_name}({operation_type}[^\]]+?)))\s*\]""",
     """ATTRIBUTES_NEW_VALUE\s*=\s*(null|-|({new_attribute}[^\]]+?))\s*\]""",
     """ATTRIBUTES_OLD_VALUE\s*=\s*(null|-|({old_attribute}[^\]]+?))\s*\]""",
     """CLIENT_IP_ADDRESS\s*=\s*(null|-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
-  ]
-  DupFields =[ "operation_type->event_name", "ds_object_class->additional_info" 
+  
 }
 ```

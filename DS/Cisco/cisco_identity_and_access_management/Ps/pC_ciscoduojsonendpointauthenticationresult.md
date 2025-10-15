@@ -12,11 +12,10 @@ Name = cisco-duo-json-endpoint-authentication-result
     """"+ip"+:\s"+(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
     """"+username"+:\s*"(?:({domain}[^\\]+))?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"+integration"+:\s"+({auth_method}[^"]+)"""",
-    """"+device"+:\s(null|"+({device_name}[^"]+))""",
+    """"+device"+:\s(null|"+({mfa_device}({device_name}[^"]+)))""",
     """"+result"+:\s"+({action}[^"]+)"""",
     """"+reason"+:\s"+({failure_reason}[^"]+)""""
   ]
-  DupFields = ["device_name->mfa_device"]
   ParserVersion = "v1.0.0"
 
 

@@ -6,12 +6,17 @@ Name = amazon-awscloudtrail-json-role-assume-success-switchrole
   Conditions = [ """AwsConsoleSignIn""", """"eventName":""", """"SwitchRole"""" ]
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
   """exa_json_path=$.additionalEventData.RedirectTo,exa_field_name=url""",
+  """"arn":\s*"[^"]*?role\/({account}[^\/"]+)[\/"]""",
+  """"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/({account}[^\/"]+)\/(AssumeRoleSession|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"]+)|({aws_user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?"""",
+  """exa_json_path=$.userIdentity.arn,exa_regex=role\/({account}[^\/"]+)\/?""",
+  """exa_regex="arn":\s*"arn:aws:sts::\d+:assumed-role\/({account}[^\/"]+)\/(AssumeRoleSession|\d{19}"|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"\s]+)|({aws_user}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?""",
+  """exa_json_path=$.UserIdentityArn,exa_regex=role\/({account}[^\/"]+)\/?""",
   """exa_json_path=$.additionalEventData.SwitchFrom,exa_regex=[^"]+?role\/({source_role}[^\/]+)\/({account}[^"]+)""",
   """exa_json_path=$.additionalEventData.SwitchTo,exa_regex=[^"]+?:role\/({role}[^"]+)""",
-  """exa_json_path=$.additionalEventData.SwitchTo,exa_field_name=role_arn""",
+  """exa_json_path=$.additionalEventData.SwitchTo,exa_regex=[^"]+?:role\/({account}[^"]+)""",
+  """exa_json_path=$.additionalEventData.SwitchTo,exa_field_name=role_arn"""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["role->account"]
 
 aws-cloudtrail-json = {
     Vendor = Amazon
@@ -33,11 +38,11 @@ aws-cloudtrail-json = {
       """"eventSource"+\s*:\s*"+?(|({service_name}[^"]+))"""",
       """"eventName"+\s*:\s*"+?(|({operation}[^"]+))"""",
       """"awsRegion"\s*:\s*"({region}[^"]+)"""",
-      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))"+\s*[,\]\}]""",
+      """"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]""",
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_id}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
@@ -75,6 +80,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..eventType,exa_field_name=event_category""",
       """exa_json_path=$..eventID,exa_field_name=event_id""",
       """exa_json_path=$..errorCode,exa_field_name=result""",
+      """exa_json_path=$..errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..errorMessage,exa_field_name=failure_reason""",
       """exa_json_path=$..readOnly,exa_field_name=readonly""",
       """exa_json_path=$..vpcEndpointId,exa_field_name=vpc""",

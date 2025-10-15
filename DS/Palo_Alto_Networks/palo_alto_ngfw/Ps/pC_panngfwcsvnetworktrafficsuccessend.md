@@ -16,9 +16,9 @@ paloalto-firewall = {
    Product = Palo Alto NGFW
    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy/MM/dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
    Fields = [
-     """\s({host}[\w\-.]+)\s+(\[.*?\]\s+)?\d+,([^,]*,){2}TRAFFIC,""",
-     """:\d\d:\d\d(([+-]\d\d:\d\d)|(\.\d+Z))?\s+({host}[\w.-]+)\s""",
-     """,TRAFFIC,("[^"]*",|[^,]*,){48}({host}[\w\-\.]+)""",
+     #removed slow regexes for host
+     #"""\s({host}[\w\-.]+)\s+(\[.*?\]\s+)?\d+,([^,]*,){2}TRAFFIC,""",
+     #""":\d\d:\d\d(([+-]\d\d:\d\d)|(\.\d+Z))?\s+({host}[\w.-]+)\s""",
      """({event_category}TRAFFIC)""",
      """,TRAFFIC,({subtype}[^,]+),""",
      """,({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d),""",
@@ -44,10 +44,10 @@ paloalto-firewall = {
      """,TRAFFIC,([^,]*,){28}({bytes_out}\d+)""",
      """,TRAFFIC,([^,]*,){29}({bytes_in}\d+)""",
      """,TRAFFIC,([^,]*,){33}(any|unknown|({category}[^,]+?)\s*,)""",
-     """,TRAFFIC,([^,]*,){37}({src_country}[^\.:]*?)\s*,""",
-     """,TRAFFIC,([^,]*,){38}({dest_country}[^\.:]*?)\s*,""",
+     """,TRAFFIC,([^,]*,){37}({src_country}[^\.:\d,]+?)\s*,""",
+     """,TRAFFIC,([^,]*,){38}({dest_country}[^\.:\d,]+?)\s*,""",
      """,TRAFFIC,([^,]*,){18}({session_id}\d+),""",
-     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+     """,((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+)),"""
      """,TRAFFIC,([^,]*,){14}({src_interface}[^,]+),""",
      """,TRAFFIC,([^,]*,){15}({dest_interface}[^,]+),""",
      """,TRAFFIC,([^,]*,){42}({result_reason}[^,]+),""",

@@ -16,7 +16,8 @@ Name = okta-amfa-json-app-login-success-evaluatesignon-1
     """"behaviors\\*":"*\{({more_info}[^\}]+)""",
     """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """"target":\s*\[.*?\{.*?"alternateId":\s*"({app_id}[^"]+)"[^\{\}]*?"type":\s*"AppInstance"""",
-    """serialNumber":"({serial_num}[^"]+)""""
+    """serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
+    """exa_regex=serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
     """exa_json_path=$..device.screen_lock_type,exa_field_name=identity_type""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..transaction.id,exa_field_name=device_id""",
@@ -94,7 +95,9 @@ s-okta-app-login = {
     """exa_json_path=$..displayMessage,exa_field_name=event_name"""
     """exa_json_path=$.detail.client.userAgent.rawUserAgent,exa_field_name=user_agent"""
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^\{reasons=({failure_reason}[^=]+?),\s\w+="""
-   ] 
+    """"zone":"(null|({src_network_zone}[^",]+))""""
+    """exa_json_path=$.client.zone,exa_field_name=src_network_zone,exa_match_expr=!Contains($.client.zone,"null")"""
+       ] 
  },
 
   json-okta-auth = {

@@ -26,8 +26,8 @@ Fields = [
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
 """InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?",""""
 """ProcessId\\?"+:({process_id}\d+)"""
-""""InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
 """"ProcessCommandLine\\?"+:\s*[\\"]*?"\s*(|({process_command_line}.*?))\s*[\\"]*",\s*""""
+""""InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
 """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?""""
 """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
 """"AccountDomain":"({domain}[^:]+?)",""",

@@ -17,18 +17,17 @@ Fields = [
 """"destinationServiceName":"({app}.+?)"(\s+\w+=)?"""
 """\"event_simpleName\":\"({event_code}[^\"]+)"""
 """\"aid\":\"({aid}[^\"]+)"""
-"""\"(ImageFileName|TargetFileName)\":\"({src_file_path}[^\"]+)"""
-"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({src_file_name}[^\\\/\"]+\.({src_file_ext}[^\\\/\"]+))"""
+"""\"(ImageFileName|TargetFileName)\":\"({file_path}({src_file_path}[^\"]+))"""
+"""\"(ImageFileName|TargetFileName)\":\"({file_dir}[^\"]*[\\\/]+)({file_name}({src_file_name}[^\\\/\"]+\.({file_ext}({src_file_ext}[^\\\/\"]+))))"""
 """\"UserName\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 """\"aip\":\"({aip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"ClientComputerName\":\"({src_host}[^\"]+)"""
-"""\"ServiceImagePath\":\"({src_file_path}({file_dir}[^\"]*?\\+)({src_file_name}[^\\\s\"]+?\.({src_file_ext}[^\\\s\"\.]+?)))(\s|\")"""
+"""\"ServiceImagePath\":\"({file_path}({src_file_path}({file_dir}[^\"]*?\\+)({file_name}({src_file_name}[^\\\s\"]+?\.({file_ext}({src_file_ext}[^\\\s\"\.]+?))))))(\s|\")"""
 """\"ServiceObjectName\":\"({additional_info}[^\"]+)"""
 """({action}ModifyServiceBinaryV2)"""
 """"cid":"({cid}[^"]+)"""
 """"event_platform":"({os}[^"]+)""""
 ]
-DupFields = [ "src_file_name->file_name" , "src_file_ext->file_ext" , "src_file_path->file_path"]
 
 
 }

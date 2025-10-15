@@ -20,6 +20,7 @@ Fields = [
 """exa_json_path=$.event_timestamp,exa_field_name=time"""
 """exa_json_path=$..timestamp,exa_field_name=time"""
 """exa_json_path=$..username,exa_field_name=db_user"""
+"""exa_json_path=$..username,exa_field_name=account"""
 """exa_json_path=$..os_username,exa_field_name=user"""
 """exa_regex=PROTOCOL=({protocol}\w+)"""
 """exa_json_path=$..return_code,exa_field_name=return_code"""
@@ -30,9 +31,6 @@ Fields = [
 """exa_json_path=$..exa_jdbc_port,exa_field_name=dest_port"""
 """exa_json_path=$..action_name,exa_field_name=db_operation"""
 """exa_json_path=$..sessionid,exa_field_name=session_id"""
-]
-DupFields = [
-"db_user->account"
 ]
 ParserVersion = "v1.0.0"
 

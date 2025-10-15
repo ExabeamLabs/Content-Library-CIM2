@@ -9,7 +9,6 @@ Conditions = [
 """|Imperva Inc.|SecureSphere"""
 """cat=Alert"""
 """=ServerGroup"""
-"""Query"""
 ]
 Fields = [
 """cs7=\s*\(({time}\d\d \w+ \d{4} \d\d:\d\d:\d\d)\)\s*cs7Label=EventTime"""

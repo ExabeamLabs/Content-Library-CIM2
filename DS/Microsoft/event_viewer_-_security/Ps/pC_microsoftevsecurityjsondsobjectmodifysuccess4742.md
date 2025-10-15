@@ -20,6 +20,9 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4742
     """ServicePrincipalNames"\s*:\s*"({attribute}[^"]+)"""
     """TargetDomainName"\s*:\s*"({ds_object_dn}[^"]+)""",
     """TargetUserName"\s*:\s*"({src_host}[^\s$]+)\$"""
+    """Old UAC Value:\s*(-|({old_value}[^"\\]+))\s*New UAC Value:"""
+    """New UAC Value:\s*(-|({new_value}[^"\\]+))\s*User Account Control:"""
+    """User Account Control:\s*(-|({uac_status}[^"]+))\s*User\s*Parameter"""
   ]
   DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 

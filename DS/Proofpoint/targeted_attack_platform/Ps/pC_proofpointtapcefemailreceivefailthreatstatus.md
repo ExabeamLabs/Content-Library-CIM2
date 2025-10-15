@@ -17,12 +17,13 @@ Name = proofpoint-tap-cef-email-receive-fail-threatstatus
     """"threat(Url|URL)":\s*"<?({threat_url}[^"]+?)"""",
     """(fromAddress|sender)":\s*\[?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|0-9]+))([\\]+)?([\\]+)?"\]?""",
     """toAddresses":\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)\]""",
-    """:\sCategory\s\[[^\]]+\]\s,\sName\s\[({alert_name}[^\]]+)\]""",
+     """\scs1=Policy \[id: [^\]]*? ; name: ({alert_subject}({alert_name}[^\]]+?)) ; category: ({category}[^\]]+?)]""",
+    """:\sCategory\s\[[^\]]+\]\s,\sName\s\[({alert_subject}({alert_name}[^\]]+))\]""",
     """"fromArray":"({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)"""",
     """"threatStatus":"({status_msg}[^"]+)""",
-    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+\.({file_ext}[^"]+))[^"]*?)",\s*"\w+":""",
+    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+\.({file_ext}[^"]+)))[^"]*?)",\s*"\w+":""",
     """"recipient":\["({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"],""",
-    """proto=({alert_name}[^=]+)\s""",
+    """proto=({alert_subject}({alert_name}[^=]+))\s""",
     """msg=.*?\[({alert_source}[^\]]+)\]:""",
     """msg=.*?name:\s*({alert_source}[^\]]+)\]"""
     """"userAgent":"({user_agent}[^"]+)""""
@@ -30,9 +31,8 @@ Name = proofpoint-tap-cef-email-receive-fail-threatstatus
     """"clickIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """"completelyRewritten":\s*({alert_status}(?i)true|false)"""
     """eventType=({result}[^\s]+)"""
-    """"classification":\s*"({alert_name}[^"]+)""",
+    """"classification":\s*"({alert_subject}({alert_name}[^"]+))""",
   ]
-  DupFields = ${ProofpointParsersTemplates.s-proofpoint-email-in-1.DupFields}[ "alert_name->alert_subject","email_attachment->file_name" ]
 
 s-proofpoint-email-in-1 = {
   Vendor = Proofpoint
@@ -59,14 +59,13 @@ s-proofpoint-email-in-1 = {
     """url":\s*"([A-Fa-f\d]{64}|[^@,"]+@[^\.,"]+\.[^,"]+|({malware_url}[^",]+?))\s*(,|")""",
     """\scs1=Policy \[id: [^\]]*? ; name: ({alert_name}[^\]]+?) ; category: ({category}[^\]]+?)]""",
     """threat":\s*"\s*([A-Fa-f\d]{64}|[^@,]+@[^\.]+\.[^",]+|({malware_url}[^",]+?))\s*(,|")""",
-    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)",\s*"\w+":""",
+    """,\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)",\s*"\w+":""",
     ""","fromArray":"({result}[^\]]+?)","\w+":""",
     """eventType":\s*"({result}[^",]+?)\s*(,|")""",
     """eventType=({result}[^\s]+)""",
     """"messageID":\s*"<?({message_id}[^>"]+)""",
     """src-account-name":"({account_name}[^"]+)""",
     """"threatStatus":\s*"({alert_status}[^"]+)""",
-
     """exa_json_path=$.threatTime,exa_field_name=time""",
     """exa_json_path=$.messageTime,exa_field_name=time""",
     """exa_json_path=$.spamScore,exa_field_name=spam_score""",
@@ -84,7 +83,7 @@ s-proofpoint-email-in-1 = {
     """exa_json_path=$.senderIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_regex=url":\s*"({malware_url}[^",]+?)\s*(,|")""",
     """exa_regex=threat":\s*"\s*({malware_url}[^",]+?)\s*(,|")""",
-    """exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({email_attachment}[^",;]+)[^"]*?)$""",
+    """exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)$""",
     """exa_json_path=$.fromArray,exa_field_name=result""",
     """exa_json_path=$.eventType,exa_field_name=result""",
     """exa_regex=({result}clicksBlocked|clicksPermitted|messagesBlocked|messagesDelivered)""",
@@ -94,7 +93,6 @@ s-proofpoint-email-in-1 = {
     """exa_json_path=$.threatStatus,exa_field_name=alert_status"""
     """exa_json_path=$.threatsInfoMap[0].threatUrl,exa_field_name=threat_url"""
     """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
-  ]
-  DupFields = [ "email_attachment->file_name" 
+  
 }
 ```

@@ -19,11 +19,8 @@ Name = "salesforce-sf-sk4-app-activity-success-resouceviewed"
     """\WdestinationServiceName =({app}Sales Cloud)"""
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\sfileType=({file_type}\w+)"""
-    """\Wfname=(|({file_name}.+?(\.({file_ext}\w+))?))(\s+\w+=|\s*$)"""
+    """\Wfname=(|({report}({file_name}.+?(\.({file_ext}\w+))?)))(\s+\w+=|\s*$)"""
     """IS_SUCCESS(\\)?=({result_code}[^";]+)"""
-   ]
-   DupFields = [
-  "file_name->report"
    ]
 
 

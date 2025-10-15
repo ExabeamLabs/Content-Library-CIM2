@@ -20,7 +20,10 @@ Name = pagerduty-pagerduty-json-app-activity-success-audit
     """exa_json_path=$.id,exa_field_name=audit_id""",
     """exa_json_path=$.method.type,exa_field_name=service_name""",
     """exa_json_path=$.details.fields[0].before_value,exa_field_name=more_info""",
-    """exa_json_path=$.details.fields[0].name,exa_field_name=object_name"""
+    """exa_json_path=$.details.fields[0].name,exa_field_name=object_name""",
+    """exa_json_path=$.details.references[0]..summary,exa_field_name=description,exa_match_expr=InList(toLower($.action), "delete","create")""",
+
+
     ]
    
  

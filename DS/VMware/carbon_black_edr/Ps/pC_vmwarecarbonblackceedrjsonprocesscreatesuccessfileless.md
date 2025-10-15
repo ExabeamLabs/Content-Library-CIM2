@@ -3,7 +3,7 @@
 {
 Name = vmware-carbonblackceedr-json-process-create-success-fileless
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """"type":"endpoint.event.fileless_scriptload"""", """"process_username":"""", """"event_origin":"EDR"""" ]
+  Conditions = [ """"type":"endpoint.event.fileless_scriptload"""", """"process_username":"""", """"event_origin":"""" ]
   Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields} [
     """exa_json_path=$.parent_path,exa_regex=({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""
     """exa_json_path=$.device_timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""

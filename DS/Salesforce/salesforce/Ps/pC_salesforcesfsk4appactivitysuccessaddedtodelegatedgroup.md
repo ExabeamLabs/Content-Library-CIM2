@@ -10,9 +10,6 @@ Fields = ${SalesforceParsersTemplates.cef-salesforce-app-activity-1.Fields}[
   """Display\\=Added ({object}.+?) to .*?delegated group"""
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
 ]
-DupFields = [
-  "email_address->user"
-]
 ParserVersion = "v1.0.0"
 
 cef-salesforce-app-activity-1 = {

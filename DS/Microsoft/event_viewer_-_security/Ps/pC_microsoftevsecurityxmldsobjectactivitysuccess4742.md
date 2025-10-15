@@ -18,6 +18,8 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4742
     """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Data Name =('|")UserAccountControl('|")>(-|({uac_status}[^"<]+))<\/Data><Data Name =('|")UserParameters('|")>"""
+   """OldUacValue('|")>(-|({old_value}[^"<]+))<\/Data><Data Name =('|")NewUacValue('|")>(-|({new_value}[^"<]+))<\/Data><Data Name =('|")UserAccountControl('|")>"""
   ]
   DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"

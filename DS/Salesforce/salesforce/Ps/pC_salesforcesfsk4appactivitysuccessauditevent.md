@@ -36,7 +36,6 @@ Fields = [
 """CLIENT_GEO\\?=({src_country}[^;/]+)"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "full_name->username" ]
 
 
 }

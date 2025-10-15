@@ -4,7 +4,7 @@
 Name = vmware-carbonblack-json-network-traffic-success-ngav
   ParserVersion = v1.0.0
   Product = Carbon Black CES
-  Conditions = [ """"type":"endpoint.event.netconn"""", """"process_username":"""", """"event_origin":"NGAV"""" ]
+  Conditions = [ """"type":"endpoint.event.netconn"""", """"process_username":"""", """"event_origin":"""" ]
   Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields} [
      """exa_json_path=$.parent_path,exa_regex=({parent_process_path}({parent_process_dir}[^"]+(\\|\/)+)?({parent_process_name}[^"]+))"""
   ]

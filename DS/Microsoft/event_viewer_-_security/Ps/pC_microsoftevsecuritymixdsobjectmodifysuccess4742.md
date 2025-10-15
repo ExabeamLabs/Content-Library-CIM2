@@ -28,6 +28,10 @@ Fields = [
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """Message(":"|>)({additional_info}[^:]+?)\s*(\\r|\\n|\\t)*\w+:"""
 """User Workstations:\s*(\\r|\\n|\\t)*(-|({src_host_windows}[^\s]+?))(\\r|\\n|\\t)*Password Last Set:"""
+"""Old UAC Value:(\\t|\\r|\\n|\s)*(-|({old_value}[^":\\]+))(\\t|\\r|\\n|\s)*New UAC Value:(\\t|\\r|\\n|\s)*(-|({new_value}[^":\\]+))(\\t|\\r|\\n|\s)*User Account Control:"""
+"""User Account Control:(\\t|\\r|\\n|\s)*(-|({uac_status}[^"]+))\s*(\\t|\\r|\\n|\s)*User\s*Parameters"""
+"""<Data Name =\\*('|")UserAccountControl\\*('|")>(-|({uac_status}[^"<]+))<\\\/Data><Data Name =\\*"UserParameters\\*">"""
+"""<Data Name =\\*('|")OldUacValue\\*('|")>(-|({old_value}[^"<]+))<\\\/Data><Data Name =\\*"NewUacValue\\*">(-|({new_value}[^"<]+))<\\\/Data><Data Name =\\*"UserAccountControl\\">"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """"timestamp":"({time}\d{10})"""
-""""event_simpleName":"({alert_name}[^"]+)"""
+""""event_simpleName":"({alert_subject}({alert_type}({alert_name}[^"]+)))"""
 """"aip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"aid":"({aid}[^"]+)"""
 """"event_platform":"({os}[^"]+)"""
@@ -20,10 +20,6 @@ Fields = [
 """"ImageFileName":"({file_path}[^"]+)"""
 """"ImageFileName":"({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\.\s"]+)?)?)""""
 """"cid":"({cid}[^"]+)"""
-]
-DupFields = [
-"alert_name->alert_type",
-"alert_name->alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

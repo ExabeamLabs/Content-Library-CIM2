@@ -15,9 +15,8 @@ Name = cisco-duo-json-app-login-success-adminlogin-1
     """"ip_address":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"primary_auth_method":\s*"({auth_method}[^"]+?)"""",
     """"factor":\s*"({factor}[^"]+?)"""",
-    """({operation}admin_login)"""
+    """({event_name}({operation}admin_login))"""
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

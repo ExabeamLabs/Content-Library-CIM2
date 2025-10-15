@@ -46,6 +46,8 @@ json-aws-guardduty-security-alert-template = {
       """"accessKeyId":"({key_id}[^"]+?)""""
       """"+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"""",
       """"tags":\s*({tags}[^$]+?)\]""",
+      """"remoteIpDetails":\{"ipAddressV4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
+      """"remotePortDetails":\{"port":({dest_port}\d+)""",
       """exa_regex=AssumedRole\/({role}[^\s]+)"""
       """exa_regex=AssumedRole\s+:\s+({role}[^\s]+)"""
       """exa_json_path=$.updatedAt,exa_field_name=time"""
@@ -81,7 +83,9 @@ json-aws-guardduty-security-alert-template = {
       """dhost=({dest_host}[\w\-.]+)"""
       """exa_regex="tags":\s*({tags}[^$]+?)\]"""
       """exa_regex="+iamInstanceProfile.+?arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?""""
-      """exa_json_path=$.id,exa_field_name=alert_id"""      
+      """exa_json_path=$.id,exa_field_name=alert_id"""
+      """exa_regex="remoteIpDetails":\{"ipAddressV4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """exa_regex="remotePortDetails":\{"port":({dest_port}\d+)"""
     
 }
 ```

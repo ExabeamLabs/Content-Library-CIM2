@@ -24,6 +24,9 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
     """"param1":"({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
     """"TransactionId":"({transaction_id}[^"]+)"""",
     """"Message":"({event_name}[^.]+)""",
+    """UserAccountControl":"(-|({uac_status}[^"]+))","UserParameters""""
+   """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
+    """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
   ]
   DupFields = [ "user->src_user", "domain->src_domain" ]
 

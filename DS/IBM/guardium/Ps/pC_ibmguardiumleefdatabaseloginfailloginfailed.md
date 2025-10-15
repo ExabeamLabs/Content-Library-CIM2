@@ -17,7 +17,7 @@ Name = ibm-guardium-leef-database-login-fail-loginfailed
     """\WruleDesc=({rule_description}[^\|]+)""",
     """\WdevTime=({time}\d\d\d\d-\d+-\d+ \d\d:\d\d:\d\d)""",
     """\WserverType=({server_type}[^\|]+)""",
-    """\WdbUser=(({domain}[^\|\\]+)\\)?(\?|({db_user}[^\|\\]+))""",
+    """\WdbUser=(({domain}[^\|\\]+)\\)?(\?|({account}({db_user}[^\|\\]+)))""",
     """\WusrName =(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\WsourceProgram=({src_interface}[^\|]+)""",
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
@@ -27,7 +27,6 @@ Name = ibm-guardium-leef-database-login-fail-loginfailed
     """\WsrcPort=({src_port}\d+)""",
     """\Werror=({result_reason}[^\|]+?)("|\s*$)"""
   ]
-  DupFields = [ "db_user->account" ]
 
 
 }

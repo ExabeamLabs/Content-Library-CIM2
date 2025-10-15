@@ -6,11 +6,10 @@ Name = google-cloudplatform-json-disk-attach-success-computeinstancesattachdisk
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":""", """compute.instances.attachDisk"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
-    """exa_json_path=$.protoPayload.request.deviceName,exa_field_name=device_name"""
-    """exa_json_path=$.protoPayload.request.mode,exa_field_name=disk_mode"""
-    """exa_json_path=$.protoPayload.request.source,exa_field_name=src_resource"""
+    """exa_json_path=$..protoPayload.request.deviceName,exa_field_name=device_name"""
+    """exa_json_path=$..protoPayload.request.mode,exa_field_name=disk_mode"""
+    """exa_json_path=$..protoPayload.request.source,exa_field_name=src_resource"""
   ]
-  DupFields = ["src_resource->source_resource"]
 
 gcp-cloudaudit-json = {
     Vendor = Google
@@ -61,19 +60,19 @@ gcp-cloudaudit-json = {
     """exa_json_path=$..resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
     """exa_json_path=$..serviceName,exa_field_name=service_name""",
     """exa_json_path=$..access.serviceName,exa_field_name=service_name""",
-    """exa_json_path=$.resource.type,exa_field_name=resource_type""",
-    """exa_json_path=$.resource.labels.project_id,exa_field_name=project_id""",
-    """exa_json_path=$.resource.labels.zone,exa_field_name=zone""",
-    """exa_json_path=$.resource.labels.location,exa_field_name=region""",
-    """exa_json_path=$.resource.labels.bucket_name,exa_field_name=bucket_name,exa_match_expr=!InList($.resource.labels.bucket_name,"")""",
-    """exa_json_path=$.operation.first,exa_field_name=operation_first""",
-    """exa_json_path=$.operation.last,exa_field_name=operation_last"""
+    """exa_json_path=$..resource.type,exa_field_name=resource_type""",
+    """exa_json_path=$..resource.labels.project_id,exa_field_name=project_id""",
+    """exa_json_path=$..resource.labels.zone,exa_field_name=zone""",
+    """exa_json_path=$..resource.labels.location,exa_field_name=region""",
+    """exa_json_path=$..resource.labels.bucket_name,exa_field_name=bucket_name,exa_match_expr=!InList($.resource.labels.bucket_name,"")""",
+    """exa_json_path=$..operation.first,exa_field_name=operation_first""",
+    """exa_json_path=$..operation.last,exa_field_name=operation_last"""
     """exa_json_path=$..request.storageLocations[0],exa_field_name=location""",
     """exa_json_path=$..response.operationType,exa_field_name=operation_type"""
-    """exa_json_path=$.protoPayload.request.policy.etag,exa_field_name=tag"""
-    """exa_json_path=$.severity,exa_field_name=severity"""
-    """exa_json_path=$.protoPayload.authorizationInfo[:1].permission,exa_field_name=permission"""
-    """exa_json_path=$.protoPayload.authorizationInfo[:1].permissionType,exa_field_name=operation_type"""
+    """exa_json_path=$..protoPayload.request.policy.etag,exa_field_name=tag"""
+    """exa_json_path=$..severity,exa_field_name=severity"""
+    """exa_json_path=$..protoPayload.authorizationInfo[:1].permission,exa_field_name=permission"""
+    """exa_json_path=$..protoPayload.authorizationInfo[:1].permissionType,exa_field_name=operation_type"""
     
 }
 ```

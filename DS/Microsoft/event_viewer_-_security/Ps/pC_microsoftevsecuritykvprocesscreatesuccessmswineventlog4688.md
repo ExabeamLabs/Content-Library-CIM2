@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-process-create-success-mswineventlog4688
       """Target Subject:.+?Account Name:\s+(?:-|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
       """New Process ID:\s+({process_guid}[^\s]+)\s""",
       """Creator Process ID:\s+({parent_process_guid}[^\s]+)\s""",
-      """Process Command Line:\s+"({process_command_line}[^"]+)"\s""",
+      """Process Command Line:\s+(-|\s+|({process_command_line}.+?))\s+Token Elevation Type""",
       """Process Command Line:\s+"(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= ({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))"\s""",
       """TaskCategory=({operation_type}Process Creation)"""
       """Creator Process Name:\s*\"*(|({parent_process_path}({parent_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({parent_process_name}[^\\\/\"]+?)))\"*\s"""

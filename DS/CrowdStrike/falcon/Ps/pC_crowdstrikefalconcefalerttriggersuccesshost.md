@@ -34,17 +34,16 @@ Fields = [
 """(\s|\|)cs1=({alert_name}.+?)\s+\w+=.*?cs1Label=ScanResultName"""
 """cs1Label=ScanResultName.*?cs1=({alert_name}.+?)\s+(\w+=|$)"""
 """(\s|\|)msg=({additional_info}.+?)\s+(\w+=|$)"""
-"""(\s|\|)fname=({file_name}.+?)\s+(\w+=|$)"""
-"""(\s|\|)filePath=({file_dir}.+?)\s+(\w+=|$)"""
+"""(\s|\|)fname=({process_name}({file_name}.+?))\s+(\w+=|$)"""
+"""(\s|\|)filePath=({process_dir}({file_dir}.+?))\s+(\w+=|$)"""
 """(\s|\|)cs1=("+)?({process_command_line}.+?)("+)?\s\w+=.*(?=cs1Label=CommandLine)"""
 """(?=cs1Label=CommandLine).*cs1=("+)?({process_command_line}.+?)("+)?\s+(\w+=|$)"""
 """(\s|\|)cs5=("+)?({process_command_line}.+?)("+)?\s\w+=.*(?=cs5Label=CommandLine)"""
 """(?=cs5Label=CommandLine).*cs5=("+)?({process_command_line}.+?)("+)?\s+(\w+=|$)"""
-"""(\s|\|)cs6=({falcon_host_link}.+?)\s\w+=.*(?=cs6Label=FalconHostLink)"""
-"""(?=cs6Label=FalconHostLink).*cs6=({falcon_host_link}.+?)\s+(\w+=|$)"""
+"""(\s|\|)cs6=({additional_info}({falcon_host_link}.+?))\s\w+=.*(?=cs6Label=FalconHostLink)"""
+"""(?=cs6Label=FalconHostLink).*cs6=({additional_info}({falcon_host_link}.+?))\s+(\w+=|$)"""
 """cs1=({alert_name}[^=]+)\s\w+="""
 ]
-DupFields = [ "falcon_host_link->additional_info", "file_name->process_name", "file_dir->process_dir" ]
 ParserVersion = "v1.0.0"
 
 

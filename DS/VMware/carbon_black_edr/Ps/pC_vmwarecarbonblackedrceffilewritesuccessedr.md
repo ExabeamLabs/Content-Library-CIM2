@@ -12,14 +12,14 @@ Conditions = [
 ]
 TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
 Fields = [
-""""+process_cmdline"+:"+\s*({process_command_line}[^"]+?)\s*"+,"""
+""""+process_cmdline"+:"+\s*({process_command_line}.+?)\s*(",\s*"|"\s*})"""
 """"+process_username"+:"+(({domain}[^\\,]+)\\+)?(Citrix Delivery Services Resources|SYSTEM|NETWORK SERVICE|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+"""
 """"+process_pid"+:({process_id}\d+)"""
 """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)"""
 """"+sensor_action"+:"+({result}[^"]+)"+"""
 """"+process_path"+:"+((?i)(SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))""""
 """"+action"+:"+({action}[^"]+)?"{0,20}"""
-""""+parent_cmdline"+:"+\s*({parent_process_command_line}[^,"]+)"""
+""""+parent_cmdline"+:"+\s*({parent_process_command_line}.+?)\s*(",\s*"|"\s*})"""
 """"+parent_pid"+:({parent_process_id}\d+)"""
 """"+process_guid"+:"+({process_guid}[^"]+)?"{0,20}\,"""
 """"+parent_guid"+:"+({parent_process_guid}[^"]+)?"{0,20}\,"""

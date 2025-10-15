@@ -14,9 +14,8 @@ Name = zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries
     """([^\|]*\|){5}({action}[^\|]+)\|""",
     """(\s|\|)act=({action}[^=]+?)\s*(\w+=|$)""",
     """\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
-    """\slogin=({email_address}[^@\s]+@[^@\s]+)\s\w+=""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}[^@"]+@({email_domain}[^\."]+\.[^"\s]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
-    """\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+    """\slogin=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s\w+=""",
+    """\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """\|({alert_severity}\d+)\|act=""",
     """\seurl=({url}[^\s\/\?]+({uri_path}\/[^\?\s]+)?({uri_query}\?[^\s]+)?)""",
     """\sapp=({protocol}[^=]+?)\s*(\w+=|$)""",

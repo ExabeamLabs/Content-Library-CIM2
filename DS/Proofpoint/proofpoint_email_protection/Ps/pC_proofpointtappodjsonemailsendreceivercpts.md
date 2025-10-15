@@ -27,7 +27,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """"filter"+:.+?"+disposition"+:\s*"+({result}[^"]+)""",
       """"routeDirection"+:\s*"+({direction}[^"]+)""",
       """"message-id"+:\s*\["+<*({message_id}[^>"]+)""",
-      """msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachment}[^",]+?\.({file_ext}\w+))"""",
+      """msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"""",
       """"detectedName":"({attachment_1}[^"]+)"(.+?detectedName":"({attachment_2}[^"]+)")?(.+?detectedName":"({attachment_3}[^"]+)")?(.+?detectedName":"({attachment_4}[^"]+)?")?(.+?detectedName":"({attachment_5}[^"]+)")?(.+?detectedName":"({attachment_6}[^"]+)")?(.+?detectedName":"({attachment_7}[^"]+)")?(.+?detectedName":"({attachment_8}[^"]+)")?(.+?detectedName":"({attachment_9}[^"]+)")?(.+?detectedName":"({attachment_10}[^"]+)")?"""
       """msgParts":[^\$]+"sizeDecodedBytes":\s*({bytes}\d+)""",
       """"sizeBytes"+:\s*({bytes}\d+)""",
@@ -79,7 +79,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_regex="rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)\]""",
       """exa_regex="verified"+:\{[^\}]*"rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
       """exa_regex="message-id"+:\s*\["+<*({message_id}[^>"]+)""",
-      """exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachment}[^",]+?\.({file_ext}\w+))"""",
+      """exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"""",
       """exa_regex="detectedName":"({attachment_1}[^"]+)"(.+?detectedName":"({attachment_2}[^"]+)")?(.+?detectedName":"({attachment_3}[^"]+)")?(.+?detectedName":"({attachment_4}[^"]+)?")?(.+?detectedName":"({attachment_5}[^"]+)")?(.+?detectedName":"({attachment_6}[^"]+)")?(.+?detectedName":"({attachment_7}[^"]+)")?(.+?detectedName":"({attachment_8}[^"]+)")?(.+?detectedName":"({attachment_9}[^"]+)")?(.+?detectedName":"({attachment_10}[^"]+)")?"""
       """exa_regex=msgParts":[^\$]+"sizeDecodedBytes":\s*({bytes}\d+)""",
       """exa_json_path=$.msg.sizeBytes,exa_field_name=bytes""",
@@ -92,7 +92,6 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """exa_json_path=$..normalizedHeader.subject[0:],exa_field_name=email_subject""",
     ]
-    DupFields = [ "email_attachment->email_attachments" ]
   SOAR {
     IncidentType = "dlp"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "dest_email_address->dlpUser", "email_address->emailFrom", "email_subject->emailSubject", "email_recipients->emailTo", "action->dlpActionTaken","host->dlpDeviceName"]

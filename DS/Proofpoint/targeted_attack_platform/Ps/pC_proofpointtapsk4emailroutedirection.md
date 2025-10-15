@@ -22,13 +22,10 @@ Fields = [
   """"msg_header_subject_s":"\[\s*\\*"({email_subject}[^\]]+?)\\*"\s*\]",""""
   """"filter_routeDirection_s":"({direction}[^"]+)""""
   """"filter_disposition_s":"({result}[^"]+)"""
-  """"detectedName":\s*"({email_attachment}(?!text)[^"]+)"""
+  """"detectedName":\s*"({email_attachments}({email_attachment}(?!text)[^"]+))"""
   """"filter_isMsgReinjected_b":[\s"]*({is_consolidated}\w+)[\s"]*,"""
   """"rule":\s*"({rule}[^"]+)""""
   """eventTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
-]
-DupFields = [
-  "email_attachment->email_attachments"
 ]
 ParserVersion = "v1.0.0"
 

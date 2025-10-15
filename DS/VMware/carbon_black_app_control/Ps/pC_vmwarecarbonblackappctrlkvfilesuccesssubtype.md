@@ -14,7 +14,7 @@ Fields = [
   """\sdate="({time}\d{1,2}\/\d{1,2}\/\d{1,4}\s\d{1,2}:\d{1,2}:\d{1,2}\s(am|AM|PM|pm))""""
   """\shostname="(({domain}[^\\]+)\\({host}[^"]+))"""
   """\susername="(({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-  """\ssubtype="({event_name}[^"]+)""""
+  """\ssubtype="({access}({event_name}[^"]+))""""
   """\sprocess="+({process_path}(({process_dir}[^"]+)\\({process_name}[^"\s]+)))"""
   """\sfile_hash="({file_hash}[^"]+)""""
   """\stext="({additional_info}[^"]+?)\s*""""
@@ -24,9 +24,6 @@ Fields = [
   """\sfile_path="({file_path}[^"]+)""""
   """file_name="({file_name}[^"]+\.({file_ext}[^"]+))"""
   """\spolicy="({policy_name}[^"]+)""""
-]
-DupFields = [
-  "event_name->access"
 ]
 ParserVersion = "v1.0.0"
 

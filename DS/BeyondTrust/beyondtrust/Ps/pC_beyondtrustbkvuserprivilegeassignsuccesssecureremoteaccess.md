@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
   """sessionId=({session_id}[^\|]+)"""
   """deviceHost=({host}[^\|]+)"""
-  """dstUser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """dstUser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   """srcUser=({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)\|"""
   """srcUser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\|\w+="""
   """sessionOwner=({full_name}[^\|]+)"""
@@ -27,9 +27,6 @@ Fields = [
   """dstPort=({dest_port}\d+)"""
   """confMemOs=({os}[^\|]+)"""
   """cmdShellViewUrl=({additional_info}[^\|]+)"""
-]
-DupFields = [
-  "dest_user->account"
 ]
 ParserVersion = "v1.0.0"
 

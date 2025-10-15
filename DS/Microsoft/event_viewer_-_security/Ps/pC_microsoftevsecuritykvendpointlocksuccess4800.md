@@ -11,7 +11,7 @@ Conditions = [
 """REMARKS = The workstation was locked."""
 ]
 Fields = [
-"""({host}[\w\-.]+)\s+ADAuditPlus"""
+"""({dest_host}({host}[\w\-.]+))\s+ADAuditPlus"""
 """\WTIME_GENERATED\s*=\s*({time}\d{10})"""
 """\WREMARKS\s*=\s*({event_name}[^\]]+?)\s*\]"""
 """\WEVENT_NUMBER\s*=\s*({event_code}\d+)"""
@@ -30,9 +30,6 @@ Fields = [
 """\WLOGON_TYPE\s*=\s*({login_type}\d+)"""
 """\WLOGON_PROCESS\s*=\s*(null|-|({auth_process}[^\s]+))"""
 """\WAUTHENTICATION_PACKAGE\s*=\s*(null|-|({auth_package}[^\s]+))"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

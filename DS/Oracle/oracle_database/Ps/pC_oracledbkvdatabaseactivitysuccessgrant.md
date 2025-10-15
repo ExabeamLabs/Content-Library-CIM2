@@ -20,11 +20,10 @@ oracle-db-template-2 = {
     """sql\.OBJECT_SCHEMA=({db_schema}[^=]+?)\s+[\w\.]+?=""",
     """sql\.USER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+[\w\.]+?=""",
     """sql\.DBID=({db_name}[^=]+?)\s+[\w\.]+?=""",
-    """sql\.DB_USER=({account}[^=]+?)\s+[\w\.]+?=""",
+    """sql\.DB_USER=({db_user}({account}[^=]+?))\s+[\w\.]+?=""",
     """sql\.SQL_TEXT="({db_query}[^@]+?)\s*"\s+[\w\.]+?=""",
     """sql\.RETURNCODE=({return_code}[^=]+?)\s+[\w\.]+?=""",
     """sql\.OS_USER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+[\w\.]+?="""
-  ]
-  DupFields = [ "account->db_user" 
+  
 }
 ```

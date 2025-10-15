@@ -34,7 +34,6 @@ Name = google-gcpca-sk4-app-activity-cloud
      """"outcome":"({result}[^"]+)"""
      """log-name":"({log_name}[^"]+)"""
   ]
-  DupFields = [ "resource->object" ]
 
 
 }

@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """TIME_GENERATED\s*=\s*({time}\d{10})"""
-  """({host}[\w\-.]+) ADAuditPlus"""
+  """({dest_host}({host}[\w\-.]+))\s+ADAuditPlus"""
   """CALLER_USER_NAME\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """CALLER_USER_DOMAIN\s*=\s*({domain}[^\s\]]+)"""
   """SOURCE\s*=\s*({src_host}[\w\-.]+)"""
@@ -24,9 +24,6 @@ Fields = [
   """ACCOUNT_DOMAIN\s*=\s*({dest_domain}[^\s]+)"""
   """ACCOUNT_SID\s*=\s*\%?\{?({dest_user_sid}[^\s\}]+)"""
   """EVENT_TYPE_TEXT\s*=\s*({result}[^\s]+)"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

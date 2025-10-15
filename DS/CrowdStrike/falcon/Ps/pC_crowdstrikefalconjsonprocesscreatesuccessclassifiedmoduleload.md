@@ -19,8 +19,8 @@ crowdstrike-process-info-1 = {
     """"ContextBaseFileName":"({file_name}[^"]+)""""
     """"ParentProcessId":\s*"({parent_process_id}[^"]+)""",
     """"event_platform":\s*"({os}[^"]+)""",
-    """"name":\s*"({event_name}[^"]+)""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
-    """"event_simpleName":\s*"({event_name}[^"]+)""",
+    """"name":\s*"({event_code}({event_name}[^"]+))""",    #These changes are done as a part of NGCIM-6070. The value in this field is not actual process_name and it is event_name instead.
+    """"event_simpleName":\s*"({event_code}({event_name}[^"]+))""",
     """"UserSid":\s*"({user_sid}[^"]+)""",
     """"UserName":\s*"(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """src-account-name":"({account_name}[^"]+)""",
@@ -41,8 +41,10 @@ crowdstrike-process-info-1 = {
     """exa_json_path=$.ContextProcessId,exa_field_name=process_id""",
     """exa_json_path=$.ParentProcessId,exa_field_name=parent_process_id""",
     """exa_json_path=$.event_platform,exa_field_name=os""",
+    """exa_json_path=$.name,exa_field_name=event_name""",
+    """exa_json_path=$.name,exa_field_name=event_code""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_name""",
-    """exa_json_path=$.name,exa_field_name=process_name""",
+    """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$.UserSid,exa_field_name=user_sid""",
     """exa_json_path=$.UserName,exa_regex=(?:(?:NT AUTHORITY|({domain}[^\\",]+?))\\+)?(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_regex=rc-account-name":"({account_name}[^"]+)""",
@@ -64,7 +66,6 @@ crowdstrike-process-info-1 = {
     """exa_regex="(ImageFileName|TargetFileName)\\*"+:\\*"+({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+))"""
     """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
     """exa_regex="TargetImageFileName":\s*"[\\\?]*(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
-  ]
-  DupFields = ["event_name->event_code"
+  
 }
 ```

@@ -8,8 +8,9 @@ Name = crowdstrike-falcon-json-app-logout-success-remoteresponsesessionend
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-app-logout.Fields}[
     """"eventCreationTime":\s*({time}\d{13})""",    
     """"destinationServiceName":"({app}CrowdStrike)""""
+    """"(?i)EventType":\s*"({operation}[^",]+)"""",
+    """exa_json_path=$.metadata.eventType,exa_field_name=operation"""
   ]
-  DupFields = [ "operation_details->operation" ]
 
 json-crowdstrike-app-logout = {
   Vendor = CrowdStrike

@@ -8,8 +8,8 @@ Conditions = [ """"event_type":""", """"Detection and Response"""", """"event_su
      """exa_json_path=$.criticality,exa_field_name=alert_severity"""
      """exa_json_path=$.indication,exa_field_name=alert_name"""
      """description\\?":\\?"({additional_info}[^"\\]+)"""
+     """exa_json_path=$..event_sub_type,exa_field_name=alert_type"""
    ]
-   DupFields = [ "event_subtype->alert_type" ]
 ParserVersion = "v1.0.0"
 
 json-catonetwork = {

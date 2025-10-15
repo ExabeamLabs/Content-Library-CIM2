@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-xml-ds-object-modify-success-4742"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [
 """<EventID>4742</EventID>""","""<Data Name""","""TargetSid""","""TargetUserName""","""<Message>A computer account was changed"""
 ]
@@ -21,6 +21,8 @@ Fields = [
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
   """<Data Name\\*=('|")UserPrincipalName('|")>(-|({attribute}[^<]+))<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Data Name =('|")UserAccountControl('|")>(-|({uac_status}[^"<]+))<\/Data><Data Name =('|")UserParameters('|")>"""
+  """OldUacValue('|")>(-|({old_value}[^"<]+))<\/Data><Data Name =('|")NewUacValue('|")>(-|({new_value}[^"<]+))<\/Data><Data Name =('|")UserAccountControl('|")>"""
 ]
 DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"

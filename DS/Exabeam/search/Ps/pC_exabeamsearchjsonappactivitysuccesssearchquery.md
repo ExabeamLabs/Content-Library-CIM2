@@ -5,9 +5,8 @@ Name = exabeam-search-json-app-activity-success-searchquery
     Product = Search
     Conditions = [""""Exabeam Audit Event"""", """"event_type":"dl-search-activity"""", """"activity":"Search query"""", """"app":"Exabeam Data Lake""""]
     Fields = ${EXAParsersTemplates.exa-events.Fields} [
-      """query:\s*\[({query}[^]]+)\]"""
+      """query:\s*\[({object}({query}[^]]+))\]"""
     ]
-    DupFields = ["query->object"]
     ParserVersion = "v1.0.0"
   
 exa-events = {

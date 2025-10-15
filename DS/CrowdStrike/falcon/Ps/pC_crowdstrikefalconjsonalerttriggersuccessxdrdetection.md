@@ -16,6 +16,7 @@ Fields = [
 	"""exa_json_path=$.event.Severity,exa_field_name=alert_severity""",
 	"""exa_json_path=$.event.DetectId,exa_field_name=alert_id""",
 	"""exa_json_path=$.event.Tactics,exa_field_name=category""",
+  """exa_json_path=$.event.Tactics,exa_field_name=alert_type""",
 	"""exa_json_path=$.event.Techniques,exa_field_name=alert_name""",
 	"""exa_json_path=$.event.Users,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?<!local)""",
 	"""exa_json_path=$.event.Name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?<!local)""",
@@ -25,7 +26,6 @@ Fields = [
   """exa_json_path=$..cid,exa_field_name=cid""",
   """exa_json_path=$..customerIDString,exa_field_name=cid"""
 ]
-DupFields = [ "category->alert_type" ]
 
 
 }

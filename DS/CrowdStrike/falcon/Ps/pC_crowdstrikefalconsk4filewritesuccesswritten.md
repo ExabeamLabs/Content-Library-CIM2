@@ -14,12 +14,11 @@ Name = crowdstrike-falcon-sk4-file-write-success-written
     """"event_simpleName":"({event_code}[^"]+)"""",
     """"TargetFileName":"({file_path}(({file_dir}[^"]*?)[\\\/]+)?\s*({file_name}[^\\\/"]+?(\.(\d+|({file_ext}[^\\\/"\.]+)))?))"""",
     """"Size":"({bytes}\d+)"""",
-    """"DiskParentDeviceInstanceId":"({device_id}[^"]{1,2099})"""",
+    """"DiskParentDeviceInstanceId":"({service_type}({device_id}[^"]{1,2099}))"""",
     """"aid":"({aid}[^"]+)""""
     """"cid":"({cid}[^"]+)"""  
     """"event_platform":"({os}[^"]+)""""
   ]
-  DupFields = [ "device_id->service_type" ]
   ParserVersion = v1.0.0
 
 

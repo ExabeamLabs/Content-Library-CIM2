@@ -18,7 +18,7 @@ fortisiem-fortimail-email-traffic-activity = {
   TimeFormat = "epoch_sec"
   Fields = [
     """\Wtimestamp=({time}\d{10})""",
-    """\Wdevname="({host}[\w\-.]+)""",
+    """\Wdevname="({dest_host}({host}[\w\-.]+))""",
     """\Wdevice_id="({device_id}[^"]+)""",
     """\Wtype=({category}[^"]+)""",
     """\Wsubtype="({event_category}[^"]+)"""",
@@ -30,7 +30,6 @@ fortisiem-fortimail-email-traffic-activity = {
     """\Wdst_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """\Wfrom="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\Wto="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-  ]
-  DupFields = [ "host->dest_host" 
+  
 }
 ```

@@ -24,21 +24,21 @@ Name = amazon-awscloudtrail-json-role-assume-success-assumerole
       """"userAgent"\s*:\s*"\[?(|({user_agent}[^"]+?))\]?"""",
       """"eventID\\?"+:\\?"+({event_code}[^"\\]+)\\?"""",
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
-      """"errorCode"\s*:\s*"({result}[^"]+)"""",
+      """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
       """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
-      """"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
+      """"assumedRoleId\\?":\s*\\?"({role_id}({assumedRoleId}[^"]+?))\\?"""",
       """"accessKeyId":"({key_id}[^"]+?)"""",
-      """"+requestParameters[^\}]*?roleArn\\?"+:\s*\\?"({role_arn}[^"]+\/({role}[^"]+?))\\?"+""",
+      """"arn\\?":\s*\\?"arn:aws:sts::\d+:assumed-role\/({account}[^\/"]+)\/(AssumeRoleSession|((?![\w\-\.]{30,})(({aws_email_address}[^"@]+@[^"\.]+\.[^"]+)|({aws_account}[\w\.\-]{1,40}\$?)(@({domain}[^@"]+))?)))\\?"""",
+      """"+requestParameters[^\}]*?roleArn\\?"+:\s*\\?"({role_arn}[^"]+\/({account}({role}[^"]+?)))\\?"+""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
       """"+responseElements":\{"credentials":\{("[^,]+,)*"expiration\\?":\s*\\?"({session_expiration}[^"]+?)\\?"""", 
       """"assumedRoleUser":\{("[^,]+,)*"arn"\s*:\s*"({session_arn}[^"]+)\\?""""
       """"recipientAccountId"+\s*:\s*"({object}[^"]+)""""
   ]
   ParserVersion = v1.0.0
-  DupFields = ["role->account","assumedRoleId->role_id","result->failure_code"]
 
 aws-cloudtrail-user-template = {
     Fields = [

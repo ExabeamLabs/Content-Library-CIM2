@@ -13,7 +13,7 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
 ]
   Fields = [
     """"timestamp":\s*"({time}\d{13})"""",
-    """"CommandLine":\s*"({process_command_line}.+?)\s*","TargetProcessId""",
+    """"CommandLine":\s*"({dest_process_command_line}({parent_process_command_line}({process_command_line}.+?)))\s*","TargetProcessId""",
     """"name":\s*"({service_name}[^"]+)""",
     """"ServiceDisplayName":"({service_name}[^"]+)"""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
@@ -25,13 +25,15 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """"event_platform":\s*"({os}[^"]+)"""
     """"InterfaceGuid":"({process_guid}[^"]+)""""
     """"cid":"({cid}[^"]+)"""
-    """"ImageFileName":\s*"[\\\?]+(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
+    """"ImageFileName":\s*"[\\\?]+(|({dest_process_path}({process_path}({dest_process_dir}({process_dir}[^"]*?))(\\+({dest_process_name}({process_name}[^"\\]+?)))?)))""""
     """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"ComputerName":"({host}[\w\-\.]+)""""
     """"aip":\s*"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_regex="timestamp":\s*"({time}\d{13})"""",
     """exa_json_path=$.CommandLine,exa_field_name=process_command_line""",
+    """exa_json_path=$.CommandLine,exa_field_name=parent_process_command_line""",
+    """exa_json_path=$.CommandLine,exa_field_name=dest_process_command_line""",
     """exa_json_path=$.name,exa_field_name=service_name""",
     """exa_json_path=$.ServiceDisplayName,exa_field_name=service_name""",
     """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
@@ -43,12 +45,11 @@ Name = crowdstrike-falcon-json-process-create-success-servicestarted
     """exa_json_path=$.event_platform,exa_field_name=os""",
     """exa_json_path=$.InterfaceGuid,exa_field_name=process_guid""",
     """exa_json_path=$.cid,exa_field_name=cid""",
-    """exa_regex="ImageFileName":\s*"[\\\?]+(|({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+?))?))""""
+    """exa_regex="ImageFileName":\s*"[\\\?]+(|({dest_process_path}({process_path}({dest_process_dir}({process_dir}[^"]*?))(\\+({dest_process_name}({process_name}[^"\\]+?)))?)))""""
     """exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
     """exa_json_path=$.aip,exa_field_name=aip"""
   ]
-  DupFields = [ "process_dir->process_path_directory", "process_command_line->parent_process_command_line" ,"process_path->dest_process_path","process_dir->dest_process_dir","process_name->dest_process_name","process_command_line->dest_process_command_line"]
 
 
 }

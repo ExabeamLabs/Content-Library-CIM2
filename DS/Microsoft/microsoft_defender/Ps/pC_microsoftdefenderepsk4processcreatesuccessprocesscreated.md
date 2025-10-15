@@ -27,8 +27,8 @@ Name = microsoft-defenderep-sk4-process-create-success-processcreated
      """"InitiatingProcessFolderPath"+:\s*"+({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+?))""""
      """"FileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?,""""
      """"FolderPath"+:"+({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))"""",
-     """\"InitiatingProcessCommandLine\\?\"+:\s*\\?\"\s*({process_command_line}.+?)\s*\\*","\w+":"""
      """"ProcessCommandLine\\?"+:\s*\\?"\s*({process_command_line}.+?)\s*\\*",""""
+     """\"InitiatingProcessCommandLine\\?\"+:\s*\\?\"\s*({process_command_line}.+?)\s*\\*","\w+":"""
      """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?"""",
      """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
      """"AccountDomain":"({domain}[^:]+?)",""",

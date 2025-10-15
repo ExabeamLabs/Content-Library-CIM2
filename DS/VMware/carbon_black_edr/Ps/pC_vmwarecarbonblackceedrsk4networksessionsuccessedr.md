@@ -13,7 +13,7 @@ Name = vmware-carbonblackceedr-sk4-network-session-success-edr
     """"+reason"+:\s*"+({additional_info}[^"]+?)"+""",
     """"+device_os"+:\s*"+({os}[^"]+?)"+""",
     """"+state"+:\s*"+({status_msg}[^"]+?)"+""",
-    """"+type"+:\s*"+({event_name}[^"]+?)"+""",
+    """"+type"+:\s*"+({operation_type}({event_name}[^"]+?))"+""",
     """"+process_pid"+:\s*({process_id}\d+)""",
     """"+process_path"+:"+({process_path}({process_dir}[^"]+)\\({process_name}[^"]+))"""",
     """"+parent_path"+:"+({parent_process_path}({parent_process_dir}[^"]+)\\({parent_process_name}[^"]+))"""",
@@ -25,7 +25,6 @@ Name = vmware-carbonblackceedr-sk4-network-session-success-edr
     """"+process_guid"+:"+({process_guid}[^"]+)""",
     """"+parent_guid"+:"+({parent_process_guid}[^"]+)""",
   ]
-  DupFields = ["event_name->operation_type"]
 ParserVersion = "v1.0.0"
 
 

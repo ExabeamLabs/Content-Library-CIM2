@@ -22,9 +22,9 @@ onewelcome-authentication-event = {
       """exa_json_path=$.result,exa_field_name=result""",
       """exa_json_path=$.authres,exa_field_name=result""",
       """exa_json_path=$.action,exa_field_name=event_name""",
+      """exa_json_path=$.action,exa_field_name=operation""",
       """exa_json_path=$.hdetail,exa_field_name=additional_info""",
       """exa_json_path=$.human,exa_field_name=additional_info"""
-    ]
-    DupFields = [ "event_name->operation" 
+    
 }
 ```

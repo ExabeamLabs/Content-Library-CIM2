@@ -15,7 +15,7 @@ Name = zscaler-ia-json-network-traffic-success-internalreason
      """ConnectorPort":\s*({src_port}\d+),""",
      """ServerPort":\s*({dest_port}\d+),""",
      """Policy":\s*"\s*({policy_name}[^"]+)"""",
-     """ConnectionStatus":\s*"({result}[^"]+)""""
+     """ConnectionStatus":\s*"({connection_status}({result}[^"]+))""""
      """"LogTimestamp":\s*"({time}[^"]+)""""
      """"SessionID":\s*"({session_id}[^"]+)""""
      """"ConnectionID":\s*"({connection_id}[^"]+)""""
@@ -30,18 +30,17 @@ Name = zscaler-ia-json-network-traffic-success-internalreason
      """"ConnectorIP":\s*"({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
      """"Host":\s*"({dest_host}[^"]+)""""
      """"Application":\s*"({app}[^"]+)""""
-     """"AppGroup":\s*"({app_group}[^"]+)""""
+     """"AppGroup":\s*"({operation_type}({app_group}[^"]+))""""
      """"TimestampConnectionStart":\s*"({event_start_time}[^"]+)""""
      """"TimestampConnectionEnd":\s*"({event_stop_time}[^"]+)""""
      """"ZENTotalBytesRxClient":\s*({rx_client_total_bytes}\d+)"""
      """"ZENTotalBytesTxClient":\s*({tx_client_total_bytes}\d+)"""
-     """"ZENTotalBytesRxConnector":\s*({rx_connector_total_bytes}\d+)"""
-     """"ZENTotalBytesTxConnector":\s*({tx_connector_total_bytes}\d+)"""
+     """"ZENTotalBytesRxConnector":\s*({rx_connector_total_bytes}({bytes_in}\d+))"""
+     """"ZENTotalBytesTxConnector":\s*({tx_connector_total_bytes}({bytes_out}\d+))"""
      """"PolicyProcessingTime":\s*({policy_runtime}\d+)"""
      """"CAProcessingTime":\s*({ca_runtime}\d+)"""
      """"AppLearnTime":\s*({app_learntime}\d+)"""
   ]
-  DupFields = ["result->conn_status", "app_group->operation_type", "rx_connector_total_bytes->bytes_in", "tx_connector_total_bytes->bytes_out"]
 
 
 }

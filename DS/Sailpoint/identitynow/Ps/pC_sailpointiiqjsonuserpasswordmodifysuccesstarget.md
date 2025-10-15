@@ -13,9 +13,8 @@ Name = sailpoint-iiq-json-user-password-modify-success-target
     """"TARGET\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"SOURCE\\?":\\?"(({email_address}[^@"]+@[^"]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"APPLICATION\\?":\\?"({app}[^"]+?)\\?"""",
-    """"ACTION\\?":\\?"({operation}[^"]+?)\\?""""
+    """"ACTION\\?":\\?"({event_name}({operation}[^"]+?))\\?""""
   ]
-  DupFields = [ "operation->event_name" ]
 
 
 }

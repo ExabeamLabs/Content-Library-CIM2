@@ -19,7 +19,7 @@ Name = "crowdstrike-falcon-json-app-notification-success-streamstopped"
     """"UserId":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"ServiceName":\s*"({app}[^"]+)""",
     """"Success":\s*({result}[^",}]+)""",
-    """"OperationName":"({event_name}[^"]+)"""
+    """"OperationName":"({operation}({event_name}[^"]+))"""
     """"EventType":"({event_category}[^"]+)"""
     """"aid":"({aid}[^"]+)"""
     """exa_json_path=$.timestamp,exa_field_name=time""",
@@ -29,10 +29,10 @@ Name = "crowdstrike-falcon-json-app-notification-success-streamstopped"
     """exa_json_path=$.ServiceName,exa_field_name=app""",
     """exa_json_path=$.Success,exa_field_name=result"""
     """exa_json_path=$.OperationName,exa_field_name=event_name"""
+    """exa_json_path=$.OperationName,exa_field_name=operation"""
     """exa_json_path=$.EventType,exa_field_name=event_category"""
     """exa_json_path=$.aid,exa_field_name=aid"""
   ]
-  DupFields = [event_name->operation]
 
 
 }

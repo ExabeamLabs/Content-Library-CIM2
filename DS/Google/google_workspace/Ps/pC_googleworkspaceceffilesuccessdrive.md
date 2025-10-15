@@ -15,8 +15,8 @@ Fields = [
     """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"events":[^=]*?"name"\s*:\s*"old_value",\s*"multiValue"\s*:\s*\[\s*"({src_file_name}[^"]+)"""",
     """"events":[^=]*?"name"\s*:\s*"new_value",\s*"multiValue"\s*:\s*\[\s*"\s*({file_name}[^"]+?(\.({file_ext}[^"\.]+?))?)\s*"""",
-    """"events":[^=]*?"name":"({access}[^"]+)"""",
-    """"events":[^=]*?"type":"access","name":"({access}[^"]+)"""",
+    """"events":[^=]*?"name":"({operation}({access}[^"]+))"""",
+    """"events":[^=]*?"type":"access","name":"({operation}({access}[^"]+))"""",
     """"events":[^=]*?"name"\s*:\s*"destination_folder_title",\s*"(multiValue|value)"\s*:\s*\[*"({file_dir}[^"]+)"""",
     """"events":[^=]*?"name"\s*:\s*"source_folder_title",\s*"(multiValue|value)"\s*:\s*\[*"({src_file_dir}[^"]+)"""",
     """:"doc_id","value":"({file_id}[^"]+)"""",
@@ -29,7 +29,6 @@ Fields = [
     """"kind":\s*"({category}[^"]+)"""
     """:"owner","value":"\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s*""""
   ]
-  DupFields = [ "access->operation" ]
   ParserVersion = "v1.0.0"
 
 

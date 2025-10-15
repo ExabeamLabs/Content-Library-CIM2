@@ -15,7 +15,7 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailfrom
 """:"""
   ]
   Fields = [
-    """"relay"+:\s*"+({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """"relay"+:\s*"+({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"from"+:\s*\[?"+([^<,]+?<|<)?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|\>]+\.[^\]\s"\\,;\|\>]+))\s*>?""",
     """"sizeBytes"+:\s*"*({bytes}\d+)""",
     """"nrcpts"+:\s*"+({num_recipients}\d+)""",
@@ -25,7 +25,7 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailfrom
     """"cipher"+:\s*"+(NONE|({auth_method}[^"]+))""",
     """"qid"+:\s*"+({alert_id}[^"]+)""",
     """"to":\["<\'?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@([^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)(?<!local))\s*>"""
-    """exa_json_path=$.sm.relay,exa_regex=({host}[\w\-.]+?)\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.sm.relay,exa_regex=({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.sm.from,exa_regex=([^<,]+?<|<)?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|\>]+\.[^\]\s"\\,;\|\>]+))\s*>?""",
     """exa_json_path=$.sm.sizeBytes,exa_field_name=bytes""",
     """exa_json_path=$.sm.nrcpts,exa_field_name=num_recipients""",
@@ -36,7 +36,6 @@ Name = proofpoint-tappod-json-email-send-receive-sendmailfrom
     """exa_json_path=$.sm.qid,exa_field_name=alert_id""",
     """exa_regex="to":\["<\'?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@([^\]\s"\\,\|>]+\.[^\]\s"\\,\|>]+)(?<!local))\s*>"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

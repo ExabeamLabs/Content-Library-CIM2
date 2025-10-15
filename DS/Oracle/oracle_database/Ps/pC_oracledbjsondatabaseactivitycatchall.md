@@ -12,6 +12,7 @@ Name = oracle-db-json-database-activity-catchall
     """exa_json_path=$.os_username,exa_field_name=user"""
     """exa_json_path=$.username,exa_field_name=db_user"""
     """exa_json_path=$.action_name,exa_field_name=operation""",
+    """exa_json_path=$.action_name,exa_field_name=db_operation""",
     """exa_json_path=$.sessionid,exa_field_name=session_id""",
     """exa_json_path=$.userhost,exa_regex=(({domain}[^\\]+)[\\]+)?({host}[^"]+)"""
     """exa_json_path=$.os_process,exa_field_name=process_id""",
@@ -23,7 +24,6 @@ Name = oracle-db-json-database-activity-catchall
     """exa_json_path=$.exa_jdbc_hostname,exa_field_name=dest_host""",
     """exa_json_path=$.exa_jdbc_port,exa_field_name=dest_port"""
   ]
-  DupFields = ["operation->db_operation"]
 
 
 }

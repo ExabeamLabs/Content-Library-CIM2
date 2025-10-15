@@ -5,8 +5,8 @@ Name = "proofpoint-casb-json-alert-trigger-success-dataleakage"
   Conditions = [ """"sub_type":""", """"Data Leakage"""", """"event_id":""", """"user_email":""", """"severity":""", """"related_events":""" ]
   Fields = ${ProofpointParsersTemplates.proofpoint-casb-json-alert-trigger-events.Fields} [
     """exa_json_path=$.related_events[0].file_id,exa_field_name=file_id"""
+    """exa_json_path=$.title,exa_field_name=policy_name""",
   ]
-  DupFields = [ "alert_name->policy_name" ]
   ParserVersion = "v1.0.0"
 
 proofpoint-casb-json-alert-trigger-events = {
