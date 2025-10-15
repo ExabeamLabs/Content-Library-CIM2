@@ -1,0 +1,20 @@
+# Code Changes for amazon-awscloudtrail-json-endpoint-create-runinstances (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'availabilty_zone', 'aws_account', 'aws_email_address', 'aws_user', 'block_public_acls', 'block_public_policy', 'bucket_arn', 'bucket_host', 'domain', 'email_address', 'email_domain', 'event_category', 'event_id', 'failure_code', 'failure_reason', 'ignore_public_acls', 'instance_id', 'instance_profile_arn', 'instance_type', 'key_id', 'key_name', 'mfa', 'new_host', 'new_ip', 'operation', 'principal_id', 'readonly', 'region', 'resource_id', 'restrict_public_buckets', 'result', 'role', 'role_arn', 'role_id', 'security_group', 'service_name', 'session_name', 'src_host', 'src_ip', 'src_port', 'src_resource', 'time', 'user', 'user_agent', 'user_arn', 'user_type', 'vpc'] |
+| edit_regex_field | availabilty_zone |  | ['availabilityZone\\?":\s*\\?"({availabilty_zone}[^"]+?)\\?"'] |
+| edit_regex_field | instance_profile_arn |  | ['arn\\?":\s*\\?"({instance_profile_arn}[^"]+?)\\?"', 'exa_json_path=$..iamInstanceProfile,exa_regex=arn\\?":\s*\\?"({instance_profile_arn}[^"]+)'] |
+| edit_regex_field | instance_type |  | ['instanceType\\?":\s*\\?"({instance_type}[^"]+?)\\?"'] |
+| edit_regex_field | key_name |  | ['keyName\\?":\s*\\?"({key_name}[^"]+?)\\?"'] |
+| edit_regex_field | new_host |  | ['privateDnsName\\?":\s*\\?"({new_host}[^"]+?)\\?"'] |
+| edit_regex_field | new_ip |  | ['privateIpAddress\\?":\s*\\?"({new_ip}[^"]+?)\\?"'] |
+| edit_regex_field | resource_id |  | ['instanceId\\?":\s*\\?"({resource_id}[^"]+?)\\?"'] |
+| edit_regex_field | result |  | ['"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"'] |
+| edit_regex_field | security_group |  | ['groupName\\?":\s*\\?"({security_group}[^"]+?)\\?"'] |
+| edit_regex_field | src_host |  | ['"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]', 'exa_json_path=$..SourceIpAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$', 'exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$'] |
+| edit_regex_field | src_ip |  | ['"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]', 'exa_json_path=$..SourceIpAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$', 'exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$'] |
+| edit_regex_field | src_port |  | ['"sourceIPAddress"+\s*:\s*"+?(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(lambda.amazonaws.com|internal|({src_host}[\w\-.]+)))"+\s*[,\]\}]', 'exa_json_path=$..SourceIpAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$', 'exa_json_path=$..sourceIPAddress,exa_regex=(?:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-.]+))$'] |
+| edit_regex_field | src_resource |  | ['imageId\\?":\s*\\?"({src_resource}[^"]+?)\\?"'] |
+| added_regex_field | failure_code |  | ['"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"'] |
+| removed_attribute | DupFields |  | N/A |

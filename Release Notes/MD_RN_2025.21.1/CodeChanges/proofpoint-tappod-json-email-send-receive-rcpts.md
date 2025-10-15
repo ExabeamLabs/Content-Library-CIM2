@@ -1,0 +1,9 @@
+# Code Changes for proofpoint-tappod-json-email-send-receive-rcpts (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'alert_id', 'alert_type', 'attachment_1', 'attachment_10', 'attachment_2', 'attachment_3', 'attachment_4', 'attachment_5', 'attachment_6', 'attachment_7', 'attachment_8', 'attachment_9', 'bytes', 'connection_status', 'country', 'dest_email_address', 'dest_email_domain', 'dest_user', 'dest_user_full_name', 'direction', 'email_address', 'email_attachment', 'email_attachments', 'email_recipients', 'email_subject', 'file_ext', 'full_name', 'hash_md5', 'hash_sha256', 'host', 'message_id', 'reply_to', 'result', 'rule', 'src_ip', 'src_port', 'time', 'virus_name'] |
+| edit_regex_field | email_attachment |  | ['exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"', 'msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"'] |
+| edit_regex_field | file_ext |  | ['exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"', 'exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))', 'msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"', 'msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))'] |
+| added_regex_field | email_attachments |  | ['exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"', 'msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"'] |
+| removed_attribute | DupFields |  | N/A |

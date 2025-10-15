@@ -1,0 +1,8 @@
+# Code Changes for zscaler-ia-cef-alert-trigger-success-zscalernssweblogdlpdictionaries (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'alert_name', 'alert_severity', 'alert_type', 'bytes_in', 'bytes_out', 'categories', 'category', 'dest_ip', 'dest_port', 'email_address', 'file_ext', 'file_name', 'file_type', 'host', 'http_response_code', 'location', 'method', 'mime', 'owner_id', 'protocol', 'proxy_action', 'referrer', 'risk_level', 'risk_score', 'rule', 'src_file_name', 'src_host', 'src_ip', 'src_port', 'time', 'uri_path', 'uri_query', 'url', 'user', 'user_agent', 'web_domain'] |
+| edit_regex_field | email_address |  | ['\slogin=({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s\w+=', '\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))'] |
+| removed_regex_field | email_domain |  | [] |
+| edit_regex_field | user |  | ['\ssuser=((noauth-protocol[^=]+)?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)\s)|((\w+[^=]+\->\w+[^=]+)\s|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))', '\ssuser=(NA|None|\$NULL|(\w+[^=]+\->\w+[^=]+)\s|(?![^\s]+@[^\s]+)({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)'] |

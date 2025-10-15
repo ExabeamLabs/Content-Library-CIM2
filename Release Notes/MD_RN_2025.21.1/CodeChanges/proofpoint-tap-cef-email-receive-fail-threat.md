@@ -1,0 +1,11 @@
+# Code Changes for proofpoint-tap-cef-email-receive-fail-threat (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_name', 'action', 'alert_id', 'alert_name', 'alert_severity', 'alert_status', 'alert_type', 'bytes', 'category', 'dest_email_address', 'dest_email_domain', 'email_address', 'email_attachment', 'email_attachments', 'email_domain', 'email_recipients', 'email_subject', 'file_name', 'malware_score', 'malware_url', 'message_id', 'phishing_score', 'result', 'spam_score', 'src_ip', 'src_port', 'status_msg', 'threat_url', 'time'] |
+| edit_regex_field | alert_name |  | ['"classification":"({alert_name}[^"]+)', '"threatType":"({alert_name}({alert_type}[^"]+))', '\scs1=Policy \[id: [^\]]*? ; name: ({alert_name}[^\]]+?) ; category: ({category}[^\]]+?)]'] |
+| edit_regex_field | alert_type |  | ['"threatType":"({alert_name}({alert_type}[^"]+))', '"threatsInfoMap":\s*\[\{"[^}\]]+?"classification":\s*"({alert_type}[^"]+)', '"threatsInfoMap":\s*\[\{"[^}\]]+?"threatType":\s*"({alert_type}[^"]+)', 'classification":\s*"({alert_type}[^",]+?)\s*(,|")'] |
+| edit_regex_field | email_attachment |  | [',\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)",\s*"\w+":', 'exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)$'] |
+| edit_regex_field | email_attachments |  | [',\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)",\s*"\w+":', 'exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)$'] |
+| added_regex_field | file_name |  | [',\s*"filename":\s*"(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)",\s*"\w+":', 'exa_json_path=$.messageParts[0].filename,exa_regex=(?!text(\.txt|\.html|-calendar))\s*({email_attachments}({file_name}({email_attachment}[^",;]+))[^"]*?)$'] |
+| removed_attribute | DupFields |  | N/A |

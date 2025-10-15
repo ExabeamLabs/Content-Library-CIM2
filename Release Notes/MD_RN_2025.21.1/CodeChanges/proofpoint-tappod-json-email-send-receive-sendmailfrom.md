@@ -1,0 +1,10 @@
+# Code Changes for proofpoint-tappod-json-email-send-receive-sendmailfrom (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['alert_id', 'auth_method', 'bytes', 'dest_email_address', 'dest_host', 'dest_ip', 'dest_port', 'email_address', 'email_domain', 'host', 'message_id', 'num_recipients', 'protocol', 'time'] |
+| edit_regex_field | dest_ip |  | ['"relay"+:\s*"+({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', 'exa_json_path=$.sm.relay,exa_regex=({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?'] |
+| edit_regex_field | dest_port |  | ['"relay"+:\s*"+({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', 'exa_json_path=$.sm.relay,exa_regex=({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?'] |
+| edit_regex_field | host |  | ['"relay"+:\s*"+({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', 'exa_json_path=$.sm.relay,exa_regex=({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?'] |
+| added_regex_field | dest_host |  | ['"relay"+:\s*"+({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', 'exa_json_path=$.sm.relay,exa_regex=({dest_host}({host}[\w\-.]+?))\.?\s*\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?'] |
+| removed_attribute | DupFields |  | N/A |

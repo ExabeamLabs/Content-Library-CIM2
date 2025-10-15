@@ -1,0 +1,7 @@
+# Code Changes for microsoft-azure-kv-app-activity-adduser (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'app', 'category', 'dest_email_address', 'dest_email_domain', 'dest_user', 'email_address', 'email_domain', 'event_category', 'event_name', 'group_name', 'group_type', 'object', 'operation', 'provider_name', 'resource', 'resource_group', 'resource_id', 'result', 'src_ip', 'src_port', 'subscription_id', 'target', 'time', 'user_agent'] |
+| added_regex_field | group_name |  | ['Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)', 'TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)', 'TargetResources":"\[.+?"displayName\\":\\"Group.DisplayName\\",.+?\\"newValue\\":\\"\\*"({group_name}[^"\\]+)', 'exa_regex=Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)', 'exa_regex=TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)', 'exa_regex=TargetResources":"\[.+?"displayName\\":\\"Group.DisplayName\\",.+?\\"newValue\\":\\"\\*"({group_name}[^"\\]+)'] |
+| added_regex_field | group_type |  | ['GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)', 'exa_regex=GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)', 'exa_regex=groupType\\":\\"({group_type}[^"\\]+)', 'groupType\\":\\"({group_type}[^"\\]+)'] |
