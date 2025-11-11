@@ -1,0 +1,12 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-673 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['dest_host', 'domain', 'event_code', 'failure_code', 'host', 'result_code', 'service_name', 'src_ip', 'src_port', 'ticket_encryption_type', 'ticket_options', 'time', 'user'] |
+| edit_regex_field | result_code |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| edit_regex_field | service_name |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| edit_regex_field | src_ip |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| edit_regex_field | src_port |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| edit_regex_field | user |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| added_regex_field | failure_code |  | ['User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?Service Name:\s+({service_name}\S+).+?Client Address:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?.+?Failure Code:\s+({failure_code}({result_code}[^\s]+))'] |
+| removed_attribute | DupFields |  | N/A |

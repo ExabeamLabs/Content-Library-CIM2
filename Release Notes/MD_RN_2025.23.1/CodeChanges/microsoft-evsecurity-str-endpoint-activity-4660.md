@@ -1,0 +1,9 @@
+# Code Changes for microsoft-evsecurity-str-endpoint-activity-4660 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['dest_host', 'domain', 'event_code', 'event_name', 'host', 'login_id', 'object_id', 'object_server', 'process_dir', 'process_id', 'process_name', 'process_path', 'src_host', 'time', 'user', 'user_sid'] |
+| edit_regex_field | host |  | ['(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', '<?Computer>?(Name)?\s*=?\s*"*({src_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)', 'Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({dest_host}({host}[\w.\-]+)))', '\Wdvchost=(|({dest_host}({host}.+?)))(\s+\w+=|\s*$)', '\w{3}\s+\d+\s+\d+:\d+:\d+\s+(\d+|({dest_host}({host}[\w\-\.]+)))\s'] |
+| edit_regex_field | time |  | ['(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', 'Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({dest_host}({host}[\w.\-]+)))'] |
+| added_regex_field | dest_host |  | ['(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', 'Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({dest_host}({host}[\w.\-]+)))', '\Wdvchost=(|({dest_host}({host}.+?)))(\s+\w+=|\s*$)', '\w{3}\s+\d+\s+\d+:\d+:\d+\s+(\d+|({dest_host}({host}[\w\-\.]+)))\s'] |
+| removed_attribute | DupFields |  | N/A |

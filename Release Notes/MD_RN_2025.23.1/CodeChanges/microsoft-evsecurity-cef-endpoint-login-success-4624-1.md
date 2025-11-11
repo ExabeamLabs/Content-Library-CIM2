@@ -1,0 +1,11 @@
+# Code Changes for microsoft-evsecurity-cef-endpoint-login-success-4624-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['auth_package', 'auth_process', 'dest_domain', 'dest_host', 'dest_login_id', 'dest_user', 'dest_user_sid', 'domain', 'event_code', 'event_name', 'full_name', 'host', 'key_length', 'login_id', 'login_type', 'process_dir', 'process_id', 'process_name', 'process_path', 'provider_name', 'result', 'src_domain', 'src_host', 'src_host_windows', 'src_ip', 'src_port', 'subject_sid', 'time', 'user', 'user_sid', 'user_upn'] |
+| edit_regex_field | domain |  | ['<Data Name\\=(\'|")SubjectDomainName(\'|")>(-|({src_domain}({domain}.+?)))<', '<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | full_name |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | user |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | user_upn |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| added_regex_field | src_domain |  | ['<Data Name\\=(\'|")SubjectDomainName(\'|")>(-|({src_domain}({domain}.+?)))<', '<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| removed_attribute | DupFields |  | N/A |

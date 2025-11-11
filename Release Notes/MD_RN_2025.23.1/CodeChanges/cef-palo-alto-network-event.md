@@ -1,0 +1,7 @@
+# Code Changes for cef-palo-alto-network-event (ParserTemplate)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['alert_id', 'alert_name', 'bytes_in', 'bytes_out', 'dest_interface', 'dest_network_zone', 'dest_port', 'dest_translated_ip', 'dest_translated_port', 'device_name', 'domain', 'host', 'network_app', 'protocol', 'result', 'result_reason', 'rule', 'serial_num', 'src_interface', 'src_ip', 'src_network_zone', 'src_port', 'src_translated_ip', 'src_translated_port', 'time', 'user'] |
+| added_regex_field | device_name |  | ['\sdvchost=({device_name}[\w.-]+?)\s+(\w+=|$)'] |
+| removed_attribute | DupFields |  | N/A |

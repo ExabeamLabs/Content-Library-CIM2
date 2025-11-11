@@ -1,0 +1,11 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-success-4770 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'dest_host', 'domain', 'event_code', 'event_name', 'host', 'opcode', 'service_name', 'src_ip', 'src_port', 'ticket_encryption_type', 'ticket_options', 'time', 'user'] |
+| edit_regex_field | dest_host |  | ['"ComputerName":"({dest_host}({host}[\w\-.]+))"', '(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))\s', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', '({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({dest_host}({host}[\w\-.]+))', '<?Computer>?(Name)?\s*=?\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)', 'Service Name(:|=)\s*(\\[nrt])*(::ffff:)?({dest_host}[\w\-.]+?\$)([\s;]*|(\\[nrt])*)\w+\s\w+(:|=)', '__li_source_path="*({dest_host}({host}[^"]+))"'] |
+| edit_regex_field | host |  | ['"ComputerName":"({dest_host}({host}[\w\-.]+))"', '(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))\s', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', '({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({dest_host}({host}[\w\-.]+))', '<?Computer>?(Name)?\s*=?\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)', '__li_source_path="*({dest_host}({host}[^"]+))"'] |
+| edit_regex_field | time |  | ['"TimeGenerated":"({time}\d\d\d\d\-\d\d\-\d\d\s\d\d:\d\d:\d\d)', '({dest_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', '({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})', '({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({dest_host}({host}[\w\-.]+))', '<TimeCreated SystemTime\\*=(\'|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)'] |
+| edit_regex_field | user |  | ['Account Name(:|=)\s*(\\[nrt])*({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@[^:\s;]*)?[\s;]*\w+\s\w+(:|=)'] |
+| added_regex_field | account |  | ['Account Name(:|=)\s*(\\[nrt])*({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@[^:\s;]*)?[\s;]*\w+\s\w+(:|=)'] |
+| removed_attribute | DupFields |  | N/A |

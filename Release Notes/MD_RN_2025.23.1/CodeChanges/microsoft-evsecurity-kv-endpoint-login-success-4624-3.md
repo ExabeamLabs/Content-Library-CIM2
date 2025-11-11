@@ -1,0 +1,10 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-success-4624-3 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'auth_package', 'auth_process', 'dest_host', 'dest_ip', 'dest_login_id', 'domain', 'email_address', 'event_code', 'event_name', 'host', 'key_length', 'login_id', 'login_type', 'process_dir', 'process_id', 'process_name', 'process_path', 'src_host', 'src_ip', 'src_port', 'subject_sid', 'time', 'user', 'user_sid', 'user_upn'] |
+| edit_regex_field | email_address |  | ['\sAccount Name:\s*(\\[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\[ntr])*)\s+Account Domain:'] |
+| edit_regex_field | user |  | ['New Logon:[^"]*?Account Name(:|=)\s*(\\[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*', '\sAccount Name:\s*(\\[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\[ntr])*)\s+Account Domain:'] |
+| edit_regex_field | user_upn |  | ['New Logon:[^"]*?Account Name(:|=)\s*(\\[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| added_regex_field | account |  | ['New Logon:[^"]*?Account Name(:|=)\s*(\\[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*', '\sAccount Name:\s*(\\[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\[ntr])*)\s+Account Domain:'] |
+| removed_attribute | DupFields |  | N/A |

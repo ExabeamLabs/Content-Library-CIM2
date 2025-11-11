@@ -1,0 +1,11 @@
+# Code Changes for microsoft-evsecurity-kv-group-member-remove-success-computer (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_domain', 'account_id', 'account_name', 'action', 'activity_id', 'dest_user_sid', 'domain', 'event_code', 'event_id', 'event_name', 'group_domain', 'group_id', 'group_name', 'group_type', 'host', 'login_id', 'member', 'os', 'process_id', 'result', 'src_host', 'task_name', 'thread_id', 'time', 'user', 'user_dn', 'user_ou', 'user_sid'] |
+| edit_regex_field | host |  | ['"(?:winlog\.)?computer_name"+:"+({src_host}({host}[^"]+))', '"(?i)Hostname\\*"+:\\*"+({src_host}({host}[\w\-.]+))', '"ComputerName":"({src_host}({host}[\w\-.]+))"', '"agent_hostname":"({src_host}({host}[\w\-.]+))"', '"computer":"({src_host}({host}[\w\-.]+))"', '(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({src_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*', '(?i)Computer_name(\\*")?:(\\*")?({src_host}({host}[\w\-\.]+))', 'ComputerName=({src_host}({host}[\w\-.]+))'] |
+| edit_regex_field | user_dn |  | ['Account Name\s*:\s*(\\*(r|n|t))*(.+?({member}({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+))))\s*(\\*(r|n|t))*Group:'] |
+| edit_regex_field | user_ou |  | ['Account Name\s*:\s*(\\*(r|n|t))*(.+?({member}({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+))))\s*(\\*(r|n|t))*Group:'] |
+| added_regex_field | member |  | ['Account Name\s*:\s*(\\*(r|n|t))*(.+?({member}({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+))))\s*(\\*(r|n|t))*Group:'] |
+| added_regex_field | src_host |  | ['"(?:winlog\.)?computer_name"+:"+({src_host}({host}[^"]+))', '"(?i)Hostname\\*"+:\\*"+({src_host}({host}[\w\-.]+))', '"ComputerName":"({src_host}({host}[\w\-.]+))"', '"agent_hostname":"({src_host}({host}[\w\-.]+))"', '"computer":"({src_host}({host}[\w\-.]+))"', '(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({src_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*', '(?i)Computer_name(\\*")?:(\\*")?({src_host}({host}[\w\-\.]+))', 'ComputerName=({src_host}({host}[\w\-.]+))'] |
+| removed_attribute | DupFields |  | N/A |

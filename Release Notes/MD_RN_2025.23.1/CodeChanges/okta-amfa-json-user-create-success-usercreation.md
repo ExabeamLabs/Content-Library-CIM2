@@ -1,0 +1,10 @@
+# Code Changes for okta-amfa-json-user-create-success-usercreation (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_domain', 'account_name', 'additional_info', 'app', 'dest_domain', 'dest_user', 'email_address', 'email_domain', 'full_name', 'host', 'object', 'operation', 'result', 'src_ip', 'src_port', 'time', 'uri_path', 'user', 'user_agent'] |
+| edit_regex_field | account_name |  | ['"targets":\[.*?\{.*?"login":"({account_name}({dest_user}[^"]+))"[^\{\}]+?"objectType":"User".*?\}', '"targets":\[.*?\{.*?"login":"({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"[^\{\}]+?"objectType":"User".*?\}', '"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({account_name}({dest_user}[^"]+))"', '"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"'] |
+| edit_regex_field | dest_domain |  | ['"targets":\[.*?\{.*?"login":"({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"[^\{\}]+?"objectType":"User".*?\}', '"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"'] |
+| edit_regex_field | dest_user |  | ['"targets":\[.*?\{.*?"login":"({account_name}({dest_user}[^"]+))"[^\{\}]+?"objectType":"User".*?\}', '"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"({account_name}({dest_user}[^"]+))"'] |
+| added_regex_field | account_domain |  | ['"targets":\[.*?\{.*?"login":"({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"[^\{\}]+?"objectType":"User".*?\}', '"targets":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*({account_name}[^@\s"]+)@({account_domain}({dest_domain}[^"]+))"'] |
+| removed_attribute | DupFields |  | N/A |

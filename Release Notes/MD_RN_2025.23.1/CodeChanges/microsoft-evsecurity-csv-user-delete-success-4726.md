@@ -1,0 +1,14 @@
+# Code Changes for microsoft-evsecurity-csv-user-delete-success-4726 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_name', 'dest_domain', 'dest_user', 'dest_user_sid', 'domain', 'event_code', 'host', 'login_id', 'time', 'user', 'user_sid'] |
+| edit_regex_field | dest_domain |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | dest_user |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | dest_user_sid |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | domain |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | login_id |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | user |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| edit_regex_field | user_sid |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| added_regex_field | account_name |  | ['セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:\s*({domain}.*?)\s*ログオン ID:\s*({login_id}.*?)\s*ターゲット.+?セキュリティ ID:\s*({dest_user_sid}.*?)\s*>アカウント名:\s*({account_name}({dest_user}.*?))\s*アカウント ドメイン:\s*({dest_domain}.*?)\s*追加情報'] |
+| removed_attribute | DupFields |  | N/A |

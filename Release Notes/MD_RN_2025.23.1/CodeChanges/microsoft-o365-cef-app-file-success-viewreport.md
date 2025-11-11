@@ -1,0 +1,8 @@
+# Code Changes for microsoft-o365-cef-app-file-success-viewreport (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | event_name |  | ['"Operation":\s*"({event_name}({operation}[^"]+?))\.?"', '"activityDisplayName":\s*"({event_name}({operation}[^"]+))"', 'CEF:([^\|"]*\|){5}({event_name}({operation}[^\|"]+))', '\sflexString1=({event_name}[^=]+?)\.?\s+(\w+=|$)'] |
+| edit_regex_field | file_name |  | ['"SourceFileName":"({file_name}({src_file_name}[^"]+))"', '((fileType=(n\/a|N\/A|mail|calendar-event|note|message)[^\n]*?\sfname=\s*(N\/A|({email_subject}[^=]+?)))|(fileType=group[^\n]*?\sfname=\s*(N\/A|({group_name}[^=]+?)))|(fileType=(file|folder|attachment|report)[^\n]*?\sfname=\s*(N\/A|({file_name}[^=]+?)))|(fileType=process[^\n]*?\sfname=\s*(N\/A|({process_name}[^=]+?)))|(fileType=app(lication)?[^\n]*?\sfname=\s*(N\/A|({app}[^=]+?)))|(fileType=secret[^\n]*?\sfname=\s*(N\/A|({secret}[^=]+?)))|(fileType=key[^\n]*?\sfname=\s*(N\/A|({key_name}[^=]+?))))\s+(\w+=|$)', 'DatasetName"*:\s*"*({file_name}[^"]+)'] |
+| edit_regex_field | operation |  | ['"Operation":\s*"({event_name}({operation}[^"]+?))\.?"', '"activityDisplayName":\s*"({event_name}({operation}[^"]+))"', 'CEF:([^\|"]*\|){5}({event_name}({operation}[^\|"]+))'] |
+| edit_regex_field | src_file_name |  | ['"SourceFileName":"({file_name}({src_file_name}[^"]+))"'] |

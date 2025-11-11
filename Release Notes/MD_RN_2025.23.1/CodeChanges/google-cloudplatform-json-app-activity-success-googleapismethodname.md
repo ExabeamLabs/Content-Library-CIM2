@@ -1,0 +1,10 @@
+# Code Changes for google-cloudplatform-json-app-activity-success-googleapismethodname (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['app', 'bucket_name', 'dest_ip', 'dest_port', 'email_address', 'email_domain', 'event_category', 'failure_reason', 'operation', 'operation_first', 'operation_last', 'principal_name', 'project_id', 'region', 'resource', 'resource_dir', 'resource_name', 'resource_path', 'resource_type', 'result_code', 'service_name', 'src_ip', 'src_port', 'subnetwork', 'time', 'user', 'user_agent', 'vm_host_name', 'vpc', 'zone'] |
+| edit_regex_field | resource_dir |  | ['"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"', 'exa_json_path=$..resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))', 'exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))'] |
+| edit_regex_field | resource_name |  | ['"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"', 'exa_json_path=$..resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))', 'exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))'] |
+| edit_regex_field | resource_path |  | ['"resourceName":\s*"({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))"', 'exa_json_path=$..resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))', 'exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))'] |
+| added_regex_field | app |  | ['"serviceName":\s*"({app}[^"]+)', '\sdproc=({app}[^=]+)\s\w+=', 'exa_regex=\sdproc=({app}[^=]+)\s\w+='] |
+| added_regex_field | principal_name |  | ['exa_regex=principalEmail":"({principal_name}[^"\@}]+)"', 'principalEmail":"({principal_name}[^"\@}]+)"'] |

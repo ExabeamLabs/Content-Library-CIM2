@@ -1,0 +1,8 @@
+# Code Changes for microsoft-o365-sk4-alert-trigger-success-graphidentity (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | alert_name |  | ['"Name":"({alert_subject}({alert_name}[^"]+))', '"RuleName":"({alert_subject}({alert_name}[^"]+))"', '"riskEventType":"({alert_subject}({alert_name}[^"]+))', '"riskType":"(generic|({alert_subject}({alert_name}[^"]+)))"', '({alert_subject}({alert_type}({alert_name}IdentityProtection)))', '({alert_subject}({alert_type}({alert_name}graph-identity-protection-risk-detection)))'] |
+| edit_regex_field | alert_subject |  | ['"Name":"({alert_subject}({alert_name}[^"]+))', '"RuleName":"({alert_subject}({alert_name}[^"]+))"', '"riskEventType":"({alert_subject}({alert_name}[^"]+))', '"riskType":"(generic|({alert_subject}({alert_name}[^"]+)))"', '"von\\*"*:\\*"*({alert_subject}[^",\\]+)', '({alert_subject}({alert_type}({alert_name}IdentityProtection)))', '({alert_subject}({alert_type}({alert_name}graph-identity-protection-risk-detection)))'] |
+| edit_regex_field | alert_type |  | ['"AlertType":"({alert_type}[^"]+)', '"PolicyName":"({alert_type}[^"]+)"', '"source":"(generic|({alert_source}({alert_type}[^"]+)))"', '({alert_subject}({alert_type}({alert_name}IdentityProtection)))', '({alert_subject}({alert_type}({alert_name}graph-identity-protection-risk-detection)))'] |
+| removed_attribute | DupFields |  | N/A |

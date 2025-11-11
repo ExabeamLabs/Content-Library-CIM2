@@ -1,0 +1,11 @@
+# Code Changes for microsoft-evsecurity-json-endpoint-login-success-4770 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'dest_domain', 'dest_host', 'dest_user', 'domain', 'event_code', 'event_name', 'host', 'service_name', 'src_ip', 'src_port', 'ticket_encryption_type', 'ticket_options', 'time', 'user', 'user_upn'] |
+| edit_regex_field | domain |  | ['"TargetDomainName\\?":\\?"({dest_domain}({domain}[^."\\]*))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | user |  | ['"TargetUserName\\?":\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | user_upn |  | ['exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| added_regex_field | dest_domain |  | ['"TargetDomainName\\?":\\?"({dest_domain}({domain}[^."\\]*))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| added_regex_field | dest_user |  | ['"TargetUserName\\?":\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| removed_attribute | DupFields |  | N/A |

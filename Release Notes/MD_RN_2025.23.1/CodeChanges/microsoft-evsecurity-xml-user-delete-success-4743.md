@@ -1,0 +1,12 @@
+# Code Changes for microsoft-evsecurity-xml-user-delete-success-4743 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_name', 'dest_user', 'domain', 'event_code', 'event_name', 'host', 'login_id', 'object_dn', 'run_level', 'src_host', 'time', 'user'] |
+| edit_regex_field | dest_user |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| edit_regex_field | domain |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| edit_regex_field | login_id |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| edit_regex_field | object_dn |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| edit_regex_field | user |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| added_regex_field | account_name |  | ['Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:'] |
+| removed_attribute | DupFields |  | N/A |

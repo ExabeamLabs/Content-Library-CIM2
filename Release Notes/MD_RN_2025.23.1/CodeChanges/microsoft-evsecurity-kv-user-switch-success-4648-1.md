@@ -1,0 +1,12 @@
+# Code Changes for microsoft-evsecurity-kv-user-switch-success-4648-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'account_domain', 'account_login_guid', 'dest_domain', 'dest_email_address', 'dest_email_domain', 'dest_host', 'dest_service_name', 'dest_user', 'domain', 'event_code', 'event_name', 'host', 'login_id', 'process_dir', 'process_id', 'process_name', 'process_path', 'src_ip', 'src_port', 'time', 'user', 'user_login_guid', 'user_sid', 'user_upn'] |
+| edit_regex_field | dest_domain |  | ['Used(:|=).+?Account Domain(:|=)\s*(\\r|\\t|\\n)*(|({account_domain}({dest_domain}.*?)))[\s;]*(\\r|\\t|\\n)*Logon GUID(:|=)'] |
+| edit_regex_field | dest_email_address |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | dest_email_domain |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | dest_user |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| added_regex_field | account |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| added_regex_field | account_domain |  | ['Used(:|=).+?Account Domain(:|=)\s*(\\r|\\t|\\n)*(|({account_domain}({dest_domain}.*?)))[\s;]*(\\r|\\t|\\n)*Logon GUID(:|=)'] |
+| removed_attribute | DupFields |  | N/A |

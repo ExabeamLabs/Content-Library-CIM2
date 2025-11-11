@@ -1,0 +1,12 @@
+# Code Changes for symantec-cloudsoc-sk4-alert-trigger-success-fromdetect (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['alert_name', 'alert_severity', 'alert_type', 'browser', 'email_address', 'file_dir', 'file_ext', 'file_name', 'file_path', 'full_name', 'object', 'object_type', 'operation', 'process_path', 'resource', 'src_ip', 'src_port', 'time', 'user', 'user_agent'] |
+| edit_regex_field | file_dir |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| edit_regex_field | file_ext |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| edit_regex_field | file_name |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| edit_regex_field | file_path |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| edit_regex_field | object |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| added_regex_field | resource |  | ['"name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({file_name}[^\\\/=]*?(\.({file_ext}[^"]+))?)?)))))"'] |
+| removed_attribute | DupFields |  | N/A |

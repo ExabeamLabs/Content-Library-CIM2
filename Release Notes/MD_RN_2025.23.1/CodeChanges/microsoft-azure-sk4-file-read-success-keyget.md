@@ -1,0 +1,10 @@
+# Code Changes for microsoft-azure-sk4-file-read-success-keyget (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['app', 'email_address', 'event_name', 'file_dir', 'file_ext', 'file_name', 'file_path', 'http_response_code', 'object', 'result', 'src_file_ext', 'src_file_name', 'src_file_path', 'src_ip', 'src_port', 'time', 'user'] |
+| edit_regex_field | file_dir |  | ['"ResourceId":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?))"', '"ResourceId":\"({src_file_path}({file_dir}(?:[^\";]+)?[\/;])?({src_file_name}[^\/\";]+?(\.({src_file_ext}[^\s\.\/\";]+))?))"', '"id_s":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?)?)"', '"id_s":\"({src_file_path}({file_dir}(?:[^\";]+)?[\/;])?({src_file_name}[^\/\";]+?(\.({src_file_ext}[^\s\.\/\";]+))?)?)"'] |
+| added_regex_field | file_ext |  | ['"ResourceId":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?))"', '"id_s":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?)?)"'] |
+| added_regex_field | file_name |  | ['"Resource":\"({file_name}[^\"]+)"', '"ResourceId":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?))"', '"id_s":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?)?)"'] |
+| added_regex_field | file_path |  | ['"ResourceId":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?))"', '"id_s":\"({file_path}({file_dir}(?:[^\";]+)?[\/;])?({file_name}[^\/\";]+?(\.({file_ext}[^\s\.\/\";]+))?)?)"'] |
+| removed_attribute | DupFields |  | N/A |

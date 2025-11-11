@@ -1,0 +1,12 @@
+# Code Changes for microsoft-x-csv-email-receive-success-incoming (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'alert_id', 'bytes', 'dest_email_address', 'dest_email_domain', 'direction', 'email_address', 'email_recipients', 'email_subject', 'host', 'num_recipients', 'orig_user', 'return_path', 'src_domain', 'time'] |
+| edit_regex_field | bytes |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| edit_regex_field | dest_email_address |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| edit_regex_field | dest_email_domain |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| edit_regex_field | email_recipients |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| edit_regex_field | num_recipients |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| added_regex_field | orig_user |  | [',({email_recipients}({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))[^,]*?),(?:[^",]+?,|,)({bytes}\d+),({num_recipients}\d+),(?:"(?:[^"]|"")+",|[^",]+?,|,){6}Incoming,'] |
+| removed_attribute | DupFields |  | N/A |

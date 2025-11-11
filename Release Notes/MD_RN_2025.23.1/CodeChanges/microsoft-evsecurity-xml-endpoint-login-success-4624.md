@@ -1,0 +1,16 @@
+# Code Changes for microsoft-evsecurity-xml-endpoint-login-success-4624 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'auth_package', 'auth_process', 'dest_domain', 'dest_email_address', 'dest_host', 'dest_login_id', 'dest_user', 'dest_user_sid', 'domain', 'email_address', 'event_code', 'event_id', 'event_name', 'host', 'key_length', 'login_id', 'login_type', 'process_dir', 'process_id', 'process_name', 'process_path', 'provider_name', 'result', 'result_code', 'run_level', 'src_host', 'src_host_windows', 'src_ip', 'src_port', 'subject_sid', 'time', 'user', 'user_sid'] |
+| edit_regex_field | domain |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>', '<Data Name\\*=(\'|")TargetDomainName(\'|")>(-|({dest_domain}({domain}[^<]+)))<'] |
+| edit_regex_field | email_address |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>'] |
+| edit_regex_field | login_id |  | ['(\'|")TargetLogonId(\'|")>({dest_login_id}({login_id}[^<]+))<'] |
+| edit_regex_field | user |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>'] |
+| edit_regex_field | user_sid |  | ['<Data Name\\*=(\'|")TargetUserSid(\'|")>({dest_user_sid}({user_sid}[^<]+))<'] |
+| added_regex_field | dest_domain |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>', '<Data Name\\*=(\'|")TargetDomainName(\'|")>(-|({dest_domain}({domain}[^<]+)))<'] |
+| added_regex_field | dest_email_address |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>'] |
+| added_regex_field | dest_login_id |  | ['(\'|")TargetLogonId(\'|")>({dest_login_id}({login_id}[^<]+))<'] |
+| added_regex_field | dest_user |  | ['<Data Name(\\)?=(\'|")TargetUserName(\'|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>'] |
+| added_regex_field | dest_user_sid |  | ['<Data Name\\*=(\'|")TargetUserSid(\'|")>({dest_user_sid}({user_sid}[^<]+))<'] |
+| removed_attribute | DupFields |  | N/A |

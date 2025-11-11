@@ -1,0 +1,9 @@
+# Code Changes for pan-ngfw-leef-alert-trigger-success-alert (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'alert_name', 'alert_severity', 'alert_type', 'bytes_in', 'bytes_out', 'category', 'dest_domain', 'dest_interface', 'dest_ip', 'dest_network_zone', 'dest_port', 'dest_translated_ip', 'dest_translated_port', 'dest_user', 'direction', 'domain', 'event_category', 'host', 'malware_url', 'miscellaneous', 'network_app', 'profile', 'protocol', 'rule', 'sequence', 'serial_num', 'src_domain', 'src_interface', 'src_ip', 'src_network_zone', 'src_port', 'src_translated_ip', 'src_translated_port', 'src_user', 'subtype', 'time', 'user'] |
+| edit_regex_field | miscellaneous |  | ['\|Miscellaneous=\"(|({malware_url}({miscellaneous}.+?)))(\"|\s*$)', '\|Miscellaneous=\"(|({malware_url}({miscellaneous}[^=]+?)))(\"|\s*$)'] |
+| added_regex_field | malware_url |  | ['\|Miscellaneous=\"(|({malware_url}({miscellaneous}.+?)))(\"|\s*$)', '\|Miscellaneous=\"(|({malware_url}({miscellaneous}[^=]+?)))(\"|\s*$)'] |
+| removed_attribute | DupFields |  | N/A |
+| edit_attribute | SOAR |  | ConfigTree([('IncidentType', 'malware'), ('NameTemplate', 'Palo Alto Alert ${alert_name} found'), ('ProjectName', 'SOC'), ('EntityFields', [ConfigTree([('EntityType', 'device'), ('Name', 'src_address'), ('Fields', ['src_ip->ip_address'])]), ConfigTree([('EntityType', 'device'), ('Name', 'dest_address'), ('Fields', ['dest_ip->ip_address'])]), ConfigTree([('EntityType', 'user'), ('Name', 'windows_id'), ('Fields', ['user->windows_id'])])])]) |

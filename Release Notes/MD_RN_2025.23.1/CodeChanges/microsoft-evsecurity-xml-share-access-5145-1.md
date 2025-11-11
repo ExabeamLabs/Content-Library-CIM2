@@ -1,0 +1,10 @@
+# Code Changes for microsoft-evsecurity-xml-share-access-5145-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['d_name', 'd_parent', 'domain', 'event_code', 'event_id', 'file_dir', 'file_ext', 'file_name', 'file_type', 'host', 'login_id', 'run_level', 'share_name', 'share_path', 'src_domain', 'src_ip', 'src_port', 'src_user', 'time', 'user', 'user_sid'] |
+| edit_regex_field | domain |  | ['(\'|")SubjectDomainName(\'|")>({src_domain}({domain}[^"\s<]+))<'] |
+| edit_regex_field | user |  | ['(\'|")SubjectUserName(\'|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<'] |
+| added_regex_field | src_domain |  | ['(\'|")SubjectDomainName(\'|")>({src_domain}({domain}[^"\s<]+))<'] |
+| added_regex_field | src_user |  | ['(\'|")SubjectUserName(\'|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<'] |
+| removed_attribute | DupFields |  | N/A |

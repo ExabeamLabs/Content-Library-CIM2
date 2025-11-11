@@ -1,0 +1,13 @@
+# Code Changes for microsoft-evsecurity-str-user-lock-success-4740 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['domain', 'event_code', 'host', 'login_id', 'src_domain', 'src_host', 'src_user', 'time', 'user', 'user_sid'] |
+| edit_regex_field | login_id |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| edit_regex_field | src_domain |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| edit_regex_field | src_host |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| edit_regex_field | src_user |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| edit_regex_field | user |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| edit_regex_field | user_sid |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| added_regex_field | domain |  | ['サブジェクト.+?\s*アカウント名:\s*({src_user}.*?)\s*アカウント ドメイン:\s*({domain}({src_domain}.*?))\s*ログオン ID:\s*({login_id}.*?)\s*ロックアウトされたアカウント.+?セキュリティ ID:\s*({user_sid}.*?)\s*アカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*追加情報:.+?呼び出し元コンピューター名:\s*({src_host}.*?)\s*("|$|,)'] |
+| removed_attribute | DupFields |  | N/A |
