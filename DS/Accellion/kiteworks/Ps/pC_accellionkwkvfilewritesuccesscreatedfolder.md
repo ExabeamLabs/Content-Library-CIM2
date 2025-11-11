@@ -6,10 +6,9 @@ Name = accellion-kw-kv-file-write-success-createdfolder
   Product = Kiteworks
   Conditions = [ """Created folder""", """Activity:""" ]
   Fields = ${KiteWorksParsersTemplates.q-kiteworks-file-activity.Fields}[
-    """({access}Created) folder ({src_file_name}[^$"\.]+?(\.(|({src_file_ext}[^$"]+?)))?)\.?\s*(File:|$)"""
-    """({access}Created) folder \"+({src_file_name}[^\"\.]+?(\.({src_file_ext}[^"]+))?)\""""
-  ] 
-  DupFields = [ "src_file_name->file_name", "src_file_ext->file_ext" ]
+    """({access}Created) folder ({file_name}({src_file_name}[^$"\.]+?(\.(|({file_ext}({src_file_ext}[^$"]+?))))?))\.?\s*(File:|$)"""
+    """({access}Created) folder \"+({file_name}({src_file_name}[^\"\.]+?(\.({file_ext}({src_file_ext}[^"]+)))?))\""""
+  ]
 
 q-kiteworks-file-activity = {
     Vendor = Accellion

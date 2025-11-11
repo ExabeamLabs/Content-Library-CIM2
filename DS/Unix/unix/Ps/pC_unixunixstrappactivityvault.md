@@ -1,0 +1,28 @@
+#### Parser Content
+```Java
+{
+Name = "unix-unix-str-app-activity-vault"
+  Vendor = "Unix"
+  Product = "Unix"
+  TimeFormat = ["MMM dd HH:mm:ss"]
+  Conditions = [ 
+    """ vault["""
+    """]: {"""
+  ]
+  Fields = [
+    """({time}\w\w\w \d\d \d\d:\d\d:\d\d)\s({host}[\w\-\.]+)\s({process_name}[^\[]+)(\[({process_id}[^\]]+[\d]+)]|\[)"""
+    """"remote_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """"remote_port":({src_port}\d+)"""
+    """"operation":"({operation}[^"]+)""""
+    """"type":"({event_name}[^"]+)","\w+":"""
+    """"path":"({path}[^"]+)""""
+    """"client_id":"({client_id}[^"]+)""""
+    """"client_token":"({client_token}[^"]+)""""
+    """"display_name":"({object}[^"]+)""""
+    """"token_type":"({object_type}[^"]+)""""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

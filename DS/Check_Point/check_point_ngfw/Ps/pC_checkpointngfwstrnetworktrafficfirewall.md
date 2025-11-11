@@ -18,7 +18,7 @@ Name = "checkpoint-ngfw-str-network-traffic-firewall"
 """\Wdst:\"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """ xlatedst:\"+({dest_translated_ip}0\.0\.0\.0)"""
 """ service_id:\"+({app_protocol}[^\"]+)"""
-"""\Waction:\"+({action}[^\"]+)"""
+"""\Waction:\"+({result}({action}[^\"]+))"""
 """\Wrule:\"+({rule}[^\"]+?)\s*\""""
 """ rule_name:\"+({rule}[^\"]+?)\s*\""""
 """\Wapp_rule_name:\"+({rule}[^\"]+?)\s*\""""
@@ -46,6 +46,7 @@ Name = "checkpoint-ngfw-str-network-traffic-firewall"
 """\Wuser:\"+({last_name}[^,\"\(]+),\s*({first_name}[\w\s]+\S)\s*\([^\)]+?\)[^\"]+?\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\"\)]+?))?\)"""
 """\Wuser:\"+({first_name}[\w\s]+[^\s,\(])\s+({last_name}[^\s,\(]+)\s*\([^\)]+?\)[^\"]+?\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\"\)]+?))?\)"""
 """\Wreceived_bytes:\"+({bytes_in}\d+)"""
+"""\Wsent_bytes:\"+({bytes}\d+)"""
 """\Wsent_bytes:\"+({bytes_out}\d+)"""
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):\"+(?:[^_\"\s]+_)?(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\""""
@@ -55,7 +56,7 @@ Name = "checkpoint-ngfw-str-network-traffic-firewall"
 """\Wattack_info:"({failure_reason}[^";]+)""",
 """resource:"({url}[^";,]+)""""
   """severity:"({alert_severity}[^"]+)""""
-  """action_details:"({action}[^"]+)"""
+  """action_details:"({result}({action}[^"]+))"""
   """smartdefense_profile:"({smartdefense_profile}[^"]+)"""
   """confidence_level:"({confidence_level}[^"]+)"""
   """description:"({additional_info}[^"]+)"""
@@ -72,10 +73,6 @@ Name = "checkpoint-ngfw-str-network-traffic-firewall"
   """vendor_list:"({vendor_name}[^"]+)"""
   """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
-  DupFields = [
-"action->result"
-"bytes_out->bytes"
-]
 
 
 }

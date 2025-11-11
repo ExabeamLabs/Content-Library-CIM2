@@ -14,14 +14,13 @@ Name = "microsoft-evsecurity-xml-share-delete-success-5144"
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}5144)</EventID>""",
     """<Data Name\\*=('|")ShareName('|")>(?:[\\\*]+)?({share_name}[^<]+)<\/Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
     """<Data Name\\*=('|")ShareLocalPath('|")>({share_path}[^<]+)<\/Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

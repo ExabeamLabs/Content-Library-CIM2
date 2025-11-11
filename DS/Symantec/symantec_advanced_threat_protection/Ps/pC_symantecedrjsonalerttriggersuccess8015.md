@@ -8,11 +8,11 @@ Name = symantec-edr-json-alert-trigger-success-8015
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
     """exa_json_path=$.severity_id,exa_field_name=alert_severity"""
     """exa_json_path=$.edr_enriched_data.rule_name,exa_field_name=alert_name"""
+    """exa_json_path=$.edr_enriched_data.rule_name,exa_field_name=alert_type"""
     """exa_json_path=$.type_id,exa_field_name=event_code"""
     """exa_regex="ipv4":\[?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 
   ]
-  DupFields = [ "alert_name->alert_type" ]
 
 symantec-parser-template = {
     Vendor = Symantec

@@ -38,7 +38,7 @@ checkpoint-network-alert = {
     """\Wsmartdefense_profile:"({smartdefense_profile}[^"]+)""",
     """\Wuser:"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """originsicname:"+({user_ou}[^"]+)"""
-  ]
-  DupFields = [ "attack->alert_subject" 
+    """\Wattack:"({alert_subject}[^"]+)""",
+  
 }
 ```

@@ -8,14 +8,13 @@ Name = microsoft-windows-xml-endpoint-notification-success-102
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>102</EventID>""", """<Provider Name =""","""<Channel>Microsoft-Windows-RemoteDesktopServices""" ]
   Fields = [
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
+    """<Computer>({dest_host}({host}[\w.-]+))<\/Computer>""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

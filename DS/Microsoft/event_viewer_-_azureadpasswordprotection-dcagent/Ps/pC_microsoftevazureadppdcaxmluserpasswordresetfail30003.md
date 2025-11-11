@@ -9,9 +9,9 @@ Name = microsoft-evazureadppdca-xml-user-password-reset-fail-30003
   Fields = ${DLWindowsParsersTemplates.account-password-reset.Fields}[
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<EventID>({event_code}30003)</EventID>"""
+    """<EventID>({event_code}30003)</EventID>""",
+    """UserName:\s*({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
-  DupFields = [ "user->dest_user" ]
 
 account-password-reset = {
   Vendor = Microsoft
@@ -19,7 +19,6 @@ account-password-reset = {
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)('|")/>""",
     """<Message>({event_name}[^.<]+)""",
-    """UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Keywords>({result}[^<]+)</Keywords>""",

@@ -6,10 +6,9 @@ Name = checkpoint-ngfw-kv-vpn-login-success-login
   TimeFormat = "epoch_sec"
   Conditions = [ """CheckPoint""", """product:"""", """action:"Log In"""", """cvpn_""" ]
   Fields = ${CheckpointParsersTemplates.checkpoint-auth.Fields}[
-    """action:"+({operation}[^"]+)""",
+    """action:"+({event_name}({operation}[^"]+))""",
     """\Wtime(:|=)"({time}\d{10})""""
   ]
-  DupFields = [ "operation->event_name" ]
 
 checkpoint-auth = {
   Vendor = Check Point

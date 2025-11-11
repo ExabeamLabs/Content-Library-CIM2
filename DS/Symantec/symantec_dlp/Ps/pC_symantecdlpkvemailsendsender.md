@@ -18,9 +18,9 @@ Name = symantec-dlp-kv-email-send-sender
     """Attachment:\_(N\/A|Unknown|({email_attachment}[^\n]+?\.\w+?))\s""",
     """Attachment:\_(N\/A|Unknown|({email_attachments}[^\n]+?))\s+Incident_Link:""",
     """Message_ID:\_({alert_id}[^\s]+)"""
+    """Message_ID:\_({message_id}[^\s]+)"""
     """Incident_Link:\_({additional_info}[^\s"]+)\s*"""
   ]
-  DupFields = ["alert_id->message_id"]
   ParserVersion = v1.0.0
 
 

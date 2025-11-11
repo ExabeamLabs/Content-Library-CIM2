@@ -6,6 +6,7 @@ Name = pan-ngfw-json-alert-trigger-success-hipmatch
  Fields = ${DLPaloAltoParserTemplates.json-pan-system.Fields}[
    """exa_json_path=$.TimeGenerated,exa_field_name=time""",
    """exa_json_path=$.EndpointDeviceName,exa_field_name=host""",
+   """exa_json_path=$.EndpointDeviceName,exa_field_name=firewall""",
    """exa_regex=({event_name}hipmatch)"""
  ]
 
@@ -18,6 +19,7 @@ json-pan-system = {
     Fields = [
       """exa_json_path=$.EventTime,exa_field_name=time""",
       """exa_json_path=$.LogSourceName,exa_regex=^({host}[\w.-]+)$""",
+      """exa_json_path=$.LogSourceName,exa_regex=^({firewall}[\w.-]+)$""",
       """exa_json_path=$.Subtype,exa_field_name=subtype""",
       """exa_json_path=$.VendorSeverity,exa_field_name=severity""",
       """exa_json_path=$.EventDescription,exa_field_name=additional_info""",
@@ -27,10 +29,12 @@ json-pan-system = {
       """exa_json_path=$.event.VendorSeverity,exa_field_name=severity""",
       """exa_json_path=$.event.EventTime,exa_field_name=time""",
       """exa_json_path=$.event.LogSourceName,exa_regex=^({host}[\w.-]+)$""",
+      """exa_json_path=$.event.LogSourceName,exa_regex=^({firewall}[\w.-]+)$""",
       """exa_json_path=$.event.Subtype,exa_field_name=subtype""",
       """exa_json_path=$.event.EventDescription,exa_field_name=additional_info""",
       """exa_json_path=$..DeviceName,exa_regex=^({host}[\w.-]+)$"""
       """exa_json_path=$..DeviceName,exa_field_name=device_name"""
+      """exa_json_path=$..DeviceName,exa_regex=^({firewall}[\w.-]+)"""
       
 }
 ```

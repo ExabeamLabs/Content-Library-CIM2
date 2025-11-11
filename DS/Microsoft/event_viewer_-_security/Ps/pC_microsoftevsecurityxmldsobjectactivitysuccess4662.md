@@ -15,8 +15,8 @@ Fields = [
 """<Computer>({src_host}({host}[^<]+))"""
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
-"""<Data Name(\\)?=('|")SubjectUserName('|")>(-|CN=[^<]+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
-"""<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({domain}[^<]+))"""
+"""<Data Name(\\)?=('|")SubjectUserName('|")>(-|CN=[^<]+|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
+"""<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<]+)))"""
 """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)"""
 """<Data Name(\\)?=('|")ObjectServer('|")>({object_server}[^<]+)"""
 """<Data Name(\\)?=('|")ObjectType('|")>({object_type}[^<]+)"""
@@ -30,7 +30,6 @@ Fields = [
 """<Data Name\\*=('|")AccessList('|")>(-|({access_list}[^<]+?))\s*<"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -18,11 +18,11 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
       """<EventID>({event_code}[^<]+)""",
       """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group""",
-      """<Data Name =('|")MemberName('|")>(-|({user_dn}[^<]+))<""",
+      """<Data Name =('|")MemberName('|")>(-|({member}({user_dn}[^<]+)))<""",
       """<Data Name =('|")MemberSid('|")>({dest_user_sid}[^<]+)""",
       """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-      """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-      """<Data Name =('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+      """<Data Name =('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+      """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^"\s<]+))<""",
       """<Data Name =('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
       """CN=({account_id}.*?(?=\s*,OU))""",
       """OU=({user_ou}[^,]+)""",
@@ -33,7 +33,6 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
       """<Level>({run_level}[^<]+)<"""
       ]
-  DupFields = [ "user_dn->member", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

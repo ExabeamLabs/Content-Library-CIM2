@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}A security-enabled global group was changed)""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"Keywords":({result}[^,]+)"""
@@ -33,11 +33,10 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """exa_json_path=$.Keywords,exa_field_name=result"""
     """exa_json_path=$.Level,exa_field_name=run_level"""
     """exa_regex=({event_name}A security-enabled global group was changed)"""
-    """exa_regex=Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
+    """exa_regex=Subject:.+?Account Name:\s+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({src_domain}({domain}.+?))\s+Logon ID:\s+({login_id}[^\s]+)"""
     """exa_regex=Group: Security ID:\s*({group_id}[^\s]+)"""
     """exa_regex=Group:.+?Group Name:\s*({group_name}[^\s]+)"""
    ]
-   DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

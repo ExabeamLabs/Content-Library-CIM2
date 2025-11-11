@@ -47,6 +47,8 @@ Fields = [
   """exa_json_path=$..Hashes,exa_regex="Hashes":"[^]]+MD5=({hash_md5}[^,\s]+),d"""
   """exa_json_path=$.Hostname,exa_field_name=host"""
   """exa_json_path=$.host,exa_field_name=host"""
+  """exa_json_path=$.Hostname,exa_field_name=src_host"""
+  """exa_json_path=$.host,exa_field_name=src_host"""
   """exa_json_path=$..CommandLine,exa_field_name=process_command_line"""
   """exa_json_path=$..ParentImage,exa_regex=({parent_process_path}(({parent_process_dir}[^"]+?)[\\\/]+)?({parent_process_name}[^"\\\/]+))"""
   """exa_json_path=$.EventID,exa_field_name=event_code"""
@@ -67,7 +69,6 @@ Fields = [
   """exa_json_path=$.ParentProcessId,exa_field_name=parent_process_id"""
   """exa_json_path=$.Description,exa_field_name=additional_info"""
 ]
-DupFields = [ "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

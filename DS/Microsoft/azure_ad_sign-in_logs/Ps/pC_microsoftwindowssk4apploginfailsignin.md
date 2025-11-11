@@ -25,7 +25,7 @@ Fields = [
 """"(Device)?(o|O)peratingSystem":"({os}[^"]+)"""
 """\\*"(F|f)ailureReason\\*":\\*"({failure_reason}.+?)(\.)?\\*""""
 """(?i)status(_string)?\\*":\s*"*\{[^\}]*?\\*"errorCode\\*":\s*(0|({failure_code}\d+))(,|\})"""
-""""+operationName"+:"+({operation}[^"]+)"+"""
+""""+operationName"+:"+({event_name}({operation}[^"]+))"+"""
 """"+identity"+:"+({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?""""
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """"geoCoordinates\\*"+:\{(|({location}.+?))\}"""
@@ -57,6 +57,7 @@ Fields = [
 """exa_json_path=$.eventHubsAzureRecord..deviceDetail.browser,exa_field_name=browser""",
 """exa_json_path=$.eventHubsAzureRecord..deviceDetail.operatingSystem,exa_field_name=os""",
 """exa_json_path=$.eventHubsAzureRecord.operationName,exa_field_name=operation""",
+"""exa_json_path=$.eventHubsAzureRecord.operationName,exa_field_name=event_name""",
 """exa_json_path=$.eventHubsAzureRecord.identity,exa_regex=({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?("|$)""",
 """exa_json_path=$.eventHubsAzureRecord..location.countryOrRegion,exa_field_name=country_code"""
 """exa_json_path=$.eventHubsAzureRecord.category,exa_field_name=category"""
@@ -72,6 +73,7 @@ Fields = [
 """exa_json_path=$..deviceDetail.browser,exa_field_name=browser""",
 """exa_json_path=$..deviceDetail.operatingSystem,exa_field_name=os""",
 """exa_json_path=$.operationName,exa_field_name=operation""",
+"""exa_json_path=$.operationName,exa_field_name=event_name""",
 """exa_json_path=$.identity,exa_regex=({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?("|$)""",
 """exa_json_path=$..location.countryOrRegion,exa_field_name=country_code""",
 """exa_json_path=$.category,exa_field_name=category""",
@@ -92,7 +94,7 @@ Fields = [
 """exa_regex=\\*"(F|f)ailureReason\\*":\\*"({failure_reason}.+?)(\.)?\\*""""
 """exa_regex="ConditionalAccessStatus":"({result}[^"]+)""""
 """exa_regex="IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-"""exa_regex="+operationName"+:"+({operation}[^"]+)"+"""
+"""exa_regex="+operationName"+:"+({event_name}({operation}[^"]+))"+"""
 """exa_regex="+identity"+:"+({last_name}[^",]+),\s*({first_name}[^",\/]+)(\/[^"]*)?""""
 """exa_regex="status":\s*\{[^\}]*?"errorCode":\s*(0|({failure_code}\d+))(,|\})"""
 """exa_regex="AppDisplayName":"\s*({app}[^"]+?)\s*"""",
@@ -113,7 +115,6 @@ Fields = [
 """"servicePrincipalId":\s*"({principal_id}[^"]+)""""
 """servicePrincipalName":"({attribute}[^",]+)""""
 ]
-DupFields = [ "operation->event_name" ]
 ParserVersion = "v1.0.0"
 
 

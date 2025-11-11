@@ -6,6 +6,7 @@ Name = microsoft-evterminalservicesremotecm-xml-endpoint-notification-success
   Product = Event Viewer - TerminalServices-RemoteConnectionManager
   Conditions = [ """<Channel>Microsoft-Windows-TerminalServices-RemoteConnectionManager""", """Microsoft-Windows-TerminalServices-RemoteConnectionManager""", """<Computer>""", """<EventID>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
     """<Param1>(({domain}[^<\s\\]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
   ]
@@ -23,7 +24,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

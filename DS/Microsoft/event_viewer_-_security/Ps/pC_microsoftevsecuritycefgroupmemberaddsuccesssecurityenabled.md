@@ -21,14 +21,10 @@ Name = "microsoft-evsecurity-cef-group-member-add-success-securityenabled"
     """\sduser=(({dest_user_sid}S-[^=]+?)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
     """\scs6=({group_domain}[^\\]+)"""
     """\scs6=[^=]+?\\{1,25}({group_name}[^=]+?)\s+\w+="""
-    """\sdvchost=({host}[\w\-.]+)"""
+    """\sdvchost=({dest_host}({host}[\w\-.]+))"""
     """ad.Group:Security_,ID=({group_id}[^\s]+)"""
     """\sduid=(?=\w)({user_dn}.+?)\s+\w+="""
     """\sduid=(?=\w)(.+?CN\\?=.+?,({user_ou}(OU)?.+?DC\\?=[\w-]+))\s\w+="""
-  ]
-
-  DupFields = [
-    "host->dest_host"
   ]
   ParserVersion = "v1.0.0"
 

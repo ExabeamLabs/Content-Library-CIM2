@@ -5,6 +5,18 @@ Name = microsoft-azuremon-sk4-app-activity-loganalyticsomsworkspace
   ParserVersion = v1.0.0
   Product = Azure Monitor
   Conditions = [ """destinationServiceName =Azure""", """dproc=Log Analytics OMS Workspace""" ]
+    Fields = ${CloudParsersTemplates.cef-cloud-system-info.Fields}[
+    """"host_name_s":"({host}[^"]+)""""
+    """"session_server_principal_name_s":"({session_id}[^"]+)""""
+    """"database_principal_name_s":"({db_user}[^"]+)""""
+    """"database_name_s":"({db_name}[^"]+)""""
+    """"succeeded_s":"({result}[^"]+)""""
+    """"LogicalServerName_s":"({server_name}[^",]+)""""
+    """"statement_s":"({db_query}[^"]+)""""
+    """"action_name_s":"({action}[^"]+)""""
+    """"response_rows_d":"({response}[^"]+)""""
+    """"client_ip_s":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  ]
 
 cef-cloud-system-info = {
   Vendor = Microsoft

@@ -16,8 +16,8 @@ Fields = [
   """({event_code}5145)""",
   """<EventRecordID>({event_id}[^<]+)""",
   """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-  """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-  """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+  """('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+  """('|")SubjectDomainName('|")>({src_domain}({domain}[^"\s<]+))<""",
   """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
   """('|")ObjectType('|")>({file_type}[^<]+)<""",
   """('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<""",
@@ -30,7 +30,6 @@ Fields = [
   """Source Port(=|:)\s*({src_port}\d+)"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

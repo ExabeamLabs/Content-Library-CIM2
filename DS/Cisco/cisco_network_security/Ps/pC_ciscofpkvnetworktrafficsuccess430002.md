@@ -32,8 +32,8 @@ Name = "cisco-fp-kv-network-traffic-success-430002"
     """DeviceUUID: ({device_id}[^\s]+)"""
     """\WIngressZone:\s*({ingress_zone}[^,]+)"""
     """EgressZone:\s*({egress_zone}[^,]+)"""
+    """AccessControlRuleAction:\s*({action}[^,]+)"""
   ]
-  DupFields = [ "result->action" ]
 
 
 }

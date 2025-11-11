@@ -21,8 +21,8 @@ Fields = [
   """Login permitted from .+?:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """Login permitted from .+? to .+?/({auth}.+?) for user"""
   """user "+(({domain}[^\\\/"]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """Login permitted from .+? to .+?/({protocol}.+?) for user"""
 ]
-DupFields = [ "auth->protocol" ]
 ParserVersion = "v1.0.0"
 
 

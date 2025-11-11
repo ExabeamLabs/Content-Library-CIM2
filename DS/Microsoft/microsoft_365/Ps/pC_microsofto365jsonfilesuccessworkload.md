@@ -9,15 +9,14 @@ Name = microsoft-o365-json-file-success-workload
   Fields = [
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """,ItemType":"({file_type}[^,]+)""",
-    """,Operation":"({operation}[^,]+)""",
+    """,Operation":"({access}({operation}[^,]+))""",
     """,SourceRelativeUrl":"({file_dir}[^",]+)""",
     """,ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """,UserAgent":"({user_agent}[^,]+)""",
     """"SourceFileExtension":"({src_file_ext}[^,]+)""",
-    """,SourceFileName":"({file_name}[^,]+)""",
+    """,SourceFileName":"({object}({file_name}[^,]+))""",
     """"Workload":"({app}[^,]+)""",
     ]
-    DupFields = [ "access->operation", "file_name->object" ]
 	ParserVersion = v1.0.0
 
 

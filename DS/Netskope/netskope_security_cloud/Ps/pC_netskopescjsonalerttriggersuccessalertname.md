@@ -11,10 +11,12 @@ Name = netskope-sc-json-alert-trigger-success-alertname
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.hostname,exa_field_name=dest_host"""
+    """exa_json_path=$.policy,exa_field_name=alert_subject"""
     """exa_json_path=$.policy,exa_field_name=alert_name"""
     """exa_json_path=$.alert_type,exa_field_name=alert_type"""
     """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.url,exa_field_name=malware_url"""
+    """exa_json_path=$.alert_name,exa_field_name=alert_subject"""
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""
     """exa_json_path=$.internal_id,exa_field_name=alert_id"""
     """exa_json_path=$.category,exa_field_name=additional_info"""
@@ -41,7 +43,7 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """exa_json_path=$.domain,exa_field_name=domain"""
     """exa_json_path=$.category,exa_field_name=category"""
     """exa_json_path=$.action,exa_field_name=action"""    
-    """"alert_name":\s*"({alert_name}[^",]+)"""
+    """"alert_name":\s*"({alert_subject}({alert_name}[^",]+))"""
     """"alert_type":\s*"({alert_type}[^",]+)"""
     """"severity":\s*"({alert_severity}[^",]+)"""
     """"action":\s*"({action}[^",]+)"""
@@ -68,9 +70,6 @@ Name = netskope-sc-json-alert-trigger-success-alertname
     """"policy":\s*"({policy_name}[^",]+)"""
     """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
     """"computer_name":\s*"({host}[^",]+)"""    
-  ]
-  DupFields = [
-"alert_name"->"alert_subject"
   ]
 
 

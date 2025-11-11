@@ -6,6 +6,7 @@ Name = microsoft-evtaskscheduler-xml-scheduled-task-delete-success-taskdeleted-1
   Product = Event Viewer - TaskScheduler
   Conditions = [ """<EventID>141</EventID>""", """<Channel>Microsoft-Windows-TaskScheduler/Operational</Channel>""", """Microsoft-Windows-TaskScheduler""", """<Computer>""", """TaskDeleted""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
   ]
 
@@ -22,7 +23,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

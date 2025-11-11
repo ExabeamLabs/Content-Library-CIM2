@@ -23,8 +23,11 @@ Name = cyberark-pam-kv-app-activity-fileoperations
     """;UserName ="({account}[^"]+)""",
     """;LogonDomain="({domain}[^"]+)""",
     """;DeviceType="({dest_service_name}[^"]+)"""
+    """;File="[^"]*?[^"]+\\({object}[^"]+)""",
+    """;File="({additional_info}[^"]+)""",
+    """;Message="({access}[^"]+)""",
+    """({time}\w+ \d+ \d\d:\d\d:\d\d(Z)?)?\s*({dest_host}[\w\-.]+) %CYBERARK""",
   ]
-  DupFields=[ "file_name->object_value", "file_path->additional_info", "operation->access", "host->dest_host" ]
   ParserVersion = "v1.0.0"
 
 

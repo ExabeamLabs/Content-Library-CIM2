@@ -28,8 +28,8 @@ microsoft-azuremfa-json-events = {
       """exa_json_path=$.status.additionalDetails,exa_field_name=event_name""",
       """exa_json_path=$.correlationId,exa_field_name=correlation_id""",
       """exa_json_path=$.location.countryOrRegion,exa_field_name=location_country""",
+      """exa_json_path=$.location.countryOrRegion,exa_field_name=mfa_country""",
       """exa_json_path=$.location.state,exa_field_name=location_state"""
-    ]
-    DupFields = ["location_country->mfa_country"
+    
 }
 ```

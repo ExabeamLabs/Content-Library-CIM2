@@ -11,9 +11,8 @@ Name = microsoft-defenderep-kv-configuration-modify-success-5007
    """ComputerName =({host}[^\s]+)""",
    """EventCode=({event_code}\d+)""",
    """Sid=({user_sid}[^\s]+)""",
-   """Message=({additional_info}[^\.]+)\."""
+   """Message=({event_name}({additional_info}[^\.]+))\."""
  ]
- DupFields = [ "additional_info->event_name" ]
 
 
 }

@@ -14,8 +14,8 @@ Fields = [
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>""",
   """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*(({domain}[^\\\/<]+)[\\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-  """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({src_domain}[^<]+?)</Data>""",
+  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+  """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+?))</Data>""",
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")ObjectServer('|")>({object_server}[^<]+?)</Data>""",
   """<Data Name[\\\/]*=('|")PrivilegeList('|")>({privileges}[^<]+?)</Data>""",
@@ -24,7 +24,6 @@ Fields = [
   """({event_name}A privileged service was called)"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["src_domain->domain", "src_user->user"]
 ParserVersion = "v1.0.0"
 
 

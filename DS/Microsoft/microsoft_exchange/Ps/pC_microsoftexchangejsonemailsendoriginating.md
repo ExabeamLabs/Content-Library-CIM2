@@ -22,11 +22,9 @@ Fields = [
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
+  """exchange_source":"(?:|({alert_type}[^"]+))","""
   """sender_address":"(?:|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
-]
-DupFields = [
-  "alert_name->alert_type"
 ]
 ParserVersion = "v1.0.0"
 

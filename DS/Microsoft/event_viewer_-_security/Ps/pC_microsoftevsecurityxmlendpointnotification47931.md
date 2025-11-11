@@ -19,14 +19,13 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4793-1
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
-    """<Data Name\\*=('|")Workstation('|")>([A-Fa-f:\d.]+|-|({src_host_windows}[^<]+?))\s*<""",
+    """<Data Name\\*=('|")Workstation('|")>([A-Fa-f:\d.]+|-|({src_host_windows}({src_host}[^<]+?)))\s*<""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "src_host_windows->src_host", "user->src_user", "domain->src_domain" ]
 
 
 }

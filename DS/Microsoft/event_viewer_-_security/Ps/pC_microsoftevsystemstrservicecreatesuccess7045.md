@@ -29,16 +29,13 @@ Fields = [
 """Service File Name:\s*((?:[^\";]+)?[\\\/;])?({process_name}[^\\\/\";]+?\.[^\\\/\.;\"]+?)\s.*?\s*Service Type:"""
 """Service Type:\s+({service_type}[^\\:=]+?)\s*(\\r|\\t|\\n)*Service Start Type:"""
 """Service Account:\s*(|(({account_domain}[^\s"]+)\\)?({account_name}.+?))\s*(\"|$|<)"""
-"""Service File Name:\s*({process_command_line}[^=]+?)\s*(\\t|\\r|\\n)*Service Type:"""
+"""Service File Name:\s*({service_command_line}({process_command_line}[^=]+?))\s*(\\t|\\r|\\n)*Service Type:"""
 """ComputerName(:|=)\s*({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w.-]+))"""
 """TimeStamp:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """User:\s*((?i)NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+:"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
-]
-DupFields = [
-"process_command_line->service_command_line"
 ]
 ParserVersion = "v1.0.0"
 

@@ -27,11 +27,12 @@ Fields = [
 """CEF:\d+\|([^\|]+\|){3}({event_code}[^\|]+)"""
 """CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
 """CEF:\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
+"""\sfname=[^=]+?\-({account}[^\s-]+?)\s+\w+="""
+"""\sduser="?([^\\="]+\\+)?({account}[^="]+?)"?\s+\w+="""
 """msg="*\[*({additional_info}[^"\]]+)?\]*\s*"""
 """cn2="*({action}[^=]+)\s"+(\s+\w+=)"""
 """cs3="*({device_type}[^="]+)?"*\s+\w+="""
 ]
-DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"
 
 

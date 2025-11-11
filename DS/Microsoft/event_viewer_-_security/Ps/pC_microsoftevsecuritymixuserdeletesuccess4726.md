@@ -30,10 +30,7 @@ Fields = [
   """Subject:\s+Security ID:\s*({user_sid}[^:]+?)\s+Account Name:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s*(?=\w)({domain}[^:]+?)\s+Logon ID"""
   """Logon ID:\s+(\\t)?({login_id}.+?)\s*(\\n\\n|\\r\s\\r\s\\n)*?Target Account:"""
   """Target Account.+?Security ID:\s*(%\{)?({dest_user_sid}[\w\d\-]+?)\}?\s+Account Name:"""
-  """Target Account.+?Account Name:\s*((?-i)\\+[rnt])*({dest_user}[^:].+?)((?-i)\\+[rnt])*\s*(\\n|\\r\s\\t)?\s*Account Domain:\s*((?-i)\\+[rnt])*({dest_domain}[^:].+?)\s*(\\n\\n|\\r\s\\r\s\\n)?Additional Information:"""
-]
-DupFields = [
-  "dest_user->account_name"
+  """Target Account.+?Account Name:\s*((?-i)\\+[rnt])*({account_name}({dest_user}[^:].+?))((?-i)\\+[rnt])*\s*(\\n|\\r\s\\t)?\s*Account Domain:\s*((?-i)\\+[rnt])*({dest_domain}[^:].+?)\s*(\\n\\n|\\r\s\\r\s\\n)?Additional Information:"""
 ]
 ParserVersion = "v1.0.0"
 

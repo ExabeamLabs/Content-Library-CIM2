@@ -17,12 +17,8 @@ Fields = [
   """"5":"({domain}[^"]+)"""
   """"6":"({login_id}[^"]+)"""
   """"2":"({account_id}[^"]+)"""
-  """"0":"({account_name}[^"]+)"""
-  """"1":"({account_domain}[^"]+)"""
-]
-DupFields = [
-  "account_name->dest_user",
-  "account_domain->dest_domain"
+  """"0":"({dest_user}({account_name}[^"]+))"""
+  """"1":"({dest_domain}({account_domain}[^"]+))"""
 ]
 ParserVersion = "v1.0.0"
 

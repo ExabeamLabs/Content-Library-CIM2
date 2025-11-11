@@ -19,20 +19,19 @@ Fields = [
   """ComputerName =({host}({dest_host}[\w\-\.]+))([^\s]*\s|;)""",
   """({event_code}4624)""",
   """Logon Type(:|=)\s*({login_type}\d+)""",
-  """New Logon(:|=)[\s;]*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)""",
-  """New Logon(:|=)[^\}]*?Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)""",
+  """New Logon(:|=)[\s;]*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))[\s;]*Account Domain(:|=)""",
+  """New Logon(:|=)[^\}]*?Account Domain(:|=)\s*(-|({dest_domain}({domain}[^\s]+?)))[\s;]*Logon ID(:|=)""",
   """Process Name(:|=)\s*(?:-|({process_path}({process_dir}[^\}]*?)(\\+({process_name}[^\\]+?))?))\s+(Network Information:|Additional Information:)""",
-  """Workstation Name(:|=)\s*(-|[A-Fa-f:\d.]+|(?:\\+)?({src_host_windows}[\w.\-]+\$?))[\s;]*Source Network Address(:|=)""",
+  """Workstation Name(:|=)\s*(-|[A-Fa-f:\d.]+|(?:\\+)?({src_host_windows}({src_host}[\w.\-]+\$?)))[\s;]*Source Network Address(:|=)""",
   """Source Network Address(:|=)\s*(?:-|({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f\d]+:[A-Fa-f\d:]+)))[\s;]*Source Port(:|=)""",
   """Logon Process(:|=)\s*({auth_process}[^\s;]+)[\s;]*Authentication Package(:|=)\s*({auth_package}[^\s;]+)""",
   """Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*(Linked Logon|Logon GUID)""",
-  """New Logon(:|=)[\s;]*Security ID(:|=)\s*(NT AUTHORITY\\+SYSTEM|({user_sid}[^;:=]+?))(\s+|;)Account Name(:|=)""",
+  """New Logon(:|=)[\s;]*Security ID(:|=)\s*(NT AUTHORITY\\+SYSTEM|({dest_user_sid}({user_sid}[^;:=]+?)))(\s+|;)Account Name(:|=)""",
   """Key Length(:|=)\s*({key_length}\d+)""",
   """Subject(:|=)[\s;]*Security ID(:|=)\s*({subject_sid}[^;:=]+?)(\s+|;)Account Name(:|=)"""
   """Linked Logon ID:\s*({dest_login_id}[^\s]+)"""
   """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s|;)""",
 ]
-DupFields = [ "user_sid->dest_user_sid", "src_host_windows->src_host" ,"domain->dest_domain","user->dest_user"]
 ParserVersion = "v1.0.0"
 
 

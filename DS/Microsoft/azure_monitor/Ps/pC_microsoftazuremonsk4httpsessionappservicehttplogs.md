@@ -10,10 +10,10 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
   Fields = [
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """([^\|]*\|){5}({operation}[^\|]+)""",
-    """destinationServiceName =({app}.+?)\s+(\w+=|$)""",
+    """destinationServiceName =({web_domain}({app}.+?))\s+(\w+=|$)""",
     """\Wsuser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """\Wsuid=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+[\S]+=|\s*$)""",
-    """"CsHost\\?":\\?"({app}[^:",]+?)\\?"""",
+    """"CsHost\\?":\\?"({web_domain}({app}[^:",]+?))\\?"""",
     """"Result\\?":\\?"({action}[^"]+?)\\?"""",
     """"resourceId":\s*"({resource}[^"]+)"""",
     """"CsUriStem\\?":\\?"({uri_path}[^"]+?)\\?"""",
@@ -28,10 +28,9 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
     """"Referer\\?":\\?"(-|({referrer}[^"]+?))\\?"""",
     """"ScBytes\\?":\\?"*({bytes_out}\d+)\\?"*,""",
     """"ScStatus\\?":\\?"*({http_response_code}\d+)\\?"*,""",
-    """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
+    """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
     """"UserAgent\\?":\\?"(?:-|Mozilla\/[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin).+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))"""
   ]
-  DupFields = ["app->web_domain", "event_hub_namespace->host"]
 
 
 }

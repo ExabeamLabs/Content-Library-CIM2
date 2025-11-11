@@ -50,9 +50,7 @@ Name = "checkpoint-ngfw-str-network-traffic-success-bypass-2"
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):"(?:[^_"\s]+_)?(({email_address}[^:@\s]+@[^\.\s]+\.[^:\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*"""",
 """resource:"({url}[^";,]+)""""
-  ]
-  DupFields = [
-"action->event_name"
+"""\Waction:\"+({event_name}[^\"]+)"""
   ]
 
 

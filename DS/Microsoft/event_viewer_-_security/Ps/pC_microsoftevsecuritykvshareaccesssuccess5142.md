@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5142
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Conditions = [ """SourceName =Microsoft Windows security auditing""", """A network share object was added""", """EventCode=5142""", """Share Information:""" ]
   Fields = [
-    """ComputerName =({host}[\w\-.]+)""",
+    """ComputerName =({dest_host}({host}[\w\-.]+))""",
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(am|AM|pm|PM))""",
     """({event_name}A network share object was added)""",
     """({event_code}5142)""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-kv-share-access-success-5142
     """Keywords=({result}[^:=]+?)\s*\w+[:=]"""
     """Source Port(=|:)\s*({src_port}\d+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

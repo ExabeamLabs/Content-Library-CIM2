@@ -37,9 +37,9 @@ Fields = [
   """\|proto=({protocol}[^\|]+)"""
   """\|srcBytes=({bytes_out}[\d.]+)\|"""
   """\|dstBytes=({bytes_in}[\d.]+)\|"""
-  """\|Miscellaneous=\"(|({miscellaneous}[^=]+?))(\"|\s*$)"""
+  """\|Miscellaneous=\"(|({malware_url}({miscellaneous}[^=]+?)))(\"|\s*$)"""
   """\|URLCategory=({category}[^\|]+)"""
-  """\|Miscellaneous=\"(|({miscellaneous}.+?))(\"|\s*$)"""
+  """\|Miscellaneous=\"(|({malware_url}({miscellaneous}.+?)))(\"|\s*$)"""
   """\|URLCategory=({category}[^\|]*)\|"""
   """\|Severity=({alert_severity}[^\|]+)\|"""
   """\|Direction=({direction}[\w-]+)\|"""
@@ -50,24 +50,8 @@ Fields = [
   """EgressInterface=({dest_interface}[^\|]+)"""
   """SerialNumber=({serial_num}\d+)"""
 ]
-DupFields = [
-  "miscellaneous->malware_url"
-]
 SOAR {
   IncidentType = "malware"
-  DupFields = [
-    "time->startedDate"
-    "vendor->source"
-    "rawLog->sourceInfo"
-    "alert_name->malwareName"
-    "category->malwareCategory"
-    "alert_severity->sourceSeverity"
-    "alert_id->sourceId"
-    "src_ip->malwareVictimHost"
-    "alert_type->description"
-    "malware_url->malwareAttackerUrl"
-    "dest_ip->malwareAttackerIp"
-  ]
   NameTemplate = "Palo Alto Alert ${alert_name} found"
   ProjectName = "SOC"
   EntityFields = [

@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-kv-process-create-success-4688wls
       """EventID="+({event_code}[^"]+)"""",
       """NewProcessName ="+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))"""",
       """NewProcessName ="+({path}.+?)"""",
-      """SubjectUserName ="+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-      """SubjectDomainName ="+(?=\w)({domain}[^"]+)"""",
+      """SubjectUserName ="+(?=\w)({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """SubjectDomainName ="+(?=\w)({src_domain}({domain}[^"]+))"""",
       """SubjectLogonId="+({login_id}[^"]+)"""",
       """ProcessId="+({parent_process_guid}[^"]+)"""",
       """ProviderGuid="+({process_guid}[^"]+)"""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-kv-process-create-success-4688wls
       """CommandLine="+({process_command_line}[^"]+)"""",
       """CommandLine="+(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= ({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))""",
     ]
-    DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

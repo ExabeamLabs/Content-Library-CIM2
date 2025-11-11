@@ -10,6 +10,7 @@ Name = microsoft-defendercloud-json-alert-trigger-success-assessments
   Fields =[
     """exa_json_path=$.properties.timeGenerated,exa_field_name=time""",
     """exa_json_path=$.properties.resourceDetails.resourceName,exa_field_name=src_host""",
+    """exa_json_path=$.properties.resourceDetails.resourceName,exa_field_name=resource_name""",
     """exa_json_path=$.properties.resourceDetails.resourceType,exa_field_name=resource_type""",
     """exa_json_path=$.properties.resourceDetails.source,exa_field_name=alert_source""",
     """exa_json_path=$.properties.resourceDetails.id,exa_field_name=resource_path""",
@@ -28,7 +29,6 @@ Name = microsoft-defendercloud-json-alert-trigger-success-assessments
     """exa_json_path=$.properties.category,exa_field_name=alert_name""",
     """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
-  DupFields = [ "src_host->resource_name" ]
   ParserVersion = v1.0.0
 
 

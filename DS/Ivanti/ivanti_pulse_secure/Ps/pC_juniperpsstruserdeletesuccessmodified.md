@@ -10,12 +10,8 @@ Conditions = [
 """User Accounts modified."""
 ]
 Fields = [
-  """PulseSecure:.+?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) - (::ffff:)?({host}\S+) - \[(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\] (({domain}[^\\\(]+)\\)?(System|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """Removed username (({dest_domain}[^\\]+)\\)?({dest_user}[^\\\s]+)"""
-]
-DupFields = [
-"dest_user->account_name"
-"host->dest_host"
+  """PulseSecure:.+?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) - (::ffff:)?({dest_host}({host}\S+)) - \[(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\] (({domain}[^\\\(]+)\\)?(System|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """Removed username (({dest_domain}[^\\]+)\\)?({account_name}({dest_user}[^\\\s]+))"""
 ]
 ParserVersion = "v1.0.0"
 

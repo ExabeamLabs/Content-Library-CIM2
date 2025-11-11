@@ -18,7 +18,7 @@ Fields = [
 """"severity":"({alert_severity}[^"]+)"""
 """"id":"({alert_id}[^"]+)"""
 """"sourceMaterials":\["({malware_url}[^"]+)"""
-""""title":"({alert_name}[^"]+?)(\\u200b)?""""
+""""title":"({alert_subject}({alert_name}[^"]+?))(\\u200b)?""""
 """"userPrincipalName":"((?i)null|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({full_name}[^\s"]+\s+[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
 """"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^@"]+))?)\\?""""
 """"logonLocation":((?i)null|({src_location}[^"]+))"""
@@ -28,7 +28,6 @@ Fields = [
 """msg=.*?\[({alert_source}[^\]]+)\]:"""
 """"status":"({incident_status}[^"]+)""""
 ]
-DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = v1.0.0
 
 

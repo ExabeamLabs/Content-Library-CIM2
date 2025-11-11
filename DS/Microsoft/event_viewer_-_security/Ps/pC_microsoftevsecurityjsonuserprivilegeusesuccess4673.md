@@ -10,11 +10,11 @@ Name = microsoft-evsecurity-json-user-privilege-use-success-4673
     Fields = [
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7}Z)""",
-      """"Computer":"({host}[\w\-.]+)""",
+      """"Computer":"({dest_host}({host}[\w\-.]+))""",
       """"EventID":"({event_code}\d+)""",
-      """<Data Name\\*=('|")SubjectUserSid('|")>\s*(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-      """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-      """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>""",
+      """<Data Name\\*=('|")SubjectUserSid('|")>\s*(({src_domain}({domain}[^\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+      """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+      """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+?))</Data>""",
       """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
       """<Data Name\\*=('|")ObjectServer('|")>({object_server}[^<]+?)</Data>""",
       """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)</Data>""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-json-user-privilege-use-success-4673
       """({event_name}An account was logged off)""",
       """({event_name}A privileged service was called)"""
     ]
-    DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
   
 
 }

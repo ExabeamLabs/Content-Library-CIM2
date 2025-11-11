@@ -10,17 +10,16 @@ Name = microsoft-evsecurity-json-endpoint-activity-4660
   Fields = [
     """({event_name}An object was deleted)""",
     """({event_code}4660)""",
-    """"(Hostname|Computer)":"({host}[^"]+)""""
+    """"(Hostname|Computer)":"({dest_host}({host}[^"]+))""""
     """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """"SubjectUserSid":"({user_sid}[^"]+)""""
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-    """"SubjectDomainName":"({domain}[^"]+)""""
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))""""
     """"SubjectLogonId":"({login_id}[^"]+)""""
     """"ObjectServer":"({object_server}[^"]+)""""
     """"HandleId":"({object_id}[^"]+)""""
     """"ProcessName":"(|-|({process_path}({process_dir}.*?)({process_name}[^\\\/]+?)))""""
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -15,8 +15,8 @@ Fields = [
 """<Computer>({host}[\w\-\.]+)"""
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))"""
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)"""
 """<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)"""
@@ -27,7 +27,6 @@ Fields = [
 """User Account Control:\s*(\\r|\\t|\\n)*(-|({uac_status}[^:]+?))\s*(\\r|\\t|\\n)*User Parameters:"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

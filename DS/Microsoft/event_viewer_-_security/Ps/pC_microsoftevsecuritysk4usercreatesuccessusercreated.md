@@ -16,11 +16,10 @@ Name = microsoft-evsecurity-sk4-user-create-success-usercreated
     """"TargetSid":"+({dest_user_sid}[^"]+)"""
     """"UserPrincipalName":"({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+))?)""""
     """"SubjectLogonId":"({login_id}[^\s"]+)"""
-    """"TargetUserName":"({account_name}[^"]+)"""
+    """"TargetUserName":"({dest_user}({account_name}[^"]+))"""
     """"TargetDomainName":"({account_domain}[^"]+)"""
     """"DisplayName":"({full_name}[^"]+)""""
   ]
-  DupFields = [ "account_name->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

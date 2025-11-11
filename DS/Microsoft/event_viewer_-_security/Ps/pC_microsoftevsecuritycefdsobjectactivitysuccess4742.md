@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
   Conditions = [ """CEF:""", """"eventID":"4742"""",  """A computer account was changed""" ]
   Fields = [
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """"computer":"({host}[\w\-.]+)""",
+    """"computer":"({dest_host}({host}[\w\-.]+))""",
     """"message":"({event_name}[^"]+?)\s*"""",
     """"eventID":"({event_code}\d+)""",
     """"eventRecordID":"({event_id}\d+)""",
@@ -17,14 +17,13 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """"targetUserName":"({dest_user}[^"\s]+?)\s*"""",
     """"targetDomainName":"({ds_object_dn}[^"\s]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
-    """"subjectDomainName":"({domain}[^"\s]+?)\s*"""",
+    """"subjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*"""",
+    """"subjectDomainName":"({src_domain}({domain}[^"\s]+?))\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
     """UserAccountControl":"(-|({uac_status}[^"]+))","UserParameters""""
     """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
     """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
   ]
-  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

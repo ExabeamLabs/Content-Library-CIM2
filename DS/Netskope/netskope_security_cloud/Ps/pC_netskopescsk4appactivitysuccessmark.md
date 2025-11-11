@@ -4,7 +4,6 @@
 Name = netskope-sc-sk4-app-activity-success-mark
   ParserVersion = v1.0.0
   Conditions = [  """"type":""", """"ccl":""", """"activity":""", """"Mark"""" ]
-  DupFields = ${NetskopeParsersTemplates.cef-netskope-activity.DupFields}[ "operation->access" ]
 
 cef-netskope-activity = {
   Vendor = "Netskope"
@@ -28,14 +27,14 @@ cef-netskope-activity = {
     """"user":\s*"(unknown|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({domain}[^\s"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))""""
     """"access_method":\s*"({auth_method}[^\"]+)"""
     """"logintype":\s*"({auth_method}[^\"]+)"""
-    """"activity":\s*"({operation}[^\"]+)"""
+    """"activity":\s*"({access}({operation}[^\"]+))"""
     """"os":\s*"((U|u)nknown|({os}[^\"]+))"""
     """"browser":\s*"((U|u)nknown|({browser}[^\"]+))"""
     """"page":\s*"({web_domain}[^\"\/]+)"""
     """"url":\s*"({url}[^\"]+)"""
     """"dst_location":\s*"(N/A|({location}[^\"]+))"""
     """"file_size":\s*({bytes}\d+)"""
-    """"file_type":\s*"({file_type}[^"]+)"""
+    """"file_type":\s*"({mime}({file_type}[^"]+))"""
     """"page_site":\s*"({app}[^\"]+)"""
     """"app":\s*"\[?({app}[^\"\]]+)"""
     """"dstport\":"\s*({dest_port}\d+)""""
@@ -45,7 +44,6 @@ cef-netskope-activity = {
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """"activity":\s*"File\w+"[^\}]*?"object":\s*"({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
     """"object":\s*"({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"activity":\s*"File\w+""""
-  ]
-  DupFields = [ "file_type->mime" 
+  
 }
 ```

@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})\s({host}[\w\-.]+)\s""",
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """\sComputer="({host}[\w\-.]+)"""",
+    """\sComputer="({src_host}({host}[\w\-.]+))"""",
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """Domain=({domain}.+?)\s+(\w+=|$)""",
     """User:\s*(?:(NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\]+))\\)?(SYSTEM|(NETWORK|LOCAL) SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+LogonGuid:""",
@@ -31,7 +31,6 @@ Fields = [
     """\s+ParentImage:\s*({parent_process_path}({parent_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({parent_process_name}[^:]+?))\s+ParentCommandLine:"""
     """IntegrityLevel:\s*({process_integrity}[^\s]+)"""
 ]
-DupFields = [   "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

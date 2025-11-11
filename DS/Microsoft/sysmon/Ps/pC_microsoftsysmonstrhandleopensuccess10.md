@@ -13,7 +13,7 @@ Name = microsoft-sysmon-str-handle-open-success-10
     """providername="+({provider_name}[^"]+)""",
     """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
-    """\Weventrecordid="+({event_id}\d+)"""",
+    """\Weventrecordid="+({event_code}({event_id}\d+))"""",
     """SourceProcessGUID:\s*\{({process_guid}[^\s\}]+)""",
     """SourceProcessId:\s*({process_id}\d+)""",
     """SourceThreadId:\s*({thread_id}\d+)""",
@@ -23,7 +23,6 @@ Name = microsoft-sysmon-str-handle-open-success-10
     """\s+TargetImage:\s*({dest_process_path}({dest_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({dest_process_name}.+?))\s+""",
     """\sGrantedAccess:\s*({result}[^\s]+)""",
   ]
-  DupFields = ["event_id->event_code"]
 
 
 }

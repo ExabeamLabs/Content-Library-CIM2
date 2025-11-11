@@ -23,9 +23,6 @@ Fields = [
   """Workstation Name:\s+({src_host_windows}[^\s]+)\s+Logon"""
   """Workstation Name:\s+({src_host}[^\s]+)\s+Logon.*?Source Network Address:\s*-\s+"""
 ]
-DupFields = [
-  "host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

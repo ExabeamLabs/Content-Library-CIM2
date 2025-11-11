@@ -9,9 +9,8 @@ Name = cisco-ie-cef-email-response
     Conditions = [ """CEF:""", """MID """, """ RID """, """ Response """ ]
     Fields = [
       """\srt=({time}\d{13})""",
-      """MID ({alert_id}\d+) ({additional_info}[^"]+?)\s\w+="""
+      """MID ({message_id}({alert_id}\d+)) ({additional_info}[^"]+?)\s\w+="""
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

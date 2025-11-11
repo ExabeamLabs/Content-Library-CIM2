@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}An attempt was made to access an object)"""
-""""(?:winlog\.)?computer_name\\*":\\*"({host}[\w\-.]+)"""
+""""(?:winlog\.)?computer_name\\*":\\*"({dest_host}({host}[\w\-.]+))"""
 """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_code}4663)"""
 """Object(:|=).*?Object Type(:|=)\s*({file_type}.+?)[\s;]*Object Name(:|=)\s*({file_path}({file_dir}.*?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\]+?))?))[\s;]*Handle ID(:|=)"""
@@ -20,15 +20,15 @@ Fields = [
 """Process Name(:|=).*\\({process_name}[^\\;]+?)[\s;]*Access Request Information(:|=)"""
 """Accesses(:|=)\s*({access}.+?)[\s;]*Access Mask(:|=)\s*({access_mask}\w+)"""
 """"AccessList\\*":\\*"({access}[^"]+?)\s*""""
-""""Account\\*":\\*"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+""""Account\\*":\\*"(({domain}[^\\\s"]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """"SubjectUserSid\\*":\\*"({user_sid}[^\s"]+)"""
 """"SubjectLogonId\\*":\\*"({login_id}[^\s"]+)"""
 """"ObjectName\\*":\\*"(-|({file_path}({file_dir}.*?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;]+?))?)))\s*""""
 """"ObjectType":"(-|({file_type}[^\s"]+))"""
 """"ProcessName":"(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
 """"record_number"\s*:\s*\"({event_id}\d+)"""
-""""SubjectUserName"\s*:\s*\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-""""SubjectDomainName"\s*:\s*\"({domain}[^\"]+)"""
+""""SubjectUserName"\s*:\s*\"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""SubjectDomainName"\s*:\s*\"({src_domain}({domain}[^\"]+))"""
 """"ObjectName"\s*:\s*\"(?:({file_dir}[^\"]+?)\\+[^\"\\]+)""""
 """"AccessList"\s*:\s*\"({access}.+?)""""
 """Access Request Information:[rnt\\]*Accesses:\s*((\\)*(\\t|\\r|\\n))*({access}[^\\]+)((\\)*(\\t|\\r|\\n))*Access Mask:\s*((\\)*(\\t|\\r|\\n))*({access_mask}[^"\s]+)\s*((\\)*(\\t|\\r|\\n))*"""
@@ -41,15 +41,17 @@ Fields = [
 """exa_json_path=$.event_data.ProcessName,exa_regex=(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+)))\s*"""
 """exa_json_path=$.record_number,exa_field_name=event_id"""
 """exa_json_path=$.event_data.SubjectUserName,exa_field_name=user"""
+"""exa_json_path=$.event_data.SubjectUserName,exa_field_name=src_user"""
 """exa_json_path=$.event_data.SubjectDomainName,exa_field_name=domain"""
+"""exa_json_path=$.event_data.SubjectDomainName,exa_field_name=src_domain"""
 """exa_json_path=$.event_data.ObjectName,exa_regex=(?:({file_dir}[^"]+)\\+[^\"\\]+)"""
 """exa_json_path=$.event_data.AccessList,exa_regex=({access}[^\\]+?)(\n|\r\t)"""
 """exa_json_path=$.event_data.SubjectUserSid,exa_field_name=user_sid"""
 """exa_json_path=$.computer_name,exa_field_name=host"""
+"""exa_json_path=$.computer_name,exa_field_name=dest_host"""
 """exa_json_path=$.event_data.AccessMask,exa_field_name=access_mask"""
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id"""
 ]
-DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -13,8 +13,8 @@ Name = microsoft-sysmon-xml-dll-load-7
 # signature_status is removed
     """({log_name}Microsoft-Windows-Sysmon)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Data Name\\*=('|")Image('|")>({process_path}(({process_dir}[^<>]+?)[\\\/]+)?({src_process_name}({process_name}[^\\\/<>]+?)))<\/Data>""",
   ]
-  DupFields = [ "process_name->src_process_name" ]
 
 xml-sysmon-activity = {
   Vendor = Microsoft

@@ -9,17 +9,16 @@ Conditions = [ """"EventID":4673""", """"SourceModuleType":""" ]
 Fields = [
   """({event_name}A privileged service was called)""",
   """"EventTime":\s*"({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})"""",
-  """"Hostname":"({host}[\w\-.]*)""",
+  """"Hostname":"({dest_host}({host}[\w\-.]*))""",
   """({event_code}4673)""",
   """"EventType":"({result}[^"]*)""",
-  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-  """"SubjectDomainName":"({domain}[^"]*)""",
+  """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+  """"SubjectDomainName":"({src_domain}({domain}[^"]*))""",
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))",""",
   """"ObjectServer":"({object_server}[^"]*)""",
   """"PrivilegeList":"({privileges}[^"]*)"""
 ]
-DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -18,7 +18,7 @@ hp-ilo-app-logout = {
       """({app}ILO)""",
       """\slogout:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\slogout:\s(\S+\s){2}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\(({src_host}[^\)]+)\)"""
-  ]
-  DupFields = ["host->dest_host"
+      """\d\d:\d\d:\d\dZ\s({dest_host}[^\s]+)\s#ILO""",
+  
 }
 ```

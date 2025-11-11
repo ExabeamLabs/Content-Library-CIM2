@@ -23,10 +23,7 @@ Fields = [
 """\s({time}\w+\s+\d\d\s+\d\d:\d\d:\d\d\s+\d\d\d\d),"""
 """PrintService,({user_sid}\w+-\w+-\w+-\w+-\w+-\w+-\w+-\w+),"""
 """,({host}[^,]+),Printing a document"""
-"""({event_name}Printing a document)"""
-]
-DupFields = [
-"event_name->operation"
+"""({operation}({event_name}Printing a document))"""
 ]
 ParserVersion = "v1.0.0"
 

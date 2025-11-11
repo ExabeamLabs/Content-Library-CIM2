@@ -17,22 +17,18 @@ Fields = [
 """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """({event_code}4697)"""
 """({event_name}A service was installed in the system)"""
-"""\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+"""\sComputerName =(|({dest_host}({host}[\w\-.]+?)))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
 """Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:"""
 """\sdestinationServiceName =({service_name}[^=]+?)\s+\w+="""
 """Service Name:(\\[nrt]|\s)*(|({service_name}[^:]+?)(_[0-9a-f]+)?)(\\[nrt]|\s)*Service File Name:"""
-"""Service File Name:\s*((?-i)\\+[rnt]\\*)*({process_command_line}[^=]+?)\s*(\\t|\\r|\\n)*Service Type:"""
+"""Service File Name:\s*((?-i)\\+[rnt]\\*)*({service_command_line}({process_command_line}[^=]+?))\s*(\\t|\\r|\\n)*Service Type:"""
 """(\\[nrt]|\s)*Service Type:(\\[nrt]|\s)*({service_type}[^\s]+?)(\\[nrt]|\s)*Service Start Type:(\\[nrt]|\s)*({service_start_type}.+?)(\\[nrt]|\s)*"""
 """filePath=\s*\"*(?:|-|({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}.*?)))\\?\"""",
 """\sService File Name:\s*\"*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\"*\s"""
 """Service Account:\s*(({account_domain}[^\\"\s]+)\\)?((?-i)\\+[rnt])*({account_name}[^"\s]+)"""
 """Service Account:(\\[nrt]|\s)*(({account_domain}[^\\"\s]+?)\\+)?(?!(\\*[nrt]\\+[nrt]))({account_name}[^"\s\\]+)(\\[nrt]|\s)*""""
-"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""
-]
-DupFields = [
-"host->dest_host"
-"process_command_line->service_command_line"
+"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -11,13 +11,12 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4802
   """<Computer>({host}[\w\-\.]+)"""
   """({event_name}The screen saver was invoked)"""
   """Security ID:\s*({user_sid}[^\s]+)"""
-  """<Data Name =('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data"""
-  """<Data Name =('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data"""
+  """<Data Name =('|")TargetUserName('|")>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data"""
+  """<Data Name =('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<\/Data"""
   """({event_code}4802)"""
-  """<Data Name =('|")TargetDomainName('|")>({domain}[^<]+)<\/Data"""
+  """<Data Name =('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))<\/Data"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["login_id->dest_login_id", "domain->dest_domain", "user->dest_user"]
   ParserVersion = "v1.0.0"
 
 

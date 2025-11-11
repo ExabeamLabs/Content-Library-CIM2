@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4625"
     """CLIENT_IP_ADDRESS\s*=\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """CLIENT_HOST_NAME\s*=\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))"""
     """DOMAIN\s*=\s*({domain}[^\\\/\s]+)"""
-    """SOURCE\s*=\s*({src_host_windows}[\w\-.]+)"""
+    """SOURCE\s*=\s*({src_host_windows}({src_host}[\w\-.]+))"""
     """RECORD_NUMBER\s*=\s*({event_id}\d+)"""
     """EVENT_NUMBER\s*=\s*({event_code}\d+)"""
     """USER_SID\s*=\s*({user_sid}[^\s]+)"""
@@ -31,7 +31,6 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4625"
     """FAILURE_STATUS\s*=\s*({result_code}[^\s]+)"""
     """FAILURE_SUB_STATUS\s*=\s*({result_code}[^\s]+)"""
   ]
-  DupFields = [ "src_host_windows->src_host" ]
 
 
 }

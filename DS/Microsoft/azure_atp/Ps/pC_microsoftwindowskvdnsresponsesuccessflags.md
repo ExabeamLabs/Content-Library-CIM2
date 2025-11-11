@@ -16,7 +16,7 @@ cef-atp-alert = {
   Fields = [
     """CEF:?([^\|]*\|){4}({alert_type}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)\|""",
     """\WexternalId=({event_code}\d+)""",
-    """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """\Wstart=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """\Wapp=({service_name}.+?)\s+(\w+=|$)""",
     """\Wshost=(({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[\w\-.]+))""",

@@ -17,6 +17,7 @@ Name = "veeam-v-json-app-activity-success-eventid"
        """"ThreadID":({thread_id}\d+)"""
        """"Channel":"({channel}[^"]+)""""
        """"SourceModuleName":"({resource_name}[^"]+)""""
+       """"Message":"({additional_info}[^"]+)""""
        ]
      ParserVersion = "v1.0.0"
  

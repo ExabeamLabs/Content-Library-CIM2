@@ -5,7 +5,8 @@ Name = microsoft-azuremon-json-app-activity-operationname
   Vendor = Microsoft
   Product = Azure Monitor
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","MM/dd/yyyy HH:mm:ss"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","MM/dd/yyyy HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
+  event_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
   Conditions = [ """"resourceId":""", """"operationName":""", """"category":""" ]
   Fields = [
     """exa_json_path=$..time,exa_field_name=time""",
@@ -20,11 +21,22 @@ Name = microsoft-azuremon-json-app-activity-operationname
     """exa_json_path=$..callerIpAddress,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..resultDescription,exa_regex=^\s*({additional_info}[^"]+?)\s*$""",
     """exa_json_path=$..caller,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)@([^"]+)""",
+    """exa_json_path=$..ip,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..EventIpAddress,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..level,exa_field_name=run_level""",
     """exa_json_path=$..location,exa_field_name=region""",
     """exa_json_path=$..Host,exa_field_name=host""",
-    """exa_json_path=$..message,exa_field_name=additional_info"""
+    """exa_json_path=$..message,exa_field_name=additional_info""",
+    """exa_json_path=$..thread_id,exa_field_name=thread_id""",
+    """exa_json_path=$..error_code,exa_field_name=error_code""",
+    """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$..event_class,exa_field_name=event_category""",
+    """exa_json_path=$..event_subclass,exa_field_name=event_subtype""",
+    """exa_json_path=$..sql_text,exa_field_name=db_query""",
+    """exa_json_path=$..db,exa_field_name=db_name""",
+    """exa_json_path=$..replication_set_role,exa_field_name=role""",
+    """exa_json_path=$..event_time,exa_field_name=event_time""",
+    """exa_regex="properties":\{[^\}]*?"category":"MySqlAuditLogs"[^\}]*?"user":"({db_user}[^"]+)""""
   ]
   ParserVersion = v1.0.0
 

@@ -5,11 +5,14 @@ Name = manageengine-adauditplus-kv-app-authentication-2887
   ParserVersion = v1.0.0
   Conditions = [ """ [ EVENT_NUMBER = 2887 ] """, """ ADAuditPlus: """, """ [ SOURCE = """, """ [ FORMAT_MESSAGE = """ ]
   Fields = ${WindowsParsersTemplates.ad-audit-plus-2.Fields}[
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """CLIENT_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
+    """CALLER_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
+    """CLIENT_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
+    """CALLER_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
     """Category\s*=\s*({category}[^\s]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 ad-audit-plus-2 = {
   Vendor = ManageEngine
@@ -17,10 +20,6 @@ ad-audit-plus-2 = {
   TimeFormat = "epoch_sec"
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """CLIENT_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
-    """CLIENT_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
-    """CALLER_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
-    """CALLER_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
     """RECORD_NUMBER\s*=\s*({event_id}\d+)""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """CALLER_USER_SID\s*=\s*\%?\{?({user_sid}[^\s\}]+)""",

@@ -5,6 +5,7 @@ Name = microsoft-evsystem-xml-driver-load-fail-219
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>219</EventID>""", """<TimeCreated SystemTime""" ]
   Fields = ${WindowsParsersTemplates.s-xml-object-access-1.Fields}[
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}219)"""
@@ -23,7 +24,6 @@ s-xml-object-access-1 = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*=('|")({user_sid}[^'"]+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Execution ProcessID\\*=('|")({process_id}[^"']+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",

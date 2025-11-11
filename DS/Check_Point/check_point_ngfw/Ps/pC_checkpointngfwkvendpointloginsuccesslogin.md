@@ -7,10 +7,10 @@ Name = checkpoint-ngfw-kv-endpoint-login-success-login
   Conditions = [ """ CheckPoint """, """product:"""", """action:"Log In"""", """auth_status:"Successful Login"""" ]
   Fields = ${CheckpointParsersTemplates.checkpoint-auth.Fields}[
     """action:"+({operation}[^"]+)""",
+    """action:"+({event_name}[^"]+)""",
     """\Wtime:"({time}\d{10})"""",
     """\Woriginsicname:"CN=({origin_name}[^",]+)""",
   ]
-  DupFields = [ "operation->event_name" ]
 
 checkpoint-auth = {
   Vendor = Check Point

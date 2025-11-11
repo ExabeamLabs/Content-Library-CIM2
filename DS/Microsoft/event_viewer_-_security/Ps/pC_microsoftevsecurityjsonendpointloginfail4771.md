@@ -22,15 +22,15 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """<TimeCreated SystemTime\\*=('|")?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
     """"(Hostname|MachineName|(?:winlog\.)?computer_name)\\*":\\*"({host}[\w\-\.]+)"""
     """({event_code}4771)"""
-    """"(TargetSid|TargetDomainName)\\*":\\*"({user_sid}[^"\\]*)"""
-    """<Data Name ="TargetUserName">({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    """"TargetUserName\\*":\\*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """"(TargetSid|TargetDomainName)\\*":\\*"({dest_user_sid}({user_sid}[^"\\]*))"""
+    """<Data Name ="TargetUserName">({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"TargetUserName\\*":\\*"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"ServiceName\\*":\\*"[^/]*\/({domain}[^"\\]*)""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({result}[^"]+?)\s*"""",
-    """<Data Name\\*="Status">({result_code}[^<>]+)<\/Data>"""
-    """"Status_string":"({result_code}[^"]+)"""",
-    """"(Status|TicketOptions)\\*":\\*"({result_code}[^"\\]*)"""
+    """<Data Name\\*="Status">({failure_code}({result_code}[^<>]+))<\/Data>"""
+    """"Status_string":"({failure_code}({result_code}[^"]+))"""",
+    """"(Status|TicketOptions)\\*":\\*"({failure_code}({result_code}[^"\\]*))"""
     """"((IpAddress)|(ip))\\*":\\*"(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*""""
     """exa_regex=({event_name}Kerberos pre-authentication failed)""",
     """exa_json_path=$..systemTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
@@ -44,16 +44,19 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_regex=({event_code}4771)""",
     """exa_json_path=$..TargetSid,exa_field_name=user_sid""",
     """exa_json_path=$..TargetDomainName,exa_field_name=user_sid""",
-    """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+    """exa_json_path=$..TargetSid,exa_field_name=dest_user_sid""",
+    """exa_json_path=$..TargetDomainName,exa_field_name=dest_user_sid""",
+    """exa_json_path=$..TargetUserName,exa_regex=^({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$..ServiceName,exa_regex=^([\w\-.]+)\/({domain}[^\\\/\s"]+?)$""",
     """exa_json_path=$..eventRecordID,exa_field_name=event_id""",
     """exa_json_path=$..severityValue,exa_field_name=result""",
     """exa_json_path=$..Status,exa_field_name=result_code""",
+    """exa_json_path=$..Status,exa_field_name=failure_code""",
     """exa_json_path=$..TicketOptions,exa_field_name=result_code""",
+    """exa_json_path=$..TicketOptions,exa_field_name=failure_code""",
     """exa_json_path=$..IpAddress,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..ip,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
   ]
-  DupFields = [ "result_code->failure_code", "user_sid->dest_user_sid", "user->dest_user" ]
 
 
 }

@@ -14,8 +14,8 @@ Name = cisco-ie-str-email-url-1
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\+[\d\:]+)""",
       """MID ({alert_id}\d+)""",
       """URL ({url}.+?) has reputation ({spam_score}.+?) matched Condition: URL Reputation Rule""",
+      """MID ({message_id}\d+)""",
      ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

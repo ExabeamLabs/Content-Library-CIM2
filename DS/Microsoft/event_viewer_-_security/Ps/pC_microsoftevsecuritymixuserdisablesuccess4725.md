@@ -35,9 +35,9 @@ Fields = [
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""
 """\"TargetUserName\":\"({dest_user}[^\"]+)"""
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}S-[^<]+))<"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)<"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({dest_user_sid}S-[^<]+))<"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)<"""
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)<"""
@@ -45,7 +45,6 @@ Fields = [
 """Target Account.+?Account Domain:\s*(?=\w)(({dest_domain}[^\s\^\r\n$\",]+)|)(\s+[^\^\r\n$])?"""
 """Logon ID:\s+(\\t)?({login_id}.+?)\s*(\\n|\\r\s\\r\s\\n)*?Target Account:"""
 ]
-DupFields = ["src_user->user", "src_domain->domain"]
 ParserVersion = "v1.0.0"
 
 

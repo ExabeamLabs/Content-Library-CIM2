@@ -15,17 +15,16 @@ Fields = [
   """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)"""
   """EventID="+({event_code}[^"]+)""""
   """EventRecordID="+({event_id}[^"]+)""""
-  """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+  """SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """SubjectUserSid="+({user_sid}[^"]+)""""
-  """SubjectDomainName ="+({domain}[^"]+)""""
+  """SubjectDomainName ="+({src_domain}({domain}[^"]+))""""
   """SubjectLogonId="+({login_id}[^"]+)""""
-  """TargetUserName ="+({account_name}[^"]+)""""
-  """TargetDomainName ="+({account_domain}[^"]+)""""
+  """TargetUserName ="+({dest_user}({account_name}[^"]+))""""
+  """TargetDomainName ="+({dest_domain}({account_domain}[^"]+))""""
   """TargetSid="+({account_id}[^"]+)""""
   """Enabled.*?'({user_type}[^']+)"""
   """ProviderGuid="+({process_guid}[^"]+)""""
 ]
-DupFields = [ "account_name->dest_user", "account_domain->dest_domain", "dest_user->account_name", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

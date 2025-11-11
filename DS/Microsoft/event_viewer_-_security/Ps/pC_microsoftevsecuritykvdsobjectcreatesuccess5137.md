@@ -16,7 +16,7 @@ Fields = [
 """DetectTime=({time}\d\d\d\d-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2})"""
 """({event_name}A directory service object was created)"""
 """({event_code}5137)"""
-"""ComputerName =({host}[\w\-.]+)"""
+"""ComputerName =({dest_host}({host}[\w\-.]+))"""
 """Account Name(:|=)\s*((?-i)\\+[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((?-i)\\+[rnt])*\s*((?-i)\\+[rnt])*(Account|Subject)"""
 """Security ID(:|=)\s*({user_sid}[^\s]+)"""
 """Account Domain(:|=)(\\*(r|n|t|\s))*({domain}[^\s\\]+)?(\\*(r|n|t|\s))*"""
@@ -46,9 +46,7 @@ Fields = [
   """exa_json_path=$.Message,exa_regex=Directory Service:(\s*)Name:\s*({ds_name}[^\s]+)\s+Type:\s*({ds_type}[^:]*?Services)"""
   """exa_json_path=$.DSType,exa_field_name=ds_type"""
   """exa_json_path=$.Computer,exa_field_name=host"""
-]
-DupFields = [
-"host->dest_host"
+  """exa_json_path=$.Computer,exa_field_name=dest_host"""
 ]
 ParserVersion = "v1.0.0"
 

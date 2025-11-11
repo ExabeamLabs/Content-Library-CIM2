@@ -13,20 +13,19 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4627
     """<Computer>({host}[^<>]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
-    """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<""",
-    """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<""",
-    """<Data Name\\*=('|")TargetLogonId('|")>({login_id}[^<]+)<""",
-    """<Data Name\\*=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
+    """<Data Name\\*=('|")SubjectUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<""",
+    """<Data Name\\*=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<""",
+    """<Data Name\\*=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<""",
+    """<Data Name\\*=('|")TargetUserName('|")>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """<Data Name\\*=('|")LogonType('|")>({login_type}\d+)<""",
     """ProcessID\\*=('|")({process_id}\d+)('|")""",
     """ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """<Keywords>({action}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)""",
-    """<Data Name\\*=('|")TargetDomainName('|")>({domain}[^<]+)<""",
+    """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))<""",
     """<Level>({run_level}[^<]+)<"""
 # user_groups is removed
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]  
 
 
 }

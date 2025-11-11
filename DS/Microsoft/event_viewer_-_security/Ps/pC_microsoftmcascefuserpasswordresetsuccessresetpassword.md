@@ -39,15 +39,15 @@ Fields = [
 """ServiceType="+({service_type}[^"]+)""""
 """ServiceAccount="+({account_name}[^"]+)""""
 """SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-"""SubjectDomainName ="+(-|({domain}[^"]+))""""
+"""SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))""""
 """SubjectLogonId="+({login_id}[^"]+)""""
 """ProviderGuid="+({process_guid}[^"]+)""""
 """CommandLine="+({process_command_line}[^"]+)""""
 """SubjectUserSid="+({user_sid}[^"]+)""""
-"""SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
 """ObjectServer="+({object_server}[^"]+)""""
 """ProcessId="+({process_id}[^"]+)""""
-"""Computer="+({dest_host}[\w\-.]+)""""
+"""Computer="+({host}({dest_host}[\w\-.]+))""""
 """TargetDomainName ="+(-|({dest_domain}[^"]+))""""
 """TargetUserName ="+(-|({dest_user}[^"]+))""""
 """TargetLogonId="+({dest_user_sid}[^"]+)""""
@@ -64,7 +64,6 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-password-reset-success-4724-1"
 Conditions = [
 """LogType="WLS""""
@@ -105,7 +104,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}An attempt was made to reset an account's password)"""
-""""MachineName":"({host}[\w\-.]+)"""
+""""MachineName":"({dest_host}({host}[\w\-.]+))"""
 """"TimeGenerated":"({time}[^"]*)"""
 """"InstanceId":"({event_code}[^"]+)"""
 """"4":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
@@ -115,9 +114,6 @@ Fields = [
 """"2":"({dest_user_sid}[^"]+)"""
 """"0":"({dest_user}[^"]+)"""
 """"1":"({dest_domain}[^"]+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -136,11 +132,7 @@ Fields = [
 """search_time=({time}\d+)"""
 """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)"""
 """({event_code}4764)"""
-"""summary_windows_4674_data=\"+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({host}[\w\-.]+))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_path}.+?))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({object_type}[^:::]+))?:::(-|({object}.+?))?:::(-|({access}[^:::]+))?:::(-|({privileges}[^:::]+))?:::"""
-]
-DupFields = [
-"host->dest_host"
-"process_dir->directory"
+"""summary_windows_4674_data=\"+\d+:\d+:\d+\s*\d+-\d+-\d+:::(-|({dest_host}({host}[\w\-.]+)))?:::(-|({event_code}[^:::]+))?:::(-|({result}[^:::]+))?:::(-|({process_path}.+?))?:::(-|({process_dir}.+?))?:::(-|({process_name}.+?))?:::(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))?:::(-|({domain}[^:::]+))?:::(-|({login_id}[^:::]+))?:::(-|({object_server}[^:::]+))?:::(-|({object_type}[^:::]+))?:::(-|({object}.+?))?:::(-|({access}[^:::]+))?:::(-|({privileges}[^:::]+))?:::"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -199,7 +191,7 @@ Conditions = [
 Fields = [
 """({event_name}Privileged object operation)"""
 """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+"""
-"""\s+(Information|Audit Success|Success Audit)\s+({host}[\w\-.]+)"""
+"""\s+(Information|Audit Success|Success Audit)\s+({dest_host}({host}[\w\-.]+))"""
 """(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Primary Domain"""
 """({event_code}578)"""
 """Security\t([^\s]+\t){2}({result}.+?)\t"""
@@ -211,9 +203,6 @@ Fields = [
 """\s+({environment_privilege}SeSystemEnvironmentPrivilege)"""
 """\s+({debug_privilege}SeDebugPrivilege)"""
 """\s+({tcb_privilege}SeTcbPrivilege)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -230,7 +219,7 @@ Fields = [
 """\|McAfee\|[^|]+?\|[^|]+?\|43-2630({event_code}\d+)(0|1)\|"""
 """({event_name}An attempt was made to reset an account's password)"""
 """\srt=({time}\d{13})"""
-"""shost=({host}[\w\-.]+)"""
+"""shost=({dest_host}({host}[\w\-.]+))"""
 """sntdom=({domain}[^\s]+)"""
 """dntdom=({dest_domain}[^\s]+)"""
 """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
@@ -238,9 +227,6 @@ Fields = [
 """nitroSource_Logon_ID=({login_id}.+?)(\s|0\|)"""
 """nitroSecurity_ID=({user_sid}[^\s]+)"""
 """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -259,14 +245,13 @@ Fields = [
 """EventID="+({event_code}[^"]+)""""
 """EventRecordID="+({event_id}[^"]+)""""
 """SubjectUserSid="+({user_sid}[^"]+)""""
-"""SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-"""SubjectDomainName ="+({domain}[^"]+)""""
+"""SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""SubjectDomainName ="+({src_domain}({domain}[^"]+))""""
 """SubjectLogonId="+({login_id}[^"]+)""""
 """TargetSid="+({dest_user_sid}[^"]+)""""
 """TargetDomainName ="+({dest_domain}[^"]+)""""
 """TargetUserName ="+({dest_user}[^"]+)""""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 },
 
@@ -281,16 +266,16 @@ Fields = [
 """ServiceName ="+({service_name}[^"]+)""""
 """ServiceType="+({service_type}[^"]+)""""
 """ServiceAccount="+({account_name}[^"]+)""""
-"""SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-"""SubjectDomainName ="+(-|({domain}[^"]+))""""
+"""SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
+"""SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))""""
 """SubjectLogonId="+({login_id}[^"]+)""""
 """ProviderGuid="+({process_guid}[^"]+)""""
 """CommandLine="+({process_command_line}[^"]+)""""
 """SubjectUserSid="+({user_sid}[^"]+)""""
-"""SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
 """ObjectServer="+({object_server}[^"]+)""""
 """ProcessId="+({process_id}[^"]+)""""
-"""Computer="+({dest_host}[\w\-.]+)""""
+"""Computer="+({host}({dest_host}[\w\-.]+))""""
 """TargetDomainName ="+(-|({dest_domain}[^"]+))""""
 """TargetUserName ="+(-|({dest_user}[^"]+))""""
 """TargetLogonId="+({dest_user_sid}[^"]+)""""
@@ -307,7 +292,6 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = ["dest_host->host", "user->src_user", "domain->src_domain"]
 Name = "microsoft-evsecurity-kv-user-enable-success-4722-1"
 Conditions = [
 """LogType="WLS""""
@@ -326,16 +310,16 @@ Fields = [
 """ServiceName ="+({service_name}[^"]+)""""
 """ServiceType="+({service_type}[^"]+)""""
 """ServiceAccount="+({account_name}[^"]+)""""
-"""SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-"""SubjectDomainName ="+(-|({domain}[^"]+))""""
+"""SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
+"""SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))""""
 """SubjectLogonId="+({login_id}[^"]+)""""
 """ProviderGuid="+({process_guid}[^"]+)""""
 """CommandLine="+({process_command_line}[^"]+)""""
 """SubjectUserSid="+({user_sid}[^"]+)""""
-"""SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
 """ObjectServer="+({object_server}[^"]+)""""
 """ProcessId="+({process_id}[^"]+)""""
-"""Computer="+({dest_host}[\w\-.]+)""""
+"""Computer="+(({host}{dest_host}[\w\-.]+))""""
 """TargetDomainName ="+(-|({dest_domain}[^"]+))""""
 """TargetUserName ="+(-|({dest_user}[^"]+))""""
 """TargetLogonId="+({dest_user_sid}[^"]+)""""
@@ -352,7 +336,6 @@ Fields = [
 """AuthenticationPackageName ="({auth_package}[^"]+)""""
 """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [ "dest_host->host", "user->src_user" , "domain->src_domain" ]
 Name = "microsoft-windows-kv-user-enable-success-626"
 Conditions = [
 """LogType="WLS""""
@@ -398,17 +381,13 @@ Fields = [
 """({event_name}A user account was enabled)"""
 """\|McAfee\|[^|]+?\|[^|]+?\|43-2630({event_code}\d+)(0|1)\|"""
 """\srt=({time}\d{13})(\s|0\||$)"""
-"""\ssrc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({dest_port}\d+))?(\s|0\||$)"""
-"""\sshost=({dest_host}[\w\-.]+?)(\s|0\||$)"""
+"""\ssrc=({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?))(:({dest_port}\d+))?(\s|0\||$)"""
+"""\sshost=({host}({dest_host}[\w\-.]+?))(\s|0\||$)"""
 """\ssntdom=({domain}[^\s]+?)(\s|0\||$)"""
 """\sdntdom=({dest_domain}[^\s]+?)(\s|0\||$)"""
 """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+=|0\||\s*$)"""
 """\sduser=({dest_user}.+?)(\s+\w+=|0\||\s*$)"""
 """\snitroSource_Logon_ID=({login_id}.+?)(\s|0\||$)"""
-]
-DupFields = [
-"dest_ip->host"
-"dest_host->host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -431,7 +410,7 @@ Fields = [
   """"RecipientEmailAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"SenderFromAddress":\s*"({email_address}[^"@\s]+@[^"@\s]+?)""""
   """"category":\s*"({category}[^"]+?)""""
-  """"FileName":\s*"({file_name}[^"\.]+?(\.({file_ext}[^"]+?))?)""""
+  """"FileName":\s*"({email_attachment}({file_name}[^"\.]+?(\.({file_ext}[^"]+?)))?)""""
   """"FileType":\s*"({file_type}[^"]+?)""""
   """"NetworkMessageId":\s*"({message_id}[^"]+?)""""
   """"FileSize":({bytes}\d+)"""
@@ -442,13 +421,11 @@ Fields = [
   """exa_json_path=$..SenderFromAddress,exa_field_name=email_address"""
   """exa_json_path=$.category,exa_field_name=category"""
   """exa_json_path=$..FileName,exa_field_name=file_name"""
+  """exa_json_path=$..FileName,exa_field_name=email_attachment"""
   """exa_json_path=$..FileType,exa_field_name=file_type"""
   """exa_json_path=$..NetworkMessageId,exa_field_name=message_id"""
   """exa_json_path=$..FileSize,exa_field_name=bytes"""
   """exa_json_path=$..SHA256,exa_field_name=file_hash"""
-]
-DupFields = [
-  "file_name->email_attachment"
 ]
 ParserVersion = "v1.0.0"
 },

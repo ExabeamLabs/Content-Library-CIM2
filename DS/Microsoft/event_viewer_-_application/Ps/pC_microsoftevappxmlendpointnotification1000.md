@@ -6,15 +6,15 @@ Name = microsoft-evapp-xml-endpoint-notification-1000
   Product = Event Viewer - Application
   Conditions = [ """<EventID Qualifiers""", """'>1000</EventID>""", """<TimeCreated SystemTime""", """<Channel>Application<""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access-dl.Fields}[
-    """<Computer>({host}[\w\-.]+?)<\/Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({dest_host}({host}[\w_\-\.]+))""",
     """<Message>({event_name}[^:<\.]+)""",
     """System.ObjectDisposedException:\s*({event_name}[^<.]+)""",
     """<Message>({additional_info}[^<]+?)\s*<\/Message>""",
     """Object name:\s*'({object}[^']+)""",
     """RequestId:\s*({request_id}[^\s]+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 s-xml-object-access-dl = {
   Vendor = Microsoft
@@ -28,7 +28,6 @@ s-xml-object-access-dl = {
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Security UserID\\*=['"]({user_sid}[^'"]+)""",
     """User SID:\s*({user_sid}[^\s]+)""",
-    """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """<Execution ProcessID\\*=['"]({process_id}[^'"]+)""",
     """<Provider>({provider_name}[^<]+?)</Provider>""",
     """ThreadID\\*=['"]({thread_id}[^'"]+)""",

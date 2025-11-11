@@ -14,13 +14,12 @@ Name = microsoft-evsecurity-sk4-endpoint-logout-success-anaccountwasloggedoff
     """"eventID":"({event_code}\d+)""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({action}[^"]+?)\s*"""",
-    """"targetUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
-    """"targetDomainName":"({domain}[^"\s]+?)\s*"""",
-    """"targetLogonId":"({login_id}[^"\s]+?)\s*"""",
+    """"targetUserSid":"({dest_user_sid}({user_sid}[^"\s]+?))\s*"""",
+    """"targetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*"""",
+    """"targetDomainName":"({dest_domain}({domain}[^"\s]+?))\s*"""",
+    """"targetLogonId":"({dest_login_id}({login_id}[^"\s]+?))\s*"""",
     """"logonType":"({login_type}\d+)\s*""""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

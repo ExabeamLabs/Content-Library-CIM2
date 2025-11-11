@@ -7,6 +7,8 @@ Name = microsoft-evsecurity-xml-endpoint-notification-1101
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
   Conditions = [ """<EventID>1101</EventID>""", """Microsoft-Windows-Eventlog""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """<Computer>({host}[\w\.\-]+)<""",
     """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -35,8 +37,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

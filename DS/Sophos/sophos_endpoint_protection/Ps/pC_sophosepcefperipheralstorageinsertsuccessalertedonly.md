@@ -15,8 +15,8 @@ Fields = [
 """"source":"(n\/a|({last_name}[^",\s]+),\s*({first_name}[^,"\s]+))""",
 """"source":"(n\/a|(({domain}[^\\"]+)(\\){1,20}))?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""location":"({host}[\w\-.]+)""",
 ]
-DupFields = ["src_host->host"]
 ParserVersion = "v1.0.0"
 
 

@@ -36,6 +36,12 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"resource":({resource}[^\}]*"})"""
     """"resource"+:[^\}]*labels[^\}]*"+region"+:\s*"+({region}[^"\\\/\}]+)"+"""
     """"dest_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","dest_port")?(:({dest_port}\d+))?"?"""
+    """"serviceName":\s*"({app}[^"]+)""",
+    """\sdproc=({app}[^=]+)\s\w+=""",
+    """principalEmail":"({principal_name}[^"\@}]+)""""
+    """exa_json_path=$..protoPayload.serviceName,exa_field_name=app""",
+    """exa_regex=\sdproc=({app}[^=]+)\s\w+=""",
+    """exa_regex=principalEmail":"({principal_name}[^"\@}]+)""""
     """exa_json_path=$..timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$..logName,exa_field_name=event_category""",
     """exa_json_path=$.log-name,exa_field_name=event_category""",
@@ -49,6 +55,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """exa_json_path=$.jsonPayload.access.userAgent,exa_field_name=user_agent""",
     """exa_json_path=$..protoPayload.methodName,exa_field_name=operation""",
     """exa_json_path=$.jsonPayload.access.methodName,exa_field_name=operation""",
+    """exa_json_path=$..resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
     """exa_json_path=$.jsonPayload.resourceName,exa_regex=({resource_path}({resource_dir}[^"]+)\/({resource_name}[^"\/]+))""",
     """exa_json_path=$..protoPayload.serviceName,exa_field_name=service_name""",
     """exa_json_path=$.jsonPayload.access.serviceName,exa_field_name=service_name""",

@@ -24,7 +24,7 @@ Fields = [
 """Account Domain:(\\t|\\r|\\n)*\s*(|({domain}[^:]+?))(\\t|\\r|\\n)*\s*Logon ID:"""
 """Object Server:(\\t|\\r|\\n)*\s*(|({object_server}[^:]+?))(\\t|\\r|\\n)*\s*Object Type:"""
 """Object Type:(\\t|\\r|\\n)*\s*(|({object_type}[^:]+?))(\\t|\\r|\\n)*\s*Object Name:"""
-"""Object Name:(\\t|\\r|\\n)*\s*(|({object_name}[^:]+?))(\\t|\\r|\\n)*\s*Handle ID:"""
+"""Object Name:(\\t|\\r|\\n)*\s*(|({object}({object_name}[^:]+?)))(\\t|\\r|\\n)*\s*Handle ID:"""
 """Logon ID:(\\t|\\r|\\n)*\s*({login_id}[^\\\s]+)(\\t|\\r|\\n)*\s*"""
 """Operation Type:\s*({operation}[^:]+?)\s+Accesses:"""
 """Properties:(\\t|\\r|\\n)*\s*(-|({properties}[^:]+?))(\\t|\\r|\\n)*\s*Additional Information:"""
@@ -33,7 +33,6 @@ Fields = [
 """"EventType":"({operation_type}[^"]+?)""""
 """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
-DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

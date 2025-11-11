@@ -18,15 +18,14 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4905-2
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """Provider Name\\*=('|")({provider_name}[^\'\"]+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ProcessId[^<>]+?>({process_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

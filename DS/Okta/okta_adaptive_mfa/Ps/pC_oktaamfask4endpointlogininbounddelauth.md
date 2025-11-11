@@ -21,6 +21,7 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"eventType"\s*:\s*"({operation}[^"]+)""",
     """"legacyEventType"+:"+((?i)null|({operation_details}[^",]+))""",
     """"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":"({failure_reason}[^"]+)""",
+    """"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":"({additional_info}[^"]+)""",
     """"reason":"({additional_info}[^"]+)"""
     """"target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+((?i)unknown|({object}[^"]+[^\s]))"""",
     """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|(?i)unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
@@ -31,7 +32,6 @@ Name = okta-amfa-sk4-endpoint-login-inbounddelauth
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))"""
   ]
-  DupFields = ["failure_reason->additional_info"]
   ParserVersion = "v1.0.0"
 
 

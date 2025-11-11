@@ -15,10 +15,10 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """({event_name}A member was removed from a security-enabled [\w\s]+ group)""",
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-      """"agent_hostname":"({host}[\w\-.]+)"""",
-      """"computer":"({host}[\w\-.]+)"""",
-      """(?i)Computer_name(\\*")?:(\\*")?({host}[\w\-\.]+)"""
-      """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
+      """"agent_hostname":"({src_host}({host}[\w\-.]+))"""",
+      """"computer":"({src_host}({host}[\w\-.]+))"""",
+      """(?i)Computer_name(\\*")?:(\\*")?({src_host}({host}[\w\-\.]+))"""
+      """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({src_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
       """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)""",
       """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing""",
@@ -31,29 +31,25 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"+SubjectUserSid\\?"+:\\?"+({user_sid}[^"\\<,]+)"""
       """Member:\s*(\\t|\\n|\\r)*Security ID\s*:\s*(\\t|\\n|\\r)*(({dest_user_sid}S-[^:]+?)|({account_domain}[^\\\s:]+)\\+({account_name}[^:]+?))\s*(\\t|\\n|\\r)*Account Name:""",
       """Member:.+?Security ID\s*:\s*(\\t|\\n|\\r)*({dest_user_sid}S-\d+-[^\\\s]+)"""
-      """Account Name\s*:\s*(\\*(r|n|t))*(.+?({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+)))\s*(\\*(r|n|t))*Group:""",
+      """Account Name\s*:\s*(\\*(r|n|t))*(.+?({member}({user_dn}CN\\*=.+?,({user_ou}OU.+?DC\\*=[\w-]+))))\s*(\\*(r|n|t))*Group:""",
       """Group\s*:(\\*(r|n|t))*.+?Security ID\s*:\s*(\\*(r|n|t))*({group_id}[^\\\s]+)\s*""",
       """Group:.+?(Group|Account) Name\s*:\s*(\\t|\\n|\\r)*({group_name}.+?)?(\\t|\\n|\\r)*\s*(\\t|\\n|\\r)*(Group|Account) Domain\s*:\s*(\\t|\\n|\\r)*({group_domain}[^\\\s]+)\s*""",
       """"EventID":({event_code}\d+)""",
-      """"ComputerName":"({host}[\w\-.]+)""""
+      """"ComputerName":"({src_host}({host}[\w\-.]+))""""
       """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
       """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
       """"record_id"+:({event_id}\d+)"""
       """"task"+:"+({task_name}[^"]+)"""
       """"event_id\\?"+:({event_code}\d+)"""
-      """"(?:winlog\.)?computer_name"+:"+({host}[^"]+)"""
-      """"(?i)Hostname\\*"+:\\*"+({host}[\w\-.]+)"""
+      """"(?:winlog\.)?computer_name"+:"+({src_host}({host}[^"]+))"""
+      """"(?i)Hostname\\*"+:\\*"+({src_host}({host}[\w\-.]+))"""
       """"keywords"+:\["+({result}[^"]+)"""
       """"pid"+:({process_id}\d+)"""
       """"os":[^@]+?"name":"({os}[^"]+)"""
       """"+activity_id"+:"+\{({activity_id}[^}]+)"""
       """"action"+:"+({action}[^"]+)"""
       """"+MemberSid\\?"+:\\?"+({account_id}[^"\\]+)"""
-      """ComputerName =({host}[\w\-.]+)"""
-  ]
-  DupFields = [
-    "host->src_host"
-    "user_dn->member"
+      """ComputerName =({src_host}({host}[\w\-.]+))"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -20,7 +20,7 @@ Fields = [
 """"app":\s*\{[^\}]+displayName":\s*"({app}[^",]+)"""
 """loggedByService":\s*"({app}[^",]+)"""
 """({event_name}Add member to group)"""
-"""targetResources"+:\s*\[\{([^,]+,){3}"+userPrincipalName"+:\s*"+({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"\s]+)""""
+"""targetResources"+:\s*\[\{([^,]+,){3}"+userPrincipalName"+:\s*"+(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}({member}[^"]+)))""""
 """targetResources"+:\s*\[\{[^\}]+\},\{[^:]+:\s*"+Group.DisplayName"+,[^,]+,"+newValue"+:\s*"+\\*"+({group_name}[^\\"]+)"""
 """Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)"""
 """"TargetResources":\s*"\[\{\\"id\\":\s*\\"({account_id}[^"\\]+)""",
@@ -39,7 +39,7 @@ Fields = [
 """exa_json_path=$.properties.category,exa_field_name=category"""
 """exa_regex="app":\s*\{[^\}]+displayName":\s*"({app}[^",]+)"""
 """exa_json_path=$..loggedByService,exa_field_name=app"""
-"""exa_regex=targetResources"+:\s*\[\{([^,]+,){3}"+userPrincipalName"+:\s*"+({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"\s]+)""""
+"""exa_regex=targetResources"+:\s*\[\{([^,]+,){3}"+userPrincipalName"+:\s*"+(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}({member}[^"]+)))""""
 """exa_regex=targetResources"+:\s*\[\{[^\}]+\},\{[^:]+:\s*"+Group.DisplayName"+,[^,]+,"+newValue"+:\s*"+\\*"+({group_name}[^\\"]+)"""
 """exa_regex=Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)"""
 """exa_json_path=$..targetResources[:1].id,exa_field_name=account_id"""

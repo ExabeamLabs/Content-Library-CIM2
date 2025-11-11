@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-kv-network-session-success-5156-1"
       """來源連接埠:\s*({src_port}\d+)""",
       """目的地位址:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """目的地連接埠:\s*({dest_port}\d+)""",
-      """通訊協定:\s*({ms_protocol_num}\d+)""",
+      """通訊協定:\s*({protocol}\d+)""",
       """階層名稱:\s*({layer_name}[^\s]+)""",
       """方向:\s*({direction}輸入|輸出)"""
     ]

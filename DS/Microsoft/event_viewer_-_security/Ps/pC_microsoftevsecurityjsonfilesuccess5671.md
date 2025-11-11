@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """exa_json_path=$.message,exa_regex=({event_name}Object Access Attempt)""",
 """exa_json_path=$.@timestamp,exa_field_name=time""",
-"""exa_json_path=$.computer_name,exa_regex=^({host}[\w\-.]+)$""",
+"""exa_json_path=$.computer_name,exa_regex=^({dest_host}({host}[\w\-.]+))$""",
 """exa_json_path=$.record_number,exa_field_name=event_id""",
 """exa_json_path=$.event_id,exa_field_name=event_code""",
 """exa_json_path=$.user.identifier,exa_field_name=user_sid""",
@@ -25,9 +25,6 @@ Fields = [
 """exa_json_path=$..ObjectName,exa_regex=^({file_path}({file_dir}[^"]+?\\+)({file_name}[^\\\."]+(\.({file_ext}[^\.\\"]+))?))$""",
 """exa_json_path=$..param6,exa_field_name=access""",
 """exa_json_path=$..Accesses,exa_field_name=access"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

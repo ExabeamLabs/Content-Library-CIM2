@@ -12,8 +12,8 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """\sdvc=({host}\S+)""",
     """\sdvchost=(Unknown|({host}[\w\-.]+))""",
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
-    """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
-    """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
+    """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
+    """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
     """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
     """"UserId\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?))))",""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
@@ -72,6 +72,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_regex="FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)""""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
     """exa_json_path=$.Operation,exa_field_name=operation"""
+    """exa_json_path=$.Operation,exa_field_name=event_name"""
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id"""
     """exa_json_path=$.RecordType,exa_field_name=object_type"""
     """exa_json_path=$.UserId,exa_field_name=user_upn"""
@@ -94,7 +95,6 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_json_path=$.OrganizationName,exa_field_name=company"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

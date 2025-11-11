@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4648
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Conditions = [ """明示的な資格情報を使用してログオンが試行されました。""" ]
   Fields = [ 
-    """ComputerName =({computer_name}[\w.\-]+)""",
+    """ComputerName =({host}({computer_name}[\w.\-]+))""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}4648),""",
     """EventCode=({event_code}\w+)""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?明示的な資格情報を使用してログオンが試行されました。""",
@@ -18,7 +18,6 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4648
     """プロセス ID:\s+({process_id}\w+)\s+プロセス名:\s+({process_path}({process_dir}.*?\\)({process_name}[^\\]*?))\s+ネットワーク情報:""",
     """ネットワーク アドレス:\s+(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
   ]
-  DupFields = [ "computer_name->host" ]
 
 
 }

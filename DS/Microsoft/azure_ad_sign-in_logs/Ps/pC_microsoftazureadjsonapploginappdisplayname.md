@@ -17,6 +17,7 @@ Fields = [
       """exa_json_path=$..userDisplayName,exa_regex=({last_name}[^,"\(]+?)\s*(\([^\)]*\))?,\s*({first_name}[^"\(]+?)\s*(\([^\)]*\))?""",
       """exa_json_path=$..status.failureReason,exa_field_name=failure_reason""",
       """exa_json_path=$..status.errorCode,exa_field_name=error_code""",
+      """exa_json_path=$..status.errorCode,exa_field_name=failure_code""",
       """exa_json_path=$..appDisplayName,exa_field_name=app""",
       """exa_json_path=$..location,exa_field_name=additional_info""",
       """exa_json_path=$..location.city,exa_field_name=location_city""",
@@ -25,7 +26,6 @@ Fields = [
       """exa_json_path=$..deviceDetail.operatingSystem,exa_field_name=os""",
       """exa_json_path=$..deviceDetail.browser,exa_field_name=browser"""
 ]
-DupFields = ["error_code->failure_code" ]
 ParserVersion = "v1.0.0"
 
 

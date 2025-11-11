@@ -8,7 +8,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-windowsdefenderav
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
   Conditions = [ """"ProviderName":"MDATP"""", """"VendorName":"Microsoft"""", """"AlertType":"WindowsDefenderAv"""" ]
   Fields=[
-    """"HostName":\s*"((?i)localhost|({dest_host}[\w\-.]+))""",
+    """"HostName":\s*"((?i)localhost|({host}({dest_host}[\w\-.]+)))""",
     """"TimeGenerated"+:"+({time}[^"]+)""",
     """"MicrosoftDefenderAtp.Category":\s*"({alert_type}[^"]+)""",
     """"AlertName"+:"+({alert_name}[^"]+)""",
@@ -21,7 +21,6 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-windowsdefenderav
     """"mitreTechniques":\s*\[({technique}[^\]]+)\]"""
     """"evidence".+?"verdict":\s*"({result}[^"]+)"""
   ]
-  DupFields = ["dest_host->host"]
 
 
 }

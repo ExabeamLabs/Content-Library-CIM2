@@ -6,18 +6,21 @@ Name = microsoft-evsecurity-xml-policy-apply-6144
   Product = Event Viewer - Security
   Conditions = [ """<EventID>6144<""", """Security policy in the group policy objects has been applied successfully""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events.Fields}[
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({domain}[^<]+?))<""",
+    """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
+    """Client IP: ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """<Computer>({host}[\w\-.]+?)<""",
-    """<Data Name =('|")GPOList('|")>({policy_name}[^<]+)<""",
+    """<Data Name =('|")GPOList('|")>({policy_content}({policy_name}[^<]+))<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = [ "policy_name->policy_content" ]
 
 s-xml-events = {
   ParserVersion = "v1.0.0"
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
-    """<Computer>({host}[\w\.\-]+)<""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{9}Z)"""
     """>({event_code}\d+)</EventID>""",
     """<Security UserID=('|")({user_sid}[^'"]+)('|")\/>""",

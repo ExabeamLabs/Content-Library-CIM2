@@ -16,9 +16,6 @@ Fields = [
   """\Wmsg=({additional_info}.+?)\s+(\w+=|$)"""
   """destinationServiceName =({event_subtype}.+?)\s+(\w+=|$)"""
 ]
-DupFields = [
-  "user->email_address"
-]
 ParserVersion = "v1.0.0"
 
 

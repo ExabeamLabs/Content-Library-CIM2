@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-cef-scheduled-task-modify-4702
   Fields = [
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"created":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"(?:winlog\.)?computer_name":"({host}[^"]+)"""",
+    """"(?:winlog\.)?computer_name":"({dest_host}({host}[^"]+))"""",
     """"event_id":({event_code}\d+)""",
     """"message":"({event_name}[^=]+?)\.?\\[nt]""",
     """"outcome":"({result}[^"]+)"""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-cef-scheduled-task-modify-4702
     """<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
     """"logon":\{"id":"({login_id}[^"]+)"""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

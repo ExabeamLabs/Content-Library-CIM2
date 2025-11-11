@@ -15,12 +15,11 @@ Name = dell-sw-mix-app-activity-assignedipaddress
     """ to MAC address ({dest_mac}[A-Fa-f:\d.]+)""",
     """\spri=({alert_severity}\d+)""",
     """\sfw=({firewall}[a-fA-F\d.:]+)""",
-    """\sm=({message_id}\d+)""",
+    """\sm=({alert_type}({message_id}\d+))""",
     """\smsg="({alert_name}[^:"-]+?)\s*(:|"|-)"""
     """\smsg="({additional_info}[^"]+?)\s*"""",
     """\sc=({category_id}\d+)"""
   ]
-  DupFields = [ "message_id->alert_type" ]
 
 
 }

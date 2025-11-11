@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-xml-handle-close-4658
     """({event_code}4658)""",
     """<Computer>({host}[\w\-\.]+)<""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<>]+)</Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({domain}[^<>]+))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({src_domain}({domain}[^<>]+)))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")ObjectServer('|")>({object_server}[^<>]+)</Data>""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<>]+)</Data>""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-xml-handle-close-4658
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

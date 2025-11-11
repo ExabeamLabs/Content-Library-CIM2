@@ -8,10 +8,10 @@ Name = microsoft-evsecurity-kv-handle-close-4658
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """The handle to an object was closed""" ]
   Fields = [
-    """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({dest_host}({host}[\w\-.]+)))\s""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4658\s""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
-    """"(?i)HostName":\s*"({host}[^"]+)"""",
+    """"(?i)HostName":\s*"({dest_host}({host}[^"]+))"""",
     """({event_code}4658)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """({event_name}The handle to an object was closed)""",
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-kv-handle-close-4658
     """Handle ID:\s*({object_id}.+?)\s""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -12,7 +12,7 @@ Name = microsoft-sysmon-xml-dll-load-6
     """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
-    """({event_name}Driver loaded)""",
+    """({operation}({event_name}Driver loaded))""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
@@ -22,7 +22,6 @@ Name = microsoft-sysmon-xml-dll-load-6
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "event_name->operation" ]
 
 
 }

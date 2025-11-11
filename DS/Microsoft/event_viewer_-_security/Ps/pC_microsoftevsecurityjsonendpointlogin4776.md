@@ -22,11 +22,11 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"Computer(_name)?"+:"+({host}[\w\-.]+)""""
     """"Computer"+:"+({host}[\w\-.]+)""""
     """({event_code}4776)"""
-    """"TargetUserName":"(({user_upn}[^@"]+@[^\."]+(\.[^"]+)?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""   
+    """"TargetUserName":"(({user_upn}[^@"]+@[^\."]+(\.[^"]+)?)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""   
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials"""
-    """"(Hostname|MachineName)":"(?!(?:[A-Fa-f:\d.]+))[^."]*\.({domain}[^.]*)"""
-    """"TargetUserName":"[^"@]+(?:@({domain}[^"@\s]+)[^"]*)?"""
-    """"Status":"({result_code}[^"]*)""""
+    """"(Hostname|MachineName)":"(?!(?:[A-Fa-f:\d.]+))[^."]*\.({dest_domain}({domain}[^.]*))"""
+    """"TargetUserName":"[^"@]+(?:@({dest_domain}({domain}[^"@\s]+))[^"]*)?"""
+    """"Status":"({failure_code}({result_code}[^"]*))""""
     """"Workstation":"\\*({src_host}[^"]+)"""
     """Logon Account:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Source Workstation"""
     """"record_id":"({event_id}\d+)""""
@@ -34,7 +34,6 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """keywords":\["({result}[^"]+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
   ]
-  DupFields = [ "result_code->failure_code", "domain->dest_domain", "user->dest_user" ]
 
 
 }

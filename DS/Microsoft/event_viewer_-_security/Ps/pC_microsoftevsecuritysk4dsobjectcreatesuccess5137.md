@@ -14,14 +14,13 @@ Name = microsoft-evsecurity-sk4-ds-object-create-success-5137
   """"SubjectLogonId":"({login_id}[^"]+)""""
   """"ManagementGroupName":"({group_name}[^"]+)""""
   """"SourceSystem":"({app}[^"]+)""""
-  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """"SubjectDomainName":"({domain}[^"]+)""""
+  """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+  """"SubjectDomainName":"({src_domain}({domain}[^"]+))""""
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"TenantId":"({tenant_id}[^"]+)""""
   """<Data Name\\?=\\?"ObjectClass\\?">({object_type}[^<]+?)<\/Data>"""
   """<Data Name\\?=\\?"ObjectDN\\?">({ds_object_dn}[^<]+?)<\/Data>"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

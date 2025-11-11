@@ -9,13 +9,12 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4803
   Fields = [
   """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+Z)"""
   """<Computer>({host}[\w\-\.]+)"""
-  """<Data Name =('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data"""
-  """<Data Name =('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data"""
+  """<Data Name =('|")TargetUserName('|")>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data"""
+  """<Data Name =('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<\/Data"""
   """({event_code}4803)"""
-  """<Data Name =('|")TargetDomainName('|")>({domain}[^<]+)<\/Data"""
+  """<Data Name =('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))<\/Data"""
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["login_id->dest_login_id", "domain->dest_domain", "user->dest_user"]
   ParserVersion = "v1.0.0"
 
 

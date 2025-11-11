@@ -21,16 +21,13 @@ Fields = [
   """event-id=({result}\w+)"""
   """\tinternal-message-id=(?:|({alert_id}.+?))\t[\w\-]+="""
   """recipient-address=({email_recipients}\S+)"""
-  """recipient-address=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))"""
+  """\tsource=(?:|({alert_type}.+?))\t[\w\-]+="""
+  """recipient-address=({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)))"""
   """total-bytes=({bytes}\d+)"""
   """recipient-count=({num_recipients}\d+)"""
   """message-subject="*({email_subject}.+?)"*\s+((\w+-)*\w+=|$)"""
   """sender-address=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """directionality=({direction}\w+)"""
-]
-DupFields = [
-  "alert_name->alert_type"
-  "dest_email_address->orig_user"
 ]
 ParserVersion = "v1.0.0"
 

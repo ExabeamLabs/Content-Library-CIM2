@@ -10,11 +10,11 @@ Name = microsoft-evsecurity-json-handle-request-success-4659
   Fields = [
     """({event_name}A handle to an object was requested with intent to delete)""",
     """({event_code}4659)""",
-    """"Hostname":"({host}[^"]+)"""",
+    """"Hostname":"({dest_host}({host}[^"]+))"""",
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """"SubjectUserSid":"({user_sid}[^"]+)""""
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"ObjectServer":"({object_server}[^"]+)"""",
     """"ObjectType":"({object_type}[^"]+)"""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-json-handle-request-success-4659
     """"HandleId":"({object_id}[^"]+)"""",
     """"ProcessID":({process_id}[^,]+),""",
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

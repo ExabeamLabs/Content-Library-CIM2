@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A member was added to a security-enabled [\w\s]+ group)"""
-""""MachineName":"({host}[\w\-.]+)"""
+""""MachineName":"({dest_host}({host}[\w\-.]+))"""
 """"TimeGenerated":"({time}[^"]*)"""
 """"InstanceId":"({event_code}[^"]+)"""
 """"Message":"A member was added to a security-enabled ({group_type}[^\s]+) group."""
@@ -25,9 +25,6 @@ Fields = [
 """"1":"({account_id}[^"]+)"""
 """"0":"({user_dn}[^"]+)"""
 """"0":"CN=.*,({user_ou}OU=.+?DC=.+?[^"]+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -6,6 +6,8 @@ Name = microsoft-evsecurity-xml-vpn-authentication-fail-6
   ParserVersion = "v1.0.0"
   Conditions = [ """>6</EventID>""", """<Execution ProcessID=""", """<Event xmlns=""", """<Message>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """>({event_code}\d+)</EventID>""",
     """<Data Name\\*=('|")Context('|")>({account}[^<]+?)</Data>""",
     """<Data Name\\*=('|")ErrorCode('|")>({failure_reason}[^<]+?)</Data>""",
@@ -36,8 +38,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

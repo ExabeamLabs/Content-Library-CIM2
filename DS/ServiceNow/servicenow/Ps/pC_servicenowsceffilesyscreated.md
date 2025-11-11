@@ -34,7 +34,10 @@ Name = servicenow-s-cef-file-syscreated
 	  """"sys_updated_by":"({operator_name}[^"]+)"""",
 	  """"work_notes":"({activity_details}[^"]+)"""",
 	  """"category":"({category}[^"]+)"""",
-	  """"subcategory":"({sub_category}[^"]+)""""
+	  """"subcategory":"({sub_category}[^"]+)"""",
+    """"description":"({description}[^"]+)"""",
+    """"number":"({task_id}[^"]+)"""",
+    """"short_description":"({event_name}[^"]+)""""
   ]
   DupFields = [ "file_name->object", "operation->access" ]
 

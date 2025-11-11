@@ -11,8 +11,8 @@ Name = microsoft-evsecurity-csv-endpoint-login-4769
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
     """({host}[^\s]+)\s+Kerberos Service Ticket Operations""",
     """({event_code}4769)""",
-    """TargetUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^,]+),""",
-    """TargetDomainName:({domain}[^,]+),""",
+    """TargetUserName:({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({dest_domain}({domain}[^,]+)),""",
+    """TargetDomainName:({dest_domain}({domain}[^,]+)),""",
     """ServiceName:({src_host}[\w\-.]+\$)""",
     """TicketOptions:({ticket_options}[^,]+),""",
     """TicketEncryptionType:({ticket_encryption_type}[^,]+),""",
@@ -20,7 +20,6 @@ Name = microsoft-evsecurity-csv-endpoint-login-4769
     """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
     """({result}(Success|Failure) Audit)"""
   ]
-  DupFields = [ "domain->dest_domain", "user->dest_user" ]
 
 
 }

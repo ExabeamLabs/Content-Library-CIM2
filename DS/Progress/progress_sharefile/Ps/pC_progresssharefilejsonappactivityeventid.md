@@ -16,11 +16,11 @@ Name = "progress-sharefile-json-app-activity-eventid"
     """exa_json_path=$.User,exa_field_name=full_name""",
     """exa_json_path=$.Activity,exa_field_name=operation""",
     """exa_regex="ItemName":\s*"({file_path}({file_dir}[^"]*[\/]+)\s*({file_name}[^\/"]+(\.({file_ext}[^\/"]+))))"""",
+    """exa_regex="ItemName":\s*"({src_file_path}({src_file_dir}[^"]*[\/]+)\s*({src_file_name}[^\/"]+(\.({src_file_ext}[^\/"]+))))"""",
     """exa_json_path=$.Company,exa_field_name=company""",
     """exa_regex=({app}Progress ShareFile)""",
     """exa_json_path=$.ItemName,exa_regex=([^,"]+,){3}({failure_reason}[^"]+)"""
   ]
-  DupFields = [ "file_name->src_file_name" , "file_ext->src_file_ext" , "file_path->src_file_path"]
   ParserVersion = v1.0.0
 
 

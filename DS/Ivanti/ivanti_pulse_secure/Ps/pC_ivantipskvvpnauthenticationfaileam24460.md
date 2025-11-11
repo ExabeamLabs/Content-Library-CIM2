@@ -5,9 +5,8 @@ Name = ivanti-ps-kv-vpn-authentication-fail-eam24460
     Conditions = [""" PulseSecure: """, """EAM24460""", """type=vpn""", """msg=""" ]
     Fields = ${JuniperParsersTemplates.ivanti-pulsesecure-events.Fields}[
 	    """\smsg="({event_name}[^"]+)"""",
-	    """({event_name}NeedHostChecker)"""
+	    """({failure_reason}({event_name}NeedHostChecker))"""
     ]
-    DupFields = [ "event_name->failure_reason" ]
     ParserVersion = v1.0.0
 
 ivanti-pulsesecure-events = {

@@ -17,8 +17,8 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Data Name(\\)?=('|")TargetDomainName('|")>({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")RemoteIPAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """<Data Name(\\)?=('|")LocalIPAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<""",
@@ -35,7 +35,6 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<Data Name =('|")MemberName(('|")>|":")CN\\?=({member}[^>]+)<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

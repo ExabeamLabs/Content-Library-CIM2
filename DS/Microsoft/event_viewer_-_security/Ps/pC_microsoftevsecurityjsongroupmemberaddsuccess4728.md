@@ -13,13 +13,13 @@ Conditions = [
 Fields = [
 """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
 """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
-"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
 """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
-"""SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}[^\\]+))\\?""""
+"""SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}({domain}[^\\"]+)))\\?""""
 """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""
 """event_id\\?"+:({event_code}\d+)"""
 """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?""""
-"""WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}[^\s\\]+))\\?""""
+"""WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}({src_host}[\w\-\.]+)))\\?""""
 """Status\\?"+:\\?"+({result_code}[^\\]+)\\?""""
 """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?""""
 """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?""""
@@ -31,7 +31,6 @@ Fields = [
 """TargetUserName\\?"+:\\?"+({group_name}[^\\]+)\\?""""
 """TargetDomainName\\?"+:\\?"+({group_domain}[^\\]+)\\?""""
 ]
-DupFields = [ "src_host_windows->src_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

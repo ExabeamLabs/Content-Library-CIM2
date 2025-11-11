@@ -9,6 +9,7 @@ Name = hp-arubacpm-leef-app-login-success-loggedin
   Fields = [
     """\d\d:\d\d:\d\d\s+({host}[\w.-]+)\s+LEEF:""",
     """devTime=({time}[^=]+?)\s+\w+?=""",
+    """sub-cat=({operation}[^=]+?)\s+\w+?=""",
     """action=(None|({operation}[^=]+?))\s+\w+?=""",
     """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s+\w+?="""
     """sub-cat=({event_name}[^=]+?)\s+\w+?=""",
@@ -16,7 +17,6 @@ Name = hp-arubacpm-leef-app-login-success-loggedin
     """User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """({app}ClearPass)"""
   ]
-  DupFields = [ "event_name->operation" ]
   ParserVersion = "v1.0.0"
 
 

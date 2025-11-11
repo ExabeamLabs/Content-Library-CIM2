@@ -28,7 +28,7 @@ json-microsoft-security-events-1 = {
       Fields = [
       """"alertId":\s*"({alert_id}[^"]+)"""",
       """"incidentId":\s*({alert_id}\d+)""",
-      """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
+      """"title":\s*"({alert_subject}({alert_name}[^"]+?))(\\u200b)?"""",
       """"severity":\s*"({alert_severity}[^"]+)"""",
       """"category":\s*"({alert_type}[^"]+)"""",
       """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]""",
@@ -56,6 +56,7 @@ json-microsoft-security-events-1 = {
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_json_path=$.alertId,exa_field_name=alert_id"""
       """exa_json_path=$.title,exa_field_name=alert_name"""
+      """exa_json_path=$.title,exa_field_name=alert_subject"""
       """exa_json_path=$.severity,exa_field_name=alert_severity"""
       """exa_json_path=$.category,exa_field_name=alert_type"""
       """exa_json_path=$.description,exa_field_name=additional_info"""
@@ -95,7 +96,7 @@ microsoft-dns-renew-jp = {
     """({time}\d+\/\d+\/\d+,\d+:\d+:\d+[\+\-]\d+:\d+)""",
     """<Identifier>({host}[^<]+)<\/Identifier>""",
     """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_host}[\w\-.]+),(|({dest_mac}[^,]+))?,"""
-  ]
-  DupFields = [ "dest_host->user" 
+    """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,([^,]+,)({user}[\w\.\-]{1,40}\$?)"""
+  
 }
 ```

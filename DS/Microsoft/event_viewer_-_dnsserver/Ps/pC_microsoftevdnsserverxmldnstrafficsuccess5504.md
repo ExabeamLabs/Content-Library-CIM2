@@ -6,6 +6,7 @@ Name = microsoft-evdnsserver-xml-dns-traffic-success-5504
   Product = Event Viewer - DNSServer
   Conditions = [ """<EventID>5504</EventID>""", """<Channel>DNS Server</Channel>""", """Microsoft-Windows-DNS-Server-Service""", """DNS_EVENT_INVALID_PACKET_DOMAIN_NAME""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
     """<Data Name =('|")param1('|")>(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+))</Data>"""
   ]
@@ -23,7 +24,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

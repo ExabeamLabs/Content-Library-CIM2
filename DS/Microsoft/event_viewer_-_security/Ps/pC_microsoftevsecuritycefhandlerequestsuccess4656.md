@@ -12,16 +12,16 @@ Name = microsoft-evsecurity-cef-handle-request-success-4656
     """({operation_type}requested)""",
     """"TimeCreated":"({time}\d{13})"""",
     """"EventId":"({event_code}[^"]+)"""",
-    """"Computer":"({host}[^"]+)"""",
+    """"Computer":"({dest_host}({host}[^"]+))"""",
     """"EventRecordID":"({event_id}[^"]+)"""",
     """"ThreadID":"({thread_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"HandleId":"({handle_id}[^"]+)"""",
     """"TransactionId":"({transaction_id}[^"]+)"""",
-    """"AccessList":"({access}[^"]+)"""",
+    """"AccessList":"({privileges}({access}[^"]+))"""",
     """"ProcessID":"({process_id}[^"]+)"""",
     """"ProcessName":"({process_path}[^"]+)"""",
     """"ObjectType":"({object_type}[^"]+)"""",
@@ -29,7 +29,6 @@ Name = microsoft-evsecurity-cef-handle-request-success-4656
     """"ObjectServer":"({object_server}[^"]+)"""",
     """"HandleId":"({object_id}[^"]+)"""",
   ]
-  DupFields = [ "host->dest_host", "access->privileges", "user->src_user", "domain->src_domain" ]
 
 
 }

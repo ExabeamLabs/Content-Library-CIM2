@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<Keywords>({result}[^\<]+)</Keywords>""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<EventRecordID>({event_id}[^\<]+)</EventRecordID>""",
-    """<Computer>({host}[^\<]+)</Computer>""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+    """<Computer>({dest_host}({host}[^\<]+))</Computer>""",
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({dest_host}({host}[\w_\-\.]+))""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^\<]+)</Data>""",
     """<Data Name\\*=('|")SubjectUserName('|")>(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}\w+(\s+\w+)+))</Data>""",
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^\<]+)</Data>""",
@@ -31,7 +31,6 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<Data Name\\*=('|")OperationType('|").+?(1906|delete).+?('|")OldValueType('|")>({registry_details_type}[^<]+?)<.+?('|")OldValue('|")>({registry_details}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

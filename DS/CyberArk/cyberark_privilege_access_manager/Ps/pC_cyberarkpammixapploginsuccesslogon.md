@@ -12,6 +12,8 @@ Name = cyberark-pam-mix-app-login-success-logon
     """(LEEF|CEF):([^\|]*?\|){4}({event_code}\d+)""",
     """({time}\w+\s+\d\d\s+\d\d:\d\d:\d\d)\s*({host}[\w\-.]+)\s*LEEF"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
+    """(\d\d:\d\d:\d\d|\d\d\d\d-\d\d-\d\d\w\d\d:\d\d:\d\d\w) ({dest_host}[\w\-.]+) (LEEF|CEF)""",
+    """({time}\w+\s+\d\d\s+\d\d:\d\d:\d\d)\s*({dest_host}[\w\-.]+)\s*LEEF"""
     """usrName =(({domain}[^\\=]+)(\\)+)?(({email_address}[^@"\.]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
     """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sEventMessage=(\s+|({event_subtype}[^=]+?))\s+(\w+=|$)""",
@@ -22,7 +24,6 @@ Name = cyberark-pam-mix-app-login-success-logon
     """Action=({action}[^=]+?)\s*\w+="""
     """({operation}Logon)"""
   ]
-  DupFields=[ "host->dest_host" ]
 
 
 }

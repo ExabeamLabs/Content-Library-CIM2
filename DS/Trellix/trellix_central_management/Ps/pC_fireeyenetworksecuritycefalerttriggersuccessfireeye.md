@@ -27,14 +27,13 @@ Fields = [
   """\sdvchost=({host}[^\s]+)""",
   """\sact=({action}[^=]+?)\s+\w+=""",
   """categoryOutcome=(\/)?({result}[^\s]+)"""
-  """CEF:([^\|]*\|){4}({operation}[^\|]+)""",
-  """request=({resource}[^\s=]+)\s*(\w+=|$)"""
+  """CEF:([^\|]*\|){4}({event_name}({operation}[^\|]+))""",
+  """request=({object}({resource}[^\s=]+))\s*(\w+=|$)"""
   """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """act=({category}[^=]+)\s+\w+="""
   """msg=({additional_info}[^=]+)\s+\w+=""",
   """fireeye\|({app}hx)"""
 ]
-DupFields = [ "resource->object", "operation->event_name" ]
 SOAR {
   IncidentType = "malware"
   DupFields = [

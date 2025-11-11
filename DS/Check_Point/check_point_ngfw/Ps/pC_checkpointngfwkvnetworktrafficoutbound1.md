@@ -5,7 +5,7 @@ Name = checkpoint-ngfw-kv-network-traffic-outbound-1
   ParserVersion = "v1.0.0"
   Conditions = [ """ CheckPoint """, """; ifdir:"outbound";""", """stormagentname""" ]
   Fields = ${DLCheckpointParsersTemplates.checkpoint-firewall-2.Fields} [
-    """\Wstormagentaction:"({action}[^"]+)""",
+    """\Wstormagentaction:"({event_name}({action}[^"]+))""",
     """\Wstormagentmsg:"({additional_info}[^"]+)""",
     """\Wstormagentname:"({product_name}[^"]+)"""
   ]
@@ -50,7 +50,7 @@ checkpoint-firewall-2 = {
     """\Wdescription:"({additional_info}[^"]+)""",
     """\Wfile_size:"({bytes}\d+)"""
     """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  ]
-  DupFields = [ "action->event_name" 
+    """\Waction:"({event_name}[^"]+)""",
+  
 }
 ```

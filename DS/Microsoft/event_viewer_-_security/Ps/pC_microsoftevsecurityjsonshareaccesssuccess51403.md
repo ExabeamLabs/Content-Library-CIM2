@@ -15,18 +15,18 @@ Name = microsoft-evsecurity-json-share-access-success-5140-3
       """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
       """exa_json_path=$..AccessList,exa_field_name=access""",
       """exa_json_path=$.message,exa_regex=Accesses:\s*({access}.*?)(\s|\\[nrt])+"*$""",
-      """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+      """exa_json_path=$..SubjectUserName,exa_regex=^({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
       """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
+      """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
       """exa_json_path=$..IpAddress,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
       """exa_json_path=$..ShareName,exa_regex=^(?:[\\\*]+)?({share_name}[^"]+)$""",
       """exa_json_path=$..outcome,exa_field_name=result""",
-      """exa_json_path=$.host,exa_regex=^({host}[\w.\-]+)$""",
+      """exa_json_path=$.host,exa_regex=^({dest_host}({host}[\w.\-]+))$""",
       """exa_json_path=$.message,exa_regex=Logon ID:\s({login_id}[^\s]+)""",
       """exa_json_path=$..IpPort,exa_field_name=src_port""",
       """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
       """exa_json_path=$..action,exa_field_name=operation"""
     ]
-    DupFields=[ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

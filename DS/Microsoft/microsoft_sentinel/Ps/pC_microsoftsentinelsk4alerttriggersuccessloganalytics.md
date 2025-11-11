@@ -37,7 +37,6 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalytics
     ]
    SOAR {
     IncidentType = "malware"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "alert_type->malwareCategory", "src_host->malwareVictimHost","malware_url->malwareAttackerFile"]
     NameTemplate = """Microsoft azure security Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

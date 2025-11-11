@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-group-delete-success-4730
   Conditions = ["""EVENT_NUMBER = 4730""","""A security-enabled global group was deleted"""]
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """CALLER_LOGON_ID\s*=\s*({login_id}[^]]+?)\s*\]""",
     """ACCOUNT_DOMAIN\s*=\s*({domain}[^]]+?)\s*\]""",
@@ -18,7 +18,6 @@ Name = microsoft-evsecurity-kv-group-delete-success-4730
     """CALLER_USER_NAME\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\]""",
     """CALLER_USER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -15,7 +15,7 @@ Name = juniper-ps-cef-vpn-login-success-passed
       """\stime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """\srealm="({realm}[^"]+)""",
       """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """\sdstip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+      """\sdstip=({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({dest_port}\d+))?""",
       """({host}[\w.\-]+) PulseSecure:""",
       """\sfw=({firewall}[a-fA-F\d.:]+)""",
       """\svpn=({vpn_client}[^=]+?)(\s+\w+=|\s*$)""",
@@ -33,9 +33,8 @@ Name = juniper-ps-cef-vpn-login-success-passed
       """\sagent="({agent}[^"]+)""",
       """\sduration=({session_duration}\d+)""",
       """\smsg="({additional_info}[^"]+)""",
-      """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
+      """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|\s*$)"""
     ]
-    DupFields = [ "dest_ip->host" , "user->account" ]
   
 
 }

@@ -15,8 +15,9 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670
     """exa_json_path=$.EventID,exa_field_name=event_code""",
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-    """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
+    """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
     """exa_json_path=$..ProcessId,exa_field_name=process_id""",
     """exa_json_path=$..ProcessName,exa_regex=^({auth_process}(({process_dir}[^"]+?)\\+)?({process_name}[^"\\]+))$""",
@@ -26,7 +27,6 @@ Name = microsoft-evsecurity-json-file-permission-modify-4670
     """exa_json_path=$..NewSd,exa_field_name=attribute""",
     """exa_json_path=$.Opcode,exa_field_name=severity"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]  
 
 
 }

@@ -30,9 +30,9 @@ Name = microsoft-evsecurity-json-group-member-remove-success-2008
     """"+activity_id"+:"+\{({activity_id}[^}]+)""",
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)""",
-    """"+SubjectDomainName"+:"+({domain}[^"]+)""",
-    """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+SubjectDomainName"+:"+({src_domain}({domain}[^"]+))""",
+    """"user"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
+    """"+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
 	  """({event_name}A member was removed from a security-enabled)""",
@@ -43,7 +43,6 @@ Name = microsoft-evsecurity-json-group-member-remove-success-2008
     """"+MemberName"+:"+CN\\*=({account_id}[^,"]+)""",
     """"+MemberName"+:"+CN\\*=({user_dn}[^,"]+)""",
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

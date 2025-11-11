@@ -15,8 +15,8 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """"Activity":"({event_name}[^"]+)""",
     """(<|")Computer(>|"):?"?({host}[^"<]+)""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<>]+)</Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({domain}[^<>]+))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>(NT AUTHORITY|({src_domain}({domain}[^<>]+)))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")ObjectServer('|")>({object_server}[^<>]+)</Data>""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<>]+)</Data>""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """({operation_type}closed)""",
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

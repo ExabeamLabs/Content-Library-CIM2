@@ -18,8 +18,9 @@ Name = cisco-securenwanalytics-cef-alert-trigger-success-src
     """CEF:([^\|]+\|){4}({event_code}[^\|]+)""",
     """CEF:([^\|]+\|){6}({alert_severity}[^\|]+)""",
     """CEF:([^\|]+\|){5}({alert_name}[^\|]+)""",
+    """CEF:([^\|]+\|){5}({alert_type}[^\|]+)""",
+    """CEF:([^\|]+\|){5}({event_name}[^\|]+)""",
   ]
-  DupFields = [ "alert_name->alert_type", "alert_name->event_name"]
 
 
 }

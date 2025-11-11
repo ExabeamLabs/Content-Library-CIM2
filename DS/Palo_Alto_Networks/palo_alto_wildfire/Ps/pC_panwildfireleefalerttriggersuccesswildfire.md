@@ -10,9 +10,8 @@ Name = pan-wildfire-leef-alert-trigger-success-wildfire
     """SessionID=({alert_id}[^|]+)\|""",
     """LEEF[^|]+?\|([^\|]+\|){3}({alert_name}[^|]+)\|""",
     """\|URLCategory=({category}[^\|]*)\|""",
-    """\|Miscellaneous="?({miscellaneous}[^\|"]+)"?\|"""
+    """\|Miscellaneous="?({malware_url}({miscellaneous}[^\|"]+))"?\|"""
   ]
-  DupFields = [ "miscellaneous->malware_url" ]
 
 leef-pan-alert = {
   Vendor = Palo Alto Networks
@@ -45,7 +44,8 @@ leef-pan-alert = {
     """SerialNumber=({serial_num}\d+)""",
     """srcPostNAT=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """dstPostNAT=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
-    ]
-    DupFields = ["host->device_name"
+    """({device_name}[\w\.-]+)(\s+|,"+)LEEF:""",
+    """\|DeviceName =({device_name}[^\|"]+?)\s*(\||"*$)""",
+    
 }
 ```

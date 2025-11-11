@@ -15,11 +15,14 @@ Fields = [
   """"CreationTime\\*\"+:\\*\s*\"+({time}[^\\\"]+)"""
   """"CreationTime\\*\"+:\\*\s*\"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)"""
   """"host\\*\"+:\\*\s*\"+(::ffff:)?({host}[^\"\\]+)"""
-  """"*SourceRelativeUrl\\*\"+:\\*\s*\"+({src_file_dir}[^\"]+)"""
+  """"*SourceRelativeUrl\\*\"+:\\*\s*\"+({file_dir}({src_file_dir}[^\"]+))"""
   """\"*SourceFileName\\*\"+:\\*\s*\"+\s*({src_file_name}[^\"\\]+?(\.({src_file_ext}\w+))?)(,|\s*\")"""
   """\"*SourceFileExtension\\*"+:\\*\s*"+\s*({src_file_ext}[^"\\,\s']+)""",
   """"*ObjectId\\*":\s*\\*"([a-f0-9]{8}(?:-[a-f0-9]{4}){4}[a-f0-9]{8}|({src_file_path}({src_file_dir}[^"]*?)?({src_file_name}[^\/"]+?(\.({src_file_ext}[^\\\/.\s",']+))?)))"(?!u\d+)"""
-  """Operation\\*"+:\\*\s*"+({operation}[^"\\,]+)""",
+  """\"*SourceFileName\\*\"+:\\*\s*\"+\s*({file_name}[^\"\\]+?(\.({file_ext}\w+))?)(,|\s*\")"""
+  """\"*SourceFileExtension\\*"+:\\*\s*"+\s*({file_ext}[^"\\,\s']+)""",
+  """"*ObjectId\\*":\s*\\*"([a-f0-9]{8}(?:-[a-f0-9]{4}){4}[a-f0-9]{8}|({file_url}({file_path}({file_dir}[^"]*?)?({file_name}[^\/"]+?(\.({file_ext}[^\\\/.\s",']+))?))))"(?!u\d+)"""
+  """Operation\\*"+:\\*\s*"+({action}({operation}[^"\\,]+))""",
   """\"*ClientIP\\*\"+:\\*\s*\"+(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?"""
   """\"*UserAgent\\*\"+:\\*\s*\"+({user_agent}[^\"\\]+)\"*,"""
   """"UserSharedWith\\*\"+:\\*\s*\"+({dest_user}[^\"@\\]+)"""
@@ -30,8 +33,8 @@ Fields = [
   """\Wsproc=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """\WfilePermission=(|({file_permissions}.+?))(\s+\w+=|\s*$)"""
   """\Wduser=(|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[^=]+?))(\s+\w+=|\s*$)"""
-  """\Wsuser=(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+)|\_({=domain}[^@=]+)#(ext|EXT)#@[^"=]+)?)))(\s+\w+=|\s*$)"""
-  """"UserId\\*\"+:\\*\s*\"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|system|SecurityComplianceAlerts|SecurityComplianceInsights|AAD to SharePoint Sync|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@"]+)\\)?(app@sharepoint|system|({user}[\w\.\-]{1,40}\$?))(@({=domain}[^\s"]+)|\_({=domain}[^@"]+)#(ext|EXT)#@[^"]+)?|({full_name}[\w,\s]+?)))""""
+  """\Wsuser=(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?)))(\s+\w+=|\s*$)"""
+  """"UserId\\*\"+:\\*\s*\"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|system|SecurityComplianceAlerts|SecurityComplianceInsights|AAD to SharePoint Sync|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@"]+)\\)?(app@sharepoint|system|({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({user}[\w\.\-]{1,40}\$?))(@({=domain}[^\s"]+))?|({full_name}[\w,\s]+?)))""""
   """src-account-name\":\"({account_name}[^\"]+)"""
   """"FileSizeBytes\\*"+:\s*({bytes}\d+)"""
   """"BrowserName":"({browser}[^"]+)"""",
@@ -44,14 +47,6 @@ Fields = [
   """"SensitivityLabelJustificationText":\s*"({operation_details}[^"]+)""""
   """"SensitivityLabelId":\s*"({sensitivity_label}[^"]+)""""
   """"OldSensitivityLabelId":\s*"({old_sensitivity_label}[^"]+)""""
-]
-DupFields = [
-  "operation->action"
-  "src_file_path->file_url"
-  "src_file_path"->"file_path"
-  "src_file_dir"->"file_dir"
-  "src_file_name"->"file_name"
-  "src_file_ext"->"file_ext"
 ]
 ParserVersion = "v1.0.0"
 

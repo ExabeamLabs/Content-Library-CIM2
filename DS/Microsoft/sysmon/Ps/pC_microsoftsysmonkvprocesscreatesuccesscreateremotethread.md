@@ -11,8 +11,8 @@ Conditions = [
 ]
 Fields = [
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """Hostname":"({host}[^"]+?)"""",
-    """\sComputer(?:Name)?\s*=\s*"?({host}[^\s"]+)""",
+    """Hostname":"({src_host}({host}[^"]+?))"""",
+    """\sComputer(?:Name)?\s*=\s*"?({src_host}({host}[^\s"]+))""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
     """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """SourceProcessGuid:\s*\{({process_guid}[^\s\}]+)""",
@@ -27,7 +27,6 @@ Fields = [
     """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """Domain":"({domain}[^"]+?)""""
 ]
-DupFields = [  "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

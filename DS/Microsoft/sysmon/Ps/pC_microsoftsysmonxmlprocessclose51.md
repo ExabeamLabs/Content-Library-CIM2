@@ -16,13 +16,12 @@ Name = microsoft-sysmon-xml-process-close-5-1
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
-    """<Data Name\\*=('|")ProcessGuid('|")>\{({process_guid}[^\}]+)""",
+    """<Data Name\\*=('|")ProcessGuid('|")>\{({process_id}({process_guid}[^\}]+))""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}.+?)<\/Data>""",
     """<Data Name\\*=('|")Image('|")>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/<]+?))<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "process_guid->process_id" ]
 
 
 }

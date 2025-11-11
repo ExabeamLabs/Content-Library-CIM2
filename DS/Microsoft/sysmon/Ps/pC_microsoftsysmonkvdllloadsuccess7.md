@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
 """Event ID:\s*({event_code}\d+)"""
-"""ComputerName(:|=)\s*({host}[\w.-]+)"""
+"""ComputerName(:|=)\s*({dest_host}({host}[\w.-]+))"""
 """UtcTime:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
 """User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+:"""
 """ProcessGuid:\s*\{({process_guid}[^}]+?)\}"""
@@ -24,9 +24,6 @@ Fields = [
 """Hashes:\s*.*?SHA256=({hash_sha256}[A-F0-9a-f]+)"""
 """Hashes:\s*.*?IMPHASH=({imphash}[A-F0-9a-f]+)"""
 """Signed:\s*({signed}.+?)\s*\w+:"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

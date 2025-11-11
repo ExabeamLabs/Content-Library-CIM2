@@ -9,14 +9,14 @@ Name = microsoft-evsecurity-json-endpoint-4624
     Conditions = ["""An account was successfully logged on""", """Account Name""", """computer_name"""]
     Fields = [
       """({event_name}An account was successfully logged on)""",
-      """"(?:winlog\.)?computer_name\\*":\\*"({host}[\w\-.]+)""",
+      """"(?:winlog\.)?computer_name\\*":\\*"({dest_host}({host}[\w\-.]+))""",
       """({event_code}4624)""",
       """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """Logon Type(:|=)\s*({login_type}\d+)""",
-      """New Logon[\s\S]*?Account Name(:|=)\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)""",
-      """New Logon[\s\S]*?Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)""",
+      """New Logon[\s\S]*?Account Name(:|=)\s*(-|SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)""",
+      """New Logon[\s\S]*?Account Domain(:|=)\s*(-|({dest_domain}({domain}[^\s]+?)))[\s;]*Logon ID(:|=)""",
       """Process Name(:|=)\\*\s*\\*\s*:(?:-|({process_path}({process_dir}.*?)(\\+({process_name}[^\\]+?))?))\s+Network Information:""",
-      """Workstation Name(:|=)\s*((?-i)\\+[rnt])*(-|[A-Fa-f:\d.]+|({src_host_windows}[^\\\s;]+))[\s;]*((?-i)\\+[rnt])*Source Network Address(:|=)""",
+      """Workstation Name(:|=)\s*((?-i)\\+[rnt])*(-|[A-Fa-f:\d.]+|({src_host_windows}({src_host}[\w\-\.]+)))[\s;]*((?-i)\\+[rnt])*Source Network Address(:|=)""",
       """Source Network Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s;]*Source Port(:|=)""",
       """Logon Process(:|=)\s*({auth_process}[^\s;]+)[\s;]*Authentication Package(:|=)\s*({auth_package}[^\s;]+)""",
       """Logon ID(:|=)\s*({login_id}[^\s;]+)[\s;]*(Linked Logon|Logon GUID)""",
@@ -33,13 +33,12 @@ Name = microsoft-evsecurity-json-endpoint-4624
       """"LogonProcessName":"({auth_process}[^."]+?)\s*""""
       """AuthenticationPackageName\\?"+:\\?"+({auth_package}[^",\s\\]+)\\?""""
       """SubjectLogonId\\?"+:\\?"+({login_id}[^",\\]+)\\?""""
-      """TargetUserName\\?"+:\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
-      """TargetDomainName\\?"+:\\?"({domain}[^\s",\\]+)\\?""""
-      """WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}[^",\s\\]+))\\?""""
+      """TargetUserName\\?"+:\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+      """TargetDomainName\\?"+:\\?"({dest_domain}({domain}[^\s",\\]+))\\?""""
+      """WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}({src_host}[\w\-\.]+)))\\?""""
       """"+mac\\"+:\[\\"+({src_mac}[^\\"]+)"""
       """keywords":\["({result}[^"]+)""""
     ]
-    DupFields = ["host->dest_host","src_host_windows->src_host", "domain->dest_domain", "user->dest_user"]
   
 
 }

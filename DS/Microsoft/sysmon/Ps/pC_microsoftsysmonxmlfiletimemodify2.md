@@ -12,7 +12,7 @@ Name = microsoft-sysmon-xml-file-time-modify-2
     """<Computer>({dest_host}({host}[\w\-.]+))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+)<\/EventID>""",
-    """({event_name}File creation time changed)""",
+    """({access}({event_name}File creation time changed))""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Security UserID\\*=('|")({user_sid}[^>]+?)('|")\/>""",
@@ -23,7 +23,6 @@ Name = microsoft-sysmon-xml-file-time-modify-2
     """<Provider Name\\*=('|")({log_name}[^'"]+)('|")"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "event_name->access" ]
 
 
 }

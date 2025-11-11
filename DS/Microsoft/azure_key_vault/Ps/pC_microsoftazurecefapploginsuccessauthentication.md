@@ -36,7 +36,7 @@ Fields = [
 """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]"""
 """\[Namespace:\s*({host}\S+) ; EventHub name:"""
 """(?i)({app}Microsoft.KeyVault)"""
-"""operationName\":\"({event_name}[^\"]+)\""""
+"""operationName\":\"({operation}({event_name}[^\"]+))\""""
 """resultSignature\":\"({status_msg}[^\"]+)\""""
 """resourceId\":\"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?(\/[^\/"]*)\/({resource}[^\"]+))\""""
 """requestUri\":\"({uri}[^\"]+)\""""
@@ -45,7 +45,6 @@ Fields = [
 """claims\/upn\":\"({email_address}[^\"]+)"""
 """\"properties\":.+?\"id\":\"({object}[^\"]+)"""
 ]
-DupFields = ["event_name->operation"]
 
 
 }

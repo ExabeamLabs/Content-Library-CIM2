@@ -12,12 +12,12 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-logonfailure
     """({event_name}Logon Failure)""",
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """(?i)(((audit|failure)( |_)(audit|failure))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
-    """\d\d:\d\d:\d\d \d\d\d\d\s*(\s|\t|,|#\d+|<[^>]+>)\s*({event_code}\d+)\s*(\s|\t|,|#\d+|<[^>]+>)\s*Security""",
-    """({host}[^\s\/]+)\/Security \(({event_code}\d+)\)""",
+    """\d\d:\d\d:\d\d \d\d\d\d\s*(\s|\t|,|#\d+|<[^>]+>)\s*({result_code}({event_code}\d+))\s*(\s|\t|,|#\d+|<[^>]+>)\s*Security""",
+    """({host}[^\s\/]+)\/Security \(({result_code}({event_code}\d+))\)""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+?))("|\s)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """Event(ID)?Code=({event_code}\d+)""",
+    """Event(ID)?Code=({result_code}({event_code}\d+))""",
     """Caller User Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Caller Domain:""",
     """Caller Domain:\s*(-|({src_domain}.+?))\s*Caller Logon ID:""",
     """User Name:\s*(?=\w)(-|([^\/]+?\/)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Domain.+?Logon Type""",
@@ -29,7 +29,6 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-logonfailure
     """Caller Domain:\s*({src_domain}.+?)\s*Caller Logon ID:\s*\([^,]+,({login_id}[^\)]+)""",
     """Source Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
-  DupFields = ["event_code->result_code"]
 
 
 }

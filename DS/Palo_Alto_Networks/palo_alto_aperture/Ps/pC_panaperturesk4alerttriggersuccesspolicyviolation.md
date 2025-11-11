@@ -29,7 +29,6 @@ Name = pan-aperture-sk4-alert-trigger-success-policyviolation
     ]
     SOAR {
     IncidentType = "dlp"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpUser", "alert_name->dlpPolicy", "alert_type->description", "host->dlpDeviceName"]
     NameTemplate = """Palo Alto DLP Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

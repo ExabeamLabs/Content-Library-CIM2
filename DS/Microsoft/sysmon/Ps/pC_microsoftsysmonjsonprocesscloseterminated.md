@@ -15,13 +15,13 @@ Name = microsoft-sysmon-json-process-close-terminated
     """exa_json_path=$.AccountName,exa_field_name=user"""
     """exa_json_path=$.AccountName,exa_field_name=user"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
+    """exa_json_path=$.Hostname,exa_field_name=dest_host"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.ProcessGuid,exa_field_name=process_guid"""
     """exa_json_path=$.ProcessID,exa_field_name=process_id"""
     """exa_regex=({log_name}Microsoft-Windows-Sysmon)"""
 
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

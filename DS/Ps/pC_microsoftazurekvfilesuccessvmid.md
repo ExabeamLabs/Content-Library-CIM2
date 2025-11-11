@@ -11,9 +11,10 @@ Conditions = [
   """@metadata"""
   """"ActionType":"""
 ]
-DupFields = ["event_category->category"]
 ParserVersion = "v1.0.0"
 
-
+q-adfs-auth.Fields}[
+    """\sComputer=({host}.+?)(\s+\w+=|\s*$)"""
+  
 }
 ```

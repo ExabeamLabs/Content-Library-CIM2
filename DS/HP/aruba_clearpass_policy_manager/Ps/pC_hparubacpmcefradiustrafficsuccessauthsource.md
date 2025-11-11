@@ -17,8 +17,8 @@ Name = hp-arubacpm-cef-radius-traffic-success-authsource
     """RADIUS\.Auth-Method(\\)?=({auth_method}[^,]+)""",
     """Error-Code\\=({result}\d+)""",
     """({event_name}(?i)auth)""",
+    """"host":"({auth_server}[^"]+)"""",
   ]
-  DupFields = [ "host->auth_server" ]
 
 
 }

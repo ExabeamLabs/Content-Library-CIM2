@@ -17,7 +17,7 @@ Name = microsoft-x-csv-email-receive-failed
     """({result}FAIL)""",
     """,\s*(?:'|")?(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?:'|")?)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*(?:'|")?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,]*?)\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
-    """,\s*(?:'|")?({orig_user}[^,;@]+@[^\.,"']+\.[^;,"']+)[^,]*?\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
+    """,\s*(?:'|")?({email_address}({orig_user}[^,;@]+@[^\.,"']+\.[^;,"']+))[^,]*?\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
     """,\s*(({bytes}\d+)|)\s*,\s*(({num_recipients}\d+)|)\s*,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){6}Incoming,""",
     """,\s*({email_subject}[^,]+?)\s*,([^,]*,){3}Incoming,""",
     """,\s*'({email_subject}(?:[^']|'')+?)\s*'\s*,([^,]*,){3}Incoming,""",
@@ -27,7 +27,6 @@ Name = microsoft-x-csv-email-receive-failed
     """({direction}Incoming)"""
     """RecipientNotFound;\s+({failure_reason}[^};]+)"""
 ]
-  DupFields = [ "orig_user->email_address"]
 
 
 }

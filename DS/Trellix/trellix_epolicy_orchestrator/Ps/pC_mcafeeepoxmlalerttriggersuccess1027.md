@@ -15,10 +15,9 @@ Name = mcafee-epo-xml-alert-trigger-success-1027
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Severity>({alert_severity}[^<]+)<\/Severity>""",
     """<FileName>({file_dir}[^<]+[\\\/]+)({file_name}[^<]+?\.({file_ext}[^<]+)?)""",
-    """<szVirusType>({alert_type}[^<]+)<\/szVirusType>""",
+    """<szVirusType>({alert_name}({alert_type}[^<]+))<\/szVirusType>""",
     """<MD5>({hash_md5}[^<]+)<\/MD5>""",
   ]
-  DupFields = ["alert_type->alert_name"]
 
 
 }

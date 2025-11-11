@@ -46,8 +46,8 @@ s-cisco-amp-alert-dl-1 = {
     """"connector_guid":"({connector_guid}[^"]+)""",
     """"severity":\s*"({alert_severity}[^"]+)""",
     """event_type":\s*"({alert_type}[^"]+)"""
+    """event_type":\s*"({category}[^"]+)"""
   ]
-  DupFields = [ "file_path->malware_url", "event_name->alert_type", "alert_type->category" ]
   ParserVersion = "v1.0.0"
 
 }

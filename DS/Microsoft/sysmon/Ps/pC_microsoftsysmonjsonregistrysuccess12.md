@@ -9,6 +9,7 @@ Name = microsoft-sysmon-json-registry-success-12
   Conditions = [ """"event_id":"12"""", """Registry object added or deleted:""", """"provider_name":"Microsoft-Windows-Sysmon"""" ]
   Fields = [
     """exa_json_path=$.host,exa_field_name=host""",
+    """exa_json_path=$.host,exa_field_name=dest_host""",
     """exa_json_path=$..UtcTime,exa_field_name=time""",
     """exa_json_path=$.winlog.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
     """exa_json_path=$.winlog.user.domain,exa_field_name=domain""",
@@ -18,7 +19,7 @@ Name = microsoft-sysmon-json-registry-success-12
     """exa_json_path=$.winlog.event_data.ProcessGuid,exa_field_name=process_guid""",
     """exa_json_path=$.winlog.event_data.ProcessId,exa_field_name=process_id""",
     """exa_json_path=$.winlog.event_data.Image,exa_regex=^({process_path}({process_dir}[^",]*?)({process_name}[^\\",]+?))$""",
-    """exa_json_path=$.winlog.event_data.TargetObject,exa_regex=^({file_path}({file_dir}[^",]*?)\s*({file_name}[^\\",]+?(\.({file_ext}\w+))?))$""",
+    """exa_json_path=$.winlog.event_data.TargetObject,exa_regex=^({registry_path}({target}({file_path}({file_dir}[^",]*?)\s*({file_name}[^\\",]+?(\.({file_ext}\w+))?))))$""",
     """exa_json_path=$.winlog.event_data.RuleName,exa_field_name=rule""",
     """exa_json_path=$.winlog.event_data.EventType,exa_field_name=operation""",
     """exa_json_path=$.winlog.record_id,exa_field_name=event_id""",
@@ -27,7 +28,6 @@ Name = microsoft-sysmon-json-registry-success-12
     """exa_json_path=$.winlog.provider_name,exa_field_name=provider_name""",
     """exa_json_path=$.winlog.task,exa_field_name=task_name"""
   ]
-  DupFields = [ "host->dest_host", "file_path->target", "file_path->registry_path" ]
   ParserVersion = v1.0.0
 
 

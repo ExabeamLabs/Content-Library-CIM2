@@ -21,8 +21,8 @@ Name = hp-arubacpm-kv-radius-traffic-fail-sessionreuseerror
     """RADIUS\.Auth-Method=({auth_method}[^=]+?),[\w.-]+=""",
     """Common\.Alerts=({failure_reason}[^=]+?),[\w.-]+=""",
     """Common\.Error-Code=({event_code}[^=]+?),[\w.-]+="""
+    """\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d,\d+ ({auth_server}[\w\-.]+)""",
    ]
-   DupFields = [ "host->auth_server" ]
 
 
 }

@@ -14,8 +14,8 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """"actor":\{[^\}]*?"alternateId":"(system\@okta.com|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"[^\}]*?"type":"User"""",
     """"actor":\{[^\}]+?"type":"User"[^\}]+?"displayName":"({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))"""",
     """"actor":\{[^\}]*?"displayName":"({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))"[^\}]*?"type":"User""""
-    """"target":\[[^\]]+?"type":"+User","alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"target":\[[^\]]+?"alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\]\}]*?"type":"+User"""",
+    """"target":\[[^\]]+?"type":"+User","alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """"target":\[[^\]]+?"alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"[^\]\}]*?"type":"+User"""",
     """"target":\[[^\]]+?"type":"({object_type}[^"]+)"""",
     """"type":"UserGroup"[^\}]+?"displayName":"({group_name}[^"]+)"""",
     """displayMessage":"({event_name}[^"]+)"""",
@@ -31,7 +31,7 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """exa_json_path=$..actor[?(@.type == 'User')].displayName,exa_regex=(Okta System|({full_name}({first_name}[^"]+?)\s({last_name}[^"\s]+)))""",
     """exa_json_path=$.target[?(@.type == 'UserGroup')].displayName,exa_field_name=group_name""",
     """exa_json_path=$.target[?(@.type == 'UserGroup')].id,exa_field_name=group_id""",
-    """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """exa_regex="target":\[[^\]]+?"type":"({object_type}[^"]+)"""",
     """exa_json_path=$.displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
@@ -42,7 +42,6 @@ Name = "okta-amfa-sk4-group-member-remove-success-groupmembership"
     """exa_json_path=$..debugContext.debugData.risk,exa_regex=^[^"]*?level=({severity}[^"\}]+)("|\})""",
     """exa_json_path=$..client.userAgent.os,exa_field_name=os"""
   ]
-  DupFields = [ "dest_user->account_name" ]
   ParserVersion = "v1.0.0"
 
 

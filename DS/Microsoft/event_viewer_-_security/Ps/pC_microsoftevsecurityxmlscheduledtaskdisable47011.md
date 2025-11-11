@@ -11,8 +11,8 @@ Name = microsoft-evsecurity-xml-scheduled-task-disable-4701-1
     """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)""",
     """({event_code}4701)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-    """<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
+    """<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>"""
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({src_domain}({domain}[^<]+))</Data>"""
     """<Data Name(\\)?=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
     """<Data Name(\\)?=('|")TaskName('|")>(?=[\\\w])({task_name}[^<]+)</Data>"""
     """<Data Name(\\)?=('|")TaskContent('|")>({additional_info}[^<]+)<"""
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-xml-scheduled-task-disable-4701-1
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = v1.0.0
 
 

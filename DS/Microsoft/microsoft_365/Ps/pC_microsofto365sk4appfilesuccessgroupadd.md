@@ -6,7 +6,7 @@ Name = microsoft-o365-sk4-app-file-success-groupadd
   ParserVersion = v1.0.0
   Conditions= [ """"activityType":"Group"""", """"activityOperationType":"Add"""", """"targetResourceType":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
-    """\sfname=\s*(N\/A|({object}[^=]+?))\s*(\w+=|$)""",
+    """\sfname=\s*(N\/A|({resource}({object}[^=]+?)))\s*(\w+=|$)""",
     """((fileType=(n\/a|N\/A|mail|calendar-event|note|message)[^\n]*?\sfname=\s*(N\/A|([^=]+?)))|(fileType=group[^\n]*?\sfname=\s*(N\/A|({group_name}[^=]+?)))|(fileType=(file|folder|attachment|report)[^\n]*?\sfname=\s*(N\/A|({file_name}[^=]+?)))|(fileType=process[^\n]*?\sfname=\s*(N\/A|({process_name}[^=]+?)))|(fileType=app(lication)?[^\n]*?\sfname=\s*(N\/A|({app}[^=]+?))))\s+(\w+=|$)"""
   ]
 
@@ -33,7 +33,6 @@ json-microsoft-app-activity = {
     """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
     """"userAgent":"({user_agent}[^"]+?)"""",
     """"activityResultDescription":"({event_name}[^",]+)"""
-  ]
-  DupFields = [ "object->resource" 
+  
 }
 ```

@@ -24,12 +24,11 @@ Fields = [
 """amac=({src_mac}[^\s]+)"""
 """originalAgentMacAddress=({src_mac}[^\s]+)"""
 """cs5=({object_type}[^=]+)\s\w+="""
-"""fname=({object_name}[^\s]+)"""
+"""fname=({object}({object_name}[^\s]+))"""
 """ad\.Object:Object_,?Server=({object_server}[^=]+?)\s*([^=\s]+=|$)"""
 """ad\.Operation:Operation_,?Type=({operation}[^=]+?)\s*([^=\s]+=|$)"""
 """cs1=({access}[^=]+?)\s+\w+="""
 ]
-DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

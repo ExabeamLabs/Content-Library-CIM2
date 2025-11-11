@@ -24,9 +24,8 @@ Fields = [
   """"policyType":"({alert_type}[^"]+)"""
   """"threatScore"+:({original_risk_score}\d+)"""
   """shost=({country_code}[^=]+?)\s\w+="""
-  """\srequestClientApplication=({app}[^=]+?)\s+\w+="""
+  """\srequestClientApplication=({alert_source}({app}[^=]+?))\s+\w+="""
 ]
-DupFields = [ "app->alert_source" ]
 ParserVersion = "v1.0.0"
 
 

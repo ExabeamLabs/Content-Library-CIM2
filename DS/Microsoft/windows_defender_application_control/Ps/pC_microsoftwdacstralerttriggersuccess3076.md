@@ -8,7 +8,7 @@ Name = microsoft-wdac-str-alert-trigger-success-3076
   TimeFormat = ["EEE MMM dd HH:mm:ss yyyy", "MMM dd HH:mm:ss yyyy"]
   Conditions = [ """MSWinEventLog""", """Microsoft-Windows-CodeIntegrity""", """3076""", """did not meet the""", """signing level requirements""" ]
   Fields = [
-    """\s({host}[\w\-.]+)\s+MSWinEventLog""",
+    """\s({dest_host}({host}[\w\-.]+))\s+MSWinEventLog""",
     """\s({time}\w{3}\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})""",
     """\s\w{3}\s+({time}\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})"""
     """({event_code}3076)""",
@@ -17,7 +17,6 @@ Name = microsoft-wdac-str-alert-trigger-success-3076
     """({alert_name}did not meet [^\(]+?)\s\(""",
     """({additional_info}Code Integrity [^<>]+\.)\s+({alert_id}\d+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

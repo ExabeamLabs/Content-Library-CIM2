@@ -17,13 +17,12 @@ Name = microsoft-azuremon-sk4-app-activity-success-containerservice
     """"operation":\s*"({action}[^"]+)"""",
     """"roleDefinitionId":\s*"({role}[^"]+)""",
     """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^"]+?))?(\/({resource}[^"\/]+))?)"""",
-    """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
+    """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
     """"operationName":\s*"({operation}[^"]+)"""",
     """"category":\s*"({category}[^"]+)"""",
     """"containerID":\s*"({container_id}[^"]+)"""",
     """"name\\?":\\?"({object}[^"]+?)\\"""",
  ]
- DupFields= ["event_hub_namespace->host"]
 
 
 }

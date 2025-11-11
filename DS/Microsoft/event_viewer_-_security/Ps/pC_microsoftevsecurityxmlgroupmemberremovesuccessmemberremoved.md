@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """({event_name}A member was removed from a security-enabled [\w\s]+ group)"""
 """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-"""Computer(Name|_name)?(["\s]*(:|=|\\=)\s*")?>?({host}[\w\-.]+)(<|"|\s)"""
+"""Computer(Name|_name)?(["\s]*(:|=|\\=)\s*")?>?({dest_host}({host}[\w\-.]+))(<|"|\s)"""
 """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)"""
 """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing"""
 """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group"""
@@ -26,9 +26,6 @@ Fields = [
 """Group\s*:\s*Security ID\s*:\s*({group_id}[^\s]+)\s*"""
 """Group:\s*[^$]+?(Group|Account) Name\s*:\s*({group_name}.+?)?\s*(Group|Account) Domain\s*:\s*({group_domain}[^\s]+)\s*"""
 """<Level>({run_level}[^<]+)<"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

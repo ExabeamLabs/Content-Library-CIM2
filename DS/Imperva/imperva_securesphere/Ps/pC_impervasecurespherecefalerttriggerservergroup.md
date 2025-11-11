@@ -15,10 +15,9 @@ Name = imperva-securesphere-cef-alert-trigger-servergroup
     """\Wcs1=(|({server_group}.+?))\s+(\w+=|$)""",
     """\Wcs2=(|({service_name}.+?))\s+(\w+=|$)""",
     """\Wcs3=(|({app}.+?))\s+(\w+=|$)""",
-    """CEF:([^\|]*\|){5}({alert_name}[^\|]+)""",
+    """CEF:([^\|]*\|){5}({alert_type}({alert_name}[^\|]+))""",
     """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
   ]
-  DupFields = [ "alert_name->alert_type" ]
 
 
 }

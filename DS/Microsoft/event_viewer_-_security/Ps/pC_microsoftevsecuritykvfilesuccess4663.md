@@ -17,7 +17,7 @@ Fields = [
   """\WEVENT_NUMBER\s*=\s*({event_code}\d+)"""
   """\WEVENT_TYPE_TEXT\s*=\s*(null|({result}[^\]]+?))\s*\]"""
   """\WSOURCE\s*=\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[\w\-.]+))"""
-  """\WOBJECT_NAME\s*=\s*(null|({object}[^\]]+?))\s*\]"""
+  """\WOBJECT_NAME\s*=\s*(null|({file_path}({object}[^\]]+?)))\s*\]"""
   """\WFILE_NAME\s*=\s*(null|({file_name}[^\\\/]+?(\.({file_ext}[^\.]+?))?))\s*\]"""
   """\WFILE_LOCATION\s*=\s*(null|({file_dir}[^\]]+?))\s*\]"""
   """\WLOGON_ID\s*=\s*(null|({login_id}[^\]]+?))\s*\]"""
@@ -31,9 +31,6 @@ Fields = [
   """\WFORMAT_MESSAGE\s*=\s*(null|({additional_info}.+?))\s*\]"""
   """\WFILE_TYPE\s*=\s*(null|(?:\.({file_ext}[^\]]+?))|({file_type}[^\]]+?))\s*\]"""
   """\WACCESSES\s*=\s*(null|({access}[^\]]+?))\s*\]"""
-]
-DupFields = [
-  "object->file_path"
 ]
 ParserVersion = "v1.0.0"
 

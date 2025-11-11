@@ -18,14 +18,11 @@ Fields = [
 """\"UserDisplayName\":\s*\"({email_address}[^@]+@[^\.]+\.[^\"]+)\""""
 """\"UserAddress\":\s*\"({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\""""
 """\"Protocol\":\s*\"({protocol}[^\"]+)\""""
-"""\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
+"""\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
 """"Result":\s*"({result}[^"]+)""""
 """"CsHost":\s*"({host}[\w\-.]+)""""
 """"Details":\s*"({additional_info}[^"]+)""""
 """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
-]
-DupFields = [
-"event_hub_namespace->host"
 ]
 ParserVersion = "v1.0.0"
 

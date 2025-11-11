@@ -14,7 +14,7 @@ Name = "microsoft-defenderep-sk4-dll-load-deviceimageloadevents"
   Fields = [
        """(time|TimeGenerated)"+:\s*"+({time}[^"]+)""""
        """operationName"+:\s*"+({operation}[^"]+)"""
-       """category"+:\s*"+({category}[^"]+)"""
+       """category"+:\s*"+({event_name}({category}[^"]+))"""
        """RemotePort"+:({dest_port}\d+)"""
        """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
        """protocol"+:\s*"+({protocol}[^"]+)"""
@@ -59,6 +59,7 @@ Name = "microsoft-defenderep-sk4-dll-load-deviceimageloadevents"
      """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
      """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
      """exa_json_path=$.category,exa_field_name=category"""
+     """exa_json_path=$.category,exa_field_name=event_name"""
      """exa_json_path=$..InitiatingProcessParentFileName,exa_field_name=parent_process_name"""
      """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""
      """exa_json_path=$..InitiatingProcessParentId,exa_field_name=parent_process_id"""
@@ -67,7 +68,6 @@ Name = "microsoft-defenderep-sk4-dll-load-deviceimageloadevents"
      """exa_json_path=$..InitiatingProcessAccountUpn,exa_field_name=user_upn"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = ["category->event_name"]
 
 
 }

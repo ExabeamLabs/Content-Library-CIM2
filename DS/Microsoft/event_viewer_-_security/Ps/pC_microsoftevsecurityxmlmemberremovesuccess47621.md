@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'\}"]+)""",
     """<Data Name\\*=('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^<]+)|({account_id}[^<]+))<""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")TargetUserName('|")>({group_name}[^<]+)""",
@@ -27,7 +27,6 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """<Level>({run_level}[^<]+)<""",
     """<Data Name =('|")MemberName('|")>CN=({member}[^=]+?),CN=Users,"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

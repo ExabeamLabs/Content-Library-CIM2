@@ -14,17 +14,14 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)\s"""
   """"lastUpdatedDateTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+(\.\d{1,7})?Z)"""
   """"event-name":"({event_name}[^"]+)""""
-  """"riskType":"({alert_name}[^"]+)"""
+  """"riskType":"({alert_type}({alert_name}[^"]+))"""
   """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
   """"userDisplayName":"({full_name}[^"]+)""""
   """"userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   """"severity":({alert_severity}\d+)"""
   """"requestId":"({alert_id}[^"]+)""""
   """"is-violating":({result}[^,]+)"""
-  """"riskEventTypes":\["({alert_name}[^"]+)""""
-]
-DupFields = [
- "alert_name->alert_type"
+  """"riskEventTypes":\["({alert_type}({alert_name}[^"]+))""""
 ]
 ParserVersion = "v1.0.0"
 

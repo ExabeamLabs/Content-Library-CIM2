@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-json-audit-policy-modify-4907
     """({event_code}4907)""",
     """({event_name}Auditing settings on object were changed)""",
     """"SubjectUserSid"+:"+({user_sid}[^"]+)""",
-    """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName"+:"+({domain}[^"]+)""",
+    """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName"+:"+({src_domain}({domain}[^"]+))""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
     """"ObjectServer"+:"+({object_server}[^"]+)""",
     """"ObjectType"+:"+({object_type}[^"]+)""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-json-audit-policy-modify-4907
     """"ProcessName"+:"+({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))""""
     """New Security Descriptor:(\\t|\\r|\\n)*[^\S<]*({audit_policy_name}[^<"]+?)(\s+|<|")"""
   ]
-  DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

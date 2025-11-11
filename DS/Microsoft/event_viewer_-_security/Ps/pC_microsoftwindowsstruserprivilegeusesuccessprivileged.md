@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({event_name}Privileged object operation)"""
 """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+"""
-"""\s+(Information|Audit Success|Success Audit)\s+({host}[\w\-.]+)"""
+"""\s+(Information|Audit Success|Success Audit)\s+({dest_host}({host}[\w\-.]+))"""
 """(?:Information|Audit Success|Success Audit).+?Primary User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Primary Domain"""
 """({event_code}578)"""
 """Security\t([^\s]+\t){2}({result}.+?)\t"""
@@ -24,9 +24,6 @@ Fields = [
 """\s+({environment_privilege}SeSystemEnvironmentPrivilege)"""
 """\s+({debug_privilege}SeDebugPrivilege)"""
 """\s+({tcb_privilege}SeTcbPrivilege)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

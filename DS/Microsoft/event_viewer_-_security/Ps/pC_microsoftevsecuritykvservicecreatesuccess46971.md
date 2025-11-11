@@ -10,7 +10,7 @@ Conditions = [
   """Service File Name:"""
 ]
 Fields = [
-  """\WComputer=({host}[\w\.\-]+)"""
+  """\WComputer=({dest_host}({host}[\w\.\-]+))"""
   """\WEventID=({event_code}\d+)"""
   """\WTimeGenerated=({time}\d{10})"""
   """\WSecurity ID:\s*(|({user_sid}.+?))\s+Account Name:"""
@@ -21,9 +21,6 @@ Fields = [
   """\WService File Name:\s*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?)))\s+Service Type:"""
   """\WService Type:\s*(|({service_type}.+?))\s+Service Start Type:"""
   """\WService Account:\s*(({account_domain}[^\\]+)\\)?({account_name}.+?)\s*$"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -10,19 +10,18 @@ Name = microsoft-evsecurity-sk4-user-password-reset-success-4724
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
     """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
-    """"Computer":"({host}[^"]+)"""",
+    """"Computer":"({dest_host}({host}[^"]+))"""",
     """"EventID":"({event_code}\d+)"""",
     """({event_name}An attempt was made to reset an account's password)""",
     """"SubjectAccount":"(({domain}[^"\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({src_domain}[^"]+)"""",
+    """"SubjectDomainName":"({domain}({src_domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
-    """"SubjectUserName":"({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"TargetDomainName":"({dest_domain}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)"""",
     """"TargetUserName":"({dest_user}[^"]+)""""
   ]
-  DupFields = [ "host->dest_host", "src_domain->domain", "src_user->user" ]
 
 
 }

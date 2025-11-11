@@ -5,6 +5,10 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-4945
   ParserVersion = "v1.0.0"
   Conditions = [ """EventCode=4945""", """ComputerName =""", """A rule was listed when the Windows Firewall started.""" ]
   Fields = ${WindowsParsersTemplates.windows-events.Fields}[
+    """User=(NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)""",
+    """(Primary)? User Name\s*:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(Primary)? Domain\s*:\s*(-|({domain}[^\s]+))\s""",
+    """Caller User Name\s*:\s*(-|({src_user}.+?))\s+Caller Domain\s*:\s*(-|({src_domain}.+?))\s+Caller Logon ID\s*:\s*(-|({login_id}[^\s]+))""",
+    """Source Network Address\s*:\s*(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
     """ComputerName =({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))""",
     """Workstation Name\s*:\s*(-|({src_host_windows}[^\s]+))\s+Logon GUID:""",
     """Workstation Name\s*:\s*(-|({src_host}[\w\-\.]+))\s+Logon GUID:.*?Source Network Address:\s*-\s+""",

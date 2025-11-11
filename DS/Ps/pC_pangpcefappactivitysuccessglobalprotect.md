@@ -9,7 +9,7 @@ Name = pan-gp-cef-app-activity-success-globalprotect
     """,GLOBALPROTECT,([^,]*,){10}({src_host}[\w\-.]+),"""
     """,GLOBALPROTECT,([^,]*,){18}(|(?i)any|0|({os}[^,]*)),"""
     """Private IP:\s?({src_translated_ip}[^,\s]+)""",
-    """User\s*name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\.?(\s|,|"|$)""",
+    """User\s*name:\s+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\.?(\s|,|"|$)""",
     """,SYSTEM,([^,]*,){9}({severity}[^,]+),""",
     """({event_category}SYSTEM)""",
     """,SYSTEM,({event_subtype}[^,]+),""",

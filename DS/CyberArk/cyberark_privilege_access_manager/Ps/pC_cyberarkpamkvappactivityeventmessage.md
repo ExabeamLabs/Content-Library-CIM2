@@ -23,8 +23,8 @@ Fields = [
   """Protocol=({protocol}[^\s;]+)"""
   """SessionID=({session_id}[^=\s;]+)"""
   """SrcHost=\s*({host}[\w\-.]+)"""
+  """EventMessage="?({access}[^"=,]+)"""
 ]
-DupFields = ["operation->access"]
 ParserVersion = "v1.0.0"
 
 

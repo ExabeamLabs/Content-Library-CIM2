@@ -22,7 +22,7 @@ Name = netskope-sc-cef-email-send-success-mail
     """"User Name\s*":"({full_name}[^"]+)"""",
     """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"object":\s*"(\s+"|(\s*(Unknown Unknown|unknown|Unknown|null|({object}[^"]+?))\s*"))""",
-    """"user":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"user":\s*"(({from_user_at}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"access_method":\s*"({auth_method}[^"]+)"""",
     """"logintype":\s*"({auth_method}[^"]+)"""",
     """"activity":\s*"({operation}[^"]+)"""",
@@ -36,13 +36,12 @@ Name = netskope-sc-cef-email-send-success-mail
     """"page_site":\s*"({app}[^"]+)"""",
     """"dstport":"\s*({dest_port}\d+)"""",
     """"action":"({action}[^"]+)""",
-    """"from_user":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"from_user":"({from_user_at}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"to_user":"({email_recipients}({dest_email_address}([A-Za-z0-9]+?[!#$%&'+\/=?^_`~.-])*?[A-Za-z0-9]+?@[^\]\s"\\,\|]+?\.[^\]\s"\\,\|;]+)[^"]*?);?",""",
     """"site":"({site_at}[^"]+)""""
     """"referer":"({referrer}[^"]+)"""",
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
   ]
-  DupFields = [ "email_address->from_user_at" ]
 
 
 }

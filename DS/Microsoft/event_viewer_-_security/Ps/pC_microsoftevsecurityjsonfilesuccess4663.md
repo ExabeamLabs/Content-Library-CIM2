@@ -16,8 +16,8 @@ Fields = [
   """"Hostname":"({host}[\w\-.]*)"""
   """({event_code}4663)"""
   """"SubjectUserSid":"({user_sid}[^"]+)"""
-  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """"SubjectDomainName":"({domain}[^"]+)"""
+  """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""
   """"SubjectLogonId":"({login_id}[^"]+)"""
   """"ObjectType":"({file_type}[^"]+)"""
   """"ObjectName":"({src_file_path}[^"]+)"""
@@ -27,7 +27,6 @@ Fields = [
   """Access Request Information:[rnt\\]*Accesses:[rnt\\]*({access}[^:]+?)[rnt\\]*Access Mask:[rnt\\]*({access_mask}\w+)"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

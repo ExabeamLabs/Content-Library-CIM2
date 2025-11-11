@@ -9,10 +9,10 @@ Name = microsoft-evsecurity-kv-share-access-success-5140-6
   Conditions = [ """Microsoft-Windows-Security-Auditing""","""AccessList:""", """5140""", """AccessMask:""", """ObjectType:""", """ShareName:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}""",
-    """({host}[^\s]+?)\s+(Detailed File Share|File Share)""",
+    """({dest_host}({host}[^\s]+?))\s+(Detailed File Share|File Share)""",
     """({event_code}5140)""",
-    """SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
-    """SubjectDomainName:({domain}[^,]+),""",
+    """SubjectUserName:({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
+    """SubjectDomainName:({src_domain}({domain}[^,]+)),""",
     """SubjectLogonId:({login_id}[^,]+),""",
     """ObjectType:({file_type}[^,]+),""",
     """IpAddress:(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-kv-share-access-success-5140-6
     """({result}(Success|Failure) Audit)"""
     """Source Port(=|:)\s*({src_port}\d+)"""
   ]
-  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

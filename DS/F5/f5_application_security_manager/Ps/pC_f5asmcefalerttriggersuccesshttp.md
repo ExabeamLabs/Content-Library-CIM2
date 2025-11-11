@@ -28,7 +28,8 @@ Fields = [
   """CEF:([^\|]+\|){4}(\d+\|)?({alert_type}[^\|]+)"""
   """CEF:([^\|]+\|){6}({alert_severity}\d+)"""
   """"username":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """cs3=[^\]]+?Host:\s*({web_domain}[^\.:]+\.([^\/\.\s":]+\.\w+))"""
+  """Host:\s*({web_domain}[\w\-\.]+?)((\\r\\n|\s+)[\w\-]+:|\")"""
+  """Referer:\s*({referrer}[^"]+?)((\\r\\n|\s+)[\w\-]+:|\")"""
 ]
 SOAR {
   IncidentType = "malware"

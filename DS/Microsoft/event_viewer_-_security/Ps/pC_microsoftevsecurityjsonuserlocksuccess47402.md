@@ -16,15 +16,14 @@ Fields = [
 """"Hostname\\?":\\?"({host}[\w\-.]+)"""
 """"ComputerName\\?":\\?"({host}[\w\-\.]+)"""
 """({event_code}4740)"""
-"""Security ID:\s*(\\t|\\r|\\n)*({user_sid}[^\s\\"]+)\s*(\\t|\\r|\\n)*Account Name:\s*(\\t|\\r|\\n)*({src_user}[^\s\\"]+)\s*(\\t|\\r|\\n)*Account Domain:\s*(\\t|\\r|\\n)*({src_domain}[^\s\\"]+)\s*(\\t|\\r|\\n)*Logon ID:\s*(\\t|\\r|\\n)*({login_id}[^\s"\\]+)\s*(\\t|\\r|\\n)*"""
+"""Security ID:\s*(\\t|\\r|\\n)*({dest_user_sid}({user_sid}[^\s\\"]+))\s*(\\t|\\r|\\n)*Account Name:\s*(\\t|\\r|\\n)*({src_user}[^\s\\"]+)\s*(\\t|\\r|\\n)*Account Domain:\s*(\\t|\\r|\\n)*({domain}({src_domain}[^\s\\"]+))\s*(\\t|\\r|\\n)*Logon ID:\s*(\\t|\\r|\\n)*({login_id}[^\s"\\]+)\s*(\\t|\\r|\\n)*"""
 """"SubjectUserName\\?":\\?"({src_user}[^\\"]+)"""
-""""SubjectDomainName\":\"({src_domain}[^\\"]+)"""
+""""SubjectDomainName\":\"({domain}({src_domain}[^\\"]+))"""
 """"SubjectLogonId\\?":\\?"({login_id}[^\\"]+)"""
-""""TargetSid\\?":\\?"({user_sid}[^\\"]+)"""
-""""TargetUserName\\?":\\?"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+""""TargetSid\\?":\\?"({dest_user_sid}({user_sid}[^\\"]+))"""
+""""TargetUserName\\?":\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
 ]
-DupFields = [ "src_domain->domain", "user_sid->dest_user_sid", "user->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

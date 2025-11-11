@@ -13,13 +13,12 @@ Name = microsoft-evsecurity-kv-process-create-success-592
     """User\s*Name:\s*(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Domain""",
     """Domain:\s*(?:-|({domain}.+?))\s+Logon""",
     """Logon\s*ID:\s*(?:-|({login_id}.+?))\s*$""",
-    """New\s*Process\s*ID:\s*(?:-|({process_guid}\d+))\s""",
+    """New\s*Process\s*ID:\s*(?:-|({process_id}({process_guid}\d+)))\s""",
     """Creator\s*Process\s*ID:\s*(?:-|({parent_process_guid}\d+))\s""",
     """Image\s*File\s*Name:\s*({process_path}({process_dir}(?:[^\s]+)?[\\\/])?({process_name}[^\\\/\s]+))\s""",
     """Image\s*File\s*Name:\s*(?:-|({path}.+?))\s+Creator"""
     """({event_name}A new process has been created)"""
   ]
-  DupFields = [ "process_guid->process_id" ]
   ParserVersion = "v1.0.0"
 
 

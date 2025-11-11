@@ -44,9 +44,9 @@ Fields = [
   """"SubjectLogonId":"({login_id}[^\s"]+)"""
   """"TargetSid":"({dest_user_sid}S-[^\s"]+)""""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
-  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}S-[^\\"]+)\\?""""
-  """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\"]+))\\?""""
+  """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\"]+)))\\?""""
   """TargetDomainName\\?"+:\\?"+({dest_domain}[^\s"\\]+)\\?""""
   """"TargetSid\\?"+:\\?"+({dest_user_sid}S-[^"\\]+)""""
   """TargetUserName\\?"+:\\?"+({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
@@ -54,7 +54,6 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d)\s+(?i)(AM|PM)"""
 ]
-DupFields = ["src_user->user", "src_domain->domain"]
 ParserVersion = "v1.0.0"
 
 

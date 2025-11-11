@@ -9,9 +9,14 @@ Conditions = [
 ParserVersion = "v1.0.0"
 
 netapp-json-windows-events-1.Fields}[
-    """'Computer':\s+'({host}[\w\-\.]+)""",
+    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """'SubjectUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """'SubjectDomainName':\s+'({domain}[^']+)""",
+    """'TargetDomainName':\s+'({dest_domain}[^']+)""",
+    """'TargetUserName':\s+'({dest_user}[^']+)""",
+    """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?',""",
+    """'Computer':\s+'({host}[\w\-\.]+)"""
   ]
-  DupFields = [ "access->event_name","object_class->file_type" ]
   ParserVersion = "v1.0.0"
 },
 
@@ -32,12 +37,9 @@ Fields = [
 """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """\sduid=\([^,]+,({login_id}[^\)]+)"""
 """\scn1=({login_type}\d+)"""
-"""\sdvchost=({host}[^\s]+)"""
+"""\sdvchost=({host}({dest_host}[\w\-\.]+))"""
 """ dntdom=({domain}[^\s]+)"""
 """ src=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -78,7 +80,7 @@ ParserVersion = "v1.0.0"
   """exa_json_path=$.Hostname,exa_field_name=host""",
   """exa_json_path=$.Computer,exa_field_name=host"""
   """exa_json_path=$.Channel,exa_field_name=channel""",
-  """exa_json_path=$.Message,exa_regex=({event_name}[^\.]+).\s*Subject""",
+  """exa_json_path=$.Message,exa_regex=({alert_name}({event_name}[^\.]+)).\s*Subject""",
   """exa_json_path=$.EventType,exa_field_name=event_category""",
   """exa_json_path=$.SeverityValue,exa_field_name=alert_severity""",
   """exa_json_path=$.SourceName,exa_field_name=app""",
@@ -91,22 +93,22 @@ ParserVersion = "v1.0.0"
   """exa_json_path=$.ThreadID,exa_field_name=thread_id""",
   """exa_json_path=$.Category,exa_field_name=category""",
   """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-  """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+  """exa_json_path=$..SubjectUserName,exa_regex=^({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
   """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
+  """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
   """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
   """exa_json_path=$.TargetUserName,exa_field_name=dest_user"""
   """exa_json_path=$.TargetDomainName,exa_field_name=dest_domain"""
   """exa_json_path=$.RequestType,exa_field_name=dns_query_type"""
-  """exa_json_path=$..LogonProcessName,exa_regex=^(-|({auth_process}.+?))\s*$""",
+  """exa_json_path=$..LogonProcessName,exa_regex=^(-|({alert_type}({auth_process}.+?)))\s*$""",
   """exa_json_path=$.AuthenticationPackage,exa_field_name=auth_package"""
   """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",
   """exa_json_path=$..WorkstationName,exa_field_name=src_host_windows,exa_match_expr=!InList($.WORKSTATION_NAME,"-")"""
-  """exa_regex=Subject: Security ID:\s*({user_sid}S-[^\s]+)\s*Account Name: ({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s* Logon ID:\s*({login_id}[^\s]+)"""
+  """exa_regex=Subject: Security ID:\s*({user_sid}S-[^\s]+)\s*Account Name: ({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*({src_domain}({domain}[^\s]+))\s* Logon ID:\s*({login_id}[^\s]+)"""
   """exa_regex=Process Name:\s+({process_path}(({process_dir}[^\s]+)\\+)?({process_name}[^\s]+))\s+Network Information:"""
   """exa_regex=Authentication Package:\s+({auth_package}[^\s]+)""",
-  """exa_regex=Logon Process:\s+({auth_process}[^\s]+)"""
+  """exa_regex=Logon Process:\s+({alert_type}({auth_process}[^\s]+))"""
   ]
-  DupFields = [ "event_name->alert_name", "auth_process->alert_type", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 }
 
@@ -121,18 +123,17 @@ ParserVersion = "v1.0.0"
     """EventCode=({event_code}\d+)""",
     """ComputerName =({host}[^\s]+)""",
     """Keywords=({result}[^=]+?)\s+\w+=""",
-    """Message=({event_name}[^:]+?)\s+\w+:""",
+    """Message=({alert_name}({event_name}[^:]+?))\s+\w+:""",
     """Subject:\s+Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
     """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Process ID:\s+({process_id}[^\s]+)""",
     """Process Name:\s+({process_path}(({process_dir}[^\s]+)\\+)?({process_name}[^\s]+))\s+Network Information:""",
-    """Logon Process:\s+({auth_process}[^\s]+)""",
+    """Logon Process:\s+({alert_type}({auth_process}[^\s]+))""",
     """Authentication Package:\s+({auth_package}[^\s]+)""",
     """({additional_info}This event indicates that[^$]+?)\s*$"""
   ]
-  DupFields = [ "event_name->alert_name", "auth_process->alert_type" ]
   ParserVersion = "v1.0.0"
 },
 
@@ -146,9 +147,8 @@ ParserVersion = "v1.0.0"
       """search_time=({time}\d+)"""
       """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d+[+-]\d+)""",
       """({event_code}4688)""",
-      """summary_windows_4688_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({host}[^:::]+)?:::({user_sid}[^:::]+)?:::({user}[\w\.\-\!\#\^\~]{1,40}\$?)?:::({domain}[^:::]+)?:::({login_id}[^:::]+)?:::({process_guid}[^:::]+)?:::({process_path}({process_dir}(?:.+?)?[\\\/])?({process_name}[^\\\/:::]+))?:::({process_command_line}[^:::]+)?:::({parent_process_guid}[^:::]+)?:::({operation_type}[^:::]+)?""""
+      """summary_windows_4688_data="+\d+:\d+:\d+\s*\d+-\d+-\d+:::({src_host}({host}[^:::]+))?:::({user_sid}[^:::]+)?:::({user}[\w\.\-\!\#\^\~]{1,40}\$?)?:::({domain}[^:::]+)?:::({login_id}[^:::]+)?:::({process_id}({process_guid}[^:::]+))?:::({process_path}({process_dir}(?:.+?)?[\\\/])?({process_name}[^\\\/:::]+))?:::({process_command_line}[^:::]+)?:::({parent_process_guid}[^:::]+)?:::({operation_type}[^:::]+)?""""
     ]
-    DupFields = [ "process_guid->process_id" , "host->src_host" ]
 	ParserVersion = "v1.0.0"
   },
 
@@ -160,14 +160,13 @@ ParserVersion = "v1.0.0"
   Conditions = [ """ProcessName ="""", """ProcessId=""", """CommandLine="""" ]
   Fields = [
     """StartTime="({time}\d+\.\d+)""",
-    """Host="({host}[^"]+)""",
-    """ProcessId=({process_guid}.+?)\s+(\w+=|$)""",
+    """Host="({dest_host}({host}[^"]+))""",
+    """ProcessId=({process_id}({process_guid}.+?))\s+(\w+=|$)""",
     """CommandLine="*({process_command_line}[^"]+?)\s*"""",
     """Path="({path}[^"]+)""",
     """Path="({process_path}({process_dir}[^"]+?)({process_name}[^"\\]+))"""",
     """ProcessName ="({process_name}[^"]+)""",
   ]
-  DupFields = [ "host->dest_host", "process_guid->process_id" ]
   ParserVersion = "v1.0.0"
 },
 
@@ -238,8 +237,8 @@ ParserVersion = "v1.0.0"
   Fields = [
     """({event_name}A new process has been created)""",
     """\Wrt=({time}\d{13})""",
-    """\Wdhost=({host}[\w\-\.]+)\s*(\w+=|$)""",
-    """\Wdvchost=({host}[\w\-\.]+)\s*(\w+=|$)""",
+    """\Wdhost=({src_host}({host}[\w\-\.]+))\s*(\w+=|$)""",
+    """\Wdvchost=({src_host}({host}[\w\-\.]+))\s*(\w+=|$)""",
     """\Wdst=({dest_ip}[a-fA-F:\.\d]+)\s*(\w+=|$)""",
     """({event_code}4688)""",
     """\Wduser=(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
@@ -249,11 +248,10 @@ ParserVersion = "v1.0.0"
     """\Wdproc=({path}.+?)\s*(\w+=|$)""",
     """\Wduid=({login_id}[^\s]+)\s*(\w+=|$)""",
     """\Wcs2=({operation_type}.+?)\s*(\w+=|$)""",
-    """\Wcs3=({process_guid}[^\s]+)\s*(\w+=|$)""",
+    """\Wcs3=({process_id}({process_guid}[^\s]+))\s*(\w+=|$)""",
     """\Wcs4=({process_command_line}.+?)\s*(\w+=|$)""",
     """\Wcs5=({parent_process_guid}[^\s]+)\s*(\w+=|$)""",
   ]
-  DupFields = [ "process_guid->process_id" , "host->src_host" ]
   ParserVersion = "v1.0.0"
 },
 
@@ -293,13 +291,12 @@ ParserVersion = "v1.0.0"
     """providername="+({provider_name}[^"]+)""",
     """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
-    """\Weventrecordid="+({event_id}\d+)"""",
+    """\Weventrecordid="+({event_code}({event_id}\d+))"""",
     """({event_name}Creating Scriptblock text)""",
     """ScriptBlock ID:\s+({scriptblock_id}[^\s]+)""",
     """({process_name}PowerShell)""",
     """Creating Scriptblock text\s*\([^\)]+\):\s*({scriptblock_text}.+?)\s*ScriptBlock ID:""",
   ]
-  DupFields = ["event_id->event_code"]
   ParserVersion = "v1.0.0"
 },
 
@@ -314,8 +311,8 @@ Fields = [
   """ServiceName ="+({service_name}[^"]+)""""
   """ServiceType="+({service_type}[^"]+)""""
   """ServiceAccount="+({account_name}[^"]+)""""
-  """SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-  """SubjectDomainName ="+(-|({domain}[^"]+))""""
+  """SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
+  """SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))""""
   """SubjectLogonId="+({login_id}[^"]+)""""
   """ProviderGuid="+({process_guid}[^"]+)""""
   """CommandLine="+({process_command_line}[^"]+)""""
@@ -323,7 +320,7 @@ Fields = [
   """SubjectUserName ="+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """ObjectServer="+({object_server}[^"]+)""""
   """ProcessId="+({process_id}[^"]+)""""
-  """Computer="+({dest_host}[\w\-.]+)""""
+  """Computer="+({host}({dest_host}[\w\-.]+))""""
   """TargetDomainName ="+(-|({dest_domain}[^"]+))""""
   """TargetUserName ="+(-|({dest_user}[^"]+))""""
   """TargetLogonId="+({dest_user_sid}[^"]+)""""
@@ -340,7 +337,6 @@ Fields = [
   """AuthenticationPackageName ="({auth_package}[^"]+)""""
   """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
 ]
-DupFields = [ "dest_host->host", "user->src_user", "domain->src_domain" ]
 Name = "microsoft-evsecurity-kv-endpoint-login-fail-534"
 Conditions = [
   """LogType="WLS""""
@@ -423,7 +419,7 @@ Fields = [
   """({event_name}A logon was attempted using explicit credentials)"""
   """\sexternalId=({event_code}\d+)"""
   """\srt=({time}\d{13})"""
-  """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """\sdvc=({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({dest_port}\d+))?"""
   """\sdvchost=({dest_host}[\w\-.]+)"""
   """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
@@ -432,9 +428,6 @@ Fields = [
   """\sduid=({login_id}[^\s]+)"""
   """dproc=(?: |({process_path}({process_dir}(?:[^=]+)?[\\\/])?({process_name}[^\\\/=]+)))\s+\w+="""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-]
-DupFields = [
-  "dest_ip->host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -479,11 +472,8 @@ Fields = [
   """src=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\ssuser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
   """\scs4=({result_code}[^\s]+)"""
-  """\sdvchost=({host}[^\s]+)"""
+  """\sdvchost=({dest_host}({host}[^\s]+))"""
   """\sdntdom=({domain}[^\s]+)"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -545,9 +535,9 @@ Conditions = [
 ]
 Fields = [
   """({event_name}Logon Failure)"""
-  """\|McAfee\|[^|]+?\|[^|]+?\|43-21100({event_code}\d+)(0|1)\|"""
+  """\|McAfee\|[^|]+?\|[^|]+?\|43-21100({result_code}({event_code}\d+))(0|1)\|"""
   """\srt=({time}\d{13})"""
-  """deviceTranslatedAddress=({host}[a-fA-F:\d.]+)"""
+  """deviceTranslatedAddress=({dest_host}({host}[a-fA-F:\d.]+))"""
   """sntdom=({domain}[^\s]+)"""
   """nitroLogon_Type=({login_type}\d+)"""
   """nitroAppID=({auth_package}[^\s]+)"""
@@ -557,10 +547,6 @@ Fields = [
   """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """nitroSource_Logon_ID=\([^,]+,({login_id}[^\)]+)"""
   """nitroDestination_Logon_ID=({login_id}\d+)"""
-]
-DupFields = [
-  "host->dest_host"
-  "event_code->result_code"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -652,9 +638,13 @@ ${WindowsParsersTemplates.windows-events-wls} {
   Conditions = [ """LogType="WLS"""", """EventID="4648"""" ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
-    """Computer="+({host}[\w\-.]+)""""
+    """TargetUserName ="+(-|({dest_user}[^"]+))"""",
+    """SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))"""",
+    """TargetDomainName ="+(-|({dest_domain}[^"]+))"""",
+    """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+    """Computer="+({dest_host}({host}[\w\-.]+))"""",
+    """SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  },
 
 ${WindowsParsersTemplates.windows-events-wls} {
@@ -663,8 +653,12 @@ ${WindowsParsersTemplates.windows-events-wls} {
   Conditions = [ """LogType="WLS"""", """EventID="552"""" ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-events-wls.Fields}[
-    """Computer="+({host}[\w\-.]+)""""
-  ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" 
+    """TargetUserName ="+(-|({dest_user}[^"]+))"""",
+    """SubjectDomainName ="+(-|({src_domain}({domain}[^"]+)))"""",
+    """TargetDomainName ="+(-|({dest_domain}[^"]+))"""",
+    """IpAddress="(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""""
+    """Computer="+({dest_host}({host}[\w\-.]+))"""",
+    """SubjectUserName ="+(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+  
 }
 ```

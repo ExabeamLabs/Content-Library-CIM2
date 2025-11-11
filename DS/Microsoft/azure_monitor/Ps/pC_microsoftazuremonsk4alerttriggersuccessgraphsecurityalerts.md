@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
   """"eventDateTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """"title":"({alert_name}[^"]+?)(\\u200b)?""""
+  """"title":"({alert_type}({alert_name}[^"]+?))(\\u200b)?""""
   """"severity":"({alert_severity}[^"]+)""""
   """"description":"({additional_info}[^"]+)""""
   """"userPrincipalName":"(null|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({domain}[^\\\s"]+)\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
@@ -22,7 +22,6 @@ Fields = [
   """"id":"({alert_id}[^"]+)""""
   """\srequestClientApplication=({app}[^=]+)\s+\w+="""
 ]
-DupFields = [ "alert_name->alert_type" ]
 ParserVersion = "v1.0.0"
 
 

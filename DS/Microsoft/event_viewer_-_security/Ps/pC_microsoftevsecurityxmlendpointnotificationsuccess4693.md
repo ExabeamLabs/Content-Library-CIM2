@@ -7,13 +7,12 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4693
   Conditions = [ """<EventID>4693<""", """<Task>""","""Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<\/Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name\\*=('|")FailureId('|")>({result}[^<]+)<\/Data>"""
   ] 
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 xml-windows-events = {
   Vendor = Microsoft

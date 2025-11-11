@@ -35,24 +35,10 @@ Fields = [
 """\WSENDER=(N\/A|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|[^\s@]*?(({domain}[^\\\/\s@]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)"""
 """\WENDPOINT_MACHINE=({src_host}[\w\-.]+)\s+(\w+=|$)"""
 """\WPROTOCOL=(N\/A|({protocol}.+?))\s+(\w+=|$)"""
-]
-DupFields = [
-"alert_name->alert_subject" 
+"""\|Symantec\|DLP.*?\|([^|]*\|){2}({alert_subject}[^|]+)\|"""
 ]
 SOAR {
   IncidentType = "dlp"
-  DupFields = [
-"time->startedDate"
-"vendor->source"
-"rawLog->sourceInfo"
-"user->dlpUser"
-"alert_name->dlpPolicy"
-"alert_severity->sourceSeverity"
-"protocol->dlpProtocol"
-"src_host->dlpDeviceName"
-"file_name->dlpFileName"
-"action->dlpActionTaken"
-  ]
   NameTemplate = "Symantec DLP Alert ${alert_name} found"
   ProjectName = "SOC"
   EntityFields = [

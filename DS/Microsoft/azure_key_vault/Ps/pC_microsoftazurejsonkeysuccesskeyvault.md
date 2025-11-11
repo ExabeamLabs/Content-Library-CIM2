@@ -10,7 +10,7 @@ Name = microsoft-azure-json-key-success-keyvault
    Fields = [
     """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
     """"+TenantId"+:\s*"+({tenant_id}[^"]+)"+""",
-    """"+OperationName"+:\s*"+({operation}[^"]+)"+""",
+    """"+OperationName"+:\s*"+({operation_name}({operation}[^"]+))"+""",
     """"+CorrelationId"+:\s*"+({correlation_id}[^"]+)"+""",
     """"+OperationVersion"+:\s*"+({operation_version}[^"]+)"+""",
     """"+Category"+:\s*"+({operation_type}[^"]+)"+""",
@@ -34,7 +34,6 @@ Name = microsoft-azure-json-key-success-keyvault
     """"httpStatusCode_d"+:"+({http_response_code}\d+)"""",
     """({app}MICROSOFT.KEYVAULT)"""
     ]
-    DupFields = [ "operation->operation_name", "resource_name->keyvault"]
  
 
 }

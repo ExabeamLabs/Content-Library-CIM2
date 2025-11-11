@@ -14,6 +14,7 @@ Name = netskope-sc-json-alert-trigger-success-alertname-1
     """exa_json_path=$.alert_type,exa_field_name=alert_type"""
     """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.url,exa_field_name=malware_url"""
+    """exa_json_path=$.alert_name,exa_field_name=alert_subject"""
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""
     """exa_json_path=$._id,exa_field_name=alert_id"""
     """exa_json_path=$.category,exa_field_name=additional_info"""
@@ -25,9 +26,6 @@ Name = netskope-sc-json-alert-trigger-success-alertname-1
     """exa_json_path=$.app,exa_field_name=app"""
     """exa_json_path=$.site,exa_field_name=site_at"""
     """exa_json_path=$.ip_protocol,exa_field_name=protocol"""
-  ]
-  DupFields = [
-"alert_name"->"alert_subject"
   ]
 
 

@@ -19,9 +19,9 @@ Fields = [
 """"EventTime":\s*"?({time}[^",]+)"""
 """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)""""
 """"SubjectUserSid":"({user_sid}[^"]+)""""
-""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-""""SubjectDomainName":"({domain}[^"]+)""""
-""""ObjectName":"({object_name}[^"]+)""""
+""""SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+""""SubjectDomainName":"({src_domain}({domain}[^"]+))""""
+""""ObjectName":"({object}({object_name}[^"]+))""""
 """"ObjectServer":"({object_server}[^"]+)""""
 """"ObjectType":"({object_type}[^"]+)""""
 """"LogonID":"({login_id}[^"]+)""""
@@ -31,7 +31,6 @@ Fields = [
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [ "object_name->object", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

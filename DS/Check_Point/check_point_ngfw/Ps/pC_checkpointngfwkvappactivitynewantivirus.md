@@ -12,8 +12,8 @@ Name = checkpoint-ngfw-kv-app-activity-newantivirus
     """\Wdsecription:"({alert_name}[^"]+)""",
     """\Wnext_update_desc:"({additional_info}[^"]+)""",
     """\Wifname:"({src_interface}[^"]+)""",
+    """\Worigin(_)?sic(_)?name:"CN=({user_ou}[^",]+)"""
   ]
-  DupFields = [ "origin_name->user_ou" ]
 
 checkpoint-firewall-2 = {
   Vendor = Check Point
@@ -55,7 +55,7 @@ checkpoint-firewall-2 = {
     """\Wdescription:"({additional_info}[^"]+)""",
     """\Wfile_size:"({bytes}\d+)"""
     """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  ]
-  DupFields = [ "action->event_name" 
+    """\Waction:"({event_name}[^"]+)""",
+  
 }
 ```

@@ -8,9 +8,6 @@ Conditions = [
   """"responseCode":""""
   """"mostGranularIdentityType":"AD Users""""
 ]
-DupFields = [
-  "host->src_host"
-]
 ParserVersion = "v1.0.0"
 
 

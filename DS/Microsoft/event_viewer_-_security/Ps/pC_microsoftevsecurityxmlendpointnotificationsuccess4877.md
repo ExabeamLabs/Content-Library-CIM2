@@ -19,12 +19,11 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4877
   """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)""",
   """ThreadID(\\)?=('|")({thread_id}\d+)""",
   """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-  """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-  """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+  """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+  """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
   """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
 	]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-json-key-5061
     """"HostName":"({host}[^"]+)"""",
     """({event_code}5061)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",
     """"ProcessID":({process_id}\d+)""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-json-key-5061
     """"KeyName":"({key_name}[^"]+)"""",
     """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

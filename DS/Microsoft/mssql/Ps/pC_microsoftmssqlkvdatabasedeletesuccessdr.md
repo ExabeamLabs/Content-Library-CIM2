@@ -14,12 +14,12 @@ s-mssql-database-query-1 = {
         """\.sql\.action_id="+({db_operation}\w+)\s*"""",
         """\.sql\.event_time="+({time}\d{4}-\d{2}-\d{2} (\d{2}:){2}\d{2}\.\d{7})"+""",
         """\.server_principal_name="*(({domain}[^\\]+?)[\\]{1,2})?({db_user}[^\s]+?)"*(\s+\.sql\.)""",
+        """\.server_principal_name="*(({domain}[^\\]+?)[\\]{1,2})?({user}[\w\.\-]{1,40}\$?)"*(\s+\.sql\.)""",
         """\.sql\.database_name=({db_name}[^=]+?)\s+\.sql""",
         """\.sql\.schema_name=({db_schema}[^=]+?)\s+\.sql""",
         """\.sql\.object_name=({db_object}[^=]+?)\s+\.sql\.\w+=""",
         """sql\.statement="+({db_query}[^"]+)"+\s+.sql"""
       ]
-      DupFields = [ "db_user->user" ]
     },
 
   cef-sysmon-file-write = {
@@ -28,9 +28,9 @@ s-mssql-database-query-1 = {
     TimeFormat = "epoch"
     Fields = [
       """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
-      """({host}\S+) CEF:""",
-      """\Wdvc=({host}[A-Fa-f:\d]+)""",
-      """\Wdvchost=({host}[\w\-.]+)""",
+      """({dest_host}({host}\S+)) CEF:""",
+      """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+      """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
       """\Wrt=({time}\d{13})""",
       """\WeventId=({event_code}\d+)""",
       """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -41,7 +41,6 @@ s-mssql-database-query-1 = {
       """\Wcs6=\{({process_guid}[^\}]+)""",
       """\Wdpid=({process_id}\d+)""",
       """\Wcs1=({object}.+?)\s+(\w+=|$)""",
-    ]
-    DupFields = [ "host->dest_host" 
+    
 }
 ```

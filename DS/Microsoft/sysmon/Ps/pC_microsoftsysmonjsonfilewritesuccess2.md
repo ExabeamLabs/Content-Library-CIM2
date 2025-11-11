@@ -9,7 +9,7 @@ Name = microsoft-sysmon-json-file-write-success-2
   Conditions = [ """File creation time changed:""", """Microsoft-Windows-Sysmon""", """EventID":2""" ]
   Fields = [
     """"EventTime":"({time}\d+-\d+-\d+ \d+:\d+:\d+)""",
-    """"Hostname":"+({host}[\w\-.]+)""",
+    """"Hostname":"+({dest_host}({host}[\w\-.]+))""",
     """"EventID":({event_code}2)""",
     """({event_name}File creation time changed)""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
@@ -19,10 +19,9 @@ Name = microsoft-sysmon-json-file-write-success-2
     """"Keywords":({result}[^,"]+)""",
     """ProcessGuid:\s*\{({process_guid}[^\s\}]+)""",
     """ProcessId:\s*({process_id}\d+)""",
-    """"Image"+:"+({process_path}(process_dir}[^"]+)\\+({process_name}[^"]+))"""",
+    """"Image"+:"+({path}({process_path}(process_dir}[^"]+)\\+({process_name}[^"]+)))"""",
     """"TargetFilename":"({file_path}({file_dir}[^"]+?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
   ]
-  DupFields = [ "host->dest_host", "process_path->path" ]
 
 
 }

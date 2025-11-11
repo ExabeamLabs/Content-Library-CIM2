@@ -6,8 +6,8 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4691
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>4691</EventID>""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-events.Fields}[
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
     """<Data Name\\*=('|")ObjectType('|")>({object_type}[^<]+)""",
     """<Data Name\\*=('|")ObjectName('|")>({object}[^<]+)""",
     """<Data Name\\*=('|")AccessList('|")>({access}[^<]+?)\s*<""",
@@ -17,7 +17,6 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4691
     """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 xml-windows-events = {
   Vendor = Microsoft

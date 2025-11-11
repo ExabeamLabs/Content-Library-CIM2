@@ -13,10 +13,9 @@ Name = microsoft-evpowershell-str-endpoint-notification-success-53504
     """providername="+({provider_name}[^"]+)""",
     """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
-    """\Weventrecordid="+({event_id}\d+)"""",
+    """\Weventrecordid="+({event_code}({event_id}\d+))"""",
   """({event_name}Windows PowerShell has started an IPC listening thread)""",
   ]
-  DupFields = ["event_id->event_code"]
 
 
 }

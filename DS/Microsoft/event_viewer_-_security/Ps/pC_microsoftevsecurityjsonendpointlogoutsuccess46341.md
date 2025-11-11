@@ -13,16 +13,15 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4634-1
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+""",
     """({event_code}4634)""",
     """({event_name}An account was logged off)""",
-    """Security ID:\s*(SYSTEM|({user_sid}\S+))\s+Account Name:""",
-    """Account Name:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
+    """Security ID:\s*(SYSTEM|({dest_user_sid}({user_sid}\S+)))\s+Account Name:""",
+    """Account Name:\s*(SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+Account Domain:""",
+    """Account Domain:\s*({dest_domain}({domain}\S+))\s+Logon ID:""",
     """"+LogonType"+:"+({login_type}\d+)"+""",
-    """"+TargetUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"+""",
-    """"+TargetLogonId"+:"+({login_id}[^"]+)"+""",
-    """"+TargetDomainName"+:"+({domain}[^"]+)"+""",
-    """"+TargetUserSid"+:"+({user_sid}[^"]+)"+""",
+    """"+TargetUserName"+:"+({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+""",
+    """"+TargetLogonId"+:"+({dest_login_id}({login_id}[^"]+))"+""",
+    """"+TargetDomainName"+:"+({dest_domain}({domain}[^"]+))"+""",
+    """"+TargetUserSid"+:"+({dest_user_sid}({user_sid}[^"]+))"+"""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

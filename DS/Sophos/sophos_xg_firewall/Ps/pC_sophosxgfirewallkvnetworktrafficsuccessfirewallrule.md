@@ -20,6 +20,8 @@ Name = sophos-xgfirewall-kv-network-traffic-success-firewallrule
     """\sduration=({duration}\d+)?\s""",
     """\sfw_rule_id="*({rule_id}\d+)"*"\s""",
     """\spolicy_type=({policy_name}\S+)?\s""",
+    """\slog_subtype="({result}({subtype}\S+))?"\s""",
+    """\sstatus="({result}\S+)?"\s""",
     """\suser_name="(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))?"\s.*?\s""",
     """\sin_interface="({src_interface}\S+)?"\s""",
     """\sout_interface="({dest_interface}\S+)?"\s""",
@@ -41,7 +43,6 @@ Name = sophos-xgfirewall-kv-network-traffic-success-firewallrule
     """\ssrc_country="({src_country}[^"]+)""""
     """\sdst_country="({dest_country}[^"]+)""""
   ]
-  DupFields = [ "action->result" ]
 
 
 }

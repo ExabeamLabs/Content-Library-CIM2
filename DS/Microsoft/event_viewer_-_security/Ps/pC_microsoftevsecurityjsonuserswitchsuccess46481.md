@@ -18,13 +18,12 @@ Fields = [
 """"DomainID":"({domain}[^"]+)"""
 """"HostID":"({host}[\w\-.]+)"""
 """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-""""UserIDDst":"({dest_user}[^"]+)"""
+""""UserIDDst":"({account}({dest_user}[^"]+))"""
 """"Security_ID":"({user_sid}[^"]+)"""
 """"Source_Logon_ID":"({login_id}[^"]+)"""
 """"Process_Name":"({process_name}[^"]+?)""""
 """"PID":"({process_id}[^"]+)"""
 ]
-DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"
 
 

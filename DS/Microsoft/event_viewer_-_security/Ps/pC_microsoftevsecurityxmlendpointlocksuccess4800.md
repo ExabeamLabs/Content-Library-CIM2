@@ -17,22 +17,21 @@ Fields = [
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """({event_name}The workstation was locked)"""
 """({event_code}4800)"""
-"""Data Name(\\)?=('|")TargetUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-"""Data Name(\\)?=('|")TargetDomainName('|")>({domain}[^<]+)"""
-"""Data Name(\\)?=('|")TargetLogonId('|")>({login_id}[^<]+)"""
-"""Data Name(\\)?=('|")TargetUserSid('|")>({user_sid}[^<]+)"""
-"""<Hostname>({dest_host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
+"""Data Name(\\)?=('|")TargetUserName('|")>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""Data Name(\\)?=('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))"""
+"""Data Name(\\)?=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))"""
+"""Data Name(\\)?=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))"""
+"""<Hostname>({dest_host}({host}[^\.\<]+))\.({dest_domain}({domain}[^\s\<]+))<"""
 """<ProcessID>({process_id}\d+)<"""
 """<Category>({category}[^\<]+)<"""
 """<Severity>({alert_severity}[^\<]+)<""",
-"""<TargetLogonId>({login_id}[^\<]+)<""",
-"""<TargetUserName>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
+"""<TargetLogonId>({dest_login_id}({login_id}[^\<]+))<""",
+"""<TargetUserName>({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
 """<TargetDomainName>({dest_domain}[^\<]+)<""",
 """<RecordNumber>({event_id}\d+)<""",
-"""<TargetUserSid>({user_sid}[^\<]+)<""",
+"""<TargetUserSid>({dest_user_sid}({user_sid}[^\<]+))<""",
 """<Level>({run_level}[^<]+)"""
 ]
-DupFields = ["dest_host->host", "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user"]
 ParserVersion = "v1.0.0"
 
 

@@ -20,9 +20,9 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   """<EventID>({event_code}\d+)</EventID>"""
   """<Data Name\\*=('|")TargetSid('|")>(NULL SID|({user_sid}[^<]+))</Data>"""
   """<Data Name\\*=('|")Status('|")>({result_code}[^<]+)</Data>"""
-  """Account Name(:|=)\s*(\\t|\\r|\\n)*(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@.+?)?[\s;]*(\\t|\\r|\\n)*"?\s*Supplied Realm Name"""
-  """<Data Name\\*=('|")TargetUserName('|")>\s*(?=\w)([^"'<]+?('|"))?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s<"\\,\|]+)|(-|NA|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(@({domain}[^@<=]+))?)"?<\/Data>""",
-  """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
+  """Account Name(:|=)\s*(\\t|\\r|\\n)*(-|NA|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(?:@.+?)?[\s;]*(\\t|\\r|\\n)*"?\s*Supplied Realm Name"""
+  """<Data Name\\*=('|")TargetUserName('|")>\s*(?=\w)([^"'<]+?('|"))?(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|<]+\.[^\]\s<"\\,\|]+))|(-|NA|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*(@({dest_domain}({domain}[^@<=]+)))?)"?<\/Data>""",
+  """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({dest_domain}({domain}[^<]+))</Data>"""
   """<Data Name\\*=('|")IpAddress('|")>(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>"""
   """<Data Name\\*=('|")TicketEncryptionType('|")>({ticket_encryption_type}[^<]+)</Data>"""
   """<Data Name\\*=('|")TicketOptions('|")>({ticket_options}[^<]+)</Data>"""
@@ -31,7 +31,6 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4768"
   """<Opcode>(0|({opcode}[^<]+))""",
   """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "email_address->dest_email_address", "domain->dest_domain", "user->dest_user" ]
   ParserVersion = "v1.0.0"
 
 

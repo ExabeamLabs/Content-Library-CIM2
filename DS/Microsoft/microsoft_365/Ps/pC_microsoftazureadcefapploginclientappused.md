@@ -35,8 +35,8 @@ Fields = [
 """conditionalAccessStatus\":\"(notApplied|({status_msg}[^\",]+))\""""
 """\"clientAppUsed\":\"({object}[^\",]+)"""
 """\"resourceDisplayName\":\"({resource}[^\",]+)"""
-"""\"errorCode\":\"*({error_code}\d+)"""
-"""\"\"signinErrorCode\":\"*({error_code}\d+)"""
+"""\"errorCode\":\"*({failure_code}({error_code}\d+))"""
+"""\"\"signinErrorCode\":\"*({failure_code}({error_code}\d+))"""
 """userId\":\"({user_upn}[^\"]+)"""
 """\"appId\":\"({app_id}[^\"]+)"""
 """\"deviceDetail\".+?"deviceId\":\"({device_id}[\w\.\-]+)"""
@@ -52,7 +52,6 @@ Fields = [
 """"riskState":"({action}[^"]+)""",
 """"correlationId":\s*"({correlation_id}[^"]+)""""
 ]
-DupFields = ["error_code->failure_code"]
 ParserVersion = "v1.0.0"
 
 

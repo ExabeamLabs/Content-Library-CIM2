@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-json-file-5058
     """"+EventTime"+:({time}\d+)""",
     """"+EventTime"+:\s*"+({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})"+"""
     """({event_name}Key file operation)""",
-    """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
+    """"+(Hostname|Computer)"+:"+({dest_host}({host}[^"]+))"+""",
     """"+EventType"+:"+({result}[^"]+)"+""",
     """"+EventID"+:({event_code}\d+)""",
     """"+SourceName"+:"+({log_source}[^"]+)"+""",
@@ -25,10 +25,10 @@ Name = microsoft-evsecurity-json-file-5058
     """"+KeyFilePath"+:"+({file_path}[^"]+)"+"""
     """"SubjectLogonId"+:"+({login_id}[^"]+)"""",
     """"SubjectUserSid"+:"+({user_sid}[^"]+)"""",
-    """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName"+:"+({src_domain}({domain}[^"]+))"""",
     """"Operation"+:"+({operation}[^"]+)"""",
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -25,16 +25,15 @@ Name = microsoft-azuremon-sk4-http-session-frontdooraccesslog
    """"userAgent":"({user_agent}[^"]+)"""",
    """"securityProtocol":"({protocol}[^\s"]+)""",
    """"userAgent":"(?:-|Mozilla\/.+\(({os}iOS|Android|BlackBerry|Windows Phone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin).+?([uU]nknown|({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident)))"""
-   """Namespace:\s*({event_hub_namespace}\S+)""",
+   """Namespace:\s*({host}({event_hub_namespace}\S+))""",
    """EventHub name:\s*({event_hub_name}.+?)\s*\]""",
    """"category":"({category}[^"]+)""",
    """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
-   """"resourceId":"({object}[^"]+)""",
+   """"resourceId":"({resource}({object}[^"]+))""",
    """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
    """"operationName":"({operation}[^"]+)""",
    """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
   ]
-   DupFields=["event_hub_namespace->host", "object->resource"]
 
 
 }

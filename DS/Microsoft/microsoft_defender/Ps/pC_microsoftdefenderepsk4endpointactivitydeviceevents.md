@@ -22,7 +22,7 @@ cef-defender-atp-1 = {
      Fields = [
        """time"+:\s*"+({time}[^"]+)""""
        """operationName"+:\s*"+({operation}[^"]+)"""
-       """category"+:\s*"+({category}[^"]+)"""
+       """category"+:\s*"+({event_name}({category}[^"]+))"""
        """RemotePort"+:({dest_port}\d+)"""
        """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
        """protocol"+:\s*"+({protocol}[^"]+)"""
@@ -47,7 +47,6 @@ cef-defender-atp-1 = {
        """"InitiatingProcessId"+:({process_id}\d+)"""
        """"tenantId":"({tenant_id}[^",]+)"""
      ]
-     DupFields = ["category->event_name"]
    }
 
 cef-defender-atp-3 {
@@ -57,7 +56,7 @@ cef-defender-atp-3 {
    Fields = [
      """time"+:\s*"+({time}[^"]+)"""",
      """operationName"+:\s*"+({operation}[^"]+)""",
-     """category"+:\s*"+({category}[^"]+)""",
+     """category"+:\s*"+({event_name}({category}[^"]+))""",
      """RemotePort"+:({dest_port}\d+)""",
      """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
      """protocol"+:\s*"+({protocol}[^"]+)""",
@@ -84,7 +83,6 @@ cef-defender-atp-3 {
      """"tenantId":"({tenant_id}[^",]+)""",
      """"SHA1":"({hash_sha1}[^"]+)"""",
      """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
-   ]
-   DupFields = ["category->event_name"
+   
 }
 ```

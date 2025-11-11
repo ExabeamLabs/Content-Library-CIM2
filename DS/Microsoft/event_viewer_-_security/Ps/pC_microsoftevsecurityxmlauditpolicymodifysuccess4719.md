@@ -17,8 +17,8 @@ Fields = [
 """<Computer>({src_host}({host}[\w\-.]+))"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)"""
 """<Data Name\\*=('|")CategoryId('|")>({category_id}[^<]+)"""
 """<Data Name\\*=('|")SubcategoryId('|")>({sub_category_id}[^<]+)"""
@@ -26,7 +26,6 @@ Fields = [
 """<Message>({event_name}System audit policy was changed)"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

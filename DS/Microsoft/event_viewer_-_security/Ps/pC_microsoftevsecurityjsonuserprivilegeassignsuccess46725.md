@@ -15,13 +15,12 @@ Fields = [
   """"(Hostname|MachineName)":"({host}[\w\-.]*)""",
   """({event_code}4672)""",
   """"(Event|Entry)Type":"({result}[^"]+)""",
-  """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-  """"SubjectDomainName":"({domain}[^"]*)""",
+  """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+  """"SubjectDomainName":"({src_domain}({domain}[^"]*))""",
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"PrivilegeList":"(-|({privileges}[^"]*))""",
   """"Keywords":"({result}[^\"]+)"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

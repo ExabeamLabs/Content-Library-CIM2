@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-5137
       """"id":\d*({event_code}5137)""",
       """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
       """"DomainID":"({domain}[^"]+)""",
-      """"HostID":"({host}[^"]+)""",
+      """"HostID":"({dest_host}({host}[^"]+))""",
       """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"Security_ID":"({user_sid}[^"]+)""",
       """"Source_Logon_ID":"({login_id}[^"]+)""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-5137
       """"Target_Class":"({object_type}[^"]+)""",
       """"Process_Name":"({process_name}[^"]+)""",
     ]
-    DupFields = [ "host->dest_host" ]
 	ParserVersion = "v1.0.0"
   
 

@@ -16,8 +16,8 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
     """<Data Name(\\)?=('|")TargetDomainName('|")>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<System>.*?Guid(\\)?=('|")\{({process_guid}[^}]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}\d+)""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Level>({run_level}[^<]+)<"""
       ]
-  DupFields = ["user->src_user", "domain->src_domain"]    
 
 
 }

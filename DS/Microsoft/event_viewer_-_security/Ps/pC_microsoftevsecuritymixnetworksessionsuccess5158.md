@@ -11,21 +11,18 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-  """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
+  """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({src_host}({host}[\w\-.]+)))\s"""
   """<TimeCreated SystemTime\\*=('|")?({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
   """({time}\w+ \w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+"""
   """({event_code}5158)"""
   """\WComputer\\*=(::ffff:)?({host}[\w\-.]+)"""
-  """Computer(Name)?\s*\\*\"?(=|:|>)\s*\"*(::ffff:)?({host}[\w\.-]+)(\s|,|\"|</Computer>|$)"""
+  """Computer(Name)?\s*\\*\"?(=|:|>)\s*\"*(::ffff:)?({src_host}({host}[\w\.-]+))(\s|,|\"|</Computer>|$)"""
   """({event_name}The Windows Filtering Platform has permitted a bind to a local port)"""
   """Process ID:\s*({process_id}\d+)"""
   """Application Name:.+?\s*(({process_path}(({process_dir}[^"\/:]*)\\)?({process_name}[^":]+?)))\s*Network Information:"""
   """Source Address:\s*(0\.0\.0\.0|(::ffff:)?({src_ip}(?!::)[a-fA-F:\d.]+))?.*?\s*Source Port:\s*({src_port}\d*)"""
-  """Protocol:\s*({ms_protocol_num}\d*)"""
+  """Protocol:\s*({protocol}\d*)"""
   """Layer Name:\s*({layer_name}.*?)\s*Layer Run-Time ID"""
-]
-DupFields = [
-  "host->src_host", "ms_protocol_num->protocol"
 ]
 ParserVersion = "v1.0.0"
 

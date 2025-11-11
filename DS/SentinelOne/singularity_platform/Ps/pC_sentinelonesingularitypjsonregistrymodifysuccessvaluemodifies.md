@@ -4,7 +4,6 @@
 Name = sentinelone-singularityp-json-registry-modify-success-valuemodifies
 ParserVersion = "v1.0.0"
 Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"registry"""", """"event.type":"Registry Value Modified""""]
-DupFields = [ "host->dest_host", "alert_name->event_name" ]
 Fields = ${SentinelOneParsersTemplates.json-sentinelone-singularityp-events.Fields}[
   """exa_json_path=$..['registry.oldValue'],exa_field_name=old_registry_details""",
   """exa_json_path=$..['registry.oldValueType'],exa_field_name=old_registry_details_type""",
@@ -19,9 +18,9 @@ json-sentinelone-singularityp-events = {
     ExtractionType = json
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
-      """"event\.type":"({alert_name}[^"]+)""",
+      """"event\.type":"({event_name}({alert_name}[^"]+))""",
       """"event\.category":"({alert_type}[^"]+)"""",
-      """"endpoint\.name":"({host}[^"]+)""",
+      """"endpoint\.name":"({dest_host}({host}[^"]+))""",
       """process\.name":"({process_name}[^"]+)""",
       """"endpoint.os":"({os}[^"]+)"""
       """"agent.version":\s*"+({user_agent}[^"]+)""""
@@ -38,8 +37,10 @@ json-sentinelone-singularityp-events = {
       """"endpoint\.type":"({host_type}[^"]+)"""
       """exa_json_path=$..timestamp,exa_field_name=time"""
       """exa_json_path=$..['event.type'],exa_field_name=alert_name"""
+      """exa_json_path=$..['event.type'],exa_field_name=event_name"""
       """exa_json_path=$..['event.category'],exa_field_name=alert_type"""
       """exa_json_path=$..['endpoint.name'],exa_field_name=host"""
+      """exa_json_path=$..['endpoint.name'],exa_field_name=dest_host"""
       """exa_regex=process\.name":"({process_name}[^"]+)"""
       """exa_json_path=$..['endpoint.os'],exa_field_name=os"""
       """exa_json_path=$..['agent.version'],exa_field_name=user_agent"""

@@ -10,7 +10,7 @@ Conditions = [
   """An attempt was made to reset an account's password."""
 ]
 Fields = [
-  """\sdhost=({host}[\w\-.]+)"""
+  """\sdhost=({dest_host}({host}[\w\-.]+))"""
   """({event_name}An attempt was made to reset an account's password)"""
   """Microsoft-Windows-Security-Auditing:({event_code}\d{4})"""
   """\srt=({time}\d{13})"""
@@ -20,9 +20,6 @@ Fields = [
   """\ssuid=({suid}[^\s]+)"""
   """Security_,ID=({user_sid}[^\s]+?)(\s|\||$)"""
   """\sdntdom=({dest_domain}.+?)\s+\w+="""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

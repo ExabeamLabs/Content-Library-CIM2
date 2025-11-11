@@ -14,7 +14,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
   ]
   Fields = [
     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """<Provider Name =('|")({db_name}[^']+)('|")""",
+    """<Provider Name =('|")({db_name}[^'"]+)('|")""",
     """<Computer>({dest_host}({host}[\w\-.]+?))<\/Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventData><Data>(({domain}[^\\\/<>]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
@@ -26,7 +26,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
     """<Keyword>({result}Audit.+?)</Keyword>""",
     """<Message>[^<>]*?Reason:\s*({result_reason}[^.]+?)\."""
     """\sserver_principal_name:(({domain}[^\\\/:]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sserver_principal_sid""",
-    """database_name:({db_name}[^\s]+)""",
+    """database_name:({db_name}[^\s:\+]+)""",
     """\Wserver_principal_name:(({domain}[^\\\/:]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",
     """\Waction_id:({action}[^\s]+)""",
     """statement:[^:=]*\s*({db_operation}\b(Select|alter|BACKUP|RESTORE|dbcc|drop|CREATE|update|insert|delete|set|show|RECONFIGURE)\b).+?\s*additional_information:"""

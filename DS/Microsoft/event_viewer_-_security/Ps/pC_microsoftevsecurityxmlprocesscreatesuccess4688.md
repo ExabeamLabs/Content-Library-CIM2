@@ -19,23 +19,22 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
     """({event_code}4688)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+?)<""",
     """<Data Name(\\)?=('|")SubjectUserName('|")>(-|LOCAL SERVICE|({full_name}[^<\s]+\s[^<]+))<""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>(-|({user}(LOCAL SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({domain}[^<]+?))<""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>(-|({src_user}({user}(LOCAL SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))))<""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<]+?)))<""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+?)<""",
-    """<Data Name(\\)?=('|")NewProcessId('|")>({process_guid}[x\da-f]+)<""",
+    """<Data Name(\\)?=('|")NewProcessId('|")>({process_id}({process_guid}[x\da-f]+))<""",
     """<Data Name(\\)?=('|")NewProcessName('|")>({process_path}({process_dir}(?:[^<>]+)?[\\\/])?({process_name}[^\\\/<>]+))<""",
     """<Data Name(\\)?=('|")CommandLine('|")>"?\s*({process_command_line}[^<]+?)\s*"?<""",
     """<Data Name(\\)?=('|")CommandLine('|")>\s*(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= ({process_path}({process_dir}(?:[^<>]+)?[\\\/])?({process_name}[^\\\/<>]+))<""",
-    """<Data Name(\\)?=('|")ProcessId('|")>({parent_process_guid}[x\da-f]+)<""",
     """<Data Name(\\)?=('|")ParentProcessName('|")>({parent_process_path}({parent_process_dir}[^<]+[\\\/]+)?({parent_process_name}[^<]+))<\/Data>""",
     """Creator Process Name:\s*\"*(|({parent_process_path}({parent_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({parent_process_name}[^\\\/\"]+?)))\"*\s""",
     """<Data Name(\\)?=('|")NewProcessName('|")>({dest_process_path}({dest_process_dir}(?:[^<>]+)?[\\\/])?({dest_process_name}[^\\\/<>]+))<"""
     """<Data Name(\\)?=('|")NewProcessId('|")>({parent_process_id}[^<]+)<"""
+    """<Data Name(\\)?=('|")ProcessId('|")>({parent_process_id}({parent_process_guid}[x\da-f]+))<""",
     """New Process Name:\s*\"*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\"*\s"""
     """<Level>({run_level}[^<]+)<"""
     """<Data Name(\\)?\s*=('|")TargetUserName('|")>(-|({dest_user}[^<]+))"""
   ]
-  DupFields = [ "process_guid->process_id","parent_process_guid->parent_process_id", "user->src_user", "domain->src_domain" ]
 
 
 }

@@ -16,7 +16,6 @@ Name = vmware-horizon-str-endpoint-login-fail-unable
 # machine is removed
 # machine is removed
   ]
-  DupFields = ["machine->dest_host"]
 
 
 }

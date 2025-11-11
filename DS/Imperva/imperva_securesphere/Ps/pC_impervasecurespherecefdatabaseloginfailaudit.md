@@ -14,7 +14,7 @@ Name = imperva-securesphere-cef-database-login-fail-audit
   Fields = [
     """\Wrt=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """\Wcs12=(({domain}[^\\\s]+)\\+)?({host}[\w\-.]+)""",
-    """\Wduser=(({domain}[^\\\s]+)\\+)?({db_user}[^\s]+)""",
+    """\Wduser=(({domain}[^\\\s]+)\\+)?({account}({db_user}[^\s]+))""",
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wdpt=({dest_port}\d+)""",
     """\Wsrc=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
@@ -28,7 +28,6 @@ Name = imperva-securesphere-cef-database-login-fail-audit
     """\Wcs14=(|({db_schema}.+?))\s*(\w+=|$)""",
     """\Wcs18=(|({result_reason}.+?))\s*(\w+=|$)""",
   ]
-  DupFields = [ "db_user->account" ]
 
 
 }

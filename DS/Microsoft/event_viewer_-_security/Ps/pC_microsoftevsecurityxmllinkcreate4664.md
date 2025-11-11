@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-xml-link-create-4664
     """<Message>({event_name}[^:<\.]+)""",
     """<Message>({event_name}[^<]+?)\.(\s|<)""",
     """('|")SubjectUserSid('|")>({user_sid}[^'<\s"]+)<""",
-    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-    """('|")SubjectDomainName('|")>({domain}[^'<\s"]+)<""",
+    """('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """('|")SubjectDomainName('|")>({src_domain}({domain}[^'<\s"]+))<""",
     """('|")SubjectLogonId('|")>({login_id}[^'<\s"]+)<""",
     """('|")FileName('|")>(|({file_path}({file_dir}[^"<]*?)[\\\/]*({file_name}[^\\\/"<]+?(\.({file_ext}[^\\\/\.\s"<]+))?)))<""",
 # link_name is removed
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-xml-link-create-4664
     """<Keyword>({result}.+?)</Keyword>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

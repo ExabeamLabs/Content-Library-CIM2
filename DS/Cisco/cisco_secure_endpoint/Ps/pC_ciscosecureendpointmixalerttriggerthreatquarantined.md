@@ -26,7 +26,6 @@ Name = cisco-secureendpoint-mix-alert-trigger-threatquarantined
     """exa_json_path=$..event_type,exa_field_name=alert_name"""
     """exa_json_path=$..file.identity.sha256,exa_field_name=hash_sha256"""
     ]
-  DupFields = ${DLCiscoParsersTemplates.s-cisco-amp-alert-dl.DupFields}[ "alert_type->alert_name" ]
 
 s-cisco-amp-alert-dl = {
   Vendor = Cisco
@@ -37,6 +36,7 @@ s-cisco-amp-alert-dl = {
     """\Wdproc=(|({process_path}[^=]+?))\s*(\w+=|$|"|')""",
     """\Woutcome=(|({action}[^=]+?))(\s+\w+=|\s*$)""",
     """timestamp":\s*({time}\d{10})""",
+    """event_type":\s*"({alert_name}[^"]+)"""
     """"detection":"(|({alert_name}[^"]+?))"""",
     """detection":\s*"({alert_name}[^"]+)""",
     """\Wsuser=((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
@@ -70,16 +70,17 @@ s-cisco-amp-alert-dl = {
     """exa_json_path=$..computer.external_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$..computer.network_addresses[:1].ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$..event_type,exa_field_name=event_name"""
+    """exa_json_path=$..event_type,exa_field_name=alert_type"""
     """exa_json_path=$..computer.network_addresses[:1].mac,exa_field_name=src_mac"""
     """exa_json_path=$.connector_guid,exa_field_name=connector_guid"""
     """exa_json_path=$.event.connector_guid,exa_field_name=connector_guid"""
     """exa_json_path=$..severity,exa_field_name=alert_severity"""
+    """exa_json_path=$..file.file_path,exa_field_name=malware_url"""
     """exa_json_path=$..file.file_path,exa_field_name=file_path"""
     """exa_json_path=$..file.file_name,exa_field_name=file_name"""
     """exa_json_path=$..file.identity.sha256,exa_field_name=hash_sha256"""
     """exa_json_path=$.event.file.identity.sha256,exa_field_name=hash_sha256"""
-
-  ]
-  DupFields = [ "file_path->malware_url", "event_name->alert_type" 
+    """file_path":\s*"(\\+\?\\+)?({malware_url}({file_dir}[^"]+[\\]+)?({file_name}[^"]+(\.({file_ext}[^"]+))))"""
+  
 }
 ```

@@ -35,10 +35,8 @@ Fields = [
 """\WsourceNetInterfaceName =({src_interface}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """\WsourceMacAddress=({src_mac}[^\|]+?)((\||\s+)\w+=|\s*$)"""
 """threatClassification=({alert_type}[^\|]+)"""
-]
-DupFields = [
-"file_name->process_name"
-"file_path->process_path"
+"""\WfileName =({file_dir}[^\|]*?\\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\\Desktop\\)?)({process_name}[^\\\|]+?({file_ext}[^\\\|\.]+)?)((\||\s+)\w+=|\s*$)"""
+"""\WfilePath=(N/A|({process_path}[^\|]+?))((\||\s+)\w+=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 

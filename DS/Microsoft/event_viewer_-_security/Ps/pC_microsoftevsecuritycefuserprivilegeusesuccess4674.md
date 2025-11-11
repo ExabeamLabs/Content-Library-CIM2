@@ -14,7 +14,7 @@ Fields = [
   """({event_name}An operation was attempted on a privileged object)"""
   """\srt=({time}\d{13})"""
   """\sdeviceSeverity=({result}[^\s]+)"""
-  """\sdhost=({host}[\w\-.]+?)(\s+[^\s]+=|\s*$)"""
+  """\sdhost=({dest_host}({host}[\w\-.]+?))(\s+[^\s]+=|\s*$)"""
   """\sexternalId=({event_code}\d+)"""
   """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+[^\s]+=|\s*$)"""
   """\sdntdom=({domain}.+?)(\s+[^\s]+=|\s*$)"""
@@ -23,9 +23,6 @@ Fields = [
   """\sduid=({login_id}[^\s]+)"""
   """Desired_\,Access=({access}[^\d]+?)(\s+[^\s]+=|\s*$)"""
   """\sdpriv=({privileges}.+?)(\s+[^\s]+=|\s*$)"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

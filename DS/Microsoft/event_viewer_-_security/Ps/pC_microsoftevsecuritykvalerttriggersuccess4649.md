@@ -11,18 +11,17 @@ Name = microsoft-evsecurity-kv-alert-trigger-success-4649
     """EventCode=({event_code}\d+)""",
     """ComputerName =({host}[^\s]+)""",
     """Keywords=({result}[^=]+?)\s+\w+=""",
-    """Message=({event_name}[^:]+?)\s+\w+:""",
+    """Message=({alert_name}({event_name}[^:]+?))\s+\w+:""",
     """Subject:\s+Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
     """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Process ID:\s+({process_id}[^\s]+)""",
     """Process Name:\s+({process_path}(({process_dir}[^\s]+)\\+)?({process_name}[^\s]+))\s+Network Information:""",
-    """Logon Process:\s+({auth_process}[^\s]+)""",
+    """Logon Process:\s+({alert_type}({auth_process}[^\s]+))""",
     """Authentication Package:\s+({auth_package}[^\s]+)""",
     """({additional_info}This event indicates that[^$]+?)\s*$"""
   ]
-  DupFields = [ "event_name->alert_name", "auth_process->alert_type" ]
   ParserVersion = "v1.0.0"
 
 

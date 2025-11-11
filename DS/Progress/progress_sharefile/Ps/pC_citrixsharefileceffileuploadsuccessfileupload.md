@@ -24,9 +24,8 @@ Fields = [
 """"AdditionalInfo"+:"({additional_info}[^"]+)"""
 """"Action":"({action}[^"]+)"""
 """"Company":"(\\|({company}[^"]+?))\s*""""
-""""ItemName"+:"+({file_path}({file_dir}[^"]*[\/]+)\s*({file_name}[^\/"]+(\.({file_ext}[^\/"\.\s]+))))""""
+""""ItemName"+:"+({src_file_path}({file_path}({file_dir}[^"]*[\/]+)\s*({src_file_name}({file_name}[^\/"]+(\.({src_file_ext}({file_ext}[^\/"\.\s]+)))))))""""
 ]
-DupFields = [ "file_name->src_file_name" , "file_ext->src_file_ext" , "file_path->src_file_path"]
 ParserVersion = "v1.0.0"
 
 

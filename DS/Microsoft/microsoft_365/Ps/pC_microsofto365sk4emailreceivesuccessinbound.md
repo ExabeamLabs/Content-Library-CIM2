@@ -12,15 +12,14 @@ Name = microsoft-o365-sk4-email-receive-success-inbound
     """"Subject":"({email_subject}[^"]+)"""",
     """"Direction":"({direction}[^"]+)"""",
     """"SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"RecipientAddress":"({email_recipients}[^"]+)"""",
+    """"RecipientAddress":"({dest_email_address}({email_recipients}[^"]+))"""",
     """"MessageSize":"?({bytes}\d+)""",
     """"MessageTraceId":"({message_id}[^"]+)"""",
     """"MessageId":"({message_id}[^"]+)"""",
-    """"EventType":"({alert_type}[^"]+)""""
+    """"EventType":"({result}({alert_name}({alert_type}[^"]+)))""""
     """"Action":"({action}[^"]+)"""
     """"BulkComplaintLevel":"({spam_score}[^"]+)""""
   ]
-  DupFields = [ "alert_type->alert_name", "alert_type->result", "email_recipients->dest_email_address" ]
 
 
 }

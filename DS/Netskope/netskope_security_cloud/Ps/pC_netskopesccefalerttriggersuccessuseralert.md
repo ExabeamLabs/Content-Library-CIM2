@@ -11,7 +11,7 @@ Name = netskope-sc-cef-alert-trigger-success-useralert
   """"hostname":\s*"({src_host}[\w\-\.]+)"""
   """"app":\s*"({app}[^"]+)"""
   """"user":\s*"(unknown|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|(({domain}[^"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))""""
-  """"object":\s*"(((?i)(Unknown( Unknown)?)|null)|({object}[^"]+?))\s*""""
+  """"object":\s*"(((?i)(Unknown( Unknown)?)|null)|({file_name}({object}[^"]+?)))\s*""""
   """"activity":\s*"({operation}[^"]+)""""
   """"os":\s*"((?i)unknown|({os}[^"]+))"""",
   """"browser":\s*"((?i)unknown|({browser}[^"]+))"""",
@@ -32,7 +32,6 @@ Name = netskope-sc-cef-alert-trigger-success-useralert
   """"dlp_rule_count":({rule_count}\d+)"""
   """"dlp_rule":"({rule}[^"]+)"""
   ]
-  DupFields = [ "object->file_name" ]
   ParserVersion = "v1.0.0"
 
 

@@ -6,6 +6,7 @@ Name = microsoft-evsetup-xml-app-activity-setup-1
   Conditions = [ """<Provider Name =""", """Microsoft-Windows-WUSA""", """<Channel>Setup</Channel>""", """<EventID>""", """<Computer>""" ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-xml-events.Fields}[
+    """<Computer>({host}[\w\.\-]+)<""",
     """<Data Name =('|")UpdateTitle('|")>"({event_name}[^"<]+)"""
     """<Data Name =('|")ErrorCode('|")>({failure_code}[^<]+)<""",   
     """<Data Name =('|")CommandLine('|")>({process_command_line}.+?)\s*</Data>"""    
@@ -16,7 +17,6 @@ windows-xml-events = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
-    """<Computer>({host}[\w\.\-]+)<""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{9}Z)"""
     """>({event_code}\d+)</EventID>""",
     """<Security UserID=('|")({user_sid}[^'"]+)('|")\/>""",

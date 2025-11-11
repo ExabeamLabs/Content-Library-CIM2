@@ -170,10 +170,8 @@ Fields = [
   """\sdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"""
   """\sdvchost=({host}[^\s]+)"""
   """\sdhost=({dest_host}[\w\-.]+)"""
+  """\sdhost=({user}[\w\.\-]{1,40}\$?)"""
   """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-]
-DupFields = [
-  "dest_host->user"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -250,15 +248,11 @@ Fields = [
 """"id":\d*({event_code}4726)"""
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 """"DomainID":"({domain}[^\"]+)"""
-""""HostID":"({host}[\w\-.]+)"""
+""""HostID":"({dest_host}({host}[\w\-.]+))"""
 """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"Security_ID":"({user_sid}[^\"]+)"""
 """"Source_Logon_ID":"({login_id}[^\"]+)"""
-""""UserIDDst":"({dest_user}[^\"]+)"""
-]
-DupFields = [
-"host->dest_host"
-"dest_user->account_name"
+""""UserIDDst":"({account_name}({dest_user}[^\"]+))"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -275,15 +269,12 @@ Conditions = [
 Fields = [
 """EventID=\"+({event_code}[^\"]+)\""""
 """EventRecordID=\"+({event_id}[^\"]+)\""""
-"""CallerDomain=\"+({src_domain}[^\"]+)\""""
+"""CallerDomain=\"+({domain}({src_domain}[^\"]+))\""""
 """CallerLogonId=\"+\([^,]+,({login_id}[^\)]+)\""""
 """CallerUserName =\"+({src_user}[^\"]+)\""""
 """TargetAccountID=\"+\%\{({user_sid}[^}]+)\}\""""
 """TargetAccountName =\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
 """CallerMachineName =\"+({src_host}[^\"]+)\""""
-]
-DupFields = [
-"src_domain->domain"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -301,15 +292,14 @@ Fields = [
 """Computer="+({dest_host}[\w\-.]+)""""
 """EventID="+({event_code}[^\"]+)""""
 """EventRecordID="+({event_id}[^\"]+)""""
-"""SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-"""SubjectDomainName ="+({domain}[^\"]+)""""
+"""SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""SubjectDomainName ="+({src_domain}({domain}[^\"]+))""""
 """SubjectLogonId="+({login_id}[^\"]+)""""
 """SubjectUserSid="+({user_sid}[^\"]+)""""
 """TargetDomainName ="+({dest_domain}[^\"]+)""""
-"""TargetUserName ="+({dest_user}[^\"]+)""""
+"""TargetUserName ="+({account_name}({dest_user}[^\"]+))""""
 """TargetSid="+({dest_user_sid}[^\"]+)""""
 ]
-DupFields = ["dest_user->account_name", "user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 },
 
@@ -331,10 +321,9 @@ ParserVersion = "v1.0.0"
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Target Computer:\s+Security ID:\s+({dest_user_sid}[^:]+?)\s+Account Name:""",
-    """Target Computer:.+?Account Name:\s+({dest_user}[^:]+?)\s+Account Domain:""",
+    """Target Computer:.+?Account Name:\s+({account_name}({dest_user}[^:]+?))\s+Account Domain:""",
     """Target Computer:.+?Account Domain:\s+({dest_domain}[^:]+?)\s+Additional Information:""",
     """Privileges:\s+(-|({privileges}.+?))\s*(\w+=|$)"""
-  ]
-  DupFields = [ "dest_user->account_name"
+  
 }
 ```

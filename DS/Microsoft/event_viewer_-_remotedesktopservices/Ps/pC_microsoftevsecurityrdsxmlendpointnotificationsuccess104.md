@@ -10,8 +10,8 @@ Fields = [
 """<EventID>({event_code}\d+)"""
 """<Keywords>({result}[^<]+)"""
 """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
-"""<Computer>({host}[\w\-.]+)"""
-"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+"""<Computer>({src_host}({host}[\w\-.]+))"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({src_host}({host}[\w_\-\.]+))""",
 """<Computer>(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w\-\.]+))"""
 """<Security UserID\\*=('|")({user_sid}[^'<\/"]+)"""
 """<Level>({alert_severity}[^<]+)"""
@@ -22,7 +22,6 @@ Fields = [
 """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "host->src_host" ]
 
 
 }

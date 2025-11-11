@@ -16,7 +16,7 @@ Name = microsoft-azuremon-sk4-app-notification-applicationgatewayfirewalllog
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """"hostname":\s*"({host}[^"]+)"""",
     """"category":\s*"({category}[^"]+)"""",
-    """"operationName":\s*"({operation}[^"]+)"""",
+    """"operationName":\s*"({event_name}({operation}[^"]+))"""",
     """"message":\s*"({additional_info}[^"]+)"""",
     """"clientIp":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"resourceId":\s*"({resource_id}[^"]+)"""",
@@ -29,7 +29,6 @@ Name = microsoft-azuremon-sk4-app-notification-applicationgatewayfirewalllog
     """"ruleGroup":\s*"({rule}[^"]+)"""",
     """"file":\s*"({file_path}({file_dir}[^\\\/]+[\\\/])({file_name}[^"]+\.({file_ext}[^"]+)))""""
   ]
-  DupFields = [ "operation->event_name" ]
 
 
 }

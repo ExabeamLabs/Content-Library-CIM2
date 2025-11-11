@@ -6,9 +6,8 @@ Name = checkpoint-ngfw-kv-network-traffic-fail-reject
   ParserVersion = "v1.0.0"
 
 checkpoint-auth.Fields}[
-    """action:"+({operation}[^"]+)""",
+    """action:"+({event_name}({operation}[^"]+))""",
     """\Wtime(:|=)"({time}\d{10})""""
-  ]
-  DupFields = [ "operation->event_name" 
+  
 }
 ```

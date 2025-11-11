@@ -11,12 +11,12 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
   Fields = [
     """"EventTime":({time}\d{10})""",
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """"Hostname":"({host}[\w.-]+?)"""",
+    """"Hostname":"({dest_host}({host}[\w.-]+?))"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}A scheduled task was updated)""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"TaskName":"({task_name}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"Keywords":"({result}[^,"]+)""",
@@ -27,11 +27,14 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """exa_regex=({event_code}4702)"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
+    """exa_json_path=$.Hostname,exa_field_name=dest_host"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_regex=({event_name}A scheduled task was updated)""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
     """exa_json_path=$..SubjectUserName,exa_field_name=user"""
+    """exa_json_path=$..SubjectUserName,exa_field_name=src_user"""
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
+    """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$..TaskName,exa_field_name=task_name"""
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$.Keywords,exa_field_name=result"""
@@ -39,7 +42,6 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """exa_regex=<Command>({process_path}({process_dir}[^<]+)\\\\({process_name}[^<]+))<""",
     """exa_regex=<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

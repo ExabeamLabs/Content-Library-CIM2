@@ -18,7 +18,7 @@ Fields = [
 """\Wsrc=(0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
 """\WOperationType="table"[^=]+object="(|({table_name}[^"]+))""""
 """\Wobject="(|({table_name}[^"]+))[^"]+OperationType="table""""
-"""\WdbUsername="(|({domain}[^"\\]+)\\)?(|({db_user}[^"\\]+))""""
+"""\WdbUsername="(|({domain}[^"\\]+)\\)?(|({account}({db_user}[^"\\]+)))""""
 """\WserviceName ="(|({service_name}[^"]+))""""
 """\WappName ="(|({app}[^"]+))""""
 """\WosUser="\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
@@ -28,9 +28,6 @@ Fields = [
 """\Woperation="(|(?i)(Logout)|({db_operation}[^"]+))""""
 """\WschemaName ="(|({db_schema}[^"]+))""""
 """\WparsedQuery="(|(N\/A \(logout\))|({db_query}[^\n]+)?)"\s*$"""
-]
-DupFields = [
-"db_user->account"
 ]
 ParserVersion = "v1.0.0"
 

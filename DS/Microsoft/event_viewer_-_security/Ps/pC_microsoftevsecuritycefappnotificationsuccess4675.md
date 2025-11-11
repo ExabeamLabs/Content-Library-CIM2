@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-cef-app-notification-success-4675
   Conditions = [ """CEF:""", """"eventID":"4675"""", """SIDs were filtered""" ]
   Fields = [
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """"computer":"({host}[\w\-.]+)""",
+    """"computer":"({dest_host}({host}[\w\-.]+))""",
     """"message":"({event_name}[^"]+?)\s*"""",
     """"eventID":"({event_code}\d+)""",
     """"eventRecordID":"({event_id}\d+)""",
@@ -19,7 +19,6 @@ Name = microsoft-evsecurity-cef-app-notification-success-4675
     """"tdoType":"({trust_type}[^"\s]+?)\s*"""",
 # tdo_domain_sid is removed
   ]
-  DupFields = ["host-> dest_host"]
 
 
 }

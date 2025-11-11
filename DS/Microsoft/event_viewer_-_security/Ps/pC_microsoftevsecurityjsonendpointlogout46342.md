@@ -15,10 +15,10 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Computer":"({src_host}({host}[\w\-.]+))"""",
     """"Keywords":"({result}[^"]+)""",
-    """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"TargetLogonId":"({login_id}[^"]+)"""",
-    """"TargetDomainName":"({domain}[^"]+)"""",
-    """"TargetUserSid":"({user_sid}[^"]+)"""",
+    """"TargetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"TargetLogonId":"({dest_login_id}({login_id}[^"]+))"""",
+    """"TargetDomainName":"({dest_domain}({domain}[^"]+))"""",
+    """"TargetUserSid":"({dest_user_sid}({user_sid}[^"]+))"""",
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({action}[^"]+?)\s*"""",
     """"logonType":"({login_type}\d+)\s*""""
@@ -28,15 +28,17 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """exa_json_path=$..TimeCreated,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$..Computer,exa_regex=^({src_host}({host}[\w\-.]+))$""",
     """exa_json_path=$..Keywords,exa_field_name=result""",
-    """exa_json_path=$..TargetUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$..TargetLogonId,exa_field_name=login_id""",
+    """exa_json_path=$..TargetLogonId,exa_field_name=dest_login_id""",
     """exa_json_path=$..TargetDomainName,exa_field_name=domain""",
+    """exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
     """exa_json_path=$..TargetUserSid,exa_field_name=user_sid""",
+    """exa_json_path=$..TargetUserSid,exa_field_name=dest_user_sid""",
     """exa_json_path=$..EventRecordID,exa_field_name=event_id""",
     """exa_json_path=$..severityValue,exa_field_name=action""",
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
   ]
-  DupFields = [ "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

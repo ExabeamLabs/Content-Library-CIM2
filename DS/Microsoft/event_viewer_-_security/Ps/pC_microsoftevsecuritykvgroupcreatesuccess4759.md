@@ -7,11 +7,10 @@ Name = microsoft-evsecurity-kv-group-create-success-4759
   ParserVersion = "v1.0.0"
   Conditions = [ """ [ EVENT_NUMBER = 4759 ] """, """ ADAuditPlus: """, """ [ SOURCE = """, """ [ FORMAT_MESSAGE = """ ]
   Fields = ${MicrosoftParserTemplates.ad-audit-plus-1.Fields}[
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """SOURCE\s*=\s*({src_host}[\w\-.]+)""",
     """Category\s*=\s*({category}[^\s]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 ad-audit-plus-1 = {
   Vendor = Microsoft

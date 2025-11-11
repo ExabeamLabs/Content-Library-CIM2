@@ -17,6 +17,7 @@ Fields = [
 """exa_json_path=$..CreationTime,exa_field_name=time"""
 """exa_json_path=$..DeviceName,exa_regex=^({host}[\w\-.]+)$"""
 """exa_json_path=$..Operation,exa_field_name=operation"""
+"""exa_json_path=$..Operation,exa_field_name=alert_name"""
 """exa_json_path=$..UserId,exa_field_name=user_upn"""
 """exa_json_path=$..Workload,exa_field_name=app"""
 """exa_regex="(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)"""
@@ -50,9 +51,12 @@ Fields = [
 """exa_json_path=$..LeaveTime,exa_field_name=end_time"""
 """exa_json_path=$..JoinTime,exa_field_name=start_time"""
 """exa_json_path=$..MeetingDetailId,exa_field_name=meeting_number"""
+"""exa_json_path=$.FileSize,exa_field_name=bytes"""
+"""exa_json_path=$.Sha1,exa_field_name=hash_sha1"""
+"""exa_json_path=$.Sha256,exa_field_name=hash_sha256"""
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
-""""Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
+""""Operation\\*"+:[\s\\]*"+({alert_name}({operation}[^"\\\.]*))""",
 """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)"""",
 """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
 """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)""",
@@ -89,8 +93,10 @@ Fields = [
 """Severity\\?":\\?"({alert_severity}[^"\\]+)"""
 """"Attendees":[^\]]+?"InviterInfo":[^\}]+?"DisplayName":"({additional_info}[^"]+)"""
 """"Attendees":[^\]]+"DisplayName":"({member}[^"]+)"""
+""""FileSize":\s*({bytes}\d+)"""
+""""Sha1":\s*"({hash_sha1}[^"]+)""""
+""""Sha256":\s*"({hash_sha256}[^"]+)""""
 ]
-DupFields = [ "operation->alert_name"]
 
 
 }

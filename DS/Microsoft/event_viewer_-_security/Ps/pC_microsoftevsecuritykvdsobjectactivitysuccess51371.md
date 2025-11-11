@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({event_name}A directory service object was created)"""
   """({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))"""
-  """ComputerName =({host}[\w.\-]+)"""
+  """ComputerName =({dest_host}({host}[\w.\-]+))"""
   """EventCode=({event_code}\w+)"""
   """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)"""
   """Object:.+?Class:\s+({object_type}.+?)\s+Operation:"""
@@ -21,9 +21,6 @@ Fields = [
   """Directory Service:\s*Name(:|=)\s*({ds_name}[^\s]+)\s*.*?Type(:|=)\s*({ds_type}.*?Services)"""
   """GUID(:|=)\s*\{({object_id}[^\}]+)"""
   """Operation:\s*Correlation ID(:|=)\s*\{({correlation_id}[^\}]+)"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

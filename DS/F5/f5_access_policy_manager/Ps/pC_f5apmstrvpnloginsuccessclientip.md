@@ -9,9 +9,8 @@ Name = f5-apm-str-vpn-login-success-clientip
   Fields = [
     """:Common:({session_id}[^:]+)""",
     """\s(?i)Client IP\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
-    """Listener \/Common\/({host}[\w\-\.]+)_({dest_port}\d{1,5})\s"""
+    """Listener \/Common\/({dest_host}({host}[\w\-\.]+))_({dest_port}\d{1,5})\s"""
   ]
-  DupFields = ["host->dest_host"]
   ParserVersion = "v1.0.0"
 
 

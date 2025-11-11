@@ -15,7 +15,9 @@ azure-classicblob-json = {
       """exa_json_path=$..time,exa_field_name=time""",
       """exa_json_path=$..resourceId,exa_field_name=resource""",
       """exa_json_path=$..category,exa_field_name=operation_type""",
+      """exa_json_path=$..category,exa_field_name=category""",
       """exa_json_path=$..operationName,exa_field_name=operation""",
+      """exa_json_path=$..operationName,exa_field_name=operation_name"""
       """exa_json_path=$..operationVersion,exa_field_name=operation_version""",
       """exa_json_path=$..schemaVersion,exa_field_name=schema_version""",
       """exa_json_path=$..statusCode,exa_field_name=result_code""",
@@ -24,6 +26,7 @@ azure-classicblob-json = {
       """exa_json_path=$..correlationId,exa_field_name=correlation_id""",
       """exa_json_path=$..identity.type,exa_field_name=auth_type""",
       """exa_json_path=$..location,exa_field_name=region""",
+      """exa_json_path=$..location,exa_field_name=location""",
       """exa_json_path=$..accountName,exa_field_name=storage_account""", 
       """exa_json_path=$..userAgentHeader,exa_field_name=user_agent""", 
       """exa_json_path=$..lastModifiedTime,exa_field_name=file_modify_time""", 
@@ -37,8 +40,8 @@ azure-classicblob-json = {
       """exa_json_path=$..upn,exa_field_name=user_upn""",
       """"+time"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+resourceId"+:\s*"+({resource}[^"]+)"+""",
-      """"+category"+:\s*"+({operation_type}[^"]+)"+""",
-      """"+operationName"+:\s*"+({operation}[^"]+)"+""",
+      """"+category"+:\s*"+({category}({operation_type}[^"]+))"+""",
+      """"+operationName"+:\s*"+({operation_name}({operation}[^"]+))"+""",
       """"+operationVersion"+:\s*"+({operation_version}[^"]+)"+""",
       """"+schemaVersion"+:\s*"+({schema_version}[^"]+)"+""",
       """"+statusCode"+:\s*({result_code}[^,"]+)""",
@@ -46,7 +49,7 @@ azure-classicblob-json = {
       """"+callerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
       """"+correlationId"+:\s*"+({correlation_id}[^"]+)"+""",
       """"+identity"+:[^\}]+"+type"+:\s*"+({auth_type}[^"]+)"+""",
-      """"+location"+:\s*"+({region}[^"]+)"+""",
+      """"+location"+:\s*"+({location}({region}[^"]+))"+""",
       """"+properties"+:[^\}]+"+accountName"+:\s*"+({storage_account}[^"]+)"+""",
       """"+properties"+:[^\}]+"+userAgentHeader"+:\s*"+({user_agent}[^"]+)"+""",
       """"+properties"+:[^\}]+"+lastModifiedTime"+:\s*"+({file_modify_time}[^"]+)"+""",
@@ -58,7 +61,6 @@ azure-classicblob-json = {
       """"+resourceType"+:\s*"+({resource_type}({service_name}[^"\/]+)\/[^"]+)"+""",
       """"+serviceType"+:\s*"+({service_type}[^"]+)"+"""
       """"upn":"({user_upn}[^"]+)""""
-    ]
-    DupFields = [ "operation->operation_name", "region->location", "operation_type->category" 
+    
 }
 ```

@@ -16,9 +16,9 @@ Fields = [
 """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_name}A member was removed from a security-enabled [\w\s]+ group)"""
 """"_raw":"({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
-""""agent_hostname":"({host}[^"]+)""""
-""""computer":"({host}[^"]+)""""
-"""(?i)(success|audit)\s+\w+\s+({host}[\w\-.]+)\s"""
+""""agent_hostname":"({dest_host}({host}[^"]+))""""
+""""computer":"({dest_host}({host}[^"]+))""""
+"""(?i)(success|audit)\s+\w+\s+({dest_host}({host}[\w\-.]+))\s"""
 """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)"""
 """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing"""
 """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group"""
@@ -28,9 +28,6 @@ Fields = [
 """Account Name\s*:\s*(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
 """Group\s*:\s*Security ID\s*:\s*({group_id}[^\s]+)\s*"""
 """Group:.+?(Group|Account) Name\s*:(\\*(r|n|t|\s))*({group_name}.+?)?(\\*(r|n|t|\s))*(Group|Account) Domain\s*:(\\*(r|n|t))*\s*({group_domain}.+?)?(\\*(r|n|t|\s))*Additional Information:"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

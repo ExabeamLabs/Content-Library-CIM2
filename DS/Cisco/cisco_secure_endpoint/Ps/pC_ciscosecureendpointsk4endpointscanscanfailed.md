@@ -43,11 +43,8 @@ cisco-secureendpoint-sk4-alert = {
     """"connector_guid":"({connector_guid}[^"]+)"""
     """"severity":\s*"({alert_severity}[^"]+)"""
     """event_type":\s*"({alert_type}[^"]+)"""
-  ]
-  DupFields = [ 
-    "file_path->malware_url"
-    "event_name->alert_type"
-    "alert_type->category"
+    """file_path":\s*"(\\+\?\\+)?({malware_url}[^"]+)"""
+    """event_type":\s*"({category}[^"]+)"""
   
 }
 ```

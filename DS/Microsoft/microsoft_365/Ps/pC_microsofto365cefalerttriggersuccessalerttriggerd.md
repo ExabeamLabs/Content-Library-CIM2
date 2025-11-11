@@ -10,7 +10,7 @@ Conditions = [ """"Operation":"AlertTriggered"""", """"AlertType":""", """AlertI
    """"(ts|CreationTime)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
    """\\?"f3u\\?":\\?"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
    """"ad\\?":\\?"({additional_info}[^"]+?)\\?"""",
-   """"(Name|an\\?)":\\?"({alert_name}[^"]+?)(\\u200b)?\\?""""
+   """"(Name|an\\?)":\\?"({alert_subject}({alert_name}[^"]+?))(\\u200b)?\\?""""
    """"AlertId":"({alert_id}[^"]+)""""
    """"(sev|Severity)":"({alert_severity}[^"]+)""",
    """"AlertType":"({alert_type}[^"]+)"""",
@@ -21,7 +21,6 @@ Conditions = [ """"Operation":"AlertTriggered"""", """"AlertType":""", """AlertI
    """"wl\\*"*:\\*"*({app}[^",\\\s]+)"""
    """"von\\*"*:\\*"*({alert_subject}[^",\\]+)"""
   ]
-  DupFields = ["alert_name->alert_subject"]
   ParserVersion = "v1.0.0"
 
 

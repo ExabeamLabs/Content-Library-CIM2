@@ -14,12 +14,12 @@ Name = symantec-dlp-kv-alert-trigger-success-incidentid
     """policy="({alert_name}[^"]+)"""",
     """username="(({domain}[^\\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """domain="({domain}[^"]+)"""",
+    """policy="({alert_type}[^"]+)"""",
     """sender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """recipients="({target}[^"@]+@[^"]+)"""",
     """subject="\s*({additional_info}[^"]+?)\s*"""",
     """blocked="({action}\d+)""""
   ]
-  DupFields = [ "alert_name->alert_type"]
   ParserVersion = "v1.0.0"
 
 

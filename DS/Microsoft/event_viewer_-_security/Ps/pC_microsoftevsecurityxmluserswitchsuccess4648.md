@@ -17,11 +17,11 @@ Name = "microsoft-evsecurity-xml-user-switch-success-4648"
 """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7,9}Z)""",
 """<EventID>({event_code}\d+)</EventID>""",
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<\/Data>""",
-"""<Data Name\\*=('|")SubjectUserName('|")>\s*(-|(?i)(anonymous logon|LOCAL SERVICE)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*</Data>""",
-"""<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<]+))</Data>""",
+"""<Data Name\\*=('|")SubjectUserName('|")>\s*(-|(?i)(anonymous logon|LOCAL SERVICE)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*</Data>""",
+"""<Data Name\\*=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<]+)))</Data>""",
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
-"""<Data Name\\*=('|")TargetUserName('|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({dest_user}[^@",\s<]+)@?({dest_domain}[^\\<]+)?))\s*<\/Data>""",
-"""<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({dest_domain}[^<]+?)</Data>""",
+"""<Data Name\\*=('|")TargetUserName('|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>""",
+"""<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({account_domain}({dest_domain}[^<]+?))</Data>""",
 """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
 """<Data Name\\*=('|")TargetServerName('|")>(localhost|({dest_host}[\w\-.]+))[^<]*</Data>""",
 """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<]+)</Data>""",
@@ -34,7 +34,6 @@ Name = "microsoft-evsecurity-xml-user-switch-success-4648"
 """<Keyword>({result}[^<]+)</Keyword>""",
 """<Level>({run_level}[^<]+)<"""
   ]
-   DupFields = ["dest_user->account", "dest_domain->account_domain", "user->src_user" , "domain->src_domain"]
 
 
 }

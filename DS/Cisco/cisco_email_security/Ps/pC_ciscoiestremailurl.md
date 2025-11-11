@@ -14,8 +14,8 @@ Name = cisco-ie-str-email-url
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\+[\d\:]+)""",
       """MID ({alert_id}\d+)""",
       """Custom Log Entry:\s*({result}.+?)\s*URL""",
+      """MID ({message_id}\d+)""",
       ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

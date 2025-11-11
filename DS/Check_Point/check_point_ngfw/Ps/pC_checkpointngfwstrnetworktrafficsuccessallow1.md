@@ -8,7 +8,7 @@ Name = checkpoint-ngfw-str-network-traffic-success-allow-1
   TimeFormat =  "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """logger:""", """product:""", """ allow """ ]
   Fields = [
-    """logger:\s*\d\d:\d\d:\d\d\s*({action}\w+)\s*({host}[\w.\-]+)""",
+    """logger:\s*\d\d:\d\d:\d\d\s*({event_name}({action}\w+))\s*({host}[\w.\-]+)""",
     """product:\s*({product_name}.+?);""",
     """\Wsrc:\s*(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?);""",
     """\Ws_port:\s*(|({src_port}\d+));""",
@@ -26,7 +26,6 @@ Name = checkpoint-ngfw-str-network-traffic-success-allow-1
     """\Wxlatedport:\s*(|({dest_translated_port}\d+));""",
     """\Wservice_id:\s*(|({protocol}.+?));""",
   ]
-   DupFields = [ "action->event_name" ]
 
 
 }

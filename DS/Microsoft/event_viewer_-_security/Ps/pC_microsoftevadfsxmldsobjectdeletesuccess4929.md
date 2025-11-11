@@ -9,8 +9,8 @@ Name = microsoft-evadfs-xml-ds-object-delete-success-4929
   Conditions = [ """Microsoft-Windows-Security-Auditing""", """<EventID>4929</EventID>""", """<Execution ProcessID""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """<Data Name =('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-    """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name =('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+    """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)"""
@@ -26,7 +26,6 @@ Name = microsoft-evadfs-xml-ds-object-delete-success-4929
     """<Data Name =('|")StatusCode('|")>({result_code}[^<]+)""",
     """<Data Name =('|")SourceAddr('|")>({additional_info}[^<\.]+)"""
   ]
-  DupFields = ["user->src_user" , "domain->src_domain"]
 
 
 }

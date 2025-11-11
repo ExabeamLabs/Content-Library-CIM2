@@ -26,9 +26,7 @@ Name = "cisco-asa-str-network-traffic-success-teardown"
 """to\s+[^\s:]+:\s*((::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|(::ffff:)?({dest_host}[^\s]+?))((\/({dest_port}\d+))|(\s|$))"""
 """\sbytes\s+({bytes}\d+)"""
 """%ASA-.*?\((({domain}[^\\/]+)[\\/]+)?(?:({email_address}[^@\\/]+@[^@\\/]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
-  ]
-  DupFields = [
-"event_name->operation"
+"""({operation}Teardown ({protocol}\w+) connection)"""
   ]
 
 

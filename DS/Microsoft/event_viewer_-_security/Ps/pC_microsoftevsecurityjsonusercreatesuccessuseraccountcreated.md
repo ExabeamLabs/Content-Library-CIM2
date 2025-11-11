@@ -20,11 +20,10 @@ Fields = [
   """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """"Security_ID":"({user_sid}[^"]+)"""
   """"Source_Logon_ID":"({login_id}[^"]+)"""
-  """"UserIDDst":"({account_name}[^"]+)"""
+  """"UserIDDst":"({dest_user}({account_name}[^"]+))"""
   """"Event_Class":"({additional_info}[^"]+)"""
   """Enabled,({user_type}.*?)\s-\sEnabled"""
 ]
-DupFields = [ "account_name->dest_user" ]
 ParserVersion = "v1.0.0"
 
 

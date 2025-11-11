@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4905
     """"(HostName|Computer(Name)?)":"({host}[^"]+)"""",
     """({event_code}4905)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",
     """"ProcessName":"({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4905
 # src_name is removed
 # src_id is removed
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

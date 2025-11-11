@@ -7,11 +7,11 @@ Name = sentinelone-singularityp-json-alert-trigger-success-eventtype
   Fields = ${SentinelOneParsersTemplates.sentinelone-json-api-alerts.Fields} [
     """exa_json_path=$.alertInfo.indicatorDescription,exa_field_name=additional_info""",
     """exa_json_path=$.alertInfo.eventType,exa_field_name=alert_name""",
+    """exa_json_path=$.alertInfo.eventType,exa_field_name=alert_subject""",
     """exa_json_path=$.ruleInfo.name,exa_field_name=alert_type""",
     """exa_json_path=$..severity,exa_field_name=alert_severity""",
     """exa_json_path=$..incidentStatus,exa_field_name=incident_status"""
   ]
-  DupFields = [ "alert_name->alert_subject" ]
 
 sentinelone-json-api-alerts {
     Vendor = SentinelOne

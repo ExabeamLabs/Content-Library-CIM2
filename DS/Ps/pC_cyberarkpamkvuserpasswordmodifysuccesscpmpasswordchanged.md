@@ -7,9 +7,6 @@ Conditions = [
 """Message="CPM Change Password""""
 """;Safe="""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

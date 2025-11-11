@@ -5,8 +5,10 @@ Name = dell-sw-kv-network-session-537
   ParserVersion = "v1.0.0"
   Product = Sonicwall
   Conditions = [ """ m=537 """, """id=""", """ fw=""", """ c=""", """ pri="""]
-  DupFields = ${SonicwallDLParsersTemplates.sonicwall-firewall-dl.DupFields}["severity->priority", "message_id->event_code"]
-
+  Fields = ${SonicwallDLParsersTemplates.sonicwall-firewall-dl.Fields} [
+    """\spri=({priority}\d+)""",
+    """\sm=({event_code}\d+)"""
+  ]
 sonicwall-firewall-dl = {
   Vendor = Dell
   Product = Sonicwall
@@ -16,7 +18,7 @@ sonicwall-firewall-dl = {
     """\smsg="({event_name}[^:"]+?)\s*(:|")""",
     """\snote="\s*({additional_info}[^"]+?)\s*"""",
     """\sc=({category_id}\d+)""",
-    """\sm=({message_id}\d+)""",
+    """\sm=({alert_type}({message_id}\d+))""",
     """\suser="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """usr="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\ssrc=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:({src_port}\d+))?(:({src_interface}[^\s:]+))?(:[^\s:]+)?""",
@@ -35,7 +37,6 @@ sonicwall-firewall-dl = {
     """\srule="({rule}[^"]+)"""
     """rpkt=({packets_in}\d+)"""
     """spkt=({packets_out}\d+)"""
-  ]
-    DupFields = [ "message_id->alert_type" 
+  
 }
 ```

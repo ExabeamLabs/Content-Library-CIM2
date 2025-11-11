@@ -34,8 +34,8 @@ symantec-dlp-alert = {
         """\|\sEP_Location="({src_location}[^"]+)""",
         """\|\application="({app}[^"]+)"""",
         """\|\device_id="({device_id}[^"]+)"""",
+        """\|\sRR_Action="({result}[^"]+)""",
       ]
-      DupFields = [ "action->result" ]
     
 }
 ```

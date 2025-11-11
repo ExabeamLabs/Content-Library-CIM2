@@ -16,8 +16,8 @@ Name = microsoft-evsecurity-json-group-member-list-4799
     """"SeverityValue":({severity}\d+)""",
     """"SeverityValue":"({severity}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"TargetUserName":"({group_name}[^"]+)"""",
     """"TargetS(?i)ID":"({group_id}[^"]+)"""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-json-group-member-list-4799
     """"CallerProcessId":"({process_id}[^"]+)"""",
     """"CallerProcessName":"({process_path}({process_dir}[^,"]+?[\\\/]+)?({process_name}[^\\\/\s"]+?))""""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

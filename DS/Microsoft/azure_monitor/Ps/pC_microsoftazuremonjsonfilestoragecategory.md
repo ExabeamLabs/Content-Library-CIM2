@@ -23,9 +23,8 @@ Name = microsoft-azuremon-json-file-storagecategory
     """"serviceType":"({service_type}[^"]+)""""
     """"statusCode":({result_code}\\d+)"""
     """"resourceType":"({resource_type}({service_name}[^"\/]+)\/[^"]+)""""
-    """"location"+:\s*"+({region}[^"]+)""""
+    """"location"+:\s*"+({location}({region}[^"]+))""""
   ]
-  DupFields = [ "region->location" ]
 
 
 }

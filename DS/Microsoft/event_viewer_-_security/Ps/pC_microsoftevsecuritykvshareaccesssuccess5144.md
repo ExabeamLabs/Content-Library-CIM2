@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-share-access-success-5144
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
     """EventCode=({event_code}\d+)""",
-    """ComputerName =({host}[^\s]+)""",
+    """ComputerName =({dest_host}({host}[^\s]+))""",
     """Keywords=({result}[^=]+?)\s+\w+=""",
     """Message=({event_name}[^:]+?)\s+\w+:""",
     """Security ID:\s+({user_sid}[^:]+?)\s+Account Name:""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-kv-share-access-success-5144
     """Share Path:\s+({share_path}[^\s]+)"""
     """Source Port(=|:)\s*({src_port}\d+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

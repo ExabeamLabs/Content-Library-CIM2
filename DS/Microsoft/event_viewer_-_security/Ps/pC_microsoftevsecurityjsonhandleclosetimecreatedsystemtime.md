@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-json-handle-close-timecreatedsystemtime
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """The handle to an object was closed""", """TimeCreated SystemTime""" ]
   Fields = [
-    """(?i)\w+ \d+ \d\d:\d\d:\d\d (am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """(?i)\w+ \d+ \d\d:\d\d:\d\d (am|pm|\d{4}|({dest_host}({host}[\w\-.]+)))\s""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4658\s""",
     """({event_code}4658)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-json-handle-close-timecreatedsystemtime
     """({operation_type}closed)""",
     """Handle ID:\s*({object_id}.+?)\s""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -6,6 +6,10 @@ Name = microsoft-evsystem-json-service-state-modify-7040-1
   ParserVersion = v1.0.0
   Conditions = [ """"ProviderName":"""", """"EventID":7040,""", """"Channel":"System"""" ]
   Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields} [
+    """exa_json_path=$.Computer,exa_field_name=host"""
+		"""exa_json_path=$.UserID,exa_regex=(({user_sid}S-[^"]+?)|(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+		"""exa_regex=Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s"""
+    """exa_regex=Account Domain:\s+({domain}[^\s]+)"""
     """exa_regex=The start type of the ({service_name}[^\.="]+) service was changed from[^\.="]+ to ({service_state}[^\.="]+)"""
   ]
 
@@ -16,7 +20,6 @@ microsoft-json-events {
   Fields = [
     """exa_json_path=$.TimeCreated,exa_field_name=time"""
     """exa_json_path=$.ProviderName,exa_field_name=provider_name"""
-    """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_json_path=$.Channel,exa_field_name=channel"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.EventRecordID,exa_field_name=event_id"""
@@ -27,11 +30,8 @@ microsoft-json-events {
     """exa_json_path=$.ActivityID,exa_field_name=activity_id"""
     """exa_json_path=$.ProcessID,exa_field_name=process_id"""
     """exa_json_path=$.Message,exa_field_name=additional_info"""    
-    """exa_json_path=$.UserID,exa_regex=(({user_sid}S-[^"]+?)|(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.Message,exa_regex=(S-[^"]+|({event_name}[^\."]+))"""
     """exa_regex=Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """exa_regex=Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s""",
-    """exa_regex=Account Domain:\s+({domain}[^\s]+)""",
     """exa_regex=Logon ID:\s+({login_id}[^\s]+)"""
   
 }

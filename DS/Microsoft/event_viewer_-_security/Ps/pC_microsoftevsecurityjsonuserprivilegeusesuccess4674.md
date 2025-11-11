@@ -18,8 +18,8 @@ Fields = [
   """EventType"*:"*({result}[^"]+)"""
   """ProcessName"*:"*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
   """"SubjectUserSid"*:"*(SYSTEM|({user_sid}[^"]+))"""
-  """"SubjectUserName"*:"*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-  """"SubjectDomainName"*:"*({domain}[^"]+)"""
+  """"SubjectUserName"*:"*(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+  """"SubjectDomainName"*:"*({src_domain}({domain}[^"]+))"""
   """"SubjectLogonId"*:"*({login_id}[^"]+)"""
   """"ProcessID"*:({process_id}[^,"]+)"""
   """"HandleId"*:"*({object_id}[^"]+)"""
@@ -31,7 +31,6 @@ Fields = [
   """"Category"*:"*({category}[^"]+)"""
   """"Opcode"*:"*({severity}[^"]+)"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

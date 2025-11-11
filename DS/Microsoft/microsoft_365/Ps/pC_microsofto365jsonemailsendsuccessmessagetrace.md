@@ -10,7 +10,7 @@ Name = microsoft-o365-json-email-send-success-messagetrace
     """"d:Received":.+?#text":\s*"({time}[^"]+)"""", 
     """"d:SenderAddress":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"d:RecipientAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"d:Subject"":\s*"({email_subject}[^"]+)"""",
+    """"d:Subject"":\s*"({alert_name}({email_subject}[^"]+))"""",
     """"d:Organization":\s*""({email_domain}[^"]+)"""",
     """"d:StartDate":.+?#text"":\s*"({time_started}[^"]+)"""",
     """"d:EndDate":.+?#text"":\s*"({time_ended}[^"]+)"""",
@@ -18,7 +18,6 @@ Name = microsoft-o365-json-email-send-success-messagetrace
     """"d:Size":.+?#text":\s*""({bytes}\d+)"""",
     """"d:Status":\s*"({result}[^"]+)"""",
   ]
-  DupFields = [ "email_subject->alert_name" ]
   ParserVersion = "v1.0.0"
 
 

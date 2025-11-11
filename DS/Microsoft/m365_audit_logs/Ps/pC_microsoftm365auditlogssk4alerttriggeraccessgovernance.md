@@ -9,7 +9,6 @@ Name = microsoft-m365auditlogs-sk4-alert-trigger-accessgovernance
   Fields = ${MicrosoftParserTemplates.json-microsoft-security-events.Fields}[
     """msg=Security Alert Detected by \[({alert_source}[^\]]+)"""
   ]
-  DupFields = ["alert_name -> alert_subject"]
 
 json-microsoft-security-events = {
      Vendor = Microsoft
@@ -17,7 +16,7 @@ json-microsoft-security-events = {
      TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SZ"]
      Fields = [
       """"id":\s*"({alert_id}[^"]+)""""
-       """"title":\s*"({alert_name}[^"]+?)(\\u200b)?""""
+       """"title":\s*"({alert_subject}({alert_name}[^"]+?))(\\u200b)?""""
        """"severity":\s*"({alert_severity}[^"]+)""""
        """"category":\s*"({alert_type}[^"]+)""""
        """"description":\s*"({additional_info}[^}\]]+?)\s*"[,\]}]"""
@@ -44,6 +43,7 @@ json-microsoft-security-events = {
       """"evidence".+?"verdict":"({result}[^"]+)"""
        """exa_json_path=$.id,exa_field_name=alert_id""",
        """exa_json_path=$.title,exa_field_name=alert_name""",
+       """exa_json_path=$.title,exa_field_name=alert_subject""",
        """exa_json_path=$.severity,exa_field_name=alert_severity""",
        """exa_json_path=$.category,exa_field_name=alert_type""",
        """exa_json_path=$.sourceMaterials,exa_field_name=additional_info""",

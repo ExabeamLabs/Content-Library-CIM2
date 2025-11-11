@@ -13,7 +13,7 @@ Fields = [
   """\srt=({time}\d{13})"""
   """\sdvc=({host}[\d.]+)"""
   """\sdvchost=({host}[^\s]*)"""
-  """\scs6=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({orig_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
+  """\scs6=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({orig_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
   """\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+\w+="""
   """\sduser=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)).*?)\s+\w+="""
   """\smsg=({email_subject}.+?)\s+\w+="""
@@ -26,9 +26,6 @@ Fields = [
   """CEF([^\|]*\|){5}({action}[^|]+)"""
   """({direction}Originating)"""
   """\scategoryOutcome=(\/)?({result}[^\s]*)"""
-]
-DupFields = [
-  "orig_user->user"
 ]
 ParserVersion = "v1.0.0"
 

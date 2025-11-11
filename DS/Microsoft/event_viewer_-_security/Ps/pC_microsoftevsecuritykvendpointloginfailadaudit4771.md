@@ -22,11 +22,8 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4771"
     """RECORD_NUMBER\s*=\s*({event_id}\d+)"""
     """EVENT_NUMBER\s*=\s*({event_code}\d+)"""
     """USER_SID\s*=\s*\%\{({user_sid}[^\}]+)"""
-    """ERROR_CODE\s*=\s*({result_code}[^\s]+)"""
+    """ERROR_CODE\s*=\s*({failure_code}({result_code}[^\s]+))"""
     """EVENT_TYPE_TEXT\s*=\s*({result}.+?)\s*\]"""
-  ]
-  DupFields = [
-    "result_code->failure_code"
   ]
 
 

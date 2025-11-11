@@ -9,7 +9,7 @@ Name = microsoft-sysmon-json-file-stream-create-15
   Conditions = [ """"EventID":15""", """"File stream created""", """FileCreateStreamHash""", """"SourceModuleType""" ]
   Fields = [
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
-    """"Hostname":"({host}[^"]+)"""",
+    """"Hostname":"({dest_host}({host}[^"]+))"""",
     """"AccountName":"((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"EventID":({event_code}\d+)""",
     """"Domain":"((?i)NT AUTHORITY|NT-AUTORIT|({domain}[^"\\]+))"""",
@@ -17,10 +17,9 @@ Name = microsoft-sysmon-json-file-stream-create-15
     """"Category":"({event_name}[^(]+?)\s\(""",
     """"Severity":"({severity}[^"]+)"""",
     """"Image":"({process_path}({process_dir}[^"]*?)(\\+({process_name}[^"\\]+)))"""",
-    """"TargetFilename":"({file_path}({file_dir}[^"]*?)(\\+({file_name}[^"\\]+?(\.({file_ext}[^"\\\.\s]+))?)))""""
+    """"TargetFilename":"({target}({file_path}({file_dir}[^"]*?)(\\+({file_name}[^"\\]+?(\.({file_ext}[^"\\\.\s]+))?))))""""
     """({log_name}Microsoft-Windows-Sysmon)"""
   ]
-  DupFields = [ "host->dest_host", "file_path->target" ]
 
 
 }

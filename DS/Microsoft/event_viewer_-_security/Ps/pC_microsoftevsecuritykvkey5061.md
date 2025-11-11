@@ -6,6 +6,8 @@ Name = microsoft-evsecurity-kv-key-5061
   ParserVersion = v1.0.0
   Conditions = [ """5061""", """Cryptographic operation""" ]
   Fields = ${DLWindowsParsersTemplates.raw-object-access.Fields} [
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
     """TimeCreated":"\/Date\(({time}\d{13})\)\/""""
     """\srt=({time}\d{13})""",
@@ -28,8 +30,6 @@ raw-object-access = {
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d\d\d\d\d\d)?[+-]\d\d:\d\d)\s+""",
     """\WexternalId=({event_code}\d+)""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+Cryptographic Parameters:""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

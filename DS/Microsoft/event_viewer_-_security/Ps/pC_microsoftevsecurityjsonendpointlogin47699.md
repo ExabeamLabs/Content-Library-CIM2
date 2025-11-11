@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-9
   Conditions = [ """4769""", """Kerberos サービス チケットが要求されました。""" ]
   Fields = [ 
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4769,""",
-    """ComputerName =({computer_name}[\w.\-]+)""",
+    """ComputerName =({host}({computer_name}[\w.\-]+))""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?Kerberos サービス チケットが要求されました。""",
     """({event_code}4769)""",
     """アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[\w._\-]+)""",
@@ -20,7 +20,6 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-9
     """クライアント アドレス:\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """エラー コード:\s+({result_code}[\w]+)""" 
   ]
-  DupFields = [ "computer_name->host" ]
 
 
 }

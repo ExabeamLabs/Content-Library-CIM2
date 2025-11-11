@@ -10,11 +10,11 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4742
   Fields = [
     """"@timestamp"\s*:\s*"({time}.+?)"""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s""",
-    """"(?:winlog\.)?computer_name"\s*:\s*"({host}[\w\-.]+?)"""",
+    """"(?:winlog\.)?computer_name"\s*:\s*"({dest_host}({host}[\w\-.]+?))"""",
     """({event_code}4742)""",
     """({event_name}A computer account was changed.)""",
-    """SubjectDomainName"\s*:\s*"({domain}[^"]+)""",
-    """SubjectUserName"\s*:\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """SubjectDomainName"\s*:\s*"({src_domain}({domain}[^"]+))""",
+    """SubjectUserName"\s*:\s*"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """SubjectLogonId"\s*:\s*"({login_id}[^"]+)""",
     """TargetUserName"\s*:\s*"({dest_user}[^"]+)""",
     """ServicePrincipalNames"\s*:\s*"({attribute}[^"]+)"""
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-json-ds-object-modify-success-4742
     """New UAC Value:\s*(-|({new_value}[^"\\]+))\s*User Account Control:"""
     """User Account Control:\s*(-|({uac_status}[^"]+))\s*User\s*Parameter"""
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

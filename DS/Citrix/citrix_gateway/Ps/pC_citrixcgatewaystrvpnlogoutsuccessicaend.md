@@ -17,8 +17,8 @@ Name = citrix-cgateway-str-vpn-logout-success-icaend
     """\sTotal_bytes_recv\s+({bytes_in}\d+)""",
     """\sconnectionId\s+({source_connection_id}\w+)\s"""
     """\sconnectionId\s+({source_connection_id}\S+?)($|")"""
+    """\sDuration ({session_duration}\S+)""",
   ]
-  DupFields = [ "duration->session_duration" ]
 
 
 }

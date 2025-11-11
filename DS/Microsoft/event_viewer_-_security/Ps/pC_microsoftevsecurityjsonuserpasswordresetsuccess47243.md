@@ -10,7 +10,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}An attempt was made to reset an account's password)"""
-""""MachineName":"({host}[\w\-.]+)"""
+""""MachineName":"({dest_host}({host}[\w\-.]+))"""
 """"TimeGenerated":"({time}[^"]*)"""
 """"InstanceId":"({event_code}[^"]+)"""
 """"4":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
@@ -20,9 +20,6 @@ Fields = [
 """"2":"({dest_user_sid}[^"]+)"""
 """"0":"({dest_user}[^"]+)"""
 """"1":"({dest_domain}[^"]+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

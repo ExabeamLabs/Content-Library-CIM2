@@ -11,18 +11,17 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-success-4907
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)\S*\s+[^\s]+\s+""",
     """EventID':\s+({event_code}\d+),""",
     """({event_name}Auditing Settings Changed)""",
-    """SubjectUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
-    """SubjectDomainName':\s+'({domain}[^']+)'""",
+    """SubjectUserName':\s+'({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
+    """SubjectDomainName':\s+'({src_domain}({domain}[^']+))'""",
     """SubjectUserSid':\s+('|")({user_sid}[^'"]+)('|")""",
     """SubjectIP':\s+'({src_ip}[a-dA-F\d:\.]+)'""",
     """ObjectServer':\s+'({object_server}[^']+)'""",
     """ObjectType':\s+'({object_type}[^']+)'""",
     """ObjectName':\s+'({object}[^']+)'""",
     """HandleID':\s+'({handle_id}[^']+)'""",
-    """Computer':\s+[^\/]+\/({host}[^']+)'""",
+    """Computer':\s+[^\/]+\/({dest_host}({host}[^']+))'""",
     """Result':\s+'({action}[^']+)'"""
   ]
-  DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

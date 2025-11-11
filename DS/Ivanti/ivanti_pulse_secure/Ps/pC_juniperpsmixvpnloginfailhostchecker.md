@@ -17,7 +17,6 @@ Name = juniper-ps-mix-vpn-login-fail-hostchecker
     """vpn=({host}[^\s]+)""",
     """time="+({time}[^"]+)"""
   ]
-  DupFields = [ "dest_ip->host" ]
   ParserVersion = "v1.0.0"
 
 

@@ -26,9 +26,7 @@ Fields = [
 """\sDNSQuery:\s*({dns_query}[^,]+)"""
 """\sDNSRecordType:\s*({dns_query_type}[^,]+)"""
 """\sDNSSICategory:\s({alert_type}[^\s]+)"""
-]
-DupFields = [
-"alert_type -> alert_name"
+"""\sDNSSICategory:\s({alert_name}[^\s]+)"""
 ]
 ParserVersion = "v1.0.0"
 

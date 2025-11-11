@@ -6,7 +6,7 @@ Name = microsoft-o365-sk4-app-file-success-userdelete
   ParserVersion = v1.0.0
   Conditions= [ """"activityType":"User"""", """"activityOperationType":"Delete"""", """"targetResourceType":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
-    """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\*"+({object}[^\\"]+)"""
+    """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\*"+({resource}({object}[^\\"]+))"""
   ]
 
 json-microsoft-app-activity = {
@@ -32,7 +32,6 @@ json-microsoft-app-activity = {
     """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
     """"userAgent":"({user_agent}[^"]+?)"""",
     """"activityResultDescription":"({event_name}[^",]+)"""
-  ]
-  DupFields = [ "object->resource" 
+  
 }
 ```

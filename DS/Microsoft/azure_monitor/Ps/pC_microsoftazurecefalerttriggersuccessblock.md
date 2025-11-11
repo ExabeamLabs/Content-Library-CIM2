@@ -23,12 +23,9 @@ Fields = [
   """"action":"({action}[^"]+)""""
   """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """"requestUri":"({url}.+?)",""""
-  """Namespace:\s*({event_hub_namespace}\S+)"""
+  """Namespace:\s*({host}({event_hub_namespace}\S+))"""
   """EventHub name:\s*({event_hub_name}[^\]\s]+)\s*\]"""
   """"msg":"({alert_name}[^"]+)""""
-]
-DupFields = [
-  "event_hub_namespace->host"
 ]
 ParserVersion = "v1.0.0"
 

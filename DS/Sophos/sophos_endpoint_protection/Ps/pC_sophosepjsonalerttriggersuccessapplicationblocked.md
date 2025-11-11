@@ -11,6 +11,7 @@ Conditions = [
 ]
 Fields = [
   """"location":"({host}[^"]+)"""
+  """"location":"({src_host}[^"]+)"""
   """"when":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
   """"rt":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
   """"name":\s*"({alert_name}[^:]+):\s({target}[^"]+)"""
@@ -25,9 +26,6 @@ Fields = [
   """"source":"({last_name}[^",\s]+),\s*({first_name}[^,"\s]+)""""
   """\\"source_info\\"__ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"id":\s*"({alert_id}[^"]+)"""
-]
-DupFields = [
-  "host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

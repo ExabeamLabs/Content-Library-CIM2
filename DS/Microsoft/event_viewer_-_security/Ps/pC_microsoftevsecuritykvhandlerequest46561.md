@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-1
   TimeFormat = "epoch_sec"
   Conditions = [ "EventIDCode=4656" ]
   Fields = [
-    """Computer=\s*({host}[^\s]*)""",
+    """Computer=\s*({dest_host}({host}[^\s]*))""",
     """EventID=({event_code}\d+)""",
     """TimeGenerated=({time}\d{10})""",
     """Message=({event_name}.*?)\s*Subject\s*:""",
@@ -27,7 +27,6 @@ Name = microsoft-evsecurity-kv-handle-request-4656-1
     """Privileges Used for Access Check:\s*(-|({privileges}.*?))\s*Restricted SID Count:""",
     """({operation_type}requested)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

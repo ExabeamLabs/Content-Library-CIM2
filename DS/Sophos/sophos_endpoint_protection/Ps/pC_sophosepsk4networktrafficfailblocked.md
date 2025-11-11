@@ -16,9 +16,8 @@ Name = sophos-ep-sk4-network-traffic-fail-blocked
     """"type":"({event_name}[^"]+)"""",
     """"source":"(({full_name}[^\s",]+[\s,]{1,100}[^\s",]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """"source":"(n\/a|(([^\\\s"]*\s{1,100}[^\\"]*|(DOMAIN|({domain}[^\\"]+)))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-
+    """"location":"({src_host}[\w\-.]+)""""
   ]
-  DupFields = ["host->src_host"]
 
 
 }

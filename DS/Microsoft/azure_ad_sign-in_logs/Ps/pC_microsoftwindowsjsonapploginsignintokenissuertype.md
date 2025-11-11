@@ -26,7 +26,7 @@ Fields = [
 """"userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
 """"identity":\s*"({first_name}[^\s"]+)\s({last_name}[^"]+)"""",
 """"userId"=:\s*"({user_uid}[^"]+)"""",
-""""operationName":\s"({operation}[^"]+)"""",
+""""operationName":\s"({event_name}({operation}[^"]+))"""",
 """"userAgent":\s*"({user_agent}[^"]+)"""",
 """"authenticationMethod":\s*"({auth_method}[^"]+)"""",
 """"conditionalAccessStatus":\s*"({result}[^"]+)"""",
@@ -34,7 +34,6 @@ Fields = [
 """"countryOrRegion":\s*"({country_code}[^"]+)"""",
 """deviceDetail\".+?"displayName\":\s*\"({src_host}[\w\-\.]+)\$?\s*\""""
 ]
-DupFields = ["operation->event_name"]
 ParserVersion = "v1.0.0"
 
 

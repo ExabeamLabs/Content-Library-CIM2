@@ -37,7 +37,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-operational
     TimeFormat = "yyyy-MM-dd HH:mm:ss"  
     Conditions = ["""Event ID: 10016""","""The application-specific permission settings do not grant""","""for the COM Server application"""] 
     Fields = [  
-      """ComputerName(:|=)\s*({host}[\w.-]+)""",  
+      """ComputerName(:|=)\s*({dest_host}({host}[\w.-]+))""",  
       """TimeStamp:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""", 
       """Event ID:\s*({event_code}\d+)""",  
       """({failure_reason}The application-specific permission settings do not grant ({operation}.*) permission for the COM Server application)""",  
@@ -46,7 +46,6 @@ Name = microsoft-defenderep-json-alert-trigger-success-operational
       """user\s+({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s""", 
       """\s+SID\s+\(({user_sid}[^\)]+)\)\s+from address\s+(({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[^\s]+))\s""" 
     ] 
-    DupFields = ["host->dest_host"] 
   },  
 
 { 
@@ -58,13 +57,12 @@ Name = microsoft-defenderep-json-alert-trigger-success-operational
     Conditions = [ """Event ID: 1149""", """Remote Desktop Services: User authentication succeeded:"""  ] 
     Fields = [  
       """Event ID:\s*({event_code}\d+)""",  
-      """ComputerName(:|=)\s*({host}[\w.-]+)""" 
+      """ComputerName(:|=)\s*({dest_host}({host}[\w.-]+))""" 
       """TimeStamp:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""", 
       """User authentication succeeded:\s*User:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+""", 
       """Domain:\s*({domain}[^\s]+)\s+""", 
       """Source Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""  
     ] 
-    DupFields = [ "host->dest_host" ] 
   },  
 
   { 
@@ -76,13 +74,12 @@ Name = microsoft-defenderep-json-alert-trigger-success-operational
     Conditions = [ """<EventID>148</EventID>""", """Microsoft-Windows-RemoteDesktopServices-RdpCoreTS""" ] 
     Fields = [  
       """<EventID>({event_code}\d+)<""",  
-      """<Computer>({host}[\w\-.]+)""",
+      """<Computer>({dest_host}({host}[\w\-.]+))""",
       """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""", 
       """({app}Rdp)CoreTS""", 
       """<Data Name =('|")ChannelName('|")>({channel}[^<]+)"""
       """<Level>({run_level}[^<]+)<"""  
     ] 
-    DupFields = [ "host->dest_host" ] 
   
 
 }

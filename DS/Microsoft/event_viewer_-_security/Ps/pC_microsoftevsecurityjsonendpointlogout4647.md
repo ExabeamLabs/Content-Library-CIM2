@@ -9,18 +9,17 @@ Name = microsoft-evsecurity-json-endpoint-logout-4647
   Conditions = [ """"EventID":4647""", """User initiated logoff""" ]
   Fields = [
     """"EventTime":({time}\d{10})""",
-    """"(Hostname|Computer)":"({host}[\w.-]+?)"""",
+    """"(Hostname|Computer)":"({dest_host}({host}[\w.-]+?))"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}User initiated logoff)""",
-    """"TargetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"TargetDomainName":"({domain}[^"]+)"""",
-    """"TargetLogonId":"({login_id}[^"]+)"""",
+    """"TargetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"TargetDomainName":"({dest_domain}({domain}[^"]+))"""",
+    """"TargetLogonId":"({dest_login_id}({login_id}[^"]+))"""",
     """"Keywords":({result}[^,]+)"""
-    """"TargetUserSid":"({user_sid}[^"]+)""",
+    """"TargetUserSid":"({dest_user_sid}({user_sid}[^"]+))""",
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)"""
   ]
-  DupFields = [ "host->dest_host", "login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user" ]
 
 
 }

@@ -14,15 +14,14 @@ Name = microsoft-evsecurity-xml-group-create-success-4731
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)"""
     """({event_code}4731)""",
     """<Data Name\\?=('|")SubjectUserSid('|")>(-|({user_sid}[^<>]+))<""",
-    """<Data Name\\?=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
-    """<Data Name\\?=('|")SubjectDomainName('|")>(-|({domain}[^<>]+))<""",
+    """<Data Name\\?=('|")SubjectUserName('|")>(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
+    """<Data Name\\?=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<>]+)))<""",
     """<Data Name\\?=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<""",
     """<Data Name\\?=('|")TargetUserName('|")>({group_name}[^<]+)<""",
     """<Data Name\\?=('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
     """<Data Name\\?=('|")TargetSid('|")>({group_id}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

@@ -15,7 +15,6 @@ Name = microsoft-azure-json-disk-write-success-disk
     """exa_json_path=$..responseBody,exa_regex="diskSizeGB\\?"+:\s*\\?({disk_size}[^,"]+)"""
     """exa_json_path=$..responseBody,exa_regex="diskState\\?"+:\s*\\?"+({disk_state}[^"]+?)\\?""""
   ]
-  DupFields = ["src_resource->source_resource", "src_resource_type->source_resource_type" ]
 
 azure-activity-json = {
     Vendor = Microsoft

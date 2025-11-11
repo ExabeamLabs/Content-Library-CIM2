@@ -17,16 +17,15 @@ Fields = [
 """exa_json_path=$.event_data.param3,exa_regex=^({dest_host}[\w\-.]+)$""",
 """exa_json_path=$.event_data.SourceWorkstation,exa_regex=^({dest_host}[\w\-.]+)$""",
 """exa_json_path=$.event_data.param4,exa_field_name=result_code""",
+"""exa_json_path=$.event_data.param4,exa_field_name=failure_code""",
 """exa_json_path=$.event_data.ErrorCode,exa_field_name=result_code""",
+"""exa_json_path=$.event_data.ErrorCode,exa_field_name=failure_code""",
 """exa_json_path=$.hostname,exa_field_name=domain""",
 """exa_json_path=$.user.identifier,exa_field_name=user_sid""",
 """exa_json_path=$.user.domain,exa_field_name=domain""",
 """exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
 """exa_json_path=$.event_id,exa_field_name=event_code""",
 """exa_json_path=$.record_number,exa_field_name=event_id"""
-]
-DupFields = [
-  "result_code->failure_code"
 ]
 ParserVersion = "v1.0.0"
 

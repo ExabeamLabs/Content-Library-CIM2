@@ -14,13 +14,13 @@ Name = microsoft-evsecurity-kv-endpoint-notification-521
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"Hostname"*:"*({host}[^"]+)"""",
     """"EventType"*:"*({result}[^"]+)""",
-    """"Domain"*:"*(-|({domain}[^"]+))""",
+    """"Domain"*:"*(-|({src_domain}({domain}[^"]+)))""",
     """"Severity"*:"*({severity}[^"]+)"""",
     """"SeverityValue"*:({severity}[^,]+)""",
-    """"AccountName"*:"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """"AccountName"*:"*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectUserSid"*:"*({user_sid}[^"]+)"""",
-    """"SubjectUserName"*:"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName"*:"*(-|({domain}[^"]+))"""",
+    """"SubjectUserName"*:"*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName"*:"*(-|(){src_domain}({domain}[^"]+)))"""",
     """"LogonID"*:"*({login_id}[^"]+)"""",
     """"ProcessId"*:"*(\\t)*({process_id}[^\\"]+)"""",
     """"ProcessName"*:"*({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
@@ -43,7 +43,6 @@ Name = microsoft-evsecurity-kv-endpoint-notification-521
       """exa_regex=Status code:\s*[\\t]*({result_code}\w+)[\rn]*"""
       """exa_json_path=$.Level,exa_field_name=run_level"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

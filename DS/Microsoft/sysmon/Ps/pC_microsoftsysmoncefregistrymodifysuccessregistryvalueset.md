@@ -15,9 +15,9 @@ cef-sysmon-file-write = {
     TimeFormat = "epoch"
     Fields = [
       """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
-      """({host}\S+) CEF:""",
-      """\Wdvc=({host}[A-Fa-f:\d]+)""",
-      """\Wdvchost=({host}[\w\-.]+)""",
+      """({dest_host}({host}\S+)) CEF:""",
+      """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+      """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
       """\Wrt=({time}\d{13})""",
       """\WeventId=({event_code}\d+)""",
       """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -28,7 +28,6 @@ cef-sysmon-file-write = {
       """\Wcs6=\{({process_guid}[^\}]+)""",
       """\Wdpid=({process_id}\d+)""",
       """\Wcs1=({object}.+?)\s+(\w+=|$)""",
-    ]
-    DupFields = [ "host->dest_host" 
+    
 }
 ```

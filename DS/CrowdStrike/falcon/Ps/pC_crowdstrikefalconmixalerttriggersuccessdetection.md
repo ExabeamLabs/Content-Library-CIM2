@@ -147,6 +147,11 @@ Fields = [
 """"SourceEndpointIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """"SourceProducts":"({src_product}[^"]+)"""",
 """"SourceAccountName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+"""exa_json_path=$.event.MitreAttack[0].Tactic,exa_field_name=tactic""",
+"""exa_json_path=$.event.MitreAttack[0].TacticID,exa_field_name=tactic_key""",
+"""exa_json_path=$.event.MitreAttack[0].Technique,exa_field_name=technique""",
+"""exa_json_path=$.event.MitreAttack[0].TechniqueID,exa_field_name=technique_key"""
+"""exa_json_path=$.event.MitreAttack[0],exa_field_name=mitre_labels"""
 ]
 SOAR {
   IncidentType = "malware"

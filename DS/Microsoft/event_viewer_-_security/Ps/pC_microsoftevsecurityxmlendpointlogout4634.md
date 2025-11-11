@@ -16,16 +16,15 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4634
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Data Name\\*=('|")LogonType('|")>({login_type}\d+)<\/Data>""",
-    """<Data Name\\*=('|")TargetUserSid('|")>({user_sid}[^<]+)<\/Data>""",
-    """<Data Name\\*=('|")TargetDomainName('|")>((?i)NT AUTHORITY|({domain}[^<]+))<\/Data>""",
-    """<Data Name\\*=('|")TargetUserName('|")>((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
-    """<Data Name\\*=('|")TargetLogonId('|")>({login_id}[^<]+)<\/Data>"""
+    """<Data Name\\*=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<\/Data>""",
+    """<Data Name\\*=('|")TargetDomainName('|")>((?i)NT AUTHORITY|({dest_domain}({domain}[^<]+)))<\/Data>""",
+    """<Data Name\\*=('|")TargetUserName('|")>((?i)SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>""",
+    """<Data Name\\*=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<\/Data>"""
     """<Data Name\\*=('|")(Caller)?ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """<Execution ProcessID\\*=('|")({process_id}[^'"]+)""",
     """Logon Type\s*:\s*(-|({login_type}\d+))\s+"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "user->dest_user","user_sid->dest_user_sid","domain->dest_domain","login_id->dest_login_id"]
 
 
 }

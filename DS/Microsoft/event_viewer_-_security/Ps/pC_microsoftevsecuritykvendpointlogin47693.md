@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-3
     """"({time}\d\d\d\d\-\d{1,100}\-\d{1,100}T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
     """EventRecordID="+({event_id}[^"]+)"""",
-    """TargetUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+)"""",
-    """TargetLogonId="+({login_id}[^"]+)"""",
+    """TargetUserName ="+({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({dest_domain}({domain}[^"]+))"""",
+    """TargetLogonId="+({dest_login_id}({login_id}[^"]+))"""",
     """ServiceName ="+({dest_host}[\w\-.]+\$)"""",
     """ServiceName ="+({service_name}[^"]+)"""",
     """IpAddress="+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-3
     """TicketEncryptionType="+({ticket_encryption_type}[^"]+)""""
     """TicketOptions="+({ticket_options}[^"]+)""""
   ]
-  DupFields = [ "login_id->dest_login_id", "domain->dest_domain", "user->dest_user" ]
 
 
 }

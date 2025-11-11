@@ -28,7 +28,6 @@ Name = sentinelone-singularityp-json-alert-trigger-success-indicators
     """exa_json_path=$.['indicator.name'],exa_field_name=alert_name""",
     """exa_json_path=$.['indicator.description'],exa_field_name=additional_info""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 json-sentinelone-edr-events = {
     Vendor = SentinelOne
@@ -38,7 +37,7 @@ json-sentinelone-edr-events = {
     Fields = [
       """"timestamp":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""",
       """"event\.type":"({event_name}[^"]+)""",
-      """"endpoint\.name":"({host}[^"]+)""",
+      """"endpoint\.name":"({dest_host}({host}[^"]+))""",
       """"task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """process\.name":"({process_name}[^"]+)""",
       """"endpoint.os":"({os}[^"]+)""",
@@ -52,6 +51,7 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..timestamp,exa_field_name=time""",
       """exa_json_path=$..['event.type'],exa_field_name=event_name""",
       """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
+      """exa_json_path=$..['endpoint.name'],exa_field_name=dest_host""",
       """exa_regex="task\.path":"({file_path}({file_dir}[^"]+[\\\/]+)?({file_name}[^\\"]+?(\.({file_ext}[^\\."]+?))?))"""",
       """exa_json_path=$..['src.process.name'],exa_field_name=process_name""",
       """exa_json_path=$..['endpoint.os'],exa_field_name=os""",

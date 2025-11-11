@@ -15,10 +15,9 @@ Name = microsoft-evsecurity-kv-user-lock-success-4740-3
     """Account That Was Locked Out:Security ID=({user_sid}[^\s]+)""",
     """Caller Computer Name =({src_host}[\w\-.]+)""",
     """Subject:Account Name =({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """Subject:Account Domain=({src_domain}[^\s]+)""",
+    """Subject:Account Domain=({domain}({src_domain}[^\s]+))""",
     """Subject:Logon ID=({login_id}[^\s\"]+)"""
   ]
-  DupFields = [ "src_domain->domain" ]
   ParserVersion = "v1.0.0"
 
 

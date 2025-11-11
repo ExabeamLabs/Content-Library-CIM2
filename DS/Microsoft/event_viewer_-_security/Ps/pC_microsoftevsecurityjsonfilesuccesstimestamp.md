@@ -13,12 +13,12 @@ Conditions = [
 Fields = [
   """({event_name}An attempt was made to access an object)"""
   """"@timestamp"\s*:\s*\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-  """"(?:winlog\.)?computer_name\"\s*:\s*\"({host}[\w\-.]+?)""""
+  """"(?:winlog\.)?computer_name\"\s*:\s*\"({dest_host}({host}[\w\-.]+?))""""
   """"record_number"\s*:\s*\"({event_id}\d+)"""
   """({event_code}4663)"""
   """"SubjectUserSid"\s*:\s*\"({user_sid}[^\"]+)"""
-  """"SubjectUserName"\s*:\s*\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """"SubjectDomainName"\s*:\s*\"({domain}[^\"]+)"""
+  """"SubjectUserName"\s*:\s*\"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """"SubjectDomainName"\s*:\s*\"({src_domain}({domain}[^\"]+))"""
   """"SubjectLogonId"\s*:\s*\"({login_id}[^\"]+)"""
   """"ObjectType"\s*:\s*\"({file_type}[^\"]+)"""
   """"ObjectName"\s*:\s*\"({src_file_path}[^\"]+)"""
@@ -28,7 +28,6 @@ Fields = [
   """"AccessList"\s*:\s*\"({access}.+?)""""
   """Access Request Information:[rnt\\]*Access:[rnt\\]*({access}.*)[rnt\\]*Access Mask:[rnt\\]*({access_mask}.+?)\s*(\"|$)"""
 ]
-DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

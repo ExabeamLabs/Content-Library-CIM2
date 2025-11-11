@@ -6,6 +6,7 @@ Name = microsoft-evossh-xml-ssh-traffic-openssh
   Conditions = [ """<Channel>OpenSSH/Admin""", """<Computer>""", """<EventID>""" ]
   ParserVersion = "v1.0.0"
   Fields = ${WindowsParsersTemplates.windows-xml-events.Fields}[
+    """<Computer>({host}[\w\.\-]+)<""",
     """<Data Name =('|")payload('|")>"({additional_info}[^"<]+)"""
   ]
 
@@ -14,7 +15,6 @@ windows-xml-events = {
   Vendor = Microsoft
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
   Fields = [
-    """<Computer>({host}[\w\.\-]+)<""",
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{9}Z)"""
     """>({event_code}\d+)</EventID>""",
     """<Security UserID=('|")({user_sid}[^'"]+)('|")\/>""",

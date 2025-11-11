@@ -16,8 +16,8 @@ Fields = [
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{7,9}Z)""",
   """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  """Computer=({host}[\w\-.]*?)\s*\w+="""
-  """"Computer":"({host}[^"]+?)""""
+  """Computer=({src_host}({host}[\w\-.]*?))\s*\w+="""
+  """"Computer":"({src_host}({host}[\w\-.]+?))""""
   """({event_code}4663)"""
   """"AccessList":"({access}[^"]+?)\s*""""
   """"Account":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
@@ -28,11 +28,11 @@ Fields = [
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
   """<TimeCreated SystemTime=("|')({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-  """<Computer>([^<>]+?[\\\/]+)?({host}[\w\-.]+)<"""
+  """<Computer>([^<>]+?[\\\/]+)?({src_host}({host}[\w\-.]+))<"""
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name =("|')SubjectUserSid("|')>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-  """<Data Name =("|')SubjectUserName("|')>(?=\w)({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name =("|')SubjectDomainName("|')>(?=\w)({src_domain}[^<]+)<"""
+  """<Data Name =("|')SubjectUserName("|')>(?=\w)({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+  """<Data Name =("|')SubjectDomainName("|')>(?=\w)({domain}({src_domain}[^<]+))<"""
   """<Data Name =("|')SubjectLogonId("|')>({login_id}[^<]+)<"""
   """<Data Name =("|')ObjectType("|')>({file_type}[^<]+)<"""
   """<Data Name =("|')ObjectName("|')>(({registry_path}\\+REGISTRY[^<]+?({registry_key}[^\\\/<]+))|({src_file_path}[^<]+))<"""
@@ -43,7 +43,6 @@ Fields = [
   """<Data Name =("|')AccessMask("|')>({access_mask}[^<\s"']+)"""
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
 ]
-DupFields = [ "host->src_host", "src_user->user", "src_domain->domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -19,8 +19,8 @@ Fields = [
 """<EventID[^<]*?>({event_code}\d+)"""
 """({event_name}An account was successfully logged on)"""
 """<Data Name\\=('|")SubjectUserSid('|")>(-|({user_sid}.+?))<"""
-"""<Data Name\\=('|")SubjectUserName('|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>"""
-"""<Data Name\\=('|")SubjectDomainName('|")>(-|({domain}.+?))<"""
+"""<Data Name\\=('|")SubjectUserName('|")>(-|({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>"""
+"""<Data Name\\=('|")SubjectDomainName('|")>(-|({src_domain}({domain}.+?)))<"""
 """<Data Name\\=('|")SubjectLogonId('|")>(-|({login_id}.+?))<"""
 """<Data Name\\=('|")TargetUserName('|")>(SYSTEM|({dest_user}[^<]+))<"""
 """<Data Name\\=('|")TargetDomainName('|")>({dest_domain}[^<]+)<"""
@@ -39,7 +39,6 @@ Fields = [
 """<Data Name\\=('|")SubjectUserSid('|")>({subject_sid}[^<]+)</Data>"""
 """<Data Name\\=('|")KeyLength('|")>({key_length}\d+)</Data>"""
 ]
-DupFields = [ "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

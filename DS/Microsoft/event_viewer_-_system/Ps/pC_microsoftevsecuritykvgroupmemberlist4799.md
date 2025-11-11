@@ -18,8 +18,8 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({event_name}A security-enabled local group membership was enumerated)""",
     """Subject:\s*[^"]+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
-    """Subject:\s*[^"]+?Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+\s\w+:""",
-    """Subject:\s*[^"]+?Account Domain:\s*(-|({domain}[^\s]+))""",
+    """Subject:\s*[^"]+?Account Name:\s*(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\w+\s\w+:""",
+    """Subject:\s*[^"]+?Account Domain:\s*(-|({src_domain}({domain}[^\s]+)))""",
     """Subject:\s*[^"]+?Logon ID:\s*({login_id}[^\s]+)""",
     """Group:\s*[^"]+?Security ID:\s+({group_id}[^\s]+)""",
     """Group:\s*[^"]+?(Group|Account) Name:\s+({group_name}.+?)?\s+(Group|Account) Domain:""",
@@ -32,8 +32,9 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_regex=({event_name}A security-enabled local group membership was enumerated)""",
     """exa_json_path=$..SubjectUserSid,exa_regex=(SYSTEM|({user_sid}\S+))"""
-    """exa_json_path=$..SubjectUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$..SubjectUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
+    """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$..TargetSid,exa_field_name=group_id"""
     """exa_json_path=$..TargetUserName,exa_field_name=group_name"""
@@ -41,7 +42,6 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """exa_json_path=$..CallerProcessId,exa_field_name=process_id"""
     """exa_json_path=$..CallerProcessName,exa_regex=({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

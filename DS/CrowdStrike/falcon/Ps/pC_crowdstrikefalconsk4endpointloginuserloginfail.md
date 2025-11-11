@@ -18,7 +18,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """"name":"({event_name}[^"]+)"""",
     """"LogonDomain":"\s*({domain}[^\"]+?)\s*"""",
     """"ClientComputerName":"(-|({src_host}[\w\-\.]+))"""",
-    """"RemoteAddressIP4":"({src_ip}[A-Fa-f:\d\.]+)"""",
+    """"RemoteAddressIP4":"({dest_ip}[A-Fa-f:\d\.]+)"""",
     """"cid":"({cid}[^"]+)"""
     """"event_platform":"({os}[^"]+)""""
     """"LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -36,7 +36,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """exa_json_path=$..name,exa_field_name=event_name""",
     """exa_regex="LogonDomain":"\s*({domain}[^\"]+?)\s*"""",
     """exa_json_path=$..ClientComputerName,exa_regex=^(-|({src_host}[\w\-\.]+))$""",
-    """exa_json_path=$..RemoteAddressIP4,exa_regex=({src_ip}[A-Fa-f:\d\.]+)"""
+    """exa_json_path=$..RemoteAddressIP4,exa_regex=({dest_ip}[A-Fa-f:\d\.]+)"""
     """exa_json_path=$..event_platform,exa_field_name=os""",
     """exa_json_path=$..cid,exa_field_name=cid""",
     """exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

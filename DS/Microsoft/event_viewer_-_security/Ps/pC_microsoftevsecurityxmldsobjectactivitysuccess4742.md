@@ -14,14 +14,13 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4742
     """({event_code}4742)""",
     """<EventRecordID>({event_id}[^<]+)""",
     """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-    """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+    """('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """('|")SubjectDomainName('|")>({src_domain}({domain}[^"\s<]+))<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
     """<Level>({run_level}[^<]+)<"""
     """<Data Name =('|")UserAccountControl('|")>(-|({uac_status}[^"<]+))<\/Data><Data Name =('|")UserParameters('|")>"""
    """OldUacValue('|")>(-|({old_value}[^"<]+))<\/Data><Data Name =('|")NewUacValue('|")>(-|({new_value}[^"<]+))<\/Data><Data Name =('|")UserAccountControl('|")>"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

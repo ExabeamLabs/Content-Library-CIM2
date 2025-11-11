@@ -11,13 +11,12 @@ Name = "microsoft-evsecurity-json-ds-object-modify-success-4738-2"
     """({event_code}4738)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"Category"+:"+({category}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)""""
   ]
-  DupFields = [ "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

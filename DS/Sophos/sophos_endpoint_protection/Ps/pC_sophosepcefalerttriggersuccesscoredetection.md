@@ -11,15 +11,15 @@ cef-sophos-security-alert-1 {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """"when":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """"location":"({host}((\d{1,3}\.){3}\d{1,3}|({src_host}[\w\-.]+)))"""",
+    """"location":"({src_host}({host}((\d{1,3}\.){3}\d{1,3}|({=src_host}[\w\-.]+))))"""",
     """"id":"({alert_id}[^"]+)""",
     """"severity":"({alert_severity}[^"]+)""",
-    """"name":\s*"(n\/a|({alert_name}[^\:\"\']+(\:\s*\'({target}[^\"\']+))?\'))""",
+    """"name":\s*"(n\/a|({event_name}({alert_name}[^\:\"\']+(\:\s*\'({target}[^\"\']+))?\')))""",
     """"name":\s*"(n\/a|[^"]*? at \'({additional_info}({malware_url}[^"\']+)))""",
     """"name":\s*"(n\/a|[^"]*? at \'({additional_info}({process_path}[^']+\\({process_name}[^']+))))""",
-    """"type":"({alert_name}Event::Endpoint::[^"]+)""",
-    """"name":"({alert_name}[^"]+)""",
-    """"threat":"?(null|({alert_name}[^",]+))""",
+    """"type":"({event_name}({alert_name}Event::Endpoint::[^"]+))""",
+    """"name":"({event_name}({alert_name}[^"]+))""",
+    """"threat":"?(null|({event_name}({alert_name}[^",]+)))""",
     """"type":"({alert_type}Event::Endpoint::[^"]+)""",
     """"source":"(n\/a|(\d{1,3}\.){3}\d{1,3}|({full_name}[^"\\\(\)]+))","\w+""",
     """"source":"(n\/a|(([^\\\s"]*\s+[^\\"]*|({domain}[^\\"]+?))\\+)?((\d{1,3}\.){3}\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
@@ -28,7 +28,6 @@ cef-sophos-security-alert-1 {
     """"description":"({additional_info}[^:"]+:?([^"]+? at '({malware_url}[^"]+)')?)"""",
     """"descriptor":"({process_path}[^"]+\\({process_name}[^"]+))"""",
     """"endpoint_platform":"({os}[^"]+)"""
-  ]
-  DupFields = ["host->src_host"
+  
 }
 ```

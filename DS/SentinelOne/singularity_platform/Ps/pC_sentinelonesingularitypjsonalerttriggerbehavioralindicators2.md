@@ -8,10 +8,11 @@ Name = sentinelone-singularityp-json-alert-trigger-behavioralindicators-2
     """exa_json_path=$..eventType,exa_field_name=alert_type""",
     """exa_json_path=$..eventType,exa_field_name=alert_name""", 
     """exa_json_path=$..indicatorName,exa_field_name=alert_name""",
+    """exa_json_path=$..eventType,exa_field_name=alert_subject""", 
+    """exa_json_path=$..indicatorName,exa_field_name=alert_subject""",
     """exa_json_path=$..severity,exa_field_name=alert_severity""",
     """exa_json_path=$..incidentStatus,exa_field_name=incident_status""",
   ]
-  DupFields = [ "alert_name->alert_subject" ]
 
 sentinelone-json-api-alerts {
     Vendor = SentinelOne

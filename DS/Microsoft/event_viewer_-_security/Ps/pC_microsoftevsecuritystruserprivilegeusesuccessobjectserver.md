@@ -9,10 +9,10 @@ TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
 Conditions = [ """Microsoft-Windows-Security-Auditing""", """PrivilegeList:""", """4674""", """ObjectServer:""", """Sensitive Privilege Use""", """AccessMask:""", """HandleId:""" ]
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d{1,3}[+\-]+\d\d:\d\d""",
-"""({host}[\w\-.]+)\s+Sensitive Privilege Use""",
+"""({dest_host}({host}[\w\-.]+))\s+Sensitive Privilege Use""",
 """({event_code}4674)""",
-"""SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
-"""SubjectDomainName:({domain}[^,]+),""",
+"""SubjectUserName:({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
+"""SubjectDomainName:({src_domain}({domain}[^,]+)),""",
 """SubjectLogonId:({login_id}[^,]+),""",
 """PrivilegeList:({privileges}[^:]+),\s+\w+:""",
 """ProcessId:({process_id}[^,]+),""",
@@ -22,7 +22,6 @@ Fields = [
 """ObjectName:(-|({object}[^,]+)),""",
 """HandleId:({handle_id}[^,]+),"""
 ]
-DupFields = ["host->dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

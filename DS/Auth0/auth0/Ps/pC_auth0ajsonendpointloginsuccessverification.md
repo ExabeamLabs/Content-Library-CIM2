@@ -20,7 +20,8 @@ auth0-authentication-template = {
       """hostname"+:"+({host}[^"]+)""",
       """description"+:"+({additional_info}[^"]+)\s*"+""",
       """"+ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|({user_id}[^\|"@]+)))"""",
+      """"user_id":"({user_id}[^"]+)"""",
+      """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
       """user_id":"([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
       """user_name"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
       """client_name"+:"+({app}[^"]+)""",
@@ -31,7 +32,9 @@ auth0-authentication-template = {
       """exa_json_path=$..hostname,exa_field_name=host"""
       """exa_json_path=$.message.description,exa_field_name=additional_info"""
       """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-      """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|({user_id}[^\|"@]+)))"""",
+      """exa_regex="user_id":"({user_id}[^"]+)"""",
+      """exa_regex="user_name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+      """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
       """exa_regex="user_id":"([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
       """exa_json_path=$..client_name,exa_field_name=app"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""

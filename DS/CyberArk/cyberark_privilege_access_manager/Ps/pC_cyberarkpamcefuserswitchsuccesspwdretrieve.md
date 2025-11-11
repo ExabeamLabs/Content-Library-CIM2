@@ -23,13 +23,13 @@ Fields = [
 """CEF:\s*\d+\|([^\|]+\|){3}({event_code}[^\|]+)"""
 """CEF:\s*\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""
 """CEF:\s*\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
+"""\sduser=([^\\=]+\\+)?({account}[^=]+?)\s+\w+="""
 """msg="*\[*({additional_info}[^"\]]+)?\]*\s*"""
 """act=({operation}Retrieve password)"""
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs3=({device_type}[^=]+)\s+\w+="""
 """Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
-DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"
 
 

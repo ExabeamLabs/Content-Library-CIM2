@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-1
     """(::ffff:)?({host}[\w.-]+)\s\d{1,3}\s\d\d\d\d-\d\d-\d\d""",
     """({event_code}4663)""",
     """SubjectUserSid:({user_sid}[^\s,]+),""",
-    """SubjectUserName:({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
-    """SubjectDomainName:({domain}[^:,]+?),""",
+    """SubjectUserName:({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)),""",
+    """SubjectDomainName:({src_domain}({domain}[^:,]+?)),""",
     """SubjectLogonId:({login_id}[^\s,]+),""",
     """ObjectServer:({object_server}[^\s,]+),""",
     """ObjectType:({file_type}[^\s,]+),""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-1
     """AccessMask:({access_mask}[^,]+?),""",
     """ProcessName:(|({process_path}({process_dir}(?:[^";,]+?))?[\\\/]+?({process_name}[^\\\/";,]+?)))\s*,"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

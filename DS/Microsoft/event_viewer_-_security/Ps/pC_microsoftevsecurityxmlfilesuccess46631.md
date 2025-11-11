@@ -14,8 +14,8 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventID>({event_code}[^<]+)</EventID>"""
   """<Data Name\\*="SubjectUserSid">(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-  """<Data Name\\*="SubjectUserName">(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name\\*="SubjectDomainName">(?=\w)({domain}[^<]+)<"""
+  """<Data Name\\*="SubjectUserName">(?=\w)({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+  """<Data Name\\*="SubjectDomainName">(?=\w)({src_domain}({domain}[^<]+))<"""
   """<Data Name\\*="SubjectLogonId">({login_id}[^<]+)<"""
   """<Data Name\\*="ObjectType">({file_type}[^<]+)<"""
   """<Data Name\\*="ObjectName">(({registry_path}\\+REGISTRY[^<]+?({registry_key}[^\\\/<]+))|({file_path}[^<]+))<"""
@@ -27,7 +27,6 @@ Fields = [
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -16,9 +16,8 @@ Fields = [
 """\suser=(\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
 """realm=*"({realm}[^\"]+)?\\*"""
 """roles="({role}[^\"]+)?\\*"""
-"""Removed username ((({dest_domain}[^\\]+)\\)?(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\\\s]+)))"""
+"""Removed username ((({dest_domain}[^\\]+)\\)?(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account_name}({dest_user}[^\\\s]+))))"""
 ]
-DupFields = ["dest_user->account_name"]
 ParserVersion = "v1.0.0"
 
 

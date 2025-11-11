@@ -6,9 +6,10 @@ Name = secureauth-idp-kv-endpoint-authentication-fail-51101
   ParserVersion = "v1.0.0"
   Conditions = [ """EventID="51101"""", """RequestID=""", """BrowserSession=""", """PEN=""", """Appliance=""" ]
   Fields = ${SecureAuthDLParsersTemplates.secure-auth-events.Fields} [
-    """\susername:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\,"""
+    """\susername:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\,""",
+    """\WEventID="[^\]]*?\]\s({failure_reason}[^"]+)\s*"*$""",
+    """Message="\s*({failure_reason}[^"]+)\s*""""
   ]
-  DupFields = [ "additional_info->failure_reason" ]
 
 secure-auth-events = {
   Vendor = SecureAuth

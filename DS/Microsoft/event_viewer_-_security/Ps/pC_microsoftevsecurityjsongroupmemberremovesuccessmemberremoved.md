@@ -34,9 +34,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({domain}[^"]+)"""
-""""user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""+SubjectDomainName"+:"+({src_domain}({domain}[^"]+))"""
+""""user"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """"+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
 """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
 """"Keywords":"({result}[^"]+)"""
@@ -45,7 +45,6 @@ Fields = [
 """"TargetSid":"({group_id}[^\s"]+)"""
 """event_id"+:({event_code}\d+)"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

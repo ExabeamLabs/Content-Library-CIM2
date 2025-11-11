@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-json-group-modify-success-4755
     """"Hostname":"({host}[\w.-]+?)"""",
     """"EventID":({event_code}\d+)""",
     """({event_name}A security-enabled universal group was changed)""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"Keywords":({result}[^,]+)"""
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-json-group-modify-success-4755
     """"ThreadID":({thread_id}\d+)"""
     """"Computer":"({host}[\w.-]+?)"""",
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

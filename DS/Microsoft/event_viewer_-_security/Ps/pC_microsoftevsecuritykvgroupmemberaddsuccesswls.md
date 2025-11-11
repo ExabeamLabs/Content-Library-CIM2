@@ -12,13 +12,13 @@ Conditions = [
 ]
 Fields = [
 """({time}\w+\s+\d+ \d+:\d+:\d+)"""
-"""Computer="+({host}[^"]+)""""
+"""Computer="+({dest_host}({host}[^"]+))""""
 """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)"""
-"""EventID="+({event_code}[^"]+)""""
+"""EventID="+({group_type}({event_code}[^"]+))""""
 """EventRecordID="+({event_id}[^"]+)""""
-"""SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+"""SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """SubjectUserSid="+({user_sid}[^"]+)""""
-"""SubjectDomainName ="+({domain}[^"]+)""""
+"""SubjectDomainName ="+({src_domain}({domain}[^"]+))""""
 """SubjectLogonId="+({login_id}[^"]+)""""
 """TargetUserName ="+({group_name}[^"]+)""""
 """TargetDomainName ="+({group_domain}[^"]+)""""
@@ -27,7 +27,6 @@ Fields = [
 """MemberName ="+.*?OU=({user_ou}[^,]+)?"""
 """TargetSid="({group_id}[^"]+)"""
 ]
-DupFields = [ "event_code->group_type""", "host->dest_host""", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

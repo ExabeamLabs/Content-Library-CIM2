@@ -14,10 +14,10 @@ azure-workspaceblob-json = {
     Fields = [
     """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
     """"+TenantId"+:\s*"+({tenant_id}[^"]+)"+""",
-    """"+AccountName"+:\s*"+({storage_account}[^"]+)"+""",
+    """"+AccountName"+:\s*"+({dest_host}({storage_account}[^"]+))"+""",
     """"+Location"+:\s*"+({region}[^"]+)"+""",
     """"+Protocol"+:\s*"+({protocol}[^"]+)"+""",
-    """"+OperationName"+:\s*"+({operation}[^"]+)"+""",
+    """"+OperationName"+:\s*"+({operation_name}({operation}[^"]+))"+""",
     """"+AuthenticationType"+:\s*"+({auth_type}[^"]+)"+""",
     """"+StatusCode"+:\s*"+({result_code}[^"]+)"+""",
     """"+StatusText"+:\s*"+({result}[^"]+)"+""",
@@ -35,7 +35,6 @@ azure-workspaceblob-json = {
     """"+Type"+:\s*"+({event_category}[^"]+)"+""",
     """"+RequesterUpn"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
     """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
-    ]
-    DupFields = [ "operation->operation_name", "storage_account->dest_host" 
+    
 }
 ```

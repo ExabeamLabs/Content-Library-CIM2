@@ -33,7 +33,7 @@ s-xml-object-access-2 = {
     """ThreadID='({thread_id}[^']+)""",
     """File Name:\s*({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<\s]+?))))\s+\w+:""",
     """Hash:\s*((&lt;None&gt;)|({file_hash}[^\s]+))""",
-  ]
-  DupFields = [ "host->dest_host" 
+    """<Computer>({dest_host}[^<>]+?)<\/Computer>""",
+  
 }
 ```

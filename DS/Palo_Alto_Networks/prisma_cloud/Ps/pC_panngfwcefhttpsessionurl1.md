@@ -30,8 +30,8 @@ Name = pan-ngfw-cef-http-session-url-1
     """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
 	  """sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
     """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
+    """\sdvchost=({device_name}[\w\-\.]+)""",
   ]
-  DupFields = ["host->device_name"]
   ParserVersion = v1.0.0
 
 

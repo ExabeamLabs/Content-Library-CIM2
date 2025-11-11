@@ -16,7 +16,7 @@ s-cyberark-events {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ","MMM dd HH:mm:ss"]
   Fields = [
     """({time}(\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ|\w+\s+\d\d\s+\d\d:\d\d:\d\d)) \S+ %CYBERARK""",
-    """\d\d:\d\d:\d\d(Z)? ({host}[\w\-.]+) %CYBERARK""",
+    """\d\d:\d\d:\d\d(Z)? ({dest_host}({host}[\w\-.]+)) %CYBERARK""",
     """({app}CYBERARK)""",
     """;Message="(|({operation}[^"]+?))\s*"""",
     """MessageID="({event_code}\d+)""",

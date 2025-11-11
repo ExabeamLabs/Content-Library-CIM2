@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
     """<EventID>({event_code}[^<]+)<\/EventID>""",
     """<Data Name(\\)?=('|")SubjectIP('|").*?>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}.+?)</Data>""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}.+?)</Data>""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}.+?))</Data>""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<Data Name(\\)?=('|")ObjectServer('|")>({object_server}.+?)</Data>""",
     """<Data Name(\\)?=('|")ObjectType('|")>({object_class}.+?)</Data>""",
     """<Data Name(\\)?=('|")ObjectName('|")>({object}.+?)</Data>""",
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
     """({event_name}An object was deleted.)"""
     """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

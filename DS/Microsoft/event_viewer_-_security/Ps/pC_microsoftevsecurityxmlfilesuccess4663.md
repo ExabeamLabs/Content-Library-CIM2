@@ -14,8 +14,8 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-  """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-  """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+  """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
   """<Data Name\\*=('|")ObjectType('|")>({file_type}[^<]+)<"""
   """<Data Name\\*=('|")ObjectName('|")>(({registry_path}\\+REGISTRY[^<]+?({registry_key}[^<\\\/]+))|({file_path}[^<]+))<"""
@@ -28,7 +28,6 @@ Fields = [
   """({event_name}An attempt was made to access an object)"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

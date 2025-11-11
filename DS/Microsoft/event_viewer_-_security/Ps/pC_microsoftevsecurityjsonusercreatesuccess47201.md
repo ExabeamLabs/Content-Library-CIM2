@@ -35,9 +35,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({domain}[^"]+)"""
+""""+SubjectDomainName"+:"+({src_domain}({domain}[^"]+))"""
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """"Keywords":"({result}[^"]+)"""
 """({event_name}A user account was created)"""
 """exa_json_path=$..created,exa_field_name=time""",
@@ -59,9 +59,9 @@ Fields = [
 """exa_json_path=$..provider_name,exa_field_name=provider_name""",
 """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
-"""exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
+"""exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
+"""exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$"""
 ]
-DupFields = [ "domain->dest_domain", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

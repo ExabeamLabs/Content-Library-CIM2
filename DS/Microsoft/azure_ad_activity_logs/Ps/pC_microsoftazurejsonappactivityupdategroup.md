@@ -16,7 +16,7 @@ ms-azure-eventhubs-activity = {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Fields = [
     """"ActivityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
-    """"ActivityDisplayName":\s*"({event_name}[^"]+)"""",
+    """"ActivityDisplayName":\s*"({operation}({event_name}[^"]+))"""",
     """"ResourceId":\s*"({object}[^"]+)"""",
     """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
     """"value\\":\s*\\"({user_agent}[^"]+?)\\?",\\"key\\":\s*\\"User-Agent\\"""",
@@ -43,6 +43,7 @@ ms-azure-eventhubs-activity = {
     """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.ActivityDateTime,exa_field_name=time"""
     """exa_json_path=$.ActivityDisplayName,exa_field_name=event_name"""
+    """exa_json_path=$.ActivityDisplayName,exa_field_name=operation"""
     """exa_json_path=$.ResourceId,exa_field_name=object"""
     """exa_regex=resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
     """exa_regex="key\\":\s*\\"User-Agent\\",\\"value\\":\s*\\"({user_agent}[^"]+?)\\?"""",
@@ -74,7 +75,6 @@ ms-azure-eventhubs-activity = {
     """exa_regex=groupType\\":\\"({group_type}[^"\\]+)"""
     """exa_regex=GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)"""
    """exa_regex=TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)"""
-  ]
-  DupFields = [ "event_name->operation" 
+  
 }
 ```

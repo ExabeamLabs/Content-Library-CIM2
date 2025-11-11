@@ -13,14 +13,14 @@ Name = microsoft-evsecurity-xml-group-create-success-4727-1
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Keywords>({result}[^<]+)""",
     """<Task>({sub_category}[^<]+)""",
+    """<EventID[^<]*?>({event_code}\d+)"""
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""	
     """<Level>({run_level}[^<]+)<"""
 ] 
-DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

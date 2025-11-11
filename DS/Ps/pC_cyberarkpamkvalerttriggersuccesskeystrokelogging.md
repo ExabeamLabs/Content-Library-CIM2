@@ -7,10 +7,6 @@ Conditions = [
 """Message="Keystroke logging""""
 """;Safe="""
 ]
-DupFields = [
-"operation->alert_name"
-"operation->alert_type"
-]
 ParserVersion = "v1.0.0"
 
 

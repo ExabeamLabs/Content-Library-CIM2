@@ -15,10 +15,9 @@ Name = microsoft-o365-cef-alert-trigger-success-spoofmail
 	  """"Action":"({operation}[^"]+)""",
 	  """"SpoofedSender":"({external_domain}[^"]+)"""",
 	""""TrueSender":"({email_domain}[a-zA-z0-9.\-_]+\.[a-zA-Z]{2,})"""",
-	""""EventType":"({alert_type}[^"]+)"""",
+	""""EventType":"({alert_name}({alert_type}[^"]+))"""",
 	""""Direction":"({direction}[^"]+)""",
  ]
- DupFields = [ "alert_type->alert_name" ]
  
 
 }

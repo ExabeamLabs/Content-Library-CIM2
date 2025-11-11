@@ -15,8 +15,8 @@ Fields = [
 """"FromPerson":"({email_address}[^\@]+\@[^"]+)""""
 """"Id":"({user_id}[^"]+)""""
 """({alert_type}DlpRuleMatch)"""
-""""PolicyName":"({alert_name}[^"]+)""""
-""""ToPerson":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+""""PolicyName":"({alert_subject}({event_name}({alert_name}[^"]+)))""""
+""""ToPerson":"({target}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
 """"RuleName":"({additional_info}[^"]+)""""
 """"Location":"(Message Body|({file_name}[^"]+))""""
 """"IncidentId":"({alert_id}[^"]+)""""
@@ -28,11 +28,6 @@ Fields = [
 """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
 """"Workload":\s*"({app}[^"]+)""""
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
-]
-DupFields = [
-"dest_email_address->target"
-"alert_name->event_name"
-"alert_name->alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

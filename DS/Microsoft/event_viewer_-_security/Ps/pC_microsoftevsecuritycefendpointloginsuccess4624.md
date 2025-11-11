@@ -18,7 +18,7 @@ Name = "microsoft-evsecurity-cef-endpoint-login-success-4624"
     """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
     """\sduid=({login_id}[^\s]+)"""
     """\scn1=({login_type}\d+)"""
-    """\sdvchost=({host}[\w\-.]+)"""
+    """\sdvchost=({dest_host}({host}[\w\-.]+))"""
     """\sdproc=(?:-|({process_path}[\w:\\.\-]+[\\]+({process_name}[^\\=]+?)?))\s\w+="""
     """Service_,ID=({user_sid}[^\s]+)\s"""
     """cs5=({auth_package}[^\s]+).+?cs5Label=Auth"""
@@ -28,9 +28,6 @@ Name = "microsoft-evsecurity-cef-endpoint-login-success-4624"
     """shost=({src_host}[^\s]+)"""
     """Key_,Length=({key_length}\d+)"""
     """\ssourceGeoLocationInfo=({location}[^=]+?)\s+\w+="""
-  ]
-  DupFields = [
-    "host->dest_host"
   ]
 
 

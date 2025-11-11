@@ -11,7 +11,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
   Fields=[
     """"published"\s*:\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"displayMessage"\s*:\s*"({event_name}(Kerberos[^",]+user)|([^"]+))""",
-    """"eventType"\s*:\s*"({operation}[^"]+)""",
+    """"eventType"\s*:\s*"({alert_name}({operation}[^"]+))""",
     """"legacyEventType":\s*"({operation_details}[^"]+)"""",
     """suser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
     """duser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)\s\w+=""",
@@ -62,6 +62,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_regex=({event_name}(Kerberos[^",]+user)|([^"]+))""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
+    """exa_json_path=$..eventType,exa_field_name=alert_name""",
     """exa_json_path=$..legacyEventType,exa_field_name=operation_details,exa_match_expr=!Contains($.legacyEventType,"null")""",
     #moved target regex to lower precendence
     """exa_regex="target":[^\]\}]*?"type":\s*"(App)?User"[^\}]+?"alternateId"\s*:\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))""""
@@ -112,8 +113,9 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
+    """"type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
-  DupFields = ["operation->alert_name"]
 
 
 }

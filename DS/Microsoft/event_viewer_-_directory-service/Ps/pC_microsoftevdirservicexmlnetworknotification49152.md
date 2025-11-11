@@ -6,6 +6,8 @@ Name = microsoft-evdirservice-xml-network-notification-49152
   Product = Event Viewer - Directory-Service
   Conditions = [ """<EventID Qualifiers""","""'49152'>""", """<Channel>Directory Service""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """<Computer>({host}[\w\.\-]+)<""",
     """>({event_code}\d+)<\/EventID>""",
     """<Data Name\\*='Endpoint'>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)(:({src_port}\d+))?</Data>""",
@@ -34,8 +36,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

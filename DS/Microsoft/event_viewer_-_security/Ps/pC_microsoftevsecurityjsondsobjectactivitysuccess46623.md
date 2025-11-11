@@ -36,9 +36,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({src_domain}[^"]+)"""
+""""+SubjectDomainName"+:"+({domain}({src_domain}[^"]+))"""
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^",]+))""""
 """"+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
 """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
 """"Keywords":"({result}[^"]+)"""
@@ -46,7 +46,7 @@ Fields = [
 """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_name}An operation was performed on an object)"""
 """({event_code}4662)"""
-""""ObjectName":"({object_name}[^"]+)""""
+""""ObjectName":"({object}({object_name}[^"]+))""""
 """"ObjectServer":"({object_server}[^"]+)""""
 """"ObjectType":"({object_type}[^"]+)""""
 """"LogonID":"({login_id}[^"]+)""""
@@ -55,7 +55,6 @@ Fields = [
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
 ]
-DupFields = [ "object_name->object", "src_user->user", "src_domain->domain" ]
 
 
 }

@@ -61,7 +61,6 @@ cef-defender-atp-events = {
       """exa_json_path=$.InitiatingProcessAccountName,exa_field_name=account"""
       """exa_json_path=$.DeviceId,exa_field_name=device_id"""
       """exa_json_path=$..DeviceId,exa_field_name=device_id"""
-    ]
-    DupFields = ["host->dest_host"
+    
 }
 ```

@@ -9,8 +9,8 @@ Name = microsoft-evsecurity-cef-process-create-success-4688-1
   Fields = [
     """({event_name}A new process has been created)""",
     """\Wrt=({time}\d{13})""",
-    """\Wdhost=({host}[\w\-\.]+)\s*(\w+=|$)""",
-    """\Wdvchost=({host}[\w\-\.]+)\s*(\w+=|$)""",
+    """\Wdhost=({src_host}({host}[\w\-\.]+))\s*(\w+=|$)""",
+    """\Wdvchost=({src_host}({host}[\w\-\.]+))\s*(\w+=|$)""",
     """\Wdst=({dest_ip}[a-fA-F:\.\d]+)\s*(\w+=|$)""",
     """({event_code}4688)""",
     """\Wduser=(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
@@ -20,11 +20,10 @@ Name = microsoft-evsecurity-cef-process-create-success-4688-1
     """\Wdproc=({path}.+?)\s*(\w+=|$)""",
     """\Wduid=({login_id}[^\s]+)\s*(\w+=|$)""",
     """\Wcs2=({operation_type}.+?)\s*(\w+=|$)""",
-    """\Wcs3=({process_guid}[^\s]+)\s*(\w+=|$)""",
+    """\Wcs3=({process_id}({process_guid}[^\s]+))\s*(\w+=|$)""",
     """\Wcs4=({process_command_line}.+?)\s*(\w+=|$)""",
     """\Wcs5=({parent_process_guid}[^\s]+)\s*(\w+=|$)""",
   ]
-  DupFields = [ "process_guid->process_id" , "host->src_host" ]
   ParserVersion = "v1.0.0"
 
 

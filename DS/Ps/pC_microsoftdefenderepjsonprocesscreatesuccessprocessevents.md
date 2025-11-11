@@ -13,7 +13,7 @@ defender-atp-events-dl {
      """TenantId"*:\s*"*({host}[^"]+)""",
      """Computer"*:\s*"*({host}[^"]+)""",
      """InitiatingProcessId_d"+:\s*"+({process_id}\d+)""",
-     """"Type"+:\s*"+({category}[^",]+)""",
+     """"Type"+:\s*"+({event_name}({category}[^",]+))""",
      """RemotePort_d"+:\s*({dest_port}\d+)""",
      """RemoteIP_s"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
      """"Protocol_s"+:\s*"+({protocol}[^"]+)""",
@@ -29,7 +29,6 @@ defender-atp-events-dl {
      """InitiatingProcessParentFileName_s"*:\s*"*({process_name}[^",]+)""",
      """InitiatingProcessCommandLine_s"*:\s*"*({process_command_line}.+?)\s"","*(\w+"|$)""",
      """InitiatingProcessMD5_g"*:\s*"*({hash_md5}[^",]+)""",
-     ]
-     DupFields = ["category->event_name"
+     
 }
 ```

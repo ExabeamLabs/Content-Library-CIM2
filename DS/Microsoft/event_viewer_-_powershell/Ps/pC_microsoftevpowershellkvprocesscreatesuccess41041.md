@@ -12,13 +12,12 @@ Name = microsoft-evpowershell-kv-process-create-success-4104-1
     """providername="+({provider_name}[^"]+)""",
     """userid="(?:[^\\]+\\+)?(SYSTEM|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\stask="+({operation}[^"]+)""",
-    """\Weventrecordid="+({event_id}\d+)"""",
+    """\Weventrecordid="+({event_code}({event_id}\d+))"""",
     """({event_name}Creating Scriptblock text)""",
     """ScriptBlock ID:\s+({scriptblock_id}[^\s]+)""",
     """({process_name}PowerShell)""",
     """Creating Scriptblock text\s*\([^\)]+\):\s*({scriptblock_text}.+?)\s*ScriptBlock ID:""",
   ]
-  DupFields = ["event_id->event_code"]
   ParserVersion = "v1.0.0"
 
 

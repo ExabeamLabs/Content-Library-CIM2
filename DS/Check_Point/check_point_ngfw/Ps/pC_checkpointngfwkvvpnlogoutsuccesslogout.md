@@ -21,12 +21,10 @@ Fields = [
 """\Wuser:"({last_name}[^,]+),\s*({first_name}[\w\s]+\S)\s*\(({account}.+?)\)"""
 """\Wuser:"({first_name}[\w\s]+[^\s,])\s+({last_name}[^\s,]+)\s*\(({account}.+?)\)"""
 """\suser_dn:"+({user_ou}[^"]+)"""
+"""\Waction:"({event_name}[^"]+)"""
 """\W(user|src_user_name|dst_user_name):"+.+?\((({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
 """\W(user|src_user_name|dst_user_name):"(?:[^_"\s]+_)?(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*""""
 """\Wduration:"({session_duration}\d+)""""
-]
-DupFields = [
-"action->event_name"
 ]
 ParserVersion = "v1.0.0"
 

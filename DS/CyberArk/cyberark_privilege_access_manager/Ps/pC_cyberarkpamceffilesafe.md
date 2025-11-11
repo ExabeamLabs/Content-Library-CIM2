@@ -23,14 +23,14 @@ Fields = [
 """\sfname="?({domain}[^"\\]+)\\+[^"]+""""
 """\Wduser="?(|(({dest_domain}[^\\="]+)(\\)+)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\s+(\w+=|$)"""
 """\ssuser="?(|(({domain}[^\\="]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?(\s+\w+=|\s*$)"""
-"""\sfname="?(|({src_file_path}({file_dir}[^="]*?[\\\/]+)?({src_file_name}[^="\\\/]+?(\.({src_file_ext}\w+))?)))"?(\s+\w+=|\s*$)"""
+"""\sfname="?(|({src_file_path}({file_dir}[^="]*?[\\\/]+)?({file_name}({object}({src_file_name}[^="\\\/]+?(\.({file_ext}({src_file_ext}\w+)))?)))))"?(\s+\w+=|\s*$)"""
 """({file_type}(?i)file)"""
 """({app}Vault)"""
 """({protocol}SSH)""",
 """reason="?({result_reason}[^="]+?)"?\s+\w+=""",
 """cs3="*({device_type}[^="]+)?"*\s+\w+="""
 """cs2="?({safe_name}[^="]+?)"?\s+\w+=""",
-"""\Wact="?({operation}[^"=\[\]]+?)"?(\[|\]|\s+\w+=|\s*$)""",
+"""\Wact="?({access}({operation}[^"=\[\]]+?))"?(\[|\]|\s+\w+=|\s*$)""",
 """msg="*\[*({additional_info}[^"\]]+)?\]*\s*""""
 """fname=({additional_info}[^=]+?)\s+\w+=""",
 """Error:\s*({error_info}[^:]+?)\s*\w+:""",
@@ -42,12 +42,6 @@ Fields = [
 """cs1="*(|({client_name}[^="]+?))(\s*\w+|")="""
 """\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """Failure Description:\s({failure_reason}[^:]+?)\s*\w+:"""
-]
-DupFields = [
-"src_file_name->object"
-"operation->access"
-"src_file_name->file_name"
-"src_file_ext->file_ext"
 ]
 ParserVersion = "v1.0.0"
 

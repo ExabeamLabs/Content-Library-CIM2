@@ -19,14 +19,13 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
     """ThreadID\\*=('|")({thread_id}[^'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({group_domain}[^<>]+?)<\Data>""",
     """<Data Name[^<>]+?TargetUserName[^<>]+?>({group_name}[^<>]+?)</Data>"""
     """<Level>({run_level}[^<]+)<"""
    ]
-   DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

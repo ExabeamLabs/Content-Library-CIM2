@@ -19,8 +19,8 @@ Name = cisco-asa-str-vpn-login-success-716059
       """%ASA-({priority}\d+)-({event_code}\d+)""",
       """%FTD-({priority}\d+)-({event_code}\d+)""",
       """Group\s*<({group_name}.*?)>"""
+      """Group\s*<({realm}.*?)>"""
      ]
-     DupFields = [ "group_name->realm" ]
   
 
 }

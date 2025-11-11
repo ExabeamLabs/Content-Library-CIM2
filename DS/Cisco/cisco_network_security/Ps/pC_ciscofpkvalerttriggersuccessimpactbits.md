@@ -21,7 +21,6 @@ Name = cisco-fp-kv-alert-trigger-success-impactbits
   ]
   SOAR {
     IncidentType = "generic"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->description", "alert_severity->sourceSeverity"]
     NameTemplate = """Cisco Firesight Alert ${alert_type} found"""
     ProjectName = "SOC"
     EntityFields = [

@@ -14,8 +14,8 @@ Fields = [
   """<TimeCreated SystemTime(\\\/)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d*Z('|")/>""",
   """<TimeCreated SystemTime(\\\/)?=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")/>""",
   """<Data Name(\\\/)?=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
-  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-  """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>""",
+  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+  """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+?))</Data>""",
   """<Data Name(\\\/)?=('|")ObjectType('|")>({file_type}[^<]+?)</Data>""",
   """<Data Name(\\\/)?=('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
   """<Data Name(\\\/)?=('|")ShareName('|")>(?:[\\\*]*)?({share_name}[^<]+?)</Data>""",
@@ -25,7 +25,6 @@ Fields = [
   """('|")IpPort('|")>({src_port}\d+)"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

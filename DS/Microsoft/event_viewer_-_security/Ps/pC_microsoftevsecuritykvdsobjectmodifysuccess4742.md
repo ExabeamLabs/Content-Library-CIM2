@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-4742
   Conditions = [ """ADAuditPlus""", """EVENT_NUMBER = 4742""", """REMARKS = A computer account was changed.""" ]
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """CLIENT_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
     """CLIENT_USER_DOMAIN\s*=\s*(null|-|NT AUTHORITY|({domain}[^\s\]]+))\s*\]""",
     """CALLER_USER_NAME\s*=\s*(null|-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
@@ -19,14 +19,16 @@ Name = microsoft-evsecurity-kv-ds-object-modify-success-4742
     """CALLER_USER_SID\s*=\s*\%?\{?({user_sid}[^\s\}]+)""",
     """CALLER_LOGON_ID\s*=\s*(null|-|({login_id}[^\s]+))""",
     """ATTRIBUTES_TEXT\s*=\s*(-|null|({attribute}[^\s]+))""",
-    """ACCOUNT_NAME\s*=\s*(null|-|({account_name}[^\s]+))""",
-    """FORMAT_MESSAGE\s*=\s*(null|-|({object_type}[^\']+?))\s*'""",
-    """REMARKS\s*=\s*(null|-|({operation_type}[^\]]+?))\s*\]""",
+    """ACCOUNT_NAME\s*=\s*(null|-|({object}({account_name}[^\s]+)))""",
+    """FORMAT_MESSAGE\s*=\s*(null|-|({additional_info}({object_type}[^\']+?)))\s*'""",
+    """REMARKS\s*=\s*(null|-|({event_name}({operation_type}[^\]]+?)))\s*\]""",
     """ATTRIBUTES_NEW_VALUE\s*=\s*(null|-|({new_attribute}[^\]]+?))\s*\]""",
     """ATTRIBUTES_OLD_VALUE\s*=\s*(null|-|({old_attribute}[^\]]+?))\s*\]""",
     """CLIENT_IP_ADDRESS\s*=\s*(null|-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+    """USER_ACCOUNT_CONTROL\s*=\s*(null|-|({uac_status}[^\s]+))\s*"""
+    """OLD_UAC_VALUE\s*=\s*(null|-|({old_value}[^\s]+))\s*"""
+    """NEW_UAC_VALUE\s*=\s*(null|-|({new_value}[^\s]+))\s*"""
   ]
-  DupFields =[ "host->dest_host", "operation_type->event_name", "object_type->additional_info", "account_name->object" ]
   ParserVersion = "v1.0.0"
 
 

@@ -49,10 +49,11 @@ json-symantec-endpoint-protection = {
       """exa_json_path=$.device_public_ip,exa_field_name=src_ip"""
       """exa_json_path=$.device_os_name,exa_field_name=os"""
       """exa_json_path=$.device_name,exa_field_name=host"""
+      """exa_json_path=$.device_name,exa_field_name=src_host"""
       """exa_json_path=$.device_domain,exa_field_name=domain"""
       """exa_json_path=$..rule_name,exa_field_name=operation"""
       """exa_json_path=$.user_name,exa_regex=^(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)$"""
-    ]
-   DupFields = [ "host->src_host" 
+      """"device_name":"({src_host}[\w\-.]+)""",
+    
 }
 ```

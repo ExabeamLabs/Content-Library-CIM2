@@ -5,6 +5,8 @@ Name = microsoft-evsecurity-xml-app-authentication-success-1200
   ParserVersion = "v1.0.0"
   Conditions = [ """(EventID 1200)""", """<AuthProtocol>""", """<NetworkLocation>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-events-1.Fields}[
+    """(<|&lt;)IpAddress(&gt;|>)({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """(<|&lt;)UserId(&gt;|>)(N\/A|({email_address}[^@&]+@[^&]+)|(({domain}[^\\&]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(<|&lt;)\/UserId(&gt;|>)""",
     """({host}[\w.-]+)\sMSWinEventLog\s""",
     """({event_name}The Federation Service issued a valid token)"""
   ]
@@ -18,12 +20,10 @@ s-xml-events-1 = {
     """\(EventID\s({event_code}\d+)\)""",
     """(<|&lt;)AuditType(&gt;|>)({audit_subcategory}.+?)(&lt;|<)\/AuditType(&gt;|>)""",
     """(<|&lt;)AuditResult(&gt;|>)({result}.+?)(&lt;|<)\/AuditResult(&gt;|>)""",
-    """(<|&lt;)IpAddress(&gt;|>)({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """(<|&lt;)AuthProtocol(&gt;|>)(N\/A|({app_protocol}.+?))(&lt;|<)\/AuthProtocol(&gt;|>)""",
     """(<|&lt;)ProxyServer(&gt;|>)(N\/A|({proxy_server}.+?))(&lt;|<)\/ProxyServer(&gt;|>)""",
     """(<|&lt;)UserAgentString(&gt;|>)(N\/A|({user_agent}.+?))(<|&lt;)\/UserAgentString(&gt;|>)""",
     """(<|&lt;)Endpoint(&gt;|>)(N\/A|({endpoint}.+?))(<|&lt;)\/Endpoint(&gt;|>)""",
-    """(<|&lt;)UserId(&gt;|>)(N\/A|({email_address}[^@&]+@[^&]+)|(({domain}[^\\&]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(<|&lt;)\/UserId(&gt;|>)""",
     """(<|&lt;)FailureType(&gt;|>)(None|({failure_reason}.+?))(<|&lt;)\/FailureType(&gt;|>)""",
     """(<|&lt;)ErrorCode(&gt;|>)(N\/A|({error_code}.+?))(<|&lt;)\/ErrorCode(&gt;|>)""",
     """(<|&lt;)RelyingParty(&gt;|>)(N\/A|({relying_party}.+?))(<|&lt;)\/RelyingParty(&gt;|>)""",

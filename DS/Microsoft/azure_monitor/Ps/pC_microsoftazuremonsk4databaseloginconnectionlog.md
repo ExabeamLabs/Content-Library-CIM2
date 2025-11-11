@@ -18,17 +18,16 @@ cef-azure-db-for-mysql-1 = {
      """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d+)?Z)""",
      """"user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """"resourceId":"({resource_id}[^",]+)""",
-     """"event_subclass":"({action}[^",]+)""",
+     """"event_subclass":"({operation}({action}[^",]+))""",
      """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """"ResourceGroup":"({resource_group}[^"]+)""",
      """"SubscriptionId":"({subscription_id}[^"]+)""",
 # resource_provider is removed
      """"category":"({category}[^"]+)""",
-     """"operationName":"({action}[^"]+)""",
-     """\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
+     """"operationName":"({operation}({action}[^"]+))""",
+     """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)""",
      """"resourceId":"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""
    ]
-   DupFields = ["action->operation","event_hub_namespace->host"]
  },
 
 s-mssql-database-login = {
@@ -46,9 +45,9 @@ s-mssql-database-login = {
     """\WSid=({user_sid}[^\s]+?)(\s+\w+=|\s*$)""",
     """\Wserver_principal_name:(({domain}[^\\\/:]+?)[\\\/])?({db_user}[^\\\/\s]+?)(\s+\w+:|\s*$)""",
     """server_principal_sid:({db_user_sid}[^\s\\]+)""",
-    """server_instance_name:({dest_host}[^\\\s]+)""",
+    """server_instance_name:({dest_host}[\w\-.]+)""",
     """additional_information:.*?<address>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdatabase_name:({db_name}[^\s]+)""",
+    """\Wdatabase_name:({db_name}[^\s:\+]+)""",
     """\Wstatement:(-+|({failure_reason}[^.:]+))"""
     """<Level>({run_level}[^<]+)<"""
   ]
@@ -61,7 +60,7 @@ s-mssql-database-login = {
      Fields = [
        """time"+:\s*"+({time}[^"]+)"""",
        """operationName"+:\s*"+({operation}[^"]+)""",
-       """category"+:\s*"+({category}[^"]+)""",
+       """category"+:\s*"+({event_name}({category}[^"]+))""",
        """RemotePort"+:({dest_port}\d+)""",
        """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
        """"Protocol"+:\s*"+({protocol}[^"]+)""",
@@ -74,7 +73,6 @@ s-mssql-database-login = {
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
-     ]
-     DupFields = ["category->event_name"
+     
 }
 ```

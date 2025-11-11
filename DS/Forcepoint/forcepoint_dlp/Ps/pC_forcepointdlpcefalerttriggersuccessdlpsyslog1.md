@@ -1,0 +1,29 @@
+#### Parser Content
+```Java
+{
+Name = forcepoint-dlp-cef-alert-trigger-success-dlpsyslog-1
+  Vendor = Forcepoint
+  Product = Forcepoint DLP
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [ """|Forcepoint|Forcepoint DLP|""", """|DLP Syslog|""", """sourceUsername=""" ]
+  Fields = [
+    """action="({action}[^"]+)""""
+    """application="({app}[^"]+)""""
+    """channel="({channel}[^"]+)""""
+    """destination="({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^;\]\s"\\,\|]+)[^"]+)""""
+    """incidentID="({alert_id}\d+)""""
+    """eventTime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
+    """fileName ="({file_name}[^"]+)""""
+    """fileSize="({bytes}\d+\.\d+) ({bytes_unit}\w+)""""
+    """rules="({alert_name}[^"]+)""""
+    """policies="({policy_name}[^"]+)""""
+    """severity="({alert_severity}[^"]+)""""
+    """sourceEmail="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """sourceHostname="({src_host}[\w\-\.]+)""""
+    """sourceUsername="(({domain}[^"\\]+?)\\)?({user}[\w\.\-]{1,40}\$?)""""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

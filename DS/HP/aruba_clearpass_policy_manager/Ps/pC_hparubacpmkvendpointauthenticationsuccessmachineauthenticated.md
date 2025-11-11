@@ -15,7 +15,7 @@ leef-aruba-clearpass-events = {
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """RADIUS\.Acct-Timestamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\.\d+?[\+\-]\d+))""",
-    """\s\d\d\s\d\d:\d\d:\d\d\s({host}[\w\.\-]+)\sLEEF:""",
+    """\s\d\d\s\d\d:\d\d:\d\d\s({auth_server}({host}[\w\.\-]+))\sLEEF:""",
     """RADIUS\.Acct-Username=(?:({user_type}host)/)(({src_domain}[^\\\s,]+)\\+)?(anonymous|({src_host}[\w\-\.]+))""",
     """RADIUS\.Acct-Username=(?!(host)/)(({domain}[^\\\s,]+)\\+)?(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Auth.Username=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sAuth""",
@@ -25,7 +25,7 @@ leef-aruba-clearpass-events = {
     """RADIUS\.Acct-Framed-IP-Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\sAuth.Host-MAC-Address=({src_mac}\w+)\s""",
     """RADIUS.Acct-NAS-Port=({dest_port}\d+)""",
-    """Auth.Login-Status=(0|({result_code}\d+))"""
+    """Auth.Login-Status=(0|({failure_code}({result_code}\d+)))"""
     """Auth.Enforcement-Profiles=\[({additional_info}[^\}]+)\]"""
     """Auth.Service=({service_name}[^=]+?)\sAuth"""
   

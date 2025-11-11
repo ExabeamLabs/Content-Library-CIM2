@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627-1
   Fields = [
     """({event_name}(Group membership information|The subject fields indicate the account on the local system which requested the logon))""",
     """({time}\d+\/\d+\/\d\d\d\d \d+:\d\d:\d\d (am|AM|pm|PM))""",
-    """"computer":"({host}[^"]+)""",
+    """"computer":"({dest_host}({host}[^"]+))""",
     """"new_logon-AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"new_logon-AccountDomain":"({domain}[^"]+)""",
     """"new_logon-LogonID":"({login_id}[^"]+)""",
@@ -19,7 +19,6 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627-1
     """"login_type":"({login_type}\d+)""",
 # group_membership is removed
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

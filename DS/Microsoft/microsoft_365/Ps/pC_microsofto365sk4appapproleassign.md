@@ -17,8 +17,8 @@ o365-activity-template = {
     """\sdvc=({host}\S+)""",
     """\sdvchost=(Unknown|({host}[\w\-.]+))""",
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
-    """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
-    """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
+    """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
+    """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
     """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
     """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)",""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
@@ -54,7 +54,6 @@ o365-activity-template = {
     """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
-  ]
-  DupFields = ["operation->event_name"
+  
 }
 ```

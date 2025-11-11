@@ -9,13 +9,13 @@ Name = microsoft-evsecurity-kv-file-read-success-4663
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({event_name}An attempt was made to access an object)""",
-    """Computer="+({host}[^"]+)"""",
+    """Computer="+({src_host}({host}[^"]+))"""",
     """"({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
     """EventRecordID="+({event_id}[^"]+)"""",
-    """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """SubjectUserSid="+({user_sid}[^"]+)"""",
-    """SubjectDomainName ="+({domain}[^"]+)"""",
+    """SubjectDomainName ="+({src_domain}({domain}[^"]+))"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",
     """ObjectType="+({file_type}[^"]+)""",
     """ObjectName ="+(({registry_path}\\+REGISTRY[^"]+?({registry_key}[^\\\/"]+))|({src_file_path}[^"]+))""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-kv-file-read-success-4663
     """AccessList="({access}[^"]+)""",
     """AccessMask="({access_mask}[^"]+)"""
   ]
-  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

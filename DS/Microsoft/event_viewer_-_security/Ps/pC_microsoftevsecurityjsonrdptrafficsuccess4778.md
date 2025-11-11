@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-json-rdp-traffic-success-4778"
   Fields = [
     """"EventTime":({time}\d{10})"""
     """"EventTime\\?":\s*\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
-    """"Hostname\\?":\\?"({host}[\w.-]+?)\\?""""
+    """"Hostname\\?":\\?"({dest_host}({host}[\w.-]+?))\\?""""
     """"EventID\\?":({event_code}\d+)"""
     """({event_name}A session was reconnected to a Window Station)"""
     """Client Name:(\\r|\\t|\\n)*({src_host}[\w\-\.]+)(\\r|\\t|\\n)*"""
@@ -27,9 +27,6 @@ Name = "microsoft-evsecurity-json-rdp-traffic-success-4778"
     """"ClientName\\?":\\?"({src_host}[^"]+?)\\?""""
     """"ClientAddress\\?":\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """Client Address:(\\r|\\n|\\t)*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
-  ]
-  DupFields = [
-    "host->dest_host"
   ]
 
 

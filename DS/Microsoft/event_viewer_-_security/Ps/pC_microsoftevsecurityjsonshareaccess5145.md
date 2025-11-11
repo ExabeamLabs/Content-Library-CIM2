@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """({event_name}A network share object was checked to see whether client can be granted desired access)"""
 """({event_code}5145)"""
-"""Computer(Name)?\s*\\*\"?(=|:|>)\s*\"*({host}[\w\.-]+)(\s|,|\"|</Computer>|$)"""
+"""Computer(Name)?\s*\\*\"?(=|:|>)\s*\"*({dest_host}({host}[\w\.-]+))(\s|,|\"|</Computer>|$)"""
 """SystemTime="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)""",
 """TimeGenerated=({time}\d{10})"""
 """Microsoft-Windows-Security-Auditing.+?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
@@ -32,9 +32,6 @@ Fields = [
 """Access Check Results:\s*({result}-)\s"""
 """Access Check Results:.*({result}Granted|Denied)\s+by"""
 """Source Port(=|:)\s*({src_port}\d+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

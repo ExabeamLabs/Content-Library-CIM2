@@ -7,7 +7,6 @@ Conditions = [
 """<Data Name"""
 """Protocol"""
 ]
-DupFields = ["user->src_user" , "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

@@ -17,10 +17,9 @@ Name = microsoft-evsecurity-cef-endpoint-login-success-528
     """\sdntdom=({domain}[^\s]+)""",
     """\sduid=\([^,]+,({login_id}[^\)]+)""",
     """\scn1=({login_type}\d+)""",
-    """\sdvchost=({host}[\w\-.]+)""",
+    """\sdvchost=({dest_host}({host}[\w\-.]+))""",
     """\sduser=(.*?\\+)?({account}.*?)\s+\w+=""",
   ]
-  DupFields = [ "host->dest_host"]
 
 
 }

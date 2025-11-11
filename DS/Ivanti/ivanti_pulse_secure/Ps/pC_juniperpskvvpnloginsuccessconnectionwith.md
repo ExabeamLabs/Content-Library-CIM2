@@ -33,8 +33,8 @@ Name = juniper-ps-kv-vpn-login-success-connectionwith
     """\Wrcvd=({bytes_in}\d+)""",
     """\sduration=({session_duration}\d+)""",
     """\Wmsg="({additional_info}[^"]+)\s+(\d+|")"""
+    """\Wuser=([^\\]+\\)?({account}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
-  DupFields = [ "user->account" ]
 
 
 }

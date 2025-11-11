@@ -14,8 +14,8 @@ Name = cisco-ie-str-email-file-verdict
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\+[\d\:]+)""",
       """MID ({alert_id}\d+)""",
       """file reputation verdict\s*:\s*(?:UNKNOWN|({file_verdict}[^,\s]+))"""
+      """MID ({message_id}\d+)""",
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

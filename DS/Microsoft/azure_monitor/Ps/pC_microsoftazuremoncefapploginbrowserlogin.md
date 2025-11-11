@@ -17,7 +17,7 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
     """category":"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """"resourceId":\s*"({object}[^"]{1,249})""",
+    """"resourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -34,7 +34,6 @@ Name = microsoft-azuremon-cef-app-login-browserlogin
     """userId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     ]
-  DupFields = [ "object->resource" ]
 
 
 }

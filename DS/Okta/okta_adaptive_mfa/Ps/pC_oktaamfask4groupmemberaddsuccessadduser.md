@@ -14,7 +14,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """"type":"User".*?"displayName":"({group_name}[^"]+)".*?"id":"({group_id}[^"]+)".*?"type":"UserGroup"""",
     """\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",
     """"target":\[[^\]]*?("type":"User",)?"alternateId":"({account_id}[^"]+)"""",
-    """"target":\[[^\]]*?("type":"User",)?"alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"target":\[[^\]]*?("type":"User",)?"alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"ipAddress":"?(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),?"?""",
     """"outcome":\{"result":"({result}[^"]+)"""",
@@ -42,10 +42,9 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """exa_regex="type":"User".*?"displayName":"({group_name}[^"]+)".*?"id":"({group_id}[^"]+)".*?"type":"UserGroup"""",
     """exa_regex=\{"id":"({group_id}[^"]+)","type":"UserGroup"[^\}]*?"displayName":"({group_name}[^"]+)"""",
     """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_field_name=account_id""",
-    """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.target[?(@.type == 'User')].alternateId,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """exa_json_path=$.target[?(@.type == 'User')].displayName,exa_field_name=member"""
   ]
-  DupFields = [ "dest_user->account_name" ]
   ParserVersion = "v1.0.0"
 
 

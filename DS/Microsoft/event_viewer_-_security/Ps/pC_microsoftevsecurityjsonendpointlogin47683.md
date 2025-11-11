@@ -7,16 +7,19 @@ Name = microsoft-evsecurity-json-endpoint-login-4768-3
   Conditions = ["""A Kerberos authentication ticket (TGT) was requested""", """Account Name""", """computer_name""", """event_id\":4768"""]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
     """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
+    """"TargetUserName"+:"+({dest_user}[^"]+)""",
+    """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"+SubjectDomainName"+:"+({src_domain}[^"]+)""",
+    """"+SubjectUserName"+:"+(SYSTEM|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"hostname"+:"+({host}[^"]+)""",
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)""",
-    """TargetUserName\\?"+:\\?"(?:-|(?i)(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """TargetUserName\\?"+:\\?"(?:-|(?i)(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?"""",
     """IpAddress\\?"+:\\?"(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?"""",
-    """Status\\?"+:\\?"({result_code}[\w\-]+)\\?"""",
-    """TargetDomainName\\?"+:\\?"(?:-|({domain}[^\s\\]+?))\\?"""",
-    """TargetSid\\?"+:\\?"({user_sid}[^\\]+)\\?""""
+    """Status\\?"+:\\?"({failure_code}({result_code}[\w\-]+))\\?"""",
+    """TargetDomainName\\?"+:\\?"(?:-|({dest_domain}({domain}[^\s\\]+?)))\\?"""",
+    """TargetSid\\?"+:\\?"({dest_user_sid}({user_sid}[^\\"]+))\\?""""
     """"event_id[\\]?"+:({event_code}\d+)"""
   ]
-  DupFields = [ "result_code->failure_code", "user->dest_user", "domain->dest_domain", "user_sid->dest_user_sid" ]
 
 json-windows-events-2 = {
   Vendor = Microsoft
@@ -30,7 +33,6 @@ json-windows-events-2 = {
     """"keywords"+:\["+({result}[^"]+)""",
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
-    """"TargetUserName"+:"+({dest_user}[^"]+)""",
     """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
@@ -44,18 +46,13 @@ json-windows-events-2 = {
     """"+activity_id"+:"+\{({activity_id}[^}]+)""",
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"]+)""",
-    """"+SubjectDomainName"+:"+({src_domain}[^"]+)""",
 # algorithm_name is removed
     """"+Operation"+:"+({operation}[^"]+)""",
     """"+KeyType"+:"+({key_type}[^"]+)""",
     """"+KeyName"+:"+({key_name}[^"]+)""",
-    """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
     """exa_json_path=$.EventData.SubjectUserSid,exa_field_name=user_sid"""
-    """exa_json_path=$.EventData.SubjectUserName,exa_field_name=src_user"""
-    """exa_json_path=$.EventData.SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$.EventData.SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.EventData.ProviderName,exa_field_name=provider_name"""

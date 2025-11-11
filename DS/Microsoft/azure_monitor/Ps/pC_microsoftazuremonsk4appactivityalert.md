@@ -13,7 +13,6 @@ Name = microsoft-azuremon-sk4-app-activity-alert
 # azure_alert_description is removed
 # azure_resource is removed
   ]
-  DupFields = [ "object->resource" ]
   ParserVersion = "v1.0.0"
 
 cef-microsoft-app-activity-3 = {
@@ -26,12 +25,12 @@ cef-microsoft-app-activity-3 = {
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
     """"Host":\s*"({host}[\w\-.]+)"""",
     """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
-    """"message":\s*"({additional_info}[^"]+)""",
-    """"description":\s*"({additional_info}[^"]+)""",
+    """"message":\s*"({failure_reason}({additional_info}[^"]+))""",
+    """"description":\s*"({failure_reason}({additional_info}[^"]+))""",
     """category":\s*"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """"(?i)resourceId":\s*"({object}[^"]{1,249})""",
+    """"(?i)resourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """"operationName":\s*"({operation}[^"]+)""",
     """action":\s*"({action}[^"]+)""",
     """"IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -75,10 +74,11 @@ cef-microsoft-app-activity-3 = {
     """exa_regex=destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
     """exa_json_path=$..message,exa_field_name=event_name"""
     """exa_json_path=$..description,exa_field_name=additional_info"""
+    """exa_json_path=$..description,exa_field_name=failure_reason"""
     """exa_regex=category":\s*"({category}[^"]+)"""",
     """exa_regex=Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """exa_regex=EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """exa_regex=(?i)resourceId":\s*"({object}[^"]{1,249})""",
+    """exa_regex=(?i)resourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """exa_regex="operationName":\s*"({operation}[^"]+)"""
     """exa_json_path=$..action,exa_field_name=action"""
     """exa_regex=IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -102,8 +102,7 @@ cef-microsoft-app-activity-3 = {
     """exa_json_path=$..level,exa_field_name=severity"""
     """exa_json_path=$..location,exa_field_name=location"""
     """exa_regex="CorrelationId":\s*"({correlation_id}[^"]+)""""
-    """exa_regex=message":\s*"({additional_info}[^"]+)""",
-    ]
-  DupFields = [ "object->resource" 
+    """exa_regex=message":\s*"({failure_reason}({additional_info}[^"]+))""",
+    
 }
 ```

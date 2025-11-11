@@ -21,10 +21,10 @@ Name = pan-gp-json-app-activity-success-tunnel
   """exa_json_path=$.SourceUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$.EndpointOSType,exa_field_name=os"""
   """exa_json_path=$.EventIDValue,exa_field_name=event_name"""
+  """exa_json_path=$.EventIDValue,exa_field_name=operation"""
   """exa_json_path=$.EventIDValue,exa_field_name=auth_method,exa_match_expr=!Contains(toLower($.EventIDValue),"null")"""
   """exa_json_path=$.Description,exa_field_name=additional_info"""
   ]
-  DupFields = [ "event_name->operation" ]
   ParserVersion = "v1.0.0"
 
 

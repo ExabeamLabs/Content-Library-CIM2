@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-cef-file-write-success-43
     Fields = [ """\|McAfee\|[^|]+?\|[^|]+?\|43-2630({event_code}\d+)(0|1)\|""",
       """({event_name}An attempt was made to access an object)""",
       """\srt=({time}\d{13})""",
-      """shost=({host}[^\s]+)""",
+      """shost=({dest_host}({host}[^\s]+))""",
       """sntdom=({domain}[^\s]+)""",
       """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
       """nitroDestination_Filename=({file_path}.+?)\s+\w+=""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-cef-file-write-success-43
       """nitroAccess_Privileges=\d+ - ({access}[^\r\n]+)\s+""",
       """nitroAccess_mask=({access_mask}\w+)"""
     ]
-    DupFields = [ "host->dest_host" ]
   
 
 }

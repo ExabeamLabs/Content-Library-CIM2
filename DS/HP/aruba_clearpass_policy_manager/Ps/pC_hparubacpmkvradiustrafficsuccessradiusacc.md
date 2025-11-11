@@ -18,8 +18,8 @@ Name = hp-arubacpm-kv-radius-traffic-success-radiusacc
     """RADIUS\.Acct-Service-Name =({network}[^,]+)""",
     """RADIUS\.Acct-NAS-IP-Address=({dest_ip}[A-Fa-f:\d.]+)""",
     """RADIUS\.Acct-Framed-IP-Address=({src_ip}[A-Fa-f:\d.]+)""",
+    """\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d,\d+ ({auth_server}[\w\-.]+)""",
   ]
-  DupFields = [ "host->auth_server" ]
 
 
 }

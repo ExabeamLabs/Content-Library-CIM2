@@ -4,7 +4,6 @@
 Name = "sentinelone-singularityp-json-registry-export-success-registrykeyexport"
   ExtractionType = json
   Conditions = [ """"dataSource.name":"SentinelOne"""", """"event.category":"registry"""", """"event.type":"Registry Key Export"""" ]
-  DupFields = ["alert_name->event_name"]
   ParserVersion = "v1.0.0"
 } 
 

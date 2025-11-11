@@ -13,19 +13,18 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4904
     """({event_name}An attempt was made to register a security event source)""",
     """"(HostName|Computer)":"({host}[^"]+)"""",
     """({event_code}4904)""",
-    """Security ID:\s*(|({user_sid}[^\s:]+))\s+Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s*(|({domain}[^\s]+))\s+"""
+    """Security ID:\s*(|({user_sid}[^\s:]+))\s+Account Name:\s*(|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+Account Domain:\s*(|({src_domain}({domain}[^\s]+)))\s+"""
     """Process Name:\s*({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))\s+Event Source:"""
     """Process ID:\s*(\\t)*({process_id}[^\\\s:]+)\s+""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",
     """"ProcessName":"({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
     """"ProcessID":({process_id}[^"]+)"""",
 # audit_name is removed
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

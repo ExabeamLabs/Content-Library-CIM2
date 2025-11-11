@@ -14,10 +14,9 @@ Name = microsoft-evsecurity-str-process-create-success-592
       """Image File Name:\s+({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?))\s+Creator Process ID:""",
       """Image File Name:\s+({path}.+?)\s+Creator Process ID:""",
       """User Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain:\s+({domain}.+?)\s+Logon ID:\s+\([^,]+,({login_id}[^)]+)""",
-      """New Process ID:\s+({process_guid}[^\s]+)\s""",
+      """New Process ID:\s+({process_id}({process_guid}[^\s]+))\s""",
       """Creator Process ID:\s+({parent_process_guid}[^\s]+)\s"""
     ]
-    DupFields = [ "process_guid->process_id" ]
         ParserVersion = "v1.0.0"
   
 

@@ -19,13 +19,10 @@ Fields = [
   """Logon ID:\s*({login_id}\S+)\s+Object:"""
   """Object Server:\s*({object_server}\S.*?)\s+Object Type:"""
   """Object Type:\s*({object_type}\S+)\s*Object Name:"""
-  """Object Name:\s*({object_name}\S.*?)\s*Handle ID:"""
+  """Object Name:\s*({object}({object_name}\S.*?))\s*Handle ID:"""
   """Operation Type:\s*({operation_type}\S.*?)\s*Accesses:"""
   """Accesses:\s*({access}\S.*?)\s*Access Mask:"""
   """Properties:\s*({attributes}\S.*?)\s*Additional Information:"""
-]
-DupFields = [
-"object_name->object"
 ]
 ParserVersion = "v1.0.0"
 

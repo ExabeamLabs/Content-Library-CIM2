@@ -15,10 +15,12 @@ Name = cisco-fp-json-alert-trigger-success-502
     """exa_json_path=$.destinationIpAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.fileSize,exa_field_name=bytes""",
     """exa_json_path=$.@computed.recordTypeDescription,exa_field_name=alert_name""",
+    """exa_json_path=$.@computed.recordTypeDescription,exa_field_name=alert_type""",
     """exa_json_path=$.@computed.filePolicy,exa_field_name=rule""",
     """exa_json_path=$.destinationPort,exa_field_name=dest_port""",
     """exa_json_path=$.sourcePort,exa_field_name=src_port""",
     """exa_json_path=$.@computed.clientApplication,exa_field_name=process_path""",
+    """exa_json_path=$.@computed.clientApplication,exa_field_name=process_name""",
     """exa_json_path=$.shaHash,exa_regex=^(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))$""",
     """exa_json_path=$.uri.data,exa_field_name=malware_url""",
     """exa_json_path=$.fileName.data,exa_field_name=malware_file_name""",
@@ -30,7 +32,6 @@ Name = cisco-fp-json-alert-trigger-success-502
     """exa_json_path=$.threatScore,exa_field_name=alert_severity""",
     """exa_json_path=$.recordType,exa_field_name=record_type"""
   ]
-  DupFields = [ "alert_name->alert_type" , "process_path->process_name"]
 
 
 }

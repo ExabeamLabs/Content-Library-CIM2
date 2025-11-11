@@ -34,6 +34,7 @@ Fields = [
   """exa_json_path=$..['dst.port.number'],exa_field_name=dest_port""",
   """exa_json_path=$..['event.type'],exa_field_name=event_name""",
   """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
+  """exa_json_path=$..['endpoint.name'],exa_field_name=dest_host""",
   """exa_regex=process\.name":"({process_name}[^"]+)""",
   """exa_json_path=$..['endpoint.os'],exa_field_name=os""",
   """exa_json_path=$..['agent.version'],exa_field_name=user_agent""",
@@ -45,8 +46,8 @@ Fields = [
   """exa_regex="src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
   """exa_json_path=$..['endpoint.type'],exa_field_name=host_type""",
   """exa_json_path=$..['event.network.connectionStatus'],exa_field_name=result"""
+  """"endpoint\.name":"({dest_host}[^"]+)"""
   ]
-  DupFields = [ "host->dest_host"]
 
 
 }

@@ -8,12 +8,12 @@ Name = microsoft-evsecurity-kv-user-privilege-success-467
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
     Conditions = ["""LogType="WLS"""", """EventID="467"""]
     Fields = [
-      """Computer="+({host}[\w\-.]+)""",
+      """Computer="+({dest_host}({host}[\w\-.]+))""",
       """"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """EventID="+({event_code}[^"]+)"""",
       """Keywords="+({result}[^"]+)"""",
-      """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-      """SubjectDomainName ="+({domain}[^"]+)"""",
+      """SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """SubjectDomainName ="+({src_domain}({domain}[^"]+))"""",
       """SubjectLogonId="+({login_id}[^"]+)"""",
       """ProcessName ="+(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^"]+)))"+,""",
       """PrivilegeList="+({privileges}[^"]+)"""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-kv-user-privilege-success-467
       """ObjectType="+(?:-|({object_type}[^"]+))"""",
       """ObjectServer="+(?:-|({object_server}[^"]+))""""
     ]
-    DupFields = ["host->dest_host","directory->process_dir","user->src_user", "domain->src_domain"]
   
 
 }

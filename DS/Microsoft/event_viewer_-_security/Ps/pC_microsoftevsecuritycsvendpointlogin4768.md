@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-4768
   Conditions = [ """4768""", """Kerberos 認証チケット (TGT) が要求されました。""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4768,""",
-    """ComputerName =({computer_name}[\w.\-]+)""",
+    """ComputerName =({host}({computer_name}[\w.\-]+))""",
     """({host}(?!\d+)[\w\-.]+),([^,]*,)?Kerberos 認証チケット \(TGT\) が要求されました。""",
     """({event_code}4768)""",
     """アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@([^\s]+))?\s+提供された領域名:""",
@@ -18,7 +18,6 @@ Name = microsoft-evsecurity-csv-endpoint-login-4768
     """提供された領域名:\s+({domain}[^\s]+)""",
     """ユーザー ID:\s+(?:NULL SID|({user_sid}.+?))\s+サービス情報:"""
   ]
-  DupFields = [ "computer_name->host" ]
 
 
 }

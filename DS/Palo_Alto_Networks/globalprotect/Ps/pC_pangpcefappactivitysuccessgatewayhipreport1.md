@@ -5,9 +5,8 @@ Name = pan-gp-cef-app-activity-success-gatewayhipreport-1
   ParserVersion = "v1.0.0"
   Conditions = [ """|gateway-hip-report|GLOBALPROTECT|""", """GPSourceUser=""" ]
   Fields = ${PaloAltoParsersTemplates.paloalto-app-activity.Fields}[
-    """({event_name}gateway-hip-report)"""
+    """({operation}({event_name}gateway-hip-report))"""
   ]
-  DupFields = [ "event_name->operation" ]
 
 paloalto-app-activity = {
   Vendor = Palo Alto Networks

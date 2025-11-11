@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Data Name(\\)?=('|")TaskName('|")>({task_name}[^<]+)""",
     """(<|&lt;)UserId(>|&gt;)(?=\w)(({account_domain}[^\\<]*)\\)?({account_name}[^<]+)(<|&lt;)/UserId(>|&gt;)""",
@@ -27,7 +27,6 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """(<|&lt;)Arguments(>|&gt;)("+)?({arg}.+?)(<|&lt;)/Arguments(>|&gt;)"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

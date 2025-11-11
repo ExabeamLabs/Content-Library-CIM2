@@ -15,14 +15,13 @@ Fields = [
 """\"Hostname\":\"({host}[\w\-.]*)"""
 """({event_code}4725)"""
 """\"SubjectUserSid\":\"({user_sid}[^\"]+)"""
-"""\"SubjectUserName\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-"""\"SubjectDomainName\":\"({domain}[^\"]+)"""
+"""\"SubjectUserName\":\"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""\"SubjectDomainName\":\"({src_domain}({domain}[^\"]+))"""
 """\"SubjectLogonId\":\"({login_id}[^\"]+)"""
 """\"TargetSid\":\"({dest_user_sid}[^\"]+)"""
 """\"TargetUserName\":\"({dest_user}[^\"]+)"""
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

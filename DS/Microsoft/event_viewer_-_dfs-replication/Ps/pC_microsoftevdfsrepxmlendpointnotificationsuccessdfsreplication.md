@@ -8,11 +8,11 @@ Name = microsoft-evdfsrep-xml-endpoint-notification-success-dfsreplication
   Conditions = [  """<Channel>DFS Replication<""", """<Computer>""", """<Keywords>""", """<EventID""" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """<Computer>({host}[\w\-.]+)""",
+    """<Computer>({dest_host}({host}[\w\-.]+))""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'"\}]+)""",
     """<EventRecordID>({event_id}.+?)<""",
-    """<Keywords>({result}[^<]+)""",
+    """<Keywords>({result_code}({result}[^<]+))""",
     """<EventID>({event_code}\d+)""",
     """<EventID Qualifiers='\d+'>({event_code}\d+)<""",
     """<EventData>({additional_info}.+?)<\/EventData>""",
@@ -21,7 +21,6 @@ Name = microsoft-evdfsrep-xml-endpoint-notification-success-dfsreplication
     """<Level>({run_level}[^<]+)<""",
     """<Channel>({channel}[^<]+)<"""
   ]
-  DupFields = [ "host->dest_host", "result->result_code" ]
   ParserVersion = "v1.0.0"
 
 

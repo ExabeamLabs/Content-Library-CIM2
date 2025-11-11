@@ -10,7 +10,6 @@ Name = microsoft-azure-json-snapshot-write-success-snapshotswrite
     """exa_json_path=$..responseBody,exa_regex="createOption\\?"+:\s*\\?"+({src_resource_type}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="sourceResourceId\\?"+:\s*\\?"+({src_resource}[^"]+)\\?""""
   ]
-  DupFields = ["src_resource->source_resource", "src_resource_type->source_resource_type"]
 
 azure-activity-json = {
     Vendor = Microsoft

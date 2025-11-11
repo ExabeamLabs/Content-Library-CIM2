@@ -12,16 +12,12 @@ Conditions = [
   """ESX"""
 ]
 Fields = [
-  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d).+?\s+({host}[^\s]+)\s""",
+  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d).+?\s+({dest_host}({host}[\w\-\.]+))\s""",
   """User\s+((({domain}[^\\\s@]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?\s*logged""",
-  """({event_name}logged in)""",
+  """({operation}({event_name}logged in))""",
   """:\s+({additional_info}User.+?)\s*$"""
   """logged in\s*as\s*({user_agent}.+?)\s*$""",
   """({app}ESX)"""
-]
-DupFields = [
-  "event_name->operation"
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

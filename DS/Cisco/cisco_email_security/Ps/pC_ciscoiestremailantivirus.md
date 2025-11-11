@@ -11,8 +11,8 @@ Name = cisco-ie-str-email-antivirus
       """MID ({alert_id}\d+)""",
       """ antivirus ({malware_score}.+?)(\s+\w+=|\s*$)"""
       """ antivirus -[^-]*?- Result '({malware_score}.+?)'"""
+      """MID ({message_id}\d+)""",
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

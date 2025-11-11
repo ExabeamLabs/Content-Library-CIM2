@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-json-mul-network-session-success-5156
     """Application Name:(\\r|\\n|\\t)*\s*([\\nrt]+System[\\nrt]+|({process_path}({process_dir}[^\t\n]+?)[\\\/]+({process_name}[^\\\/\t\n]+?)))(\\r|\\n|\\t)*\s*Network Information:"""
     """Direction:\s*({direction}Inbound).*Source Address:\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\s*Source Port:\s*({dest_port}\d+)\s*Destination Address:\s*(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\s*Destination Port:\s*({src_port}\d+)"""
     """Direction:\s*({direction}Outbound).*Source Address:\s*(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\s*Source Port:\s*({src_port}\d+)\s*Destination Address:\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\s*Destination Port:\s*({dest_port}\d+)"""
-    """Protocol:\s*(\\r|\\n|\\t)*({ms_protocol_num}\d+)"""
+    """Protocol:\s*(\\r|\\n|\\t)*({protocol}\d+)"""
     """Layer Name:(\\r|\\n|\\t)*\s*({layer_name}[^\s]+)"""
     """"hostname":"({host}[\w\-\.]+)""""
     """"ProcessID\\*":\s*\\*"({process_id}[^\\"]+)"""
@@ -34,10 +34,9 @@ Name = microsoft-evsecurity-json-mul-network-session-success-5156
     """"DestPort\\*":\\*"({dest_port}\d+)"""
     """"SourceAddress\\*":\\*\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """"SourcePort\\*":\\*"({src_port}\d+)"""
-    """"Protocol\\*":\\*\s*"({ms_protocol_num}\d+)"""
+    """"Protocol\\*":\\*\s*"({protocol}\d+)"""
     """"LayerName\\*":\\*"({layer_name}[^\\"]+)"""
   ]
-  DupFields = [ "ms_protocol_num->protocol" ]
 
 
 }

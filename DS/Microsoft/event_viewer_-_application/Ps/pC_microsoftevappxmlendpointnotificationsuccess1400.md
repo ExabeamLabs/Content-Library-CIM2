@@ -21,7 +21,6 @@ xml-windows-events-dl = {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,9}Z)('|")""",
-    """<Computer>({host}[\w.-]+)<\/Computer>""",
     """<EventID>({event_code}\d+)<\/EventID>""",
     """<Message>({event_name}[^<\.]+)""",
     """<Keywords>({result}[^<]+)<\/Keywords>""",

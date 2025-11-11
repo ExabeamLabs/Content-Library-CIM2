@@ -14,8 +14,8 @@ Conditions = [
 ]
 Fields = [
 """SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-"""<Computer>({host}[^<]+)</Computer>"""
-"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
+"""<Computer>({host}({src_host}[\w\-\.]+))</Computer>"""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({src_host}({host}[\w_\-\.]+))""",
 """({event_code}4722)"""
 """Subject:.+?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}.+?)\s*Logon ID:\s*({login_id}.+?)\s*Target Account:"""
 """Target Account:\s*Security ID:\s*({account_id}.+?)\s*Account Name:\s*(.+?)\s*Account Domain:\s*({dest_domain}.+?)\s*<"""
@@ -24,13 +24,12 @@ Fields = [
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}\S+)</Data>"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)<"""
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "host->src_host", "src_user->user", "src_domain->domain" ]
 
 
 }

@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}Security Enabled [\w\s]+ Group Member Added)"""
-"""ComputerName =({host}[\w.\-]+)"""
+"""ComputerName =({dest_host}({host}[\w.\-]+))"""
 """EventCode=({event_code}\w+)"""
 """Security Enabled ({group_type}[^\s]+) Group Member"""
 """Group Member.+?Member ID:\s+(({dest_user_sid}S-\d+-[^:\s]+)|({account_domain}[^\\\s:]+)\\+({account_name}.+?)|(?:.+?))\s+Target Account"""
@@ -25,9 +25,6 @@ Fields = [
 """Caller Domain:\s+({domain}.+?)\s+Caller"""
 """Caller Logon ID:\s+\([^,]+,({login_id}[^)]+)"""
 """Group Member.+?Member Name:\s+({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))\s+Member ID"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """({event_name}A network share object was accessed)"""
 """({event_code}5140)"""
-"""ComputerName =({host}[^\s]+)"""
+"""ComputerName =({dest_host}({host}[^\s]+))"""
 """DetectTime=({time}\d\d\d\d-\d{1,2}-\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2})"""
 """Logon ID=\s*({login_id}\S+)"""
 """Account Name =\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
@@ -24,9 +24,6 @@ Fields = [
 """Share Name =\s*(?:[\\\*]+)?({share_name}[^\s]+)\s*Share"""
 """Share Path=\s*[\\\?]*(\s*|({share_path}(({d_parent}.+?)\\)?(|({d_name}[^\\]+?)))\\?)\s*Access Request Information:"""
 """Source Port(=|:)\s*({src_port}\d+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

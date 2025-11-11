@@ -12,9 +12,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-528
     """({event_name}Successful Logon)""",
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+528\s+Security\s""",
-    """(?i)(((audit|success)( |_)(success|audit))|information)\s*,?\s*({host}[\w\-.]+)""",
-    """"dhn":"({host}[^-"]+)""",
-    """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+?)("|\s)""",
+    """(?i)(((audit|success)( |_)(success|audit))|information)\s*,?\s*({dest_host}({host}[\w\-.]+))""",
+    """"dhn":"({dest_host}({host}[^-"]+))""",
+    """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+?))("|\s)""",
     """({event_code}528)""",
     """User Name\s*:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Domain:\s+({domain}[^\s]+)""",
     """Source Network Address\s*:\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-528
     """\sSecurity.+?({event_id}\d+)\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s""",
     """Sid=({user_sid}[^\s]+)\s+SidType"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

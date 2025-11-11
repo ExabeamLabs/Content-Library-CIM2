@@ -14,7 +14,7 @@ xml-ms-event-viewer = {
       """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
       """Guid\\*=('|")\{({process_guid}[^\'"\}]+)""",
       """<EventRecordID>({event_id}.+?)<""",
-      """<Keywords>({result}[^<]+)""",
+      """<Keywords>({result_code}({result}[^<]+))""",
       """<EventID>({event_code}\d+)""",
       """<EventID Qualifiers=('|")\d+('|")>({event_code}\d+)<""",
       """<Data>({additional_info}[^<]+)<""",
@@ -27,7 +27,6 @@ xml-ms-event-viewer = {
       """<Computer>({host}[\w\-.]+)""",
       """<EventData Name =('|")({event_name}[^>'"]+)('|")>""",
       """<Security UserID=('|")({user_sid}[^'"<]+?)('|")"""
-    ]
-    DupFields = [ "result->result_code" 
+    
 }
 ```

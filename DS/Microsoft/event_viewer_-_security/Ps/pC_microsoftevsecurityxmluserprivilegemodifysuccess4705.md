@@ -22,15 +22,14 @@ Fields = [
 """<Computer>({host}[^<]+?)<"""
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Data Name\\*=('|")TargetSid('|")>(?:NONE_MAPPED|({dest_user_sid}[^<]+))<"""
 """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<"""
 """<Message>({event_name}[^.<]+)\s*"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -10,26 +10,22 @@ Conditions = [
   """File created:"""
 ]
 Fields = [
-  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
-  """Hostname":"({host}[\w\-.]+?)""""
+  """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({dest_host}({host}[\w\-.]+))\s)?""",
+  """Hostname":"({dest_host}({host}[\w\-.]+?))""""
   """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)"""
-  """\sComputer(?:Name)?\s*=\s*"?({host}[\w\-.]+)"""
+  """\sComputer(?:Name)?\s*=\s*"?({dest_host}({host}[\w\-.]+))"""
   """Message\s*=\s*"?({operation_type}[^:]+)"""
   """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """ProcessGuid:\s*\{({process_guid}[^\s\}]+)"""
   """ProcessId:\s*({process_id}\d+)"""
   """ParentProcessGuid:\s*\{({parent_process_guid}[^\s\}]+)"""
-  """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?))\s+TargetFilename:"""
+  """\s+Image:\s*({path}({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}.+?)))\s+TargetFilename:"""
   """\sTargetFilename:\s*({file_path}(({file_dir}.+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+CreationUtcTime:"""
   """EventID":({event_code}\d+),"""
   """Domain":"({domain}[^"]+?)""""
   """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))""""
+  """"Image":"({path}({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+)))""""
   """"TargetFilename":"({file_path}(({file_dir}[^"]+?)[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))""""
-]
-DupFields = [
-  "host->dest_host"
-  "process_path->path"
 ]
 ParserVersion = "v1.0.0"
 

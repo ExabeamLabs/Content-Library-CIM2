@@ -15,7 +15,7 @@ Fields = [
   """"*CreationTime"*:\s*"*({time}\d+-\d+-\d+T\d+:\d+:\d+)"*"""
   """Workload"*:\s*"*({app}[^"]+)""""
   """ObjectId"*:\s*"*<?({object}[^"]+?)>?""""
-  """Operation"*:\s*"*({operation}[^"]+)"*"""
+  """Operation"*:\s*"*({alert_type}({operation}[^"]+))"*"""
   """UserId"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"*"""
   """FileSize"*:\s*"*({bytes}\d+)"""
   """From"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
@@ -29,9 +29,6 @@ Fields = [
   """RuleName"*:\s*"*(|({alert_name}.+?[^"]))""""
   """FileName"*:\s*"*(|({file_name}.+?[^"]))""""
   """RecipientCount"*:\s*({recipient_count}\d+)"""
-]
-DupFields = [
-  "operation->alert_type"
 ]
 ParserVersion = "v1.0.0"
 

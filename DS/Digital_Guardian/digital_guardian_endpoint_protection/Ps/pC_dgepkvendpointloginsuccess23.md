@@ -12,13 +12,12 @@ Name = "dg-ep-kv-endpoint-login-success-23"
 ]
   Fields = [
 """\s(Agent_UTC_Time|Server_UTC_Timestamp)=\"({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))\""""
-"""\sComputer_Name =\"([^\/\\\"]+[\\\/])?({host}[^\"]+)\""""
+"""\sComputer_Name =\"([^\/\\\"]+[\\\/])?({dest_host}({host}[^\"]+))\""""
 """\sUser_Name =\"(?:|(({domain}[^\"\/\\]+)[\/\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\""""
 """\sDomain_Name =\"(?:|({domain}[^\"]+))\""""
 """\sApplication=\"(?:|({process_name}[^\"]+))\""""
 """\sOperation=\"(?:|({event_code}[^\"]+))\""""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

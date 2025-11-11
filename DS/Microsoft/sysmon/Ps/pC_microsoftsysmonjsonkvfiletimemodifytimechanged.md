@@ -16,7 +16,6 @@ Name = microsoft-sysmon-json-kv-file-time-modify-timechanged
     """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^=]+?))\s*";"""
     """\sTargetFilename:\s*({file_path}(({file_dir}[^=]+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+CreationUtcTime:""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

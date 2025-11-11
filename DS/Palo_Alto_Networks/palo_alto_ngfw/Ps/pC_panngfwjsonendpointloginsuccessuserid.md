@@ -13,7 +13,7 @@ paloalto-vpn.Fields}[
     """exa_json_path=$.event.Subtype,exa_field_name=alert_type"""
     """exa_json_path=$.event.DestinationAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.event.ThreatCategory,exa_regex=((?i:unknown)|({threat_category}[^"]+))"""
-    """exa_json_path=$.event.ThreatID,exa_regex=({alert_name}[^"\(]+?)\s*(\(({alert_id}[^"\)]\d+))"""
+    """exa_json_path=$.event.ThreatID,exa_regex=({alert_subject}({alert_name}[^"\(]+?))\s*(\(({alert_id}[^"\)]\d+))"""
     """exa_json_path=$..Application,exa_field_name=network_app"""
 	  """exa_json_path=$..InboundInterface,exa_field_name=src_interface"""
     """exa_json_path=$..OutboundInterface,exa_field_name=dest_interface"""
@@ -29,7 +29,6 @@ Conditions = [
   """"Subtype":"vulnerability""""
   """"Action":"alert""""
 ]
-DupFields = ["alert_name -> alert_subject"]
 ParserVersion = "v1.0.0"
 },
 
@@ -125,7 +124,7 @@ Fields = [
   """exa_json_path=$..NATSourcePort,exa_field_name=src_translated_port"""
   """exa_json_path=$..NATDestinationPort,exa_field_name=dest_translated_port"""
   """exa_json_path=$..DirectionOfAttack,exa_field_name=direction"""
-  """exa_json_path=$..URL,exa_regex=({malware_url}[^\/"]+)"""
+  """exa_json_path=$..URL,exa_regex=({url}({malware_url}[^\/"]+))"""
   """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """exa_json_path=$..SourceAddress,exa_field_name=src_ip"""
   """exa_json_path=$..DestinationAddress,exa_field_name=dest_ip"""
@@ -146,7 +145,6 @@ Conditions = [
 """DirectionOfAttack":""""
 """"Subtype":"url""""
 ]
-DupFields = [ "malware_url->url" ]
 ParserVersion = "v1.0.0"
 },
 
@@ -180,15 +178,16 @@ Fields = [
   """exa_json_path=$.event.Description,exa_field_name=additional_info"""
     """exa_json_path=$.event.LogType,exa_field_name=event_category"""
     """exa_json_path=$.event.Action,exa_field_name=action"""
-    """exa_regex=({alert_name}spyware)"""
+    """exa_regex=({alert_subject}({alert_name}spyware))"""
     """exa_json_path=$.event.VendorSeverity,exa_field_name=alert_severity"""
     """exa_json_path=$.event.Subtype,exa_field_name=alert_type"""
     """exa_json_path=$.event.DestinationAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$.event.ThreatCategory,exa_regex=((?i:unknown)|({threat_category}[^"]+))"""
-    """exa_json_path=$.event.ThreatID,exa_regex=({alert_name}[^"\(]+?)\s*(\(({alert_id}[^"\)]\d+))"""
+    """exa_json_path=$.event.ThreatID,exa_regex=({alert_subject}({alert_name}[^"\(]+?))\s*(\(({alert_id}[^"\)]\d+))"""
     """exa_json_path=$.event.Application,exa_field_name=network_app"""
     """exa_json_path=$.event.FileName,exa_regex=({file_name}[^\."]+)*?(\.({file_ext}[^"\.]+))"""
     """exa_json_path=$.event.Rule,exa_field_name=alert_name"""
+    """exa_json_path=$.event.Rule,exa_field_name=alert_subject"""
     """exa_json_path=$.event.SubType,exa_field_name=alert_type"""
     """exa_regex=(Source)?User(Name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(na|NA|(({domain}[^"\\]+))\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$..InboundInterface,exa_field_name=src_interface"""
@@ -204,7 +203,6 @@ Conditions = [
 """"SubType":"file""""
 """"Action":"alert""""
 ]
-DupFields = [ "alert_name -> alert_subject" ]
 ParserVersion = "v1.0.0"
 },
 

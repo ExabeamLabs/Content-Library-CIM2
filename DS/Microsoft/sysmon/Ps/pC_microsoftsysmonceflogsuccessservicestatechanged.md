@@ -9,9 +9,9 @@ Name = microsoft-sysmon-cef-log-success-servicestatechanged
   Conditions = [ """CEF:""", """|Microsoft Sysmon|Sysmon NXLog|""", """|SysmonTask-SYSMON_SERVICE_STATE_CHANGE|Sysmon service state changed|""" ]
   Fields = [
     """CEF:([^\|]*\|){5}({event_name}[^\|]+)""",
-    """({host}\S+) CEF:""",
-    """\Wdvc=({host}[A-Fa-f:\d]+)""",
-    """\Wdvchost=({host}[\w\-.]+)""",
+    """({dest_host}({host}\S+)) CEF:""",
+    """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+    """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
     """\Wrt=({time}\d{13})""",
     """\WeventId=({event_code}\d+)""",
     """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -22,7 +22,6 @@ Name = microsoft-sysmon-cef-log-success-servicestatechanged
 # category_custom_format_field is removed
     """\WdeviceSeverity=({severity}.+?)\s+(\w+=|$)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

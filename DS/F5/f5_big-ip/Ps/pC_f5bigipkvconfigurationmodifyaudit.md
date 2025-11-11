@@ -6,7 +6,7 @@ Name = f5-bigip-kv-configuration-modify-audit
   Vendor = F5
   Product = F5 BIG-IP
   TimeFormat = [ "yyyy-MM-dd HH:mm:ss" , "MMM dd HH:mm:ss" ]
-  Conditions = [ """ tmsh[""", """ - pid=""", """ user=""", """ folder=""", """ status=""", """ cmd_data=""",  """: AUDIT """ ]
+  Conditions = [ """tmsh[""", """ - pid=""", """ user=""", """ folder=""", """ status=""", """ cmd_data=""",  """: AUDIT """ ]
   Fields = [
     """<(?:\d{1,3})>(?:\d{0,2}\s)?({time}\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})"""
     """({host}[\w.-]+)\snotice""",

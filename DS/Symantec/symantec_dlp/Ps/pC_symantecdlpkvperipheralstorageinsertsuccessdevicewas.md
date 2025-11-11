@@ -22,7 +22,6 @@ Name = symantec-dlp-kv-peripheral-storage-insert-success-devicewas
   ]
   SOAR {
     IncidentType = "generic"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "operation_details->description"]
     NameTemplate = """Symantec ${device_class} insert found"""
     ProjectName = "SOC"
     EntityFields = [

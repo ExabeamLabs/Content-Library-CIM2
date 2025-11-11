@@ -16,15 +16,15 @@ Name = microsoft-x-csv-email-deliver
     """({alert_name}STOREDRIVER,({action}[^,]+)),""",
     """({direction}Incoming)""",
     """,STOREDRIVER,[^,]+,\s*({alert_id}\d+)\s*,""",
+    """({alert_type}STOREDRIVER,({action}[^,]+)),""",
     """,\s*(?:'|")?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^,]*?)\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
-    """,\s*(?:'|")?({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^,]*?\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
+    """,\s*(?:'|")?({email_address}({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))[^,]*?\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
     """,\s*({bytes}\d+)\s*,(?:[^,]*,){7}Incoming,""",
     """,\s*({num_recipients}\d+)\s*,(?:[^,]*,){6}Incoming,""",
     """,\s*({email_subject}[^,]+?)\s*,(?:[^,]*,){3}Incoming,""",
     """,\s*['"]*(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))['"]*)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*['"]*(?:<>|({return_path}[^,]+?))['"]*\s*,(?:[^,]*,)Incoming,"""
   ]
-  DupFields = [ "alert_name->alert_type","orig_user->email_address"]
 
 
 }

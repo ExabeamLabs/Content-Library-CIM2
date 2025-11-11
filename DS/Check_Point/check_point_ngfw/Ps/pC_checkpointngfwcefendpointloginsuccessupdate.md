@@ -48,6 +48,9 @@ cef-checkpoint-firewall = {
     """deviceDirection=({direction}[^=]+)\s\w+=""",
     """proto=({protocol}[^=]+?)\s\w+="""
     """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+        """\Wact=(|({result}.+?))(\s+\w+=|\s*$)""",
+        """\Wserver_outbound_bytes=({bytes}\d+)""",
+        """\Wout=({bytes}\d+)""",
   
 }
 ```

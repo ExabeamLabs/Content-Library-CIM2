@@ -33,8 +33,8 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Creator Subject:.+?Account Domain:(\\+[rnt]|\s)*(-|({domain}[^\s]+?))(\\+[rnt]|\s|;)*Logon ID:""",
     """Creator Subject:.+?Logon ID:(\\[nrt]|\s)*({login_id}[^\s\\;]+?)(\\[nrt]|\s)*(Target|Process)""",
     """New Process Name:(\\+[nrt]|\s)*({dest_process_path}({dest_process_dir}[^"=]+?)?[\\]*({dest_process_name}[^"\\=]+?))(\\+[nrt]|\s)+(Token Elevation Type:|%\{S-)""",
-    """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_guid}[^\\\s;]+)(\s|;|\\)""",
-    """Creator Process ID:(\\+[rnt]|\s)*({parent_process_guid}[^\\\s;]+)(\s|\\+[rnt]|;|\\)""",
+    """New Process ID:((\\)*(\\t|\\r|\\n))*\s*({process_id}({process_guid}[^\\\s;]+))(\s|;|\\)""",
+    """Creator Process ID:(\\+[rnt]|\s)*({parent_process_id}({parent_process_guid}[^\\\s;]+))(\s|\\+[rnt]|;|\\)""",
     """Creator Process Name:(\\*[nrt]|\s)*(|({parent_process_path}({parent_process_dir}[^"=]+?)?[\\]*?({parent_process_name}[^"\\=]+?)))(\\*[nrt]|\s)*(Process|%\{S-)""",
     """Process Command Line(:|=)\s{0,2}"?((?-i)\\+[rnt])*(|({process_command_line}\S[^";]*?))((\\)[\\r\\n\\t]+)*(\s*Token Elevation Type indicates|"+?\s*|;|\s*$)"""
     """Process Command Line:\s*"*(|-|(sc|((?:[^"]+)?[\\\/])?sc.exe)\s*(?:\\*[\w.\-]+)?\s*create\s*({service_name}.+?))\s+binPath= \s*(|-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/\s]+)))"*\s*Token Elevation Type""",
@@ -49,12 +49,11 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_exe}.+?\.exe)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
     """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
     """SubjectLogonId\\?"+:\\?"+(\\[nrt]|\s)*({login_id}[^\\]+)(\\[nrt]|\s)*\\?""""
-    """\"SubjectDomainName\\?":\\?"({src_domain}[^\\"]+)"""
+    """\"SubjectDomainName\\?":\\?"({src_domain}({domain}[^\\"]+))"""
   ]
-  DupFields = [ "process_guid->process_id" ,"parent_process_guid->parent_process_id", "src_user->user", "src_domain->domain" ]
 
 
 }

@@ -61,7 +61,7 @@ aws-cloudtrail-json = {
       ""","userIdentity\\?":\{[^\}]+"AssumedRole\\?"[^\}]+"principalId\\?":\s*\\?"[A-Z\d]{1,25}:({aws_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"\s*[,\]\}]""",
       ""","userIdentity\\?":[^\}]+"IAMUser\\?"[^\}]+"userName\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
       ""","userIdentity\\?":\s*\{[^\}]+"type\\?":\s*\\?"({aws_user}({user}Root))\\?""""
-      """requestParameters":"({additional_info}.+?),"\w+"?:"""
+      """(?i)requestParameters":"?({additional_info}[^\$]+?}+?)"?,"\w+"?"""
       """"RestrictPublicBuckets\\*":({restrict_public_buckets}[^",\\\}]+)"""
       """"BlockPublicPolicy\\*":({block_public_policy}[^",\\\}]+)"""
       """"BlockPublicAcls\\*":({block_public_acls}[^",\\\}]+)"""
@@ -99,7 +99,7 @@ aws-cloudtrail-json = {
       """exa_json_path=$..requestParameters..InstanceId,exa_field_name=instance_id"""
       """exa_json_path=$..requestParameters..instanceId,exa_field_name=instance_id"""
       """exa_json_path=$..recipientAccountId,exa_field_name=aws_account"""
-      """exa_regex=requestParameters":"({additional_info}.+?),"\w+"?:"""
+      """exa_regex=(?i)requestParameters":"?({additional_info}[^\$]+?}+?)"?,"\w+"?:"""
       """exa_json_path=$..RestrictPublicBuckets,exa_field_name=restrict_public_buckets"""
       """exa_json_path=$..BlockPublicPolicy,exa_field_name=block_public_policy"""
       """exa_json_path=$..BlockPublicAcls,exa_field_name=block_public_acls"""
@@ -128,7 +128,6 @@ aws-cloudtrail-json = {
       """exa_json_path=$.Resources..ARN,exa_field_name=bucket_arn"""
       """exa_json_path=$.UserIdentityAccessKeyId,exa_field_name=key_id"""
       """exa_json_path=$..RecipientAccountId,exa_field_name=aws_account"""
-      """exa_regex=RequestParameters":"({additional_info}.+?),"\w+"?:"""
     
 }
 ```

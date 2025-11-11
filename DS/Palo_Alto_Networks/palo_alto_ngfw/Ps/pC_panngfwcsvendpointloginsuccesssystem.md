@@ -11,8 +11,8 @@ Name = pan-ngfw-csv-endpoint-login-success-system
     """User ({user}[\w\.\-\!\#\^\~]{1,40}\$?) logged in .+?from (({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^,]+))""",
     """,SYSTEM,([^,]*,){18}({host}[^\s,]+)""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
+    """,SYSTEM,([^,]*,){18}({dest_host}[^\s,]+)""",
   ]
-  DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"
 
 

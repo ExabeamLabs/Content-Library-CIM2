@@ -26,6 +26,9 @@ ${WindowsParsersTemplates.windows-defender-1}{
   Product = Microsoft Defender
   Conditions = [ """Microsoft-Windows-Windows Defender/Operational""", """Windows Defender signature version has been updated"""]
   Fields = ${WindowsParsersTemplates.windows-defender-1.Fields}[
+    """Hostname":"({host}[^"]+?)"""",
+    """"+host"+:"+({host}[^"]+)"+""",
+    """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """({event_name}Windows Defender signature version has been updated)"""
     ]
 

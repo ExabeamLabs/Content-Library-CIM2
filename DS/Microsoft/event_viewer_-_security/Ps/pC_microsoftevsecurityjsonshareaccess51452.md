@@ -13,13 +13,13 @@ Conditions = [
 Fields = [
   """({event_name}A network share object was checked to see whether client can be granted desired access)"""
   """({event_code}5145)"""
-  """"hostname":"({host}[\w\-.]+)"""
+  """"hostname":"({dest_host}({host}[\w\-.]+))"""
   """"EventTime":({time}\d{10})"""
   """"EventTime\\?":\s*\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
   """SubjectLogonId"+:"+({login_id}[^"]+)"""
-  """SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """SubjectDomainName"+:"+({domain}[^"]+)"""
+  """SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """SubjectDomainName"+:"+({src_domain}({domain}[^"]+))"""
   """IpAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """IpPort"+:"+({src_port}\d+)"""
   """SubjectUserSid"+:"+({user_sid}[^"<]+)"""
@@ -33,7 +33,6 @@ Fields = [
   """Access Check Results:.*({result}Granted|Denied)\s+by"""
   """Source Port(=|:)\s*((?-i)\\+[rnt])*({src_port}\d+)"""
 ]
-DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -10,8 +10,8 @@ Name = cisco-ie-str-email-spam
     Fields = [
       """MID ({alert_id}\d+)""",
       """CASE spam ({spam_score}.+?)"(\s+\w+=|\s*$)"""
+      """MID ({message_id}\d+)""",
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

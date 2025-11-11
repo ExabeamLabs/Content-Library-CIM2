@@ -11,7 +11,7 @@ Name = imperva-securesphere-kv-alert-trigger-success-catsecurity
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d [+-]\d\d\d\d)""",
     """alert_severity=({alert_severity}[^,]+)""",
     """db_query="?({db_query}.+?)",\s""",
-    """db_username="?({db_user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """db_username="?({account}({db_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """db_name="?({db_name}[^,"]+)"""
     """schema="?({db_schema}[^",]+)"""
     """dst_ip="?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
@@ -19,8 +19,8 @@ Name = imperva-securesphere-kv-alert-trigger-success-catsecurity
     """event_cat="?({alert_type}[^,"]+)"""
     """event_id="?({alert_id}[^,\s"]+)"""
     """object="?({object}[^",]+)"""
-    """operation="({operation}[^"]+)"""
-    """operation=({operation}[^",]+)"""
+    """operation="({alert_name}({operation}[^"]+))"""
+    """operation=({alert_name}({operation}[^",]+))"""
     """policy="?({policy_name}[^",]+)"""
     """description="({additional_info}[^"]+)"""
     """service_name="?({service_name}[^",]+)"""
@@ -31,7 +31,6 @@ Name = imperva-securesphere-kv-alert-trigger-success-catsecurity
     """server_group="?({server_group}[^",]+)"""  
     """sql_error="({sql_error}[^"]+)""""  
   ]
-  DupFields = [ "db_user->account", "operation->alert_name" ]
 
 
 }

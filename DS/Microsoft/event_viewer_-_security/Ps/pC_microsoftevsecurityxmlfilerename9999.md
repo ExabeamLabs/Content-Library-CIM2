@@ -15,14 +15,13 @@ Name = microsoft-evsecurity-xml-file-rename-9999
     """<Result>({result}[^<]+)</Result>""",
     """<Data Name\\*=('|")SubjectIP('|").*?>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}.+?)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}.+?)</Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}.+?))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
     """<Data Name\\*=('|")ObjectServer('|")>({object_server}.+?)</Data>""",
 # old_file_path is removed
     """<Data Name\\*=('|")NewPath('|")>({file_path}({file_dir}.*?[\\\/]+)?({file_name}[^\\\/]+?(\.({file_ext}\w+))?))</Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

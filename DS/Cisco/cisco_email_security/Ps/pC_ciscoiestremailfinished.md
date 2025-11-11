@@ -10,9 +10,8 @@ Name = cisco-ie-str-email-finished
     Fields = [
       """({time}\w+ \d\d \d\d:\d\d:\d\d)\s+"""
       """\srt=({time}\d+)""",
-      """Message finished MID ({alert_id}\d+) ({result}[^=]+?)("|\s+\w+(=)?|\s*$)"""
+      """Message finished MID ({message_id}({alert_id}\d+)) ({result}[^=]+?)("|\s+\w+(=)?|\s*$)"""
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

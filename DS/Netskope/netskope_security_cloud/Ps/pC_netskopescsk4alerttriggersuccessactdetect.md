@@ -70,7 +70,6 @@ cef-netskope-alert = {
   ]
   SOAR {
     IncidentType = "malware"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "src_host->malwareVictimHost", "alert_type->description", "malware_url->malwareAttackerUrl"]
     NameTemplate = """Netskope Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

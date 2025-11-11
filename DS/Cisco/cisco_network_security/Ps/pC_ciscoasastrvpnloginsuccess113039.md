@@ -19,8 +19,8 @@ Name = cisco-asa-str-vpn-login-success-113039
       """\sGroup\s*<({group_name}[^>]+)>"""
       """\sUser\s*<({user}[\w\.\-\!\#\^\~]{1,40}\$?)>"""
       """\w{3}\s+\d+\s+\d+\s+\d+:\d+:\d+\s+(\d+|({host}[\w\-\.]+))\s"""
+      """\sUser\s*<({account}[\w\.\-\!\#\^\~]{1,40}\$?)>"""
     ]
-    DupFields = [ "user->account"]
   
 
 }

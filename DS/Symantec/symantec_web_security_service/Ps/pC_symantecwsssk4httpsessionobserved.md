@@ -16,6 +16,7 @@ Name = symantec-wss-sk4-http-session-observed
     """,\sOBSERVED,\s(-|({category}[^,]+))""",
     """,\sOBSERVED(,\s([^,]+)),\s(-|({referrer}[^\s,]+))""",
     """,\sOBSERVED(,\s([^,]+)){2},\s(-|({result_code}\d{1,3}))""",
+    """,\sOBSERVED(,\s([^,]+)){2},\s(-|({http_response_code}\d{1,3}))""",
     """,\sOBSERVED(,\s([^,]+)){3},\s(-|unknown|({proxy_action}[^,]+))""",
     """,\sOBSERVED(,\s([^,]+)){4},\s(-|unknown|({method}[^,]+))""",
     """,\sOBSERVED(,\s([^,]+)){5},\s(-|({mime}[^,]+))""",
@@ -31,7 +32,6 @@ Name = symantec-wss-sk4-http-session-observed
     """(OBSERVED|PROXIED|DENIED)(,\s+[^,]+){65},\s+(-,\s)?(?:-|({transaction_id}[^,"\]]+))"""
     """,\s*(-|({additional_info}[^,]+)),?\s*(OBSERVED|PROXIED|DENIED)"""
   ]
-  DupFields = ["result_code->http_response_code"]
 
 
 }

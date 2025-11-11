@@ -38,6 +38,7 @@ Name = "checkpoint-ngfw-str-network-traffic-fail-drop"
 """\Wdst_machine_name:\"+({dest_host}[^\"]+?)\s*\""""
 """\Wdst_machine_name:\"+({dest_host}[^\"@]+)@({domain}[^\"]+)"""
 """\Wuser:\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\""""
+"""\Waction:\"+({event_name}[^\"]+)"""
 """\Wuser:\"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*\""""
 """\Wsrc_user_name:\"+(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}[^\"@\(\)]+@[\(\)^\"@]+))\s*\""""
 """\Wdst_user_name:\"+(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}[^\"@]+@[^\"@]+))\s*\""""
@@ -50,9 +51,6 @@ Name = "checkpoint-ngfw-str-network-traffic-fail-drop"
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):\"+(?:[^_\"\s]+_)?(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\""""
 """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  ]
-  DupFields = [
-"action->event_name"
   ]
 
 

@@ -41,7 +41,7 @@ cef-palo-alto-networks-firewall-dl = {
       """\sdeviceDirection=({direction}.+?)\s+(\w+=|$)""",
       """\scategoryOutcome=\/?({result}.+?)\s+(\w+=|$)""",
       """\sreason=(?:n\/a|({result_reason}.+?))\s+(\w+=|$)""",
-    ]
-    DupFields = [ "subtype->action" 
+      """\|({action}[^\|]+)\|TRAFFIC""",
+    
 }
 ```

@@ -43,10 +43,8 @@ Fields = [
 """\Wurl=({url}.+?)(\s+\w+:?=|\s*$)"""
 """\Wresource_probing=({additional_info}.+?)(\s+\w+:?=|\s*$)"""
 """\scat=({alert_source}.+?)(\s+\w+:?=|\s*$)"""
-]
-DupFields = [
-"event_name->protection_name"
-"attack_info->alert_subject"
+"""\Wsignature=({protection_name}.+?)(\s+\w+:?=|\s*$)"""
+"""\Wattack_info=({alert_subject}.+?)(\s+\w+:?=|\s*$)"""
 ]
 ParserVersion = "v1.0.0"
 

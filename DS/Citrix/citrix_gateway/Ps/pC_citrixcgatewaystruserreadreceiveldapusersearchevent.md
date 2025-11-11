@@ -9,10 +9,9 @@ Name = citrix-cgateway-str-user-read-receive-ldap-user-search-event
   Conditions = [ """ AAA Message """, """In receive_ldap_user_search_event""" ]
   Fields = [
     """({time}\d+\/\d+\/\d+:\d+:\d+:\d+)\s*GMT""",
-    """GMT\s*({host}[^:\s]+)(\s\S+)?\s:\s*({event_code}(\w+\s+){3})[^:]+:\s*"*({additional_info}[^"]+)"*""",
+    """GMT\s*({src_host}({host}[^:\s]+))(\s\S+)?\s:\s*({event_code}(\w+\s+){3})[^:]+:\s*"*({additional_info}[^"]+)"*""",
     """({event_code}default AAA Message)"""
   ]
-  DupFields = ["host->src_host"]
 
 
 }

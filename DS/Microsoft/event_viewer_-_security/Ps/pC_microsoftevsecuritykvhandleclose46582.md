@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-handle-close-4658-2
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """The handle to an object was closed""", """Computer""" ]
   Fields = [
-    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
+    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4658\s""",
     """({event_code}4658)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-kv-handle-close-4658-2
     """({operation_type}closed)""",
     """Handle ID:\s*({object_id}.+?)\s""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

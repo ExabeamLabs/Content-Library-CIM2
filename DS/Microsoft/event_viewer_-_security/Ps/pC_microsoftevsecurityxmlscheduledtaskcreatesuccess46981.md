@@ -16,8 +16,8 @@ Fields = [
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
 """<EventID>({event_code}[^<]+)</EventID>"""
 """<Data Name(\\)?=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))</Data>"""
-"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
-"""<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({domain}[^<]+)</Data>"""
+"""<Data Name(\\)?=('|")SubjectUserName('|")>(?=\w)({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>"""
+"""<Data Name(\\)?=('|")SubjectDomainName('|")>(?=\w)({src_domain}({domain}[^<]+))</Data>"""
 """<Data Name(\\)?=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Data Name(\\)?=('|")TaskName('|")>(?=[\\\w])({task_name}[^<]+)</Data>"""
 """<UserId>(?=\w)(({account_domain}[^\\<]*)\\)?({account_name}[^<]+)</UserId>"""
@@ -32,7 +32,6 @@ Fields = [
 """<Message>({event_name}A scheduled task was created)"""
 """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

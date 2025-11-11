@@ -16,7 +16,7 @@ Fields = [
   """<Keywords><Keyword>({result}[^<]+)</Keyword></Keywords>""",
   """<EventID>({event_code}[^<]+)</EventID>""",
   """SubjectLogonId('|")>({login_id}[^<]+)""",
-  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(NETWORK SERVICE|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+  """<Data Name(\\\/)?=('|")SubjectUserName('|")>(NETWORK SERVICE|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
   """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({src_domain}[^<]+)</Data>""",
   """<Data Name(\\\/)?=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
   """<Data Name(\\\/)?=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",
@@ -26,7 +26,6 @@ Fields = [
   """<Hostname>({host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = [ "src_user->user" ]
 ParserVersion = "v1.0.0"
 
 

@@ -23,12 +23,12 @@ json-defender-atp {
      """time":\s*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(.\d{1,7})?Z)"""",
      """(time|TimeGenerated)":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)"""",
      """operationName":\s*"({operation}[^"]+)""",
-     """category":\s*"({category}[^"]+)""",
+     """category":\s*"({event_name}({category}[^"]+))""",
      """RemotePort":\s*({dest_port}\d+)""",
      """RemoteIP":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
      """LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
      """LocalPort":\s*({src_port}\d+)""",
-     """ActionType":\s*"({action}[^"]+)""",
+     """ActionType":\s*"({operation}({action}[^"]+))""",
      """"DeviceId":"({device_id}[^"]+)"""",
      """DeviceName":\s*"({dest_host}({host}[\w\-.]+))""",
      """InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)"|({full_name}[^"]+))""",
@@ -56,12 +56,15 @@ json-defender-atp {
      """exa_json_path=$.TimeGenerated,exa_field_name=time"""
      """exa_json_path=$.operationName,exa_field_name=operation"""
      """exa_json_path=$.category,exa_field_name=category"""
+     """exa_json_path=$.category,exa_field_name=event_name"""
      """exa_json_path=$.ActionType,exa_field_name=action"""
+     """exa_json_path=$.ActionType,exa_field_name=operation"""
      """exa_json_path=$..RemotePort,exa_field_name=dest_port"""
      """exa_json_path=$..RemoteIP,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
      """exa_json_path=$..LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
      """exa_json_path=$..LocalPort,exa_field_name=src_port"""
      """exa_json_path=$..ActionType,exa_field_name=action"""
+     """exa_json_path=$..ActionType,exa_field_name=operation"""
      """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
      """exa_json_path=$..DeviceName,exa_field_name=host"""
      """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""
@@ -90,7 +93,6 @@ json-defender-atp {
      """exa_json_path=$..AdditionalFields,exa_regex=DeviceDescription\\":\\"\\*({device_description}[^,]+)\\","""
      """AdditionalFields":.*DeviceId\\":\\"({device_id}[^,]+)\\","""
      """AdditionalFields":.*DeviceDescription\\":\\"\\*({device_description}[^,]+)\\","""
-   ]
-   DupFields = ["category->event_name"
+   
 }
 ```

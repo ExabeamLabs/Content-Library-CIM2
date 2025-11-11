@@ -20,7 +20,7 @@ sonicwall-firewall-dl = {
     """\smsg="({event_name}[^:"]+?)\s*(:|")""",
     """\snote="\s*({additional_info}[^"]+?)\s*"""",
     """\sc=({category_id}\d+)""",
-    """\sm=({message_id}\d+)""",
+    """\sm=({alert_type}({message_id}\d+))""",
     """\suser="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """usr="\s*(({email_address}[^@"]+@[^\\\s"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\ssrc=({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:({src_port}\d+))?(:({src_interface}[^\s:]+))?(:[^\s:]+)?""",
@@ -39,7 +39,6 @@ sonicwall-firewall-dl = {
     """\srule="({rule}[^"]+)"""
     """rpkt=({packets_in}\d+)"""
     """spkt=({packets_out}\d+)"""
-  ]
-    DupFields = [ "message_id->alert_type" 
+  
 }
 ```

@@ -15,7 +15,7 @@ Fields = [
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
 """({event_code}4698)"""
 """({event_name}A scheduled task was created)"""
-"""\sComputerName =(|({host}[\w\-.]+?))(\s+\w+=|\s*$)"""
+"""\sComputerName =(|({dest_host}({host}[\w\-.]+?)))(\s+\w+=|\s*$)"""
 """\sKeywords=(|({result}.+?))(\s+\w+=|\s*$)"""
 """Security ID:\s*(|({user_sid}[^:]+?))(\\[srnt])*\s*Account Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[srnt])*\s*Account Domain:\s*(|({domain}[^:]+?))(\\[srnt])*\s*Logon ID:\s*(|({login_id}[^:]+?))(\\[srnt])*\s*Task Information:"""
 """Task Name:\s*(|({task_name}.+?))\s*Task Content:"""
@@ -28,10 +28,7 @@ Fields = [
 """<RegistrationInfo>.+?<Description>(?=\w)({description}[^<]+)</Description>"""
 """<Command>\"?({process_path}({process_dir}(?:(\w+:)?[^:<\"]+)?[\\\/])?({process_name}[^<\"]+))"""
 """<Arguments>(\"+)?({arg}[^<]+)"""
-"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""
-]
-DupFields = [
-"host->dest_host"
+"""Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -15,9 +15,7 @@ Name = cisco-fp-str-network-session-fail-710005
       """\sfrom\s+({src_ip}[.:a-fA-F\d]+)\/({src_port}\d+)""",
       """\sto\s\S+\:({dest_ip}[.:a-fA-F\d]+)\/({dest_port}\d+)""",
       """to\s*({dest_interface}\w+):({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\/({dest_port}\d+)"""
-  ]
-  DupFields = [
-	"event_name->operation"
+      """({operation}({protocol}TCP|UDP)\s+({action}request ({result}discarded)))""",
   ]
 
 

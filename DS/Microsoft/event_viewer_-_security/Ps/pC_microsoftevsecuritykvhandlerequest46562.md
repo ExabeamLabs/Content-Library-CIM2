@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   Conditions = [ """4656""", """A handle to an object was requested""", """Computer""" ]
   Fields = [
-    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|<[\\\/]+Computer>|$)""",
+    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|<[\\\/]+Computer>|$)""",
     """({event_code}4656)""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+4656\s""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
@@ -32,7 +32,6 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
     """({operation_type}requested)""",
     """Handle ID:(\s|\\[rnt])*({object_id}\S+?)(\s|\\[rnt])*Resource Attributes:""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

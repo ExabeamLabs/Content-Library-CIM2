@@ -21,9 +21,6 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-memberwasremoved"
     """Member:\s+Security ID:\s+(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s]+))\s+Account Name:\s*(-|({user_dn}CN=.+?OU.+?DC.+?))?\s*Group:\s+Security ID:\s+({group_id}[^\s]+)\s+(Group|Account) Name:\s*({group_name}.+?)?\s+(Group|Account) Domain:\s+({group_domain}.+?)\s+Additional""",
     """Member:.+?Account Name:\s*CN=.+?({user_ou}OU.+?DC.+?)\s+Group:""",
   ]
-  DupFields = [
-    "host->dest_host"
-  ]
   ParserVersion = "v1.0.0"
 
 

@@ -6,8 +6,8 @@ Name = microsoft-o365-sk4-app-file-success-groupunassign
   ParserVersion = v1.0.0
   Conditions= [ """"activityType":"Group"""", """"activityOperationType":"Unassign"""", """"targetResourceType":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
-    """"targetResources":[^\}]+?"displayName":"\s*({object}[^"]+?)\s*"""",
-    """\sfname=\s*(N\/A|({object}[^=]+?))\s*(\w+=|$)""",
+    """"targetResources":[^\}]+?"displayName":"\s*({resource}({object}[^"]+?))\s*"""",
+    """\sfname=\s*(N\/A|({resource}({object}[^=]+?)))\s*(\w+=|$)""",
   ]
 
 json-microsoft-app-activity = {
@@ -33,7 +33,6 @@ json-microsoft-app-activity = {
     """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
     """"userAgent":"({user_agent}[^"]+?)"""",
     """"activityResultDescription":"({event_name}[^",]+)"""
-  ]
-  DupFields = [ "object->resource" 
+  
 }
 ```

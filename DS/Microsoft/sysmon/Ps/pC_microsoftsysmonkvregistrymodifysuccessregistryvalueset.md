@@ -9,7 +9,7 @@ Name = microsoft-sysmon-kv-registry-modify-success-registryvalueset
   Conditions = [ """=Microsoft-Windows-Sysmon""", """Message=Registry value set:""" ]
   Fields = [
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """\sComputer(?:Name)?=({host}[\w\-.]+)""",
+    """\sComputer(?:Name)?=({dest_host}({host}[\w\-.]+))""",
     """Message=({operation_type}[^:]+)""",
     """Task=({operation}.+?)\s+(\w+=|$)""",
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
@@ -20,7 +20,6 @@ Name = microsoft-sysmon-kv-registry-modify-success-registryvalueset
     """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^:]+?))\s+\w+:"""
     """\s+Image:\s*({file_path}({file_dir}(?:(\w+:)?[^:]+)?[\\\/])?({file_name}.+?))\s+\w+:"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -18,11 +18,10 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-scanningyourcomputer
 		"""Domain:\s*({domain}[^,]+),"""
 		"""({alert_name}Somebody is scanning your computer)"""
 		""""({additional_info}SymantecServer[^"]+)"""
+		"""({alert_type}Somebody is scanning your computer)"""
   ]
-  DupFields = [ "alert_name->alert_type" ]
   SOAR {
     IncidentType = "generic"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->description"]
     NameTemplate = """Symantec Network Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

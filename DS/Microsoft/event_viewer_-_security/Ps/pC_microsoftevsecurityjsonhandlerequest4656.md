@@ -11,14 +11,14 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """({event_name}A handle to an object was requested)""",
     """({event_code}4656)""",
     """"EventTime"+:\s*"+({time}[^",]+)""",
-    """"Hostname"+:"+({host}[^",]+)""",
+    """"Hostname"+:"+({dest_host}({host}[^",]+))""",
     """"SubjectUserSid"+:"+({user_sid}[^",]+)"""",
-    """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName"+:"+({domain}[^",]+)"""",
+    """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName"+:"+({src_domain}({domain}[^",]+))"""",
     """"SubjectLogonId"+:"+({login_id}[^",]+)"""",
     """"TransactionId"+:"+({transaction_id}[^",]+)"""",
-    """Accesses:(?:\s|\\t|\\r|\\n)*({access}[^:]+?)(?:\s|\\t|\\r|\\n)*Access Reasons:""",
-    """"AccessReason"+:"+(-|({access}[^",]+))""",
+    """Accesses:(?:\s|\\t|\\r|\\n)*({privileges}({access}[^:]+?))(?:\s|\\t|\\r|\\n)*Access Reasons:""",
+    """"AccessReason"+:"+(-|({privileges}({access}[^",]+)))""",
     """"PrivilegeList"+:"+(-|({privileges}[^",]+))""",
     """({operation_type}requested)""",
     """"ProcessID"+:"+({process_id}[^",]+)"""",
@@ -29,7 +29,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"HandleId"+:"+({object_id}[^",]+)"""",
     """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
-  DupFields = [ "host->dest_host", "access->privileges", "user->src_user", "domain->src_domain" ]
+
 
 
 }

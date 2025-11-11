@@ -9,6 +9,7 @@ Name = pan-gp-csv-vpn-login-useridlogin
   Conditions = [ """,USERID,login,""" ]
   Fields = [
     """\s(-|({host}[\w\-.]+))\s+\d+,({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+).+?,USERID,login,""",
+    """,USERID,login,([^,]*,){20}(0|({device_name}({firewall}[^,]+))),""",
     """,USERID,login,.+?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^,]+)),""",
     """({app}active-directory)""",
     """,USERID,login,([^,]*,){25}({result_code}[^",]+),(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^,]+))"""

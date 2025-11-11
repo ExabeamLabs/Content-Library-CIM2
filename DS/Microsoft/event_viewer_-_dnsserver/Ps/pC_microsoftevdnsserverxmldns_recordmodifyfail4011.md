@@ -6,6 +6,7 @@ Name = microsoft-evdnsserver-xml-dns_record-modify-fail-4011
   Product = Event Viewer - DNSServer
   Conditions = [ """<EventID>4011</EventID>""", """<Channel>DNS Server</Channel>""", """Microsoft-Windows-DNS-Server-Service""", """<Computer>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
     """({provider_name}Microsoft-Windows-DNS-Server-Service)"""
     """({additional_info}The DNS server[^<]+?)\s*<"""
@@ -27,7 +28,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

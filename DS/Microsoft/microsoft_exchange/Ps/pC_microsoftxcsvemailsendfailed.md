@@ -20,12 +20,12 @@ Name = microsoft-x-csv-email-send-failed
     """,\s*({email_subject}[^,]+?)\s*,([^,]*,){3}Originating,""",
     """,\s*'({email_subject}(?:[^']|'')+?)\s*'\s*,([^,]*,){3}Originating,""",
     """,\s*"({email_subject}(?:[^"]|"")+?)\s*"\s*,([^,]*,){3}Originating,""",
+    """,\s*(?:'|")?(|MicrosoftExchange.*?|({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
     """,\s*(?:'|")?(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
     """,\s*(?:'|")?(?:<>|({return_path}[^,]+?))(?:'|")?\s*,([^,]*,)Originating,"""
     """RecipientNotFound;\s+({failure_reason}[^};]+)"""
     """({direction}Originating)"""
    ]
-   DupFields = [ "email_address->orig_user" ]
 
 
 }

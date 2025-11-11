@@ -6,10 +6,12 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-1
   Product = Event Viewer - Security
   Conditions = ["""A Kerberos service ticket was requested""", """Account Name""", """computer_name""", """event_id\":4769"""]
   Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
+    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\]+))\\?"""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """({event_name}A Kerberos service ticket was requested)""",
-    """TargetUserName\\?"+:\\?"+((({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^\\]+))?)|({user_upn}[^@\s]+?@[^\s\.]+?(\.[^\s\\]+?)?))\\?"""",
+    """TargetUserName\\?"+:\\?"+((({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({dest_domain}({domain}[^\\]+))?))|({user_upn}[^@\s]+?@[^\s\.]+?(\.[^\s\\]+?)?))\\?"""",
     """TargetDomainName\\?"+:\\?"+({web_domain}[^\\]+)""",
     """ServiceName\\?"+:\\?"+({dest_host}[\w\-.]+\$)""",
     """ServiceName\\?"+:\\?"+({service_name}[\w\-.]+)""",
@@ -19,7 +21,6 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-1
     """TicketEncryptionType\\?"+:\\?"+({ticket_encryption_type}[^\s\\]+)"""
     """"event_id[\\]?"+:({event_code}\d+)"""
  ]
- DupFields = [ "domain->dest_domain", "user->dest_user" ]
 
 json-windows-events-2-aa = {
   Vendor = Microsoft
@@ -27,9 +28,7 @@ json-windows-events-2-aa = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?"""",
-    """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\]+))\\?"""",
     """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?"""",
     """event_id\\?"+:({event_code}\d+)""",
     """ProcessName\\?"+:\\?"+(?:|-|({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/":;\s]+?)))\\?"""",

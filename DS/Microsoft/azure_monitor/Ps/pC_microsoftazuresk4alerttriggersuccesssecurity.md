@@ -13,14 +13,13 @@ Name = microsoft-azure-sk4-alert-trigger-success-security
     """operationId":"({alert_id}[^"]+)"""",
     """category":"({azure_category}[^"]+)"""",
     """attackedResourceType":"({azure_resource_type}[^"]+)"""",
-    """eventName":"({alert_type}[^"\\]+)[\\]*"""",
+    """eventName":"({alert_name}({alert_type}[^"\\]+))[\\]*"""",
     """"(detail|result)Description":"({additional_info}[^"]+)[\\]*"""",
     """"resourceId":"({resource}[^"]+)"""",
     """"resourceId":"[^"]*\/RESOURCEGROUPS\/({account_id}[^\/]+)\/""",
     """"correlationId":"({correlation_id}[^"]+)"""",
     """"operationName":"({operation}[^"]+)""""
   ]
-  DupFields = ["alert_type->alert_name"]
 
 cef-azure-event-hub-1 = {
 Vendor = Microsoft

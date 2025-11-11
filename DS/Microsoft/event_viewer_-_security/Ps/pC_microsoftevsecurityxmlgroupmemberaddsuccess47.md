@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-47"
       """>({event_code}\d+)<\d+>Microsoft-Windows-Security-Auditing""",
       """A member was added to a security-enabled ({group_type}[^\s]+) group""",
       """Subject:.+?Account Name:\s*(#011)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(#011)*\s*Account Domain""",
-      """<Data Name\\*=('|")SubjectUserName('|")>(\#011)*({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*(\#\d+)*\s*<""",
+      """<Data Name\\*=('|")SubjectUserName('|")>(\#011)*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\#\d+)*\s*<""",
       """Subject:.+?Account Domain:\s*(\#011)*({domain}[^\s#]+?)\s*(\#011)*\s*Logon ID""",
       """Logon ID:\s*(\#011)*({login_id}[^\s#]+?)\s*(\#011)*\s*Member:""",
       """Member:.*?Security ID:\s*(({dest_user_sid}S-\d+-[^\s]+)|({account_domain}[^\\:]+)\\+({account_name}[^\s]+)|(?:[^\s]+))\s*Account Name:""",
@@ -34,7 +34,6 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-47"
       """hostname\\*=({src_host}[^\\=]+?),.*?\\="""
       """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["src_user->user"]
   ParserVersion = "v1.0.0"
 
 

@@ -18,9 +18,9 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<Execution ProcessID\\*=('|")({process_id}[^'"]+)"""
   """ProcessID\\*=('|")({process_id}\d+)"""
-  """Name =('|")LogonProcessName'>({auth_process}[^<]+)"""
-  """<Message>({event_name}.+?)\s*\.(\s|</Message>)"""
-  """<Message>({event_name}.+?)\s+Subject:"""
+  """Name =('|")LogonProcessName'>({alert_type}({auth_process}[^<]+))"""
+  """<Message>({alert_name}({event_name}.+?))\s*\.(\s|</Message>)"""
+  """<Message>({alert_name}({event_name}.+?))\s+Subject:"""
   """<Keywords?>({result}[^<]+)<\/Keywords?>"""
   """<Provider>({provider_name}.+?)</Provider>"""
   """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)"""
@@ -32,10 +32,6 @@ Fields = [
   """<EventID>({event_code}[^<]+)<\/EventID>"""
   """({additional_info}Credentials Which Were Replayed:.+)This event indicates that a Kerberos replay attack was detected"""
   """<Level>({run_level}[^<]+)"""
-]
-DupFields = [
-  "event_name->alert_name"
-  "auth_process->alert_type"
 ]
 ParserVersion = "v1.0.0"
 

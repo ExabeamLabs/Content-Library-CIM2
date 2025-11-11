@@ -12,12 +12,12 @@ Conditions = [
 Fields = [
 """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
 """({time}\w{1,3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
-"""\w{1,3}\s{1,2}\d{1,2}\s\d\d:\d\d:\d\d\s(::ffff:)?({host}[^\s]+)""",
+"""\w{1,3}\s{1,2}\d{1,2}\s\d\d:\d\d:\d\d\s(::ffff:)?({dest_host}({host}[^\s]+))""",
 """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """\srt=({time}\d{13})""",
-"""<Computer>({host}[^<]+?)</Computer>"""
-""""Computer":"({host}[^"]+)""""
-"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+"""<Computer>({dest_host}({host}[^<]+?))</Computer>"""
+""""Computer":"({dest_host}({host}[^"]+))""""
+"""<\d+>\w+ \d+ \d\d:\d\d:\d\d ({dest_host}({host}[\w_\-\.]+))"""
 """({event_code}4700)"""
 """({event_name}A scheduled task was enabled)"""
 """\sAccount Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}[^:]+?))\s*Logon ID:\s*(|({login_id}[^:]+?))\s*Task Information:"""
@@ -26,7 +26,6 @@ Fields = [
 """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "host-> dest_host"]
 
 
 }

@@ -17,13 +17,10 @@ Fields = [
   """dest_port="({dest_port}\d+)"""",
   """src="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """src_port="({src_port}\d+)"""",
-  """signature="({alert_name}[^"]+)"""",
+  """signature="({alert_type}({alert_name}[^"]+))"""",
   """Alarm_ID="({alert_id}[^"]+)"""",
   """severity="({alert_severity}[^"]+)""""
-  """Notification="+[^\|]+\|({alert_name}[^"\|]+)"""
-]
-DupFields = [
-"alert_name->alert_type"
+  """Notification="+[^\|]+\|({alert_type}({alert_name}[^"\|]+))"""
 ]
 ParserVersion = "v1.0.0"
 

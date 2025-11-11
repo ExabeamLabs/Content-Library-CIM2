@@ -8,13 +8,13 @@ Name = manageengine-adauditplus-kv-handle-request-4656
   TimeFormat = "epoch_sec"
   Conditions = [ """ADAuditPlus""", """EVENT_NUMBER = 4656""", """REMARKS = A handle to an object was requested.""" ]
   Fields = [
-    """({host}[\w\-.]+)\s+ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+))\s+ADAuditPlus""",
     """\WTIME_GENERATED\s*=\s*({time}\d{10})""",
     """\WREMARKS\s*=\s*({event_name}[^\]]+?)\s*\]""",
     """\WEVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """\WEVENT_TYPE_TEXT\s*=\s*(null|({result}[^\]]+?))\s*\]""",
     """\WSOURCE\s*=\s*(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({src_host}[\w\-.]+))""",
-    """\WOBJECT_NAME\s*=\s*(null|({object}[^\]]+?))\s*\]""",
+    """\WOBJECT_NAME\s*=\s*(null|({file_path}({object}[^\]]+?)))\s*\]""",
     """\WFILE_NAME\s*=\s*(null|({file_name}[^\\\/]+?(\.({file_ext}[^\.]+?))?))\s*\]""",
     """\WFILE_LOCATION\s*=\s*(null|({file_dir}[^\]]+?))\s*\]""",
     """\WLOGON_ID\s*=\s*(null|({login_id}[^\]]+?))\s*\]""",
@@ -29,7 +29,6 @@ Name = manageengine-adauditplus-kv-handle-request-4656
     """\WFILE_TYPE\s*=\s*(null|({file_type}[^\]]+?))\s*\]""",
     """\WACCESSES\s*=\s*(null|({access}[^\]]+?))\s*\]""",
   ]
-  DupFields = [ "host->dest_host", "object->file_path" ]
 
 
 }

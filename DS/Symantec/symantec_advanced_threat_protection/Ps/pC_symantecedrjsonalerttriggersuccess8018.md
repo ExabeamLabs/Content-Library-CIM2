@@ -7,10 +7,10 @@ Name = symantec-edr-json-alert-trigger-success-8018
   Conditions = [  """"product_name":"Symantec Endpoint""", """"type_id":8018""" ]
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
     """exa_json_path=$.edr_enriched_data.rule_name,exa_field_name=alert_name""",
+    """exa_json_path=$.edr_enriched_data.rule_name,exa_field_name=alert_type""",
     """exa_json_path=$.severity_id,exa_field_name=alert_severity""",
     """exa_json_path=$.type_id,exa_field_name=event_code"""
   ]
-   DupFields = [ "alert_name->alert_type" ]
 
 symantec-parser-template = {
     Vendor = Symantec

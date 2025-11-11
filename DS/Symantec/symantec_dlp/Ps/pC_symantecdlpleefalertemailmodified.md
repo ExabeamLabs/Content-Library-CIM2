@@ -35,20 +35,6 @@ Fields = [
 ]
 SOAR {
   IncidentType = "dlp"
-  DupFields = [
-    "time->startedDate"
-    "vendor->source"
-    "rawLog->sourceInfo"
-    "user->dlpUser"
-    "alert_name->dlpPolicy"
-    "alert_severity->sourceSeverity"
-    "protocol->dlpProtocol"
-    "src_ip->dlpDeviceName"
-    "file_name->dlpFileName"
-    "action->dlpActionTaken"
-    "email_subject->emailSubject"
-    "email_recipients->emailTo"
-  ]
   NameTemplate = "Symantec DLP Alert ${alert_name} found"
   ProjectName = "SOC"
   EntityFields = [

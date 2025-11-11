@@ -14,11 +14,10 @@ Fields = [
   """\sduser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
   """\sduid=({login_id}[^\s]+)""",
   """\scn1=({login_type}\d+)""",
-  """\sdvchost=({host}[^\s]+)""",
+  """\sdvchost=({dest_host}({host}[^\s]+))""",
   """categoryOutcome=\/?({result}[^=]+)\s\w+=""",
   """cs1=({group_membership}[^=]+)\s\w+="""
 ]
-DupFields = ["host->dest_host"]
 ParserVersion = "v1.0.0"
 
 

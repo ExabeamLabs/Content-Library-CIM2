@@ -24,8 +24,8 @@ Name = citrix-cgateway-cef-vpn-login-success-login
     """SSLVPN_client_type\s*({vpn_client_type}[^\-]+?)\s\-""",
     """Group\(s\) "+(N\/A|({realm}[^"]+))""",
     """ Nat_ip ({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
+    """\s(s|d)user=({account}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+=""",
   ]
-  DupFields = ["user->account"]
   ParserVersion = "v1.0.0"
 
 

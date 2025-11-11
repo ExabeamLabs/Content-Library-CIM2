@@ -9,9 +9,9 @@ Name = microsoft-sysmon-cef-driver-load-success-driverloaded
   Conditions = [ """CEF:""", """|Microsoft Sysmon|Sysmon NXLog|""", """|SysmonTask-SYSMON_DRIVER_LOAD|Driver loaded|""" ]
   Fields = [
     """CEF:([^\|]*\|){5}({event_name}[^\|]+)""",
-    """({host}\S+) CEF:""",
-    """\Wdvc=({host}[A-Fa-f:\d]+)""",
-    """\Wdvchost=({host}[\w\-.]+)""",
+    """({dest_host}({host}\S+)) CEF:""",
+    """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+    """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
     """\Wrt=({time}\d{13})""",
     """\WeventId=({event_code}\d+)""",
     """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -29,7 +29,6 @@ Name = microsoft-sysmon-cef-driver-load-success-driverloaded
     """\Wcs4=({signed}.+?)\s+(\w+=|$)""",
     """\WfileHash=({file_hash}\S+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -25,10 +25,9 @@ cef-azure-event-hub-cosmosdb = {
      """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
      """\[Namespace:\s*({host}\S+) ; EventHub name:"""
      """category":\s*"({category}[^"]+)"""",
-     """"resourceId":\s*"({object}[^"]{1,249})"""
+     """"resourceId":\s*"({resource}({object}[^"]{1,249}))"""
      """"_?ResourceId":\s*"({resource_id}[^"]+)""""
      """"SubscriptionId":\s*"({subscription_id}[^"]+)""""
-  ]
-  DupFields = [ "object->resource" 
+  
 }
 ```

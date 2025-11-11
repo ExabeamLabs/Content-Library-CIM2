@@ -18,11 +18,10 @@ Name = microsoft-evsecurity-cef-group-modify-success-4735-2
     """"targetUserName":"({group_name}[^"\s]+?)\s*"""",
     """"targetDomainName":"({group_domain}[^"\s]+?)\s*"""",
     """"subjectUserSid":"({user_sid}[^"\s]+?)\s*"""",
-    """"subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
-    """"subjectDomainName":"({domain}[^"\s]+?)\s*"""",
+    """"subjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*"""",
+    """"subjectDomainName":"({src_domain}({domain}[^"\s]+?))\s*"""",
     """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]  
 
 
 }

@@ -13,10 +13,10 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)""",
     """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """EventCode=({event_code}\d+)""",
-    """<Computer>({host}[\w\-.]+?)<\/Computer>"""
-    """ComputerName =({host}[^\s]+)""",
+    """<Computer>({src_host}({host}[\w\-.]+?))<\/Computer>"""
+    """ComputerName =({src_host}({host}[^\s]+))""",
     """Keywords=({result}[^=]+?)\s+\w+=""",
-    """\w+\s{1,2}\d{1,2}\s\d\d:\d\d:\d\d\s(\d{4}|({host}[\w\-.]+))\s\w+"""
+    """\w+\s{1,2}\d{1,2}\s\d\d:\d\d:\d\d\s(\d{4}|({src_host}({host}[\w\-.]+)))\s\w+"""
     """({event_name}A registry value was modified)"""
     """Subject:[^"]+?Security ID:\s*({user_sid}[^:]+?)\s+Account Name:"""
     """Subject:[^"]+?Account Name:\s*(LOCAL|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -37,7 +37,6 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """\(EventID\s({event_code}\d+)\)"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host->src_host" ]
 
 
 }

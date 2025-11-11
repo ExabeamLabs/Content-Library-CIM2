@@ -23,11 +23,10 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-denialofservice
 		"""SymantecServer:\s*.*?({alert_name}Denial of Service[^:]+?)\s*Description:"""
 		"""\W\s+Description:\s*({additional_info}[^\.:]+)"""
 
+		"""SymantecServer:\s*.*?({alert_type}Denial of Service[^:]+?)\s*Description:"""
   ]
-  DupFields = [ "alert_name->alert_type" ]
   SOAR {
     IncidentType = "generic"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->description"]
     NameTemplate = """Symantec Network Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

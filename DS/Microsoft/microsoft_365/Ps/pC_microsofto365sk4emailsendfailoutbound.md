@@ -20,13 +20,9 @@ Fields = [
   """"MessageSize":"?({bytes}\d+)"""
   """"MessageTraceId":"({message_id}[^"]+)"""",
   """"MessageId":"({message_id}[^"]+)"""",
-  """"EventType":"({alert_type}[^"]+)""""
+  """"EventType":"({result}({alert_name}({alert_type}[^"]+)))""""
   """"Action":"({action}[^"]+)"""
   """"BulkComplaintLevel":"({spam_score}[^"]+)""""
-]
-DupFields = [
-  "alert_type->alert_name"
-  "alert_type->result"
 ]
 ParserVersion = "v1.0.0"
 

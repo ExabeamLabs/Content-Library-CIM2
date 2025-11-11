@@ -29,11 +29,10 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-arpreplydetected
     """Local Port:\s*({src_port}\d+)""",
     """Remote Port:\s*({dest_port}\d+)""",
 
+    """({alert_type}Unsolicited incoming ARP reply detected)""",
   ]
-  DupFields = [ "alert_name->alert_type" ]
   SOAR {
     IncidentType = "generic"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->description"]
     NameTemplate = """Symantec Network Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

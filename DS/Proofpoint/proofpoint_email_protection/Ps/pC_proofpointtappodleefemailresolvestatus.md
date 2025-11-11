@@ -22,7 +22,7 @@ Fields = [
   """"from"+:\s*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
   """"rcpts"+:\s*\[({email_recipients}"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"*[^\]]*?)\]"""
   """"sizeBytes"+:\s*({bytes}\d+)"""
-  """"filter":.+?disposition":"({result}[^"]+)""""
+  """"filter":.+?disposition":\s*"({result}[^"]+)""""
   """"ip"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"rule"+:\s*"+({rule}[^",]+)""""
   """"guid"*:\s*"*({message_id}[^"]+)""""
@@ -30,11 +30,11 @@ Fields = [
   """"message-id"+:\s*\["+<*({message_id}[^>"]+)"""
   """"detectedName"+:\s*"+\s*({email_attachment}[^"]+)""""
   """"return-path"+:\s*\["+(<>|({return_path}[^"]+))""""
-  """"detectedName"+:"+({attachment_1}[^"]+)"(.+?detectedName"+:"+({attachment_2}[^"]+)")?(.+?detectedName"+:"+({attachment_3}[^"]+)")?(.+?detectedName"+:"+({attachment_4}[^"]+)?")?(.+?detectedName"+:"+({attachment_5}[^"]+)")?(.+?detectedName"+:"+({attachment_6}[^"]+)")?(.+?detectedName"+:"+({attachment_7}[^"]+)")?(.+?detectedName"+:"+({attachment_8}[^"]+)")?(.+?detectedName"+:"+({attachment_9}[^"]+)")?(.+?detectedName"+:"+({attachment_10}[^"]+)")?"""
-  """"cc"+:\[({cc}[^\]]+)\]"""
-  """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))""",
-  """"spf":\{[^\}]*?result":"({spf_result}[^"]+)"""",
-  """"dkimv":\[?\{[^\]\}]*?result":"({dkim_result}[^"]+)""""
+  """"detectedName"+:\s*"+({attachment_1}[^"]+)"(.+?detectedName"+:\s*"+({attachment_2}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_3}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_4}[^"]+)?")?(.+?detectedName"+:\s*"+({attachment_5}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_6}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_7}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_8}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_9}[^"]+)")?(.+?detectedName"+:\s*"+({attachment_10}[^"]+)")?"""
+  """"cc"+:\s*\[({cc}[^\]]+)\]"""
+  """msgParts":[^\n]*?"detectedName":\s*"[^",]*(\.({file_ext}\w+))""",
+  """"spf":\{[^\}]*?result":\s*"({spf_result}[^"]+)"""",
+  """"dkimv":\[?\{[^\]\}]*?result":\s*"({dkim_result}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

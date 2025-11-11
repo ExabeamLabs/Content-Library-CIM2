@@ -11,14 +11,13 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-fail-5168
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
     """<Computer>({host}({dest_host}[\w\-\.]+))</Computer>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>(-|({user_sid}[^<>]+))<""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>(-|({domain}[^<>]+))<""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<>]+)))<""",
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<"""
     """<Data Name\\*=('|")ServerNames('|")>({src_host}[\w\-\.]+)""",
     """<Data Name =('|")IpAddresses('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -15,7 +15,7 @@ Name = pan-gp-csv-vpn-login-success-login-1
     """,USERID,login,.+?({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^,]+)),""",
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))""",
     """({serial_num}[^,]+),USERID,login"""
-    """,USERID,login,([^,]*,){20}({device_name}({host}[^,]+))"""
+    """,USERID,login,([^,]*,){20}({firewall}({device_name}({host}[^,]+)))"""
   ]
 
 

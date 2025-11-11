@@ -15,13 +15,12 @@ Name = "microsoft-nps-xml-endpoint-authentication-11"
     """<Client-IP-Address[^>]+>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """<Authentication-Type[^>]+>({auth_method}[^<]+)<""",
     """Proxy-Policy-Name[^>]+>({additional_info}[^<]+)<""",
-    """<Packet-Type.+?>({result}\d+)""",
+    """<Packet-Type.+?>({event_code}({result}\d+))""",
     """<NP-Policy-Name[^>]+>({network}[^<]+)""",
     """<SAM-Account-Name[^>]+>(({domain}[^<\\]+)\\)?({account}[^<]+)""",
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "result->event_code" ]
 
 
 }

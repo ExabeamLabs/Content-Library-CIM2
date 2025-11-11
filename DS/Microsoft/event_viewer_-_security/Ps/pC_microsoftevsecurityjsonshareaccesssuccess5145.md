@@ -5,15 +5,18 @@ Name = microsoft-evsecurity-json-share-access-success-5145
   ParserVersion = v1.0.0
   Conditions = [  """"Activity":"5145 - A network share object was checked to see whether the client can be granted desired access."""", """"EventID":5145""", """"EventSourceName":"Microsoft-Windows-Security-Auditing""""]
   Fields = ${WindowsParsersTemplates.json-windows-events-4.Fields}[
+    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"IpPort":"({src_port}\d{1,5})""",
     """"ObjectType":"({file_type}[^"]+)"""",
     """"ShareName":"(?:[\\\*]+)?({share_name}[^"]+)""",
     """"ShareLocalPath":"(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)"""",
     """"RelativeTargetName":"({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?"""",
     """"AccessMask":"({access_mask}[^"]+)"""",
-    """"Computer":"({host}[\w\-\.]+)""""
+    """"Computer":"({dest_host}({host}[\w\-\.]+))""""
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))""""
   ]
-  DupFields = ${WindowsParsersTemplates.json-windows-events-4.DupFields}[ "host->dest_host" ]
 
 json-windows-events-4 = {
   Vendor = Microsoft
@@ -23,13 +26,8 @@ json-windows-events-4 = {
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""",
     """"EventID":({event_code}\d+),""",
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
-    """"SubjectLogonId":"({login_id}[^"]+)"""",
-    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"IpPort":"({src_port}\d{1,5})"""
-  ]
-  DupFields = ["user->src_user", "domain->src_domain"
+    """"SubjectLogonId":"({login_id}[^"]+)""""
+  
 }
 ```

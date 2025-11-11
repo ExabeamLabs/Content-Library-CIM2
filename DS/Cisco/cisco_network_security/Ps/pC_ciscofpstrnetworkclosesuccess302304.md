@@ -14,9 +14,7 @@ Name = cisco-fp-str-network-close-success-302304
     """({event_name}({action}Teardown)\s+({protocol}[^\s]+).+?connection)""",
     """from\s+({src_interface}.+?):((::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\/({src_port}\d+)).+?to\s*({dest_interface}.+?):((::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\/({dest_port}\d+))"""
 	  """\sduration\s+({duration}\S+)\s+bytes\s+({bytes}\d+)(\s+({result_reason}[^\("]+[^\(\s"])\s)?"""
-  ]
-  DupFields = [
-  "event_name->operation"
+    """({operation}({action}Teardown)\s+({protocol}[^\s]+).+?connection)""",
   ]
 
 

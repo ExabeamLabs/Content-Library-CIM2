@@ -15,14 +15,13 @@ Name = microsoft-nps-xml-radius-traffic-fail-3
     """<Client-IP-Address[^>]+>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """<Authentication-Type[^>]+>({auth_type}[^<]+)<"""
     """Proxy-Policy-Name[^>]+>({additional_info}[^<]+)<"""
-    """<Packet-Type.+?>({result}\d+)"""
+    """<Packet-Type.+?>({event_code}({result}\d+))"""
     """<SAM-Account-Name[^>]+>(({domain}[^<\\]+)\\)?({account}[^<]+)"""
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<"""
     """<NP-Policy-Name[^>]+>({network}[^<]+)<"""
     """<Reason-Code[^>]+>({failure_reason}\d+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "result->event_code" ]
 
 
 }

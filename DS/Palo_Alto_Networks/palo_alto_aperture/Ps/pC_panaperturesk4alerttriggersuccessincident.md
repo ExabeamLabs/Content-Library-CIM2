@@ -30,7 +30,6 @@ Name = pan-aperture-sk4-alert-trigger-success-incident
     ]
     SOAR {
     IncidentType = "dlp"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "user->dlpFileOwner", "item_name->dlpFileName", "alert_name->dlpPolicy", "host->dlpDeviceName", "alert_type->description"]
     NameTemplate = """Palo Alto DLP Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

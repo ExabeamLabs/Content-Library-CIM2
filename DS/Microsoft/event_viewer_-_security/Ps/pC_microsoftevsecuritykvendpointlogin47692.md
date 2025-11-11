@@ -27,18 +27,15 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
     """Service Name(:|=)\s*((?-i)\\+[rnt])*(::ffff:)?({dest_host}[\w\-.]+\$)[\s;]*((?-i)\\+[rnt])*Service ID"""
     """Service Name(:|=)\s*((?-i)\\+[rnt])*({service_name}[^\s;]+?)[\s;]*((?-i)\\+[rnt])*Service ID"""
     """Client Address(:|=)\s*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[\w\-\.]+?))\s"""
-    """Failure Code(:|=)\s*((?-i)\\+[rnt])*({result_code}[^\s]+)[\s;]*((?-i)\\+[rnt])*.+?Transited Services(:|=)"""
+    """Failure Code(:|=)\s*((?-i)\\+[rnt])*({failure_code}({result_code}[^\s]+))[\s;]*((?-i)\\+[rnt])*.+?Transited Services(:|=)"""
     """Ticket Options(:|=)\s*((?-i)\\+[rnt])*({ticket_options}[^\s]+)[\s;]*((?-i)\\+[rnt])*.+?Ticket Encryption Type(:|=)"""
     """Ticket Encryption Type(:|=)\s*((?-i)\\+[rnt])*({ticket_encryption_type}.+?)(\\r|\\n\\t)*[\s;]*Failure Code(:|=)"""
     """Client Address(:|=)\s*((?-i)\\+[rnt])*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
     """Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
-    """\sComputer(Name)?=({host}[\w\-\.]+)([^\s]*\s|;)"""
+    """Computer(Name)?=({host}[\w\-\.]+)([^\s]*\s|;)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """Microsoft-Windows-Security-Auditing.+?Success Audit ({host}[\w\-\.]+)"""
-    """Error Code:(\\t|\\r\\n)*({result_code}[\w\-]+)\s*(\\t|\\r|\\n)*"""
-  ]
-  DupFields = [
-    "result_code->failure_code"
+    """Error Code:(\\t|\\r\\n)*({failure_code}({result_code}[\w\-]+))\s*(\\t|\\r|\\n)*"""
   ]
   ParserVersion = "v1.0.0"
 

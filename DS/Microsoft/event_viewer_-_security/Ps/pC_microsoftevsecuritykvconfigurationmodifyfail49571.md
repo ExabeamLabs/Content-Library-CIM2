@@ -9,13 +9,12 @@ Conditions = ["""EventCode=4957""","""Windows Firewall did not apply the followi
 Fields = [
   """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM|am|pm))""",
   """EventCode=({event_code}\S+)""",
-  """ComputerName =({host}[\w\-.]+)"""
+  """ComputerName =({dest_host}({host}[\w\-.]+))"""
   """({event_name}Windows Firewall did not apply the following)""",
   """Keywords=({result}[^=]+)\s\w+=""",
   """TaskCategory=({operation_type}[^=]+)\s\w+=""",
   """\WReason:\s*({failure_reason}.+?)(\s\w+:|$)""",
 ]
-DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
 

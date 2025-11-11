@@ -18,11 +18,7 @@ Fields = [
 """({event_code}4743)"""
 """:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog"""
 """Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+(?=\w)({domain}[^:]+?)\s+Logon ID:\s+({login_id}[^\s]+)\s+"""
-"""Target Computer:\s+Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({dest_user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({dest_user}[^:]+?)\s+Account Domain:\s+(?=\w)({object_dn}[^:]+?)\s+Additional Information:"""
-]
-DupFields = [
-"dest_user->object",
-"dest_user->account_name"
+"""Target Computer:\s+Security ID:\s+(NT AUTHORITY\\(SYSTEM|LOCAL SERVICE)|({dest_user_sid}[^:]+?))\s+Account Name:\s+(?=\w)({object}({account_name}({dest_user}[^:]+?)))\s+Account Domain:\s+(?=\w)({object_dn}[^:]+?)\s+Additional Information:"""
 ]
 ParserVersion = "v1.0.0"
 

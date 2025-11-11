@@ -11,8 +11,8 @@ Name = "microsoft-sysmon-mix-registry-create-success-valueset"
   ]
   Fields = [
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)"""
-    """\sComputer="({host}[\w\-.]+)""""
-    """({host}[\w\-\.]+)\sMicrosoft-Windows-Sysmon"""
+    """\sComputer="({dest_host}({host}[\w\-.]+))""""
+    """({dest_host}({host}[\w\-\.]+))\sMicrosoft-Windows-Sysmon"""
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)"""
     """Domain=({domain}.+?)\s+(\w+=|$)"""
     """User:\s*(?:(NT AUTHORITY|NT-AUTORITÄT|({domain}[^\\]+))\\)?(SYSTEM|(NETWORK|LOCAL) SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+LogonGuid:"""
@@ -33,11 +33,8 @@ Name = "microsoft-sysmon-mix-registry-create-success-valueset"
     """TargetObject:\s*({object}({registry_path}.+?[\\\/]+({registry_key}[^\\:]+)[\\\/]+({registry_value}[^\\:]+)))\s+Details:"""
     """Details:\s*({registry_details}.+?)\s*$"""
     """Details:\s*({registry_details_type}DWORD|QWORD|Binary Data)?\s*({registry_details}.+?)\s*$"""
-    """ComputerName(:|=)\s*({host}[\w.-]+)"""
+    """ComputerName(:|=)\s*({dest_host}({host}[\w.-]+))"""
     """"({log_name}Microsoft-Windows-Sysmon)"""
-  ]
-  DupFields = [ 
-    "host->dest_host"
   ]
   ParserVersion = "v1.0.0"
 

@@ -15,7 +15,7 @@ Fields = [
   """\WUNIQUE_ID\s*=\s*({alert_id}\d+)"""
   """\WTIME_GENERATED\s*=\s*({time}\d{10})"""
   """\WSOURCE\s*=\s*(?:User Behaviour Analytics|({src_host}[\w\-.]+))"""
-  """\WALERT_PROFILE\s*=\s*({alert_type}[^=]+?)\s*(\]|([\w_]+)\s*=)"""
+  """\WALERT_PROFILE\s*=\s*({alert_name}({alert_type}[^=]+?))\s*(\]|([\w_]+)\s*=)"""
   """\WSEVERITY\s*=\s*({alert_severity}\d+)"""
   """\WFORMAT_MESSAGE\s*=\s*.+?\sby\s+'(({domain}[^'\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
   """\WFORMAT_MESSAGE = User '?({dest_user}[^'\s]+)'?[^=]+?was (created|deleted) by""",
@@ -28,9 +28,6 @@ Fields = [
   """\WFORMAT_MESSAGE\s*=.+?\s+occured on\s+(?:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[^\s]+))\s+"""
   """\WDOMAIN\s*=\s*({domain}[^\s\]]+)"""
   """\WFORMAT_MESSAGE\s*=\s*({additional_info}.+?)\s*(\]|([\w_]+)\s+=)"""
-]
-DupFields = [
-  "alert_type->alert_name"
 ]
 ParserVersion = "v1.0.0"
 

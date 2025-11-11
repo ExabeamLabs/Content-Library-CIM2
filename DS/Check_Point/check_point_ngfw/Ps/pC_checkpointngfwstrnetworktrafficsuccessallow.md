@@ -49,10 +49,8 @@ Name = "checkpoint-ngfw-str-network-traffic-success-allow"
 """\Wsent_bytes:\"+({bytes_out}\d+)"""
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):\"+(?:[^_\"\s]+_)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\""""
-  ]
-  DupFields = [
-"action->event_name"
-"bytes_out->bytes"
+"""\Waction:\"+({event_name}[^\"]+)"""
+"""\Wsent_bytes:\"+({bytes}\d+)"""
   ]
 
 

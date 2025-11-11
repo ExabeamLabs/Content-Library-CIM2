@@ -16,18 +16,17 @@ Name = microsoft-evsecurity-cef-endpoint-logout-4634
     """<Data Name\\=('|")(Caller)?ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """<Execution ProcessID\\=('|")({process_id}[^'"]+)""",
     """<EventID>({event_code}\d+)""",
-    """<Data Name =('|")TargetUserName('|")>(SYSTEM|({dest_user}[^<]+))<""",
-    """<Data Name =('|")TargetDomainName('|")>({dest_domain}[^<]+)<""",
+    """<Data Name =('|")TargetUserName('|")>(SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
+    """<Data Name =('|")TargetDomainName('|")>({domain}({dest_domain}[^<]+))<""",
     """<Data Name\\=('|")LogonType('|")>({login_type}\d+)<""",
-    """<Data Name\\=('|")TargetUserSid('|")>({dest_user_sid}[^<]+)<""",
-    """<Data Name\\=('|")TargetLogonId('|")>({dest_login_id}[^<]+)<"""
+    """<Data Name\\=('|")TargetUserSid('|")>({user_sid}({dest_user_sid}[^<]+))<""",
+    """<Data Name\\=('|")TargetLogonId('|")>({login_id}({dest_login_id}[^<]+))<"""
     """<Data Name\\=('|")SubjectUserSid('|")>(-|({user_sid}[^<>]+))<""",
     """<Data Name\\=('|")SubjectUserName('|")>(-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """<Data Name\\=('|")SubjectDomainName('|")>(-|({src_domain}[^<>]+))<""",
     """<Data Name\\=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<""",
     """({event_name}An account was logged off)"""
   ]
-  DupFields = [ "dest_user->user", "dest_user_sid->user_sid", "dest_login_id->login_id", "dest_domain->domain" ]
 
 
 }

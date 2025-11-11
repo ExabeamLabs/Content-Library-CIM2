@@ -14,16 +14,15 @@ Name = microsoft-evsecurity-kv-log-clear-success-logfileclear
     """<SubjectLogonId>({login_id}[^<]+)""",
     """({event_code}1102)""",
     """({event_name}LogFileCleared)""",
-    """<SubjectUserName>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """<SubjectUserName>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """<SubjectUserSid>({user_sid}[^<]+)""",
-    """<SubjectDomainName>({domain}[^<]+)""",
+    """<SubjectDomainName>({src_domain}({domain}[^<]+))""",
     """log_name:\s*({log_name}\s*[^,]+)""",
     """<Execution ProcessID\\*=('|")({process_id}[^"']+)""",
     """ThreadID\\*=('|")({thread_id}\d+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)"""
     """<Security UserID=('|")({user_sid}S-[^<]+)('|")"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

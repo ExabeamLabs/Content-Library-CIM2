@@ -13,11 +13,10 @@ Name = microsoft-nps-xml-endpoint-authentication-packettype4
     """<User-Name[^>]+>(({email_address}[^@<]+@[^<]+)|(({domain}[^\\\/<]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """<Client-IP-Address[^>]+>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """Proxy-Policy-Name[^>]+>({additional_info}[^<]+)<""",
-    """<Packet-Type[^>]+>({result}\d+)""",
+    """<Packet-Type[^>]+>({event_code}({result}\d+))""",
     """<NAS-IP-Address data_type=[^>]+>({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})<"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "result->event_code" ]
   ParserVersion = "v1.0.0"
 
 

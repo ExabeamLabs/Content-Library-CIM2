@@ -26,16 +26,13 @@ Fields = [
   """"url":\s*"({url}[^"]+)""""
   """"dst_location":\s*"(N/A|({location}[^"]+))""""
   """"file_size":\s*({bytes}\d+)"""
-  """"file_type":\s*"({file_type}[^"]+)""""
+  """"file_type":\s*"({mime}({file_type}[^"]+))""""
   """"page_site":\s*"({app}[^"]+)""""
   """"dstport":\s*"({dest_port}\d+)""""
   """"action":\s*"({action}[^"]+)"""
   """"referer":\s*"({referrer}[^"]+)"""",
   """"useragent":\s*"({user_agent}[^"]+)""""
   """"dstip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-]
-DupFields = [
-  "file_type->mime"
 ]
 ParserVersion = "v1.0.0"
 

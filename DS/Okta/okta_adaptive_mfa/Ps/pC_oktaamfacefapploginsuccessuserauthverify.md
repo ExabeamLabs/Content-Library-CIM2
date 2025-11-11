@@ -46,6 +46,7 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """"state":"({location_state}[^"]+)""",
     """"country":"({location_country}[^"]+)""",
     """"behaviors":"\{({more_info}[^\}"]+)\}"""", 
+    """"type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_field_name=event_name""",
     """exa_json_path=$..eventType,exa_field_name=operation""",
@@ -80,6 +81,7 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """exa_json_path=$..client.geographicalContext.state,exa_field_name=location_state""",
     """exa_json_path=$..client.geographicalContext.country,exa_field_name=location_country""",
     """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
+    """exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   ]
 
 

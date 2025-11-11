@@ -24,14 +24,11 @@ Fields = [
 """\scs3=({printer_name}.+?)\s*(\w+=|$).*cs3Label=Port"""
 """ad.Key\[7\]=({num_pages}\d+)"""
 """\scn1=({num_pages}\d+).*cn1Label=Pages Printed"""
-"""\sdvchost=({host}[^\s]+)"""
+"""\sdvchost=({dest_host}({host}[^\s]+))"""
 """\sdvc=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sexternalId=({event_code}\d+)"""
 """({operation}PrintService:307)"""
 """\smsg=({operation}.+?)\s*\w+="""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

@@ -15,8 +15,8 @@ Name = checkpoint-ngfw-kv-http-traffic-success-httpinspection
     """\Wdst="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """https_inspection_action="({action}[^"]+)"""",
     """rule_name="({rule}[^"]+)""""
+    """https_inspection_action="({event_name}[^"]+)"""",
   ]
-  DupFields = [ "action->event_name" ]
 
 
 }

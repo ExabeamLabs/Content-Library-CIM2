@@ -13,8 +13,8 @@ Name = cisco-ie-str-email-aborted
       """\sMID\s+({alert_id}\d+)\s+({failure_reason}.+?)$"""
       """\sMessage\s+({result}aborted)"""
       """\sMID\s+({alert_id}\d+)"""
+      """\sMID\s+({message_id}\d+)"""
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

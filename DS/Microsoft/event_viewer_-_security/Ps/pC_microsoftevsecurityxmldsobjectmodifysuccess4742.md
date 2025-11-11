@@ -16,15 +16,14 @@ Fields = [
   """<EventID>({event_code}4742)<"""
   """<Data Name\\*=('|")TargetUserName('|")>({dest_user}[^<]+)<"""
   """<Data Name\\*=('|")TargetDomainName('|")>({ds_object_dn}[^<]+)<"""
-  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<"""
-  """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<"""
+  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
+  """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
   """<Data Name\\*=('|")UserPrincipalName('|")>(-|({attribute}[^<]+))<"""
   """<Level>({run_level}[^<]+)<"""
   """<Data Name =('|")UserAccountControl('|")>(-|({uac_status}[^"<]+))<\/Data><Data Name =('|")UserParameters('|")>"""
   """OldUacValue('|")>(-|({old_value}[^"<]+))<\/Data><Data Name =('|")NewUacValue('|")>(-|({new_value}[^"<]+))<\/Data><Data Name =('|")UserAccountControl('|")>"""
 ]
-DupFields = ["user->src_user", "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

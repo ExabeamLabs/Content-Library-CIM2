@@ -5,9 +5,9 @@ Name = ivanti-ps-kv-vpn-logout-success-nwc32185
   Conditions = [ """ PulseSecure: """, """NWC32185""", """ type=vpnssl """, """Closing the connection""" ]
   Fields = ${JuniperParsersTemplates.ivanti-pulsesecure-events.Fields}[
     """({event_name}Closing the connection)"""
-  ]
+    """\smsg="({failure_reason}.+?)$"""
+    ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "additional_info->failure_reason" ]
 
 ivanti-pulsesecure-events = {
   Vendor = Ivanti

@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """\srt=({time}\d{13})"""
 """\scs5=({app}.+?)\s+\w+="""
-"""\sact=({access}.+?)\s+\w+="""
+"""\sact=({event_code}({access}.+?))\s+\w+="""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\ssuid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?\s+\w+="""
 """\sfilePath=({src_file_path}.+?)\s+\w+="""
@@ -21,9 +21,6 @@ Fields = [
 """\sfileType=({file_type}.+?)\s+\w+="""
 """\soldFileName =({src_file_name}.+?)\s+\w+="""
 """\soldFileType=({src_file_ext}.+?)\s+\w+="""
-]
-DupFields = [
-"access->event_code"
 ]
 ParserVersion = "v1.0.0"
 

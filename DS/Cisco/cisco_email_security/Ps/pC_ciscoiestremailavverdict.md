@@ -12,8 +12,8 @@ Name = cisco-ie-str-email-av-verdict
       """\d\d:\d\d:\d\d\s*({host}[\w\-\.]+)\s*""",
       """MID ({alert_id}\d+)""",
       """AV verdict using\s.+?\s({malware_score}[^\s"]+)""",
+      """MID ({message_id}\d+)""",
      ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

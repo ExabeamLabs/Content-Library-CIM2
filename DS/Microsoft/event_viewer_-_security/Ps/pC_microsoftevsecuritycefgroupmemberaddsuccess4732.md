@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)"""
-""""computer":"({host}[\w\-.]+)"""
+""""computer":"({src_host}({host}[\w\-.]+))"""
 """"message":"({event_name}[^"]+?)\s*""""
 """"eventID":"({event_code}\d+)"""
 """"eventRecordID":"({event_id}\d+)"""
@@ -22,12 +22,11 @@ Fields = [
 """"targetUserName":"({group_name}[^"\s]+?)\s*""""
 """"targetDomainName":"({group_domain}[^"\s]+?)\s*""""
 """"subjectUserSid":"({user_sid}[^"\s]+?)\s*""""
-""""subjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
-""""subjectDomainName":"({domain}[^"\s]+?)\s*""""
+""""subjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""""
+""""subjectDomainName":"({src_domain}({domain}[^"\s]+?))\s*""""
 """"subjectLogonId":"({login_id}[^"\s]+?)\s*""""
 """"memberSid":"({dest_user_sid}S-\d+-[^\s"]+)""""
 ]
-DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-kv-user-switch-success-4648"
 """\"dhn\":\"({host}[^-\"]+)""",
 """({event_code}4648)""",
 """Subject(:|=)[\s;]*Security ID(:|=)\s*({user_sid}.*?)[\s;]*Account Name(:|=)""",
-"""Subject(:|=).+?Account Name(:|=)\s*(?:-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)""",
+"""Subject(:|=).+?Account Name(:|=)\s*(?:-|SYSTEM|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*Account Domain(:|=)""",
 """Subject(:|=).+?Account Domain(:|=)\s*(?:-|NT Service|({domain}[^\s]*?))[\s;]*Logon ID(:|=)""",
 """Subject(:|=).+?Logon ID(:|=)\s*({login_id}.*?)[\s;]*Logon GUID(:|=)""",
 """Subject(:|=).+?Logon GUID(:|=)\s*\{({user_login_guid}[^}]+)\}[\s;]*Account Whose""",
@@ -30,7 +30,6 @@ Name = "microsoft-evsecurity-kv-user-switch-success-4648"
 """Process Name(:|=)\s*(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))[\s;]*Network Information(:|=)""",
 """Network Address(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
   ]
-  DupFields = ["user->account"]
 
 
 }

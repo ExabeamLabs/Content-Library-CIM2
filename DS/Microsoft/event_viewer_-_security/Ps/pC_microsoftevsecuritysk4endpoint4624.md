@@ -7,10 +7,16 @@ Name = microsoft-evsecurity-sk4-endpoint-4624
   Product = Event Viewer - Security
   Conditions = [ """EventID': 4624""", """'NetApp-Security-Auditing'""", """'LogonType'"""  ]
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [
-    """'Computer':\s+'({host}[\w\-\.]+)""",
-    """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """'SubjectDomainName':\s+'({src_domain}[^']+)""",
+    """'TargetDomainName':\s+'({dest_domain}[^']+)""",
+    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """'SubjectUserName':\s+'({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """'TargetUserName':\s+'({dest_user}[^']+)""",
+    """'Computer':\s+'({dest_host}({host}[\w\-\.]+))""",
+    """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """'TargetUserName':\s+'({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """'TargetDomainName':\s+'({domain}[^']+)""",
   ]
-  DupFields = [ "dest_user->user","dest_domain->domain","host->dest_host" ]
 
 netapp-json-windows-events = {
   Vendor = NetApp
@@ -24,10 +30,7 @@ netapp-json-windows-events = {
     """'Result':\s+'({result}[^']+)""",
     """'Computer':\s+'({host}[^']+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
-    """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
-    """'SubjectDomainName':\s+'({src_domain}[^']+)""",
-    """'SubjectUserName':\s+'({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
     """'ObjectServer':\s+'({object_server}[^']+)""",
     """'ObjectType':\s+'({object_class}[^']+)""",
     """'HandleID':\s+'({handle_id}[^']+)""",
@@ -37,8 +40,6 @@ netapp-json-windows-events = {
     """'@SystemTime':\s+'({time}[^']+)"""
     """'IpPort':\s+({src_port}\d+)""",
     """'TargetUserSID':\s+'({dest_user_sid}[^']+)""",
-    """'TargetUserName':\s+'({dest_user}[^']+)""",
-    """'TargetDomainName':\s+'({dest_domain}[^']+)""",
     """'AuthenticationPackageName':\s+'({auth_package}[^']+)""",
     """'LogonType':\s+({login_type}\d+)""",
     """'Provider':.+?@Name':\s+'({provider_name}[^']+)""",
@@ -47,7 +48,6 @@ netapp-json-windows-events = {
     """'ObjectName':\s+'[^.]+\/({file_name}[^']+?(\.({file_ext}[^\s\.']+))?)'""",
     """'OldSD':\s+'({old_sd}[^']+)""",
     """'NewSD':\s+'({new_sd}[^']+)"""
-        """'IpAddress':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     
 }
 ```

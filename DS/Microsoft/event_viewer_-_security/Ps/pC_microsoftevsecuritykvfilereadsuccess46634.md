@@ -8,12 +8,12 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-4
   Conditions = [ """Microsoft-Windows-Security-Auditing """, """EventID="4663"""", """An attempt was made to access an object""" ]
   Fields = [
     """({event_name}An attempt was made to access an object)""",
-    """Computer="+({host}[^"]+)"""",
+    """Computer="+({src_host}({host}[\w\-\.]+))"""",
     """({time}\d\d\d\d\-\d+\-\d+T\d\d:\d\d:\d\d)""",
     """EventID="+({event_code}[^"]+)"""",
-    """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
+    """SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """SubjectUserSid="+({user_sid}[^"]+)"""",
-    """SubjectDomainName ="+({domain}[^"]+)"""",
+    """SubjectDomainName ="+({src_domain}({domain}[^"]+))"""",
     """SubjectLogonId="+({login_id}[^"]+)"""",
     """Category="+({category}[^"]+)""",
     """ObjectType="+({file_type}[^"]+)""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-4
     """AccessMask="({access_mask}[^"]+)""",
     """Accesses:\s*({additional_info}.+?)\s+Access Mask:"""
   ]
-  DupFields = [ "host->src_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

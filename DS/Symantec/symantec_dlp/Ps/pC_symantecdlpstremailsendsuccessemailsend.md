@@ -26,6 +26,8 @@ Fields = [
   """(?i)incident_id="*({alert_id}\d+)"""
   """(?i)policy="*({alert_name}[^",]+)("|,|\s*$)"""
   """(?i)protocol="*({protocol}[^",]+)("|,|\s*$)"""
+  """(?i)policy="*({alert_type}[^",]+)("|,|\s*$)"""
+  """(?i)recipients="*(?=[\w.]+@[\w.])?({email_recipients}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("|,|\s*$)"""
   """(?i)recipients="*(?=[\w.]+@[\w.])?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("|,|\s*$)"""
   """(?i)recipients="*(?=\w+:\/+)({target}[^",]+)("|,|\s*$)"""
   """(?i)sender="*(?=[\w.]+@[\w.])({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("|,|\s*$)"""
@@ -40,21 +42,8 @@ Fields = [
   """(?i)incident_snapshot=[^,]*?({alert_id}\d+),"""
   """(?i)machineIP="*(N\/A|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 ]
-DupFields = [
-  "alert_name->alert_type", "dest_email_address->email_recipients"
-]
 SOAR {
   IncidentType = "dlp"
-  DupFields = [
-    "time->startedDate"
-    "vendor->source"
-    "rawLog->sourceInfo"
-    "user->dlpUser"
-    "alert_name->dlpPolicy"
-    "alert_severity->sourceSeverity"
-    "dest_host->dlpDeviceName"
-    "action->dlpActionTaken"
-  ]
   NameTemplate = "Vontu DLP Alert ${alert_name} found"
   ProjectName = "SOC"
   EntityFields = [

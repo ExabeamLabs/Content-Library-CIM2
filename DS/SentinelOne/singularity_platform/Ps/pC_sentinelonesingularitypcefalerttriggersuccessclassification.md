@@ -14,7 +14,7 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
      """"title":\s*"({alert_name}[^"]+)""",
      """"classification":\s*"({alert_name}({alert_type}[^"]+))""",
      """"agentIp(V4|V6)?":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-     """"fileDisplayName":\s*"({file_name}[^"]+)""",
+     """"fileDisplayName":\s*"({process_name}({file_name}[^"]+))""",
      """"filePath":\s*"({file_path}[^"]+)""", 
      """"agentDomain":\s*"(unknown|({src_domain}[^"]+))""",
      """"agentComputerName":\s*"({src_host}[^"]+)""",
@@ -50,7 +50,6 @@ Name = sentinelone-singularityp-cef-alert-trigger-success-classification
   ]
    SOAR {
     IncidentType = "malware"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "src_host->malwareVictimHost", "alert_type->description", "malware_url->malwareAttackerUrl","file_name->malwareAttackerFile"]
     NameTemplate = """SentinelOne Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

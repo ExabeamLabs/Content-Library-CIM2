@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4770
   Conditions = [ """4770""", """Kerberos サービス チケットが更新されました。""", """アカウント名:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4770,""",
-    """ComputerName =({computer_name}[\w.\-]+)""",
+    """ComputerName =({host}({computer_name}[\w.\-]+))""",
     """(?!\d+)({host}[\w\-.]+),([^,]*,)?Kerberos サービス チケットが更新されました。""",
     """({event_code}4770)""",
     """アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?\s+""",
@@ -21,7 +21,6 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4770
     """クライアント アドレス:\s+(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|::1)(:({src_port}\d+))?"""
     """クライアント アドレス:\s+(::[\w]+:)?({dest_ip}(?!::1)((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   ]
-  DupFields = [ "computer_name->host" ]
 
 
 }

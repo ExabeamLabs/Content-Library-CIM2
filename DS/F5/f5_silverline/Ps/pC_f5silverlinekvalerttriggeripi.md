@@ -9,7 +9,7 @@ Name = f5-silverline-kv-alert-trigger-ipi
   Conditions = [ """ type=ipi, """, """ ip_intelligence_policy_name=""", """ ip_intelligence_threat_name=""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\s+({host}\S+)\s+""",
-    """ip_intelligence_policy_name="({policy_name}[^"]+)"""",
+    """ip_intelligence_policy_name="({alert_name}({policy_name}[^"]+))"""",
     """ip_intelligence_threat_name="(\[\")?({rule}[^"]+?)\\?"""",
     """ip_protocol="({protocol}[^"]+)"""",
     """severity="({alert_severity}[^"]+)"""",
@@ -18,8 +18,6 @@ Name = f5-silverline-kv-alert-trigger-ipi
     """action="({operation}[^"]+)"""",
     """attack_type="({rule_type}[^"]+)"""",
   ]
-  # DupFields = ["rule_type->alert_type" , "policy_name->alert_name"]
-  DupFields = ["policy_name->alert_name"]
 
 
 }

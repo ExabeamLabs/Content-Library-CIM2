@@ -12,9 +12,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-540
     """({event_name}Successful Network Logon)""",
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+540\s+Security""",
-    """(?i)(((audit|success)( |_)(success|audit))|information)\s*,?\s*({host}[\w\-.]+)""",
-    """({host}[^\/\s]+)\/Security\s+\(""",
-    """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+?)("|\s)""",
+    """(?i)(((audit|success)( |_)(success|audit))|information)\s*,?\s*({dest_host}({host}[\w\-.]+))""",
+    """({dest_host}({host}[^\/\s]+))\/Security\s+\(""",
+    """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+?))("|\s)""",
     """({event_code}540)""",
     """User Name\s*:\s*(-|<null>|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Domain\s*:\s*(-|({domain}[^\s]+))\s""",
     """Source Network Address\s*:\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-540
     """Logon ID\s*:\s*[^,\s]+[,\s]({login_id}[^\)]+)\)\s+Logon Type\s*:\s*({login_type}\d+)""",
     """Security(\s+|,)(rn=)?({event_id}\d+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

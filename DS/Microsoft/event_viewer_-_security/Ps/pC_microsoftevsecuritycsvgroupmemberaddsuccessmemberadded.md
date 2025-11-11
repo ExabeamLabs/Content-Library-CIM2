@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-csv-group-member-add-success-memberadded
     TimeFormat = "MM/dd/yyyy hh:mm:ss a"
     Conditions = [ """EventCode=""", """セキュリティが有効な""" ]
     Fields = [ 
-      """ComputerName =({host}[\w.\-]+)""",
+      """ComputerName =({computer_name}({host}[\w.\-]+))""",
       """EventCode=({event_code}[\w]+)""",
       """セキュリティが有効な({group_type}[^\s]+) グループにメンバーが追加されました。""",
       """サブジェクト:.+?アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
@@ -19,7 +19,6 @@ Name = microsoft-evsecurity-csv-group-member-add-success-memberadded
       """グループ:\s+セキュリティ ID:\s+({group_id}[^\s]+)""",
       """グループ:.+?グループ名:\s+({group_name}.+?)?\s+グループ ドメイン:""",
       """グループ:.+?グループ ドメイン:\s+({group_domain}[^\s]+)"""]
-    DupFields = [ "host->computer_name" ]
   
 
 }

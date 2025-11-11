@@ -10,7 +10,7 @@ Name = "microsoft-evsecurity-kv-user-privilege-use-success-4674-1"
       """({event_name}An operation was attempted on a privileged object)""",
       """\s({time}(\d{2}\/){2}\d{4}\s(\d{2}:){2}\d{2}\s(am|AM|pm|PM))\s""",
       """Keywords=Audit\s({result}\w+)\s""",
-      """Computer(\w+)?["\s]*(:|=)\s*"?({host}[\w\-.]+)""",
+      """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+))""",
       """({event_code}4674)""",
       """Account Name:\s*(-|({user}LOCAL SERVICE|SYSTEM|Administrator|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s*(-|NT AUTHORITY|({domain}[^":]+?))\s"""
       """"TargetAccount":"(({dest_domain}[^\\\s"]+)\\+)?({dest_user}[^\\\s"]+)""",
@@ -24,7 +24,6 @@ Name = "microsoft-evsecurity-kv-user-privilege-use-success-4674-1"
       """Privileges:\s*({privileges}[^:"]+?)\s*("|\w+:|$)"""
       """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
     ]
-    DupFields = ["host->dest_host"]
     ParserVersion = "v1.0.0"
 
 

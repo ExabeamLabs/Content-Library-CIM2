@@ -15,10 +15,7 @@ Fields = [
   """(\s|\|)Severity=({alert_severity}[^\|]+)"""
   """usrName =(({domain}[^\\|]+)(\\))?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """Message=({additional_info}[^"|]+)\|"""
-  """SecureSphere\|[^|]+?\|({operation}[^\|]+)\|"""
-]
-DupFields = [
-  "operation->event_name"
+  """SecureSphere\|[^|]+?\|({event_name}({operation}[^\|]+))\|"""
 ]
 ParserVersion = "v1.0.0"
 

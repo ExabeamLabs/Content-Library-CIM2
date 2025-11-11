@@ -17,10 +17,10 @@ Fields = [
 """"eventID":"({event_code}\d+)"""
 """"eventRecordID":"({event_id}\d+)"""
 """"severityValue":"({result}[^"]+?)\s*""""
-""""targetSid":"({user_sid}[^"\s]+?)\s*""""
-""""targetUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*""""
+""""targetSid":"({dest_user_sid}({user_sid}[^"\s]+?))\s*""""
+""""targetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""""
 """"targetUserName":"({user_upn}[^"\s@]+@[^"\s@]+?)\s*""""
-""""targetDomainName":"({domain}[^"\s]+?)\s*""""
+""""targetDomainName":"({dest_domain}({domain}[^"\s]+?))\s*""""
 """"serviceName":"({service_name}[^"\s]+?)\s*""""
 """"serviceName":"({dest_host}[\w\-.]+?\$)\s*""""
 """"ticketEncryptionType":"({ticket_encryption_type}[^"\s]+?)\s*""""
@@ -29,7 +29,6 @@ Fields = [
 """"ipAddress":"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"ipPort":"({src_port}\d+)"""
 ]
-DupFields = [ "user_sid->dest_user_sid", "user->dest_user", "domain->dest_domain" ]
 ParserVersion = "v1.0.0"
 
 

@@ -16,7 +16,7 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """({event_code}4674)"""
   """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*({user_sid}[^<]+)</Data>"""
-  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
+  """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>"""
   """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({src_domain}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({domain}[^<]+?)</Data>"""
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>"""
@@ -31,7 +31,6 @@ Fields = [
   """Creator Process ID:((?-i)\\+[rnt])*({process_id}.+?)((?-i)\\+[rnt])*Creator"""
   """<Level>({run_level}[^<]+)<"""
 ]
-DupFields = ["src_user->user"]
 ParserVersion = "v1.0.0"
 
 

@@ -9,11 +9,10 @@ Name = citrix-cgateway-kv-app-notification-monitorup
   Conditions = [ """ EVENT MONITORUP """ ]
   Fields = [
     """({time}\d+\/\d+\/\d+:\d+:\d+:\d+)\s*GMT""",
-    """GMT\s*({host}[^:\s]+)(\s\S+)?\s:\s*\w+\s*({event_name}(\w+\s+){2})[^:]+:\s*({additional_info}[^"]+)"*""",
-    """GMT\s*({host}[^:\s]+)(\s\S+)?\s:\s*\w+\s*({event_name}(\w+\s+\w+))[^:]+:\s*({additional_info}.+?)\s+($|")"""
+    """GMT\s*({src_host}({host}[^:\s]+))(\s\S+)?\s:\s*\w+\s*({event_name}(\w+\s+){2})[^:]+:\s*({additional_info}[^"]+)"*""",
+    """GMT\s*({src_host}({host}[^:\s]+))(\s\S+)?\s:\s*\w+\s*({event_name}(\w+\s+\w+))[^:]+:\s*({additional_info}.+?)\s+($|")"""
     """({event_name}EVENT MONITORUP)"""
   ]
-  DupFields = ["host->src_host"]
 
 
 }

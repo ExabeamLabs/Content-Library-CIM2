@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 	  """({time}\d+\/\d+\/\d+ \d+:\d+:\d+ (am|AM|pm|PM))""",
     """EventCode=({event_code}\d+)""",
-    """ComputerName\=({host}[\w\-.]+?)\s""",
+    """ComputerName\=({dest_host}({host}[\w\-.]+?))\s""",
     """Target\sAccount\:(\\t|\\r|\\n|\s)*Security\s+ID\:(\\t|\\r|\\n|\s)*({dest_domain}\w+)\\({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\s)*""",
     """TaskCategory=({operation_type}.+?)(\\t|\\r|\\n|\s)*OpCode(:|=)"""
     """RecordNumber=({event_id}\d+)"""
@@ -23,7 +23,6 @@ Fields = [
     """Subject:[^"]+?Account Domain:(\\t|\\r|\\n|\s)*({domain}[^:]+?)(\\t|\\r|\\n|\s)*Logon ID:"""
     """Additional Information:(\\t|\\r|\\n|\s)*Privileges:(\\t|\\r|\\n|\s|\-)*({additional_info}.+?)\.(\w+=|$|")"""
       ]
-      DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
 

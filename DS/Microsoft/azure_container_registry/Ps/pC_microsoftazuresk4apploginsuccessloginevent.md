@@ -19,7 +19,7 @@ Fields = [
 """"callerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"userAgent":"({user_agent}[^"]+)""""
 """"operationName":"({operation}[^",]+)"""
-"""\[Namespace:\s*({event_hub_namespace}\S+) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
+"""\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
 """"loginServer":"({auth_server}[^"]+)""""
 """"({category}ContainerRegistryLoginEvents)""""
 """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^"]+?))?(\/({resource}[^"\/]+))?)""""
@@ -27,9 +27,6 @@ Fields = [
 """"tenantId":"({tenant_id}[^",]+)"""
 """"durationMs":"({duration}[^",]+)"""
 """"correlationId":"({correlation_id}[^",]+)"""
-]
-DupFields = [
-"event_hub_namespace->host"
 ]
 ParserVersion = "v1.0.0"
 

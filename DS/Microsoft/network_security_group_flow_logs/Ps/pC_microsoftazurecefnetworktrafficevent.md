@@ -8,7 +8,7 @@ Name = microsoft-azure-cef-network-traffic-event
      """"category":"NetworkSecurityGroupEvent""""
    ]
     Fields = ${MicrosoftAzureParsersTemplates.cef-azure-event-hub.Fields}[
-    """"operationName":"({operation}[^"]+)"""",
+    """"operationName":"({event_name}({operation}[^"]+))"""",
     """type":"({result}[^"\\]+)""",
     """rule":"({rule}[^"\\]+)""",
     """sourceIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -20,7 +20,6 @@ Name = microsoft-azure-cef-network-traffic-event
     """"_ResourceId":"({resource_id}[^"]+)"""
     """"Category":"({category}[^"]+)"""",
 ] 
-DupFields = [ "operation->event_name" ]
 
 cef-azure-event-hub = {
    Vendor = Microsoft

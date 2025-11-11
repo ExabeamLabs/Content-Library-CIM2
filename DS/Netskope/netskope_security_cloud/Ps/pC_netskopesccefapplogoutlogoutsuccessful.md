@@ -14,7 +14,6 @@ Name = netskope-sc-cef-app-logout-logoutsuccessful
     """"user":\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
     """"audit_log_event":\s*"({operation}[^"]+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

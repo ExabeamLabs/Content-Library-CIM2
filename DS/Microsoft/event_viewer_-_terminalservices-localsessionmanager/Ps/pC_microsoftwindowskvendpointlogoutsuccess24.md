@@ -6,12 +6,15 @@ Name = microsoft-windows-kv-endpoint-logout-success-24
   ParserVersion = "v1.0.0"
   Conditions = [ """eventid="24"""", """Microsoft-Windows-TerminalServices-LocalSessionManager""" ]
   Fields = ${WindowsParsersTemplates.windows-events-2.Fields}[
+    """"subject.account_name"+:"+(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
+    """"new_logon.account_domain"+:"+({domain}[^"]+)""",
     """({event_name}Remote Desktop Services: Session has been disconnected)""",
     """\sUser:\s*(?:[^\\]+\\+)?(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\sSession ID:\s*({session_id}\d+)""",
     """\sSource Network Address:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)(\.\d+Z)?\s*({host}[^\s]+)\s""",
     """"Computer"+:"+({host}[^"]+)""",
+    """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
     """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host"""
   ]
 
@@ -26,9 +29,7 @@ windows-events-2 = {
    """"subject.security_id"+:"+({user_sid}[^"]+)""",
    """"process_information.process_name"+:"+({process_path}({process_dir}[^"]*)\\\\({process_name}[^"]+))""",
    """"process_information.process_id"+:"+({process_id}[^"]+)""",
-   """"subject.account_name"+:"+(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
    """"network_information.source_port"+:"+(-|({src_port}\d+))""",
-   """"new_logon.account_domain"+:"+({domain}[^"]+)""",
    """"message"+:"+({additional_info}[^"]+)""",
    """"ProviderName"+:"+({provider_name}[^"]+)""",
    """"logon_information.logon_type"+:"+({login_type}\d+)"""
@@ -39,7 +40,6 @@ windows-events-2 = {
    """exa_json_path=$.log.jsonPayload.['subject.security_id'],exa_field_name=user_sid"""
    #"""exa_json_path=$.process_information.process_name,exa_field_name=process_path"""
    #"""exa_json_path=$.process_information.process_id,exa_field_name=process_id"""
-   """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))"""
    #"""exa_json_path=$.network_information.source_port,exa_field_name=src_port"""
    #"""exa_json_path=$.new_logon.account_domain,exa_field_name=domain"""
    """exa_json_path=$.log.jsonPayload.message,exa_field_name=additional_info"""

@@ -33,12 +33,10 @@ Fields = [
 """"shared_with":"({shared_with_at}[^"]+)""""
 """"site":"({site_at}[^"]+)""""
 """"file_size":\s*({bytes}\d+)"""
+""""url":"({url}[^"]+)"""
+""""file_path":"({file_path_at}[^"]+)"""
 """msg=.*?\[({alert_source}[^\]]+)\]:"""
 """"activity":"({operation}[^"]+)""""
-]
-DupFields = [
-"malware_url->url"
-"malware_file_name->file_path_at"
 ]
 ParserVersion = "v1.0.0"
 

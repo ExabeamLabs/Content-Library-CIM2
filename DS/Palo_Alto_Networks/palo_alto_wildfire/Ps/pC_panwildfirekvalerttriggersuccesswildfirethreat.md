@@ -11,7 +11,7 @@ pan-cef-alert = {
   Product = Palo Alto WildFire
   TimeFormat = "epoch"
   Fields = [
-    """\|Palo Alto Networks\|PAN-OS\|[^|]+?\|({alert_type}.+?)\|THREAT\|""",
+    """\|Palo Alto Networks\|PAN-OS\|[^|]+?\|({category}({alert_type}.+?))\|THREAT\|""",
     """\|Palo Alto Networks\|PAN-OS\|[^|]+?\|[^|]+?\|THREAT\|({alert_severity}.+?)\|""",
     """cat=(|({alert_name}.+?))(\s+\w+=|\s*$)""",
     """\Wproto=(|({protocol}.+?))(\s+\w+=|\s*$)""",
@@ -28,7 +28,7 @@ pan-cef-alert = {
     """suser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({=domain}[^\s@=]+))?""",
     """\ssourceTranslatedAddress=({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
     """\sdestinationTranslatedAddress=({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
-    """\sdvchost=({host}[\w\-\.]+)""",
+    """\sdvchost=({device_name}({host}[\w\-\.]+))""",
     """\srequest="({malware_url}.+?)"\s""",
     """\sspt=({src_port}\d+)""",
     """\sdpt=({dest_port}\d+)""",
@@ -38,7 +38,6 @@ pan-cef-alert = {
     """deviceOutboundInterface=({dest_interface}[^\s]+)""",
     """deviceExternalId=({serial_num}\d+)""",
     """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
-  ]
-  DupFields = [ "alert_type->category", "host->device_name" 
+  
 }
 ```

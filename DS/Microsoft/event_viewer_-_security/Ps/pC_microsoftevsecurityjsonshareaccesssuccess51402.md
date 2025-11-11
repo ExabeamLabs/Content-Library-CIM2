@@ -11,20 +11,19 @@ Conditions = [
 ]
 Fields = [
 """({event_code}5140)"""
-""""Computer":"({host}[^"]+)"""
+""""Computer":"({dest_host}({host}[^"]+))"""
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}.+?)</Data>"""
-"""<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>"""
-"""<Data Name\\*=('|")SubjectDomainName('|")>({domain}.+?)</Data>"""
+"""<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>"""
+"""<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}.+?))</Data>"""
 """<Data Name\\*=('|")ObjectType('|")>({file_type}.+?)</Data>"""
 """<Data Name\\*=('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?</Data>"""
 """<Data Name\\*=('|")ShareName('|")>(?:[\\\*]+)?({share_name}.+?)</Data>"""
 """<Data Name\\*=('|")ShareLocalPath('|")>(?:[\\\?]+)?(?:\s*|({share_path}(({d_parent}.+)\\)?({d_name}\s*\S[^\\<]+?))\\?)</Data>"""
-"""({accesses_code}4416)"""
+"""({accesses_code}({access}4416))"""
 """('|")IpPort('|")>({src_port}\d+)"""
 """Source Port(=|:)\s*(\\t)*({src_port}\d+)"""
 ]
-DupFields = [ "host->dest_host", "accesses_code->access", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

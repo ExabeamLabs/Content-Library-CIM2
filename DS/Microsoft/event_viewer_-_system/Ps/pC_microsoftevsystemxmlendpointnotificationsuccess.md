@@ -6,6 +6,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success
   Product = Event Viewer - System
   Conditions = [ """<Channel>System</Channel>""", """Microsoft-Windows-IsolatedUserMode""", """<Computer>""", """<EventID>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
   ]
 
@@ -22,7 +23,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

@@ -38,6 +38,7 @@ s-cisco-amp-alert = {
     """\Wact=(|({action}[^=]+?))(\s+\w+=|\s*$)""",
     """\Woutcome=(|({result}[^=]+?))(\s+\w+=|\s*$)""",
     """"timestamp":\s*({time}\d{10})""",
+    """event_type":\s*"({alert_name}[^"]+)"""
     """dpriv=({alert_name}[^=]+?)\s\w+=""",
     """"detection":\s*"(|({alert_name}[^"]+?))"""",
     """\Wsuser=((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
@@ -46,6 +47,7 @@ s-cisco-amp-alert = {
     """user"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))"""",
     """hostname":\s*"({src_host}[^"]+)""",
     """file_path":\s*"(\\+\?\\+)?({file_path}[^"]+)""",
+    """file_path":\s*"(\\+\?\\+)?({malware_file_name}[^"]+)""",
     """external_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"network_addresses":.+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"trajectory":\s*"({additional_info}[^"]+)""",
@@ -66,6 +68,7 @@ s-cisco-amp-alert = {
     """"connector_guid":"({connector_guid}[^"]+)""",
     """"severity":\s*"({alert_severity}[^"]+)""",
     """event_type":\s*"({alert_type}[^"]+)"""
+    """event_type":\s*"({category}[^"]+)"""
 
     """exa_json_path=$..timestamp,exa_field_name=time"""
     """exa_json_path=$.computer.hostname,exa_field_name=src_host"""
@@ -73,6 +76,8 @@ s-cisco-amp-alert = {
     """exa_json_path=$.computer.network_addresses..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """exa_json_path=$.event_type,exa_field_name=event_name"""
     """exa_json_path=$.event_type,exa_field_name=alert_type"""
+    """exa_json_path=$.event_type,exa_field_name=category"""
+    """exa_regex=event_type":\s*"({category}[^"]+)"""
     """exa_json_path=$..computer.network_addresses[:1].Mac,exa_field_name=src_mac"""
     """exa_json_path=$.event.computer.network_addresses[:1].mac,exa_field_name=src_mac"""
     """exa_json_path=$.event.file.identity.sha256,exa_field_name=hash_sha256"""
@@ -81,11 +86,12 @@ s-cisco-amp-alert = {
     """exa_json_path=$.event.connector_guid,exa_field_name=connector_guid"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.file.file_path,exa_field_name=file_path"""
+    """exa_json_path=$.file.file_path,exa_field_name=malware_file_name"""
     """exa_json_path=$.file.file_name,exa_field_name=file_name"""
     """exa_json_path=$.file.identity..sha256,exa_field_name=hash_sha256"""
     """exa_json_path=$.event.file.identity.sha256,exa_field_name=hash_sha256"""
     """exa_json_path=$.event.file.file_path,exa_field_name=file_path"""
-  ]
-  DupFields = [ "file_path->malware_file_name", "alert_type->category" 
+    """exa_json_path=$.event.file.file_path,exa_field_name=malware_file_name"""
+  
 }
 ```

@@ -23,11 +23,8 @@ Fields = [
 """duser=({group_name}.+?)\s+\w+="""
 """\scs6=({user_dn}.+?)\s+\w+="""
 """\scs6=(.+?CN\\?=.+?,({user_ou}(OU)?.+?DC\\?=[\w-]+))\s\w+="""
-"""\sdvchost=({host}[^\s]+)"""
+"""\sdvchost=({dest_host}({host}[^\s]+))"""
 """\sduid=({group_id}.+?)\s+\w+="""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

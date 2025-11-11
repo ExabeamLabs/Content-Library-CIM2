@@ -10,19 +10,18 @@ Name = microsoft-evsecurity-xml-group-delete-success-4763
    Fields = [
      """<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
      """<EventID>({event_code}\d+)""",
-     """<Computer>({host}[^<]+)""",
+     """<Computer>({dest_host}({host}[^<]+))""",
      """<Execution ProcessID=('|")({process_id}\d+)('|") ThreadID=('|")({thread_id}\d+)'""",
      """<EventRecordID>({event_id}\d+)""",
      """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
      """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)""",
      """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)""",
      """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-     """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-     """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)""",
+     """<Data Name =('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+     """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))""",
      """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)""",
      """<Level>({run_level}[^<]+)<"""
    ]
-   DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
  
 
 }

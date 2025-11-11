@@ -8,7 +8,7 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
   TimeFormat = "epoch_sec"
   Conditions = [ """events type=""" ]
   Fields = [
-    """({time}\d{10})\.\d*\s+({host}[\w.\-]+)\s+({alert_name}[^=]+?)\s+type=({event_name}.+?)\s+\w+=""",
+    """({time}\d{10})\.\d*\s+({host}[\w.\-]+)\s+({alert_name}[^=]+?)\s+type=({alert_type}({event_name}.+?))\s+\w+=""",
 # radio is removed
 # vap is removed
     """\sclient_mac='({src_mac}[^']+)""",
@@ -49,7 +49,6 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
     """\sconn_id\[({connection_id}\d+)\]\s""",
     """\sBytes rcv:\s({bytes_in}\d+),\s"""
   ]
-  DupFields = [ "event_name->alert_type" ]
 
 
 }

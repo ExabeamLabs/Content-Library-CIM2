@@ -12,7 +12,7 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
          """<Computer>({host}[^<]+)<\/Computer>""",
          """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
          """<EventID>({event_code}[^<]+)<\/EventID>""",
-         """({event_name}The service is now enforcing the following Azure password policy)""",
+         """({operation}({event_name}The service is now enforcing the following Azure password policy))""",
          """<Security\sUserID\\*='({user_sid}[^']+)'""",
          """<Keywords>({result}[^<]+)<\/Keywords>""",
          """<Execution\sProcessID\\*='({process_id}[^']+)'""",
@@ -20,7 +20,6 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
          """<Message>({additional_info}[^\n]+?)\s*<\/Message>"""
          """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "event_name->operation"]
 
 
 }

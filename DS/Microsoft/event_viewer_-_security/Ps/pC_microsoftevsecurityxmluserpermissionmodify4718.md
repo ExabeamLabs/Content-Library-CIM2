@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
     """<Data Name[^<>]+?AccessRemoved[^<>]+?>({access_type}[^<>]+?)</Data>""",
     """<EventID>({event_code}\d+)""",
     """<Keywords>({result}[^<]+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName'>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName'>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")AccessRemoved('|")>({access_removed_right}[^<]+)<""",
@@ -23,7 +23,6 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
     """<Task>({sub_category}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

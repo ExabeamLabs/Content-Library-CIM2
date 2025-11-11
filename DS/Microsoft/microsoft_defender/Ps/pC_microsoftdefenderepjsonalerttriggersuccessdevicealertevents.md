@@ -12,8 +12,8 @@ Fields = ${MicrosoftParserTemplates.cef-defender-atp-2.Fields} [
 """AlertId":\s*"({alert_id}[^"]+)"""
 """DeviceName":\s*"({src_host}[^"]+)""",
 """"MitreTechniques":"\[({technique}[^\]]+)\]"""
+"""category"+:\s*"+({alert_type}[^"]+)""",
 ]
-DupFields = [ "category->alert_type" ]
 
 cef-defender-atp-2 = {
      Vendor = Microsoft
@@ -22,7 +22,7 @@ cef-defender-atp-2 = {
      Fields = [
        """time"+:\s*"+({time}[^"]+)"""",
        """operationName"+:\s*"+({operation}[^"]+)""",
-       """category"+:\s*"+({category}[^"]+)""",
+       """category"+:\s*"+({event_name}({category}[^"]+))""",
        """RemotePort"+:({dest_port}\d+)""",
        """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
        """"Protocol"+:\s*"+({protocol}[^"]+)""",
@@ -35,7 +35,6 @@ cef-defender-atp-2 = {
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
-     ]
-     DupFields = ["category->event_name"
+     
 }
 ```

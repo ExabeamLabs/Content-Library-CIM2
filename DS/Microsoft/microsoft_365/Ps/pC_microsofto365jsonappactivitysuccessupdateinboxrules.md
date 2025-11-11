@@ -16,6 +16,7 @@ Name = microsoft-o365-json-app-activity-success-updateinboxrules
     """"ActionType(\\)?":(\\)?"({operation}[^"\\]+)(\\)?"""",
     """"Operation":\s*"({event_name}[^"]+)"""",
     """Forward[^\}\]]+Recipients(\\)?":\[[\\"]*({recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\\]+))[^\]]*?)[\\"]*\]"""
+    """Forward[^\}\]]+Recipients(\\)?":\[[\\"]*({recipients}({target}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\\]+))[^\]]*?)[\\"]*\]"""
     """"Workload":\s*"({app}[^"]+)"""",
     """"UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})"""
     """"ClientProcessName":\s*"({process_name}[^"]+)""""
@@ -27,11 +28,11 @@ Name = microsoft-o365-json-app-activity-success-updateinboxrules
     """exa_regex="ActionType(\\)?":(\\)?"({operation}[^"\\]+)(\\)?""""
     """exa_json_path=$..Operation,exa_field_name=event_name"""
     """exa_json_path=$..OperationProperties,exa_regex=Forward[^\}\]]+Recipients(\\)?":\[(\\)?({recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]+)\]""",
+    """exa_json_path=$..OperationProperties,exa_regex=Forward[^\}\]]+Recipients(\\)?":\[(\\)?({recipients}"({target}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]+)\]""",
     """exa_json_path=$..Workload,exa_field_name=app"""
     """exa_json_path=$..ClientProcessName,exa_field_name=process_name"""
     """exa_regex="UserType":\s*"*({user_type}[^\}"]+)\s*"*(,|\})"""
   ]
-  DupFields = [ "dest_email_address->target" ]
   ParserVersion = "v1.0.0"
 
 

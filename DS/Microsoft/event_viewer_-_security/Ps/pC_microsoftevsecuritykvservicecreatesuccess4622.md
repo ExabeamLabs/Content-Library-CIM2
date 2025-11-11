@@ -9,13 +9,12 @@ Name = microsoft-evsecurity-kv-service-create-success-4622
   Fields = [
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d \w\w)""",  
     """({event_code}4622)""",
-    """ComputerName =({host}[\w\-\.]+)""",
+    """ComputerName =({dest_host}({host}[\w\-\.]+))""",
     """({event_name}A security package has been loaded by the Local Security Authority)""",
     """Keywords=({result}[^=]+?)\s*\w+=""",
     """Security Package Name:\s*({service_name}[^$]+?)\s*("|$)""",
     """RecordNumber=({event_id}\w+)""",
   ]
-  DupFields = ["host->dest_host"]
   ParserVersion = "v1.0.0"
 
 

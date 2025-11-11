@@ -9,7 +9,7 @@ Name = microsoft-wdac-xml-endpoint-notification-success-3033
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
     """<EventID>({event_code}\d+)"""
-    """<Computer>({host}[\w\-.]+)"""
+    """<Computer>({dest_host}({host}[\w\-.]+))"""
     """<Data Name =('|")ProcessNameBuffer('|")>\\*(({process_path}({process_dir}[^<]+[\\\\*])({process_name}[^<]+)))"""
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)"""
@@ -18,7 +18,6 @@ Name = microsoft-wdac-xml-endpoint-notification-success-3033
     """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host->dest_host" ]
 
 
 }

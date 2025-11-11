@@ -9,9 +9,8 @@ Name = cisco-ie-str-email-to
     Conditions = [ """MID """, """ RID """, """ To: """ ]
     Fields = [
       """({time}\w+ \w+ \d+ \d\d:\d\d:\d\d \d\d\d\d) Info: MID""",
-      """MID ({alert_id}\d+) .*? To: <({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>""",
+      """MID ({message_id}({alert_id}\d+)) .*? To: <({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>""",
     ]
-    DupFields = [ "alert_id->message_id" ]
  
 
 }

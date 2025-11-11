@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """<EventID>({event_code}\d+)""",
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)</Data>""",
     """<Data Name\\*=('|")AccessGranted('|")>({access_type}[^<]+)</Data>"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

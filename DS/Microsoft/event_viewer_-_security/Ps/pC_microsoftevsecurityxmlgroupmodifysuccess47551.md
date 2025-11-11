@@ -19,8 +19,8 @@ Name = microsoft-evsecurity-xml-group-modify-success-4755-1
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^'"]+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Data Name[^<>]+?TargetUserName[^<>]+?>({group_name}[^<]+)""",
@@ -29,7 +29,6 @@ Name = microsoft-evsecurity-xml-group-modify-success-4755-1
     """<Data Name[^<>]+?PrivilegeList[^<>]+?>({privileges}[^<]+?)<""",   
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

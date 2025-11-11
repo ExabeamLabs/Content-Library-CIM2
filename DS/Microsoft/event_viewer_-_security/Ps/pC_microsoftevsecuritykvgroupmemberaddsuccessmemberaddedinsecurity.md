@@ -13,7 +13,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A member was added to a security-enabled [\w\s]+ group)"""
-"""ComputerName =({host}[\w.\-]+)"""
+"""ComputerName =({src_host}({host}[\w.\-]+))"""
 """EventCode=({event_code}[\w]+)"""
 """A member was added to a security-enabled ({group_type}[^\s]+) group"""
 """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+\s\w+:"""
@@ -25,9 +25,6 @@ Fields = [
 """Group:.+?(Group|Account) Name:\s+(\\t)?({group_name}.+?)?\s*(\\r\s\\t)?(Group|Account) Domain:"""
 """Group:.+?(Group|Account) Domain:\s+(\\t)?({group_domain}[^\s]+)"""
 """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
-]
-DupFields = [
-"host->src_host"
 ]
 ParserVersion = "v1.0.0"
 

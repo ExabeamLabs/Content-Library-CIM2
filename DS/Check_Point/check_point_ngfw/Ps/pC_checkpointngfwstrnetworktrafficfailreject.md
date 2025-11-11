@@ -25,9 +25,7 @@ Name = "checkpoint-ngfw-str-network-traffic-fail-reject"
 """\Wdst_machine_name=\"({dest_host}[^\"@]+)@({domain}[^\"]+)"""
 """\W(user|dst_user_name)=\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """\W(user|dst_user_name)=\"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  ]
-  DupFields = [
-"action->event_name"
+"""\WAction=\"({event_name}[^\"]+)"""
   ]
 
 

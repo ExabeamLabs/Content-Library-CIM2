@@ -39,8 +39,9 @@ Fields = [
   """\sapp=(not-applicable|({network_app}[^=]+?))\s\w+="""
 	"""sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s""",
   """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s"""
+  """\scat=({alert_subject}[^=]+)\s+(\w+=|$)"""
+  """\sPanOSThreatID="*({alert_subject}[^"=\(]+?)(\s*\([^\)]+?\)?)"*\s+\w+="""
 ]
-DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = "v1.0.0"
 
 

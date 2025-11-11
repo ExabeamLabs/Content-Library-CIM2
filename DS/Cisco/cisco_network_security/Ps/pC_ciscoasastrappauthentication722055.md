@@ -18,8 +18,8 @@ Name = cisco-asa-str-app-authentication-722055
     """({event_name}AnyConnect VPN Agent for ({os}[^"]+?))\s\d"""
     """Client Type:\s*({user_agent}[^":\n]+)"""
     """\s(::ffff:)?(-|({host}[\w\.-]+))[\s:]+%\w+-"""
+    """Group <({realm}[^>]+)>""",
   ]
-  DupFields = [ "group_name->realm" ]
 
 
 }

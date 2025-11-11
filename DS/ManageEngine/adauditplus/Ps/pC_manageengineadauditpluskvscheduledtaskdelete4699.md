@@ -9,7 +9,7 @@ Name = manageengine-adauditplus-kv-scheduled-task-delete-4699
   Conditions = ["""EVENT_NUMBER = 4699""","""A scheduled task was deleted"""]
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """({event_name}A scheduled task was deleted)""",
     """CALLER_LOGON_ID\s*=\s*(null|({login_id}[^]]+?))\s*\]""",
@@ -21,7 +21,6 @@ Name = manageengine-adauditplus-kv-scheduled-task-delete-4699
     """FILE_NAME\s*=\s*({task_name}[^\s\]]+)\s*\]""",
     """REPORT_PROFILE\s*=\s*[^\]]+?for ({src_host}[^\]]+?)\s*\]"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

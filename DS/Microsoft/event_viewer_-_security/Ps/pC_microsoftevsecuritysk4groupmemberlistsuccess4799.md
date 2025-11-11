@@ -6,12 +6,15 @@ Name = microsoft-evsecurity-sk4-group-member-list-success-4799
   ParserVersion = v1.0.0
   Conditions = [ """"event_id":4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+    """"TargetUserName"+:"+({dest_user}[^"]+)""",
+    """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
     """"hostname"+:"+({host}[^"]+)""",
     """({event_name}A security-enabled local group membership was enumerated)""",
-    """tGroup Name:((?-i)\\+[rnt])*({group_name}[^:\\",]+)((?-i)\\+[rnt])*"""
+    """tGroup Name:((?-i)\\+[rnt])*({group_name}[^:\\",]+)((?-i)\\+[rnt])*""",
+    """"+SubjectDomainName"+:"+({src_domain}({domain}[^"]+))""",
+    """"+SubjectUserName"+:"+(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   ]
-  DupFields = [ "src_user->user", "src_domain->domain" ]
 
 json-windows-events-2 = {
   Vendor = Microsoft
@@ -25,7 +28,6 @@ json-windows-events-2 = {
     """"keywords"+:\["+({result}[^"]+)""",
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
-    """"TargetUserName"+:"+({dest_user}[^"]+)""",
     """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
@@ -39,18 +41,13 @@ json-windows-events-2 = {
     """"+activity_id"+:"+\{({activity_id}[^}]+)""",
     """"+ProviderName"+:"+({provider_name}[^"]+)""",
     """"+SubjectUserSid"+:"+({user_sid}[^"]+)""",
-    """"+SubjectDomainName"+:"+({src_domain}[^"]+)""",
 # algorithm_name is removed
     """"+Operation"+:"+({operation}[^"]+)""",
     """"+KeyType"+:"+({key_type}[^"]+)""",
     """"+KeyName"+:"+({key_name}[^"]+)""",
-    """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"+SubjectUserName"+:"+(SYSTEM|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
     """exa_json_path=$.EventData.SubjectUserSid,exa_field_name=user_sid"""
-    """exa_json_path=$.EventData.SubjectUserName,exa_field_name=src_user"""
-    """exa_json_path=$.EventData.SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$.EventData.SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.EventData.ProviderName,exa_field_name=provider_name"""

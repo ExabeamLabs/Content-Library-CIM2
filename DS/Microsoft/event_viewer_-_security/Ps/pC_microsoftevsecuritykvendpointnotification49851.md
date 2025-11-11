@@ -13,17 +13,16 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985-1
     """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """({event_name}The state of a transaction has changed)""",
     """Subject:\s+Security ID:\s+({user_sid}[^\s]+)""",
-    """SubjectUserName ="+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    """SubjectDomainName ="+({domain}[^"]+)""",
+    """SubjectUserName ="+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """SubjectDomainName ="+({src_domain}({domain}[^"]+))""",
     """SubjectLogonId="+({login_id}[^"]+)""",
 # transcation_id is removed
 # new_state is removed
 # resource_manager is removed
     """ProcessId="+({process_id}[^"]+)""",
     """ProcessName ="+({process_path}({process_dir}[^.]+)\\({process_name}[^"]+))""",
-    """Computer="+({host}[^"]+)"""
+    """Computer="+({dest_host}({host}[^"]+))"""
   ]
-   DupFields = [ "host-> dest_host", "user->src_user", "domain->src_domain" ]
 
 
 }

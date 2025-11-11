@@ -5,11 +5,12 @@ Name = microsoft-azuread-xml-user-password-modify-fail-30002
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>30002</EventID>""", """<Provider Name""","""Microsoft-AzureADPasswordProtection-DCAgent""" ]
   Fields = ${WindowsParsersTemplates.account-password-activity.Fields}[
+    """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<EventID>({event_code}30002)</EventID>"""
+    """<EventID>({event_code}30002)</EventID>""",
+    """UserName:\s*({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   ]
-  DupFields = [ "user->dest_user" ]
 
 account-password-activity = {
   Vendor = Microsoft
@@ -18,8 +19,6 @@ account-password-activity = {
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>({event_name}[^.<]+)""",
-    """UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """FullName:\s+({full_name}[^<]+?)\s+</Message>""",
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""

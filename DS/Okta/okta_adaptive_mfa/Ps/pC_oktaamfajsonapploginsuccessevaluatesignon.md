@@ -11,6 +11,7 @@ Name = okta-amfa-json-app-login-success-evaluatesignon
     """"+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}[^@]+@({email_domain}[^\.]+\.[^",]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,""",
     """"+actor"+:\{[^\{\}]*?"+displayName"+:"+(Okta System|Okta Admin|unknown|({full_name}[^",]+))"+,""",
     """"policyType"+:"+({alert_type}[^",]+)""",
+    """"eventType"+:"+({event_name}[^",]+)""",
     """"eventType"+:"+({operation}[^",]+)""",
     """"legacyEventType"+:"+({operation_details}[^",]+)""",
     """"+result"+:"+({result}[^",]+)"+,""",
@@ -18,11 +19,10 @@ Name = okta-amfa-json-app-login-success-evaluatesignon
     """"severity"+:"+({alert_severity}[^",]+)"+""",
     """"+userAgent"+:(null|"+({user_agent}[^",]+))"+""",
     """"outcome"+:[^\]]*?"+result"+:"+FAILURE"+,"+reason"+:"+({failure_reason}[^"]+)"+""",
-    """({app}(O|o)kta)"""
-    """"type"+:"+AppInstance"+[^\}\]]*"displayName"+:"+({app}[^"]+?)\s*""""
+    """({object}({app}(O|o)kta))"""
+    """"type"+:"+AppInstance"+[^\}\]]*"displayName"+:"+({object}({app}[^"]+?))\s*""""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = ["operation->event_name", "app->object"]
 
 
 }

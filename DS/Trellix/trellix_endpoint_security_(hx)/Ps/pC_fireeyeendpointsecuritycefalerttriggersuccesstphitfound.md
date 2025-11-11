@@ -23,12 +23,11 @@ fireeye-eps-hx-alert = {
     """\Wmsg=({additional_info}.+?)\s+\w+="""
     """act=({action}[^=]+?)\s\w+="""
     """\srequest=({malware_url}.+?)\s\w+="""
-    """filePath=({file_path}(({file_dir}[^=]+[^\\\/])[\\\/]+)?({file_name}[^=\\\/]+?))\s+(\w+=|$)"""
-    """fname=({file_name}[^=]+?(\.({file_ext}[^=\.]+?))?)\s\w+="""
+    """filePath=({file_path}(({file_dir}[^=]+[^\\\/])[\\\/]+)?({malware_file_name}({file_name}[^=\\\/]+?)))\s+(\w+=|$)"""
+    """fname=({malware_file_name}({file_name}[^=]+?(\.({file_ext}[^=\.]+?))?))\s\w+="""
     """categoryOutcome=\/*({result}[^=]+?)\s\w+=""",
     """cs4Label=Process Name.*?cs4=({process_path}({process_dir}[^\.]+?)\\+({process_name}[^\\]+?))\s*(\w+=|$)"""
   ]
-  DupFields = ["file_name->malware_file_name"]
   SOAR {
     IncidentType = "malware"
     DupFields = [

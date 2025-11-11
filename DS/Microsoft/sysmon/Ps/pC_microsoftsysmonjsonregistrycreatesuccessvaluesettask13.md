@@ -11,9 +11,9 @@ Name = "microsoft-sysmon-json-registry-create-success-valuesettask13"
     """"Task":13"""
   ]
   Fields = [
-    """\"Message\":\s*\"({operation}[^:]+)"""
-    """\"Image\":\s*\"[\\?]*({file_path}({file_dir}[^\"]*?[\\\/]+)?({file_name}[^\"\\\/]+?(\.({file_ext}\w+))?))\""""
-    """\"Hostname\":\s*\"({host}[\w\-.]+)"""
+    """\"Message\":\s*\"({event_name}({operation}[^:]+))"""
+    """\"Image\":\s*\"[\\?]*({process_path}({file_path}({file_dir}[^\"]*?[\\\/]+)?({process_name}({file_name}[^\"\\\/]+?(\.({file_ext}\w+))?))))\""""
+    """\"Hostname\":\s*\"({dest_host}({host}[\w\-.]+))"""
     """\"UtcTime\":\s*\"({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)"""
     """\"UserID\":\s*\"({user_sid}[^\"]+)"""
     """\"ProcessGuid\":\s*\"({process_guid}[^\"]+)"""
@@ -24,12 +24,6 @@ Name = "microsoft-sysmon-json-registry-create-success-valuesettask13"
     """\"Domain\":\s*\"((?i)NT AUTHORITY|({domain}[^\"]+))"""
     """"TargetObject":\s*"({object}({registry_path}[^"]*?\\+({registry_key}[^"\\\/]+?)\\+({registry_value}[^\\"]+)))""""
     """"({log_name}Microsoft-Windows-Sysmon)"""
-  ]
-  DupFields = [
-    "file_path->process_path"
-    "host->dest_host"
-    "file_name->process_name"
-    "operation->event_name"
   ]
   ParserVersion = "v1.0.0"
 

@@ -12,7 +12,6 @@ Name = symantec-endpointprotection-cef-alert-trigger-success-intrusiondetected
   ]
   SOAR {
     IncidentType = "malware"
-      DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "alert_severity->sourceSeverity", "alert_id->sourceId", "src_host->malwareVictimHost", "alert_type->description"]
       NameTemplate = """Symantec Alert ${alert_name} found"""
       ProjectName = "SOC"
       EntityFields = [
@@ -40,7 +39,7 @@ symantec-epp-cef-alert-1 = {
     """\scs2=({result}[^=]+?)\s+(\w+=|$)""",
     """\scs3=({secondary_action}[^=]+?)\s+(\w+=|$)""",
     """\scs5=((?i)(\(Unknown\) \[-1\])|({process_name}[^=]+?))\s+(\w+=|$)""",
-  ]
-  DupFields = [ "alert_type->protection_name" 
+    """\|Symantec\|Endpoint Protection\|([^|]*?\|){2}({protection_name}[^|(]+?)\s*(\([^|]*?)?\|(Unknown|({alert_severity}[^|]+))\|""",
+  
 }
 ```

@@ -37,9 +37,9 @@ Fields = [
 """"+activity_id"+:"+\{({activity_id}[^}]+)"""
 """"+ProviderName"+:"+({provider_name}[^"]+)"""
 """"+SubjectUserSid"+:"+({user_sid}[^"<,]+)"""
-""""+SubjectDomainName"+:"+({src_domain}[^"]+)"""
+""""+SubjectDomainName"+:"+({domain}({src_domain}[^"]+))"""
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """"+PrivilegeList"+:"+(-|({privileges}[^"]+))"""
 """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
 """"Keywords":"({result}[^"]+)"""
@@ -47,7 +47,7 @@ Fields = [
 """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({event_name}An operation was performed on an object)"""
 """({event_code}4662)"""
-""""ObjectName":"({object_name}[^"]+)""""
+""""ObjectName":"({object}({object_name}[^"]+))""""
 """"ObjectServer":"({object_server}[^"]+)""""
 """"ObjectType":"({object_type}[^"]+)""""
 """"LogonID":"({login_id}[^"]+)""""
@@ -60,19 +60,21 @@ Fields = [
 """exa_json_path=$..SubjectLogonId,exa_field_name=login_id"""
 """exa_json_path=$..AccessList,exa_regex=({access}[^\s]+)"""
 """exa_json_path=$..ObjectName,exa_field_name=object_name"""
+"""exa_json_path=$..ObjectName,exa_field_name=object"""
 """exa_json_path=$..ObjectServer,exa_field_name=object_server"""
 """exa_json_path=$..OperationType,exa_field_name=operation"""
 """exa_json_path=$..AdditionalInfo,exa_regex="(?:-|({additional_info}[^"]+))"""
 """exa_json_path=$..SubjectUserName,exa_field_name=src_user"""
+"""exa_json_path=$..SubjectUserName,exa_field_name=user"""
 """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid"""
 """exa_json_path=$.ProviderName,exa_field_name=provider_name"""
 """exa_regex=({event_code}4662)"""
 """exa_json_path=$..ObjectType,exa_field_name=object_type"""
 """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain"""
+"""exa_json_path=$..SubjectDomainName,exa_field_name=domain"""
 """exa_json_path=$.Hostname,exa_field_name=host"""
 """exa_json_path=$.Computer,exa_field_name=host"""
 ]
-DupFields = [ "object_name->object", "src_user->user", "src_domain->domain" ]
 
 
 }

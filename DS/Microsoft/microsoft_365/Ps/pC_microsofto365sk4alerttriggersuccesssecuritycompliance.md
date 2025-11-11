@@ -22,14 +22,13 @@ Fields = [
 """"Category":\s*"({category}[^"]+)""""
 """"AlertType":\s*"({alert_type}[^"]+)""""
 """"Severity":\s*"({alert_severity}[^"]+)""""
-""""Name":\s*"({alert_name}[^"]+?)(\\u200b)?""""
+""""Name":\s*"({alert_subject}({alert_name}[^"]+?))(\\u200b)?""""
 """"trc\\":\s*\\"({email_address}[^"\s@]+@[^"\s@\\]+)\\""""
 """"AlertId":\s*"({alert_id}[^"]+)"""",
 """"Source":\s*"({alert_source}[^"]+)""""
 """"Category":\s*"({category}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
-DupFields = [ "alert_name->alert_subject" ]
 
 
 }

@@ -7,9 +7,8 @@ Name = microsoft-exchange-str-email-send-success-outbound
   TimeFormat = "epoch_sec"
   Conditions = [ """archive[""", """ outbound """ ]
   Fields = [
-    """archive\[\d+\]:\s+({message_id}\S+)\s+({time}\d{10}).*?<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>\s+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+\S+\s+({direction}outbound)"""
+    """archive\[\d+\]:\s+({message_id}\S+)\s+({time}\d{10}).*?<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))>\s+({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\s+\S+\s+({direction}outbound)"""
   ]
-  DupFields = [ "dest_email_address->email_recipients" ]
   ParserVersion = "v1.0.0"
 
 

@@ -7,6 +7,8 @@ Name = microsoft-evbferf-xml-network-notification-success-2003
   ParserVersion = v1.0.0
   Conditions = [ """<EventID>2003</EventID>""","""<Data Name""","""ConnectionUsedId""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """<Computer>({host}[\w\.\-]+)<""",
     """<Data Name\\*=('|")Protocol('|")>({protocol}[^<]+)""",
     """<Data Name\\*=('|")ConnectionUsedId('|")>({connection_id}[^<]+)""",
@@ -41,8 +43,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

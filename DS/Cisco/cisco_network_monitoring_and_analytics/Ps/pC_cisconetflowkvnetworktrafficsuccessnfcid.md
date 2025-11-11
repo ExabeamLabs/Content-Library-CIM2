@@ -24,10 +24,8 @@ Name = "cisco-netflow-kv-network-traffic-success-nfc-id"
     """\spackets_out=({packets_out}\d+)"""
     """\sbytes_out=({bytes_out}\d+)"""
     """\sprotocol=({protocol}\d+)"""
-  ]
-  DupFields = [
-    "bytes_in->bytes"
-    "packets_in->packets"
+    """\sbytes_in=({bytes}\d+)"""
+    """\spackets_in=({packets}\d+)"""
   ]
 
 

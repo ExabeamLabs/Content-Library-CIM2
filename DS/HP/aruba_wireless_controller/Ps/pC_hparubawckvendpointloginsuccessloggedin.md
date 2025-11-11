@@ -24,9 +24,7 @@ Fields = [
   """cs1Label=Session Id.*?\Wcs1=({session_id}[^\s]+)"""
   """\Wcs3=({network}[^\s]+).*?cs3Label=Port Type"""
   """cs3Label=Port Type.*?\Wcs3=({network}[^\s]+)"""
-]
-DupFields = [
-  "dest_ip->auth_server"
+  """\Wdst=({auth_server}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s+([\w\.]+=|$)"""
 ]
 ParserVersion = "v1.0.0"
 

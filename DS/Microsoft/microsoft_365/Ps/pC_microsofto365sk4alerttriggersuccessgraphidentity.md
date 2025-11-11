@@ -12,10 +12,10 @@ Conditions = [
 ]
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)\.\d+Z\s+[\w\-.]+\s+"""
-"""({alert_type}({alert_name}IdentityProtection))"""
-"""({alert_type}({alert_name}graph-identity-protection-risk-detection))"""
+"""({alert_subject}({alert_type}({alert_name}IdentityProtection)))"""
+"""({alert_subject}({alert_type}({alert_name}graph-identity-protection-risk-detection)))"""
 """"source":"(generic|({alert_source}({alert_type}[^"]+)))""""
-""""riskType":"(generic|({alert_name}[^"]+))""""
+""""riskType":"(generic|({alert_subject}({alert_name}[^"]+)))""""
 """"id":"({alert_id}[^"]+)""""
 """"requestId":"({alert_id}[^"]+)""""
 """"riskLevel":"({alert_severity}[^"]+)""""
@@ -34,7 +34,7 @@ Fields = [
 """"+activity":"({action}[^"]+)"""
 """"+additionalInfo":"\[\{+({more_info}[^]]+?)\s*\}\]""",
 """flexString1=({action}[^=]+?)\s*\w+=""",
-""""Name":"({alert_name}[^"]+)"""
+""""Name":"({alert_subject}({alert_name}[^"]+))"""
 """request=({result}[^=]+?)\s*\w+="""
 """"Severity":"({alert_severity}[^"]+)"""
 """"sev\\*":\\*"({alert_severity}[^"\\]+)"""
@@ -49,16 +49,15 @@ Fields = [
 """"state":"({location_state}[^"]+)"""
 """"suid":"(anonymous|\\|({email_address}[^@="\\]+@({email_domain}[^"\\]+?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
 """"PolicyName":"({alert_type}[^"]+)""""
-""""RuleName":"({alert_name}[^"]+)""""
+""""RuleName":"({alert_subject}({alert_name}[^"]+))""""
 """"Id":"({alert_id}[^"]+)""""
-""""riskEventType":"({alert_name}[^"]+)"""
+""""riskEventType":"({alert_subject}({alert_name}[^"]+))"""
 """"riskState":"({action}[^"]+)"""
 """"op\\*"*:\\*"*({operation}[^",\\\s]+)"""
 """"wl\\*"*:\\*"*({app}[^",\\\s]+)"""
 """"von\\*"*:\\*"*({alert_subject}[^",\\]+)""",
 """"correlationId":\s*"({correlation_id}[^"]+)""""
 ]
-DupFields = [ "alert_name->alert_subject" ]
 ParserVersion = "v1.0.0"
 
 

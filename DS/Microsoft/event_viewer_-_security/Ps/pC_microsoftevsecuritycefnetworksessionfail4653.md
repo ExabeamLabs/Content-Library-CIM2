@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-cef-network-session-fail-4653
   Conditions = [ """CEF:""", """"eventID":"4653"""", """An IPsec main mode negotiation failed""" ]
   Fields = [
     """"systemTime":"({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """"computer":"({host}[\w\-.]+)""",
+    """"computer":"({dest_host}({host}[\w\-.]+))""",
     """"message":"({event_name}[^"]+?)\s*"""",
     """"eventID":"({event_code}\d+)""",
     """"eventRecordID":"({event_id}\d+)""",
@@ -20,7 +20,6 @@ Name = microsoft-evsecurity-cef-network-session-fail-4653
     """"localKeyModPort":"({dest_port}\d+)""",
     """"remoteKeyModPort":"({src_port}\d+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

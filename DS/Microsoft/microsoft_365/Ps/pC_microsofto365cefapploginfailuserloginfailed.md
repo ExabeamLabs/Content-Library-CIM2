@@ -11,7 +11,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"Operation":\s*"UserLogin({result}[^"]+)""",
     """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
     """"Operation":\s*"({operation}[^"]+)""",
-    """"ErrorNumber":\s*"({error_code}\d+)"""",
+    """"ErrorNumber":\s*"({failure_code}({error_code}\d+))"""",
     """"OS.*?Value":\s*"({os}[^"]+)|"Value":\s*"({=os}[^"]+)",\s*"Name":\s*"OS"""",
     """"BrowserType.*?Value":\s*"({browser}[^"]+)|"Value":\s*"({=browser}[^"]+)",\s*"Name":\s*"BrowserType"""",
     """"UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
@@ -35,7 +35,6 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"Name":"RequestType","Value":"({request_type}[^"]+?)\s*"""",
     """"Value":"({request_type}[^"]+?)\s*","Name":"RequestType""""
     ]
-  DupFields = [ "error_code->failure_code" ]
 
 cef-o365-app-login-2 = {
   Vendor = Microsoft

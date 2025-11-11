@@ -15,11 +15,11 @@ Name = "microsoft-evsecurity-json-group-member-remove-memberremoved"
     """"EventTime":({time}\d{10})""",
     """"EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
-    """"Hostname":"({host}[\w.-]+?)"""",
+    """"Hostname":"({dest_host}({host}[\w.-]+?))"""",
     """"EventID":"*({event_code}\d+)""",
     """({event_name}A member was removed from a security-enabled ({group_type}[\w\s]+) group)""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"MemberSid":"(({dest_user_sid}S-\d+-[^"]+)|({account_id}[^"]+))""",
@@ -28,7 +28,6 @@ Name = "microsoft-evsecurity-json-group-member-remove-memberremoved"
     """"TargetDomainName":"({group_domain}[^"]+)""",
     """"TargetSid":"({group_id}[^"]+)"""
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

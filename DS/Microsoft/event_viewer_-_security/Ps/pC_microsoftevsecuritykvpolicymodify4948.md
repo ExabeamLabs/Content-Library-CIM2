@@ -12,10 +12,9 @@ Name = microsoft-evsecurity-kv-policy-modify-4948
     """EventCode=({event_code}\d+)\s""",
     """Rule Name:\s*({rule}[^:]+)""",
     """Rule ID:\s*({rule_id}[^\s]+)\s""",
-    """Message=({additional_info}[^.]+)""",
+    """Message=({event_name}({additional_info}[^\.]+))""",
     """Keywords=({result}[^=]+)\s\w+="""
   ]
-  DupFields = [ "additional_info->event_name" ]
   ParserVersion = "v1.0.0"
 
 

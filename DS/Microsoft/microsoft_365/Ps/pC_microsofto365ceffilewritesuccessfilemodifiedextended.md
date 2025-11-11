@@ -19,14 +19,13 @@ logrhythm-o365-file-operation = {
     """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
     """USER=({domain}[^\\\s]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """WORKLOAD=({app}[^=]+?)\s+\w+=""",
-    """COMMAND=({event_name}[^=]+?)\s+\w+=""",
-    """OBJECT=({object}[^=]+?)\s+\w+=""",
+    """COMMAND=({operation}({event_name}[^=]+?))\s+\w+=""",
+    """OBJECT=({file_path}({object}[^=]+?))\s+\w+=""",
     """\sFILENAME=({file_name}[^=]+?(\.({file_ext}[^\s\=\.]+))?)\s+\w+=""",
     """SIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
     """ITEMTYPE=({file_type}[^=]+?)\s+\w+="""
     ]
-    DupFields = [ "event_name->operation", "object->file_path" ]
  },
 
 azure-app-activity-skyfromation= {

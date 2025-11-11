@@ -10,7 +10,7 @@ Name = microsoft-azure-json-image-write-success-createvm
     """exa_json_path=$..responseBody,exa_regex="vmId\\?"+:\s*\\?"+({instance_id}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="vmSize\\?"+:\s*\\?"+({vm_size}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+publisher\\?"+:\s*\\?"+({image_publisher}[^"]+)\\?""""
-    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+offer\\?"+:\s*\\?"+({image_name}[^"]+)\\?""""
+    """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+offer\\?"+:\s*\\?"+({src_resource}({image_name}[^"]+))\\?""""
     """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+sku\\?"+:\s*\\?"+({image_release}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="imageReference\\?"+:[^\}]+"+exactVersion\\?"+:\s*\\?"+({image_version}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="osDisk\\?"+:[^\}]+"+osType\\?"+:\s*\\?"+({os_type}[^"]+)\\?""""
@@ -23,7 +23,6 @@ Name = microsoft-azure-json-image-write-success-createvm
     """exa_regex=identity\/claims\/givenname"\s*:\s*"({full_name}({first_name}[^"\s,]+)[\s,]+({last_name}[^"]+))"""
     """exa_regex=\\*"Creator\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   ]
-  DupFields = [ "image_name->src_resource",  "image_name->source_resource", "src_resource_type->source_resource_type" ]
 
 azure-activity-json = {
     Vendor = Microsoft

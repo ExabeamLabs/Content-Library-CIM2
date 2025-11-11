@@ -26,7 +26,7 @@ Name = "cisco-fp-kv-network-traffic-estreamer"
 """\WPolicy:\s*({policy_name}[^,]+)"""
 """\WConnectType:\s*({connection_type}[^,]+)"""
 """\WAccessControlRuleName:\s*(Unknown|({rule}[^,]+))"""
-"""\WAccessControlRuleAction:\s*({result}[^,]+)"""
+"""\WAccessControlRuleAction:\s*({action}({result}[^,]+))"""
 """\WUserName:\s*(No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
 """\WInitiatorPackets:\s*({initiator_packets}[^,]+)"""
 """\WResponderPackets:\s*({responder_packets}\d+)"""
@@ -49,7 +49,7 @@ Name = "cisco-fp-kv-network-traffic-estreamer"
 """exa_json_path=$.message,exa_regex=\WPolicy:\s*({policy_name}[^,]+)"""
 """exa_json_path=$.message,exa_regex=\WConnectType:\s*({connection_type}[^,]+)"""
 """exa_json_path=$.message,exa_regex=\WAccessControlRuleName:\s*(Unknown|({rule}[^,]+))"""
-"""exa_json_path=$.message,exa_regex=\WAccessControlRuleAction:\s*({result}[^,]+)"""
+"""exa_json_path=$.message,exa_regex=\WAccessControlRuleAction:\s*({action}({result}[^,]+))"""
 """exa_json_path=$.message,exa_regex=\WUserName:\s*(No Authentication Required|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
 """exa_json_path=$.message,exa_regex=\WInitiatorPackets:\s*({initiator_packets}[^,]+)"""
 """exa_json_path=$.message,exa_regex=\WResponderPackets:\s*({responder_packets}\d+)"""
@@ -61,7 +61,6 @@ Name = "cisco-fp-kv-network-traffic-estreamer"
 """exa_json_path=$.message,exa_regex=\WURLCategory:\s*(Unknown|({category}[^,]+?))(,|\s*$)"""
 """exa_json_path=$.message,exa_regex=\WURLReputation:\s*({reputation}[^,]+?)(,|\s*$)"""
   ]
-  DupFields = [ "result->action" ]
 
 
 }

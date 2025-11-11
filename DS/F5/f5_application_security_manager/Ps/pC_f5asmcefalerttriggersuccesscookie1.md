@@ -16,13 +16,10 @@ Fields = [
      """\sASM:("[^"]*",){1}"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
      """\sASM:("[^"]*",){2}"({dest_port}\d+)""",
      """\sASM:("[^"]*",){4}"({alert_name}[^"]+)"""",
-     """\sASM:("[^"]*",){6}"\w+\s+({malware_url}[^"]+?)\s+(({protocol}\w+)\/\d\.\d|)((\\r\\n|\s+)[\w\-]+:|")""",
-     """(\\r\\n|\s)Host:\s*({domain}[^"]+?)((\\r\\n|\s+)[\w\-]+:|")""",
+     """\sASM:("[^"]*",){6}"\w+\s+({malware_url}[^"]+?)\s+(({alert_type}({protocol}\w+))\/\d\.\d|)((\\r\\n|\s+)[\w\-]+:|")""",
+     """(\\r\\n|\s)Host:\s*({web_domain}[^"]+?)((\\r\\n|\s+)[\w\-]+:|")""",
      """(\\r\\n|\s)User-Agent:\s*({user_agent}[^"]+?)(\\r\\n[\w\-]+:|")""",
    ]
-   DupFields = [
-     "protocol->alert_type"
-  ]
  ParserVersion = "v1.0.0"
 
 

@@ -17,3 +17,16 @@ Vendor: Netskope
 | Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
 | Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
 | Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |
+| Edge login data file accessed | The Microsoft Edge login information database file has been accessed. | file-read     | Credential Access | 2        | false    |

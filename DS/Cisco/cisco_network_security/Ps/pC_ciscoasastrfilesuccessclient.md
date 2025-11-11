@@ -25,9 +25,8 @@ Name = "cisco-asa-str-file-success-client"
     """FileSize:\s*({bytes}\d+)"""
     """FilePolicy:\s*({policy_name}[^,]+?)\s*,"""
     """FileDirection:\s*({direction}[^,]+)"""
-    """FileName:\s*(|({file_path}(|({file_dir}[^\",]*?))[\\\/]*({file_name}[^\\\/\",]+?(\.({file_ext}[^\\\/\.\s\",]+))?)))\s*,"""
+    """FileName:\s*(|({file_path}(|({file_dir}[^\",]*?))[\\\/]*({src_file_name}({file_name}[^\\\/\",]+?(\.({src_file_ext}({file_ext}[^\\\/\.\s\",]+))))?)))\s*,"""
   ]
-  DupFields = [ "file_name->src_file_name" , "file_ext->src_file_ext" ]
   ParserVersion = "v1.0.0"
 
 

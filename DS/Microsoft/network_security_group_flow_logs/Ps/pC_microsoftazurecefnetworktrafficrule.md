@@ -28,12 +28,11 @@ Name = microsoft-azure-cef-network-traffic-rule
 """Machine\"+:\"+({src_host}[^\"]+)"""
 """ExecutableName\"+:\"+({process_name}[^\"]+)"""
 """FirstPid\"+:({process_id}\d+)"""
-"""\"ExecutablePath\":\"({process_path}((|({process_dir}[^\"]*?))[\\/]+)?({process_name}[^\"\\/]+?))\s*\""""
+"""\"ExecutablePath\":\"({process_path}((|({process_dir}[^\"]*?)[\\/]+))?({process_name}[^\"\\/]+?))\s*\""""
 """CommandLine\":\"\s*({process_command_line}[^\n]+?)\s*\",\"\w+\""""
 """UserName\"+:\"+((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """UserDomain\"+:\"+({domain}[^\"]+)"""
 ]
-DupFields = [ "process_dir->process_path_directory" ]
 
 cef-azure-event-hub = {
    Vendor = Microsoft

@@ -18,12 +18,12 @@ Name = netskope-sc-json-alert-trigger-success-dlp_match_info
     """exa_json_path=$.app,exa_field_name=app"""
     """exa_json_path=$.status,exa_field_name=alert_status"""
     """exa_json_path=$.dlp_incident_id,exa_field_name=alert_id"""
+    """exa_json_path=$..dlp_policy,exa_field_name=alert_type"""
     """exa_json_path=$..dlp_policy,exa_field_name=alert_name"""
     """exa_json_path=$..dlp_rules[0].dlp_rule_name,exa_field_name=rule"""
     """exa_json_path=$..dlp_action,exa_field_name=action"""    
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "alert_name"->"alert_type" ]  
 
 
 }

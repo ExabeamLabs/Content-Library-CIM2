@@ -10,7 +10,7 @@ Conditions = [ """"event_id":540,""", """Successful Network Logon:""" ]
 Fields = [
   """exa_json_path=$.message,exa_regex=({event_name}Successful Network Logon)""",
   """exa_json_path=$.@timestamp,exa_field_name=time""",
-  """exa_json_path=$.computer_name,exa_regex=^({host}[\w\-.]+?)$""",
+  """exa_json_path=$.computer_name,exa_regex=^({dest_host}({host}[\w\-.]+?))$""",
   """exa_json_path=$.event_id,exa_field_name=event_code""",
   """exa_json_path=$.user.domain,exa_field_name=domain""",
   """exa_json_path=$.user.name,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
@@ -34,9 +34,6 @@ Fields = [
   """exa_json_path=$..logon_id,exa_regex=^\(([\dxA-F]+,)?({login_id}.+?)\)$""",
   """exa_json_path=$..param4,exa_field_name=login_type""",
   """exa_json_path=$..LogonType,exa_field_name=login_type"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

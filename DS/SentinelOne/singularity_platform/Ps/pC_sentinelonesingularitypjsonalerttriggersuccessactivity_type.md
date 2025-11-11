@@ -8,8 +8,9 @@ Name = "sentinelone-singularityp-json-alert-trigger-success-activity_type"
        """exa_json_path=$.['data.threat_classification'],exa_field_name=alert_type""",
        """exa_json_path=$.['data.confidence_level'],exa_field_name=category""",       
        """exa_json_path=$.['data.file_path'],exa_regex=({file_path}((|({file_dir}[^"]*?)[\\\/]+))?({file_name}[^"\\\/]+?(\.({file_ext}[^"\/\\\.]+))?))("|$)"""
+       """exa_json_path=$.type,exa_field_name=alert_subject""",  
+       """exa_json_path=$.primary_description,exa_field_name=alert_name"""      
   ]
-  DupFields = [ "event_name->alert_subject", "additional_info->alert_name" ]
 
 json-sentinelone-activity_type = {
   Vendor = SentinelOne

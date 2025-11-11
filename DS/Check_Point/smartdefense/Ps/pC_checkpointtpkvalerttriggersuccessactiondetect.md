@@ -11,8 +11,8 @@ Name = checkpoint-tp-kv-alert-trigger-success-actiondetect
     """http_status:"({http_response_code}\d+)"""",
     """method:"({method}[^"]+)"""",
     """\Wmalware_action:"({malware_action}[^"]+)"""   
+    """\Wproduct:"({alert_source}[^"]+)"""
   ]
-  DupFields = ["product_name->alert_source"]
 
 checkpoint-network-alert = {
   Vendor = Check Point
@@ -46,7 +46,7 @@ checkpoint-network-alert = {
     """\Wsmartdefense_profile:"({smartdefense_profile}[^"]+)""",
     """\Wuser:"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*"""",
     """originsicname:"+({user_ou}[^"]+)"""
-  ]
-  DupFields = [ "attack->alert_subject" 
+    """\Wattack:"({alert_subject}[^"]+)""",
+  
 }
 ```

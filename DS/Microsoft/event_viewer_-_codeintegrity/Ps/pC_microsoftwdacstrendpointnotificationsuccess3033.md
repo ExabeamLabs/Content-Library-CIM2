@@ -7,7 +7,7 @@ Name = microsoft-wdac-str-endpoint-notification-success-3033
   TimeFormat = ["EEE MMM dd HH:mm:ss yyyy", "MMM dd HH:mm:ss yyyy"]
   Conditions = [ """MSWinEventLog""", """Microsoft-Windows-CodeIntegrity""", """3033""", """did not meet the""", """signing level requirements""" ]
   Fields = [
-    """\s({host}[\w\-.]+)\s+MSWinEventLog""",
+    """\s({dest_host}({host}[\w\-.]+))\s+MSWinEventLog""",
     """\s({time}\w{3}\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})""",
     """\s\w{3}\s+({time}\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\d{4})""",
     """({event_code}3033)""",
@@ -16,7 +16,6 @@ Name = microsoft-wdac-str-endpoint-notification-success-3033
     """({additional_info}Code Integrity determined[^<>]+\.)\s+({alert_id}\d+)"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host->dest_host" ]
 
 
 }

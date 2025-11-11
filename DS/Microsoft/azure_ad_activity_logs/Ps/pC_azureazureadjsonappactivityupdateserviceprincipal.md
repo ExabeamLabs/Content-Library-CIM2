@@ -13,6 +13,7 @@ Name = azure-azuread-json-app-activity-updateserviceprincipal
     """exa_json_path=$.properties.targetResources[:1].displayName,exa_field_name=principal_name""",
     """exa_json_path=$.properties.targetResources[:1].id,exa_field_name=resource_id""",
     """exa_json_path=$.properties.targetResources[:1].type,exa_field_name=principal_type""",
+    """exa_json_path=$.properties.targetResources[:1].type,exa_field_name=azure_resource_type""",
     """exa_json_path=$.properties.category,exa_field_name=azure_category""",
     """exa_json_path=$.tenantId,exa_field_name=tenant_id""",
     """exa_json_path=$.properties.loggedByService,exa_field_name=service_name""",
@@ -21,12 +22,12 @@ Name = azure-azuread-json-app-activity-updateserviceprincipal
     """"targetResources":\s*\[[^\]]*?"displayName":\s*"({principal_name}[^"]+)"""",
     """"targetResources":\s*\[[^\]]*?"id":\s*"({resource_id}[^"]+)"""",
     """"targetResources":\s*\[[^\]]*?"type":\s*"({principal_type}[^"]+)"""",
+    """"targetResources":\s*\[[^\]]*?"type":\s*"({azure_resource_type}[^"]+)"""",
     """"properties".*?"category":\s*"({azure_category}[^"]+)"""",
     """"tenantId":\s*"({tenant_id}[^"]+)"""",
     """"loggedByService":\s*"({service_name}[^"]+)"""",
     """"servicePrincipalId":\s*"({principal_id}[^"]+)""""
   ]
-  DupFields = [ "principal_type->azure_resource_type" ]
 
 microsoft-azuread-json-events = {
     Vendor = Microsoft
@@ -66,6 +67,7 @@ microsoft-azuread-json-events = {
       """exa_regex="targetResources":\s*\[[^\]]+?"displayName":"Role.WellKnownObjectName","oldValue":"\\*"*({object_name}[^\\"]+)\\*""""
       """exa_regex="targetResources":\s*\[[^\]]+?newValue":"\\*"*({role}[^\\"]+)\\*"*","displayName":"Role.DisplayName"""
       """exa_regex="targetResources":\s*\[[^\]]+?newValue":"\\*"*({object_name}[^\\"]+)\\*"*","displayName":"Role.WellKnownObjectName"""
+      """exa_json_path=$.targetResources[?(@.type == 'User')].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^"]+))""",
 
       """"activityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+([+-]\d\d:\d\d|Z))"""",
       """"initiatedBy":\s*[^\}]+?userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
@@ -83,7 +85,7 @@ microsoft-azuread-json-events = {
       """"operationType":\s*"({operation}[^"]+)"""",
       """"correlationId":\s*"({correlation_id}[^"]+)"""",
       """"activityDisplayName":\s*"({operation}({event_name}[^"]+))"""",
-      """"targetResources":\s*\[\{[^\}]+?userPrincipalName":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^"]+))""""
+      """"targetResources":\s*\[.*?userPrincipalName":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^"]+))""""
       """"tenantId":\s*"({tenant_id}[^"]+)"""",
       """"targetResources":\s*\[[^\]]+?"displayName":"Role.DisplayName","oldValue":"\\*"*({role}[^\\"]+)\\*""""
       """"targetResources":\s*\[[^\]]+?"displayName":"Role.WellKnownObjectName","oldValue":"\\*"*({object_name}[^\\"]+)\\*""""

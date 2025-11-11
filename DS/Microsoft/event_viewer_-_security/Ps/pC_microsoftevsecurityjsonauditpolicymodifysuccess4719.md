@@ -15,14 +15,13 @@ Fields = [
     """"(Hostname|Computer)"+:"+({host}[^",]+)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(\s*(\+|\-)[\d\:]+)?)"""",
     """"EventTime"+:"+({time}[^",]+)""",
-    """"SubjectUserName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """"SubjectDomainName"+:"+({domain}[^"]+)""",
+    """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName"+:"+({src_domain}({domain}[^"]+))""",
     """"SubjectLogonId"+:"+({login_id}[^"]+)""",
     """Category:(?:\\t|\\n|\\r|\s)*%*({audit_category}[^:]+?)(?:\\t|\\n|\\r|\s)*Subcategory:"""
     """Subcategory:(?:\\t|\\n|\\r|\s)*%*({sub_category}[^:]+?)(?:\\t|\\n|\\r|\s)*Subcategory GUID:""",
     """Changes:(?:\\t|\\n|\\r|\s)*%*({audit_policy_name}[^:"]+?)(?:\\t|\\n|\\r|\s)*"""",
   ]
-  DupFields = [ "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

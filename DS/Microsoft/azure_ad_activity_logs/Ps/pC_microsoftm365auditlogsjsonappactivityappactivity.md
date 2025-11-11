@@ -8,9 +8,9 @@ Name = microsoft-m365auditlogs-json-app-activity-appactivity
   TimeFormat = "epoch"
   Conditions = [ """"activityResultDescription":"""",  """"activityOperationType":""", """"activityResultStatus":""" ]
   Fields = [
-    """"category":"({category}[^"]+)"""",
+    """"category":"({resource}({category}[^"]+))"""",
     """({app}Office 365)""",
-    """"activity":"({operation}[^"]+)"""",
+    """"activity":"({event_name}({operation}[^"]+))"""",
     """"activityResultStatus":"({result}[^"]+)"""",
     """"activityType":"({object_type}[^"]+)"""",
     """"userPrincipalName":"(({email_address}[^@"]+?@[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
@@ -19,7 +19,6 @@ Name = microsoft-m365auditlogs-json-app-activity-appactivity
     """"targets":\[\{.*?"@odata.type":"({additional_info}[^"]+)"""",
     """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
-  DupFields = ["operation->event_name", "category->resource"]
 
 
 }

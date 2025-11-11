@@ -13,12 +13,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4776
     """ComputerName =({host}[\w\-\.]+)""",
     """Message=({event_name}[^<=]+?)\s*<""",
     """The ({login_type_text}computer|domain)(\s\w+)? attempted to validate the credentials""",
-    """Error Code:\s*({result_code}[^\s"]+)\s*"?""",
+    """Error Code:\s*({failure_code}({result_code}[^\s"]+))\s*"?""",
     """Source Workstation:\s*({src_host}[^\s\<]+)\s*(<14>)?""",
     """Logon Account:\s*(({user_upn}[^<:@]+@[^\.]+\.[^<:]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(<14>)?Source Workstation:""",
-   ]
-   DupFields = [
-    "result_code->failure_code"
    ]
 
 

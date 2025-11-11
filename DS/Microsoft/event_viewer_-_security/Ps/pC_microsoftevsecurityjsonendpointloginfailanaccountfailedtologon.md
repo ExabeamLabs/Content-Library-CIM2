@@ -16,16 +16,13 @@ Fields = [
 """"id":\d*({event_code}4625)"""
 """"firsttime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""
 """"DomainID":"({domain}[^"]+)"""
-""""HostID":"({host}[^"]+)"""
+""""HostID":"({dest_host}({host}[^"]+))"""
 """"UserIDSrc":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
 """"Security_ID":"({user_sid}[^"]+)"""
 """"Logon_Type":"({login_type}\d+)"""
 """"ObjectID":"({auth_package}[^"]+)"""
 """"Status":"({failure_reason}[^"]+)"""
 """"Sub_Status":"({result_code}[^"]+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

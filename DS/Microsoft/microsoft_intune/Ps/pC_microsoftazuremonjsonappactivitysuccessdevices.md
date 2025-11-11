@@ -14,6 +14,7 @@ microsoft-azuremon-json-events = {
   Fields = [
     """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
     """exa_json_path=$.operationName,exa_field_name=operation"""
+    """exa_json_path=$.operationName,exa_field_name=event_name"""
     """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.category,exa_field_name=category"""
     """exa_json_path=$.resultType,exa_field_name=result,exa_match_expr=!Contains($.resultType,"None")"""
@@ -40,7 +41,6 @@ microsoft-azuremon-json-events = {
     """exa_json_path=$..AlertType,exa_field_name=alert_type"""
     """exa_json_path=$..AlertDisplayName,exa_field_name=alert_name"""
     """exa_json_path=$..UPNSuffix,exa_field_name=domain"""
-  ]
-  DupFields = [ "operation->event_name" 
+  
 }
 ```

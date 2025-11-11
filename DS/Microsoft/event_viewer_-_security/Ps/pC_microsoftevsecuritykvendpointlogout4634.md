@@ -19,10 +19,10 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """({time}\w+\s\d+\s\d+:\d+:\d+\s\d+)"""
     """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
     """({event_name}An account was logged off)""",
-    """Security ID:\s*(SYSTEM|({user_sid}\S+))\s+Account Name:""",
-    """Account Name:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*({domain}\S+)\s+Logon ID:""",
-    """Logon ID:\s*({login_id}\S+)\s+Logon Type:""",
+    """Security ID:\s*(SYSTEM|({dest_user_sid}({user_sid}\S+)))\s+Account Name:""",
+    """Account Name:\s*(SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+Account Domain:""",
+    """Account Domain:\s*({dest_domain}({domain}\S+))\s+Logon ID:""",
+    """Logon ID:\s*({dest_login_id}({login_id}\S+))\s+Logon Type:""",
     """Logon Type:\s*({login_type}\d+)""",
     """({event_code}4634)""",
     """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|((?i)am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
@@ -31,15 +31,15 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """exa_json_path=$.TimeCreated,exa_regex=[\\\/]*Date\(({time}\d{13})"""
     """exa_json_path=$.times[0].EventTime,exa_field_name=time"""
     """exa_regex=({event_name}An account was logged off)"""
-    """exa_json_path=$..TargetUserSid,exa_regex=(SYSTEM|({user_sid}\S+))"""
-    """exa_json_path=$..TargetUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-    """exa_json_path=$..TargetDomainName,exa_regex=(-|NT AUTHORITY|({domain}[^\s\\"]+))"""
+    """exa_json_path=$..TargetUserSid,exa_regex=(SYSTEM|({dest_user_sid}({user_sid}\S+)))"""
+    """exa_json_path=$..TargetUserName,exa_regex=(SYSTEM|ANONYMOUS LOGON|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+    """exa_json_path=$..TargetDomainName,exa_regex=(-|NT AUTHORITY|({dest_domain}({domain}[^\s\\"]+)))"""
     """exa_json_path=$..TargetLogonId,exa_field_name=login_id"""
+    """exa_json_path=$..TargetLogonId,exa_field_name=dest_login_id"""
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Computer,exa_field_name=host"""
   ]
-  DupFields = ["login_id->dest_login_id" , "user_sid->dest_user_sid" , "domain->dest_domain", "user->dest_user"]
 
 
 }

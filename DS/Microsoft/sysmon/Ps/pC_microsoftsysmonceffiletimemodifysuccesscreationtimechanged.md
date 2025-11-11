@@ -9,9 +9,9 @@ Name = microsoft-sysmon-cef-file-time-modify-success-creationtimechanged
   Conditions = [ """CEF:""", """|Microsoft Sysmon|Sysmon NXLog|""", """|SysmonTask-SYSMON_FILE_TIME|File creation time changed|""" ]
   Fields = [
     """CEF:([^\|]*\|){5}({event_name}[^\|]+)""",
-    """({host}\S+) CEF:""",
-    """\Wdvc=({host}[A-Fa-f:\d]+)""",
-    """\Wdvchost=({host}[\w\-.]+)""",
+    """({dest_host}({host}\S+)) CEF:""",
+    """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+    """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
     """\Wrt=({time}\d{13})""",
     """\WeventId=({event_code}\d+)""",
     """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -27,7 +27,6 @@ Name = microsoft-sysmon-cef-file-time-modify-success-creationtimechanged
     """\Wdpid=({process_id}\d+)""",
     """\Wfname=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

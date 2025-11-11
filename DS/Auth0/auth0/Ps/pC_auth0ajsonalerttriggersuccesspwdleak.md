@@ -229,6 +229,27 @@ ParserVersion = "v1.0.0"
 }
 
 {
+  Name = "extrahop-revealx-leef-alert-trigger-success-extrahopdetection"
+  Vendor = "Extrahop"
+  Product = "Extrahop Reveal(x)"
+  TimeFormat = [ "MMM dd yyyy HH:mm:ss", "MMM dd yyyy HH:mm:ss Z", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]  
+  Conditions = [ """LEEF:""", """|ExtraHop|Reveal""", """|extrahop-detection|""", """categories=""", """title=""" ]
+  Fields = [
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+-\d+:\d+)\s*({host}[\w.-]+)\s"""
+    """\Wstart_time=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d [+-]\d\d\d\d)"""
+    """\Wdesc=({alert_description}.+?)\s*([¦|]\w+=|$)"""
+    """\Woffender_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\Wvictim_ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """\Wtitle=({alert_name}.+?)\s*([¦|]\w+=|$)"""
+    """\Wdet_url=({url}.+?)\s*([¦|]\w+=|$)"""
+    """\Wrisk_score=({alert_severity}\d+)"""
+    """\Wrisk_score=({original_risk_score}\d+)"""    
+    """\Wcategories=({alert_type}.+?)\s*([¦|]\w+=|$)"""
+  ]
+  ParserVersion = "v1.0.0"
+}
+
+{
   Name = vectra-cd-json-alert-trigger-success-headendaddr
   Product = Vectra Cognito Detect
   Vendor = Vectra
@@ -617,7 +638,12 @@ ParserVersion = "v1.0.0"
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*UTC"""
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
-    """({additional_info}({action}connection authorized):\s*(\[[^\]]+\]:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)?\s*user=({db_user}[^=]+?)(\sdatabase=({db_name}[^"\s=]+))?("|\s)(application_name=({app}[^\s]+)\s)?[^"]*)("|$)*"""
+    """({action}connection authorized)"""
+    """connection authorized:\s*(\[[^\]]+\]:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)?"""
+    """\s*user=({db_user}[^=]+?)\s"""
+    """({additional_info}(connection authorized).+?)\s*$"""
+    """\sdatabase=({db_name}[^"\s=]+)"""
+    """application_name=({app}[^\s]+)"""
     """database=({db_name}[\w\.\-]+)"""
     """:LOG:\s*({action}[^:]+)"""
   ]

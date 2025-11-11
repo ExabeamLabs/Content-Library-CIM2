@@ -16,8 +16,8 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
       """<Computer>(\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}|({dest_host}[\w\-.]+)</Computer>)""",
       """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-      """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-      """<Data Name\\*=('|")SubjectDomainName('|")>(|NT AUTHORITY|({domain}[^<]+))</Data>""",
+      """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+      """<Data Name\\*=('|")SubjectDomainName('|")>(|NT AUTHORITY|({src_domain}({domain}[^<]+)))</Data>""",
       """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
       """<Data Name\\*=('|")ObjectType('|")>({file_type}[^<]+)</Data>""",
       """<Data Name\\*=('|")IpAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -32,7 +32,6 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """Source Port(=|:)\s*({src_port}\d+)"""
       """<Level>({run_level}[^<]+)<"""
     ]
-    DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

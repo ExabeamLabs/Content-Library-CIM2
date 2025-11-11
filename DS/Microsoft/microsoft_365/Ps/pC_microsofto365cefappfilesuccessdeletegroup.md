@@ -19,7 +19,7 @@ cef-microsoft-app-activity-2 = {
     """category":"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """resourceId":\s*"({object}[^"]+)""",
+    """resourceId":\s*"({resource}({object}[^"]+))""",
     """"Operation":\s*"({operation}[^"]+)""",
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
@@ -46,7 +46,6 @@ cef-microsoft-app-activity-2 = {
     """"Workload":\s*"({app}[^"]+)""""
     #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
-  ]
-  DupFields = [ "object->resource" 
+  
 }
 ```

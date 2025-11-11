@@ -11,7 +11,6 @@ Name = microsoft-azure-json-image-write-success-imagewrite
     """exa_json_path=$..responseBody,exa_regex="blobUri\\?"+:\s*\\?"+({src_resource}[^"]+)\\?""""
     """"eventTimestamp":"({time}\d{4}\-\d{1,2}\-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+Z)"""
   ]
-  DupFields = ["src_resource->source_resource"]
 
 azure-activity-json = {
     Vendor = Microsoft

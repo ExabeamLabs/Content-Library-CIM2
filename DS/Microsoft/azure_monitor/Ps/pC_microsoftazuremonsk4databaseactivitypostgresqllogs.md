@@ -17,24 +17,23 @@ Name = microsoft-azuremon-sk4-database-activity-postgresqllogs
      """"TimeGenerated":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
      """ResourceGroup":"({server_group}[^"]+)""",
      """schemaName":"({db_schema}[^"]+)""",
-     """"message":"({db_operation}[^"]+)""",
+     """"message":"({additional_info}({db_operation}[^"]+))""",
      """"tableName":"({table_name}[^"]+)""",
      """"detail":"({additional_info}[^"]+)""",
      """"LogicalServerName":"({server}[^"]+)""",
 # azure_resource_id is removed
-     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
+     """Namespace:\s*(|({host}({event_hub_namespace}[^\]]+?)))\s*[\];]""",
      """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
      """category":"({category}[^"]+)"""",
      """protocol\\=({protocol}[^,]+)""",
      """cipher\\=({cipher}[^,]+)""",
      """"+domain"+:"+({domain}[^"]+)"""
-     """"resourceId":\s*"({object}[^"]{1,249})"""
+     """"resourceId":\s*"({resource}({object}[^"]{1,249}))"""
      """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
      """"operationName":"({operation}[^"]+)"""
      """"_?ResourceId":\s*"({resource_id}[^"]+)""""
      """"SubscriptionId":\s*"({subscription_id}[^"]+)""""
   ]
-  DupFields= ["event_hub_namespace->host", "object->resource" , "db_operation->additional_info"]
 
 
 }

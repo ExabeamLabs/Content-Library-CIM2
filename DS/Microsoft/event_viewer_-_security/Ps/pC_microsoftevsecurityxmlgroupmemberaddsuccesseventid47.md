@@ -13,12 +13,12 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
   Fields = [
     """({event_name}A member was added to a security-enabled [\w\s]+ group)""",
     """<TimeCreated SystemTime\\*=('|")({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
-    """<Computer>({host}[^<]+)</Computer>""",
+    """<Computer>({dest_host}({host}[^<]+))</Computer>""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """A member was added to a security-enabled ({group_type}[^\s]+) group""",
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)<"""
-    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)<""",
+    """<Data Name =('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<""",
     """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)<""",
     """<Data Name =('|")MemberSid('|")>(({dest_user_sid}S-\d+\-[^<]+)|({account_id}[^<]+))<""",
     """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
@@ -28,7 +28,6 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
     """Member:(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
   ParserVersion = "v1.0.0"
 
 

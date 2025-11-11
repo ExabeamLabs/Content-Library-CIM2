@@ -9,7 +9,7 @@ Name = manageengine-adauditplus-kv-endpoint-time-modify-4616
   Conditions = ["""EVENT_NUMBER = 4616""","""The system time was changed"""]
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """({event_name}The system time was changed)""",
     """\sACCOUNT_NAME\s*=\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
@@ -18,7 +18,6 @@ Name = manageengine-adauditplus-kv-endpoint-time-modify-4616
     """\WPROCESS_NAME\s*=\s*(|null|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]""",
     """CALLER_USER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

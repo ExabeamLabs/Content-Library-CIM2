@@ -7,12 +7,12 @@ Name = symantec-edr-json-alert-trigger-success-8031
   Conditions = [ """"product_name":"Symantec Endpoint""", """"event_data_type":"sep"""",""""type_id":8031""" ]
   Fields = ${SymantecParserTemplates.symantec-parser-template.Fields}[
     """exa_json_path=$.type,exa_field_name=alert_type"""
+    """exa_json_path=$.type,exa_field_name=alert_name"""
     """exa_json_path=$.file.path,exa_field_name=file_path"""
     """exa_json_path=$.file.name,exa_field_name=file_name"""
     """exa_json_path=$.message,exa_field_name=additional_info"""
     """exa_json_path=$.type_id,exa_field_name=event_code"""
   ]
-  DupFields = [ "alert_type->alert_name" ]
 
 symantec-parser-template = {
     Vendor = Symantec

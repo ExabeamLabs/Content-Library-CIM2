@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-xml-file-5058-1
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}\d+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>""",
-    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({domain}[^<>]+?)</Data>""",
+    """<Data Name[^<>]+?SubjectUserName[^<>]+?>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
 # algorithm_name is removed
     """<Data Name(\\)?=('|")Operation('|")>({operation}[^<]+)""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-xml-file-5058-1
     """<Data Name =('|")KeyFilePath('|")>({file_path}({file_dir}[^<]+[\\\/]+)?({file_name}[^<\\\/]+(\.({file_ext}[^\s<\\\/]+))?))<"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

@@ -10,10 +10,9 @@ Name = microsoft-evsystem-str-ssl-start-fail-36874
   Fields = [
     """({event_code}36874)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """\s+({host}[\w.\-]+)\s+EvntSLog""",
+    """\s+({dest_host}({host}[\w.\-]+))\s+EvntSLog""",
     """({event_name}The \w+ connection request has failed)""",
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

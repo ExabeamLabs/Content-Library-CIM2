@@ -10,7 +10,7 @@ Name = microsoft-evntlm-kv-endpoint-login-fail-8004
   Fields = [
     """({event_name}Domain Controller Blocked Audit: Audit NTLM authentication to this domain controller)""",
     """({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d)""",
-    """ComputerName =({host}[^\s]+)""",
+    """ComputerName =({dest_host}({host}[^\s]+))""",
     """({event_code}8004)""",
     """User name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """Domain name:\s+(NULL|({domain}[^\s]+))""",
@@ -19,7 +19,6 @@ Name = microsoft-evntlm-kv-endpoint-login-fail-8004
     """Workstation name:\s*\\?(NULL|({src_host}[\w\-.]+))\s+Secure Channel type:""",
     """security policy Network Security:\s*Restrict NTLM:\s*({policy_name}[^\.]+)""",
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

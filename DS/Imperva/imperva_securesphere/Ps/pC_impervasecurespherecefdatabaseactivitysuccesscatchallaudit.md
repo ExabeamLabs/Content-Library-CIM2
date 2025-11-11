@@ -18,7 +18,7 @@ securesphere-db-activity= {
     """OSUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """dpt=({dest_port}\d+)"""
-    """duser=(({domain}[^\\\s]+)\\+)?({db_user}[^\s\|]+)"""
+    """duser=(({domain}[^\\\s]+)\\+)?({account}({db_user}[^\s\|]+))"""
     """UserGroup=({group_name}[^\|]+)"""
     """\WserviceName ="(|({service_name}[^"\|]+))"""
     """HostName =({host}[^\|]+)"""
@@ -30,7 +30,6 @@ securesphere-db-activity= {
     """RawQuery=({db_query}[^\|\$]+)"""
     """Object=({object}[^\|]+)"""
   ]
-  DupFields = [ "db_user->account" ]
  }
 
 }
@@ -87,7 +86,7 @@ ParserVersion = "v1.0.0"
       """cpt\\?=({src_port}\d+)\s""",
       """spt\\?=({dest_port}\d+)\s""",
       """app\\?=({protocol}[^|\s%=]+)\s""",
-      """request\\?=({uri_path}[^\s]+)\s""",
+      """request\\?=({url}({uri_path}[^\s]+))\s""",
       """qstr\\?=({uri_query}[^|]+?)\s\w+\\?=""",
       """in\\?=({bytes}\d+|$)\s""",
       """\|Incapsula\|SIEMintegration\|([^\|]*?\|){2}({attack}[^\|]+)\|""",
@@ -97,8 +96,6 @@ ParserVersion = "v1.0.0"
       """cs9\\?=({rule}[^=]+)\s\w+\\?=""",
       """ccode\\?=({country_code}[^=]+)\s""",
       """cicode\\?=({city}[^=]+)\s\w+\\?="""
-  ]
-
-  DupFields = [ "uri_path->url" 
+  
 }
 ```

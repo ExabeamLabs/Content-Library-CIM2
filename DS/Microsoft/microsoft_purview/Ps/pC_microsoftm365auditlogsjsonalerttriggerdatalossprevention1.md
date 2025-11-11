@@ -11,7 +11,7 @@ q-microsoft-security-events = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
     Fields = [
       """"id"+:\s*"+({alert_id}[^"]+)"""",
-      """"title"+:\s*"+({alert_name}[^"]+)"""",
+      """"title"+:\s*"+({alert_subject}({alert_name}[^"]+))"""",
       """"severity"+:\s*"+({alert_severity}[^"]+)"""",
       """"category"+:\s*"+({alert_type}[^"]+)"""",
 	  """"sourceMaterials"+:\["+({malware_url}[^"]+)"""",

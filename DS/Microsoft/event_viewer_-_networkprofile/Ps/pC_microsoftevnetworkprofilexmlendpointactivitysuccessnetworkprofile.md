@@ -6,6 +6,7 @@ Name = microsoft-evnetworkprofile-xml-endpoint-activity-success-networkprofile
   Product = Event Viewer - NetworkProfile
   Conditions = [ """Microsoft-Windows-NetworkProfile""", """<Computer>""", """<EventID>""", """<Channel>Microsoft-Windows-NetworkProfile/Operational</Channel>""" ]
   Fields = ${WindowsParsersTemplates.xml-windows-eventviewer-events.Fields}[
+    """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
     """<Computer>({host}[\w\-\.]+)<"""
     """<Data Name =('|")State('|")>({service_state}[^<]+)</Data>"""
   ]
@@ -23,7 +24,6 @@ xml-windows-eventviewer-events = {
 	  """<Keywords>({result}[^<]+)""",
 	  """<EventData Name =('|")(Name|({event_name}[^'"<]+))""",
 	  """<Data Name =('|")TaskName('|")>({task_name}[^<]+)<""",
-	  """<Data Name =('|")User(Context|Name)('|")>(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
 	  """<Channel>({channel}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)<\/EventRecordID>"""
 	

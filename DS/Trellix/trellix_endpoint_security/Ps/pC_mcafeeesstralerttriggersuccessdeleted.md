@@ -10,7 +10,6 @@ Name = mcafee-es-str-alert-trigger-success-deleted
   Fields = [
     """({time}\d+/\d+/\d+\s+\d+:\d+:\d+ (am|AM|pm|PM)+)\t({additional_info}[^\t]+?)\s*\t(({domain}[^\t]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\t({process_path}[^\t]+)\t({url}.+?\\({malware_file_name}[^\\]+))\t({alert_name}[^\t]+?)\s*\(({alert_type}[^\)]+)\)\t({hash_md5}\S+?)\s*\(MD5\)"""
   ]
-  DupFields=[ "host->src_host" ]
   SOAR {
     IncidentType = "malware"
     DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "src_host->malwareVictimHost", "url->malwareAttackerUrl", "alert_type->malwareCategory", "malware_file_name->malwareAttackerFile"]

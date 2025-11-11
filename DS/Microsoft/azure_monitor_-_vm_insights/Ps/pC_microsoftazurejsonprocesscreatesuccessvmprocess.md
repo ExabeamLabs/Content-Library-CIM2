@@ -16,12 +16,11 @@ Name = microsoft-azure-json-process-create-success-vmprocess
 """Machine\"+:\"+({src_host}[^\"]+)"""
 """ExecutableName\"+:\"+({process_name}[^\"]+)"""
 """FirstPid\"+:({process_id}\d+)"""
-"""\"ExecutablePath\":\"({process_path}((|({process_dir}[^\"]*?))[\\/]+)?({process_name}[^\"\\/]+?))\s*\""""
+"""\"ExecutablePath\":\"({process_path}((|({process_dir}[^\"]*?)[\\/]+))?({process_name}[^\"\\/]+?))\s*\""""
 """CommandLine\":\"\s*({process_command_line}[^\n]+?)\s*\",\"\w+\""""
 """UserName\"+:\"+((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """UserDomain\"+:\"+({domain}[^\"]+)"""
 ]
-DupFields = [ "process_dir->process_path_directory" ]
 
 
 }

@@ -18,9 +18,11 @@ Fields = [
 """"cid":"({cid}[^"]+)"""
 """({operation}CriticalFileModified)"""
 """"event_platform":"({os}[^"]+)""""
-""""LocalAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+""""LocalAddressIP4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"ComputerName":"({host}[\w\-\.]+)""""
+""""ComputerName":"({dest_host}[\w\-\.]+)""""
 """"aip":\s*"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+"""suser=({user}[\w\.\-]{1,40}\$?)\s\w+="""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
 """exa_json_path=$.aid,exa_field_name=aid""",
@@ -29,9 +31,12 @@ Fields = [
 """exa_json_path=$.cid,exa_field_name=cid""",
 """exa_regex=({operation}CriticalFileModified)"""
 """exa_json_path=$.event_platform,exa_field_name=os"""
-"""exa_json_path=$.LocalAddressIP4,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""exa_json_path=$.LocalAddressIP4,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
+"""exa_json_path=$.ComputerName,exa_regex=({dest_host}[\w\-\.]+)"""
 """exa_json_path=$.aip,exa_field_name=aip"""
+"""exa_json_path=$.UserName,exa_regex=({user}[\w\.\-]{1,40}\$?)"""
+
 ]
 ParserVersion = "v1.0.0"
 

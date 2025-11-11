@@ -33,7 +33,8 @@ leef-pan-events = {
     """DirectionOfAttack=({direction}[^=]+?)\s\w+=""",
     """\sSessionID=({session_id}\d+)""",
     """\sproto=({protocol}[^\s]+)""",
-    """\sAction=({result}[^=]+?)\s\w+=""",
+    """EventStatus=({action}({result}[^\s=]+))""",
+    """\sAction=({action}({result}[^=]+?))\s\w+=""",
     """\sURL=(\w+:\/\/)?({url}({web_domain}[^\/\s]+)({uri_path}\/[^\s\?]*?)?({uri_query}\?[^\s\/]+)?)""",
     """\sFromZone=({src_network_zone}[^\s]+)""",
     """\sToZone=({dest_network_zone}[^\s]+)""",
@@ -45,7 +46,6 @@ leef-pan-events = {
     """\sInboundInterface=({src_interface}[^=]+?)\s\w+=""",
     """\sOutboundInterface=({dest_interface}[^=]+?)\s\w+=""",
     """\sApplication=(not-applicable|({network_app}[^=]+?))\s\w+="""
-  ]
-  DupFields = ["result->action"
+  
 }
 ```

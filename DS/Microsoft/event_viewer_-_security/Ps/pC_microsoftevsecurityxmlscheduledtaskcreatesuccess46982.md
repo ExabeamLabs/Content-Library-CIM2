@@ -10,7 +10,7 @@ Conditions = [
 """A scheduled task was created"""
 ]
 Fields = [
-"""\WComputer=({host}[\w\.\-]+)"""
+"""\WComputer=({dest_host}({host}[\w\.\-]+))"""
 """\WEventID=({event_code}\d+)"""
 """\WTimeGenerated=({time}\d{10})"""
 """\sAccount Name:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|({domain}.+?))\s*Logon ID:\s*(|({login_id}.+?))\s*Task Information:"""
@@ -21,9 +21,6 @@ Fields = [
 """<Command>\"?({process_path}({process_dir}(?:(\w+:)?[^:<\"]+)?[\\\/])?({process_name}[^<\"]+))"""
 """<Arguments>(\"+)?({arg}[^<\"]+)"""
 """({event_name}A scheduled task was created)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

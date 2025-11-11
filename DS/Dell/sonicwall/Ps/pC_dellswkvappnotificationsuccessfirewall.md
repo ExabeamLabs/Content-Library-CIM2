@@ -23,11 +23,10 @@ Name = dell-sw-kv-app-notification-success-firewall
     """\sbytesTx=({bytes_out}\d+)""",
     """\spri=({alert_severity}\d+)""",
     """\sfw=({firewall}[a-fA-F\d.:]+)""",
-    """\sm=({message_id}\d+)""",
+    """\sm=({alert_type}({message_id}\d+))""",
     """\smsg="({alert_name}[^:"-]+?)\s*(:|"|-)"""
     """\smsg="({additional_info}[^"]+?)\s*""""
   ]
-  DupFields = [ "message_id->alert_type" ]
 
 
 }

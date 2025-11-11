@@ -27,11 +27,11 @@ cef-microsoft-app-activity = {
     """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
     """"OriginatingServer":(\s*|)"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?"""",
-    """CEF:([^\|"]*\|){5}({operation}[^\|"]+)""",
+    """CEF:([^\|"]*\|){5}({event_name}({operation}[^\|"]+))""",
     """\sflexString1=({event_name}[^=]+?)\.?\s+(\w+=|$)""",
-    """"activityDisplayName":\s*"({operation}[^"]+)""""
+    """"activityDisplayName":\s*"({event_name}({operation}[^"]+))""""
     """"resourceId":\s*"({resource_id}[^"]{1,249})""",
-    """"Operation":\s*"({operation}[^"]+?)\.?"""",
+    """"Operation":\s*"({event_name}({operation}[^"]+?))\.?"""",
     """((fileType=(n\/a|N\/A|mail|calendar-event|note|message)[^\n]*?\sfname=\s*(N\/A|({email_subject}[^=]+?)))|(fileType=group[^\n]*?\sfname=\s*(N\/A|({group_name}[^=]+?)))|(fileType=(file|folder|attachment|report)[^\n]*?\sfname=\s*(N\/A|({file_name}[^=]+?)))|(fileType=process[^\n]*?\sfname=\s*(N\/A|({process_name}[^=]+?)))|(fileType=app(lication)?[^\n]*?\sfname=\s*(N\/A|({app}[^=]+?)))|(fileType=secret[^\n]*?\sfname=\s*(N\/A|({secret}[^=]+?)))|(fileType=key[^\n]*?\sfname=\s*(N\/A|({key_name}[^=]+?))))\s+(\w+=|$)""",
     """\Wmsg=({additional_info}[^=]+?)\s+(\w+=|$)""",
     """"initiatedBy".+?\"userPrincipalName\":\"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))""",
@@ -54,7 +54,7 @@ cef-microsoft-app-activity = {
     """"UserAgent":\s*"({user_agent}[^"]+)"""",
     """("key":\s*"User-Agent","value":\s*"({user_agent}[^"]+?)"|"value":"({=user_agent}[^"]+?)","key":"User-Agent")""",
     """"ipAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
-    """"SourceFileName":"({src_file_name}[^"]+)""""
+    """"SourceFileName":"({file_name}({src_file_name}[^"]+))""""
     """"user":\{[^}]+?displayName":"(Microsoft Teams Services|({full_name}[^"]+))"""",
     """"result":\s*"failure"[^\}]+?"resultReason":\s*"({failure_reason}[^"]+?)\s*",""""
     """"ClientProcessName":\s*"({process_name}[^"]+)"""

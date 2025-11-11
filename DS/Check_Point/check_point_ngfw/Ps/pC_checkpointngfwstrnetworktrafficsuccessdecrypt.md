@@ -38,6 +38,7 @@ Name = "checkpoint-ngfw-str-network-traffic-success-decrypt"
 """\Wdst_machine_name:\"+({dest_host}[^\"]+?)\s*\""""
 """\Wdst_machine_name:\"+({dest_host}[^\"@]+)@({domain}[^\"]+)"""
 """\Wuser:\"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\""""
+"""\Waction:\"+({event_name}[^\"]+)"""
 """\Wuser:\"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*\""""
 """\Wsrc_user_name:\"+(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}[^\"@\(\)]+@[\(\)^\"@]+))\s*\""""
 """\Wdst_user_name:\"+(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({email_address}[^\"@]+@[^\"@]+))\s*\""""
@@ -52,9 +53,6 @@ Name = "checkpoint-ngfw-str-network-traffic-success-decrypt"
 """resource:"({url}[^";,]+)"""",
 """ dns_query:"({dns_query}[^"]+?)\s*""""
 """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  ]
-  DupFields = [
-"action->event_name"
   ]
 
 

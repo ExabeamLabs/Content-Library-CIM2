@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """({event_name}Account That Was Locked Out)"""
 """({event_code}4740)"""
-"""\sComputerName =({host}[\w\-.]+)"""
+"""\sComputerName =({dest_host}({host}[\w\-.]+))"""
 """Locked Out:Security ID=({user_sid}[^\s]+)"""
 """\sDetectTime=({time}\d\d\d\d-\d+-\d+ \d+:\d+:\d+)\s"""
 """\sUser=(null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
@@ -24,10 +24,6 @@ Fields = [
 """Account Domain=({domain}[^\s]+)"""
 """Logon ID=({login_id}[^\s\"]+)"""
 """Security ID=({user_id}[^\s]+)"""
-]
-DupFields = [
-"host->dest_host"
-"user_domain->src_domain"
 ]
 ParserVersion = "v1.0.0"
 

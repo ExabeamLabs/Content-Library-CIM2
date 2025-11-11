@@ -18,11 +18,10 @@ Name = "microsoft-evsecurity-kv-user-delete-fail-4743"
     """Subject:.+?Account Domain:\s+({domain}[^:]+?)\s+Logon ID:""",
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Target Computer:\s+Security ID:\s+({dest_user_sid}[^:]+?)\s+Account Name:""",
-    """Target Computer:.+?Account Name:\s+({dest_user}[^:]+?)\s+Account Domain:""",
+    """Target Computer:.+?Account Name:\s+({account_name}({dest_user}[^:]+?))\s+Account Domain:""",
     """Target Computer:.+?Account Domain:\s+({dest_domain}[^:]+?)\s+Additional Information:""",
     """Privileges:\s+(-|({privileges}.+?))\s*(\w+=|$)"""
   ]
-  DupFields = [ "dest_user->account_name"]
 
 
 }

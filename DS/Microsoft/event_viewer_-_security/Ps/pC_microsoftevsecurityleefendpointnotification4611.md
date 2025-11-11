@@ -4,6 +4,10 @@
 Name = microsoft-evsecurity-leef-endpoint-notification-4611
   Conditions = [ """LEEF:""", """|Microsoft|Windows|""", """|4611|""" ]
   Fields = ${WindowsParsersTemplates.windows-leef-events.Fields}[
+    """resource=({dest_host}[^=]+?)\s+\w+="""
+    """Account Domain:\s+({domain}[^:]+?)\s+Logon ID:"""
+ 		"""\susrName =(-|([^@"\s]+@[^@"\s]+)|(({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+ 		"""Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
   ]
 
 windows-leef-events = {
@@ -15,11 +19,7 @@ windows-leef-events = {
       """devTime=({time}[^=]+)\s+\w+="""
       """cat=({result}[^=]+?)\s+\w+="""
       """sev=({severity}\d+)"""
-      """resource=({dest_host}[^=]+?)\s+\w+="""
-      """\susrName =(-|([^@"\s]+@[^@"\s]+)|(({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """application=({app}[^=]+?)\s+\w+="""
-      """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
-      """Account Domain:\s+({domain}[^:]+?)\s+Logon ID:"""
       """Logon ID:\s+({login_id}\w+)"""
       """Group Name:\s+({group_name}[^:]+?)\s+Group Domain:\s+({group_domain}[^:]+?)\s+"""
       """Changed Attributes:\s+({attribute}[^:=]+?)\s+Account"""

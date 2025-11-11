@@ -22,13 +22,10 @@ Fields = [
   """total_bytes":"*(?:|({bytes}\d+))"*,"""
   """recipient_count":"*(?:|({num_recipients}\d+))"*,"""
   """message_subject":"(?:|({email_subject}[^"]+))","""
+  """exchange_source":"(?:|({alert_type}[^"]+))","""
   """sender_address":"(?:|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))","""
   """return_path":"(?:|<>|({return_path}[^"]+))","""
-  """recipient_address":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-]
-DupFields = [
-  "alert_name->alert_type"
-  "dest_email_address->orig_user"
+  """recipient_address":"({orig_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
 ]
 ParserVersion = "v1.0.0"
 

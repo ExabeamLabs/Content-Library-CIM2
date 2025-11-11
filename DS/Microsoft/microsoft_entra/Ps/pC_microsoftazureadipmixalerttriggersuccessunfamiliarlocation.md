@@ -10,7 +10,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
   Conditions = [ """"category":""", """"UnfamiliarLocation"""", """"title":""", """"vendor":""", """"Microsoft"""", """"provider":""", """"IPC""""  ]
   Fields = [
     """"id":\s*"({alert_id}[^"]+)"""",
-    """"title":\s*"({alert_name}[^"]+?)(\\u200b)?"""",
+    """"title":\s*"({alert_subject}({alert_name}[^"]+?))(\\u200b)?"""",
     """"severity":\s*"({alert_severity}[^"]+)"""",
     """"category":\s*"({alert_type}[^"]+)"""",
     """"description":\s*"({additional_info}[^"]+)"""",
@@ -25,6 +25,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
     """msg=.*?\[({alert_source}[^\]]+)\]:"""
     """exa_json_path=$.id,exa_field_name=alert_id""",
     """exa_json_path=$.title,exa_field_name=alert_name""",
+    """exa_json_path=$.title,exa_field_name=alert_subject""",
     """exa_json_path=$.severity,exa_field_name=alert_severity""",
     """exa_json_path=$.category,exa_field_name=alert_type""",
     """exa_json_path=$.description,exa_field_name=additional_info""",
@@ -38,7 +39,6 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
     """exa_json_path=$.status,exa_field_name=result""",
     """msg=.*?\[({alert_source}[^\]]+)\]:"""
  ]
-  DupFields = [ "alert_name->alert_subject" ]
 
 
 }

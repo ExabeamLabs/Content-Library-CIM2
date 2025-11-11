@@ -21,12 +21,12 @@ Fields = [
   """exa_json_path=$.TargetProcessId,exa_field_name=dest_process_id"""
   """exa_json_path=$.TargetProcessGuid,exa_field_name=dest_process_id"""
   """exa_json_path=$.Hostname,exa_field_name=host"""
+  """exa_json_path=$.Hostname,exa_field_name=src_host"""
   """exa_json_path=$.LogonId,exa_field_name=login_id"""
-  """exa_json_path=$.TargetImage,exa_regex=({dest_process_path}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+))""""
+  """exa_json_path=$.TargetImage,exa_regex=({dest_process}({dest_process_path}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+)))""""
   """exa_json_path=$.EventID,exa_field_name=event_code"""
   """exa_json_path=$.Category,exa_field_name=event_name"""
 ]
-DupFields = [  "host->src_host", "dest_process->dest_process_path" ]
 ParserVersion = "v1.0.0"
 
 

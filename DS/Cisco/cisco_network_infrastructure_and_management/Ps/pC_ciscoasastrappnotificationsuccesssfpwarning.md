@@ -5,7 +5,7 @@ Name = cisco-asa-str-app-notification-success-sfpwarning
     ParserVersion = v1.0.0
     Conditions = [ """%ETHPORT-4-IF_SFP_WARNING:""" ]
     Fields = ${DLCiscoParsersTemplates.cisco-system-info.Fields} [
-      """\d+:\d+:\d+\s+({host}[\w\-.]+)"""
+      """\d+:\d+:\d+\s+({host}[\w\-.]+)\s*: \d\d\d\d"""
       """\s*({time}\w+ \d+ \d+:\d+:\d+)"""
     ]
   

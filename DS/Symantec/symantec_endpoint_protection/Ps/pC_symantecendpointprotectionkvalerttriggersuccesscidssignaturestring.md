@@ -36,16 +36,6 @@ Fields = [
 ]
 SOAR {
   IncidentType = "malware"
-  DupFields = [
-"time->startedDate"
-"vendor->source"
-"rawLog->sourceInfo"
-"alert_name->malwareName"
-"alert_id->sourceId"
-"src_ip->malwareVictimHost"
-"malware_url->malwareAttackerUrl"
-"dest_ip->malwareAttackerIp"
-  ]    
   NameTemplate = "Symantec Alert ${alert_name} found"
   ProjectName = "SOC"
   EntityFields = [

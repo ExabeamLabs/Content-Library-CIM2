@@ -31,8 +31,8 @@ Fields = [
 """\WfilePath=(System|({file_path}({file_dir}[^=]+\\)?({file_name}[^\s]+?((\.({file_ext}[^\s\.]+))|))))\s+\w+="""
 """\Wrequest=({malware_url}[^\=]+)\s+\w+="""
 """\Wincident=({additional_info}[^\s]+)\s+\w+="""
+"""CEF:[^|]+?\|([^\|]+\|){4}({alert_subject}[^\|]+)"""
 ]
-DupFields = ["alert_name->alert_subject"]
 ParserVersion = "v1.0.0"
 
 

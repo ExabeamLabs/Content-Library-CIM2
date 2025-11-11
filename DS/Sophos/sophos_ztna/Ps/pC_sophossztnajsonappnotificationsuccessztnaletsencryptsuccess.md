@@ -24,7 +24,7 @@ sophos-notification-events = {
   	"""exa_json_path=$.user_id,exa_field_name=user_id""",
     """exa_json_path=$.group,exa_field_name=group_type""",
   	"""exa_json_path=$..source_info.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  ]
-  DupFields = ["host->src_host"
+    """exa_json_path=$.location,exa_regex=^({src_host}[\w\-\.]+)$""",
+  
 }
 ```

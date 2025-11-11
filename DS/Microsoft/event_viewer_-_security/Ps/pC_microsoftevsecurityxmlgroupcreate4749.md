@@ -13,8 +13,8 @@ Name = microsoft-evsecurity-xml-group-create-4749
     """<Keywords>({result_code}[^<]+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
-    """<Data Name =('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
-    """<Data Name =('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name =('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""
     """<Level>({run_level}[^<]+)<""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-xml-group-create-4749
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<>]+?)</Data>""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<>]+?)<\/Data>"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

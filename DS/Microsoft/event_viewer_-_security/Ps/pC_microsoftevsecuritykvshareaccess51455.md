@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """({event_name}A network share object was checked to see whether client can be granted desired access)"""
 """({event_code}5145)"""
-"""\"Hostname\":\"({host}[^\"]+)"""
+"""\"Hostname\":\"({dest_host}({host}[^\"]+))"""
 """\sTimeGenerated=({time}\d{10})"""
 """Logon ID:\s*((?-i)\\+[rnt])*({login_id}\S+?)((?-i)\\+[rnt])*\s*Network Information:"""
 """Account Name:\s*((?-i)\\+[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:"""
@@ -28,9 +28,6 @@ Fields = [
 """Access Check Results:\s*({result}-)\s"""
 """Access Check Results:.*({result}Granted|Denied)\s+by"""
 """Source Port(=|:)\s*({src_port}\d+)"""
-]
-DupFields = [
-"host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

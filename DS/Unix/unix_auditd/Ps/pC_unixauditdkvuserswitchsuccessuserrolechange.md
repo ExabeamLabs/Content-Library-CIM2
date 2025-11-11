@@ -14,7 +14,7 @@ Name = unix-auditd-kv-user-switch-success-userrolechange
   ]
   Fields = [
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
-"""\s({host}[\w\-.]+)\s+audispd:""",
+"""<\d+>\S+\s\d+\s\d{2}:\d{2}:\d{2}\s({host}[\w\-.]+)?\s?audispd:""",
 """node=({dest_host}[^\s\.]+)""",
 """uid=({user_id}[^\s]+)""",
 """auid=({account_id}[^\s]+)""",

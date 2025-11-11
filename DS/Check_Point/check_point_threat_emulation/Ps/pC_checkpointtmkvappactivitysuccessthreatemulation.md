@@ -18,7 +18,7 @@ Name = checkpoint-tm-kv-app-activity-success-threatemulation
 """\Wdst:\"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """ xlatedst:\"+({dest_translated_ip}0\.0\.0\.0)"""
 """ service_id:\"+({app_protocol}[^\"]+)"""
-"""\Waction:\"+({action}[^\"]+)"""
+"""\Waction:\"+({result}({action}[^\"]+))"""
 """\Wrule:\"+({rule}[^\"]+?)\s*\""""
 """ rule_name:\"+({rule}[^\"]+?)\s*\""""
 """\Wapp_rule_name:\"+({rule}[^\"]+?)\s*\""""
@@ -47,6 +47,7 @@ Name = checkpoint-tm-kv-app-activity-success-threatemulation
 """\Wuser:\"+({first_name}[\w\s]+[^\s,\(])\s+({last_name}[^\s,\(]+)\s*\([^\)]+?\)[^\"]+?\(({user}[\w\.\-]{1,40}\$?)(@({domain}[^\"\)]+?))?\)"""
 """\Wreceived_bytes:\"+({bytes_in}\d+)"""
 """\Wsent_bytes:\"+({bytes_out}\d+)"""
+"""\Wsent_bytes:\"+({bytes}\d+)"""
 """\Wifname:\"+({interface_name}[^\"]+)"""
 """\W(user|src_user_name|dst_user_name):\"+(?:[^_\"\s]+_)?(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-]{1,40}\$?)))\s*\""""
 """\Wuser:\"+({first_name}[\w\s]+[^\s,\(])\s+({last_name}[^\s,\(]+)\s*\(({user}[\w\.\-]{1,40}\$?)(\)|@)"""
@@ -55,7 +56,7 @@ Name = checkpoint-tm-kv-app-activity-success-threatemulation
 """\Wattack_info:"({failure_reason}[^";]+)""",
 """resource:"({url}[^";,]+)""""
   """severity:"({alert_severity}[^"]+)""""
-  """action_details:"({action}[^"]+)"""
+  """action_details:"({result}({action}[^"]+))"""
   """smartdefense_profile:"({smartdefense_profile}[^"]+)"""
   """confidence_level:"({confidence_level}[^"]+)"""
   """description:"({additional_info}[^"]+)"""
@@ -71,10 +72,6 @@ Name = checkpoint-tm-kv-app-activity-success-threatemulation
   """user_agent:"\s*({user_agent}[^"]+)"""
   """vendor_list:"({vendor_name}[^"]+)"""
   ]
-  DupFields = [
-"action->result"
-"bytes_out->bytes"
-]
 
 
 }

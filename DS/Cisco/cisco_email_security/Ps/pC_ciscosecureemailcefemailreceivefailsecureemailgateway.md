@@ -20,9 +20,8 @@ Name = cisco-secureemail-cef-email-receive-fail-secureemailgateway
     """\|Cisco\|([^\|]*\|){3}({alert_name}[^\|]+)""",
     """\|Cisco\|([^\|]*\|){4}({alert_severity}[^\|]+)""",
     """deviceDirection=({direction}\d)""",
-    """\Wact=({action}[^=]+?)\s*\w+="""
+    """\Wact=({result}({action}[^=]+?))\s*\w+="""
   ]
-  DupFields = [ "action->result" ]
   ParserVersion = "v1.0.0"
 
 

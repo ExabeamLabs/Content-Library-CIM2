@@ -12,7 +12,7 @@ Name = "microsoft-evsecurity-kv-group-member-add-success-adauditplus"
   ]
   Fields = [
 
-    """({host}[\w\-.]+) ADAuditPlus"""
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus"""
     """CALLER_USER_NAME\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     """CALLER_USER_DOMAIN\s*=\s*({domain}[^\s\]]+)"""
     """SOURCE\s*=\s*({src_host}[\w\-.]+)"""
@@ -23,9 +23,6 @@ Name = "microsoft-evsecurity-kv-group-member-add-success-adauditplus"
     """was added to .+? Group '({group_name}[^']+)"""
     """MEMBER_NAME\s*=\s*(?:-|({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+)))"""
     """MEMBER_SID\s*=\s*({dest_user_sid}S-\d+-[^\s\]]+)"""
-  ]
-  DupFields = [
-    "host->dest_host"
   ]
   ParserVersion = "v1.0.0"
 

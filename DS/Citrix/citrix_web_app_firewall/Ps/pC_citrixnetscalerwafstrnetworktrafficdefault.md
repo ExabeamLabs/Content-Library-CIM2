@@ -8,7 +8,7 @@ Name = citrix-netscalerwaf-str-network-traffic-default
   TimeFormat = "MM/dd/yyyy:HH:mm:ss z"
   Conditions = [ """ : default""", """ Vserver""", """-PPE""" ]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d:\d\d:\d\d:\d\d\s*GMT)\s({host}[^\s]+).*?:\sdefault\s({protocol}[^\s]+)\s({event_name}[^\s]+)"""
+    """({time}\d\d\/\d\d\/\d\d\d\d:\d\d:\d\d:\d\d\s*GMT)\s({host}[^\s]+).*?:\sdefault\s({protocol}[^\s]+)\s({operation}({event_name}[^\s]+))"""
     """Source\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)"""
     """Client(IP|_ip)\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """ClientPort\s*({src_port}\d+)"""
@@ -22,7 +22,6 @@ Name = citrix-netscalerwaf-str-network-traffic-default
     """\sUser\s(-|({email_address}[^@"\s]+@[^@"\s]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
     """Errmsg\s*"({failure_reason}[^"]+?)("|$)"""
   ]
-  DupFields = [ "event_name->operation" ]
 
 
 }

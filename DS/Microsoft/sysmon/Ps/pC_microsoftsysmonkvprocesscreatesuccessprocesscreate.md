@@ -11,9 +11,9 @@ Conditions = [
 """Event ID: 1"""
 ]
 Fields = [
-    """Hostname":"({host}[^"]+?)"""",
+    """Hostname":"({src_host}({host}[^"]+?))"""",
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """\sComputer(?:Name)?\s*=\s*"?({host}[^\s"]+)""",
+    """\sComputer(?:Name)?\s*=\s*"?({src_host}({host}[^\s"]+))""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
     """Domain=({domain}.+?)\s+(\w+=|$)""",
@@ -47,7 +47,6 @@ Fields = [
     """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
     """"ParentImage":"({parent_process_path}(({parent_process_dir}[^"]*?)[\\\/]+)?({parent_process_name}[^"\\\/]+))""""
 ]
-DupFields = [  "host->src_host" ]
 ParserVersion = "v1.0.0"
 
 

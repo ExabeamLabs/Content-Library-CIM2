@@ -31,7 +31,6 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-requestedaction
         ]
   SOAR {
     IncidentType = "malware"
-    DupFields = ["time->startedDate", "vendor->source", "rawLog->sourceInfo", "alert_name->malwareName", "alert_type->malwareCategory", "src_host->malwareVictimHost", "malware_url->malwareAttackerFile", "dest_ip->malwareAttackerIp"]
     NameTemplate = """Symantec Alert ${alert_name} found"""
     ProjectName = "SOC"
     EntityFields = [

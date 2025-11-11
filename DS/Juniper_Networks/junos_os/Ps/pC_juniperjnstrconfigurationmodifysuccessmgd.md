@@ -14,9 +14,7 @@ Fields = [
   """<\d+>\d+\s+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d(\+|\-)\d\d:\d\d)"""
   """({host}\S+)\s+mgd\s"""
   """\sUser '({user}[\w\.\-\!\#\^\~]{1,40}\$?)' requested '({operation}[^']+)' """
-]
-DupFields = [
-  "host->dest_host"
+  """({dest_host}\S+)\s+mgd\s"""
 ]
 ParserVersion = "v1.0.0"
 

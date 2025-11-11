@@ -16,13 +16,12 @@ Name = microsoft-evsystem-xml-endpoint-notification-16
     """ProcessID\\*=('|")({process_id}\d+)('|")""",
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Data Name\\*=('|")FailureReason('|")>({result_code}[^<]+)<\/Data>""",
-    """Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)<\/Data>""",
-    """Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>""",
+    """Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
+    """Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """Data Name\\*=('|")Ipaddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<\/Data>""",
     """Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user" , "domain->src_domain"]
 
 
 }

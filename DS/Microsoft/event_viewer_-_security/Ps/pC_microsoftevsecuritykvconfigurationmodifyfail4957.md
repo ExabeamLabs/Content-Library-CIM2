@@ -13,12 +13,11 @@ Fields = [
    """sntdom=({domain}[^=]+)\s\w+=""",
    """\ssuser=(N\/A|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+=""",
    """\ssuid=(N\/A|-|({user_uid}.+?))\s*\w+=""",
-   """dhost=({host}[\w\-.]+)"""
+   """dhost=({dest_host}({host}[\w\-.]+))"""
    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",
    """duser=({dest_user}.+?)\s+\w+=""",
    """cs4=({failure_reason}[^=]+)\s\w+="""
 ]
-DupFields = [ "host->dest_host" ]
 ParserVersion = "v1.0.0"
 
 

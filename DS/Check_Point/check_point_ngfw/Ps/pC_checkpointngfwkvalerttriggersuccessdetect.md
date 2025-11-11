@@ -27,9 +27,9 @@ Name = checkpoint-ngfw-kv-alert-trigger-success-detect
     """\Wsmartdefense_profile:({smartdefense_profile}[^"]+)""",
     """originsicname:({user_ou}[^"]+)""",
     """\Wdescription:({additional_info}[^"]+)""",
+    """\Wprotection_name:({alert_name}[^"]+)""",
     """\Wpolicy_name=({rule}[^"]+?)\\\]"""
   ]
-  DupFields = ["protection_name->alert_name"]
 
 
 }

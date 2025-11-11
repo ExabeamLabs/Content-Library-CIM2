@@ -24,12 +24,10 @@ Fields = [
 """({file_type}(?i)file)"""
 """\s+File=({object}[^\s]+)\s*Safe=({resource}[^\s]+)\s*Location"""
 """Action=({operation}[^=]+?)\s*\w+="""
+"""Action=({action}[^=]+?)\s*\w+="""
+"""Action=({access}[^=]+?)\s*\w+="""
 """({app}Cyber-Ark)"""
 """ProcessName =({process_name}[^;=]+)"""
-]
-DupFields = [
-"operation->access"
-"operation->action"
 ]
 ParserVersion = "v1.0.0"
 

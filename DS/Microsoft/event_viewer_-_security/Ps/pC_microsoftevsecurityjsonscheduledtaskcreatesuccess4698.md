@@ -13,12 +13,12 @@ Fields = [
 """"EventTime":\s*\"?({time}\d{10})"""
 """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-""""Hostname":"({host}[\w.-]+?)""""
-""""Computer(Name)?":"({host}[\w\-.]+)"""
+""""Hostname":"({dest_host}({host}[\w.-]+?))""""
+""""Computer(Name)?":"({dest_host}({host}[\w\-.]+))"""
 """"EventID":({event_code}\d+)"""
 """({event_name}A scheduled task was created)"""
-""""SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-""""SubjectDomainName":"({domain}[^\"]+)""""
+""""SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+""""SubjectDomainName":"({src_domain}({domain}[^\"]+))""""
 """"SubjectUserSid":"({user_sid}[^\"]+)"""
 """"TaskName":"({task_name}[^\"]+)""""
 """"SubjectLogonId":"({login_id}[^\"]+)""""
@@ -33,7 +33,6 @@ Fields = [
 """<Arguments>("+)?({arg}[^<\"]+)"""
 """Subject:.+?Security ID:(\\r|\\n|\\t)*({user_sid}[^:]+?)(\\r|\\n|\\t)*Account Name:"""
 ]
-DupFields = [ "host->dest_host", "user->src_user", "domain->src_domain" ]
 ParserVersion = "v1.0.0"
 
 

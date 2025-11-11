@@ -8,6 +8,7 @@ Name = microsoft-o365-sk4-app-file-move
   Fields = ${MicrosoftAzureParsersTemplates.o365-activity-template.Fields} [
     """exa_json_path=$.CreationTime,exa_field_name=time""",
     """exa_json_path=$.Operation,exa_field_name=operation""",
+    """exa_json_path=$.Operation,exa_field_name=event_name""",
     """exa_json_path=$.UserId,exa_field_name=user_upn""",
     """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
     """exa_json_path=$.Workload,exa_field_name=app""",
@@ -33,8 +34,8 @@ o365-activity-template = {
     """\sdvc=({host}\S+)""",
     """\sdvchost=(Unknown|({host}[\w\-.]+))""",
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
-    """\sact=({operation}[^=]+?)\s+(\w+=|$)""",
-    """"Operation\\*"+:[\s\\]*"+({operation}[^"\\\.]*)""",
+    """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
+    """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
     """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
     """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)",""",
     """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
@@ -70,7 +71,6 @@ o365-activity-template = {
     """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
-  ]
-  DupFields = ["operation->event_name"
+  
 }
 ```

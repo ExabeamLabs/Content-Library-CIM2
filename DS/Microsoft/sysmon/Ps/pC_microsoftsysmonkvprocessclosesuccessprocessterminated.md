@@ -8,10 +8,10 @@ Name = microsoft-sysmon-kv-process-close-success-processterminated
   TimeFormat = [ "yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" ]
   Conditions = [ """Microsoft-Windows-Sysmon""", """Process terminated:""" ]
   Fields = [
-    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
-    """Hostname":"({host}[^"]+?)"""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({dest_host}({host}[\w\-.]+))\s)?""",
+    """Hostname":"({dest_host}({host}[^"]+?))"""",
     """UtcTime:\s*({time}\d\d\d\d\-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """\sComputer(?:Name)?\s*=\s*"?({host}[^\s"]+)""",
+    """\sComputer(?:Name)?\s*=\s*"?({dest_host}({host}[^\s"]+))""",
     """Message\s*=\s*"?({operation_type}[^:]+)""",
     """User\s*=\s*"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """ProcessGuid:\s*\{({process_guid}[^\s\}]+)""",
@@ -20,7 +20,6 @@ Name = microsoft-sysmon-kv-process-close-success-processterminated
     """"Image":"({process_path}(({process_dir}[^"]*?)[\\\/]+)?({process_name}[^"\\\/]+))"""",
     """EventID":({event_code}\d+),""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

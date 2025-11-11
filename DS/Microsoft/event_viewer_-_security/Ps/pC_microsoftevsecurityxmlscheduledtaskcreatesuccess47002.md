@@ -17,16 +17,15 @@ Name = "microsoft-evsecurity-xml-scheduled-task-create-success-4700-2"
     """<Task>({sub_category}[^<]+)""",
     """Provider Name\\*=('|")({provider_name}[^\"']+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)""",
-    """<Data Name\\*=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name =('|")TaskName('|")>({task_name}[^<]+)"""
     """<Data Name =('|")TaskContent('|")>({additional_info}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host-> dest_host", "user->src_user", "domain->src_domain"]
 
 
 }

@@ -13,7 +13,7 @@ Fields = [
   """({event_name}An operation was attempted on a privileged object)"""
   """\scategoryOutcome=(|/({result}.+?))(\s+\w+=|\s*$)"""
   """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-  """\"dhn\":\"({host}[\w\-.]+)"""
+  """\"dhn\":\"({dest_host}({host}[\w\-.]+))"""
   """Event Type\s*:\s*({result}.+?)\.\s+Log Type"""
   """Type\s*=\s*\"({result}[^\";]+)\""""
   """Keywords=({result}.+?);?\s*Message="""
@@ -31,9 +31,6 @@ Fields = [
   """\"ObjectName\":\"(-|({object}[^\s\"]+))"""
   """\"ObjectType\":\"(-|({object_type}[^\s\"]+))"""
   """\"ProcessName\":\"(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))\s*\""""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

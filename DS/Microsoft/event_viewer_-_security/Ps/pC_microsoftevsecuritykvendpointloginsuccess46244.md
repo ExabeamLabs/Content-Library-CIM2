@@ -10,8 +10,8 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4624-4
   Fields = [ 
     """({time}\d+/\d+/\d+ \d+:\d+:\d+ (am|AM|pm|PM))""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4624,""",
-    """ComputerName =({host}[\w.\-]+)""",
-    """(?!\d+)({host}[\w\-.]+),([^,]*,)?アカウントが正常にログオンしました。""",
+    """ComputerName =({dest_host}({host}[\w.\-]+))""",
+    """(?!\d+)({dest_host}({host}[\w\-.]+)),([^,]*,)?アカウントが正常にログオンしました。""",
     """({event_code}4624)""",
     """ログオン タイプ:\s+({login_type}\d+)""",
     """新しいログオン:.*?アカウント名:\s+(?:-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+アカウント ドメイン:\s+(?:-|({domain}[^\\\s]+?))\s*ログオン ID:""",
@@ -22,7 +22,6 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-4624-4
     """新しいログオン:\s+セキュリティ ID:\s+({user_sid}[^\s]+)\s"""
     """移行されたサービス:\s+-\s+パッケージ名\s+\(NTLM\s+のみ\):\s+({auth_package}.+?)\s+キーの長さ"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

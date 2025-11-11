@@ -35,8 +35,8 @@ Name = juniper-ps-cef-vpn-login-success-connected-1
     """\Wrcvd=({bytes_in}\d+)""",
     """\sduration=({session_duration}\d+)""",
     """\Wmsg="({additional_info}[^"]+)"""
+    """\Wuser=([^\\]+\\)?({account}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   ]
-  DupFields = [ "user->account" ]
 
 
 }

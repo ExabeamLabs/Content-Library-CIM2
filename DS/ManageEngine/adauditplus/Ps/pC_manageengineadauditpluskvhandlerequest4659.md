@@ -9,7 +9,7 @@ Name = manageengine-adauditplus-kv-handle-request-4659
   Conditions = ["""EVENT_NUMBER = 4659""","""An object was deleted"""]
   Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})""",
-    """({host}[\w\-.]+) ADAuditPlus""",
+    """({dest_host}({host}[\w\-.]+)) ADAuditPlus""",
     """EVENT_NUMBER\s*=\s*({event_code}\d+)""",
     """({event_name}An object was deleted)""",
     """\sOBJECT_NAME\s*=\s*({object}[^]]+?)\s*\]""",
@@ -21,7 +21,6 @@ Name = manageengine-adauditplus-kv-handle-request-4659
     """\sUSERNAME\s*=\s*(({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\]""",
     """\sUSER_SID\s*=\s*(({user_sid}[^]]+?))\s*\]""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

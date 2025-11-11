@@ -12,9 +12,9 @@ Name = microsoft-windows-kv-dhcp-session-success-renew
     """<.*?>\w+ \d+ \d+:\d+:\d+\s+({host}[^\s]+)""",
     """\sIP Address=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\sHost Name =({dest_host}[\w.\-]+)""",
+    """\sHost Name =({user}[\w\.\-]{1,40}\$?)""",
     """"UtcTime"="({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d \w+)"""    
   ]
-  DupFields = [ "dest_host->user" ]
 
 
 }

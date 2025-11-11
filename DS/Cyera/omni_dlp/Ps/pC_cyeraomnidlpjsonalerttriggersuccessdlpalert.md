@@ -1,0 +1,26 @@
+#### Parser Content
+```Java
+{
+Name = "cyera-omnidlp-json-alert-trigger-success-dlpalert"
+  Vendor = "Cyera"
+  Product = "Omni DLP"
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [ """"cyera_id":""", """"cyera_dlp_link"""", """"policy":""", """"alert_name":""" ]
+  Fields = [
+    """exa_json_path=$.cyera_dlp_link,exa_field_name=event_url""", 
+		"""exa_json_path=$.provider,exa_field_name=provider_name""",
+    """exa_json_path=$.destinations,exa_regex=(\[\\"(({file_path}(({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+\.({file_ext}[^\\\/"]+)))|[^"]+))\\")""",  
+		"""exa_json_path=$.file_name,exa_field_name=file_name""",
+		"""exa_json_path=$.policy,exa_field_name=alert_type""", 
+		"""exa_json_path=$.channel,exa_field_name=channel""", 
+		"""exa_json_path=$.user,exa_regex=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""", 
+		"""exa_json_path=$.alert_severity,exa_field_name=alert_severity""", 
+		"""exa_json_path=$.alert_name,exa_field_name=alert_name""", 
+		"""exa_json_path=$.created_at,exa_field_name=time"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

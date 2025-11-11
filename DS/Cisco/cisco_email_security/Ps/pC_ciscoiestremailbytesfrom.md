@@ -9,9 +9,9 @@ Name = cisco-ie-str-email-bytesfrom
     Conditions = [ """MID """, """ ready """, """ bytes from <""" ]
     Fields = [
       """MID ({alert_id}\d+)""",
+      """MID ({message_id}\d+)""",
       """({bytes}\d+) bytes from <({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>"""
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

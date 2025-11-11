@@ -9,9 +9,9 @@ Name = microsoft-sysmon-cef-registry-success-sysmonregkey
   Conditions = [ """CEF:""", """|Microsoft Sysmon|Sysmon NXLog|""", """|SysmonTask-SYSMON_REG_KEY|Registry object added or deleted|""" ]
   Fields = [
     """CEF:([^\|]*\|){5}({event_name}[^\|]+)""",
-    """({host}\S+) CEF:""",
-    """\Wdvc=({host}[A-Fa-f:\d]+)""",
-    """\Wdvchost=({host}[\w\-.]+)""",
+    """({dest_host}({host}\S+)) CEF:""",
+    """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
+    """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
     """\Wrt=({time}\d{13})""",
     """\WeventId=({event_code}\d+)""",
     """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
@@ -27,7 +27,6 @@ Name = microsoft-sysmon-cef-registry-success-sysmonregkey
     """\Wdpid=({process_id}\d+)""",
     """\Wcs1=({object}\S+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -12,8 +12,8 @@ Name = microsoft-evsecurity-cef-file-permission-modify-4670
     """({event_name}Permissions on an object were changed)""",
     """({event_code}4670)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"ProcessId":"({process_id}[^"]+)"""",
     """"ProcessName":"({process_path}(({process_dir}[^"]+?)\\+)?({process_name}[^"\\]+))"""",
@@ -25,7 +25,6 @@ Name = microsoft-evsecurity-cef-file-permission-modify-4670
     """"Level":"({run_level}[^"]+)"""",
     """"_ResourceId":"({resource}[^"]+)""""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]  
   ParserVersion = v1.0.0
 
 

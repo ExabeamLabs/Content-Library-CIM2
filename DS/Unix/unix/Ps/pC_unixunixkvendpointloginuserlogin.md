@@ -10,22 +10,22 @@ Name = unix-unix-kv-endpoint-login-userlogin
   Fields = [
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """({host}[\w\-\.]+)\saudispd""",
-    """\smsg=audit\(({time}\d{10})\.\d+:\d+\):""",
-    """\snode=({host}[\w\.-]+)\s""",
-    """\sacct="\(?(unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)?""",
-    """\shostname=(\?|({src_host}[\w\.-]+))\s+\w+=""", 
-    """\saddr=(\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\s+\w+=""",
-    """\sterminal=(\?|({login_type_text}[^=]+?))\s+\w+=""",
-    """\sexe="({auth_process}[^"]+)""",
-    """\stype=({event_name}USER_\S+)\s+\w+=""",
-    """\sres=({result}[^\(\)]+?)('\s*$|'?\s+\w+=)""",
+    """msg=audit\(({time}\d{10})\.\d+:\d+\):""",
+    """node=({host}[\w\.-]+)\s""",
+    """acct="\(?(unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)?""",
+    """hostname=(\?|({src_host}[\w\.-]+))\s+\w+=""", 
+    """addr=(\?|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?\s+\w+=""",
+    """terminal=(\?|({login_type_text}[^=]+?))\s+\w+=""",
+    """exe="({auth_process}[^"]+)""",
+    """type=({event_name}USER_\S+)\s+\w+=""",
+    """res=({result}[^']+)""",
     """({event_code}ssh)""",
     """({event_name}USER_LOGIN)"""
-    """\smsg='({additional_info}[^']+)'""",
-    """\spid=({process_id}\d+)""", 
-    """\suid=({user_id}\d+)""",
-    """\sses=({session_id}\d+)""",
-    """\sauid=({account_id}\d+)\s"""
+    """msg='({additional_info}[^']+)'""",
+    """pid=({process_id}\d+)""", 
+    """uid=({user_id}\d+)""",
+    """ses=({session_id}\d+)""",
+    """auid=({account_id}\d+)\s"""
     """type=({login_type_text}[^=]+?)\s+\w+="""
   ]
   DupFields = [ "host->dest_host" ]

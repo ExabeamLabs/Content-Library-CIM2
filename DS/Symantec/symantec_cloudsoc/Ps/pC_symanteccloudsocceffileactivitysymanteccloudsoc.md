@@ -14,23 +14,18 @@ Fields = [
 """"user_name":"({full_name}[^"]+)"""
 """"user":"({email_address}[^\@]+@({email_domain}[^"]+))"""
 """"user":"(system|({email_address}[^\@]+@[^"]+))"""
-""""service":"({app}[^"]+)""""
+""""service":"({service_name}({app}[^"]+))""""
 """"browsers":(\[)?"({browser}[^"]+)""""
 """"user_agent":"({user_agent}[^"]+)""""
-""""activity_type":"({operation}[^"]+)""""
+""""activity_type":"({access}({operation}[^"]+))""""
 """"ioi_code":"({alert_type}[^"]+)""""
 """"message":"({additional_info}[^"]+)""""
 """"severity":"({alert_severity}[^"]+)""""
 """"object_type":"({object_type}[^"]+)""""
-""""object_name":"(|\/|({object}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?))))""""
-""""name":"(|\/|({object}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?))))""""
+""""object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))""""
+""""name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))""""
 """"host(s)?":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"shared_with":"({target}[^"]+)""""
-]
-DupFields = [
-"src_file_path->resource"
-"app->service_name"
-"operation->access"
 ]
 ParserVersion = "v1.0.0"
 

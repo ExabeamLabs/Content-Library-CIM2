@@ -9,8 +9,8 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737
   Conditions = [ """Security Group Management""", """<EventID>4737</EventID>""", """<Execution ProcessID""" ,"""<Channel>Security</Channel>"""]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")TargetUserName('|")>({group_name}[^<]+)"""
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737
 	  """({event_code}4737)""",
     """<Level>({run_level}[^<]+)<"""
      ]
-     DupFields = ["user->src_user", "domain->src_domain"]
   
 
 }

@@ -24,7 +24,7 @@ Name = imperva-incapsula-cef-http-session-siemintegration
       """cpt\\?=({src_port}\d+)\s""",
       """spt\\?=({dest_port}\d+)\s""",
       """app\\?=({protocol}[^|\s%=]+)\s""",
-      """request\\?=({uri_path}[^\s]+)\s""",
+      """request\\?=({url}({uri_path}[^\s]+))\s""",
       """qstr\\?=({uri_query}[^|]+?)\s\w+\\?=""",
       """in\\?=({bytes}\d+|$)\s""",
       """\|Incapsula\|SIEMintegration\|([^\|]*?\|){2}({attack}[^\|]+)\|""",
@@ -35,8 +35,6 @@ Name = imperva-incapsula-cef-http-session-siemintegration
       """ccode\\?=({country_code}[^=]+)\s""",
       """cicode\\?=({city}[^=]+)\s\w+\\?="""
   ]
-
-  DupFields = [ "uri_path->url" ]
 
 
 }

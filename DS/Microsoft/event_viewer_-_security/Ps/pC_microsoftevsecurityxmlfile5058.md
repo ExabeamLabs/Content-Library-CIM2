@@ -6,11 +6,12 @@ Name = microsoft-evsecurity-xml-file-5058
   ParserVersion = "v1.0.0"
   Conditions = [ """<EventID>5058</EventID>""", """<Message>Key file operation""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
-    """<Computer>({host}[\w\.\-]+)<""",
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
+    """<Computer>({dest_host}({host}[\w\.\-]+))<""",
     """<Data Name =('|")KeyFilePath('|")>({file_path}({file_dir}[^<]+[\\\/]+)?({file_name}[^<\\\/]+(\.({file_ext}[^\s<\\\/]+))?))<""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({dest_host}({host}[\w_\-\.]+))"""
   ]
-  DupFields = ["host->dest_host"]
 
 s-xml-object-access = {
   Vendor = Microsoft
@@ -35,8 +36,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

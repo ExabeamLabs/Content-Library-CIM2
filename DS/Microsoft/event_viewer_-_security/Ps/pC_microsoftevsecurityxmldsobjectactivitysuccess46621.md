@@ -15,8 +15,8 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4662-1
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """<EventRecordID>({event_id}[^<]+)""",
     """('|")SubjectUserSid('|")>({user_sid}[^"\s<]+)<""",
-    """('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<""",
-    """('|")SubjectDomainName('|")>({domain}[^"\s<]+)<""",
+    """('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """('|")SubjectDomainName('|")>({src_domain}({domain}[^"\s<]+))<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<""",
     """('|")ObjectServer('|")>({object_server}[^<]+)<""",
     """('|")ObjectType('|")>\%?\{?({object_type}[^<>\{\}]+)""",
@@ -26,7 +26,6 @@ Name = microsoft-evsecurity-xml-ds-object-activity-success-4662-1
     """('|")Properties('|")>[\-\\r\\n\s]*({properties}[^<]+?)[\-\\r\\n\s]*<""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
   ParserVersion = "v1.0.0"
 
 

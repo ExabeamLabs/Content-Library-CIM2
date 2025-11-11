@@ -13,13 +13,10 @@ Fields = [
   """({event_name}The workstation was unlocked)"""
   """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))\s+LogName ="""
   """({event_code}4801)"""
-  """ComputerName =({host}[^\s]+)"""
+  """ComputerName =({dest_host}({host}[^\s]+))"""
   """Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:"""
   """Account Domain:\s+({domain}.+?)\s+Logon ID:"""
   """Logon ID:\s+({login_id}[^\s]+)\s+Session"""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

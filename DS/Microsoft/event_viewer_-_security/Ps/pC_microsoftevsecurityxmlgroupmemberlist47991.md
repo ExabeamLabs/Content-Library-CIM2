@@ -14,8 +14,8 @@ Name = microsoft-evsecurity-xml-group-member-list-4799-1
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({domain}[^<]+)""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)""",
     """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)""",
@@ -24,7 +24,6 @@ Name = microsoft-evsecurity-xml-group-member-list-4799-1
     """<Data Name(\\)?=('|")CallerProcessName('|")>({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+))<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
   ]
-  DupFields = ["user->src_user", "domain->src_domain"]
 
 
 }

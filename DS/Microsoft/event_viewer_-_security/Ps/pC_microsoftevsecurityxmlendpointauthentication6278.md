@@ -6,15 +6,16 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-6278
   Product = Event Viewer - Security
   Conditions = [ """<EventID>6278</EventID>""", """<EventRecordID>""" ]
   Fields = ${DLWindowsParsersTemplates.s-xml-object-access.Fields}[
+    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
+    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """<Computer>({host}[\w\.\-]+)<""",
     """<Security UserID\\*=('|")({user_sid}[^'"]+)""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
-    """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}[^<]+)</Data>""",
+    """<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
-  DupFields = ["src_user->user", "src_domain->domain"]
 
 s-xml-object-access = {
   Vendor = Microsoft
@@ -39,8 +40,6 @@ s-xml-object-access = {
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}[^<]+?)\s*<\/Data>""",
     """<Data Name\\*=('|")ErrorDescription('|")>({failure_reason}[^<]+?)\s*</Data>""",
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
-    """Account Name:\s*(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
-    """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """Logon ID:\s*({login_id}\S+)\s+""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
 # algorithm_name is removed

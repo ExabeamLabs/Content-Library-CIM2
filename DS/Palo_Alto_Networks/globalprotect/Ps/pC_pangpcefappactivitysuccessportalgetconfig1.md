@@ -5,9 +5,8 @@ Name = pan-gp-cef-app-activity-success-portalgetconfig-1
   ParserVersion = "v1.0.0"
   Conditions = [ """|portal-getconfig|GLOBALPROTECT|""", """GPSourceUser=""" ]
   Fields = ${PaloAltoParsersTemplates.paloalto-app-activity.Fields}[
-    """({event_name}portal-getconfig)"""
+    """({operation}({event_name}portal-getconfig))"""
   ]
-  DupFields = [ "event_name->operation" ]
 
 paloalto-app-activity = {
   Vendor = Palo Alto Networks

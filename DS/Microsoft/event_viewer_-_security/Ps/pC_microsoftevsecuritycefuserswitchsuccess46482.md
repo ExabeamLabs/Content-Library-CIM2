@@ -17,14 +17,13 @@ Fields = [
 """deviceExternalId=({host}[^\s]+)"""
 """shost=({dest_host}[\w\-.]+)"""
 """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""duser=({dest_user}[\w\-\.]+(?:\w+)?\$?)\s+suser"""
+"""duser=({account}({dest_user}[\w\-\.]+(?:\w+)?\$?))\s+suser"""
 """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+nitroSecurity"""
 """sntdom=({domain}.+?)\s+shost"""
 """nitroSecurity_ID=({user_sid}[^\s]+)"""
 """nitroSource_Logon_ID=({login_id}.+?)(\s|0\|)"""
 """nitroAppID=\s*(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))\s+\w+="""
 ]
-DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"
 
 

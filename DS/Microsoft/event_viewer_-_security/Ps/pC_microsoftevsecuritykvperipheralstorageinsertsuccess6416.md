@@ -19,7 +19,7 @@ Name = "microsoft-evsecurity-kv-peripheralstorage-insert-success-6416"
     """Class Name:\s*({device_class}[^:]+?)\s+(Vendor IDs:|Hardware IDs:)""",
     """hostname":"({dest_host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)\s""",
-    """({event_name}A new external device was recognized by the system.)"""
+    """({operation}({event_name}A new external device was recognized by the system))"""
 
     """exa_regex=({time}(\d{2}\/){2}\d{4} (\d{2}:){2}\d{2} (?:am|AM|pm|PM))""",
     """exa_json_path=$.message,exa_regex=ComputerName =\s*({dest_host}[\w\.-]+?)\s+TaskCategory""",
@@ -32,9 +32,8 @@ Name = "microsoft-evsecurity-kv-peripheralstorage-insert-success-6416"
     """exa_json_path=$.message,exa_regex=Class Name:\s*({device_class}[^:]+?)\s+(Vendor IDs:|Hardware IDs:)""",
     """exa_json_path=$.message,exa_regex=EventCode=({event_code}\d+)\s""",
     """exa_regex="hostname":"({dest_host}[\w\-.]+)""",
-    """exa_regex=({event_name}A new external device was recognized by the system.)"""
+    """exa_regex=({operation}({event_name}A new external device was recognized by the system))"""
   ]
-  DupFields = [ "event_name->operation" ]
   ParserVersion = "v1.0.0"
 
 
