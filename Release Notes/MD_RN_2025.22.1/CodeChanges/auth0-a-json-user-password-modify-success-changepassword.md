@@ -1,0 +1,10 @@
+# Code Changes for auth0-a-json-user-password-modify-success-changepassword (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  |  |
+| edit_regex_field | auth_type |  |  |
+| edit_regex_field | domain |  |  |
+| edit_regex_field | email_address |  |  |
+| edit_regex_field | user |  |  |
+| added_regex_field | user_id |  |  |

@@ -1,0 +1,6 @@
+# Code Changes for microsoft-o365-cef-app-file-success-removememberfromgroup (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | group_name |  |  |
+| edit_regex_field | target |  |  |
