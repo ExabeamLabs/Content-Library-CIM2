@@ -1,0 +1,6 @@
+# Code Changes for proofpoint-tappod-json-email-send-receive-rcpts (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'alert_id', 'alert_type', 'attachment_1', 'attachment_10', 'attachment_2', 'attachment_3', 'attachment_4', 'attachment_5', 'attachment_6', 'attachment_7', 'attachment_8', 'attachment_9', 'bytes', 'connection_status', 'country', 'dest_email_address', 'dest_email_domain', 'dest_user', 'dest_user_full_name', 'direction', 'email_address', 'email_attachment', 'email_attachments', 'email_recipients', 'email_subject', 'file_ext', 'full_name', 'hash_md5', 'hash_sha256', 'host', 'mailfrom', 'message_id', 'reply_to', 'result', 'rule', 'src_ip', 'src_port', 'time', 'virus_name'] |
+| added_regex_field | mailfrom |  | ['"smtp.mailfrom":"({mailfrom}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"', 'exa_json_path=$..[\'smtp.mailfrom\'],exa_regex=({mailfrom}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)$'] |

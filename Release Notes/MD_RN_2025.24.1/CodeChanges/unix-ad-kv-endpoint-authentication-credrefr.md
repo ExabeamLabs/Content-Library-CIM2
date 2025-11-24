@@ -1,0 +1,10 @@
+# Code Changes for unix-ad-kv-endpoint-authentication-credrefr (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account_id', 'action', 'dest_host', 'email_address', 'host', 'host_ip', 'operation_type', 'process_dir', 'process_name', 'process_path', 'result', 'session_id', 'src_host', 'src_ip', 'time', 'user', 'user_id'] |
+| edit_regex_field | host |  | ['({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({dest_host}({host}[\w.\-]+))', '\d\d:\d\d:\d\d ({dest_host}({host}[\w\-.]+))\s*(tag_audit_log(:|\s*)|audisp-syslog\[)', '\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({dest_host}({host}[\w.\-]+))))\s+(\d\S+|tag_audit_log|({=dest_host}({=host}[\w.\-]+))\s)?'] |
+| edit_regex_field | host_ip |  | ['\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({dest_host}({host}[\w.\-]+))))\s+(\d\S+|tag_audit_log|({=dest_host}({=host}[\w.\-]+))\s)?'] |
+| edit_regex_field | time |  | ['({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({dest_host}({host}[\w.\-]+))', '({time}\d{4}\-\d{1,2}\-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}\.\d+)', 'msg=audit\(({time}\d{10})'] |
+| added_regex_field | dest_host |  | ['({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({dest_host}({host}[\w.\-]+))', '\d\d:\d\d:\d\d ({dest_host}({host}[\w\-.]+))\s*(tag_audit_log(:|\s*)|audisp-syslog\[)', '\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({dest_host}({host}[\w.\-]+))))\s+(\d\S+|tag_audit_log|({=dest_host}({=host}[\w.\-]+))\s)?'] |
+| removed_attribute | DupFields |  | N/A |

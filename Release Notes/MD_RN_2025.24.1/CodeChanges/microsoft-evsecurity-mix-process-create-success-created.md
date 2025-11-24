@@ -1,0 +1,13 @@
+# Code Changes for microsoft-evsecurity-mix-process-create-success-created (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['dest_user', 'domain', 'event_code', 'event_name', 'host', 'login_id', 'operation_type', 'parameter_csproj', 'parameter_dll', 'parameter_exe', 'parameter_hta', 'parameter_sct', 'parameter_xml', 'parent_process', 'parent_process_guid', 'parent_process_id', 'parent_process_name', 'path', 'process_command_line', 'process_dir', 'process_guid', 'process_id', 'process_name', 'process_path', 'run_level', 'service_command_line', 'service_name', 'src_host', 'time', 'user'] |
+| edit_regex_field | host |  | ['"forwarder":"({src_host}({host}[^"]+))', '(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(\s|\\[nrt])*ComputerName=({src_host}({host}[\w\-.]+))', '({src_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', 'Computer(Name|_name)?\s*\\*"?(=|:|>)\s*"*({src_host}({host}[\w\.-]+))(\s|,|"|<\/Computer>|$)'] |
+| edit_regex_field | parent_process_guid |  | ['Creator Process ID(:|=)(\\[nrt]|\s)*({parent_process_id}({parent_process_guid}[^\s\\;]+))(\\[nrt]|\s)*(\s|;)'] |
+| edit_regex_field | process_guid |  | ['"NewProcessId":"({process_id}({process_guid}[^"]+))', 'New Process ID(:|=)\s*({process_id}({process_guid}[^\s;]+))(\s|;)'] |
+| edit_regex_field | process_id |  | ['"NewProcessId":"({process_id}({process_guid}[^"]+))', '"ProcessId":"({process_id}[^"]+)', 'New Process ID(:|=)\s*({process_id}({process_guid}[^\s;]+))(\s|;)'] |
+| edit_regex_field | time |  | ['"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)', '({src_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', '({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})', '({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))'] |
+| added_regex_field | parent_process_id |  | ['Creator Process ID(:|=)(\\[nrt]|\s)*({parent_process_id}({parent_process_guid}[^\s\\;]+))(\\[nrt]|\s)*(\s|;)'] |
+| added_regex_field | src_host |  | ['"forwarder":"({src_host}({host}[^"]+))', '(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(\s|\\[nrt])*ComputerName=({src_host}({host}[\w\-.]+))', '({src_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))', 'Computer(Name|_name)?\s*\\*"?(=|:|>)\s*"*({src_host}({host}[\w\.-]+))(\s|,|"|<\/Computer>|$)'] |
+| removed_attribute | DupFields |  | N/A |

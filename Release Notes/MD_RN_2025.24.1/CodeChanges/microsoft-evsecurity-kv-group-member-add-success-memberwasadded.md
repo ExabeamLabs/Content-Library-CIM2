@@ -1,0 +1,12 @@
+# Code Changes for microsoft-evsecurity-kv-group-member-add-success-memberwasadded (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'account_domain', 'account_id', 'account_name', 'dest_host', 'dest_user_sid', 'domain', 'event_code', 'event_id', 'event_name', 'group_domain', 'group_id', 'group_name', 'group_type', 'host', 'login_id', 'member', 'result', 'time', 'user', 'user_dn', 'user_ou', 'user_sid'] |
+| edit_regex_field | domain |  | ['"Account":"(({domain}[^\\\s"]+)\\+)?({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'Account Name:\s*({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s\\n]*Account Domain:\s*({domain}[^\s]+?)[\s\\n]*Logon ID:', 'Subject:\s+[^:]+:\s*({user_sid}.+?)\s+Account Name:\s+({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({domain}[^:]+?)\s+Logon ID:'] |
+| edit_regex_field | host |  | ['"data\.system_name":"({host}[^"]+)"', 'Computer(\w+)?["\s]+(:|=)\s*"?({dest_host}({host}.+?))("|\s|;)', 'ComputerName\\=({dest_host}({host}[\w\-.]+))', 'Computer_name:({dest_host}({host}[\w\-\.]+))', '\s(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)({dest_host}({host}[\w.\-]+))\s'] |
+| edit_regex_field | user |  | ['"Account":"(({domain}[^\\\s"]+)\\+)?({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'Account Name:\s*({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s\\n]*Account Domain:\s*({domain}[^\s]+?)[\s\\n]*Logon ID:', 'Subject:\s+[^:]+:\s*({user_sid}.+?)\s+Account Name:\s+({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({domain}[^:]+?)\s+Logon ID:'] |
+| edit_regex_field | user_sid |  | ['Subject:\s+[^:]+:\s*({user_sid}.+?)\s+Account Name:\s+({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({domain}[^:]+?)\s+Logon ID:'] |
+| added_regex_field | account |  | ['"Account":"(({domain}[^\\\s"]+)\\+)?({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'Account Name:\s*({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s\\n]*Account Domain:\s*({domain}[^\s]+?)[\s\\n]*Logon ID:', 'Subject:\s+[^:]+:\s*({user_sid}.+?)\s+Account Name:\s+({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({domain}[^:]+?)\s+Logon ID:'] |
+| added_regex_field | dest_host |  | ['Computer(\w+)?["\s]+(:|=)\s*"?({dest_host}({host}.+?))("|\s|;)', 'ComputerName\\=({dest_host}({host}[\w\-.]+))', 'Computer_name:({dest_host}({host}[\w\-\.]+))', '\s(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)({dest_host}({host}[\w.\-]+))\s'] |
+| removed_attribute | DupFields |  | N/A |

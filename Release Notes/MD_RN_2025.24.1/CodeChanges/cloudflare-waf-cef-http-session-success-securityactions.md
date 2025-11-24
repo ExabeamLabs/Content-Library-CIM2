@@ -1,0 +1,9 @@
+# Code Changes for cloudflare-waf-cef-http-session-success-securityactions (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'alert_severity', 'bytes_in', 'bytes_out', 'dest_ip', 'device_type', 'edge_response_status', 'host', 'http_response_code', 'method', 'origin_response_status', 'protocol', 'src_country', 'src_ip', 'src_port', 'time', 'uri_path', 'uri_query', 'user_agent', 'web_domain'] |
+| edit_regex_field | bytes_out |  | ['"EdgeResponseBytes"+:({bytes_out}\d+)', '"OriginIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"*.*OriginResponseBytes"+:({bytes_out}\d+)'] |
+| edit_regex_field | dest_ip |  | ['"EdgeServerIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))', '"OriginIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))', '"OriginIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"*.*OriginResponseBytes"+:({bytes_out}\d+)'] |
+| added_regex_field | host |  | ['"EdgeServerIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))', '"OriginIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))', '"OriginIP"+:"+({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"*.*OriginResponseBytes"+:({bytes_out}\d+)'] |
+| removed_attribute | DupFields |  | N/A |

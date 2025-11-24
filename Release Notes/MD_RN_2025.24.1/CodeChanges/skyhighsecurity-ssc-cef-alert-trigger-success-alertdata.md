@@ -1,0 +1,5 @@
+# Code Changes for skyhighsecurity-ssc-cef-alert-trigger-success-alertdata (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "skyhighsecurity-ssc-cef-alert-trigger-success-alertdata", "Vendor": "Skyhigh Security", "Product": "Skyhigh Security Cloud", "TimeFormat": "MMM dd yyyy HH:mm:ss.SSS z", "Conditions": ["CEF:0", "Alert.", "activityName=", "actorIdType=", "serviceNames=", "|Skyhigh Security|"], "Fields": ["\d\d:\d\d:\d\d\s({host}[\w\.\-]+)", "\|start=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d{1,3} \w{1,3})", "response=\[({result}[^\]\s]+)", "riskSeverity=({alert_severity}[^\s]+)", "\ssuser=(({email_address}[^@\s=]+@[^\s=\.]+\.[^\s=]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=", "({alert_type}Alert\.Data)", "\|Skyhigh Security\|Skyhigh Security Cloud\|[^\|]+\|({alert_name}[^\|]+)\|", "userAction=({action}[^=]+?)\s\w+=", "incidentId=({alert_id}[^=]+?)\s\w+=", "serviceNames=\[?(|({additional_info}[^=\]]+?))\]?\s+\w+=", "\sdhost=({dest_host}[\w\.\-]+)", "activityName=\[({activity_details}[^\]]+?)\]"], "ParserVersion": "v1.0.0"} |

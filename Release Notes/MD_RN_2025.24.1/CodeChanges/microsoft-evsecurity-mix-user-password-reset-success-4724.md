@@ -1,0 +1,10 @@
+# Code Changes for microsoft-evsecurity-mix-user-password-reset-success-4724 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['Subject:[^=]+?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s*((?i)NT AUTHORITY|NA|({domain}[^:]+?))\s+Logon ID', 'SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\"]+)))\\?"', 'SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?"'] |
+| edit_regex_field | src_domain |  | ['SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\"]+)))\\?"'] |
+| edit_regex_field | src_user |  | ['SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?"'] |
+| edit_regex_field | user |  | ['Subject:[^=]+?Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s*((?i)NT AUTHORITY|NA|({domain}[^:]+?))\s+Logon ID', 'SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?"'] |
+| edit_regex_field | user_upn |  | ['SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?"'] |
+| removed_attribute | DupFields |  | N/A |

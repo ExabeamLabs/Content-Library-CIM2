@@ -1,0 +1,13 @@
+# Code Changes for linux-dhcp-str-dhcp-session-success-dhcprequest (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['auth_server', 'dest_host', 'dest_interface', 'dest_ip', 'dest_mac', 'host', 'src_ip', 'src_port'] |
+| edit_regex_field | dest_host |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| edit_regex_field | dest_interface |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| edit_regex_field | dest_ip |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| edit_regex_field | dest_mac |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| edit_regex_field | host |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| edit_regex_field | src_ip |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*', 'for\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |
+| added_regex_field | auth_server |  | ['\d\d:\d\d:\d\d\s+({auth_server}({host}[\w\-\.]+))\s+dhcpd(\[\d+\])?:\s+DHCPREQUEST for ({dest_ip}[a-fA-F\d\.:]+)\s.*?from ({dest_mac}[a-fA-F\d\.:]+)(\s\(({dest_host}[\w\-\.]+)(-.*?)?\))?( via (({src_ip}[\d.:a-fA-F]+[\da-fA-F]):?|({dest_interface}[\w-]+)))\s*'] |
+| removed_attribute | DupFields |  | N/A |
