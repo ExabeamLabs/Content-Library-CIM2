@@ -1,0 +1,7 @@
+# Code Changes for microsoft-o365-cef-app-login-fail-userloginfailed (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['app', 'app_id', 'browser', 'email_address', 'email_domain', 'error_code', 'event_name', 'failure_reason', 'object', 'object_id', 'operation', 'os', 'request_type', 'resource', 'result', 'src_ip', 'src_port', 'time', 'user', 'user_agent', 'user_id', 'user_type', 'user_upn'] |
+| edit_regex_field | email_address |  | ['"Actor":\[[^\]]+?"ID":"(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))","Type":5\}\]', '"Actor":\[[^\]]+?"Type":5,"ID":"(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\}\]', '"UserId":"({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"', 'suser=({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)'] |
+| added_regex_field | email_domain |  | ['"UserId":"({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"'] |

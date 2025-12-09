@@ -1,0 +1,13 @@
+# Code Changes for microsoft-evsecurity-kv-service-create-success-4697 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account_domain |  | ['Service Account:(\\[nrt]|\s)*(({account_domain}[^\\"\s]+?)\\+)?(?!(\\*[nrt]\\+[nrt]))({account_name}[^"\s\\]+)(\\[nrt]|\s)*"', 'Service Account:\s*(({account_domain}[^\\"\s]+)\\)?((?-i)\\+[rnt])*({account_name}[^"\s]+)'] |
+| edit_regex_field | account_name |  | ['Service Account:(\\[nrt]|\s)*(({account_domain}[^\\"\s]+?)\\+)?(?!(\\*[nrt]\\+[nrt]))({account_name}[^"\s\\]+)(\\[nrt]|\s)*"', 'Service Account:\s*(({account_domain}[^\\"\s]+)\\)?((?-i)\\+[rnt])*({account_name}[^"\s]+)'] |
+| edit_regex_field | domain |  | ['Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:'] |
+| edit_regex_field | login_id |  | ['Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:'] |
+| edit_regex_field | service_name |  | ['Service Name:(\\[nrt]|\s)*(|({service_name}[^:]+?)(_[0-9a-f]+)?)(\\[nrt]|\s)*Service File Name:', '\sdestinationServiceName=({service_name}[^=]+?)\s+\w+='] |
+| edit_regex_field | service_start_type |  | ['(\\[nrt]|\s)*Service Type:(\\[nrt]|\s)*({service_type}[^\s]+?)(\\[nrt]|\s)*Service Start Type:(\\[nrt]|\s)*({service_start_type}.+?)(\\[nrt]|\s)*'] |
+| edit_regex_field | service_type |  | ['(\\[nrt]|\s)*Service Type:(\\[nrt]|\s)*({service_type}[^\s]+?)(\\[nrt]|\s)*Service Start Type:(\\[nrt]|\s)*({service_start_type}.+?)(\\[nrt]|\s)*'] |
+| edit_regex_field | user |  | ['Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:'] |
+| edit_regex_field | user_sid |  | ['Security ID:(\\[nrt]|\s)*(|({user_sid}.+?))(\\[nrt]|\s)*Account Name:(\\[nrt]|\s)*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\\[nrt]|\s)*Account Domain:(\\[nrt]|\s)*(|({domain}.+?))(\\[nrt]|\s)*Logon ID:(\\[nrt]|\s)*(|({login_id}.+?))(\\[nrt]|\s)*Service Information:'] |

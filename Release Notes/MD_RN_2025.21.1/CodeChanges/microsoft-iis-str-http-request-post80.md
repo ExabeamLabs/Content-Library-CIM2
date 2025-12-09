@@ -1,0 +1,5 @@
+# Code Changes for microsoft-iis-str-http-request-post80 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "microsoft-iis-str-http-request-post80", "Vendor": "Microsoft", "Product": "Microsoft IIS", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["POST /", "80 -"], "VendorMatch": true, "Fields": ["({time}\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s+({method}[A-Z]+)\s+(-|({uri_path}\/[^\s]*))\s+(-|({uri_query}[^\s]*))\s+({=src_port}\d+)\s+(-|({user}[\w\.\-]{1,40}\$?))\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s+(-|({referrer}[^\s]*))\s+(-|({user_agent}[^\s]*))\s+({http_response_code}\d{3})\s+({sub_status}\d{1,3})\s+({error_code}\d{1,3})\s+({bytes_in}\d+)"], "ParserVersion": "v1.0.0"} |

@@ -1,0 +1,12 @@
+# Code Changes for google-workspace-cef-file-permission-modify-success-aclchange (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['access', 'app', 'dest_email_address', 'dest_email_domain', 'dest_user', 'email_address', 'email_domain', 'file_ext', 'file_id', 'file_name', 'file_owner', 'file_type', 'host', 'operation', 'privileges', 'src_ip', 'src_port', 'time', 'user', 'user_id'] |
+| edit_regex_field | file_ext |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| edit_regex_field | file_id |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| edit_regex_field | file_name |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| edit_regex_field | file_type |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| edit_regex_field | privileges |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| added_regex_field | operation |  | [',"parameters":[^=]*?name":"doc_id","value":"({file_id}[^"]+)"[^=]*?name":"doc_type","value":"((?i)unknown|({file_type}[^"]+))"[^=]*?name":"doc_title","value":"\s*({file_name}[^"]+?(\.\s*({file_ext}[a-zA-Z]+?))?)\s*"[^=]*?name":"visibility","value":"({operation}({privileges}[^"]+))"'] |
+| removed_attribute | DupFields |  | N/A |
