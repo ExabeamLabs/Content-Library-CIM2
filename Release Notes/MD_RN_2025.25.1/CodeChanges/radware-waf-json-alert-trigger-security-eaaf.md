@@ -1,0 +1,5 @@
+# Code Changes for radware-waf-json-alert-trigger-security-eaaf (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "radware-waf-json-alert-trigger-security-eaaf", "Vendor": "Radware", "Product": "Radware WAF", "TimeFormat": "epoch", "ExtractionType": "json", "Conditions": ["targetModule\":", "\"severity\":", "\"action\":", "\"violationType\":", "\"eventType\":\"EAAF\""], "Fields": ["exa_json_path=$.severity,exa_field_name=alert_severity", "exa_json_path=$.sourcePort,exa_field_name=src_port", "exa_json_path=$.method,exa_field_name=method", "exa_json_path=$.description,exa_field_name=additional_info", "exa_json_path=$.host,exa_field_name=host", "exa_json_path=$.action,exa_field_name=action", "exa_json_path=$.receivedTimeStamp,exa_field_name=time", "exa_json_path=$.externalIp,exa_field_name=src_ip", "exa_json_path=$.violationType,exa_field_name=alert_name", "exa_json_path=$.violationType,exa_field_name=alert_type", "exa_json_path=$.details,exa_field_name=alert_reason"], "ParserVersion": "v1.0.0"} |

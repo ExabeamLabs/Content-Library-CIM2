@@ -1,0 +1,7 @@
+# Code Changes for microsoft-evsecurity-xml-group-list-4798-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | process_dir |  | ['<Data Name(\\)?=(\'|")CallerProcessName(\'|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+)))<\/Data>', '<Data Name(\\)?=(\'|")ProcessName(\'|")>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>', 'Process Name:\s*(-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))("|,|<|$)'] |
+| edit_regex_field | process_name |  | ['<Data Name(\\)?=(\'|")CallerProcessName(\'|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+)))<\/Data>', '<Data Name(\\)?=(\'|")ProcessName(\'|")>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>', '<Message>Process (\'|")?(-|({process_name}[^\s\'"]+))', 'Process Name:\s*(-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))("|,|<|$)'] |
+| edit_regex_field | process_path |  | ['<Data Name(\\)?=(\'|")CallerProcessName(\'|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+)))<\/Data>', '<Data Name(\\)?=(\'|")ProcessName(\'|")>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>', 'Process Name:\s*(-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))("|,|<|$)'] |

@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evsecurity-xml-network-traffic-fail-5152 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_attribute | legacy_product |  | ['Windows'] |
