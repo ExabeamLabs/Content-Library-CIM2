@@ -29,7 +29,6 @@ Name = splunk-s-json-dhcp-session-success-dhcpack
     """exa_json_path=$.ip_lease_time,exa_field_name=ip_lease_time"""
     """exa_json_path=$.host_name,exa_field_name=host"""
     ]
-    DupFields = ["transaction_id->trans_id"]
   ParserVersion = "v1.0.0"
 
 

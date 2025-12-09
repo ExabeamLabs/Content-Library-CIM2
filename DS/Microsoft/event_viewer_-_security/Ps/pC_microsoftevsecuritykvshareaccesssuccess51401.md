@@ -4,6 +4,10 @@
 Name = microsoft-evsecurity-kv-share-access-success-5140-1
   ParserVersion = v1.0.0
   Conditions = [ """5140""", """ネットワーク共有オブジェクトにアクセスしました。""" ]
+  Fields = ${WinJPParsersTemplates.jp-event.Fields} [
+    """\sアカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:""",
+    """\sアカウント ドメイン:\s*({domain}[^:]+?)\s*ログオン ID:"""
+  ]
 
 jp-event = {
   Vendor = Microsoft
@@ -16,8 +20,6 @@ jp-event = {
     """\sアクセス:\s*({access}[^\s:]+)\s""",
     """\sMessage=({event_name}\S+)""",
     """\sセキュリティ ID:\s*({user_sid}[^:]+?)\s*アカウント名:""",
-    """\sアカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:""",
-    """\sアカウント ドメイン:\s*({domain}[^:]+?)\s*ログオン ID:""",
     """\sログオン ID:\s*({login_id}\S+)""",
     """Source Port(=|:)\s*({src_port}\d+)"""
   

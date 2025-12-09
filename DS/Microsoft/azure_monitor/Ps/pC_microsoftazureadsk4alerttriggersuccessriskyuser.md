@@ -11,9 +11,9 @@ Name = microsoft-azuread-sk4-alert-trigger-success-riskyuser
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,7}Z)"""",
     """destinationServiceName =({app}Azure)""",
     """OperationName":"({operation}[^"]+)""",
-    """Category":"({category}[^"]+)""",
+    """Category":"({event_name}({category}[^"]+))""",
     """CallerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
-    """"Type":"({event_category}[^"]+)""",
+    """"Type":"({alert_type}({event_category}[^"]+))""",
     """"type":"({additional_info}[^"]+)""",
     """"Resource":"({resource}[^"]+)""",
     """"ResourceId":"({resource_id}[^",]+)""",
@@ -21,7 +21,6 @@ Name = microsoft-azuread-sk4-alert-trigger-success-riskyuser
     """"UserDisplayName":"(({first_name}[^\s"]+)\s+({last_name}[^\s"]+))"""",
     """"RiskState":"({result}[^"]+)"""
   ]
-  DupFields = ["category->event_name","event_category->alert_type"]
 
 
 }

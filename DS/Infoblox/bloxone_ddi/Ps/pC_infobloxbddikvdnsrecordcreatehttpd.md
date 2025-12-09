@@ -10,12 +10,11 @@ Name = infoblox-bddi-kv-dns-record-create-httpd
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Created HostAddress)""",
+    """({event_name}({operation}Created HostAddress))""",
     """Created HostAddress ({server}\S+)\s""",
 # host_record is removed
 # reserved_interface is removed
   ]
-  DupFields = ["operation->event_name"]
 
 
 }

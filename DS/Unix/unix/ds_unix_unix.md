@@ -4,7 +4,7 @@ Product: Unix
 -------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  721  |  198   |        162         |       31       |   123   |
+|  721  |  198   |        162         |       31       |   124   |
 
 |    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

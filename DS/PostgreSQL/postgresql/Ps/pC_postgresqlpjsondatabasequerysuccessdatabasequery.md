@@ -13,7 +13,7 @@ Conditions = [
 """"sql_state_code":"""
 ]
 Fields = [
-  """exa_json_path=$.user_name,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+  """exa_json_path=$.user_name,exa_regex=({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """exa_json_path=$.log_time,exa_field_name=time""",
   """exa_json_path=$.database_name,exa_field_name=db_name""",
   """exa_json_path=$.process_id,exa_field_name=process_id""",
@@ -29,9 +29,6 @@ Fields = [
   """exa_json_path=$.error_severity,exa_field_name=severity""",
   """exa_json_path=$.process_id,exa_field_name=process_id""",
   """exa_json_path=$.process_id,exa_field_name=process_id""",
-]
-DupFields = [
-"user->db_user"
 ]
 ParserVersion = "v1.0.0"
 

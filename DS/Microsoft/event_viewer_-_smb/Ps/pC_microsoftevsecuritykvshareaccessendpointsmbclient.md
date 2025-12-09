@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-share-access-endpoint-smbclient
     """\s({time}[a-zA-Z]{3} \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
     """({time}\d{1,4}-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """\d+\s+({event_code}\d+)\s+Microsoft-Windows-SMBClient"""
-    """({host}[\w\-\.]+)\s+None"""
+    """({src_host}({host}[\w\-\.]+))\s+None"""
     """None\s*({event_name}[^\:]+?)\s+(\w+:|Share name:)"""
     """Session ID:\s*({session_id}[^\s]+)"""
     """Status:\s*({result}[^\s]+)"""
@@ -20,7 +20,6 @@ Name = microsoft-evsecurity-kv-share-access-endpoint-smbclient
     """Error:\s*\{({result}[^\}]+)\}"""
     """({log_name}MSWinEventLog)"""
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

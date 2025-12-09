@@ -13,13 +13,12 @@ Name = threatblockr-t-kv-dns-response-success-dnsresplog
     """\ssrc_port=({src_port}\d{1,5})""",
     """\sdst_port=({dest_port}\d{1,5})""",
     """\sproto=({protocol}[^=]+?)(,\s\w+=|\s*$)""",
-    """\saction=({action}[^=]+?)(,\s\w+=|\s*$)""",
+    """\saction=({result}({action}[^=]+?))(,\s\w+=|\s*$)""",
     """\sreason=({additional_info}[^=]+?)(,\s\w+=|\s*$)""",
     """\squery_name=({dns_query}[^=]+?)(,\s\w+=|\s*$)""",
     """\squery_type=({dns_query_type}[^=]+?)(,\s\w+=|\s*$)""",
     """\sanswer_value=({response}[^=]+?)(,\s\w+=|\s*$)"""
   ]
-  DupFields = [ "action->result" ]
   ParserVersion = "v1.0.0"
 
 

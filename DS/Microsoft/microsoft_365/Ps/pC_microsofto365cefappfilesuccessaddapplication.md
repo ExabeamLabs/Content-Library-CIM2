@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-addapplication
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Add application""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"targetResources":[^\}]+?"displayName":"({target}[^"]+)""""
+    """"targetResources":(?:(?!modifiedProperties)[^}])+?"displayName":"({target}[^"]+)""""
   ]
 
 cef-microsoft-app-activity = {
@@ -67,6 +67,7 @@ cef-microsoft-app-activity = {
     """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
     """appId":"({app_id}[^"]+)""""
+    """"SiteUrl":"({url}[^"]+)""""
  
 }
 ```

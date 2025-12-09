@@ -15,6 +15,7 @@ Name = humansecurity-botdefender-json-app-activity-botdefender
     """exa_json_path=$.country,exa_field_name=country""",
     """exa_json_path=$.domain,exa_field_name=domain""",
     """exa_json_path=$.event_type,exa_field_name=action""",
+    """exa_json_path=$.event_type,exa_field_name=operation""",
     """exa_json_path=$.filter_category,exa_field_name=rule_type""",
     """exa_json_path=$.filter_id,exa_field_name=rule_id""",
     """exa_json_path=$.filter_origin,exa_field_name=rule""",
@@ -30,7 +31,6 @@ Name = humansecurity-botdefender-json-app-activity-botdefender
     """exa_json_path=$.user_agent,exa_field_name=user_agent""",
   ]
   ParserVersion = v1.0.0
-  DupFields = [ "action->operation" ]
 
 
 }

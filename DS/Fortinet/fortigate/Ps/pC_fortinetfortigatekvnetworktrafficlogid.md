@@ -43,7 +43,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
 # craction is removed
     """\stransport=({src_translated_port}\d+)""",
     """\stransip=(::ffff:)?({src_translated_ip}[a-fA-F\d.:]+)""",
-    """\smsg=\\?"?({additional_info}[^=]+?),?\\?"?\s+(\w+=|$)""",
+    """\smsg=\\?"?({additional_info}[^=]+?),?\\?"?\s*(\w+=|$)""",
     """\slogdesc=\\?"*({event_name}[^"]+?)\\?"*\s+(\w+=|$)""",
     """({result}succeeded|failed)"""
     """\sstatus=\\?"*({result}[^"\s]*)\\?"*\s+(\w+=|$)""",
@@ -65,6 +65,9 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\Wtz=\\?"?({tz}[+-]\d+)"""
     """forwardedfor="*({more_info}[^"=]+)"""
     """url="({url}[^"]+)""""
+    """\Whostname="({web_domain}[^\"]+)""""
+    """\Wsrcintfrole=\"+(undefined|({src_role}[^\"]+))\"+"""
+    """\Wdstintfrole=\"+(undefined|({dest_role}[^\"]+))\"+"""    
   ]
 
 

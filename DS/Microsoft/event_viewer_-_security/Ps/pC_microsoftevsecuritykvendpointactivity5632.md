@@ -18,12 +18,11 @@ Name = microsoft-evsecurity-kv-endpoint-activity-5632
     """Subject:.+?Logon ID:\s+({login_id}[^\s]+)""",
     """Network Information:\s*Name\s*\(SSID\):\s*({ssid}[^\s]+)""",
     """Local MAC Address:\s*({src_mac}[^\s]+)""",
-    """Additional Information:\s*Reason Code:\s*({result_reason}.+?)\s*Error Code:""",
+    """Additional Information:\s*Reason Code:\s*({failure_reason}({result_reason}.+?))\s*Error Code:""",
     """Additional Information:.+?Error Code:\s+({result_code}[\w\-]+)""",
     """EAP Root Cause String:\s+(\s+|({additional_info}.+?))\s+EAP Error Code:"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "result_reason->failure_reason" ]
 
 
 }

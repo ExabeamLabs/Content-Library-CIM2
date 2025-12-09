@@ -6,6 +6,7 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-4747"
   Product = "Event Viewer - Security"
   Conditions = [ """<EventID>4747<""", """<Provider Name =""", """Microsoft-Windows-Security-Auditing""" ]
   Fields = ${WindowsParsersTemplates.s-xml-windows-member.Fields}[
+    """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
     """<Data Name(\\)?=('|")RemoteIPAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
@@ -25,7 +26,6 @@ s-xml-windows-member = {
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
-    """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",

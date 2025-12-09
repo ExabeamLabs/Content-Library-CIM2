@@ -16,8 +16,8 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)?\s*({host}[\w\-.]+)\ssshd\[""",
 """(::ffff:)?({host}[\w\-.]+)\s+pam_unix""",
 """({time}\d+-\d+-\d+T\d+:\d+:\d+)((\.\d+)?[\+\-]\d+:\d+)""",
-"""\(uid=({user_id}\d+)\)""",
-"""session opened for user ({account}.+?)(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\(uid=({user_id}\d+)\)""",
+"""\(uid=({user_uid}({user_id}\d+))\)""",
+"""session opened for user ({dest_user}({account}.+?))(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\(uid=({user_uid}({user_id}\d+))\)""",
 """(::ffff:)?({host}[\w.\-]+) sshd ({login_id}\d+) authpriv""",
 """sshd\[({login_id}\d+)""",
 """\d\d:\d\d:\d\d (::ffff:)?({host}[\w.\-]+)\s+""",
@@ -32,7 +32,6 @@ Name = unix-unix-mix-user-switch-success-sshdsession
 """({event_name}session opened)"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = [ "user_id->user_uid", "account->dest_user"]
 
 
 }

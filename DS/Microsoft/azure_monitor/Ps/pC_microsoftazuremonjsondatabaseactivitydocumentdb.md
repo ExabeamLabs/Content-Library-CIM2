@@ -28,8 +28,8 @@ Name = microsoft-azuremon-json-database-activity-documentdb
     """exa_json_path=$..operationType,exa_field_name=db_operation""",
     """exa_json_path=$..subscriptionId,exa_field_name=subscription_id""",
     """exa_json_path=$..accountName,exa_field_name=account_name"""
+    """exa_json_path=$..accountName,exa_field_name=storage_account"""
   ]
-  DupFields = [ "account_name->storage_account" ]
   ParserVersion = v1.0.0
 
 

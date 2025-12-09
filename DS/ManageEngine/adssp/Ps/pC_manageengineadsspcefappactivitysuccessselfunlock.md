@@ -5,9 +5,9 @@ Name = manageengine-adssp-cef-app-activity-success-selfunlock
   ParserVersion = v1.0.0
   Conditions= [ """CEF:0|ManageEngine|ADSSP|""", """dvchost""", """DATE_TIME""", """ACTION_NAME\=Self Unlock""" ]
   Fields = ${ManageEngineParserTemplates.adssp-events.Fields}[
-    """({operation}Self Unlock)"""
+    """({operation}Self Unlock)""",
+    """LOGIN NAME\\?=(({email_address}[^@"]+@[^"\.]+.[^"]+)|({object}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   ]
-  DupFields = [ "user->object" ]
 
 adssp-events = {
   Vendor = ManageEngine

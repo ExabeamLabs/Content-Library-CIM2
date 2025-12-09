@@ -12,10 +12,9 @@ Name = symantec-s-sk4-app-activity-auditevent
       """\WrequestClientApplication=({app}[^=]+?)\s+(\w+=|$)""",
       """([^\|]*\|){5}({operation}[^\|]+)""",
       """\WdestinationServiceName =({event_subtype}.+?)\s+(\w+=|$)""",
-      """({host}[\w.\-]+)\s+SymantecServer:\s*({src_host}[^,]+)(,|\s*$)""",
+      """({dest_host}({host}[\w.\-]+))\s+SymantecServer:\s*({src_host}[^,]+)(,|\s*$)""",
       """Category: \d+,[^,]+,({event_name}[^,]+)(,|\s*$)""",
     ]
-    DupFields = [ "host->dest_host" ]
         ParserVersion = "v1.0.0"
 
 

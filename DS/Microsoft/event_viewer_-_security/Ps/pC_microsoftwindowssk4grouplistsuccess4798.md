@@ -14,7 +14,7 @@ Name = microsoft-windows-sk4-group-list-success-4798
      """"TargetDomainName":"({dest_domain}[^"]+)"""",
      """"TargetSid":"({dest_user_sid}[^"]+)"""",
      """"CallerProcessId":"({process_id}[^"]+)"""",
-     """"CallerProcessName":"(	process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\]+))""""
+     """"CallerProcessName":"(-|({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\]+)))""""
    ]
  
 json-windows-system-info = {

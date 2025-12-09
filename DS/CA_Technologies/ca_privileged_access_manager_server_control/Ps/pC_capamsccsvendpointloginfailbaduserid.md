@@ -5,9 +5,9 @@ Name = ca-pamsc-csv-endpoint-login-fail-baduserid
   ParserVersion = v1.0.0
   Conditions = [ """Transaction: login""", """PAM-CMN-0900:""", """gkpsyslog""" ]
   Fields = ${PamParsersTemplates.pam-authentication.Fields}[
-    """({event_name}Bad User ID)""",
+    """({failure_reason}({event_name}Bad User ID))""",
+    """\sDetails:[^;]*:\s+({failure_reason}[^;]+?)\s*(;|$)""",
   ]
-  DupFields = ${PamParsersTemplates.pam-authentication.DupFields}[ "event_name->failure_reason" ]
 
 pam-authentication = {
     Vendor = CA Technologies
@@ -23,11 +23,10 @@ pam-authentication = {
       """\sDetails:[^;]*:\s+({event_name}[^;]+?)\s*(;|$)""",
       """\sPrivate IP\s*:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """\sSource IP\s*:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-      """(?i)\sDevice Name\s*:\s*(?:\- \-|({dest_host}[^,]+))""",
+      """(?i)\sDevice Name\s*:\s*(?:\- \-|({host}({dest_host}[^,]+)))""",
       """\sPort\s*:\s*({dest_port}\d+)""",
       """\sAccess/Protocol\s*:\s*(?:\- \-|({protocol}[^,]+))""",
       """\sService/App\s*:\s*(?:\- \-|({app}[^,]+))""",
-    ]
-    DupFields = [ "dest_host->host" 
+    
 }
 ```

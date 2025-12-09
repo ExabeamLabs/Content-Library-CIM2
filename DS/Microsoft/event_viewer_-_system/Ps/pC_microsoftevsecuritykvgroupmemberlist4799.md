@@ -40,7 +40,7 @@ Name = microsoft-evsecurity-kv-group-member-list-4799
     """exa_json_path=$..TargetUserName,exa_field_name=group_name"""
     """exa_json_path=$..TargetDomainName,exa_regex=(-|NT AUTHORITY|({group_domain}[^\s\\"]+))"""
     """exa_json_path=$..CallerProcessId,exa_field_name=process_id"""
-    """exa_json_path=$..CallerProcessName,exa_regex=({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$"""
+    """exa_json_path=$..CallerProcessName,exa_regex=(-|({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?)))$"""
   ]
 
 

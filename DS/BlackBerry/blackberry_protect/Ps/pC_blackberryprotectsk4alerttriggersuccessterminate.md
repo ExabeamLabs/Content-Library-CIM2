@@ -20,18 +20,13 @@ Fields = [
 """"groups":"({user_group_name}[^"]+)""""
 """"device_id":"({device_id}[^"]+)""""
 """outcome=({action}terminate)"""
-""" Category \[({alert_name}[^\]]+)\]"""
+""" Category \[({alert_subject}({alert_name}[^\]]+))\]"""
 """msg=({alert_type}[^:]+)"""
 """"agent_event_id":"({alert_id}[^"]+)""""
-""""file_hash_id":"({file_hash}[^"]+)""""
-"""\sfname=([^=]*\\)?({file_name}[^\.]+\.({file_ext}[^\\:\s.]+)?)\s+\w+="""
+""""file_hash_id":"({hash_sha256_at}({file_hash}[^"]+))""""
+"""\sfname=([^=]*\\)?({name_at}({file_name}[^\.]+\.({file_ext}[^\\:\s.]+)?))\s+\w+="""
 """msg.+?\[({alert_source}[^]]+)"""
 """\s*Category\s*\[({alert_type}[^\]]+)[^\|]*"""
-]
-DupFields = [
-"file_hash->hash_sha256_at"
-"file_name->name_at"
-"alert_name"->"alert_subject"
 ]
 ParserVersion = "v1.0.0"
 

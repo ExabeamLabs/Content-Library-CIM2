@@ -19,7 +19,7 @@ Name = bitdefender-gz-cef-alert-trigger-success-gravityzone
     """filePath=({file_path}.*?)\s\w+=""",
     """BitdefenderGZMalwareName.*?filePath=({malware_url}.*?)\s\w+=""",
     """BitdefenderGZMalwareType=({file_type}.*?)\s\w+=""",
-    """BitdefenderGZDetectionLevel=({alert_severity}.*?)\s\w+=""",
+    """BitdefenderGZDetectionLevel=({detection_level}({alert_severity}.*?))\s\w+=""",
     """suid=({suid}.*?)\s\w+=""",
     """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"\s]+)""",
@@ -27,7 +27,6 @@ Name = bitdefender-gz-cef-alert-trigger-success-gravityzone
     """BitdefenderGZFwProtocolId=({protocol}.*?)\s\w+=""",
     """BitdefenderGZExploitType=({alert_type}.*?)\s\w+=""",
   ]
-  DupFields = ["alert_severity->detection_level", "operation->bitdefender_activity_type"]
 
 
 }

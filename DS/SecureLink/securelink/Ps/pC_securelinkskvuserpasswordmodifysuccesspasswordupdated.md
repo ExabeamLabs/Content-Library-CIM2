@@ -5,9 +5,9 @@ Name = securelink-s-kv-user-password-modify-success-passwordupdated
   ParserVersion = "v1.0.0"
   Conditions = [ """ SecureLink """, """, Type: User,""", """Password Updated""", """User:""" ]
   Fields = ${SecureLinkParsersTemplates.securelink-system-events.Fields}[
-    """({event_name}Password Updated)"""
+    """({event_name}Password Updated)""",
+    """Text:\s*(\[[^\]]+\]\s+)?({result_reason}[^",]+)"""
   ]
-  DupFields = [ "additional_info->result_reason" ]
 
 securelink-system-events {
      Vendor = SecureLink

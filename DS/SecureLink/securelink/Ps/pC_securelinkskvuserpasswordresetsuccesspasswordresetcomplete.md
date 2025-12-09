@@ -5,9 +5,9 @@ Name = securelink-s-kv-user-password-reset-success-passwordresetcomplete
   ParserVersion = "v1.0.0"
   Conditions = [ """ SecureLink """, """, Type: VendorRep,""", """Password Reset Complete""", """User:""" ]
   Fields = ${SecureLinkParsersTemplates.securelink-system-events.Fields}[
-    """({event_name}Password Reset)"""
+    """({event_name}Password Reset)""",
+    """Text:\s*(\[[^\]]+\]\s+)?({result_reason}[^",]+)"""
   ]
-  DupFields = [ "additional_info->result_reason" ]
 
 securelink-system-events {
      Vendor = SecureLink

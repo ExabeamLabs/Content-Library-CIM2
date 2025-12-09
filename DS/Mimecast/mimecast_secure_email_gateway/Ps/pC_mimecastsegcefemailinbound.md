@@ -18,7 +18,7 @@ Name = mimecast-seg-cef-email-inbound
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"(?i)Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"(recipientAddress|Recipient)":"({email_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """"SenderDomain":"({email_domain}[^"]+)"""",
@@ -32,7 +32,6 @@ Name = mimecast-seg-cef-email-inbound
     """"Virus":"({alert_name}[^"]+)""""
     """"UrlCategory":"({category}[^"]+)"""
   ]
-  DupFields = ["dest_email_address->email_user"]
 
 
 }

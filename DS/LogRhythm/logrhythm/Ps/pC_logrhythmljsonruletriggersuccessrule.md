@@ -11,10 +11,11 @@ Name = logrhythm-l-json-rule-trigger-success-rule
     Conditions = [""""cmsCanonicalId":""", """"ruleElements":""", """"messageIds":""", """"description":"""]
     Fields = [
       """exa_json_path=$.description,exa_field_name=rule_description""",
+      """exa_json_path=$.description,exa_field_name=rule_reason""",
       """exa_json_path=$.name,exa_field_name=rule""",
       """exa_json_path=$.timestamp,exa_field_name=trigger_time"""
+      """exa_json_path=$.timestamp,exa_field_name=time"""
     ]
-    DupFields = [ "rule_description->rule_reason", "trigger_time->time" ]
 
 
 }

@@ -12,14 +12,13 @@ Name = helpsystems-powertechiam-kv-process-create-success-sshfrom
   ]
   Fields = [
     """clientTime="*({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)Z"*""",
-    """\d\dZ\s+({host}[\w\-.]+)\s+sshd - ssh_runcmd""",
+    """\d\dZ\s+({dest_host}({host}[\w\-.]+))\s+sshd - ssh_runcmd""",
     """user="*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """touser="*({account}[^"]+)"""",
     """ssh from ({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}) starting:""",
     """cmd="*({process_command_line}[^"]+?)"+\] ssh from""",
     """({event_code}ssh_runcmd)"""
   ]
-  DupFields = [ "host->dest_host", "process_guid->process_id"]
 
 
 }

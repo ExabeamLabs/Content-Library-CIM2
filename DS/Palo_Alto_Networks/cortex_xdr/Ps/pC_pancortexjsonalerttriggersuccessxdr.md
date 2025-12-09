@@ -15,7 +15,7 @@ Fields = [
 """exa_json_path=$.category,exa_field_name=category"""
 """exa_json_path=$.severity,exa_field_name=alert_severity""",
 """exa_json_path=$..description,exa_field_name=description"""
-"""exa_regex=user_name":\["(({domain}[^\\"]+)\\\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+"""exa_regex=user_name":\[?"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
 """exa_json_path=$.agent_os_type,exa_field_name=os"""
 """exa_json_path=$.action,exa_field_name=action""",
 """exa_json_path=$.event_type,exa_field_name=event_category""",

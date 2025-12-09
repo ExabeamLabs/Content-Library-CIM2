@@ -15,8 +15,8 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
     """"Severity":"({severity}[^"]+)"""",
     """"SeverityValue":({severity}[^,]+)""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
-    """"SubjectUserName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
-    """"SubjectDomainName":"({domain}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"ProcessID":({process_id}\d+)""",
     """"ProcessId":"(\\t)*({process_id}[^\\]+)"""",
@@ -28,7 +28,6 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
    """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
     """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
   ]
-  DupFields = [ "user->src_user", "domain->src_domain" ]
 
 
 }

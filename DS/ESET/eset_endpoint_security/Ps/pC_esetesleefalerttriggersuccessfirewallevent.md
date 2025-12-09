@@ -5,10 +5,10 @@ Name = eset-es-leef-alert-trigger-success-firewallevent
   Conditions = [ """LEEF:""", """|ESET|RemoteAdministrator|""", """cat=ESET Firewall Event""" ]
   Fields = ${ESETParsersTemplates.eset-activity.Fields}[
     """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
+    """\|ESET\|(?:[^\|]+\|){2}({alert_type}[^\|]+)""",
     """scannerID=({additional_info}[^=]+?)\s*(\w+=|$)""",
     """\Wsev=({alert_severity}\d+)"""
   ]
-  DupFields = ["event_name->alert_type"]
   ParserVersion = "v1.0.0"
 
 eset-activity = {

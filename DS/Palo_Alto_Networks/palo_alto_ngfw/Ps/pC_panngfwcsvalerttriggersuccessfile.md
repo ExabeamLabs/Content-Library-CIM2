@@ -15,7 +15,7 @@ Fields = ${PaloAltoParsersTemplates.pan-csv-threat.Fields}[
   """,THREAT,file,([^,]*,){26}"*(|({file_name}[^\n]+?(\.({file_ext}[^",\-\.\_\/]+?))?))\s*\/?"*\/?,"""
   """,THREAT,file,([^,]*,){27}(|({additional_info}[^\(,]+(\(\w+\))?))\s*\(({alert_id}\d+)?""",
   """,THREAT,file,([^,]*,){27}(|({alert_name}[^\(,]+(\(\w+\))?))\s*\(({alert_id}\d+)?""",
-  """,THREAT,([^,]*,){55}"*({device_name}({host}[^,"]+))"""
+  """THREAT,([^,]*,){46}("[^"]+")?,("[^"]+")?,(("[^"]+")|([^,]*)),([^,]*,){6}({device_name}({host}[^",]+))"""
 ]
 SOAR {
   IncidentType = "malware"

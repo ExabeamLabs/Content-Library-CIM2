@@ -14,7 +14,7 @@ proofpoint-dlp-log = {
     """({time}\w+ \d+ \d+:\d+:\d+)(\s+({host}[\w\-.]+)\s+)?"""
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)""",
     """Original Address=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\sx=({xid}[^\s]+)\s""",
+    """\sx=({alert_id}({xid}[^\s]+))\s""",
 # mode is removed
     """cmd=(?:\s|({command}[^\s]+))\s""",
 # module is removed
@@ -32,7 +32,6 @@ proofpoint-dlp-log = {
     """malwarescore=({malware_score}[\d]+)\s""",
     """value=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)""",
     """from=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))("+|\s+\w+=)""",
-  ]
-  DupFields = [ "xid->alert_id"
+  
 }
 ```

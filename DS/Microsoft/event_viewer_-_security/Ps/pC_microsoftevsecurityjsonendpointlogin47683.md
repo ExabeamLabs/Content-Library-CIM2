@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4768-3
   Product = Event Viewer - Security
   Conditions = ["""A Kerberos authentication ticket (TGT) was requested""", """Account Name""", """computer_name""", """event_id\":4768"""]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
     """"TargetUserName"+:"+({dest_user}[^"]+)""",
     """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
@@ -33,7 +34,6 @@ json-windows-events-2 = {
     """"keywords"+:\["+({result}[^"]+)""",
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
-    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
     """"TargetUserSid"+:"+({user_sid}[^"]+)""",

@@ -13,10 +13,9 @@ Name = apc-a-kv-endpoint-login-fail-smtpauthfail
     """client_ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """dst_ip="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """from="(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
-    """classifier="({event_name}[^"]+)"""",
+    """classifier="({failure_reason}({event_name}[^"]+))"""",
     """disposition="({action}[^"]+)""""
   ]
-  DupFields = [ "event_name->failure_reason" ]
 
 
 }

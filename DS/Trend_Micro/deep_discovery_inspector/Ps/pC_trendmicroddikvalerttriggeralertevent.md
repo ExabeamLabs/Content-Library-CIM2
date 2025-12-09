@@ -5,8 +5,8 @@ Name = trendmicro-ddi-kv-alert-trigger-alertevent
   Conditions = [ """CEF:""", """|Trend Micro|""", """|ALERT_EVENT|""" ]
   Fields = ${DLTrendMicroParserTemplates.cef-trendmicro-system-event.Fields}[
     """\Wcs1=(|({additional_info}.+?))(\s+\w+=|\s*$)""",
+    """({host}[\w.\-]+)\s+CEF:([^\|]*\|){5}({alert_name}[^\|]+)""",
   ]
-  DupFields = [ "event_name->alert_name"]
   ParserVersion = "v1.0.0"
 
 cef-trendmicro-system-event = {

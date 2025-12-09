@@ -7,7 +7,7 @@ Name = microsoft-azuremon-json-endpoint-activity-success-advancedhuntingcloudaud
   ExtractionType = json   
   ParserVersion = v1.0.0
   Conditions = [ """ResourceId":""", """"category":""", """"AdvancedHunting-CloudAuditEvents"""" ]  
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Fields = [
     """exa_json_path=$.tenantId,exa_field_name=tenant_id""",
     """exa_json_path=$.operationName,exa_field_name=operation""",

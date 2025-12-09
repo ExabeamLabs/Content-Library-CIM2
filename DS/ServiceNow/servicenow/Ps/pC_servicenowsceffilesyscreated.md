@@ -18,13 +18,13 @@ Name = servicenow-s-cef-file-syscreated
     """"srcip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"name"+:"+({event_name}[^",]+)""",
     """"user(_name)?"+:"+(?:unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"queue"+:"+({operation}[^",]+)""",
+    """"queue"+:"+({access}({operation}[^",]+))""",
     """"parm1"+:"+\s*(|-|({resource}[^"]+?))\s*"+,""",
     """"(instance|documentkey)"+:"+({object}[^"]+?)"+,""",
     """"tablename"+:"+({table_name}[^"]+)"+,""",
     """"table"+:"+({table}[^"]+)"+,""",
     """"parm2"+:"+\s*({action}[^"]+?)\s*"+,""",
-    """"file_name"+:"+({file_name}[^"]+?(\.({file_ext}[^\."]+))?)"+,""",
+    """"file_name"+:"+({object}({file_name}[^"]+?(\.({file_ext}[^\."]+))?))"+,""",
     """"size_bytes"+:"+({bytes}\d+)""",
     """"content_type"+:"+({file_type}[^"]+?)"+,""",
     """"oldvalue"+:"+\s*({old_value}[^"]+?)\s*",""",
@@ -39,7 +39,6 @@ Name = servicenow-s-cef-file-syscreated
     """"number":"({task_id}[^"]+)"""",
     """"short_description":"({event_name}[^"]+)""""
   ]
-  DupFields = [ "file_name->object", "operation->access" ]
 
 
 }

@@ -20,6 +20,7 @@ Name = unix-unix-json-process-create-auditd
     """exa_json_path=$.process,exa_regex=\{.*?"exe":"(|({process_path}({process_dir}[^"]+\/).*?))"""",
     """exa_json_path=$.process.args,exa_field_name=arg""",
     """exa_json_path=$.host.name,exa_field_name=host""",
+    """exa_json_path=$.host.name,exa_field_name=dest_host""",
     """exa_json_path=$.auditd.result,exa_field_name=result""",
     """exa_json_path=$.event.type,exa_field_name=operation_type""",
     """"@timestamp":"({time}[^"]+)""",
@@ -34,7 +35,7 @@ Name = unix-unix-json-process-create-auditd
     """"process":\{.*?"name":"(|({process_name}[^"]+))"""",
     """"process":\{.*?"exe":"(|({process_path}({process_dir}[^"]+\/).*?))"""",
     """"process":\{.*?"args":\[({arg}[^\[\]]+?)\]""",
-    """"host":\{.*?"name":"(|({host}[^"]+))"""",
+    """"host":\{.*?"name":"(|({dest_host}({host}[^"]+)))"""",
     """"result":"({result}[^"]+)"""",
     """"event":\{.*?"type":"(|({operation_type}[^"]+))""""
     """\{"audit":\s*\{.+?"pid":"({process_id}[^"]+)"""
@@ -45,7 +46,6 @@ Name = unix-unix-json-process-create-auditd
     """"success":"({result}[^"]+)"""
     """\{"audit":.+?"exe":"(|({process_path}({process_dir}[^"]+\/).*?))""""
  ]
- DupFields = ["host->dest_host"]
  ParserVersion = "v1.0.0"
 
 

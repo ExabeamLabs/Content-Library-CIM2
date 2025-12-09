@@ -10,11 +10,10 @@ Name = openvpn-ov-kv-app-notification-openvpn
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """({host}[\w.\-]+)\s+openvpn\[({dest_port}\d+)\]""",
+    """({src_host}({host}[\w.\-]+))\s+openvpn\[({dest_port}\d+)\]""",
     """Authenticate/Decrypt packet error:\s*({failure_reason}[^:]+?):""",
     """\[\s*\#({process_id}\d+)\s*\]""",
   ]
-  DupFields = [ "host->src_host" ]
 
 
 }

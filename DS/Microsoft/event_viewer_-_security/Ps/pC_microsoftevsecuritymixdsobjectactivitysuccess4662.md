@@ -20,14 +20,13 @@ Fields = [
 """Account Domain:\s*((?-i)\\+[rnt])*(|({domain}.+?))\s*((?-i)\\+[rnt])*Logon ID:"""
 """Object Server:\s*((?-i)\\+[rnt])*(|({object_server}.+?))\s*((?-i)\\+[rnt])*Object Type:"""
 """Object Type:\s*((?-i)\\+[rnt])*(|({object_type}.+?))\s*((?-i)\\+[rnt])*Object Name:"""
-"""Object Name:\s*((?-i)\\+[rnt])*(|({object_name}.+?))\s*((?-i)\\+[rnt])*Handle ID:"""
+"""Object Name:\s*((?-i)\\+[rnt])*(|({object}({object_name}.+?)))\s*((?-i)\\+[rnt])*Handle ID:"""
 """Logon ID:\s*((?-i)\\+[rnt])*({login_id}[^:]+?)[\\n\s]*Object:"""
 """Operation Type:\s*({operation}.+?)\s+Accesses:"""
 """Properties:\s*({properties}.+?)\s+Additional"""
 """Additional Information:\s*(|({attribute}.*?))(\\n)*\s*"""
 """Accesses:\s*((?-i)\\+[rnt])*({access}[^:]+?)\s*((?-i)\\+[rnt])*Access Mask:"""
 ]
-DupFields = [ "object_name->object" ]
 ParserVersion = "v1.0.0"
 
 

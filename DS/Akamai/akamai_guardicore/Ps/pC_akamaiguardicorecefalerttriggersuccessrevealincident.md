@@ -8,8 +8,8 @@ Name = akamai-guardicore-cef-alert-trigger-success-revealincident
     Conditions = [ """CEF:""" , """Guardicore|Centra""", """|Reveal Incident|""", """act=""" ]
     Fields = [
       """start=({time}\d{10})""",
-      """CEF:\d+\|([^\|]+\|){3}({event_name}[^\|]+)""",
-      """CEF:\d+\|([^\|]+\|){4}({category}[^\|]+)""",
+      """CEF:\d+\|([^\|]+\|){3}({alert_name}({event_name}[^\|]+))""",
+      """CEF:\d+\|([^\|]+\|){4}({alert_type}({category}[^\|]+))""",
       """CEF:\d+\|([^\|]+\|){5}({alert_severity}[^\|]+)""",
       """act=({action}[^=]+)\s+\w+=""",
       """cs1=({alert_id}[^\s]+)\s+\w+=""",
@@ -24,7 +24,6 @@ Name = akamai-guardicore-cef-alert-trigger-success-revealincident
       """msg=({description}.+$)"""
       ]
     ParserVersion = v1.0.0
-    DupFields = ["event_name->alert_name", "category->alert_type"]
 
 
 }

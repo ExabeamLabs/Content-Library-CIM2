@@ -17,7 +17,6 @@ Name = infoblox-nios-cef-configuration-modify-rpziprewrite
     """msg="rpz ({request_type}\S+) ({dns_response_code}\S+) ({operation}\S+) ({dns_query}.+?)\s*\[[^\]]+\] via ([^"]+)""", #dl field removed
     """app=({app}.+?)\s+(\w+=|$)""",
   ]
-  DupFields = [ "query->domain" ]
   ParserVersion = "v1.0.0"
 
 

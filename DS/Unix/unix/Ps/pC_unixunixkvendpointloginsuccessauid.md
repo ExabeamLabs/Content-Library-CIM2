@@ -17,9 +17,8 @@ Name = "unix-unix-kv-endpoint-login-success-auid"
     """\sses=({session_id}\d+)"""
     """\sauid=({account_id}\d+)"""
     """\d\d:\d\d:\d\d\s+({host}[^\s]+)\s"""
-    """type=({login_type_text}[^\s]+)"""
+    """type=({operation_type}({login_type_text}[^\s]+))"""
   ]
-  DupFields = ["login_type_text->operation_type"]
   ParserVersion = "v1.0.0"
 
 

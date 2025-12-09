@@ -9,7 +9,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-forwardzonecreated
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Created ForwardZone)""",
+    """({event_name}({operation}Created ForwardZone))""",
 # forwardzone is removed
 # comment is removed
 # fqdn is removed
@@ -22,7 +22,6 @@ Name = infoblox-bddi-kv-configuration-modify-success-forwardzonecreated
 # ns_group is removed
 # ns_group_external is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

@@ -7,11 +7,10 @@ Name = checkpoint-avanan-json-email-send-receive-phishing
   Fields = ${AvananParserTemplates.json-avanan-security-alert.Fields}[
     """"description_text\\*":\\*"[^"']+?'({email_subject}[^"']+)'""",
     """"saas_info\\*":\[\{[^\}]+?"full_name\\*":\\*"({full_name}[^\\"]+)\\*"""",
-    """"sender_address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"saas_info":[^\}]+"email":"({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
+    """"sender_address":"({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""",
+    """"saas_info":[^\}]+"email":"({dest_email_address}({email_address}[^@"]+@[^\."]+\.[^"]+))"""",
     """"is_deleted\\*":({result}[^,]+)"""
   ]
-  DupFields = [ "email_address->dest_email_address" ]
 
 json-avanan-security-alert = {
   Vendor = Check Point

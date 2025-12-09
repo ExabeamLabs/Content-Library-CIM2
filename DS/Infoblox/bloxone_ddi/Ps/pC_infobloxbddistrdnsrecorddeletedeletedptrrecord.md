@@ -10,13 +10,12 @@ Name = infoblox-bddi-str-dns-record-delete-deletedptrrecord
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Deleted PtrRecord)""",
+    """({event_name}({operation}Deleted PtrRecord))""",
 # ptrrecord is removed
 # dns_view is removed
 # address is removed
 # dname is removed
   ]
-  DupFields = ["operation->event_name"]
 
 
 }

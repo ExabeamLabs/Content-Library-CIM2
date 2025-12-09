@@ -40,7 +40,6 @@ Name = "netskope-sc-json-file-download-success-download-1"
     """exa_regex="object":\s*"'?\s*({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}\w+)?))".*"object_type":"(File|Image)""""
     """exa_regex=""object_type":"File",.*"object":\s*"'?\s*({file_dir}[^"]+\/)?({file_name}[^"]+(\.({file_ext}\w+)?))""""
   ]
-  DupFields = [ "file_type->mime" ]
   ParserVersion = "v1.0.0"
 
 

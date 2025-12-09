@@ -7,7 +7,7 @@ Product = "CyberArk Privilege Access Manager"
 TimeFormat = ["epoch", "MMM dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ"]
 Conditions = [ """|Cyber-Ark|Vault|""", """act=Retrieve password""", """Safe""" ]
 Fields = [
-"""\d\d:\d\d:\d\d ({host}[\w\-.]+) CEF"""
+"""\d\d:\d\d:\d\dZ? ({host}[\w\-.]+) CEF:"""
 """({time}\w+\s+\d+\s+\d\d:\d\d:\d\d)[^:]+CEF:"""
 """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\dZ)[^:]+CEF:"""
 """\srt=({time}\d{13})"""
@@ -15,8 +15,8 @@ Fields = [
 """\sdvchost=({host}\S+?)(\s+\w+=|\s*$)"""
 """\sshost=(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|({src_host}[^=]+?))(\s+\w+=|\s*$)"""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\ssuser=(({domain}[^\\=]+?)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
-"""\sduser=([^\\=]+\\+)?({dest_user}[^=]+?)\s+\w+="""
+"""\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\=]+?)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
+"""\sduser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({dest_domain}[^\\=]+?)(\\)+)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
 """cs2=(|({safe_value}[^=]+?))\s+\w+="""
 """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sdhost=({dest_host}[^=]+?)(\s+\w+=|\s*$)"""
@@ -28,7 +28,6 @@ Fields = [
 """act=({operation}Retrieve password)"""
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs3=({device_type}[^=]+)\s+\w+="""
-"""Cyber-Ark\|Vault\|[^\|]+\|({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 

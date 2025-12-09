@@ -13,7 +13,7 @@ claroty-network-alert {
       """CtdTimeGenerated=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
       """start=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
       """({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)\s\w{3}\sCEF:""",
-      """\|CTD\|([^\|]+\|){2}({alert_name}[^\|]+)\|({alert_severity}[^\|]+)""",
+      """\|CTD\|([^\|]+\|){2}({alert_type}({event_name}({alert_name}[^\|]+)))\|({alert_severity}[^\|]+)""",
       """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
       """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",
       """dhost=({dest_host}[\w\-\.]+)""",
@@ -24,7 +24,6 @@ claroty-network-alert {
       """\suser:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """\suser\s'({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """msg=({additional_info}[^=]+)\s\w+="""
-    ]
-    DupFields = ["alert_name->alert_type","alert_name->event_name"
+    
 }
 ```

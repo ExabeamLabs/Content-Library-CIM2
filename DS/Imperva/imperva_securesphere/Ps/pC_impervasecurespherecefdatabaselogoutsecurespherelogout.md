@@ -9,7 +9,7 @@ Name = imperva-securesphere-cef-database-logout-securespherelogout
   Fields = [
     """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """\Wdpt=({dest_port}\d+)""",
-    """\Wduser=(|(({domain}[^\\]+)\\)?({db_user}[^\\]+?))(\s+\w+=|\s*$)""",
+    """\Wduser=(|(({domain}[^\\]+)\\)?({account}({db_user}[^\\]+?)))(\s+\w+=|\s*$)""",
     """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\Wspt=({src_port}\d+)""",
     """\Wproto=(|({protocol}.+?))(\s+\w+=|\s*$)""",
@@ -24,7 +24,6 @@ Name = imperva-securesphere-cef-database-logout-securespherelogout
     """\Wcs13=(|({db_name}.+?))(\s+\w+=|\s*$)""",
     """\Wcs14=(|({db_schema}.+?))(\s+\w+=|\s*$)"""
   ]
-  DupFields = [ "db_user->account" ]
   ParserVersion = "v1.0.0"
 
 

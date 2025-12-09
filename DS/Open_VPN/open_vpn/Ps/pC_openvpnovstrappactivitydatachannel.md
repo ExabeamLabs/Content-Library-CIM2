@@ -12,10 +12,9 @@ Name = openvpn-ov-str-app-activity-datachannel
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """({host}[\w.\-]+)\s+openvpn\[({dest_port}\d+)\]""",
+    """({src_host}({host}[\w.\-]+))\s+openvpn\[({dest_port}\d+)\]""",
     """Data Channel[^:]*?:\s*({event_name}.+?)\s*$"""
   ]
-  DupFields = [ "host->src_host" ]
   ParserVersion = "v1.0.0"
 
 

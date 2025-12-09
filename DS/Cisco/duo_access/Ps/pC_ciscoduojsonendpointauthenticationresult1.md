@@ -46,7 +46,8 @@ Name = cisco-duo-json-endpoint-authentication-result-1
     """exa_json_path=$.access_device.location.country,exa_field_name=src_country""",
     """exa_json_path=$.access_device.location.country,exa_field_name=mfa_country""",
     """exa_json_path=$.auth_device.location.country,exa_field_name=mfa_country,exa_match_expr=!Contains($.auth_device.location.country,"null")""",
-    """exa_json_path=$.auth_device.ip,exa_regex=(0.0.0.0|null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
+    """exa_json_path=$.auth_device.ip,exa_field_name=mfa_device"""
+    """exa_json_path=$.access_device.ip,exa_regex=(0.0.0.0|null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?""",
     """exa_json_path=$.access_device.hostname,exa_field_name=mfa_device,exa_match_expr=!Contains($.access_device.hostname,"null")"""
   ]
 

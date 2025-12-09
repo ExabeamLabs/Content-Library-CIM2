@@ -9,9 +9,8 @@ Name = cisco-ie-str-email-subject
     Conditions = [ """MID """, """ Subject """ ]
     Fields = [
       """MID ({alert_id}\d+) Subject ('|")?({email_subject}.+?)\s*('|"|$)"""
-      """\sMID\s+({alert_id}\d+)"""
+      """\sMID\s+({message_id}({alert_id}\d+))"""
     ]
-    DupFields = [ "alert_id->message_id" ]
   
 
 }

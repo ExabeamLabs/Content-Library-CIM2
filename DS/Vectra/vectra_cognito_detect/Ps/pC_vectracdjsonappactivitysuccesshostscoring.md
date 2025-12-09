@@ -12,10 +12,10 @@ Name = vectra-cd-json-app-activity-success-hostscoring
     """exa_json_path=$.last_detection.type,exa_field_name=event_name""",
     """exa_json_path=$.event_timestamp,exa_field_name=time""",
     """exa_json_path=$.category,exa_field_name=category""",
+    """exa_json_path=$.category,exa_field_name=operation""",
     """exa_json_path=$.is_prioritized,exa_field_name=additional_info""",
     """exa_json_path=$.name,exa_field_name=src_host"""
   ]
-  DupFields = [ "category->operation"]
   ParserVersion = "v1.0.0"  
 
 

@@ -58,6 +58,9 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """"target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
     """serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
+    """"target":\s*\[[^\]]+?"type":"AppUser","alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"target":\s*\[[^\]]+?"type":"AppGroup"[^\]]+?"displayName":"({group_name}[^"]+)""""
+    """"target":\s*\[[^\]]+?"type":"AppUser","alternateId":"({member}[^"]+)""""
     """exa_regex=serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
     """exa_json_path=$..published,exa_field_name=time""",
     """exa_json_path=$..displayMessage,exa_regex=({event_name}(Kerberos[^",]+user)|([^"]+))""",
@@ -97,24 +100,21 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex=({app}(?i)Okta|Microsoft Office 365)""",
     """exa_json_path=$..actor.displayName,exa_field_name=app,exa_match_expr=Contains($.actor.type,"PublicClientApp")""",
     """exa_regex="target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance"""",
-    #"""exa_json_path=$.target[?(@.type == 'AppInstance')].displayName,exa_field_name=app""",
-    #"""exa_json_path=$.target[?(@.type == 'AppInstance')].alternateId,exa_field_name=app_id"""
-    #"""exa_json_path=$.target[?(@.type == 'User')].displayName,exa_field_name=full_name""",
     """exa_regex="target":\s*\[[^\]]*"type":\s*"(App)?User"[^\]]*?"displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)",\s*"detailEntry":\s*[^\}]*\}(,\{|\])""",
     """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"[^"]*","displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
     """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
     """"behaviors\\*":"*\{({more_info}[^\}]+)""",
-    """"actor":[^\]\}]*?"alternateId"\s*:"({src_user}[^"]+)""""
     """"target":[^\]\}]*?"alternateId"\s*:"({target}[^"]+)""""
-    """exa_json_path=$..actor.alternateId,exa_field_name=src_user""",
     """exa_json_path=$..target.alternateId,exa_field_name=target""",
     """exa_regex="target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
-    """"type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    """exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """exa_json_path=$.actor,exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"({member}[^"]+)""""
+    """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.target,exa_regex="type":\s*"AppGroup"\s*[^\}]+?"displayName":\s*"({group_name}[^"]+)""""
   ]
 
 

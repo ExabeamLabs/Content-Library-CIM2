@@ -9,12 +9,11 @@ Name = infoblox-bddi-kv-configuration-modify-success-hostalias
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Created HostAlias)""",
+    """({event_name}({operation}Created HostAlias))""",
 # hostalias is removed
 # alias is removed
 # parent_record is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

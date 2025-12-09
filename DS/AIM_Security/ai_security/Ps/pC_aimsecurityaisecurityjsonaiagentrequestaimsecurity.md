@@ -1,0 +1,26 @@
+#### Parser Content
+```Java
+{
+Name = aimsecurity-aisecurity-json-ai-agent-request-aimsecurity
+  Vendor = AIM Security
+  Product = AI Security
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  ExtractionType = json
+  Conditions = [ """"detections":""", """"llm_response":""", """"user_prompt":""", """"topic":""", """"subtopic":""" ]
+  Fields = [
+    """exa_json_path=$.event_timestamp,exa_field_name=time"""
+    """exa_json_path=$.user_email,exa_field_name=email_address"""
+    """exa_json_path=$.application_display_name,exa_field_name=app"""
+    """exa_json_path=$.was_blocked,exa_field_name=blocked"""
+    """exa_json_path=$.detections..policy_name,exa_field_name=policy_name"""
+    """exa_json_path=$.detections..risk,exa_field_name=severity"""
+    """exa_json_path=$.intent,exa_field_name=category"""
+    """exa_json_path=$.user_prompt,exa_field_name=additional_info"""
+    """exa_json_path=$.llm_response,exa_field_name=more_info"""
+    """exa_json_path=$.chat_session_id,exa_field_name=session_id"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

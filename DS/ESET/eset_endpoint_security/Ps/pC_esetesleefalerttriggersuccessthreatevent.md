@@ -7,7 +7,7 @@ Name = eset-es-leef-alert-trigger-success-threatevent
     TimeFormat = "MMM dd yyyy HH:mm:ss"
     Conditions = [ """LEEF:""", """|ESET|RemoteAdministrator|""","""cat=ESET Threat Event""","""threatType=""" ]
     Fields = [
-      """deviceName =({host}[^\s]+)\s""",
+      """deviceName =({dest_host}({host}[^\s]+))\s""",
       """\Wcat=({threat_category}[^=]+?)\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
       """\WdevTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
@@ -18,7 +18,7 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))\s*(\w+=|$)""",
-      """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
+      """actionTaken=({additional_info}({action}[^=]+?))\s*(\w+=|$)""",
       """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
       """objectType=({object_type}[^=]+?)\s*(\w+=|$)""",
@@ -28,7 +28,6 @@ Name = eset-es-leef-alert-trigger-success-threatevent
       """firstseen=({firstseen}[^=]+?)\s*(\w+=|$)""",
       """hash=({hash_sha256}[^\s]+)"""
     ]
-    DupFields = ["action->additional_info", "host->dest_host"]
 	ParserVersion = "v1.0.0"
   
 

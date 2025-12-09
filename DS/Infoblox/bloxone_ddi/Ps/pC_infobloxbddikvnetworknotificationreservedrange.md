@@ -10,7 +10,7 @@ Name = infoblox-bddi-kv-network-notification-reservedrange
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Created ReservedRange)""",
+    """({event_name}({operation}Created ReservedRange))""",
 # reservedrange is removed
 # dns_view is removed
 # comment is removed
@@ -23,7 +23,6 @@ Name = infoblox-bddi-kv-network-notification-reservedrange
 # use_member_enable_discovery is removed
 # parent is removed
   ]
-  DupFields = ["operation->event_name"]
 
 
 }

@@ -15,7 +15,7 @@ Fields = [
   """caseDescription=({additional_info}(^((?!Unknown source).)*<.+?>).+?)\scaseDate"""
   """({host}[\w\-.]+)\s+CEF:"""
   """caseDateAndTime=({time}\d\d\s*\w{3}\.\s*\d\d\d\d,\s*\d\d:\d\d:\d\d)"""
-  """caseClassification=({alert_type}.+?)\s*numberOfI"""
+  """caseClassification=({alert_name}({alert_type}.+?))\s*numberOfI"""
   """riskScore=({alert_severity}[^\s]+)\s"""
   """content to\s*({target}[^\s]+)"""
   """sent.+?content.+?to\s*({target}.+?)\."""
@@ -25,9 +25,6 @@ Fields = [
   """sent\s({file_name}.+?)\scontent"""
   """custom\s({file_name}.+?)\s(content|and)"""
   """sent more than .+? ({file_name}.+?)\sto"""
-]
-DupFields = [
-  "alert_type->alert_name"
 ]
 SOAR {
   IncidentType = "dlp"

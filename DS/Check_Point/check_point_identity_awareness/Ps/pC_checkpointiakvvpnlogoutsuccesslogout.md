@@ -7,7 +7,7 @@ Product = "Check Point Identity Awareness"
 TimeFormat = "epoch_sec"
 end_timeFormat = "epoch_sec"
 start_timeFormat = "epoch_sec"
-Conditions = ["""product:"Identity Awareness"""", """"Identity Collector"""", """"Log Out""""]
+Conditions = ["""product:"Identity Awareness" """, """action:"Log Out" """ ]
 Fields = [
   """\stime:"({time}\d{10})""",
   """action:"({action}[^"]+)""",

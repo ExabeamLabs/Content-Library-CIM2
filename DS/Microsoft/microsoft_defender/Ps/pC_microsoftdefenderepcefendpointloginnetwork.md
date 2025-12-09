@@ -30,7 +30,6 @@ cef-defender-atp-events = {
       """DeviceId":"({device_id}[^:]+?)",""",
       """InitiatingProcessMD5":"({hash_md5}[^:]+?)",""",
       """"FailureReason":"({failure_reason}[^"]+)"""",
-      """"InitiatingProcessAccountName":"({account}[^"]+)""""
       """exa_regex="(time|TimeGenerated)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
       """exa_json_path=$..DeviceName,exa_field_name=host"""
       """exa_json_path=$.DeviceName,exa_field_name=host"""
@@ -59,8 +58,6 @@ cef-defender-atp-events = {
       """exa_json_path=$.InitiatingProcessMD5,exa_field_name=hash_md5"""
       """exa_json_path=$..FailureReason,exa_field_name=failure_reason"""
       """exa_json_path=$.FailureReason,exa_field_name=failure_reason"""
-      """exa_json_path=$..InitiatingProcessAccountName,exa_field_name=account"""
-      """exa_json_path=$.InitiatingProcessAccountName,exa_field_name=account"""
       """exa_json_path=$.DeviceId,exa_field_name=device_id"""
       """exa_json_path=$..DeviceId,exa_field_name=device_id"""
     

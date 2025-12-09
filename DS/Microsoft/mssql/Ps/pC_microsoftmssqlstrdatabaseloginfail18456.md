@@ -13,10 +13,9 @@ Name = microsoft-mssql-str-database-login-fail-18456
     """({event_code}18453)""",
     """({event_name}Login failed)""",
     """database '({db_name}[^']+)""",
-    """user '(N\/A|(({domain}[^\\']+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'""",
+    """user '(N\/A|(({domain}[^\\']+)\\+)?({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))'""",
     """CLIENT:\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
-  DupFields = ["user->db_user"]
 
 
 }

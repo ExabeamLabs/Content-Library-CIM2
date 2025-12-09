@@ -14,7 +14,7 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
   """ComputerHOST644=({host}[\w\-.]+)\s\w+=""",
   """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d)""",
-  """({event_name}An account was successfully logged on)""",
+  """({operation}({event_name}An account was successfully logged on))""",
   """Computer_name:({host}[^\s]+)""",
   """ComputerName =({host}({dest_host}[\w\-\.]+))([^\s]*\s|;)""",
   """({event_code}4624)""",

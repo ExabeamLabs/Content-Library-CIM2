@@ -30,7 +30,6 @@ json-windows-events = {
     """'Opcode':\s+({opcode}\d+)""",
     """'Keywords':\s+'({keywords}[^']+)""",
     """'Result':\s+'({result}[^']+)""",
-    """'Computer':\s+'({host}[^']+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'ObjectServer':\s+'({object_server}[^']+)""",

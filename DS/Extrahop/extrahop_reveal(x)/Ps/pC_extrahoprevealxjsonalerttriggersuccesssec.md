@@ -13,14 +13,12 @@ Name = extrahop-revealx-json-alert-trigger-success-sec
      """"ipaddrs":\["({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?.+?victim""",
      """"dnsNames":\["({src_host}[^."]+)(\.({domain}[^"]+))?".+?offender""",
      """"dnsNames":\["({dest_host}[^."]+)(\.({domain}[^"]+))?".+?victim""",
-     """"title":"({alert_name}[^"]+)""",
+     """"title":"({alert_type}({alert_name}[^"]+))""",
      """"netbiosName":(null|"({sub_domain}[^"]+))""",
      """"dnsNames":\["({dns_query}[^"]+)"\]""",
      """"status":(null|"({status_msg}[^"\s]+))""",
-     """"riskScore":(null|({original_risk_score}\d+))""",
+     """"riskScore":(null|({alert_severity}({original_risk_score}\d+)))""",
   ]
-  DupFields = ["alert_name->alert_type",
-  "original_risk_score->alert_severity"]
   ParserVersion = "v1.0.0"
 
 

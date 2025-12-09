@@ -12,10 +12,9 @@ Name = absolute-siemconnector-kv-app-notification-success-unprotected
     """\s({host}[\w\-.]+)\sAbsoluteSIEMConnector""",
     """actorType=("Device".+?actorName ="({src_host}[\w\-.]+)|"User".+?actorName ="(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """objectID="({object}[^"]+)"""",
-    """({operation}DeviceBecameAVUnprotected)""",
+    """({event_name}({operation}DeviceBecameAVUnprotected))""",
     """objectProperties="({additional_info}.+?)"\s+\w+="""
    ]
-   DupFields = ["operation -> event_name"]
 
 
 }

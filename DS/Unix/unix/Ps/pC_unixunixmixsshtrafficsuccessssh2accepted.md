@@ -38,9 +38,6 @@ Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
     """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = [
-    "dest_host->original_dest_host"
-  ]
   ParserVersion = "v1.0.0"
 
 

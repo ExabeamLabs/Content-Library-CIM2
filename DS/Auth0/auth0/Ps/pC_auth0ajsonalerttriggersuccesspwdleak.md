@@ -197,14 +197,12 @@ ParserVersion = "v1.0.0"
      """"ipaddrs":\["({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?.+?victim""",
      """"dnsNames":\["({src_host}[^."]+)(\.({domain}[^"]+))?".+?offender""",
      """"dnsNames":\["({dest_host}[^."]+)(\.({domain}[^"]+))?".+?victim""",
-     """"title":"({alert_name}[^"]+)""",
+     """"title":"({alert_type}({alert_name}[^"]+))""",
      """"netbiosName":(null|"({sub_domain}[^"]+))""",
      """"dnsNames":\["({dns_query}[^"]+)"\]""",
      """"status":(null|"({status_msg}[^"\s]+))""",
-     """"riskScore":(null|({original_risk_score}\d+))""",
+     """"riskScore":(null|({alert_severity}({original_risk_score}\d+)))""",
   ]
-  DupFields = ["alert_name->alert_type",
-  "original_risk_score->alert_severity"]
   ParserVersion = "v1.0.0"
 },
 {
@@ -220,11 +218,11 @@ ParserVersion = "v1.0.0"
     """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.event,exa_field_name=alert_type""",
     """exa_json_path=$.riskScore,exa_field_name=original_risk_score""",
+    """exa_json_path=$.riskScore,exa_field_name=alert_severity""",
     """exa_json_path=$.offenders,exa_regex=\["({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """exa_json_path=$.victims,exa_regex=\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",    
     """exa_json_path=$.description,exa_field_name=additional_info"""
   ]
-        DupFields = [ "original_risk_score->alert_severity"]
   ParserVersion = "v1.0.0"
 }
 
@@ -291,10 +289,7 @@ Conditions = [
 Fields = [
   """({time}\w+\s+\d+ \d+:\d+:\d+)"""
   """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2})"""
-  """\s+({host}[^\s]+)\s+({event_code}%\d*SYSTEM-3-LOGIN_FAIL):\s+Log-in ({result}failed) for user '({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s+from '({protocol}[^']+)\'"""
-]
-DupFields = [
-  "host->dest_host"
+  """\s+({dest_host}({host}[^\s]+))\s+({event_code}%\d*SYSTEM-3-LOGIN_FAIL):\s+Log-in ({result}failed) for user '({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s+from '({protocol}[^']+)\'"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -340,11 +335,8 @@ Fields = [
 """\-\shost:\/({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\|source:\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\|operation:({additional_info}[^|]+?)\|\w+"""
-"""\|authenticated:({db_user}[^\|]+)"""
+"""\|authenticated:({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\|type:({event_name}[^|]+)"""
-]
-DupFields = [
-"db_user->user"
 ]
 Name = "apache-cassandradb-str-database-activity-fail-auth"
 Conditions = [
@@ -379,14 +371,11 @@ Fields = [
 """\|timestamp\:({time}\d{13})"""
 """\-\shost:\/({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\|source:\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\|operation:({additional_info}[^|]+?)\s*$"""
+"""\|operation:({db_query}({additional_info}[^|]+?))\s*$"""
 """\|authenticated:({db_user}[^\|]+)"""
 """\|type:({db_operation}[^|]+)"""
 """\|ks:({db_name}[^|]+)"""
-"""\|operation:({additional_info}[^|\.]+)"""
-]
-DupFields = [
-"additional_info->db_query"
+"""\|operation:({db_query}({additional_info}[^|\.]+))"""
 ]
 Name = "apache-cassandradb-str-database-modify-success-ddl"
 Conditions = [
@@ -467,7 +456,7 @@ Fields = [
   """"date":"({time}\d{13})""""
   """"user":"({db_user}[^"]+)""""
   """"ip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
-  """"host":"({dest_host}[^"]+)""""
+  """"host":"({host}({dest_host}[^"]+))""""
   """"_os":"({os}[^"]+)""""
   """"_client_name":"({app}[^"]+)""""
   """"rows":"({response_size}\d+)""""
@@ -482,6 +471,7 @@ Fields = [
   """exa_json_path=$.user,exa_field_name=db_user""",
   """exa_json_path=$.ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   """exa_json_path=$.host,exa_field_name=dest_host""",
+  """exa_json_path=$.host,exa_field_name=host""",
   """exa_json_path=$.connect_attrs._os,exa_field_name=os""",
   """exa_json_path=$.connect_attrs._client_name,exa_field_name=app""",
   """exa_json_path=$.rows,exa_field_name=response_size""",
@@ -492,9 +482,6 @@ Fields = [
   """exa_json_path=$.objects[0].db,exa_field_name=db_name""",
   """exa_json_path=$.objects[0].name,exa_field_name=db_object""",
   """exa_json_path=$.query,exa_field_name=db_query""",
-]
-DupFields = [
-"dest_host->host"
 ]
 ParserVersion = "v1.0.0"
 },
@@ -596,11 +583,8 @@ Fields = [
   """\-\shost:\/({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """\|source:\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """\|operation:({additional_info}[^|]+?)\s*$"""
-  """\|authenticated:({db_user}[^\|]+)"""
+  """\|authenticated:({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """\|type:({event_name}[^|]+)"""
-]
-DupFields = [
-  "db_user->user"
 ]
 Name = apache-cassandradb-kv-database-login-success-auth
 Conditions = [
@@ -640,7 +624,7 @@ ParserVersion = "v1.0.0"
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
     """({action}connection authorized)"""
     """connection authorized:\s*(\[[^\]]+\]:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)?"""
-    """\s*user=({db_user}[^=]+?)\s"""
+    """\s*user=({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
     """({additional_info}(connection authorized).+?)\s*$"""
     """\sdatabase=({db_name}[^"\s=]+)"""
     """application_name=({app}[^\s]+)"""
@@ -648,6 +632,47 @@ ParserVersion = "v1.0.0"
     """:LOG:\s*({action}[^:]+)"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = ["db_user -> user"
+},
+
+{
+Name = teradata-rdbms-str-database-login-success-req8
+Vendor = "Teradata"
+Product = "Teradata RDBMS"
+TimeFormat = "yyyy-MM-dd HH:mm:ss"
+Conditions = [
+  """teradata"""
+  """[TERADATA]"""
+  """REQ8"""
+]
+Fields = [
+  """({task_id}REQ8)[\s(#)]{0,4}({app_id}[^\s]+)[\s(#)]{0,4}({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s(#)]{0,4}(?:Unavailable[\s(#)]{0,4})({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d)[\s(#)]{0,4}(?:Unavailable|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s(#)]{0,5}({session_id}[\d,]+)[\s(#)]{0,4}({query_id}\d+)[\s(#)]{0,4}({db_query}[^;]+)"""
+]
+ParserVersion = "v1.0.0"
+},
+
+{
+Name = mariadb-m-csv-database-login-fail-failedconnect
+Vendor = "MariaDB"
+Product = "MariaDB"
+TimeFormat = "yyyyMMdd HH:mm:ss"
+Conditions = [
+  """ mariadb """
+  """,FAILED_CONNECT,"""
+]
+Fields = [
+  """ mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
+  """\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
+]
+ParserVersion = "v1.0.0"
+},
+
+${ForcepointParsersTemplates.forcepoint-template-aa}{
+  Name = forcepoint-ngfw-cef-network-traffic-success-connectionallowed
+  ParserVersion = v1.0.0
+  Product = Forcepoint Next-Gen Firewall
+  Conditions = [ """CEF:""", """|FORCEPOINT|""", """|Connection_Allowed|""" ]
+  Fields = ${ForcepointParsersTemplates.forcepoint-template-aa.Fields} [
+    """proto=\s*({protocol}.+?)(\s\w+=)""",
+    
 }
 ```

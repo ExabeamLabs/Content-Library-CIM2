@@ -15,8 +15,8 @@ tessian-dlp-email-alert = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
     Fields = [
       """"created_at":"({time}\d{4}-\d{1,2}-\d{1,2}T\d\d:\d\d:\d\d\.\d{1,6}Z)"""",	
-      """"tessian_action":"({alert_name}[^"]+)"""",
-      """"threat_types":\["({alert_name}[^"]+)"\]""",
+      """"tessian_action":"({alert_type}({alert_name}[^"]+))"""",
+      """"threat_types":\["({alert_type}({alert_name}[^"]+))"\]""",
       """"tessian_id":"({alert_id}[^"]+)"""",
       """"confidence":"({alert_severity}[^"]+)"""",
       """"message_id":"({message_id}[^"]+)"""",
@@ -30,7 +30,6 @@ tessian-dlp-email-alert = {
       """"cc":\[({cc}[^\]]+)\]""",
       """"bcc":\[({bcc}[^\]]+)\]""",
       """"bytes":({bytes}\d+),"""
-    ]
-    DupFields = ["alert_name->alert_type"
+    
 }
 ```

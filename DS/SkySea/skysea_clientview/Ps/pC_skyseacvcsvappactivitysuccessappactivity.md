@@ -16,7 +16,6 @@ Name = skysea-cv-csv-app-activity-success-appactivity
     """^([^\,]*\,){17}({operation}[^\,]+)\,""",
     """^([^\,]*\,){8}({additional_info}[^\,]+)\,"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

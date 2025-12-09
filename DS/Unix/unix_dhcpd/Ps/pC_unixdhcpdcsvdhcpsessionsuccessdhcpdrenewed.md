@@ -11,11 +11,8 @@ Name = "unix-dhcpd-csv-dhcp-session-success-dhcpdrenewed"
   ]
   Fields = [
     """\s({host}[^\s]+)\s+dhcpd"""
-    """({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),Renewed,(|({dest_host}[^,]+))"""
+    """({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),Renewed,(|({dest_host}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
-  ]
-  DupFields = [
-    "dest_host->user"
   ]
   ParserVersion = "v1.0.0"
 

@@ -9,12 +9,11 @@ Name = infoblox-bddi-kv-dns-record-delete-success-mxrecord
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Deleted MxRecord)""",
+    """({event_name}({operation}Deleted MxRecord))""",
 # name_server is removed
 # dns_view is removed
 # exchanger is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

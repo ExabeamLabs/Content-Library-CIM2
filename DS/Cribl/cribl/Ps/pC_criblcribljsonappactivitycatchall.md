@@ -13,6 +13,7 @@ Name = cribl-cribl-json-app-activity-catchall
     """exa_json_path=$.channel,exa_field_name=channel""",
     """exa_json_path=$.level,exa_field_name=severity""",
     """exa_json_path=$.message,exa_field_name=additional_info""",
+    """exa_json_path=$.message,exa_field_name=event_name""",
     """exa_json_path=$..bucket,exa_field_name=bucket_name"""
     """exa_regex="file":"({file_path}({file_dir}[^"]*\/)?({file_name}[^"]+))"""
     """exa_json_path=$..receiveCount,exa_field_name=count"""
@@ -24,7 +25,6 @@ Name = cribl-cribl-json-app-activity-catchall
     """exa_json_path=$.credentials..endpoint.hostname,exa_field_name=host"""
     """exa_json_path=$.src,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
-  DupFields = ["additional_info-> event_name"]
   ParserVersion = v1.0.0
 
 

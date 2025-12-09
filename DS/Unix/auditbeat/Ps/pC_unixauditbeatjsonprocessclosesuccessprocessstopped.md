@@ -9,7 +9,7 @@ Name = unix-auditbeat-json-process-close-success-processstopped
   Conditions = [""""auditbeat"""",""""action":"process_stopped"""",""""category":["process""",""""pid":"""]
   Fields = [
     """timestamp":"({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+Z)"""",
-    """"host":.+?name":"({host}[\w\-.]+?)(@[^"]*)?"""",
+    """"host":.+?name":"({dest_host}({host}[\w\-.]+?))(@[^"]*)?"""",
     """"action":"({event_name}[^"]+)"""",
     """"pid":({process_id}\d+)""",
     """"process".+?"executable":"({process_path}(({process_dir}[^"]*?)\/)?[^"\\\/]*?)"""",
@@ -21,7 +21,6 @@ Name = unix-auditbeat-json-process-close-success-processstopped
     """user.+?group":.+?id":"({user_id}\d+)"""",
     """user.+?group":.+?name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
   ]
-  DupFields = ["host->dest_host"]
 
 
 }

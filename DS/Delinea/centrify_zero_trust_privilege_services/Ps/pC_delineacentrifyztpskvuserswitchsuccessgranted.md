@@ -17,11 +17,10 @@ Fields = [
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""
 """service=({service_name}.+?)\s\w+="""
-"""runas=({dest_user}.+?)\s\w+="""
+"""runas=({account}({dest_user}.+?))\s\w+="""
 """EntityName =({object}.+?)\s*$"""
 """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
 ]
-DupFields = [ "dest_user->account" ]
 ParserVersion = "v1.0.0"
 
 

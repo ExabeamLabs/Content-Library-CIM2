@@ -23,15 +23,15 @@ Name = "code42-incydr-json-file-success-oshostname"
     """"domainName"+:\s*"(({host}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[^"]+))"""",
     """"eventTimestamp"+:\s*"+({time}[^"]+)"""",
     """"filePath"+:\s*"+({file_dir}[^"]+)"""",
-    """"fileName"+:\s*"+({src_file_name}[^"]+?(\.({src_file_ext}[^"\s\.]+))?)"""",
     """"fileCategory"+:\s*"+({file_type}[^"]+)"""",
     """"fileCategoryByExtension"+:\s*"+({file_ext}[^"]+)"""",
+    """"fileName"+:\s*"+({file_name}({src_file_name}[^"]+?(\.({file_ext}({src_file_ext}[^"\s\.]+)))?))"""",
     """"fileSize"+:\s*({bytes}\d+)""",
     """"processOwner"+:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"md5Checksum"+:\s*"+({hash_md5}[^"]+)"""",
     """"sha256Checksum"+:\s*"+({hash_sha256}[^"]+)"""",
     """"deviceUserName"+:\s*"+({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
-    """"osHostName"+:\s*"+({dest_host}[^"]+)"""",
+    """"osHostName"+:\s*"+({device_name}({dest_host}[^"]+))"""",
     """"windowTitle"+:\s*\["*({requested_app}[^"\]]+)"*\]""",
     """"actor"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
     """exa_regex="eventType"+:\s*"+({access}MODIFIED|DELETED|READ|CREATED)""",
@@ -45,22 +45,18 @@ Name = "code42-incydr-json-file-success-oshostname"
     """exa_json_path=$.domainName,exa_regex=(({host}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({domain}[^"]+))""",
     """exa_json_path=$.eventTimestamp,exa_field_name=time""",
     """exa_json_path=$.filePath,exa_field_name=file_dir""",
-    """exa_json_path=$.fileName,exa_regex=({src_file_name}[^"]+?(\.({src_file_ext}[^"\s\.]+))?)$""",
     """exa_json_path=$.fileCategory,exa_field_name=file_type""",
     """exa_json_path=$.fileCategoryByExtension,exa_field_name=file_ext""",
+    """exa_json_path=$.fileName,exa_regex=({file_name}({src_file_name}[^"]+?(\.({file_ext}({src_file_ext}[^"\s\.]+)))?))$""",
     """exa_json_path=$.fileSize,exa_field_name=bytes""",
     """exa_json_path=$.processOwner,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.md5Checksum,exa_field_name=hash_md5""",
     """exa_json_path=$.sha256Checksum,exa_field_name=hash_sha256""",
     """exa_json_path=$.deviceUserName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.osHostName,exa_field_name=dest_host""",
+    """exa_json_path=$.osHostName,exa_field_name=device_name""",
     """exa_json_path=$.windowTitle[0],exa_field_name=requested_app""",
     """exa_regex="actor"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""
-  ]
-  DupFields = [
-    "dest_host->device_name"
-    "src_file_name->file_name"
-    "src_file_ext->file_ext"
   ]
   ParserVersion = "v1.0.0"
 

@@ -9,7 +9,7 @@ Name = unix-unix-str-process-create-success-cmd
   Conditions = [ """ CMD """, """]: """ ]
   Fields = [
     """({time}\w{3}\s+\d+\s+\d\d:\d\d:\d\d)\s+(::ffff:)?({host}[\w\-.]+)""",
-    """\(({account}[^\)]+?)\) CMD""",
+    """\(({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\) CMD""",
     """time:"({time}\d+)""",
     """\sCMD \(\s*({process_command_line}.+?)\)($|\s|")""",
     """\sCMD\s+\=?\s*({process_command_line}.+?)$"""
@@ -19,7 +19,6 @@ Name = unix-unix-str-process-create-success-cmd
     """from_remote_host = ({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """\WCMD\s+({process_path}({process_dir}[^\s]+[\\\/]+)?({process_name}[^;\\\/\s=]+))\s(?:|;|$)"""
   ]
-  DupFields = [ "account->user" ]
 
 
 }

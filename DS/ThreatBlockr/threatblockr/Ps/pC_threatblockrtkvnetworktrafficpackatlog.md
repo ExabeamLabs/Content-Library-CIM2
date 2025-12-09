@@ -14,13 +14,12 @@ Name = threatblockr-t-kv-network-traffic-packatlog
     """\sdst_port=({dest_port}\d{1,5})""",
     """\sdirection=({direction}[^=]+?)(,\s\w+=|\s*$)""",
     """\sproto=({protocol}[^=]+?)(,\s\w+=|\s*$)""",
-    """\saction=({action}[^=]+?)(,\s\w+=|\s*$)""",
+    """\saction=({result}({action}[^=]+?))(,\s\w+=|\s*$)""",
     """\sreason=({additional_info}[^=]+?)(,\s\w+=|\s*$)""",
     """\sgroup="({group_name}[^"]+?)"(,\s\w+=|\s*$)""",
     """\scountry="({country}[^"]+?)"(,\s\w+=|\s*$)""",
     """\s(al|dl)_active="({rule}[^"]+?)"(,\s\w+=|\s*$)"""
   ]
-  DupFields = [ "action->result" ]
   ParserVersion = "v1.0.0"
 
 

@@ -20,10 +20,7 @@ Fields = [
 """({host}[^\/\s]+)\/Security \(644\)"""
 """Target Account Name:\s+(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Target Account ID:\s+(%\{)?({user_sid}([\w\d\-]+?)|([^\s]+))\}?\s+Caller Machine"""
 """Caller Machine Name:\s+({src_host}.+?)\s+Caller User"""
-"""Caller User Name:\s+({src_user}.+?)\s+Caller Domain:\s+(?=\w)({src_domain}.+?)\s+Caller Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
-]
-DupFields = [
-"src_domain->domain"
+"""Caller User Name:\s+({src_user}.+?)\s+Caller Domain:\s+(?=\w)({domain}({src_domain}.+?))\s+Caller Logon ID:\s+\([^,]+,({login_id}[^\)]+)"""
 ]
 ParserVersion = "v1.0.0"
 

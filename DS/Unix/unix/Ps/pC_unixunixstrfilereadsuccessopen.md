@@ -11,13 +11,10 @@ Conditions = [
 """ open """
 ]
 Fields = [
-"""\d\d:\d\d:\d\d ({host}[^\s]+) sftp-server\["""
+"""\d\d:\d\d:\d\d ({dest_host}({host}[^\s]+)) sftp-server\["""
 """({operation}open) \"+({file_path}({file_dir}[^\"]*?[\\\/]+)?\s*({file_name}[^\"\\\/]*?(\.({file_ext}\w+))?))\"+"""
 """flags ({access}.+?) mode"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
-]
-DupFields = [
-"host->dest_host"
 ]
 
 

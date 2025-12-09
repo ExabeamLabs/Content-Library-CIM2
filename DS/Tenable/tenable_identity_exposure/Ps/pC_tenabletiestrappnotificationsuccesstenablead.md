@@ -14,14 +14,13 @@ Name = tenable-tie-str-app-notification-success-tenablead
     """Tenable\.ad\s*\[({process_id}\d+)\]"""
     """Tenable\.ad\s*\[\S+]:\s"({event_code}\d+)""""
     """Tenable\.ad\s*\[\S+\]:\s"[^"]*"\s"({alert_id}\d+)""""
-    """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){2}"({event_name}[^"]+)""""
+    """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){2}"({operation}({event_name}[^"]+))""""
     """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){3}"({result}[^\s]+)""""
     """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){4}"({domain}[^"]+)""""
     """"ComputerCn"="?({host}[\w\-.]+)"?"""
     """"OperatingSystem"="?({os}[^"]+)"?"""
     """"OperatingSystemVersion"="?({os_version}[^"]+)"?"""
   ]
-  DupFields = [ "event_name->operation" ]
 
 
 }

@@ -12,7 +12,7 @@ azure-ad-activity-1 = {
    Fields = [
      """"(TimeGenerated|time)":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
      """"userPrincipalName(\\)?":\s*(\\)?"({email_address}[^"\\]+)""",
-     """"OperationName":\s*"({operation}[^"]+)"""",
+     """"OperationName":\s*"({event_name}({operation}[^"]+))"""",
      """"Result":\s*"({result}[^",]+)"""",
      """"Category":\s*"({category}[^"]+)"""",
      """"UserId":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
@@ -20,7 +20,6 @@ azure-ad-activity-1 = {
      """"Resource":\s*"({src_host}[^"]+)"""",
      """"TenantId":\s*"({tenant_id}[^"]+)""",
      """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
-   ]
-   DupFields = [ "operation->event_name" 
+   
 }
 ```

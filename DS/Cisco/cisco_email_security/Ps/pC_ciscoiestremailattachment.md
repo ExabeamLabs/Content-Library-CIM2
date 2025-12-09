@@ -8,12 +8,9 @@ Name = cisco-ie-str-email-attachment
     TimeFormat = "yyyy-MM-dd HH:mm:ss"
     Conditions = [ """MID """, """ attachment """ ]
     Fields = [
-      """MID ({alert_id}\d+) attachment '({email_attachment}[^']+)'""",
+      """MID ({message_id}({alert_id}\d+)) attachment '({attachment}({email_attachment}[^']+))'""",
       """attachment '({email_attachment}[^']+\.({file_ext}[^']+))'""",
        ]
-    DupFields = [ "alert_id->message_id"
-    "email_attachment->attachment"
-    ]
   
 
 }

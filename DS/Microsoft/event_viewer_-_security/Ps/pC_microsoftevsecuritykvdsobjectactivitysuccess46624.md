@@ -3,6 +3,10 @@
 {
 Name = microsoft-evsecurity-kv-ds-object-activity-success-4662-4
   Conditions = [ """,4662,""", """オブジェクトに対して操作が実行されました。""" ]
+  Fields = ${WinJPParsersTemplates.jp-event.Fields} [
+    """\sアカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:""",
+    """\sアカウント ドメイン:\s*({domain}[^:]+?)\s*ログオン ID:"""
+  ]
   ParserVersion = "v1.0.0"
 
 jp-event = {
@@ -16,8 +20,6 @@ jp-event = {
     """\sアクセス:\s*({access}[^\s:]+)\s""",
     """\sMessage=({event_name}\S+)""",
     """\sセキュリティ ID:\s*({user_sid}[^:]+?)\s*アカウント名:""",
-    """\sアカウント名:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*アカウント ドメイン:""",
-    """\sアカウント ドメイン:\s*({domain}[^:]+?)\s*ログオン ID:""",
     """\sログオン ID:\s*({login_id}\S+)""",
     """Source Port(=|:)\s*({src_port}\d+)"""
   

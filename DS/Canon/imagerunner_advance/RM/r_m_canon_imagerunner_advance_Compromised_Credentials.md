@@ -7,7 +7,7 @@ Vendor: Canon
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  69   |   37   |         7          |       3        |    1    |
+|  69   |   37   |         7          |       3        |    4    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

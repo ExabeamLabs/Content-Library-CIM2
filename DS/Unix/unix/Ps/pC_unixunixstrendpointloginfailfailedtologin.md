@@ -9,11 +9,10 @@ Name = unix-unix-str-endpoint-login-fail-failedtologin
   Conditions = [ """SSHS_VERSION_MISMATCH: """, """SSH client """, """failed to log in """ ]
   Fields = [
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
-    """\d\d:\d\d:\d\d(\.\S+)? \d\d\d\d ({host}[^\s]+)""",
+    """\d\d:\d\d:\d\d(\.\S+)? \d\d\d\d ({dest_host}({host}[^\s]+))""",
     """({event_name}SSHS_VERSION_MISMATCH)""",
     """SSH client ({src_ip}[a-fA-F:\d\.]+) ({failure_reason}[^.]+)"""
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

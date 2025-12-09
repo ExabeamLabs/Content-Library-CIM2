@@ -22,6 +22,8 @@ Name = fortinet-vpn-cef-vpn-logout-success-connection
     """(rcvd|rcvdbyte)=({bytes_out}\d+)""",
     """(sent|sentbyte)=({bytes_in}\d+)""",
     """\Wtz="?({tz}[+-]\d+)"""
+    """\sloc_?ip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+
   ]
 
 

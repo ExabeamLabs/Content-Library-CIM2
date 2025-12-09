@@ -7,6 +7,7 @@ Name = microsoft-evsecurity-sk4-endpoint-4624
   Product = Event Viewer - Security
   Conditions = [ """EventID': 4624""", """'NetApp-Security-Auditing'""", """'LogonType'"""  ]
   Fields = ${DLWindowsParsersTemplates.netapp-json-windows-events.Fields} [
+    """'Computer':\s+'({host}[^']+)""",
     """'SubjectDomainName':\s+'({src_domain}[^']+)""",
     """'TargetDomainName':\s+'({dest_domain}[^']+)""",
     """'SubjectIP':\s+'({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -28,7 +29,6 @@ netapp-json-windows-events = {
     """'Opcode':\s+({opcode}\d+)""",
     """'Keywords':\s+'({keywords}[^']+)""",
     """'Result':\s+'({result}[^']+)""",
-    """'Computer':\s+'({host}[^']+)""",
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'ObjectServer':\s+'({object_server}[^']+)""",

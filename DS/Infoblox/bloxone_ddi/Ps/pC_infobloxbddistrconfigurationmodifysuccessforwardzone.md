@@ -9,11 +9,10 @@ Name = infoblox-bddi-str-configuration-modify-success-forwardzone
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Deleted ForwardZone)""",
+    """({event_name}({operation}Deleted ForwardZone))""",
 # forwardzone is removed
 # dns_view is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

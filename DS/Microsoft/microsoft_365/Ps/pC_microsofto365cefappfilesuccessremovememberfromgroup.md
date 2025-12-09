@@ -9,7 +9,7 @@ Name = microsoft-o365-cef-app-file-success-removememberfromgroup
     """"OldValue":"({group_name}[^"]+)"[^\}]+?"Name":"Group\.DisplayName""""
     """"Name":"Group\.DisplayName"[^\}]+?"OldValue":"({group_name}[^"]+)""""
     """"Target":\[[^\]]+?"Type"\s*:1,\s*"ID":\s*"({target}[^"]+)"""
-    """"targetResources":[^\}]+?"displayName":"({target}[^"]+)""""
+    """"targetResources":(?:(?!modifiedProperties)[^}])+?"displayName":"({target}[^"]+)""""
     """"targetResources":\[.+?"displayName":"Group.DisplayName","oldValue":"\\*"({group_name}[^"\\]+)"""
   ]
 
@@ -71,6 +71,7 @@ cef-microsoft-app-activity = {
     """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
     """appId":"({app_id}[^"]+)""""
+    """"SiteUrl":"({url}[^"]+)""""
  
 }
 ```

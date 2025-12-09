@@ -23,7 +23,7 @@ Name = mimecast-seg-cef-email-hold
     """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
     """"(?i)Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
-    """"fileName":"({email_attachment}[^"]+\.({file_ext}[^"]+))""",
+    """"fileName":"({file_name}({email_attachment}[^"]+\.({file_ext}[^"]+)))""",
     """"fileType":"({file_type}[^"]+)""",
     """"fileHash":"({file_hash}[^"]+)""",
     """"(?:action|actions)":"({action}[^"]+)""",
@@ -33,7 +33,6 @@ Name = mimecast-seg-cef-email-hold
     """"subject":"({email_subject}[^"]+)"""
     """"UrlCategory":"({category}[^"]+)"""
   ]
-  DupFields = [ "email_attachment->file_name" ]
 
 
 }

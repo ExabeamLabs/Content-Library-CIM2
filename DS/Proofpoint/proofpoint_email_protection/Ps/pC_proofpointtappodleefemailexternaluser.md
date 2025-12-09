@@ -24,15 +24,12 @@ Fields = [
   """"filter"+:.*?"disposition"+:\s*"+({result}[^"]+)"""
   """"routeDirection"+:\s*"+({direction}[^"]+)"""
   """"message-id"+:\s*\["+<*({message_id}[^>"]+)"""
-  """msgParts.+"detectedName"+:\s*"+\s*({email_attachment}[^"]+)"""
+  """msgParts.+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^"]+))"""
   """msgParts"+:[^\n]*?"detectedName"+:"+[^",]*(\.({file_ext}\w+))"""
   """msgParts.+"sizeDecodedBytes":\s{0,99}({bytes}\d+)"""
   """"ip"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"x-originating-ip"+:\s*\["+\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """"host"+:\s*"+\[?({host}[\w\-.]+)\]?""""
-]
-DupFields = [
-  "email_attachment->email_attachments"
 ]
 ParserVersion = "v1.0.0"
 

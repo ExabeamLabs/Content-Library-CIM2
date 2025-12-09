@@ -29,7 +29,6 @@ Name = unix-ad-kv-endpoint-notification-permissioncheck
     """\suid=({user_id}\d+)""",
     """\sgid=({group_id}\d+)""",
   ]
-  DupFields = [ "target_name->file_name" ]
 
 
 }

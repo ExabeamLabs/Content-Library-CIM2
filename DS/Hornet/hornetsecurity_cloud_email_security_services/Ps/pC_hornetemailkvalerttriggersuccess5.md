@@ -10,7 +10,7 @@ Name = hornet-email-kv-alert-trigger-success-5
   Fields = [
     """date=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """reason="({alert_name}[^"]+)""",
-    """type=({alert_type}5)""",
+    """type=({alert_severity}({alert_type}5))""",
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
@@ -22,7 +22,6 @@ Name = hornet-email-kv-alert-trigger-success-5
     """attachments="[^0"]#({email_attachments}[^"]+)""",
     """subject="[ \s]*({email_subject}[^"]+?)[ \s]*"""",
   ]
-  DupFields = [ "alert_type->alert_severity" ]
 
 
 }

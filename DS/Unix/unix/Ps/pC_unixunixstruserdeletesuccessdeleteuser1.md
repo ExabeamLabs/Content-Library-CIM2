@@ -8,13 +8,12 @@ Name = unix-unix-str-user-delete-success-deleteuser-1
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """ delete """, """ userdel[""",""" group '""" ]
   Fields = [
-    """\d\d:\d\d:\d\d(\.\S+)? ({host}[\w.\-]+)\suserdel""",
-    """delete\s+\'({dest_user}[^']+)\'""",
+    """\d\d:\d\d:\d\d(\.\S+)? ({dest_host}({host}[\w.\-]+))\suserdel""",
+    """delete\s+\'({account_name}({dest_user}[^']+))\'""",
     """group\s+'({group_name}[^']+)'"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields=["host->dest_host", "dest_user->account_name"]
 
 
 }

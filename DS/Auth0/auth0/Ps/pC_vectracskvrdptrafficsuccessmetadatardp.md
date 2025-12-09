@@ -19,9 +19,8 @@ auth0-authentication-template = {
       """description"+:"+({additional_info}[^"]+)\s*"+""",
       """"+ip"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """"user_id":"({user_id}[^"]+)"""",
-      """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
-      """user_id":"([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-      """user_name"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
+      """"user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|([\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))""",
+      """user_name"+:"+(({email_address}([A-Za-z0-9_]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""",
       """client_name"+:"+({app}[^"]+)""",
       """user_agent"+:"+({user_agent}[^"]+)""",         
       """severity"+:"+({alert_severity}[^"]+)""", 
@@ -31,16 +30,14 @@ auth0-authentication-template = {
       """exa_json_path=$.message.description,exa_field_name=additional_info"""
       """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
       """exa_regex="user_id":"({user_id}[^"]+)"""",
-      """exa_regex="user_name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
-      """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
-      """exa_regex="user_id":"([^\|]+\|){2}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+      """exa_regex="user_name":"(({email_address}([A-Za-z0-9_]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+      """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|([\w\.\-]{1,40}\$?))|(({=auth_type}[^|"]+)\|))""",
       """exa_json_path=$..client_name,exa_field_name=app"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
       """exa_json_path=$..severity,exa_field_name=alert_severity"""
       """exa_json_path=$.message.type,exa_regex=({operation_type}[^",]+)"""
       """exa_json_path=$.data..user.email,exa_field_name=email_address"""
-      """exa_json_path=$..user_name,exa_regex=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?|)"""
-      """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+      """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9_]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
       """exa_json_path=$.data..request.userAgent,exa_field_name=user_agent"""
       """exa_json_path=$.data..request.path,exa_field_name=uri_path"""
       """exa_json_path=$.data..request.method,exa_field_name=method"""

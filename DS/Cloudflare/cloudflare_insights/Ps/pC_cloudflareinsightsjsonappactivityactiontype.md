@@ -30,6 +30,7 @@ Name = cloudflare-insights-json-app-activity-actiontype
     """exa_json_path=$.EdgePathingStatus,exa_field_name=status_msg"""
     """exa_json_path=$.SecurityRuleID,exa_field_name=rule_id"""
     """exa_json_path=$.EdgeResponseStatus,exa_field_name=edge_response_status"""
+    """exa_json_path=$.EdgeResponseStatus,exa_field_name=http_response_code"""
     """exa_json_path=$.ClientRequestHost,exa_field_name=web_domain"""
     """exa_json_path=$.EdgeResponseBytes,exa_field_name=bytes_out"""
     """exa_json_path=$.ClientRequestMethod,exa_field_name=method"""
@@ -44,13 +45,12 @@ Name = cloudflare-insights-json-app-activity-actiontype
     """exa_json_path=$.AssetExternalID,exa_field_name=asset_id"""
     """exa_json_path=$.AssetDisplayName,exa_field_name=asset_labels"""
   ]
-  DupFields = ["edge_response_status->http_response_code"]
 }  
 
 ${CanonParsersTemplates.canon-endpoint-events}{
    Name = canon-iradv-csv-endpoint-login-4098-catchall
    ParserVersion = v1.0.0
-   Conditions = [ """-  4098,""", """iR-ADV"""]
+   Conditions = [ """ 4098,""", """iR-ADV"""]
  
 
 }

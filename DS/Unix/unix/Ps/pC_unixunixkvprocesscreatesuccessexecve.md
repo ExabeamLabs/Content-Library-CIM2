@@ -15,7 +15,7 @@ unix-kv-template = {
   Fields = [
       """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
       """msg=audit\(({time}\d{10})\.\d{3}""",
-      """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({host}[\w.\-]+)""",
+      """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({dest_host}({host}[\w.\-]+))""",
       """\sauid=({account_id}\d+)\s"""
       """\suid=({user_uid}\d+)"""
       """\sses=({session_id}\d+)""",
@@ -31,7 +31,6 @@ unix-kv-template = {
       """type=(?:({event_name}USER_\S+)|({operation_type}\S+))"""
 
     ]
-  DupFields = [ "host->dest_host" ]
  }
 
 }
@@ -48,18 +47,17 @@ DLWazuhParserTemplates = {
       """({event_code}ssh)""",
       """\s+port\s+({src_port}\d+)""",
       """"@timestamp":"({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-      """"data.dstuser":"(\(no user\)|({dest_user}[^"]+))"""
+      """"data.dstuser":"(\(no user\)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
       """"location":"({log_location}[^"]+)"""
       """"path":"({log_path}[^"]+)"""
       """"agent.id":"({agent_id}\d+)"""
       """"manager.name":"({wazuh_manager}[^"]+)"""
       """"rule.description":"({description}[^"]+)"""
-      """"decoder.name":"({decoder_name}[^"]+)"""
+      """"decoder.name":"({process_name}({decoder_name}[^"]+))"""
       """"rule.id":"({rule_id}\d+)"""
       """"agent.name":"({agent_name}[^"]+)"""
       """"agent.id":"({agent_id}[^"]+)"""
       """"data.srcip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    ]
-    DupFields = ["dest_host->original_dest_host", "dest_user->user", "decoder_name->process_name"
+    
 }
 ```

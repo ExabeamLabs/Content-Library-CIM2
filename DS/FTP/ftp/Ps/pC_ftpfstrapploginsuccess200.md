@@ -9,12 +9,11 @@ Name = ftp-f-str-app-login-success-200
   Conditions = [ """]pass ******""", """ - 200 - - - """ ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d) """,
-    """({host}[\w\.-]+)\s+(\S+\s+){2}\[\d+\]""",
+    """({dest_host}({host}[\w\.-]+))\s+(\S+\s+){2}\[\d+\]""",
     """({src_ip}\S+)\s+(\S+\s+){2}\[\d+\]""",
     """(-|(({domain}\S+)[\/\\])?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\[\d+\]""",
     """\]pass\s+(\S+\s+){2}({result}\d+)""",
   ]
-  DupFields = [ "host->dest_host" ]
 
 
 }

@@ -11,11 +11,8 @@ Name = "helpsystems-powertechiam-kv-endpoint-login-success-loginok"
   ]
   Fields = [
     """clientTime=\"*({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)Z\"*"""
-    """authHost=\"*({host}[^\"]+)\""""
+    """authHost=\"*({dest_host}({host}[^\"]+))\""""
     """user=\"*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\""""
-  ]
-  DupFields = [
-    "host->dest_host"
   ]
   ParserVersion = "v1.0.0"
 

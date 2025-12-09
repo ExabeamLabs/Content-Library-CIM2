@@ -10,7 +10,7 @@ Name = claroty-ctd-cef-app-activity-success-catch-all
       """CtdTimeGenerated=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
       """start=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)"""
       """({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)\s\w+\sCEF:""",
-      """\|CTD\|([^\|]+\|){2}({alert_name}[^\|]+)\|({alert_severity}[^\|]+)""",
+      """\|CTD\|([^\|]+\|){2}({event_name}({alert_type}({alert_name}[^\|]+)))\|({alert_severity}[^\|]+)""",
       """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s""",
       """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",
       """dhost=({dest_host}[\w\-\.]+)""",
@@ -28,7 +28,6 @@ Name = claroty-ctd-cef-app-activity-success-catch-all
       """CtdMitreAttackTechniqueIds=({mitre_labels}[^=]+?)\s\w+="""
       """proto=({protocol}[^=]+?)\s\w+="""
     ]
-    DupFields = ["alert_name->alert_type","alert_name->event_name"]
     ParserVersion = "v1.0.0"
 
 

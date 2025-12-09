@@ -25,7 +25,6 @@ s-xml-windows-member = {
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
-    """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",

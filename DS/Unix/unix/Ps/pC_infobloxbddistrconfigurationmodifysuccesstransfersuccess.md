@@ -11,11 +11,8 @@ Name = infoblox-bddi-str-configuration-modify-success-transfersuccess
     """({operation}transfer)""",
     """transfer of '({zone}[^']+?)(\/[^']+)?'""",
     """({additional_info}transfer of[^=]+?)\s*$""",
-    """Transfer status:\s({action}[^\s]+?)\s*$"""
+    """Transfer status:\s({result}({action}[^\s]+?))\s*$"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
-  ]
-  DupFields = [
-  "action->result"
   ]
   ParserVersion = "v1.0.0"
 

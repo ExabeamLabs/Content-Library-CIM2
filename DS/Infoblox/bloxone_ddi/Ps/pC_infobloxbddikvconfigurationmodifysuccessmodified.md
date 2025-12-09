@@ -9,10 +9,9 @@ Name = infoblox-bddi-kv-configuration-modify-success-modified
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Modified ForwardZone)""",
+    """({event_name}({operation}Modified ForwardZone))""",
 # forwardzone is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

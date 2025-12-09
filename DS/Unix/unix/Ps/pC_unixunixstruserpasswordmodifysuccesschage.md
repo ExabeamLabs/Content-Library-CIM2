@@ -12,10 +12,9 @@ Name = unix-unix-str-user-password-modify-success-chage
   ]
   Fields = [
 """({host}[\w.\-]+)\s+chage\["""
-"""changed password expiry for ({account}\S+)"""
+"""changed password expiry for ({dest_user}({account}\S+))"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = [ "account->dest_user" ]
 
 
 }

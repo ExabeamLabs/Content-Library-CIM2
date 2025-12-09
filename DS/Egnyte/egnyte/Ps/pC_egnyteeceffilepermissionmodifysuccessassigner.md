@@ -18,10 +18,8 @@ Name = "egnyte-e-cef-file-permission-modify-success-assigner"
     """"folder":"({file_path}({file_dir}[^"]*?[\\\/]+)({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\\\/]+))?)?)\s*"""",
     """({access}ACL was.*?with permission\s+\[[^\]]*\])""",
     """destinationServiceName =({service_name}[^"]+?)\s+(\w+=|$)""",
-    """({app}Egnyte)"""
-  ]
-  DupFields = [
-    "dproc->category"
+    """({app}Egnyte)""",
+    """({category}permissions-audit-report)"""
   ]
   ParserVersion = "v1.0.0"
 

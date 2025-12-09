@@ -5,10 +5,10 @@ Name = zyxel-usgflex-kv-network-session-fail-accessblock
   ParserVersion = "v1.0.0"
   Conditions = [ """ cat="Security Policy Control"""", """ note="ACCESS BLOCK"""", """ dir="""" ]
   Fields = ${ZyxelParsersTemplates.zyxel-network-events.Fields}[
+    """\snote="({failure_reason}[^"]+)"""
     """\sproto="({protocol}[^"]+)""",
     """\sdir="({direction}[^"]+)""",  
   ]
-  DupFields = [ "operation->failure_reason" ]
 
 zyxel-network-events = {
     Vendor = "Zyxel Networks"
@@ -23,6 +23,8 @@ zyxel-network-events = {
       """\sdst="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """\sdevid="({devid}[^\s]+)"""",
       """\scat="({category}[^"]+)""",
+      """sent=({bytes_out}\d+)"""
+      """rcvd=({bytes_in}\d+)"""
     
 }
 ```

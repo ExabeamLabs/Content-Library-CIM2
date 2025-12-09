@@ -21,17 +21,13 @@ Fields = [
   """<Data Name\\*="*SubjectDomainName"*>({domain}.+?)<\/Data>"""
   """<Data Name\\*="*SubjectUserName"*>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>"""
   """<Data Name\\*="*ObjectServer"*>({object_server}.+?)<\/Data>"""
-  """<Data Name\\*="*ObjectType"*>({object_class}.+?)<\/Data>"""
+  """<Data Name\\*="*ObjectType"*>({alert_type}({object_class}.+?))<\/Data>"""
   """<Data Name\\*="*ObjectName"*>({file_path}.+?)<\/Data>"""
   """<Data Name\\*="*ObjectName"*>[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)</Data>"""
   """<Data Name\\*="*ObjectName"*>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)</Data>"""
   """<Data Name\\*="*ProcessName"*>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/"<]+?))</Data>"""
   """<Data Name\\*="*(HandleID|HandleId)"*>({object_id}.+?)<\/Data>"""
   """<Data Name\\*="*DesiredAccess"*>\s*({access}.+?)\s*<\/Data>"""
-]
-DupFields = [
-  "event_name->operation"
-  "object_class-> alert_type"
 ]
 ParserVersion = "v1.0.0"
 

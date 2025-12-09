@@ -11,7 +11,7 @@ Name = postgresql-p-csv-database-login-success-authentication
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
     """({action}connection authorized)"""
     """connection authorized:\s*(\[[^\]]+\]:|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)?"""
-    """\s*user=({db_user}[^=]+?)\s"""
+    """\s*user=({db_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
     """({additional_info}(connection authorized).+?)\s*$"""
     """\sdatabase=({db_name}[^"\s=]+)"""
     """application_name=({app}[^\s]+)"""
@@ -19,7 +19,6 @@ Name = postgresql-p-csv-database-login-success-authentication
     """:LOG:\s*({action}[^:]+)"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = ["db_user -> user"]
 
 
 }

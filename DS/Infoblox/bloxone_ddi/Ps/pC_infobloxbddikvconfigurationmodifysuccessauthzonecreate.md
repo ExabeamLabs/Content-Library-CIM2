@@ -9,7 +9,7 @@ Name = infoblox-bddi-kv-configuration-modify-success-authzonecreate
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Created AuthZone)""",
+    """({event_name}({operation}Created AuthZone))""",
 # auth_zone is removed
 # dns_view is removed
 # fqdn is removed
@@ -27,7 +27,6 @@ Name = infoblox-bddi-kv-configuration-modify-success-authzonecreate
 # use_import_from is removed
 # use_scavenging is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

@@ -52,6 +52,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """"msg".+?"normalizedHeader":.+?"reply-to":\["[^",<>]+\s<({reply_to}[^>"]+)>"""",
       """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """"(classification|triggeredClassification|triggeredClassifier)":\s*"({alert_type}[^",]+)""",
+      """"smtp.mailfrom":"({mailfrom}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
       """exa_json_path=$.filter..triggeredClassifier,exa_field_name=alert_type""",
       """exa_json_path=$.filter..triggeredClassification,exa_field_name=alert_type""",
       """exa_json_path=$.filter..classification,exa_field_name=alert_type""",
@@ -91,6 +92,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_regex="msg".+?"normalizedHeader":.+?"subject":\["({email_subject}[^"]+?)"\]"""
       """exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """exa_json_path=$..normalizedHeader.subject[0:],exa_field_name=email_subject""",
+      """exa_json_path=$..['smtp.mailfrom'],exa_regex=({mailfrom}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)$""",
     ]
   SOAR {
     IncidentType = "dlp"

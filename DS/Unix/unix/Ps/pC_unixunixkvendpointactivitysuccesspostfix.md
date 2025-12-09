@@ -14,12 +14,11 @@ Name = unix-unix-kv-endpoint-activity-success-postfix
     """\sOBJECT=({object}.+?)\s*\w+=""",
     """\sUSER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*\w+=""",
 # origin is removed
-    """time=({start_time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d)""",
+    """time=({time}({start_time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d))""",
     """endtime=({end_time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d)""",
 # process_users is removed
     """TYPE=({category}.+?)\s*\w+="""
   ]
-  DupFields = [ "start_time->time" ]
 
 
 }

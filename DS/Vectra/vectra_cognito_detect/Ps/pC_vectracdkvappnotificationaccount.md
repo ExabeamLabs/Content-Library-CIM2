@@ -14,7 +14,6 @@ Name = vectra-cd-kv-app-notification-account
         """\scategory="({event_name}[^"]+)""",
         """\sUTCTime="({time}\d{10})"""
   ]
-  DupFields = [ "object->threat" ]
 
 
 }

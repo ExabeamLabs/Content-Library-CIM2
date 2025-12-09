@@ -15,7 +15,7 @@ Fields = [
 """\Wrt=({time}\d{13})"""
 """\Wdvc=({host}[^\s]+)"""
 """\Wdvchost=({host}[^\s]+)"""
-"""CEF:([^\|]*\|){4}({alert_name}[^\|]+)"""
+"""CEF:([^\|]*\|){4}({alert_type}({alert_name}[^\|]+))"""
 """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)"""
 """\WeventId=({alert_id}\d+)"""
 """\Wdsn\\=({result}[^\s,]+)"""
@@ -25,9 +25,6 @@ Fields = [
 """\Wcn3=({num_recipients}\d+)"""
 """\Wsize\\=({bytes}\d+)"""
 """\Wproto=({protocol}[^\s,]+)"""
-]
-DupFields = [
-"alert_name->alert_type"
 ]
 
 

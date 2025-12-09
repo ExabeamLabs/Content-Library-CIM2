@@ -14,12 +14,11 @@ Fields = [
 """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
 """<Computer>(-|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w\-.]+))"""
 """<Security UserID\\*='({user_sid}[^'<\/]+)"""
-"""<SubjectUserName>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""<SubjectDomainName>(NT AUTHORITY|({domain}[^<]+))"""
+"""<SubjectUserName>(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+"""<SubjectDomainName>(NT AUTHORITY|({src_domain}({domain}[^<]+)))"""
 """<Message>({event_name}[^<]+)"""
 """<Level>({run_level}[^<]+)"""
 ]
-DupFields = ["user->src_user" , "domain->src_domain"]
 ParserVersion = "v1.0.0"
 
 

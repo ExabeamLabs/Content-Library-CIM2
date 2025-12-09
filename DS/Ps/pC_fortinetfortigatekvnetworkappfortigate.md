@@ -17,8 +17,7 @@ ${IbmLotusNotesTemplates.ibm-lotus-notes}{
   Conditions = ["""  Pushing """, """ to """]
   Fields = ${IbmLotusNotesTemplates.ibm-lotus-notes.Fields}[
 # system_info is removed
-    """Pushing\s*({src_file_path}(({file_dir}[^\"]+)[\\\/]+)?(({src_file_name}[^"]+(\.({src_file_ext}[^\.\"]+)))))\"*"""
-  ]
-  DupFields = ["src_file_name -> file_name","src_file_ext -> file_ext"
+    """Pushing\s*({src_file_path}(({file_dir}[^\"]+)[\\\/]+)?(({file_name}({src_file_name}[^"]+(\.({file_ext}({src_file_ext}[^\.\"]+)))))))\"*"""
+  
 }
 ```

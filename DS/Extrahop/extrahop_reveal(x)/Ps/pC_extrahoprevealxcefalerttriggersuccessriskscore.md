@@ -19,8 +19,8 @@ Fields = [
 """CEF:\d+\|([^\|]+\|){4}({alert_name}[^\|]+)"""
 """cn1=({alert_id}\d+)\s+cn1Label=detectionID"""
 """cn2=({alert_id}\d+)\s+cn2Label=detectionID"""
-"""cn2=({original_risk_score}\d+)\s+cn2Label=riskScore"""
-"""cn1=({original_risk_score}\d+)\s+cn1Label=riskScore"""
+"""cn2=({alert_severity}({original_risk_score}\d+))\s+cn2Label=riskScore"""
+"""cn1=({alert_severity}({original_risk_score}\d+))\s+cn1Label=riskScore"""
 """dst=(({dest_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)"""
 """CEF:\d+\|([^\|]+\|){3}({alert_type}\d+)"""
 """src=(({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
@@ -31,9 +31,6 @@ Fields = [
 """suser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """shost=({src_host}[^=\s]+)\s+\w+="""
 """dhost=({dest_host}[^=\s]+)\s+\w+="""
-]
-DupFields = [
-"original_risk_score->alert_severity"
 ]
 ParserVersion = "v1.0.0"
 

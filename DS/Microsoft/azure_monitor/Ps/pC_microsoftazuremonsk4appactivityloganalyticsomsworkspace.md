@@ -35,7 +35,7 @@ cef-cloud-system-info = {
     """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 # mg is removed
     """"ManagementGroupName":"({group_name}[^"]+)""",
-    """"_ResourceId":"({resource_id}[^"]+)""",
+    """"_ResourceId":"({object}({resource_id}[^"]+))""",
 # code_cf is removed
     """"ClusterName_s":"({cluster_name}[^"]+)""",
 # cluster_type is removed
@@ -61,7 +61,6 @@ cef-cloud-system-info = {
     """"EventID":({event_code}\d+)"""
     """"SubscriptionId":"({subscription_id}[^"]+)""""
   ]
-  DupFields = [ "resource_id->object"]
  
 }
 ```

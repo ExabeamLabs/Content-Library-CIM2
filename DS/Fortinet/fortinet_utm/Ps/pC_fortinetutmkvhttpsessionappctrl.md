@@ -26,6 +26,13 @@ Name = fortinet-utm-kv-http-session-appctrl
     """\Wappcat="({category}[^\"]+)""""
     """\Wsubtype="({event_name}[^\"]+)"""",
     """\Wtz="?({tz}[+-]\d+)"""
+    """\Wsrcintfrole=\"+(undefined|({src_role}[^\"]+))\"+"""
+    """\Wdstintfrole=\"+(undefined|({dest_role}[^\"]+))\"+"""  
+    """\ssrcintf=\\?"?({src_interface}[^=]+?)\\?"?\s*(\w+=|$)"""
+    """\sdstintf=\\?"?({dest_interface}[^=]+?)\\?"?\s*(\w+=|$)"""
+    """\sapprisk=\\?"?({severity}[^=]+?)\\?"?\s*(\w+=|$)"""
+    """\Wdirection=\\?"?(((?i)unknown)|({direction}[^=]+?))\\?"?\s*(\w+=|$)"""
+    """\spolicyid=({policy_id}\d+)"""
    ]
 
 

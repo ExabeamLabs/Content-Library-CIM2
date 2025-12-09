@@ -17,12 +17,11 @@ Name = unix-unix-mix-user-switch-success-susession
 """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[\+\-][^\s]+)""", 
 """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)""",   
 """\"agent_hostname\":\"(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[^\"]+)))\"""",
-"""({event_code}su):.+?for user ({dest_user}[^\s]+?)(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?(\(uid=({user_uid}\d+)\))?""",
+"""({event_code}su):.+?for user ({account}({dest_user}[^\s]+?))(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?(\(uid=({user_id}({user_uid}\d+))\))?""",
 """(T|\s)\d\d:\d\d:\d\d(\.?\S+)? (::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w.\-]+)))\s+su(:|\[)""",
 """({event_name}session opened for user)"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = ["dest_user->account","user_uid->user_id"]
 
 
 }

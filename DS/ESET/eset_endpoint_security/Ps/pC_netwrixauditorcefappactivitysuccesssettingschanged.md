@@ -9,10 +9,10 @@ ParserVersion = "v1.0.0"
 
 eset-activity.Fields}[
     """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
+    """\|ESET\|(?:[^\|]+\|){2}({alert_type}[^\|]+)""",
     """scannerID=({additional_info}[^=]+?)\s*(\w+=|$)""",
     """\Wsev=({alert_severity}\d+)"""
   ]
-  DupFields = ["event_name->alert_type"]
   ParserVersion = "v1.0.0"
 },
 
@@ -23,7 +23,7 @@ eset-activity.Fields}[
     TimeFormat = "MMM dd yyyy HH:mm:ss"
     Conditions = [ """LEEF:""", """|ESET|RemoteAdministrator|""","""cat=ESET Threat Event""","""threatType=""" ]
     Fields = [
-      """deviceName =({host}[^\s]+)\s""",
+      """deviceName =({dest_host}({host}[^\s]+))\s""",
       """\Wcat=({threat_category}[^=]+?)\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
       """\WdevTime=({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
@@ -34,7 +34,7 @@ eset-activity.Fields}[
       """eventDesc=({alert_name}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({malware_url}[^=]+?)\s*(\w+=|$)""",
       """objectUri=({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))\s*(\w+=|$)""",
-      """actionTaken=({action}[^=]+?)\s*(\w+=|$)""",
+      """actionTaken=({additional_info}({action}[^=]+?))\s*(\w+=|$)""",
       """accountName =((({domain}[^\\=]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)""",
       """engineVersion=({engine_version}\d+)""",
       """objectType=({object_type}[^=]+?)\s*(\w+=|$)""",
@@ -44,7 +44,6 @@ eset-activity.Fields}[
       """firstseen=({firstseen}[^=]+?)\s*(\w+=|$)""",
       """hash=({hash_sha256}[^\s]+)"""
     ]
-    DupFields = ["action->additional_info", "host->dest_host"]
 	ParserVersion = "v1.0.0"
   },
 
@@ -61,7 +60,7 @@ eset-activity.Fields}[
     """"hostname"+:\s*"+({host}[^"]+)""",
     """"+ipv4"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"+severity"+:\s*"+({alert_severity}[^"]+)""",
-    """"name"+:\s*"+({alert_name}[^"]+)""",
+    """"name"+:\s*"+({alert_type}({alert_name}[^"]+))""",
     """"synopsis"+:\s*"+({alert_subject}[^"]+)""",
     """"+description"+:\s*"+({additional_info}[^"]+?)"+""",
     """cvss_base_score"+:\s*({cvss_base_score}[^,]+)""",
@@ -77,6 +76,7 @@ eset-activity.Fields}[
     """exa_json_path=$.scan.indexed,exa_field_name=time"""
     """exa_json_path=$.asset.hostname,exa_field_name=host"""
     """exa_json_path=$.plugin.name,exa_field_name=alert_name"""
+    """exa_json_path=$.plugin.name,exa_field_name=alert_type"""
     """exa_json_path=$.plugin.synopsis,exa_field_name=alert_subject"""
     """exa_json_path=$.asset.ipv4,exa_field_name=src_ip"""
     """exa_json_path=$.port.protocol,exa_field_name=protocol"""
@@ -89,7 +89,6 @@ eset-activity.Fields}[
     """exa_json_path=$.plugin.see_also,exa_field_name=see_also""",
     """exa_json_path=$.plugin.cve,exa_field_name=cve_id"""
   ]
-  DupFields = ["alert_name->alert_type"]
   ParserVersion = "v1.0.0"
 },
 
@@ -183,7 +182,7 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
   Fields = [
     """date=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""",
     """reason="({alert_name}[^"]+)""",
-    """type=({alert_type}5)""",
+    """type=({alert_severity}({alert_type}5))""",
     """msgid="({alert_id}[^"]+)""",
     """dir=({direction}1|2)""",
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
@@ -194,7 +193,6 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
     """dst_ip=(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))""",
     """attachments="[^0"]#({email_attachments}[^"]+)""",
     """subject="[ \s]*({email_subject}[^"]+?)[ \s]*"""",
-  ]
-  DupFields = [ "alert_type->alert_severity" 
+  
 }
 ```

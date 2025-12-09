@@ -15,8 +15,8 @@ Name = unix-ad-kv-process-create-success-audispd
   Fields = [
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """msg=audit\(({time}\d{10})""",
-    """node=({host}[^\s\.]+)""",
-    """\s({host}[\w\-.]+)\s+audisp""",
+    """node=({src_host}({host}[^\s\.]+))""",
+    """\s({src_host}({host}[\w\-.]+))\s+audisp""",
     """\suid=({user_id}[^\s]+)""",
     """auid=({account_id}[^\s]+)""",
     """pid=({process_id}[^\s]+)""",
@@ -24,7 +24,6 @@ Name = unix-ad-kv-process-create-success-audispd
     """cmd=({process_command_line}[^=]+?)\s*\w+="""
     """exe="({process_dir}.*\/)({process_name}[^"]+?)"\s*\w+="""
   ]
-  DupFields = ["host->src_host"]
 
 
 }

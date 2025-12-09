@@ -33,8 +33,8 @@ cef-microsoft-app-activity1 = {
     """(?i)category(Value)?":"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """"\_?(R|r)esourceId":\s*"({object}[^"]{1,249})""",
-    """"(R|r)esourceId":\s*"({object}[^"]{1,249})""",
+    """"\_?(R|r)esourceId":\s*"({resource}({object}[^"]{1,249}))""",
+    """"(R|r)esourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """"(?i)operationName(Value)?":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
@@ -70,15 +70,14 @@ cef-microsoft-app-activity1 = {
     """exa_regex=(?i)category(value)?":"({category}[^"]+)"""",
     """exa_regex=Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """exa_regex=EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """exa_regex="\_?(R|r)esourceId":\s*"({object}[^"]{1,249})""",
-    """exa_regex="(R|r)esourceId":\s*"({object}[^"]{1,249})""",
+    """exa_regex="\_?(R|r)esourceId":\s*"({resource}({object}[^"]{1,249}))""",
+    """exa_regex="(R|r)esourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """exa_regex="(?i)operationName(Value)?":"({operation}[^"]+)"""
     """exa_regex="Host":"({host}[^"]+)"""",
     """exa_regex=\[Namespace:\s*({host}\S+) ; EventHub name:""",
     """exa_regex="\_?(R|r)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""",
     """exa_regex="(R|r)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""",
     """exa_json_path=$.Caller,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-    ]
-  DupFields = [ "object->resource" 
+    
 }
 ```

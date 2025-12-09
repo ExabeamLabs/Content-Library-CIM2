@@ -30,9 +30,8 @@ Name = openshift-o-kv-app-activity-annotations
     """message\\xB7({event_name}[^\\]+)""",
     """resource\\xAE({object}[^\\]+)"""
     """operation":"({operation}[^"]+)"""
-    """"resource\\?":\\?"({resource}[^"\\]+)""",
+    """"resource\\?":\\?"({object}({resource}[^"\\]+))""",
     ]
-    DupFields = [ "resource->object" ]
   ParserVersion = "v1.0.0"
 
 

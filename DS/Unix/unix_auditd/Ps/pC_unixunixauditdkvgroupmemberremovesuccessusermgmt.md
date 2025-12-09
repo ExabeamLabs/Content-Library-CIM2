@@ -18,9 +18,6 @@ Fields = [
 """\suid=({user_id}\d+)"""
 """\sses=({session_id}\d+)"""
 ]
-DupFields = [
-"host->dest_host"
-]
 ParserVersion = "v1.0.0"
 
 

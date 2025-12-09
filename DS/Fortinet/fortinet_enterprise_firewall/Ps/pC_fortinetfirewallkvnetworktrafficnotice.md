@@ -43,6 +43,10 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\sdstname=\"*({dest_host}[\w\-.]+)\"*"""
     """policyname="({policy_name}[^"]+)""""
     """url="({url}[^"]+)""""
+    """\Wtransip=(::ffff:)?({src_translated_ip}[a-fA-F\d.:]+)"""
+    """\Wsrchwvendor=\"+({src_host_type}[^"]+)"""
+    """\Wsrcmac="?({src_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"?"""
+    """\Wdstmac="?({dest_mac}([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})"?"""
 ]
 
 

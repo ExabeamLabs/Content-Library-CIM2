@@ -5,9 +5,9 @@ Name = claroty-ctd-cef-app-notification-success-assetinformationchange
   ParserVersion = "v1.0.0"
   Conditions = [ """CEF:""", """|Schneider|CTD|""", """|Asset Information Change|""", """|CtdSourceIp=""" ]
   Fields = ${ClarotyParserTemplates.claroty-schneider-events.Fields}[
-    """({app}CTD)"""
+    """({app}CTD)""",
+    """\|Schneider\|CTD\|([^\|]+\|){2}({operation}[^\|]+)\|"""
   ]
-  DupFields = ["event_name->operation"]
 
 claroty-schneider-events {
     Vendor = Claroty

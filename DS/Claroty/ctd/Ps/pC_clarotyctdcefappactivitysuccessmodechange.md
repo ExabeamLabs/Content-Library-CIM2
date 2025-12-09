@@ -6,8 +6,8 @@ Name = claroty-ctd-cef-app-activity-success-modechange
   Conditions = [ """CEF:""", """|CTD|""", """|Mode Change|""", """|CtdSourceIp=""" ]
   Fields = ${ClarotyParserTemplates.claroty-schneider-events.Fields}[
     """({app}CTD)"""
+    """\|Schneider\|CTD\|([^\|]+\|){2}({operation}[^\|]+)\|"""
   ]
-  DupFields = ["event_name->operation"]
 
 claroty-schneider-events {
     Vendor = Claroty

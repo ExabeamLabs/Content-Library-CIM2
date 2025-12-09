@@ -18,12 +18,9 @@ Fields = [
 """Event Type:\s*({alert_type}[^,]+)\s*,"""
 """Event Name:\s*({additional_info}[^,]+)\s*,"""
 """Device Name:\s*({src_host}[^,]+)\s*,"""
-"""File Path:\s*({malware_url}[^,]+)\s*,"""
+"""File Path:\s*({malware_file_name}({malware_url}[^,]+))\s*,"""
 """Interpreter:\s*({alert_name}[^,]+)\s*,"""
 """User Name:\s*(?:SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(,|$)"""
-]
-DupFields = [
-"malware_url->malware_file_name"
 ]
 ParserVersion = "v1.0.0"
 

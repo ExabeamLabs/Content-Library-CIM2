@@ -16,7 +16,7 @@ Name = forcepoint-dlp-cef-email-send-success-smtp
     """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,;\|]+))""",
     """\Wfname=\s*({email_attachment}[^;]+?)(;.*?)?\s*([\w\.]+=|$)""",
     """\Wfname=({file_name}[^-]*(\.({file_ext}\w+)))(N\/A|.*? - ({bytes}\d+\.?\d*)\s*({bytes_unit}[^\s;]+))"""
-    """\Wfname=\s*(N\/A|-|({email_attachments}({email_attachment}[^=;]+)[^=]*))\s([\w\.]+=|$)"""
+    """\Wfname=\s*(N\/A|-|({attachment}({email_attachments}({email_attachment}[^=;]+)[^=]*)))\s([\w\.]+=|$)"""
     """\Wmsg=\s*({email_subject}.+?)(\s+\-\s|\s+[\w\.]+=|$)""",
     """\Wcat=({alert_name}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
     """\WsourceServiceName =({alert_type}.+?)\s+(on |\w+=)""",
@@ -30,7 +30,6 @@ Name = forcepoint-dlp-cef-email-send-success-smtp
     """\Wsuser=({last_name}[^\\,=]+?),\s+({first_name}[^\\,=]+?)\s+(\w+=|$)""",
     """\Wsuser=({email_address}[^\\\s,@=]+?@[^\\\s,@=]+?)\s+(\w+=|$)""",
   ]
-  DupFields = [ "email_attachments->attachment"]
   ParserVersion = "v1.0.0"
 
 

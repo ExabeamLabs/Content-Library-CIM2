@@ -2,7 +2,6 @@
 ```Java
 {
 Name = "tanium-ep-json-alert-trigger-success-accountenumeration"
-ExtractionType = json
 Product = "Tanium Threat Response"
 Vendor = "Tanium"
 TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -13,19 +12,18 @@ Conditions = [
 """Intel Labels"""
 ]
 Fields = [
-  """exa_json_path=$.['Alert Id'],exa_field_name=alert_id"""
-  """exa_json_path=$.Timestamp,exa_field_name=time"""
-  """exa_json_path=$.['Computer Name'],exa_field_name=src_host"""
-  """exa_json_path=$.['Computer IP'],exa_field_name=src_ip"""
-  """exa_json_path=$.['Intel Type'],exa_field_name=alert_type"""
-  """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
-  """exa_json_path=$.['Intel Name'],exa_field_name=alert_name"""
-  """exa_json_path=$.['Match Details'].match..file.fullpath,exa_regex=({path}({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+)))"""
-  """exa_json_path=$.['Match Details'].match.properties.file.md5,exa_field_name=hash_md5"""
-  """exa_json_path=$.['Match Details'].match.properties,exa_regex=[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","""
-  """exa_regex="user"+:"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"+\}\,"+source"+:"""
-  """exa_json_path=$.['Match Details'].match.properties.user,exa_regex=([^\\]+\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """exa_json_path=$.['Match Details'].match.properties.parent.file.fullpath,exa_regex=(({parent_process_path}({parent_process_dir}[^"]+)\\+({parent_process_name}[^"]+)))"""
+  """"Alert Id":\s*"({alert_id}[^"]+)""""
+  """"Timestamp":\s*"({time}[^"]+)""""
+  """"Computer Name":\s*"({src_host}[^"]+)""""
+  """"Computer IP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""""
+  """"Intel Type":\s*"({alert_type}[^"]+)""""
+  """"Intel Name":\s*"({alert_name}[^"]+)""""
+  """"Match Details":\{"match":\{[^\$]+?"properties"[^\$]+?"file"[^\]]+?"fullpath":"({path}({process_path}({process_dir}[^"]+)\\+({process_name}[^"]+)))""""
+  """"Match Details":\{"match":\{[^\$]+?"properties"[^\]]+?args\\?"+:"*\\*"+({process_command_line}[^,\]]+?)\\?\s*","""
+  """"Match Details":\{"match":\{[^\$]+?"properties"[^\]]+?md5\\?"+:"*\\*"+({hash_md5}[^,\]]+?)\\?\s*","""
+  """"user":"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:SYSTEM|LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\},"source"""
+  """"Match Details":\{"match":\{[^\$]+?"properties"[^\]]+?"user":"+(?:(?:NT AUTHORITY|({domain}[^\\"]+))\\+)?(?:({user}SYSTEM|LOCAL SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))""""
+  """"Match Details":\{"match":\{[^\$]+?"properties"[^\]]+?"parent":\s*\{[^\]]+?file"[^\]]+?"fullpath":"(({parent_process_path}({parent_process_dir}[^"]+)\\+({parent_process_name}[^"]+)))"""
 ]
 ParserVersion = "v1.0.0"
 

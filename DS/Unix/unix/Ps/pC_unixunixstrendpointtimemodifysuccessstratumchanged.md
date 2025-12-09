@@ -15,8 +15,7 @@ unix-events-1 = {
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Fields = [
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
-    """\d\d:\d\d:\d\d(\.\S+)? \d\d\d\d ({host}[^\s]+)""",
-  ]
-  DupFields = [ "host->dest_host" 
+    """\d\d:\d\d:\d\d(\.\S+)? \d\d\d\d ({dest_host}({host}[^\s]+))""",
+  
 }
 ```

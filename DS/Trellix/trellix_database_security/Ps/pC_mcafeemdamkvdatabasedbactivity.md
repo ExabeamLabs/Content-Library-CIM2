@@ -15,13 +15,12 @@ Name = "mcafee-mdam-kv-database-dbactivity"
     """sqlstmt="({db_query}.+?)\s*"+\s*(\w+=|$)""",
     """db_name="({db_name}[^"]+)"""",
     """src_host="({src_host}[^"]+)"""",
-    """db_user="(NULL|(({db_domain}[^"]+)\\+)?({db_user}.+?)\s*)"""",
+    """db_user="(NULL|(({db_domain}[^"]+)\\+)?({account}({db_user}.+?))\s*)"""",
     """schema="(NULL|({db_schema}[^"]+))"""",
     """db_type="({app}[^"]+)"""",
     """sid="({user_sid}[^"]+)"""",
     """accessed_objects="(NULL|({additional_info}[^"]+))""""
   ]
-  DupFields = [ "db_user->account" ]
   ParserVersion = "v1.0.0"
 
 

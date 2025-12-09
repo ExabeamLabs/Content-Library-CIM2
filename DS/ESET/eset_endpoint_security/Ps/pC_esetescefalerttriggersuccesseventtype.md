@@ -12,7 +12,7 @@ Conditions = [
 ]
 Fields = [
   """occured":"({time}[^,\"]+)"""
-  """({host}[^\s]+)\sERAServer\s"""
+  """({dest_host}({host}[^\s]+))\sERAServer\s"""
   """(?:,|\")(threat_name|event)":\"({alert_name}[^",]+)"""
   """(threat_type|protocol)\":\"({alert_type}[^,"]+)"""
   """severity":"({alert_severity}[^,\"]+)"""
@@ -25,9 +25,6 @@ Fields = [
   """source_address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   """target_address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
   """"processname":"({process_path}[^\"]+\\({process_name}[^\"]+))""""
-]
-DupFields = [
-  "host->dest_host"
 ]
 ParserVersion = "v1.0.0"
 

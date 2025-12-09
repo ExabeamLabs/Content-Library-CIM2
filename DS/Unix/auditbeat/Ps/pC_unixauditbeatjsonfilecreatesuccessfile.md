@@ -13,9 +13,8 @@ Name = unix-auditbeat-json-file-create-success-file
     """"owner":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """"path":"({file_path}[^"]+)"""",
     """"size":({bytes}\d+)""",
-    """"action":\["({action}[^"]+)""""
+    """"action":\["({access}({action}[^"]+))""""
   ]
-  DupFields = ["action->access"]
 
 
 }

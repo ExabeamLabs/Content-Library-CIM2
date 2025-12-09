@@ -9,12 +9,11 @@ Name = unix-unix-kv-group-member-add-success-groupadd
   Conditions = [ """][""", """ groupadd """, """ name=""" ]
   Fields = [
     """\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\[\d+\]\[""",
-    """<\d+>\d+ ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d) ({host}[\w.\-]+) groupadd""",
+    """<\d+>\d+ ({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+(\+|\-)\d\d:\d\d) ({dest_host}({host}[\w.\-]+)) groupadd""",
     """group added to ({dest_group}[^:]+)""",
 # new_group_name is removed
 # new_group_id is removed
   ]
-  DupFields = [ "host->dest_host", "new_group_name->group_name" ]
 
 
 }

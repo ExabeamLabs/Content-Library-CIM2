@@ -21,7 +21,7 @@ Fields = [
    """\sduser=(?:|(({domain}[^\\]+)\\+)?({last_name}[^\\,=]+?),\s*({first_name}[^\\,=]+))\s+\w+="""
    """\|Varonis Inc.\|([^|]*\|){3}({access}[^|]+)\|"""
    """\Wact=({access}[^=]+?)\s+(\w+=|$)"""
-   """\scs2=\s*(?:|({alert_name}.+?))(\s+likely|\s+\w+=)"""
+   """\scs2=\s*(?:|({alert_type}({alert_name}.+?)))(\s+likely|\s+\w+=)"""
    """\sfilePath=(?:|({additional_info}.+?))\s+\w+="""
    """\s(fname|filePath)=({file_path}({file_dir}[^=]*?[\\\/]+)?({file_name}[^\\\/=]+?(\.({file_ext}\w+))?))\s+\w+="""
    """\sdhost=(?:|({dest_ip}\d+\.\d+\.\d+\.\d+)|({dest_host}[\w\-.]+))\s+\w+="""
@@ -29,9 +29,6 @@ Fields = [
    """\|Varonis Inc.\|([^\|]+\|){4}({alert_severity}\d+)\|"""
    """SAMAccountName =(SYSTEM|not available|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
  ]
- DupFields = [
-  "alert_name->alert_type"
-]
 SOAR {
   IncidentType = "dlp"
   DupFields = [

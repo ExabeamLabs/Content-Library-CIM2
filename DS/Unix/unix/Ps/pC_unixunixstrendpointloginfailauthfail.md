@@ -8,13 +8,12 @@ Name = unix-unix-str-endpoint-login-fail-authfail
   Conditions = [ """Authentication failed for""", """ from """, """SSHS_LOG: """ ]
   Fields = [
     """({time}\w+\s+\d+ \d\d:\d\d:\d\d \d\d\d\d)""",
-    """\d\d:\d\d:\d\d \d\d\d\d ({host}[^\s]+)""",
+    """\d\d:\d\d:\d\d \d\d\d\d ({dest_host}({host}[^\s]+))""",
     """({event_name}SSHS_LOG)""",
     """Authentication failed for ({user}[\w\.\-\!\#\^\~]{1,40}\$?) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """because of ({failure_reason}[^.]+)\s+"""
   ]
   ParserVersion = "v1.0.0"
-  DupFields = [ "host->dest_host" ]
 
 
 }

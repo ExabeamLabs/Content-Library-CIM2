@@ -16,7 +16,7 @@ Name = armis-a-cef-alert-trigger-success-systempolicyviolation
     """"deviceIds":\[({device_id_list}[^\]]+)""",
     """"device_0_ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"device_0_id":({device_id}\d+)""",
-    """"device_0_name":"({device_name}[^"]+)""",
+    """"device_0_name":"({src_host}({device_name}[^"]+))""",
     """"device_0_category":"({device_category}[^"]+)""",
     """"device_0_riskLevel":({severity}\d+)""",
     """"device_0_model":"({device_model}[^"]+)""",
@@ -31,7 +31,6 @@ Name = armis-a-cef-alert-trigger-success-systempolicyviolation
     """"device_1_sensorName":"({device_1_sensor}[^"]+)""",
     """"device_1_type":"({device_1_type}[^"]+)""",
     ]
-  DupFields = ["device_name->src_host"]
 
 
 }

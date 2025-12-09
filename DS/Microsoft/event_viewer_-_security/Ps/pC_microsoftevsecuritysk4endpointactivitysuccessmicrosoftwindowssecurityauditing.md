@@ -15,8 +15,9 @@ Name = microsoft-evsecurity-sk4-endpoint-activity-success-microsoftwindowssecuri
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.EventType,exa_field_name=result""",
     """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
-    """exa_json_path=$..SubjectUserName,exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
+    """exa_json_path=$..SubjectUserName,exa_regex=^({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
+    """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
     """exa_json_path=$..ProcessId,exa_field_name=process_id""",
     """exa_json_path=$..ProcessName,exa_regex=^({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))$""",
@@ -25,7 +26,6 @@ Name = microsoft-evsecurity-sk4-endpoint-activity-success-microsoftwindowssecuri
     """exa_json_path=$..Category,exa_field_name=event_name""",
     """exa_json_path=$..Message,exa_regex=({event_name}[^.]+)"""
     ]
-    DupFields = ["user->src_user", "domain->src_domain"]
  
 
 }

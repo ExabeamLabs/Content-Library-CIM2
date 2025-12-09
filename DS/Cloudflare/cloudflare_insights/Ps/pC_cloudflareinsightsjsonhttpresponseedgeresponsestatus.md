@@ -11,6 +11,7 @@ Name = cloudflare-insights-json-http-response-edgeresponsestatus
   Fields = [
     """exa_json_path=$.SecurityRuleID,exa_field_name=rule_id"""
     """exa_json_path=$.EdgeResponseStatus,exa_field_name=edge_response_status"""
+    """exa_json_path=$.EdgeResponseStatus,exa_field_name=http_response_code"""
     """exa_json_path=$.ClientRequestHost,exa_field_name=web_domain"""
     """exa_json_path=$.EdgeResponseBytes,exa_field_name=bytes_out"""
     """exa_json_path=$.ClientRequestMethod,exa_field_name=method"""
@@ -18,7 +19,6 @@ Name = cloudflare-insights-json-http-response-edgeresponsestatus
     """exa_json_path=$.EdgeStartTimestamp,exa_field_name=time"""
     """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
-  DupFields = ["edge_response_status->http_response_code"]
 }  
 
 {

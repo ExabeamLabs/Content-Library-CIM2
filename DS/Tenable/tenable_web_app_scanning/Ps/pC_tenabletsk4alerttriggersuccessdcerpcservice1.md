@@ -13,7 +13,7 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
     """"hostname"+:\s*"+({host}[^"]+)""",
     """"+ipv4"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"+severity"+:\s*"+({alert_severity}[^"]+)""",
-    """"name"+:\s*"+({alert_name}[^"]+)""",
+    """"name"+:\s*"+({alert_type}({alert_name}[^"]+))""",
     """"synopsis"+:\s*"+({alert_subject}[^"]+)""",
     """"+description"+:\s*"+({additional_info}[^"]+?)"+""",
     """cvss_base_score"+:\s*({cvss_base_score}[^,]+)""",
@@ -29,6 +29,7 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
     """exa_json_path=$.scan.indexed,exa_field_name=time"""
     """exa_json_path=$.asset.hostname,exa_field_name=host"""
     """exa_json_path=$.plugin.name,exa_field_name=alert_name"""
+    """exa_json_path=$.plugin.name,exa_field_name=alert_type"""
     """exa_json_path=$.plugin.synopsis,exa_field_name=alert_subject"""
     """exa_json_path=$.asset.ipv4,exa_field_name=src_ip"""
     """exa_json_path=$.port.protocol,exa_field_name=protocol"""
@@ -41,7 +42,6 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
     """exa_json_path=$.plugin.see_also,exa_field_name=see_also""",
     """exa_json_path=$.plugin.cve,exa_field_name=cve_id"""
   ]
-  DupFields = ["alert_name->alert_type"]
   ParserVersion = "v1.0.0"
 
 

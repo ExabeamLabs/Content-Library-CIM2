@@ -9,10 +9,9 @@ Name = infoblox-bddi-str-network-notification-success-deltadiskopen
   Conditions = [ """vobd:""", """Non-empty delta disk being open""" ]
   Fields = [      
 	  """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{1,6}Z)\s+({host}[\w.-]+)\s+({additional_info}[^~]+?)\s*$""",
-    """({operation}Non-empty delta disk being open)"""
+    """({event_name}({operation}Non-empty delta disk being open))"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = ["operation->event_name"]
 
 
 }

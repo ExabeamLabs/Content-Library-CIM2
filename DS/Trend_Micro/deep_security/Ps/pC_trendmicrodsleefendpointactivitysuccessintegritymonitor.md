@@ -8,7 +8,7 @@ Name = trendmicro-ds-leef-endpoint-activity-success-integritymonitor
     Conditions = [ """LEEF:""", """|Trend Micro|Deep Security Agent|""", """cat=Integrity Monitor""" ]
     Fields = [
       """\Wcat=({alert_type}.+?)\s*(\w+=|$)""",
-      """\Wname=({alert_name}.+?)\s*(\w+=|$)""",
+      """\Wname=({event_name}({alert_name}.+?))\s*(\w+=|$)""",
       """\Wsev=({alert_severity}\d+)""",
       """\Wdvc(host)?=({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s*(\w+=|$)""",
       """\Wact=({action}.+?)\s*(\w+=|$)""",
@@ -18,7 +18,6 @@ Name = trendmicro-ds-leef-endpoint-activity-success-integritymonitor
       """suser=(N\/A|({user}NT AUTHORITY|[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """sproc=(N\/A|({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?)))\sentityType="""
     ]
-    DupFields = [ "alert_name->event_name" ]
   ParserVersion = "v1.0.0"
   
 

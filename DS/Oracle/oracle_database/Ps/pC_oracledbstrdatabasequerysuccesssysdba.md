@@ -13,10 +13,9 @@ Name = oracle-db-str-database-query-success-sysdba
       """ACTION\s+:\[\d+\]\s+'\s*({db_query}({db_operation}\w+).*?)\s*'([\w\s]+\w+\s*:|$)""",
       """\sCLIENT USER:\[\d+\]\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
       """\sDBID:\[\d+\]\s*'(|({db_name}[^']+))'""",
-      """\sDATABASE USER:\[\d+\]\s*'(\/|({account}[^'\\\/\s]+))'""",
+      """\sDATABASE USER:\[\d+\]\s*'(\/|({db_user}({account}[^'\\\/\s]+)))'""",
       """\sPRIVILEGE :\[\d+\]\s*'({privileges}[^']+)'""",
     ]
-    DupFields = [ "user->user", "account->db_user" ]
  
 
 }

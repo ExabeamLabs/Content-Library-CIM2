@@ -18,7 +18,7 @@ Name = tenable-tie-str-alert-trigger-success-tenablead
     """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){4}"({alert_name}[^"]+)"""
     """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){5}"({alert_severity}[^"]+)"""
     """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){6}"({object_dn}[^"]+)"""
-    """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){9}"({alert_subject}[^"]+)"""
+    """Tenable\.ad\s*\[\S+\]:\s("[^"]*"\s){9}"({result_reason}({alert_subject}[^"]+))"""
     """"AccountCn"="({account_name}[^"]+)"""
     """"GroupCn"="({group_name}[^"]+)"""
     """"SID"="({user_sid}[^"]+)"""
@@ -28,7 +28,6 @@ Name = tenable-tie-str-alert-trigger-success-tenablead
     """"OperatingSystemVersion"="?({os_version}[^"]+)"?"""
     """"AccountList"="({users}[^"]+)"""
   ]
-  DupFields = [ alert_subject->result_reason ]
 
 
 }

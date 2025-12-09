@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-sk4-group-member-list-success-4799
   ParserVersion = v1.0.0
   Conditions = [ """"event_id":4799""", """A security-enabled local group membership was enumerated""" ]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetUserName"+:"+({dest_user}[^"]+)""",
     """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
@@ -28,7 +29,6 @@ json-windows-events-2 = {
     """"keywords"+:\["+({result}[^"]+)""",
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
-    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
     """"TargetUserSid"+:"+({user_sid}[^"]+)""",

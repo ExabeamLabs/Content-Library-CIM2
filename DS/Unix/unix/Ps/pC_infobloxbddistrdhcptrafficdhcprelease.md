@@ -13,7 +13,6 @@ Name = infoblox-bddi-str-dhcp-traffic-dhcprelease
     """({event_name}DHCPRELEASE)"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]
-  DupFields = [ "transaction_id->trans_id"]
 
 
 }

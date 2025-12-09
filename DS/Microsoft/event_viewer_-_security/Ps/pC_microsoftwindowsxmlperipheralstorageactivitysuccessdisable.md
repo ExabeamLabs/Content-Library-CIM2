@@ -21,7 +21,7 @@ Fields = [
 """<Data Name\\*=('|")LocationInformation('|")>\s*(|-|({additional_info}[^\s]*?))\s*<\/Data>"""
 """<Data Name\\*=('|")ClassName('|")>\s*(|-|({device_class}[^\s]*?))<\/Data>"""
 """>({event_code}6419)<\/EventID>"""
-"""({event_name}A request was made to disable a device.)"""
+"""({operation}({event_name}A request was made to disable a device.))"""
 """<Level>({run_level}[^<]+)<"""
 """<Data Name =('|")DeviceId('|")>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)""""
 ]

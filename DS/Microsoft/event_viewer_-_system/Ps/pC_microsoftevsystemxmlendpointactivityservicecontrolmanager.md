@@ -14,6 +14,7 @@ Name = microsoft-evsystem-xml-endpoint-activity-servicecontrolmanager
     """<Computer>({host}[\w\-.]+?)<""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
     """<Computer>({dest_host}[\w\-.]+)</Computer>"""
+    """<Message>({operation}({event_name}[^.<]+))"""
   ]
 
 s-xml-events = {

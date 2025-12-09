@@ -13,13 +13,12 @@ Name = unix-unix-kv-endpoint-notification-proctitle
     """msg=audit\(({time}\d{10})""",
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+\w+:""",
 # node is removed
-    """type=({event_category}[^=]+?)\s+(\w+=|$)""",
+    """type=({operation_type}({event_category}[^=]+?))\s+(\w+=|$)""",
     """msg=({event_name}[^=]+?)\s+(\w+=|$)""",
     """type=({event_name}PROCTITLE)""",
     """({host}[\w\-.]+)\s*vcsa-audit"""
 # proctitle is removed
   ]
-  DupFields = ["event_category->operation_type"]
 
 
 }

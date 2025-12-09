@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-xml-group-list-4798-1
     """<Data Name(\\)?=('|")TargetUserName('|")>(-|({dest_user}[^<]+))""",
     """<Data Name(\\)?=('|")TargetDomainName('|")>\s*(-|({dest_domain}[^\s]+?))\s*</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*""",
-    """<Data Name(\\)?=('|")CallerProcessName('|")>({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+))<\/Data>"""
+    """<Data Name(\\)?=('|")CallerProcessName('|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+)))<\/Data>"""
     """<Data Name(\\)?=('|")CallerProcessId('|")>({process_id}[^<]+)"""
   ]
 

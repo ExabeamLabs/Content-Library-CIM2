@@ -10,12 +10,11 @@ Name = infoblox-bddi-kv-dns-record-modify-httpd
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Modified HostRecord)""",
+    """({event_name}({operation}Modified HostRecord))""",
 # name_server is removed
 # dns_view is removed
 # host_record is removed
   ]
-  DupFields = ["operation->event_name"]
 
 
 }

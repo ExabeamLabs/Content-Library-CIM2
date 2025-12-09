@@ -14,6 +14,7 @@ Fields = ${PaloAltoParsersTemplates.pan-csv-threat.Fields}[
   """,THREAT,spyware,(("[^\s]+"|[^,]*),){64}(|""|({threat_category}[^,]+)),"""
   """,THREAT,spyware([^,]*,){27}(|(\\?"+(({malware_url}[^<>".,]+(?:\.[^<>\/\s,]+)?\/[^<>]*?)|({malware_file_name}[^<>,]+?)|[^,]*?)[\\\/]*"+)),(|(\d+|({alert_name}[^,"]+?))\(({alert_id}\d+)?\)),(|({category}[^,]*)),(|({alert_severity}[^,]+)),("[^"]*",|[^,]*,){34}(|({threat_category}[^,]+)),""",
   """,THREAT,spyware,([^,]*,){26}("[^"]+")?,([^,]*,){27}({device_name}({host}[^",]+))"""
+  """,({threat_id}[^,]+)?,({categories}({category}[^,]+))?,({severity}({alert_severity}(?i)(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}({src_location}[^,]*?[a-zA-Z][^,]*?)?,({dest_country}[^,]*?[a-zA-Z][^,]*?)?,(([^,]*,){35}"+\s*({=categories}({=category}[^,\n"]+)\s*[^"]*)"+,)?"""
 ]
 SOAR {
   IncidentType = "malware"

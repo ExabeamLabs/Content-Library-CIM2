@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-sk4-group-create-success-4727
   ParserVersion = v1.0.0
   Conditions = [""""event_id":4727""", """Microsoft-Windows-Security-Auditing""", """A security-enabled global group was created"""]
   Fields = ${DLWindowsParsersTemplates.json-windows-events-2.Fields}[
+    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetUserName"+:"+({dest_user}[^"]+)""",
     """"user"+:"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"(?:winlog\.)?computer_name"+:"+({src_host}[^"]+)""",
@@ -29,7 +30,6 @@ json-windows-events-2 = {
     """"keywords"+:\["+({result}[^"]+)""",
     """"pid"+:({process_id}\d+)""",
     """thread"+:[^=]+?"+id"+:({thread_id}\d+)""",
-    """"TargetDomainName"+:"+({account_domain}[^"]+)""",
     """"TargetLogonId"+:"+({login_id}[^"]+)""",
     """"LogonType"+:"+({login_type}\d+)""",
     """"TargetUserSid"+:"+({user_sid}[^"]+)""",

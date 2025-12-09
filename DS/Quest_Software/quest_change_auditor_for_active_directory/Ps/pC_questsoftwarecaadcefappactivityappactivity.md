@@ -19,10 +19,9 @@ Name = questsoftware-caad-cef-app-activity-appactivity
     """userMail=({email_address}[^@=]+@[^\.]+[^\s]+)""",
     """suid=({user_sid}[^\s=])+""",
     """suser=(({domain}[^\\]+)\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s\w+=""",
-    """event=({event_name}[^=]+?)\s\w+=""",
+    """event=({operation}({event_name}[^=]+?))\s\w+=""",
     """msg=({additional_info}[^=]+?)\s*\w+="""
   ]
-  DupFields = [ "event_name->operation" ]
   ParserVersion = "v1.0.0"
 
 

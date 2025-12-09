@@ -1,0 +1,19 @@
+#### Parser Content
+```Java
+{
+Name = workday-wd-json-app-authentication-activesession
+    Vendor = Workday
+    Product = Workday
+    ParserVersion = v1.0.0
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+    Conditions = [ """"Active_Session":"""", """"Authentication_Type":""", """"Signon_Time":""", """"Signon_Worker":""" ]
+    Fields = [
+      """"Authentication_Type":"\s*({auth_type}[^"]+)"""
+      """"IP":"\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+      """"Signon_Time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d-\d\d:\d\d)""""
+      """"Signon_Worker":"\s*({employee_id}[^\/"]+?)\s*\/\s*({full_name}[^,"]+)""""
+    ]
+
+
+}
+```

@@ -7,9 +7,11 @@ Name = servicenow-s-json-app-activity-success-syscreated
   ParserVersion = v1.0.0
   ExtractionType = json
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  incident_creation_timeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions= [ """"sys_created_on":""", """"sys_created_by":""", """"work_notes":""", """"display_value":""", """"upon_reject":""" ]
   Fields =[
   	"""exa_json_path=$.sys_created_on.value,exa_field_name=time""",
+    """exa_json_path=$.sys_created_on.value,exa_field_name=incident_creation_time""",
   	"""exa_json_path=$.description.value,exa_field_name=additional_info""",
   	"""exa_json_path=$.short_description.value,exa_field_name=event_name""",
   	"""exa_json_path=$.category.value,exa_field_name=category""",
@@ -25,7 +27,6 @@ Name = servicenow-s-json-app-activity-success-syscreated
     """exa_json_path=$.sys_updated_by.display_value,exa_field_name=operator_name"""
     """exa_json_path=$.subcategory.display_value,exa_field_name=sub_category"""
   ]
-  DupFields = ["time->incident_creation_time"]
 
 
 }

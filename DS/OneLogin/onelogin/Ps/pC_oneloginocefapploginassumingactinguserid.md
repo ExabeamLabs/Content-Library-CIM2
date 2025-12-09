@@ -20,11 +20,10 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"error_description":\s*"\s*({additional_info}([^\\"]|(\\\\)*\\"|\\\\)+?)\s*"""",
     """"event_type_name":"({operation}[^"]+)"""",
     """"event_type_description":"({additional_info}[^"]+)"""",
-    """"user_id":({user_id}\d+)""",
-    """suser=(({user_id}\d+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """"user_id":({account}({user_id}\d+))""",
+    """suser=(({account}({user_id}\d+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
     """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
-  DupFields = ["user_id->account"]
 
 
 }

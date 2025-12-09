@@ -8,6 +8,7 @@ Name = microsoft-azuremon-sk4-http-request-success-azurefirewallapplicationrule
     """"category":"({category}AzureFirewallApplicationRule)""",
     """"msg":"HTTPS?\s+request from\s({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\s*to\s*(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({web_domain}[\w\-\.]+))(:({dest_port}\d+))?""",
     """\sAction:\s*({action}Deny)"""
+    """\sUrl:\s*({url}(https?:\/+)?({web_domain}[^"\\\/\s]+)[^"\s]*)\.(\s\w+:|\s*$)"""
    ]
 
 

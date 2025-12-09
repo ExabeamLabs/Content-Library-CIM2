@@ -19,6 +19,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-scanningyourcomputer
 		"""({alert_name}Somebody is scanning your computer)"""
 		""""({additional_info}SymantecServer[^"]+)"""
 		"""({alert_type}Somebody is scanning your computer)"""
+		"""(<({alert_severity}({priority}\d+))>)\w+\s+\d+\s+\d+:\d+:\d+\s*\w+\s+SymantecServer:"""
   ]
   SOAR {
     IncidentType = "generic"

@@ -9,6 +9,7 @@ Name = tenable-tcs-json-app-notification-success-ermetic
   Conditions = [ """"accountName":""", """"accountId":""", """"findingType":""", """"remediation":""", """"source":""", """"Ermetic""" ]
   Fields = [
     """exa_json_path=$.source,exa_field_name=log_source""",
+    """exa_json_path=$.source,exa_field_name=app""",
     """exa_json_path=$.accountId,exa_field_name=account_id""",
     """exa_json_path=$.accountName,exa_field_name=account_name""",
     """exa_json_path=$.category,exa_field_name=category""",
@@ -22,7 +23,7 @@ Name = tenable-tcs-json-app-notification-success-ermetic
     """exa_json_path=$.type,exa_field_name=event_subtype"""
     """exa_json_path=$.title,exa_field_name=event_name"""
     """exa_json_path=$.labels,exa_field_name=additional_info""",
-    """"source":\s*"({log_source}[^"]+)"""", 
+    """"source":\s*"({app}({log_source}[^"]+))"""", 
 		""""accountName":\s*"({account_name}[^"]+)"""", 
 		""""accountId":\s*"({account_id}[^"]+)"""", 
 		""""description":\s*"({description}[^"]+)"""", 
@@ -34,7 +35,6 @@ Name = tenable-tcs-json-app-notification-success-ermetic
 		""""type":\s*"({event_subtype}[^"]+)"""",
 		""""labels":\s*\[\s*({additional_info}[^\]]+?)\s*\]"""
   ]
-  DupFields = ["log_source->app"]
   ParserVersion = "v1.0.0"
 
 

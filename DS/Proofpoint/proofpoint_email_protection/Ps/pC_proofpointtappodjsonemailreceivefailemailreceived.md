@@ -27,7 +27,7 @@ Fields = [
 """filter":[^\n]*?"disposition":"({result}[^"]+)""""
 """routeDirection":"({direction}[^"]+)""""
 """"message-id":\["<({message_id}[^">]+?)\s*>""""
-"""msgParts":[^\n]*?"detectedName":"({email_attachment}[^"]+)""""
+"""msgParts":[^\n]*?"detectedName":"({email_attachments}({email_attachment}[^"]+))""""
 """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
 """msgParts":[^\n]*?"sizeDecodedBytes":({bytes}\d+),"""
 """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
@@ -47,7 +47,7 @@ Fields = [
 """exa_json_path=$.filter.disposition,exa_field_name=result""",
 """exa_json_path=$.filter.routeDirection,exa_field_name=direction""",
 """exa_regex="message-id":\["<({message_id}[^">]+?)\s*>"""",
-"""exa_regex=msgParts":[^\n]*?"detectedName":"({email_attachment}[^"]+)""""
+"""exa_regex=msgParts":[^\n]*?"detectedName":"({email_attachments}({email_attachment}[^"]+))""""
 """exa_json_path=$.msgParts[1:].sizeDecodedBytes,exa_regex=({bytes}\d+),""",
 """exa_regex=msgParts":[^\n]*?"sizeDecodedBytes":({bytes}\d+),"""
 """exa_json_path=$.connection.host,exa_field_name=host""",
@@ -56,9 +56,6 @@ Fields = [
 """exa_regex="return-path":\["(<>|({return_path}[^"]+))""""
 """exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
 
-]
-DupFields = [
-  "email_attachment->email_attachments"
 ]
 ParserVersion = "v1.0.0"
 

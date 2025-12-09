@@ -14,16 +14,13 @@ Name = "egnyte-e-cef-app-login-success-eventlogin"
   Fields = [
     """\"time\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)Z\""""
     """requestClientApplication=({app}[^=]+?)\s\w+="""
-    """dproc=({dproc}[^=]+)\s\w+="""
+    """dproc=({category}({dproc}[^=]+))\s\w+="""
     """ipAddress\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """ip_address\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """destinationServiceName =({event_subtype}[^=]+)\s\w+="""
     """([^\|]*\|){5}({operation}[^\|]+)\|"""
     """\"username\":\"({full_name}[^\(]+)\s\(\s*({email_address}[^@"]+@({email_domain}[^"\s\)]+))\s*\)\""""
     """\"event\":\"({event_name}[^\"]+)\""""
-  ]
-  DupFields = [
-    "dproc->category"
   ]
   ParserVersion = "v1.0.0"
 

@@ -16,6 +16,7 @@ Name = wiz-w-json-alert-trigger-success-issue
          """exa_json_path=$.control.description,exa_field_name=additional_info""",
          """exa_json_path=$.trigger.updatedFields,exa_field_name=additional_info""",     
          """exa_json_path=$.trigger.ruleName,exa_field_name=rule""",
+         """exa_json_path=$.trigger.ruleName,exa_field_name=alert_type""",
          """exa_json_path=$.trigger.ruleId,exa_field_name=rule_id""",
          """exa_json_path=$.resource.subscriptionId,exa_field_name=subscription_id"""
          """exa_json_path=$.resource.id,exa_field_name=resource_id"""
@@ -26,7 +27,6 @@ Name = wiz-w-json-alert-trigger-success-issue
          """exa_json_path=$.resource.subscriptionName,exa_field_name=resource_name"""
          """exa_json_path=$.resource.subscriptionId,exa_field_name=aws_account"""
   ]
-  DupFields = [ "rule->alert_type" ]
   ParserVersion = v1.0.0
 
 

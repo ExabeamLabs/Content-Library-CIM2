@@ -42,7 +42,7 @@ kv-cylance-optics-events = {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s\S+ CylanceOPTICS""",
-    """Event Type:\s*({event_category}[^,]+)""",
+    """Event Type:\s*({alert_type}({event_category}[^,]+))""",
     """Event Name: ({event_name}[^,]+)""",
     """Device Name: ({src_host}[^,]+)""",
     """Zone Names: \(({zone}[^\),]+)""",
@@ -64,9 +64,6 @@ kv-cylance-optics-events = {
     """Instigating Process Owner:\s*({process_owner}[^,]+)"""
     """Target File Path:\s({dest_path}[^,]+)"""
     """Description:\s*({alert_name}[^,]+),"""
-  ]
-      DupFields = [ "event_category->alert_type" ]
-
-
+  
 }
 ```

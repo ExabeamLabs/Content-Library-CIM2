@@ -9,11 +9,10 @@ Name = infoblox-bddi-str-dns-record-delete-success-cnamerecorddeleted
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Deleted CnameRecord)""",
+    """({event_name}({operation}Deleted CnameRecord))""",
 # name_server is removed
 # dns_view is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 

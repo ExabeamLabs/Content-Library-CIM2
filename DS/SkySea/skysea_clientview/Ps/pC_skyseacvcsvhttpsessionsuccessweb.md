@@ -11,9 +11,8 @@ Name = "skysea-cv-csv-http-session-success-web"
     """({time}\d\d\d\d\/\d\d\/\d\d \d\d:\d\d:\d\d)""",
     """,Webアクセス,[^,]*,[^,]*,({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?({web_domain}[^\\\/\s:,"]+)?(:({dest_port}\d+))?({uri_path}\/[^,]*)?)""",
     """Web書き込み,([^,]*,){23}({uri_query}[^,]*),""",
-    """({action}Web書き込み)""",
+    """({method}({action}Web書き込み))""",
   ]
-  DupFields = ["action->method"]
   ParserVersion = "v1.0.0"
 
 

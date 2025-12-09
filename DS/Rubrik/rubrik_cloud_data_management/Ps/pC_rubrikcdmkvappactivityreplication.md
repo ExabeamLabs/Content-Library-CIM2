@@ -16,7 +16,7 @@ rubrik-system-info = {
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-      """nodeId="({host}[^"]+)"""",
+      """nodeId="({dest_host}({host}[^"]+))"""",
       """nodeIpAddress="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """eventName ="({event_name}[^"]+)"""",
       """status="({result}[^"]+)"""",
@@ -24,7 +24,6 @@ rubrik-system-info = {
       """objectType="({object_type}[^"]+)"""",
       """objectId="({object_id}[^"]+)"""",
       """eventSeverity="({alert_severity}[^"]+)"""",
-    ]
-    DupFields = [ "host->dest_host"
+    
 }
 ```

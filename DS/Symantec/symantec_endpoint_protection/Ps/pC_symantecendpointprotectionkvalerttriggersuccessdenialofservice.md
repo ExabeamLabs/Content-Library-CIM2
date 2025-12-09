@@ -22,6 +22,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-denialofservice
 		"""Domain( Name)?:\s*({domain}[^,\s]+),"""
 		"""SymantecServer:\s*.*?({alert_name}Denial of Service[^:]+?)\s*Description:"""
 		"""\W\s+Description:\s*({additional_info}[^\.:]+)"""
+		"""(<({alert_severity}({priority}\d+))>)\w+\s+\d+\s+\d+:\d+:\d+\s*\w+\s+SymantecServer:"""
 
 		"""SymantecServer:\s*.*?({alert_type}Denial of Service[^:]+?)\s*Description:"""
   ]

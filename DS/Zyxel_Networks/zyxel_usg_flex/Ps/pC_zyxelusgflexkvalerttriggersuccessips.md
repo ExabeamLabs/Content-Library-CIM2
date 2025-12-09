@@ -5,11 +5,12 @@ Name = zyxel-usgflex-kv-alert-trigger-success-ips
   ParserVersion = "v1.0.0"
   Conditions = [ """ cat="IPS"""", """ msg="""", """ class="""" ]
   Fields = ${ZyxelParsersTemplates.zyxel-network-events.Fields}[
+    """\smsg="({alert_subject}[^"]+)"""
+    """\scat="({alert_type}[^"]+)""",
     """\sclass="({alert_name}[^"]+)"""
     """\sact="({action}[^"]+)"""
     """\sSeverity:({alert_severity}\w+)"""
   ]
-  DupFields = ["category->alert_type", "event_name->alert_subject"]
 
 zyxel-network-events = {
     Vendor = "Zyxel Networks"
@@ -24,6 +25,8 @@ zyxel-network-events = {
       """\sdst="({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
       """\sdevid="({devid}[^\s]+)"""",
       """\scat="({category}[^"]+)""",
+      """sent=({bytes_out}\d+)"""
+      """rcvd=({bytes_in}\d+)"""
     
 }
 ```

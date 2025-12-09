@@ -6,6 +6,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-1
   Product = Event Viewer - Security
   Conditions = [ """<EventID>4670<""", """Permissions on an object were changed""", """<Data Name\=""", """ObjectServer""" ]
   Fields = ${DLWindowsParsersTemplates.windows-events-3-dl.Fields}[
+    """<Data Name\\=('|")TargetDomainName('|")>({dest_domain}[^<]+)<""",
     """<Data Name\\=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<>]+)))<""",
     """<Data Name\\=('|")TargetUserName('|")>(SYSTEM|({dest_user}[^<]+))<""",
     """<Data Name\\=('|")SubjectUserName('|")>(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
@@ -32,7 +33,6 @@ windows-events-3-dl = {
     """<Data Name\\=('|")(Caller)?ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """<Execution ProcessID\\=('|")({process_id}[^'"]+)""",
     """<EventID>({event_code}\d+)""",
-    """<Data Name\\=('|")TargetDomainName('|")>({dest_domain}[^<]+)<""",
     """<Data Name\\=('|")LogonType('|")>({login_type}\d+)<""",
     """<Data Name\\=('|")TargetUserSid('|")>({dest_user_sid}[^<]+)<""",
     """<Data Name\\=('|")TargetLogonId('|")>({dest_login_id}[^<]+)<"""

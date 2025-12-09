@@ -16,10 +16,10 @@ Name = mimecast-seg-json-alert-trigger-success-policy
     """exa_json_path=$.to..emailAddress,exa_field_name=dest_email_address"""
     """exa_json_path=$.subject,exa_field_name=email_subject"""
     """exa_json_path=$.policy,exa_field_name=alert_name"""
+    """exa_json_path=$.policy,exa_field_name=alert_type"""
     """exa_json_path=$.route,exa_field_name=direction"""
     """exa_json_path=$.detectionLevel,exa_field_name=alert_severity"""
   ]
-  DupFields = ["alert_name->alert_type"]
 
 
 }

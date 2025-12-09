@@ -10,14 +10,14 @@ Name = microsoft-evsecurity-mix-process-create-success-created
 """A new process has been created"""
   ]
   Fields = [
-    """"forwarder":"({host}[^"]+)""",
+    """"forwarder":"({src_host}({host}[^"]+))""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))""",
     """({event_name}A new process has been created)""",
     """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-    """(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(\s|\\[nrt])*ComputerName =({host}[\w\-.]+)""",
-    """Computer(Name|_name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|<\/Computer>|$)""",
-    """({host}[\w\-.]+)\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
+    """(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)(\s|\\[nrt])*ComputerName =({src_host}({host}[\w\-.]+))""",
+    """Computer(Name|_name)?\s*\\*"?(=|:|>)\s*"*({src_host}({host}[\w\.-]+))(\s|,|"|<\/Computer>|$)""",
+    """({src_host}({host}[\w\-.]+))\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
     """({event_code}4688)""",
     """Process Name(:|=)\s*({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))[\s;]*Token Elevation Type(:|=)""",
     """Process Name(:|=)\s*({path}.+?)[\s;]*Token Elevation Type(:|=)""",
@@ -29,8 +29,8 @@ Name = microsoft-evsecurity-mix-process-create-success-created
     """Creator Subject(:|=).+?Account Domain(:|=)\s*(-|({domain}[^\s]+?))[\s;]*Logon ID(:|=)""",
     """Creator Subject(:|=).+?Logon ID(:|=)(\\[nrt]|\s)*({login_id}[^\s;\\]+)(\\[nrt]|\s)*""",
     """New Process Name(:|=)(\\[nrt]|\s)*({process_path}({process_dir}[^:]+:[^";:\n]+)[\\\/]+?({process_name}[^\s\\:;]+))(\\[nrt]|\s)*""",
-    """New Process ID(:|=)\s*({process_guid}[^\s;]+)(\s|;)""",
-    """Creator Process ID(:|=)(\\[nrt]|\s)*({parent_process_guid}[^\s\\;]+)(\\[nrt]|\s)*(\s|;)""",
+    """New Process ID(:|=)\s*({process_id}({process_guid}[^\s;]+))(\s|;)""",
+    """Creator Process ID(:|=)(\\[nrt]|\s)*({parent_process_id}({parent_process_guid}[^\s\\;]+))(\\[nrt]|\s)*(\s|;)""",
     """Creator Process Name(:|=)\s*({parent_process}([^:]+:[^";:\n]+)[\\\/]+?({parent_process_name}[^\\\/";]+?))[\s;]*Process""",
     """Creator Process Name(:|=)\s*(((?:[^";]+)?[\\\/])?({parent_process_name}[^\\\/";]+?))[\s;]*Process""",
     """Process Command Line(:|=)\s{0,2}"?(|({process_command_line}.+?))(\s*Token Elevation Type indicates|;|\s+$)""",
@@ -42,7 +42,7 @@ Name = microsoft-evsecurity-mix-process-create-success-created
     """"ProcessId":"({process_id}[^"]+)""",
     """"SubjectAccount":"(({domain}[^\\\s"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"SubjectLogonId":"({login_id}[^"]+)""",
-    """"NewProcessId":"({process_guid}[^"]+)""",
+    """"NewProcessId":"({process_id}({process_guid}[^"]+))""",
     """Command\s*Line(:|=)\s*(?:config)\s+({service_name}\S+)""",
     """binPath=\s*({service_command_line}(?:\"(.+)\")|(?:(\S+)))\s*""",
     """Command\s*Line(:|=).*\s+({parameter_sct}\S+\.sct)""",
@@ -57,7 +57,6 @@ Name = microsoft-evsecurity-mix-process-create-success-created
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
     """"log_level":"({run_level}[^"]+)\s*""""
   ]
-  DupFields = [ "process_guid->process_id" , "host->src_host", "parent_process_guid->parent_process_id" ]
 
 
 }

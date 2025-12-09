@@ -8,7 +8,7 @@ Name = dg-ep-kv-app-kv-logout-success-utctime
   Conditions = [ """Operation="24"""" , """Agent_UTC_Time=""" ]
   Fields = [
     """(Agent_UTC_Time|Server_UTC_Timestamp)="({time}\d+\/\d+\/\d\d\d\d \d+:\d+:\d+ (am|AM|pm|PM))"""",
-    """Computer_Name ="([^\/"]+\/)?({host}[^"]+)"""",
+    """Computer_Name ="([^\/"]+\/)?({dest_host}({host}[^"]+))"""",
     """User_Name ="(?:|(({domain}[^"\/\\]+)[\/\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """Domain_Name ="(?:|({domain}[^"]+))"""",
     """Source_Directory="(?:|({src_file_dir}[^"]+))"""",
@@ -23,7 +23,6 @@ Name = dg-ep-kv-app-kv-logout-success-utctime
     """Operation((_ID)?)=""(?:|({event_code}[^"]+))"""",
      """Operation_ID="({event_code}[^"]+)""""
   ]
-  DupFields = [ "host->dest_host" ]
   ParserVersion = "v1.0.0"
 
 

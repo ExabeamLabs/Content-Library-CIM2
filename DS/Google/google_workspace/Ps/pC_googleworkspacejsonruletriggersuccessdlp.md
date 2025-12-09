@@ -13,7 +13,7 @@ Name = google-workspace-json-rule-trigger-success-dlp
     """"resource_owner_email"[^}]+?"value":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """suser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+""",
     """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"data_source"[^}]+?"value":"({rule_source}[^"]+)"""",
+    """"data_source"[^}]+?"value":"({app}({rule_source}[^"]+))"""",
     """"resource_id"[^}]+?"value":"({resource_id}[^"]+)"""",
     """"rule_name"[^}]+?"value":"({rule}[^"]+)"""",
     """"rule_type"[^}]+?"value":"({rule_type}[^"]+)"""",
@@ -26,7 +26,6 @@ Name = google-workspace-json-rule-trigger-success-dlp
     """"kind":"({operation}[^"]+)"""",
     """flexString1=({action}.+?)\s\w+="""
   ]
-  DupFields = [ "rule_source->app" ]
 
 
 }

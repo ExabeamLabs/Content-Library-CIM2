@@ -14,7 +14,7 @@ Fields = [
 """CEF:([^\|]*\|){4}({rule_id}[^\|]+)\|({alert_name}[^\|]+)\|({alert_severity}[^\|]+)"""
 """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s"""
 """act="({action}[^"]+)"""
-"""cat="({operation}[^"]+)"""
+"""cat="({alert_type}({operation}[^"]+))"""
 """spt=({src_port}\d+)"""
 """dpt=({dest_port}\d+)"""
 """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -22,7 +22,6 @@ Fields = [
 """fqdn=(((?i)na\s)|({dns_query}[\w\-.]+))"""
 """fqdn=((?i)NA|({web_domain}[^\s]+))\s*"""
 ]
-DupFields = ["operation->alert_type"]
 ParserVersion = "v1.0.0"
 
 

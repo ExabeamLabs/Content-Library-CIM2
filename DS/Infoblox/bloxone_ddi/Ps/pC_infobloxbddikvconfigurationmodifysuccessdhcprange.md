@@ -9,12 +9,11 @@ Name = infoblox-bddi-kv-configuration-modify-success-dhcprange
   Fields = [
     """\d\d:\d\d:\d\d\s({host}\S+)\s""",
     """: ({time}\d{4}-\d\d-\d\d\s\d\d:\d\d:\d\d\.\d\d\d)""",
-    """({operation}Modified DhcpRange)""",
+    """({event_name}({operation}Modified DhcpRange))""",
 # dhcp_range is removed
 # new_start_address is removed
 # new_end_address is removed
   ]
-  DupFields = ["operation->event_name"]
   ParserVersion = "v1.0.0"
 
 
