@@ -15,7 +15,7 @@ Name = cisco-asa-str-dns-response-fail-746016
     """({event_code}746016)""",
     """({event_name}DNS lookup) for ({dns_response}({dns_query}.+?)\sfailed)""",
     """,\s*reason\s*:\s*(UNKNOWN|({result_reason}.+?))\s*($|\w+=|'|")"""
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-"""
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-"""
     """,\s*reason\s*:\s*(UNKNOWN|({failure_reason}.+?))\s*($|\w+=|'|")"""
   ]
 

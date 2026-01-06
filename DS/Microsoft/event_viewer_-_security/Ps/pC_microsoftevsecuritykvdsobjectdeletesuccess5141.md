@@ -10,7 +10,7 @@ Fields = [
   """({event_name}A directory service object was deleted)""",
   """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+""",
   """({event_code}5141)""",
-  """\s(?i)(success|failure|audit)\s+\w+\s+({host}[\w\-.]+)""",
+  """\s(success|failure|audit)\s+\w+\s+({host}[\w\-.]+)""",
   """Subject:.+?Account Name:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain:\s+({domain}.+?)\s+Logon ID:\s+({login_id}[^\s]+)""",
   """Object:.+?Class:\s+({object_type}.+?)\s+Operation:""",
   """Object:\s+DN:\s+({ds_object_dn}.+?)\s+GUID:""",
@@ -22,7 +22,7 @@ Fields = [
   """User Account Control:\s*.+?\-\s({status_msg}[^\s]+)\s""",
   """Changed Attributes:\s*(|({attribute}[^\s]+))\s+SAM Account Name""",
   """Directory Service:\s*Name(:|=)\s*({ds_name}[^\s]+)\s*.*?Type(:|=)\s*({ds_type}.*?Services)"""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
 ]
 ParserVersion = "v1.0.0"
 

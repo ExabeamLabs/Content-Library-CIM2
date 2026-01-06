@@ -36,7 +36,7 @@ Name = "microsoft-365defender-json-alert-trigger-success-publish"
     """"verdict\\*":\\*"({result}[^"\\]+)"""
     """"tenantId":"({tenant_id}[^"]+)"""",
     """"ServiceSource":"({service_name}[^"]+)"""",
-    """"Categories":"\[({categories}[^\]]+)"""",
+    """"Categories":"\[\\"({categories}[^\\]+)""",
     """"AccountDomain":"({domain}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"

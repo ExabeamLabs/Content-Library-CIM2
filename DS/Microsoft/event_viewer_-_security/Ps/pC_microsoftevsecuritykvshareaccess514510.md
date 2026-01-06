@@ -13,11 +13,11 @@ Conditions = [
 Fields = [
   """({event_name}A network share object was checked to see whether client can be granted desired access)"""
   """({event_code}5145)"""
-  """({host}[\w\-.]+)\s+(?i)((audit|success)( |_)(success|audit))""",
-  """(::ffff:)?(Unknown|({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+))))\s+(?i)((audit|success)( |_)(success|audit))"""
+  """({host}[\w\-.]+)\s+((audit|success)( |_)(success|audit))""",
+  """(::ffff:)?(Unknown|({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+))))\s+((audit|success)( |_)(success|audit))"""
   """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
   """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)"""
-  """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
+  """\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
   """Logon ID:\s*((?-i)\\+[rnt])*({login_id}\S+?)((?-i)\\+[rnt])*\s*Network Information:"""
   """Account Name:\s*((?-i)\\+[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:"""
   """Account Domain:\s*((?-i)\\+[rnt])*({domain}\S+?)((?-i)\\+[rnt])*\s*Logon ID:"""
@@ -32,7 +32,7 @@ Fields = [
   """Accesses:.*({access}SYNCHRONIZE|Execute|Traverse|Read|READ|WRITE_DAC|WRITE_OWNER|WriteAttributes|WriteEA|WriteData|AppendData|delete|Delete).*Access Check Results:"""
   """Access Check Results:\s*({result}-)\s*"""
   """Access Check Results:.*({result}Granted|Denied)\s+by"""
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+  """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   """Source Port(=|:)\s*({src_port}\d+)"""
 ]
 ParserVersion = "v1.0.0"

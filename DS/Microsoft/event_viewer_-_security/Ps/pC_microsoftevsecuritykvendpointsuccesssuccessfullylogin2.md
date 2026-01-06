@@ -11,10 +11,10 @@ Conditions = [
   """TimeGenerated:"""
 ]
 Fields = [
-  """(?i)<\d+>\s*\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({dest_host}({host}[\w.\-]+)))\s"""
+  """<\d+>\s*\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({dest_host}({host}[\w.\-]+)))\s"""
   """({event_name}An account was successfully logged on)"""
   """TimeGenerated:\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-  """(?i)(((audit|success)( |_)(success|audit)))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({dest_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
+  """(((audit|success)( |_)(success|audit)))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({dest_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
   """({event_code}4624)"""
   """Logon Type(:|=)\s*({login_type}\d+)"""
   """New Logon[\s\S]*?Account Name(:|=)\s*(-|SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\s;]*Account Domain(:|=)"""

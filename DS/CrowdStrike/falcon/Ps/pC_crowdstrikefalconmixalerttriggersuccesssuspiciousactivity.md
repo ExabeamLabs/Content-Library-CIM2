@@ -36,7 +36,7 @@ Fields = [
 """"ProcessId":({process_guid}\d+)"""
 """"ParentProcessId":({parent_process_guid}\d+)"""
 """"FalconHostLink":\s*"({additional_info}({falcon_host_link}[^"]+))""""
-""""((?i)SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,"""
+""""(SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,"""
 """"GrandparentImageFileName\\*":\\*"({grandparent_image_filename}[^,]+?)\\*"+"""
 """"GrandparentCommandLine\\*"+:\s*\\*"+({grandparent_command_line}[^,]+?)\\*"+,"""
 """"ParentImageFileName\\*":\s*\\*"({parent_image_filename}[^,]+?)\\*"+,"""

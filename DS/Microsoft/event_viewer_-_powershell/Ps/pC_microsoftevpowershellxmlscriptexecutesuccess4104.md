@@ -6,7 +6,7 @@ Name = microsoft-evpowershell-xml-script-execute-success-4104
   Product = Event Viewer - PowerShell
   ParserVersion = v1.0.0
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ" ]
   Conditions = [
 """<EventID>4104<""",
 """ScriptBlockText"""

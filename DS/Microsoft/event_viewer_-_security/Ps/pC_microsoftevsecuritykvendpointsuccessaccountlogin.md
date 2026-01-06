@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-  """(?i)<\d+>\s*\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({dest_host}({host}[\w.\-]+)))\s"""
+  """<\d+>\s*\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({dest_host}({host}[\w.\-]+)))\s"""
   """({event_name}An account was successfully logged on)"""
   """({event_code}4624)"""
   """Logon Type=\s*({login_type}\d+)"""

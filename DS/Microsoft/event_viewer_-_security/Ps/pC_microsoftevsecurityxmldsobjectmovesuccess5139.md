@@ -11,7 +11,7 @@ Fields = [
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
   """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z('|")/>""",
   """<Data Name\\*=('|")SubjectLogonId('|")>\s*({login_id}.+?)\s*</Data>""",
-  """<Data Name\\*=('|")SubjectUserName('|")>\s*((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*</Data>""",
+  """<Data Name\\*=('|")SubjectUserName('|")>\s*((LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*</Data>""",
   """<Data Name\\*=('|")SubjectDomainName('|")>\s*({src_domain}({domain}[^\s]+?))\s*</Data>""",
   """<Data Name\\*=('|")SubjectUserSid('|")>\s*({user_sid}[^\s]+?)\s*</Data>""",
   """<Data Name\\*=('|")ObjectClass('|")>\s*({object_type}.+?)\s*</Data>""",

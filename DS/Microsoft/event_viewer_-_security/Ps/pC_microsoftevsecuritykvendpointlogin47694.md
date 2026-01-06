@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-4
   Fields = [
     """({event_name}A Kerberos service ticket was requested)""",
     """({time}\d\d\d\d-\d\d-\d\d(\s|T)\d\d:\d\d:\d\d)"""
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """<Computer>({host}[^<]+)</Computer>""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s|;)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4769-4
     """Failure Code(:|=)(\s|\\[rnt])*({failure_code}({result_code}[^\s]+))(\s|\\[rnt]|;)*.+?Transited Services(:|=)"""
     """Ticket Options(:|=)(\s|\\[rnt])*({ticket_options}[^\s]+)(\s|\\[nrt]|;)*.+?Ticket Encryption Type(:|=)"""
     """Ticket Encryption Type(:|=)(\s|\\[rnt])*({ticket_encryption_type}[^\s]+)(\s|\\[nrt]|;)*.+?Failure Code(:|=)"""
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   ]
 
 

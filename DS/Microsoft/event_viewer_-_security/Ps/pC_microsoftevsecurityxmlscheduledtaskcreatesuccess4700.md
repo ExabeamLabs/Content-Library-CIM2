@@ -17,7 +17,7 @@ Fields = [
  """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({dest_host}({host}[\w_\-\.]+))"""
 """({event_code}4700)"""
 """({event_name}A scheduled task was enabled)"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
 """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<"""

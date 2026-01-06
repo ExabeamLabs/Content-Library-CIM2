@@ -27,7 +27,7 @@ json-github-actions = {
       """"actor":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"user":\s*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """"operation_type":\s*"({operation_type}[^"]+)""",
-      """({app}(?i)github)""",
+      """({app}github)""",
       """"key":\s*"({key_name}[^"]+)"""",
       """"(external_identity_nameid|external_identity_username)":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"external_identity_username":"[^@"]+?@({domain}[^"]+)"""",

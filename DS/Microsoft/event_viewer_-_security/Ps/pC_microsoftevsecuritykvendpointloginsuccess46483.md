@@ -14,7 +14,7 @@ Fields = [
   """({event_name}A logon was attempted using explicit credentials)""",
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """TimeGenerated=({time}\d{10})"""
   """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d(T|\s)\d\d:\d\d:\d\d(\s*(\+|\-)[\d\:]+)?)"""",
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d\s*({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({dest_host}[\w.\-]+))"""
@@ -28,7 +28,7 @@ Fields = [
   """Subject(:|=)[^\"]+?Logon ID(:|=)\s*(\\t)*({login_id}[^=:;\s;\\]+)[\s;]*""",
   """Subject(:|=)[^\"]+?Logon GUID(:|=)(\\[rnt]|\s)*\{({user_login_guid}[^}]+)\}[\s;]*(\\[rnt]|\s)*Account Whose""",
   """Used(:|=);?\s*Account Name(:|=)\s*({account}({dest_user}[^\s;@]+?))(@({account_domain}({dest_domain}[^\s;]+?)))?[\s;]*\w+\s\w+(:|=)""",
-  """Used(:|=)[^\"]+?Account Domain(:|=)\s*(\\r|\\n|\\t)*((?i)(NULL)|({account_domain}({dest_domain}[^\s;]+?)))(\\r|\\n|\\t)*[\s;]*(Logon GUID|Callout Information)(:|=)""",
+  """Used(:|=)[^\"]+?Account Domain(:|=)\s*(\\r|\\n|\\t)*((NULL)|({account_domain}({dest_domain}[^\s;]+?)))(\\r|\\n|\\t)*[\s;]*(Logon GUID|Callout Information)(:|=)""",
   """Used(:|=)[^\"]+?Logon GUID(:|=)(\\[rnt]|\s)*\{({account_login_guid}[^\s;]+?)\}[\s;]*(\\[rnt]|\s)*\w+\s\w+(:|=)""",
   """Target Server Name(:|=)(\\[rnt]|\s)*({dest_host}[\w\-\.]+)""",
   """Additional Information(:|=)\s*(\\r|\\t|\\n)*({dest_service_name}[^=:\s;\\]+)"""

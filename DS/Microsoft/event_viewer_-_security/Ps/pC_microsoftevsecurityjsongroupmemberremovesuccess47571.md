@@ -15,7 +15,7 @@ Name = microsoft-evsecurity-json-group-member-remove-success-4757-1
     """<Data Name(\\)?=('|")LocalPort('|")>({src_port}\d+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Computer>({host}[\w\-.]+)<\/Computer>""",
-    """<Data Name(\\)?=('|")MemberName('|")>({member}({user_dn}(?i)(cn)=.+?,({user_ou}OU.+?DC=[\w-]+)))</Data>"""
+    """<Data Name(\\)?=('|")MemberName('|")>({member}({user_dn}(cn)=.+?,({user_ou}OU.+?DC=[\w-]+)))</Data>"""
   ]
 
 s-xml-windows-member = {
@@ -25,7 +25,7 @@ s-xml-windows-member = {
   Fields = [
     """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
-    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
+    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>({dest_user_sid}S-[^\s]+)<\/Data>"""
     """Provider Name\\*=('|")({provider_name}[^\'"]+)""",
     """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",

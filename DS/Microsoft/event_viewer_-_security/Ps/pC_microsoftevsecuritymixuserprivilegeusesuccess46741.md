@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
   """({event_name}An operation was attempted on a privileged object)"""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """TimeGenerated=({time}\d{10})"""
   """TimeGenerated=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
@@ -34,7 +34,7 @@ Fields = [
   """"ObjectName":"(-|({object}[^\s"]+))"""
   """"ObjectType":"(-|({object_type}[^\s"]+))"""
   """Process\s*Name(:|=)\s*((?-i)\\+[rnt])*(?: |({process_path}({process_dir}(?:[^";]+?)?[\\\/])?({process_name}[^\\\/";]+?)))[\\n\s;]*Requested"""
-  """\s*Account Name(:|=)\s*((?-i)\\+[rnt])*(?:-|(?i)local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+?))[\s;]*((?-i)\\+[rnt])*Account Domain(:|=)\s*((?-i)\\+[rnt])*((?i)NT AUTHORITY|({domain}.+?))[\s;]*((?-i)\\+[rnt])*Logon ID(:|=)\s*((?-i)\\+[rnt])*({login_id}.+?)[\s;]*((?-i)\\+[rnt])*Object(:|=)"""
+  """\s*Account Name(:|=)\s*((?-i)\\+[rnt])*(?:-|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+?))[\s;]*((?-i)\\+[rnt])*Account Domain(:|=)\s*((?-i)\\+[rnt])*(NT AUTHORITY|({domain}.+?))[\s;]*((?-i)\\+[rnt])*Logon ID(:|=)\s*((?-i)\\+[rnt])*({login_id}.+?)[\s;]*((?-i)\\+[rnt])*Object(:|=)"""
   """\s*Object Server(:|=)\s*((?-i)\\+[rnt])*({object_server}.+?)[nrt\\\s;]*((?-i)\\+[rnt])*Object Type(:|=)\s*((?-i)\\+[rnt])*(?:-|({object_type}.+?))[\s;]*((?-i)\\+[rnt])*Object Name(:|=)\s*((?-i)\\+[rnt])*(?:|-|({object}.+?))[nrt\\\s;]*((?-i)\\+[rnt])*Object Handle"""
   """Desired Access(:|=)\s*((?-i)\\+[rnt])*({access}.+?)[\s;]*((?-i)\\+[rnt])*Privileges(:|=)\s*((?-i)\\+[rnt])*({privileges}.+?)(\s+\d+|"|,|;|\s+User:|\s*$)"""
 ]

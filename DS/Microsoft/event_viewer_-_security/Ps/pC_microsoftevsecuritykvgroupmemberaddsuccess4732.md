@@ -18,7 +18,7 @@ jp-member-added = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Fields = [
     """ログオン ID:\s+({login_id}[^\s]+)\s+""",
-    """メンバー:.+?アカウント名:\s*({user_dn}(?i)(cn)=.+?,({user_ou}OU.+?DC=[\w-]+))\s*グループ:""",
+    """メンバー:.+?アカウント名:\s*({user_dn}(cn)=.+?,({user_ou}OU.+?DC=[\w-]+))\s*グループ:""",
     """グループ:\s+セキュリティ ID:\s+({group_id}[^\s]+)""",
     """グループ:.+?アカウント名:\s+({group_name}.+?)?\s+アカウント ドメイン:""",
     """グループ:.+?グループ名:\s+({group_name}.+?)?\s+グループ ドメイン:""",

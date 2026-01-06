@@ -1,8 +1,8 @@
 Rules by Product and UseCase
 ============================
-Vendor: Microsoft
------------------
-### Product: [Event Viewer - TerminalServices-RemoteConnectionManager](../ds_microsoft_event_viewer_-_terminalservices-remoteconnectionmanager.md)
+Vendor: Wallix
+--------------
+### Product: [Wallix Bastion](../ds_wallix_wallix_bastion.md)
 ### Use-Case: [Data Access](../../../../UseCases/uc_data_access.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

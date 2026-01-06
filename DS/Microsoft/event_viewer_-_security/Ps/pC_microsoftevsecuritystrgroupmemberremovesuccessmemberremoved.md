@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({event_name}Security Enabled [\w\s]+ Group Member Removed)"""
 """TimeGenerated=({time}\d{10})"""
-"""(?i)(success|failure|audit)\s+\w+\s+({dest_host}({host}[\w\-.]+))"""
+"""(success|failure|audit)\s+\w+\s+({dest_host}({host}[\w\-.]+))"""
 """Information(,|\s+)({dest_host}({host}[\w.\-]+))"""
 """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}.+?))("|\s)"""
 """Event(Code|ID)=({event_code}\d+)"""

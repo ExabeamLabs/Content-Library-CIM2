@@ -7,7 +7,7 @@ Product = "Event Viewer - Security"
 TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS", "MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy", "yyyy-MM-dd HH:mm:ss"]
 Conditions = [ """A network share object was accessed""", """Account Name:""" ]
 Fields = [
-  """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+  """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
   """({event_name}A network share object was accessed)""",
   """({event_code}5140)""",
   """<Computer>(::ffff:)?({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))<\/Computer>""",
@@ -22,7 +22,7 @@ Fields = [
   """\sTimeGenerated=({time}\d{10})""",
   """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
   """\sEventReceivedTime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-  """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+)))\s""",
+  """\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+)))\s""",
   """({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))\s+(Detailed File Share|File Share)""",
   """Logon ID:\s*((\\)*(\\r|\\t|\\n))*({login_id}\S+?)((\\)*(\\r|\\t|\\n))*\s*Network Information:""",
   """Account Name:\s*((\\)*(\\r|\\t|\\n))*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((\\)*(\\r|\\t|\\n))*\s*Account Domain:"""
@@ -33,10 +33,10 @@ Fields = [
   """({access}Read)""",
   """Share Name:\s*((\\)*(\\r|\\t|\\n))*(?:\\\\\*\\)?({share_name}[^:]+?)((\\)*(\\r|\\t|\\n))*\s*Share Path:""",
   """Share Path:\s*((\\)*(\\r|\\t|\\n))*(?:\\+\?+)(?:\s*|({file_path}({share_path}(({d_parent}[^"]+?)[\\\/])?(|({d_name}[^\\\/]+?))))[\\\/]?)((\\)*(\\r|\\t|\\n))*\s*Access Request Information:""",
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+  """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   """Computer=\s*(::ffff:)?"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))"""",
   """Source Port:\s*({src_port}\d+)"""
-  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
+  """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
   """ShareName\\?"+:\\?"+[\\\*]*({share_name}[^\\"]+)"""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
   """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\]+)))\\?""""

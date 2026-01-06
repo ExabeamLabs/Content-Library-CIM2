@@ -22,7 +22,7 @@ Name = zscaler-ia-cef-http-session-spriv
     """requestProtocol=({protocol}[^=\s]+)""",
     """cs4=(None|({malware_name}[^=]+?))\s*(\w+=|$)""",
     """requestMethod=(NA|({method}[^\s=]+))""",
-    """requestClientApplication=((?i)unknown|({user_agent}[^=]+?))\s+(\w+=|$)""",
+    """requestClientApplication=(unknown|({user_agent}[^=]+?))\s+(\w+=|$)""",
     """cn1=({risk_level}\d+)""",
     """out=({bytes_out}\d+)""",
     """in=({bytes_in}\d+)""",

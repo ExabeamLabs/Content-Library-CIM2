@@ -24,7 +24,7 @@ Fields = [
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}\S+)</Data>"""
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}[^<]+)<"""
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))<"""
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
+"""<Data Name\\*=('|")SubjectUserName('|")>((LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<"""
 """<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""

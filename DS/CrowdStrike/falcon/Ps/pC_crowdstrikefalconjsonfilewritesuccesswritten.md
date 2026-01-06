@@ -19,7 +19,7 @@ Name = crowdstrike-falcon-json-file-write-success-written
     """"DiskParentDeviceInstanceId":"({service_type}({device_id}[^"]+))"""",
     """"aid":"({aid}[^"]+)""""
     """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-    """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
+    """"(SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
     """"ContextProcessId":"({process_guid}[^"]+)""""
     """"event_platform":"({os}[^"]+)""""
     """exa_json_path=$.timestamp,exa_field_name=time""",

@@ -21,7 +21,7 @@ Fields = [
 """\s+File=[^=]*\\({file_name}[^\s]+)\s+\w+=""",
 """\s+File=[^=]*\\({file_name}[^=]+)\s+\w+=""",
 """\s+File=[^=]*\\[^=]*\.({file_ext}[^=.\s\\]{1,10}?)\s*\w+="""
-"""({file_type}(?i)file)"""
+"""({file_type}file)"""
 """\s+File=({object}[^\s]+)\s*Safe=({resource}[^\s]+)\s*Location"""
 """Action=({operation}[^=]+?)\s*\w+="""
 """Action=({action}[^=]+?)\s*\w+="""

@@ -40,7 +40,7 @@ rsa-account-activity = {
   TimeFormat = "yyyy-MM-dd HH:mm:ss,SSS Z"
   Fields = [
     """\s({host}[^\s]+)\s+AAOP-Audit""",
-    """\s({host}[^\s]+)\s+AAOP-Audit\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(,\d+ (\+|-)\d+)?)\s+\|[^\|]+\|\s[^\s]+\s\|\s*\[?({user_id}[^\]\|\s]+)\s+\|\s*([^\s\|]+)\s+\|\s*((?i)DEVID_UNDEFINED|({device_id}[^\s\|]+))\s+\|\s((?i)IP_UNDEFINED|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\|\s*([^\|]+)\s+\|\s*({event_name}[^\|]+)\s+\|\s*((?i)EVENTID_UNDEFINED|({event_code}[^\|]+))\s+\|\s*((?i)TRANSID_UNDEFINED|({transaction_id}[^\|]+))\s+\|\s*((?i)TRANSTYPE_UNDEFINED|({result}[^\|]+))\s+\|\s*""", #dl field removed
+    """\s({host}[^\s]+)\s+AAOP-Audit\s*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d(,\d+ (\+|-)\d+)?)\s+\|[^\|]+\|\s[^\s]+\s\|\s*\[?({user_id}[^\]\|\s]+)\s+\|\s*([^\s\|]+)\s+\|\s*(DEVID_UNDEFINED|({device_id}[^\s\|]+))\s+\|\s(IP_UNDEFINED|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\|\s*([^\|]+)\s+\|\s*({event_name}[^\|]+)\s+\|\s*(EVENTID_UNDEFINED|({event_code}[^\|]+))\s+\|\s*(TRANSID_UNDEFINED|({transaction_id}[^\|]+))\s+\|\s*(TRANSTYPE_UNDEFINED|({result}[^\|]+))\s+\|\s*""", #dl field removed
   ]
  }
 
@@ -54,7 +54,7 @@ rsa-account-activity = {
    """spt=({src_port}\d+)""",
    """sessionId=({session_id}\d+)""",
    """({app}NetWitness)""",
-   """\Wsuser=((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s\w+=|\()""",
+   """\Wsuser=(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s\w+=|\()""",
    """outcome=({result}[^=]+?)\s\w+=""",
    """userRole=({role}[^=]+?)\s*(\w+=|$)""",
    """CEF:\d+\|([^\|]+\|){4}({event_name}[^\|]+)"""

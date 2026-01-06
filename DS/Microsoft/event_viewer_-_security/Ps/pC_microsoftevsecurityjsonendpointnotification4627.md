@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """"TargetLogonId"+:"+({dest_login_id}({login_id}[^"]+))""",
     """"LogonType"+:"+({login_type}\d+)""",
 # sequence_num is removed
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
     """exa_json_path=$.Message,exa_field_name=event_name"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Hostname,exa_field_name=host"""

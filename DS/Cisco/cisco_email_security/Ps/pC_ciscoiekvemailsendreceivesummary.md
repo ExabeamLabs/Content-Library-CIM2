@@ -13,7 +13,7 @@ Name = cisco-ie-kv-email-send-receive-summary
     """direction=({direction}[^,]+)""",
     """From:\s*<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """To:\s*<({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))[^>]*)""",
-    """(?i)(Subject)[\s\\=]*"({email_subject}[^"]+)""",
+    """(Subject)[\s\\=]*"({email_subject}[^"]+)""",
     """({time}\d+\/\d+\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+[\+\-]\d+)""",
     """Message finished MID ({alert_id}\d+) ({result}aborted|done)""",
     """MID \d+ ready ({bytes}\d+) bytes from """,

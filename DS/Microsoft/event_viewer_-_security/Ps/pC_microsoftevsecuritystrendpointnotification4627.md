@@ -8,13 +8,13 @@ Name = microsoft-evsecurity-str-endpoint-notification-4627
   TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ssZ","MM/dd/yyyy hh:mm:ss a"]
   Conditions = [ """4627""", """Group membership information""" ]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""",
-    """"(?i)Computer(Name)?":\s*"({host}[^"]+)"""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))""",
+    """"Computer(Name)?":\s*"({host}[^"]+)"""",
     """({event_code}4627)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|\-)\d\d:\d\d)\s+({host}[\w.\-]+)""",
     """EVENT_ID="({event_code}\d+)"""",
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
-    """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """({event_name}Group membership information)""",
     """Subject:[^"]+?Security ID:\s*((NT AUTHORITY|([^\\:]+))\\+)?(SYSTEM|\\NULL SID|({user_sid}[^:\s]+))""",
     """Subject:[^"]+?Account Name:\s*(-|({account_name}[^\s]+))""",

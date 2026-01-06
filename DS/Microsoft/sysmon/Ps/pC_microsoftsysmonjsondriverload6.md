@@ -10,7 +10,7 @@ Name = microsoft-sysmon-json-driver-load-6
   Fields = [
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """"Hostname":"({dest_host}({host}[^"]+))""",
-    """"Domain":"((?i)(NT AUTHORITY)|({domain}[^"]+))""",
+    """"Domain":"((NT AUTHORITY)|({domain}[^"]+))""",
     """"EventID":({event_code}6),""",
     """({operation}({event_name}Driver loaded))""",
     """"RecordNumber":({event_id}\d+)""",
@@ -18,7 +18,7 @@ Name = microsoft-sysmon-json-driver-load-6
     """"UserID":"({user_sid}[^"]+)""",
     """"ImageLoaded":"({file_path}(({file_dir}(?:[^"]+)?)[\\\/]+)?({file_name}[^\\\/"]+?(\.({file_ext}[^\\\/\."]+))))""",
     """"Hashes":"MD5=({hash_md5}[^,"]+)""",
-    """"AccountName":"((?i)(SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"AccountName":"((SYSTEM)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
  ]
 
 

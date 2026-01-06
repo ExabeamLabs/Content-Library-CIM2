@@ -13,6 +13,8 @@ Name = "mimecast-seg-cef-app-login-fail-logonauthfailed"
     """\sReason:\s(|({failure_reason}[^=]+?))(\s+\w+=|\s*$)""",
     """\sApplication:\s*({app}[^,]+?),""",
     """"user":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_regex=\sReason:\s*(|({failure_reason}[^="]+?))(\s+\w+:|\s*")""",
+    """exa_regex=\sApplication:\s*({app}[^,]+?),""",    
   ]
 
 

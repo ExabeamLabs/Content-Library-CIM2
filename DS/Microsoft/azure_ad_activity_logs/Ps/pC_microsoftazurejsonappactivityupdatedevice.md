@@ -23,7 +23,7 @@ ms-azure-eventhubs-activity = {
     """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
     """"value\\":\s*\\"({user_agent}[^"]+?)\\?",\\"key\\":\s*\\"User-Agent\\"""",
     """"key\\":\s*\\"User-Agent\\",\\"value\\":\s*\\"({user_agent}[^"]+?)\\?"""",
-    """(?i)"+callerIpAddress"+:\s*"+(<null>|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+""",
+    """"+callerIpAddress"+:\s*"+(<null>|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+""",
     """"+initiatedBy[^}]+"+userPrincipalName\\?"+:\s*\\?"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+"""
     """TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"+targetResources.*?"+displayName"+:\s*"+({object}[^"]+?)"+""",
@@ -31,7 +31,7 @@ ms-azure-eventhubs-activity = {
     """"targetResources":\s*\[\{[^\}]+\},\{"displayName"[^\]]+?\.DisplayName","newValue":\s*"\\?"({target}[^"\\]+)"""
     """"+time"+:\s*"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}\w+)"+"""
     """"+operationName"+:\s*"+({operation}[^"]+)"+""",
-    """(?i)"+result"+:\s*"+({result}[^"]+)"+""",
+    """"+result"+:\s*"+({result}[^"]+)"+""",
     """Category":\s*"({category}[^"]+)""",
     """"Type":\s*"({event_category}[^"]+)""",
     """"type":\s*"({additional_info}[^"]+)""",

@@ -13,7 +13,7 @@ Conditions = [
 """,BYTES="""
 ]
 Fields = [
-"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s((?i)AM|PM))"""
+"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))"""
 """IBOSS=({host}[\w\-.]+),"""
 """URL=({url}(\w+:\/\/)?({web_domain}[^\/]+?)({uri_path}\/[^\?]*?)?({uri_query}\?[^,]+)?)(,|")"""
 """CATEGORIES_NAMES=({categories}({category}[^,;\=]+)[^\=]*?),\w+="""

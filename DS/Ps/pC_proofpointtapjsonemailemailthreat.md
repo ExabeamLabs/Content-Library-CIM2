@@ -31,7 +31,7 @@ s-proofpoint-email-in-1.Fields}[
     """"userAgent":"({user_agent}[^"]+)""""
     """"clickTime":"({log_time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
     """"clickIP":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-    """"completelyRewritten":\s*({alert_status}(?i)true|false)"""
+    """"completelyRewritten":\s*({alert_status}true|false)"""
     """eventType=({result}[^\s]+)"""
     """"classification":\s*"({alert_subject}({alert_name}[^"]+))""",
   

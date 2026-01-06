@@ -28,7 +28,7 @@ json-crowdstrike-app-logout = {
     """"OperationName":"({event_name}[^"]+)""",
     """"Commands":\s*({additional_info}\[[^\]\{]+\])""",
     """"AgentIdString":"({aid}[^",]+)"""",
-    """"(?i)EventType":\s*"({operation_details}[^",]+)"""",
+    """"EventType":\s*"({operation_details}[^",]+)"""",
 	  """"ExternalApiType":\s*"({operation}[^"]+)"""",
     """"cid":"({cid}[^"]+)""""
     """"customerIDString":"({cid}[^"]+)""""

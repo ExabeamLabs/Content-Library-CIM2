@@ -32,7 +32,7 @@ Fields = [
   """({access}Read)""",
   """Share Name:\s*((\\)*(\\r|\\t|\\n))*(?:\\\\\*\\)?({share_name}[^:]+?)((\\)*(\\r|\\t|\\n))*\s*Share Path:""",
   """Share Path:\s*((\\)*(\\r|\\t|\\n))*(?:\\+\?+)(?:\s*|({file_path}({share_path}(({d_parent}[^"]+?)[\\\/])?(|({d_name}[^\\\/]+?))))[\\\/]?)((\\)*(\\r|\\t|\\n))*\s*Access Request Information:""",
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+  """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   """Computer=\s*(::ffff:)?"({host}({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w.\-]+))"""",
   """Source Port:\s*({src_port}\d+)"""
   """<Level>({run_level}[^<]+)<"""

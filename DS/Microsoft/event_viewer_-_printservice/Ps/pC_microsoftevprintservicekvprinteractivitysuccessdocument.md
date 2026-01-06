@@ -12,12 +12,12 @@ Conditions = [
 Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
 """({time}\w{3}\s\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+\d+\s+""",
-"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
 """ComputerName =({host}[^\s]+)"""
 """Sid=({user_sid}[^\s]+)"""
 """OpCode=({result}.+?)\s+\w+="""
 """EventCode=({event_code}\d+)"""
-"""Message=({activity_1}.*?\s*(?i)Document) \d+,"""
+"""Message=({activity_1}.*?\s*Document) \d+,"""
 """owned by [^\s]+\s*.*?( on [^\s]+)?({activity_2}.+?) on ({printer_name}.+?)(\.\s+|\s+through)"""
 """Message=[^,]+,\s+({object}.+?) owned by"""
 """owned by ({user}[\w\.\-\!\#\^\~]{1,40}\$?) """,

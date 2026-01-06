@@ -27,7 +27,7 @@ Name = nextdlp-r-json-configuration-modify-success-reveal
     """"source_ip":\s*\["({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"\]""",
     """"source_port":\s*\["({src_port}\d{1,5})"\]"""
     """"url":\s*\["({url}[^"\]]+)"(,|\])"""
-    """size (({bytes}\d+(\.\d+)?)({bytes_unit}(?i)kb|mb|gb))"""
+    """size (({bytes}\d+(\.\d+)?)({bytes_unit}kb|mb|gb))"""
     """"score":\s*"?({alert_severity}\w+),"""
   ]
 

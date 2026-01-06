@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({event_name}System audit policy was changed)"""
   """ComputerName =({src_host}({host}[\w.\-]+))"""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """EventCode=({event_code}\d+)"""
   """\sAccount Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+Account Domain"""
   """\sAccount Domain:\s*({domain}[^\s]+)"""

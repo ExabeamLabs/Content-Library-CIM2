@@ -33,7 +33,7 @@ Name = crowdstrike-falcon-sk4-app-activity-fdritemsexplorer
     """"MachineDomain":"({domain}[^"]+)"""",
     """"UserPrincipal":\s*"(?:[^"@]+@)?({domain}[^"]+)""",
     """"Timezone":"({zone}[^"]+)"""",
-    """"((?i)SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
+    """"(SHA256String|SHA256HashData)":"({hash_sha256}[^"]+)""""
     """exa_json_path=$.Time,exa_regex=({time}\d{10})""",
     """exa_json_path=$.MD5HashData,exa_field_name=hash_md5""",
     """exa_json_path=$.ContextProcessId,exa_field_name=process_id""",

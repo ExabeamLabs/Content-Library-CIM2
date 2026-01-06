@@ -9,9 +9,9 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd HH:mm:ss", "epoch_sec", "MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy"]
   Conditions = [ """4634""", """An account was logged off""" ]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d ((?i)am|pm))""",
-    """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?((?i)am|pm|\d{4}|({host}[\w.\-]+))\s""",
-    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?((?i)am|pm|\d{4}|({host}[\w\-.]+))\s"""
+    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))""",
+    """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?(am|pm|\d{4}|({host}[\w.\-]+))\s""",
+    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
     """TimeGenerated=({time}\d+)""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+""",
     """({event_code}4634)""",
@@ -25,8 +25,8 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """Logon ID:\s*({dest_login_id}({login_id}\S+))\s+Logon Type:""",
     """Logon Type:\s*({login_type}\d+)""",
     """({event_code}4634)""",
-    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|((?i)am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
-    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?((?i)am|pm|({host}[\w\.-]+))(\s|,|"|</Computer>|$)""",
+    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
+    """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?(am|pm|({host}[\w\.-]+))(\s|,|"|</Computer>|$)""",
 
     """exa_json_path=$.TimeCreated,exa_regex=[\\\/]*Date\(({time}\d{13})"""
     """exa_json_path=$.times[0].EventTime,exa_field_name=time"""

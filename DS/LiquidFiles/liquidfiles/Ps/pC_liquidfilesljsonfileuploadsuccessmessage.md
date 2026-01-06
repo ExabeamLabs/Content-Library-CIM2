@@ -60,9 +60,9 @@ IronscalesParserTemplates = {
         """cs5=({result}[^=]+?)\s+cs5Label=Report State"""
         """reason=({additional_info}[^=]+?)\s+\w+="""
         """request=({malware_url}[^\s]+)"""
-        """cs4=({email_subject}[^=]+?)\s+cs4Label=(?i)(Email Subject)"""
+        """cs4=({email_subject}[^=]+?)\s+cs4Label=(Email Subject)"""
         """CEF:([^\|]+\|){5}(\d+|({event_name}[^\|]+))\|"""
-        """cs6=({result}\S+)\s+cs6Label=(?i)Outcome"""
+        """cs6=({result}\S+)\s+cs6Label=Outcome"""
         """cs2=({full_name}[^=]+)\s+cs2Label=Employee Name"""
       ]
     

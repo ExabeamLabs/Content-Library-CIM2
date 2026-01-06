@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """TimeGenerated=({time}\d{10})"""
 """({event_name}User Account Created)"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """({event_code}624)"""
 """({host}[^\/\s]+)\/Security \(624\)"""
 """Computer=({host}[\w\-.]+)"""

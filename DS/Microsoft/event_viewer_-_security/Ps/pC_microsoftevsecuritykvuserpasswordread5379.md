@@ -9,9 +9,9 @@ Name = "microsoft-evsecurity-kv-user-password-read-5379"
   Conditions = [ """5379""", """Credential Manager credentials were read""", """Account Name:""" ]
   Fields = [
     """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+({event_code}\d+)""",
-    """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*((?i)AM|PM))\s*.*?LogName =""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*(AM|PM))\s*.*?LogName =""",
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+MSWinEventLog""",
-    """"(?i)Computer(Name)?":\s*"({host}[^"]+)"""",
+    """"Computer(Name)?":\s*"({host}[^"]+)"""",
     """ComputerName =({host}[^\s]+)\sSourceName =""",
     """({event_code}5379)""",
     """EventCode=({event_code}\d+)\s*EventType=""",

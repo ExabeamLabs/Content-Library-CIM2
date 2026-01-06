@@ -19,7 +19,7 @@ Name = zscaler-ia-cef-network-traffic-blocked
     """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """spt=({src_port}\d+)""",
     """dpt=({dest_port}\d+)""",
-    """(?i)\sact=({action}(Allow|Drop))""",
+    """\sact=({action}(Allow|Drop))""",
     """sourceTranslatedAddress=({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """destinationTranslatedAddress=({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """proto=({protocol}[^=]+?)\s\w+=""",

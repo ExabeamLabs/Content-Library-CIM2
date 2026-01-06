@@ -10,7 +10,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-4625-4
   Fields = [
    """Message=({event_name}Error de una cuenta al iniciar sesión)""",
    """({event_code}4625)""",
-   """(\s({dest_host}({host}[^\s]+))\s)?({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
+   """(\s({dest_host}({host}[^\s]+))\s)?({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
    """Sujeto:[^=]+?\s*Nombre de cuenta:\s*(-|({src_user}[^\s@]+?))[\s;]*Dominio de cuenta""",
    """Sujeto:[^=]+?\s*Dominio de cuenta:\s*(\\t)?(-|({src_domain}[^:;]+?))[\s;]*(\\r\s\\t)*?Id. de inicio de sesión:""",
    """Tipo de inicio de sesión:\s*(\\t)*?\s*({login_type}\d+)""",

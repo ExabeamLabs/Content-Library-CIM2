@@ -22,7 +22,7 @@ Name = cisco-ise-kv-endpoint-authentication-fail-attempts
     """, NetworkDeviceGroups=Location#All Locations#({location}[^,]+)""",
     """, FailureReason=({result_code}\d+)""",
     """, FailureReason=\d+ ({failure_reason}[^,]+)""",
-    """(?i)(MacAddress)=({src_mac}[^,\s]+),""",
+    """(MacAddress)=({src_mac}[^,\s]+),""",
     """, SSID=({ssid}[^,]+)""",
     """, AuthenticationIdentityStore=({auth_server}[^,]+)""",
   ]

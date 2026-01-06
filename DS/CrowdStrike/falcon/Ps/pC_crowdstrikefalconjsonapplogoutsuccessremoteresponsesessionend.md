@@ -8,7 +8,7 @@ Name = crowdstrike-falcon-json-app-logout-success-remoteresponsesessionend
   Fields = ${DLCrowdStrikeParserTemplates.json-crowdstrike-app-logout.Fields}[
     """"eventCreationTime":\s*({time}\d{13})""",    
     """"destinationServiceName":"({app}CrowdStrike)""""
-    """"(?i)EventType":\s*"({operation}[^",]+)"""",
+    """"EventType":\s*"({operation}[^",]+)"""",
     """exa_json_path=$.metadata.eventType,exa_field_name=operation"""
   ]
 
@@ -30,7 +30,7 @@ json-crowdstrike-app-logout = {
     """"OperationName":"({event_name}[^"]+)""",
     """"Commands":\s*({additional_info}\[[^\]\{]+\])""",
     """"AgentIdString":"({aid}[^",]+)"""",
-    """"(?i)EventType":\s*"({operation_details}[^",]+)"""",
+    """"EventType":\s*"({operation_details}[^",]+)"""",
 	  """"ExternalApiType":\s*"({operation}[^"]+)"""",
     """"cid":"({cid}[^"]+)""""
     """"customerIDString":"({cid}[^"]+)""""

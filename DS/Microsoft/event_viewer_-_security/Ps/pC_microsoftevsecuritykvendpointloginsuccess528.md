@@ -10,9 +10,9 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-528
   Fields = [
     """TimeGenerated=({time}\d{10})"""
     """({event_name}Successful Logon)""",
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+528\s+Security\s""",
-    """(?i)(((audit|success)( |_)(success|audit))|information)\s*,?\s*({dest_host}({host}[\w\-.]+))""",
+    """(((audit|success)( |_)(success|audit))|information)\s*,?\s*({dest_host}({host}[\w\-.]+))""",
     """"dhn":"({dest_host}({host}[^-"]+))""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({dest_host}({host}[\w\-.]+?))("|\s)""",
     """({event_code}528)""",

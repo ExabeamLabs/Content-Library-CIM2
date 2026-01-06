@@ -24,17 +24,17 @@ cef-microsoft-app-activity-2 = {
     """"operationName":"({operation}[^"]+)""",
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
-    """"((?i)callerIpAddress|CIp)":"({src_ip}((\d{1,3}\.){3}\d{1,3}|[A-Fa-f\d]+:[a-fA-F\d:]+))(:({src_port}\d+))?"""",
+    """"(callerIpAddress|CIp)":"({src_ip}((\d{1,3}\.){3}\d{1,3}|[A-Fa-f\d]+:[a-fA-F\d:]+))(:({src_port}\d+))?"""",
     """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"email":"({email_address}[^\s@"]+@[^\s@"]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
     """destinationServiceName =({app}[^=]+)\s+(\w+=|$)""",
 # port is removed
-    """"(?i)userAgent":"({user_agent}[^"]+)"""",
+    """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({http_response_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """(?i)userId":"({user_upn}[^",]+)""",
+    """userId":"({user_upn}[^",]+)""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:"""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"Platform":"({os}[^"]+)""""

@@ -8,7 +8,7 @@ Name = "fireeye-networksecurity-json-network-traffic-success-smb2"
     	"""exa_json_path=$.smb2.pid,exa_field_name=process_id""",
     	"""exa_json_path=$.smb2.sid,exa_field_name=session_id""",
     	"""exa_json_path=$.smb2.mid,exa_field_name=message_id""",
-    	"""exa_regex="smb2":\{[^\}]+?"command_str":"(?i)({access}create|write|close|read)"[^}]+?"\w+":\{[^}]*?"fid":"({file_id}[^"]+)"""",
+      """exa_regex="smb2":\{[^\}]+?"command_str":"(?i)({access}create|write|close|read)"[^}]+?"\w+":\{[^}]*?"fid":"({file_id}[^"]+)"""",
     	"""exa_regex="smb2":\{[^\}]+?"command_str":"(?i)({access}create|write|close|read)"[^}]+?"\w+":\{[^}]*?"filename":"({file_path}((|({file_dir}[^"]*?)[\\\/]+))?({file_name}[^"\\\/]+?(\.({file_ext}[^"\/\\\.]+))?))""""
     ]
 	ParserVersion = "v1.0.0"

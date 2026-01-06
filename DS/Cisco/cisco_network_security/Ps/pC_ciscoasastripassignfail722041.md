@@ -10,7 +10,7 @@ Name = cisco-asa-str-ip-assign-fail-722041
   Fields = [
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-""",
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-""",
     """%ASA-({priority}\d+)-({event_code}\d+)""",
     """ User <(({domain}[^\s\\]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>""",
     """\sIP\s+<({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})>""",

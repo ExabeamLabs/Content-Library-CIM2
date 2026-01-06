@@ -7,8 +7,9 @@ Name = oracle-oci-json-app-activity-auditlogevent
   ParserVersion = "v1.0.0"
   ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"ddsource":"oracle_cloud"""", """"source":""", """"eventName":""", """"eventType":""", """"eventID":"""]
+  Conditions = [ """"additionalDetails":""", """"availabilityDomain":""", """"compartmentId":""", """oracle""", """"eventName":"""]
   Fields = [
+    """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.data.compartmentId,exa_field_name=resource_id"""
     """exa_json_path=$.data.eventName,exa_field_name=event_name"""
     """exa_json_path=$.data.identity.authType,exa_field_name=auth_type"""

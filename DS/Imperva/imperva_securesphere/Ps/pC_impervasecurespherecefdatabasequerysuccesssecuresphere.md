@@ -25,7 +25,7 @@ Fields = [
 """\WsrcHost="(|({domain}[^"\\]+)\\)?(|({src_host}[\w\-.]+))""""
 """\WdatabaseName ="(|({db_name}[^"]+))""""
 """\WresponseSize=({response_size}\d+)"""
-"""\Woperation="(|(?i)(Logout)|({db_operation}[^"]+))""""
+"""\Woperation="(|(Logout)|({db_operation}[^"]+))""""
 """\WschemaName ="(|({db_schema}[^"]+))""""
 """\WparsedQuery="(|(N\/A \(logout\))|({db_query}[^\n]+)?)"\s*$"""
 ]

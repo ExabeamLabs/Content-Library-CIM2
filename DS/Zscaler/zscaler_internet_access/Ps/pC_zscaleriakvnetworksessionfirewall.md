@@ -27,7 +27,7 @@ Name = zscaler-ia-kv-network-session-firewall
     """tsip=(0\.0\.0\.0|({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""",
     """tunsport=({src_translated_port}\d+)""",
     """tuntype=({vpn_client_type}[^\s]+)""",
-    """destcountry=((?i)Other|({dest_country}[^\=]+?)\s+\w+=)""",
+    """destcountry=(Other|({dest_country}[^\=]+?)\s+\w+=)""",
     """nwsvc=({dest_service_name}[^\s]+)""",
     """devicehostname=(NA|({host}[^\"]+?)\s*(\w+=|\"*$))""",
     """ipcat=(Miscellaneous or Unknown|({category}[^\=]+?)\s+\w+=)""",

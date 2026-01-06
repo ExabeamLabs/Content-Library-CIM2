@@ -10,8 +10,8 @@ Name = microsoft-evsecurity-kv-endpoint-login-fail-logonfailure
   Fields = [
     """TimeGenerated=({time}\d{10})"""
     """({event_name}Logon Failure)""",
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-    """(?i)(((audit|failure)( |_)(audit|failure))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+    """(((audit|failure)( |_)(audit|failure))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
     """\d\d:\d\d:\d\d \d\d\d\d\s*(\s|\t|,|#\d+|<[^>]+>)\s*({result_code}({event_code}\d+))\s*(\s|\t|,|#\d+|<[^>]+>)\s*Security""",
     """({host}[^\s\/]+)\/Security \(({result_code}({event_code}\d+))\)""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",

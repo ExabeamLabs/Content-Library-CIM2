@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-json-policy-modify-5447
 # filter_type is removed
     """"UserName"+:"+((NT AUTHORITY|({domain}[^\\\s]+))\\+)?(LOCAL SERVICE|N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 # change_type is removed
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
   ]
 
 

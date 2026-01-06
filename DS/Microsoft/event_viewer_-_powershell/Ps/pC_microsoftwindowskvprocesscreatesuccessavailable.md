@@ -13,7 +13,7 @@ Name = microsoft-windows-kv-process-create-success-available
   Fields = [
     """({event_name}A new process has been created)""",
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
-    """"(?i)HostName":\s*"({dest_host}({host}[\w\-.]+))"""",
+    """"HostName":\s*"({dest_host}({host}[\w\-.]+))"""",
     """Windows PowerShell\s+\S+\s+({time}\w+ \w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+({event_code}\d+)""",
     """({dest_host}({host}[\w.\-]+))\s+Engine Lifecycle""",
     """\sHostApplication=({process_path}(|({process_dir}[^\s=]*?))?({process_name}[^\s\\/=]+?))\s+.*?EngineVersion=""",

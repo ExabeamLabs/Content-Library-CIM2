@@ -10,8 +10,8 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-3
     Fields = [
       """({event_name}An attempt was made to access an object)""",
       """({host}[\w\-.]+)\s+({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
-      """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-      """(?i)(((audit|success)( |_)(success|audit))|information)[\s,]({host}[\w\-.]+).*Subject:""",
+      """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+      """(((audit|success)( |_)(success|audit))|information)[\s,]({host}[\w\-.]+).*Subject:""",
       """({event_code}4663)""",
       """Subject=.*?Security ID=\s*({user_sid}.+?)[\s;]*Account Name =\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s;]*Account Domain=\s*(NT AUTHORITY|({domain}.+?))[\s;]*Logon ID=\s*({login_id}[^\s;]+)[\s;]*Object""",
       """Object=.*?Object Type=\s*({file_type}.+?)[\s;]*Object Name =\s*({file_path}({file_dir}.*?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\]+?))?))[\s;]*Handle ID(:|=)""",

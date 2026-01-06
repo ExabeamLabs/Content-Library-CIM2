@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-3
   Product = Event Viewer - Security
   Conditions = ["""attempted to validate the credentials for an account""", """Authentication Package""", """computer_name""", """event_id\":4776""", """"audit-event""""]
   Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\]+))\\?"""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",

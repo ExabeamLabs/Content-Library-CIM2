@@ -18,7 +18,7 @@ Fields = [
   """TimeGenerated=({time}\d{10})""",
   """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
   """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s+({time}\w+ \d+ \d+:\d+:\d+ \d+)"""
-  """"(?i)Computer":"({host}[\w\-.]+)"""
+  """"Computer":"({host}[\w\-.]+)"""
   """EvntSLog:\s*\[({result}.+?)\]"""
   """;\s+Type = "({result}[^"]+)""""
   """Keywords=({result}.+?)\s+\w+="""
@@ -44,7 +44,7 @@ Fields = [
   """"SubjectLogonId":"({login_id}[^\s"]+)"""
   """"TargetSid":"({dest_user_sid}S-[^\s"]+)""""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
-  """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
+  """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}S-[^\\"]+)\\?""""
   """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\"]+)))\\?""""
   """TargetDomainName\\?"+:\\?"+({dest_domain}[^\s"\\]+)\\?""""
@@ -52,7 +52,7 @@ Fields = [
   """TargetUserName\\?"+:\\?"+({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)\\?""""
   """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d)\s+(?i)(AM|PM)"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d)\s+(AM|PM)"""
 ]
 ParserVersion = "v1.0.0"
 

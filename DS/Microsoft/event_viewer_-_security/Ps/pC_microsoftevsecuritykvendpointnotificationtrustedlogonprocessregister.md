@@ -19,14 +19,14 @@ Name = microsoft-evsecurity-kv-endpoint-notification-trustedlogonprocessregister
       """Computer(Name)?["\s]*(:|=)\s*"?(::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+?)))("|\s)""",
       """Security ID:\s*({user_sid}[^:]+?)\s*Account Name:\s*(?=\w)({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*(?=\w)({domain}[^:]+?)\s*Logon ID""",
       """Logon ID:\s*({login_id}[^:]+?)\s*Logon Process Name:\s*({process_name}[^,\s"]+)""",
-      """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
+      """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
       """Subject:Security ID=({user_sid}\S+)""",
       """Subject:Account Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)\sSubject:""",
       """Subject:Account Domain=({domain}[^\s]+)\sSubject:""",
       """Subject:Logon ID=({login_id}[^\s]+)\s""",
       """Logon Process Name =({process_name}\S+)"""
       """"Message":"({additional_info}[^:]+?)\s*\w+:"""
-      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
       
     ]
 

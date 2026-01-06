@@ -13,7 +13,7 @@ Name = microsoft-evsystem-kv-dcom-activate-fail-10016-1
 	"""This security permission can be modified using the Component Services administrative tool"""
 	]
 	Fields = [
-		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
+		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
 		"""\WEventCode=({event_code}\d+)""",
 		"""ComputerName =({host}[\w\-.]+)""",
 		"""\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",

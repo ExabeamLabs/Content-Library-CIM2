@@ -19,7 +19,7 @@ Name = mimecast-seg-cef-email-url
     """"action":"({action}[^"]+)""",
     """"category":"(Unknown|({category}[^"]+))""",
     """"+fromUserEmailAddress"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
-    """"+userEmailAddress"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"+userEmailAddress"+:"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"+url"+:"+({url}[^"]+)""",
     """"+ttpDefinition"+:"+({service_name}[^"]+)""",
     """"+subject"+:"+\s*({email_subject}.+?)\s*"+""",

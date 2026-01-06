@@ -8,7 +8,7 @@ Name = microsoft-mssql-kv-app-activity-mssqlserver
     """<Computer>({host}[\w\-.]+)<"""
     """[rnt\\]+action_id:({db_operation}[^\\\s]+)"""
     """database_principal_name:({db_user}[^\\\s]+)"""
-    """server_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\\\)?((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[rnt\\]*server_principal_sid:"""
+    """server_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\\\)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[rnt\\]*server_principal_sid:"""
   ]
 
 microsoft-sql-events {
@@ -24,14 +24,14 @@ microsoft-sql-events {
     """schema_name:({db_schema}[^\\\s]+)""",
     """server_instance_name:({dest_host}[^\\\s]+)""",
     """object_name:({object}[^\\\s]+)""",
-    """statement:\s*({db_query}((?i)(Select|alter|BACKUP|RESTORE|dbcc|drop|CREATE|update|insert|delete|set|show)).+?)\s+additional_information:""",
+    """statement:\s*({db_query}((Select|alter|BACKUP|RESTORE|dbcc|drop|CREATE|update|insert|delete|set|show)).+?)\s+additional_information:""",
     """additional_information:\s*({additional_info}[^\s\\]+)\s+\w+:""",
 # permission_bitmask is removed
     """object_id:({object_id}[^\\\s]+)""",
     """\starget_database_principal_name:({target}[^\s]+)""",
     """\starget_server_principal_name:([^\\]+\\)?({dest_user}[^\s]+)\starget_server_principal_sid:""",
     """\sdatabase_principal_name:([^\\]+\\)?({db_user}[^\s]+)\starget_server_principal_name:""",
-    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\sserver_principal_sid:""",
+    """\sserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\sserver_principal_sid:""",
 # server_principal_id is removed
 # db_principal_id is removed
 # target_server_principal_id is removed

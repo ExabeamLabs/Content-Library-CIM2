@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}[^<]+?)<""",
     """<Data Name\\*=('|")SubjectUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({account_name}[^<]+))<""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({account_name}[^<]+))<""",
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({account_domain}[^<]+))<""",
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<]+))<""",
     """<Data Name\\*=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<""",

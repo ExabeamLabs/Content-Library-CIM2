@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
 """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[^\\]+)"""
-"""SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
+"""SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
 """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\]+)\\?""""
 """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}({domain}[^\\]+)))\\?""""
 """SubjectLogonId\\?"+:\\?"+({login_id}[^\\]+)\\?""""

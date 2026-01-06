@@ -11,7 +11,7 @@ Name = cisco-asa-str-network-start-302020
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d+)""",
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-""",
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-""",
     """%ASA-({priority}\d+)-({event_code}\d+)""",
     """({event_name}Built ({direction}inbound|outbound) ({protocol}ICMP) connection)""",
     """Built outbound ICMP.*?faddr\s+((({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({dest_host}[^\s]+?))((\/({dest_port}\d+))|\s+)|({icmp_seq_num}\S+))""",

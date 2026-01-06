@@ -24,7 +24,7 @@ Fields = [
 """Group:\s+(\\r\s\\t)?Security ID:\s*(\\t)?({group_id}[^\s]+)(.+?)(\\r\s\\t)?Group Name:"""
 """Group:.+?(Group|Account) Name:\s+(\\t)?({group_name}.+?)?\s*(\\r\s\\t)?(Group|Account) Domain:"""
 """Group:.+?(Group|Account) Domain:\s+(\\t)?({group_domain}[^\s]+)"""
-"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
 ]
 ParserVersion = "v1.0.0"
 

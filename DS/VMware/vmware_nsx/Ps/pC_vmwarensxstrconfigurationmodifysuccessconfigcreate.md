@@ -14,7 +14,7 @@ nsx-config-change-activity = {
       """event\s({operation}[^\s]+)""",
       """({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d.\d\d:\d\d)\sevent""",
       """occurred on object ({object}[^\s]+)""",
-      """({result}(?i)success|failure)""",
+      """({result}success|failure)""",
       """tenant\s({tenant_id}[\w\-\.]+)\s""",
       """by user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
     

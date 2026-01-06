@@ -13,7 +13,7 @@ Conditions = [
 Fields = [
 """({event_name}A network share object was checked to see whether client can be granted desired access)"""
 """({event_code}5145)"""
-"""({dest_host}({host}[\w\-.]+))\s+(?i)((audit|success)( |_)(success|audit))"""
+"""({dest_host}({host}[\w\-.]+))\s+((audit|success)( |_)(success|audit))"""
 """\"EventTime\":\"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
 """Logon ID:\s*((?-i)\\+[rnt])*({login_id}\S+?)((?-i)\\+[rnt])*\s*Network Information:"""
 """Account Name:\s*((?-i)\\+[rnt])*({user}[\w\.\-\!\#\^\~]{1,40}\$?)((?-i)\\+[rnt])*\s*Account Domain:"""

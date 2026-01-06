@@ -17,7 +17,7 @@ Name = microsoft-azure-mix-app-activity-success-caller
     """\srequestClientApplication=({app}[^=]+)\s\w+=""",
     """"resourceId":"({object}[^"]+)""",
     """"resourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
-    """"resourceId":"[^"]*\/(?i)resourcegroups\/({account_id}[^\/"]+)\/"""
+    """"resourceId":"[^"]*\/resourcegroups\/({account_id}[^\/"]+)\/"""
     """"operationName":\s*\{[^\}]*?"localizedValue":\s*"({db_operation}[^"]+)"""",
     """request=({result}[^=\s]+)\s+\w+=""",
     """sourceServiceName =\s*({service_name}[^=]+)\s+\w+=""",

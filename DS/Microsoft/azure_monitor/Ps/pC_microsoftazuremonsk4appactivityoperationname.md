@@ -14,7 +14,7 @@ Name = microsoft-azuremon-sk4-app-activity-operationname
 # azure_event_hub_namespace is removed
 # azure_event_hub_name is removed
     """DeviceName"+:\s*"+({dest_host}[\w\-.]+)"""
-    """(?i)"clientIP_s":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"clientIP_s":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
     """"(host_s|hostName_s)":"({host}[\w\-.]+)""""
     """"userAgent_s"+:"+({user_agent}[^"]+)?"+,"""
     """Vendor":"({vendor_name}[^"]+?)"""",
@@ -51,12 +51,12 @@ cef-microsoft-app-activity-3 = {
     """category":\s*"({category}[^"]+)"""",
     """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
     """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
-    """"(?i)resourceId":\s*"({resource}({object}[^"]{1,249}))""",
+    """"resourceId":\s*"({resource}({object}[^"]{1,249}))""",
     """"operationName":\s*"({operation}[^"]+)""",
     """action":\s*"({action}[^"]+)""",
     """"IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"MacAddress\\?"+\s*:\s*\\?"({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+)""",
-    """"((?i)callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"(callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""

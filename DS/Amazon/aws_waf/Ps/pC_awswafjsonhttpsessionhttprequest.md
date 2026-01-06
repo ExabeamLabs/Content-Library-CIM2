@@ -12,7 +12,7 @@ Name = aws-waf-json-http-session-httprequest
     """\s\d\d\s\d\d:\d\d:\d\d\s({host}[\w\-\.]+)""",
     """"clientIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"name":"user-agent","value":"({user_agent}[^"]+)"""",
-    """"name"+:"+(?i)Host"+,"+value"+:"+(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^="]+?\.(\d+|([^\/\.\s"]+?)))|({dest_host}[\w\-\.]+))[\\\/\s:"]"""
+    """"name"+:"+Host"+,"+value"+:"+(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^="]+?\.(\d+|([^\/\.\s"]+?)))|({dest_host}[\w\-\.]+))[\\\/\s:"]"""
     """"uri":"({uri_path}[^"]+)"""",
     """"args":"({uri_query}[^"]+)"""",
     """"action":"({action}[^"]+)"""",
@@ -23,8 +23,8 @@ Name = aws-waf-json-http-session-httprequest
     """"webaclId":"arn:aws:waf([^:]+:){2}({account_id}\d+):"""
     """"terminatingRuleId"+:"+({rule_id}[^"]+)"""",
     """"terminatingRuleType"+:"+({rule}[^"]+)""""
-    """"name"+:"+(?i)user-agent"+,"+value"+:"+(?:-|Mozilla\/[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|iPhone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)[^=]+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))"""
-    """"name"+:"+(?i)Referer"+,"+value"+:"+({referrer}[^"]+)""""
+    """"name"+:"+user-agent"+,"+value"+:"+(?:-|Mozilla\/[^"]+?({os}iOS|Android|BlackBerry|Windows Phone|iPhone|BeOS|(?:X|x)11|(?:W|w)indows|(?:L|l)inux|(?:M|m)acintosh|(?:D|d)arwin)[^=]+?({browser}Chrome|Safari|Opera|(?:F|f)irefox|MSIE|Trident))"""
+    """"name"+:"+Referer"+,"+value"+:"+({referrer}[^"]+)""""
   ]
 
 

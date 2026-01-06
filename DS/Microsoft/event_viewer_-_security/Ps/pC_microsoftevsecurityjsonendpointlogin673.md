@@ -9,9 +9,9 @@ Name = microsoft-evsecurity-json-endpoint-login-673
   Conditions = [ "Service Ticket Request:", "Ticket Options:" ]
   Fields = [
     """({event_name}Account Logon)""",
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
     """({event_code}673)""",
-    """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)\s*,\s*({host}[^,]+)""",
+    """(((audit|success|failure)( |_)(success|audit|failure))|information)\s*,\s*({host}[^,]+)""",
     """Security(,|\srn=|\s+)({event_id}\d+)""",
     """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """User Domain:\s*({domain}[^\s]+)\s""",

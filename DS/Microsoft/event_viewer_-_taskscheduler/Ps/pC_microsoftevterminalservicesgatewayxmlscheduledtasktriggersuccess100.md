@@ -12,7 +12,7 @@ Name = microsoft-evterminalservicesgateway-xml-scheduled-task-trigger-success-10
     """<Computer>({host}[\w\-\.]+)<""",
     """<Security UserID=('|")({user_sid}[^'"<]+?)('|")""",
     """<Data Name =(('|")TaskName('|")>({task_name}[^<]+))""",
-    """<Data Name =('|")UserContext('|")>(((?i)NT AUTHORITY\\System)|(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """<Data Name =('|")UserContext('|")>((NT AUTHORITY\\System)|(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """({event_code}100)""",
     """<Level>({run_level}[^<]+)<"""
   ]

@@ -5,7 +5,7 @@ Name = microsoft-windows-json-user-lock-success-4740-2
   ParserVersion = v1.0.0
   Conditions = [ """Account That Was Locked Out""", """event_id\":4740""", """computer_name""" ]
   Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
     """SubjectUserName\\?"+:\\?"(?:-|LOCAL SYSTEM|({src_user}[^\\]+))\\?"""",

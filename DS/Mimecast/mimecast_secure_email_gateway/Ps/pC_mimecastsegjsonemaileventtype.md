@@ -18,7 +18,7 @@ Name = mimecast-seg-json-email-eventtype
     """exa_json_path=$.accountId,exa_field_name=account_id""",
     """exa_json_path=$.route,exa_field_name=direction""",
     """exa_json_path=$.direction,exa_field_name=direction""",
-    """exa_json_path=$.recipients,exa_regex=({email_recipients}(({dest_email_address}[^@,"]+@[^,"]+?),)?[^"]+)""",
+    """exa_json_path=$.recipients,exa_regex=({email_recipients}(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+),?)?[^"]*)""",
     """exa_json_path=$.recipient,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """exa_json_path=$.senderIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.numberAttachments,exa_field_name=attachment_count""",

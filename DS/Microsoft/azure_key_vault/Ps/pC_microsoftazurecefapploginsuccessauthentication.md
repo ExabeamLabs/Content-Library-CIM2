@@ -35,7 +35,7 @@ Fields = [
 """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]"""
 """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]"""
 """\[Namespace:\s*({host}\S+) ; EventHub name:"""
-"""(?i)({app}Microsoft.KeyVault)"""
+"""({app}Microsoft.KeyVault)"""
 """operationName\":\"({operation}({event_name}[^\"]+))\""""
 """resultSignature\":\"({status_msg}[^\"]+)\""""
 """resourceId\":\"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?(\/[^\/"]*)\/({resource}[^\"]+))\""""

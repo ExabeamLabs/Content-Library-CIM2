@@ -16,7 +16,7 @@ Name = microsoft-evsystem-xml-alert-trigger-5830
     """<Level>({alert_severity}\d+)""",
     """<Keywords>({result}[^<]+)<""",
     """<EventRecordID>({event_id}\d+)""",
-    """<EventData><Data>([^<]+)<\/Data><Data>({domain}[^<]+?)\.*<\/Data><Data>({user_type}[^<]+)<\/Data><Data>({os}[^<]+)<\/Data><Data>([^<]+)<\/Data><Data>(?:(?i)N\/A|([^<]+))<"""
+    """<EventData><Data>([^<]+)<\/Data><Data>({domain}[^<]+?)\.*<\/Data><Data>({user_type}[^<]+)<\/Data><Data>({os}[^<]+)<\/Data><Data>([^<]+)<\/Data><Data>(?:N\/A|([^<]+))<"""
     """<Level>({run_level}[^<]+)<"""
   ]
 

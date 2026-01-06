@@ -6,8 +6,8 @@ Name = microsoft-o365-sk4-app-activity-success-movetodeleteditems-2
   Product = Microsoft 365
   Conditions= [ """"Workload":""", """"Operation":"MoveToDeletedItems"""", """"UserId":"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-o365-app-activity-1.Fields} [
-    """\WfilePath=(((?i)N\/A)|({file_path}[^=]+?))\s*(\w+=|$)""",
-    """\WfilePath=(((?i)N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?(\.({file_ext}[^\/=\.\s]+?))?)))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|({file_path}[^=]+?))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?(\.({file_ext}[^\/=\.\s]+?))?)))\s*(\w+=|$)""",
     """\sfname=\s*(N\/A|({object}[^=\s]+))""",
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)""",
     """"Folder":\{[^\}]*?"Path":"([^"]*\\+)?({folder_name}[^"]+)""""
@@ -33,8 +33,8 @@ cef-microsoft-o365-app-activity-1 = {
     """"ResultStatus":"({result}[^"]+?)"""",
     """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)""",
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)""",
-    """\WfilePath=(((?i)N\/A)|([A-Za-z\d]+)|({file_path}[^=]+?))\s*(\w+=|$)""",
-    """\WfilePath=(((?i)N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?)))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|([A-Za-z\d]+)|({file_path}[^=]+?))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?)))\s*(\w+=|$)""",
     """\WfilePath=[^=]*?(\.({file_ext}[^\/\.]*?))?\s*(\w+=|$)""",
     """"ClientProcessName":"({process_name}[^"]+)""",
     """"Workload":\s*"({app}[^"]+)""""

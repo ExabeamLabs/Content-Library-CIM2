@@ -16,9 +16,9 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """suser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
     """duser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)\s\w+=""",
    """\Wsuid=(anonymous|email|system|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
-    """actor":\s*\{[^\}]+?"+displayName"+:\s*(null|"+(Okta System|({full_name}(?:({first_name}[^,"]+),\s*({last_name}[^"]+))|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|_oktaadagent|({=full_name}[^"]+))))")[^\}]+?"type":"User"""",
-    """actor"+:\s*\{[^\}]+?"type"+:\s*"+User"[^\}]+?"+displayName"+:\s*(null|"+(Okta System|Okta Admin|(?:({full_name}({first_name}[^,"]+),\s*({last_name}[^"]+))|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|_oktaadagent|({=full_name}[^"]+))))")"""
-    """"client":[^\]]*?"rawUserAgent"\s*:\s*"((?i)unknown|({user_agent}[^"]+))""",
+    """actor":\s*\{[^\}]+?"+displayName"+:\s*(null|"+(Okta System|({full_name}(?:({first_name}[^,"]+),\s*({last_name}[^"]+))|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|_oktaadagent|({=full_name}[^"]+))))")[^\}]+?"type":"User"""",
+    """actor"+:\s*\{[^\}]+?"type"+:\s*"+User"[^\}]+?"+displayName"+:\s*(null|"+(Okta System|Okta Admin|(?:({full_name}({first_name}[^,"]+),\s*({last_name}[^"]+))|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|_oktaadagent|({=full_name}[^"]+))))")"""
+    """"client":[^\]]*?"rawUserAgent"\s*:\s*"(unknown|({user_agent}[^"]+))""",
     """logInfo.request.ipChain.ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -27,7 +27,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
     """destinationServiceName =({app}[^=]+?)\s*\w+=""",
-    """({app}(?i)Okta|Microsoft Office 365)""",
+    """({app}Okta|Microsoft Office 365)""",
     """"type":\s*"AppInstance"[^\}\]]*"displayName":\s*"({app}[^"]+?)\s*"""",
     """"actor":.+?"displayName":\s*"({app}[^"]+).+?"type":\s*"PublicClientApp"""",
     """"geographicalContext":\s*\{[^\}]*?"city":\s*"({location_city}[^"]+)"""",
@@ -46,8 +46,8 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":[^}\]]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"[^\}]+?"alternateId"\s*:\s*"({object}[^"]+)"""",
     """"target":[^}\]]+?"alternateId"\s*:\s*"({object}[^"]+)"[^\}]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"""",
     """"domain"+:"+(null|\.|({domain}[^"\/,]+))"""
-    """"os":\s*"((?i)unknown|({os}[^"]+))""""
-    """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"os":\s*"(unknown|({os}[^"]+))""""
+    """"browser":"(UNKNOWN|({browser}[^"]+))""""
     """"deviceFingerprint":\s*"({fingerprint}[^"]+)""""
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
     """"debugData":.*?"risk":\s*"[^"]*?\Wlevel=\s*({severity}\w+)("|,|\})"""
@@ -91,7 +91,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..debugContext.debugData.requestUri,exa_field_name=uri_path""",
     """exa_regex="target":[^}\]]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"[^\}]+?"alternateId"\s*:\s*"({object}[^"]+)"""",
     """exa_regex="target":[^}\]]+?"alternateId"\s*:\s*"({object}[^"]+)"[^\}]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"""",
-    """exa_json_path=$..client.userAgent.browser,exa_regex=((?i)UNKNOWN|({browser}[^"]+))""",
+    """exa_json_path=$..client.userAgent.browser,exa_regex=((?i)UNKNOWN|({browser}[^"]+))"""
     """exa_json_path=$..client.userAgent.os,exa_field_name=os,exa_match_expr=!Contains($.client.userAgent.os,"unknown")""",
     """exa_json_path=$..debugContext.debugData.deviceFingerprint,exa_field_name=fingerprint""",
     """exa_json_path=$..target[1:].detailEntry.methodTypeUsed,exa_field_name=auth_method""",
@@ -101,7 +101,8 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..actor.displayName,exa_field_name=app,exa_match_expr=Contains($.actor.type,"PublicClientApp")""",
     """exa_regex="target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance"""",
     """exa_regex="target":\s*\[[^\]]*"type":\s*"(App)?User"[^\]]*?"displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)",\s*"detailEntry":\s*[^\}]*\}(,\{|\])""",
-    """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"[^"]*","displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
+    """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"[^"]*","displayName":\s*"({dest_user_full_name}[\w\.\-]+,?[\s\w\-\.]+)","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
+    """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))","displayName":"[^":]+","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
     """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",

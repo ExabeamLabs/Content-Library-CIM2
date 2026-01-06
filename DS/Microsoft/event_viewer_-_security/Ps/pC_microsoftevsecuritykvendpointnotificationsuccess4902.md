@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-success-4902
 	"""The Per-user audit policy table was created"""
 	]
 	Fields = [
-		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
+		"""({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
 		"""\WEventCode=({event_code}\d+)""",
 		"""ComputerName =({host}[\w\-.]+)""",
 		"""Keywords=({result}.+?)(\s+\w+=|\s*$)""",

@@ -17,7 +17,7 @@ Name = "microsoft-evsecurity-json-network-session-success-5158"
 """({event_name}The Windows Filtering Platform has permitted a bind to a local port)"""
 """"TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
 """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-"""(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?({host}[\w\-.]+)\s"""
+"""\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?({host}[\w\-.]+)\s"""
 """\"(Hostname|Computer)\"+:\"+({host}[^\",]+)"""
 """\"ProcessId\"+:\"+({process_id}[^\"]+)"""
 """\"Application\"+:\"+({process_path}({process_dir}[^,\"]*?[\\\/]+)?({process_name}[^\\\/\s\"]+?))\""""

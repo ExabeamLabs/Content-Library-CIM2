@@ -45,7 +45,7 @@ Fields = [
 """"rawOperationName":"({operation}[^"]+)"""",
 """app-user-id":"({user_id}[\w-]+)""",
 """src-ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-"""activityResult":[^}]+?"isSuccess":({result}(?i)(true|false))""",
+"""activityResult":[^}]+?"isSuccess":({result}(true|false))""",
 """"eventTypeName":"({event_name}[^"]+)""""
 """LoginErrorCode"*:({error_code}\d+)"""
 ]

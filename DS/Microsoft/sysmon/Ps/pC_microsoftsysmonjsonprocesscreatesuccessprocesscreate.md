@@ -30,7 +30,7 @@ Fields = [
      """ProviderGuid":"({provider_guid}[^"]+)""",
      """"Task":({task_name}\d+)""",
      """"OpcodeValue":({opcode}\d+)""",
-     """"User":"(((?i)NT AUTHORITY|({domain}[^\\]+))[\\]+)?((?i)SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+     """"User":"((NT AUTHORITY|({domain}[^\\]+))[\\]+)?(SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
      """"LogonGuid":"({logon_guid}[^"]+)""",
      """"Hashes":"[^]]+SHA256=({hash_sha256}[^",]+)""",
      """"ParentCommandLine":"\s*({parent_process_command_line}[^,]+?)\s*",""",

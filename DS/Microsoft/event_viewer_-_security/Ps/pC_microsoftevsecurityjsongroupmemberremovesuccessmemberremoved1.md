@@ -18,7 +18,7 @@ Fields = [
 """"_raw":"({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (AM|PM|am|pm))"""
 """"agent_hostname":"({dest_host}({host}[^"]+))""""
 """"computer":"({dest_host}({host}[^"]+))""""
-"""(?i)(success|audit)\s+\w+\s+({dest_host}({host}[\w\-.]+))\s"""
+"""(success|audit)\s+\w+\s+({dest_host}({host}[\w\-.]+))\s"""
 """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)"""
 """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing"""
 """A member was removed from a security-enabled\s*({group_type}[^\s]+)\s+group"""

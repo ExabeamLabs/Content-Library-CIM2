@@ -15,7 +15,7 @@ Name = cisco-asa-kv-app-notification-734001
     """User (({domain}[^\\\/@\s,]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({=domain}[^\s@,]+))?""",
     """Addr (({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})(:({src_port}\d+))?|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+(th0)?))|({src_host}[^\s]+?))""",
     """({event_name}The following DAP records were selected)""",
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-"""
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-"""
   ]
 
 

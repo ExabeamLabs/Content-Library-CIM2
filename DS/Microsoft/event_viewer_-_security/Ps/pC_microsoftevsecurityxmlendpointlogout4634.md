@@ -17,8 +17,8 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4634
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Data Name\\*=('|")LogonType('|")>({login_type}\d+)<\/Data>""",
     """<Data Name\\*=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))<\/Data>""",
-    """<Data Name\\*=('|")TargetDomainName('|")>((?i)NT AUTHORITY|({dest_domain}({domain}[^<]+)))<\/Data>""",
-    """<Data Name\\*=('|")TargetUserName('|")>((?i)SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>""",
+    """<Data Name\\*=('|")TargetDomainName('|")>(NT AUTHORITY|({dest_domain}({domain}[^<]+)))<\/Data>""",
+    """<Data Name\\*=('|")TargetUserName('|")>(SYSTEM|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>""",
     """<Data Name\\*=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<\/Data>"""
     """<Data Name\\*=('|")(Caller)?ProcessId('|")>({process_id}[^<]+?)\s*<""",
     """<Execution ProcessID\\*=('|")({process_id}[^'"]+)""",

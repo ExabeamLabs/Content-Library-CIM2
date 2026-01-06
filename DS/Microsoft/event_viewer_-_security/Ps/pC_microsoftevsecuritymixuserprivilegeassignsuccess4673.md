@@ -8,20 +8,20 @@ TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm
 Conditions = [ """A privileged service was called""", """Privileges""", """Account Name:""" ]
 Fields = [
   """"\@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)""""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """TimeGenerated=({time}\d{10})"""
   """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
   """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """({event_name}A privileged service was called)""",
   """"hostname":"({dest_host}[\w\-\.]+)""""
-  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({dest_host}({host}[\w\-.]+))\s""",
-  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
+  """<\d+>\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({dest_host}({host}[\w\-.]+))\s""",
+  """<\d+>\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
   """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+4673""",
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
-  """:\d{2}\s+({host}[\w.-]+)\s+(?i)((audit|success|failure)( |_)(success|audit|failure))\s+4673""",
-  """({result}(?i)(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*(4673|({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-\.]+))))\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
+  """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
+  """:\d{2}\s+({host}[\w.-]+)\s+((audit|success|failure)( |_)(success|audit|failure))\s+4673""",
+  """({result}(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*(4673|({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-\.]+))))\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
   """({event_code}4673)""",
-  """"(?i)(Hostname|MachineName|computer_name)":"({host}[\w\-.]*)"""
+  """"(Hostname|MachineName|computer_name)":"({host}[\w\-.]*)"""
   """Computer(Name)?\s*(=|:)\s*({host}[\w\-.]+)"""
   """Process Name:\s*((?-i)\\+[rnt])*(?: |(\\r|\\t|\\n)|({process_path}({process_dir}(?:[^";]+?)?[\\\/])?({process_name}[^\\\/";]+?)))[\\n\s;]*(Service Request Information:|\w+=)""",
   """Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\[srnt])*\s*(Account Domain:|\w+=)""",

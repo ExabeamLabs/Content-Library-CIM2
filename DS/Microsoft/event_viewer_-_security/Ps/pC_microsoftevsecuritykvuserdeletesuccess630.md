@@ -13,10 +13,10 @@ Conditions = [
 ]
 Fields = [
 """({event_name}User Account Deleted)"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """Security,({event_id}[\d]+),(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)"""
 """({event_code}630)"""
-"""(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)({host}({dest_host}[\w.\-]+))"""
+"""(((audit|success)( |_)(success|audit))|information)(\s+|,)({host}({dest_host}[\w.\-]+))"""
 """({host}({dest_host}[^\/\s]+))\/Security \(630\)"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}({dest_host}[\w\-.]+?))(\"|\s)"""
 """Target Account Name:\s+(?=\w)({account_name}({dest_user}.+?))\s+Target Domain:\s+(?=\w)({dest_domain}.+?)\s+Target Account ID:\s\%\{({dest_user_sid}[^}]+)\}"""

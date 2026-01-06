@@ -12,7 +12,7 @@ Name = ossec-o-kv-alert-trigger-success-syscheck
     """\sRule:\s*({alert_name}[^;]+)""",
     """\sLocation:\s*\(({dest_host}[^\)]+)""",
     """Location:(\s*\([^;]*?\))?\s*(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^;\-]+))""",
-    """\s(?i)file\s*'({file_path}({file_dir}[^']*?[\\\/]+)?({file_name}[^'\\\/]+?(\.({file_ext}\w+))?))'""",
+    """\sfile\s*'({file_path}({file_dir}[^']*?[\\\/]+)?({file_name}[^'\\\/]+?(\.({file_ext}\w+))?))'""",
     """\d\d:\d\d:\d\d\s*({host}[^\s]+)\s*ossec:""",
     """classification:\s*({classification_name}[^,]+)""",
     """\ssrcip:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

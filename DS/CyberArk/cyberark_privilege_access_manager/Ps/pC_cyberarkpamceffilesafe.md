@@ -24,7 +24,7 @@ Fields = [
 """\Wduser="?(|(({dest_domain}[^\\="]+)(\\)+)?({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\s+(\w+=|$)"""
 """\ssuser="?(|(({domain}[^\\="]+)(\\)+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?(\s+\w+=|\s*$)"""
 """\sfname="?(|({src_file_path}({file_dir}[^="]*?[\\\/]+)?({file_name}({object}({src_file_name}[^="\\\/]+?(\.({file_ext}({src_file_ext}\w+)))?)))))"?(\s+\w+=|\s*$)"""
-"""({file_type}(?i)file)"""
+"""({file_type}file)"""
 """({app}Vault)"""
 """({protocol}SSH)""",
 """reason="?({result_reason}[^="]+?)"?\s+\w+=""",

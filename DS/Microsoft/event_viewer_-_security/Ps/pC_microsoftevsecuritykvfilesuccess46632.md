@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
   """({event_name}An attempt was made to access an object)"""
   """Microsoft-Windows-Security-Auditing[^":=]+?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-  """(?i)(((audit|success)( |_)(success|audit))|information)[\s,](::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+))).*Subject:"""
+  """(((audit|success)( |_)(success|audit))|information)[\s,](::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w\-.]+))).*Subject:"""
   """({event_code}4663)"""
   """({time}\w+\s\d+\s\d+:\d+:\d+\s\d+)"""
   """\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
@@ -27,7 +27,7 @@ Fields = [
   """"ObjectName":"(-|({file_path}({file_dir}[^"]+?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;\\"]+?))?)))\s*""""
   """"ObjectType":"(-|({file_type}[^\s"]+))"""
   """"ProcessName":"(?: |({process_path}(({process_dir}(?:[^";]+))?[\\\/]+)?({process_name}[^\\\/";]+?)))\s*""""
-  """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+  """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
 ]
 ParserVersion = "v1.0.0"
 

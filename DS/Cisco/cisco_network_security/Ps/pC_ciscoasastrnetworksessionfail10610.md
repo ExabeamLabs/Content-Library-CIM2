@@ -12,7 +12,7 @@ Name = cisco-asa-str-network-session-fail-10610
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """({time}\w+ \d\d (\d\d\d\d )?\d\d:\d\d:\d\d)""",
     """(\w{3} (\d\d| \d) \d\d\d\d (\d\d| \d):\d\d:\d\d)\s+({host}[\w\.-]+)\s*:\s*%ASA-""",
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-""",
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-""",
     """%ASA-({priority}\d+)-({event_code}\d+)""",
     """({event_name}access-list\s*({access_list}.+?)\s*({action}permitted|denied|est-allowed)\s*({protocol}\S+))"""
     """({failure_reason}access-list\s*(.+?)\s*denied\s*)"""

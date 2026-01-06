@@ -13,9 +13,9 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
   ]
   Fields = [
     """({event_name}A Kerberos service ticket was requested)"""
-    """(?i)({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))"""
+    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
     """TimeGenerated=({time}\d{10})"""
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\d\s+\d\d:\d\d:\d\d\s+\-\d{4})""""

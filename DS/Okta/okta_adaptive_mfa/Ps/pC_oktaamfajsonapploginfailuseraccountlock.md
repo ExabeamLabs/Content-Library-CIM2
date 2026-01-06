@@ -15,7 +15,7 @@ s-okta-app-login = {
   Fields = [
     """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """"userAgent":\s*\{[^\{\}]*?"rawUserAgent":\s*"((?i)unknown|({user_agent}[^"]+))""",
+    """"userAgent":\s*\{[^\{\}]*?"rawUserAgent":\s*"(unknown|({user_agent}[^"]+))""",
     """"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"type":\s*"({app}[^"]+)""",
@@ -25,21 +25,21 @@ s-okta-app-login = {
     """"type":\s*"AppInstance"(,\s"[^"]+":\s\{[^\}]+\},\s|[^\]\}]*)"displayName":\s*"({app}[^"]+?)\s*"""",
     """"type":\s*"AppUser"[^\}\]]"alternateId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*""""
     """"alternateId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))",\s*?"type":\s*"AppUser""""
-    """"actor":\s*\{[^\{\}]*?"displayName":\s*"((?i)okta[^"]*|unknown|({full_name}[^",]+))"[^\{\}]*?"type":\s*"User"""",
-    """"actor":\s*\{[^\{\}]*?"type":\s*"User"[^\{\}]*?"displayName":\s*"((?i)okta[^"]*|unknown|({full_name}[^",]+))"""",
-    """"actor"":\s*\{[^\{\}]*?""type"":\s*""User""[^\{\}]*?""displayName"":\s*""((?i)okta[^"]*|unknown|({last_name}[^,]+),\s*({first_name}[^,"\}\]]+))""""
+    """"actor":\s*\{[^\{\}]*?"displayName":\s*"(okta[^"]*|unknown|({full_name}[^",]+))"[^\{\}]*?"type":\s*"User"""",
+    """"actor":\s*\{[^\{\}]*?"type":\s*"User"[^\{\}]*?"displayName":\s*"(okta[^"]*|unknown|({full_name}[^",]+))"""",
+    """"actor"":\s*\{[^\{\}]*?""type"":\s*""User""[^\{\}]*?""displayName"":\s*""(okta[^"]*|unknown|({last_name}[^,]+),\s*({first_name}[^,"\}\]]+))""""
     """"actor":\s*\{[^\{\}]*?"alternateId":\s*"(?:(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"userName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"outcome":\s*\{[^\{\}]*?"result":\s*"({result}[^"]+)""",
     """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"displayMessage":\s*"({operation}[^"]+)"""",
-    """"displayMessage"\s*:\s*"((?i)null|({event_name}[^",]+))""",
+    """"displayMessage"\s*:\s*"(null|({event_name}[^",]+))""",
     """"city":\s*"({location_city}[^"]+)""",
     """"state":\s*"({location_state}[^"]+)""",
     """"country":\s*"({mfa_country}({location_country}[^"]+))"""
     """"dtHash":"({hash_sha256}[^"]+)"""
-    """"os":\s*"((?i)unknown|({os}[^"]+))""""
-    """"browser":\s*"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"os":\s*"(unknown|({os}[^"]+))""""
+    """"browser":\s*"(UNKNOWN|({browser}[^"]+))""""
     """"domain":\s*"(null|\.|({domain}[^"\\},]+))""""
     """"risk":"\{reasons=({failure_reason}[^=]+?),\s\w+=""",
     """exa_json_path=$..published,exa_field_name=time""",
@@ -89,13 +89,13 @@ s-okta-app-login = {
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
   Fields = [
     """"published"+\s*:\s*"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """({app}(?i)Okta)""",
+    """({app}Okta)""",
     """destinationServiceName =({app}[^=]+?)\s*\w+=""",
     """"city":"({location_city}[^",]+)""",
     """"state":"({location_state}[^",]+)""",
     """"country":"({mfa_country}({location_country}[^",]+))""",
     """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """"rawUserAgent"+\s*:\s*"+((?i)unknown|({user_agent}[^"]+))"""",
+    """"rawUserAgent"+\s*:\s*"+(unknown|({user_agent}[^"]+))"""",
     """"action"+:.+?"+message"+:"+({operation}({event_name}[^",]+))"""
     """"displayMessage"\s*:\s*"({operation}({event_name}[^",]+))""",
     """"action"+:.+?"+objectType"+:"+({operation}[^",]+)""",
@@ -103,10 +103,10 @@ s-okta-app-login = {
     """"legacyEventType"+:"+({operation_details}[^",]+)""",
     """"risk":"\{reasons=({additional_info}({failure_reason}[^=]+?)),\s\w+=""",
     """"reason":"({additional_info}({failure_reason}[^"]+))"""
-    """"target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+((?i)unknown|({object}[^"]+[^\s]))"""",
-    """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|(?i)unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
-    """"actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
-    """"actor"+.+?"+[^}]+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))[^\}]+?type":"User"""",
+    """"target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+(unknown|({object}[^"]+[^\s]))"""",
+    """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
+    """"actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
+    """"actor"+.+?"+[^}]+?displayName"+:(null|"+(Okta System|Okta Admin|unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))[^\}]+?type":"User"""",
     """"domain"+:"+(null|\.|\.?({domain}[^",]+))"""",
     """"actor":\s*\{[^\}]+?alternateId":\s*"((({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))",[^\}]+?"type":\s*"User"""",
     """"target":[^\]]*?"alternateId"\s*:\s*"(unknown|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\}]+?"type":\s*"User"""",
@@ -143,7 +143,7 @@ s-okta-app-login = {
     """exa_json_path=$..legacyEventType,exa_field_name=operation_details""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^\{reasons=({failure_reason}[^=]+?),\s\w+=""",
     """exa_json_path=$..outcome.reason,exa_field_name=failure_reason""",
-    """exa_regex="target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+((?i)unknown|({object}[^"]+[^\s]))"""",
+     """exa_regex="target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+((?i)unknown|({object}[^"]+[^\s]))"""",
     """exa_regex=request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|(?i)unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
     """exa_regex="actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
     """exa_regex="actor"+.+?"+[^}]+?displayName"+:(null|"+(Okta System|Okta Admin|(?i)unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))[^\}]+?type":"User"""",
@@ -178,9 +178,9 @@ s-okta-app-login = {
     """"action":\s*\{.*?"objectType":\s*"({operation}[^"]+)".+?\}""",
     """"action":\s*\{.*?"objectType":\s*"[^"]*?({result}error)".+?\}""",
     """"categories":\s*\["({operation}[^"]+)"""",
-    """"actors":\[.*?\{.*?"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"[^\{\}]+?"objectType":"User".*?\}""",
-    """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"displayName":\s*"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"""",
-    """"displayName":"((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+?))\s*"[^\}\]]*"objectType":"User"""",
+    """"actors":\[.*?\{.*?"displayName":"(Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"[^\{\}]+?"objectType":"User".*?\}""",
+    """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"displayName":\s*"(Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))"""",
+    """"displayName":"(Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+?))\s*"[^\}\]]*"objectType":"User"""",
     """"actors":\[.*?\{.*?"login":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"[^\{\}]+?"objectType":"User".*?\}""",
     """"actors":\s*\[\{[^\{\}]*?"objectType":\s*"User"[^\]]*?"login":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"targets":\[.*?\{.*?"login":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account_name}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"[^\{\}]+?"objectType":"User".*?\}""",

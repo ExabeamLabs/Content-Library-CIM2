@@ -16,7 +16,7 @@ carbonblack-edr-dl = {
       """"+process_pid"+:({process_id}\d+)""",
       """"+device_name"+:"+([^\\"]+\\+)?({host}[^"]+)"+""",
       """"+sensor_action"+:"+({action}[^"]+)"+""",
-      """"+process_path"+:"+((?i)(SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""",
+      """"+process_path"+:"+((SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""",
       """"+action"+:"+({action}[^"]+)?"*""",
       """"+parent_cmdline"+:"+\s*({parent_process_command_line}[^"]+?)\s*",""",
       """"+parent_pid"+:({parent_process_id}\d+)""",

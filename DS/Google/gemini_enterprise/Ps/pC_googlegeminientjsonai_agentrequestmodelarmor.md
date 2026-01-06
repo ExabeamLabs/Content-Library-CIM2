@@ -13,6 +13,7 @@ Name = google-geminient-json-ai_agent-request-modelarmor
     """exa_json_path=$..sanitizationResult..sanitizationVerdictReason,exa_field_name=result_reason"""
     """exa_json_path=$..sanitizationResult..sanitizationVerdictReason,exa_regex=({result_reason}[^"]+)"""
     """exa_json_path=$..operationType,exa_field_name=event_name"""
+    """exa_json_path=$..sanitizationInput.text,exa_regex=({llm_request}.{0,256})"""
     """exa_json_path=$.severity,exa_field_name=severity"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$..sanitizationMetadata.errorCode,exa_field_name=failure_code"""

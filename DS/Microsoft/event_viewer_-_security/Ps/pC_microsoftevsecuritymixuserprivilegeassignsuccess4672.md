@@ -8,7 +8,7 @@ TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss",
 Conditions = [ """Special privileges assigned to new logon""", """Privileges""" ]
 Fields = [
   """\d\d:\d\d:\d\d(\+|-)\d\d:\d\d ({host}[\w\-.]+)""",
-  """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({host}[\w\-.]+)\s""",
+  """<\d+>\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?({host}[\w\-.]+)\s""",
   """"host":"(::ffff:)?({host}[\w\-.]+)"""",
   """({event_name}Special privileges assigned to new logon)""",
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z?)"""
@@ -16,8 +16,8 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
   """(::ffff:)?(({host}[\w\-.]+)\s+)?({time}\d+\/\d+\/\d+\s+\d+:\d+:\d+\s+(am|AM|pm|PM))""",
   """\scategoryOutcome=(|/({result}[^=]+?))(\s+\w+=|\s*$)""",
-  """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-  """({result}(?i)(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
+  """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+  """({result}(((audit|success|failure)( |_)(success|audit|failure))|information))\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[^=]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
   """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}[\w\-.]+)""",
   """(::ffff:)?({host}[\w\-.]+)\/Microsoft-Windows-Security-Auditing \(4672\)""",
   """"dhn":"(::ffff:)?({host}[\w\-.]+)""",

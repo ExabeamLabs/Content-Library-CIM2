@@ -34,7 +34,7 @@ Fields = [
 """"GrandparentCommandLine\\*"+:\s*\\*"+({grandparent_command_line}[^},]+?)\\*\s*"+(,|})"""
 """"ParentImageFileName\\*"+:\s*\\*"+({parent_image_filename}[^,]+?)\\*"+,"""
 """"ParentCommandLine\\*"+:\s*\\*"+({parent_process_command_line}[^,]+?)\s*"+,"""
-""""((?i)SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,"""
+""""(SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,"""
 """"PatternDispositionDescription\\*"+:\s*\\*"+({pattern_disposition_description}[^"]+)""",
 """"BootupSafeguardEnabled":\s*({bootup_safeguard_enabled}true|false)"""
 """"QuarantineFile"+:\s*({quarantine_file}true|false)"""

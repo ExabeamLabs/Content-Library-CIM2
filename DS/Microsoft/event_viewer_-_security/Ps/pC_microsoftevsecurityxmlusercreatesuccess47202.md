@@ -18,7 +18,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720-2"
 """<Data Name\\*=('|")TargetUserName('|")>({dest_user}({account_name}[^<]+))<""",
 """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}({account_domain}[^<]+))<""",
 """<Data Name\\*=('|")SubjectUserSid('|")>(?:NONE_MAPPED|({user_sid}[^<]+))<""",
-"""<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
+"""<Data Name\\*=('|")SubjectUserName('|")>((LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<""",
 """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<""",
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<""",
 """({event_name}A user account was created)"""

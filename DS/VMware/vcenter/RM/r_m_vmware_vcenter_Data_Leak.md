@@ -1,8 +1,8 @@
 Rules by Product and UseCase
 ============================
-Vendor: Microsoft
------------------
-### Product: [Event Viewer - TerminalServices-RemoteConnectionManager](../ds_microsoft_event_viewer_-_terminalservices-remoteconnectionmanager.md)
+Vendor: VMware
+--------------
+### Product: [vCenter](../ds_vmware_vcenter.md)
 ### Use-Case: [Data Leak](../../../../UseCases/uc_data_leak.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

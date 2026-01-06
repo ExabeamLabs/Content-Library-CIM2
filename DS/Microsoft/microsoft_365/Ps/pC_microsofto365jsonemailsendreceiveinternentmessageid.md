@@ -21,7 +21,7 @@ Name = microsoft-o365-json-email-send-receive-internentmessageid
     """"Id":"({alert_id}[^"]+)"""",
     """"SenderIp":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"SHA256":"({hash_sha256}[^"]+)"""",
-    """"Verdict":"({verdict}[^"]+)"""",
+    """"Verdict":"({result}[^"]+)"""",
     """"Subject":"\s*({additional_info}({email_subject}[^"]+?))\s*",""",
     """"Directionality":"({direction}[^",]+)"""",
     """"P2Sender":"((([^@]+?\\=)+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({email_user}[^"]+))"""",

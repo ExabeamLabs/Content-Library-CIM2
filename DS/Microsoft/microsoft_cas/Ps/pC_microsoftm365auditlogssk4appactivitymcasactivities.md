@@ -17,7 +17,7 @@ Name = microsoft-m365auditlogs-sk4-app-activity-mcasactivities
      """"location"[^}]+?city":"({location_city}[^",]+)""",
      """"location"[^}]+?countryCode":"({location_country}[^",]+)""",
      """"location"[^}]+?region":"({region}[^",]+)""",
-     """activityResult":[^}]+?"isSuccess":({result}(?i)(true|false))""",
+     """activityResult":[^}]+?"isSuccess":({result}(true|false))""",
      """"application-action":"({operation}[^"]+)""",
      """"src-endpoint":"({endpoint}[^"]+)""",
      """"src-account-name":"({account}[^"]+)""",

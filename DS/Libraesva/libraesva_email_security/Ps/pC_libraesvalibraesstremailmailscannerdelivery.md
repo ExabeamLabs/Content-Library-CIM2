@@ -9,7 +9,7 @@ Name = "libraesva-libraes-str-email-mailscanner-delivery"
   Fields = [
     """({time}\w+\s+\d{1,2}\s+\d\d:\d\d:\d\d)\s+({host}[^\s]+)\s"""
     """\smessage ({message_id}\S+)\s"""
-    """]:\s({result}(?i)(Non-)?Delivery)\sof"""
+    """]:\s({result}(Non-)?Delivery)\sof"""
     """\sfrom\s({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+.[^\]\s"\\,;\|]+)\sto"""
     """\sto ({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^:]*?)\swith subject"""
     """\Wwith subject ({email_subject}(.+)$)"""

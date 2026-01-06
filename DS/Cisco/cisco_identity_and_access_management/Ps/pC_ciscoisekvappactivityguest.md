@@ -14,7 +14,7 @@ Name = cisco-ise-kv-app-activity-guest
 # auditsessionid is removed
 # guestusername is removed
     """IdentityGroup=({identity_group}[^,]+?),""",
-    """(?i)(MacAddress)=({src_mac}[^,]+?),""",
+    """(MacAddress)=({src_mac}[^,]+?),""",
 # ipaddress is removed
 # usertype is removed
     """Calling-Station-ID=({calling_station_id}[^,\s]+),""",
