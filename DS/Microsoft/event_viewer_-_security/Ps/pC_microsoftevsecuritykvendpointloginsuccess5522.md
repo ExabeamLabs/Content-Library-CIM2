@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-success-552-2
   Conditions = [ """EventCode=552""", """The session cookies were successfully deleted""", """SourceName =AD FS""" ]
   Fields = [
     """({event_name}The session cookies were successfully deleted using the OAuth logout path.)""",
-	  """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*((?i)AM|PM))\s*LogName =""",
+	  """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*(AM|PM))\s*LogName =""",
     """ComputerName =({host}[^\s]+)\s*User=""",
     """({event_code}552)""",
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Sid=""",

@@ -14,11 +14,11 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
   Fields = [
       """({event_name}A member was removed from a security-enabled [\w\s]+ group)""",
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-      """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+      """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
       """"agent_hostname":"({src_host}({host}[\w\-.]+))"""",
       """"computer":"({src_host}({host}[\w\-.]+))"""",
-      """(?i)Computer_name(\\*")?:(\\*")?({src_host}({host}[\w\-\.]+))"""
-      """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({src_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
+      """Computer_name(\\*")?:(\\*")?({src_host}({host}[\w\-\.]+))"""
+      """(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({src_host}({host}[^=]+?))\s*(\s|\t|,|#\d+|<[^>]+>)\s*"""
       """({event_code}\d+)\|\s+devTime=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)""",
       """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing""",
@@ -36,13 +36,13 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """Group:.+?(Group|Account) Name\s*:\s*(\\t|\\n|\\r)*({group_name}.+?)?(\\t|\\n|\\r)*\s*(\\t|\\n|\\r)*(Group|Account) Domain\s*:\s*(\\t|\\n|\\r)*({group_domain}[^\\\s]+)\s*""",
       """"EventID":({event_code}\d+)""",
       """"ComputerName":"({src_host}({host}[\w\-.]+))""""
-      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
       """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
       """"record_id"+:({event_id}\d+)"""
       """"task"+:"+({task_name}[^"]+)"""
       """"event_id\\?"+:({event_code}\d+)"""
       """"(?:winlog\.)?computer_name"+:"+({src_host}({host}[^"]+))"""
-      """"(?i)Hostname\\*"+:\\*"+({src_host}({host}[\w\-.]+))"""
+      """"Hostname\\*"+:\\*"+({src_host}({host}[\w\-.]+))"""
       """"keywords"+:\["+({result}[^"]+)"""
       """"pid"+:({process_id}\d+)"""
       """"os":[^@]+?"name":"({os}[^"]+)"""

@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4756-2
     """<EventID>({event_code}[^<]+)</EventID>""",
     """<Computer>({host}[\w\-.]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
+    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetDomainName('|")>({group_domain}[^<]+)</Data>""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)</Data>""",

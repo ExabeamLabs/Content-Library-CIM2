@@ -22,7 +22,7 @@ Name = "microsoft-evsecurity-kv-user-privilege-use-success-4674-1"
       """Process Name:\s*(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/"\.]+\.\w+?)))"*\s+""",
       """Desired Access:\s*(|-|0|({access}[^:]+?))\s*(?:\s\w+:|$|")""",
       """Privileges:\s*({privileges}[^:"]+?)\s*("|\w+:|$)"""
-      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+      """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
     ]
     ParserVersion = "v1.0.0"
 

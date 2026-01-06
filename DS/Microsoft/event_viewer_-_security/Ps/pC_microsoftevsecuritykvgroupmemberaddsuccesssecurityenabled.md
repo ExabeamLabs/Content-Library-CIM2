@@ -15,7 +15,7 @@ Fields = [
 """(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+),"""
 """"agent_hostname":"({dest_host}({host}[^"]+))""""
 """"computer":"({dest_host}({host}[^"]+))""""
-"""(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)(,|\s+)({dest_host}({host}[\w.\-]+))"""
+"""(((audit|success|failure)( |_)(success|audit|failure))|information)(,|\s+)({dest_host}({host}[\w.\-]+))"""
 """Computer=({dest_host}({host}[\w\-.]+))"""
 """EventID=({event_code}\d+)"""
 """\d\d:\d\d:\d\d\s+\d\d\d\d(\s+|,)({event_code}\d+)(\s|,)+Security"""

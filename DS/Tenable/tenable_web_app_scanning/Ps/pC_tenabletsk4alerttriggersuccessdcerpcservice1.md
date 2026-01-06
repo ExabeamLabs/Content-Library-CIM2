@@ -23,7 +23,7 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
     """cve"+:\s*\[({cve_id}[^\]]+)\]""",
     """protocol"+:\s*"+({protocol}[^"]+)""",
     """"state"+:\s*"+({alert_status}[^"]+)""",
-    """"solution"+:\s*"+((?i)n\/a|({solution}[^"]+))"""
+    """"solution"+:\s*"+(n\/a|({solution}[^"]+))"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.scan.started_at,exa_field_name=time"""
     """exa_json_path=$.scan.indexed,exa_field_name=time"""

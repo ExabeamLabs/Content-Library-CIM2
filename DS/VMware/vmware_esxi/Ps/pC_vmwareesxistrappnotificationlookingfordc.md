@@ -10,7 +10,7 @@ Name = vmware-esxi-str-app-notification-lookingfordc
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\s({host}[\w.-]+)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s({host}[\w.-]+)\s""",
-    """domain\s'(<(?i)null>|({domain}[^',]+))""",
+    """domain\s'(<null>|({domain}[^',]+))""",
     """\[[^\]]+?\]\s+({additional_info}\w+\s.*?)\s*("|$)"""
 # flag is removed
   ]

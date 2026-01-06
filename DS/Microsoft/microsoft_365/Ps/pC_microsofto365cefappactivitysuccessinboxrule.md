@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-activity-success-inboxrule
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"New-InboxRule"""" ]
   Fields = ${MicrosoftAzureParsersTemplates.cef-microsoft-app-activity-1.Fields}[
-    """"(?i)({operation}ForwardTo|delivertomailboxandforward)""""
+    """"({operation}ForwardTo|delivertomailboxandforward)""""
     """"ForwardTo":"+(smtp:)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
     """"ResultStatus":"({result}[^"]+)"""",

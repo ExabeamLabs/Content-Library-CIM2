@@ -10,8 +10,8 @@ Name = microsoft-evsecurity-json-endpoint-login-success-552
   Fields = [
     """({event_name}Logon attempt using explicit credentials)""",
     """timestamp:({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
-    """(?i)(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[\w\-.]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+    """(((audit|success)( |_)(success|audit))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*({host}[\w\-.]+?)\s*(\s|\t|,|#\d+|<[^>]+>)\s*""",
     """({event_code}552)""",
     """({host}[\w\-.]+)\/Security \(552\)""",
     """<Computer>({host}[\w\-.]+)</Computer>""",

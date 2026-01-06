@@ -70,7 +70,7 @@ eset-activity.Fields}[
     """cve"+:\s*\[({cve_id}[^\]]+)\]""",
     """protocol"+:\s*"+({protocol}[^"]+)""",
     """"state"+:\s*"+({alert_status}[^"]+)""",
-    """"solution"+:\s*"+((?i)n\/a|({solution}[^"]+))"""
+    """"solution"+:\s*"+(n\/a|({solution}[^"]+))"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.scan.started_at,exa_field_name=time"""
     """exa_json_path=$.scan.indexed,exa_field_name=time"""
@@ -188,7 +188,7 @@ ${HornetDlpEmailTemplates.hornet-dlp-email}{
     """main_domain=({domain}[^=]+?)\s*(\w+=|$)""",
     """from=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """to=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """src_host=((?i)unknown|({src_host}[^\s]+))""",
+    """src_host=(unknown|({src_host}[^\s]+))""",
     """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """dst_ip=(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))""",
     """attachments="[^0"]#({email_attachments}[^"]+)""",

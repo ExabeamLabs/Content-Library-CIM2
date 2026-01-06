@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
 """({event_name}A member was removed from a security-enabled [\w\s]+ group)"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """Computer(Name|_name)?(["\s]*(:|=|\\=)\s*")?>?({dest_host}({host}[\w\-.]+))(<|"|\s)"""
 """"?Event(ID>)?(Code["\s]*(:|=|\\=)\s*"?)?({event_code}\d+)"""
 """({event_code}\d+)\s+Microsoft-Windows-Security-Auditing"""

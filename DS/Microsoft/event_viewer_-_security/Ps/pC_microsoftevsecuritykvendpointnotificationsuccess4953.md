@@ -9,7 +9,7 @@ TimeFormat = "MM/dd/yyyy hh:mm:ss a"
 Conditions = [ """EventCode=4953""", """ComputerName =""", """RecordNumber=""","""Microsoft Windows security auditing""" ]
 Fields = 
 [
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
     """\WLogName =({log_name}[^\s]+)"""
     """\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)"""
     """\WEventCode=({event_code}\d+)"""

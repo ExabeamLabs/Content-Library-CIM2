@@ -1,8 +1,8 @@
 Rules by Product and UseCase
 ============================
-Vendor: Microsoft
------------------
-### Product: [Event Viewer - TerminalServices-RemoteConnectionManager](../ds_microsoft_event_viewer_-_terminalservices-remoteconnectionmanager.md)
+Vendor: Ermes
+-------------
+### Product: [Ermes Browser Security Platform](../ds_ermes_ermes_browser_security_platform.md)
 ### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |

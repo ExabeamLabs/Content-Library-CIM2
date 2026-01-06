@@ -32,7 +32,7 @@ netapp-json-windows-events = {
     """'ComputerUUID':\s+'({user_uid}[^']+)""",
     """'SubjectUserSid':\s+'({user_sid}[^']+)""",
     """'ObjectServer':\s+'({object_server}[^']+)""",
-    """'ObjectType':\s+'({object_class}[^']+)""",
+    """'ObjectType':\s+'({object_type}[^']+)""",
     """'HandleID':\s+'({handle_id}[^']+)""",
     """'ObjectName':\s+'({object}[^']+)""",
     """'AccessList':\s+'({access}.+?)\s+'""",

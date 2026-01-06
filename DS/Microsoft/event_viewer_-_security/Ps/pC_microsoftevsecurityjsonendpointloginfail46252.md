@@ -6,7 +6,7 @@ Name = microsoft-evsecurity-json-endpoint-login-fail-4625-2
   Product = Event Viewer - Security
   Conditions = ["""An account failed to log on""", """Failure Reason""", """event_id\":4625""", """computer_name"""]
   Fields = ${WindowsParsersTemplates.json-windows-events-2-aa.Fields}[
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({src_domain}[^\\]+))\\?"""",
     """(?:winlog\.)?computer_name\\?"+:\\?"+({dest_host}({host}[\w\-.]+))""",
     """WorkstationName\\?"+:\\?"+(?:-|({src_host}({src_host_windows}[^\s\\]+)))\\?"""",
@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-json-endpoint-login-fail-4625-2
     """SubjectUserName\\?"+:\\?"(?:-|LOCAL SYSTEM|({src_user}[^\\]+))\\?"""",
     """SubjectDomainName\\?"+:\\?"(?:-|NT AUTHORITY|({src_domain}[^\\]+))\\?"""",
     """TargetUserSid\\?"+:\\?"({dest_user_sid}({user_sid}[^\\]+))\\?"""",
-    """TargetUserName\\?"+:\\?"+(?:-|(?i)(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|((({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({dest_domain}({domain}[^\\]+)))?)|({user_upn}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?)))\\?"""",
+    """TargetUserName\\?"+:\\?"+(?:-|(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|((({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({dest_domain}({domain}[^\\]+)))?)|({user_upn}[^@\s]+?@[^\s\.]+?\.[^\s\\]+?)))\\?"""",
     """TargetDomainName\\?"+:\\?"(?:-|\.|NT AUTHORITY| |({dest_domain}({domain}[^\s\\]+?)))\\?"""",
     """IpAddress\\?"+:\\?"(?:-|(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
     """SubStatus\\?"+:\\?"+({failure_code}({result_code}[^\\]+))\\?"""

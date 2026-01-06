@@ -11,7 +11,7 @@ Name = cisco-asa-str-network-notification-725016
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
     """({time}\w+ \d\d \d\d\d\d \d\d:\d\d:\d\d+)""",
-    """\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-""",
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-""",
     """({time}\w+ \d\d (\d\d\d\d )?\d\d:\d\d:\d\d):\s*%ASA-({priority}\d+)""",
     """({event_code}725016)""",
     """({event_name}Device selects trust-point)""",

@@ -15,11 +15,11 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """"legacyEventType"\s*:"\s*({operation_details}[^",]+)""",
     """actor":\s*\{[^\}]+?alternateId":\s*"((({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s"]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))",[^\}]+?"type":\s*"User"""",
     """actor":\s*\{[^\}]+?displayName":\s*"({full_name}[^"]+)"[^\}]+?type":\s*"User"""",
-    """request"+:[^\]]*?User[^\]]*?"+displayName"+:\s*(null|"+(Okta System|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))))")""",
-    """"actor"+[^\]]*?"+type"+:\s*"+User[^\]]*?displayName"+:\s*(null|"+(Okta System|Okta Admin|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|({full_name}[^"]+)))))""",
+    """request"+:[^\]]*?User[^\]]*?"+displayName"+:\s*(null|"+(Okta System|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|({full_name}[^"]+))))")""",
+    """"actor"+[^\]]*?"+type"+:\s*"+User[^\]]*?displayName"+:\s*(null|"+(Okta System|Okta Admin|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|({full_name}[^"]+)))))""",
     """"os":\s*"({os}[^"]+)"""",
-    """"client":[^\]]*?"os"\s*:\s*"((?i)unknown|({os}[^"]+))""",
-    """"client":[^\]]*?"rawUserAgent"\s*:\s*"((?i)unknown|({user_agent}[^"]+))""",
+    """"client":[^\]]*?"os"\s*:\s*"(unknown|({os}[^"]+))""",
+    """"client":[^\]]*?"rawUserAgent"\s*:\s*"(unknown|({user_agent}[^"]+))""",
     """logInfo.request.ipChain.ip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"client":[^\]]*?"ipAddress"\s*:\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -27,7 +27,7 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """"outcome":[^\]]*?"result"\s*:\s*"(FAILURE|DENY)","reason":\s*"({failure_reason}[^"]+)""",
     """"outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
-    """({app}(?i)Okta)""",
+    """({app}Okta)""",
     """"destinationServiceName":"({app}[^",]+)""""
     """"type":\s*"AppInstance"[^\}\]]*"displayName":\s*"({app}[^"]+?)\s*"""",
     """request"+:[^\]]*?"+type"+:\s*"+User"+,"+alternateId"+:\s*(null|"+(system@okta\.com|unknown|(?:(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}[^"@]+@({email_domain}[^"]+))|({=user}[\w\.\-\!\#\^\~]{1,40}\$?))))""",
@@ -35,7 +35,7 @@ Name = "okta-amfa-cef-app-login-success-userauthverify"
     """(s|d)?user\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """(s|d)?user\\*=(anonymous|system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s|\||,)""",
     """\Wsuid=(anonymous|email|system|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
-    """"browser":"((?i)UNKNOWN|({browser}[^"]+))""""
+    """"browser":"(UNKNOWN|({browser}[^"]+))""""
     """"deviceFingerprint":"({fingerprint}[^"]+)""""
     """"methodTypeUsed":\s*"({auth_method}[^"]+)""""
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""

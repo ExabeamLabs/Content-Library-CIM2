@@ -15,7 +15,7 @@ Fields = [
 """\sUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\w+="""
 """\sDomain=({domain}.+?)\s+\w+="""
 """\sEventIDCode=({event_code}\d+)"""
-"""Message=({activity_1}.*?\s*(?i)Document) \d+,"""
+"""Message=({activity_1}.*?\s*Document) \d+,"""
 """owned by [^\s]+\s*.*?( on [^\s]+)?({activity_2}.+?) on ({printer_name}.+?)(\.\s+|\s+through)"""
 """Message=[^,]+,\s+({object}.+?) owned by"""
 """owned by ({user}[\w\.\-\!\#\^\~]{1,40}\$?) (to|on|was) """

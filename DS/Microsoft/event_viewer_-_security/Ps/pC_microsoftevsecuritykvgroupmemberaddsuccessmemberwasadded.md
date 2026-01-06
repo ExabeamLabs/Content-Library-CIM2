@@ -10,10 +10,10 @@ Name = "microsoft-evsecurity-kv-group-member-add-success-memberwasadded"
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
       """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
       """({event_name}A member was added to a security-enabled [\w\s]+ group)""",
-      """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+      """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
       """({time}\w+ \d+ \d+:\d+:\d+ \d{4})\s+47\d\d\s+Microsoft""",
       """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
-      """\s(?i)(((audit|success)( |_)(success|audit))|information)(\s+|,)({dest_host}({host}[\w.\-]+))\s""",
+      """\s(((audit|success)( |_)(success|audit))|information)(\s+|,)({dest_host}({host}[\w.\-]+))\s""",
       """ComputerName\\=({dest_host}({host}[\w\-.]+))""",
       """Computer_name:({dest_host}({host}[\w\-\.]+))"""
       """Computer(\w+)?["\s]+(:|=)\s*"?({dest_host}({host}.+?))("|\s|;)""",

@@ -12,10 +12,10 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4768-3"
     """Microsoft-Windows-Security-Auditing""" 
   ] 
   Fields = [  
-    """(?i)({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))"""
+    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))"""
     """"TimeCreated"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""" 
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""" 
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""" 
     """TimeGenerated=({time}\d{10})"""
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
@@ -64,7 +64,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4768-3"
   Fields = [ 
     """({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)\s({host}[\w\-\.]+)?""",
     """ComputerName =({host}[\w\-\.]+)""", 
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""" 
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))""" 
     """({event_name}A Kerberos authentication ticket \(TGT\) was requested)"""  
     """({event_code}4768)"""  
     """Account Name(:|=)\s*(\\t)?({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@.+?)?[\s;]*(\\r\s\\t)*?Supplied Realm Name""" 

@@ -30,7 +30,7 @@ Name = microsoft-azure-cef-network-traffic-rule
 """FirstPid\"+:({process_id}\d+)"""
 """\"ExecutablePath\":\"({process_path}((|({process_dir}[^\"]*?)[\\/]+))?({process_name}[^\"\\/]+?))\s*\""""
 """CommandLine\":\"\s*({process_command_line}[^\n]+?)\s*\",\"\w+\""""
-"""UserName\"+:\"+((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""UserName\"+:\"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """UserDomain\"+:\"+({domain}[^\"]+)"""
 ]
 

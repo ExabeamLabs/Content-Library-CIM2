@@ -30,7 +30,7 @@ Name = cisco-asa-str-network-notification-success
     """src_addr=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,"""
     """dest_addr=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,"""
     """label length ({bytes}\d+) """
-    """%ASA-\d+-\d+.*?({result}(?i)dropped|drop|Deny|failure|failed|fail|rejected|denied|reject|bad)"""
+    """%ASA-\d+-\d+.*?({result}dropped|drop|Deny|failure|failed|fail|rejected|denied|reject|bad)"""
   ]
 
 

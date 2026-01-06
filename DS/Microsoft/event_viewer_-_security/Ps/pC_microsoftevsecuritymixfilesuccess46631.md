@@ -26,7 +26,7 @@ Fields = [
   """"ObjectName":"(-|({file_path}({file_dir}.*?)({file_name}[^\\\/;]+?(\.({file_ext}[^\.;]+?))?)))\s*""""
   """"ObjectType":"(-|({file_type}[^\s"]+))"""
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?)))\s*""""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """<TimeCreated SystemTime=("|')({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
   """<Computer>([^<>]+?[\\\/]+)?({src_host}({host}[\w\-.]+))<"""
   """<EventID>({event_code}[^<]+)<"""

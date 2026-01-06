@@ -30,7 +30,7 @@ cef-cloud-system-info = {
     """"(H|h)ost(N|n)ame_s":"({host}[^"]+)""",
     """"Hostname_s":"({host}[^"]+)""",
 # src_system is removed
-    """"(?i)Type":"({event_category}[^"]+)""",
+    """"Type":"({event_category}[^"]+)""",
     """"Computer":"({computer_name}[^"]+)""",
     """"Account":"(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
 # mg is removed

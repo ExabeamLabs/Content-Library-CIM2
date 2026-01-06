@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
 """"published"+:"+({time}[^",]+)"+"""
-"""({object}({app}(?i)Okta))"""
+"""({object}({app}Okta))"""
 """"+target"+:\[?\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({dest_user}[\w\.\-]{1,40})@({dest_domain}[^\s",]+?\.corp))|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")"""
 """"+actor"+:\{[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,"""
 """"+actor"+:\{[^\{\}]*?"+alternateId"+:"+(system@okta\.com|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s",]+?\.corp))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(unknown|({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+,[^\{\}]*?("type"+:\s*"+(SystemPrincipal|User)")"""
@@ -34,7 +34,7 @@ Fields = [
 """"type"+:"+AppInstance"+[^\}\]]*"displayName"+:"+({object}({app}[^"]+?))\s*""""
 """"outcome"+:[^\]]*?"+result"+:"+({result}[^",]+)""""
 """"client"+:[^\]]*?"+ipAddress"+:"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-""""client"+:[^\]]*?"+rawUserAgent"+:"+((?i)unknown|({user_agent}[^"]+?))""""
+""""client"+:[^\]]*?"+rawUserAgent"+:"+(unknown|({user_agent}[^"]+?))""""
 """"target"+:\[\{[^\}\]]+"+type"+:"+({object_type}[^",]+)""""
 ]
 ParserVersion = "v1.0.0"

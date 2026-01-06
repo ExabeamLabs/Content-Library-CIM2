@@ -11,10 +11,10 @@ Conditions = [
 ]
 Fields = [
 """({event_name}User Account Locked Out)"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
 """({event_code}644)"""
-"""(?i)(information)(\s+|,)({host}[\w.\-]+)"""
-"""(?i)(success|failure|audit)\s+\w+(\s+|,)({host}[^\s,]+)"""
+"""(information)(\s+|,)({host}[\w.\-]+)"""
+"""(success|failure|audit)\s+\w+(\s+|,)({host}[^\s,]+)"""
 """"dhn":"({host}[\w\-.]+)"""
 """rn=({event_id}[\d]+)"""
 """({host}[^\/\s]+)\/Security \(644\)"""

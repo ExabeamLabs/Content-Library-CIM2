@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-json-mul-network-session-success-5156
     """\WComputerName:\s*(::ffff:)?({host}[\w\-.]+)"""
     """"Computer":"({host}[\w\-.]+)""""
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+"""
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
+    """\w+\s*\d+\s*\d+:\d+:\d+\s(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
     """({event_code}5156)"""
     """({event_name}The Windows Filtering Platform has permitted a connection)"""
     """Process ID:((\\)*(\\r|\\t|\\n))*\s*({process_id}\d+)"""

@@ -51,7 +51,7 @@ aws-cloudtrail-json = {
       ""","userIdentity\\?":\{[^\}]+"AssumedRole\\?"[^\}]+"principalId\\?":\s*\\?"[A-Z\d]{1,25}:({aws_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"\s*[,\]\}]""",
       ""","userIdentity\\?":[^\}]+"IAMUser\\?"[^\}]+"userName\\?":\s*\\?"(({aws_email_address}({email_address}[^"@]+@[^"\.]+\.[^"]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^@"]+))?)\\?"""",
       ""","userIdentity\\?":\s*\{[^\}]+"type\\?":\s*\\?"({aws_user}({user}Root))\\?""""
-      """(?i)requestParameters":"?({additional_info}[^\$]+?}+?)"?,"\w+"?"""
+      """requestParameters":"?({additional_info}[^\$]+?}+?)"?,"\w+"?"""
       """"RestrictPublicBuckets\\*":({restrict_public_buckets}[^",\\\}]+)"""
       """"BlockPublicPolicy\\*":({block_public_policy}[^",\\\}]+)"""
       """"BlockPublicAcls\\*":({block_public_acls}[^",\\\}]+)"""

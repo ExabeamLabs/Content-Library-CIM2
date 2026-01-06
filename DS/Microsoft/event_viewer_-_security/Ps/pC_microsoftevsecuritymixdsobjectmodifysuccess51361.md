@@ -15,7 +15,7 @@ Fields = [
 """({event_name}A directory service object was modified)"""
 """"agent_hostname":"({dest_host}({host}[\w\-.]+))""""
 """"computer":"({dest_host}({host}[\w\-.]+))""""
-"""(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))\s"""
+"""(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))\s"""
 """__li_source_path="*({dest_host}({host}[\w\-.]+))""""
 """<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""
 """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)"""

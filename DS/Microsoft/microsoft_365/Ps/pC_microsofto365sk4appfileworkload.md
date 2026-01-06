@@ -33,7 +33,7 @@ Fields = [
 """exa_json_path=$..UserAgent,exa_field_name=user_agent"""
 """exa_json_path=$..MailboxPrimaryAddress,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
 """exa_json_path=$..UserType,exa_field_name=user_type"""
-"""exa_json_path=$..severity,exa_field_name=alert_severity"""
+"""exa_json_path=$..Severity,exa_field_name=alert_severity"""
 """exa_json_path=$..correlationId,exa_field_name=correlation_id"""
 """exa_json_path=$..UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """exa_json_path=$..SensitivityLabelId,exa_field_name=sensitivity_label"""
@@ -51,7 +51,7 @@ Fields = [
 """exa_json_path=$..LeaveTime,exa_field_name=end_time"""
 """exa_json_path=$..JoinTime,exa_field_name=start_time"""
 """exa_json_path=$..MeetingDetailId,exa_field_name=meeting_number"""
-"""exa_json_path=$.FileSize,exa_field_name=bytes"""
+"""exa_json_path=$..FileSize,exa_field_name=bytes"""
 """exa_json_path=$.Sha1,exa_field_name=hash_sha1"""
 """exa_json_path=$.Sha256,exa_field_name=hash_sha256"""
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

@@ -8,7 +8,7 @@ Name = microsoft-evsecurity-kv-group-create-success-4731-1
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Conditions = ["""EventCode=4731""","""SourceName =Microsoft Windows security auditing.""","""TaskCategory="""]
   Fields = [
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """Computer(Name)?="?({host}[\w\-.]+)"?"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """LogName =({log_name}[^\s]+)"""

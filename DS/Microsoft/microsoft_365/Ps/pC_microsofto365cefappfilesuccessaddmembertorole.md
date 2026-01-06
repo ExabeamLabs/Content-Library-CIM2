@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-file-success-addmembertorole
   Product = Microsoft 365
   Conditions= [ """"Workload":""", """":"Add member to role""", """"UserKey":""" ]
    Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-     """(?i)modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+(?i)newValue"+:"+\\"+({object}[^\\"]+)"""
+     """modifiedProperties"+:\[\{[^\}]+\},\{[^\}]+?"+newValue"+:"+\\"+({object}[^\\"]+)"""
      """"ObjectId":"({object}[^"]+)"""
      """({event_name}Add member to role)"""
      """"Workload":"({resource}[^"]+)"""

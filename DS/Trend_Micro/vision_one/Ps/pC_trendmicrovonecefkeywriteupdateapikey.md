@@ -17,7 +17,7 @@ trendmicro-vision-one-account-audit = {
     """rt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
     """CEF:([^\|]*\|){4}({event_code}[^|]+)""",
     """CEF:([^\|]*\|){5}({event_category}[^|]+)""",    
-    """cat=((?i)Unknown|({category}[^=,]+))(\s*,\S+)?\s+\w+=""",
+    """cat=(Unknown|({category}[^=,]+))(\s*,\S+)?\s+\w+=""",
     """({app}Trend Vision One)""",
     """ \d\d:\d\d:\d\d ({host}[\w.-]+)\s""",
     """ cn1=({result}\d)""", 

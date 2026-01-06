@@ -6,7 +6,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
   Product = Microsoft 365
   Conditions = [ """"Workload":""", """"AzureActiveDirectoryEventType":""", """"Operation":""",  """"UserLoginFailed"""", """"ResultStatus":""", """"ClientIP":"""  ]
   Fields = ${MicrosoftAzureParsersTemplates.cef-o365-app-login-2.Fields} [
-    """"ResultStatusDetail":\s*"((?i)Success|({failure_reason}[^"]+))"""",
+    """"ResultStatusDetail":\s*"(Success|({failure_reason}[^"]+))"""",
     """"LogonError":\s*"({failure_reason}[^"]+)""",
     """"Operation":\s*"UserLogin({result}[^"]+)""",
     """CEF:([^\|]*\|){5}({operation}[^\|]+)""",

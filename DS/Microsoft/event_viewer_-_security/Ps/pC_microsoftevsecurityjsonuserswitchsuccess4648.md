@@ -29,7 +29,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
 """"TargetDomainName":"({account_domain}({dest_domain}[^\s"]*))""",
 """"TargetServerName":"(localhost|({dest_host}[\w\-.]*))""",
 """"TargetInfo":"({dest_service_name}[^"]*)""",
-""""(?i)(ProcessId)":"*({process_id}[^",]*)""",
+""""(ProcessId)":"*({process_id}[^",]*)""",
 """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))"""",
 """"IpAddress":"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
 

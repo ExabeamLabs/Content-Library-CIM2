@@ -21,7 +21,7 @@ s-zscaler-web-activity = {
     """\saction=({action}[^=]+?)\s*(\w+=|$)""",
     """\s(protocol|proto)=({protocol}[^=]+?)\s*(\w+=|$)""",
     """\s(requestsize|reqSize)=({bytes_out}\d+)""",
-    """\s((?i)responsesize)=({bytes_in}\d+)""",
+    """\s(responsesize)=({bytes_in}\d+)""",
     """\s(urlsupercategory|urlSuperCat)=({categories}({category}[^;,\s=]+)[^=]*?)\s+(\w+|$|\w+=)""",
     """\s(urlcategory|urlCat)=({categories}({category}[^;,=]+)[^=]*?)\s+(\w+|$)""",
     """\sserverip=(?:0.0.0.0|({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?)""",

@@ -16,7 +16,7 @@ Name = "cisco-asa-str-network-traffic-success-teardown-2"
     """({time}\d{4}\-\d{2}\-\d{2}T\d{2}:\d{2}:\d{2}\.\d+((\+|\-)\d\d:\d\d)?)\s+""",
 """\s(({host}[\w.\-]+))\s+([-\s:]+)?%ASA""",
 """({time}\w+ \d\d( \d\d\d\d)? \d\d:\d\d:\d\d+)"""
-"""\d\d:\d\d:\d\d\s+(::ffff:)?((?i)system|({host}[\w\.-]+))[\s:]+%ASA-"""
+"""\d\d:\d\d:\d\d\s+(::ffff:)?(system|({host}[\w\.-]+))[\s:]+%ASA-"""
 """%ASA-({priority}\d+)-({event_code}\d+)"""
 """({event_name}Teardown ({protocol}\w+) connection)"""
 """\sconnection\s+({connection_id}\d+)"""

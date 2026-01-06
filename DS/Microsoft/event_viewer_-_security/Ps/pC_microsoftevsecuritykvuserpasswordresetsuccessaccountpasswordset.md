@@ -11,8 +11,8 @@ Conditions = [
 Fields = [
 """({event_name}User Account password set)"""
 """({time}\w+ \d{1,2} [\d:]+ \d+)"""
-"""(?i)(information)(,|\s+)({dest_host}({host}[\w.\-]+))"""
-"""(?i)((audit|success|failure)( |_)(success|audit|failure))\s+({dest_host}({host}[\w\-.]+))\s+Account Management"""
+"""(information)(,|\s+)({dest_host}({host}[\w.\-]+))"""
+"""((audit|success|failure)( |_)(success|audit|failure))\s+({dest_host}({host}[\w\-.]+))\s+Account Management"""
 """({dest_host}({host}[^\/\s]+))\/Security"""
 """ComputerName =({dest_host}({host}[\w.\-]+))"""
 """({event_code}628)"""

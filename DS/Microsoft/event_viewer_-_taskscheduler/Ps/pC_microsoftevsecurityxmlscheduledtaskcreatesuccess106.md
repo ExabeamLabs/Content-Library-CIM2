@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-create-success-106
     """<Computer>({host}({dest_host}[\w\-\.]+))<""",
     """<Security UserID=('|")({user_sid}[^'"<]+?)('|")""",
     """<Data Name =(('|")TaskName('|")>({task_name}[^<]+))""",
-    """<Data Name =('|")UserContext('|")>(((?i)NT AUTHORITY\\System)|(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
+    """<Data Name =('|")UserContext('|")>((NT AUTHORITY\\System)|(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """({event_code}106)""",
     """({event_name}Task registered)""",
     """<Message>({additional_info}[^<]+)<""",

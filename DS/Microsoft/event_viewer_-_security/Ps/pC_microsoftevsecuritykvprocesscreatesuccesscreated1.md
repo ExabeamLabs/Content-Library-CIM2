@@ -19,7 +19,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """({event_name}A new process has been created)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
     """Event Time\s+:\s+({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))""",
     """\w+\s+({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s*""",
     """({event_code}4688)""",
     """ComputerName =({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))\s"""
@@ -49,7 +49,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """Command\s*Line(:|=).*\s+"({parameter_csproj}.+\.csproj)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_exe}.+?\.exe)""",
     """Command\s*Line(:|=).+?\/u\s*["\s]({parameter_dll}.+?\.dll)"""
-    """SubjectUserName\\?"+:\\?"+(?:-|(?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
+    """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\\?""""
     """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
     """SubjectLogonId\\?"+:\\?"+(\\[nrt]|\s)*({login_id}[^\\]+)(\\[nrt]|\s)*\\?""""
     """\"SubjectDomainName\\?":\\?"({src_domain}({domain}[^\\"]+))"""

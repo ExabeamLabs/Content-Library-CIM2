@@ -16,7 +16,7 @@ Name = microsoft-evsecurity-kv-key-5061
     """EventID="+({event_code}[^"]+)""",
     """EventType="+({result}[^"]+)""",
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+)\S+\s({host}[^\s]+)""",
-    """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Operation:\s+({operation}[^:\.]+)\.?\s+Return Code:"""
   ]

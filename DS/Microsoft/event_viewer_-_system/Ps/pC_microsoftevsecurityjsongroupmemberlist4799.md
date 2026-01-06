@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-json-group-member-list-4799
     """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
     """"LogonID":"({login_id}[^"]+)"""",
     """"TargetUserName":"({group_name}[^"]+)"""",
-    """"TargetS(?i)ID":"({group_id}[^"]+)"""",
+    """"TargetSID":"({group_id}[^"]+)"""",
     """"TargetDomainName":"({group_domain}[^"]+)"""",
     """"CallerProcessId":"({process_id}[^"]+)"""",
     """"CallerProcessName":"(-|({process_path}({process_dir}[^,"]+?[\\\/]+)?({process_name}[^\\\/\s"]+?)))""""

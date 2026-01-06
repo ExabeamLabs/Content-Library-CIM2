@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4793
     """\Wrt=({time}\d+)""",
     """({event_name}The Password Policy Checking API was called)""",
     """({event_code}4793)""",
-    """"(?i)Computer(Name)?":\s*"({host}[^"]+)""""
+    """"Computer(Name)?":\s*"({host}[^"]+)""""
     """\WComputerName:\s*(::ffff:)?({host}[\w\-.]+)""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+)""",
     """(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)"""

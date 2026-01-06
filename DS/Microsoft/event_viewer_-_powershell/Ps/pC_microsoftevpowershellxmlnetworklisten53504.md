@@ -5,7 +5,7 @@ Name = microsoft-evpowershell-xml-network-listen-53504
   Vendor = Microsoft
   ParserVersion = "v1.0.0"
   Product = Event Viewer - PowerShell
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Conditions = [ """<EventID>53504</EventID>""", """Microsoft-Windows-PowerShell""", """<Provider Name =""" ]
   Fields = [
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z?)"""

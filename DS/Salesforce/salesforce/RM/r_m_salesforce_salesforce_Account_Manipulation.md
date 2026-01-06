@@ -7,7 +7,7 @@ Vendor: Salesforce
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   1    |         2          |       1        |   46    |
+|   3   |   1    |         2          |       1        |   47    |
 
 | Event Type   | Rules    | Models    |
 | ---- | ---- | ---- |

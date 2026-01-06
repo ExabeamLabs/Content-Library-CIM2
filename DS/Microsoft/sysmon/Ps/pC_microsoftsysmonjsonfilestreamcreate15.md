@@ -10,9 +10,9 @@ Name = microsoft-sysmon-json-file-stream-create-15
   Fields = [
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """"Hostname":"({dest_host}({host}[^"]+))"""",
-    """"AccountName":"((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"AccountName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"EventID":({event_code}\d+)""",
-    """"Domain":"((?i)NT AUTHORITY|NT-AUTORIT|({domain}[^"\\]+))"""",
+    """"Domain":"(NT AUTHORITY|NT-AUTORIT|({domain}[^"\\]+))"""",
     """"UserID":"({user_sid}[^"]+)"""",
     """"Category":"({event_name}[^(]+?)\s\(""",
     """"Severity":"({severity}[^"]+)"""",

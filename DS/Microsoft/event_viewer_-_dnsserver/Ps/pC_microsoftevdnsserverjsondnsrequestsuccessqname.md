@@ -25,8 +25,8 @@ Fields = [
 """\"QTYPE\":\"({dns_query_type}[^\"]+)"""
 """\"Flags\":\"({dns_query_flags}[^\"]+)"""
 """\"BufferSize\":\"({bytes}\d+)"""
-"""\"Domain\":\"((?i)NT AUTHORITY|({domain}[^\"]+))"""
-"""\"AccountName\":\"((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""\"Domain\":\"(NT AUTHORITY|({domain}[^\"]+))"""
+"""\"AccountName\":\"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\"UserID\":\"({user_sid}[^\"]+)"""
 ]
 ParserVersion = "v1.0.0"

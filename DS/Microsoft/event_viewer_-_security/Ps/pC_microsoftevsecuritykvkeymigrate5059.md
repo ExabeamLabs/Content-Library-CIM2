@@ -10,14 +10,14 @@ Name = microsoft-evsecurity-kv-key-migrate-5059
     """Account Domain:\s*(NT AUTHORITY|({domain}\S+))\s+Logon ID:""",
     """\d\d:\d\d:\d\d\s[\w\-\.]+\s({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(am|pm))""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d[+-]\d\d:\d\d)\s+({host}[\w.-]+)\s""",
-    """(?i)\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,9})-\d\d:\d\d\s[^\s]+""",
     """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """({host}[^\s]+)\sMicrosoft-Windows-Security-Auditing""",
     """({event_code}5059)""",
     """({event_name}Key migration operation)""",
-    """"(?i)(HostName|Computer)":\s*"({host}[^"]+)""""
+    """"(HostName|Computer)":\s*"({host}[^"]+)""""
   ]
 
 raw-object-access = {

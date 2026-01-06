@@ -15,7 +15,7 @@ Name = unix-unix-mix-user-switch-success-sudo
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({dest_host}({host}[\w.\-]+))))\s+(\d\S+|tag_audit_log|({=dest_host}({=host}[\w.\-]+)\s))?""",
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({dest_host}({host}[\w.\-]+))))\s+\[({=dest_host}({=host}\w+))\]"""
 """({time}\w+\s\d+(\s|T)\d\d:\d\d:\d\d)(\.?\S+)?\s({dest_host}({host}[\w\.\-]+))?:?\s*sudo:""",
-"""({time}\w{3} \d{1,2}, \d\d\d\d, \d{1,2}:\d{1,2}:\d{1,2} (?i)(am|pm))""",
+"""({time}\w{3} \d{1,2}, \d\d\d\d, \d{1,2}:\d{1,2}:\d{1,2} (am|pm))""",
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\"timestamp\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\"agent_hostname\":\"({dest_host}({host}[^\"]+))\"""",

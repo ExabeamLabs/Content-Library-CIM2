@@ -9,7 +9,7 @@ Name = microsoft-adfs-kv-user-lock-success-512-1
   Conditions = [ """EventCode=512""", """The account for the following user is locked out""", """SourceName =AD FS""" ]
   Fields = [
     """({event_name}The account for the following user is locked out.)""",
-	  """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*((?i)AM|PM))\s*LogName =""",
+	  """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d\s*(AM|PM))\s*LogName =""",
     """ComputerName =({host}[^\s]+)\s*User=""",
     """({event_code}512)""",
     """User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Sid=""",

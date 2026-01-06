@@ -12,8 +12,8 @@ Conditions = [
 Fields = [
 """({event_name}Object Access Attempt)"""
 """({time}\d\d/\d\d/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-"""(?i)(((audit|success)( |_)(success|audit))|information)\s*,\s*({dest_host}({host}[\w\-.]+))"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""(((audit|success)( |_)(success|audit))|information)\s*,\s*({dest_host}({host}[\w\-.]+))"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s)"""
 """Audit\s*({dest_host}({host}[\w\-.]+?))\s+Object Access"""
 """User=(?:SYSTEM|NOT_TRANSLATED|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Sid="""

@@ -17,7 +17,7 @@ hornet-dlp-email = {
       """to=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """\stype=({result}\d+)""",
       """reason="({additional_info}[^"]+)""",
-      """src_host=((?i)unknown|({src_host}[^\s]+))""",
+      """src_host=(unknown|({src_host}[^\s]+))""",
       """src_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
       """dst_ip=(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[^\s]+))""",
       """msgid="({message_id}[^"]+)""",

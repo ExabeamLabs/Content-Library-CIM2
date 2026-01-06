@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-policy-modify-4948
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Conditions = [ """EventCode=4948""", """Microsoft Windows security auditing""", """A change was made to the Windows Firewall exception list""" ]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s((?i)AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
     """ComputerName =({host}[\w\-.]+)""",
     """EventCode=({event_code}\d+)\s""",
     """Rule Name:\s*({rule}[^:]+)""",

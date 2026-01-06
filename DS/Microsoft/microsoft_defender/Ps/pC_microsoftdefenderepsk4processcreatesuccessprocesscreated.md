@@ -32,7 +32,7 @@ Name = microsoft-defenderep-sk4-process-create-success-processcreated
      """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?"""",
      """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
      """"AccountDomain":"({domain}[^:]+?)",""",
-     """Invoke-WebRequest\s*-Uri\s*'*({url}(\w+:\/{2})?({web_domain}[^\/\.\s]+(?i)(\.(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ai|ms|mx))+)?[^'\s]+)""",
+     """Invoke-WebRequest\s*-Uri\s*'*({url}(\w+:\/{2})?({web_domain}[^\/\.\s]+(\.(com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ai|ms|mx))+)?[^'\s]+)""",
      """"SHA1":"({hash_sha1}[^"]+)"""",
      """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
      """"SHA256":"({hash_sha256}[^",]+)",""",

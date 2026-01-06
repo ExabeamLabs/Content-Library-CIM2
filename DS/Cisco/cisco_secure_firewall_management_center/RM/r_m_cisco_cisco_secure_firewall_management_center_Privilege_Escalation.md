@@ -1,9 +1,9 @@
 Rules by Product and UseCase
 ============================
-Vendor: Microsoft
------------------
-### Product: [Event Viewer - TerminalServices-RemoteConnectionManager](../ds_microsoft_event_viewer_-_terminalservices-remoteconnectionmanager.md)
-### Use-Case: [Account Manipulation](../../../../UseCases/uc_account_manipulation.md)
+Vendor: Cisco
+-------------
+### Product: [Cisco Secure Firewall Management Center](../ds_cisco_cisco_secure_firewall_management_center.md)
+### Use-Case: [Privilege Escalation](../../../../UseCases/uc_privilege_escalation.md)
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|

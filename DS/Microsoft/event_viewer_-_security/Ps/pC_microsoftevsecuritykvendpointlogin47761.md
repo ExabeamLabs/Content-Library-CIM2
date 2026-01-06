@@ -9,7 +9,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776-1
     Conditions = ["""attempted to validate the credentials for an account""", """Authentication Package""", """"computer_name"""]
     Fields = [
       """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
-      """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*(?!(?:[A-Fa-f:\d.]+))[^\t,#<\s.]+\.({domain}[^\s.",]+)""",
+      """(((audit|success|failure)( |_)(success|audit|failure))|information)\s*(\s|\t|,|#\d+|<[^>]+>)\s*(?!(?:[A-Fa-f:\d.]+))[^\t,#<\s.]+\.({domain}[^\s.",]+)""",
       """"(?:winlog\.)?computer_name\\*":\\*"({host}[^\\"]+)""",
       """@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """({event_code}4776)""",

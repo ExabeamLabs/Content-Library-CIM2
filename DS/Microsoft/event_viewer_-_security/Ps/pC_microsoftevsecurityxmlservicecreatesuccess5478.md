@@ -21,7 +21,7 @@ Fields = [
   """ThreadID\\*=('|")({thread_id}[^'"]+)"""
   """<Provider>({provider_name}.+?)<\/Provider>"""
   """({service_name}IPsec Policy Agent)"""
-  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+  """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """<Level>({run_level}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"

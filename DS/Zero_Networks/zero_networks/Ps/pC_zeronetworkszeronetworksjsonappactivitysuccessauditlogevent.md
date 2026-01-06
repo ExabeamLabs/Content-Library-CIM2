@@ -17,7 +17,7 @@ Name = "zeronetworks-zeronetworks-json-app-activity-success-auditlogevent"
     """exa_json_path=$.userRole,exa_field_name=role_id"""
     """exa_json_path=$.enforcementSource,exa_field_name=result_code"""
     """exa_json_path=$.details,exa_regex=description\\?":\\?"({description}[^\\"]+)\\?","""
-    """exa_json_path=$.performedBy,exa_regex="name":"(((?i)NT AUTHORITY|NT SERVICE|({domain}[^\\]+))[\\]+)?(local service|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({user}[\w\.\-]{1,40}\$?))""""
+  """exa_json_path=$.performedBy,exa_regex="name":"(((?i)NT AUTHORITY|NT SERVICE|({domain}[^\\]+))[\\]+)?(local service|(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({user}[\w\.\-]{1,40}\$?))""""
     """exa_json_path=$.performedBy,exa_regex="name":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
   ParserVersion = "v1.0.0"

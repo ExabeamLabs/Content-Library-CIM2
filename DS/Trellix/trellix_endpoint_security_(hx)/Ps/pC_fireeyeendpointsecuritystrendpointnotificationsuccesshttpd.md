@@ -12,7 +12,7 @@ fireeye-endpointsecurity-hx-events = {
   Fields = [
     """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s({host}[\w\-\.]+)\s""",
     """(\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s[\w\-\.]+\s[\w-]+\[({event_code}\d+)\]""",
-    """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\S+\s\S+\s\[?(\w+\.)?({severity}(?i)(NOTICE|ERR(OR)?|WARNING))\]?:?""",
+    """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\S+\s\S+\s\[?(\w+\.)?({severity}(NOTICE|ERR(OR)?|WARNING))\]?:?""",
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\S+\s\S+\s(\[[^\]]+\]:)?\s*({additional_info}[^$]+?)\s*$""",
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\S+\s({event_name}[^\[:]+)(\[|:)"""
     """\suser(name)?\s'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",

@@ -8,7 +8,7 @@ Name = microsoft-windows-kv-user-privilege-assign-success-576-1
   TimeFormat = "MMM dd HH:mm:ss yyyy"
   Conditions = [ """576""", """Special privileges assigned to new logon:""" ]
   Fields = [
-    """<\d+>(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
+    """<\d+>\w+\s*\d+\s*\d+:\d+:\d+\s+(am\s+|pm\s+)?(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))\s""",
     """({event_name}Special privileges assigned to new logon)""",
     """\s+(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+""",
     """({event_code}576)""",

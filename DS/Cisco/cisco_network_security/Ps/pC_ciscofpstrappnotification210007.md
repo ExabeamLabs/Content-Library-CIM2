@@ -11,7 +11,7 @@ Name = cisco-fp-str-app-notification-210007
     """({time}[a-zA-Z]{1,3} \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
     """\s(({host}[\w.\-]+))\s+([-\s:]+)?%FTD"""
     """%FTD-({priority}\d+)-({event_code}\d+)""",
-    """({event_name}LU allocate xlate ({result}failed) for ((?i)(static|dynamic)-(nat|pat)) ({protocol}\w+) translation)""",
+    """({event_name}LU allocate xlate ({result}failed) for ((static|dynamic)-(nat|pat)) ({protocol}\w+) translation)""",
     """\sfrom\s+({src_interface}[^:]+?):({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({src_port}\d+))?\s+\(({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({src_translated_port}\d+))?\)""",
     """\sto\s+({dest_interface}[^:]+?):({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({dest_port}\d+))?\s+\(({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(\/({dest_translated_port}\d+))?\)"""
   ]

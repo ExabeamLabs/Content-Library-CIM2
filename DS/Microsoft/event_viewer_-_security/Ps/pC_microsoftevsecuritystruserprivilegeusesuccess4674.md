@@ -15,7 +15,7 @@ Name = "microsoft-evsecurity-str-user-privilege-use-success-4674"
    """プロセス名:\s+({process_path}({process_dir}.*?\\)({process_name}[^\\]*?))\s+要求された操作:""",
    """望ましいアクセス権:\s*({access}.*?)\s*特権:\s*({privileges}.*?)\s*($|"|,)"""
    """({event_code}4674),"""
-   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   ]
 
 

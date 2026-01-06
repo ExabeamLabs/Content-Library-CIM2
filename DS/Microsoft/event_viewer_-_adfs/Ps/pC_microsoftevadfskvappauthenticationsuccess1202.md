@@ -23,7 +23,7 @@ windows-events-6 = {
   Product = Event Viewer - ADFS
   TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "dd-MM-yyyy HH:mm:ss"]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(?i)(AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
 	"""\WEventCode=({event_code}\d+)""",
 	"""\WSourceName =({service_name}.+?)(\s+\w+=|\s*$)""",
 	"""RecordNumber=({event_id}\w+)\s*""",

@@ -22,7 +22,7 @@ Fields = [
 """"AccountSid":"({user_sid}[^"]+)""""
 """"RemoteIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"RemotePort":({src_port}\d+)"""
-""""Upn\\?":\\?"({email_address}[^"@\\\s]+@[^"@\\\s]+?)\\?""""
+""""Upn\\?":\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """"ActionType":"({result}[^"]+)""""
 """"ActionType":"({result}LogonSuccess|LogonAttempted|LogonFailed)""""
 """"InitiatingProcessFileName":"({process_name}[^"]+)""""
@@ -52,6 +52,7 @@ Fields = [
 """exa_json_path=$..DeviceId,exa_field_name=device_id"""
 """exa_json_path=$.properties.RemoteDeviceName,exa_field_name=src_host"""
 """exa_json_path=$..FailureReason,exa_field_name=failure_reason"""
+"""exa_regex="Upn\\?":\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 ]
 
 

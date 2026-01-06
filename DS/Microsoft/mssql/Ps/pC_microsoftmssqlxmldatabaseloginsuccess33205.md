@@ -11,7 +11,7 @@ Name = microsoft-mssql-xml-database-login-success-33205
     """<Computer>({host}[\w\-.]+)<"""
     """<EventID Qualifiers\\?=[^>]+>({event_code}\d+)"""
     """Provider Name\\?='({provider_name}[^\']+)"""
-    """\\nserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\+)?((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\nserver_principal_sid:"""
+    """\\nserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\+)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\nserver_principal_sid:"""
   ]
 
 s-mssql-database-login = {
@@ -52,7 +52,7 @@ s-mssql-database-login = {
        """LocalPort"+:({src_port}\d+)""",
        """ActionType"+:\s*"+({result}[^"]+)""",
        """DeviceName"+:\s*"+({dest_host}[\w\-.]+)""",
-       """InitiatingProcessAccountName"+:\s*"+((?i)SYSTEM|(?i)network service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+       """InitiatingProcessAccountName"+:\s*"+(SYSTEM|network service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
        """"ProcessIntegrityLevel"+:\s*"+({process_integrity}[^"]+)""",
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",

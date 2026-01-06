@@ -19,7 +19,7 @@ Fields = [
   """<Keywords>({result}[^<]+)</Keywords>"""
   """<Keyword>({result}Audit\s[^<]+)</Keyword>"""
   """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>"""
-  """<Data Name\\*=('|")SubjectUserName('|")>((?i)(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>"""
+  """<Data Name\\*=('|")SubjectUserName('|")>((LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>"""
   """<Data Name\\*=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>"""
   """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""
   """<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)</Data>"""

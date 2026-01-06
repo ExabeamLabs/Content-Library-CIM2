@@ -19,7 +19,7 @@ Conditions = [ """\"source\":\"aws.guardduty\"""", """\"detail-type\":\"GuardDut
     """requestClientApplication=({app}[^=]+?)\s+\w+=""",
     """"accountId\\?":\\?"({account_id}\d+)""",
     """"country\\?":\{\\?"countryName\\?":\\?"({country_code}[^"\\]+)""",
-    """"city\\?":\{\\?"cityName\\":\\"((?i)UNKNOWN|({location_city}[^"\\]+))""",
+    """"city\\?":\{\\?"cityName\\":\\"(UNKNOWN|({location_city}[^"\\]+))""",
     """"principalId\\?":\\?"({principal_id}[^"\\]+)\\?"""",
     """"userName\\?":\\?"(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """"s3BucketDetails\\?":[^\}\]]*"name\\?":\\?"({s3_bucket_name}[^"\\]+)""",

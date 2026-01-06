@@ -14,9 +14,9 @@ Name = microsoft-evsecurity-kv-group-modify-success-4735
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)"""
     """EventTime":\s*"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""",
     """\srt=({time}\d{13})""",
-    """"(?i)Computer(Name)?":\s*"({host}[^"]+)"""",
+    """"Computer(Name)?":\s*"({host}[^"]+)"""",
     """\sComputer:\s+({host}[\w\-.]+)\s""",
-    """"(?i)HostName":\s*"({host}[^"]+)"""",
+    """"HostName":\s*"({host}[^"]+)"""",
     """({time}\d+-\d+-\d+T\d+:\d+:\d+)\S*\s+({host}[\w\-.]+)\s""",
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)\s+Account Name:""",
     """Subject:.+?Account Name:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",

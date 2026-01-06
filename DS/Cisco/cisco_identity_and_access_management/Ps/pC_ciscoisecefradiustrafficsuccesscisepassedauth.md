@@ -21,7 +21,7 @@ Fields = [
   """dst=({auth_server}[A-Fa-f:\d.]+)\s"""
   """dpt=({dest_port}\d+)"""
   """Cisco ISE\|(|[^\|]+)\|({event_code}\d+)\|"""
-  """deviceSeverity=((?i)UNKNOWN|({severity}[^\s]+))"""
+  """deviceSeverity=(UNKNOWN|({severity}[^\s]+))"""
   """cs1=({auth_method}[^\s]+)"""
   """ad.User=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """NetworkDeviceName\\*=({network}[^,\s]+)"""

@@ -12,7 +12,7 @@ Conditions = [
 Fields = [
 """({event_name}An operation was performed on an object)"""
 """({event_code}4662)"""
-"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))"""
+"""({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
 """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+"""
 """<TimeCreated SystemTime\\*=('|")({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d)\d+Z'/>"""
 """"EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

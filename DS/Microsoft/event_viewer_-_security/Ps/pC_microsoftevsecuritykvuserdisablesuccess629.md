@@ -12,8 +12,8 @@ Conditions = [
 Fields = [
 """({event_name}User Account Disabled)"""
 """\sTimeGenerated=({time}\d{10})"""
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
-"""(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+({event_code}629)\s+Security\s.+?(?i)((audit|success)( |_)(success|audit))\s+({host}[\w\-.]+)"""
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})"""
+"""(Mon|Tue|Wed|Thu|Fri|Sat|Sun) ({time}\w+ \d+ \d+:\d+:\d+ \d+)\s+({event_code}629)\s+Security\s.+?((audit|success)( |_)(success|audit))\s+({host}[\w\-.]+)"""
 """\srt=({time}\d{13})""",
 """({host}[\w\-.]+)\/Security"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)"""

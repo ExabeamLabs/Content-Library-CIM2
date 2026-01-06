@@ -27,7 +27,7 @@ Name = microsoft-azure-cef-network-traffic-firewall
      """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]"""
      """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]"""
      """\[Namespace:\s*({host}\S+) ; EventHub name:"""
-     """"properties":\s*\{.+?\"(?i)clientIp\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+     """"properties":\s*\{.+?\"clientIp\":\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
      """"properties":\s*\{.+?\"clientPort\":\"({src_port}\d+)"""
      """\"requestUri\":\"({uri}[^\"]+)"""
      """\"ruleSetType\":\"({rule}[^\"]+)"""

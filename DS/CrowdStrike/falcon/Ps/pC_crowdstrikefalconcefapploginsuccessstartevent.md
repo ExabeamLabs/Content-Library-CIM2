@@ -25,7 +25,7 @@ Fields = [
   """"destinationServiceName":"({app}[^=]+?)"(\s\w+=)?"""
   """({operation}({event_name}RemoteResponseSessionStartEvent))"""
   """"SessionId":"({session_id}[^",]+)""""
-  """"(?i)EventType":\s*"({operation_details}[^",]+)""""
+  """"EventType":\s*"({operation_details}[^",]+)""""
   """"cid":"({cid}[^"]+)""""
   """"customerIDString":"({cid}[^"]+)""""
 ]

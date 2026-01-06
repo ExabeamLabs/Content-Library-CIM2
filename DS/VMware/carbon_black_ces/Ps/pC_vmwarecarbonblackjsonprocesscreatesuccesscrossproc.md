@@ -22,7 +22,7 @@ carbonblack-edr {
     """"+process_pid"+:({process_id}\d+)""",
     """"+device_name"+:\s*"+(\w+\\+)?({host}[^."]+)""",
     """"+sensor_action"+:"+({result}[^"]+)"+""",
-    """"+process_path"+:"+((?i)(SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""",
+    """"+process_path"+:"+((SYSTEM)|({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+)))"""",
     """"+action"+:"+({action}[^"]+)?"*""",
     """"+parent_cmdline"+:"+\s*({parent_process_command_line}[^,"]+)""",
     """"+parent_pid"+:({parent_process_id}\d+)""",

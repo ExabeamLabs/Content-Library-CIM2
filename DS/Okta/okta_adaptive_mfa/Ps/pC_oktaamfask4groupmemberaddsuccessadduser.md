@@ -25,7 +25,7 @@ Name = okta-amfa-sk4-group-member-add-success-adduser
     """outcome":[^\]]*?"result":"?(null|({result}[^\"]+))"?,"reason":"?(null|({result_reason}[^"]+))""",
     """"debugData":.*?"risk":\s*"[^"]*?level=({severity}[^"\}]+)("|\})"""
     """"os":\s*"({os}[^"]+)""""
-    """"displayMessage"\s*:\s*"((?i)null|({event_name}[^",]+))"""
+    """"displayMessage"\s*:\s*"(null|({event_name}[^",]+))"""
     """exa_json_path=$.published,exa_field_name=time""",
     """exa_json_path=$.target[1:].alternateId,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|unknown|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=Contains($.target.type,"User")""",
     """exa_json_path=$..client.ipAddress,exa_regex=(null|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",

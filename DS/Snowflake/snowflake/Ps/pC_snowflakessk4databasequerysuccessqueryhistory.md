@@ -13,7 +13,7 @@ Fields = [
   """"SCHEMA_NAME":"({db_schema}[^"]+)""""
   """"WAREHOUSE_NAME":"({db_name}[^"]+)""""
   """"DATABASE_NAME":"({db_name}[^"]+)"""
-  """"QUERY_TEXT":"({db_operation}(?i)(insert|delete|truncate|drop|alter|create|update|enable|disable|merge|select|dbcc))"""
+  """"QUERY_TEXT":"({db_operation}(insert|delete|truncate|drop|alter|create|update|enable|disable|merge|select|dbcc))"""
   """"QUERY_TYPE":"(UNKNOWN|({db_operation}[^"]+))""""
   """"USER_NAME":"({db_user}[^"]+)""""
   """"ROLE_NAME":"({role}[^"]+)""""

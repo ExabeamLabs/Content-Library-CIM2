@@ -10,11 +10,11 @@ Name = microsoft-evsecurity-kv-file-permission-modify-4670
   Fields = [
     """({event_name}Permissions on an object were changed)""",
     """({event_code}4670)""",
-    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(?i)(AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+""",
     """(::ffff:)?({host}[^\s=]+)\sMSWinEventLog""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
-    """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Security ID:\s*(SYSTEM|({user_sid}[^\s]+))\s""",
     """Account Name:\s*(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*\w+(\s\w+)?:""",
     """Account Domain:\s*({domain}[^\s]+)\s""",
@@ -26,7 +26,7 @@ Name = microsoft-evsecurity-kv-file-permission-modify-4670
     """Object Type:\s*({object_type}[^\s]+)\s""",
     """Object Name:\s*(-|({object}[^\s]+))\s""",
     """Permissions Change:\s*({attribute}[^\s].+?)\s+(User:|$)""",
-    """(?i)\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+    """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
     """Permissions Change:[\s\S]*?New Security Descriptor:[^\S<]*({permissions}[^<]+?)(\s+|<)"""
   ]
 

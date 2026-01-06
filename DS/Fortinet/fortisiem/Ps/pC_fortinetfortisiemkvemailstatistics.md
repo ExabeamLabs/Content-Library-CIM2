@@ -7,7 +7,7 @@ Name = "fortinet-fortisiem-kv-email-statistics"
   Fields = ${FortinetParsersTemplates.fortisiem-fortimail-email-traffic-activity.Fields}[
     """\Wto="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """\Wsubject="({email_subject}[^"]+)"""",
-    """\Wdirection="(((?i)unknown)|({direction}[^"]+))"""",
+    """\Wdirection="((unknown)|({direction}[^"]+))"""",
     """\Wdisposition="({action}[^";]+)""",
     """\Wclassifier="({additional_info}[^"]+)"""
   ]

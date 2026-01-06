@@ -31,7 +31,7 @@ json-aws-guardduty-security-alert-template = {
       """"resourceType":\s*"({resource_type}[^"]+)"""",
       """s3BucketDetails:\s*\[\{Arn:\s*({object}[^,]+),Name:""",
       """"instanceId":"({instance_id}[^"]+)"""",
-      """"city":\{"cityName":"((?i)UNKNOWN|({location_city}[^"]+))""""
+      """"city":\{"cityName":"(UNKNOWN|({location_city}[^"]+))""""
       """\ssuser=(|Anonymous|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+(\w+=|$)""",
       """"service".*?"action".*?"networkConnectionAction.*?({result}"blocked":"*(false|true))"""
       """"accountId":"({aws_account}\d+)"""

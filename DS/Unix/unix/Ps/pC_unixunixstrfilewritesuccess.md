@@ -13,7 +13,8 @@ Conditions = [
 Fields = [
   """\d\d:\d\d:\d\d ({dest_host}({host}[^\s]+)) sftp-server\["""
   """({operation}rename)"""
-  """old "+({src_file_dir}(\/[^\/]+)*\/)?({src_file_name}[^\/"]+)"+\snew\s"+({file_path}({file_dir}[^"]*?[\\\/]+)?\s*({file_name}[^"\\\/]*?(\.({file_ext}\w+))?))"+"""
+  """ old "+({src_file_path}({src_file_dir}[^"]*[\\\/]+)?\s*({src_file_name}[^"\\\/]*?(\.({src_file_ext}\w+))?))""""
+  """ new "+({file_path}({file_dir}[^"]*[\\\/]+)?\s*({file_name}[^"\\\/]*?(\.({file_ext}\w+))?))\s*["$]"""
   """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
 ]
 

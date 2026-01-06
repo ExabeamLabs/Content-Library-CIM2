@@ -12,7 +12,7 @@ Name = microsoft-evsecurity-mix-network-traffic-fail-5152
     """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
     """TimeGenerated=({time}\d{13})""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)""",
-    """(?i)\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
+    """\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*(::ffff:)?({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """({event_code}5152)""",
     """\sProcess ID:\s*(|-|({process_id}.+?))\s*Application Name:\s*(|-|({app}.+?))\s*Network Information""",

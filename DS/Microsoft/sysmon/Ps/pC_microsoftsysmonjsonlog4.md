@@ -10,7 +10,7 @@ Name = microsoft-sysmon-json-log-4
   Fields = [
     """UtcTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
     """Hostname":"({host}[^"]+)""",
-    """Domain":"((?i)(NT AUTHORITY)|({domain}[^"]+))""",
+    """Domain":"((NT AUTHORITY)|({domain}[^"]+))""",
     """EventID":({event_code}4),""",
     """({event_name}Sysmon service state changed)""",
     """RecordNumber":({event_id}\d+)""",
@@ -18,8 +18,8 @@ Name = microsoft-sysmon-json-log-4
     """UserID":"({user_sid}[^"]+)""",
     """State":"({service_state}[^"]+)""",
     """ProcessID":({process_id}\d+)""",
-    """AccountName":"((?i)SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """"AccountName":"((?i)system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """AccountName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"AccountName":"(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"({log_name}Microsoft-Windows-Sysmon)"""
   ]
 

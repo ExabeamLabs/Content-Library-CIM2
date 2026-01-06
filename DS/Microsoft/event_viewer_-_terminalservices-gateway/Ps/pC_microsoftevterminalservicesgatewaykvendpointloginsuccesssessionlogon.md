@@ -9,7 +9,7 @@ Name = "microsoft-evterminalservicesgateway-kv-endpoint-login-success-sessionlog
   Conditions = ["""Microsoft-Windows-TerminalServices-LocalSessionManager""", """Remote Desktop Services: Session logon succeeded"""]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
-    """({time}\w+\s+\w+\s+\d+:\d+:\d+ \d+)""",
+    """({time}\w+\s+\w+\s+\d+:\d+:\d+ \d+)\s+({event_code}\d+)?""",
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-\.]+)\sMSWinEventLog""",
     """({event_name}Remote Desktop Services: Session logon succeeded)""",
     """\sUser:\s*(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",

@@ -15,7 +15,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   Fields = [
   """SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d{1,9}Z)"""
   """({event_name}The (computer|domain controller) attempted to validate the credentials for an account)"""
-  """<Data Name(\\)?=('|")Workstation('|")>(\\+)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)((?i)(workstation)|(\\*({src_host}[\w\-.]+)))))<\/Data>""",
+  """<Data Name(\\)?=('|")Workstation('|")>(\\+)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)((workstation)|(\\*({src_host}[\w\-.]+)))))<\/Data>""",
   """<Computer>(\w+\.({dest_domain}({domain}[^<]+)))"""
   """<Computer>({host}[\w\-.]+)</Computer>"""
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
@@ -25,7 +25,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """<Data Name(\\)?=('|")TargetUserName('|")>\s*((({dest_domain}({domain}[^<\\]+))\\+)?(null|-|NA|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))|({user_upn}[\w\.\-\!\#\^\~]{1,40}\$?@[^<]+?))<\/Data>"""
   """<Data Name(\\)?=('|")Status('|")>((?-i)\\+[rnt])*\s*({failure_code}({error_code}({result_code}[^<]+)))<\/Data>"""
   """<Keywords><Keyword>({result}[^<]+)<""",
-  """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((?i)(workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""
+  """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""
   """<Level>({run_level}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"

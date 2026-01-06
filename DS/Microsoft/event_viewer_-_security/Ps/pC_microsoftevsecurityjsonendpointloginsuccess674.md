@@ -9,9 +9,9 @@ Name = microsoft-evsecurity-json-endpoint-login-success-674
   Conditions = [ "Service Ticket Renewed:", "Ticket Options:" ]
   Fields = [
     """({event_name}Account Logon)""",
-    """({time}\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2}:\d{2}\s+((?i)AM|PM))"""
-    """({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} \d{4})""",
-    """(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)\s*,\s*({host}[^,]+)""",
+    """({time}\d{2}\/\d{2}\/\d{4}\s+\d{2}:\d{2}:\d{2}\s+(AM|PM))"""
+    """({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} \d{4})""",
+    """(((audit|success|failure)( |_)(success|audit|failure))|information)\s*,\s*({host}[^,]+)""",
     """Computer(\w+)?["\s]*(:|=)\s*"?({host}.+?)("|\s)""",
     """({event_code}674)""",
     """User Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?).+?\s+""",

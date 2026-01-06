@@ -14,8 +14,8 @@ Name = akamai-guardicore-cef-network-traffic-blocked-networklog
       """shost=({src_host}[\w\-\.]+)""",
       """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
       """dhost=({dest_host}[\w\-\.]+)""",
-      """suser=(((?i)NT AUTHORITY|({src_domain}[^\\]+))[\\]+)?((?i)SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-      """duser=(((?i)NT AUTHORITY|({dest_domain}[^\\]+))[\\]+)?((?i)SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """suser=((NT AUTHORITY|({src_domain}[^\\]+))[\\]+)?(SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """duser=((NT AUTHORITY|({dest_domain}[^\\]+))[\\]+)?(SYSTEM|LOCAL SERVICE|NETWORK SERVICE|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """proto=({protocol}[^=]+)\s+\w+="""
       """dpt=({dest_port}\d+)""",
       """act=({action}[^=]+)\s+\w+=""",

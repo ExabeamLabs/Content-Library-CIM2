@@ -20,7 +20,7 @@ Name = microsoft-sysmon-xml-dns-request-success-query
     """<Computer>({host}.+?)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Security UserID\\*=('|")({user_sid}.+?)('|")/>""",
-    """(?i)<Data Name\\*=('|")ProcessGuid('|")>\{({process_guid}[A-F0-9a-f-]+)\}</Data>""",
+    """<Data Name\\*=('|")ProcessGuid('|")>\{({process_guid}[A-F0-9a-f-]+)\}</Data>""",
     """<Data Name\\*=('|")ProcessId('|")>({process_id}\d+)</Data>""",
     """<Data Name\\*=('|")QueryName('|")>({dns_query}.+?)\s*</Data>""",
     """<Data Name\\*=('|")QueryResults('|")>({dns_response}.+?)\s*</Data>""",

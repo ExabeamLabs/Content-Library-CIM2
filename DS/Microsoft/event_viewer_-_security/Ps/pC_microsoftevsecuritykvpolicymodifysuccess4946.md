@@ -16,7 +16,7 @@ windows-system-info-2 = {
   ParserVersion = "v1.0.0"
   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s((?i)AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\s(AM|PM))""",
     """EventCode=({event_code}\d+)""",
     """EventType=({result}\d+)""",
     """TaskCategory=(None|({operation_type}[^\n]+?))\s*\w+(=|:)""",

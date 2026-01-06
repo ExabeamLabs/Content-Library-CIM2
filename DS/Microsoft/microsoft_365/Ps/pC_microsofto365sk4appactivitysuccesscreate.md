@@ -35,8 +35,8 @@ cef-microsoft-o365-app-activity = {
     """"ResultStatus":"({result}[^"]+?)"""",
     """destinationServiceName\s*=({app}[^=]+?)\s+(\w+=|$)""",
     """sourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)""",
-    """\WfilePath=(((?i)N\/A)|([A-Za-z\d]+)|({file_path}[^=]+?))\s*(\w+=|$)""",
-    """\WfilePath=(((?i)N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?)))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|([A-Za-z\d]+)|({file_path}[^=]+?))\s*(\w+=|$)""",
+    """\WfilePath=((N\/A)|(({file_dir}[^=]+?)\/({file_name}[^\/=]+?)))\s*(\w+=|$)""",
     """\WfilePath=[^=]*?(\.({file_ext}[^\/\.]*?))?\s*(\w+=|$)""",
     """"ClientProcessName":"({process_name}[^"]+)"""
     """"userAgent":"({user_agent}[^"]+)"""",

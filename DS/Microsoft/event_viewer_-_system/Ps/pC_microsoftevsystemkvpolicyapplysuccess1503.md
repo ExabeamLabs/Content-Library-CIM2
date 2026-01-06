@@ -21,6 +21,7 @@ windows-events-2 = {
  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
  Fields = [ 
    """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+   """eventid="+({event_code}\d+)""",
    """"EventID"+:"+({event_code}\d+)""",
    """"subject.logon_id"+:"+({login_id}[^"]+)""",
    """"subject.security_id"+:"+({user_sid}[^"]+)""",

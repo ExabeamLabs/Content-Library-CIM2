@@ -4,7 +4,9 @@
 Name = checkpoint-ngfw-kv-app-activity-newantivirus
   ParserVersion = v1.0.0
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  Conditions = [ """CheckPoint""", """product:"New Anti Virus"""" ]
+  start_timeFormat = "epoch_sec"
+  end_timeFormat = "epoch_sec"
+  Conditions = [ """product:"New Anti Virus"""", """ifdir:"""", """origin:"""", """origin_sic_name:"""", """severity:"""" ]
   Fields = ${DLCheckpointParsersTemplates.checkpoint-firewall-2.Fields}[
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ) ({host}[\w.\-]+) CheckPoint """,
     """\Wupdate_status:"({result}[^"]+)""",
@@ -12,7 +14,16 @@ Name = checkpoint-ngfw-kv-app-activity-newantivirus
     """\Wdsecription:"({alert_name}[^"]+)""",
     """\Wnext_update_desc:"({additional_info}[^"]+)""",
     """\Wifname:"({src_interface}[^"]+)""",
-    """\Worigin(_)?sic(_)?name:"CN=({user_ou}[^",]+)"""
+    """\Worigin(_)?sic(_)?name:"CN=({user_ou}[^",]+)""",
+    """ifdir:"({direction}[^"]+)""",
+    """cu_rule_category:"({rule_type}[^"]+)""",
+    """cu_rule_id"?:"({rule_id}[^"]+)""",
+    """domain:"({domain}[^"]+)""",
+    """event_name:"({event_name}[^"]+)""",
+    """event_start_time:"({start_time}\d{10})""",
+    """event_end_time:"({end_time}\d{10})"""
+    """\Wsent_bytes:\"+({bytes_out}\d+)""",
+    """\Wreceived_bytes:\"+({bytes_in}\d+)"""
   ]
 
 checkpoint-firewall-2 = {

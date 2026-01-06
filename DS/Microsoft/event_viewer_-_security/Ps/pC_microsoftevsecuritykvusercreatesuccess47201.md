@@ -15,12 +15,12 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """({event_name}A user account was created)""",
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))""",
-"""({time}(?i)(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
+"""({time}(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \d{1,2} \d{1,2}:\d{1,2}:\d{1,2} 20\d{2})""",
 """TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)""""
 """({event_code}4720)""",
 """Hostname\":\"({host}[\w\-.]+)\"""",
 """"ComputerName":"({host}[\w\-.]+)""",
-"""(?i)(((audit|success|failure)( |_)(success|audit|failure))|information)(,|\s+)ComputerName =({host}[\w.\-]+)""",
+"""(((audit|success|failure)( |_)(success|audit|failure))|information)(,|\s+)ComputerName =({host}[\w.\-]+)""",
 """({host}[^\/\s]+)\/Microsoft-Windows-Security-Auditing \(4720\)""",
 """\"dhn\":\"({host}[^-\"]+)""",
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({host}[\w\-.]+?)(\"|\s)""",

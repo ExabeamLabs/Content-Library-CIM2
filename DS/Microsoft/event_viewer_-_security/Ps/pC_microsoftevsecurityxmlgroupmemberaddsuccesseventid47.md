@@ -24,7 +24,7 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
     """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)<"""
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)<""",
-    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))<\/Data>"""
+    """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))<\/Data>"""
     """Member:(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
     """<Level>({run_level}[^<]+)<"""
   ]

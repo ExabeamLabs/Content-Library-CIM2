@@ -7,7 +7,7 @@ Name = microsoft-evsecurity-kv-service-create-success-5478
   TimeFormat = ["dd/MM/yyyy HH:mm:ss a", "MM/dd/yyyy hh:mm:ss a"]
   Conditions = [ """EventCode=5478""", """SourceName =Microsoft Windows security auditing""", """Message=The IPsec Policy Agent service was started""" ]
   Fields = [
-    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d ((?i)AM|PM))""",
+    """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (AM|PM))""",
     """ComputerName =({dest_host}({host}[\w.-]+))""",
     """EventCode=({event_code}5478)""",
     """Message=({event_name}The IPsec Policy Agent service was started)""",

@@ -11,7 +11,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4751
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{9}Z)""",
     """<EventID>({event_code}[^<]+)</EventID>""",
     """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
-    """<Data Name =('|")MemberName('|")>({user_dn}(?i)(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
+    """<Data Name =('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>""",
     """<Data Name =('|")TargetUserName('|")>(?=\w)({group_name}[^<]+)</Data>""",
     """<Data Name =('|")TargetDomainName('|")>(?=\w)({group_domain}[^<]+)</Data>""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)</Data>""",
