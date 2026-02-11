@@ -1,0 +1,9 @@
+# Code Changes for microsoft-evsecurity-xml-user-switch-success-4648 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>'] |
+| edit_regex_field | account_domain |  | ['<Data Name\\*=(\'|")TargetDomainName(\'|")>(?=\w)({account_domain}({dest_domain}[^<]+?))</Data>', '<Data Name\\*=(\'|")TargetUserName(\'|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>'] |
+| edit_regex_field | dest_domain |  | ['<Data Name\\*=(\'|")TargetDomainName(\'|")>(?=\w)({account_domain}({dest_domain}[^<]+?))</Data>', '<Data Name\\*=(\'|")TargetUserName(\'|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>'] |
+| edit_regex_field | dest_email_address |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>'] |
+| edit_regex_field | dest_user |  | ['<Data Name\\*=(\'|")TargetUserName(\'|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>'] |

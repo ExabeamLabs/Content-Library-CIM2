@@ -1,0 +1,9 @@
+# Code Changes for netskope-sc-sk4-alert-trigger-success-actdetect (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'alert_id', 'alert_name', 'alert_severity', 'alert_source', 'alert_status', 'alert_type', 'app', 'auth_method', 'browser', 'category', 'confidence_level', 'dest_ip', 'dest_port', 'domain', 'email_address', 'file_dir', 'file_ext', 'file_name', 'file_path_at', 'folder_name', 'hash_md5', 'host', 'location', 'malware_file_name', 'malware_url', 'object', 'operation', 'os', 'policy_name', 'protocol', 'referrer', 'shared_with_at', 'site_at', 'src_host', 'src_ip', 'src_port', 'src_translated_ip', 'threat_category', 'time', 'url', 'user', 'user_agent', 'web_domain'] |
+| edit_regex_field | domain |  | ['"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)', '"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'suser=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | email_address |  | ['"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'suser=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| removed_regex_field | email_domain |  | [] |
+| edit_regex_field | user |  | ['"user":"(({email_address}[^@"\s]+@[^@"\s]+\.[^"\s]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'suser=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |

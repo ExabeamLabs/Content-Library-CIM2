@@ -1,0 +1,6 @@
+# Code Changes for microsoft-defenderep-json-http-request-success-browserlaunchedtoopenurl (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | full_name |  | ['InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"]+))"', 'exa_json_path=$..InitiatingProcessAccountName,exa_regex=^(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))$'] |
+| edit_regex_field | user |  | ['InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"]+))"', 'exa_json_path=$..InitiatingProcessAccountName,exa_regex=^(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))$'] |

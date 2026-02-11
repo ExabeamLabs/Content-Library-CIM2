@@ -1,0 +1,16 @@
+# Code Changes for code42-incydr-json-file-succes-file (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_attribute | Vendor |  | Mimecast |
+| edit_regex_field | bytes |  | ['"file":\{.*?"sizeInBytes":({bytes}\d+),', 'exa_json_path=$..file,exa_regex="sizeInBytes":(({bytes}\d+))'] |
+| edit_regex_field | dest_email_address |  | ['"destination":\{.*?"user":\{.*?"email":\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"', '"email":\{"recipients":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"+\]', 'exa_json_path=$..destination.user.email,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)'] |
+| edit_regex_field | email_address |  | ['"email":\{"sender":"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', '"repositoryEmail":"({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"', '"user":\{"email":"({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))', 'exa_json_path=$..user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)'] |
+| edit_regex_field | file_ext |  | ['"file":\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"', 'exa_json_path=$..file,exa_regex=\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"'] |
+| edit_regex_field | file_name |  | ['"file":\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"', 'exa_json_path=$..file,exa_regex=\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"'] |
+| edit_regex_field | file_owner |  | ['"file":\{.*?"owner":"([^\\]+\\+)?({file_owner}[^"]+)"', 'exa_json_path=$..file,exa_regex="owner":"([^\\]+\\+)?({file_owner}[^"]+)"'] |
+| edit_regex_field | src_file_ext |  | ['"file":\{.*?"originalName":"({src_file_name}[^"]+?(\.({src_file_ext}[^"\.]+))?)"', 'exa_json_path=$..file,exa_regex="originalName":"({src_file_name}[^"\.]+(\.({src_file_ext}[^"]+))?)"'] |
+| edit_regex_field | src_file_name |  | ['"file":\{.*?"originalName":"({src_file_name}[^"]+?(\.({src_file_ext}[^"\.]+))?)"', 'exa_json_path=$..file,exa_regex="originalName":"({src_file_name}[^"\.]+(\.({src_file_ext}[^"]+))?)"'] |
+| edit_regex_field | src_host |  | ['"source":\{.+?"Device".*?"name":"({src_host}[\w\-\.]+)"'] |
+| edit_regex_field | src_ip |  | ['"source":\{.*?"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"', 'exa_json_path=$..source.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |
+| edit_regex_field | src_port |  | ['"source":\{.*?"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"', 'exa_json_path=$..source.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |

@@ -1,0 +1,5 @@
+# Code Changes for unix-unix-kv-endpoint-logout-success-sshuserlogout (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "unix-unix-kv-endpoint-logout-success-sshuserlogout", "Vendor": "Unix", "Product": "Unix", "ParserVersion": "v1.0.0", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "Conditions": ["cascade-audit", "USER_LOGOUT", "subtype=", "pid="], "Fields": ["({host}[\w\-\.]+)\s+cascade-audit", "origin ip=\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\"", "created=\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\dZ)\"", "uid=\"({user_id}[^\"]+)\"", "UserLogin=\"({user}[\w\.\-]{1,40}\$?)\"", "pid=\"({process_id}\d+)\"", "success=\"({result}[^\"]+)\"", "({event_name}USER_LOGOUT)", "Key Value:Terminal@({login_method}ssh)"]} |

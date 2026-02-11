@@ -1,0 +1,5 @@
+# Code Changes for smartsuite-ssuite-json-app-activity-success (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "smartsuite-ssuite-json-app-activity-success", "ParserVersion": "v1.0.0", "Vendor": "SmartSuite", "Product": "SmartSuite", "ExtractionType": "json", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Conditions": ["\"account_slug\":", "\"limitKind\":", "\"userEmail\":", "\"apiEndpoint\":\"", "\"source\":", "\"usedAt\":"], "Fields": ["exa_json_path=$.account_slug,exa_field_name=tenant_id", "exa_json_path=$.userEmail,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s\"\\,;\|]+\.[^\]\s\"\\,;\|]+))|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\"]+))?))", "exa_json_path=$.apiEndpoint,exa_field_name=operation", "exa_json_path=$.usedAt,exa_field_name=time"]} |

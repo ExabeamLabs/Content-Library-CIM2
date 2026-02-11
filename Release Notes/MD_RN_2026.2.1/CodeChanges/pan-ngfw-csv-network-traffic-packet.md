@@ -1,0 +1,19 @@
+# Code Changes for pan-ngfw-csv-network-traffic-packet (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | alert_severity |  | [',({categories}({category}[^,]+)),({severity}({alert_severity}(low|medium|high|critical|informational))),', ',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | categories |  | [',({categories}({category}[^,]+)),({severity}({alert_severity}(low|medium|high|critical|informational))),', ',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | category |  | [',({categories}({category}[^,]+)),({severity}({alert_severity}(low|medium|high|critical|informational))),', ',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | dest_country |  | [',(low|medium|high|critical|informational),([^,]*,){4}(0|({dest_country}[a-zA-Z]+[^,]+)),'] |
+| edit_regex_field | dest_domain |  | [',THREAT,([^,]*,){9}\s*(({dest_email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({dest_domain}[^\s,\\]+)\\+)?({dest_user}[^\s,]+)),'] |
+| edit_regex_field | dest_email_address |  | [',THREAT,([^,]*,){9}\s*(({dest_email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({dest_domain}[^\s,\\]+)\\+)?({dest_user}[^\s,]+)),'] |
+| edit_regex_field | dest_user |  | [',THREAT,([^,]*,){9}\s*(({dest_email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({dest_domain}[^\s,\\]+)\\+)?({dest_user}[^\s,]+)),'] |
+| edit_regex_field | direction |  | [',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | email_address |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),'] |
+| edit_regex_field | severity |  | [',({categories}({category}[^,]+)),({severity}({alert_severity}(low|medium|high|critical|informational))),', ',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | src_domain |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),'] |
+| edit_regex_field | src_location |  | [',({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?'] |
+| edit_regex_field | src_user |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),'] |
+| edit_regex_field | threat_id |  | [',({threat_id}[^,]+),([^,]*),(low|medium|high|critical|informational),'] |
+| edit_regex_field | user |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),'] |
