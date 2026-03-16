@@ -1,0 +1,13 @@
+# Code Changes for paloalto-firewall (ParserTemplate)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_domain |  | [',TRAFFIC,([^,]*,){9}\s*(|(?:({dest_domain}[^\s,\\]+)\\)?(|\d|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s,]+))),'] |
+| edit_regex_field | dest_email_address |  | [',TRAFFIC,([^,]*,){9}\s*(|(?:({dest_domain}[^\s,\\]+)\\)?(|\d|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s,]+))),'] |
+| edit_regex_field | dest_email_domain |  | [',TRAFFIC,([^,]*,){9}\s*(|(?:({dest_domain}[^\s,\\]+)\\)?(|\d|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s,]+))),'] |
+| edit_regex_field | dest_user |  | [',TRAFFIC,([^,]*,){9}\s*(|(?:({dest_domain}[^\s,\\]+)\\)?(|\d|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s,]+))),'] |
+| edit_regex_field | domain |  | [',TRAFFIC,([^,]*,){8}\s*(|\d|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({domain}({src_domain}[^\s,\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))),'] |
+| edit_regex_field | email_address |  | [',TRAFFIC,([^,]*,){8}\s*(|\d|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({domain}({src_domain}[^\s,\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))),'] |
+| edit_regex_field | src_domain |  | [',TRAFFIC,([^,]*,){8}\s*(|\d|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({domain}({src_domain}[^\s,\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))),'] |
+| edit_regex_field | src_user |  | [',TRAFFIC,([^,]*,){8}\s*(|\d|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({domain}({src_domain}[^\s,\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))),'] |
+| edit_regex_field | user |  | [',TRAFFIC,([^,]*,){8}\s*(|\d|(({email_address}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((?:({domain}({src_domain}[^\s,\\]+))\\)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))),'] |

@@ -1,0 +1,5 @@
+# Code Changes for cisco-gateway-str-vpn-login-success-assignedtosession (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "cisco-gateway-str-vpn-login-success-assignedtosession", "Vendor": "Cisco", "Product": "Cisco Collaboration", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ssz", "Conditions": ["Group <", "User <", " assigned to session"], "Fields": ["({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d)", ":\d\d:\d\d[+-]\d\d:\d\d\s({host}[\w.-]+)", "\s*({event_name}[^\"]+?assigned to session)", "Group\s*\<\s*({group_name}[^\>]+?)\s*\>", "User\s*\<\s*(({email_address}[^@\"\s\>]+@[^@\"\s\>]+)|((({domain}[^\s\>]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\>", "IP\s*\<\s*(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*\>", "IPv4 Address\s*\<\s*(({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_translated_port}\d+))?)\s*\>"], "ParserVersion": "v1.0.0"} |

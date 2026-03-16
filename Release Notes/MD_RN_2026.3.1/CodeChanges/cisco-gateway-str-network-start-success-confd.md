@@ -1,0 +1,5 @@
+# Code Changes for cisco-gateway-str-network-start-success-confd (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "cisco-gateway-str-network-start-success-confd", "Vendor": "Cisco", "Product": "Cisco Collaboration", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ssz", "Conditions": [" confd ", " audit user: ", " created new session via "], "Fields": ["({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d)", ":\d\d:\d\d[+-]\d\d:\d\d\s({host}[\w.-]+)", "\s({process_name}confd)\s+({process_id}[^\s]+)", "audit user:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\/({user_id}[^\s]+)", "({event_name}({operation}created new session) via ({protocol}[^\s]+) from ({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))? with ({app_protocol}[^\s\"]+))"], "ParserVersion": "v1.0.0"} |

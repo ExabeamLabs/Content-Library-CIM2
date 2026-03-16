@@ -1,0 +1,6 @@
+# Code Changes for microsoft-azure-cef-group-member-remove-success-removefromgroup (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"InitiatedBy":\s*"\{\\"user\\":\s*\{[^\}]+"userPrincipalName\\":\s*\\"({email_address}[^@"]+@([^\."]+\.[^"]+?)?)\\?"', '\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")', 'exa_regex="InitiatedBy":\s*"\{\\"user\\":\s*\{[^\}]+"userPrincipalName\\":\s*\\"({email_address}[^@"]+@([^\."]+\.[^"]+?)?)\\?"', 'exa_regex=\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")'] |
+| edit_regex_field | email_domain |  | ['\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")', 'exa_regex=\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")'] |

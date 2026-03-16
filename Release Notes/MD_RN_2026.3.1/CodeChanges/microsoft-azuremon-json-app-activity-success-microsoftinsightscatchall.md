@@ -1,0 +1,8 @@
+# Code Changes for microsoft-azuremon-json-app-activity-success-microsoftinsightscatchall (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'app', 'category', 'correlation_id', 'dest_email_address', 'dest_email_domain', 'dest_user', 'email_address', 'event_hub_name', 'event_hub_namespace', 'failure_reason', 'host', 'location', 'object', 'operation', 'resource', 'resource_group', 'resource_id', 'result_code', 'server_name', 'severity', 'src_ip', 'src_mac', 'src_port', 'subscription_id', 'tenant_id', 'time', 'url', 'user_agent', 'user_id', 'user_type', 'web_domain'] |
+| edit_regex_field | email_address |  | ['"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)', 'claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)', 'exa_regex=claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)', 'exa_regex=email":\s*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)', 'exa_regex=userId":\s*"({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)', 'userId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user_id}[^"]+))'] |
+| removed_regex_field | email_domain |  | [] |
+| edit_regex_field | user_id |  | ['userId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user_id}[^"]+))'] |

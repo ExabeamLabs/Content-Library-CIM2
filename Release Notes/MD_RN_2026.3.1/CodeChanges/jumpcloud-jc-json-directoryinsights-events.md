@@ -1,0 +1,7 @@
+# Code Changes for jumpcloud-jc-json-directoryinsights-events (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | host |  | ['exa_json_path=$.system.hostname,exa_regex=({host}[\w\-\.]+)'] |
+| edit_attribute | activity_type |  | ['app-login:fail', 'app-login:success', 'app-notification:success', 'file-create:success', 'file-delete:success', 'file-download:fail', 'file-download:success', 'group-create:success', 'group-delete:success', 'group-modify:success', 'policy-create:success', 'policy-delete:success', 'policy-modify:success', 'report-create:fail', 'report-create:success', 'report-delete:fail', 'report-delete:success', 'report-export:fail', 'report-export:success', 'user-create:fail', 'user-create:success', 'user-delete:success', 'user-disable:fail', 'user-disable:success', 'user-enable:success', 'user-lock:success', 'user-modify:fail', 'user-modify:success', 'user-password-expire:success', 'user-password-modify:fail', 'user-password-modify:success', 'user-password-reset:success', 'user-privilege-assign:success', 'user-role-revoke:success', 'user-unlock:success'] |
+| edit_attribute | legacy_activity_type |  | ['account-creation', 'account-deleted', 'account-disabled', 'account-enabled', 'account-lockout', 'account-password-change', 'account-password-change-failed', 'account-password-reset', 'account-unlocked', 'app-activity', 'app-activity-failed', 'app-login', 'failed-app-login', 'file-download', 'privileged-access'] |

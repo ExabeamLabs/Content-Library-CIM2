@@ -1,0 +1,8 @@
+# Code Changes for sentinelone-singularityp-json-alert-trigger-success-ip (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['dest_host', 'dest_ip', 'dest_port', 'direction', 'domain', 'event_name', 'hash_md5', 'hash_sha1', 'hash_sha256', 'host', 'host_type', 'os', 'process_dir', 'process_id', 'process_name', 'process_path', 'result', 'src_host', 'src_ip', 'src_port', 'time', 'user', 'user_agent'] |
+| edit_regex_field | dest_host |  | ['"endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)"', 'exa_regex="endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)"'] |
+| added_regex_field | direction |  | ['"endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)"', '"endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)"', 'exa_regex="endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)"', 'exa_regex="endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)"'] |
+| added_regex_field | src_host |  | ['"endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)"', 'exa_regex="endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)"'] |
