@@ -1,6 +1,6 @@
 # Content Package 2026.3.1
 
-These release notes contain information about content package 2026.3.1, released on 12 Mar 2026.
+These release notes contain information about content package 2026.3.1, released on 13 Mar 2026.
 
 
 ## Enhancements
