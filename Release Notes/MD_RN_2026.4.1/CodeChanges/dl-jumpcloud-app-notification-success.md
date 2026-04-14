@@ -1,0 +1,5 @@
+# Code Changes for dl-jumpcloud-app-notification-success (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'jumpcloud-jc-json-directoryinsights-events') &&  !InList(toLower(event_category), 'user_password_set','user_password_change','user_create','user_create_provision','admin_create','user_delete','user_password_reset_email','policy_update','policy_delete','policy_create','system_admin_grant','user_activated','user_update_provision','report_create','report_delete','user_suspended','configuration_file_download','file_delete','file_create','group_delete','group_update','group_create','user_login_attempt','user_unlocked','user_lockout','user_update','admin_delete','admin_update','user_password_update_provision','user_deprovision','user_admin_granted','system_admin_revoke','report_export','user_password_expired','report-create','report-delete','report-export','admin_login_attempt') |

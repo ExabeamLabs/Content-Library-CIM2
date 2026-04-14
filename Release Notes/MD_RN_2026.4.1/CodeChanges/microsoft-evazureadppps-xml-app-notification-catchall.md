@@ -1,0 +1,5 @@
+# Code Changes for microsoft-evazureadppps-xml-app-notification-catchall (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Vendor": "Microsoft", "Product": "Event Viewer - AzureADPasswordProtection-ProxyService", "ParserVersion": "v1.0.0", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Fields": ["<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)'/>", "<Message>({event_name}[^.<]+)", "UserName:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)", "FullName:\s+({full_name}[^<]+?)\s+</Message>", "Security UserID\\*='({user_sid}[^']+)'", "<Keywords>({result}[^<]+)</Keywords>", "<Level>({run_level}[^<]+)<", "<EventID>({event_code}\d+)</EventID>", "<Correlation ActivityID\\*=('|\")\{({activity_id}[^\}'\"]+)", "<Execution ProcessID=('|\")({process_id}\d+)('|\") ThreadID=('|\")({thread_id}\d+)", "<Channel>({channel}[^<]+)<\/Channel>", "<Computer>({host}[\w.-]+)</Computer>"], "Name": "microsoft-evazureadppps-xml-app-notification-catchall", "Conditions": ["<EventID>", "</EventID>", "Microsoft-AzureADPasswordProtection-ProxyService", "<Computer>"]} |

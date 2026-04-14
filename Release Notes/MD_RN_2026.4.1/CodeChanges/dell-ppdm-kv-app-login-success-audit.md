@@ -1,0 +1,5 @@
+# Code Changes for dell-ppdm-kv-app-login-success-audit (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "dell-ppdm-kv-app-login-success-audit", "Vendor": "Dell", "Product": "PowerProtect Data Manager", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "Conditions": ["user-audit", "monitoring", "AUDIT", "logged in", " Details:"], "Fields": ["\s+({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z)\s+", "Details:\s({user}[\w\.\-\!\#\^\~]{1,40}\$?) has logged in\.;", "\[TRACE_ID:({tracking_id}[^\]]+)\]", "\d\d:\d\d:\d\d\s({host}[\w_\-\.]+)\s\w", "\sDetails:\s({operation_details}[^;]+);", "({operation}logged in)"], "ParserVersion": "v1.0.0"} |

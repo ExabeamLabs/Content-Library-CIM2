@@ -1,0 +1,27 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-success-4624-3 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'auth_package', 'auth_process', 'channel', 'dest_host', 'dest_ip', 'dest_login_id', 'domain', 'email_address', 'event_code', 'event_name', 'host', 'key_length', 'login_id', 'login_type', 'process_dir', 'process_id', 'process_name', 'process_path', 'src_host', 'src_ip', 'src_port', 'subject_sid', 'time', 'user', 'user_sid', 'user_upn'] |
+| edit_regex_field | account |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:', 'New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| edit_regex_field | auth_package |  | ['Logon Process(:|=)\s*(\\+[nrt])*({auth_process}[^\s;\\]+)([\s;]*|(\\+[nrt])*)Authentication Package(:|=)\s*(\\+[nrt])*({auth_package}[^\s;\\]+)(\\+[nrt])*'] |
+| edit_regex_field | auth_process |  | ['Logon Process(:|=)\s*(\\+[nrt])*({auth_process}[^\s;\\]+)([\s;]*|(\\+[nrt])*)Authentication Package(:|=)\s*(\\+[nrt])*({auth_package}[^\s;\\]+)(\\+[nrt])*'] |
+| edit_regex_field | dest_login_id |  | ['Linked Logon ID(:|=)\s*(\\+[nrt])*({dest_login_id}[^\s\\;]+)\s*', 'TargetLinkedLogonId="({dest_login_id}[^"]+)"'] |
+| edit_regex_field | domain |  | ['New Logon:[^"]*?Account Domain(:|=)(\\+[nrt]|\s)*(-|NT AUTHORITY|({domain}[^\s\\]+))(\\[nrt]|\s)*'] |
+| edit_regex_field | email_address |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:'] |
+| edit_regex_field | key_length |  | ['Key Length(:|=)\s*(\\+[nrt])*({key_length}\d+)'] |
+| edit_regex_field | login_id |  | ['New Logon:[^"]*?Logon ID(:|=)(\\+[nrt]|\s)*({login_id}[^\s\\;]+)(\\+[nrt]|\s)*'] |
+| edit_regex_field | login_type |  | ['Logon Type(:|=)\s*(\\+[nrt])*({login_type}\d+)'] |
+| edit_regex_field | process_dir |  | ['Process Name(:|=)\s*(\\+[nrt])*(?:-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))(\s+|(\\+[nrt])*)Network Information:'] |
+| edit_regex_field | process_id |  | ['Process ID:\s*(\\+[nrt])*({process_id}[^\s\\]+)(\s*|(\\+[nrt])*)'] |
+| edit_regex_field | process_name |  | ['Process Name(:|=)\s*(\\+[nrt])*(?:-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))(\s+|(\\+[nrt])*)Network Information:'] |
+| edit_regex_field | process_path |  | ['Process Name(:|=)\s*(\\+[nrt])*(?:-|({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?))(\s+|(\\+[nrt])*)Network Information:'] |
+| edit_regex_field | src_host |  | ['Workstation Name(:|=)\s*(\\+[nrt])*(-|[A-Fa-f:\d.]+|(::ffff:)?({src_host}[\w\-.]+))([\s;]*|(\\+[rnt])*)Source Network Address(:|=)'] |
+| edit_regex_field | src_ip |  | ['Source Network Address(:|=)\s*(\\+[nrt])*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)([\s;]*|(\\+[nrt])*)Source Port(:|=)'] |
+| edit_regex_field | src_port |  | ['Source Network Address(:|=)\s*(\\+[nrt])*(?:-|(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)([\s;]*|(\\+[nrt])*)Source Port(:|=)', 'Source Port(:|=)\s*(\\+[ntr])*({src_port}\d+)\s*'] |
+| edit_regex_field | subject_sid |  | ['Subject(:|=)([\s;]*|(\\+[nrt])*)Security ID(:|=)\s*(\\+[nrt])*({subject_sid}S-[^=:;]+?)(\s+|;|(\\+[nrt])*)Account Name(:|=)'] |
+| edit_regex_field | time |  | ['"TimeCreated\\?":\\?".*?({time}\d{1,13}).*?",', '"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)', '"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\dZ)"', '({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))', '({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)', '({time}\w{3}\s\d{1,2}\s\d{1,2}:\d{1,2}:\d{1,2}\s\d{4})\s+4624\s+Microsoft-Windows-Security-Auditing', '<TimeCreated SystemTime=(\'|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\d\d\d\dZ)', 'TimeGenerated=({time}\d{10})'] |
+| edit_regex_field | user |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}([A-Za-z0-9]+[!#$%&\'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:', 'New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| edit_regex_field | user_sid |  | ['New Logon(:|=)([\s;]*|(\\+[nrt])*)Security ID(:|=)\s*(\\+[nrt])*(NT AUTHORITY\\SYSTEM|({user_sid}[^;:=]+?))([\s;]*|(\\+[nrt])*)Account Name(:|=)'] |
+| edit_regex_field | user_upn |  | ['New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&\'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| added_regex_field | channel |  | ['Channel"?(:|=)"?({channel}[^"]+)'] |

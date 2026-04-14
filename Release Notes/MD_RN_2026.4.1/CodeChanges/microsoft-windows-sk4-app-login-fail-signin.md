@@ -1,0 +1,7 @@
+# Code Changes for microsoft-windows-sk4-app-login-fail-signin (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'app', 'attribute', 'auth_method', 'browser', 'category', 'city', 'country_code', 'device_id', 'email_address', 'email_domain', 'error_code', 'event_name', 'failure_code', 'failure_reason', 'first_name', 'full_name', 'last_name', 'location', 'operation', 'os', 'principal_id', 'resource', 'result', 'session_id', 'severity', 'src_host', 'src_ip', 'src_network_type', 'src_network_zone', 'src_port', 'state', 'tenant_id', 'time', 'user_agent', 'user_id'] |
+| edit_regex_field | user_id |  | ['"identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))"', 'UserId"+:"+({user_id}[^",]+)', 'exa_json_path=$.eventHubsAzureRecord.identity,exa_regex=(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",]+)))', 'exa_json_path=$.identity,exa_regex=(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",]+)))', 'exa_regex="identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))"', 'exa_regex=UserId"+:"+({user_id}[^",]+)'] |
+| added_regex_field | tenant_id |  | ['"tenantId"\s*:\s*"({tenant_id}[^"]+)'] |

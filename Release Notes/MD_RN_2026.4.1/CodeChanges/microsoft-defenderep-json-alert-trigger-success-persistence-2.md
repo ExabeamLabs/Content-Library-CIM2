@@ -1,0 +1,6 @@
+# Code Changes for microsoft-defenderep-json-alert-trigger-success-persistence-2 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'alert_id', 'alert_name', 'alert_severity', 'alert_type', 'dest_ip', 'dest_port', 'domain', 'email_address', 'email_domain', 'host', 'incident_status', 'more_info', 'result', 'src_ip', 'src_port', 'technique', 'tenant_id', 'time', 'user', 'workspace_name'] |
+| added_regex_field | tenant_id |  | ['"tenantId"\s*:\s*"({tenant_id}[^"]+)'] |

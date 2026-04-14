@@ -1,0 +1,8 @@
+# Code Changes for microsoft-defenderep-json-alert-trigger-success-lateralmovement-2 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['account', 'additional_info', 'alert_id', 'alert_name', 'alert_severity', 'alert_source', 'alert_subject', 'alert_type', 'domain', 'email_address', 'email_domain', 'file_dir', 'file_ext', 'file_name', 'full_name', 'incident_status', 'malware_family', 'more_info', 'process_id', 'process_name', 'result', 'src_host', 'src_ip', 'src_port', 'technique', 'tenant_id', 'time', 'user', 'user_upn', 'workspace_name'] |
+| edit_regex_field | src_host |  | ['"computerDnsName":\s*"+({src_host}[\w.-]+)"', '"deviceDnsName":\s*"+({src_host}[\w.-]+)"', 'exa_json_path=$..computerDnsName,exa_regex=({src_host}[\w.-]+)', 'exa_json_path=$..deviceDnsName,exa_regex=({src_host}[\w.-]+)'] |
+| added_regex_field | alert_source |  | ['"detectionSource":\s*"({alert_source}[^"]+)"', 'exa_regex="detectionSource":\s*"({alert_source}[^"]+)"'] |
+| added_regex_field | tenant_id |  | ['"tenantId"\s*:\s*"({tenant_id}[^"]+)'] |

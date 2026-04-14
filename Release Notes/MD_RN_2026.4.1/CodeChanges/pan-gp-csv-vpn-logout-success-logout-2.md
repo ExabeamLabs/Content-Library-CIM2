@@ -1,0 +1,7 @@
+# Code Changes for pan-gp-csv-vpn-logout-success-logout-2 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | device_name |  | [',GLOBALPROTECT,([^,]*,){44}(\d|({device_name}({host}[\w\-\.]+))),'] |
+| edit_regex_field | host |  | [',GLOBALPROTECT,([^,]*,){44}(\d|({device_name}({host}[\w\-\.]+))),', ':\d\d:\d\d\s+({host}[\w.-]+)\s', '\d+:\d+:\d\d[\+-]\d+:\d+\s+({host}[\w.-]+)\s', '\d\d:\d\d:\d\d\s({host}[\w\-\.]+)\s*\d*,({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d),'] |
+| edit_regex_field | time |  | ['((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))', '({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d)', ',GLOBALPROTECT,([^,]+,){2}({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z),', '\d\d:\d\d:\d\d\s({host}[\w\-\.]+)\s*\d*,({time}\d\d\d\d\/\d\d\/\d\d\s\d\d:\d\d:\d\d),'] |

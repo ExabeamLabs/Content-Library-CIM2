@@ -1,0 +1,5 @@
+# Code Changes for microsoft-copilot-ai-agent-modify-success (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'microsoft-copilot-json-ai-agent-powerplatform-catchall','microsoft-copilot-json-ai-agent-powerplatform-catchall-2') && containsAny(toLower(operation), 'botdeletecleanup','botupdateoperation-botnameupdate','botupdateoperation-botauthupdate', 'botupdateoperation-boticonupdate', 'botappinsightsupdate', 'botcomponentcreate', 'botcomponentupdate', 'botcomponentdelete', 'botcomponentcollectioncreate', 'botcomponentcollectiondelete', 'botcomponentcollectionupdate', 'aipluginoperationcreate', 'aipluginoperationupdate', 'aipluginoperationdelete') && containsAny(toLower(result), 'succeeded') |

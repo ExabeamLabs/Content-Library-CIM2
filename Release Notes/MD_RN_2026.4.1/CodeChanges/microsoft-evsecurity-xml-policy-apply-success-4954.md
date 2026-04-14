@@ -1,0 +1,6 @@
+# Code Changes for microsoft-evsecurity-xml-policy-apply-success-4954 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['channel', 'event_code', 'event_name', 'host', 'process_id', 'result', 'run_level', 'task_name', 'thread_id', 'time'] |
+| added_regex_field | channel |  | ['<Channel>({channel}[^<]+)<'] |
