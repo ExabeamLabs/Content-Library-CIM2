@@ -30,6 +30,7 @@ Fields = [
   """PrivilegeList"*:"*(-|({privileges}[^"]+))"""
   """"Category"*:"*({category}[^"]+)"""
   """"Opcode"*:"*({severity}[^"]+)"""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

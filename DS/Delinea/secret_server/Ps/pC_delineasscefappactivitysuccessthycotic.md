@@ -21,6 +21,7 @@ Fields = [
 """Action:\s*\[({operation}[^\]]+)\]"""
 """\sfileType=({additional_info}[^=]+?)\s\w+="""
 """CEF:\s*\d+\|([^\|]+\|){4}({category}[^\|]+)"""
+"""Account Name:\s*({dest_user}[\w\.\-]{1,40}\$?)"""
 ]
 ParserVersion = "v1.0.0"
 

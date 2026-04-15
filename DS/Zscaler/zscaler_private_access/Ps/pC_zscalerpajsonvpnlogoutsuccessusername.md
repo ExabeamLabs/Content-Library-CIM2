@@ -4,7 +4,7 @@
 Name = "zscaler-pa-json-vpn-logout-success-username"
 Vendor = "Zscaler"
 Product = "Zscaler Private Access"
-TimeFormat = "MMM  dd HH:mm:ss yyyy"
+TimeFormat = ["MMM  dd HH:mm:ss yyyy", "MMM dd HH:mm:ss yyyy"]
 Conditions = [
   """"ZPN_STATUS_DISCONNECTED""""
   """"Username":"""

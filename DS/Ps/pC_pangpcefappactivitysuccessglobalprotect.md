@@ -11,11 +11,11 @@ Name = pan-gp-cef-app-activity-success-globalprotect
     """Private IP:\s?({src_translated_ip}[^,\s]+)""",
     """User\s*name:\s+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\.?(\s|,|"|$)""",
     """,SYSTEM,([^,]*,){9}({severity}[^,]+),""",
-    """({event_category}SYSTEM)""",
+    """,({event_category}SYSTEM|TRAFFIC)""",
     """,SYSTEM,({event_subtype}[^,]+),""",
     """,({asset_id}\d+),SYSTEM,""",
     """,SYSTEM,(?:[^,]*,){10}"*({additional_info}[^",]+?)(?:\.*"|\.\s|\.*,|\s(\d{1,3}\.){3}\d{1,3}:\d+)""",
-    """,GLOBALPROTECT,([^,]*,){48}({device_name}({host}[^,]+))"""
+    """,GLOBALPROTECT,([^,]*,){48}(\d|({device_name}({host}[^,]+)))"""
   ]
 
 

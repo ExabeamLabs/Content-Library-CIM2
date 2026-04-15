@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-9
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """4769""", """Kerberos サービス チケットが要求されました。""" ]
   Fields = [ 
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4769,""",

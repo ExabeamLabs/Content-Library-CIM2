@@ -32,6 +32,7 @@ Fields = [
 """"ObjectName"\s*:\s*\"(?:({file_dir}[^\"]+?)\\+[^\"\\]+)""""
 """"AccessList"\s*:\s*\"({access}.+?)""""
 """Access Request Information:[rnt\\]*Accesses:\s*((\\)*(\\t|\\r|\\n))*({access}[^\\]+)((\\)*(\\t|\\r|\\n))*Access Mask:\s*((\\)*(\\t|\\r|\\n))*({access_mask}[^"\s]+)\s*((\\)*(\\t|\\r|\\n))*"""
+""""channel":"({channel}[^"]+)""""
 """exa_json_path=$.message_info,exa_field_name=event_name"""
 """exa_json_path=$.@timestamp,exa_field_name=time"""
 """exa_json_path=$.event_id,exa_field_name=event_code"""
@@ -51,6 +52,7 @@ Fields = [
 """exa_json_path=$.computer_name,exa_field_name=dest_host"""
 """exa_json_path=$.event_data.AccessMask,exa_field_name=access_mask"""
 """exa_json_path=$.event_data.SubjectLogonId,exa_field_name=login_id"""
+"""exa_json_path=$.channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -4,7 +4,7 @@
 Name = accellion-kw-kv-file-write-success-createdfolder
   ParserVersion = v1.0.0
   Product = Kiteworks
-  Conditions = [ """Created folder""", """Activity:""" ]
+  Conditions = [ """Created folder""", """Activity:""", """ id=""" ]
   Fields = ${KiteWorksParsersTemplates.q-kiteworks-file-activity.Fields}[
     """({access}Created) folder ({file_name}({src_file_name}[^$"\.]+?(\.(|({file_ext}({src_file_ext}[^$"]+?))))?))\.?\s*(File:|$)"""
     """({access}Created) folder \"+({file_name}({src_file_name}[^\"\.]+?(\.({file_ext}({src_file_ext}[^"]+)))?))\""""

@@ -29,6 +29,7 @@ Name = crowdstrike-falcon-json-alert-trigger-success-processblock
     """exa_json_path=$.CommandLine,exa_field_name=process_command_line""",
     """exa_json_path=$.TargetProcessId,exa_field_name=process_id""",
     """exa_json_path=$.ImageFileName,exa_regex=({process_path}[^"]+(\/|\\)({process_name}[^"\\]+))"""
+    """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 

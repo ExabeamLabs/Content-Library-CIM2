@@ -21,7 +21,7 @@ Fields = [
   """user_name="(Unknown|({email_address}[^@"]+@[^\."]+\.[^"]+)|(({domain}[^\\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """proto="*({protocol}[^\s"]+)"""
   """http_agent="(none|({user_agent}[^"]+))"\s\w+="""
-  """http_method=({method}[^=]+?)\s\w+="""
+  """http_method="?({method}[^=]+?)"?\s\w+="""
   """http_refer="({referrer}[^"]+)"""
   """\Waction="({action}[^"]+)""""
   """msg="({additional_info}[^"=]+)"\s\w+="""

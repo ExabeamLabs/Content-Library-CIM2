@@ -20,6 +20,7 @@ windows-events-4 = {
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""""
+    """"Channel":"({channel}[^"]+)"""
   
 }
 ```

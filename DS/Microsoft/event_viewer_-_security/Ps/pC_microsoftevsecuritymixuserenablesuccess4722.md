@@ -32,6 +32,7 @@ Fields = [
 """\"SubjectLogonId\":\"({login_id}[^\s\"]+)"""
 """({time}\d\d\/\d\d\/\d\d\d\d\s*\d\d:\d\d:\d\d)"""
 """Target Account.+?Account Name:\s*(\\t|\\r|\\n|\s)*({dest_user}[^:]+?)(\\t|\\r|\\n|\s)*Account Domain:\s*"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

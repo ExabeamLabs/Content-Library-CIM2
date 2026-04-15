@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-kv-file-read-success-4663-4
     """AccessList="({access}[^"]+)""",
     """AccessMask="({access_mask}[^"]+)""",
     """Accesses:\s*({additional_info}.+?)\s+Access Mask:"""
+    """\schannel="+({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

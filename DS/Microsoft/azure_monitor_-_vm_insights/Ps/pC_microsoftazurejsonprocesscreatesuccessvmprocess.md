@@ -20,6 +20,7 @@ Name = microsoft-azure-json-process-create-success-vmprocess
 """CommandLine\":\"\s*({process_command_line}[^\n]+?)\s*\",\"\w+\""""
 """UserName\"+:\"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """UserDomain\"+:\"+({domain}[^\"]+)"""
+""""TenantId":\s*"({tenant_id}[^"]+)""""
 ]
 
 

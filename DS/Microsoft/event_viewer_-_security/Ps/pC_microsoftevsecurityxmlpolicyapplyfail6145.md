@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-policy-apply-fail-6145
     """<Message>\s*({additional_info}[^<]+?)\s*<\/Message>""",
     """<Data Name\\*=('|")GPOList('|")>({policy_name}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

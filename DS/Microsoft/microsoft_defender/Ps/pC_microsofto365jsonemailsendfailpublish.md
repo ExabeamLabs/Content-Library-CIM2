@@ -32,6 +32,8 @@ Fields = [
   """"DMARC\\*":\\*"({dmarc_result}[^\\"]+)\\*""""
   """"CompAuth\\*":\\*"({compauth_result}[^\\"]+)\\*""""
   """"Connectors":"({connectors}[^"]+)""""
+  """"EmailSize":({bytes}\d+)"""
+  """exa_json_path=$.EmailSize,exa_field_name=bytes"""
   """exa_json_path=$..Timestamp,exa_field_name=time"""
   """exa_json_path=$..RecipientEmailAddress,exa_regex=\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""" 
   """exa_json_path=$..SenderFromDomain,exa_field_name=email_domain"""

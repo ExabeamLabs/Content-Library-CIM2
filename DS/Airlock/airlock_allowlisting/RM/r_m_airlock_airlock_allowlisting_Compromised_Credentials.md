@@ -7,7 +7,7 @@ Vendor: Airlock
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  50   |   26   |         6          |       4        |    6    |
+|  50   |   26   |         6          |       4        |    5    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

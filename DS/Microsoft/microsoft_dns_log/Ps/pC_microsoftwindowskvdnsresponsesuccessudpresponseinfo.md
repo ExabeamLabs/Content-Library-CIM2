@@ -4,7 +4,7 @@
 Name = microsoft-windows-kv-dns-response-success-udpresponseinfo
 Vendor = Microsoft
 Product = Microsoft DNS Log
-TimeFormat = "MM/dd/yyyy HH:mm:ss a"
+TimeFormat = ["MM/dd/yyyy HH:mm:ss a", "M/d/yyyy h:mm:ss a", "M/d/yyyy HH:mm:ss a", "M/dd/yyyy H:mm:ss a"]
 Conditions = [
   """UDP response info at """
   """Buf length ="""

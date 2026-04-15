@@ -7,7 +7,7 @@ Vendor: Monday.com
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         2          |       1        |    1    |
+|   3   |   0    |         2          |       1        |    0    |
 
 | Event Type   | Rules    | Models |
 | ---- | ---- | ------ |

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-user-permission-modify-4718
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Task>({sub_category}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

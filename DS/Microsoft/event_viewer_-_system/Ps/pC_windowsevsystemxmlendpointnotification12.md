@@ -20,6 +20,7 @@ Name = windows-evsystem-xml-endpoint-notification-12
     """<Provider>({provider_name}[^<]+)<""",
     """<Message>({process_name}\S+)\swas started as a protected process with level"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

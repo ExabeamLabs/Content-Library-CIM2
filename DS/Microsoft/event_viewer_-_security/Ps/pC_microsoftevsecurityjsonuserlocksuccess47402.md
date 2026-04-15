@@ -23,6 +23,7 @@ Fields = [
 """"TargetSid\\?":\\?"({dest_user_sid}({user_sid}[^\\"]+))"""
 """"TargetUserName\\?":\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
+""""Channel\\?":\s*\\?"({channel}[^"\\]+)"""
 ]
 ParserVersion = "v1.0.0"
 

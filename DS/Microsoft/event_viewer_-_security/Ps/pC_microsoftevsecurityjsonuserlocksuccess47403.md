@@ -29,6 +29,7 @@ Fields = [
   """Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
   """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """"TargetDomainName":"\\*({domain}[^"]+)""""
+  """"Channel":"({channel}[^"]+)"""
   """exa_regex=({event_name}A user account was locked out)""",
   """exa_json_path=$.TimeGenerated,exa_field_name=time"""
   """exa_json_path=$.EventTime,exa_field_name=time"""
@@ -47,6 +48,7 @@ Fields = [
   """exa_json_path=$.Message,exa_regex=Caller Computer Name:\s*([\\\/]+)?(::ffff:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({src_host}[\w\-\.]+))"""
   """exa_json_path=$.Message,exa_regex=Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """exa_json_path=$.TargetDomainName,exa_regex=\\*({domain}[^"]+)$"""
+  """exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4902-1
     """Guid\\*=('|")\{({process_guid}[^\'\}]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

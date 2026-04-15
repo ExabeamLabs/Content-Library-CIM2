@@ -27,6 +27,7 @@ Fields = [
   """Accesses:\s*(\\r|\\n|\\t)*({access}[^:]+?)\s*(\\r|\\n|\\t)*Access Mask:"""
   """({event_name}An attempt was made to access an object)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

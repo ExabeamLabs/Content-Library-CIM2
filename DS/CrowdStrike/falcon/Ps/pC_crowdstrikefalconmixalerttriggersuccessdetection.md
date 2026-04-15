@@ -27,7 +27,7 @@ Fields = [
 """"ComputerName":\s*"({dest_host}[\w\-.]+)".*?"LocalAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","LocalPort":\s*({=dest_port}\d+),"RemoteAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","RemotePort":\s*({=src_port}\d+),"ConnectionDirection":\s*1"""
 """"IOCValue":\s*"({ioc}[^"]+)""""
 """"MD5String":\s*"(|({hash_md5}[^"]+))""""
-""""UserName":\s*"(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+""""UserName":\s*"(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"FalconHostLink":\s*"({malware_url}({falcon_host_link}[^"]+))""""
 """"DetectDescription":\s*"\s*({additional_info}({alert_description}[^"]+?))\s*""""
 """"GrandparentImageFileName\\*"+:\s*\\*"+({grandparent_image_filename}[^,]+?)\\*"+,"""
@@ -92,13 +92,15 @@ Fields = [
 """exa_regex="ComputerName":\s*"({dest_host}[\w\-.]+)".*?"LocalAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","LocalPort":\s*({=dest_port}\d+),"RemoteAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","RemotePort":\s*({=src_port}\d+),"ConnectionDirection":\s*1""",
 """exa_json_path=$..IOCValue,exa_field_name=ioc""",
 """exa_json_path=$..MD5String,exa_field_name=hash_md5""",
-"""exa_json_path=$..UserName,exa_regex=(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+"""exa_json_path=$..UserName,exa_regex=(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """exa_json_path=$..FalconHostLink,exa_field_name=falcon_host_link""",
 """exa_json_path=$..FalconHostLink,exa_field_name=malware_url""",
 """exa_json_path=$..DetectDescription,exa_field_name=alert_description""",
 """exa_json_path=$..DetectDescription,exa_field_name=additional_info""",
 """exa_json_path=$..GrandparentImageFileName,exa_field_name=grandparent_image_filename""",
 """exa_json_path=$..GrandparentCommandLine,exa_field_name=grandparent_command_line""",
+"""exa_json_path=$..GrandParentImageFileName,exa_field_name=grandparent_image_filename""",
+"""exa_json_path=$..GrandParentCommandLine,exa_field_name=grandparent_command_line""",
 """exa_json_path=$..ParentImageFileName,exa_field_name=parent_image_filename""",
 """exa_json_path=$..ParentCommandLine,exa_field_name=parent_process_command_line""",
 """exa_regex="((?i)SHA256|SHA256String|SHA256HashData)\\*"+:\s*\\*"+({hash_sha256}[^,]+?)\\*"+,""",
@@ -115,7 +117,7 @@ Fields = [
 """exa_json_path=$..PatternDispositionFlags.ProcessBlocked,exa_field_name=process_blocked""",
 """exa_json_path=$..PatternDispositionFlags.PolicyDisabled,exa_field_name=policy_disabled""",
 """exa_json_path=$..PatternDispositionFlags.SensorOnly,exa_field_name=sensor_only""",
-"""exa_json_path=$..PatternDispositionFlags.CriticalProcessDisabled,exa_field_name=rcritical_process_disabled""",
+"""exa_json_path=$..PatternDispositionFlags.CriticalProcessDisabled,exa_field_name=critical_process_disabled""",
 """exa_json_path=$..PatternDispositionFlags.KillSubProcess,exa_field_name=kill_sub_process""",
 """exa_json_path=$..PatternDispositionFlags.Rooting,exa_field_name=rooting""",
 """exa_json_path=$..PatternDispositionFlags.InddetMask,exa_field_name=inddet_mask""",

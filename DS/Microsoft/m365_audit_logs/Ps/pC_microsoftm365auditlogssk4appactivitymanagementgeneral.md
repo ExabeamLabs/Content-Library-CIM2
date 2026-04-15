@@ -11,6 +11,7 @@ Name = microsoft-m365auditlogs-sk4-app-activity-managementgeneral
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
     """\srt=({time}\d{13})""",
     """"Operation":"({event_name}[^"]+)"""",
+    """operationName":"({operation}[^",]+)""",
 # team_guid is removed
 # team_name is removed
     """"UserId":"({user_id}[^"]+)"""",

@@ -7,7 +7,7 @@ Vendor: Trellix
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  150  |   72   |         27         |       9        |    8    |
+|  150  |   72   |         27         |       9        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -44,6 +44,7 @@ cef-netskope-alert.Fields}[
     """"page":"(|({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?))"""",
     """"domain":"({web_domain}[^"]+)""""
     """\"+url\"+:\s*\"+(|({web_domain}[^\",\/]+))"""",
+    """"url":"({url}[^"]+)"""",
     """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)""",
     """\"user\"+:\s*\"+(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))"""",
     """\"+dstport\"+:\s*({dest_port}\d+)""",
@@ -71,6 +72,7 @@ cef-netskope-alert.Fields}[
     """"other_categories":\[({categories}[^\]]+?)\]"""
     """"client_bytes":({bytes_in}\d+)"""
     """"server_bytes":({bytes_out}\d+)"""
+    """"action":\s*"({action}[^"]+)"""
 
   
 }

@@ -20,6 +20,7 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8001
     """<Data Name =('|")LogonType('|")>({login_type}\d+)<\/Data>"""
     """<Data Name =('|")ProcessName('|")>({process_path}({process_dir}[^<\/]+?)\\+({process_name}[^<\\]+))<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
    ]
 
 

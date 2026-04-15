@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-4904-3
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
    ]
 
 

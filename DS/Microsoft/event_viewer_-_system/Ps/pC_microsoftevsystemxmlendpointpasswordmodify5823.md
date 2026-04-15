@@ -26,6 +26,7 @@ windows-events-5 = {
     """Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>""",
     """\WCLSID\s*\{({cls_id}[^}\s]+)\}\s*"""
     """<Level>({run_level}[^<]+)<"""    
+    """<Channel>({channel}[^<]+)<"""
   
 }
 ```

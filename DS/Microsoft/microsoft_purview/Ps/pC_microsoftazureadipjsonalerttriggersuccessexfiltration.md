@@ -23,6 +23,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
     """"incidentId":"({alert_id}\d+)"""
     """"mitreTechniques":\[({technique}[^\]]+)\]"""
     """"evidence".+?"verdict":"({result}[^"]+)"""
+    """"tenantId":\s*"({tenant_id}[^"]+)""""
     """exa_json_path=$.id,exa_field_name=alert_id""",
     """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -38,6 +39,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-exfiltration
     """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
     """exa_json_path=$.incidentId,exa_field_name=alert_id"""
     """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
+    """exa_json_path=$..tenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = v1.0.0
 

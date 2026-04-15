@@ -25,6 +25,7 @@ Fields = [
   """<Data Name(\\\/)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
   """<Hostname>({host}[^\.\<]+)\.({domain}[^\s\<]+)<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

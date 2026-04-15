@@ -22,6 +22,7 @@ Fields = [
 """Data Name(\\)?=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))"""
 """Data Name(\\)?=('|")TargetUserSid('|")>({dest_user_sid}({user_sid}[^<]+))"""
 """<Level>({run_level}[^<]+)"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

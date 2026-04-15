@@ -19,6 +19,7 @@ Name = sentinelone-singularityp-json-endpoint-login-success-logins
     """event.login.failureReason":"({failure_reason}[^"]+)"""
     """exa_json_path=$.['event.login.failureReason'],exa_field_name=failure_reason"""
     """exa_json_path=$.['event.login.loginIsSuccessful'],exa_field_name=result"""
+    """event.login.loginIsSuccessful":"({result}[^"]+)"""
   ]
 
 json-sentinelone-edr-events = {
@@ -52,7 +53,7 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..['src.process.pid'],exa_field_name=process_id""",
       """exa_json_path=$..['src.process.cmdline'],exa_field_name=process_command_line""",
       """exa_json_path=$..['account.id'],exa_field_name=account_id""",
-      """exa_json_path=$..['src.process.user'],exa_regex=((({domain}[^\\"$]+))\\+)?(({user}Système|LOCAL SERVICE|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))($|")""",
+      """exa_json_path=$..['src.process.user'],exa_regex=^((({domain}[^\\"$]+))\\+)?(({user}Système|LOCAL SERVICE|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))($|")""",
       """exa_json_path=$..['tgt.process.user'],exa_regex=((({dest_domain}[^\\"$]+))\\+)?((({dest_user}Système|LOCAL SERVICE|NETWORK SERVICE|[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
     
 }

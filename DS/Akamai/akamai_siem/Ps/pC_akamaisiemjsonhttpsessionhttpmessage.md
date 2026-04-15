@@ -17,8 +17,9 @@ Name = akamai-siem-json-http-session-httpmessage
     """exa_json_path=$.httpMessage.path,exa_field_name=uri_path""",
     """exa_json_path=$.httpMessage.status,exa_field_name=http_response_code""",
     """exa_json_path=$.httpMessage.bytes,exa_field_name=bytes""",
-    """exa_json_path=$.attackData.policyId,exa_field_name=policy_id"""
-    """exa_json_path=$.updatedhttpMessage.requestHeaders.User-Agent,exa_field_name=user_agent"""
+    """exa_json_path=$.attackData.policyId,exa_field_name=policy_id""",
+    """exa_json_path=$.updatedhttpMessage.requestHeaders.User-Agent,exa_regex=\s*({user_agent}[^"$]+)""",
+    """exa_json_path=$.identity,exa_field_name=identities"""
    ]
    ParserVersion = v1.0.0
 

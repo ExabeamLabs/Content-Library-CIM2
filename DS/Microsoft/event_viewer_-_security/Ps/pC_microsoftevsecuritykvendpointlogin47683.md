@@ -33,6 +33,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4768-3"
     """"ServiceName":"({service_name}[^"]+)"""
     """"Computer"+:"+({host}[\w\-.]+)""""
     """"IpAddress":"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"Channel":"({channel}[^"]+)"""
 
     """exa_json_path=$.TimeCreated,exa_field_name=time""",
     """exa_json_path=$.TimeGenerated,exa_field_name=time""",
@@ -50,6 +51,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4768-3"
     """exa_json_path=$.EventData.ServiceName,exa_field_name=service_name""",
     """exa_json_path=$.Computer,exa_field_name=host""",
     """exa_json_path=$.EventData.IpAddress,exa_regex=(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$..Channel,exa_field_name=channel"""
   ] 
   ParserVersion = "v1.0.0"  
 },  

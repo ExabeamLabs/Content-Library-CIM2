@@ -14,6 +14,7 @@ Name = microsoft-azuremon-json-alert-trigger-success-cputhresholdexceeded
     """exa_json_path=$.AlertSeverity,exa_field_name=alert_severity""",
     """exa_json_path=$.Type,exa_field_name=alert_type""",
     """exa_json_path=$.AlertDescription,exa_field_name=additional_info""",
+    """exa_json_path=$.TenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = v1.0.0
 

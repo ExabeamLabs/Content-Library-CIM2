@@ -24,6 +24,7 @@ Fields = [
 """<Data Name\\*=('|")AccountName('|")>(({account_domain}[^<>\\\/]+)[\\\/]+)?({account_name}[^<]+?)</Data>"""
 """({event_name}A service was installed in the system)""",
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

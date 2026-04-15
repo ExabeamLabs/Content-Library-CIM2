@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-5031
     """<Execution ProcessID\\*=('|")({process_id}\d+)('|") ThreadID\\*=('|")({thread_id}\d+)('|")""",
     """<Data Name\\*=('|")Application('|")>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/]+?))<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -12,7 +12,7 @@ Name = microsoft-o365-sk4-email-receive-success-inbound
     """"Subject":"({email_subject}[^"]+)"""",
     """"Direction":"({direction}[^"]+)"""",
     """"SenderAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """"RecipientAddress":"({dest_email_address}({email_recipients}[^"]+))"""",
+    """"RecipientAddress":"({dest_email_address}({email_recipients}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"MessageSize":"?({bytes}\d+)""",
     """"MessageTraceId":"({message_id}[^"]+)"""",
     """"MessageId":"({message_id}[^"]+)"""",

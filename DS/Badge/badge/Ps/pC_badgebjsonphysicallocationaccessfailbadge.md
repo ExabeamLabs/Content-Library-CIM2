@@ -6,7 +6,7 @@ Vendor = "Badge"
 Product = "Badge"
 TimeFormat = "epoch_sec"
 Conditions = [
-  """BADGE"""
+  """ BADGE"""
   """Floor"""
 ]
 Fields = [

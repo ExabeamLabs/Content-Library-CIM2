@@ -25,6 +25,7 @@ Fields = [
   """"ticketEncryptionType":"({ticket_encryption_type}[^"]+)"""
   """ticketOptions":"({ticket_options}[^"]+)"""
   """"serviceName":"({service_name}[^"]+)"""
+  """"channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

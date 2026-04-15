@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-driver-load-fail-6281
     """<Data Name\\*=('|")param1('|")>[^<]+[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?|[^\\:<]+)</Data>""",
     """<Data Name\\*=('|")param1('|")>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

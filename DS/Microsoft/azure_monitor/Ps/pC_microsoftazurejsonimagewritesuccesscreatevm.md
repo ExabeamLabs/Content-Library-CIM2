@@ -3,7 +3,7 @@
 {
 Name = microsoft-azure-json-image-write-success-createvm
   ParserVersion = v1.0.0
-  Conditions = [ """"operationName":""", """Microsoft.Compute/virtualMachines/write""" ]
+  Conditions = [ """"operationName":""", """Microsoft.Compute/virtualMachines/write""", """"authorization":""" ]
   Fields = ${MSParserTemplates.azure-activity-json.Fields} [
     """exa_json_path=$..responseBody,exa_regex="name\\?"+:\s*\\?"+({resource_name}[^"]+)\\?""""
     """exa_json_path=$..responseBody,exa_regex="location\\?"+:\s*\\?"+({region}[^"]+)\\?""""
@@ -53,6 +53,7 @@ azure-activity-json = {
       """exa_json_path=$._ResourceId,exa_field_name=resource_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="_?resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""
+      """exa_json_path=$.Channel,exa_field_name=channel"""
       
 }
 ```

@@ -37,6 +37,7 @@ Fields = [
   """\s*Account Name(:|=)\s*((?-i)\\+[rnt])*(?:-|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+?))[\s;]*((?-i)\\+[rnt])*Account Domain(:|=)\s*((?-i)\\+[rnt])*(NT AUTHORITY|({domain}.+?))[\s;]*((?-i)\\+[rnt])*Logon ID(:|=)\s*((?-i)\\+[rnt])*({login_id}.+?)[\s;]*((?-i)\\+[rnt])*Object(:|=)"""
   """\s*Object Server(:|=)\s*((?-i)\\+[rnt])*({object_server}.+?)[nrt\\\s;]*((?-i)\\+[rnt])*Object Type(:|=)\s*((?-i)\\+[rnt])*(?:-|({object_type}.+?))[\s;]*((?-i)\\+[rnt])*Object Name(:|=)\s*((?-i)\\+[rnt])*(?:|-|({object}.+?))[nrt\\\s;]*((?-i)\\+[rnt])*Object Handle"""
   """Desired Access(:|=)\s*((?-i)\\+[rnt])*({access}.+?)[\s;]*((?-i)\\+[rnt])*Privileges(:|=)\s*((?-i)\\+[rnt])*({privileges}.+?)(\s+\d+|"|,|;|\s+User:|\s*$)"""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

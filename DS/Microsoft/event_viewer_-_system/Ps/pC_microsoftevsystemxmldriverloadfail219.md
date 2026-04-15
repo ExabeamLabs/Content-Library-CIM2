@@ -31,6 +31,7 @@ s-xml-object-access-1 = {
     """File Name:\s*({file_path}({file_dir}(?:[^<]+)?[\\\/])?({file_name}[^\\\/<]+?(\.({file_ext}[^\\\/\.<\s]+?))))\s+\w+:""",
     """Hash:\s*((&lt;None&gt;)|({file_hash}[^\s]+))""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   
 }
 ```

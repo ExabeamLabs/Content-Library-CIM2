@@ -35,6 +35,9 @@ Name = "microsoft-evsecurity-str-registry-create-success-4657"
     """Object Name:((?-i)\\+[rnt])*\s*({registry_path}[^"]+?({registry_key}[^"\\]+?))((?-i)\\+[rnt])*\s*Object Value Name"""
     """Object Value Name:((?-i)\\+[rnt])*\s*({registry_value}[^"]+?)((?-i)\\+[rnt])*\s*Handle ID:"""
     """\(EventID\s({event_code}\d+)\)"""
+    """"channel":"({channel}[^"]+)""""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

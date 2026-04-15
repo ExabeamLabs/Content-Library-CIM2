@@ -5,7 +5,7 @@ Name = checkpoint-ngfw-kv-http-session-ifname
   Vendor = Check Point
   Product = Check Point NGFW
   TimeFormat = "epoch_sec"
-  Conditions = [ """CheckPoint""", """product:"URL Filtering"""", """ifname:"""" ]
+  Conditions = [ """CheckPoint""", """product:"URL Filtering"""", """ifname:"""", """action:"""" ]
   Fields = [
     """\Wtime(:|=)"({time}\d{10})""",
     """\W({host}[\w\-.]+) CheckPoint""",

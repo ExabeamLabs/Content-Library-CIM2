@@ -23,6 +23,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
     """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
     """status=({result}[^\s]+)""",
     """msg=.*?\[({alert_source}[^\]]+)\]:"""
+    """"azureTenantId":\s*"({tenant_id}[^"]+)""""
     """exa_json_path=$.id,exa_field_name=alert_id""",
     """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.title,exa_field_name=alert_subject""",
@@ -38,6 +39,7 @@ Name = microsoft-azureadip-mix-alert-trigger-success-unfamiliarlocation
     """exa_json_path=$.userStates[0].userPrincipalName,exa_field_name=user_upn""",
     """exa_json_path=$.status,exa_field_name=result""",
     """msg=.*?\[({alert_source}[^\]]+)\]:"""
+    """exa_json_path=$.azureTenantId,exa_field_name=tenant_id"""
  ]
 
 

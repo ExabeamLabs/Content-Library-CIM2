@@ -27,6 +27,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """"MemberSid":"(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s"]+))""",
     """"MemberName":"({user_dn}[^"]+)""",
     """"MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""
+    """"Channel":"({channel}[^"]+)""""
     """exa_regex=({event_name}A member was added to a security-enabled [\w\s]+ group)"""
     """exa_json_path=$.EventTime,exa_field_name=time"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
@@ -43,6 +44,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """exa_json_path=$.MemberSid,exa_field_name=account_id"""
     """exa_json_path=$.MemberName,exa_field_name=user_dn"""
     """exa_regex="MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
   ParserVersion = "v1.0.0"
 

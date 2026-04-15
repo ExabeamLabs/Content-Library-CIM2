@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-json-group-member-add-success-4756
     """"SourceName":"({provider_name}[^"]+)""""
     """"ProcessID":({process_id}\d+),"""
     """"Category":"({category}[^"]+)""""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

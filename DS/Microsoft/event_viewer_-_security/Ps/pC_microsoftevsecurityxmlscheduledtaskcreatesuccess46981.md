@@ -31,6 +31,7 @@ Fields = [
 """<Arguments>(\"+)?({arg}[^<\"]+)"""
 """<Message>({event_name}A scheduled task was created)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -10,7 +10,7 @@ Name = "unix-unix-str-endpoint-login-fail-expiredpassword"
 """sshd["""
   ]
   Fields = [
-"""({host}[\w.\-]+)\s+sshd\["""
+"""({host}[\w.\-]+)\]?\s+sshd\["""
 """expired password for user ({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)) \(({failure_reason}[^\)]+?)\)"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]

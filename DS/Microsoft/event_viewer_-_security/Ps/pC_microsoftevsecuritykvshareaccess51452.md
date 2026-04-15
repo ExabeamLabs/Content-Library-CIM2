@@ -29,7 +29,6 @@ Fields = [
 """Access Check Results:.*({result}Granted|Denied)\s+by"""
 """Source Port(=|:)\s*({src_port}\d+)"""
 ]
-
 ParserVersion = "v1.0.0"
 
 

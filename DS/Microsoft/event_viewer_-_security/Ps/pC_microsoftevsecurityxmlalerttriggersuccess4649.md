@@ -32,6 +32,7 @@ Fields = [
   """<EventID>({event_code}[^<]+)<\/EventID>"""
   """({additional_info}Credentials Which Were Replayed:.+)This event indicates that a Kerberos replay attack was detected"""
   """<Level>({run_level}[^<]+)"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

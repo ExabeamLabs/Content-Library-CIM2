@@ -30,7 +30,7 @@ azure-app-activity-skyfromation= {
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
   Fields = [
     """({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z)\s+[^\s]+\s+""",
-    """"+src-event-id"+:"+({event_code}[^"]+)""",
+    """"+src-event-id"+:"+({event_id}[^"]+)""",
     """"+event-name"+:"+({event_name}[^"]+)""",
     """"+application-module"+:"+({app_module}[^"]+)""",
     """"+authorization"+:.+?action"+:"+({action}[^"]+)""",

@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-sk4-service-create-success-4622
     """"Computer":"({dest_host}({host}[^"]+))"""",
     """({event_name}A security package has been loaded by the Local Security Authority)""",
     """ <Data Name\\?="SecurityPackageName">({service_name}[^<]+)<"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -25,6 +26,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
+    """Channel"?(:|=)"?({channel}[^"<]+)"""
   
 }
 ```

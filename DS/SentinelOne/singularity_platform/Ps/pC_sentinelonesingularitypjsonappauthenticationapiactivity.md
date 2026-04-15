@@ -1,0 +1,35 @@
+#### Parser Content
+```Java
+{
+Name = "sentinelone-singularityp-json-app-authentication-apiactivity"
+  ParserVersion = "v1.0.0"
+  Vendor = "SentinelOne"
+  Product = "Singularity Platform"
+  ExtractionType = "json"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Conditions = [
+    """destinationServiceName =SentinelOne"""
+    """"class_name":"API Activity""""
+    """"dataSource.name":"""
+    """"dataSource.category":""""
+  ]
+  Fields = [
+    """exa_json_path=$.timestamp,exa_field_name=time""",
+    """exa_json_path=$.['user.name'],exa_regex=({user}[\w\.\-]{1,40}\$?)""",
+    """exa_json_path=$.['actor.session.uid'],exa_field_name=session_id""",
+    """exa_json_path=$.['dst_endpoint.ip'],exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """exa_json_path=$.['unmapped.host'],exa_regex=({host}[\w\-\.]+)""",
+    """exa_json_path=$.['serverIP'],exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.['service.name'],exa_field_name=app""",
+    """exa_json_path=$.['status'],exa_field_name=result""",
+    """exa_json_path=$.['message.reason'],exa_field_name=result_reason""",
+    """exa_json_path=$.['metadata.product.vendor_name'],exa_field_name=vendor_name""",
+    """exa_json_path=$.['metadata.product.name'],exa_field_name=product_name""",
+    """exa_json_path=$.['user.uid'],exa_field_name=user_id""",
+    """exa_json_path=$.status_detail,exa_field_name=auth_type""",
+    """exa_json_path=$.activity_name,exa_field_name=event_name"""
+  ]
+
+
+}
+```

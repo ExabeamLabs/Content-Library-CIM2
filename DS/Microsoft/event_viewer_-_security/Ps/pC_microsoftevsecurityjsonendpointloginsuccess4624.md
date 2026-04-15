@@ -39,6 +39,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624"
     """"KeyLength":"?({key_length}\d+)"?,"""
     """"SubjectUserSid":"({subject_sid}[^"]+)"""
     """"Process":"(-|({process_name}[^"]+))""""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

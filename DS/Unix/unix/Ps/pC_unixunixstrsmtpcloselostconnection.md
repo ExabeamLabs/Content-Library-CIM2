@@ -13,6 +13,7 @@ Name = unix-unix-str-smtp-close-lostconnection
     """\s*({additional_info}postfix.+?)\s*$""",
     """from\s[^\[]+\[({dest_ip}[A-Fa-f.\d]+)"""
     """\s+.*\/({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
+    """\s*(::ffff:)?({host}[^\s]+)?\s*postfix"""
   ]
 
 

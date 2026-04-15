@@ -17,7 +17,7 @@ checkpoint-auth = {
   Product = Check Point NGFW
   TimeFormat = "epoch_sec"
   Fields = [
-    """\Wtime:"({time}\d+)""",
+    """\Wtime:"({time}\d{10})""",
     """\W({host}[\w\-.]+) CheckPoint""",
     """\Wuser:"(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """\Wuser:"({last_name}[^,]+),\s*({first_name}[\w\s]+\S)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\)""",

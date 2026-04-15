@@ -42,7 +42,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"GID":"({group_id}[^"]+)""""
     """'Content-Type:({web_content_type}[^']+)'"""
     """"ComputerName":"({dest_host}[^"]+)""""
-    """"UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.OciContainerId,exa_field_name=container_id""",
     """exa_json_path=$..aip,exa_field_name=aip""",
     """exa_json_path=$..aip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
@@ -76,7 +76,7 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """exa_json_path=$..GID,exa_field_name=group_id"""
     """exa_regex='Content-Type:({web_content_type}[^']+)'"""
     """exa_json_path=$..ComputerName,exa_field_name=dest_host"""
-    """exa_regex="UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_regex="UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   ]
 
 

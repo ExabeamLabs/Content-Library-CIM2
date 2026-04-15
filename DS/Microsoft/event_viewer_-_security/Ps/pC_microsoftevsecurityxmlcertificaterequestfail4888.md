@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-xml-certificate-request-fail-4888
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({sub_category}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
    ]
 
 

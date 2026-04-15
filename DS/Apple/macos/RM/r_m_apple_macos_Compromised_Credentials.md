@@ -7,7 +7,7 @@ Vendor: Apple
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  27   |   12   |         6          |       1        |    1    |
+|  27   |   12   |         6          |       1        |    0    |
 
 | Event Type  | Rules    | Models    |
 | ---- | ---- | ---- |

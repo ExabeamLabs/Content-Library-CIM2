@@ -29,6 +29,7 @@ s-xml-events-1 = {
     """(<|&lt;)Server(&gt;|>)(N\/A|({server}.+?))(<|&lt;)\/Server(&gt;|>)""",
     """(<|&lt;)NetworkLocation(&gt;|>)(N\/A|({location_information}.+?))(<|&lt;)\/NetworkLocation(&gt;|>)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   
 }
 ```

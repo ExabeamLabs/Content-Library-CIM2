@@ -54,6 +54,7 @@ Fields = [
 """"AdditionalInfo":"(?:-|({additional_info}[^"]+))""""
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
+""""channel":"({channel}[^"]+)""""
 ]
 
 

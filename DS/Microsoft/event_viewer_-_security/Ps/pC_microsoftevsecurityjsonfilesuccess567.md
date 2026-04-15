@@ -4,7 +4,7 @@
 Name = "microsoft-evsecurity-json-file-success-567"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "MMM dd HH:mm:ss yyyy"]
 Conditions = [
 """Object Access Attempt"""
 """Image File Name:"""
@@ -22,7 +22,7 @@ Fields = [
 """Object Type:\s+({file_type}.+?)\s+Process ID:"""
 """Image File Name:\s+({src_file_path}.+?)\s+Accesses:"""
 """Accesses:\s+({access}.+?)\s+Access Mask:"""
-"""Image File Name:\s*.*?\\?({src_file_name}([^\\]*?)({src_file_ext}\.[^\\]*?)?|[^\\]+)\s+Accesses:"""
+"""Image File Name:\s*.*?\\?({src_file_name}([^\\]*?)(\.({src_file_ext}[^\\]*?))?|[^\\]+)\s+Accesses:"""
 """Image File Name:\s*({file_dir}.+?)\\(?:[^\\]+?)\s+Accesses:"""
 """\s+Client Address:\s+(::[\w]+:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 ]

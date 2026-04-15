@@ -3,7 +3,7 @@
 {
 Name = vmware-carbonblackedr-cef-process-create-success-childproc
    ParserVersion = v1.0.0
-   TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSSSSS"
+   TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSSSSSS", "yyyy-MM-dd HH:mm:ss.SSS"]
    Conditions = [
 """"type":"endpoint.event.procstart""""
 """"process_username":""""

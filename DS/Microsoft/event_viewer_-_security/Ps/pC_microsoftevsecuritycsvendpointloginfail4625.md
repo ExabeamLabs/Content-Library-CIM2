@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-fail-4625
     """ComputerName =({dest_host}[\w.\-]+)""",
     """ComputerName =({computer_name}[\w.\-]+)""",
     """EventCode=({event_code}\d+)""",
-    """アカウントがログオンに失敗しました。.+?アカウント名:\s+(?=\w)({src_user}.+?)\s+アカウント ドメイン:""",
+    """アカウントがログオンに失敗しました。.+?アカウント名:\s+(?=\w)({src_user}.+?)(@({src_domain}[^\s]+))?\s+アカウント ドメイン:""",
     """アカウントがログオンに失敗しました。.+?アカウント ドメイン:\s+(?=\w)({src_domain}.+?)\s+ログオン ID:""",
     """ログオン タイプ:\s+({login_type}\d+)""",
     """ログオンを失敗したアカウント:\s+セキュリティ ID:\s+({user_sid}[^\s]+)\s+アカウント名:""",

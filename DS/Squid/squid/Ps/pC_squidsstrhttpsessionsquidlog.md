@@ -17,7 +17,7 @@ Name = squid-s-str-http-session-squidlog
     """SQUID_LOG\s+(\S+\s*){6}(?:({protocol}\w+\:\/+))?({web_domain}[^\s:\/]+)(?:\:({dest_port}\d+))?""",
     """SQUID_LOG\s+(\S+\s*){7}(-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """SQUID_LOG\s+(\S+\s*){8}(HIER_)?({hierarchy_code}[^\/]+)\/({dest_local_host}[^\/\s]+)\s""",
-    """SQUID_LOG\s+(\S+\s*){9}(-|({mime}[^$\s]+))\s*$"""
+    """SQUID_LOG\s+(\S+\s*){9}(-|({mime}[^$\s]+))\s*"""
   ]
   ParserVersion = "v1.0.0"
 

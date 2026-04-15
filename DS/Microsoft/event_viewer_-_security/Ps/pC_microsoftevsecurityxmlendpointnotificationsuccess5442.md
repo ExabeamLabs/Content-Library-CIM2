@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-5442
     """<Task>({sub_category}[^<]+)""",
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)"""	
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

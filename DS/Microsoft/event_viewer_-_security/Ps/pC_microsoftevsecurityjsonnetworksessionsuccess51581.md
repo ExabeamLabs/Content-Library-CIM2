@@ -22,6 +22,7 @@ Name = "microsoft-evsecurity-json-network-session-success-5158-1"
 """"Protocol"+:"+({ms_protocol_num}[^"]+)""""
 """"LayerName":"({layer_name}[^"]+)""""
 """"computer_name":"({host}({src_host}[\w\-.]+))"""
+""""Channel":"({channel}[^"]+)""""
   ]
 
 

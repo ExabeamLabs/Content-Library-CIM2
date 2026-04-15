@@ -11,7 +11,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4771"
     """EVENT_NUMBER = 4771"""
     """Kerberos pre-authentication failed"""
   ]
-  Fields = [
+ Fields = [
     """TIME_GENERATED\s*=\s*({time}\d{10})"""
     """({host}[\w\-.]+) ADAuditPlus"""
     """USERNAME\s*=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
@@ -21,9 +21,11 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4771"
     """SOURCE\s*=\s*({src_host}[\w\-.]+)"""
     """RECORD_NUMBER\s*=\s*({event_id}\d+)"""
     """EVENT_NUMBER\s*=\s*({event_code}\d+)"""
-    """USER_SID\s*=\s*\%\{({user_sid}[^\}]+)"""
+    """USER_SID\s*=\s*(\%\{)?({user_sid}[^\}\s\]]+)"""
     """ERROR_CODE\s*=\s*({failure_code}({result_code}[^\s]+))"""
     """EVENT_TYPE_TEXT\s*=\s*({result}.+?)\s*\]"""
+    """ERROR_CODE_TEXT\s*=\s*({failure_reason}.+?)\s*\]"""
+    """({event_name}Kerberos pre-authentication failed)"""
   ]
 
 

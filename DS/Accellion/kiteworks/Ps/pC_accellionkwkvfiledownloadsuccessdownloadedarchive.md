@@ -4,7 +4,7 @@
 Name = accellion-kw-kv-file-download-success-downloadedarchive
   ParserVersion = v1.0.0
   Product = Kiteworks
-  Conditions = [ """Downloaded archive""", """Activity:""" ]
+  Conditions = [ """Downloaded archive""", """Activity:""", """ id=""" ]
   Fields = ${KiteWorksParsersTemplates.q-kiteworks-file-activity.Fields}[
     """({access}Downloaded)"""
     """with Files:\s*({src_file_name}[^\",]+?(\.({src_file_ext}\w+))?)(,\s*({additional_info}.+?))?\.\s*$"""

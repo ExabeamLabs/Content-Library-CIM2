@@ -68,7 +68,7 @@
 | beyondtrust-pi-account-password-change    | beyondtrust-prividentity-json-user-password-modify-success-2023                            |
 | beyondtrust-pi-account-password-change-1  | beyondtrust-prividentity-kv-user-password-modify-success-sharedcredentiallisteditedaccount |
 | beyondtrust-pi-account-switch             | beyondtrust-prividentity-kv-user-switch-success-passwordcheckedout                         |
-| beyondtrust-pi-app-activity               | "beyondtrust-prividentity-xml-app-activity-success-identity                                |
+| beyondtrust-pi-app-activity               | beyondtrust-prividentity-xml-app-activity-success-identity                                 |
 | beyondtrust-pi-app-activity-10            | beyondtrust-prividentity-kv-app-activity-success-sharedcredentiallistaddedaccount          |
 | beyondtrust-pi-app-activity-4             | beyondtrust-prividentity-kv-app-activity-success-webapppasswordcheckin                     |
 | beyondtrust-pi-app-activity-5             | beyondtrust-prividentity-kv-app-activity-success-passwordcheckedin                         |
@@ -88,6 +88,9 @@
 | beyondtrust-privileged-access-2           | beyondtrust-b-json-user-privilege-assign-success-28691                                     |
 | beyondtrust-privileged-access-3           | beyondtrust-b-json-user-privilege-assign-success-28693                                     |
 | beyondtrust-process-created               | beyondtrust-powerbroker-json-process-create-success-28692                                  |
+| beyondtrust-process-created-1             | beyondtrust-b-json-process-create-success-processcreated                                   |
+| beyondtrust-system-info                   | beyondtrust-bi-cef-app-notification-success-performancealert                               |
+| beyondtrust-system-info-1                 | beyondtrust-bi-cef-app-notification-success-serviceerroralert                              |
 | bind-dns-query                            | unix-unixnamed-str-dns-request-success-client                                              |
 | bind-dns-query-1                          | unix-unixnamed-json-dns-request-denied                                                     |
 | bind-dns-query-2                          | unix-unixnamed-str-dns-request-success-client-1                                            |

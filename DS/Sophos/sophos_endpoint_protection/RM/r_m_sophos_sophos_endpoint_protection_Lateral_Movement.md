@@ -7,7 +7,7 @@ Vendor: Sophos
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  67   |   22   |         11         |       5        |   28    |
+|  67   |   22   |         11         |       5        |   24    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

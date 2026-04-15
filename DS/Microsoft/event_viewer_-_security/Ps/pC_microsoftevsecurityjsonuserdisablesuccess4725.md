@@ -20,6 +20,7 @@ Fields = [
 """Logon ID:\s*({login_id}.+?)\s*Target Account:"""
 """Target Account:\s*Security ID:\s*({dest_user_sid}.+?)\s*Account Name:\s*(?=\w)({dest_user}.+?)\s*Account Domain"""
 """Target Account.+?Account Domain:\s*(?=\w)({dest_domain}.+?)\s*</EventData>"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

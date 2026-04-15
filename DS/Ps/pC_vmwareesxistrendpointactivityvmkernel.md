@@ -6,6 +6,7 @@ Name = vmware-esxi-str-endpoint-activity-vmkernel
   Conditions = [ """vmkernel:""" ]
   Fields = ${VMDLParsersTemplates.VMParserTemplates.Fields}[
     """({event_name}Last path removed for TGT)"""
+    """\s*({host}[\w.-]+)\s*vmkernel:"""
     ]
 
 

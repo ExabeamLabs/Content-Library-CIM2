@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-member-remove-success-4762-1
     """<Keywords>({result}[^<]+)""",
     """<Level>({run_level}[^<]+)<""",
     """<Data Name =('|")MemberName('|")>CN=({member}[^=]+?),CN=Users,"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -37,6 +37,7 @@ Fields = [
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """"riskLevelAggregated":\s*"(none|({severity}[^"]+))""""
 """"category":\s*"({category}[^"]+)""""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)"""
 """exa_json_path=$.time,exa_field_name=time""",
 """exa_json_path=$.callerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
 """exa_json_path=$.identity,exa_regex=(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",]+)))""",
@@ -59,6 +60,7 @@ Fields = [
 """exa_json_path=$.category,exa_field_name=category"""
 """exa_json_path=$..riskLevelAggregated,exa_field_name=severity,exa_match_expr=!Contains($..riskLevelAggregated,"none")"""
 """exa_regex="status":\s*\{[^\}]*?"errorCode":\s*(0|({failure_code}\d+))(,|\})"""
+"""exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

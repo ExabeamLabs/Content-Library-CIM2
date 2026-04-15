@@ -35,6 +35,7 @@ Name = "microsoft-evsecurity-kv-rdp-traffic-success-4778"
     """Client Name(:|=)(\\r|\\t|\\n|\s)*({src_host}[\w\-\.]+)\s"""
     """ComputerName =({dest_host}[\w.\-]+)"""
     """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
+    """"Channel":"({channel}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

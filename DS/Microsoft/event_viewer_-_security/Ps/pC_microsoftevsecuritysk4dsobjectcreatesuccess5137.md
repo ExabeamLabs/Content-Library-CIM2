@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-sk4-ds-object-create-success-5137
   """"TenantId":"({tenant_id}[^"]+)""""
   """<Data Name\\?=\\?"ObjectClass\\?">({object_type}[^<]+?)<\/Data>"""
   """<Data Name\\?=\\?"ObjectDN\\?">({ds_object_dn}[^<]+?)<\/Data>"""
+  """"Channel":"({channel}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -14,7 +14,7 @@ Conditions = [
 ]
 Fields = [
     """name="({file_path}(({file_dir}[^\]"]+)\/)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))""""
-    """({dest_host}({host}[\w\-.]+))\s*(vcsa-audit|audispd:|\w+:) """
+    """\s({dest_host}({host}[\w\-.]+))\s*(vcsa-audit|audispd:|\w+:) """
     """msg=audit\(({time}(\d{10})|\d\d\/\d\d\/\d\d\d\d\s\d\d:\d\d:\d\d\.\d+)"""
     """mode=({file_type}[^,=]+),({file_permissions}[^\s=]+)"""
 ]

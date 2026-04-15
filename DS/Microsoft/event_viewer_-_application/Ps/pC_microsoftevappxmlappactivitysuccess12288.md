@@ -19,6 +19,7 @@ Name = "microsoft-evapp-xml-app-activity-success-12288"
     """<EventData>({additional_info}.+?)<\/EventData>"""
     """Event Name:\s*({event_name}.+?)\s+\w+:"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

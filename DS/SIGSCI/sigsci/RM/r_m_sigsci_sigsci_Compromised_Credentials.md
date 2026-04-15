@@ -7,7 +7,7 @@ Vendor: SIGSCI
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  79   |   46   |         13         |       3        |    2    |
+|  79   |   46   |         13         |       3        |    0    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

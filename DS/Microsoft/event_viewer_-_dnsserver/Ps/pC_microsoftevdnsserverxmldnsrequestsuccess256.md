@@ -23,6 +23,7 @@ Fields = [
 """<Data Name\\*='Flags'>({dns_query_flags}.+?)<\/Data>"""
 """<Data Name\\*='BufferSize'>({bytes}\d+)<\/Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<\/Channel>"""
 ]
 ParserVersion = "v1.0.0"
 

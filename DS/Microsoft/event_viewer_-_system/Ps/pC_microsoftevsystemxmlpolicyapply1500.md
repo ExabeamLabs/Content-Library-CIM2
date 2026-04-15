@@ -17,6 +17,7 @@ Name = microsoft-evsystem-xml-policy-apply-1500
     """<Security UserID\\*=('|")({user_sid}.+?)('|")\/>""",
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 # dc_name is removed
   ]
 

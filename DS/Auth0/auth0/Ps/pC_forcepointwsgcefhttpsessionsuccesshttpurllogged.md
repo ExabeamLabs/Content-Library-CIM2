@@ -153,35 +153,6 @@ ParserVersion = "v1.0.0"
   ParserVersion = "v1.0.0"
 },
 
-{
-Name = "kemp-loadmaster-str-endpoint-login-success-loggedin"
-Vendor = "Kemp"
-Product = "Kemp LoadMaster"
-TimeFormat = "yyyy-MM-dd HH:mm:ss"
-Conditions = [
-  """logger: User"""
-  """ Logged in """
-  """(Session: """
-]
-Fields = [
-  """User\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\)"""
-  """({event_name}Logged in)"""
-  """({event_category}logger)"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-  Name = progress-pdatabase-str-endpoint-login-success-742
-  Vendor = Progress
-  Product = Progress Database
-  TimeFormat = ["yyyy-MM-dd'@'HH:mm:ss.SSSZ","yyyy/MM/dd'@'HH:mm:ss.SSSZ"]
-  Conditions = [ """ T-""", """ P-""", """(742)""", """ Login """ ]
-  Fields = [
-  """:\d\d:\d\d\s+({src_host}[^\s]+)\s+\[({time}\d\d\d\d\/\d\d\/\d\d@\d\d:\d\d:\d\d\.\d\d\d-\d\d\d\d)\]\s+({process_id}[^\s]+)\s+({thread_id}[^\s]+)\s+({severity}[^\s]+)\s+({service_name}TSRV)\s+\d:\s*\(({event_code}742)\)\s+({additional_info}({event_name}Login)[^,]+),\s+userid\s({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^,]+,\son\s({dest_host}[^\s]+)\s[^"]+?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\.?\s+"?$"""
-  ]
-  ParserVersion = "v1.0.0"
-},
 
 {
   Name = extrahop-revealx-json-alert-trigger-success-sec
@@ -294,38 +265,6 @@ ParserVersion = "v1.0.0"
 },
 
 {
-Name = "mariadb-m-str-database-activity-success-read"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-"""MariaDB:"""
-""",READ,"""
-]
-Fields = [
-"""MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "mariadb-m-str-database-activity-success-mariadb"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-""" mariadb """
-""",READ,"""
-]
-Fields = [
-""" mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
 Vendor = "Apache"
 Product = "Cassandra db"
 TimeFormat = "epoch"
@@ -347,21 +286,7 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 },
-{
-Name = "mariadb-m-str-database-delete-success-drop"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-"""MariaDB:"""
-"""DROP"""
-]
-Fields = [
-"""MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
-]
-ParserVersion = "v1.0.0"
-},
+
 {
 Vendor = "Apache"
 Product = "Cassandra db"
@@ -383,54 +308,6 @@ Conditions = [
 """|authenticated:"""
 """|user:"""
 """|operation:"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "mariadb-m-kv-database-modify-success-alter"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-"""MariaDB:"""
-"""ALTER"""
-]
-Fields = [
-"""MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "mariadb-m-kv-database-modify-success-create"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-"""MariaDB:"""
-"""CREATE"""
-]
-Fields = [
-"""MariaDB:\s({time}\d+\s\d\d:\d\d:\d\d)"""
-"""\:\d{2}\,({host}[^\,]+)?\,({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\,({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,({connection_id}\d+)?\,({query_id}\d+)?\,({db_operation}\w+)?\,({db_name}[^\,]+)?\,({object}[^\,]+)?"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = "mariadb-m-str-database-modify-success-write"
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-""" mariadb """
-""",WRITE,"""
-]
-Fields = [
-""" mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-"""\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -498,82 +375,6 @@ ${GoAnywhereParsersTemplates.goanywhere-events-2}{
 },
 
 {
-Vendor = "Portnox"
-Product = "Portnox CLEAR"
-TimeFormat = "epoch"
-Fields = [
-"""start=({time}\d{13})"""
-"""CEF:([^|]*\|){4}({event_code}\d+)"""
-"""CEF:([^|]*\|){5}({event_name}[^|]+)"""
-"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-"""cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
-"""cs2=({policy_name}[^=]+?)\s\w+="""
-"""msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-]
-Name = "portox-clear-cef-endpoint-login-fail-accessdenied"
-Conditions = [
-"""|Portnox"""
-"""|CLEAR|"""
-"""act=System"""
-"""Access denied"""
-]
-ParserVersion = "v1.0.0"
-}
-
-{
-Vendor = "Portnox"
-Product = "Portnox CLEAR"
-TimeFormat = "epoch"
-Fields = [
-"""start=({time}\d{13})"""
-"""CEF:([^|]*\|){4}({event_code}\d+)"""
-"""CEF:([^|]*\|){5}({event_name}[^|]+)"""
-"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-"""cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
-"""cs2=({policy_name}[^=]+?)\s\w+="""
-"""msg=({additional_info}[^=]+?)\s\w+="""
-"""duser=(({domain}[^\\=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-]
-Name = "portox-clear-cef-endpoint-login-fail-accountnotfound"
-Conditions = [
-"""|Portnox"""
-"""|CLEAR|"""
-"""act=Access"""
-"""account is not found"""
-"""access was denied"""
-]
-ParserVersion = "v1.0.0"
-}
-
-{
-Vendor = "Portnox"
-Product = "Portnox CLEAR"
-TimeFormat = "epoch"
-Fields = [
-"""start=({time}\d{13})"""
-"""CEF:([^|]*\|){4}({event_code}\d+)"""
-"""CEF:([^|]*\|){5}({event_name}[^|]+)"""
-"""src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
-"""cs4=(unknown|({auth_method}[^=]+?))\s\w+="""
-"""cs2=({policy_name}[^=]+?)\s\w+="""
-"""msg=({additional_info}[^=]+?)\s\w+="""
-]
-Name = "portox-clear-cef-endpoint-login-success-guestauthsuccess"
-Conditions = [
-"""|Portnox"""
-"""|CLEAR|"""
-"""|Guest authentication success|"""
-"""act=Access """
-"""successfully authenticated"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
 Vendor = "Apache"
 Product = "Cassandra db"
 TimeFormat = "epoch"
@@ -597,28 +398,13 @@ ParserVersion = "v1.0.0"
 },
 
 {
-Name = mariadb-m-csv-database-login-success-connect-1
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-  """ mariadb """
-  """,CONNECT,"""
-]
-Fields = [
-  """ mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-  """\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
   Name = postgresql-p-csv-database-login-success-authentication
   Vendor = PostgreSQL
   Product = PostgreSQL
   TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS","yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """connection authorized:""", """ user=""", """ database=""", """LOG""" ]
   Fields = [
+    """\s({host}\S+?)\spostgres\b"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*UTC"""
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
     """({action}connection authorized)"""
@@ -645,22 +431,6 @@ Conditions = [
 ]
 Fields = [
   """({task_id}REQ8)[\s(#)]{0,4}({app_id}[^\s]+)[\s(#)]{0,4}({user}[\w\.\-\!\#\^\~]{1,40}\$?)[\s(#)]{0,4}(?:Unavailable[\s(#)]{0,4})({time}\d\d\d\d-\d\d-\d\d\s*\d\d:\d\d:\d\d)[\s(#)]{0,4}(?:Unavailable|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)[\s(#)]{0,5}({session_id}[\d,]+)[\s(#)]{0,4}({query_id}\d+)[\s(#)]{0,4}({db_query}[^;]+)"""
-]
-ParserVersion = "v1.0.0"
-},
-
-{
-Name = mariadb-m-csv-database-login-fail-failedconnect
-Vendor = "MariaDB"
-Product = "MariaDB"
-TimeFormat = "yyyyMMdd HH:mm:ss"
-Conditions = [
-  """ mariadb """
-  """,FAILED_CONNECT,"""
-]
-Fields = [
-  """ mariadb ({time}\d{1,8} \d\d:\d\d:\d\d),"""
-  """\:\d{2}\,(|({host}[^\,]+))\,(|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\,(|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?),(|({connection_id}\d+))\,(|({query_id}\d+))\,(|({db_operation}\w+))\,(|({db_name}[^\,]+))\,(|({object}[^\,]+)),"""
 ]
 ParserVersion = "v1.0.0"
 },

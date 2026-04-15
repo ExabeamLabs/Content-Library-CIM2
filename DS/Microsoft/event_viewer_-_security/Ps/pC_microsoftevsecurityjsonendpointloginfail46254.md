@@ -33,6 +33,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4625-4"
     """"SubjectUserSid\\*":\\*"({subject_sid}[^"\\]+)"""
     """Subject(:|=).+?Account Name(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_user}[^\s@]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Account Domain(:|=)"""
     """Subject(:|=).+?Account Domain(:|=)\s*((\\)*(\\r|\\t|\\n))*(-|({src_domain}[^:;]+?))[\s;]*((\\)*(\\r|\\t|\\n))*Logon ID(:|=)"""
+    """Channel\\?"+:\\?"+({channel}[^"\\]+)"""
   ]
 
 

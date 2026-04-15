@@ -7,7 +7,7 @@ Vendor: Squid
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   9   |   0    |         5          |       2        |    5    |
+|   9   |   0    |         5          |       2        |    4    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

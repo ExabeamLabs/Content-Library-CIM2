@@ -20,6 +20,7 @@ Name = microsoft-evsystem-xml-service-start-6005
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
     """<Provider Name =('|")({service_name}[^'"]+)('|")"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

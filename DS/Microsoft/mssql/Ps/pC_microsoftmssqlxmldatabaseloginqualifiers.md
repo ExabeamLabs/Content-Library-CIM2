@@ -11,6 +11,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
 """<Provider Name =""",
 """MSSQL""",
 """<Keyword>Audit """
+"""Qualifiers"""
   ]
   Fields = [
     """<TimeCreated SystemTime='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",

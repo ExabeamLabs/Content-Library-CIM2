@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-sk4-share-modify-success-5143
   """"SubjectAccount":"(-|({domain}[\w\-.]+)([\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"ShareLocalPath":"({share_path}[^"]+)""""
+  """"Channel":"({channel}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

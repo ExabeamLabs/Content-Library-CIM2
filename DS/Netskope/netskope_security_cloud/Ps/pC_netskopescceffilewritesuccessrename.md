@@ -44,7 +44,7 @@ cef-netskope-activity = {
     """"os":\s*"((U|u)nknown|({os}[^\"]+))"""
     """"browser":\s*"((U|u)nknown|({browser}[^\"]+))"""
     """"page":\s*"({web_domain}[^\"\/]+)"""
-    """"url":\s*"({url}[^\"]+)"""
+    """"url":\s*"({url}[^"]+)""""
     """"dst_location":\s*"(N/A|({location}[^\"]+))"""
     """"file_size":\s*({bytes}\d+)"""
     """"file_type":\s*"({mime}({file_type}[^"]+))"""

@@ -28,6 +28,7 @@ Fields = [
   """({event_name}An attempt was made to change an account's password)"""
   """<Opcode>(0|({opcode}[^<]+))<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

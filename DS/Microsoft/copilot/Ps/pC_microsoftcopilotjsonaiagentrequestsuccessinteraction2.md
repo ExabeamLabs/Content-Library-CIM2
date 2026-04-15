@@ -1,0 +1,26 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-copilot-json-ai-agent-request-success-interaction-2
+  Vendor = Microsoft
+  Product = Copilot
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  ExtractionType = json
+  Conditions = [ """"Operation": "CopilotInteraction"""", """"Workload": "Copilot"""", """"CopilotEventData":""" ]
+  Fields = [
+    """exa_json_path=$.Operation,exa_field_name=operation"""
+    """exa_json_path=$.CreationTime,exa_field_name=time"""
+    """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.CopilotEventData.AppHost,exa_field_name=app"""
+    """exa_json_path=$.UserType,exa_field_name=user_type"""
+    """exa_json_path=$.AppIdentity,exa_field_name=app_type"""
+    """exa_json_path=$.CopilotEventData.AccessedResources[0].SiteUrl,exa_field_name=url"""
+    """exa_json_path=$.CopilotEventData.AccessedResources[0].Action,exa_field_name=operation"""
+    """exa_json_path=$.CopilotEventData.AccessedResources[0].Action,exa_field_name=access"""
+    ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

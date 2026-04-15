@@ -14,6 +14,7 @@ Name = "cisco-mma-kv-network-traffic-success-ip-flow"
   Fields = [
 """(<\d+>[^\s]+)?\s+({time}\d{10})\.\d+\s({event_name}[^\s]+?)\ssrc="""
 """(<\d+>[^\s]+)?\s+({time}\d{10})\.\d+\s"""
+"""({host}[\w.\-]+)\s+({event_name}ip_flow_start)\s+src="""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """\sdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """\sprotocol=({protocol}\w+)"""

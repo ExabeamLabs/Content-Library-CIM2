@@ -21,27 +21,29 @@ Fields = [
 """ActionType\\?"+:\s*\\?"+({result}[^"]+?)\\?""""
 """RemoteIPType"+:\s*"+(null|({direction}[^"]+))"""
 """DeviceName\\?"+:\s*\\?"+({dest_host}[\w\-.]+?)\\?""""
-"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
+"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
 """"ProcessIntegrityLevel\\?"+:\s*\\?"+({process_integrity}[^"]+?)\\?""""
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
-"""InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?",""""
+"""InitiatingProcessFileName\\?"+:\s*\\?"+({parent_process_name}[^"]+?)\\?",""""
 """ProcessId\\?"+:({process_id}\d+)"""
-""""InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
-""""ProcessCommandLine\\?"+:\s*[\\"]*?"\s*(|({process_command_line}.*?))\s*[\\"]*",\s*""""
+""""InitiatingProcessCommandLine\\?"+:\s*\\?"\s*(|({parent_process_command_line}.*?))\s*\\*",\s*""""
+""""ProcessCommandLine\\?"+:\s*\\?"\s*(|({process_command_line}.*?))\s*\\*",\s*""""
 """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?""""
 """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
 """"AccountDomain":"({domain}[^:]+?)",""",
-""""InitiatingProcessFolderPath":\s*"({process_path}({process_dir}([^"]+)?[\\\/])?({process_name}[^\\\/"]+))""",
+""""InitiatingProcessFolderPath":\s*"({parent_process_path}({parent_process_dir}([^"]+)?[\\\/])?({parent_process_name}[^\\\/"]+))""",
 """"FolderPath"+:\s*"+({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))""""
 """"FileName\\?"+:\s*\\?"+(|({process_name}[^"]+?))\\?,*""""
-""""InitiatingProcessParentFileName":\s*"({parent_process_name}[^"]+)""",
-""""InitiatingProcessParentId"+:({parent_process_id}\d+)""",
+#Below fields are related to grandparent_process, and we currently do not have CIM field to define them
+#""""InitiatingProcessParentFileName":\s*"({parent_process_name}[^"]+)""", 
+#""""InitiatingProcessParentId"+:({parent_process_id}\d+)""",
 """"SHA1":"({hash_sha1}[^"]+)"""",
 """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
 """"SHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
-""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"+"""
+""""AccountUpn":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""
+""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/.=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"+"""
 ]
 ParserVersion = "v1.0.0"
 

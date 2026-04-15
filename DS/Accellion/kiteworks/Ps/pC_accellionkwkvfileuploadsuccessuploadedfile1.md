@@ -6,6 +6,7 @@ Product = "Kiteworks"
 Conditions = [
 """Uploaded file"""
 """Activity:"""
+""" id="""
 ]
 ParserVersion = "v1.0.0"
 

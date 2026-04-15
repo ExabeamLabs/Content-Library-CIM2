@@ -10,16 +10,17 @@ Name = "tanium-im-kv-file-write-success-write"
     """ Computer-Name =""""
     """ Process-Path=""""
     """ File-Path=""""
-    """Change-Type="Write""""
+    """Change-Type="""
   ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+\+?\-?\d\d:\d\d)\s+({host}[^\s]+)\s+Tanium"""
     """\sUser="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """Computer-Name ="({dest_host}[^"]+)""""
-    """File-Path="({file_path}({file_dir}[^"]+\\)({file_name}[^"]+\.({file_ext}[^"]+)))"""
+    """File-Path="({file_path}({file_dir}.*?)({file_name}[^\\\/;"]+?(\.({file_ext}[^\.;\\"]+?))?))""""
     """Process-Path="({process_path}[^"]+(\\|\/)({process_name}[^"]+))""""
     """File-Path="(|({src_file_path}[^=]+?))"\s\w+="""
-    """Change-Type="({event_name}Write)""""
+    """Change-Type="({event_name}[^"]+)""""
+    """Hash=({hash_md5}[^"]+?)"""
   ]
   ParserVersion = "v1.0.0"
 

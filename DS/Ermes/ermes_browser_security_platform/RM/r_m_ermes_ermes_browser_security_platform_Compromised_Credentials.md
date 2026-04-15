@@ -7,7 +7,7 @@ Vendor: Ermes
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  65   |   33   |         5          |       3        |    5    |
+|  65   |   33   |         5          |       3        |    3    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

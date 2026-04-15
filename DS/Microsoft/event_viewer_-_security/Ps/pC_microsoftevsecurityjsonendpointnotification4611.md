@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4611
       """"SubjectUserSid"+:"+({user_sid}[^"]+)"""",
       """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """({event_name}A trusted logon process has been registered with the Local Security Authority)"""
+      """"Channel":"({channel}[^"]+)""""
     ]
   
 

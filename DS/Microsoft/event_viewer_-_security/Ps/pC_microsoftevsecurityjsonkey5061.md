@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-key-5061
 # algorithm_name is removed
     """"KeyName":"({key_name}[^"]+)"""",
     """"+(Hostname|Computer)"+:"+({host}[^"]+)"+""",
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

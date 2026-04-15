@@ -20,7 +20,10 @@ Name = microsoft-sysmon-xml-dll-load-6
     """<Data Name\\*=('|")Hashes('|")>[^<>]*?MD5=({hash_md5}[^,<]+)""",
     """({log_name}Microsoft-Windows-Sysmon)"""
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Data Name =('|")Signed('|")>({file_signed}true|false)<""",
+    """<Data Name =('|")Signature('|")>({file_signature}[^<]+)<""",
+    """<Data Name =('|")SignatureStatus('|")>({file_signature_status}[^<]+)<"""
   ]
 
 

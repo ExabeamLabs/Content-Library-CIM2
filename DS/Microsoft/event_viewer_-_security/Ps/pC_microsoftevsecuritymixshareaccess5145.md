@@ -35,6 +35,7 @@ Fields = [
   """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s""",
   """Source Port:\s*({src_port}\d+)"""
   """LogName =({log_name}[^\s]+)"""
+  """\schannel="+({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

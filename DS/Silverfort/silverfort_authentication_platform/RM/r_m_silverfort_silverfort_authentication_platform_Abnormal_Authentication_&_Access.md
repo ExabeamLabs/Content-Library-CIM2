@@ -7,7 +7,7 @@ Vendor: Silverfort
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  15   |   4    |         2          |       2        |    1    |
+|  15   |   4    |         2          |       2        |    0    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

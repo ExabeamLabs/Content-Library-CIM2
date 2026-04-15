@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-password-read-5379-2
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
     """<Data Name\\*=('|")ReadOperation('|")>({additional_info}[^<]+?)</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
  ]
 
 

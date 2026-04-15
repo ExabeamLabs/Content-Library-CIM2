@@ -42,6 +42,7 @@ windows-events-1 = {
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""
+    """"Channel":"({channel}[^"]+)""""
 
       """exa_regex=\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s"""
       """exa_json_path=$.event.created,exa_field_name=time"""
@@ -66,6 +67,7 @@ windows-events-1 = {
       #"""exa_json_path=$.PrivilegeList,exa_field_name=privileges"""
       #"""exa_json_path=$.SidHistory,exa_field_name=sid_history"""
       #"""exa_json_path=$.Keywords,exa_field_name=result"""
+      """exa_json_path=$.Channel,exa_field_name=channel"""
   
 }
 ```

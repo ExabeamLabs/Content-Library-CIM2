@@ -37,6 +37,7 @@ Fields = [
 """exa_json_path=$.message,exa_regex=({event_name}A member was added to a security-enabled)""",
 """exa_regex="MemberSid":"(({dest_user_sid}S-\d+-[^"]+)|({account_id}[^"]+))"""",
 """exa_json_path=$..TargetSid,exa_field_name=group_id"""
+"""exa_json_path=$..channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

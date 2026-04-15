@@ -4,6 +4,9 @@
 Name = sentinelone-singularityp-json-driver-load-success-driverload-2
   ParserVersion = "v1.0.0"
   Conditions = [ """"s1ql":""", """"eventType":"DRIVERLOAD"""", """"incidentStatus":""" ]
+  Fields = ${SentinelOneParsersTemplates.sentinelone-json-api-alerts.Fields} [
+    """exa_json_path=$.targetProcessInfo.tgtFileIsSigned,exa_field_name=file_signed"""
+  ]
 
 sentinelone-json-api-alerts {
     Vendor = SentinelOne

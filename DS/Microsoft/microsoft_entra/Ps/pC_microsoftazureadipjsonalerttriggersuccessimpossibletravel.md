@@ -22,6 +22,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-impossibletravel
     """"logonLocation"+:\s*"+({location}[^"]+)""""
     """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
     """status=({result}[^\s]+)"""
+    """"azureTenantId":\s*"({tenant_id}[^"]+)""""
     """exa_json_path=$.id,exa_field_name=alert_id""",
     """exa_json_path=$.title,exa_field_name=alert_name""",
     """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -35,6 +36,7 @@ Name = microsoft-azureadip-json-alert-trigger-success-impossibletravel
     """exa_json_path=$.userStates[0].logonLocation,exa_field_name=location""",
     """exa_json_path=$.userStates[0].userPrincipalName,exa_field_name=user_upn""",
     """exa_json_path=$.status,exa_field_name=result"""
+    """exa_json_path=$.azureTenantId,exa_field_name=tenant_id"""
   ]
 
 

@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-kv-endpoint-login-4776
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """4776""", """コンピューターがアカウントの資格情報の確認を試行しました。""" ]
   Fields = [
     """({time}\d\d\d\d\/\d\d\/\d\d[\s\t]+\d\d:\d\d:\d\d)\s+Microsoft-Windows-Security-Auditing""",

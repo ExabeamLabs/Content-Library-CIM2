@@ -4,6 +4,10 @@
 Name = secureauth-login-kv-app-notification-24010
   ParserVersion = "v1.0.0"
   Conditions = [ """EventID="24010"""", """ApplianceID=""", """Realm=""", """RequestID="""", """UserHostAddress=""" ]
+  Fields = ${SecureAuthDLParsersTemplates.secure-auth-events.Fields} [
+  """Message="\s*({auth_method}[^"]+)\s*"""
+  """\WEventID="[^\]]*?\]\s({auth_method}[^"]+)\s*"*$""",
+  ]
 
 secure-auth-events = {
   Vendor = SecureAuth

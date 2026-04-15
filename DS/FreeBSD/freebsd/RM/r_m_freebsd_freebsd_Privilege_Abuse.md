@@ -7,7 +7,7 @@ Vendor: FreeBSD
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  34   |   18   |         5          |       2        |    2    |
+|  34   |   18   |         5          |       2        |    0    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

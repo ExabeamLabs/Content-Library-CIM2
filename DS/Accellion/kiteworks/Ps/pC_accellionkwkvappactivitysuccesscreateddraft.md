@@ -6,6 +6,7 @@ Product = Kiteworks
 Conditions = [
   """Created draft Subject"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

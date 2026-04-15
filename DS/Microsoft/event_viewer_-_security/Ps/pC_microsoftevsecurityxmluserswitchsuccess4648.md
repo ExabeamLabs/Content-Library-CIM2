@@ -20,7 +20,7 @@ Name = "microsoft-evsecurity-xml-user-switch-success-4648"
 """<Data Name\\*=('|")SubjectUserName('|")>\s*(-|(anonymous logon|LOCAL SERVICE)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*</Data>""",
 """<Data Name\\*=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<]+)))</Data>""",
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
-"""<Data Name\\*=('|")TargetUserName('|")>(({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>""",
+"""<Data Name\\*=('|")TargetUserName('|")>(\.\/)?(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({account}({dest_user}[^@",\s<]+))@?({account_domain}({dest_domain}[^\\<]+))?))\s*<\/Data>""",
 """<Data Name\\*=('|")TargetDomainName('|")>(?=\w)({account_domain}({dest_domain}[^<]+?))</Data>""",
 """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
 """<Data Name\\*=('|")TargetServerName('|")>(localhost|({dest_host}[\w\-.]+))[^<]*</Data>""",
@@ -33,6 +33,7 @@ Name = "microsoft-evsecurity-xml-user-switch-success-4648"
 """<Opcode>({result_code}\d+)<""",
 """<Keyword>({result}[^<]+)</Keyword>""",
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
   ]
 
 

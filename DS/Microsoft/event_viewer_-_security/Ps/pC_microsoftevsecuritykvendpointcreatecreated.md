@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-kv-endpoint-create-created
     """\sComputer Account:.+?Account Name:\s*({dest_host}[^$:]+?)\$""",
     """\sUser Principal Name:\s*(|-|({attribute}.+?))\s*Home Directory:""",
     """New Computer Account:\s+Security ID:\s*({account_id}[^\s]+)"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

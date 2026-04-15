@@ -8,6 +8,7 @@ TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
 Conditions = [ """Directory Service:""", """Object:""", """Old DN:""", """New DN:""", """A directory service object was moved""" ]
 Fields = [
   """({event_name}A directory service object was moved)""",
+  """"Channel":"({channel}[^"]+)"""
   """\d\d:\d\d:\d\d\s+({host}({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[\w.\-]+))\s+(Microsoft-Windows-Security-Auditing|MSWinEventLog)""",
   """<TimeCreated SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
   """\s(Mon|Tue|Wed|Thu|Fri|Sat|Sun)\s({time}\w+\s\d\d\s\d\d:\d\d:\d\d\s\d{4})\s""",
@@ -22,6 +23,7 @@ Fields = [
   """Object:\s+Old DN:[^\{\}]+?\s*({old_attribute}[^:]+?)\s+New DN:\s*({new_attribute}[^:]+?)\s+GUID:""",
   """({event_code}5139)"""
   """"Computer":"({host}[^"]+)"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

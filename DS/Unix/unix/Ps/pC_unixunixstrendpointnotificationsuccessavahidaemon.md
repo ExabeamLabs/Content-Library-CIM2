@@ -3,9 +3,11 @@
 {
 Name = unix-unix-str-endpoint-notification-success-avahidaemon
   Conditions = [ """avahi-daemon[""", """]: Host name conflict""" ]
+  TimeFormat = "MMM dd HH:mm:ss"
   Fields = ${DLUnixParserTemplates.unix-system-info.Fields}[
     """({event_name}Host name conflict)"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+)\s*({host}[\w.\-]+)\s"""
   ]
   ParserVersion = "v1.0.0"
 

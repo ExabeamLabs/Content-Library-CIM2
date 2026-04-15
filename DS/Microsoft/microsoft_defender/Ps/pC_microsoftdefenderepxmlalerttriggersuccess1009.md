@@ -21,6 +21,7 @@ Name = microsoft-defenderep-xml-alert-trigger-success-1009
     """<Data Name\\*=('|")Threat Name('|")>({alert_name}[^<]+)<\/Data>""",
     """<Data Name\\*=('|")Threat ID('|")>({threat_id}\d+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
   ParserVersion = "v1.0.0"
 

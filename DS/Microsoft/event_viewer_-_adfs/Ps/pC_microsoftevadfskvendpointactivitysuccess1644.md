@@ -28,6 +28,7 @@ Name = microsoft-evadfs-kv-endpoint-activity-success-1644
     """Attributes Preventing Optimization:\s*({attributes_preventing_optimization}.*?)\s+User:""",
     """User:\s*(({domain}[^\\\s"]+)\\+)?\s*(CN\s*=|\s*)(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """\sUser:\s*(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
 
 

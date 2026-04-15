@@ -3,7 +3,9 @@
 {
 Name = unix-unix-str-endpoint-notification-success-multipathd
   Conditions = [ """multipathd[""", """: sda: """, """: failed to get """, """ uid: """ ]
+  TimeFormat = "MMM dd HH:mm:ss"
   Fields = ${DLUnixParserTemplates.unix-system-info.Fields}[
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+)\s*({host}[\w.\-]+)\s"""
     """:\ssda:\sfailed[^:]+?:\s({failure_reason}[^"$]+?)\s*$""",
     """:\ssda:\s({event_name}[^:]{1,2000})"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""

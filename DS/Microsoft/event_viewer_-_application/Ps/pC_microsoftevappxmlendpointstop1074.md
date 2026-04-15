@@ -18,6 +18,7 @@ Name = microsoft-evapp-xml-endpoint-stop-1074
     """<Data Name\\*=('|")param3('|")>({result_reason}[^<]+)</Data>""",
     """<Security UserID\\*=('|")({user_sid}[^<'"]+)('|")/>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

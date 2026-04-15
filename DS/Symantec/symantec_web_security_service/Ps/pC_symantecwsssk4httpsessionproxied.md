@@ -7,8 +7,7 @@ Product = "Symantec Web Security Service"
 TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
 """destinationServiceName =Symantec WSS"""
-"""PROXIED"""
-"""http"""
+""", PROXIED,"""
 ]
 Fields = [
 """cs6=\[([^,]+,\s){5}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,\s(-|non-interactive-user|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""

@@ -30,6 +30,7 @@ Fields = [
 """"AdditionalInfo":"(?:-|({additional_info}[^"]+))""""
 """"AccessList":"(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*""""
 """Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
+""""Channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

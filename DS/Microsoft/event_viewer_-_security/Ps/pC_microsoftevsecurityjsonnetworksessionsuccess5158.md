@@ -25,6 +25,7 @@ Name = "microsoft-evsecurity-json-network-session-success-5158"
 """\"SourcePort\"+:\"+({src_port}\d+)"""
 """\"Protocol\"+:\"+({ms_protocol_num}[^\"]+)"""
 """Layer Name:(?:\s|\\t|\\n|\\r)*({layer_name}[^:]+?)(?:\s|\\t|\\n|\\r)*Layer Run-Time ID:"""
+""""channel":"({channel}[^"]+)""""
 """exa_regex=({event_code}5158)"""
 """exa_regex=({event_name}The Windows Filtering Platform has permitted a bind to a local port)"""
 """exa_json_path=$.TimeGenerated,exa_field_name=time"""
@@ -40,6 +41,7 @@ Name = "microsoft-evsecurity-json-network-session-success-5158"
 """exa_regex=Layer Name:(?:\s|\\t|\\n|\\r)*({layer_name}[^:]+?)(?:\s|\\t|\\n|\\r)*Layer Run-Time ID:"""
 """exa_regex=\"ProcessId\"+:\"+({process_id}[^\"]+)"""
 """exa_regex=\"Application\"+:\"+({process_path}({process_dir}[^,\"]*?[\\\/]+)?({process_name}[^\\\/\s\"]+?))\""""
+"""exa_json_path=$.channel,exa_field_name=channel"""
   ]
 
 

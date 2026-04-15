@@ -25,6 +25,7 @@ Name = microsoft-evdnsserver-xml-process-create-success-800-1
     """<Data>CommandInvocation[^<]{0,10000}value="+\s*(|-|({command_module}.+?))\s*"\s*<\/Data>""",
     """<Data>CommandInvocation[^:]+:\s*"+({command_invocation}[^"]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 ]
 
 

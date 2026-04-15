@@ -29,6 +29,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-6"
     """Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
     """Computer(Name)?=({host}[\w\-\.]+)([^\s]*\s|;)"""
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """"Channel":"({channel}[^"]+)""""  
   ]
   ParserVersion = "v1.0.0"
 

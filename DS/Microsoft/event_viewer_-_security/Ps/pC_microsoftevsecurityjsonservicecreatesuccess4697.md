@@ -26,6 +26,7 @@ Fields = [
 """"ServiceAccount":"({account_domain}[^"]+)""""
 """"ProcessID":({process_id}\d+)"""
 """"EventType":"({operation_type}[^"]+?)""""
+""""Channel":"({channel}[^"]+)"""
 """"Computer(Name)?":"({dest_host}({host}[\w\-\.]+))"""
 
 """exa_json_path=$.EventTime,exa_field_name=time""",
@@ -48,6 +49,7 @@ Fields = [
 """exa_json_path=$.ProcessID,exa_field_name=process_id""",
 """exa_json_path=$.EventType,exa_field_name=operation_type""",
 """exa_json_path=$.SourceName,exa_field_name=provider_name"""
+"""exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

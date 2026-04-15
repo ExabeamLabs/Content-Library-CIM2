@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4756
     """<Data Name =('|")MemberName(('|")>|":")CN\\?=({member}[^>]+)<\/Data>""",
     """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-\d+-[^:\s<]+)|({account_domain}[^\\\s<]+)\\+({account_name}[^\s]+)|(?:[^\s\<]+))</Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
       ]
 
 

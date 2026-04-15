@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4660
     """<EventName>({event_name}[^<]+)<\/EventName>"""
     """({event_name}An object was deleted.)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 ]
 
 

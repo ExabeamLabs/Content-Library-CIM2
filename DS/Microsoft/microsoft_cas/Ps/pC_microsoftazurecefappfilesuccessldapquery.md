@@ -45,6 +45,8 @@ cef-azure-app-activity-1 = {
     """"DestinationIpAddress","value":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""",
     """"Protocol","value":"({protocol}[^"]+)"""",
     """"ClientIPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
+    """"aadTenantId":\s*"({tenant_id}[^"]+)""""
+    """"tenantId":\s*"({tenant_id}[^"]+)""""    
   
 }
 ```

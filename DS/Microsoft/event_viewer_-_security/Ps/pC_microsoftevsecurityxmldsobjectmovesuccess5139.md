@@ -21,6 +21,7 @@ Fields = [
   """({event_code}5139)"""
   """<Data Name\\*=('|")ObjectGUID('|")>\{({object_id}[^<\}]+)\}<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

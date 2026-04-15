@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4802
   """({event_code}4802)"""
   """<Data Name =('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))<\/Data"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

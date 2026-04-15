@@ -12,6 +12,7 @@ Name = microsoft-o365-sk4-file-app-userkey
       """exa_json_path=$.DeviceName,exa_field_name=src_host"""
       """exa_json_path=$.RemovableMediaDeviceAttributes.Manufacturer,exa_field_name=removable_media_vendor"""
       """exa_json_path=$.RemovableMediaDeviceAttributes.SerialNumber,exa_field_name=removable_media_serial_number"""
+      """exa_json_path=$.SiteUrl,exa_regex=({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
       """"PolicyName":\s*"({policy_name}[^"]+)""""
       """"FileExtension":\s*"({file_ext}[^"]+)""""
       """"Application":\s*"({app}[^"]+)""""
@@ -19,6 +20,7 @@ Name = microsoft-o365-sk4-file-app-userkey
       """"DeviceName":\s*"({src_host}[^"]+)""""
       """"Manufacturer":\s*"({removable_media_vendor}[^"]+)""""
       """"SerialNumber":\s*"({removable_media_serial_number}[^"]+)""""
+      """"SiteUrl":\s*"({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
     ]
 
 o365-file-app-activity = {
@@ -28,7 +30,7 @@ o365-file-app-activity = {
     Fields = [
       """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"Operation":\s*"({operation}[^"]+)""",
-      """"UserId":\s*"({email_address}[^:@]+@({email_domain}[^",]+\.[^",]+))",""",
+      """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)",""",
       """"Workload":\s*"({app}[^"]+)"""",
       """"ObjectId":\s*"({object}[^"]+)""",
       """"Id":\s*"({object_id}[^"]+)"""", 

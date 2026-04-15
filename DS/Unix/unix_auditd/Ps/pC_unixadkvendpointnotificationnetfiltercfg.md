@@ -11,6 +11,7 @@ Name = unix-ad-kv-endpoint-notification-netfiltercfg
       """msg=({event_name}.+?)\s+(\w+=|$)""",
       """type=({operation_type}({event_category}.+?))\s+(\w+=|$)""",
       """table=({table}.+?)\s+(\w+=|$)""",
+      """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z\s({host}[\w\-.]+)\saudit"""
 # family is removed
 # entries is removed
     ]

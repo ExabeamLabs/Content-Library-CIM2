@@ -15,7 +15,7 @@ kv-cylance-optics-events = {
     """Event Name: ({event_name}[^,]+)""",
     """Device Name: ({src_host}[^,]+)""",
     """Zone Names: \(({zone}[^\),]+)""",
-    """Event Id:\s*({event_code}[^,]+)"""
+    """Event Id:\s*({event_id}[^,]+)"""
     """Severity:\s*({alert_severity}[^,]+)"""
     """Description:\s*({additional_info}[^,]+)"""
     """Process Name:\s*(|({process_name}[^,]+)),"""

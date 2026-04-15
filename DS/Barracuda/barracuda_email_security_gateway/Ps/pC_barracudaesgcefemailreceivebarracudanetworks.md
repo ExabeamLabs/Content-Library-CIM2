@@ -6,8 +6,9 @@ Vendor = "Barracuda"
 Product = "Barracuda Email Security Gateway"
 TimeFormat = "epoch"
 Conditions = [
-  """Barracuda Networks"""
-  """Email Security Gateway"""
+  """|Barracuda Networks|"""
+  """|Email Security Gateway|"""
+  """CEF:"""
 ]
 Fields = [
   """dvc=({host}[^\s]+)"""

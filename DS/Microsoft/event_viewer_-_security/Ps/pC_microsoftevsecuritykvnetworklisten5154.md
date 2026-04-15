@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-kv-network-listen-5154
         """Source Port:(\s|\\[rnt])*({src_port}\d+)""",
         """Protocol:(\s|\\[rnt])*({protocol}[^\s]+?)(\s|\\[rnt])*Filter Information:""",
         """Process ID:(\s|\\[rnt])*({process_id}\d+)""",
+        """"Channel":"({channel}[^"]+)"""
   ]
 
 

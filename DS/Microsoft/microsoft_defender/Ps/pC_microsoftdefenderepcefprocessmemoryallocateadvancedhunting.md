@@ -36,7 +36,7 @@ cef-defender-atp-3 {
      """"InitiatingProcessParentId"+:({parent_process_id}\d+)""",
      """"InitiatingProcessCommandLine"+:"+"+({process_command_line}.+?)\s*"+,*"*(\w+"|$)""",
      """"InitiatingProcessId"+:({process_id}\d+)""",
-     """"tenantId":"({tenant_id}[^",]+)""",
+     """"tenantId":\s*"({tenant_id}[^",]+)""",
      """"SHA1":"({hash_sha1}[^"]+)"""",
      """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
    

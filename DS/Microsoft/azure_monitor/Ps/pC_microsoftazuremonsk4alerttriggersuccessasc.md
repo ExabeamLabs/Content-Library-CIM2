@@ -20,6 +20,7 @@ Fields = [
   """"Identity address\\":\\"({account_name}[^@"\\]+)@({domain}[^"\\]+)"""
   """"description":"({event_name}[^"]+)""""
   """"Suspicious actions\\":\\"\[[\\"]+({additional_info}[^\]]+?)[\\""]+\]"""
+  """"azureTenantId":\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

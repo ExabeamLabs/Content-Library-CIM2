@@ -11,7 +11,7 @@ Name = microsoft-azuremon-json-file-storagecategory
     """"callerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """"resourceId":"({resource_id}[^"]+)""""
     """"operationName":"({operation}[^"]+)""""
-    """"uri":"+({url}({file_path}[^"]+\\/({file_name}[^\\?"]+))[^"]*|[^"]+)""""    
+    """"uri":"+({url}({file_path}[^"]+\\/?({file_name}[^\\?"\.]+(\.({file_ext}[^"\\]+))?))[^"]*|[^"]+)""""
     """"protocol":"({protocol}[^"]+)"""
     """"statusText":"+({result}[^"]+)""""
     """"correlationId":"({correlation_id}[^"]+)""""
@@ -24,6 +24,7 @@ Name = microsoft-azuremon-json-file-storagecategory
     """"statusCode":({result_code}\\d+)"""
     """"resourceType":"({resource_type}({service_name}[^"\/]+)\/[^"]+)""""
     """"location"+:\s*"+({location}({region}[^"]+))""""
+    """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
   ]
 
 

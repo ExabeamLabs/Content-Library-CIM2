@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"Keywords":({result}[^,]+)"""
+    """"Channel":"({channel}[^"]+)""""
 # src_handle_id is removed
 # src_pid is removed
 # target_handle_id is removed
@@ -43,6 +44,7 @@ Name = microsoft-evsecurity-json-handle-copy-4690
     """exa_json_path=$.ThreadId,exa_field_name=thread_id"""
     """exa_regex="EventTime":({time}\d{10})""",
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
 

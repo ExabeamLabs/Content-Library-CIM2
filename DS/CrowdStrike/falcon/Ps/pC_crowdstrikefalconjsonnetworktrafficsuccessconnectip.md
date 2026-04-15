@@ -65,6 +65,7 @@ Name = crowdstrike-falcon-json-network-traffic-success-connectip
     """exa_json_path=$.event_platform,exa_field_name=os"""
    """exa_json_path=$.ContextBaseFileName,exa_field_name=process_name"""
    """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
+   """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 

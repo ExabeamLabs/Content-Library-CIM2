@@ -26,6 +26,7 @@ Fields = [
 """<Data Name(\\)?=('|")ServiceType('|")>(?=\w)({service_type}[^<]+)</Data>"""
 """<Message>({event_name}A service was installed in the system)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-kv-audit-policy-modify-4907
     """Process ID:\s*(\\t|\\n|\\r)*({process_id}[^\\\s]+)\s*(\\t|\\n|\\r)*""",
     """Process Name:\s*((\\)*(\\r|\\t|\\n))*({process_path}({process_dir}[^=]*?)(\\+({process_name}[^\\]+?))?)((\\)*(\\r|\\t|\\n))*\s*Auditing Settings:""",
     """New Security Descriptor:[^\S<]*({audit_policy_name}[^<"]+?)(\s+|<|")"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 

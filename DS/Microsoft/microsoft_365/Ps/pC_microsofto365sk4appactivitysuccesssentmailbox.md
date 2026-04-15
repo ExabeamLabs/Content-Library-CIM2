@@ -26,6 +26,7 @@ Name = microsoft-o365-sk4-app-activity-success-sentmailbox
     """"Workload":\s*"({app}[^"]+)""""
     """"UserType":"*({user_type}[^,}"]+)"*"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
+    """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
   ]
 
 

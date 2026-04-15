@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-json-policy-modify-4948
     """({event_code}4948)"""
     """<Data Name\\*=\\*('|")RuleId\\*('|")>({rule_id}[^<]+)""",
     """<Data Name\\*=\\*('|")RuleName\\*('|")>({rule}[^<]+)"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -27,6 +28,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
+    """Channel"?(:|=)"?({channel}[^"<]+)"""
   
 }
 ```

@@ -4,14 +4,14 @@
 Name = questsoftware-caad-cef-app-activity-appactivity
   Vendor = Quest Software
   Product = Quest Change Auditor for Active Directory
-  TimeFormat = """MMM dd yyyy HH:mm:ss"""
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
   Conditions = [
     """CEF:""",
     """Quest Software""",
     """|Change Auditor|"""
   ]
   Fields = [
-    """start=({time}\w+\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
+    """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+(\+|-)\d+:\d+)""",
     """dvchost=({host}[\w\-.]+)""",
     """domain=({domain}[^\s=]+)""",
     """categoryOutcome=({result}[^\s=]+)""",

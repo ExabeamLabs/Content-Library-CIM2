@@ -43,8 +43,8 @@ Fields = [
   """exa_json_path=$..ServerPort,exa_field_name=dest_port""",
   """exa_json_path=$..Application,exa_regex=^\s*({app}[^"]+?)$"""
   """exa_json_path=$..AppGroup,exa_regex=^\s*({app_group}[^"]+?)\s*$"""
-  """exa_json_path=$..ZENTotalBytesRxConnector,exa_field_name=bytes_in""",
-  """exa_json_path=$..ZENTotalBytesTxConnector,exa_field_name=bytes_out""",
+  """exa_regex=ZENTotalBytesRxConnector":\s*({bytes_in}\d+),""",
+  """exa_regex=ZENTotalBytesTxConnector":\s*({bytes_out}\d+),""",
   """exa_json_path=$..Policy,exa_regex=^\s*({policy_name}[^"]+?)$"""
   """exa_json_path=$..ConnectionStatus,exa_field_name=result""",
   """exa_json_path=$..InternalReason,exa_field_name=result_reason""",

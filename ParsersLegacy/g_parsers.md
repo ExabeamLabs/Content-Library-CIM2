@@ -28,6 +28,7 @@
 | gcp-storagesetiampermissions-json       | google-cloudplatform-json-bucket-permission-modify-success-storagesetiampermissions        |
 | gcp-updaterole-json                     | google-cloudplatform-json-role-modify-success-googleiamupdaterole                          |
 | gcpvpc-netflow-connection               | google-cloudplatform-json-network-traffic-success-payload                                  |
+| genetec-physical-access                 | genetec-gb-str-physical-location-access-success-accessgranted                              |
 | gentax-app-activity                     | fastenterprises-gt-csv-app-notification-accountmanagement                                  |
 | gentax-app-login                        | fastenterprises-gt-str-app-login-success-accesslogs                                        |
 | gigamon-system-info-1                   | gigamon-gvuehc2-cef-network-notification-success-sessiondecrypt                            |

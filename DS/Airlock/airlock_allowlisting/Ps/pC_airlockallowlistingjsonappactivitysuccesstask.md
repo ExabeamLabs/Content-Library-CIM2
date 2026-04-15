@@ -32,6 +32,7 @@ Name = airlock-allowlisting-json-app-activity-success-task
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)\s+({host}[^\s]+)\s""",
     """Hostd:\s*({additional_info}[^=]+?)\s*$"""
+    """\s*({host}[\w.-]+)\s*Hostd:"""
   ]
 
 

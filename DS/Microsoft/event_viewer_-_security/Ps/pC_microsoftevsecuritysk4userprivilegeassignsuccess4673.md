@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-sk4-user-privilege-assign-success-4673
     """"+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
     """"TargetDomainName"+:"+({dest_domain}[^"]+)""",
     """"+SubjectDomainName"+:"+({src_domain}({domain}[^"]+))""",
+    """"Channel":"({channel}[^"]+)"""
     """exa_json_path=$.winlog.event_data.TargetDomainName,exa_field_name=dest_domain""",
     """exa_json_path=$.winlog.event_data.SubjectDomainName,exa_field_name=domain""",
     """exa_json_path=$.winlog.event_data.SubjectDomainName,exa_field_name=src_domain""",
@@ -20,6 +21,7 @@ Name = microsoft-evsecurity-sk4-user-privilege-assign-success-4673
     """exa_json_path=$.winlog.event_data.SubjectUserName,exa_field_name=src_user""",
     """exa_json_path=$.winlog.computer_name,exa_field_name=src_host""",
     """exa_json_path=$.host.hostname,exa_field_name=host""",
+    """exa_json_path=$..channel,exa_field_name=channel""",
     """({event_name}A privileged service was called)""",
     """"PrivilegeList"+:"+({privileges}[^"]+)""",
     """"ObjectServer"+:"+({object_server}[^"]+)""",
@@ -56,6 +58,7 @@ json-windows-events-1 = {
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))""",
     """"Keywords":"({result}[^"]+)"""
+    """"Channel":"({channel}[^"]+)""""
 
       """exa_regex=\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s"""
       """exa_json_path=$.event.created,exa_field_name=time"""
@@ -80,6 +83,7 @@ json-windows-events-1 = {
       #"""exa_json_path=$.PrivilegeList,exa_field_name=privileges"""
       #"""exa_json_path=$.SidHistory,exa_field_name=sid_history"""
       #"""exa_json_path=$.Keywords,exa_field_name=result"""
+      """exa_json_path=$.Channel,exa_field_name=channel"""
   
 }
 ```

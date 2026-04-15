@@ -17,7 +17,7 @@ Name = infoblox-bddi-json-dhcp-traffic-success-lease
     """exa_json_path=$.Lease[0].Hostname,exa_field_name=src_host""",
     """exa_json_path=$.Lease[0].AddressV0,exa_field_name=src_ip""",
     """exa_json_path=$.Lease[0].AddressV0,exa_field_name=dhcp_ip""",
-    """exa_json_path=$.Lease[0].HWAddr,exa_field_name=src_mac""",
+    """exa_json_path=$.Lease[0].HWAddrV0,exa_field_name=src_mac""",
     """exa_json_path=$.Lease[0].ClientIDV0,exa_field_name=client_id""",
     """exa_json_path=$.Lease[0].Lifetime,exa_field_name=lease_time""",
     """exa_json_path=$.Lease[0].Type,exa_field_name=dhcp_type"""

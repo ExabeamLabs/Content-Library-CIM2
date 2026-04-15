@@ -28,7 +28,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """exa_json_path=$.UserName,exa_regex=^(-|\/+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}({first_name}[^\s"@]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\"]+))?)$""",
     """exa_json_path=$..timestamp,exa_field_name=time""",
     """exa_json_path=$.raw-event.timestamp,exa_field_name=time""",
-    """exa_json_path=$..UserName,exa_regex=(-|\/+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}({first_name}[^\s"@]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$..UserName,exa_regex=(-|\/+|[^@]+\/({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({full_name}({first_name}[^\s"@]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$..UserSid,exa_field_name=user_sid""",
     """exa_json_path=$..event_simpleName,exa_field_name=event_code""",
     """exa_json_path=$..aid,exa_field_name=aid""",
@@ -43,6 +43,7 @@ Name = crowdstrike-falcon-sk4-endpoint-login-userloginfail
     """exa_json_path=$.LocalAddressIP4,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$.ComputerName,exa_regex=({host}[\w\-\.]+)"""
     """exa_json_path=$.ComputerName,exa_regex=({dest_host}[\w\-\.]+)"""
+    """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|[^@]+\/({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
   ParserVersion = "v1.0.0"
 

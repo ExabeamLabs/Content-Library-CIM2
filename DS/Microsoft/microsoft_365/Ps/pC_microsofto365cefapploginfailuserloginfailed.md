@@ -34,6 +34,7 @@ Name = microsoft-o365-cef-app-login-fail-userloginfailed
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
     """"Name":"RequestType","Value":"({request_type}[^"]+?)\s*"""",
     """"Value":"({request_type}[^"]+?)\s*","Name":"RequestType""""
+    """\{"Value":"({session_id}[^",]+)","Name":"SessionId""""
     ]
 
 cef-o365-app-login-2 = {
@@ -49,6 +50,7 @@ cef-o365-app-login-2 = {
     """destinationServiceName =({app}Office 365)""",
     """"Name":\s*"UserAgent","Value":\s*"({user_agent}[^"]+?)\s*"""",
     """"Workload":\s*"({app}[^"]+)"""
+    """"DeviceProperties":.+?"DisplayName",\s*"Value":\s*"({host}[\w\-.]+)""""
     
 }
 ```

@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-5446
 	  """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<]+)<""",
     """<Task>({sub_category}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

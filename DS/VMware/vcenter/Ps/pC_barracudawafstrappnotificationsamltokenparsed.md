@@ -10,6 +10,7 @@ Name = barracuda-waf-str-app-notification-samltokenparsed
   Fields = [
     """({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z)"""
     """({additional_info}SAML token for .*)""",
+    """\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+\s*(\+|\-)[\d:]+\s({host}[\w\-.]+)\s"""
   ]
 
 

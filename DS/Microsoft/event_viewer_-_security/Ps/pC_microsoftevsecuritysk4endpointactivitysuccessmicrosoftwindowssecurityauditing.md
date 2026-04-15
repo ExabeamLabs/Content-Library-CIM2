@@ -25,6 +25,22 @@ Name = microsoft-evsecurity-sk4-endpoint-activity-success-microsoftwindowssecuri
     """exa_json_path=$..TransactionId,exa_field_name=transaction_id""",
     """exa_json_path=$..Category,exa_field_name=event_name""",
     """exa_json_path=$..Message,exa_regex=({event_name}[^.]+)"""
+    """exa_json_path=$..Channel,exa_field_name=channel"""
+    """"EventID":({event_code}\d+)"""
+    """"EventTime":"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
+    """"TimeCreated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
+    """"EventType":"({result}[^"]+)""""
+    """"SubjectUserSid":"({user_sid}[^"]+)"""",
+    """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """"SubjectDomainName":"({src_domain}({domain}[^"]+))"""",
+    """"ProcessName":"({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
+    """"ProcessId":"({process_id}[^"]+)""",
+    """"TransactionId":"({transaction_id}[^"]+)"""",
+    """"message":"({event_name}[^:"]+)"""
+    """"category":"({category}[^"]+)"""",
+    """"SubjectLogonId":"({login_id}[^"]+)""",
+    """"Hostname":"({host}[\w\-.]+)""""
+    """"Channel":"({channel}[^"]+)"""",
     ]
  
 

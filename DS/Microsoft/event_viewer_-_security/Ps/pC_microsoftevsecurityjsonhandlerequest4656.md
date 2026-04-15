@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-json-handle-request-4656
     """"ObjectServer"+:"+({object_server}[^",]+)"""",
     """"HandleId"+:"+({object_id}[^",]+)"""",
     """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

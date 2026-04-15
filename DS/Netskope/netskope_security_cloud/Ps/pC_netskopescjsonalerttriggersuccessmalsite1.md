@@ -31,6 +31,7 @@ json-netskope-alert = {
     """"page":\s*"({web_domain}[^\\\/"]+)""",
     """"url":\s*"({malware_url}[^"]+)"""",
     """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
+    """"action":\s*"({action}[^"]+)"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
     """exa_json_path=$.hostname,exa_field_name=host"""
     """exa_json_path=$.incident_id,exa_field_name=alert_id"""
@@ -47,6 +48,7 @@ json-netskope-alert = {
     """exa_json_path=$.numbytes,exa_field_name=bytes"""
     """exa_regex="page":\s*"({web_domain}[^\\\/"]+)"""
     """exa_json_path=$.url,exa_field_name=malware_url"""
+    """exa_json_path=$.action,exa_field_name=action"""
     """exa_json_path=$.shared_domains,exa_regex=[\[\<\s]?({domain}[^"\s,\\\]\>]+)"""
   
 }

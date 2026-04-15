@@ -30,6 +30,7 @@ Name = "microsoft-evsecurity-xml-network-session-fail-5157"
     """Layer Name:\s+({layer_name}[^:]+?)\s+Layer Run-Time ID:"""
     """<Message>({failure_reason}.+?)\s*(:|\.)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

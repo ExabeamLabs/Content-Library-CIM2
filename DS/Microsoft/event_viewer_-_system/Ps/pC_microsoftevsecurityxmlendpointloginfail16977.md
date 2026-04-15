@@ -16,6 +16,7 @@ Fields = [
   """<Execution ProcessID=('|")({process_id}\d+)('|") ThreadID=('|")({thread_id}\d+)('|")\/>"""
   """<Security UserID=('|")({user_sid}[^']+)('|")\/>"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -7,6 +7,7 @@ Name = postgresql-p-csv-database-login-success-authentication
   TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS","yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """connection authorized:""", """ user=""", """ database=""", """LOG""" ]
   Fields = [
+    """\s({host}\S+?)\spostgres\b"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*UTC"""
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
     """({action}connection authorized)"""

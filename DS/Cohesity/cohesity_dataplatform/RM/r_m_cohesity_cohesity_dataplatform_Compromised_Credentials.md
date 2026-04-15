@@ -7,7 +7,7 @@ Vendor: Cohesity
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  65   |   33   |         5          |       3        |    8    |
+|  65   |   33   |         5          |       3        |    5    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

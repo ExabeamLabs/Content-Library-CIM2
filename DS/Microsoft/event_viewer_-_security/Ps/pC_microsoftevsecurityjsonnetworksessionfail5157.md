@@ -25,6 +25,7 @@ Name = "microsoft-evsecurity-json-network-session-fail-5157"
 """Layer Name:\s*(\\t|\\r|\\n)*(|({layer_name}.+?))\s*(\\t|\\r|\\n)*Layer Run-Time ID:"""
 """User:\s*(\\t|\\r|\\n)*(N/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\\t|\\r|\\n)*ComputerName:"""
 """"(Hostname|Computer)":"({host}[^"]+)""""
+""""Channel":"({channel}[^"]+)""""
   ]
 
 

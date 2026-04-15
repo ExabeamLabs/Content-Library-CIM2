@@ -14,7 +14,7 @@ Name = microsoft-evsecurity-xml-group-member-list-4799-1
     """<Computer>({host}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<Data Name(\\)?=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~\s]{1,40}\$?))""",
+    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}(LOCAL SERVICE|[\w\.\-\!\#\^\~\s]{1,40}\$?)))""",
     """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))""",
     """<Data Name(\\)?=('|")SubjectLogonId('|")>({login_id}[^<]+)""",
     """<Data Name(\\)?=('|")TargetSid('|")>({group_id}[^<]+)""",
@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-group-member-list-4799-1
     """<Data Name(\\)?=('|")CallerProcessId('|")>({process_id}[^<]+)""",
     """<Data Name(\\)?=('|")CallerProcessName('|")>(-|({process_path}({process_dir}[^<]*?[\\\/]+)?({process_name}[^<\\\/]+)))<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

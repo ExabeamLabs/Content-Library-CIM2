@@ -27,6 +27,7 @@ Fields = [
 """"AlertId":\s*"({alert_id}[^"]+)"""",
 """"Source":\s*"({alert_source}[^"]+)""""
 """"Category":\s*"({category}[^"]+)""""
+""""tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

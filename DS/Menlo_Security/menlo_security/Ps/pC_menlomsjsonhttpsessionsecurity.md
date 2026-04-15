@@ -4,10 +4,10 @@
 Name = menlo-ms-json-http-session-security
     Vendor = Menlo Security
     Product = Menlo Security
-    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS"
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSS", "yyyy-MM-dd'T'HH:mm:ss.SSS"]
     ExtractionType = json
     ParserVersion = "v1.0.0"
-    Conditions = [ """"Menlo Security"""", """"browser_and_version":""", """"request_type":""", """"connId":""", """"userid":""", """"content-type":""", """"user-agent":""" ]
+    Conditions = [ """"vendor":""", """"Menlo Security"""", """"browser_and_version":""", """"request_type":""", """"connId":""", """"userid":""", """"user-agent":""" ]
     Fields = [
        """exa_json_path=$.event_time,exa_field_name=time""",
        """exa_json_path=$.pe_action,exa_field_name=action""",

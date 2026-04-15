@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-policy-modify-4946-1
     """ThreadID\\*=('|")({thread_id}[^'"]+)""",
     """<Keywords?>({result}[^<]+)<\/Keywords?>"""  
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

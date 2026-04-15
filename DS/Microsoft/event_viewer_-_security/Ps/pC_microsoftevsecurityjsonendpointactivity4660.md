@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-4660
     """"ObjectServer":"({object_server}[^"]+)""""
     """"HandleId":"({object_id}[^"]+)""""
     """"ProcessName":"(|-|({process_path}({process_dir}.*?)({process_name}[^\\\/]+?)))""""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

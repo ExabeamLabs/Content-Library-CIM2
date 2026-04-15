@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-csv-user-password-reset-success-4724-1
    ParserVersion = v1.0.0
    Vendor = Microsoft
    Product = Event Viewer - Security
-   TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+   TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
    Conditions = [ """アカウントのパスワードのリセットが試行されました。""" ]
    Fields = [
      """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}4724),""",

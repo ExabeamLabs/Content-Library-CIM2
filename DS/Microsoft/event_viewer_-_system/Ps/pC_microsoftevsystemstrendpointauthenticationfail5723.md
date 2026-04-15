@@ -13,6 +13,7 @@ Name = microsoft-evsystem-str-endpoint-authentication-fail-5723
         """"TimeCreated":"[\\\/]*Date\(({time}\d{13})"""
         """({time}\w+ \d+ \d+:\d+:\d+ \d\d\d\d)""",
         """:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+        """\s({host}[\w.-]+)\s+[^\s"]+\s+The session setup from computer""",
         """({event_code}5723)""",
         """({event_name}The session setup from computer.+?)\.""",
         """trust account\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",

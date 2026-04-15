@@ -21,6 +21,7 @@ Name = unix-unix-mix-user-switch-success-susession
 """(T|\s)\d\d:\d\d:\d\d(\.?\S+)? (::ffff:)?({host}(({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w.\-]+)))\s+su(:|\[)""",
 """({event_name}session opened for user)"""
 """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
+"""session opened for user \S+ by (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\(]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))?(\(uid\\?=({user_uid}({user_id}\d+))\))?"""
   ]
 
 

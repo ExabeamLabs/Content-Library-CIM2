@@ -9,6 +9,7 @@ ExtractionType = json
 Conditions = [ """"event_type":""", """"alert_type":""", """"alert_id":""", """"severity":""", """"source":""" ]
 Fields = [
 """exa_json_path=$.event_timestamp,exa_field_name=time""",
+"""exa_json_path=$.detection_timestamp,exa_field_name=time""",
 """exa_json_path=$.event_id,exa_field_name=event_id""",
 """exa_json_path=$.source,exa_field_name=log_source""",
 """exa_json_path=$.host_name,exa_field_name=host""",

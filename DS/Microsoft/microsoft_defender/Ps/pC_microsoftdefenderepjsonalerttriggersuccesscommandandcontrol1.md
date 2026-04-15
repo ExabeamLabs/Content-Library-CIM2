@@ -9,7 +9,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-commandandcontrol-1
 json-microsoft-security-events-1 = {
       Vendor = Microsoft
       Product = Microsoft Defender
-      TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+      TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
       Fields = [
       """"alertId":\s*"({alert_id}[^"]+)"""",
       """"incidentId":\s*({alert_id}\d+)""",
@@ -27,6 +27,7 @@ json-microsoft-security-events-1 = {
       """"userPrincipalName":\s*"({user_upn}[^"]+?)"""",
       """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))"""",
       """"domainName"+:\s*"+((?i:-|NT AUTHORITY)|({domain}[^",]+))[^}\]]+?userPrincipalName""",
+      """"computerDnsName":\s*"+({src_host}[\w.-]+)"""",
       """"deviceDnsName":\s*"+({src_host}[\w.-]+)"""",
       """"status":\s*"({incident_status}[^",]+)"""",
       """"threatFamilyName":\s*"({malware_family}[^"]+)"""",
@@ -38,6 +39,10 @@ json-microsoft-security-events-1 = {
       """"mitreTechniques":\[({technique}[^\]]+)\]"""
       """"evidence".+?"verdict":"({result}[^"]+)"""
       """recipientEmailAddress":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
+      """"incidentWebUrl":"({more_info}[^"]+)""""
+      """"WorkspaceName":"({workspace_name}[^"]+)""""
+      """"detectionSource":\s*"({alert_source}[^"]+)""""
+      """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_json_path=$.alertId,exa_field_name=alert_id"""
       """exa_json_path=$.title,exa_field_name=alert_name"""
@@ -54,7 +59,8 @@ json-microsoft-security-events-1 = {
       """exa_regex="userPrincipalName":\s*"(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@[^"]+)?))""""
       """exa_regex="userPrincipalName":\s*"({user_upn}[^"]+?)""""
       """exa_regex="domainName":\s*"({domain}[^"]+)""""
-      """exa_regex="deviceDnsName":\s*"+({src_host}[\w.-]+)""""
+      """exa_json_path=$..computerDnsName,exa_regex=({src_host}[\w.-]+)"""
+      """exa_json_path=$..deviceDnsName,exa_regex=({src_host}[\w.-]+)"""
       """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.threatFamilyName,exa_field_name=malware_family"""
       """exa_regex="ipAddress":\s*"(00.00.00.00|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))(:({src_port}\d+))?"""
@@ -70,6 +76,10 @@ json-microsoft-security-events-1 = {
       """exa_regex="entityType":\s+"Process",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
       """"entityType":\s+"User",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
       """exa_regex="entityType":\s+"User",[^\}]+"accountName":\s+"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+      """exa_json_path=$.incidentWebUrl,exa_field_name=more_info"""
+      """exa_json_path=$..WorkspaceName,exa_field_name=workspace_name"""
+      """exa_regex="detectionSource":\s*"({alert_source}[^"]+)""""
+      """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       ]
  },
 

@@ -26,6 +26,7 @@ cef-azure-alert = {
     """"category":"({alert_type}[^"]+)""""
     """"accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"status":"({incident_status}[^"]+)"""
+    """"azureTenantId":\s*"({tenant_id}[^"]+)""""  
     
 }
 ```

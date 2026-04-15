@@ -8,7 +8,7 @@ Name = pan-ngfw-cef-http-session-url-1
   Conditions = [ """CEF:""", """|Palo Alto Networks|LF|""", """|THREAT|url|""" ]
   Fields = [
     """\srt=({time}\w{3}\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)\s""",
-    """\sdvchost=({host}[\w\-\.]+)""",
+    """\sdvchost=({host}[\w\-\.]+)\s\w+=""",
     """({event_category}THREAT)""",
     """\sact=({action}[^\s]+)""",
     """\sproto=({protocol}[^\s]+)""",

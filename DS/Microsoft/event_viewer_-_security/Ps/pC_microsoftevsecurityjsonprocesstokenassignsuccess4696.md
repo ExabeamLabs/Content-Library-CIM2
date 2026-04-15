@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-process-token-assign-success-4696
 # token_account_name is removed
 # token_sid is removed
 # token_domain is removed
+"""exa_json_path=$..Channel,exa_field_name=channel"""
   ]
 
 

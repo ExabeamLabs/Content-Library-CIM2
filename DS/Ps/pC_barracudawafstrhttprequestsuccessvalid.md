@@ -3,7 +3,7 @@
 {
 Name = barracuda-waf-str-http-request-success-valid
   ParserVersion = v1.0.0
-  Conditions = [ """SERVER""", """DEFAULT""", """PROTECTED""" ]
+  Conditions = [ """SERVER""", """DEFAULT""", """PROTECTED""", """VALID""", """TR""" ]
 
 barracuda-web-activity}{
   Name = barracuda-waf-str-http-request-success-profiledvalid

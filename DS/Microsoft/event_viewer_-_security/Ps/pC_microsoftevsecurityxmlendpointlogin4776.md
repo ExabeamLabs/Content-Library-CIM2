@@ -27,6 +27,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4776"
   """<Keywords><Keyword>({result}[^<]+)<""",
   """Source Workstation(:|=)[\s\\\t]*((({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9%.]*:[A-Fa-f0-9%.:]+))(:({src_port}\d+))?)|((workstation)|({src_host}[\w\-.]+?)))[\s\\\\n\;]*Error Code(:|=)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

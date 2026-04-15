@@ -12,6 +12,7 @@ Name = pan-tesm-csv-alert-trigger-hipmatch
     """((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+))"""
     """,HIPMATCH,([^,]*,){8}({object}[^,]+),([^,]*,)({host_type}object),"""
     """,HIPMATCH,([^,]*,){8}({profile}[^,]+),([^,]*,)({host_type}profile),"""
+    """,({event_category}HIPMATCH)"""
   ]
   ParserVersion = v1.0.0
 

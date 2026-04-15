@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-endpoint-logout-4634
     """<Execution ProcessID\\*=('|")({process_id}[^'"]+)""",
     """Logon Type\s*:\s*(-|({login_type}\d+))\s+"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

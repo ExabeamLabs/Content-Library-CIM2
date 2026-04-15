@@ -13,6 +13,7 @@ Name = microsoft-evpowershell-kv-process-create-success-executing
   Fields = [
     """\$Message\s*=\s*"({event_name}[^"]+)""",
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})\s({host}[\w\-.]+)\s""",
+    """\s+({host}[\w.-]+)\s+Executing Pipeline """,
     """({time}\w{3}\s\w\w\w\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s+\d+\s+""",
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))""",
     """<TimeCreated SystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)""",
@@ -38,6 +39,7 @@ Name = microsoft-evpowershell-kv-process-create-success-executing
     """"user"\s*:\s*\{[^\}]*"identifier"\s*:\s*"({user_sid}[^"]+)"""
     """"process_id":({process_id}\d+)"""
     """\sUser = (({domain}[^=]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\\t|\\r|\\n|\\s){0,5}\s{1,100}Connected User ="""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
 ]
 
 

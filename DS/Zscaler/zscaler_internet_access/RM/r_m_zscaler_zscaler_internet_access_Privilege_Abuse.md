@@ -7,7 +7,7 @@ Vendor: Zscaler
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   8   |   2    |         5          |       11       |   21    |
+|   8   |   2    |         5          |       11       |   20    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

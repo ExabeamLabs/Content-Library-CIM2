@@ -20,7 +20,7 @@ cisco-system-info-aa = {
     """\s({time}\w+ \d+(\s*\d+)? \d+:\d+:\d+(\.\d+)?)"""
     """({time}\d+ \w+ \d+ \d+:\d+:\d+(\.\d+)?)\s+\w+:\s+\%""",
     """\Wrt=({time}\d{13})""",
-    """({event_code}%\w+\-[^:]+)""",
+    """({event_code}%\w+\-[^:\s]+):""",
     """\%[\w+-.]+:\s*({additional_info}[^\$]+?)\s*$"""
   
 }

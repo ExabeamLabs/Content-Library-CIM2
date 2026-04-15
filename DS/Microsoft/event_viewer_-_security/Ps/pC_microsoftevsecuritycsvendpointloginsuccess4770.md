@@ -5,7 +5,7 @@ Name = microsoft-evsecurity-csv-endpoint-login-success-4770
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Event Viewer - Security
-  TimeFormat = "MM/dd/yyyy hh:mm:ss a"
+  TimeFormat = ["MM/dd/yyyy hh:mm:ss a", "yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """4770""", """Kerberos サービス チケットが更新されました。""", """アカウント名:""" ]
   Fields = [
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),4770,""",

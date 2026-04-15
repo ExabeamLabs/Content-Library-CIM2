@@ -6,10 +6,11 @@ Name = oracle-oci-json-app-activity-auditlogevent
   Product = Oracle Cloud Infrastructure
   ParserVersion = "v1.0.0"
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"additionalDetails":""", """"availabilityDomain":""", """"compartmentId":""", """oracle""", """"eventName":"""]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
+  Conditions = [ """"additionalDetails":""", """"availabilityDomain":""", """"compartmentId":""", """oracle""" ]
   Fields = [
     """exa_json_path=$.time,exa_field_name=time"""
+    """exa_json_path=$.eventTime,exa_field_name=time"""
     """exa_json_path=$.data.compartmentId,exa_field_name=resource_id"""
     """exa_json_path=$.data.eventName,exa_field_name=event_name"""
     """exa_json_path=$.data.identity.authType,exa_field_name=auth_type"""
@@ -19,10 +20,18 @@ Name = oracle-oci-json-app-activity-auditlogevent
     """exa_json_path=$.data.message,exa_field_name=additional_info"""
     """exa_json_path=$.data.request.action,exa_field_name=method"""
     """exa_json_path=$.data.response.status,exa_field_name=http_response_code"""
+    """exa_regex="status":"[^\d"]+({http_response_code}\d+)""",
     """exa_json_path=$.data.stateChange.current,exa_field_name=new_value"""
     """exa_json_path=$.data.stateChange.previous,exa_field_name=old_value"""
     """exa_json_path=$.eventID,exa_field_name=event_id"""
     """exa_json_path=$.source,exa_field_name=resource"""
+    """exa_json_path=$.eventType,exa_field_name=event_category"""
+    """exa_json_path=$.data.additionalDetails.adminValuesRemoved,exa_field_name=old_attribute"""
+    """exa_json_path=$.data.additionalDetails.adminValuesAdded,exa_field_name=new_attribute"""
+    """exa_json_path=$.data.resourceName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({resource_name}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.data.resourceId,exa_field_name=resource_id"""
+    """exa_json_path=$.data.additionalDetails.clientIp,exa_field_name=src_ip"""
+    """exa_json_path=$.data.additionalDetails.adminResourceType,exa_field_name=resource_type"""
   ]
 
 

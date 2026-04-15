@@ -23,6 +23,7 @@ Fields = [
   """"OperationName\":\"({event_name}[^\"]+)\""""
   """({access}resource-created)"""
   """msg=({additional_info}.+?)\s+\w+="""
+  """"TenantId":\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

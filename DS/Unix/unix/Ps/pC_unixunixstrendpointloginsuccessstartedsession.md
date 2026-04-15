@@ -9,7 +9,7 @@ Name = "unix-unix-str-endpoint-login-success-startedsession"
     """systemd: Started Session"""
   ]
   Fields = [
-    """({dest_host}({host}[\w\-.]+))\s+systemd: Started Session"""
+    """(\d+|({dest_host}({host}[\w\-.]+)))\s+systemd: Started Session"""
     """of user (({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}?\$?))\.?"*$"""
     """({event_code}Started Session)"""
   ]

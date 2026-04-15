@@ -19,6 +19,7 @@ Name = "microsoft-365defender-json-endpoint-activity-success-publish-identityinf
     """exa_json_path=$.properties.EmailAddress,exa_field_name=email_address"""
     """exa_json_path=$.properties.Country,exa_field_name=country"""
     """exa_json_path=$.properties.AccountName,exa_field_name=full_name"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = "v1.0.0"
 

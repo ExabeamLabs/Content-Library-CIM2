@@ -62,7 +62,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
 # trigger is removed
     """\sdirection=\\?"?({direction}[^=]+?)\\?"?\s+(\w+=|$)""",
     """\sdevice=\\?"?({device_name}[^=]+?)\\?"?\s+(\w+=|$)""",
-    """\Wtz=\\?"?({tz}[+-]\d+)"""
+    """\Wtz=\\?"?({zone}[+-]\d+)"""
     """forwardedfor="*({more_info}[^"=]+)"""
     """url="({url}[^"]+)""""
     """\Whostname="({web_domain}[^\"]+)""""

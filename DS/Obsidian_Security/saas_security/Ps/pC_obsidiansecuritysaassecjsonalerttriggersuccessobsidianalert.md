@@ -1,0 +1,29 @@
+#### Parser Content
+```Java
+{
+Name = obsidiansecurity-saassec-json-alert-trigger-success-obsidianalert
+    ParserVersion = "v1.0.0"
+    Vendor = Obsidian Security
+    Product = SaaS Security
+    ExtractionType = json
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+    Conditions = [ """Obsidian Alert""", """Alert Name:""", """"action_id":"""", """"severity":"""" ]
+    Fields = [
+       """exa_json_path=$.eventDatetime,exa_field_name=time""",
+       """exa_json_path=$.raw.name,exa_field_name=alert_name""",
+       """exa_json_path=$.message,exa_field_name=alert_subject""",
+       """exa_json_path=$.severity,exa_field_name=alert_severity""",
+       """exa_json_path=$.details,exa_field_name=alert_description""",
+       """exa_json_path=$.raw.alert_id,exa_field_name=alert_id""",
+       """exa_json_path=$.raw.actors[0].name,exa_field_name=full_name""",
+       """exa_json_path=$.raw.relatedActorEmails[0],exa_field_name=email_address""",
+       """exa_json_path=$.raw.relatedTargetEmails[0],exa_field_name=dest_email_address""",
+       """exa_json_path=$.raw.relatedEvents.results[0].rawEventName,exa_field_name=alert_type""",
+       """exa_json_path=$.raw.relatedEvents.results[0].ipAddress.hostname,exa_field_name=src_host""",
+       """exa_json_path=$.raw.relatedEvents.results[0].ipAddress.raw,exa_field_name=src_ip""",
+       """exa_json_path=$.url,exa_field_name=url"""
+    ]
+
+
+}
+```

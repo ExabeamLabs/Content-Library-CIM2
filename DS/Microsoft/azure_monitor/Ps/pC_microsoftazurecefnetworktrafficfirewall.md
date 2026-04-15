@@ -50,6 +50,7 @@ Name = microsoft-azure-cef-network-traffic-firewall
      """"requestUri":"({uri}[^"]+)""""
      """"resourceId":"({object}[^",]+)""""
      """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
+     """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
    ]
 
 

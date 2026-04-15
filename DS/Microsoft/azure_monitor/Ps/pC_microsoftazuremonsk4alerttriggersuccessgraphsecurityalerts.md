@@ -21,6 +21,7 @@ Fields = [
   """"domainName":"({domain}[^"]+)""""
   """"id":"({alert_id}[^"]+)""""
   """\srequestClientApplication=({app}[^=]+)\s+\w+="""
+  """"azureTenantId":\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

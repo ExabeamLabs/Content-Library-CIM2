@@ -4,9 +4,13 @@
 Name = "microsoft-evsecurity-mix-user-privilege-assign-success-4673"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
-TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+TimeFormat = ["MMM dd HH:mm:ss yyyy", "yyyy-MM-dd'T'HH:mm:ss", "MM/dd/yyyy hh:mm:ss a","yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
 Conditions = [ """A privileged service was called""", """Privileges""", """Account Name:""" ]
 Fields = [
+  """<EventID>({event_code}\d+)<\/EventID>""",
+  """<TimeCreated SystemTime="({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{1,9}Z)"\/>"""",
+  """<Computer>({host}[\w\-\.]+)<\/Computer>""",
+  """<EventData><Data>({additional_info}[^\<]+)<\/Data><\/EventData>""",
   """"\@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z)""""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """TimeGenerated=({time}\d{10})"""
@@ -30,6 +34,7 @@ Fields = [
   """Server:\s*((?-i)\\+[rnt])*({object_server}[^:]+?)\s*((?-i)\\+[rnt])*Service Name:""",
   """Privileges:\s*((?-i)\\+[rnt])*({privileges}[^$]+?)(\s*$|\s+\d+|\\?"|,|;|\s*(xml=)?<)""",
   """Service Name:\s*(-|({service_name}[^\\\s]+?))\s*\w+:"""
+  """Channel"?(:|>)"?({channel}[^"<]+)"""
 ]
 ParserVersion = "v1.0.0"
 

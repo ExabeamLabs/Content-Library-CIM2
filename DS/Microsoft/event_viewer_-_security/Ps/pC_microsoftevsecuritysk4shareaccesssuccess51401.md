@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-sk4-share-access-success-5140-1
     """"ShareLocalPath":"(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)"""",
     """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.\s]+?))?)"""",
     """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -29,6 +30,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
+    """Channel"?(:|=)"?({channel}[^"<]+)"""
   
 }
 ```

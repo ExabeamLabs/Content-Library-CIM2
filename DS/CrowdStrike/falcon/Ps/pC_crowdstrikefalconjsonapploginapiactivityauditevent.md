@@ -21,7 +21,7 @@ Name = crowdstrike-falcon-json-app-login-apiactivityauditevent
     """exa_json_path=$.metadata.customerIDString,exa_field_name=cid""",
     """exa_json_path=$.event..user_agent,exa_field_name=user_agent""",
     """exa_json_path=$.event..request_path,exa_field_name=uri_path""",
-    """exa_json_path=$.event..status_code,exa_field_name=http_response_code""",
+    """exa_json_path=$.event..status_code,exa_regex=({http_response_code}\d+)""",
     """exa_json_path=$.event..request_query,exa_field_name=uri_query""",
     """exa_json_path=$.event..request_method,exa_field_name=method""",
     """exa_json_path=$.event..scopes,exa_field_name=assignble_scope""",

@@ -8,7 +8,7 @@ Name = hp-arubacpm-str-app-notification-5688
   Conditions = [ """awc[5688]:""", """wsc:""" ]
   Fields = ${DLHPEParsersTemplates.aruba-clearpass-info.Fields}[
     """awc\[5688\]:\s*({additional_info}[^"\$]+?)\s*("|$)""",
-    """({event_code}awc\[5688\])"""
+    """({event_code}5688)"""
   ]
 
 aruba-clearpass-info = {

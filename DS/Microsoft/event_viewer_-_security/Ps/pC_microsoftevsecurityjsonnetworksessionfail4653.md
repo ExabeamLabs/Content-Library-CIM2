@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-json-network-session-fail-4653
 # initiator_cookie is removed
 # responder_cookie is removed
     """"EventType":"({action}[^"]+)""""
+    """"Channel":"({channel}[^"]+)""""
     ]
 
 

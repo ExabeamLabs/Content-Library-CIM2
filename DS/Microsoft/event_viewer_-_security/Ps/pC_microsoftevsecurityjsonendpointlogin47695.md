@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4769-5
     """Failure Code(:|=)\s*({failure_code}({result_code}.+?))[\s;]*Transited Services(:|=)""",
     """Ticket Options(:|=)\s*({ticket_options}.+?)[\s;]*Ticket Encryption Type(:|=)""",
     """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}.+?)[\s;]*Failure Code(:|=)"""
+    """"channel":"({channel}[^"]+)""""
   ]
 
 

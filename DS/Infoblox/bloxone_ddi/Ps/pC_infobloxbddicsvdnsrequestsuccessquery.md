@@ -9,7 +9,7 @@ Name = infoblox-bddi-csv-dns-request-success-query
   Fields = [
     """({time}\d{10}),[^,]*.Query,""",
     """,Query,(|({protocol}[^,]+)),""",
-    """,Query,([^,]*,)({src_ip}[a-fA-F\d:\.]+),""",
+    """,Query,([^,]*,)({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,""",
     """,Query,([^,]*,){2}({src_port}\d{1,5}),""",
     """,Query,([^,]*,){5}({dns_query}[^,]+),""",
     """,Query,([^,]*,){7}({dns_query_type}[^,]+),"""

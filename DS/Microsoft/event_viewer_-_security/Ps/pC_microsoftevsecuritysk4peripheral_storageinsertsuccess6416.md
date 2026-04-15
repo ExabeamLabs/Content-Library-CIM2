@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-sk4-peripheral_storage-insert-success-6416
     """"Computer":"({host}[^"]+)"""",
     """({event_name}A new external device was recognized by the System)"""
     """"DeviceId">.+?VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -25,6 +26,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
+    """Channel"?(:|=)"?({channel}[^"<]+)"""
   
 }
 ```

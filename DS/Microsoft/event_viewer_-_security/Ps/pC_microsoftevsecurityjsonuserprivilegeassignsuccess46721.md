@@ -20,6 +20,7 @@ Fields = [
   """\s*Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*Account Domain:\s*({domain}[^\s]+)\s*Logon ID:"""
   """\s*Logon ID:\s*({login_id}.+?)\s*Privileges:"""
   """\s*Privileges:\s*({privileges}.+?)</EventData>"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

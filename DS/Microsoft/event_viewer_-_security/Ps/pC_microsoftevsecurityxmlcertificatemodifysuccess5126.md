@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-xml-certificate-modify-success-5126
      """<Level>({run_level}[^<]+)<"""
      """<Data Name =('|")NewSigningCertificateHash('|")>({hash_sha1}[^<]+)"""
      """<Data Name =('|")CAConfigurationId('|")>({activity_id}[^<]+)"""
+     """<Channel>({channel}[^<]+)<"""
    ]
 
 

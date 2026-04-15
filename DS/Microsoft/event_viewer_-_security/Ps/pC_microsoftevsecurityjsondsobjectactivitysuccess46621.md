@@ -36,6 +36,7 @@ Fields = [
 """exa_json_path=$..AdditionalInfo,exa_regex=(?:-|({additional_info}[^"]+))""",
 """exa_json_path=$..AccessList,exa_field_name=access""",
 """exa_regex=Accesses:(\\[srnt])*(-|({access}[^:]+?))(\\[srnt])*Access Mask:"""
+"""exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 
 

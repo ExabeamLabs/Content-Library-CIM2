@@ -18,6 +18,7 @@ Name = microsoft-evpowershell-json-script-execute-success-4104
     """"ScriptBlockId":"({scriptblock_id}[^"]+)"""",
     """({process_name}PowerShell)"""
     """"ScriptBlockText":"\s*({scriptblock_text}.+?)""""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

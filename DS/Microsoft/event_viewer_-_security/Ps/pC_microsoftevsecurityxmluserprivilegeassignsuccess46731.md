@@ -23,6 +23,7 @@ Fields = [
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<>\s=]+)"""
   """({event_name}A privileged service was called)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

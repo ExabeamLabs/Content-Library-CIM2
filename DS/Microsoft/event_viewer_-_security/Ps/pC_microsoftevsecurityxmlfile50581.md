@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-file-5058-1
     """<Data Name(\\)?=('|")KeyType('|")>({key_type}[^\.<]+)"""
     """<Data Name =('|")KeyFilePath('|")>({file_path}({file_dir}[^<]+[\\\/]+)?({file_name}[^<\\\/]+(\.({file_ext}[^\s<\\\/]+))?))<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

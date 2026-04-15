@@ -7,7 +7,7 @@ Vendor: Extreme Networks
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   6   |   2    |         3          |       4        |    2    |
+|   6   |   2    |         3          |       4        |    0    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

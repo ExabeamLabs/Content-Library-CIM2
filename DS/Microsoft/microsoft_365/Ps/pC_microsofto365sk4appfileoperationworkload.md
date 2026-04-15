@@ -66,6 +66,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """AlertSeverity":"+({alert_severity}[^"]+)"""
     """"InternalLogonType":({login_type}\d+)"""
     """"LogonType":({login_type}\d+)"""
+    """"MailAccessType","Value":"({access_type}[^"]+)"}"""
     """exa_regex="Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)"""
     """exa_regex="Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
     """exa_regex="User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*""""
@@ -94,6 +95,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_json_path=$.LogonType,exa_field_name=login_type"""
     """exa_json_path=$.OrganizationName,exa_field_name=company"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
+    """exa_json_path=$..OperationProperties[0].Value,exa_field_name=access_type"""
   ]
   ParserVersion = "v1.0.0"
 

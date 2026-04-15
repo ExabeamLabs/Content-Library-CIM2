@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-json-user-privilege-assign-success-4672-4
     """Account Domain:\s*(\\t|\\r|\\n)*({domain}[^:]+?)\s*(\\t|\\r|\\n)*Logon ID:""",
     """Logon ID:\s*(\\t|\\r|\\n)*({login_id}[^:]+?)\s*(\\t|\\r|\\n)*Privileges:""",
     """Privileges:\s*(\\t|\\r|\\n)*({privileges}.+?)\s*(\\t|\\r|\\n)*(,\d+|\s*$|",)"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 

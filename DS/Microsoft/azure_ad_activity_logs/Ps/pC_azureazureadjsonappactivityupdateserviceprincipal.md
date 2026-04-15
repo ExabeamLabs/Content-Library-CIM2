@@ -9,7 +9,7 @@ Name = azure-azuread-json-app-activity-updateserviceprincipal
     """exa_json_path=$.targetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
     """exa_json_path=$.targetResources[:1].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^@",\s]+))""",
     """exa_json_path=$.targetResources[:1].id,exa_field_name=user_sid""",
-    """exa_json_path=$.callerIpAddress,exa_field_name=src_ip""",
+    """exa_json_path=$.callerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.properties.targetResources[:1].displayName,exa_field_name=principal_name""",
     """exa_json_path=$.properties.targetResources[:1].id,exa_field_name=resource_id""",
     """exa_json_path=$.properties.targetResources[:1].type,exa_field_name=principal_type""",

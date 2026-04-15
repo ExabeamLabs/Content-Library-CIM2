@@ -26,6 +26,7 @@ Fields = [
 """Properties:\s*({properties}.+?)\s+Additional"""
 """Additional Information:\s*(|({attribute}.*?))(\\n)*\s*"""
 """Accesses:\s*((?-i)\\+[rnt])*({access}[^:]+?)\s*((?-i)\\+[rnt])*Access Mask:"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

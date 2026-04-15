@@ -58,6 +58,8 @@ Fields = [
 """\"DestinationComputerDnsName\",\"value\":\"({dest_host}[\w\-.]+)\""""
 """\"DestinationIpAddress\",\"value\":\"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\""""
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
+""""aadTenantId":\s*"({tenant_id}[^"]+)""""
+""""tenantId":\s*"({tenant_id}[^"]+)""""
 
 }
 ```

@@ -25,6 +25,9 @@ Fields = [
   """Object Name:\s*((?-i)\\+[rnt])*(?:|-|({object}[^<>]+?))[\\rnt\s]*Object Handle""",
   """Desired Access:\s*((?-i)\\+[rnt])*({access}[^:]+?)[\\rnt\s]*Privileges:""",
   """Privileges:\s*((?-i)\\+[rnt])*({privileges}[^:<>"=]+?)(\s*<|\s*($|")|\s*\w+=)"""
+  """<Channel>({channel}[^<]+)<\/Channel>"""
+  """"Channel":"({channel}[^"]+)""""
+
 ]
 ParserVersion = "v1.0.0"
 

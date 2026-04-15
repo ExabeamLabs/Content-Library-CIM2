@@ -42,6 +42,7 @@ cef-netskope-web = {
     """"dst_location":\s*"({location}[^"]+)""""
     """"dst_country":\s*"({dest_country}[^"]+)""""
     """"dstport":\s*"({dest_port}\d+)"""
+    """"url":\s*"({url}[^"]+)""""
   
 }
 ```

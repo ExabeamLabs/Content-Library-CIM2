@@ -1,0 +1,19 @@
+#### Parser Content
+```Java
+{
+Name = "commvault-threatwise-str-alert-trigger-success-reconnaissance"
+  Vendor = "Commvault"
+  Product = "Commvault ThreatWise"
+  TimeFormat = "MMM dd HH:mm:ss"
+  Conditions = [ """ traps[""",  """: Reconnaissance :""" ]
+Fields = [
+  """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)""",
+  """\d{2}:\d{2}:\d{2} ({host}[\w\-.]+)\s+""",
+  """({event_category}traps)\[({session_id}\d+)\]({protocol}.+?)\s+\:\s+({service_name}.+?)\s+\:\s+({alert_name}Reconnaissance)\s+\:\s+({interface}.+?)\s+\:\s+({os}.+?)\s+\:\s+\d+\|({additional_info}.+?)\s+\:\s+\d+""",
+  """\|Logon:.*?Domain:\s+({domain}[^\s,]+)\s+\,\s+Username:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+\("""
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

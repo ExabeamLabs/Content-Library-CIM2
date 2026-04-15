@@ -23,12 +23,12 @@ Name = microsoft-defenderep-sk4-process-create-success-processcreated
      """"ProcessIntegrityLevel\\?"+:\s*\\?"+({process_integrity}[^"]+?)\\?"""",
      """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?"""",
      """ProcessId\\?"+:({process_id}\d+)""",
-     """InitiatingProcessFileName\\?"+:\s*\\?"+({process_name}[^"\\\/]+?)\\?"""",
-     """"InitiatingProcessFolderPath"+:\s*"+({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+?))""""
+     """InitiatingProcessFileName\\?"+:\s*\\?"+({parent_process_name}[^"\\\/]+?)\\?"""",
+     """"InitiatingProcessFolderPath"+:\s*"+({parent_process_path}({parent_process_dir}[^"]*?[\\\/]+)?({parent_process_name}[^"\\\/]+?))""""
      """"FileName\\?"+:\s*\\?"+({process_name}[^"]+?)\\?,""""
      """"FolderPath"+:"+({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?))"""",
      """"ProcessCommandLine\\?"+:\s*\\?"\s*({process_command_line}.+?)\s*\\*",""""
-     """\"InitiatingProcessCommandLine\\?\"+:\s*\\?\"\s*({process_command_line}.+?)\s*\\*","\w+":"""
+     """\"InitiatingProcessCommandLine\\?\"+:\s*\\?\"\s*({parent_process_command_line}.+?)\s*\\*","\w+":"""
      """MD5\\?"+:\\?"+({hash_md5}[^"]+?)\\?"""",
      """\[Namespace:\s*({host}({event_hub_namespace}\S+)) ; EventHub name:\s*({event_hub_name}[\w-]+)"""
      """"AccountDomain":"({domain}[^:]+?)",""",
@@ -37,7 +37,8 @@ Name = microsoft-defenderep-sk4-process-create-success-processcreated
      """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)"""",
      """"SHA256":"({hash_sha256}[^",]+)",""",
      """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
-     """"InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+[\\\/]+)?({parent_process_name}[^"\\\/]+))"""",
+     #Below fields is related to grandparent_process, and we currently do not have CIM field to define them
+     #""""InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+[\\\/]+)?({parent_process_name}[^"\\\/]+))"""",
      """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
   ]
 

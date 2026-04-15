@@ -26,6 +26,7 @@ Fields = [
 """DestAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 """DestPort":\s*"({dest_port}\d+)"""
 """SourceAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+""""Channel":"({channel}[^"]+)""""
 """SourcePort":\s*"({src_port}\d+)"""
 """exa_json_path=$.Hostname,exa_field_name=host"""
 """exa_json_path=$.Computer,exa_field_name=host"""
@@ -43,6 +44,7 @@ Fields = [
 """exa_json_path=$..DestPort,exa_field_name=dest_port"""
 """exa_json_path=$..SourceAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 """exa_json_path=$..SourcePort,exa_field_name=src_port"""
+"""exa_json_path=$..Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

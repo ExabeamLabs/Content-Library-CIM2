@@ -1,0 +1,32 @@
+#### Parser Content
+```Java
+{
+Name = openai-chatgpt-json-ai-agent-request-response-compliance
+  ParserVersion = "v1.0.0"
+  Vendor = OpenAI
+  Product = ChatGPT
+  ExtractionType = json
+  TimeFormat = "epoch_sec"
+  Conditions = [ """"object":"compliance.workspace.conversation""", """"workspace_id":""", """"gpt_id":""" ]
+  Fields = [
+    """exa_regex="created_at":({time}\d{10})\.\d+,\"files\""""
+    """exa_json_path=$.workspace_id,exa_field_name=workspace_id"""
+    """exa_json_path=$.message.gpt_id,exa_field_name=ai_agent_id"""
+    """exa_json_path=$.message.parent_id,exa_field_name=parent_message_id"""
+    """exa_json_path=$.message.author.role,exa_field_name=message_author_type"""
+    """exa_json_path=$.message.author.tool_name,exa_field_name=ai_tool_name"""
+    """exa_json_path=$.message.content.value,exa_field_name=llm_request"""
+    """exa_json_path=$.user_email,exa_field_name=email_address"""
+    """exa_json_path=$.user_id,exa_field_name=user_id"""
+    """exa_json_path=$.title,exa_field_name=additional_info"""
+    """exa_json_path=$.object,exa_field_name=event_name"""
+    """exa_json_path=$.message.files.data[*].name,exa_field_name=file_name"""
+    """exa_json_path=$.message.files.data[*].id,exa_field_name=file_id"""
+    """exa_json_path=$.message.files.data[*].download_url,exa_field_name=url"""
+    """exa_json_path=$..action_name,exa_field_name=ai_function_name"""
+    """exa_json_path=$.message.content.annotations[*].action_name,exa_field_name=ai_function_name"""
+    ]
+
+
+}
+```

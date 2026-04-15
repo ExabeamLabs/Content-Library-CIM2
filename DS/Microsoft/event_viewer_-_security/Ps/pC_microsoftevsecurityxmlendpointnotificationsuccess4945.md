@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4945
 	  """<Data Name\\*=('|")RuleId('|")>({rule_id}[^<]+)""",
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

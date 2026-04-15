@@ -22,6 +22,7 @@ Fields = [
 """Logon ID:\s*({login_id}[^\s]+?)[\\n\s]+Session"""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s)"""
 """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
+""""channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

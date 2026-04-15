@@ -19,7 +19,7 @@ Fields = [
 """"AppDisplayName":"\s*({app}[^"]+?)\s*"""",
 """"identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))""""
 """UserDisplayName"+:"+([a-f\d]+(\-[a-f\d]+){4}|({full_name}[^"]+))"""
-"""UserId"+:"+({user_id}[^"]+)"""
+"""UserId"+:"+({user_id}[^",]+)"""
 """"(Device)?(b|B)rowser":"({browser}[^"]+)"""
 """"UserAgent\\*"+:\\*"+(,|({user_agent}[^"]+))"""
 """"(Device)?(o|O)peratingSystem":"({os}[^"]+)"""
@@ -42,6 +42,11 @@ Fields = [
 """"authenticationProtocol\\*":\\*"(none|({auth_method}[^\\"]+))\\*""""
 """"category":\s*"({category}[^"]+)""""
 """"riskLevelAggregated":\s*"(none|({severity}[^"]+))""""
+""""networkType":\s*"({src_network_type}[^"]+)""""
+""""networkNames":\s*\["({src_network_zone}[^"]+)""""
+""","sessionId":"(-|({session_id}[^",]+))""""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)"""
+"""exa_json_path=$..sessionId,exa_field_name=session_id""",
 """exa_regex="+time"+:"+({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}\w+)"+"""
 """exa_regex="TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)"""
 """exa_regex="TIMEGENERATED=({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d.\d\d\d)""""
@@ -87,7 +92,7 @@ Fields = [
 """exa_regex="(app|resource)DisplayName":"({resource}[^"]+)"""",
 """exa_json_path=$.properties.resourceId,exa_field_name=resource""",
 """exa_regex="resultType":\s*"({error_code}\d+)"""",
-"""exa_regex=UserId"+:"+({user_id}[^"]+)"""
+"""exa_regex=UserId"+:"+({user_id}[^",]+)"""
 """exa_regex="(Device)?(b|B)rowser":"({browser}[^"]+)"""
 """exa_regex="UserAgent\\*"+:\\*"+(,|({user_agent}[^"]+))"""
 """exa_regex="(Device)?(o|O)peratingSystem":"({os}[^"]+)"""
@@ -114,6 +119,9 @@ Fields = [
 """exa_json_path=$..servicePrincipalId,exa_field_name=principal_id"""
 """"servicePrincipalId":\s*"({principal_id}[^"]+)""""
 """servicePrincipalName":"({attribute}[^",]+)""""
+"""exa_json_path=$.properties.networkLocationDetails[0].networkType,exa_field_name=src_network_type""",
+"""exa_json_path=$.properties.networkLocationDetails[0].networkNames,exa_field_name=src_network_zone"""
+"""exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

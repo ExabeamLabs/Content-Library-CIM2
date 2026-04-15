@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4755-1
     """<Data Name[^<>]+?TargetSid[^<>]+?>({group_id}[^<]+)""",
     """<Data Name[^<>]+?PrivilegeList[^<>]+?>({privileges}[^<]+?)<""",   
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

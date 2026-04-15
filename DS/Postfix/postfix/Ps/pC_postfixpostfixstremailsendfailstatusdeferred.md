@@ -15,6 +15,7 @@ Name = "postfix-postfix-str-email-send-fail-statusdeferred"
     """\Wto=<({email_recipients}[^\>]+)"""
     """\Wstatus=({result}[^\s]+)\s*\(({additional_info}[^\)]+)"""
     """\Wconnect to\s+({dest_host}[\w\-.]+)\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))?\]:({dest_port}\d+)?:\s*({additional_info}[^$]+)"""
+    """\s*(::ffff:)?({host}[^\s]+)?\s*postfix"""
   ]
   ParserVersion = "v1.0.0"
 

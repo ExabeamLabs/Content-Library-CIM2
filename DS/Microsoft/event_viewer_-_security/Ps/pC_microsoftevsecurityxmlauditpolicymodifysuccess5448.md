@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-success-5448
     """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)""",
     """<Data Name\\*=('|")ChangeType('|")>({operation}[^<]+)</Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

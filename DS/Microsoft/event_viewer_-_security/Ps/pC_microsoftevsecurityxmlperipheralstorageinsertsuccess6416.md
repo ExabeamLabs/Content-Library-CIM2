@@ -22,6 +22,7 @@ Fields = [
 """({operation}({event_name}A new external device was recognized by the system))"""
 """<Level>({run_level}[^<]+)<"""
 """<Data Name =('|")DeviceId('|")>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

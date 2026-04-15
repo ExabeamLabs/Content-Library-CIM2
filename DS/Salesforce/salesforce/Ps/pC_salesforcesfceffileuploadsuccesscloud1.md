@@ -20,8 +20,8 @@ Name = "salesforce-sf-cef-file-upload-success-cloud-1"
     """\WdestinationServiceName =({app}.+?)\s*(\w+=|$)""",
     """CreatedBy.Name\\?=({full_name}[^=]+?);?\w+\\?=""",
     """dproc=({action}[\w-]+)"""
-    """filePath=({file_path}[^=]+?)\s+\w+="""
-    """CEF:([^\|]*\|){5}({operation}resource-uploaded)"""
+    """filePath=({file_id}[^=]+?)\s+\w+="""
+    """CEF:([^\|]*\|){5}({operation}(resource-uploaded|resource-deleted))"""
    ]
 
 

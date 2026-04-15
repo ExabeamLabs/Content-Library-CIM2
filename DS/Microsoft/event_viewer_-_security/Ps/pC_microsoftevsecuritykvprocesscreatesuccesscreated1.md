@@ -53,6 +53,7 @@ Name = microsoft-evsecurity-kv-process-create-success-created-1
     """"NewProcessName\\?":\\?"({process_path}({process_dir}(?:[^";]+)?[\\\/])?({process_name}[^\\\/";]+?))\s*\\?""""
     """SubjectLogonId\\?"+:\\?"+(\\[nrt]|\s)*({login_id}[^\\]+)(\\[nrt]|\s)*\\?""""
     """\"SubjectDomainName\\?":\\?"({src_domain}({domain}[^\\"]+))"""
+    """"Channel\\":\\"({channel}[^\\"]+)"""
   ]
 
 

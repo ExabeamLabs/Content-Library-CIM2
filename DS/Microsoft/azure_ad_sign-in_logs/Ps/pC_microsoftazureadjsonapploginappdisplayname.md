@@ -25,6 +25,7 @@ Fields = [
       """exa_json_path=$..location.countryOrRegion,exa_field_name=location_country""",
       """exa_json_path=$..deviceDetail.operatingSystem,exa_field_name=os""",
       """exa_json_path=$..deviceDetail.browser,exa_field_name=browser"""
+      """exa_json_path=$..deviceDetail.displayName,exa_field_name=host"""
 ]
 ParserVersion = "v1.0.0"
 

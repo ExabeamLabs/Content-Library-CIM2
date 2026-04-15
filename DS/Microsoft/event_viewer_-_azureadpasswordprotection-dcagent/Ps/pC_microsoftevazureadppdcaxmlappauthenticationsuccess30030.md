@@ -16,6 +16,7 @@ Name = microsoft-evazureadppdca-xml-app-authentication-success-30030
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Message>({event_name}[^<\.:]+?)(<|\.|:)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""    
   ]
 
 

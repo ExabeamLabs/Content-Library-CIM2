@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-kv-endpoint-activity-success-4665
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+)\-\d+:\d+\s({host}[^\s]+)""",
     """Application Information:\s+({additional_info}[^@]+?)\s+Status:""",
     """({event_name}An attempt was made to create an application client context)"""
+    """Channel="({channel}[^"]+)"""
   ]
 
 windows-system-info = {
@@ -24,6 +25,7 @@ windows-system-info = {
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
+    """Channel":"({channel}[^"]+)"""
   
 }
 ```

@@ -7,7 +7,7 @@ Vendor: Fortinet
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  10   |   0    |         6          |       3        |    2    |
+|  10   |   0    |         6          |       3        |    0    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

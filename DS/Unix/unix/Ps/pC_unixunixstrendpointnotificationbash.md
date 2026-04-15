@@ -11,6 +11,7 @@ Name = unix-unix-str-endpoint-notification-bash
     """({time}\w+\s*\d+ \d\d:\d\d:\d\d)\s*({host}[^\s]+)\s*bash\[""",
     """bash\[({process_id}\d+)\]:\s*({additional_info}.+?)\s*$""",
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s+""",
+    """({time}\w+\s*\d+ \d\d:\d\d:\d\d)\s*(\d+|({host}[^\s]+))\s*kernel:"""
   ]
 
 

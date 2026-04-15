@@ -23,6 +23,7 @@ json-windows-system-info = {
     """"SubjectUserSid":"({user_sid}[^"]+)""",
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
+    """Channel":"({channel}[^"]+)"""
   
 }
 ```

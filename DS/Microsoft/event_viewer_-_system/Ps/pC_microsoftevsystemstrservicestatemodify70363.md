@@ -11,6 +11,7 @@ Name = microsoft-evsystem-str-service-state-modify-7036-3
    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}[\+\-]\d{1,2}:\d{1,2})(\s({host}[\w\-.]+)\s)?""",
    """({time}\w+\s\d+\s\d+:\d+:\d+\s\d+)""",
    """\w+\s\d+\s\d+:\d+:\d+\s({host}[^\s]+)\sMSWinEventLog""",
+   """Service Control Manager(\s+[^\s"]+){3}\s+({host}[\w.-]+)""",
    """\s({event_code}7036)\s""",
    """({event_name}The.+?)\s*("|$)"""
    """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""

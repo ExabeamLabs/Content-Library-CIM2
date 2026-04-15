@@ -25,6 +25,7 @@ Fields = [
   """"ObjectName":"+(?:({file_dir}.+?)\\+[^\\]+)","HandleId""""
   """"ProcessName":"({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+))""""
   """Access Request Information:[rnt\\]*Accesses:[rnt\\]*({access}[^:]+?)[rnt\\]*Access Mask:[rnt\\]*({access_mask}\w+)"""
+  """"Channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

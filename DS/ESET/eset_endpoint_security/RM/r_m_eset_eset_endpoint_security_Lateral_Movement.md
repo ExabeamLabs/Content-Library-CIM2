@@ -7,7 +7,7 @@ Vendor: ESET
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   4   |   0    |         5          |       4        |    5    |
+|   4   |   0    |         5          |       4        |    2    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

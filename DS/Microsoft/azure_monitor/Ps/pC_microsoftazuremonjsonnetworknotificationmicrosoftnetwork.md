@@ -22,6 +22,7 @@ Name = microsoft-azuremon-json-network-notification-microsoftnetwork
     """exa_json_path=$..RuleCollectionGroup,exa_field_name=rule_source""",
     """exa_json_path=$..Policy,exa_field_name=policy_name""",
     """exa_json_path=$..PolicyType,exa_field_name=policy_type"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = v1.0.0
 

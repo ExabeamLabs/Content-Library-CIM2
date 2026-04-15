@@ -19,6 +19,7 @@ Name = microsoft-evdnsserver-xml-network-notification-6001
      """Guid\\*=('|")\{({process_guid}[^}']+?)\}'""",
      """ProcessID\\*=('|")({process_id}\d+)""",
      """<Level>({run_level}[^<]+)<"""
+     """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
 
 

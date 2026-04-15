@@ -32,6 +32,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
 """"(ProcessId)":"*({process_id}[^",]*)""",
 """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))"""",
 """"IpAddress":"(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+""""Channel":"({channel}[^"]+)"""
 
       """exa_json_path=$.TimeGenerated,exa_field_name=time"""
       """exa_json_path=$.@timestamp,exa_field_name=time"""
@@ -57,6 +58,7 @@ Name = "microsoft-evsecurity-json-user-switch-success-4648"
       """exa_json_path=$..ProcessID,exa_regex=({process_id}[^",]*)"""
       """exa_json_path=$..ProcessName,exa_regex=(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))$"""
       """exa_json_path=$.IpAddress,exa_regex=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""
+      """exa_json_path=$..channel,exa_field_name=channel"""
 
   ]
 

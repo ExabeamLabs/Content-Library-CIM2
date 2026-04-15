@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-endpoint-start-4608-1
     """Guid\\*=('|")\{({process_guid}[^\'"\}]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ] 
 
 

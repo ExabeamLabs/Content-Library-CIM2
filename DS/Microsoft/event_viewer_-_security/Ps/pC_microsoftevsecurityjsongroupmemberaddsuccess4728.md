@@ -30,6 +30,7 @@ Fields = [
 """TargetSid\\?"+:\\?"+({group_id}[^\\]+)\\?""""
 """TargetUserName\\?"+:\\?"+({group_name}[^\\]+)\\?""""
 """TargetDomainName\\?"+:\\?"+({group_domain}[^\\]+)\\?""""
+""""channel\\?":\\?"({channel}[^"\\]+)"""
 ]
 ParserVersion = "v1.0.0"
 

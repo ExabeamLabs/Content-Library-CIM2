@@ -31,6 +31,7 @@ Name = microsoft-evsecurity-xml-handle-request-4659
     """Accesses:\s*(-|({access}[^\s]+))\s*"""
     """Process ID:\s*({process_id}\S+)\s+"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -13,15 +13,15 @@ duo-app-activity-1 = {
     """"time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)"""",
     """destinationServiceName =({app}\S+)"""
     """"timestamp"\s*:\s*({time}\d{10})""",
-    """"event-name":"({event_name}[^"]+)"""",
-    """"action":"({operation}[^"]+)"""",
+    """"event-name":\s*"({event_name}[^"]+)"""",
+    """"action":\s*"({operation}[^"]+)"""",
     """"description":\s*"\{({additional_info}[^"]+?)\}",""",
-    """"username":"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"object":"({object}[^"]+)"""",
+    """"username":\s*"(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"object":\s*"({object}[^"]+)"""",
     """"error":\s*"({failure_reason}[^"]+)""",
     """"email\\"+:\s*\\"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\"""",
     """"ip_address"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"src-application-name":"({app}[^"]+)""""
+    """"src-application-name":\s*"({app}[^"]+)""""
   
 }
 ```

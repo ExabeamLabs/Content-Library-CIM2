@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-group-create-4754
     """EventType="*({result}[^"\s]+)""",
     """<Level>({run_level}[^<]+)<""",
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)<\/Data>"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -5,7 +5,7 @@ Name = cyberark-vault-kv-rdp-traffic-success-psmconnect-1
   Conditions = [ """%CYBERARK:""", """Message="PSM Connect"""", """;Safe=""" ]
   Fields = ${CyberArkParsersTemplates.s-cyberark-events.Fields}[
     """;UserName ="(|(({domain}[^\s\\"]+)\\+)?({account}[^\s\\"]+))"""",
-    """;LogonDomain="(|[\d\.]+|({account_domain}[^"]+?))"""",
+    """;LogonDomain="(|[\d\.]+|({account_domain}[^";]+?))"""",
   ]
   ParserVersion = v1.0.0
 

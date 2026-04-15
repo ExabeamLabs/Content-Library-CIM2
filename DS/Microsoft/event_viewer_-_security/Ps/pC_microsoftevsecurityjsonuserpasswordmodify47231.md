@@ -22,6 +22,7 @@ Fields = [
   """"TargetSid":"({dest_user_sid}[^"]+)"""
   """"TargetUserName":"({dest_user}[^"]+)"""
   """"TargetDomainName":"({dest_domain}[^"]+)"""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -4,14 +4,14 @@ Product: HCL Notes
 ------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  40   |   17   |         7          |       3        |    3    |
+|  40   |   17   |         7          |       3        |    0    |
 
-|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  network-traffic:success (network-connection-successful)<br> ↳[ibm-ln-str-network-traffic-success-connected](Ps/pC_ibmlnstrnetworktrafficsuccessconnected.md)<br>    | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>39 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_ibm_hcl_notes_Lateral_Movement.md) |
-|    [Malware](../../../UseCases/uc_malware.md)    |  network-traffic:success (network-connection-successful)<br> ↳[ibm-ln-str-network-traffic-success-connected](Ps/pC_ibmlnstrnetworktrafficsuccessconnected.md)<br>    | TA0011 - TA0011<br>    | [<ul><li>3 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Malware.md)    |
-|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  file-download:success (file-download)<br> ↳[ibm-hclnotes-str-file-download-success-pulling](Ps/pC_ibmhclnotesstrfiledownloadsuccesspulling.md)<br><br> file-upload:success (file-upload)<br> ↳[ibm-hclnotes-str-file-upload-success-pushing](Ps/pC_ibmhclnotesstrfileuploadsuccesspushing.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Privilege_Abuse.md)    |
-| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  file-download:success (file-download)<br> ↳[ibm-hclnotes-str-file-download-success-pulling](Ps/pC_ibmhclnotesstrfiledownloadsuccesspulling.md)<br><br> file-upload:success (file-upload)<br> ↳[ibm-hclnotes-str-file-upload-success-pushing](Ps/pC_ibmhclnotesstrfileuploadsuccesspushing.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Privileged_Activity.md)    |
+|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  network-connection-successful<br> ↳[ibm-ln-str-network-traffic-success-connected](Ps/pC_ibmlnstrnetworktrafficsuccessconnected.md)<br>    | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>39 Rules</li></ul><ul><li>17 Models</li></ul>](RM/r_m_ibm_hcl_notes_Lateral_Movement.md) |
+|    [Malware](../../../UseCases/uc_malware.md)    |  network-connection-successful<br> ↳[ibm-ln-str-network-traffic-success-connected](Ps/pC_ibmlnstrnetworktrafficsuccessconnected.md)<br>    | TA0011 - TA0011<br>    | [<ul><li>3 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Malware.md)    |
+|     [Privilege Abuse](../../../UseCases/uc_privilege_abuse.md)     |  file-download<br> ↳[ibm-hclnotes-str-file-download-success-pulling](Ps/pC_ibmhclnotesstrfiledownloadsuccesspulling.md)<br><br> file-upload<br> ↳[ibm-hclnotes-str-file-upload-success-pushing](Ps/pC_ibmhclnotesstrfileuploadsuccesspushing.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Privilege_Abuse.md)    |
+| [Privileged Activity](../../../UseCases/uc_privileged_activity.md) |  file-download<br> ↳[ibm-hclnotes-str-file-download-success-pulling](Ps/pC_ibmhclnotesstrfiledownloadsuccesspulling.md)<br><br> file-upload<br> ↳[ibm-hclnotes-str-file-upload-success-pushing](Ps/pC_ibmhclnotesstrfileuploadsuccesspushing.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_ibm_hcl_notes_Privileged_Activity.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

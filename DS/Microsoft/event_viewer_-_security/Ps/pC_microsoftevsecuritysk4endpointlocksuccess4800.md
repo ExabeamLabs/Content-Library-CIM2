@@ -13,6 +13,7 @@ Name = microsoft-evsecurity-sk4-endpoint-lock-success-4800
     """"TargetUserName":"({dest_user}[^"]+)"""",
     """"TargetDomainName":"({dest_domain}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)"""",
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -27,6 +28,7 @@ json-windows-events-3 = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
+    """Channel"?(:|=)"?({channel}[^"<]+)"""
   
 }
 ```

@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-log-clear-success-1102-1
     """Client IP: ({src_ip}[a-fA-F:\.\d]+)""",
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

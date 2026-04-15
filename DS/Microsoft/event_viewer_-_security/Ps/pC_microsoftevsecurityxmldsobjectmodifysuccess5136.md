@@ -27,6 +27,7 @@ Fields = [
 """<Level>({run_level}[^<]+)<"""
 """AttributeValue("|')>({attribute_value}[^"'<]+)</Data>"""
 """<Data Name(\\)?=('|")OperationType('|")>({operation_type}[^<]+)"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

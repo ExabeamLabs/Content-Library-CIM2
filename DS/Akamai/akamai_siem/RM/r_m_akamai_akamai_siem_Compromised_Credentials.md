@@ -7,7 +7,7 @@ Vendor: Akamai
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  63   |   31   |         15         |       3        |    2    |
+|  63   |   31   |         15         |       3        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

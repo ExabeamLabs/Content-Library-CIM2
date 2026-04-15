@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-json-user-password-modify-4723-3
       """"Source_Logon_ID":"({login_id}[^"]+)""",
       """"UserIDDst":"({dest_user}[^"]+)""",
       """"action":"({result}[^"]+)"""
+      """"Channel":"({channel}[^"]+)"""
     ]
     ParserVersion = "v1.0.0"
   

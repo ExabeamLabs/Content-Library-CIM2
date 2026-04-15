@@ -28,6 +28,7 @@ Fields = [
 """"displayName"[^\}]+newValue":\s*"\\"?({group_id}[^\\"]+)\\"?","displayName":"Group.ObjectID""""
 """"Category":\s*"({category}[^"]+)""""
 """targetResources"+:\s*\[\{"+id"+:\s*"+({account_id}[^",]+)"""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)"""
 """exa_json_path=$.TimeGenerated,exa_field_name=time"""
 """exa_json_path=$.time,exa_field_name=time"""
 """exa_regex="userPrincipalName(\\)?":\s*(\\)?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
@@ -46,6 +47,7 @@ Fields = [
 """exa_regex="displayName"[^\}]+Group\.ObjectID"[^\}]+newValue":\s*"\\"?({group_id}[^\\"]+)\\"?""""
 """exa_regex="displayName"[^\}]+newValue":\s*"\\"?({group_id}[^\\"]+)\\"?","displayName":"Group.ObjectID""""
 """exa_json_path=$.Category,exa_field_name=category"""
+"""exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

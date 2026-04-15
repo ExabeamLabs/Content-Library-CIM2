@@ -4,7 +4,7 @@
 Name = accellion-kw-str-app-login-success-sessionstarted
   ParserVersion = v1.0.0
   Product = Kiteworks
-  Conditions = [ """Session started""", """Activity:""" ]
+  Conditions = [ """Session started""", """Activity:""", """ id=""" ]
 
 q-kiteworks-file-activity = {
     Vendor = Accellion

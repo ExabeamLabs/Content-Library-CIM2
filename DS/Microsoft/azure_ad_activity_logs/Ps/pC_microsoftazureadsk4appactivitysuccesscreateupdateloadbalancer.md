@@ -19,6 +19,7 @@ cef-azure-audit {
        """"type":\s*"({additional_info}[^"]+)""",
        """"Resource":\s*"({object}({resource}[^"]+))""",
        """"ResourceId":\s*"({resource_id}[^",]+)""",
+       """"TenantId":\s*"({tenant_id}[^"]+)""""
      
 }
 ```

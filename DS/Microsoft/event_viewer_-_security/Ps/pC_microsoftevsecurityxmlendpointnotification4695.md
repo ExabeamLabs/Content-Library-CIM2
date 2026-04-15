@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4695
     """Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """({event_name}Unprotection of auditable protected data was attempted)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

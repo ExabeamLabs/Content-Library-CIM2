@@ -33,6 +33,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """"eventRecordID":"({event_id}\d+)""""
     """keywords":\["({result}[^"]+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

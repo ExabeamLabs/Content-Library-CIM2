@@ -32,6 +32,7 @@ windows-events-2 = {
    """"message"+:"+({additional_info}[^"]+)""",
    """"ProviderName"+:"+({provider_name}[^"]+)""",
    """"logon_information.logon_type"+:"+({login_type}\d+)"""
+   """channel="({channel}[^"]+)"""
 
    """exa_json_path=$.log.timestamp,exa_field_name=time"""
    """exa_json_path=$.log.jsonPayload.EventID,exa_field_name=event_code"""

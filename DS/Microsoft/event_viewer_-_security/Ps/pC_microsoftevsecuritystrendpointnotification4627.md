@@ -21,7 +21,7 @@ Name = microsoft-evsecurity-str-endpoint-notification-4627
     """Subject:[^"]+?Account Domain:\s*(-|({account_domain}[^\s]+))""",
     """Subject:[^"]+?Logon ID:\s*({login_id}[^\s]+)""",
     """New Logon:[^"]+?Security ID:\s*((NT AUTHORITY|([^\\:]+))\\+)?(SYSTEM|ANONYMOUS|({user_sid}[^:\s]+))\s[^:]*?Account Name:""",
-    """New Logon:[^"]+?Account Name:\s*(SYSTEM|ANONYMOUS|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\w+\s\w+:""",
+    """New Logon:[^"]+?Account Name:\s*(SYSTEM|ANONYMOUS|(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*\w+\s\w+:""",
     """New Logon:[^"]+?Account Domain:\s*(NT AUTHORITY|({domain}[^\s]+))""",
     """New Logon:[^"]+?Logon ID:\s*({login_id}[^\s]+)""",
 # DL Fields are removed

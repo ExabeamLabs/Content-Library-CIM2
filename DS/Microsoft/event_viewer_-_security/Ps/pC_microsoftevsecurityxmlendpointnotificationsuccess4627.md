@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4627
     """<EventRecordID>({event_id}\d+)""",
     """<Data Name\\*=('|")TargetDomainName('|")>({dest_domain}({domain}[^<]+))<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 # user_groups is removed
   ]
 

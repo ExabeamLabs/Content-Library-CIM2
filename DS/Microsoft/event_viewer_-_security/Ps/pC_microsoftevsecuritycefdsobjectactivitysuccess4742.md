@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-cef-ds-object-activity-success-4742
     """UserAccountControl":"(-|({uac_status}[^"]+))","UserParameters""""
     """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
     """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
+    """"channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-json-share-access-success-5145
     """"Computer":"({dest_host}({host}[\w\-\.]+))""""
     """"SubjectUserName":"({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectDomainName":"({src_domain}({domain}[^"]+))""""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 json-windows-events-4 = {
@@ -28,6 +29,7 @@ json-windows-events-4 = {
     """"Activity":"\d+\s\-\s({event_name}[^"]+)"""",
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""""
+    """"Channel":"({channel}[^"]+)"""
   
 }
 ```

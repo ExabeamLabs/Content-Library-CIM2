@@ -8,7 +8,7 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Conditions = [ """"scan":""", """"indexed":""", """"synopsis":""", """"hostname":""", """"publication_date":""", """"exploit_available":""" ]
   Fields = [
-    """started_at"+:\s*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """last_found"+:\s*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"indexed"+:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """"hostname"+:\s*"+({host}[^"]+)""",
     """"+ipv4"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -25,7 +25,7 @@ Name = tenable-t-sk4-alert-trigger-success-dcerpcservice-1
     """"state"+:\s*"+({alert_status}[^"]+)""",
     """"solution"+:\s*"+(n\/a|({solution}[^"]+))"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
-    """exa_json_path=$.scan.started_at,exa_field_name=time"""
+    """exa_json_path=$..last_found,exa_field_name=time"""
     """exa_json_path=$.scan.indexed,exa_field_name=time"""
     """exa_json_path=$.asset.hostname,exa_field_name=host"""
     """exa_json_path=$.plugin.name,exa_field_name=alert_name"""

@@ -21,7 +21,7 @@ json-defender-atp {
      """ActionType":\s*"({operation}({action}[^"]+))""",
      """"DeviceId":"({device_id}[^"]+)"""",
      """DeviceName":\s*"({dest_host}({host}[\w\-.]+))""",
-     """InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)"|({full_name}[^"]+))""",
+     """"InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""",
      """InitiatingProcessAccountSid":\s*"({user_sid}[^"]+)""",
      """InitiatingProcessFileName":\s*"({process_name}[^"]+)"""",
      """"InitiatingProcessFolderPath":\s*"(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))""""
@@ -57,7 +57,7 @@ json-defender-atp {
      """exa_json_path=$..ActionType,exa_field_name=operation"""
      """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
      """exa_json_path=$..DeviceName,exa_field_name=host"""
-     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))"""
+     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""
      """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
      """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""
      """exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))$"""

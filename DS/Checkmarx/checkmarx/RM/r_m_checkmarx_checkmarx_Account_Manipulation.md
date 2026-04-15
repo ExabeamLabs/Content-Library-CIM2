@@ -7,7 +7,7 @@ Vendor: Checkmarx
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  39   |   15   |         6          |       5        |    7    |
+|  39   |   15   |         6          |       5        |    1    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

@@ -36,6 +36,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-1
       """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """exa_json_path=$.Account,exa_regex=(({src_domain}({domain}[^"]+?))[\\\/]+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
+      """"Channel":"({channel}[^"]+)"""
       """exa_regex=({event_code}4688)"""
       """exa_regex=({event_name}A new process has been created)"""
       """exa_json_path=$.Activity,exa_field_name=event_name"""
@@ -53,6 +54,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-1
       """exa_json_path=$..ComputerName,exa_field_name=host"""
       """exa_json_path=$..ComputerName,exa_field_name=src_host"""
       """exa_json_path=$..ParentProcessName,exa_regex=({parent_process_path}({parent_process_dir}[^"]+[\\\/]+)?({parent_process_name}[^"\\\/]+))"""
+      """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
 

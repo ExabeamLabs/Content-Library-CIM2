@@ -1,0 +1,26 @@
+#### Parser Content
+```Java
+{
+Name = dell-powerstore-str-audit-event-success
+    Vendor = "Dell"
+    Product = "PowerStore"
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    ParserVersion = "v1.0.0"
+    Conditions = [ """[PowerStore_audit_event@""", """resource_type=""", """status=""","""user="""]
+    Fields = [
+        """\s({host}\S+)\s\[\d+\]:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})""",
+        """id="({event_id}[^"]+)""""
+        """\suser="(not applicable|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+        """\sresource_type="(None|({resource_type}[^"]+))""""
+        """\saction="(None|({operation}[^"]+))""""
+        """\sclient_ip="(None|({src_ip}(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)))""""
+        """\sappliance="(None|({device_name}[^"]+))""""
+        """\sstatus="(None|({result}[^"]+))"\]\s*({additional_info}[^.]+)""",
+        """User\s"([\w.-]+)"\slogged in successfully using\s({auth_method}[^.]+)""",
+        """({event_category}[^\s]+)\s+\[PowerStore_audit_event@""",
+        """executed the service script command\[({scriptblock_text}[^\]]+)\s+from\s+({src_host}[\w\-.]+)\s+via\s+({command_module}[^.]+)"""
+    ]
+
+
+}
+```

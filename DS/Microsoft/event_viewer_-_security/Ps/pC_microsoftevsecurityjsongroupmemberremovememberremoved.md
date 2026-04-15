@@ -27,6 +27,7 @@ Name = "microsoft-evsecurity-json-group-member-remove-memberremoved"
     """"TargetUserName":"({group_name}[^"]+)""",
     """"TargetDomainName":"({group_domain}[^"]+)""",
     """"TargetSid":"({group_id}[^"]+)"""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

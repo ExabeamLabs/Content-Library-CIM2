@@ -6,6 +6,7 @@ Product = Kiteworks
 Conditions = [
   """Added new permission"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

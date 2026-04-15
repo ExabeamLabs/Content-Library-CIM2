@@ -24,6 +24,7 @@ Fields = [
 """({operation}({event_name}A request was made to disable a device.))"""
 """<Level>({run_level}[^<]+)<"""
 """<Data Name =('|")DeviceId('|")>USB\\+VID_({device_vid}[^&]+)&(amp;)?PID_({device_pid}[^\\&]+)""""
+"""<Channel>({channel}[^<]+)<"""
 ]
 
 

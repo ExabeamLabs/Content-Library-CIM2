@@ -25,6 +25,7 @@ Fields = [
 """\s+Category:\s+({audit_category}.+?)\s+Subcategory:"""
 """\s+Subcategory:\s+({sub_category}.+?)\s+Subcategory GUID:"""
 """\s+Changes:\s+({audit_policy_name}.*?)\s*(\||\d|<|\",)"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

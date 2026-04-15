@@ -4,7 +4,7 @@
 Name = "microsoft-windows-xml-log-clear-success-104"
 Vendor = "Microsoft"
 Product = "Event Viewer - System"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
 Conditions = [ """<EventID>104<""", """<Provider Name =""" ]
 Fields = [
 """<EventID>({event_code}\d+)"""

@@ -9,8 +9,8 @@ Name = google-workspace-cef-app-activity-success-audit
   Conditions = [ """CEF:""", """destinationServiceName =Google Apps""", """cat=audit""", """dproc=Gmail Logs""" ]
   Fields = [
   """"timestamp_usec":({time}\d{10,13})""",
-  """"destination":\[\{"address":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-  """"source":\{"address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+  """"destination":\[\{"address":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+  """"source":\{"address":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
   """"subject":"({email_subject}[^"]+)"""",
   """"selector":"({operation}[^"]+)""",
   """"success":({result}true|false)""",
@@ -21,7 +21,7 @@ Name = google-workspace-cef-app-activity-success-audit
   """"action_type":({result_code}\d+)"""
   """"service":"({service_name}[^"]+)"""
   """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+""",
-  """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+  """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
   """"attachment":\[[^\}]+"file_name":"({email_attachment}[^\}]+?)"(,|\})"""
   ]
 

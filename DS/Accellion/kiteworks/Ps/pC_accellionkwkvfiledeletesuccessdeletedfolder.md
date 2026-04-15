@@ -6,6 +6,7 @@ Product = Kiteworks
 Conditions = [
   """Deleted folder"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

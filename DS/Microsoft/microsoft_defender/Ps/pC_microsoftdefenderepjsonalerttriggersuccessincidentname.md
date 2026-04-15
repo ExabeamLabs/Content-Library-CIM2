@@ -4,7 +4,7 @@
 Name = microsoft-defenderep-json-alert-trigger-success-incidentname
   Vendor = Microsoft
   Product = Microsoft Defender
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSZ"]
   ExtractionType = json
   Conditions = [ """"assignedTo":""", """"classification":""", """"determination":""", """"redirectIncidentId":""", """"severity":""", """"status":"""
  ]
@@ -21,6 +21,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-incidentname
    """exa_json_path=$.displayName,exa_field_name=event_name"""
    """exa_json_path=$.id,exa_field_name=alert_id"""
    """exa_json_path=$.incidentWebUrl,exa_field_name=additional_info"""
+   """exa_regex="detectionSource":\s*"({alert_source}[^"]+)""""
   ]
    ParserVersion = v1.0.0
 

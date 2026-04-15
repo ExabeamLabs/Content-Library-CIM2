@@ -6,7 +6,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-10014
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>10014</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent""", """ UserName:""", """The changed password for the specified user was validated as compliant with the current Azure password policy""" ]
+  Conditions = [ """<EventID>10014</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent"""]
   Fields = [
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
@@ -19,6 +19,7 @@ Name = microsoft-azuread-xml-user-password-modify-success-10014
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Message>({additional_info}[^<]+?)\s+</Message>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
 
 

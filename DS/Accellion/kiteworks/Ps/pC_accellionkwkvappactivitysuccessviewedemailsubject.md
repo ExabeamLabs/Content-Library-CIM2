@@ -6,6 +6,7 @@ Product = Kiteworks
 Conditions = [
   """Viewed an e-mail Subject"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

@@ -25,6 +25,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720"
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({src_domain}({domain}[^<]+))</Data>""",
 """<Data Name\\*=('|")SubjectLogonId('|")>(?=\w)({login_id}[^<]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
   ]
 
 

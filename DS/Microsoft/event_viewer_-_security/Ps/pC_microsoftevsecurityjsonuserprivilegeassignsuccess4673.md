@@ -18,6 +18,7 @@ Fields = [
   """"ProcessName":"(?: |({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/"]+?)))",""",
   """"ObjectServer":"({object_server}[^"]*)""",
   """"PrivilegeList":"({privileges}[^"]*)"""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

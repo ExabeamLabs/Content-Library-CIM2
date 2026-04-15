@@ -29,6 +29,7 @@ Name = microsoft-evapp-xml-log-clear-success-1102
     """Client IP: ({src_ip}[a-fA-F:\.\d]+)""",
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
 
 

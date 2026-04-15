@@ -7,7 +7,7 @@ Vendor: Password Manager Pro
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  35   |   14   |         5          |       8        |   10    |
+|  35   |   14   |         5          |       8        |    2    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

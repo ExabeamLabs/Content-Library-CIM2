@@ -15,9 +15,9 @@ Name = aimsecurity-aisecurity-json-ai-agent-request-aimsecurity
     """exa_json_path=$.detections..policy_name,exa_field_name=policy_name"""
     """exa_json_path=$.detections..risk,exa_field_name=severity"""
     """exa_json_path=$.intent,exa_field_name=category"""
-    """exa_json_path=$.user_prompt,exa_field_name=additional_info"""
-    """exa_json_path=$.llm_response,exa_field_name=more_info"""
     """exa_json_path=$.chat_session_id,exa_field_name=session_id"""
+    """exa_json_path=$.user_prompt,exa_field_name=llm_request"""
+    """exa_json_path=$.llm_response,exa_field_name=llm_response"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -19,6 +19,7 @@ Name = microsoft-evsystem-xml-log-disable-6006
     """ProcessID\\*=('|")({process_id}\d+)""",
     """Provider Name:\s*({provider_name}.+?)\s+Algorithm Name:""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

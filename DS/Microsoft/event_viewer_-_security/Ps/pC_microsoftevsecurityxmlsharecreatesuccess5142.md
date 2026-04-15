@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-share-create-success-5142
     """<Keyword>({result}[^<]+)<\/Keyword>"""
     """({event_name}A network share object was added)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

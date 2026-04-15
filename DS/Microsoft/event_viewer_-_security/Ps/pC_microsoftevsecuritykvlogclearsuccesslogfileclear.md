@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-log-clear-success-logfileclear
     """ThreadID\\*=('|")({thread_id}\d+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)"""
     """<Security UserID=('|")({user_sid}S-[^<]+)('|")"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

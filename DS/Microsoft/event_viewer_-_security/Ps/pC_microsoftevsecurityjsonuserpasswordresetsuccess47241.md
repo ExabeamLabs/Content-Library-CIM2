@@ -36,6 +36,7 @@ Fields = [
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
 """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$"""
+"""exa_json_path=$..channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

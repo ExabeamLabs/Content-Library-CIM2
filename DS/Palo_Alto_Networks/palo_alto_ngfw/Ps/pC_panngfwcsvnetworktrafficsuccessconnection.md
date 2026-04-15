@@ -29,8 +29,8 @@ pan-csv-threat = {
     """,THREAT,([^,]*,){5}({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """,THREAT,([^,]*,){6}({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """THREAT,([^,]*,){7}({rule}[^,]+?)\s*,"""
-   """,THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\*)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),"""
-    """,THREAT,([^,]*,){9}\s*(({dest_email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({dest_domain}[^\s,\\]+)\\*)?({dest_user}[^\s,]+)),"""
+    """,THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),"""
+    """,THREAT,([^,]*,){9}\s*(({dest_email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({dest_domain}[^\s,\\]+)\\+)?({dest_user}[^\s,]+)),"""
     """,THREAT,([^,]*,){10}({alert_source}({network_app}({app}[^,]+))),""",
     """,THREAT,([^,]*,){11}({virtual_station_name}[^,]+),""",
     """,THREAT,([^,]*,){12}({src_network_zone}[^,]+?)\s*,"""
@@ -49,9 +49,13 @@ pan-csv-threat = {
     """,THREAT,([^,]*,){27}([\\"]*(({url}({malware_url}[^<>".,]+(?:\.[^<>\/\s,]+)?\/[^<>]*?))|({file_name}({malware_file_name}[^<>,]+?)|[^,]*?)[\\\/]*"+,))"""
     """,THREAT,([^,]*,){28}(|({alert_name}[^\(,]+(\(\w+\))?))\s*\(({alert_id}\d+)?""",
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+\d+,"""
+    """\d+:\d+:\d\d[\+-]\d+:\d+\s+({host}[\w.-]+)\s"""
     """,THREAT,([^,]*,){65}({threat_category}[^,]+),"""
     """,((?:1969-[^,]+?)|({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+[\+-]\d+:\d+)),"""
-    """,({threat_id}[^,]+)?,({categories}({category}[^,]+))?,({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}({src_location}[^,]+)?,((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({dest_country}[a-zA-Z]+[^,]+))?,(([^,]*,){35}"+\s*({=categories}({=category}[^,\n"]+)\s*[^"]*)"+,)?"""
+    """,(low|medium|high|critical|informational),([^,]*,){4}(0|({dest_country}[a-zA-Z]+[^,]+)),"""
+    """,({threat_id}[^,]+),([^,]*),(low|medium|high|critical|informational),"""
+    """,({categories}({category}[^,]+)),({severity}({alert_severity}(low|medium|high|critical|informational))),"""
+    """,({severity}({alert_severity}(low|medium|high|critical|informational))),({direction}[^,]+)?,([^,]*,){2}((\d+\.){3}\d+\-(\d+\.){3}\d+|0|({src_location}[a-zA-Z]+[^,]+))?,(([^,]*,){36}"+\s*({categories}({category}[^,\n"]+)\s*[^"]*)"+,)?"""
   
 }
 ```

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-ds-replication-modify-4931
         """<Data Name\\*=('|")DestinationDRA('|")>.+?CN=({dest_dra}[^<]+)""",
         """<Data Name\\*=('|")SourceDRA('|")>.+?CN=({src_dra}[^<]+)"""
         """<Level>({run_level}[^<]+)<"""
+        """<Channel>({channel}[^<]+)<"""
 	]
 
 

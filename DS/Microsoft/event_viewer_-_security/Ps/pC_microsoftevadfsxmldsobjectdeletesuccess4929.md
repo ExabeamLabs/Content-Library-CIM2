@@ -25,6 +25,7 @@ Name = microsoft-evadfs-xml-ds-object-delete-success-4929
     """<Level>({run_level}[^<]+)<"""
     """<Data Name =('|")StatusCode('|")>({result_code}[^<]+)""",
     """<Data Name =('|")SourceAddr('|")>({additional_info}[^<\.]+)"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
 
 

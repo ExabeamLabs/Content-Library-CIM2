@@ -32,6 +32,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """"Status_string":"({failure_code}({result_code}[^"]+))"""",
     """"(Status|TicketOptions)\\*":\\*"({failure_code}({result_code}[^"\\]*))"""
     """"((IpAddress)|(ip))\\*":\\*"(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\*""""
+    """"channel\\?":\\?"({channel}[^"\\]+)"""
     """exa_regex=({event_name}Kerberos pre-authentication failed)""",
     """exa_json_path=$..systemTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$..EventTime,exa_field_name=time""",
@@ -56,6 +57,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-fail-4771"
     """exa_json_path=$..TicketOptions,exa_field_name=failure_code""",
     """exa_json_path=$..IpAddress,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$""",
     """exa_json_path=$..ip,exa_regex=^(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?$"""
+    """exa_json_path=$..channel,exa_field_name=channel"""
   ]
 
 

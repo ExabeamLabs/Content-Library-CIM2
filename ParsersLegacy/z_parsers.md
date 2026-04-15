@@ -1,6 +1,10 @@
 | Old Parser Name                          | New-Scale Parser Name                                               |
 | ---------------------------------------- | ------------------------------------------------------------------- |
 | zebra-wlm-system-info                    | extremenetworks-zwlanm-str-endpoint-notification-success-filesystem |
+| zeek-app-activity                        | zeek-z-json-app-activity-success-ldapunbind                         |
+| zeek-app-activity-1                      | zeek-z-json-app-activity-success-ldapbindsimple                     |
+| zeek-authentication-success              | zeek-z-json-endpoint-authentication-success-ldapbindsasl            |
+| zeek-authentication-success-1            | zeek-z-json-endpoint-authentication-success-ldapbind                |
 | zimperium-mobile-endpoint-security-alert | zimperium-mtd-json-alert-trigger-success-threatuuid                 |
 | zoom-login                               | zoom-z-sk4-app-login-success-signin                                 |
 | zoom-meeting-created                     | zoom-z-json-meeting-create-success-created                          |

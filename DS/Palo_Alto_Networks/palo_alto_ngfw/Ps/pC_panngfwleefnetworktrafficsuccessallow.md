@@ -43,7 +43,6 @@ Fields = [
   """EgressInterface=({dest_interface}[^\|]+)"""
   """Application=({network_app}[^\|]+)"""
   """SerialNumber=({serial_num}\d+)"""
-  """Application=({action}(incomplete|insufficient-data))\|"""
 ]
 ParserVersion = "v1.0.0"
 

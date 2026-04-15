@@ -45,6 +45,7 @@ azure-activity-json = {
       """exa_json_path=$._ResourceId,exa_field_name=resource_id"""
       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
       """exa_regex="_?resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?\/[^"]+)""""
+      """exa_json_path=$.Channel,exa_field_name=channel"""
       
 }
 ```

@@ -19,6 +19,8 @@ Name = microsoft-windows-mix-configuration-modify-success-4739
     """<Data Name\\?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """<Data Name\\?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
     """<Data Name\\?=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>"""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

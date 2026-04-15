@@ -31,6 +31,7 @@ Name = microsoft-evsecurity-kv-handle-request-4656-2
     """Privileges Used for Access Check:(\s|\\[rnt])*(-|({privileges}.*?))(\s|\\[rnt])*Restricted SID Count:""",
     """({operation_type}requested)""",
     """Handle ID:(\s|\\[rnt])*({object_id}\S+?)(\s|\\[rnt])*Resource Attributes:""",
+    """Channel"?(:|>)"?({channel}[^"<]+)"""
   ]
 
 

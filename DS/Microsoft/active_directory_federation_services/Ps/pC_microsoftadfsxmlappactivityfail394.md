@@ -11,6 +11,7 @@ Name = microsoft-adfs-xml-app-activity-fail-394
     """<TimeCreated SystemTime="({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{1,9}Z)"\/>"""",
     """<Computer>({host}[\w\-\.]+)<\/Computer>""",
     """<EventData><Data>({additional_info}[^\<]+)<\/Data><\/EventData><\/Event>"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
   ParserVersion = "v1.0.0"
 

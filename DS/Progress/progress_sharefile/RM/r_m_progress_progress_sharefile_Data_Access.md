@@ -7,7 +7,7 @@ Vendor: Progress
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  44   |   24   |         2          |       4        |   10    |
+|  44   |   24   |         2          |       4        |    8    |
 
 | Event Type       | Rules    | Models    |
 | ---- | ---- | ---- |

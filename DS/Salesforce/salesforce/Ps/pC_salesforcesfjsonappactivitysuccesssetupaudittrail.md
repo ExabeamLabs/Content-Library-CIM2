@@ -11,7 +11,7 @@ Name = salesforce-sf-json-app-activity-success-setupaudittrail
   Fields = [
     """exa_json_path=$.CreatedDate,exa_regex=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.Action,exa_field_name=operation""",
-    """exa_json_path=$.CreatedBy.Email,exa_field_name=email_address""",
+    """exa_json_path=$.CreatedBy.Email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """exa_json_path=$.CreatedBy.Username,exa_regex=(autoproc|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({domain}[^"@]+))?""",
     """exa_json_path=$.CreatedBy.Id,exa_field_name=user_id""",
     """exa_json_path=$.CreatedBy.Name,exa_regex=((Automated Process)|({full_name}[^"]+))""",

@@ -5,7 +5,7 @@ Name = "microsoft-evsystem-xml-endpoint-activity-success-capi2-1"
   Conditions = [ """<Provider Name ="Microsoft-Windows-CAPI2"""", """<Execution ProcessID=""", """<EventID>""" ]
   Vendor = "Microsoft"
   Product = "Event Viewer - CAPI2"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
   Fields = [
     """Guid=('|")\{({process_guid}[^}]+?)\}"""
     """<TimeCreated SystemTime=('|")({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d.\d+Z)"""

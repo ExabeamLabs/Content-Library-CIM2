@@ -10,7 +10,6 @@ Name = microsoft-evsecurity-kv-handle-request-success-4659
   Fields = [
     """({event_name}A handle to an object was requested with intent to delete)""",
     """({event_code}4659)""",
-    """(((audit|success|failure)( |_)(success|audit|failure))|information)[\s,]({dest_host}({host}[\w.-]+))""",
     """<?Computer>?(Name)?\s*=?\s*"*({dest_host}({host}[\w\.-]+))(\s|,|"|</Computer>|$)""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(am|AM|pm|PM|({dest_host}({host}[\w.\-]+)))""",
     """\Wdvchost=(|({dest_host}({host}.+?)))(\s+\w+=|\s*$)""",

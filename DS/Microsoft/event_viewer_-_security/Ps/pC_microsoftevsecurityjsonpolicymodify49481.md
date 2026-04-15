@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-json-policy-modify-4948-1
     """exa_regex=Account Domain:\s+({domain}[^\s]+)"""
     """exa_regex=Rule ID:\s*({rule_id}[^\s]+)""",
     """exa_regex=Rule Name:\s*({rule}[^":]+)""",
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
 microsoft-json-events {

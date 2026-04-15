@@ -39,6 +39,7 @@ Fields = [
 """"user"+:"+(SYSTEM|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """"+SubjectUserName"+:"+(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """"Keywords":"({result}[^"]+)"""
+""""Channel":"({channel}[^"]+)"""
 """({event_name}A user account was created)"""
 """exa_json_path=$..created,exa_field_name=time""",
 """exa_json_path=$.message,exa_regex=({event_name}A user account was created)""",
@@ -61,6 +62,7 @@ Fields = [
 """exa_json_path=$..SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$..SubjectDomainName,exa_field_name=src_domain""",
 """exa_json_path=$..SubjectUserName,exa_regex=^(SYSTEM|-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$"""
+"""exa_json_path=$..Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

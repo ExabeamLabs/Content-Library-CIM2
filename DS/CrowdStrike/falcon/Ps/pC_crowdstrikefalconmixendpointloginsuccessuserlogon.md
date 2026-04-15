@@ -19,7 +19,7 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-userlogon"
 """"timestamp":\s*"({time}\d{10})""",
 """"LogonType":"({login_type}\d+)""",
 """"UserPrincipal":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!LOCAL)(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^,"]+)[^"]*)?)"""",
-"""UserName":"(system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+)))(?<!local)(?<!loc)|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?))"""",
+"""UserName":"(system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+)))(?<!local)(?<!loc)|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?))"""",
 """"UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?)""""
 """"LogonServer":"({auth_server}[^\"]+)""",
 """"ClientComputerName"+:"+(-|({src_host}[\w\-.]+))""",
@@ -40,7 +40,7 @@ Name = "crowdstrike-falcon-mix-endpoint-login-success-userlogon"
 """exa_json_path=$.timestamp,exa_field_name=time"""
 """exa_json_path=$.LogonType,exa_field_name=login_type"""
 """exa_regex="UserPrincipal":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!LOCAL)(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^,"]+)[^"]*)?)"""",
-"""exa_regex=UserName":"((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+))(?i))(?<!local)(?<!loc)|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?))"""",
+"""exa_regex=UserName":"((?i)system|({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+))(?i))(?<!local)(?<!loc)|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?))"""",
 """exa_regex=UserName":\s*"(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(?:@({domain}[^"]+)[^"]*)?)""""
 """exa_json_path=$.LogonServer,exa_field_name=auth_server"""
 """exa_json_path=$.ClientComputerName,exa_field_name=src_host,exa_match_expr=!InList($.ClientComputerName,"-")""",

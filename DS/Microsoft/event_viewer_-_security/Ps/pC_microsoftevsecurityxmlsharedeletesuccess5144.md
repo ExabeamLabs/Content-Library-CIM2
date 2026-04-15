@@ -20,6 +20,7 @@ Name = "microsoft-evsecurity-xml-share-delete-success-5144"
     """<Keywords?>({result}[^<]+)<\/Keywords?>""",
     """<Data Name\\*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

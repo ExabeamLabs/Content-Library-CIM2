@@ -5,7 +5,7 @@ Name = infoblox-bddi-mix-dns-response-success-opcode_query
     Vendor = Infoblox
     Product = BloxOne DDI
     TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-    Conditions = [ """opcode: QUERY""", """named:""", """QUESTION SECTION:""", """AUTHORITY SECTION:""", """ANSWER SECTION:""" ]
+    Conditions = [ """opcode: QUERY""", """named:""", """QUESTION SECTION:""", """AUTHORITY:""", """ANSWER:""" ]
     Fields = [
       """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)\s\S+\sdns\[\d+\]:""",
       """\s({host}[\w\-\.]+)\sdns\[\d+\]:""",

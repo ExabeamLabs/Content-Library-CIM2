@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-1
     """&lt;Arguments&gt;({arg}.+?)&lt;/Arguments&gt;"""
     """<Triggers>\s*(|({triggers}[^<]+))<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -33,6 +33,7 @@ Fields = [
   """ShareName\\?"+:\\?"+[\\\*]*({share_name}[^\\"]+)"""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
   """SubjectDomainName\\?"+:\\?"+(|-|NT Service|NT AUTHORITY|({domain}({src_domain}[^\\]+)))\\?""""
+  """\schannel="+({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
    """<Message>({event_name}.+?)\s{0,100}<"""
    """status=([^:]+:){2}({failure_reason}.+?)\s<"""
    """<Level>({run_level}[^<]+)<"""
+   """<Channel>({channel}[^<]+)<"""
    ]
 
 

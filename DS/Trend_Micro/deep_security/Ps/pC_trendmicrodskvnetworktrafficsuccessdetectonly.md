@@ -15,7 +15,6 @@ Fields = [
   """dmac=({dest_mac}[^\s]+)"""
   """smac=({src_mac}[^\s]+)"""
   """dvchost=({dest_host}[^\s]+)"""
-  """cs2=({method}[^\s]+)"""
   """CEF.*?\|(.*?\|){4}({rule}.+?)\|"""
   """dpt=({dest_port}\d+)"""
   """spt=({src_port}\d+)"""

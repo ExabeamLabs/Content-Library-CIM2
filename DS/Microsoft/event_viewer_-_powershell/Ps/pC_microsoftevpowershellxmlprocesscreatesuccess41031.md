@@ -21,6 +21,7 @@ Name = microsoft-evpowershell-xml-process-create-success-4103-1
     """CommandInvocation\(.+?\):\s*\\*"({command_invocation}[^"\\]+)""",
     """Details:.+?CommandInvocation.+?ParameterBinding.+?value=\\"(function\s)?({command_module}[^\s\\,"]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

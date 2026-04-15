@@ -31,6 +31,7 @@ json-beyondtrust-beyondinsight = {
     """exa_json_path=$..Os,exa_field_name=os"""
     """exa_json_path=$..User,exa_field_name=user"""
     """exa_json_path=$..UserName,exa_field_name=user"""
+    """exa_json_path=$..Username,exa_field_name=dest_user"""
     """exa_json_path=$..AgentVer,exa_field_name=version"""
     """exa_json_path=$..ClientHost,exa_field_name=host"""
     """exa_json_path=$..SubjectDescription,exa_field_name=description"""

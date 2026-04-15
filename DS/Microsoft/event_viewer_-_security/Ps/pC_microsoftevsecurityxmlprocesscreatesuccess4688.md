@@ -34,6 +34,7 @@ Name = microsoft-evsecurity-xml-process-create-success-4688
     """New Process Name:\s*\"*(|({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^\\\/\"]+?)))\"*\s"""
     """<Level>({run_level}[^<]+)<"""
     """<Data Name(\\)?\s*=('|")TargetUserName('|")>(-|({dest_user}[^<]+))"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

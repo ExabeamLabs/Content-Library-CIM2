@@ -6,7 +6,7 @@ Name = beyondtrust-b-json-process-create-success-processcreated
   Product = BeyondTrust
   ExtractionType = json
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-  Conditions = [ """"process_name":"""",""""vendor_product":"Beyondtrust Privilege Management"""", """"process_start_time":"""" ]
+  Conditions = [ """"action":"""",""""vendor_product":"Beyondtrust Privilege Management"""", """"process_start_time":"""" ]
   Fields = [
   """exa_json_path=$.Processes.process_start_time,exa_field_name=time"""
   """exa_json_path=$.Processes.process_id,exa_field_name=process_id"""

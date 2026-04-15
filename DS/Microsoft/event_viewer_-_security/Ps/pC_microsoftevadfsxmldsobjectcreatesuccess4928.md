@@ -22,6 +22,7 @@ Name = microsoft-evadfs-xml-ds-object-create-success-4928
     """<Data Name\\*=('|")StatusCode('|")>({result_code}\d+)</Data>""",
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
      ]
   
 

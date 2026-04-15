@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """"eventRecordID":"({event_id}\d+)""",
     """"severityValue":"({action}[^"]+?)\s*"""",
     """"logonType":"({login_type}\d+)\s*""""
+    """"channel":"({channel}[^"]+)""""
     """exa_regex=({event_name}An account was logged off)""",
     """exa_regex=({event_code}4634)""",
     """exa_json_path=$..systemTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
@@ -38,6 +39,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4634-2
     """exa_json_path=$..EventRecordID,exa_field_name=event_id""",
     """exa_json_path=$..severityValue,exa_field_name=action""",
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
+    """exa_json_path=$.channel,exa_field_name=channel"""
   ]
 
 

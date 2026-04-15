@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-json-file-5058
     """"SubjectUserName"+:"+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectDomainName"+:"+({src_domain}({domain}[^"]+))"""",
     """"Operation"+:"+({operation}[^"]+)"""",
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

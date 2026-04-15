@@ -28,6 +28,7 @@ Fields = [
 """"+Category\\?"+:\\?"+({category}[^"\\]+)"""
 """"+Message\\?"+:\\?"+({additional_info}[^"\\\.]+?)""""
 """"+EventType\\?"+:\\?"+({result}[^"\\]+)"""
+""""+Channel\\?"+:\\?"+({channel}[^"\\]+)"""
 ]
 ParserVersion = "v1.0.0"
 

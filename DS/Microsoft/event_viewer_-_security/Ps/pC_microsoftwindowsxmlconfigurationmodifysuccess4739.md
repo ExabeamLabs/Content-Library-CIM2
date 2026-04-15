@@ -20,6 +20,7 @@ Name = microsoft-windows-xml-configuration-modify-success-4739
     """<Data Name\\?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))<\/Data>""",
     """<Data Name\\?=('|")SubjectLogonId('|")>({login_id}[^<]+)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

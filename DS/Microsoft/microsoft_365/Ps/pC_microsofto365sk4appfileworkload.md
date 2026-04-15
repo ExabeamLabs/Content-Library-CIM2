@@ -23,19 +23,19 @@ Fields = [
 """exa_regex="(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)"""
 """exa_regex="Operation\\*":\\*"(File|Folder)[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({file_path}({file_dir}[^"]*?)({file_name}[^"\\\/]+?(\.({file_ext}[^"\\\/\.]+?))?)))\\*"""",
 """exa_regex="Operation\\*:\\*"(?!(File|Folder))[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({object}[^"]+?))\\*"""",
-"""exa_regex=\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
-"""exa_regex="Sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+"""exa_regex=\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
+"""exa_regex="Sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
 """exa_regex="Receivers":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]+?)\],"""",
 """exa_json_path=$..SourceFileName,exa_field_name=file_name"""
 """exa_json_path=$..ItemName,exa_field_name=email_subject"""
-"""exa_json_path=$..SenderAddress,exa_regex=(<>|\\+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"""
+"""exa_json_path=$..SenderAddress,exa_regex=(<>|\\+|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
 """exa_json_path=$..ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$..UserAgent,exa_field_name=user_agent"""
-"""exa_json_path=$..MailboxPrimaryAddress,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
+"""exa_json_path=$..MailboxPrimaryAddress,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
 """exa_json_path=$..UserType,exa_field_name=user_type"""
 """exa_json_path=$..Severity,exa_field_name=alert_severity"""
 """exa_json_path=$..correlationId,exa_field_name=correlation_id"""
-"""exa_json_path=$..UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""exa_json_path=$..UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
 """exa_json_path=$..SensitivityLabelId,exa_field_name=sensitivity_label"""
 """exa_json_path=$..OldSensitivityLabelId,exa_field_name=old_sensitivity_label"""
 """exa_json_path=$..LabelId,exa_field_name=label_id"""
@@ -47,13 +47,17 @@ Fields = [
 """exa_json_path=$..IsSuccess,exa_field_name=result"""
 """exa_json_path=$..TargetUserOrGroupName,exa_field_name=target"""
 """exa_json_path=$..DatasetName,exa_field_name=file_name"""
-"""exa_json_path=$.Attendees[0:].UPN,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""exa_json_path=$.Attendees[0:].UPN,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+"""exa_json_path=$.ArtifactsShared[0].ArtifactSharedName,exa_field_name=object_name"""
+"""exa_json_path=$.ArtifactsShared[0].ArtifactShareSessions[0].StartTimestamp,exa_field_name=start_time"""
+"""exa_json_path=$.ArtifactsShared[0].ArtifactShareSessions[0].EndTimestamp,exa_field_name=end_time"""
 """exa_json_path=$..LeaveTime,exa_field_name=end_time"""
 """exa_json_path=$..JoinTime,exa_field_name=start_time"""
 """exa_json_path=$..MeetingDetailId,exa_field_name=meeting_number"""
 """exa_json_path=$..FileSize,exa_field_name=bytes"""
 """exa_json_path=$.Sha1,exa_field_name=hash_sha1"""
 """exa_json_path=$.Sha256,exa_field_name=hash_sha256"""
+"""exa_json_path=$.TenantId,exa_field_name=tenant_id"""
 """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """"DeviceName":"(::ffff:)?({host}[\w\-.]+)"""",
 """"Operation\\*"+:[\s\\]*"+({alert_name}({operation}[^"\\\.]*))""",
@@ -66,9 +70,9 @@ Fields = [
 """"Operation\\*":\\*"(File|Folder)[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({file_path}({file_dir}[^"]*?)({file_name}[^"\\\/]+?(\.({file_ext}[^"\\\/\.]+?))?)))\\*"""",
 """"Operation\\*:\\*"(?!(File|Folder))[^\}]+?"ObjectId\\*"+:"?[\s\\]*"+(|Unknown|Not Available|({object}[^"]+?))\\*"""",
 """"SourceFileName\\*":\\*"({file_name}[^"\\\/]+?(\.({file_ext}[^"\\\/\.]+?))?)\\*"""",
-"""\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
+"""\ssuser=(anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(Unknown|Sync|AirInvestigation|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s""",
 """"ItemName":"({email_subject}[^"]+)""",
-""""Sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+""""Sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
 """"Receivers":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]+?)\],"""",
 """"ClientIP"+:"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """UserAgent":\s*"({user_agent}[^"]+)"""",
@@ -79,7 +83,7 @@ Fields = [
 """"IsSuccess":({result}[^\s,]+)""",
 """SourceRelativeUrl":"({dest_process_path}[^"]+?)\s*"""",
 """SiteUrl":"({url}[^"]+)"""",
-""""MailboxPrimaryAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+""""MailboxPrimaryAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
 """("Value":"({os}[^"]+)",)?"Key":"OsName"(,"Value":"({=os}[^"]+)")?"""
 """"UserType":({user_type}[^,\}"]+)"*"""
 """"correlationId":\s*"({correlation_id}[^"]+)""""
@@ -89,13 +93,14 @@ Fields = [
 """"ObjectId":"({object_id}[^",]+)""""
 """"JustificationText":"({additional_info}[^",]+)""""
 """"LabelId":"({label_id}[^",]+)"""
-""""UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+""""UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
 """Severity\\?":\\?"({alert_severity}[^"\\]+)"""
 """"Attendees":[^\]]+?"InviterInfo":[^\}]+?"DisplayName":"({additional_info}[^"]+)"""
 """"Attendees":[^\]]+"DisplayName":"({member}[^"]+)"""
 """"FileSize":\s*({bytes}\d+)"""
 """"Sha1":\s*"({hash_sha1}[^"]+)""""
 """"Sha256":\s*"({hash_sha256}[^"]+)""""
+""""TenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
 ]
 
 

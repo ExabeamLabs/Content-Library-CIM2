@@ -22,6 +22,7 @@ account-password-activity = {
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Keywords>({result}[^<]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   
 }
 ```

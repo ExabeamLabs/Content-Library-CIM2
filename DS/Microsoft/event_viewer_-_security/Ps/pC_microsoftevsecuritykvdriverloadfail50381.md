@@ -21,6 +21,7 @@ windows-system-info-2 = {
     """EventType=({result}\d+)""",
     """TaskCategory=(None|({operation_type}[^\n]+?))\s*\w+(=|:)""",
     """Message=({additional_info}[^\n]+?)\s*\n"""
+    """Channel=({channel}[^"]+)"""
 
 }
 ```

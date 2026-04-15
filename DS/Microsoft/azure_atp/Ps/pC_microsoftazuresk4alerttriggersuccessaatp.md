@@ -24,6 +24,7 @@ Fields = [
   """"userPrincipalName":"(null|({email_user}[^\@"]+\@([^\."]+\.)*\w+))"""
   """"logonLocation":(null|({src_location}[^"]+))"""
   """"status":"({incident_status}[^",]+)"""
+  """"azureTenantId":"({tenant_id}[^",]+)"""
 ]
 
 

@@ -32,6 +32,7 @@ Fields = [
 """<Command>\\?"?({process_path}({process_dir}(?:(\w+:)?[^:<\"]+?)?[\\\/]+)?({process_name}[^<\"\\\/]+?))\\?"?<"""
 """<Arguments>("+)?({arg}[^<\"]+)"""
 """Subject:.+?Security ID:(\\r|\\n|\\t)*({user_sid}[^:]+?)(\\r|\\n|\\t)*Account Name:"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

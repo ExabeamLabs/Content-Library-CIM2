@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-xml-configuration-modify-success-4716
     """<Data Name =('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""   
     """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -10,20 +10,18 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-s-xml-windows-member.Fields}[
-    """<Data Name(\\)?=('|")MemberSid('|")>(({dest_user_sid}S-[^"<]+)|(({account_domain}[^\\<]*)\\)?({account_name}[^<]+))<\/Data>""",
-    """<Data Name(\\)?=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
-    """<Data Name(\\)?=('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))</Data>""",
-    """<Data Name(\\)?=('|")RemoteIPAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """<Data Name(\\)?=('|")LocalIPAddress('|")>({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?<""",
-    """<Data Name(\\)?=('|")RemotePort('|")>({dest_port}\d+)""",
-    """<Data Name(\\)?=('|")LocalPort('|")>({src_port}\d+)""",
-    """({event_name}A member was added to a security-enabled global group)"""
-    """<Message>({event_name}[^:=<.]+)\."""
-    """A member was added to a security-enabled ({group_type}[^\s]+) group""",
-    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
-    """<Computer>({host}[\w\-.]+)<\/Computer>"""
-    """<Data Name(\\)?=('|")TargetUserName('|")>({group_name}[^<]+)</Data>""",
-    
+json-windows-events-3.Fields}[
+    """"SubjectUserName":"(-|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """"SubjectDomainName":"(-|({src_domain}({domain}[^"]+)))""",
+    """"IpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"Computer":"({dest_host}({host}[^"]+))"""",
+    """({event_name}A network share object was checked to see whether the client can be granted desired access)""",
+    """"ObjectType":"({file_type}[^"]+)""",
+    """"ShareName":"(?:[\\\*]+)?({share_name}[^"]+)""",
+    """"ShareLocalPath":"(?:[\\\?]+)?(|({share_path}(({d_parent}.+?)\\\\)?(|({d_name}[^\\]*?)))\\?)"""",
+    """"RelativeTargetName"+:"+({file_dir}(?:[^"]+)?[\\\/])?({file_name}[^\\:"]+?(\.\s*({file_ext}[^"\\.]+?))?)"""",
+    """AccessList"+:"+({access}[^"]+?)(\s(\\t){1,4})?""""
+    """"Channel":"({channel}[^"]+)"""
+  
 }
 ```

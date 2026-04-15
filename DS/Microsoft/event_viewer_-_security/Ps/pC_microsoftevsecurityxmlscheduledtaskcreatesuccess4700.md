@@ -23,6 +23,7 @@ Fields = [
 """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<"""
 """<Data Name\\*=('|")TaskContent('|")>({additional_info}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

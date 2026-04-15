@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-app-notification-success-5056
   """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<"""
   """<Message>({event_name}[^.<]+)\s*""",
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 
 

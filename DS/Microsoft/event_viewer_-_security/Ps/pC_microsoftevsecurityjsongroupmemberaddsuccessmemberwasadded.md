@@ -28,6 +28,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-memberwasadded"
       """"SubjectLogonId":"({login_id}[^\s"]+)""",
       """"TargetSid":"({group_id}[^\s"]+)""",
       """"EventType":"({result}[^"]+)""""
+      """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

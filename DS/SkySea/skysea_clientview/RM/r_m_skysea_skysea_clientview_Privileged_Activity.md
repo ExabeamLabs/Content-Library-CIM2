@@ -7,7 +7,7 @@ Vendor: SkySea
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   7   |   1    |         6          |       13       |   14    |
+|   7   |   1    |         6          |       13       |    6    |
 
 | Event Type    | Rules    | Models    |
 | ---- | ---- | ---- |

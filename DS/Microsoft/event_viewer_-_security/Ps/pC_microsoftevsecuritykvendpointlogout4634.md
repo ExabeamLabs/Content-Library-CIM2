@@ -12,6 +12,7 @@ Name = microsoft-evsecurity-kv-endpoint-logout-4634
     """({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|pm))""",
     """Microsoft-Windows-Security-Auditing.*?({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s+(::ffff:)?(am|pm|\d{4}|({host}[\w.\-]+))\s""",
     """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(am|pm|\d{4}|({host}[\w\-.]+))\s"""
+    """\s({host}[\w.-]+)\s+Logoff\s+An account was logged off"""
     """TimeGenerated=({time}\d+)""",
     """({time}\w+ \d\d \d\d:\d\d:\d\d \d\d\d\d)\s+""",
     """({event_code}4634)""",

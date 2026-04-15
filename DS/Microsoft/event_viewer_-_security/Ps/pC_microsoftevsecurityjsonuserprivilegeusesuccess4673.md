@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-user-privilege-use-success-4673
       """"ProcessId":"({process_id}[^"]+)"""
       """({event_name}An account was logged off)""",
       """({event_name}A privileged service was called)"""
+      """"Channel":"({channel}[^"]+)"""
     ]
   
 

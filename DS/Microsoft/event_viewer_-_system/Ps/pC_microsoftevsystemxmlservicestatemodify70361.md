@@ -20,6 +20,7 @@ Fields = [
 """<Data Name\\*=('|")param1('|")>({service_name}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
 """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

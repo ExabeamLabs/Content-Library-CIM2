@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-audit-policy-modify-success-5449
 	  """<Data Name\\*=('|")ProcessId('|")>({process_id}[^<]+)<""",
     """<Data Name\\*=('|")ChangeType('|")>({operation}[^<]+)</Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

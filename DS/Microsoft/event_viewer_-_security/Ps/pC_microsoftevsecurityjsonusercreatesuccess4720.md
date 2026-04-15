@@ -21,6 +21,7 @@ Name = "microsoft-evsecurity-json-user-create-success-4720"
 """"TargetSid":"({account_id}[^"]+)""",
 """"TargetUserName":"({dest_user}({account_name}[^"]+))""",
 """"TargetDomainName":"({dest_domain}({account_domain}[^"]+))"""
+""""Channel":"({channel}[^"]+)"""
   ]
 
 

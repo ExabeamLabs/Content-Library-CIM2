@@ -21,6 +21,10 @@ azure-ad-system-info = {
     """Security UserID\\*=('|")({user_sid}[^'"]+)('|")""",
     """<Message>({event_name}[^<\.:]+?)(<|\.|:)"""
     """<Level>({run_level}[^<]+)<"""
+    """<EventID>({event_code}\d+)</EventID>"""
+    """<Correlation ActivityID\\*=('|")\{({activity_id}[^\}'"]+)"""
+    """<Execution ProcessID=('|")({process_id}\d+)('|") ThreadID=('|")({thread_id}\d+)"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""    
   
 }
 ```

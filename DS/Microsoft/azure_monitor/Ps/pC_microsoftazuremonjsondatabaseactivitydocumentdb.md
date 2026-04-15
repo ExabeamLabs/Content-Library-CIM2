@@ -29,6 +29,7 @@ Name = microsoft-azuremon-json-database-activity-documentdb
     """exa_json_path=$..subscriptionId,exa_field_name=subscription_id""",
     """exa_json_path=$..accountName,exa_field_name=account_name"""
     """exa_json_path=$..accountName,exa_field_name=storage_account"""
+    """exa_json_path=$..tenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = v1.0.0
 

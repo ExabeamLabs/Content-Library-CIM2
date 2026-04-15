@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-app-notification-4675-1
     """ThreadID(\\)?=('|")({thread_id}\d+)""",
     """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4654
     """<Task>({task_name}[^<]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

@@ -23,6 +23,7 @@ Fields = [
 """"CsHost":\s*"({host}[\w\-.]+)""""
 """"Details":\s*"({additional_info}[^"]+)""""
 """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

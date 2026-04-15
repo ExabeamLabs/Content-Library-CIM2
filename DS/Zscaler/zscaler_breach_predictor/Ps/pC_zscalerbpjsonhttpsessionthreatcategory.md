@@ -1,0 +1,34 @@
+#### Parser Content
+```Java
+{
+Name = zscaler-bp-json-http-session-threatcategory
+  Vendor = Zscaler
+  Product = Zscaler Breach Predictor
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  ExtractionType = json
+  Conditions = [ """"threatCategory":""", """"requestMethod":""", """"policyGroups":""", """"cloudName":""" ]
+  Fields = [
+    """exa_json_path=$..time,exa_field_name=time""",
+    """exa_json_path=$..threatCategory,exa_field_name=threat_category""",
+    """exa_json_path=$..tactic,exa_field_name=tactic""",
+    """exa_json_path=$..technique,exa_field_name=technique""",
+    """exa_json_path=$..Url,exa_regex=^({url}(\w{1,5}:\/\/)?({web_domain}[^"\/\?]+)({uri_path}\/[^"\?]*)?(\?({uri_query}[^"]*))?)$""",
+    """exa_json_path=$..requestMethod,exa_field_name=method""",
+    """exa_json_path=$..responseCode,exa_field_name=http_response_code""",
+    """exa_json_path=$..userAgent,exa_field_name=user_agent""",
+    """exa_json_path=$..destinationIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))$""",
+    """exa_json_path=$..clientIp,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))$""",
+    """exa_json_path=$..urlCategory,exa_field_name=category""",
+    """exa_json_path=$..referrerUrl,exa_field_name=referrer,exa_match_expr=!InList(toLower($.[refererURL]),"none","")""",
+    """exa_json_path=$..responseHeaderSize,exa_field_name=bytes_in""",
+    """exa_json_path=$..requestHeaderSize,exa_field_name=bytes_out""",
+    """exa_json_path=$..policyGroups,exa_field_name=additional_info""",
+    """exa_json_path=$..userName,exa_regex=^(({full_name}[^"\s]+\s[^"$]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$..email,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)$""",
+    """exa_json_path=$..applicationName,exa_field_name=app"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

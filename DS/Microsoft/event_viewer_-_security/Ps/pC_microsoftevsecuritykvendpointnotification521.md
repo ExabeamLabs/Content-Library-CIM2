@@ -20,7 +20,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-521
     """"AccountName"*:"*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SubjectUserSid"*:"*({user_sid}[^"]+)"""",
     """"SubjectUserName"*:"*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """"SubjectDomainName"*:"*(-|(){src_domain}({domain}[^"]+)))"""",
+    """"SubjectDomainName"*:"*(-|({src_domain}({domain}[^"]+)))"""",
     """"LogonID"*:"*({login_id}[^"]+)"""",
     """"ProcessId"*:"*(\\t)*({process_id}[^\\"]+)"""",
     """"ProcessName"*:"*({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",

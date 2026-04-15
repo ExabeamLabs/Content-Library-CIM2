@@ -4,7 +4,7 @@
 Name = accellion-kw-kv-file-read-success-viewfile
   ParserVersion = v1.0.0
   Product = Kiteworks
-  Conditions = [ """View file""", """Activity:""" ]
+  Conditions = [ """View file""", """Activity:""", """ id=""" ]
   Fields = ${KiteWorksParsersTemplates.q-kiteworks-file-activity.Fields}[
     """\s({access}View) file\s+({file_name}.+?(\.({file_ext}\w+)))(\s+from email.|\.\s+File:)"""
   ]

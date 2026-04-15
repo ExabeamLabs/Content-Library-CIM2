@@ -7,6 +7,7 @@ Conditions = [
   """User profile"""
   """is changed"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

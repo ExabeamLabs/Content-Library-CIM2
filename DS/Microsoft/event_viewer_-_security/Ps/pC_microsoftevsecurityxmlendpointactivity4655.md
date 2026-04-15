@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-4655
     """<Data Name\\*=('|")RemoteAddress('|")>({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

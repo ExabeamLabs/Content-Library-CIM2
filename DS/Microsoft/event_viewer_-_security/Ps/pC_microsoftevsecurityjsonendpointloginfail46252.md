@@ -34,6 +34,7 @@ json-windows-events-2-aa = {
     """ProcessId\\?"+:\\?"+({process_id}[^:\\]+?)\\?"""",
     """LogonProcessName\\?"+:\\?"+({auth_process}[^\s\\]+)\s*\\?"""",
     """AuthenticationPackageName\\?"+:\\?"+({auth_package}[^\s\\]+)\\?""""
+    """channel\\?"+:\\?"+({channel}[^"\\]+)"""
   
 }
 ```

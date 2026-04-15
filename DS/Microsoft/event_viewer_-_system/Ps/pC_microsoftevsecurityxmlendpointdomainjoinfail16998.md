@@ -17,6 +17,7 @@ Fields = [
   """<Security UserID=('|")({user_sid}[^'"]+)('|")\/>""",
   """<Data Name =('|")Computer Account SID:('|")>({dest_user_sid}[^<]+)<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

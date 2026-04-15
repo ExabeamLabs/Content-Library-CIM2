@@ -31,6 +31,7 @@ Name = microsoft-evsecurity-xml-share-access-5145
       """<Keywords><Keyword>({result}[^<]+)</Keyword>"""
       """Source Port(=|:)\s*({src_port}\d+)"""
       """<Level>({run_level}[^<]+)<"""
+      """<Channel>({channel}[^<]+)<"""
     ]
   
 

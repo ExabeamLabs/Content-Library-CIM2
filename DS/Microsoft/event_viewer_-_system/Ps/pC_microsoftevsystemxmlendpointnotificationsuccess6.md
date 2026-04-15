@@ -20,6 +20,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-6
     """Guid=('|")\{({process_guid}[^"'\}]+)"""
     """<Provider>({provider_name}[^<]+?)</Provider>""",
     """ThreadID\\*=('|")({thread_id}[^'"]+)""",
+    """<Channel>({channel}[^<]+)<"""
   ]
   
 

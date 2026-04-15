@@ -48,6 +48,7 @@ Name = cisco-mma-kv-alert-trigger-airmarshalevents
     """\sUser\[[^\]]+\]:\s({additional_info}[^"]+?)(\s(Reason:\s({result_reason}[^']+?))?)\s*'""",
     """\sconn_id\[({connection_id}\d+)\]\s""",
     """\sBytes rcv:\s({bytes_in}\d+),\s"""
+    """\d\d:\d\d:\d\d\s*({host}[\w.-]+)\s"""
   ]
 
 

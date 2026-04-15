@@ -32,6 +32,7 @@ Fields = [
 """User Account Control:(\\t|\\r|\\n|\s)*(-|({uac_status}[^"]+))\s*(\\t|\\r|\\n|\s)*User\s*Parameters"""
 """<Data Name =\\*('|")UserAccountControl\\*('|")>(-|({uac_status}[^"<]+))<\\\/Data><Data Name =\\*"UserParameters\\*">"""
 """<Data Name =\\*('|")OldUacValue\\*('|")>(-|({old_value}[^"<]+))<\\\/Data><Data Name =\\*"NewUacValue\\*">(-|({new_value}[^"<]+))<\\\/Data><Data Name =\\*"UserAccountControl\\">"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -32,6 +32,7 @@ Name = microsoft-azure-cef-network-traffic-rule
 """CommandLine\":\"\s*({process_command_line}[^\n]+?)\s*\",\"\w+\""""
 """UserName\"+:\"+(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """UserDomain\"+:\"+({domain}[^\"]+)"""
+""""TenantId":\s*"({tenant_id}[^"]+)""""
 ]
 
 cef-azure-event-hub = {

@@ -7,7 +7,7 @@ Vendor: Swift
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  68   |   37   |         13         |       4        |    5    |
+|  68   |   37   |         13         |       4        |    1    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

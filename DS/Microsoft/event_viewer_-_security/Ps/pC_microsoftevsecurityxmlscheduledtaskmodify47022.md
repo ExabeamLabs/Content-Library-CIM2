@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-modify-4702-2
     """(<|&lt;)Command(>|&gt;)"?({process_path}({process_dir}(?:(\w+:)?[^:<"]+?)?[\\\/]+)?({process_name}[^<"\\\/]+?))(<|&lt;)/Command(>|&gt;)""",
     """(<|&lt;)Arguments(>|&gt;)("+)?({arg}.+?)(<|&lt;)/Arguments(>|&gt;)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

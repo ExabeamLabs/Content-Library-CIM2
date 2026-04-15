@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-5380
       """<Data Name\\*=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<>]+)))<""",
       """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<"""
       """<Level>({run_level}[^<]+)<"""
+      """<Channel>({channel}[^<]+)<"""
      ]
    
 

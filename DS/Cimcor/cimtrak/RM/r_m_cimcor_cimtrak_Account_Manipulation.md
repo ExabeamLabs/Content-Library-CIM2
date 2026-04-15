@@ -7,7 +7,7 @@ Vendor: Cimcor
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  27   |   13   |         3          |       3        |    1    |
+|  27   |   13   |         3          |       3        |    0    |
 
 | Event Type     | Rules    | Models    |
 | ---- | ---- | ---- |

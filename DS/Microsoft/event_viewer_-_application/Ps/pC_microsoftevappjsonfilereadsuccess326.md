@@ -14,6 +14,22 @@ Name = microsoft-evapp-json-file-read-success-326
     """exa_regex=({event_name}The database engine attached a database)""",
     """exa_regex=({operation}The database engine attached a database)\s+\(\d+,\s+({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))\)\."""  
   ]    
+}, 
+
+${WindowsParsersTemplates.microsoft-json-events}{
+  Name = microsoft-evapp-json-file-close-success-327
+  ParserVersion = v1.0.0
+  Product = Event Viewer - Application
+  Conditions = [ """"EventID":327,""", """"Channel":"Application"""", """"ProviderName":"""", """The database engine detached a database""" ]
+  Fields = ${WindowsParsersTemplates.microsoft-json-events.Fields}[
+    """exa_json_path=$.Computer,exa_field_name=host"""
+		"""exa_json_path=$.UserID,exa_regex=(({user_sid}S-[^"]+?)|(({domain}[^"]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+		"""exa_regex=Account Name:\s*(({domain}[^:\\]+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\s+\w+){1,2}:\s"""
+    """exa_regex=Account Domain:\s+({domain}[^\s]+)""",
+    """exa_json_path=$.Computer,exa_field_name=dest_host"""
+    """exa_regex=({event_name}The database engine detached a database)""",
+    """exa_regex=({operation}The database engine detached a database)\s+\(\d+,\s+({file_path}({file_dir}(?:[^";]+)?[\\\/;])?({file_name}[^\\\/";]+?(\.({file_ext}[^\\\/\.;"]+))))\)\."""      
+  ]    
 
 microsoft-json-events {
   Vendor = Microsoft

@@ -50,6 +50,7 @@ Name = "microsoft-evsecurity-kv-group-member-remove-success-computer"
       """"action"+:"+({action}[^"]+)"""
       """"+MemberSid\\?"+:\\?"+({account_id}[^"\\]+)"""
       """ComputerName =({src_host}({host}[\w\-.]+))"""
+      """"channel\\*?":\\*?"({channel}[^"\\]+)"""
   ]
   ParserVersion = "v1.0.0"
 

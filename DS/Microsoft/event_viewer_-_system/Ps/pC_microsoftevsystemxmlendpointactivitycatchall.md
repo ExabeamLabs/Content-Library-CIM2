@@ -30,7 +30,8 @@ xml-ms-event-viewer = {
       """<Channel>({channel}[^<]+)<""",
       """<Computer>({host}[\w\-.]+)""",
       """<EventData Name =('|")({event_name}[^>'"]+)('|")>""",
-      """<Security UserID=('|")({user_sid}[^'"<]+?)('|")"""
+      """<Security UserID=('|")({user_sid}[^'"<]+?)('|")""",
+      """\bTenantId=({tenant_id}[^\s,=.<]+)"""
     
 }
 ```

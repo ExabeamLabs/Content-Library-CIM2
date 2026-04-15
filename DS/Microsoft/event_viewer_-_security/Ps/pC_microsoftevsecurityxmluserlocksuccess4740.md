@@ -24,6 +24,7 @@ Fields = [
 """<Data Name\\*=('|")SubjectDomainName('|")>(?=\w)({src_domain}[^<]+)</Data>"""
 """<Data Name =('|")TargetDomainName('|")>(?:\\+)?({domain}[\w\-\.]+)</Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

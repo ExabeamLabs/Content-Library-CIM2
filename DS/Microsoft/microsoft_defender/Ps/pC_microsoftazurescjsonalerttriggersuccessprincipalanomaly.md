@@ -37,6 +37,7 @@ json-microsoft-security-events = {
        """"incidentId":\s*"({alert_id}\d+)"""
       """"mitreTechniques":\[({technique}[^\]]+)\]"""
       """"evidence".+?"verdict":"({result}[^"]+)"""
+      """"azureTenantId":\s*"({tenant_id}[^"]+)""""
        """exa_json_path=$.id,exa_field_name=alert_id""",
        """exa_json_path=$.title,exa_field_name=alert_name""",
        """exa_json_path=$.title,exa_field_name=alert_subject""",
@@ -63,6 +64,7 @@ json-microsoft-security-events = {
        """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
        """exa_json_path=$.incidentId,exa_field_name=alert_id"""
        """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
+       """exa_json_path=$.azureTenantId,exa_field_name=tenant_id"""
      
 }
 ```

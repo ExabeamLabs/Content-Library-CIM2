@@ -21,6 +21,7 @@ Name = microsoft-evapplocker-cef-endpoint-notification-8002
     """"FilePath":"({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}[^"\.\\\/]+))?))"""",
 # fqbn is removed
     """"Process":"({process_name}[^"]+)"""
+    """"Channel":"({channel}[^"]+)""""    
   ]
 
 

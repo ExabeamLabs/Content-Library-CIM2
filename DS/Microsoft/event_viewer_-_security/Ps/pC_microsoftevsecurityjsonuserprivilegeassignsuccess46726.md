@@ -22,6 +22,7 @@ Fields = [
   """"SubjectLogonId":"({login_id}[^"]*)""",
   """"PrivilegeList":"(-|({privileges}[^"]*))""",
   """"Keywords":"({result}[^\"]+)"""
+  """"channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -6,7 +6,7 @@ Vendor = "Picture Perfect"
 Product = "Picture Perfect"
 TimeFormat = "yyyyMMdd|HHmmss"
 Conditions = [
-  """pictureperfect"""
+  """pictureperfect""", """|"""
 ]
 Fields = [
   """^[^|]*?\|([^|]*\|){2}({user}[\w\.\-\!\#\^\~]{1,40}\$?)\|"""

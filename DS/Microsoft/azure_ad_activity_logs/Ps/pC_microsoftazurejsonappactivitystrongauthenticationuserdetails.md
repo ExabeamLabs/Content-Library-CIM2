@@ -19,6 +19,7 @@ Fields = [
   """exa_json_path=$..targetResources[*].userPrincipalName,exa_regex=({dest_user}[^@\"]+)"""
   """exa_json_path=$.resourceId,exa_field_name=object""",
  """exa_json_path=$..targetResources[*].modifiedProperties[*].newValue,exa_regex=\"\[({additional_info}\{[\\]?\"PhoneNumber[^]]+)"""
+  """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

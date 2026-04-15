@@ -28,6 +28,7 @@ Fields = [
   """"RecordNumber\\*":({event_id}\d+),""",
   """"Category\\*":\\*"({service_name}[^"]+?)\\*","""
   """Source Port(=|:)\s*(\\t)*({src_port}\d+)"""
+  """"channel\\*":\s*\\*"({channel}[^"\\]+)"""
 ]
 ParserVersion = "v1.0.0"
 

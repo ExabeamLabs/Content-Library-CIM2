@@ -5,7 +5,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-securityalert
   ParserVersion = v1.0.0
   Vendor = Microsoft
   Product = Microsoft Defender
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
   Conditions = [ """"ProductName":"Azure Security Center"""", """"Type":"SecurityAlert"""" ]
   Fields=[
     """"AlertName":"({alert_name}[^"]+)""",
@@ -21,6 +21,7 @@ Name = microsoft-azuresc-sk4-alert-trigger-success-securityalert
     """"CountryName":\s*"({location_country}[^"]+)""",
     """"City":\s*"({location_city}[^"]+)""",
     """"AlertLink":"({malware_url}[^"]+)"""
+    """"TenantId":\s*"({tenant_id}[^"]+)""""
     ]
 
 

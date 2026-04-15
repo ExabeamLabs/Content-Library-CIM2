@@ -8,7 +8,7 @@ Name = barracuda-firewall-kv-network-traffic-firewallactivity
   Conditions = [ """/box_Firewall_Activity: """, """|user=""", """|proto=""", """|srcIP=""" ]
   Fields = [
     """({time}\w{3}\s+\d\d\s+\d\d:\d\d:\d\d)\s""",
-    """\/box_Firewall_Activity:(\s+[-+][\d:\d]+)?\s+\w+\s+({host}[\w\-.]+)\s+({action}[^\s:]+):\s+({event_code}[^\|\s]+)\|""",
+    """\/box_Firewall_Activity:(\s+[-+][\d:\d]+)?\s+\w+\s+({host}[\w\-.]+)\s+({action}[^\s:]+):\s+(\w+=)?({event_code}[^\|\s]+?)\|""",
     """\|proto=({protocol}[^\|]+)\|""",
     """\|srcIF=({src_interface}[^\|]+)\|""",
     """\|srcIP=(?:0.0.0.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\|""",

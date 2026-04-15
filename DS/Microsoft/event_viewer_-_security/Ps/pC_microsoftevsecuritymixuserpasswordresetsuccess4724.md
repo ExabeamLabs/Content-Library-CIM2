@@ -44,6 +44,7 @@ Fields = [
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """Keywords=({result}[^=]+?)\s+([\\tnr])*((Task)|(Message))\w*="""
   """"keywords":\[?"({result}[^"]+)"""  
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

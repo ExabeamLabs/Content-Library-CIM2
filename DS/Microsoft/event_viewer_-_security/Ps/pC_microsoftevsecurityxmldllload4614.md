@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-dll-load-4614
     """<Data Name\\*=('|")NotificationPackageName('|")>({object}[^<]+)<""",
     """({event_name}A notification package has been loaded by the Security Account Manager)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

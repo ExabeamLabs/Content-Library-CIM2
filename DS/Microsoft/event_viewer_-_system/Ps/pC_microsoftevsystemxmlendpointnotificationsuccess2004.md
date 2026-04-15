@@ -18,6 +18,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-2004
     """<Execution ProcessID\\*=('|")({process_id}[^'"]+)"""
     """ThreadID\\*=('|")({thread_id}[^'"]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

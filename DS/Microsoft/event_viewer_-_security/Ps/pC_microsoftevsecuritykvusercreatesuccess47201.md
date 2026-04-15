@@ -31,6 +31,7 @@ Name = "microsoft-evsecurity-kv-user-create-success-4720-1"
 """New Account:.+?Security ID:\s*({account_id}[^\s]+)\s+Account Name:\s*({dest_user}({account_name}[\w.'\-]+)).+?Account Domain:\s*({dest_domain}({account_domain}[\w.\-]+))""",
 """Account Name:\s*(\\t|\\r|\\n)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s*.+?Account Domain:\s*(\\t|\\r|\\n)*({domain}[\w\-\.]+).+?Logon ID:\s*(\\t|\\r|\\n)*({login_id}[\w\-\.]+).+?Account Name:\s*(\\t|\\r|\\n)*({dest_user}({account_name}[\w\-\.]+)).+?Account Domain:\s*(\\t|\\r|\\n)*({dest_domain}({account_domain}[\w\.\-]+)).+?Attributes"""
 """(Enabled.+?|Account Control:)\s*'({user_type}.*?)'\s-\sEnabled"""
+""""Channel":"({channel}[^"]+)"""
   ]
 
 

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-key-migrate-5059-1
     """<Data Name(\\)?=('|")KeyName('|")>({key_name}[^<]+)""",
     """<Data Name(\\)?=('|")KeyType('|")>({key_type}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

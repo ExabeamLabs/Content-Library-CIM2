@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """Process ID:\s+({process_id}[^\s]+)""",
     """Process Name:\s+(-|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/]+?)))\s*(?:\d+|"|,|$)"""
+    """"Channel":"({channel}[^"]+)"""
 
     """exa_json_path=$..created,exa_field_name=time""",
     """exa_json_path=$.EventTime,exa_field_name=time""",
@@ -33,6 +34,7 @@ Name = microsoft-evsecurity-kv-group-list-membershipenumerated
     """exa_json_path=$.message,exa_regex=\sUser:.*?Security ID:\s*(|({group_id}.+?))\s*(Group|Account) Name:\s*(|({group_name}.+?))\s*(Group|Account) Domain:\s*(|({group_domain}.+?))\s*Process Information:""",
     """exa_json_path=$.message,exa_regex=Process ID:\s+({process_id}[^\s]+)""",
     """exa_json_path=$.message,exa_regex=Process Name:\s+(?:|({process_path}({process_dir}(?:[^"]+)?[\\\/])?({process_name}[^\\\/]+?)))\s*("|,|$)""",
+    """exa_json_path=$..channel,exa_field_name=channel""",
   ]
 
 

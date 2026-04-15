@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-cef-file-permission-modify-4670
     """"NewSd\\?">?({new_attribute}[^"<]+)""",
     """"Level":"({run_level}[^"]+)"""",
     """"_ResourceId":"({resource}[^"]+)""""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = v1.0.0
 

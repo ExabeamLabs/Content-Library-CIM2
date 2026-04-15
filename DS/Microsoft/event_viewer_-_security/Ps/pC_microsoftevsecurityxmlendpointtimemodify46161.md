@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-endpoint-time-modify-4616-1
     """<Data Name[^<>]+?ProcessName[^<>]+?>(-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))</Data>""",
     """<Data Name\\*=('|")NewTime('|")>({additional_info}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

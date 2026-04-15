@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-cef-scheduled-task-modify-4702
     """<Command>({process_path}({process_dir}[^<]+)\\\\({process_name}[^<]+))<""",
     """<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
     """"logon":\{"id":"({login_id}[^"]+)"""",
+    """"channel":"({channel}[^"]+)""""
   ]
 
 

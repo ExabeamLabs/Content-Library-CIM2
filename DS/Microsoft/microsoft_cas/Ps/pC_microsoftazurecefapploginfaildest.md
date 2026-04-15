@@ -44,6 +44,8 @@ Fields = [
 """"appName":"({app}[^\",]+)"""",
 """"eventTypeName":"({event_name}[^"]+)""""
 """LoginErrorCode"*:({error_code}\d+)"""
+""""aadTenantId":\s*"({tenant_id}[^"]+)""""
+""""TenantId":\s*"({tenant_id}[^"]+)""""
 ]
 
 

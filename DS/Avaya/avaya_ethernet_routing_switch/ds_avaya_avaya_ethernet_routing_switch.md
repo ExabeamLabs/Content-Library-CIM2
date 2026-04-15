@@ -4,13 +4,13 @@ Product: Avaya Ethernet Routing Switch
 --------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   5   |   3    |         4          |       1        |    1    |
+|   5   |   3    |         4          |       1        |    0    |
 
-|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  endpoint-login:fail (authentication-failed)<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1133 - External Remote Services<br>    | [<ul><li>3 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Abnormal_Authentication_&_Access.md) |
-|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  endpoint-login:fail (authentication-failed)<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1078 - Valid Accounts<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Lateral_Movement.md)    |
-|    [Ransomware](../../../UseCases/uc_ransomware.md)    |  endpoint-login:fail (authentication-failed)<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Ransomware.md)    |
+| [Abnormal Authentication & Access](../../../UseCases/uc_abnormal_authentication_&_access.md) |  authentication-failed<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1133 - External Remote Services<br>    | [<ul><li>3 Rules</li></ul><ul><li>3 Models</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Abnormal_Authentication_&_Access.md) |
+|    [Lateral Movement](../../../UseCases/uc_lateral_movement.md)    |  authentication-failed<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1078 - Valid Accounts<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br> | [<ul><li>1 Rules</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Lateral_Movement.md)    |
+|    [Ransomware](../../../UseCases/uc_ransomware.md)    |  authentication-failed<br> ↳[avaya-ers-str-endpoint-login-fail-intruderip](Ps/pC_avayaersstrendpointloginfailintruderip.md)<br> | T1078 - Valid Accounts<br>    | [<ul><li>1 Rules</li></ul>](RM/r_m_avaya_avaya_ethernet_routing_switch_Ransomware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

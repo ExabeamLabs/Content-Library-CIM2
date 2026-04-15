@@ -31,6 +31,7 @@ Fields = [
 """<RecordNumber>({event_id}\d+)<""",
 """<TargetUserSid>({dest_user_sid}({user_sid}[^\<]+))<""",
 """<Level>({run_level}[^<]+)"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

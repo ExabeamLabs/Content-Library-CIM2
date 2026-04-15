@@ -20,6 +20,7 @@ Name = "microsoft-azure-json-image-write-success-imagewrite-1"
     """exa_json_path=$.Properties_d.subscriptionId,exa_field_name=subscription_id"""
     """exa_json_path=$.ResourceProviderValue,exa_field_name=service_name"""
     """exa_json_path=$.OperationNameValue,exa_field_name=operation_name"""
+    """exa_json_path=$.TenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = "v1.0.0"
 

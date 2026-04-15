@@ -28,6 +28,7 @@ Fields = [
 """<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))<"""
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

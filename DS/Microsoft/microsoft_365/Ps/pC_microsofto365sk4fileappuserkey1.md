@@ -17,7 +17,7 @@ o365-file-app-activity = {
     Fields = [
       """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"Operation":\s*"({operation}[^"]+)""",
-      """"UserId":\s*"({email_address}[^:@]+@({email_domain}[^",]+\.[^",]+))",""",
+      """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)",""",
       """"Workload":\s*"({app}[^"]+)"""",
       """"ObjectId":\s*"({object}[^"]+)""",
       """"Id":\s*"({object_id}[^"]+)"""", 

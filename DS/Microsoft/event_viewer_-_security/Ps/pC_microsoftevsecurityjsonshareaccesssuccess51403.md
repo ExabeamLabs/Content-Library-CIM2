@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-json-share-access-success-5140-3
       """exa_json_path=$..IpPort,exa_field_name=src_port""",
       """exa_json_path=$..SubjectUserSid,exa_field_name=user_sid""",
       """exa_json_path=$..action,exa_field_name=operation"""
+      """exa_json_path=$..channel,exa_field_name=channel"""
     ]
 
 

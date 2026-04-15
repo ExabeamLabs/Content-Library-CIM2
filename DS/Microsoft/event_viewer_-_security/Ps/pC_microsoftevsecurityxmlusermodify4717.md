@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-user-modify-4717
     """({event_name}System security access was granted to an account)""",
     """<Data Name\\*=('|")TargetSid('|")>({dest_user_sid}[^<]+)</Data>""",
     """<Data Name\\*=('|")AccessGranted('|")>({access_type}[^<]+)</Data>"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

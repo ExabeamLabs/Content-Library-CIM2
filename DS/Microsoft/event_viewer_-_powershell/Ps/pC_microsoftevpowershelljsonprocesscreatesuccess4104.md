@@ -17,6 +17,7 @@ Name = microsoft-evpowershell-json-process-create-success-4104
     """"Message":"({event_name}[^\(:]+?)\s*\(""",
     """"ScriptBlockId":"({scriptblock_id}[^"]+)"""",
     """({process_name}PowerShell)"""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

@@ -19,7 +19,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)<"""
   """<Data Name\\*=('|")LogonType('|")>({login_type}\d+)<"""
-  """<Data Name(\\)?=('|")TargetUserName('|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>"""
+  """<Data Name(\\)?=('|")TargetUserName('|")>(({dest_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({dest_domain}({domain}[^@<=]+)))?)</Data>"""
   """New Logon:[\s\S]*?Account Name:\s*((?-i)\\+[rnt])*(-|({account}[^\s:\\]*))((?-i)\\+[rnt])*\s*[\w\s]+""",
   """<Data Name\\*=('|")TargetDomainName('|")>(-|({dest_domain}({domain}[^<]+)))<"""
   """<Data Name\\*=('|")ProcessName('|")>(?:-|({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+)))<"""
@@ -38,6 +38,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624"
   """<Opcode>({result_code}\d+)<"""
   """Logon Type:\s*({login_type}\d+)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

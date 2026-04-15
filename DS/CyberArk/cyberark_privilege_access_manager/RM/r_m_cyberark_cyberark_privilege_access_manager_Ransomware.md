@@ -7,7 +7,7 @@ Vendor: CyberArk
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         2          |       5        |   10    |
+|   3   |   0    |         2          |       5        |    5    |
 
 | Event Type       | Rules    | Models |
 | ---- | ---- | ------ |

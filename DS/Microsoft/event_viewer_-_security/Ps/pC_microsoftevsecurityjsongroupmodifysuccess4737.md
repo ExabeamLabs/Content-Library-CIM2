@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """"SidHistory":"(-|({sid_history}[^"]+))""",
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)""",
+    """"Channel":"({channel}[^"]+)""""
     """exa_json_path=$.TimeCreated,exa_field_name=time"""
     """exa_json_path=$.Computer,exa_field_name=host"""
     """exa_json_path=$.ProcessID,exa_field_name=process_id"""
@@ -36,6 +37,7 @@ Name = microsoft-evsecurity-json-group-modify-success-4737
     """exa_regex=Subject:.+?Account Name:\s+({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:\s+({src_domain}({domain}.+?))\s+Logon ID:\s+({login_id}[^\s]+)"""
     """exa_regex=Group: Security ID:\s*({group_id}[^\s]+)"""
     """exa_regex=Group:.+?Group Name:\s*({group_name}[^\s]+)"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
    ]
 
 

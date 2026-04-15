@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702-1
     """exa_json_path=$..SubjectLogonId,exa_field_name=login_id""",
     """exa_json_path=$..TaskName,exa_field_name=task_name""",
     """exa_json_path=$..System..Level,exa_field_name=run_level"""
+    """exa_json_path=$..Channel,exa_field_name=channel"""
   ]
 
 

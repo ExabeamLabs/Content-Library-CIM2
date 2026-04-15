@@ -25,6 +25,7 @@ Fields = [
   """<Data Name\\*=('|")LayerName('|")>({layer_name}[^<>]+)</Data>"""
   """<RenderingInfo.+?<Task>({operation_type}[^<>]+)</Task>.*?</RenderingInfo>"""
   """<Level>({run_level}[^<]+)<"""
+  """"Channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

@@ -12,8 +12,8 @@ Name = microsoft-o365-sk4-app-file-move
     """exa_json_path=$.UserId,exa_field_name=user_upn""",
     """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
     """exa_json_path=$.Workload,exa_field_name=app""",
-    """exa_json_path=$.ClientIP,exa_regex=^\[?((0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))|((0\.0\.0\.0|({=src_ip}[a-fA-F\d.:]+))\]?(:({=src_port}\d+))?))$""",
-    """exa_json_path=$.ClientIPAddress,exa_regex=^\[?(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))?$""",
+    """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.ClientIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.Item.ParentFolder.Name,exa_field_name=object""",
     """exa_json_path=$.OriginatingServer,exa_regex=({host}[\w\-.]+?)\s*\(""",
     """exa_json_path=$.Workload,exa_field_name=resource""",
@@ -71,6 +71,7 @@ o365-activity-template = {
     """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
+    """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
   
 }
 ```

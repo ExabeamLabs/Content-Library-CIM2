@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-configuration-load-4826-1
     """<Keywords>({result}[^<]+)""",
     """<Data Name[^<>]+?SubjectUserSid[^<>]+?>({user_sid}[^<>]+?)</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

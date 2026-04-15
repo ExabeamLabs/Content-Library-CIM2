@@ -46,12 +46,14 @@ json-windows-events-2 = {
     """"+KeyName"+:"+({key_name}[^"]+)""",
     """"+PrivilegeList"+:"+(-|({privileges}[^"]+))""",
     """"+SidHistory"+:"+(-|({sid_history}[^"]+))"""
+    """"channel\\?"+:\\?"+({channel}[^"\\]+)"""
     """exa_json_path=$.EventData.SubjectUserSid,exa_field_name=user_sid"""
     """exa_json_path=$.EventData.SubjectLogonId,exa_field_name=login_id"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.EventData.ProviderName,exa_field_name=provider_name"""
     """exa_regex=@timestamp\\?"+:\\?"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """exa_json_path=$.EventData.KeyType,exa_field_name=key_type"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   
 }
 ```

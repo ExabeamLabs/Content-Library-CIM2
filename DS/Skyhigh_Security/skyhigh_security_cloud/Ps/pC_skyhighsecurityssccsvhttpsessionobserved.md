@@ -6,7 +6,7 @@ Name = skyhighsecurity-ssc-csv-http-session-observed
   Product = Skyhigh Security Cloud
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   ParserVersion = "v1.0.0"
-  Conditions = [ """Logging-Client """, """http""", """OBSERVED""" , """Skyhigh""" ]
+  Conditions = [ """Logging-Client """, """http""", """,OBSERVED,""" , """Skyhigh""" ]
   Fields = [
     """({action}OBSERVED)""",
     """,({method}[^,]+),([^,]+,){4}OBSERVED"""
@@ -22,7 +22,6 @@ Name = skyhighsecurity-ssc-csv-http-session-observed
     """,OBSERVED,([^,]*,){16}({user_agent}[^,]+)"""
     """,OBSERVED,([^,]*,){18}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
     """,OBSERVED,([^,]*,){19}({dest_port}\d+)"""
-
   ]
 
 

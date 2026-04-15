@@ -13,6 +13,7 @@ Name = microsoft-evsystem-kv-policy-apply-success-1503
     """"Computer"+:"+({host}[^"]+)""",
     """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
     """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host"""
+    """channel="({channel}[^"]+)""""
   ]
 
 windows-events-2 = {
@@ -31,6 +32,7 @@ windows-events-2 = {
    """"message"+:"+({additional_info}[^"]+)""",
    """"ProviderName"+:"+({provider_name}[^"]+)""",
    """"logon_information.logon_type"+:"+({login_type}\d+)"""
+   """channel="({channel}[^"]+)"""
 
    """exa_json_path=$.log.timestamp,exa_field_name=time"""
    """exa_json_path=$.log.jsonPayload.EventID,exa_field_name=event_code"""

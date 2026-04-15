@@ -33,6 +33,7 @@ Name = microsoft-azuresc-json-alert-trigger-success-geoanomaly
      """"destinationServiceName":"({app}[^"]+)""""
      """"sourceAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """"Client hostname[\\]*":[\\]*"({src_host}[\w\-\.]+)""",
+     """"azureTenantId":\s*"({tenant_id}[^"]+)""""   
      """msg=.*?\[({alert_source}[^\]]+)\]:"""   
      """exa_json_path=$.id,exa_field_name=alert_id""",
      """exa_json_path=$.title,exa_field_name=alert_name""",
@@ -46,6 +47,7 @@ Name = microsoft-azuresc-json-alert-trigger-success-geoanomaly
      """exa_regex="sourceAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
      """exa_json_path=$.userStates[0].domainName,exa_field_name=domain""",            
      """exa_json_path=$.userStates[0].userPrincipalName,exa_field_name=user_upn""",
+     """exa_json_path=$.azureTenantId,exa_field_name=tenant_id"""
 ]
 
 

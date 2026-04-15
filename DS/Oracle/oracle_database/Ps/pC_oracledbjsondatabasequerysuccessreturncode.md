@@ -5,7 +5,7 @@ Name = "oracle-db-json-database-query-success-returncode"
 Vendor = "Oracle"
 Product = "Oracle Database"
 ExtractionType = json
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd HH:mm:ss.SSSSSS"]
 Conditions = [
 """"action_name":""""
 """"object_schema":""""

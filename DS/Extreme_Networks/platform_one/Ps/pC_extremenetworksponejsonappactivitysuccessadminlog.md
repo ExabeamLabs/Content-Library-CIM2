@@ -1,0 +1,31 @@
+#### Parser Content
+```Java
+{
+Name = extremenetworks-pone-json-app-activity-success-adminlog
+  ParserVersion = "v1.0.0"
+  Conditions = [ """"operation_name":"admin.log"""", """"operation_detail":""", """"timestamp":""", """"operation_context":{""", """"category":""" ]
+
+json-extremenetworks-pone-event = {
+  Vendor = Extreme Networks
+  Product = Platform ONE
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
+  ExtractionType = json
+  Fields = [
+    """exa_json_path=$.country,exa_field_name=country""",
+    """exa_json_path=$.operation_result,exa_field_name=result""",
+    """exa_json_path=$.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """exa_json_path=$.operation_detail,exa_field_name=additional_info""",
+    """exa_json_path=$.operation_name,exa_field_name=operation""",
+    """exa_json_path=$.client_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.timestamp,exa_field_name=time""", 
+    """exa_json_path=$.category,exa_field_name=event_category""",
+    """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}\w+(\s+\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.app_name,exa_field_name=app""",
+    """exa_json_path=$.operation_context.eventName,exa_field_name=event_name""",
+    """exa_json_path=$.operation_context.protocol,exa_field_name=protocol""",
+    """exa_json_path=$.operation_context.method,exa_field_name=auth_method""",
+    """exa_json_path=$.operation_context.old_name,exa_field_name=old_value""",
+    """exa_json_path=$.operation_context.new_name,exa_field_name=new_value"""
+  
+}
+```

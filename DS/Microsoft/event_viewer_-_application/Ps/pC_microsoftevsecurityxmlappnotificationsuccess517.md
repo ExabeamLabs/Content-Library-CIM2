@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-app-notification-success-517
     """<Security UserID(\\)?=('|")({user_sid}[^'"]+)""",
     """({event_name}Backup failed)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

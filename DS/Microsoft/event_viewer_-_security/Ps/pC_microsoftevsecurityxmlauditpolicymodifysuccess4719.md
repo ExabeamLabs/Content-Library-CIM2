@@ -25,6 +25,7 @@ Fields = [
 """<Data Name\\*=('|")AuditPolicyChanges('|")>({result}[^<]+)"""
 """<Message>({event_name}System audit policy was changed)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

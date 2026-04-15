@@ -30,6 +30,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """"TicketEncryptionType\\?":\\?"({ticket_encryption_type}[^"\\]*)"""
     """"IpAddress\\?":\\?"(?:::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\\?""""
     """Account Name:((?-i)\\+[rnt])*({account}.+?)((?-i)\\+[rnt])*Account Domain"""
+    """"Channel":"({channel}[^"]+)""""
     """exa_regex=({event_name}A Kerberos service ticket was renewed)""",
     """exa_json_path=$.EventTime,exa_field_name=time""",
     """exa_json_path=$.timestamp,exa_field_name=time""",

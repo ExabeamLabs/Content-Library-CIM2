@@ -11,6 +11,7 @@ VMParserTemplates}{
   Conditions = [ """vmkernel:""" ]
   Fields = ${VMDLParsersTemplates.VMParserTemplates.Fields}[
     """({event_name}Last path removed for TGT)"""
+    """\s*({host}[\w.-]+)\s*vmkernel:"""
     
 }
 ```

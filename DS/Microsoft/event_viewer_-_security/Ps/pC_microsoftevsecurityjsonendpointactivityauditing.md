@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-json-endpoint-activity-auditing
     """UserAccountControl":"(-|({uac_status}[^"]+))","UserParameters""""
    """OldUacValue":"(-|({old_value}[^"]+))","NewUacValue""""
     """"NewUacValue":"(-|({new_value}[^"]+))","UserAccountControl""""
+    """"Channel":"({channel}[^"]+)"""",
   ]
 
 

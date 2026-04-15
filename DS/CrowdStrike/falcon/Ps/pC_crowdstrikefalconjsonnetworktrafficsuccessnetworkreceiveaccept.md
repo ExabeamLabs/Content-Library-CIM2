@@ -37,6 +37,7 @@ Name = crowdstrike-falcon-json-network-traffic-success-networkreceiveaccept
     """exa_json_path=$.LocalPort,exa_field_name=src_port"""
     """exa_json_path=$.RemotePort,exa_field_name=dest_port"""
     """exa_json_path=$.ConnectionDirection,exa_field_name=direction"""
+    """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 

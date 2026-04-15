@@ -19,6 +19,7 @@ Name = microsoft-azuremon-json-http-session-requestmethod
     """exa_json_path=$.RequestSizeBytes,exa_field_name=bytes_in""",
     """exa_json_path=$.ResponseSizeBytes,exa_field_name=bytes_out""",
     """exa_json_path=$.ResponseStatusCode,exa_field_name=http_response_code"""
+    """exa_json_path=$.TenantId,exa_field_name=tenant_id"""
   ]
 
 

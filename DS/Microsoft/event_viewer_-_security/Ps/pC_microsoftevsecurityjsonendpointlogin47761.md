@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """"TargetUserName"\s*:\s*"({user_upn}[^@"]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)?(({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({dest_domain}({domain}[^\s"@]+)))?"""",
     """"TargetUserName"\s*:\s*"(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
     """"(record_number|record_id)"\s*:\s*"*({event_id}\d+)""",
+    """"channel":"({channel}[^"]+)""""
     """exa_json_path=$.message,exa_regex=({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
     """exa_json_path=$..computer_name,exa_regex=({host}[\w\-]+(\.({dest_domain}({domain}[\w\-.]+)))?)""",
@@ -29,6 +30,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """exa_json_path=$..TargetUserName,exa_regex=(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
     """exa_json_path=$..record_number,exa_field_name=event_id""",
     """exa_json_path=$..record_id,exa_field_name=event_id"""
+    """exa_json_path=$..channel,exa_field_name=channel"""
   ]
 
 

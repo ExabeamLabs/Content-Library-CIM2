@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """<RunLevel>({run_level}[^<]+)<\/RunLevel>""",
     """<Command>({process_path}({process_dir}[^<]+)\\\\({process_name}[^<]+))<""",
     """<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
+    """"Channel":"({channel}[^"]+)"""
     """exa_regex="EventTime":({time}\d{10})""",
     """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """exa_regex=({event_code}4702)"""
@@ -41,6 +42,7 @@ Name = microsoft-evsecurity-json-scheduled-task-modify-4702
     """exa_json_path=$.LevelDisplayName,exa_field_name=run_level"""
     """exa_regex=<Command>({process_path}({process_dir}[^<]+)\\\\({process_name}[^<]+))<""",
     """exa_regex=<RegistrationInfo>[^=]+?<Description>(?=\w)({additional_info}[^=]+?)</Description>""",
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
 

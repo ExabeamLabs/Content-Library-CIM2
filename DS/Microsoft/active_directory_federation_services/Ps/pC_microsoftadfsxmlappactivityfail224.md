@@ -12,6 +12,7 @@ Name = microsoft-adfs-xml-app-activity-fail-224
     """<Computer>({host}[\w\-\.]+)<\/Computer>""",
     """<EventData><Data>({additional_info}[^\<]+)<\/Data><\/EventData><\/Event>""",
     """thumbprint\s?'({new_hash}[^']+)"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
   ParserVersion = "v1.0.0"
 

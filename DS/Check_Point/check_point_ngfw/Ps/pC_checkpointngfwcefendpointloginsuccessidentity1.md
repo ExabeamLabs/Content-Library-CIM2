@@ -4,48 +4,35 @@
 Name = checkpoint-ngfw-cef-endpoint-login-success-identity-1
   ParserVersion = v1.0.0
   Conditions = [ """CheckPoint""", """product:"""", """action:"Update"""", """product:"Identity Awareness"""", """auth_status:"Successful Login"""" ]
+  Fields = ${CheckpointParsersTemplates.checkpoint-auth.Fields}[
+  """originsicname:"CN=({origin_name}[^",]+)""",
+  """ifdir:"({direction}[^"]+)"""
+  ]
 
-cef-checkpoint-firewall = {
+
+checkpoint-auth = {
   Vendor = Check Point
   Product = Check Point NGFW
-  TimeFormat = "epoch"
+  TimeFormat = "epoch_sec"
   Fields = [
-    """\Wrt=({time}\d{13})""",
-    """\Wact=(|({action}.+?))(\s+\w+=|\s*$)""",
-    """\Wifname=(|({src_interface}.+?))(\s+\w+=|\s*$)""",
-    """\Woriginsicname=(|({user_ou}.+?))(\s+\w+=|\s*$)""",
-    """\Wproduct=(|({product_name}.+?))(\s+\w+=|\s*$)""",
-    """\Wservice_id=(|({protocol}.+?))(\s+\w+=|\s*$)""",
-    """\Wrule_name=(|({rule}.+?))(\s+\w+=|\s*$)""",
-    """\Wconn_direction=(|({direction}.+?))(\s+\w+=|\s*$)""",
-    """\Wapp=(|({protocol}.+?))(\s+\w+=|\s*$)""",
-    """\Wcp_severity=(|({alert_severity}.+?))(\s+\w+=|\s*$)""",
-    """\W(s|d)user=({last_name}[^\s]+)\s+({first_name}[^\s]+)\s+-\s+\(({department}[^)]+)\)\s+-\s+({company}[^\s]+)\s+\((({email_address}[^@\s]+@[^)]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """\W(s|d)user=((CheckPoint|({last_name}[^\s]+))\s+(Firewall|({first_name}[^\s]+))\s+)\((({email_address}[^\s@]+@[^\)]+)|checkpointfw|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """\Wshost=(|({src_host}[\w\-.]+?)(@({domain}[^\s@]+))?)(\s+\w+=|\s*$)""",
-    """\Wsntdom=(|({domain}.+?))(\s+\w+=|\s*$)""",
-    """\Wos_name=(|({os}.+?))(\s+\w+=|\s*$)""",
-    """\WdestinationTranslatedAddress=(0\.0\.0\.0|({dest_translated_ip}[a-fA-F\d.:]+))""",
-    """\WsourceTranslatedAddress=(0\.0\.0\.0|({src_translated_ip}[a-fA-F\d.:]+))""",
-    """\Worigin=({origin_ip}[a-fA-F\d.:]+)""",
-    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-    """\Wdst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """dvc=({host}[a-fA-F\d.:]+)""",
-    """ahost=({host}[^\s]+)""",
-    """\Wspt=({src_port}\d+)""",
-    """\Wdpt=({dest_port}\d+)""",
-    """\Wserver_inbound_bytes=({bytes_in}\d+)""",
-    """\Wserver_outbound_bytes=({bytes_out}\d+)""",
-    """\Win=({bytes_in}\d+)""",
-    """\Wout=({bytes_out}\d+)""",
-    """categoryOutcome=(\/)?({result}.+?)\s\w+=""",
-    """tunnel_protocol=({tunnel_protocol}[^=]+?)\s*\w+=""",
-    """deviceDirection=({direction}[^=]+)\s\w+=""",
-    """proto=({protocol}[^=]+?)\s\w+="""
-    """\W(user|src_user_name|dst_user_name):"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-        """\Wact=(|({result}.+?))(\s+\w+=|\s*$)""",
-        """\Wserver_outbound_bytes=({bytes}\d+)""",
-        """\Wout=({bytes}\d+)""",
+    """\Wtime:"({time}\d{10})""",
+    """\W({host}[\w\-.]+) CheckPoint""",
+    """\Wuser:"(-|({email_address}[^@"\s]+@[^@"\s]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """\Wuser:"({last_name}[^,]+),\s*({first_name}[\w\s]+\S)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)\)""",
+    """\Wuser:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)""",
+    """\Wsrc:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wendpoint_ip:"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """host_ip:"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
+    """\Wauth_method:"({auth_method}[^"]+)""",
+    """\Wauth_status:"({result}[^"]+)""",
+    """\sstatus:"({result}[^"]+)""",
+    """\Wdomain_name:"({domain}[^"]+)""",
+    """\Worigin:"({origin_ip}[^"]+)""",
+    """\Worigin_sic_name:"CN=({origin_name}[^",]+)""",
+    """\Wproduct:"({product_name}[^"]+)""",
+    """reason:"({failure_reason}[^"]+)""",
+    """\Wsrc_machine_name:"({src_host}[\w\-.]+)""",
+    """\Wos_name:"({os}[^"]+)""""
   
 }
 ```

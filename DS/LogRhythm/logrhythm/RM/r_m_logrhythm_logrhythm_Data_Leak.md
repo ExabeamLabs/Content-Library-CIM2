@@ -7,7 +7,7 @@ Vendor: LogRhythm
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  36   |   15   |         5          |       3        |   18    |
+|  36   |   15   |         5          |       3        |   15    |
 
 | Event Type          | Rules    | Models    |
 | ---- | ---- | ---- |

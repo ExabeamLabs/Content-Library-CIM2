@@ -26,7 +26,7 @@ Name = cisco-umbrella-cef-http-session-proxy
     """"categories":\[({categories}"({category}[^",]+?)"[^\]]*?)\]""",
     """"verdict"+:"+({action}[^",]+)""",
     """"identityType"+:"+({identity_type}[^",]+)""",
-    """"identities"+:\["+({dest_host}[\w-]+)\.?""",
+    """"identities"+:\["+({dest_host}[\w-]+)\.?".*?"identityType":[^":]*?"(Anyconnect Roaming Client|Roaming Computers)"""",
     """"identities"+:\["+\s*({full_name}[^"\(]+).+?\('?({email_address}(([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+)@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|\)']+))"""
     """"identities":\[("({dest_host}[\w\-\.]+)")?,"({full_name}[^\("]+?)(?:\s*\(\w+}\)\s*)?(\s+\(({email_address}(([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9])+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\))""""
   ]

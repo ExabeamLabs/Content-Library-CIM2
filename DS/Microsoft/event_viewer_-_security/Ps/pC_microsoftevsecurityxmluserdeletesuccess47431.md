@@ -26,6 +26,7 @@ Fields = [
   """<Data Name[^<>]+?TargetDomainName[^<>]+?>({dest_domain}[^<>]+?)<\Data>""",
   """<Data Name[^<>]+?TargetUserName[^<>]+?>({dest_user}[^<>]+?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 
 

@@ -23,6 +23,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768-2"
     """TargetUserName":"(?:-|(system|anonymous logon|LOCAL SERVICE|LOCAL SYSTEM)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
     """TargetDomainNam":"(?:-|({dest_domain}({domain}[^"]+?)))""""
     """TargetSid":"({dest_user_sid}({user_sid}[^"\\]+))""""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 

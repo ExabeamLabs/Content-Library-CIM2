@@ -53,6 +53,7 @@ Fields = [
   """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)"""
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,9})?Z)"""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d)\s+(AM|PM)"""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

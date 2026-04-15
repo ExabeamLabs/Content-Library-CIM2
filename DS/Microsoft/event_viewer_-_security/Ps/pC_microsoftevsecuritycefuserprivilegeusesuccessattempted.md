@@ -24,6 +24,7 @@ Fields = [
 """"subjectDomainName":\"(-|({src_domain}({domain}[^\s\"]+)))""""
 """"processName":\"(?: |({process_path}({process_dir}(?:[^\";]+)?[\\\/])?({process_name}[^\\\/\";]+?)))\s*""""
 """"privilegeList":\"({privileges}[^\"]+?)\s*""""
+""""channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

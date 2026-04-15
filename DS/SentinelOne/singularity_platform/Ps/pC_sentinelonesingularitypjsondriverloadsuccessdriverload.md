@@ -12,13 +12,15 @@ Name = sentinelone-singularityp-json-driver-load-success-driverload
     """"src.process.image.md5":\s*\\?"+({hash_md5}[^"\\]+)"""",
     """"src.process.pid":\s*({process_id}\d+)""",
     """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*"""",
+    """"src.process.signedStatus":\s*\\?"+({file_signed}[^"\\]+)"""",
 
     """exa_json_path=$.['agent.version'],exa_field_name=user_agent""",
     """exa_json_path=$.['src.process.image.sha256'],exa_field_name=hash_sha256""",
     """exa_json_path=$.['src.process.image.sha1'],exa_field_name=hash_sha1""",
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5""",
     """exa_json_path=$.['src.process.pid'],exa_field_name=process_id""",
-    """exa_json_path=$.['src.process.image.path'],exa_regex=({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))$"""
+    """exa_json_path=$.['src.process.image.path'],exa_regex=({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))$""",
+    """exa_json_path=$.['src.process.signedStatus'],exa_field_name=file_signed"""
   ]
 
 json-sentinelone-edr-events-dl = {

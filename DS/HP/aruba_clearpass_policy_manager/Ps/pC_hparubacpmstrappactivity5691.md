@@ -7,7 +7,7 @@ Name = hp-arubacpm-str-app-activity-5691
   TimeFormat = ["EEE MMM dd HH:mm:ss yyyy","MMM dd HH:mm:ss yyyy"]
   Conditions = [ """cli[5691]:""", """wsc:""" ]
   Fields = ${DLHPEParsersTemplates.aruba-clearpass-info.Fields}[
-    """({event_code}cli\[5691\])""",
+    """({event_code}5691)""",
     """cli\[5691\]:\s*({additional_info}[^"\$]+?)\s*("|$)"""
   ]
 

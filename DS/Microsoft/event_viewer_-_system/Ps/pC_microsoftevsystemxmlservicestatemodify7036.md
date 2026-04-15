@@ -20,6 +20,7 @@ Name = "microsoft-evsystem-xml-service-state-modify-7036"
     """<Data Name =('|")param1('|")>({service_name}[^<]+)<"""
     """<Level>({run_level}[^<]+)<"""
     """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

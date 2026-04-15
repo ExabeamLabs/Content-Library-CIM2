@@ -37,7 +37,7 @@ ${AwsParserTemplates.aws-cloudtrail-json}{
   """exa_json_path=$.responseElements.instancesSet.items[*].privateDnsName,exa_field_name=new_host""",
   """exa_json_path=$.responseElements..instanceId,exa_field_name=resource_id""",
   """exa_json_path=$.responseElements..availabilityZone,exa_field_name=availabilty_zone""",
-  """exa_json_path=$.responseElements.instancesSet.items[*].privateIpAddress,exa_field_name=new_ip""",
+  """exa_json_path=$.responseElements.instancesSet.items[0].privateIpAddress,exa_field_name=new_ip""",
   """exa_json_path=$.responseElements.instancesSet.items[*].groupSet.items[*].groupName,exa_field_name=security_group""",
   """exa_json_path=$.responseElements..instanceId,exa_field_name=instance_id""",
   ]
@@ -68,7 +68,7 @@ aws-cloudtrail-json = {
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
       """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
-      """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
+      """"readOnly"\s*:\s*"?({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
       """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({role_id}[^"]+?)\\?"""",

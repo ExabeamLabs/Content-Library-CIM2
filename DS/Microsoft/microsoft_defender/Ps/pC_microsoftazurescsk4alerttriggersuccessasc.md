@@ -27,6 +27,7 @@ Fields = [
 """"+azureSubscriptionId"+:"+({subscription_id}[^",]+)""",
 """msg=.*?\[({alert_source}[^\]]+)\]:"""
 """"status":"({incident_status}[^"]+)""""
+""""azureTenantId":\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = v1.0.0
 

@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-file-rename-9999
 # old_file_path is removed
     """<Data Name\\*=('|")NewPath('|")>({file_path}({file_dir}.*?[\\\/]+)?({file_name}[^\\\/]+?(\.({file_ext}\w+))?))</Data>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

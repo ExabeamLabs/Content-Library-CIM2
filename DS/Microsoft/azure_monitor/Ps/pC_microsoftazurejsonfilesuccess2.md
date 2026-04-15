@@ -38,6 +38,7 @@ azure-classicblob-json = {
       """exa_json_path=$..resourceType,exa_regex=({resource_type}({service_name}[^"\/]+)\/[^"]+)""",
       """exa_json_path=$..serviceType,exa_field_name=service_type""",
       """exa_json_path=$..upn,exa_field_name=user_upn""",
+      """exa_json_path=$..tenantId,exa_field_name=tenant_id"""
       """"+time"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
       """"+resourceId"+:\s*"+({resource}[^"]+)"+""",
       """"+category"+:\s*"+({category}({operation_type}[^"]+))"+""",
@@ -61,6 +62,7 @@ azure-classicblob-json = {
       """"+resourceType"+:\s*"+({resource_type}({service_name}[^"\/]+)\/[^"]+)"+""",
       """"+serviceType"+:\s*"+({service_type}[^"]+)"+"""
       """"upn":"({user_upn}[^"]+)""""
+      """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
     
 }
 ```

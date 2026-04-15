@@ -26,6 +26,7 @@ Fields = [
   """AccessMask"+:"+({access_mask}[^"]+)"""
   """<Level>({run_level}[^<]+)<"""
   """"Activity":"({event_name}[^"]+)""""
+  """"Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

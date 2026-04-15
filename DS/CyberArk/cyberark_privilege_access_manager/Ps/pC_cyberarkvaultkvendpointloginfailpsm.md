@@ -5,7 +5,7 @@ Name = cyberark-vault-kv-endpoint-login-fail-psm
   Conditions = [ """%CYBERARK:""", """Message="PSM Connect Failed""", """;Safe=""" ]
   Fields = ${CyberArkParsersTemplates.s-cyberark-events.Fields}[
     """;UserName ="(|(({domain}[^\s\\"]+)\\+)?({account}[^\s\\"]+))"""",
-    """;LogonDomain="(|[\d\.]+|({account_domain}[^"]+?))"""",
+    """;LogonDomain="(|[\d\.]+|({account_domain}[^";]+?))"""",
   ]
   ParserVersion = v1.0.0
 

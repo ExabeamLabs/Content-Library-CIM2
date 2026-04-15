@@ -25,6 +25,7 @@ Fields = [
   """\sDevice Name:\s*({device_description}.+?)\s*Class ID:"""
   """\sClass ID:\s*({class_id}.+?)\s*Class"""
   """\sClass Name:\s*({class_name}.+?)\s*Vendor IDs:"""
+  """channel="({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

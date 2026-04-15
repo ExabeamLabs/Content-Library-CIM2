@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-1
     """<Data Name\\=('|")NewSd('|")>({new_attribute}[^<]+)<""",
     """<Level>({run_level}[^<]+)<""",
     """<Data Name\\=('|")(Caller)?ProcessName('|")>(-|(([^<>]*?[\\\/]+)?({file_name}[^<>\\\/]+?(\.({file_ext}[^\s\.\\\/<>]+))?)))<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 windows-events-3-dl = {

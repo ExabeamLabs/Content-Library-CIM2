@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-scheduled-task-disable-4701-1
     """<RegistrationInfo>.+?<Description>(?=\w)({description}[^<]+)</Description>"""
     """ThreadID(\\)?=('|")({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = v1.0.0
 

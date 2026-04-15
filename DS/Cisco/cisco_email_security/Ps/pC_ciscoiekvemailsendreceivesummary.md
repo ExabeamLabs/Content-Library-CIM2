@@ -6,7 +6,7 @@ Name = cisco-ie-kv-email-send-receive-summary
   Vendor = Cisco
   Product = Cisco Email Security
   TimeFormat = "MM/dd/yyyy HH:mm:ss Z"
-  Conditions = [ """ Info: MID """, """From:""", """To:""", """Subject""" ]
+  Conditions = [ """ Info: MID """, """From:""", """To:""", """Subject=""" ]
   Fields = [
     """\srt=({time}\d+)""",
     """({time}\w+ \d+ \d\d:\d\d:\d\d) mail_logs:""",

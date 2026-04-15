@@ -8,8 +8,8 @@ Name = cisco-secureemail-json-email-send-receive-esa
   Conditions = [ """ ESAMailFlowPolicy=""", """ ESAURLDetails=""", """ duser=""", """ ESAMsgSize=""" ]
   Fields = [
     """\sstart=({time}\w{3}\s\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d{4})\s""",
-    """\ssuser=({email_address}[^@]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s""",
+    """\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """\sact=({action}[^\s]+)\s""",
     """\sESAMsgSize=({bytes}\d+)""",
     """\sdeviceDirection=({direction}[^=]+)\s\w+=""",

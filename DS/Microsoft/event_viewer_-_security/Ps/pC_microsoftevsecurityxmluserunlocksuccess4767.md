@@ -23,6 +23,7 @@ Fields = [
 """<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
 """({event_code}4767)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
   ]
 ParserVersion = "v1.0.0"
 

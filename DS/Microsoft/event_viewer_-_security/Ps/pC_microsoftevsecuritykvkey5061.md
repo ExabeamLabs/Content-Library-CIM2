@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-kv-key-5061
     """\w+\s+\d+\s+\d+:\d+:\d+\s+(am|pm|\d{4}|({host}[\w\-.]+))\s""",
     """Computer(Name)?\s*\\*"?(=|:|>)\s*"*({host}[\w\.-]+)(\s|,|"|</Computer>|$)""",
     """Operation:\s+({operation}[^:\.]+)\.?\s+Return Code:"""
+    """Channel"?(:|>)"?({channel}[^"<]+)"""
   ]
 
 raw-object-access = {

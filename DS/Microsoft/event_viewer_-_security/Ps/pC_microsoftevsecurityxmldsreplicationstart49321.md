@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-ds-replication-start-4932-1
     """<Data Name\\*=('|")DestinationDRA('|")>.+?CN=({dest_dc}[^\s,]+)""",
     """<Data Name\\*=('|")SourceDRA('|")>.+?CN=({src_dc}[^\s,]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

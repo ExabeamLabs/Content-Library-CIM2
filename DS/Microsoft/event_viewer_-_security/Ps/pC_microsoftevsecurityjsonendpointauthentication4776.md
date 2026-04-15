@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-json-endpoint-authentication-4776
     """"SourceName":"({provider_name}[^"]+)"""",
     """"Category":"({event_name}[^"]+)"""",
     """"PackageName":"({auth_package}[^"]+)""""
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = v1.0.0
 

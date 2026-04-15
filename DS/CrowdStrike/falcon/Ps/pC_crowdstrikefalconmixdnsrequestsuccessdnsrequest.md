@@ -63,6 +63,7 @@ Fields = [
   """exa_json_path=$.RequestType,exa_field_name=dns_query_type"""
   """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
   """exa_json_path=$.name,exa_field_name=event_name"""
+  """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 

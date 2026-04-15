@@ -21,6 +21,7 @@ Fields = [
       """suser=({email_address}[^=@]+@[^\.]+\.[^\s=]+)"""
       """"_?ResourceId":\s*"({resource_id}[^"]+)""""
       """"SubscriptionId":\s*"({subscription_id}[^"]+)""""
+      """"TenantId":\s*"({tenant_id}[^"]+)""""
     ]
   
 

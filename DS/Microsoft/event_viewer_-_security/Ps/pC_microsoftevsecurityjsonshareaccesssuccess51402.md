@@ -23,6 +23,7 @@ Fields = [
 """({accesses_code}({access}4416))"""
 """('|")IpPort('|")>({src_port}\d+)"""
 """Source Port(=|:)\s*(\\t)*({src_port}\d+)"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

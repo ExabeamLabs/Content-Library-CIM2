@@ -20,7 +20,7 @@ Name = wallix-wbastion-kv-process-completed
      """type="({operation_type}[^"]+)"""
     ]
     ParserVersion = "v1.0.0"
-    
+
 
 }
 ```

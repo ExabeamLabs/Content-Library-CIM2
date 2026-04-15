@@ -18,7 +18,7 @@ Fields = [
 """Group\.DisplayName\\",\\"oldValue\\":\s*\\"\\+"({group_name}[^"\\]+)"""
 """time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}Z)"""
 """"ActivityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""""
-""""type":"User","userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(,|")"""
+"""\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")"""
 """"InitiatedBy":\s*"\{\\"user\\":\s*\{[^\}]+"userPrincipalName\\":\s*\\"({email_address}[^@"]+@([^\."]+\.[^"]+?)?)\\?""""
 """callerIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"InitiatedBy":\s*"\{\\"user\\":\s*\{[^\}]+"ipAddress\\":\s*\\"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\\?""""
@@ -30,9 +30,10 @@ Fields = [
 """targetResources":[^\]]+Group\.DisplayName[^\}]+newValue":\s*"\\*"({group_name}[^\\"]+)"""
 """loggedByService":\s*"({app}[^",]+)"""
 """"TimeGenerated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\dZ)""""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)"""
 """exa_regex=Group\.DisplayName\\",\\"oldValue\\":\s*\\"\\+"({group_name}[^"\\]+)"""
 """exa_json_path=$.time,exa_field_name=time"""
-"""exa_regex="type":"User","userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(,|")"""
+"""exa_regex=\\*"type\\*":\\*"User\\",\\*"userPrincipalName\\*":\s*\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\*(,|")"""
 """exa_regex="InitiatedBy":\s*"\{\\"user\\":\s*\{[^\}]+"userPrincipalName\\":\s*\\"({email_address}[^@"]+@([^\."]+\.[^"]+?)?)\\?""""
 """exa_json_path=$.callerIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
 """exa_regex=targetResources":[^\]]+Group\.DisplayName[^\}]+newValue":\s*"\\*"({group_name}[^\\"]+)"""
@@ -46,6 +47,7 @@ Fields = [
 """exa_json_path=$.tenantId,exa_field_name=account_id"""
 """exa_json_path=$.ActivityDisplayName,exa_field_name=operation"""
 """exa_json_path=$.Result,exa_field_name=result"""
+"""exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-endpoint-create-4741
     """<Task>({sub_category}[^<]+)""",
     """<Keywords>({result}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	 ]
   
 

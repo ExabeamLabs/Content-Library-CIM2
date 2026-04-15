@@ -33,8 +33,9 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"vpc":({vpc}[^\}]*"})"""
     """"vm_name":"({vm_host_name}[^",]*)""""
     """"subnetwork_name":"({subnetwork}[^",]*)""""
-    """"resource":({resource}[^\}]*"})"""
-    """"resource"+:[^\}]*labels[^\}]*"+region"+:\s*"+({region}[^"\\\/\}]+)"+"""
+    """"resource":\s*({resource}[^]]+?\s*"type":"[^"]+"}),"""
+    """"resource":({resource}[^\$]+?}}),"destinationServiceName":"""
+    """"resource":"({resource}[^"]+)","""    """"resource"+:[^\}]*labels[^\}]*"+region"+:\s*"+({region}[^"\\\/\}]+)"+"""
     """"dest_ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","dest_port")?(:({dest_port}\d+))?"?"""
     """"serviceName":\s*"({app}[^"]+)""",
     """\sdproc=({app}[^=]+)\s\w+=""",

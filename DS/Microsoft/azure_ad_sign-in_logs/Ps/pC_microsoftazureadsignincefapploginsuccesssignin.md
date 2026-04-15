@@ -20,6 +20,7 @@ Name = microsoft-azureadsignin-cef-app-login-success-signin
 	""""UserDisplayName":"({full_name}({first_name}[^\s"]+)\s+({last_name}[^"\(\s)]+))""",
 	""""userAgent\\?",\\"?Value\\?":\\?"({user_agent}[^"\\]+)\\?"""",
 	""""RiskDetail":"({additional_info}[^"]+)"""
+  """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
   ]
 
 

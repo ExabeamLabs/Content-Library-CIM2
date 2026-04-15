@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """<Data Name\\*=('|")ProcessName('|")>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
     """({operation_type}closed)""",
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
+    """"Channel":"({channel}[^"]+)"""
   ]
 
 

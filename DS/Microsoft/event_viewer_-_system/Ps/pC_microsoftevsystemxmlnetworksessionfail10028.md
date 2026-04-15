@@ -20,6 +20,7 @@ Name = microsoft-evsystem-xml-network-session-fail-10028
     """<keyword>({result}[^<]+)</keyword>""",
     """<execution processid=('|")({process_id}\d+)('|") threadid=('|")({thread_id}\d+)('|")\/>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -26,6 +26,7 @@ windows-events-2-dl = {
     """providername="+({provider_name}[^"]+)""",
     """\stask="+({operation}[^"]+)""",
     """\Weventrecordid="+({event_id}\d+)""""
+    """\schannel="+({channel}[^"]+)""""
   
 }
 ```

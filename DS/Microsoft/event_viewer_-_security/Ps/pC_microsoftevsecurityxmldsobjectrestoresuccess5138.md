@@ -25,6 +25,7 @@ Fields = [
   """<Data Name\\*=('|")ObjectGUID('|")>\{({object_id}[^<\}]+)\}<"""
   """<Data Name\\*=('|")OpCorrelationID('|")>\{({correlation_id}[^\}<]+)\}<"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

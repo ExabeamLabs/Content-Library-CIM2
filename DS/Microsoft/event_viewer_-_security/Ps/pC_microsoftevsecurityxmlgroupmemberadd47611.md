@@ -26,6 +26,7 @@ Name = microsoft-evsecurity-xml-group-member-add-4761-1
     """<Task>({sub_category}[^<]+)"""
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

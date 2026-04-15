@@ -3,7 +3,7 @@
 {
 Name = vmware-carbonblack-json-file-write-success-filemod
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd HH:mm:ss.SSS"]
   Product = Carbon Black CES
   Conditions = [ """"type":"endpoint.event.filemod"""", """"process_username":"""", """"event_origin":"NGAV"""" ]
   Fields = ${CarbonBlackParsersTemplates.carbonblack-edr.Fields} [

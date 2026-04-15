@@ -8,8 +8,9 @@ Name = microsoft-evsecurity-kv-group-member-add-success-4732
   Fields = ${WinJPParsersTemplates.jp-member-added.Fields}[
     """サブジェクト:.+?アカウント名:\s+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """アカウント ドメイン:\s+({domain}[^\s]+)""",
-    """メンバー:\s+セキュリティ ID:\s+(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s:"]+))|({account_domain}[^\\]+)\\({account_name}.+?)|(?:.+?))\s+アカウント名:""",
+    """メンバー:\s+セキュリティ ID:\s+((({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s:"]+))|({account_domain}[^\\]+)\\({account_name}.+?)|(?:.+?))\s+アカウント名:""",
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d),({event_code}\d+),(?!\d+)({host}({src_host}[\w\-.]+)),.+?グループにメンバーが追加されました。"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 jp-member-added = {
@@ -24,6 +25,7 @@ jp-member-added = {
     """グループ:.+?グループ名:\s+({group_name}.+?)?\s+グループ ドメイン:""",
     """グループ:.+?グループ ドメイン:\s+({group_domain}[^\s]+)""",
     """セキュリティが有効な({group_type}[^\s]+)\s+グループにメンバーが追加されました。""",
+    """<Channel>({channel}[^<]+)<"""
   
 }
 ```

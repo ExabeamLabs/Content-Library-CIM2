@@ -6,6 +6,7 @@ Product = Kiteworks
 Conditions = [
   """User deleted"""
   """Activity:"""
+  """ id="""
 ]
 ParserVersion = "v1.0.0"
 

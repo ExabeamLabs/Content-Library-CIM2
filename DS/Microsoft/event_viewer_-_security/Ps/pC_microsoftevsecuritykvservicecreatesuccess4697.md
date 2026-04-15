@@ -29,6 +29,7 @@ Fields = [
 """Service Account:\s*(({account_domain}[^\\"\s]+)\\)?((?-i)\\+[rnt])*({account_name}[^"\s]+)"""
 """Service Account:(\\[nrt]|\s)*(({account_domain}[^\\"\s]+?)\\+)?(?!(\\*[nrt]\\+[nrt]))({account_name}[^"\s\\]+)(\\[nrt]|\s)*""""
 """Computer(\w+)?[\"\s]*(:|=)\s*\"?({dest_host}({host}[\w\-.]+?))(\"|\s)"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

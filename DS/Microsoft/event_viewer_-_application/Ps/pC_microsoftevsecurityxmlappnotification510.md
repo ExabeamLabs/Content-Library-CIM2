@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-xml-app-notification-510
     """<Computer>({host}[\w\-.]+?)<""",
     """<EventData><Data>({instance_id}[^<]+)""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 s-xml-events = {

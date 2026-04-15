@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-ds-replication-stop-4933-1
     """<Data Name\\*=('|")SourceDRA('|")>({src_dra}[^<]+)<""",
     """<Data Name\\*=('|")SessionID('|")>({session_id}\d+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
    ]
 
 

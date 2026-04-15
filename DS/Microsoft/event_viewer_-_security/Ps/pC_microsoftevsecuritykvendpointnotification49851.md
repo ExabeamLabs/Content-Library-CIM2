@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-endpoint-notification-4985-1
     """ProcessId="+({process_id}[^"]+)""",
     """ProcessName ="+({process_path}({process_dir}[^.]+)\\({process_name}[^"]+))""",
     """Computer="+({dest_host}({host}[^"]+))"""
+    """Channel="+({channel}[^"]+)"""
   ]
 
 

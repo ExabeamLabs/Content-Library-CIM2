@@ -5,9 +5,9 @@ Name = jamf-jamfpro-json-security-alerts-jamfprotect
   Vendor = "Jamf"
   Product = "Jamf Protect"
   ExtractionType = json
-  TimeFormat = "epoch"
+  TimeFormat = "epoch_sec"
   ParserVersion = "v1.0.0"
-  Conditions = [""""input":{""", """"eventType":"""", """"match":{""", """"facts":""", """"human":"""", """"related":"""  ]
+  Conditions = [ """"protectVersion":""", """"input":""", """"eventType":""", """"match":""", """"facts":""", """"human":""", """"provisioningUDID":""", """"matchReason":""" ]
   Fields = [
     """exa_json_path=$.input.eventType,exa_field_name=event_category""",
     """exa_json_path=$.input.host.hostname,exa_field_name=host""",
@@ -19,7 +19,7 @@ Name = jamf-jamfpro-json-security-alerts-jamfprotect
     """exa_json_path=$.input.match.event.eventID,exa_field_name=event_id""",
     """exa_json_path=$.input.match.event.gid,exa_field_name=group_id""",
     """exa_json_path=$.input.match.event.pid,exa_field_name=process_id""",
-    """exa_json_path=$.input.match.event.timestamp,exa_field_name=time""",
+    """exa_json_path=$.input.match.event.timestamp,exa_regex=^({time}\d{10})""",
     """exa_json_path=$.input.match.event.type,exa_field_name=operation_type""",
     """exa_json_path=$.input.match.facts[0].human,exa_field_name=alert_description""",
     """exa_json_path=$.input.match.facts[0].name,exa_field_name=alert_name""",

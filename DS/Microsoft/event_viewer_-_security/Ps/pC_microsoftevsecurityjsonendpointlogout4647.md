@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-4647
     """"TargetUserSid":"({dest_user_sid}({user_sid}[^"]+))""",
     """"ProcessID":({process_id}\d+)""",
     """"ThreadID":({thread_id}\d+)"""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

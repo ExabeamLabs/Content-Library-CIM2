@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-4872
   """<Execution ProcessID(\\)?=('|")({process_id}[^"']+)""",
   """ThreadID(\\)?=('|")({thread_id}\d+)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
   ]
  
 

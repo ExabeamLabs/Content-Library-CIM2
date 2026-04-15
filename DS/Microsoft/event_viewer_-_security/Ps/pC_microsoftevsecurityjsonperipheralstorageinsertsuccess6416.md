@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-json-peripheral-storage-insert-success-6416
     """exa_regex=Class Name:\s*({device_class}[^:]+?)\s+(Vendor IDs:|Hardware IDs:)"""
     """exa_regex=({event_name}A new external device was recognized by the system.)"""
     """exa_json_path=$.Message,exa_field_name=additional_info"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
   ParserVersion = "v1.0.0"

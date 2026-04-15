@@ -47,7 +47,9 @@ Fields = [
 """exa_json_path=$..event_platform,exa_field_name=os""",
 """exa_json_path=$..OciContainerId,exa_field_name=container_id""",
 """exa_json_path=$..FileSystemOperationType,exa_field_name=operation_type""",
-"""exa_json_path=$..ShareAccess,exa_field_name=access"""
+"""exa_json_path=$..ShareAccess,exa_field_name=access""",
+"""exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+
 ]
 
 

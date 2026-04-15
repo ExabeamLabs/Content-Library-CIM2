@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4611
     """('|")SubjectDomainName('|")>({src_domain}({domain}[^"\s<]+))<""",
     """('|")SubjectLogonId('|")>({login_id}[^"\s<]+)<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

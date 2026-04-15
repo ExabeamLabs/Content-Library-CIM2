@@ -10,7 +10,7 @@ Name = vmware-horizon-str-app-notification-success-maximum
   Fields = [
     """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)""",
     """({app}View)""",
-    """({event_name}View.*?)\s+$""",
+    """\s({event_name}View.*?)\s+$""",
   ]
 
 

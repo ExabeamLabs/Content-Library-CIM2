@@ -6,7 +6,7 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
   TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = ["""The service is now enforcing the following Azure password policy""","""<EventID>30006</EventID>""","""Microsoft-AzureADPasswordProtection-DCAgent"""]
+  Conditions = ["""<EventID>30006</EventID>""","""Microsoft-AzureADPasswordProtection-DCAgent"""]
   Fields = [
      """<TimeCreated\sSystemTime\\*='({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",
          """<Computer>({host}[^<]+)<\/Computer>""",
@@ -19,6 +19,7 @@ Name = microsoft-evazureadppdca-xml-app-notification-30006
          """ThreadID\\*='({thread_id}[^']+)'""",
          """<Message>({additional_info}[^\n]+?)\s*<\/Message>"""
          """<Level>({run_level}[^<]+)<"""
+         """<Channel>({channel}[^<]+)<\/Channel>"""         
   ]
 
 

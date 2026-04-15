@@ -21,7 +21,7 @@ Fields = [
     """exa_json_path=$.name,exa_regex='({malware_url}[^"\'\s]+)'\s+blocked due to""",
     """exa_json_path=$.name,exa_regex=[^"]*?block to\s+'({malware_url}[^"\'\s]+)'""",
     """exa_json_path=$.name,exa_regex=(n\/a|[^"]*? at \'({additional_info}({malware_url}[^"\']+)))""",
-    """exa_json_path=$.name,exa_field_name=additional_info""",
+    """exa_regex="name":\s*"({additional_info}[^"]+)"""",
     """exa_json_path=$.type,exa_field_name=alert_type""",
     """exa_json_path=$.dhost,exa_field_name=src_host""",
     """exa_json_path=$.severity,exa_field_name=alert_severity""",

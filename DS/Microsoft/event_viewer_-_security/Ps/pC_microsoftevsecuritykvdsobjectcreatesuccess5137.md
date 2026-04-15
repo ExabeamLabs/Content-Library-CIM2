@@ -29,6 +29,7 @@ Fields = [
 """"DSName":"({ds_name}[^"]+)""""
 """"DSType":"({ds_type}[^"]+)""""
 """Directory Service:(\s*)Name:\s*({ds_name}[^\s]+)\s+Type:\s*({ds_type}[^:]*?Services)"""
+""""Channel":"({channel}[^"]+)"""
 
   """exa_regex=({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d (am|AM|pm|PM))"""
   """exa_json_path=$.EventTime,exa_field_name=time""",
@@ -47,6 +48,7 @@ Fields = [
   """exa_json_path=$.DSType,exa_field_name=ds_type"""
   """exa_json_path=$.Computer,exa_field_name=host"""
   """exa_json_path=$.Computer,exa_field_name=dest_host"""
+  """exa_json_path=$..Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

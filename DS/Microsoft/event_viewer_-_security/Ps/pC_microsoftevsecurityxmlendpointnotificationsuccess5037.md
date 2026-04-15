@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-success-5037
     """<Task>({sub_category}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
     """<Data Name\\*=('|")ErrorCode('|")>({error_code}\d+)<\/Data>""",
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

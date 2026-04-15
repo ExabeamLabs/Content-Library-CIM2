@@ -26,12 +26,13 @@ exa-events-ns = {
     TimeFormat = "epoch"
     event_from_time_millisFormat = "epoch"
     event_to_time_millisFormat = "epoch"
+    trigger_timeFormat = ["epoch_sec", "epoch"]
     ExtractionType = json
     Fields = [
       """exa_json_path=$.approx_log_time,exa_field_name=time"""
-       """exa_json_path=$.dest_ip,exa_field_name=dest_ip"""
-       """exa_json_path=$.src_host,exa_field_name=src_host"""
-       """exa_json_path=$.src_ip,exa_field_name=src_ip"""
+       """exa_json_path=$.dest_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+       """exa_json_path=$.src_host,exa_regex=({src_host}[\w\-\.]+)"""
+       """exa_json_path=$.src_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
        """exa_json_path=$.risk_score,exa_field_name=risk_score"""
        """exa_json_path=$.event_url,exa_field_name=event_url""",
        """exa_json_path=$.rules,exa_field_name=rules""",
@@ -49,7 +50,7 @@ exa-events-ns = {
        """exa_json_path=$.src_product,exa_field_name=src_product"""
        """exa_json_path=$.src_vendor,exa_field_name=src_vendor"""
        """exa_json_path=$.security_criticality,exa_regex=({security_criticality}\d+)"""
-       """exa_json_path=$.dest_host,exa_field_name=dest_host"""
+       """exa_json_path=$.dest_host,exa_regex=({dest_host}[\w\-\.]+)"""
        """exa_json_path=$.create_case,exa_field_name=create_case"""
        """exa_json_path=$.id,exa_field_name=id"""
       """exa_json_path=$.product,exa_field_name=alert_source"""
@@ -57,8 +58,8 @@ exa-events-ns = {
       """exa_json_path=$.dest_user_entity_id,exa_field_name=dest_user_entity_id"""
       """exa_json_path=$.dest_device_entity_id,exa_field_name=dest_device_entity_id"""
       """exa_json_path=$.source_device_entity_id,exa_field_name=source_device_entity_id"""
-      """exa_json_path=$.user,exa_field_name=user"""
-
+      """exa_json_path=$.user,exa_regex=({user}[\w\.\-]{1,40}\$?)"""
+      """exa_json_path=$.trigger_time,exa_regex=({trigger_time}\d{10,13})"""
     
 }
 ```

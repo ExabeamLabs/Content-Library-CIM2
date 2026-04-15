@@ -8,9 +8,9 @@ Name = pan-ngfw-cef-alert-trigger-success-panos-1
   ParserVersion = v1.0.0
   Conditions = [ """CEF:""", """|Palo Alto Networks|""", """|THREAT|""", """PanOSThreatCategory="""  ]
   Fields = [
-    """\s({host}[\w\-.]+?)\sCEF:""",
-    """\sdvchost=({host}[\w\-.]+)""",
-    """\sdvchost=({device_name}[\w\-.]+)""",
+    """\s(-|({host}[\w\-.]+?))\sCEF:""",
+    """\sdvchost=({host}[\w\-.]+)\s\w+=""",
+    """\sdvchost=({device_name}[^=]+)\s\w+=""",
     """\srt=({time}\w\w\w\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)"""
     """\|rt=({time}\w\w\w\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d \w\w\w)""",
     """({alert_type}THREAT)""",

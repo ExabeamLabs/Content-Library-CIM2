@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4760-2
     """<Data Name\\*=('|")TargetSid('|")>({group_id}[^<]+)""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 	]
 
 

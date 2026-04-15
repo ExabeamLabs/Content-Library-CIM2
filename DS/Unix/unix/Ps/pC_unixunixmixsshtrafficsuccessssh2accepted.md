@@ -15,7 +15,7 @@ Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
   Fields = [
     """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """\s({host}({dest_host}[\w\-\.]+))\s({additional_info}Accepted[^:]+?\d{1,5})(\s\w+)?\s*ssh2""",
-    """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
+    """({time}\w{3}\s+\d+\s\d\d:\d\d:\d\d)\s(::ffff:)?(Message|\d+|({host}[\w\-.]+))\s""",
     """\"host\":\"(::ffff:)?({dest_host}({host}[^\"]+))\""""
     """\"host\":\{\"name\":\"(::ffff:)?({dest_host}({host}[^\"]+))\""""
     """\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(.\d\d\d)?[\+\-][^\s]+)""",
@@ -29,7 +29,7 @@ Name = "unix-unix-mix-ssh-traffic-success-ssh2accepted"
     """\s+from\s+(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\s+from\s+(::[\w]+:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\d\d\s(::ffff:)?({host}[\w.\-]+) sshd ({login_id}\d+)"""
-    """\d\d\s(::ffff:)?({host}[\w\.\-]+)(:|\s|\s\w+)\s*sshd\["""
+    """\d\d\s(::ffff:)?(\d+|({host}[\w\.\-]+))(:|\s|\s\w+)\s*sshd\["""
     """sshd(\[|\s)({login_id}\d+)"""
     """({event_code}ssh)"""
     """\d\d\d\d\s+\w{3}\s+\d\d\s+\d\d:\d\d:\d\d\s+\w+>\s+<(::ffff:)?({dest_host}[\w\-.]+)"""

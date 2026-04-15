@@ -42,6 +42,7 @@ Fields = [
   """<Data Name =("|')AccessList("|')>\s*({access}[^<]+?)\s*<"""
   """<Data Name =("|')AccessMask("|')>({access_mask}[^<\s"']+)"""
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
+  """Channel"?(:|>)"?({channel}[^"<]+)"""
 ]
 ParserVersion = "v1.0.0"
 

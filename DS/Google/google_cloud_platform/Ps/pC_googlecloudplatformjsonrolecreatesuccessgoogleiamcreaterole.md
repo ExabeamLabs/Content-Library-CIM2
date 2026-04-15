@@ -6,7 +6,7 @@ Name = google-cloudplatform-json-role-create-success-googleiamcreaterole
   ParserVersion = "v1.0.0"
   Conditions = [ """googleapis.com""", """"methodName":"google.iam.admin""", """CreateRole"""" ]
   Fields = ${GcpParserTemplates.gcp-cloudaudit-json.Fields}[
-    """exa_json_path=$.protoPayload.serviceData.permissionDelta.addedPermissions,exa_field_name=added_permissions""",
+    """exa_json_path=$.protoPayload.serviceData.permissionDelta.addedPermissions,exa_regex=\[({permissions}[^\]]+)\]""",
     """exa_json_path=$.protoPayload.response.included_permissions,exa_field_name=role_permissions"""
   ]
 

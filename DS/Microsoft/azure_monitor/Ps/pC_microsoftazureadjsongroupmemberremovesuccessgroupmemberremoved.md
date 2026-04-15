@@ -19,7 +19,7 @@ Fields = [
 """\Wdvc=({host}\S+)"""
 """\Wdvchost=({host}[\w\-.]+)"""
 """\Wact=({operation}[^=]+)\s+(\w+=|$)"""
-"""([^\|]*\|){5}({operation}[^\|]+)"""
+"""CEF:([^\|]*\|){5}({operation}[^\|]+)"""
 """\WflexString1=({operation}[^=]+)\s+(\w+=|$)"""
 """destinationServiceName =({app}[^=]+)\s+(\w+=|$)"""
 """\Wfname=({object}[^=]+)\s+(\w+=|$)"""

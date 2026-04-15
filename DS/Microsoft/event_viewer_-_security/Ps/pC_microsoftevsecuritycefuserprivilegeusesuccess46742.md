@@ -27,6 +27,7 @@ Fields = [
   """<Data Name(\\)?=(\\)?"+ProcessId(\\)?"+>({process_id}[^<]+)<\/Data>"""
   """<Data Name(\\)?=(\\)?"+ObjectType(\\)?"+>(-|({object_type}[^<]+))"""
   """<Data Name(\\)?=(\\)?"+ObjectName(\\)?"+>(-|({object}[^<]+))"""
+  """"Channel":"({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

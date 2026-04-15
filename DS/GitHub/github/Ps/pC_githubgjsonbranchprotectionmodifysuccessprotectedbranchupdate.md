@@ -17,6 +17,7 @@ json-github-actions-1 = {
       """exa_json_path=$..actor_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_json_path=$..repo,exa_field_name=object"""
       """exa_json_path=$..repo,exa_field_name=repository_name"""
+      """exa_json_path=$..actor,exa_regex=({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
       """exa_json_path=$..operation_type,exa_field_name=operation_type"""

@@ -30,6 +30,7 @@ Fields = [
   """Account Domain:\s*((?-i)\\+[rnt])*({domain}[^:]+?)((?-i)\\+[rnt])*\s*Logon ID:"""
   """Creator Process ID:((?-i)\\+[rnt])*({process_id}.+?)((?-i)\\+[rnt])*Creator"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

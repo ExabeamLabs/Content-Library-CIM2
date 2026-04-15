@@ -9,7 +9,7 @@ Name = microsoft-azuremon-sk4-http-session-appservicehttplogs
   Conditions = [ """"resourceId":""", """"category":""", """"AppServiceHTTPLogs"""" ]
   Fields = [
     """"time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
-    """([^\|]*\|){5}({operation}[^\|]+)""",
+    """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
     """destinationServiceName =({web_domain}({app}.+?))\s+(\w+=|$)""",
     """\Wsuser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+[\S]+=|\s*$)""",
     """\Wsuid=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+[\S]+=|\s*$)""",

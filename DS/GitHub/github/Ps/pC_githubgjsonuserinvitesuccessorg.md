@@ -6,9 +6,10 @@ Name = github-g-json-user-invite-success-org
   Vendor = GitHub
   Product = GitHub
   TimeFormat = "epoch"
-  Conditions = [ """github_audit""", """action":""", """"org""" ]
+  Conditions = [ """github_audit""", """action":""", """"org.""" ]
   Fields = [
     """"start":({time}\d{13}),""",
+    """"@timestamp":({time}\d{13}),""",
     """({host}\S+)\s+github_audit:""",
     """"+actor"+:\s*"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """"+user"+:\s*"+({resource}[^"]+)""",

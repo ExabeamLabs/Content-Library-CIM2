@@ -25,6 +25,7 @@ Name = "microsoft-evsecurity-xml-endpoint-login-4769-2"
   """Ticket Options(:|=)\s*({ticket_options}[^\s;:]+)[\s;]*[\w\s]+(:|=)"""
   """Ticket Encryption Type(:|=)\s*({ticket_encryption_type}[^\s:;]+)[\s;]*[\w\s]+(:|=)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

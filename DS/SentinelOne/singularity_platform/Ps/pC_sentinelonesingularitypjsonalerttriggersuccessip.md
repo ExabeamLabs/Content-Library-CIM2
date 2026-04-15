@@ -27,6 +27,8 @@ Fields = [
   """"src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
   """"endpoint.type":"({host_type}[^"]+)"""
   """"event.network.connectionStatus":"({result}[^"]+)"""
+  """"endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)""""
+  """"endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)""""
   """exa_json_path=$..timestamp,exa_field_name=time""",
   """exa_regex="dst.ip.address":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
   """exa_regex="src.ip.address":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -34,7 +36,8 @@ Fields = [
   """exa_json_path=$..['dst.port.number'],exa_field_name=dest_port""",
   """exa_json_path=$..['event.type'],exa_field_name=event_name""",
   """exa_json_path=$..['endpoint.name'],exa_field_name=host""",
-  """exa_json_path=$..['endpoint.name'],exa_field_name=dest_host""",
+  """exa_regex="endpoint.name":"({src_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}OUTGOING)"""",
+  """exa_regex="endpoint.name":"({dest_host}[\w\-.]+)"[^\}]*?"event.network.direction":"({direction}INCOMING)"""",
   """exa_regex=process\.name":"({process_name}[^"]+)""",
   """exa_json_path=$..['endpoint.os'],exa_field_name=os""",
   """exa_json_path=$..['agent.version'],exa_field_name=user_agent""",
@@ -46,7 +49,6 @@ Fields = [
   """exa_regex="src.process.image.path":"({process_path}({process_dir}[^"]+?)[\\\/]*({process_name}[^"\\\/]+))\\*""""
   """exa_json_path=$..['endpoint.type'],exa_field_name=host_type""",
   """exa_json_path=$..['event.network.connectionStatus'],exa_field_name=result"""
-  """"endpoint\.name":"({dest_host}[^"]+)"""
   ]
 
 

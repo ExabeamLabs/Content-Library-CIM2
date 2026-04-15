@@ -40,6 +40,7 @@ ms-azure-eventhubs-activity = {
     """"app"+:\s*\{[^\}]*?displayName"+:\s*"+({app}[^",]+)"""",
     """object=({object}[^\|=\s]+)(\||\s\w+=)"""
     """"TimeGenerated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)""""
+    """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
     """exa_json_path=$.time,exa_field_name=time"""
     """exa_json_path=$.ActivityDateTime,exa_field_name=time"""
     """exa_json_path=$.ActivityDisplayName,exa_field_name=event_name"""
@@ -74,7 +75,8 @@ ms-azure-eventhubs-activity = {
     """exa_regex=Group\.DisplayName\\[^}]+"newValue\\":\s*[\\"]+({group_name}[^"\\]+)"""
     """exa_regex=groupType\\":\\"({group_type}[^"\\]+)"""
     """exa_regex=GroupType\\",\\"oldValue\\":\\"\\*({group_type}[^\\\[]+)"""
-   """exa_regex=TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)"""
+    """exa_regex=TargetResources":"\[.+?"displayName\\":\\"({group_name}[^"\\]+)"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   
 }
 ```

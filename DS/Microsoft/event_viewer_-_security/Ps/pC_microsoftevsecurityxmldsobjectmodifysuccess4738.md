@@ -26,6 +26,7 @@ Fields = [
 """Changed Attributes:\s*(|({attribute}[^:]+?))\s+SAM Account Name:"""
 """User Account Control:\s*(\\r|\\t|\\n)*(-|({uac_status}[^:]+?))\s*(\\r|\\t|\\n)*User Parameters:"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

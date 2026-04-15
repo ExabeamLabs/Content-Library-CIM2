@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-json-ds-replication-stop-4933
     """exa_regex=Destination DRA: .+?CN=({dest_dra}[^,]+)"""
     """exa_regex=Source DRA: .+?CN=({src_dra}[^,]+)"""
     """exa_regex=({event_name}Synchronization of a replica of an Active Directory naming context has ended)"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
     ]
 
 

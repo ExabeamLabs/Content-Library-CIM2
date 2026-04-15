@@ -29,6 +29,7 @@ Fields = [
   """('|")ObjectType('|")>({file_type}[^<]+)<"""
   """Source Port(=|:)\s*({src_port}\d+)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

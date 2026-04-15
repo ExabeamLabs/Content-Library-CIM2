@@ -20,6 +20,7 @@ Name = microsoft-evpowershell-xml-script-execute-fail-4100
     """Engine Version\s*=\s*({engine_version}[^\s]+)\s"""
     """Data Name =('|")Payload('|")>Error Message = ({failure_reason}[^<]+?)\s*<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""
   ]
   
 

@@ -18,6 +18,7 @@ Name = microsoft-evapp-xml-policy-apply-fail-4098
     """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>""",
     """error code '({error_code}[^\s]+)\s"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<\/Channel>"""    
   ]
 
 

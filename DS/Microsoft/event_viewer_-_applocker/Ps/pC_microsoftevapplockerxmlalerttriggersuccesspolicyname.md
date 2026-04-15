@@ -25,6 +25,7 @@ Fields = [
   """<EventID>({event_code}[^<]+)<"""
   """<Level>({run_level}[^<]+)<"""
   """<FilePath>({process_path}({process_dir}[^<]*[\\\/]+)?({process_name}[^<]+?))<"""
+  """<Channel>({channel}[^<]+)<\/Channel>"""  
 ]
 ParserVersion = "v1.0.0"
 

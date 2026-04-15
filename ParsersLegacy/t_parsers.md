@@ -4,6 +4,7 @@
 | tanium-cloud-app-activity              | tanium-cpp-json-app-activity-success-packagespecaudit           |
 | tanium-cloud-app-activity-1            | tanium-cpp-json-app-activity-success-savedactionaudit           |
 | tanium-cloud-app-login                 | tanium-cpp-json-app-login-success-createobject                  |
+| tanium-cloud-app-logout                | tanium-cpp-json-app-logout-success-deleteobject                 |
 | tanium-cloud-failed-app-login          | tanium-cpp-json-app-login-fail-failedcreateobject               |
 | tanium-dns-response                    | tanium-cp-kv-dns-response-success-tanium                        |
 | tanium-file-delete                     | tanium-im-kv-file-delete-success-deletepath                     |
@@ -35,6 +36,8 @@
 | teradata-database-req2                 | teradata-rdbms-str-database-query-success-req2                  |
 | teradata-database-req4                 | teradata-rdbms-str-database-query-success-req4                  |
 | teradata-database-req8                 | teradata-rdbms-str-database-login-success-req8                  |
+| tessian-dlp-email-alert-in             | tessian-ces-json-email-receive-success-inbound                  |
+| tessian-dlp-email-alert-out            | tessian-ces-json-email-send-success-outbound                    |
 | tfcs-web-activity                      | hashicorp-terraform-str-http-session-web                        |
 | threatblockr-dns-response              | threatblockr-t-kv-dns-response-success-dnsresplog               |
 | threatblockr-network-connection        | threatblockr-t-kv-network-traffic-packatlog                     |

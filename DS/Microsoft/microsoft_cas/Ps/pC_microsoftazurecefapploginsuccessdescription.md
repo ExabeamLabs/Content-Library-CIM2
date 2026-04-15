@@ -48,6 +48,8 @@ Fields = [
 """activityResult":[^}]+?"isSuccess":({result}(true|false))""",
 """"eventTypeName":"({event_name}[^"]+)""""
 """LoginErrorCode"*:({error_code}\d+)"""
+""""aadTenantId":\s*"({tenant_id}[^"]+)""""
+""""tenantId":\s*"({tenant_id}[^"]+)""""
 ]
 
 

@@ -34,6 +34,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """"Status":"({failure_code}({result_code}[^"]+))""",
     """Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))"""
     """Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
+    """"Channel":"({channel}[^"]+)""""
     """exa_json_path=$.Message,exa_regex=({event_name}A Kerberos service ticket was requested)""",
     """exa_json_path=$.message,exa_regex=({event_name}A Kerberos service ticket was requested)""",
     """exa_json_path=$.EventTime,exa_field_name=time""",
@@ -56,6 +57,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """exa_json_path=$..Status,exa_field_name=failure_code""",
     """exa_regex=Client Address(:|=)\s*(\\r|\\n|\\t)*(::[\w]+:)?(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})))""",
     """exa_regex=Client Port:(\\n|\\r|\\t)*({src_port}\d+)"""
+    """exa_json_path=$.Channel,exa_field_name=channel"""
   ]
 
 

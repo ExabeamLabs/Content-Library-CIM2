@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-xml-certificate-request-success-4898
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({sub_category}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

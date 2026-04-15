@@ -4,12 +4,12 @@ Product: Citrix Secure Private Access
 -------------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  56   |   20   |         6          |       2        |    1    |
+|  56   |   20   |         6          |       2        |    0    |
 
-|    Use-Case    | Activity Types (Legacy Event Type)/Parsers    | MITRE ATT&CK® TTP    | Content    |
+|    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |
-| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-traffic:fail (network-connection-failed)<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_citrix_citrix_secure_private_access_Lateral_Movement.md) |
-|          [Malware](../../../UseCases/uc_malware.md)          |  network-traffic:fail (network-connection-failed)<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br><br> network-traffic:success (network-connection-successful)<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br> | TA0011 - TA0011<br>    | [<ul><li>4 Rules</li></ul>](RM/r_m_citrix_citrix_secure_private_access_Malware.md)    |
+| [Lateral Movement](../../../UseCases/uc_lateral_movement.md) |  network-connection-failed<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br><br> network-connection-successful<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br> | T1071 - Application Layer Protocol<br>T1090 - Proxy<br>T1090.003 - Proxy: Multi-hop Proxy<br>T1190 - Exploit Public Fasing Application<br>TA0010 - TA0010<br>TA0011 - TA0011<br> | [<ul><li>56 Rules</li></ul><ul><li>20 Models</li></ul>](RM/r_m_citrix_citrix_secure_private_access_Lateral_Movement.md) |
+|          [Malware](../../../UseCases/uc_malware.md)          |  network-connection-failed<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br><br> network-connection-successful<br> ↳[citrix-cspa-json-network-traffic-appsaasurlnavigate](Ps/pC_citrixcspajsonnetworktrafficappsaasurlnavigate.md)<br> | TA0011 - TA0011<br>    | [<ul><li>4 Rules</li></ul>](RM/r_m_citrix_citrix_secure_private_access_Malware.md)    |
 
 MITRE ATT&CK® Framework for Enterprise
 --------------------------------------

@@ -36,6 +36,7 @@ Name = "microsoft-evsecurity-kv-endpoint-login-4769-2"
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
     """Microsoft-Windows-Security-Auditing.+?Success Audit ({host}[\w\-\.]+)"""
     """Error Code:(\\t|\\r\\n)*({failure_code}({result_code}[\w\-]+))\s*(\\t|\\r|\\n)*"""
+    """"Channel":"({channel}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

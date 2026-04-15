@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-xml-dll-load-4610
     """<Keyword>({result}[^<]+)<""",
     """<Data Name\\*=('|")AuthenticationPackageName('|")>({file_path}({file_dir}[^<]+)\\({file_name}[^:]+?))\s*:\s*({auth_package}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

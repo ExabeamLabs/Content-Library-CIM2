@@ -47,6 +47,9 @@ Fields = [
   """"SensitivityLabelJustificationText":\s*"({operation_details}[^"]+)""""
   """"SensitivityLabelId":\s*"({sensitivity_label}[^"]+)""""
   """"OldSensitivityLabelId":\s*"({old_sensitivity_label}[^"]+)""""
+  """"SiteUrl":\s*"({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
+  """"ListName":"({resource_name}[^"]+)""""
+  """"ListBaseType":"({resource_type}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

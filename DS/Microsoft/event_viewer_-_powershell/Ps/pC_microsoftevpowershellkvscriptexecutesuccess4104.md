@@ -18,6 +18,7 @@ Name = microsoft-evpowershell-kv-script-execute-success-4104
     """"EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""",
     """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)""",
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s({host}[^\s]+)\sMSWinEventLog""",
+    """\s({host}[\w.-]+)\s+Execute a Remote Command\s+Creating Scriptblock text""",
     """({event_code}4104)""",
     """AccountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """Domain"*(:|=)\s*"*({domain}[^=]+?)"*\s+\w+?(:|=)""",
@@ -37,6 +38,7 @@ Name = microsoft-evpowershell-kv-script-execute-success-4104
     """OriginatingComputer(:|=)\s*(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s*""",
     """Level(:|=)"*({severity}[^=]+?)"*\s+\w+?(:|=)""",
     """Task(:|=)"*({operation}[^=]+?)"*\s+\w+?(:|=)""",
+    """channel="({channel}[^"]+)"""
   ]
 
 

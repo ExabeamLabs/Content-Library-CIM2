@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-json-handle-request-success-4659
     """"ObjectName":"({object}[^"]+)"""",
     """"HandleId":"({object_id}[^"]+)"""",
     """"ProcessID":({process_id}[^,]+),""",
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

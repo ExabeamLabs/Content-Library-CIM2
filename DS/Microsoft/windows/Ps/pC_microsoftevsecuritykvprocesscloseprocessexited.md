@@ -9,6 +9,7 @@ Name = microsoft-evsecurity-kv-process-close-processexited
     """(Primary)? User Name\s*:\s*(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(Primary)? Domain\s*:\s*(-|({domain}[^\s]+))\s""",
     """Caller User Name\s*:\s*(-|({src_user}.+?))\s+Caller Domain\s*:\s*(-|({src_domain}.+?))\s+Caller Logon ID\s*:\s*(-|({login_id}[^\s]+))""",
     """Source Network Address\s*:\s*(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+Source Port:""",
+    """\s({host}[\w.-]+)\s+Process Termination\s+A process has exited""",
     """ComputerName =({host}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-.]+))""",
     """Workstation Name\s*:\s*(-|({src_host_windows}[^\s]+))\s+Logon GUID:""",
     """Workstation Name\s*:\s*(-|({src_host}[\w\-\.]+))\s+Logon GUID:.*?Source Network Address:\s*-\s+""",
@@ -34,6 +35,7 @@ Name = microsoft-evsecurity-kv-process-close-processexited
     """Account Name:\s*[\\t\\r\\n]*({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """Exit Status:\s*(\\+[rnt])*({result}[^\s"]+?)(?:\\t|\\n|\\r|\s)*("|\s)"""
     """Process Name:(\s|\\t|\\n|\\r)*({process_path}({process_dir}(?:[^\s]+?)?[\\\/])?({process_name}[^\\\/\s]+?))(?:\\t|\\n|\\r|\s)*Exit"""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 windows-events = {
@@ -47,6 +49,7 @@ windows-events = {
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   
 }
 ```

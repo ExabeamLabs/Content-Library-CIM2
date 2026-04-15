@@ -7,7 +7,7 @@ Name = unix-unix-str-network-notification-success-networkmanager
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """NetworkManager[""", """]: """ ]
   Fields = [
-    """\d\d:\d\d:\d\d\s+({host}[\w.-]+)\s+({event_category}[^:]+):\s+""",
+    """\d\d:\d\d:\d\d\s+(\d+|({host}[\w.-]+))\s+({event_category}[^:]+):\s+""",
     """\]:\s*({additional_info}[^$]+?)\s*$"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]

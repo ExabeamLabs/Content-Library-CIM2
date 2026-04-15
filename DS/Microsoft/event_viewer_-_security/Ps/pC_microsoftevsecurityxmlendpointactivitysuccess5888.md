@@ -14,6 +14,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-5888
     """<Data Name\\*=('|")SubjectDomainName('|")>(-|({src_domain}({domain}[^<>]+)))<""",
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<>]+))<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = v1.0.0
 

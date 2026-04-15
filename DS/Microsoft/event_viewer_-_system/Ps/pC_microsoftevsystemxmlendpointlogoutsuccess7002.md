@@ -19,6 +19,7 @@ Name = microsoft-evsystem-xml-endpoint-logout-success-7002
     """Provider Name\\*=('|")({provider_name}[^\'\"]+)""",
     """<EventRecordID>({event_id}[^<]+?)<\/EventRecordID>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
  ]
 
 

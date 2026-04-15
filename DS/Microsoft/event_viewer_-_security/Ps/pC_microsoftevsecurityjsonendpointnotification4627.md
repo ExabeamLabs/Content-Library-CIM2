@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """"LogonType"+:"+({login_type}\d+)""",
 # sequence_num is removed
     """\w+\s*\d+\s*\d+:\d+:\d+\s+(::ffff:)?(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|(am|pm|\d{4}|({dest_host}[\w\-.]+)))\s"""
+    """"Channel":"({channel}[^"]+)""""
     """exa_json_path=$.Message,exa_field_name=event_name"""
     """exa_json_path=$.EventID,exa_field_name=event_code"""
     """exa_json_path=$.Hostname,exa_field_name=host"""
@@ -44,6 +45,7 @@ Name = microsoft-evsecurity-json-endpoint-notification-4627
     """exa_json_path=$..TargetLogonId,exa_field_name=login_id"""
     """exa_json_path=$..TargetLogonId,exa_field_name=dest_login_id"""
     """exa_json_path=$..LogonType,exa_field_name=login_type"""
+    """exa_json_path=$..Channel,exa_field_name=channel"""
   ]
 
 

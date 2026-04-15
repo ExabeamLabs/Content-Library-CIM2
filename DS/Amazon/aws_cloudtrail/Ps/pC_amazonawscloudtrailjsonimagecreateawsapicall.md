@@ -40,7 +40,7 @@ aws-cloudtrail-json = {
       """"eventType"+\s*:\s*"+?(|({event_category}[^"]+))"""",
       """"errorCode"\s*:\s*"({failure_code}({result}[^"]+))"""",
       """"errorMessage"\s*:\s*"({failure_reason}[^"]+)"""",
-      """"readOnly"\s*:\s*({readonly}[^",\}]+)("|,|\}\s*$)""",
+      """"readOnly"\s*:\s*"?({readonly}[^",\}]+)("|,|\}\s*$)""",
       """"vpcEndpointId":"({vpc}[^"]+)""",
       """"+requestParameters":\{("[^,]+,)*"roleSessionName\\?":\s*\\?"({session_name}[^"]+?)\\?"""",
       """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({role_id}[^"]+?)\\?"""",

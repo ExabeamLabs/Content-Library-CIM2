@@ -14,42 +14,12 @@ Conditions = [
 ]
 ParserVersion = "v1.0.0"
 
-s-mssql-database-query-1 = {
-      Vendor = Microsoft
-      Product = MSSQL
-      TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSSSSS"
-      Fields = [
-        """sql.server_instance_name=({host}[\w.-]+)""",
-        """\.sql\.action_id="+({db_operation}\w+)\s*"""",
-        """\.sql\.event_time="+({time}\d{4}-\d{2}-\d{2} (\d{2}:){2}\d{2}\.\d{7})"+""",
-        """\.server_principal_name="*(({domain}[^\\]+?)[\\]{1,2})?({db_user}[^\s]+?)"*(\s+\.sql\.)""",
-        """\.server_principal_name="*(({domain}[^\\]+?)[\\]{1,2})?({user}[\w\.\-]{1,40}\$?)"*(\s+\.sql\.)""",
-        """\.sql\.database_name=({db_name}[^=]+?)\s+\.sql""",
-        """\.sql\.schema_name=({db_schema}[^=]+?)\s+\.sql""",
-        """\.sql\.object_name=({db_object}[^=]+?)\s+\.sql\.\w+=""",
-        """sql\.statement="+({db_query}[^"]+)"+\s+.sql"""
-      ]
-    },
+json-microsoft-security-events-1.Fields}[
+  """exa_regex="privateIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_regex="publicIpAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+  """exa_json_path=$.id,exa_field_name=alert_id"""
+  """exa_regex="domainName":\s*"({domain}[^"]+)",\s*"userPrincipalName"""
+  """exa_regex="fqdn":\s*"({src_host}[^"]+)"""
 
-  cef-sysmon-file-write = {
-    Vendor = Microsoft
-    Product = Sysmon
-    TimeFormat = "epoch"
-    Fields = [
-      """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
-      """({dest_host}({host}\S+)) CEF:""",
-      """\Wdvc=({dest_host}({host}[A-Fa-f:\d]+))""",
-      """\Wdvchost=({dest_host}({host}[\w\-.]+))""",
-      """\Wrt=({time}\d{13})""",
-      """\WeventId=({event_code}\d+)""",
-      """\WcategoryOutcome=\/({result}.+?)\s+(\w+=|$)""",
-      """\Wdproc=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
-      """\Wdproc=({process_path}({process_dir}.*?)({process_name}[^\\]+?))\s+(\w+=|$)""",
-      """\Wfname=.+?USERS\\+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-      """\Wfname=({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s+(\w+=|$)""",
-      """\Wcs6=\{({process_guid}[^\}]+)""",
-      """\Wdpid=({process_id}\d+)""",
-      """\Wcs1=({object}.+?)\s+(\w+=|$)""",
-    
 }
 ```

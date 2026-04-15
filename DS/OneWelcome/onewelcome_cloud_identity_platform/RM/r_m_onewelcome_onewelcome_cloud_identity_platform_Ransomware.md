@@ -7,7 +7,7 @@ Vendor: OneWelcome
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   1   |   0    |         1          |       2        |   10    |
+|   1   |   0    |         1          |       2        |    8    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

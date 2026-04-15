@@ -8,7 +8,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-requestedaction
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
   Conditions = [ """,Actual action:""",""",Requested action:""" ]
   Fields = [
-			"""Computer name:\s*(?:0+|({host}[^,]+))"""
+			"""Computer name:\s*(?:0+|({host}[^,]+?)),"""
 			"""Event time:\s*({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
 			"""Risk name:\s*({alert_name}({alert_type}[^,]+)),"""
 			"""Risk type:\s*({alert_type}[^,]+),"""
@@ -19,7 +19,7 @@ Name = symantec-endpointprotection-kv-alert-trigger-success-requestedaction
 			"""Risk Level:\s*(N\/A|({alert_severity}[^,]+))"""
 			"""Occurrences:\s*\d+,(File path:\s+)?({malware_url}[^,]+)"""
 			"""User\s*(Name)?:\s*(SYSTEM,|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-			"""Computer name:\s*(?:0+|({src_host}[^,]+))"""
+			"""Computer name:\s*(?:0+|({src_host}[^,]+?)),"""
 			"""Source computer:\s*(?:0+|({dest_host}[^,]+))?,"""
 			"""Source IP:\s*({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
 			"""Confidence:\s*({additional_info}[^,]+)"""

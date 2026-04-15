@@ -32,6 +32,7 @@ Fields = [
 """Access Check Results:\s*({result}-)\s"""
 """Access Check Results:.*({result}Granted|Denied)\s+by"""
 """Source Port(=|:)\s*({src_port}\d+)"""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

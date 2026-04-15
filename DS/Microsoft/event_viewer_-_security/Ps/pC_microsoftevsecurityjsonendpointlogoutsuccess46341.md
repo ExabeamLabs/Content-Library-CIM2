@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4634-1
     """"+TargetLogonId"+:"+({dest_login_id}({login_id}[^"]+))"+""",
     """"+TargetDomainName"+:"+({dest_domain}({domain}[^"]+))"+""",
     """"+TargetUserSid"+:"+({dest_user_sid}({user_sid}[^"]+))"+"""
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

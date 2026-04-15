@@ -31,16 +31,16 @@ cef-microsoft-app-activity1 = {
     """"name":"({full_name}[^"]+)"""",
     """action":"({action}[^"]+)""",
     """"(callerIpAddress|CIp)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
-    """"Caller":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-    """claims\/(name|upn)":\s*"({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""",
-    """"email":"({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)""",
+    """"Caller":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """({app}Databricks)""",
     """"serviceName\\*":\\*"({app}[^"]+)""",
     """"sourceIPAddress":"({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:(\d+))?""", #dl field removed
     """"userAgent":"({user_agent}[^"]+)"""",
     """"statusCode\\":({result_code}\d+)""",
     """"actionName":"({operation}[^"]+)""",
-    """userId":"(({email_address}[^\s@"]+@[^\s@"]+\.[^\s@"]+)|({user_id}[^"]+))""",
+    """userId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """\[Namespace:\s*({host}\S+) ; EventHub name:""",
     """"subscriptionId":"({subscription_id}[^"]+)"""",
     """"ResourceGroup":"({resource_group}[^"]+)""",
@@ -69,7 +69,7 @@ cef-microsoft-app-activity1 = {
     """exa_regex=\[Namespace:\s*({host}\S+) ; EventHub name:""",
     """exa_regex="\_?(R|r)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""",
     """exa_regex="(R|r)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""",
-    """exa_json_path=$.Caller,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.Caller,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
     
 }
 ```

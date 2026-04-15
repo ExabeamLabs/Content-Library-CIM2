@@ -38,6 +38,7 @@ Name = microsoft-evsecurity-json-endpoint-4624
       """WorkstationName\\?"+:\\?"+(?:-|({src_host_windows}({src_host}[\w\-\.]+)))\\?""""
       """"+mac\\"+:\[\\"+({src_mac}[^\\"]+)"""
       """keywords":\["({result}[^"]+)""""
+      """channel\\?"+:\\?"+({channel}[^"\\]+)\\?""""
     ]
   
 

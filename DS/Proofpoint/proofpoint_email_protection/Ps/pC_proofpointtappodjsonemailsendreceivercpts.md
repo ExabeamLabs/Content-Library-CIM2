@@ -93,6 +93,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """exa_json_path=$..normalizedHeader.subject[0:],exa_field_name=email_subject""",
       """exa_json_path=$..['smtp.mailfrom'],exa_regex=({mailfrom}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)$""",
+      """exa_json_path=$.msgParts[*].detectedName,exa_field_name=email_attachments"""
     ]
   SOAR {
     IncidentType = "dlp"

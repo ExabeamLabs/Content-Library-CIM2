@@ -19,6 +19,7 @@ xml-windows-defender-av = {
      """<Keywords>({result}[^<]+)<""",
      """Guid\\*=('|")\{({provider_guid}[^}']+)"""
      """<Level>({run_level}[^<]+)<"""
+     """<Channel>({channel}[^<]+)<\/Channel>"""     
   
 }
 ```

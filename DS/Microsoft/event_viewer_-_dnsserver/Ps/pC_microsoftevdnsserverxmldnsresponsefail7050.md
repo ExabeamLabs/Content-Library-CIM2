@@ -19,6 +19,7 @@ Name = microsoft-evdnsserver-xml-dns-response-fail-7050
      """Guid\\*=('|")\{({process_guid}[^}']+?)\}'""",
      """ProcessID\\*=('|")({process_id}\d+)""",
      """<Level>({run_level}[^<]+)<"""
+     """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -20,7 +20,7 @@ Fields = [
   """"ruleName":"({policy_name}[^"]+)"""
   """"ruleName":"({alert_name}[^"]+)"""
   """"category":"({alert_type}[^"]+)"""
-  """"action":"({action}[^"]+)""""
+  """"action":"({action}Block)""""
   """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """"requestUri":"({url}.+?)",""""
   """Namespace:\s*({host}({event_hub_namespace}\S+))"""

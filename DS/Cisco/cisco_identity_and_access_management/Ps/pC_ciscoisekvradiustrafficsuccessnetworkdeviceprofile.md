@@ -8,6 +8,7 @@ TimeFormat = "yyyy-MM-dd HH:mm:ss"
 Conditions = [
   """, AD-User-Resolved-Identities="""
   """, NetworkDeviceProfileName ="""
+  """, AuthenticationStatus="""
 ]
 Fields = [
   """,\s*AD-User-SamAccount-Name =({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""

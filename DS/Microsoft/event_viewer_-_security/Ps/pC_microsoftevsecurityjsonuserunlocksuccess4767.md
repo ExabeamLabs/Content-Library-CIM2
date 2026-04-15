@@ -23,6 +23,7 @@ Fields = [
 """\"TargetDomainName\":\"({dest_domain}[^\"]+)"""
 """\"TargetUserName\":\"({dest_user}[^\"]+)"""
 """\"TargetSid\":\"({dest_user_sid}[^\"]+)"""
+"""\"Channel\":\"({channel}[^\"]+)"""
 """exa_regex=({event_name}A user account was unlocked)"""
 """exa_json_path=$.EventTime,exa_field_name=time"""
 """exa_json_path=$.Hostname,exa_field_name=host"""
@@ -36,6 +37,7 @@ Fields = [
 """exa_json_path=$.TargetDomainName,exa_field_name=dest_domain"""
 """exa_json_path=$.TargetUserName,exa_field_name=dest_user"""
 """exa_json_path=$.TargetSid,exa_field_name=dest_user_sid"""
+"""exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

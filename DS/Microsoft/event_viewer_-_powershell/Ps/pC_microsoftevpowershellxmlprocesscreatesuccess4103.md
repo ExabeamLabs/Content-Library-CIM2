@@ -34,6 +34,7 @@ Fields = [
 """Context[^@]+?Script Name\s*=\s+({script_name}\S[^=]+?)\s+Command Path ="""
 """Engine Version\s*=\s*({engine_version}[^\s\\r\\n]+)\s*"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<\/Channel>"""
 """exa_regex=<TimeCreated SystemTime\\*=('|")({time}\d+\-\d+\-\d+T\d+:\d+:\d+\.\d{3})"""
 """exa_regex=({event_code}4103)"""
 """exa_regex=<Computer>({dest_host}({host}[\w\-.]+))</Computer>"""

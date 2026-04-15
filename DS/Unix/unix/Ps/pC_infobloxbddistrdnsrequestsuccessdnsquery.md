@@ -11,14 +11,15 @@ Conditions = [
 ]
 Fields = [
   """\d\d:\d\d:\d\d(\.\d+Z?)? (::ffff:)?({host}[\w\.-]+)""",
+  """\d\d:\d\d:\d\d(\.\d+Z?)? (::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s""",
   """({time}\w{3}\s+\d{1,2}\s+\d\d:\d\d:\d\d)""",
   """({time}\d\d-\w+-\d\d\d\d \d\d:\d\d:\d\d\.\d\d\d)""",
   """\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))#({src_port}\d+)(?:)""",
   """query:\s*({dns_query}\S+)\s"""
   """\sIN\s({dns_query_type}\w{1,5})\s""",
-  """\s+IN\s.+?\s+({dns_query_flags}[^\d\w].*?)\s""",
+  """\s+IN\s.+?\s+({dns_response_flags}[^\d\w].*?)\s""",
   """response:\s*({dns_response_code}[^\s]+)\s""",
-  """\sIN\s+.+?\s*(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\s*(;|$|"|\.|\))""",
+  """(\s+IN\s.+?){2}\s+\(?({dns_response}[^\s]+?)\s*(;|$|"|\.|\))\s*$""",
   """ CNAME ({additional_info}[^;]+?)\.?;""",
   ]
 ParserVersion = "v1.0.0"

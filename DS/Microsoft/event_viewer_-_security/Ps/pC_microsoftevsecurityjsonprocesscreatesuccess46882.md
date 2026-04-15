@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-2
       """"SubjectLogonId"*:"*({login_id}[^"]+)""",
       """"SubjectUserName"*:"*(-|SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
       """"SubjectDomainName"*:"*(-|({src_domain}({domain}[^"]+?)))""""
+      """"Channel":"({channel}[^"]+)"""
       """exa_regex="EventTime"*:"*({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """exa_regex=\s({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)\s[^\s]+\s""",
       """exa_regex="@timestamp"*:"*({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)""",      
@@ -39,6 +40,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688-2
       """exa_json_path=$.SubjectDomainName,exa_field_name=domain"""
       """exa_json_path=$.SubjectUserName,exa_field_name=src_user"""
       """exa_json_path=$.SubjectDomainName,exa_field_name=src_domain"""
+      """exa_json_path=$.channel,exa_field_name=channel"""
     ]
   
 

@@ -26,6 +26,7 @@ Fields = [
 """<Provider>({provider_name}[^<]+?)<"""
 """<Data Name\\*=('|")SecurityPackageName('|")>({service_name}[^<]+)<"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

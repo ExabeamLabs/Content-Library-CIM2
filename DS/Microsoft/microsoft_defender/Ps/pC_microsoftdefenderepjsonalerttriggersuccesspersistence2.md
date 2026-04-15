@@ -8,7 +8,7 @@ Name = microsoft-defenderep-json-alert-trigger-success-persistence-2
 
 defender-atp-security-alert-events = {
     Vendor = Microsoft
-    TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" ]
+    TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ssZ" ]
     Fields = [
       """"(timestamp|firstActivityDateTime)":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)"""",
       """"hostname":"({host}[^"]+)"""",
@@ -18,13 +18,16 @@ defender-atp-security-alert-events = {
       """"title":"({alert_name}[^"]+?)(\\u200b)?"""",
       """"category":"({alert_type}[^"]+)"""",
       """"description":"({additional_info}[^\n]+?)\s*","""",
+      """"userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-      """accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """domainName":"({domain}[^"]+)""",
       """"status":"({incident_status}[^"]+)"""
       """"incidentId":"({alert_id}\d+)"""
       """"mitreTechniques":\[({technique}[^\]]+)\]"""
       """"evidence".+?"verdict":"({result}[^"]+)"""
+      """"incidentWebUrl":"({more_info}[^"]+)""""
+      """"WorkspaceName":"({workspace_name}[^"]+)""""
+      """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
       """exa_json_path=$.firstActivityDateTime,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,7}Z)""",
       """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,3}Z)""",
       """exa_json_path=$.severity,exa_field_name=alert_severity""",
@@ -34,13 +37,16 @@ defender-atp-security-alert-events = {
       """exa_regex="hostName":"({host}[\w\-.]+)""",
       """exa_json_path=$.title,exa_field_name=alert_name""",
       """exa_json_path=$.description,exa_field_name=additional_info""",
+      """exa_regex="userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_regex=userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-      """exa_regex=accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
       """exa_regex=domainName":"({domain}[^"]+)"""
       """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
       """exa_json_path=$.incidentId,exa_field_name=alert_id"""
       """exa_regex="evidence".+?"verdict":"({result}[^"]+)""""
+      """exa_json_path=$.incidentWebUrl,exa_field_name=more_info"""
+      """exa_json_path=$..WorkspaceName,exa_field_name=workspace_name"""
+      """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
     
 }
 ```

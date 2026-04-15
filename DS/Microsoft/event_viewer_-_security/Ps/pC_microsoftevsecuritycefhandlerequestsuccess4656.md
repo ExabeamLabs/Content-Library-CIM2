@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-cef-handle-request-success-4656
     """"ObjectName":"({object}[^"]+)"""",
     """"ObjectServer":"({object_server}[^"]+)"""",
     """"HandleId":"({object_id}[^"]+)"""",
+    """"Channel":"({channel}[^"]+)""""
   ]
 
 

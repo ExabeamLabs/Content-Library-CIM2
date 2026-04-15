@@ -6,6 +6,7 @@ Name = unix-unix-kv-process-create-success-execve
   Conditions = [ """EXECVE""", """msg=""" ,"""audit""" ]
   Fields = ${DLUnixParsersTemplates.unix-kv-template.Fields}[
     """audit\([^\)]+\):\s+({additional_info}[^~]+)"""
+    """(T|\s)\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+?"""
   ]
 
 unix-kv-template = {
@@ -26,12 +27,12 @@ unix-kv-template = {
       """\sexe="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
       """\scomm="({process_name}[^\\"]+)"""",
       """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
-      """\ssaddr=({src_port}\d+)""",
+      """\ssaddr=(({src_port}\d{4}$)|([0-9a-fA-F]{4}(0000|({=src_port}[0-9a-fA-F]{4}))))""",
       """op=({operation}[^\s]+)""",
       """type=(?:({event_name}USER_\S+)|({operation_type}\S+))"""
-
+      """audit\[\d+\]:\s*(({event_name}USER_\S+)|({operation_type}\S+))"""
     ]
- }
+ } 
 
 }
 

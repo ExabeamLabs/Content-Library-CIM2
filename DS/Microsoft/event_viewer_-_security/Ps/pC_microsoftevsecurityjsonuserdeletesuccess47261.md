@@ -24,6 +24,7 @@ Fields = [
 """exa_json_path=$.SubjectDomainName,exa_field_name=domain""",
 """exa_json_path=$.SubjectDomainName,exa_field_name=src_domain""",
 """exa_json_path=$.SubjectLogonId,exa_field_name=login_id"""
+"""exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

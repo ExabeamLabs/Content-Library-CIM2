@@ -7,7 +7,7 @@ Vendor: SecureNet
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   8   |   3    |         6          |       2        |    1    |
+|   8   |   3    |         6          |       2        |    0    |
 
 | Event Type | Rules    | Models    |
 | ---------- | ---- | ---- |

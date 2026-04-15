@@ -15,6 +15,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-success-4694
     """<Execution ProcessID\\*=('|")({process_id}\d+)""",
     """<Task>({task_name}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

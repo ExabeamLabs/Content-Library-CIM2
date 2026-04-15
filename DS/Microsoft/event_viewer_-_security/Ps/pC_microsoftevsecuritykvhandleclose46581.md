@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-kv-handle-close-4658-1
     """Process Name:\s*({process_path}({process_dir}[^\s\\/]+?([/\\]+[^\\/:\*\?"<>\|]+?)*)[/\\]+({process_name}[^\\/:\*\?"<>\|]+?))(\s*$|(<|\s+\-\d+))"""
     """({operation_type}closed)""",
     """Handle ID:\s*[\\t]*({object_id}.+?)[rnt\\]*Process Information""",
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

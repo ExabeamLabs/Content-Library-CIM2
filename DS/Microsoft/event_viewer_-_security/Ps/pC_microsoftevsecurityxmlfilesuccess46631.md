@@ -26,6 +26,7 @@ Fields = [
   """<Data Name\\*="AccessMask">({access_mask}[^<\s"]+)"""
   """Accesses:\s*({access}[^:]+?)\s*Access Mask:"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

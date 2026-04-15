@@ -20,7 +20,7 @@ Name = jamf-jamfpro-json-app-activity-dts
     """exa_json_path=$.metadata.vendor,exa_field_name=vendor_name"""
     """exa_json_path=$.process.ppid,exa_field_name=process_id"""
     """exa_json_path=$.thread.thread_id,exa_field_name=thread_id"""
-    """exa_json_path=$.thread.uuid,exa_field_name=user_uid"""
+    """exa_json_path=$.thread.uuid,exa_field_name=log_uid"""
     """exa_json_path=$.action.result..result_type,exa_field_name=response_type"""
     """exa_json_path=$.action.result.result.auth,exa_field_name=result"""
     """exa_json_path=$.event_type,exa_field_name=event_category"""

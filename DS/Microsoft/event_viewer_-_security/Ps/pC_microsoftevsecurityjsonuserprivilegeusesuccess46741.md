@@ -32,6 +32,7 @@ Fields = [
   """AccessMask"+:"+((\\)*(\\r|\\t|\\n))*\s*({access_mask}[^\\\s]+)((\\)*(\\r|\\t|\\n))*"""
   """"SubjectUserSid":\"({user_sid}[^\s\"]+)""""
   """"task"+:"+({task_name}[^",]+)""""
+  """"Channel":"({channel}[^"]+)"""
 
   """exa_regex=({event_name}An operation was attempted on a privileged object)"""
   """exa_json_path=$.@timestamp,exa_field_name=time"""
@@ -55,6 +56,7 @@ Fields = [
   """exa_json_path=$.ProcessId,exa_regex=({process_id}[^",]*)"""
   """exa_json_path=$.event_data.AccessMask,exa_regex=((\\)*(\\r|\\t|\\n))*\s*({access_mask}[^\\\s]+)((\\)*(\\r|\\t|\\n))*$""",
   """exa_json_path=$.task,exa_field_name=task_name"""
+  """exa_json_path=$..channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

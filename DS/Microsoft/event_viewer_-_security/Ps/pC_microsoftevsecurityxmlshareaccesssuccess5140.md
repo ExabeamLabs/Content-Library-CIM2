@@ -24,6 +24,7 @@ Fields = [
   """<Data Name(\\\/)?=('|")AccessList('|")>(%%)?({access}[\d\w]+)"""
   """('|")IpPort('|")>({src_port}\d+)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

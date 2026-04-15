@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-json-endpoint-logout-success-4779-2
     """"SourceName":"({provider_name}[^"]+)"""",
     """"ProcessID":({process_id}\d+),""",
     """"Category":"({category}[^"]+)"""",
+    """"Channel":"({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

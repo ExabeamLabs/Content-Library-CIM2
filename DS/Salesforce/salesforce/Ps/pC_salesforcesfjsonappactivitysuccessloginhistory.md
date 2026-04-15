@@ -5,12 +5,12 @@ Name = "salesforce-sf-json-app-activity-success-loginhistory"
   Vendor = "Salesforce"
   Product = "Salesforce"
   ExtractionType = json
-  TimeFormat = "yyyyMMddHHmmss.SSS"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Conditions = [ """"EVENT_TYPE":"""", """"ORGANIZATION_ID":"""", """"USER_ID":"""", """"REQUEST_ID":"""" ]
   Fields = [
   	"""exa_json_path=$.EVENT_TYPE,exa_field_name=event_category""",
   	"""exa_json_path=$.REQUEST_ID,exa_field_name=transaction_id""",
-  	"""exa_json_path=$.TIMESTAMP,exa_field_name=time""",
+    """exa_json_path=$.TIMESTAMP_DERIVED,exa_field_name=time""",
   	"""exa_json_path=$.SESSION_KEY,exa_field_name=session_id""",
   	"""exa_json_path=$.METHOD_NAME,exa_regex=(9999|({operation}[^"]+))$""",
   	"""exa_json_path=$.CLIENT_IP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

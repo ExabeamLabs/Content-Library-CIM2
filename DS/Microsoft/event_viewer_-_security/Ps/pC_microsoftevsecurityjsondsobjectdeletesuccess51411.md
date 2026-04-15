@@ -21,6 +21,7 @@ Fields = [
   """exa_regex=Object:\s+DN:\s+({ds_object_dn}.+?)\s+GUID:""",
   """exa_regex=Object:\s+DN:.+?({ds_object_ou}OU.+?)\s+GUID:"""
   """exa_regex=Directory Service:\s*Name(:|=)\s*({ds_name}[^\s]+)\s*.*?Type(:|=)\s*({ds_type}.*?Services)"""
+  """exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

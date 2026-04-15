@@ -54,6 +54,7 @@ o365-activity-template = {
     """"ActorInfoString":"({user_agent}[^"]+)","""
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
+    """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
   
 }
 ```

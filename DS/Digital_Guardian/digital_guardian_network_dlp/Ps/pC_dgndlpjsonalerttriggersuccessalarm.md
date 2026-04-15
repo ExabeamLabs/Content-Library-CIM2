@@ -1,0 +1,33 @@
+#### Parser Content
+```Java
+{
+Name = "dg-ndlp-json-alert-trigger-success-alarm"
+Conditions = [ """"dg_det_name":""", """"dg_alarm_name":""", """"dg_machine_type":""", """"dg_time":""" ]
+Vendor = "Digital Guardian"
+Product = "Digital Guardian Network DLP"
+TimeFormat = ["yyyy-MM-dd h:mm:ss a","yyyy-MM-dd hh:mm:ss a","yyyy-MM-dd HH:mm:ss"]
+ExtractionType = json
+Fields = [
+"""exa_json_path=$.dg_time,exa_field_name=time"""
+"""exa_json_path=$.dg_det_name,exa_field_name=rule"""
+"""exa_json_path=$.dg_alarm_name,exa_field_name=alert_name"""
+"""exa_json_path=$.pi_dspn,exa_field_name=app"""
+"""exa_json_path=$.pi_fp,exa_regex=({process_path}({process_dir}[^"]+(\\|\/)+)?({process_name}[^"]+))"""
+"""exa_json_path=$.dg_machine_type,exa_field_name=os"""
+"""exa_json_path=$.dg_dst_file_name,exa_field_name=file_name"""
+"""exa_json_path=$.dg_mac_address,exa_field_name=src_mac"""
+"""exa_json_path=$.dg_proc_file_name,exa_field_name=process_name"""
+"""exa_json_path=$.dg_file_size,exa_regex=({bytes}\d+)(\.\d+)\s({bytes_unit}\w+)"""
+"""exa_json_path=$.dg_machine_name,exa_regex=({domain}[^\\]+)\\+({host}[\w-]+)"""
+"""exa_json_path=$.ua_sa,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.){3}(25[0-5]|(2[0-4]|1\d|[0-9]|)\d)))(:({src_port}\d+))?"""
+"""exa_json_path=$.ua_ra,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.){3}(25[0-5]|(2[0-4]|1\d|[0-9]|)\d)))(:({dest_port}\d+))?"""
+"""exa_json_path=$.dg_proc_dir,exa_field_name=process_dir"""
+"""exa_json_path=$.dg_alarm_sev,exa_field_name=alert_severity"""
+"""exa_json_path=$.dg_utype,exa_field_name=operation"""
+"""exa_json_path=$.dg_tenant_name,exa_field_name=tenant_id"""
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

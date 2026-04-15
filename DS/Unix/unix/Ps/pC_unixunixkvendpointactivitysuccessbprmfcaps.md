@@ -23,12 +23,12 @@ unix-kv-template = {
       """\sexe="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
       """\scomm="({process_name}[^\\"]+)"""",
       """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
-      """\ssaddr=({src_port}\d+)""",
+      """\ssaddr=(({src_port}\d{4}$)|([0-9a-fA-F]{4}(0000|({=src_port}[0-9a-fA-F]{4}))))""",
       """op=({operation}[^\s]+)""",
       """type=(?:({event_name}USER_\S+)|({operation_type}\S+))"""
-
+      """audit\[\d+\]:\s*(({event_name}USER_\S+)|({operation_type}\S+))"""
     ]
- }
+ } 
 
 }
 

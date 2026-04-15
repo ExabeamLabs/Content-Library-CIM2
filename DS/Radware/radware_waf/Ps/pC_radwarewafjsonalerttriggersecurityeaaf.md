@@ -6,19 +6,20 @@ Name = radware-waf-json-alert-trigger-security-eaaf
   Product = Radware WAF
   TimeFormat = "epoch"
   ExtractionType = json
-  Conditions = [ """targetModule":""", """"severity":""", """"action":""", """"violationType":""", """"eventType":"EAAF""""]
+  Conditions = [ """targetModule":""", """"severity":""", """"action":""", """"violationType":""", """"transId":""" ]
   Fields = [
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.sourcePort,exa_field_name=src_port"""
     """exa_json_path=$.method,exa_field_name=method"""
     """exa_json_path=$.description,exa_field_name=additional_info"""
-    """exa_json_path=$.host,exa_field_name=host"""
+    """exa_json_path=$.host,exa_regex=({host}[^:"]+)"""
     """exa_json_path=$.action,exa_field_name=action"""
     """exa_json_path=$.receivedTimeStamp,exa_field_name=time"""
     """exa_json_path=$.externalIp,exa_field_name=src_ip"""
     """exa_json_path=$.violationType,exa_field_name=alert_name"""
     """exa_json_path=$.violationType,exa_field_name=alert_type"""
     """exa_json_path=$.details,exa_field_name=alert_reason"""
+    """exa_json_path=$.appwallTimeStamp,exa_field_name=time"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -22,6 +22,7 @@ Fields = [
   """<Data Name\\*=('|")DSName('|")>(|({ds_name}[^<]+?))</Data>"""
   """<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

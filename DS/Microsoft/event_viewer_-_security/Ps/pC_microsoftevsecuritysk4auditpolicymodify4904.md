@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-sk4-audit-policy-modify-4904
     """"SeverityValue":({severity}[^,]+)""",
     """"ProcessName":"({process_path}({process_dir}[^,"]*?[\\\/]+)?({process_name}[^\\\/\s"]+?))"""",
     """"ProcessID":({process_id}[^"]+)"""",
+    """"Channel":"({channel}[^"]+)"""
 # audit_name is removed
   ]
 

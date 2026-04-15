@@ -29,6 +29,7 @@ Name = microsoft-evsecurity-xml-file-permission-modify-4670-2
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<]+)<""",
     """<Keywords>({result}[^<>]+)</Keywords>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

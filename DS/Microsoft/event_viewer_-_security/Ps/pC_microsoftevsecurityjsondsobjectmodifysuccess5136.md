@@ -37,6 +37,8 @@ Fields = [
 """<Data Name\\*=('|")ObjectDN('|")>\s*({ds_object_dn}[^<]+?)\s*</Data>"""
 """<Data Name\\*=("|')DSName("|')>(|({ds_name}[^<]+?))</Data>"""
 """<Data Name\\*=('|")DSType('|")>(|({ds_type}[^<]+?))</Data>"""
+"""<Channel>({channel}[^<]+)<\/Channel>"""
+""""+Channel\\?"+:\\?"+({channel}[^"\\]+)"""
 """exa_regex=<TimeCreated SystemTime(\\)?=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """exa_regex="TimeGenerated\\?":\\?"({time}\d\d\d\d-\d\d-\d\d\s\d\d:\d\d:\d\d)"""
 """exa_regex="+EventTime\\?"+:\\?"+({time}\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})\\?"+"""
@@ -75,6 +77,7 @@ Fields = [
 """exa_regex=<Data Name\\*=('|")AttributeLDAPDisplayName('|")>\s*({attribute}[^<]+?)\s*</Data>"""
 """AttributeLDAPDisplayName(\\)?":(\\)?"({attribute}[^"\\]+)"""
 """exa_json_path=$.EventID,exa_field_name=event_code""",
+"""exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -27,6 +27,8 @@ Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
 """"+responseElements":\{"assumedRoleUser":\{("[^,]+,)*"assumedRoleId\\?":\s*\\?"({assumedRoleId}[^"]+?)\\?"""",
 """"credentials":\{"accessKeyId":"({key_id}[^"]+?)\\?""""
 """"accessKeyId":"({key_id}[^"]+?)""""
+""""MFAUsed":\s*"({mfa}[^"]+)""""
+""""mfaAuthenticated":\s*"({mfa}[^"]+)""""
 """exa_json_path=$.userIdentity.userName,exa_regex=(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
 """exa_json_path=$.eventTime,exa_field_name=time""",
 """exa_json_path=$.sourceIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -40,6 +42,9 @@ Fields = ${AwsParserTemplates.aws-cloudtrail-user-template.Fields}[
 """exa_json_path=$..recipientAccountId,exa_field_name=additional_info""",
 """exa_json_path=$..responseElements,exa_regex="(ConsoleLogin|CheckMfa|GetSigninToken|RenewRole)\\?":\\?\s*"({result}[^"\\]+?)\\?"""",
 """exa_json_path=$.recipientAccountId,exa_field_name=aws_account"""
+"""exa_json_path=$..MFAUsed,exa_field_name=mfa"""
+"""exa_json_path=$..mfaAuthenticated,exa_field_name=mfa"""
+
 ]
 
 aws-cloudtrail-user-template = {

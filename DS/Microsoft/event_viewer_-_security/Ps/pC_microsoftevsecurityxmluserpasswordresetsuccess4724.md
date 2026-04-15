@@ -28,6 +28,7 @@ Fields = [
   """({event_name}An attempt was made to reset an account's password)"""
   """"process_id":({process_id}\d+)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

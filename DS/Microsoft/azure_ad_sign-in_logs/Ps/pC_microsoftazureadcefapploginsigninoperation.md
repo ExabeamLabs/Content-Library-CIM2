@@ -26,6 +26,7 @@ Fields = [
   """deviceDetail.+?displayName\":\"({object}[^",]+)"""
   """userAgent":"({user_agent}.+?)\"?,\w+":"""
   """"failureReason":"({failure_reason}[^"]+)"""
+  """"TenantId":"({tenant_id}[^"]+)""""
 ]
 
 

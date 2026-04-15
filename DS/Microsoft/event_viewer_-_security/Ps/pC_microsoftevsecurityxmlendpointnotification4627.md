@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-endpoint-notification-4627
     """<Data Name\\*=('|")TargetLogonId('|")>({dest_login_id}({login_id}[^<]+))<""",
     """<Data Name\\*=('|")LogonType('|")>({login_type}\d+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 # sequence_num is removed
 # user_groups is removed
   ]

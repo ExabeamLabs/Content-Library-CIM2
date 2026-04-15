@@ -18,6 +18,7 @@ Name = microsoft-evsecurity-kv-user-permission-modify-4718
     """Access Removed:.*?Access Right:\s*({access_type}.+?)\s*("|<|$)""",
     """<Computer>({host}[^>]+)<""",
     """"Computer":"({host}[^"]+)""""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

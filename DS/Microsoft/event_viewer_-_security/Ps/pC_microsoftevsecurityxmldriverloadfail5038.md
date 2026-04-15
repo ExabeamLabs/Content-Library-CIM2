@@ -27,6 +27,7 @@ Name = microsoft-evsecurity-xml-driver-load-fail-5038
     """<Data Name\\*=('|")param1('|")>({file_dir}.+?)[\\\/]+(?:[^\\\/]+?)</Data>""",
     """<param1>(-|({file_path}({file_dir}.+?)[\\\/]+({file_name}(?:[^<\\\/:]+?)(\.({file_ext}\w+))?))|[^\\:<]+)<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

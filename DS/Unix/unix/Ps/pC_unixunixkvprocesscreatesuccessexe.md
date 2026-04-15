@@ -37,6 +37,7 @@ Name = unix-unix-kv-process-create-success-exe
     """syscall=({syscall_number}\d+)"""
     """comm="({process_command_line}[^"\\]+)"""
     """arch=({system_architecture}[^"\s]+)"""
+    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z\s({host}[\w\-.]+)\saudit"""
   ]
 
 

@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-endpoint-activity-5451
     """<Data Name\\*=('|")Role('|")>({role}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
 # mode is removed
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 
