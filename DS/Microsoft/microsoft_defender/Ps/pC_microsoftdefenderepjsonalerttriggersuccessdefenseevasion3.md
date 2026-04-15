@@ -93,6 +93,16 @@ microsoft-dns-renew-jp = {
     """<Identifier>({host}[^<]+)<\/Identifier>""",
     """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),({dest_host}[\w\-.]+),(|({dest_mac}[^,]+))?,"""
     """,(DNS.*)?(更新|要求|成功|更新成功)([^,]+)?,([^,]+,)({user}[\w\.\-]{1,40}\$?)"""
-  
+  json-microsoft-security-events-1 = {
+      Vendor = Microsoft
+      Product = Microsoft Defender
+      TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSS", "yyyy-MM-dd'T'HH:mm:ss.SSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
+      Fields = [
+      """"alertId":\s*"({alert_id}[^"]+)"""",
+      """"incidentId":\s*({alert_id}\d+)""",
+      """"title":\s*"({alert_subject}({alert_name}[^"]+?))(\\u200b)?"""",
+      """"severity":\s*"({alert_severity}[^"]+)"""",
+      """"category":\s*"({alert_type}[^"]+)"""",
+      """"description":\s*"({additional_info}[^}
 }
 ```

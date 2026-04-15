@@ -41,6 +41,80 @@ sophos-events-aa = {
     """exa_json_path=$.suser,exa_regex=(?:n\/a|((({domain}[^\\"]+)\\+)?({full_name}({last_name}[^\\\(\)\s",]+),?\s+({first_name}[^\\\(\)",]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|((({=domain}[^\\",]+)\\+)?({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
     """exa_json_path=$.source_info.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.source,exa_regex=(?:n\/a|Administrator|((({domain}[^\\"]+)\\+)?({full_name}({last_name}[^\\\(\)\s",]+),?\s+({first_name}[^\\\(\)",]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|((({=domain}[^\\",]+)\\+)?({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))$"""
-  
+  sophos-events = {
+  Vendor = Sophos
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Fields = [
+    """"location":"({src_host}({host}[\w\-.]+))"""",
+    """"when":"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """"rt":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """"name":\s*"({event_name}[^"]+)""",
+    """"type":\s*"({event_category}[^"]+)""",
+    """"dhost":\s*"({dest_host}[\w\-.]+)"""",
+    """"severity":\s*"({severity}[^"]+)""",
+    """"suser":\s*"(?:n\/a|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"suser":\s*"(n\/a|({full_name}[^"\\\s,]+\s+[^"\\,]+))"""",
+    """"suser":\s*"(n\/a|({last_name}[^",\\\s]+),\s*({first_name}[^,"\\\s]+))""",
+    """"suser":\s*"(?:n\/a|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+# id is removed
+    """"source":"(?:n\/a|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """\\"source_info\\"__ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"source_info":\s*\{"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"source":"(({domain}[^\\",]+?)\\+)?(?:n\/a|Administrator|({full_name}(?:({first_name}[^\s",.\\]+)(?:\s+|\.))({last_name}[^",\\]+)))"""",
+    """"source":"((({domain}[^\",]+?)\\+)?(?:n/a|Administrator|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """destinationServiceName=({app}[^=]+)\s+\w+=""",
+
+    """exa_json_path=$.location,exa_field_name=host""",
+    """exa_json_path=$.location,exa_field_name=src_host""",
+    """exa_json_path=$.when,exa_field_name=time""",
+    """exa_json_path=$.rt,exa_field_name=time""",
+    """exa_json_path=$.name,exa_regex=({event_name}[^":]+)""",
+    """exa_json_path=$.type,exa_field_name=event_category""",
+    """exa_json_path=$.dhost,exa_field_name=dest_host""",
+    """exa_json_path=$.severity,exa_field_name=severity""",
+    """exa_json_path=$.suser,exa_regex=(?:n\/a|((({domain}[^\\"]+)\\+)?({full_name}({last_name}[^\\\(\)\s",]+),?\s+({first_name}[^\\\(\)",]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|((({=domain}[^\\",]+)\\+)?({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
+    """exa_json_path=$.source_info.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """exa_json_path=$.source,exa_regex=(?:n\/a|Administrator|((({domain}[^\\"]+)\\+)?({full_name}({last_name}[^\\\(\)\s",]+),?\s+({first_name}[^\\\(\)",]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|((({=domain}[^\\",]+)\\+)?({=user}[\w\.\-\!\#\^\~]{1,40}\$?)))$"""
+  ]
+}
+
+cef-sophos-events = {
+  Vendor = Sophos
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Fields = [
+    """rt=({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """dhost=({src_host}[\w\-.]+)""",
+    """suser=(?:n\/a|(({domain}[^\\]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
+    """suser=(n\/a|({full_name}({last_name}[^,\\\s]+),\s*({first_name}[^,\\\s]+)))""",
+    """\Wid=({alert_id}[^\s]+)""",
+    """source_info_ip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """CEF:([^\|]*\|){4}({alert_type}[^\|]+)""",
+    """CEF:([^\|]*\|){5}({alert_name}[^\|]+)""",
+    """CEF:([^\|]*\|){6}({alert_severity}[^\|]+)""",
+  ]
+}
+
+  sophos-security-alert = {
+  Vendor = Sophos
+  Product = Sophos Endpoint Protection
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Fields = [
+    """"(rt|when)":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """"name":\s*"(n\/a|({alert_name}[^\:\"]+)(\:\s*({target}[^\"]+))?)"""",
+    """"name":\s*"(n\/a|({additional_info}[^"]+))""",
+    """"name":\s*"(n\/a|({alert_name}[^\:\"\']+(\:\s*\'({target}[^\"\']+))?\'))""",
+    """"name":\s*"(n\/a|[^"]*? at \'({additional_info}({malware_url}[^"\']+)))""",
+    """"type":\s*"(n\/a|({alert_type}[^"]+))""",
+    """"dhost":\s*"({src_host}[^"]+)""",
+    """"severity":\s*"({alert_severity}[^"]+)""",
+    """"(suser|source)":\s*"(n\/a|({full_name}[^"\\\(\),]+))"""",
+    """"(suser|source)":\s*"(n\/a|({last_name}[^",\s]+),\s*({first_name}[^,"\s]+))""",
+    """"(suser|source)":\s*"(n\/a|(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"(suser|source)":\s*"(n\/a|({src_host}[\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
+    """"id":\s*"({alert_id}[^"]+)""",
+    """filePath":\s"({process_path}[^"]+\\+({process_name}[^"]+))""",
+  ]
+}
+}
 }
 ```

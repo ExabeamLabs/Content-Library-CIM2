@@ -69,6 +69,20 @@ mimecast-json-template = {
       """exa_json_path=$.user.name,exa_field_name=user"""
       """exa_json_path=$.user.fullname,exa_field_name=full_name"""
       """exa_regex=\WIP:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-      
+      postgresql-parser-str ={
+    Vendor = PostgreSQL
+    Product = PostgreSQL
+    ParserVersion = "v1.0.0"
+    TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+    Fields = [
+      """\s({host}\S+?)\spostgres\b"""
+      """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*\w\w\w:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\(({src_port}\d+)\))?"""
+      """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{1,6}Z)"""
+      """(LOG|FATAL):\s*({db_operation}({action}({operation}[^:]+)))"""
+      """user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+      """database=({db_name}[^\s]+)"""
+      """client=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\(({src_port}\d+)\))?"""
+    ]
+    }
 }
 ```

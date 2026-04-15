@@ -4,7 +4,7 @@ Product: Microsoft Exchange
 ---------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  129  |   54   |         15         |       8        |   45    |
+|  129  |   54   |         15         |       8        |   47    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

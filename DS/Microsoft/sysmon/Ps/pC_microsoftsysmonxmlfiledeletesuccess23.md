@@ -27,6 +27,11 @@ xml-sysmon-activity = {
     """<Data Name\\*=('|")State('|")>({service_state}[^<]+)<""",
     """({log_name}Microsoft-Windows-Sysmon)"""    
     """<Level>({run_level}[^<]+)<"""
-   
+   xml-sysmon-activity = {
+  Vendor = Microsoft
+  Product = Sysmon
+  TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+  Fields = [
+    """<Provider Name\\*=('|")Microsoft-Windows-Sysmon('|") Guid=('|")\{({process_guid}[^}]+?)\}
 }
 ```

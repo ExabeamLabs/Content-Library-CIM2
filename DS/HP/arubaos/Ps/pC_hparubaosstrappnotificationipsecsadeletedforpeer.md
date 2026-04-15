@@ -25,6 +25,14 @@ aruba-system-info-1 = {
 # detector_access_point_name is removed
 # detector_access_point_mac is removed
 # detector_access_point_radio is removed
-    
+    aruba-system-info = {
+  Vendor = HP
+  TimeFormat = "MMM dd HH:mm:ss yyyy"
+  Fields = [
+    """({time}\w+\s+\d+\s+\d+:\d+:\d+\s+\d+)\s+Aruba-HQ-Sec-Master""",
+    """({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>\s+ntpd\[\d+\]:\s*({event_name}.+?)\s*$"""
+    """<Aruba-HQ-Sec-Master\s+({src_ip}((([9a-fA-F.]{1,4}):{1,2}){7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?>\s*({event_name}.+?)\s*$""",
+  ]
+}
 }
 ```

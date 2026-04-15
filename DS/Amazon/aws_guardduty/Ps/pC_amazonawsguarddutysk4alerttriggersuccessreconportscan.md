@@ -30,6 +30,20 @@ cef-aws-guardduty-security-alert-template = {
       """"instanceId":"({instance_id}[^"]+)""",
       """"city":\{"cityName":"(UNKNOWN|({location_city}[^"]+))"""
       """"key":"ProductOwner","value":"({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
-    
+    cef-aws-guardduty-security-alert-template = {
+    Vendor = Amazon
+    Product = AWS GuardDuty
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    Fields = [
+      """"updatedAt":\s*"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}\.\d+Z)"""",
+      """"ipAddressV4":\s*"({src_ip}(\d{1,3}\.){3}\d{1,3})"""",
+      """"title":"(({event_name}[^"]+?(instance|bucket|database))(\s[^"\s]+?)?|({=event_name}[^"]+?))",""",
+      """"type":"({alert_type}[^"]+):({alert_name}[^"]+)",""",
+      """"severity":\s*({alert_severity}[\d.]+),""",
+      """"region":\s*"({region}[^"]+?)",""",
+      """"description":\s*"({additional_info}[^"]+?)"""",
+      """"accountId":\s*"({account_id}[^"]+?)","""
+      """domain":"({domain}[^"]+)"""",
+      """resource":[^}
 }
 ```

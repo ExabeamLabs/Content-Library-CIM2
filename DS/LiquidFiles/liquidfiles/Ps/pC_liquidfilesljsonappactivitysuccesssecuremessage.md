@@ -65,6 +65,23 @@ IronscalesParserTemplates = {
         """cs6=({result}\S+)\s+cs6Label=Outcome"""
         """cs2=({full_name}[^=]+)\s+cs2Label=Employee Name"""
       ]
-    
+    Liquid-json-template = {
+    Vendor = "LiquidFiles"
+    Product = "LiquidFiles"
+    TimeFormat = "MMM dd HH:mm:ss"
+    Fields = [
+      """({time}\w\w\w \d\d \d\d:\d\d:\d\d)"""
+      """({app}liquidfiles)""",
+      """"ip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+      """"message":"({event_name}[^:"]+)""",
+      """"username":"(({email_address}[^@"]+@[^\.]+\.[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """"hostname":"({host}[^"]+)"""
+      """"access_method":({method}[^"]+)""""
+      """"user_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """"log_level":"({run_level}[^"]+?)\s*""""
+      """"error":"({failure_reason}[^"]+)""""
+      """"filename":"({file_name}[^"]+)""""
+      ]
+    }
 }
 ```

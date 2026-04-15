@@ -85,6 +85,21 @@ json-aws-guardduty-security-alert-template = {
       """exa_json_path=$.id,exa_field_name=alert_id"""
       """exa_regex="remoteIpDetails":\{"ipAddressV4":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
       """exa_regex="remotePortDetails":\{"port":({dest_port}\d+)"""
-    
+    json-aws-guardduty-security-alert-template = {
+    Vendor = Amazon
+    Product = AWS GuardDuty
+    ExtractionType = json
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+    Fields = [
+      """"updatedAt":\s*"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}\.\d+Z)"""",
+      """"ipAddressV4":\s*"({src_ip}(\d{1,3}\.){3}\d{1,3})"""",
+      """"title":"(({event_name}[^"]+?(instance|bucket|database))(\s[^"\s]+?)?|({=event_name}[^"]+?))",""",
+      """"type":"({alert_type}[^"]+):({alert_name}[^"]+)",""",
+      """"severity":\s*({alert_severity}[\d.]+),""",
+      """"region":\s*"({region}[^"]+?)",""",
+      """"description":\s*"({additional_info}[^"]+?)"""",
+      """"accountId":\s*"({account_id}[^"]+?)","""
+      """domain":"({domain}[^"]+)"""",
+      """resource":[^}
 }
 ```

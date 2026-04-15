@@ -60,6 +60,27 @@ Fields = [
 """\"Protocol\",\"value\":\"({protocol}[^\"]+)\""""
 """"aadTenantId":\s*"({tenant_id}[^"]+)""""
 """"tenantId":\s*"({tenant_id}[^"]+)""""
-
+o365-dlp-email-out = {
+  Vendor = Microsoft
+  Product = Microsoft 365
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Fields = [
+    """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
+    """"ResultStatus\\*"+:[\s\\]*"+({result}[^"\\]+)""",
+    """"ClientIPAddress\\*"+:[\s\\]*"+\[?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_id}[^"]+)))"+""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[^"\\]+)""",
+    """"SendAsUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
+    """"SendOnBehalfOfUserSmtp\\*"+:[\s\\]*"+({additional_info}[^"\\]+)""",
+    """"Attachments\\*"+:[\s\\]*"+\s*({email_attachments}[^\n]+?)\s*\\?","\w+":""",
+    """"Attachments\\*"+:[\s\\]*"+\s*(-|none|({email_attachments}({email_attachment}[^",;:]+)[^"\\:]*))\s*""",
+    """"Subject\\*"+:[\s\\]*"+\s*({email_subject}[^"]+?)\s*\\?"""",
+    """"ClientInfoString\\*"+:[\s\\]*"+Client\\*=({alert_type}({alert_name}[^"\\;]+))""",
+    """"ActorInfoString\\*"+:[\s\\]*"({user_agent}[^"\\]+)"""
+    """src-account-name":"({account_name}[^"]+)""",
+    """"SizeInBytes":({bytes}\d+)""",
+    """"Workload":\s*"({app}[^"]+)""""
+    """"UserType":"*({user_type}[^,}
 }
 ```

@@ -79,6 +79,23 @@ azure-app-activity-skyfromation= {
     """exa_json_path=$.operationName.localizedValue,exa_field_name=operation"""
     """"(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
     """exa_regex=(r|R)esourceId":\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)\/[^"]+)""""
-
+logrhythm-o365-file-operation = {
+  Vendor = Microsoft
+  Product = Microsoft 365
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Fields = [
+    """\sTS=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """USER=(Unknown|({email_address}[^@\s]+@[^\s\.]+?\.[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s]+))?)\s+\w+=""",
+    """DOMAIN=(|({domain}[^\s]+?))\s+\w+=""",
+    """USER=({domain}[^\\\s]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """WORKLOAD=({app}[^=]+?)\s+\w+=""",
+    """COMMAND=({operation}({event_name}[^=]+?))\s+\w+=""",
+    """OBJECT=({file_path}({object}[^=]+?))\s+\w+=""",
+    """\sFILENAME=({file_name}[^=]+?(\.({file_ext}[^\s\=\.]+))?)\s+\w+=""",
+    """SIP=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
+    """ITEMTYPE=({file_type}[^=]+?)\s+\w+="""
+    ]
+ }
 }
 ```

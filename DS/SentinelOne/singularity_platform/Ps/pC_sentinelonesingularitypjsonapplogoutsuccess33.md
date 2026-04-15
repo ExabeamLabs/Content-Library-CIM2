@@ -30,6 +30,32 @@ json-sentinelone-activitytype = {
   """exa_json_path=$..userName,exa_regex=[^\(]+\(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))\)""",
   """exa_json_path=$.primaryDescription,exa_field_name=additional_info""",
   """exa_json_path=$..osType,exa_field_name=os"""
-  
+  json-sentinelone-activitytype = {
+  Vendor = SentinelOne
+  Product = "Singularity Platform"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+  ExtractionType = json
+  Fields = [
+  """exa_json_path=$.createdAt,exa_field_name=time""",
+  """exa_json_path=$..computerName,exa_field_name=src_host""",
+  """exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+  """exa_json_path=$..confidenceLevel,exa_field_name=additional_info""",
+  """exa_json_path=$.accountName,exa_field_name=account_name"""
+  """exa_json_path=$..filePath,exa_field_name=file_path""" 
+  """exa_json_path=$..fileDisplayName,exa_field_name=file_name""" 
+  """exa_json_path=$.groupName,exa_field_name=group_name""",
+  """exa_json_path=$..fileContentHash,exa_regex=^(({hash_sha256}\w{64})|({hash_sha1}\w{40})|({hash_md5}\w{32}))$""",
+  """exa_json_path=$.accountId,exa_field_name=account_id""",
+  """exa_json_path=$.activityType,exa_field_name=event_code""",
+  """exa_json_path=$.threatId,exa_field_name=alert_id""",
+  """exa_json_path=$..email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
+  """exa_json_path=$..username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}\w+\s+\w+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+  """exa_json_path=$..userName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}\w+\s+\w+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+  """exa_json_path=$..username,exa_regex=[^\(]+\(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))\)""",
+  """exa_json_path=$..userName,exa_regex=[^\(]+\(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))\)""",
+  """exa_json_path=$.primaryDescription,exa_field_name=additional_info""",
+  """exa_json_path=$..osType,exa_field_name=os"""
+  ]
+}
 }
 ```

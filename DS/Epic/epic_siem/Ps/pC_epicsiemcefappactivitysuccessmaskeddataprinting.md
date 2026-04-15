@@ -19,6 +19,20 @@ cef-epic-app-activity = {
   """MASKMODE=({result}.+?)\s+(\w+=|$)"""
   """PREVUSER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """NEWUSER=({account}[^\s,]+)"""
-  
+  cef-epic-app-activity = {
+  Vendor = Epic
+  Product = Epic SIEM
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Fields = [
+    """({host}[\w\-.]+)\s+CEF:"""
+  """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
+  """workstationID=({dest_host}[\w\-.]+)"""
+  """shost=({src_host}[\w\-.]+)"""
+  """flag=({additional_info}.+?)\s+(\w+=|$)"""
+  """MASKMODE=({result}.+?)\s+(\w+=|$)"""
+  """PREVUSER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """NEWUSER=({account}[^\s,]+)"""
+  ]
+}
 }
 ```

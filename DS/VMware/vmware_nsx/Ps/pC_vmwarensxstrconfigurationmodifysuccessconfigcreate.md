@@ -17,6 +17,19 @@ nsx-config-change-activity = {
       """({result}success|failure)""",
       """tenant\s({tenant_id}[\w\-\.]+)\s""",
       """by user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-    
+    nsx-config-change-activity = {
+    Vendor = VMware
+    Product = VMware NSX
+    TimeFormat = "yyyy-MM-dd HH:mm:ssZ"
+    Fields = [
+      """({host}[\w\-\.]+)\sAvi-Controller""",
+      """event\s({operation}[^\s]+)""",
+      """({time}\d\d\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d.\d\d:\d\d)\sevent""",
+      """occurred on object ({object}[^\s]+)""",
+      """({result}success|failure)""",
+      """tenant\s({tenant_id}[\w\-\.]+)\s""",
+      """by user ({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    ]
+  }
 }
 ```

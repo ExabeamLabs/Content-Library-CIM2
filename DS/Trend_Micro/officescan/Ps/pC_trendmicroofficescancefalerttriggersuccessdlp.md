@@ -54,6 +54,29 @@ cef-trendmicro-security-alert = {
     """\sduser=((\d{1,3}\.){3}\d{1,3}|({email_address}[^@\s]+@[^\.\s]+\.[^\s]+?)|((({email_domain}[^\s\\\/=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|\s*$)""",
     """\sfilePath=({malware_url}[^=]+?)(\s+\w+=|\s*$)""",
     """\sfileHash=({hash_md5}\w+)(\s+\w+=|\s*$)"""
-  
+  cef-trendmicro-dlp-alert = {
+  Vendor = Trend Micro
+  TimeFormat = "epoch"
+  Fields = [
+    """\Wrt=({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+\s+\w+[\+\-]\d+:\d+)""",
+    """\Wrt=({time}\d{13})""",
+    """\Wdvc=({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})""",
+    """\Wdvchost=({host}[^\s]+)""",
+    """\Wcs4=({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
+    """\Wsrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """\Wshost=({src_host}.+?)\s+(\w+=|$)""",
+    """\Wfname=({file_name}.+?)\s+(\w+=|$)""",
+    """\WfilePath=({file_dir}.+?)\s+(\w+=|$)""",
+    """\Wcs5=({alert_name}.+?)\s+(\w+=|$)""",
+    """CEF:([^\|]*\|){5}({alert_type}[^\|]+)""",
+    """\WflexString2=({alert_type}.+?)\s+(\w+=|$)""",
+    """\WflexString1=({result}.+?)\s+(\w+=|$)""",
+    """\|Trend Micro\|Control Manager\|([^|]*\|){3}({alert_severity}[^|]+)\|""",
+    """\Wcs1=({policy_guid}.+?)\s+(\w+=|$)""",
+    """\WdeviceFacility=({additional_info}.+?)\s+(\w+=|$)""",
+    """\Wduser=({target}.+?)\s+(\w+=|$)""",
+    """\Wsuser=({last_name}[^,\(]+),\s*({first_name}[^,\)\=]+?)(\s*\([^\)]*\))?\s+(\w+=|$)""",
+   ]
+ }
 }
 ```

@@ -27,6 +27,13 @@ json-avanan-security-alert = {
     """file_name\\*":\\*"\s*({file_name}[^\\"]+?)\s*\\*"""",
     """from_email\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """("|')category("|'):\s*("|')({category}[^"']+)""""
-    
+    json-avanan-security-alert = {
+  Vendor = Check Point
+  Product = Check Point Avanan
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Fields = [
+    """("|')time("|'):\s*("|')({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d)""",
+    """("|')(event|source)type\\*("|'):\\*("|')\s*({alert_name}[^\\"]+)""",
+    """("|')severity\\*("|'):\s*({alert_severity}[^,]+?)\}
 }
 ```

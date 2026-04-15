@@ -35,6 +35,35 @@ azure-workspaceblob-json = {
     """"+Type"+:\s*"+({event_category}[^"]+)"+""",
     """"+RequesterUpn"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
     """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
-    
+    azure-workspaceblob-json = {
+    Vendor = Microsoft
+    Product = Azure Monitor
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+    Fields = [
+    """"+TimeGenerated"+:\s*"+({time}\d+-\d+-\d+T\d+:\d+:\d+.\d+Z?)"+""",
+    """"+TenantId"+:\s*"+({tenant_id}[^"]+)"+""",
+    """"+AccountName"+:\s*"+({dest_host}({storage_account}[^"]+))"+""",
+    """"+Location"+:\s*"+({region}[^"]+)"+""",
+    """"+Protocol"+:\s*"+({protocol}[^"]+)"+""",
+    """"+OperationName"+:\s*"+({operation_name}({operation}[^"]+))"+""",
+    """"+AuthenticationType"+:\s*"+({auth_type}[^"]+)"+""",
+    """"+StatusCode"+:\s*"+({result_code}[^"]+)"+""",
+    """"+StatusText"+:\s*"+({result}[^"]+)"+""",
+    """"+Uri"+:\s*"+({url}({file_path}[^"]+\/({file_name}[^\?"\/]+))[^"]*|[^"]+)"+""",
+    """"+CallerIpAddress"+:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})+)(:({src_port}\d+))?"+""",
+    """"+CorrelationId"+:\s*"+({correlation_id}[^"]+)"+""",
+    """"+SchemaVersion"+:\s*"+({schema_version}[^"]+)"+""",
+    """"+OperationVersion"+:\s*"+({operation_version}[^"]+)"+""",
+    """"+UserAgentHeader"+:\s*"+({user_agent}[^"]+)"+""",
+    """"+ReferrerHeader"+:\s*"+({referrer}[^"]+)"+""",
+    """"+RequestBodySize"+:\s*({bytes_in}\d+)""",
+    """"+ResponseBodySize"+:\s*({bytes_out}\d+)""",
+    """"+LastModifiedTime"+:\s*"+({file_modify_time}[^"]+)"+""",
+    """"+Category"+:\s*"+({operation_type}[^"]+)"+""",
+    """"+Type"+:\s*"+({event_category}[^"]+)"+""",
+    """"+RequesterUpn"+:\s*"+({email_address}[^"]+@({email_domain}[^"]+))""",
+    """"_?ResourceId":\s*"({resource_id}(\/subscriptions\/({subscription_id}[^\/]+))?[^"]*)""""
+    ]
+  }
 }
 ```

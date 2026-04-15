@@ -22,6 +22,14 @@ cef-dropbox-activity = {
     """({app}Dropbox)""",
     """"participants":\[\{"\.tag":"user","user":\s*[^\}]*?"display_name":"(?:N\/A|({dest_user_full_name}[^"@]+))","""
     """"participants":\[\{"\.tag":"user","user":\s*[^\}]*?"email":"(?:N\/A|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
-  
+  cef-dropbox-activity = {
+  Vendor = Dropbox
+  Product = Dropbox
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Fields = [
+    """\w+\s+\d+\s+\d\d:\d\d:\d\d ({host}[\w\-.]+) \d+ \d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ""",
+    """"timestamp":\s*"({time}[^"]+)""",
+    """"host_name":\s*"({host}[^"]+)""",
+    """"actor":\s*[^\}
 }
 ```

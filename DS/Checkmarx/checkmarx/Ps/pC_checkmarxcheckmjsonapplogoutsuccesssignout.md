@@ -44,6 +44,25 @@ IronscalesParserTemplates = {
         """cs6=({result}\S+)\s+cs6Label=Outcome"""
         """cs2=({full_name}[^=]+)\s+cs2Label=Employee Name"""
       ]
-    
+    checkmarx-json-template = {
+      Vendor = "Checkmarx"
+      Product = "Checkmarx"
+      ExtractionType = json
+      TimeFormat = "yyyy-MM-dd HH:mm:ss.SSSSSS"
+      Fields = [
+        """exa_json_path=$.Timestamp,exa_field_name=time""",
+        """exa_regex="Timestamp":\s*"({time}[^"]+?)"""",
+        """exa_json_path=$.Hostname,exa_field_name=host""",
+        """exa_json_path=$.UserName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))$""",
+        """exa_json_path=$.Details,exa_regex=\\?"Username\\?":\s*\\?"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?))\\?"""",
+        """exa_json_path=$.Details,exa_regex=\\?"UserId\\?":\s*({dest_user_id}\d+)""",
+        """exa_json_path=$.OriginIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+        """exa_json_path=$.Type,exa_field_name=event_name""",
+        """exa_json_path=$.UserId,exa_field_name=user_id""",
+        """exa_json_path=$.Details,exa_regex=\\?"TeamName\\?":\s*\\?"({group_name}[^\\"]+)\\?"""",
+        """exa_json_path=$.Details,exa_regex=\\?"TeamId\\?":\s*({group_id}\d+)""",
+        """exa_json_path=$.Origin,exa_field_name=origin_name"""
+      ]
+    }
 }
 ```

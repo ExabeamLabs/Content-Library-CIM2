@@ -98,6 +98,42 @@ cef-microsoft-app-activity-3 = {
     """exa_regex=message":\s*"({failure_reason}({additional_info}[^"]+))""",
     """exa_json_path=$.SiteUrl,exa_regex=({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
     """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
-    
+    cef-microsoft-app-activity-3 = {
+  Vendor = Microsoft
+  Product = Azure Monitor
+  ExtractionType = json
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "M/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy h:mm:ss Z", "M/dd/yyyy h:mm:ss Z", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  Fields = [
+    """"time"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
+    """"Host":\s*"({host}[\w\-.]+)"""",
+    """destinationServiceName=({app}[^=]+)\s+(\w+=|$)""",
+    """"message":\s*"({failure_reason}({additional_info}[^"]+))""",
+    """"description":\s*"({failure_reason}({additional_info}[^"]+))""",
+    """category":\s*"({category}[^"]+)"""",
+    """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
+    """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
+    """"resourceId":\s*"({resource}({object}[^"]{1,249}))""",
+    """"operationName":\s*"({operation}[^"]+)""",
+    """action":\s*"({action}[^"]+)""",
+    """"IPAddress\\?"+\s*:\s*\\?"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"MacAddress\\?"+\s*:\s*\\?"({src_mac}([a-fA-F\d]{0,2}[-:]){0,5}[a-fA-F\d]+)""",
+    """"(callerIpAddress|CIp)"*:\s*"*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"email":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """({app}Databricks)""",
+    """"serviceName\\*":\s*\\*"({app}[^"]+)""",
+    # port is removed
+    """"userAgent":\s*"({user_agent}[^"]+)"""",
+    """"statusCode\\":\s*({result_code}\d+)""",
+    """"actionName":\s*"({operation}[^"]+)""",
+    """userId":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user_id}[^"]+))""",
+    """\[Namespace:\s*({host}\S+) ; EventHub name:"""
+    """"subscriptionId":\s*"({subscription_id}[^"]+)"""",
+    """"ResourceGroup":\s*"({resource_group}[^"]+)""",
+    """"resourceId":\s*"({resource_id}[^"]+)""",
+    """"LogicalServerName":\s*"({server_name}[^",]+)""",
+    """"UserType":\s*"*({user_type}[^,\}
 }
 ```

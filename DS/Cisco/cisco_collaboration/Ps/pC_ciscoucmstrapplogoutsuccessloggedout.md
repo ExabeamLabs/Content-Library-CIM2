@@ -21,6 +21,23 @@ cisco-events-2 = {
     """AuditDetails\s*=({additional_info}[^\]]+)""",
     """App ID\s*=({app}[^\]]+)""",
     """userPrincipalName"+:\s*"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-  
+  cisco-events = {
+  Vendor = Cisco
+  Product = Cisco
+  TimeFormat = ["MMM dd yyyy HH:mm:ss a", "MMM dd yyyy HH:mm:ss.SSS z"]
+  Fields = [
+    """\s({time}\w+\s+\d+\s+\d+\s+\d+:\d+:\d+(\s+(AM|PM|am|pm)|\.\d+\s\w+))""",
+    """UserID\s*=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """ClientAddress\s*=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """EventType\s*=({operation}[^\]]+)""",
+    """ResourceAccessed\s*=({object}[^\]]+)""",
+    """EventStatus\s*=({result}[^\]]+)""",
+    """ComponentID\s*=({target}[^\]]+)""",
+    """AuditCategory\s*=({audit_category}[^\]]+)""",
+    """AuditDetails\s*=\s*({additional_info}[^\]]+?)\s*\]""",
+    """App ID\s*=({app}[^\]]+)""",
+    """userPrincipalName"+:\s*"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+  ]
+}
 }
 ```

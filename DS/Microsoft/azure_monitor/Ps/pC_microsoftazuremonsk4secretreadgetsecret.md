@@ -49,6 +49,36 @@ cef-microsoft-app-activity-2 = {
     #"""duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
     """"TenantId":\s*"({tenant_id}[^"]+)""""
-  
+  cef-microsoft-app-activity-2 = {
+  Vendor = Microsoft
+  Product = Azure Monitor
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  Fields = [
+    """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,
+    """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
+    """"Host":"({host}[^"]+)"""",
+    """"message":"({additional_info}[^"]+)""",
+    """"description":"({additional_info}[^"]+)""",
+    """category":"({category}[^"]+)"""",
+    """Namespace:\s*(|({event_hub_namespace}[^\]]+?))\s*[\];]""",
+    """EventHub name:\s*(|({event_hub_name}[^\]]+?))\s*\]""",
+    """resourceId":\s*"({resource}({object}[^"]+))""",
+    """"Operation":\s*"({operation}[^"]+)""",
+    """"operationName":"({operation}[^"]+)""",
+    """"name":"({full_name}[^"]+)"""",
+    """action":"({action}[^"]+)""",
+    """"(callerIpAddress|CIp)":"({src_ip}((\d{1,3}\.){3}\d{1,3}|[A-Fa-f\d]+:[a-fA-F\d:]+))(:({src_port}\d+))?"""",
+    """claims\/(name|upn)":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """({app}Databricks)""",
+    """"serviceName\\*":\\*"({app}[^"]+)""",
+    """destinationServiceName=({app}[^=]+)\s+(\w+=|$)""",
+# port is removed
+    """"userAgent":"({user_agent}[^"]+)"""",
+    """"statusCode\\":({http_response_code}\d+)""",
+    """"actionName":"({operation}[^"]+)""",
+    """userId":"({user_upn}[^",]+)""",
+    """\[Namespace:\s*({host}\S+) ; EventHub name:"""
+    """"UserType":"*({user_type}[^,}
 }
 ```

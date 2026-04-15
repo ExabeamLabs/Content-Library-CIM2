@@ -51,6 +51,16 @@ cef-netskope-activity = {
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """"activity":\s*"File\w+"[^\}]*?"object":\s*"({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)""""
     """"object":\s*"({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)"[^\}]*?"activity":\s*"File\w+""""
-  
+  cef-netskope-activity = {
+  Vendor = "Netskope"
+  Product = "Netskope Security Cloud"
+  TimeFormat = "epoch_sec"
+  Fields = [
+    """"hostname":\s*"({src_host}[\w\-.]+)""""
+    """"timestamp":\s*({time}\d{10})"""
+    """requestClientApplication=({app}[^=]+?)\s+(\w+=|$)"""
+    """"User Name\s*":\s*"({full_name}[^\"]+)"""
+    """"srcip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
+    """"object":\s*"'?\s*({file_name}[^"]+?(\.({file_ext}[^"\.\s\\\/]+?))?)'?"[^\}
 }
 ```

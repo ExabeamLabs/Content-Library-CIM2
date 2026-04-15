@@ -23,6 +23,12 @@ cef-aws-guardduty-security-alert-template-1 = {
       """,Arn:\s*({object}[^,]+),\w+:""",
       """,UserName:\s*({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """,UserType:\s*({user_type}[^,\}]+)"""
-    
+    cef-aws-guardduty-security-alert-template-1 = {
+    Vendor = Amazon
+    Product = AWS GuardDuty
+    TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    Fields = [
+      """,CreatedAt:\s*({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ),""",
+      """,LocalIpDetails:[^\}
 }
 ```

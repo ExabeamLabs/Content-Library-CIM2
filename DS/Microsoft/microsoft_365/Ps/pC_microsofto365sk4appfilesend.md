@@ -52,6 +52,27 @@ o365-activity-template = {
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
     """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
-  
+  o365-activity-template = {
+  Vendor = Microsoft
+  Product = Microsoft 365
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  Fields = [
+    """"CreationTime\\*"+:[\s\\]*"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
+    """\sdvc=({host}\S+)""",
+    """\sdvchost=(Unknown|({host}[\w\-.]+))""",
+    """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
+    """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
+    """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
+    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
+    """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)",""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
+    """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
+    """sourceServiceName=({app}[^=]+?)\s+(\w+=|$)""",
+    """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
+    """"ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}[^"\\]*?))\s*"""",
+    """"Client\\*"+:[\s\\]*"+({user_agent}[^"]*)""",
+    """"User-?Agent\\*"+:[\s\\]*"(|({user_agent}[^\\"]+))\\*"""",
+    """\{"+Name"+:[\s\\]*"+UserAgent"+,"+Value"+:"+({user_agent}[^"]+)"+\}""",
+    """"+Value"+:\s*"+({user_agent}[^"]+)"+,\s*"+Name"+:[\s\\]*"+UserAgent"+\}
 }
 ```

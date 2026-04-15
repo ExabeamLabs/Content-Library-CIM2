@@ -194,6 +194,22 @@ s-okta-app-login = {
     """requestUri":\s*"({uri_path}[^"]+?)\s*"""",
     """"id":"({object}[^"]+)"[^\}\]]*"objectType":"AppInstance"""",
     """"objectType":"AppInstance"[^\}\]]*"id":"({object}[^"]+)"""",
-    
+    s-okta-app-login = {
+  Vendor = "Okta"
+  Product = "Okta Adaptive MFA"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  ExtractionType = json
+  Fields = [
+    """"published":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
+    """"userAgent":\s*\{[^\{\}]*?"rawUserAgent":\s*"(unknown|({user_agent}[^"]+))""",
+    """"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"request":\s*\{[^\}]+?"ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+    """"type":\s*"({app}[^"]+)""",
+    """({app}Okta)""",
+    """destinationServiceName=({app}[^=]+?)\s*\w+=""",
+    """"target":\s*\[.*?\{.*?"displayName":\s*"({app}[^"]+)"[^\{\}]*?"type":\s*"AppInstance"""",
+    """"type":\s*"AppInstance"(,\s"[^"]+":\s\{[^\}]+\},\s|[^\]\}]*)"displayName":\s*"({app}[^"]+?)\s*"""",
+    """"type":\s*"AppUser"[^\}
 }
 ```

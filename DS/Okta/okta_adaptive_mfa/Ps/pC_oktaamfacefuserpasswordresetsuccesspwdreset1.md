@@ -121,6 +121,29 @@ json-okta-auth = {
     """requestUri":\s*"({uri_path}[^"]+?)\s*"""",
     """"id":"({object}[^"]+)"[^\}\]]*"objectType":"AppInstance"""",
     """"objectType":"AppInstance"[^\}\]]*"id":"({object}[^"]+)"""",
-    
+    json-okta-auth = {
+  Vendor = Okta
+  Product = Okta Adaptive MFA
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
+  Fields = [
+    """"published"+\s*:\s*"+({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """({app}Okta)""",
+    """destinationServiceName=({app}[^=]+?)\s*\w+=""",
+    """"city":"({location_city}[^",]+)""",
+    """"state":"({location_state}[^",]+)""",
+    """"country":"({mfa_country}({location_country}[^",]+))""",
+    """"ipAddress"+\s*:\s*"+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """"rawUserAgent"+\s*:\s*"+(unknown|({user_agent}[^"]+))"""",
+    """"action"+:.+?"+message"+:"+({operation}({event_name}[^",]+))"""
+    """"displayMessage"\s*:\s*"({operation}({event_name}[^",]+))""",
+    """"action"+:.+?"+objectType"+:"+({operation}[^",]+)""",
+    """"eventType":\s*"({operation}[^"]+)"""",
+    """"legacyEventType"+:"+({operation_details}[^",]+)""",
+    """"risk":"\{reasons=({additional_info}({failure_reason}[^=]+?)),\s\w+=""",
+    """"reason":"({additional_info}({failure_reason}[^"]+))"""
+    """"target(s)?"+:[^\}\]]+?"+displayName"+\s*:\s*"+(unknown|({object}[^"]+[^\s]))"""",
+    """request"+:.+?User.+?"+displayName"+:(null|"+(Okta System|unknown|(?:({first_name}[^,"]+),\s*({last_name}[^"]+)|({full_name}[^"]+)))")""",
+    """"actor"+.+?"+type"+:"+User.+?displayName"+:(null|"+(Okta System|Okta Admin|unknown|(?:({last_name}[^,"]+),\s*({first_name}[^"]+)|({full_name}[^"]+))))""",
+    """"actor"+.+?"+[^}
 }
 ```

@@ -55,6 +55,29 @@ DLWazuhParserTemplates = {
       """"agent.name":"({agent_name}[^"]+)"""
       """"agent.id":"({agent_id}[^"]+)"""
       """"data.srcip":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    
+    unix-kv-template = {
+  Vendor = Unix
+  Product = Unix
+  TimeFormat = ["epoch_sec", "MMM dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+  Fields = [
+      """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
+      """msg=audit\(({time}\d{10})\.\d{3}""",
+      """({time}\d\d\d\d-\d+-\d+T\d\d:\d\d:\d\d\.\d+[-+]\d\d:\d\d)\s+({dest_host}({host}[\w.\-]+))""",
+      """\sauid=({account_id}\d+)\s"""
+      """\suid=({user_uid}\d+)"""
+      """\sses=({session_id}\d+)""",
+      """\spid=({process_id}[^\s]+)\s\w+""",
+      """\sres=({result}[^"']+)""",
+      """\ssubj=({additional_info}[^=]+)\s+\w+\\?=""",
+      """\sacct="({account_name}[^"]+)"""",
+      """\sexe="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
+      """\scomm="({process_name}[^\\"]+)"""",
+      """\sa0="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))"""",
+      """\ssaddr=(({src_port}\d{4}$)|([0-9a-fA-F]{4}(0000|({=src_port}[0-9a-fA-F]{4}))))""",
+      """op=({operation}[^\s]+)""",
+      """type=(?:({event_name}USER_\S+)|({operation_type}\S+))"""
+      """audit\[\d+\]:\s*(({event_name}USER_\S+)|({operation_type}\S+))"""
+    ]
+ }
 }
 ```

@@ -96,6 +96,31 @@ ParserVersion = "v1.0.0"
       """cs9\\?=({rule}[^=]+)\s\w+\\?=""",
       """ccode\\?=({country_code}[^=]+)\s""",
       """cicode\\?=({city}[^=]+)\s\w+\\?="""
-  
+  securesphere-db-activity= {
+  Vendor = Imperva
+  Product = Imperva SecureSphere
+  TimeFormat = "MMM dd yyyy HH:mm:ss"
+  Fields = [
+    """rt=({time}\w\w\w \d\d \d\d\d\d \d\d:\d\d:\d\d)""",
+    """EventId=({alert_id}[^\|]+)"""
+    """Policy=({policy_name}[^\|]+)"""
+    """src=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """spt=({src_port}\d+)"""
+    """OSUser=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+    """dst=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+    """dpt=({dest_port}\d+)"""
+    """duser=(({domain}[^\\\s]+)\\+)?({account}({db_user}[^\s\|]+))"""
+    """UserGroup=({group_name}[^\|]+)"""
+    """\WserviceName="(|({service_name}[^"\|]+))"""
+    """HostName=({host}[^\|]+)"""
+    """Schema=({db_schema}[^\|]+)"""
+    """Database=({db_name}[^\|]+)"""
+    """EventType=({event_category}[^\|]+)"""
+    """ApplicationName=({app}[^\|]+)"""
+    """Operation=({operation}[^\|]+)"""
+    """RawQuery=({db_query}[^\|\$]+)"""
+    """Object=({object}[^\|]+)"""
+  ]
+ }
 }
 ```

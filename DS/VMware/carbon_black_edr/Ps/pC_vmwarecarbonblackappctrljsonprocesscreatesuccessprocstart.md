@@ -39,6 +39,13 @@ carbonblack-endpoint = {
     """exa_json_path=$.parent_guid,exa_field_name=parent_process_guid"""
     """exa_json_path=$.alert_id,exa_field_name=alert_id"""
     """exa_json_path=$.type,exa_field_name=operation_type"""
-   
+   carbonblack-endpoint = { 
+    Vendor = VMware
+    Product = Carbon Black EDR
+    TimeFormat = "yyyy-MM-dd HH:mm:ss.SSS"
+    ExtractionType = json
+    Fields = [
+    """({time}\d+-\d+-\d+ \d+:\d+:\d+.\d\d\d)""",
+    """"+process_cmdline"+:"+({process_command_line}.+?)\s*(",\s*"|"\s*}
 }
 ```

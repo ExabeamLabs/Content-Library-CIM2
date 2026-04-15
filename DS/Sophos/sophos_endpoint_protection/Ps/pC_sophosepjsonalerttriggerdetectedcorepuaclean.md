@@ -28,6 +28,26 @@ sophos-security-alert-1 {
     """"description":"({additional_info}[^:"]+:?([^"]+? at '({malware_url}[^"]+)')?)"""",
     """"descriptor":"({process_path}[^"]+\\({process_name}[^"]+))"""",
     """"endpoint_platform":"({os}[^"]+)"""
-  
+  sophos-security-alert = {
+  Vendor = Sophos
+  Product = Sophos Endpoint Protection
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  Fields = [
+    """"(rt|when)":\s*"({time}\d\d\d\d\-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
+    """"name":\s*"(n\/a|({alert_name}[^\:\"]+)(\:\s*({target}[^\"]+))?)"""",
+    """"name":\s*"(n\/a|({additional_info}[^"]+))""",
+    """"name":\s*"(n\/a|({alert_name}[^\:\"\']+(\:\s*\'({target}[^\"\']+))?\'))""",
+    """"name":\s*"(n\/a|[^"]*? at \'({additional_info}({malware_url}[^"\']+)))""",
+    """"type":\s*"(n\/a|({alert_type}[^"]+))""",
+    """"dhost":\s*"({src_host}[^"]+)""",
+    """"severity":\s*"({alert_severity}[^"]+)""",
+    """"(suser|source)":\s*"(n\/a|({full_name}[^"\\\(\),]+))"""",
+    """"(suser|source)":\s*"(n\/a|({last_name}[^",\s]+),\s*({first_name}[^,"\s]+))""",
+    """"(suser|source)":\s*"(n\/a|(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"(suser|source)":\s*"(n\/a|({src_host}[\w\-.]+)\s*(\(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\))?)"""",
+    """"id":\s*"({alert_id}[^"]+)""",
+    """filePath":\s"({process_path}[^"]+\\+({process_name}[^"]+))""",
+  ]
+}
 }
 ```

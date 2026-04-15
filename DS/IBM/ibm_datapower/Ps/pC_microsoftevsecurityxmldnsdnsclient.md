@@ -24,6 +24,12 @@ xml-dns-events}{
    """:\s({object_type}[^\s]+)\s'({service_name}[^']+)'\s*-\s*({description}Operation state transition to up\s*({action}\w+))"""
    """:\s({object_type}[^\s]+)\s'({service_name}[^']+)'\s*-\s*({description}QM\s*({action}\w+))"""
    """:\suser\s'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'\s*-\s*({description}({event_name}({action}\w+)\s*authentication))"""
-   
+   xml-dns-events = {
+  Vendor = Microsoft
+  Product = Event Viewer - DNSClient
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
+  Fields = [
+    """<Provider Name=['"]({provider_name}[^'"]+)"""
+    """Guid=['"]\{({process_guid}[^}]+?)\}
 }
 ```
