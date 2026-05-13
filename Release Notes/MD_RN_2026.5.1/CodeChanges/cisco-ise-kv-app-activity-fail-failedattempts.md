@@ -1,0 +1,7 @@
+# Code Changes for cisco-ise-kv-app-activity-fail-failedattempts (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['(=\d+)?[\=,](({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^,"]+)))("|,)\s', 'User(-)?Name=(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>?,'] |
+| edit_regex_field | email_address |  | ['(=\d+)?[\=,](({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^,"]+)))("|,)\s', 'User(-)?Name=(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>?,'] |
+| edit_regex_field | user |  | ['(=\d+)?[\=,](({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!local)(?<!loc)(?<!prd)(?<!localdomain)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(?:@({domain}[^,"]+)))("|,)\s', ',\s*AD-User-SamAccount-Name=({user}[\w\.\-\!\#\^\~]{1,40}\$?)', 'User(-)?Name=(({domain}[^\\,]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))>?,'] |

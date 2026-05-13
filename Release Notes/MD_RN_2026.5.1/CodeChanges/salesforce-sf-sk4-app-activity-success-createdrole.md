@@ -1,0 +1,6 @@
+# Code Changes for salesforce-sf-sk4-app-activity-success-createdrole (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['CreatedBy\.Username\\=({email_address}[^@]+@({email_domain}[^\s;]+))', 'suser=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)'] |
+| edit_regex_field | user |  | ['suser=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*(\w+=|$)'] |

@@ -1,0 +1,10 @@
+# Code Changes for postfix-postfix-mix-email-sent (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))'] |
+| edit_regex_field | dest_email_domain |  | ['\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))'] |
+| edit_regex_field | dest_host |  | ['\Wrelay=({dest_host}[\w\-.]+)\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?', '\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))'] |
+| edit_regex_field | dest_user |  | ['\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))'] |
+| edit_attribute | activity_type |  | ['email-send:success'] |
+| edit_attribute | legacy_activity_type |  | ['dlp-email-alert-out'] |

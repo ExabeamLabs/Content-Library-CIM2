@@ -1,0 +1,5 @@
+# Code Changes for epic-siem-app-login-success (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'epic-siem-cef-app-login-success-login', 'epic-siem-leef-app-activity-securitysiem', 'epic-siem-cef-app-login-success-ewlogin', 'epic-siem-cef-app-login-success-wpsecloginsuccess', 'epic-siem-cef-app-login-success-roverlogin', 'epic-siem-cef-app-login-success-ctologin', 'epic-siem-cef-app-login-success-hkulogin', 'epic-siem-cef-app-login-success-bcaloginsuccess', 'epic-siem-cef-app-login-success-wpsecdemographicauthentication','epic-siem-cef-app-login-success-wpsecfullyauthenticated') and InList(operation, 'LOGIN','ROVER_LOGIN','HKU_LOGIN','CTO_LOGIN','EW_LOGIN','BCA_LOGIN_SUCCESS','WPSEC_LOGIN_SUCCESS','WPSEC_DEMOGRAPHIC_AUTHENTICATION','WPSEC_FULLY_AUTHENTICATED') |

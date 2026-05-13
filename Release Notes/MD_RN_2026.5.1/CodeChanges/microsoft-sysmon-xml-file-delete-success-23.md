@@ -1,0 +1,6 @@
+# Code Changes for microsoft-sysmon-xml-file-delete-success-23 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['channel', 'event_code', 'file_dir', 'file_ext', 'file_name', 'file_path', 'log_name', 'operation', 'process_dir', 'process_guid', 'process_id', 'process_name', 'process_path', 'result', 'run_level', 'service_state', 'task_name', 'thread_id', 'time', 'user_sid'] |
+| added_regex_field | channel |  | ['<Channel>({channel}[^<]+)<'] |

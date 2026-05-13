@@ -1,0 +1,10 @@
+# Code Changes for microsoft-o365-cef-app-file-success-addmembertorole (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['additional_info', 'app', 'app_id', 'browser', 'category', 'channel', 'correlation_id', 'dest_email_address', 'dest_email_domain', 'dest_ip', 'dest_port', 'dest_user', 'domain', 'email_address', 'email_subject', 'event_name', 'failure_reason', 'file_name', 'first_name', 'full_name', 'group_name', 'host', 'key_name', 'last_name', 'object', 'operation', 'operation_type', 'os', 'process_name', 'resource', 'resource_id', 'result', 'role_name', 'secret', 'service_name', 'src_file_name', 'src_ip', 'src_port', 'tenant_id', 'time', 'url', 'user', 'user_agent', 'user_id', 'user_sid', 'user_type'] |
+| edit_regex_field | dest_email_address |  | ['"Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"', '"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))', 'duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | dest_email_domain |  | ['"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))', 'duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| added_regex_field | channel |  | ['"Channel"+:"+({channel}[^"]+)"', '<Channel>({channel}[^<]+)<', 'Channel="({channel}[^"]+)'] |
+| edit_attribute | activity_type |  | ['group-role-assign:fail', 'group-role-assign:success'] |
+| edit_attribute | legacy_activity_type |  | ['app-activity', 'app-activity-failed'] |

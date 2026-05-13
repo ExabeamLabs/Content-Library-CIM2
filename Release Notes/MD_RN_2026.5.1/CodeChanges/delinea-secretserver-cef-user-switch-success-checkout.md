@@ -1,0 +1,12 @@
+# Code Changes for delinea-secretserver-cef-user-switch-success-checkout (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+='] |
+| edit_regex_field | account_domain |  | ['\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+='] |
+| edit_regex_field | dest_domain |  | ['\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+='] |
+| edit_regex_field | dest_email_address |  | ['\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+='] |
+| edit_regex_field | dest_user |  | ['\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+='] |
+| edit_regex_field | domain |  | ['\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | email_address |  | ['\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | user |  | ['\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |

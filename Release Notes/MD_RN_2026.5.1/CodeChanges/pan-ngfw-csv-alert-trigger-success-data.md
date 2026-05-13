@@ -1,0 +1,9 @@
+# Code Changes for pan-ngfw-csv-alert-trigger-success-data (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | device_name |  | [',THREAT,data,([^,]*,){26}(("*[^"]*")|[^,]*),([^,]*,){27}({device_name}[\w\-\.]+)(,|$)'] |
+| edit_regex_field | domain |  | [',THREAT,data,([^,]*,){7}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)', ',THREAT,data,([^,]*,){8}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)'] |
+| edit_regex_field | email_address |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),', ',THREAT,data,([^,]*,){7}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)', ',THREAT,data,([^,]*,){8}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)'] |
+| edit_regex_field | host |  | ['\d+:\d+:\d\d[\+-]\d+:\d+\s+({host}[\w.-]+)\s', '\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w\-.]+)\s+\d+,'] |
+| edit_regex_field | user |  | [',THREAT,([^,]*,){8}\s*(({email_address}[^@,]+@[^\.]+\.[^,]+)|(?:({src_domain}[^\s,\\]+)\\+)?({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))),', ',THREAT,data,([^,]*,){7}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)', ',THREAT,data,([^,]*,){8}(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(|({domain}[^\\,]+))\\?(|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(,|$)'] |

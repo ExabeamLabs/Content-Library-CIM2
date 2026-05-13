@@ -1,0 +1,6 @@
+# Code Changes for microsoft-azureatp-json-alert-trigger-success-passtheticket (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['exa_json_path=$.userStates[0].accountName,exa_regex=\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'exa_json_path=$.userStates[0].userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}[\w\.\-]{1,40}\$?)(@[^"]+)?)'] |
+| edit_regex_field | full_name |  | ['exa_json_path=$.userStates[0].accountName,exa_regex=\s*"(-|({full_name}[^"\s]+\s[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'exa_json_path=$.userStates[0].userPrincipalName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}[\w\.\-]{1,40}\$?)(@[^"]+)?)'] |

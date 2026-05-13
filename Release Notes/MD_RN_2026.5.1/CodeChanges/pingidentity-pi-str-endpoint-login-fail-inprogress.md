@@ -1,0 +1,7 @@
+# Code Changes for pingidentity-pi-str-endpoint-login-fail-inprogress (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['(\|\s*(AUTHN_ATTEMPT|OAuth|SSO|AUTHN_SESSION_CREATED|AUTHN_SESSION_USED|STS)\s*\|)\s*(uid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^|]+?|AWSCentrifyAPI-Puppet|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({=user}[^\s\|@]+?))([@＠]({domain}[^\s\|]+))?\s*\|'] |
+| edit_regex_field | email_address |  | ['(\|\s*(AUTHN_ATTEMPT|OAuth|SSO|AUTHN_SESSION_CREATED|AUTHN_SESSION_USED|STS)\s*\|)\s*(uid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^|]+?|AWSCentrifyAPI-Puppet|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({=user}[^\s\|@]+?))([@＠]({domain}[^\s\|]+))?\s*\|', '(\|\s*(AUTHN_ATTEMPT|OAuth|SSO|AUTHN_SESSION_CREATED|AUTHN_SESSION_USED|STS)\s*\|)\s*({email_address}[^\s\|@]+@({email_domain}[^\s\|@]+))\s*\|'] |
+| edit_regex_field | user |  | ['(\|\s*(AUTHN_ATTEMPT|OAuth|SSO|AUTHN_SESSION_CREATED|AUTHN_SESSION_USED|STS)\s*\|)\s*(uid=({user}[\w\.\-\!\#\^\~]{1,40}\$?)[^|]+?|AWSCentrifyAPI-Puppet|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({=user}[^\s\|@]+?))([@＠]({domain}[^\s\|]+))?\s*\|'] |

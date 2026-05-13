@@ -1,0 +1,5 @@
+# Code Changes for dell-powerstore-str-alert-trigger-alertevent (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "dell-powerstore-str-alert-trigger-alertevent", "Vendor": "Dell", "Product": "PowerStore", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss", "ParserVersion": "v1.0.0", "Conditions": ["[PowerStore_remote_logging_alert@", "AlertEvent", "event_code", "alert_state"], "Fields": ["\s({host}\S+)\s\[\d+\]:\s({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})", "({event_category}[^\s]+)\s+\[PowerStore_remote_logging_alert@", "event_name=\"({event_name}[^\"]+)\"", "\sresource_type=\"({resource_type}[^\"]+)\"", "\sresource_name=\"({resource_name}[^\"]+)\"", "\salert_id=\"({alert_id}[^\"]+)\"", "\salert_state=\"({alert_status}[^\"]+)\"", "event_id=\"({event_id}[^\"]+)\"", "event_code=\"({event_code}[^\"]+)\"", "system_impact=\"({impact}[^\"]+)\"", "repair_flow=\"({additional_info}[^\"]+)\"", "({description}Port link is down)"]} |

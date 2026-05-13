@@ -1,0 +1,5 @@
+# Code Changes for epic-siem-app-login-fail (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'epic-siem-cef-app-login-fail-failedlogin', 'epic-siem-leef-app-activity-securitysiem', 'epic-siem-cef-app-activity-success-roverfailedlogin', 'epic-siem-cef-app-login-fail-hkufailedlogin', 'epic-siem-cef-app-login-fail-ctofailedlogin', 'epic-siem-cef-app-login-fail-wpsecloginfail', 'epic-siem-cef-app-login-fail-bcaloginfailure', 'epic-siem-cef-app-login-fail-acbreaktheglassfailedaccess', 'epic-siem-cef-app-login-fail-usernotauthenticated', 'epic-siem-cef-app-login-fail-ekinotauthorized', 'epic-siem-cef-app-login-fail-clientnotauthorized', 'epic-siem-cef-app-login-fail-usernotauthorized', 'epic-siem-cef-app-login-fail-loginblocked') and InList(operation, 'FAILEDLOGIN','AC_BREAK_THE_GLASS_FAILED_ACCESS','HKU_FAILED_LOGIN','ROVER_FAILED_LOGIN','CTO_FAILED_LOGIN','BCA_LOGIN_FAILURE','WPSEC_LOGIN_FAIL','USER_NOT_AUTHENTICATED','EKI_NOT_AUTHORIZED','CLIENT_NOT_AUTHORIZED','USER_NOT_AUTHORIZED','LOGIN_BLOCKED') |

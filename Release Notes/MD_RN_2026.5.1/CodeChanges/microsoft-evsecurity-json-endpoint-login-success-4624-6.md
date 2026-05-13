@@ -1,0 +1,28 @@
+# Code Changes for microsoft-evsecurity-json-endpoint-login-success-4624-6 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['auth_package', 'auth_process', 'channel', 'dest_host', 'domain', 'event_code', 'host', 'key_length', 'login_id', 'login_type', 'process_dir', 'process_id', 'process_name', 'process_path', 'provider_name', 'src_host', 'src_host_windows', 'src_ip', 'src_port', 'time', 'user', 'user_sid', 'user_upn'] |
+| edit_regex_field | dest_host |  | ['"Computer":\s*"({dest_host}({host}[\w\-.]+))"', 'exa_json_path=$..Computer,exa_regex=^({dest_host}({host}[\w\-.]+))$'] |
+| edit_regex_field | domain |  | ['"new_logon.account_domain":\s*"({domain}[^"]+)', '"subject.account_name":\s*"(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |
+| edit_regex_field | host |  | ['"Computer":\s*"({dest_host}({host}[\w\-.]+))"', 'exa_json_path=$..Computer,exa_regex=^({dest_host}({host}[\w\-.]+))$'] |
+| edit_regex_field | process_dir |  | ['"process_information.process_name":\s*"({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))', 'exa_json_path=$..[\'process_information.process_name\'],exa_regex=^({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))$'] |
+| edit_regex_field | process_name |  | ['"process_information.process_name":\s*"({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))', 'exa_json_path=$..[\'process_information.process_name\'],exa_regex=^({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))$'] |
+| edit_regex_field | process_path |  | ['"process_information.process_name":\s*"({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))', 'exa_json_path=$..[\'process_information.process_name\'],exa_regex=^({process_path}({process_dir}[^"]*)\\+({process_name}[^"\\\/]+))$'] |
+| edit_regex_field | src_host |  | ['"network_information.workstation_name":\s*"(-|({src_host_windows}({src_host}[\w\-.]+)))"', "exa_json_path=$..['network_information.workstation_name'],exa_regex=^(-|({src_host_windows}({src_host}[\w\-.]+)))$"] |
+| edit_regex_field | src_host_windows |  | ['"network_information.workstation_name":\s*"(-|({src_host_windows}({src_host}[\w\-.]+)))"', "exa_json_path=$..['network_information.workstation_name'],exa_regex=^(-|({src_host_windows}({src_host}[\w\-.]+)))$"] |
+| edit_regex_field | src_ip |  | ['"network_information.source_network_address":\s*"(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"', "exa_json_path=$..['network_information.source_network_address'],exa_regex=^(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)$"] |
+| edit_regex_field | src_port |  | ['"network_information.source_network_address":\s*"(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"', '"network_information.source_port":\s*"({src_port}\d+)', "exa_json_path=$..['network_information.source_network_address'],exa_regex=^(-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)$"] |
+| edit_regex_field | time |  | ['"TimeCreated":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)', 'exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)'] |
+| edit_regex_field | user |  | ['"subject.account_name":\s*"(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |
+| edit_regex_field | user_upn |  | ['"subject.account_name":\s*"(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |
+| added_regex_field | auth_package |  | ['"detailed_authentication_information.authentication_package":\s*"({auth_package}[^"]+)'] |
+| added_regex_field | auth_process |  | ['"detailed_authentication_information.logon_process":\s*"({auth_process}[^"]+)'] |
+| added_regex_field | channel |  | ['"Channel":\s*"({channel}[^"]+)'] |
+| added_regex_field | event_code |  | ['"EventID":\s*"({event_code}4624)'] |
+| added_regex_field | key_length |  | ['"detailed_authentication_information.key_length":\s*"({key_length}\d+)'] |
+| added_regex_field | login_id |  | ['"subject.logon_id":\s*"({login_id}[^"]+)'] |
+| added_regex_field | login_type |  | ['"logon_information.logon_type":\s*"({login_type}\d+)'] |
+| added_regex_field | process_id |  | ['"process_information.process_id":\s*"({process_id}[^"]+)'] |
+| added_regex_field | provider_name |  | ['"ProviderName":\s*"({provider_name}[^"]+)'] |
+| added_regex_field | user_sid |  | ['"subject.security_id":\s*"({user_sid}[^"]+)'] |

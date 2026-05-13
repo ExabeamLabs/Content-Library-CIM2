@@ -1,0 +1,8 @@
+# Code Changes for microsoft-o365-sk4-app-activity-auditevent (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['action', 'additional_info', 'app', 'category', 'email_address', 'email_domain', 'event_hub_namespace', 'full_name', 'host', 'operation', 'resource', 'resource_type', 'result_code', 'src_ip', 'src_port', 'tenant_id', 'time', 'user', 'user_agent', 'user_id'] |
+| edit_regex_field | email_address |  | ['"email":"({email_address}[^\s@"]+@[^\s@"]+)', '"userName":"(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'suser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'userId":"(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))'] |
+| edit_regex_field | user |  | ['"userName":"(({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', '\suser\s<b>(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^<]+))<\/b>', 'suser=(anonymous|({email_address}([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| added_regex_field | tenant_id |  | ['"(?i:tenantid)":"({tenant_id}[^"]+)'] |

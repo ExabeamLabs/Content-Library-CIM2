@@ -1,0 +1,5 @@
+# Code Changes for dell-rsaauthmngr-csv-amprincipaladministrationimpl (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "dell-rsaauthmngr-csv-amprincipaladministrationimpl", "Vendor": "RSA", "Product": "RSA Authentication Manager", "TimeFormat": "yyyy-MM-dd HH:mm:ss", "Conditions": ["_AM_PRINCIPAL,", "AMPrincipalAdministrationImpl, "], "Fields": [",({host}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}),[A-Z_]+AM_PRINCIPAL,", ",({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?,[A-Z_]+AM_PRINCIPAL,", ",({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})),[^,]*,[A-Z_]+AM_PRINCIPAL,", ",[A-Z_]+AM_PRINCIPAL,([^,]*,){15}({user}[\w\.\-\!\#\^\~]{1,40}\$?)", ",[A-Z_]+AM_PRINCIPAL,({event_code}\d+)", ",[A-Z_]+AM_PRINCIPAL,[^,]*,({result}[^,]+),"], "ParserVersion": "v1.0.0"} |
