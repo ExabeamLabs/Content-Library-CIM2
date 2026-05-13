@@ -76,7 +76,7 @@ cef-microsoft-app-activity-3.Fields}[
     end_timeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Conditions = [ """"Type":"SecurityAlert"""", """"VendorName":"Microsoft"""", """"AlertSeverity":""", """"AlertType":""", """"AlertName":""", """"Description":"""]
     Fields=[
-     """exa_json_path=$.TimeGenerated,exa_field_name=time""",
+    """exa_json_path=$.TimeGenerated,exa_field_name=time""",
     """exa_json_path=$.Description,exa_field_name=description""",
     """exa_json_path=$.CompromisedEntity,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_host}[\w\-\.]+))""",
     """exa_json_path=$.ProductName,exa_field_name=product_name""",
@@ -95,6 +95,7 @@ cef-microsoft-app-activity-3.Fields}[
     """exa_json_path=$.ConfidenceScore,exa_field_name=original_risk_score""",
     """exa_json_path=$.ExtendedProperties,exa_field_name=more_info""",
     """exa_json_path=$.Entities,exa_field_name=additional_info"""
+    """exa_json_path=$.TenantId,exa_field_name=tenant_id"""
     
 }
 ```

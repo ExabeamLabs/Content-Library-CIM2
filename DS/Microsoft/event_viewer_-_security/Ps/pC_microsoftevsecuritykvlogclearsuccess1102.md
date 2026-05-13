@@ -6,7 +6,7 @@ ParserVersion = "v1.0.0"
 Vendor = "Microsoft"
 Product = "Event Viewer - Security"
 TimeFormat = "MMM dd HH:mm:ss yyyy"
-Conditions = ["""The audit log was cleared""" ]
+Conditions = ["""The audit log was cleared""", """Logon ID:""" ]
 Fields = [
 """EventTime":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
 """Hostname":"({host}[\w\-.]+)""""

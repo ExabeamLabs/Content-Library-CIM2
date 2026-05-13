@@ -42,6 +42,7 @@ json-xml-object-access = {
     """<Data Name[^<>]+?ReturnCode[^<>]+?>({return_code}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

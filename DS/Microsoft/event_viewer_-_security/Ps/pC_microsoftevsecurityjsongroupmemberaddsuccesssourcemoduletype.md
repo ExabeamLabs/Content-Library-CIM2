@@ -24,6 +24,7 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """"SubjectLogonId":"({login_id}[^"]+)""",
     """"TargetUserName":"({group_name}[^"]+)""",
     """"TargetDomainName":"({group_domain}[^"]+)""",
+    """"TargetSid":"({group_id}[^"]+)""",
     """"MemberSid":"(({dest_user_sid}S-\d+-[^\s"]+)|({account_id}[^\s"]+))""",
     """"MemberName":"({user_dn}[^"]+)""",
     """"MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""
@@ -41,6 +42,8 @@ Name = "microsoft-evsecurity-json-group-member-add-success-sourcemoduletype"
     """exa_json_path=$.SubjectDomainName,exa_field_name=domain"""
     """exa_json_path=$.SubjectDomainName,exa_field_name=src_domain"""
     """exa_json_path=$.TargetUserName,exa_field_name=group_name"""
+    """exa_json_path=$.TargetDomainName,exa_field_name=group_domain"""
+    """exa_json_path=$.TargetSid,exa_field_name=group_id"""
     """exa_json_path=$.MemberSid,exa_field_name=account_id"""
     """exa_json_path=$.MemberName,exa_field_name=user_dn"""
     """exa_regex="MemberName":"CN\\?=({member}[^,]+),({user_ou}OU\\?=.+?DC\\?=.+?[^"]+)"""

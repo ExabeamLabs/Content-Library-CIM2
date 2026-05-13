@@ -15,7 +15,7 @@ Name = microsoft-evazureadppdca-xml-user-password-reset-fail-30027
 
 account-password-reset = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)('|")/>""",
     """<Message>({event_name}[^.<]+)""",

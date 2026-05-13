@@ -26,6 +26,8 @@ Fields = [
   """<Data Name\\*=('|")Direction('|")>({direction}[^<>]+)</Data>"""
   """<Data Name\\*=('|")LayerName('|")>({layer_name}[^<>]+)</Data>"""
   """<Level>({run_level}[^<]+)<"""
+  """"TenantId":"({tenant_id}[^"]+)"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

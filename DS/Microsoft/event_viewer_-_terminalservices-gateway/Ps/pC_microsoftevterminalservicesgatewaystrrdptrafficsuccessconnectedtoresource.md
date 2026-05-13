@@ -14,6 +14,7 @@ Fields = [
   """connected to resource "+(?:({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+))""",
   """The user "+({domain}[^\\]+)?(\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
   """Connection protocol used: "+({protocol}[^"]+)"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

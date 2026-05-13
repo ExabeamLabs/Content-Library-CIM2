@@ -20,6 +20,7 @@ Fields = [
   """"SubjectLogonId":"({login_id}[^\s"]+)"""
   """"TargetSid":"({dest_user_sid}[^\s"]+)"""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

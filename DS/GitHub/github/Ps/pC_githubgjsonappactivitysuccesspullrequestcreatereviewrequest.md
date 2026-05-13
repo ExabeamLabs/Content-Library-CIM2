@@ -30,6 +30,7 @@ json-github-actions = {
       """"external_identity_username":"[^@"]+?@({domain}[^"]+)"""",
       """"external_identity_nameid":"[^@"]+?@({domain}[^"]+)"""",
       """"business":\s*"({company}[^"]+)""",
+      """"actor_id":\s*({user_id}[^",]+)"""
       """exa_json_path=$..['@timestamp'],exa_field_name=time""",
       """exa_json_path=$..action,exa_field_name=operation""",
       """exa_json_path=$..transport_protocol_name,exa_field_name=protocol""",
@@ -58,6 +59,11 @@ json-github-actions = {
       """exa_json_path=$..external_identity_username,exa_regex=^[^@"]+?@({domain}[^"]+)$""",
       """exa_json_path=$..external_identity_nameid,exa_regex=^[^@"]+?@({domain}[^"]+)$"""
       """exa_json_path=$.business,exa_field_name=company"""
+      """exa_json_path=$..actor_id,exa_field_name=user_id"""
+      """exa_json_path=$..token_scopes,exa_field_name=authorization_scope"""
+      """exa_json_path=$.oauth_credential_type,exa_field_name=object_type""",
+      """exa_json_path=$..application_name,exa_field_name=app"""
+      """exa_json_path=$..oauth_application_name,exa_field_name=app"""
     
 }
 ```

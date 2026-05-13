@@ -33,6 +33,7 @@ Fields = [
 """"tokenIssuerType":\s*"({app}[^"]+)"""",
 """"countryOrRegion":\s*"({country_code}[^"]+)"""",
 """deviceDetail\".+?"displayName\":\s*\"({src_host}[\w\-\.]+)\$?\s*\""""
+""""(?i:tenantid)":"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

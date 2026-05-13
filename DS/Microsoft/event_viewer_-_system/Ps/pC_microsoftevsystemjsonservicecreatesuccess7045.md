@@ -22,6 +22,7 @@ Fields = [
 """Service File Name:\s+(|-|({process_path}({process_dir}[^\"=]+?[\\\/]+)?({process_name}[^\\\/\s]+?)))(\s+\/Processid:\{[^\}]*?\})?(\\t|\\n|\\r)*Service Type"""
 """Service File Name:\s*({service_command_line}({process_command_line}[^=]+?))\s*(\\t|\\r|\\n)*Service Type:"""
 """Service Account:\s*(\\\\t|\\\\r|\\\\n)*(|({account_name}[^\\"]+?))\s*(\\t|\\r|\\n)*""""
+""""Channel":"({channel}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

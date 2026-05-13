@@ -33,6 +33,7 @@ Fields = [
   """"CompAuth\\*":\\*"({compauth_result}[^\\"]+)\\*""""
   """"Connectors":"({connectors}[^"]+)""""
   """"EmailSize":({bytes}\d+)"""
+  """"(?i:tenantid)":\s*"({tenant_id}[^"]+)"""
   """exa_json_path=$.EmailSize,exa_field_name=bytes"""
   """exa_json_path=$..Timestamp,exa_field_name=time"""
   """exa_json_path=$..RecipientEmailAddress,exa_regex=\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""" 
@@ -54,6 +55,7 @@ Fields = [
   """exa_json_path=$..AuthenticationDetails,exa_regex="CompAuth\\*":\\*"({compauth_result}[^\\"]+)\\*""""
   """exa_json_path=$..Connectors,exa_field_name=connectors"""
   """exa_json_path=$..UrlCount,exa_field_name=url_count"""
+  """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

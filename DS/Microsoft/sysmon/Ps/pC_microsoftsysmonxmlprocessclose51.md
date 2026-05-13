@@ -21,6 +21,7 @@ Name = microsoft-sysmon-xml-process-close-5-1
     """<Data Name\\*=('|")Image('|")>({process_path}({process_dir}(?:[^<]+)?[\\\/])?({process_name}[^\\\/<]+?))<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -21,6 +21,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-success-18
     """({log_name}Microsoft-Windows-Sysmon)""" 
     """<Data Name\\*=('|")User('|")>(({domain}[^\>]+?\w+))?\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

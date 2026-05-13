@@ -17,7 +17,7 @@ Fields = [
   """"UrlDomain":\s*"(\w+:\/\/)?({web_domain}[^\s"]+)\s*""""
   """({event_name}AdvancedHunting-EmailUrlInfo)"""
   """"NetworkMessageId":\s*"({message_id}[^"]+?)""""
- 
+  """"(?i:tenantid)":"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

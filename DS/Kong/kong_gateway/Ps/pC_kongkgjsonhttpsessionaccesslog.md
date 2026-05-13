@@ -22,7 +22,7 @@ Name = "kong-kg-json-http-session-accesslog"
     """exa_json_path=$.route.name,exa_field_name=service_name""",
     """exa_json_path=$.request.headers.operation,exa_field_name=operation""",
     """exa_json_path=$.request.headers['end-user-id'],exa_field_name=user_id""",
-    """exa_json_path=$.request.headers['client-header'],exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+))""",
+    """exa_json_path=$.request.headers['client-header'],exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+))""",
     """exa_json_path=$.authenticated_entity.id,exa_field_name=account_id""",
     """exa_json_path=$.request.id,exa_field_name=event_id""",
     """exa_json_path=$.request.tls.cipher,exa_field_name=cipher"""

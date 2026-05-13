@@ -23,6 +23,7 @@ Fields = [
   """({service_name}IPsec Policy Agent)"""
   """({time}\d\d\/\d\d\/\d\d\d\d\s+\d\d:\d\d:\d\d\s+(AM|PM))"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

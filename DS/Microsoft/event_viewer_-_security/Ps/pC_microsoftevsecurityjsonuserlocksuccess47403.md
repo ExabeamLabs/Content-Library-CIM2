@@ -30,6 +30,7 @@ Fields = [
   """Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """"TargetDomainName":"\\*({domain}[^"]+)""""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   """exa_regex=({event_name}A user account was locked out)""",
   """exa_json_path=$.TimeGenerated,exa_field_name=time"""
   """exa_json_path=$.EventTime,exa_field_name=time"""
@@ -49,6 +50,7 @@ Fields = [
   """exa_json_path=$.Message,exa_regex=Additional Information:(\\r|\\t|\\n)*Caller Computer Name:(\\r|\\t|\\n)*({src_host}[^\\"]+)"""
   """exa_json_path=$.TargetDomainName,exa_regex=\\*({domain}[^"]+)$"""
   """exa_json_path=$.Channel,exa_field_name=channel"""
+  """exa_json_path=$.TenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

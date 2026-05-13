@@ -25,7 +25,7 @@ json-netskope-alert = {
     """"alert_name":\s*"({alert_name}[^"]+)"""",
     """"useragent":\s*"({user_agent}[^"]+)"""",
     """"protocol":\s*"({protocol}[^"]+)"""",
-    """"user":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"user":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"severity":\s*"(unknown|({alert_severity}[^"]+))"""",
     """"numbytes":({bytes}\d+),""",
     """"page":\s*"({web_domain}[^\\\/"]+)""",
@@ -43,7 +43,7 @@ json-netskope-alert = {
     """exa_json_path=$.alert_name,exa_field_name=alert_name"""
     """exa_json_path=$.useragent,exa_field_name=user_agent"""
     """exa_json_path=$.protocol,exa_field_name=protocol"""
-    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.severity,exa_regex=(unknown|({alert_severity}[^"]+))"""
     """exa_json_path=$.numbytes,exa_field_name=bytes"""
     """exa_regex="page":\s*"({web_domain}[^\\\/"]+)"""

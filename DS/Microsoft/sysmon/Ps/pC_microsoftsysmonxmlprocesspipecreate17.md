@@ -20,6 +20,7 @@ Name = microsoft-sysmon-xml-process-pipe-create-17
     """<Security UserID\\*=('|")({user_sid}[^'"]+)('|")"""
     """({log_name}Microsoft-Windows-Sysmon)""" 
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

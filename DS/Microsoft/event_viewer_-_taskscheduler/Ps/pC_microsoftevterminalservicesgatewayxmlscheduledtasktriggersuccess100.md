@@ -15,6 +15,7 @@ Name = microsoft-evterminalservicesgateway-xml-scheduled-task-trigger-success-10
     """<Data Name =('|")UserContext('|")>((NT AUTHORITY\\System)|(({domain}[^\\\/<]+?)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))<""",
     """({event_code}100)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

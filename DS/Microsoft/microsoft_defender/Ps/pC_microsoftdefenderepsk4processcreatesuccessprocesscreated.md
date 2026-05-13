@@ -40,6 +40,7 @@ Name = microsoft-defenderep-sk4-process-create-success-processcreated
      #Below fields is related to grandparent_process, and we currently do not have CIM field to define them
      #""""InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+[\\\/]+)?({parent_process_name}[^"\\\/]+))"""",
      """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
+     """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

@@ -4,7 +4,7 @@ Product: Cisco Network Security
 -------------------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  724  |  209   |        171         |       22       |   159   |
+|  724  |  209   |        171         |       22       |   157   |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

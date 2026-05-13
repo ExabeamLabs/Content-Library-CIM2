@@ -20,7 +20,8 @@ Name = microsoft-evsecurity-xml-group-delete-success-4763
      """<Data Name =('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
      """<Data Name =('|")SubjectDomainName('|")>({src_domain}({domain}[^<]+))""",
      """<Data Name =('|")SubjectLogonId('|")>({login_id}[^<]+)""",
-     """<Level>({run_level}[^<]+)<"""
+     """<Level>({run_level}[^<]+)<""",
+     """<Channel>({channel}[^<]+)<"""
    ]
  
 

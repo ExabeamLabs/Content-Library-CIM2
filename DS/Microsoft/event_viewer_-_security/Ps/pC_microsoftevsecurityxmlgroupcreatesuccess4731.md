@@ -20,7 +20,8 @@ Name = microsoft-evsecurity-xml-group-create-success-4731
     """<Data Name\\?=('|")TargetUserName('|")>({group_name}[^<]+)<""",
     """<Data Name\\?=('|")TargetDomainName('|")>({group_domain}[^<]+)<""",
     """<Data Name\\?=('|")TargetSid('|")>({group_id}[^<]+)""",
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

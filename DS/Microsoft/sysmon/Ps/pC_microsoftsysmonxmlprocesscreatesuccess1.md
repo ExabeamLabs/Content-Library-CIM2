@@ -24,6 +24,7 @@ Fields = [
 """CommandLine:\s*({process_command_line}.*?)\s*CurrentDirectory:"""
 """,MD5=({hash_md5}[^,]+)(,|\s*$)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -19,6 +19,7 @@ Name = microsoft-sysmon-xml-service-state-modify-4
     """<Data Name\\*=('|")State('|")>({service_state}.+?)<\/Data>""",
     """({log_name}Microsoft-Windows-Sysmon)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

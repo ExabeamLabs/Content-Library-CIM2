@@ -5,7 +5,7 @@ Name = canon-iradv-csv-endpoint-activity-8200-catchall
    ParserVersion = v1.0.0
    Conditions = [ """ 8200,""", """iR-ADV""" ]
    Fields =${CanonParsersTemplates.canon-endpoint-events.Fields}[
-     """-\s*8200,([^,]+,){3}(|[^,]+),(|[-]+|({full_name}\w+ \w+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(\([^\)]+)\)),(|({domain}[^,]+)),({result}[^,]+),,,({operation}[^,]+),(|({resource_type}[^,]+)),"""
+     """-\s*8200,([^,]+,){3}(|[^,]+),(|[-]+|({full_name}\w+ \w+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(\([^\)]+)\)),(|({domain}[^,]+)),({result}[^,]+),,,({operation}[^,]+),(|({resource_type}[^,]+)),"""
    ]
  
 canon-endpoint-events = {

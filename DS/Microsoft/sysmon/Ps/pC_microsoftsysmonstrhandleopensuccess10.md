@@ -22,6 +22,7 @@ Name = microsoft-sysmon-str-handle-open-success-10
     """TargetProcessId:\s*({dest_process_id}\d+)""",
     """\s+TargetImage:\s*({dest_process_path}({dest_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({dest_process_name}.+?))\s+""",
     """\sGrantedAccess:\s*({result}[^\s]+)""",
+    """channel="({channel}[^"]+)"""
   ]
 
 

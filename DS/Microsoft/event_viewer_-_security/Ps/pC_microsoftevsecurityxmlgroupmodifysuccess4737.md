@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4737
 	  """({event_name}A security-enabled global group was changed)""",
 	  """({event_code}4737)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
      ]
   
 

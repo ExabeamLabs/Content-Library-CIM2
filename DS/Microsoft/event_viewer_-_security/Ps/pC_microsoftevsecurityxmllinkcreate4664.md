@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-link-create-4664
     """<EventID>({event_code}\d+)""",
     """<Keyword>({result}.+?)</Keyword>""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -23,7 +23,7 @@ Fields = [
   """({event_code}4648)""",
   """Account Whose Credentials Were Used:.+?Account Name(:|=)[\\t\s]*(-|SYSTEM|(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+(?<!local)(?<!loc))\s|({dest_user}({account}[\w\.\-\!\#\^\~]{1,40}\$?))))[\\r\\t\\n]*\s*(\w+\s\w+:|\w+=|[\w\s]+?\.)"""
   """Subject(:|=).+?Security ID(:|=)[\\t\s]*({user_sid}NULL SID|S-[^\:]+?)[;\s\\n\\r\\t]*\w+\s\w+(:|=)""",
-  """Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^<\]\s"\\,\|]+(?<!local)(?<!loc))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*(Account Domain(:|=)|\w+=|[\w\s]+?\.)""",
+  """Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^<\]\s"\\,\|]+(?<!local)(?<!loc))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*(Account Domain(:|=)|\w+=|[\w\s]+?\.)""",
   """Subject(:|=)[^\"]+?Account Domain(:|=)\s*(\\r|\\n|\\t)*(?:-|NT Service|({domain}[^\s;]+?))[\s;]*(\\r|\\n|\\t)*Logon ID(:|=)""",
   """Subject(:|=)[^\"]+?Logon ID(:|=)\s*(\\t)*({login_id}[^=:;\s;\\]+)[\s;]*""",
   """Subject(:|=)[^\"]+?Logon GUID(:|=)(\\[rnt]|\s)*\{({user_login_guid}[^}]+)\}[\s;]*(\\[rnt]|\s)*Account Whose""",

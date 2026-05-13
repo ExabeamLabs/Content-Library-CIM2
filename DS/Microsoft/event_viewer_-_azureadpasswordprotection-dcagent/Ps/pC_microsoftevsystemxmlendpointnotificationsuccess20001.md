@@ -9,6 +9,7 @@ Name = microsoft-evsystem-xml-endpoint-notification-success-20001
     """<Computer>({host}[^<]+)</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}20001)</EventID>"""
+    """<Channel>({channel}[^<]+)<"""
   ]
  
 azure-ad-system-info = {

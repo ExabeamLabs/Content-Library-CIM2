@@ -27,6 +27,7 @@ json-atp-alert = {
     """exa_regex="Operations types\\*":\\*"({operation_type}[^\\"]+)"""
     """exa_regex="Service type\\*":\\*"({service_type}[^\\"]+)"""
     """exa_regex="User agent\\*":\\*"({user_agent}[^\\"]+)"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   json-atp-alert = {
   Vendor = Microsoft
   Product = Azure ATP
@@ -50,6 +51,7 @@ json-atp-alert = {
     """exa_regex="Operations types\\*":\\*"({operation_type}[^\\"]+)"""
     """exa_regex="Service type\\*":\\*"({service_type}[^\\"]+)"""
     """exa_regex="User agent\\*":\\*"({user_agent}[^\\"]+)"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
 }
 }

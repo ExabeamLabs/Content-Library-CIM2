@@ -15,7 +15,7 @@ Name = microsoft-azuread-xml-user-password-modify-fail-30026
 account-password-activity = {
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>({event_name}[^.<]+)""",

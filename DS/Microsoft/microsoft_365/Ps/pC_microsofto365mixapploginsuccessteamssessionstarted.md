@@ -11,10 +11,10 @@ Name = microsoft-o365-mix-app-login-success-teamssessionstarted
   Fields = [
     """"CreationTime":"({time}\d+\-\d+\-\d+T\d+:\d+:\d+)"""",
     """"Workload":"({app}[^"]+)"""",
-    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+""",
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+""",
     """UserId"*:\s*"*({user_upn}[^",]+)"*"""
     """sourceDnsDomain=({domain}[^=]+?)\s+\w+=""",
-    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s"]+))?)""",
+    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s"]+))?)""",
     """"Operation":"({operation}[^"]+)"""",
     """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"UserType":"*({user_type}[^,}"]+)"*"""
@@ -26,7 +26,7 @@ Name = microsoft-o365-mix-app-login-success-teamssessionstarted
     """exa_json_path=$.UserId,exa_field_name=user_upn"""
     """ObjectId"*:\s*"*((Unknown)|({object}[^"]+))"*"""
     """exa_regex=ObjectId"*:\s*"*((?i)(Unknown)|({object}[^"]+))"*"""
-    """exa_regex="+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+"""
+    """exa_regex="+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^"]+)))"+"""
     """exa_json_path=$.sourceDnsDomain,exa_field_name=domain"""
   ]
 

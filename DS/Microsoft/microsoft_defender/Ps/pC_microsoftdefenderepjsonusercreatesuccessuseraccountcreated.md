@@ -11,7 +11,7 @@ Name = "microsoft-defenderep-json-user-create-success-useraccountcreated"
     """exa_json_path=$..Timestamp,exa_field_name=time""",
     """exa_json_path=$..TargetDeviceName,exa_field_name=src_host""",
     """exa_json_path=$..AccountDomain,exa_regex=(?i)(((https|http):\/\/))?(null|-|NT AUTHORITY|({domain}[^\s\]"]+))""",
-    """exa_json_path=$..AccountUpn,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=!Contains(tolower($..AccountUpn), "null")""",
+    """exa_json_path=$..AccountUpn,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=!Contains(tolower($..AccountUpn), "null")""",
     """exa_json_path=$..Protocol,exa_field_name=protocol,exa_match_expr=!Contains(tolower($..Protocol), "")""",
     """exa_json_path=$..DestinationIPAddress,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """exa_json_path=$..IPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -24,6 +24,7 @@ Name = "microsoft-defenderep-json-user-create-success-useraccountcreated"
     """exa_json_path=$..AccountName,exa_field_name=account"""
     """exa_json_path=$..SourceAccountSid,exa_field_name=user_sid"""
     """exa_json_path=$..DestinationDeviceName,exa_field_name=dest_host"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
   ParserVersion = "v1.0.0"
 

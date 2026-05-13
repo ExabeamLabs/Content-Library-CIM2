@@ -33,6 +33,7 @@ json-microsoft-app-activity = {
     """"name":"User-Agent","value":"({user_agent}[^"]+?)"""",
     """"userAgent":"({user_agent}[^"]+?)"""",
     """"activityResultDescription":"({event_name}[^",]+)"""
+    """"(?i:tenantid)":"({tenant_id}[^"]+)"""
   
 }
 ```

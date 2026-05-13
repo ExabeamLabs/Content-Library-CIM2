@@ -22,6 +22,7 @@ Name = microsoft-windows-sk4-endpoint-login-requireduomfa
     """"countryOrRegion\\*"+:\\*"+({country}[^"]+)\\"+""",
     """"city\\*"+:\\*"+({city}[^"]+)\\"+""",
     """"\$table"+:"+({db_name}[^"]+)""",
+    """"(?i:tenantid)":"({tenant_id}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

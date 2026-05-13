@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-xml-network-session-success-5158
     """<Data Name\\*=('|")Protocol('|")>({protocol}[^<]+)<"""
     """<Data Name\\*=('|")LayerName('|")>\s*({layer_name}[^<]+?)\s*</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 ]
 
 

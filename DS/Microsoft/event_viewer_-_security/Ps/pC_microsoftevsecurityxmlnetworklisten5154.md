@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-network-listen-5154
     """<Data Name\\*=('|")DestPort('|")>(0|({dest_port}\d+))""",
     """\sProcess ID:\s*(|-|({process_id}.+?))\s*Application Name:.+?\s*(({process_path}(({process_dir}[^"\/:]*)\\)?({process_name}[^":]+?)))\s*Network Information:""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

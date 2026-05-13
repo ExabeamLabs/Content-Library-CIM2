@@ -14,7 +14,7 @@ Name = checkpoint-avanan-json-email-entitypayload
     """exa_json_path=$.entityPayload.isQuarantined,exa_field_name=result""",
     """exa_json_path=$.entityPayload.senderClientIp,exa_regex=^({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))$""",
     """exa_json_path=$.entityPayload.senderServerIp,exa_regex=^({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))$""",
-    """exa_json_path=$.entityPayload.recipients,exa_regex=^\[?({email_recipients}"?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"?.*?)\s*\]?$""",
+    """exa_json_path=$.entityPayload.recipients,exa_regex=^\[?({email_recipients}"?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"?.*?)\s*\]?$""",
     """exa_json_path=$.entityPayload.emailLinks,exa_field_name=additional_info""",
     """exa_json_path=$.entityPayload.attachments,exa_field_name=email_attachments""",
     """exa_json_path=$.entityPayload.internetMessageId,exa_field_name=message_id""",

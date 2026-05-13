@@ -28,6 +28,7 @@ Fields = [
   """<Data Name(\\)?=(\\)?"+ObjectType(\\)?"+>(-|({object_type}[^<]+))"""
   """<Data Name(\\)?=(\\)?"+ObjectName(\\)?"+>(-|({object}[^<]+))"""
   """"Channel":"({channel}[^"]+)""""
+  """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

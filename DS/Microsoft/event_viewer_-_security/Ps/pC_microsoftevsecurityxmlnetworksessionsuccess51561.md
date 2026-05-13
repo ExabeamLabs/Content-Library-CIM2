@@ -26,6 +26,7 @@ Fields = [
   """<RenderingInfo.+?<Task>({operation_type}[^<>]+)</Task>.*?</RenderingInfo>"""
   """<Level>({run_level}[^<]+)<"""
   """"Channel":"({channel}[^"]+)""""
+  """"TenantId":"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

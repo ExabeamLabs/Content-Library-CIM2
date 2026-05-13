@@ -54,6 +54,8 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..['account.id'],exa_field_name=account_id""",
       """exa_json_path=$..['src.process.user'],exa_regex=^((({domain}[^\\"$]+))\\+)?(({user}Système|LOCAL SERVICE|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))($|")""",
       """exa_json_path=$..['tgt.process.user'],exa_regex=((({dest_domain}[^\\"$]+))\\+)?((({dest_user}Système|LOCAL SERVICE|NETWORK SERVICE|[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
+      """"os.name":"({os}macOS)""""
+      """exa_regex="os.name":"({os}macOS)""""
     
 }
 ```

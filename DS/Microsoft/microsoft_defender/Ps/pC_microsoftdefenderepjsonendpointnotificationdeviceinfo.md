@@ -17,6 +17,7 @@ Name = microsoft-defenderep-json-endpoint-notification-deviceinfo
      """DeviceName_s"+:\s*"+({src_host}[^"]+)""",
      """Type"+:"+({event_name}[^"]+)""",
      """DeviceId_s":"({device_id}[^"]+)"""",
+     """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

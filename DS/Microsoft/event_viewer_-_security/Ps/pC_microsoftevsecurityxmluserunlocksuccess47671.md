@@ -23,6 +23,7 @@ Fields = [
 """<Data Name\\*=('|")TargetSid('|")>\s*({dest_user_sid}.+?)</Data>\s*"""
 """<Data Name =('|")SubjectUserName('|")>\s*(SYSTEM|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s*</Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

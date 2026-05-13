@@ -6,10 +6,10 @@ Name = microsoft-o365-cef-app-file-success-adduser
   Product = Microsoft 365
   Conditions= [ """destinationServiceName =Office 365""", """"Add user""" ]
   Fields = ${MSParsersTemplates.cef-microsoft-app-activity.Fields} [
-    """"initiatedBy":.*?"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)""""
+    """"initiatedBy":.*?"userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)""""
     """"targetResources":[^\}]+"userPrincipalName":"({target}[^"]+)""""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)""""
-    """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
+    """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
   ]
 
 cef-microsoft-app-activity = {
@@ -67,11 +67,14 @@ cef-microsoft-app-activity = {
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
     """"Application":\s*"({app}[^"]+)"""
-    """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
     """appId":"({app_id}[^"]+)""""
     """"SiteUrl":"({url}[^"]+)""""
     """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel"+:"+({channel}[^"]+)""""
+    """Channel="({channel}[^"]+)"""
  
 }
 ```

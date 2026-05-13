@@ -4,8 +4,8 @@
 Name = openldap-o-str-user-success-mod
     Conditions = [ """slapd[""", """conn=""", """op=""", """ MOD """ ]
     Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[
-      """uid=({dest_user}\w+)"""
-      """dn="({dest_user_dn}[^"]+)"""
+    """(uid=({dest_user}({account_name}[^,]+))|cn=({=dest_user}({=account_name}[^,]+))),ou=(?i:(users|people|employees|staff|members|accounts|endusers|sudoers))"""
+    """dn="({dest_user_dn}[^"]+)"""
     ]
   
 openldap-kv-parser = {

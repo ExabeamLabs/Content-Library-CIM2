@@ -24,6 +24,7 @@ Name = "microsoft-sysmon-json-registry-create-success-valuesettask13"
     """\"Domain\":\s*\"(NT AUTHORITY|({domain}[^\"]+))"""
     """"TargetObject":\s*"({object}({registry_path}[^"]*?\\+({registry_key}[^"\\\/]+?)\\+({registry_value}[^\\"]+)))""""
     """"({log_name}Microsoft-Windows-Sysmon)"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

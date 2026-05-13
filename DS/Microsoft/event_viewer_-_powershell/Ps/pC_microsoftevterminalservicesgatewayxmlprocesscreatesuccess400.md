@@ -20,6 +20,7 @@ Fields = [
 """<Keywords>({result}[^<]+)"""
 """<EventRecordID>({event_id}[^<]+)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

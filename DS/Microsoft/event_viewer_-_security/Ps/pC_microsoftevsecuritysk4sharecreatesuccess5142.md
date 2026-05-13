@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-sk4-share-create-success-5142
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"ShareLocalPath":"({share_path}[^"]+)""""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId":"({tenant_id}[^"]+)"""
  ]
   ParserVersion = "v1.0.0"
 

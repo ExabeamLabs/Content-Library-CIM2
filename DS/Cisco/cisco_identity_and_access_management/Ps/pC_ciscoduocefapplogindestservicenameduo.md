@@ -28,7 +28,7 @@ Name = "cisco-duo-cef-app-login-destservicenameduo"
     """"action":"({operation}[^"]+)"""",
     """"browser":\s*"({browser}[^"]+)"""",
     """"os":\s*"({os}[^"]+)"""",
-    """"description":"\{\\"uname\\":\s\\"(({dest_email_user}[^"\s@]+@[^"\s@]+)|({dest_user}[^"]+?))\\?"""",
+    """"description":"\{\\"uname\\":\s\\"(({dest_email_user}[^"\s@]+@[^"\s@]+)|({dest_user}({account_name}[^"]+?)))\\?"""",
     """msg=({additional_info}[^=]+)\s+\w{1,200}=""",
   ]
 

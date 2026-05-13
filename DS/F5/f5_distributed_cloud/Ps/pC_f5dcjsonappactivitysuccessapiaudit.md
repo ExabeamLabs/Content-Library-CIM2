@@ -13,7 +13,7 @@ Name = f5-dc-json-app-activity-success-apiaudit
     """exa_json_path=$.user_agent,exa_field_name=user_agent"""
     """exa_json_path=$.method,exa_field_name=method"""
     """exa_json_path=$.rsp_code,exa_field_name=http_response_code"""
-    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.severity,exa_field_name=severity""",
     """exa_json_path=$.host,exa_field_name=host""",
     """exa_json_path=$.req_path,exa_field_name=uri_path""",

@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-group-modify-success-4750
     """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
     """({event_code}4750)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
      ]
   
 

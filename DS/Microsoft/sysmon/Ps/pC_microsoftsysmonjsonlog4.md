@@ -21,6 +21,7 @@ Name = microsoft-sysmon-json-log-4
     """AccountName":"(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """"AccountName":"(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"({log_name}Microsoft-Windows-Sysmon)"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 

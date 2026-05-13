@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-sk4-dll-load-success-4614
      """"Computer":"({host}[^"]+)"""",
      """({event_name}A notification package has been loaded by the Security Account Manager)"""
      """"Channel":"({channel}[^"]+)"""
+     """"TenantId":"({tenant_id}[^"]+)"""
   ]
  
 json-windows-system-info = {
@@ -25,6 +26,7 @@ json-windows-system-info = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Channel":"({channel}[^"]+)"""
+    """"(?i:tenantid)":"({tenant_id}[^"]+)"""
   
 }
 ```

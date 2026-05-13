@@ -22,6 +22,7 @@ Fields = [
   """<EventData><Data>({operation}.+?)<\/Data>"""
   """User=(({domain}[^\\]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}.+?)<\/Channel>"""
 ]
 ParserVersion = "v1.0.0"
 

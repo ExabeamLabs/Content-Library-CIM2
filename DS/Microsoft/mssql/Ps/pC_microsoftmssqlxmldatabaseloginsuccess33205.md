@@ -12,6 +12,7 @@ Name = microsoft-mssql-xml-database-login-success-33205
     """<EventID Qualifiers\\?=[^>]+>({event_code}\d+)"""
     """Provider Name\\?='({provider_name}[^\']+)"""
     """\\nserver_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\+)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\nserver_principal_sid:"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 s-mssql-database-login = {
@@ -34,6 +35,8 @@ s-mssql-database-login = {
     """\Wdatabase_name:({db_name}[^\s:\+]+)""",
     """\Wstatement:(-+|({failure_reason}[^.:]+))"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)"""
   ]
  },
 
@@ -57,6 +60,7 @@ s-mssql-database-login = {
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
+       """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
      
 }
 ```

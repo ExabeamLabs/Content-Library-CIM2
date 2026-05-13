@@ -14,7 +14,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"log-name"+:\s*"+({event_category}[^",\s\[\{]+)"+""",
     """"status":.+"code":\s*({result_code}\d+)""",
     """"status":.+"message":\s*"?({failure_reason}[^},]+)"""",
-    """"principalEmail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))"""",
+    """"principalEmail":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))"""",
     """"(callerIp|src_ip)":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(","src_port")?(:({src_port}\d+))?"?""",
     """"callerSuppliedUserAgent":\s*"({user_agent}[^"]+)""",
     """"methodName":\s*"({operation}[^"]+)""",
@@ -40,6 +40,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """"serviceName":\s*"({app}[^"]+)""",
     """\sdproc=({app}[^=]+)\s\w+=""",
     """principalEmail":"({principal_name}[^"\@}]+)""""
+    """"principalEmail":"(system:)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$..protoPayload.serviceName,exa_field_name=app""",
     """exa_regex=\sdproc=({app}[^=]+)\s\w+=""",
     """exa_regex=principalEmail":"({principal_name}[^"\@}]+)""""
@@ -48,8 +49,8 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """exa_json_path=$.log-name,exa_field_name=event_category""",
     """exa_json_path=$..protoPayload.status.code,exa_field_name=result_code""",
     """exa_json_path=$..protoPayload.status.message,exa_field_name=failure_reason""",
-    """exa_json_path=$..protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
-    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
+    """exa_json_path=$..protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
+    """exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\s@"]+))""",
     """exa_json_path=$..protoPayload.requestMetadata.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.jsonPayload.access.callerIp,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$..protoPayload.requestMetadata.callerSuppliedUserAgent,exa_field_name=user_agent""",
@@ -78,6 +79,7 @@ Name = google-cloudplatform-json-app-activity-success-googleapismethodname
     """exa_json_path=$.operation.first,exa_field_name=operation_first""",
     """exa_json_path=$.operation.last,exa_field_name=operation_last""",
     """exa_regex="user":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+    """exa_json_path=$..principalEmail,exa_regex="(system:)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 

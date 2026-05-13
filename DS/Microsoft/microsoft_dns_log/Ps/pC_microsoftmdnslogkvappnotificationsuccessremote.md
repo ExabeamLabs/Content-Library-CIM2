@@ -1,0 +1,17 @@
+#### Parser Content
+```Java
+{
+Name = microsoft-mdnslog-kv-app-notification-success-remote
+  Vendor = "Microsoft"
+  Product = "Microsoft DNS Log"
+  TimeFormat = ["M/d/yyyy HH:mm:ss a", "MM/dd/yyyy HH:mm:ss a"]
+  Conditions = [ """ REMOTE """ ]
+  ParserVersion = "v1.0.0"
+  Fields = [
+    """({time}\d{1,2}\/\d{1,2}\/\d\d\d\d\s\d{1,2}:\d\d:\d\d\s(am|AM|PM|pm))"""
+    """({event_name}REMOTE)\s+({additional_info}.+?)$"""   
+]
+
+
+}
+```

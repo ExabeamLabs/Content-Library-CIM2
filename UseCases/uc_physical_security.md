@@ -40,6 +40,10 @@ Use Case: Physical Security
 |                        Product                         | MITRE ATT&CK® TTP                    | Content                                                                                                                |
 |:------------------------------------------------------:| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | [Sonicwall](../DS/Dell/sonicwall/ds_dell_sonicwall.md) | T1133 - External Remote Services<br> | [<ul><li>1 Rules</li></ul><ul><li>1 Models</li></ul>](../DS/Dell/sonicwall/RM/r_m_dell_sonicwall_Physical_Security.md) |
+### Vendor: Epic
+|                        Product                         | MITRE ATT&CK® TTP          | Content                                                                                                                |
+|:------------------------------------------------------:| -------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| [Epic SIEM](../DS/Epic/epic_siem/ds_epic_epic_siem.md) | T1078 - Valid Accounts<br> | [<ul><li>9 Rules</li></ul><ul><li>4 Models</li></ul>](../DS/Epic/epic_siem/RM/r_m_epic_epic_siem_Physical_Security.md) |
 ### Vendor: F5
 |                                             Product                                             | MITRE ATT&CK® TTP                    | Content                                                                                                                                          |
 |:-----------------------------------------------------------------------------------------------:| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |

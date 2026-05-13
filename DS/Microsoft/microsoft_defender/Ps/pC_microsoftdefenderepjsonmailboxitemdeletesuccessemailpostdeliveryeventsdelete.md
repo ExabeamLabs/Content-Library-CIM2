@@ -16,6 +16,7 @@ Name = "microsoft-defenderep-json-mailbox-item-delete-success-emailpostdeliverye
     """exa_json_path=$..ActionResult,exa_field_name=result""",
     """exa_json_path=$..RecipientEmailAddress,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$..NetworkMessageId,exa_field_name=message_id"""
+    """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
   ]
 ParserVersion = "v1.0.0"
 

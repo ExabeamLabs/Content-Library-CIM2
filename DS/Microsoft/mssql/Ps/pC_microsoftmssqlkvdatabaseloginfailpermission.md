@@ -26,6 +26,7 @@ Name = microsoft-mssql-kv-database-login-fail-permission
     """server_instance_name:({dest_host}[\w\-.]+)"""
     """({event_name}LGIF)"""
     """statement:({additional_info}.+?)(\s|\\[nrt])+additional_information:"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

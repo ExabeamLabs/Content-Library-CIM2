@@ -33,6 +33,7 @@ Fields = [
   """exa_json_path=$..NetworkMessageId,exa_field_name=message_id"""
   """exa_json_path=$..FileSize,exa_field_name=attachment_size"""
   """exa_json_path=$..SHA256,exa_field_name=file_hash"""
+  """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
 ]
 ParserVersion = "v1.0.0"
 

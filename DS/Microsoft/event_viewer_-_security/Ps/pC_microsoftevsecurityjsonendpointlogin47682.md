@@ -24,6 +24,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4768-2"
     """TargetDomainNam":"(?:-|({dest_domain}({domain}[^"]+?)))""""
     """TargetSid":"({dest_user_sid}({user_sid}[^"\\]+))""""
     """"Channel":"({channel}[^"]+)"""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

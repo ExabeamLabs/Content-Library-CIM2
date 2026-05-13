@@ -17,6 +17,7 @@ Name = microsoft-evsystem-json-endpoint-authentication-fail-5723
     """exa_regex=({event_name}The session setup from computer.+?)\."""
     """exa_json_path=$.Level,exa_field_name=run_level"""
     """exa_regex=trust account\s*'({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """exa_json_path=$.channel,exa_field_name=channel"""
   ]
 
 

@@ -106,7 +106,7 @@ ParserVersion = "v1.0.0"
     """edge_host="({edge_host}[^=]+?)"\s+\w+"""
     """edge_fleet="({edge_fleet}[^"]+)"""
     """({time}\d+-\d+-\d+\s\d+:\d+:\d+)"""
-    """\s(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+))\s({bytes}\d+)\s+({file_path}(({file_dir}[^=]+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+({category}[a-z])\s+({secured}[a-z])\s+({edge_response_status}[a-z])\s+({access_type}[a-z])\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|'\\_]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+({server_name}[^\s]+)\s"""
+    """\s(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+))\s({bytes}\d+)\s+({file_path}(({file_dir}[^=]+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+({category}[a-z])\s+({secured}[a-z])\s+({edge_response_status}[a-z])\s+({access_type}[a-z])\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|'\\_]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+({server_name}[^\s]+)\s"""
   ]
   ParserVersion = "v1.0.0"  
 },

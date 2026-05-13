@@ -22,6 +22,7 @@ Name = microsoft-sysmon-xml-registry-rename-success-14
     """<Data Name =['"]ProcessGuid['"]>\{({process_guid}[^\}<]+)\}<""",
     """<Data Name =['"]RuleName['"]>({rule}[^<]+)<""",
     """<Security UserID=['"]({user_sid}[^'"]+)['"]"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

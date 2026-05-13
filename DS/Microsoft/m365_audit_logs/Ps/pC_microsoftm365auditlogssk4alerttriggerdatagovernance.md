@@ -14,6 +14,7 @@ Name = microsoft-m365auditlogs-sk4-alert-trigger-datagovernance
      """"severity":\s*"({alert_severity}[^"]+)"""",
      """"category":\s*"({alert_type}[^"]+)"""",
      """"description":\s*"({additional_info}[^"]+)""""
+     """"azureTenantId":\s*"({tenant_id}[^"]+)""""
   ]
 
 

@@ -30,6 +30,7 @@ Name = microsoft-evsecurity-xml-registry-create-success-4657
     """<Data Name\\*=('|")ObjectValueName('|")>({registry_value}[^\<]+)<\/Data>"""
     """<Data Name\\*=('|")OperationType('|").+?(1906|delete).+?('|")OldValueType('|")>({registry_details_type}[^<]+?)<.+?('|")OldValue('|")>({registry_details}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -34,7 +34,53 @@ powerprotect-str-auditevents}{
 }
 }
 
+openaiparsertemplate = {
+  openai-json-audit-clp = {
+    Vendor = OpenAI
+    Product = ChatGPT
+    ExtractionType = json
+    TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+    Fields = [
+      """exa_json_path=$.principal.id,exa_field_name=workspace_id"""
+      """exa_json_path=$.timestamp,exa_field_name=time"""
+      """exa_json_path=$.conversation.id,exa_field_name=conversation_id"""
+      """exa_json_path=$.action_data.conversation_id,exa_field_name=conversation_id"""
+      """exa_json_path=$.action_data.shared_conversation_id,exa_field_name=conversation_id"""
+      """exa_json_path=$.conversation.gpt_id,exa_field_name=ai_agent_id"""
+      """exa_json_path=$.conversation.title,exa_field_name=additional_info"""
+      """exa_json_path=$.actor.user_email,exa_field_name=email_address"""
+      """exa_json_path=$.actor.user_id,exa_field_name=user_id"""
+      """exa_json_path=$.actor.type,exa_field_name=user_type"""
+      """exa_json_path=$.action_privilege,exa_field_name=user_privilege_category"""
+      """exa_json_path=$.type,exa_field_name=event_name"""
+      """exa_json_path=$.action,exa_field_name=operation"""
+      """exa_json_path=$.action_result,exa_field_name=result"""
+      """exa_json_path=$.message.author.type,exa_field_name=message_author_type"""
+      """exa_json_path=$.message.content.value,exa_field_name=llm_request"""
+      """exa_json_path=$.message.author.tools_used,exa_field_name=ai_tool_name"""
+      """exa_json_path=$.message.files[*].name,exa_field_name=file_name"""
+      """exa_json_path=$.message.files[*].id,exa_field_name=file_id"""
+      """exa_json_path=$..action_name,exa_field_name=ai_function_name"""
+      """exa_json_path=$.message.content.annotations[*].action_name,exa_field_name=ai_function_name""" 
+      """exa_json_path=$.action_data.deleted_user_id,exa_field_name=dest_user_id"""
+      """exa_json_path=$.action_data.user_id,exa_field_name=dest_user_id"""
+      """exa_json_path=$.action_data.email_address,exa_field_name=dest_email_address"""
+      """exa_json_path=$.request_metadata.client_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+      """exa_json_path=$.request_metadata.client_user_agent,exa_field_name=user_agent"""
+      """exa_json_path=$.action_data.role,exa_field_name=role_name"""
+      """exa_json_path=$.action_data.group_id,exa_field_name=group_id"""
+      """exa_json_path=$.action_data.name,exa_field_name=group_name"""
+      """exa_json_path=$.action_data.new_name,exa_field_name=group_name"""
+      """exa_json_path=$.action_data.email_addresses,exa_field_name=email_recipients"""
+      """exa_json_path=$.action_data.email_addresses,exa_field_name=recipients"""
+      """exa_json_path=$.action_data.email_addresses[0],exa_field_name=dest_email_address"""
+      """exa_json_path=$.action_data.added_user_id,exa_field_name=member"""
+      """exa_json_path=$.action_data.removed_user_id,exa_field_name=member"""
+      """exa_json_path=$.action_data.added_user_id,exa_field_name=dest_user_id"""
 
+    ]
+  }
+}
 #============================================== Start of DefaultParsersAA section ==================================================================
 DefaultParsersAA = [
 
@@ -81,11 +127,11 @@ ParserVersion = "v1.0.0"
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """ openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
+    """ openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
     """IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
     """hostname":"({host}[^"]+)""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
-    """exa_regex= openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
+    """exa_regex= openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
     """exa_regex=IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
     """exa_json_path=$.beat.hostname,exa_field_name=host"""
   ]
@@ -139,7 +185,7 @@ ParserVersion = "v1.0.0"
 ]
   Fields = [
     """openvpn\[({process_id}[^\]]+)\]""",
-    """openvpn\[[^\]]+\]\:\s(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\:({src_port}\d+)""",
+    """openvpn\[[^\]]+\]\:\s(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\:({src_port}\d+)""",
     """({event_name}Inactivity timeout)""",
     """Inactivity timeout\s({additional_info}[^\"]+?)\s*("|$)"""
   ]
@@ -165,13 +211,13 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Act":"({action}[^"]+)""",
     """request=({result}\S+)\s""",
-    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"Subject":"(|({email_subject}[^"]+?))\s*"""",
     """"Dir":"({direction}[^"]+?)"""",
     """"IP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"SpamScore":\s*"?({spam_score}\d+)"""
     """"MsgId":"<({message_id}[^"]+?)>""""
     """"Virus":"({alert_name}[^"]+)""""
@@ -198,13 +244,13 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Act":"({action}[^"]+)""",
     """request=({result}\S+)\s""",
-    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"Subject":"(|({email_subject}[^"]+?))\s*"""",
     """"Dir":"({direction}[^"]+?)"""",
     """"IP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"SpamScore":\s*"?({spam_score}\d+)"""
     """"MsgId":"<({message_id}[^"]+?)>""""
     """"Virus":"({alert_name}[^"]+)""""
@@ -232,7 +278,7 @@ ParserVersion = "v1.0.0"
     """"aCode":"(|({alert_id}[^"]+?))"""",
     """"MsgSize":"*({bytes}\d+)""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"datetime":"({time}\d+-\d+-\d+T\d+:\d+:\d+-\d+)""",
     """"AttCnt":\s*"?({attachment_count}\d+)""",
     """"AttSize":\s*({attachment_size}\d+)""",
@@ -249,7 +295,7 @@ ParserVersion = "v1.0.0"
   ParserVersion = v1.0.0
   Vendor = Postfix
   Product = Postfix
-  TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+  TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ss.SSSZ","yyyy-MM-dd'T'HH:mm:ssZ"]
   Conditions = [
 """postfix"""
 """dsn=2."""
@@ -261,7 +307,7 @@ ParserVersion = "v1.0.0"
     """({message_id}[^\s"]+): to=<""",
     """"host(_name)?":"({host}[^"]+)""",
     """\d\d:\d\d:\d\d ({host}\S+) ( postfix[^:]+: )?""",
-    """\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))""",
+    """\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))""",
     """\Wrelay=({dest_host}[\w\-.]+)\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """originalAgentHostName=({host}[^"]+)\soriginalAgentAddress"""
     """\Wstatus=({result}\w+)"""
@@ -275,7 +321,7 @@ ParserVersion = "v1.0.0"
   ParserVersion = v1.0.0
   Vendor = Postfix
   Product = Postfix
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
   Conditions = [ 
 """postfix"""
 """from=<"""
@@ -285,7 +331,7 @@ ParserVersion = "v1.0.0"
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}([+-]\d\d:\d\d)?)"""
     """({host}[\w.\-]+) postfix""",
     """({message_id}[^\s"]+): from=<""",
-    """\Wfrom=<?(\\u\d+)?((({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({src_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+)))""",
+    """\Wfrom=<?(\\u\d+)?((({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({src_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+)))""",
     """\ssize=({bytes}\d+)""",
     """\snrcpt=({num_recipients}\d+)""",
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
@@ -365,9 +411,9 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({email_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
-    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
-    """headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
+    """"(recipientAddress|Recipient)":"({email_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
+    """headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """"SenderDomain":"({email_domain}[^"]+)"""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"<({message_id}[^"]+)>"""",
@@ -389,7 +435,7 @@ ParserVersion = "v1.0.0"
   TimeFormat = "epoch_sec"
   Conditions = [ 
 """AUDIT_TRAIL|Centrify Suite"""
-"""dzdo command execution ends"""
+"""dzdo command execution """
 ]
   Fields = [
     """utc=({time}\d{10})""",
@@ -441,8 +487,8 @@ ParserVersion = "v1.0.0"
     """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
+    """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
     """"fileName":"({file_name}({email_attachment}[^"]+\.({file_ext}[^"]+)))""",
@@ -546,7 +592,7 @@ ExtractionType = json
 ]
   Fields = [
     """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """http_username":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """http_username":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """http_method":"({method}[^"]+)"""",
     """squid_request_status":"({proxy_action}[^"]+)"""",
     """http_url":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?({web_domain}[^\\\/\s:,"]+)?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?))""",
@@ -921,7 +967,7 @@ Fields = [
   """exa_json_path=$.RequestType,exa_field_name=dns_query_type"""
   """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
   """exa_json_path=$.name,exa_field_name=event_name"""
-  """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1035,42 +1081,190 @@ ParserVersion = "v1.0.0"
 },
 
 {
-  Name = "epic-siem-cef-app-login-success-login"
+Vendor = "Epic"
+Product = "Epic SIEM"
+TimeFormat = "yyyy-MM-dd HH:mm:ss"
+Fields = [
+  """({host}[\w\-.]+)\s+CEF:"""
+  """CEF:([^\|]*\|){5}({operation}[^\|]+)"""
+  """workstationID=({dest_host}[\w\-.]+)"""
+  """shost=({src_host}[\w\-.]+)"""
+  """flag=({additional_info}.+?)\s+(\w+=|$)"""
+  """MASKMODE=({result}.+?)\s+(\w+=|$)"""
+  """PREVUSER=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+  """NEWUSER=({account}[^\s,]+)"""
+]
+Name = epic-siem-cef-app-activity-success-roverfailedlogin
+Conditions = [
+  """CEF:"""
+  """|Epic|Security-SIEM|"""
+  """|ROVER_FAILED_LOGIN|"""
+]
+ParserVersion = "v1.0.0"
+},
+
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-failedlogin
   ParserVersion = "v1.0.0"
-  Vendor = "Epic"
-  Product = "Epic SIEM"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|LOGIN|""" ]
-  Fields = [
-    """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
-    """({host}[\w\-.]+)\s+CEF:""",
-    """LOGINLDAPID=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """workstationID=({dest_host}[\w\-.]+)""",
-    """shost=({src_host}[\w\-.]+)""",
-    """IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """ROLE=({additional_info}.+?)(\s+\w+=|\s*$)""",
-    """USERJOB=(|({resource}.+?))\s+(\w+=|$)""",
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|FAILEDLOGIN|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+      """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+      """MYCAUTHRESULT=({failure_reason}.+?)\s+(\w+=|$)"""
+      """LOGINCLIENTID=({client_id}.+?)\s+(\w+=|$)"""
   ]
 },
 
-{
-  Name = "epic-siem-cef-app-login-fail-failedlogin"
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-ctofailedlogin
   ParserVersion = "v1.0.0"
-  Vendor = "Epic"
-  Product = "Epic SIEM"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|FAILEDLOGIN|""" ]
-  Fields = [
-    """CEF:([^\|]*\|){5}({operation}[^\|]+)""",
-    """({host}[\w\-.]+)\s+CEF:""",
-    """LOGINLDAPID=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """workstationID=({dest_host}[\w\-.]+)""",
-    """shost=({src_host}[\w\-.]+)""",
-    """IP=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """ROLE=({additional_info}.+?)\s+(\w+=|$)""",
-    """USERJOB=({resource}.+?)\s+(\w+=|$)""",
-    """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|CTO_FAILED_LOGIN|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+      """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+      """HKUDVCID=({device_id}.+?)\s+(\w+=|$)"""
   ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-hkufailedlogin
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|HKU_FAILED_LOGIN|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+      """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+      """HKUDVCID=({device_id}.+?)\s+(\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-wpsecloginfail
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_LOGIN_FAIL|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+      """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+      """MYCAUTHRESULT=({failure_reason}.+?)\s+(\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-bcaloginfailure
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|BCA_LOGIN_FAILURE|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+      """LOGINERROR=({failure_reason}.+?)\s+(\w+=|$)""",
+      """MYCAUTHRESULT=({failure_reason}.+?)\s+(\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-acbreaktheglassfailedaccess
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|AC_BREAK_THE_GLASS_FAILED_ACCESS|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-usernotauthenticated
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|USER_NOT_AUTHENTICATED|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-fail-loginblocked
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|LOGIN_BLOCKED|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+  """UID=({user_id}[^\^]+)\^({full_name}[^\^]+)(?=\s+\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-success-login
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|LOGIN|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+  """LOGINCLIENTID=({client_id}.+?)\s+(\w+=|$)"""
+  """CLIENTNAME=({client_name}.+?)(?=\s+\w+=|$)"""
+  ]  
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-success-wpsecloginsuccess
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_LOGIN_SUCCESS|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+  """MYCDEVICEID=({device_id}.+?)\s+(\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-login-success-wpsecdemographicauthentication
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_DEMOGRAPHIC_AUTHENTICATION|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-password-modify-success-eadminpasswordchange
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|E_ADMINPASSWORDCHANGE|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-activity-success-wpsecknowndeviceused
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_KNOWN_DEVICE_USED|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+    """MYCDEVICEID=({device_id}.+?)\s+(\w+=|$)"""
+  ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-app-activity-success-wpsecunknowndeviceused
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_UNKNOWN_DEVICE_USED|""" ]
+  Fields = ${EpicParsersTemplates.cef-epic-app-activity.Fields} [
+    """MYCDEVICEID=({device_id}.+?)\s+(\w+=|$)"""
+  ]  
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-password-modify-success-eselfpasswordchange
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|E_SELFPASSWORDCHANGE|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-password-modify-success-wpsecuserpasswordchange
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_USER_PASSWORD_CHANGE|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-password-modify-fail-efailedpasswordchange
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|E_FAILEDPASSWORDCHANGE|""" ]
+},
+
+${EpicParsersTemplates.cef-epic-app-activity}{
+  Name = epic-siem-cef-password-modify-fail-wpsecuserpasswordchangefail
+  ParserVersion = "v1.0.0"
+  Product = Epic SIEM
+  Conditions = [ """CEF:""", """|Epic|Security-SIEM|""", """|WPSEC_USER_PASSWORD_CHANGE_FAIL|""" ]
 },
 
 ${mimecast-json-template.mimecast-json-event}{
@@ -1394,7 +1588,7 @@ Fields = [
   """\sdvc=({host}[^\s]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
+  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """({app}Thycotic Software)"""
 ]
 ParserVersion = "v1.0.0"
@@ -1417,7 +1611,7 @@ Fields = [
   """\sdvc=({host}[^\s]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Details:\s*({failure_reason}.+?)\s\w+="""
   """Details:\s*({additional_info}({failure_reason}[^:=]+?)(?:\sExpected:[^=]+?)?)\s+\w+=""",
   """({app}Thycotic Software)"""
@@ -1720,8 +1914,8 @@ Fields = [
 """\sdvc=({dest_host}({host}[^\s]+))"""
 """\sdvchost=({dest_host}({host}[^\s]+))"""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
+"""\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
 """cs3=({safe_value}.+?)\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"
@@ -1747,6 +1941,80 @@ Fields = [
 """runas=({account}({dest_user}.+?))\s\w+="""
 """EntityName=({object}.+?)\s*$"""
 """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
+]
+ParserVersion = "v1.0.0"
+},
+
+{
+Name = "delinea-centrifyztps-kv-user-switch-fail-denied"
+Vendor = "Delinea"
+Product = "Centrify Zero Trust Privilege Services"
+TimeFormat = "epoch_sec"
+Conditions = [
+"""Centrify Suite|dzdo"""
+"""dzdo denied"""
+]
+Fields = [
+"""utc=({time}\d{10})"""
+"""\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w.\-]+)\s"""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+"""\d+\|\d+\|({event_name}.+?)\|\d"""
+"""status=({result}.+?)\s\w+="""
+"""pid=({process_id}\d+)"""
+"""service=({service_name}.+?)\s\w+="""
+"""runas=({account}({dest_user}.+?))\s\w+="""
+"""EntityName=({object}.+?)\s*$"""
+"""command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
+"""centrifyEventID=({event_code}\d+)"""
+]
+ParserVersion = "v1.0.0"
+},
+
+{
+Name = "delinea-centrifyztps-kv-endpoint-logout-sshdconnectionclose"
+Vendor = "Delinea"
+Product = "Centrify Zero Trust Privilege Services"
+TimeFormat = "epoch_sec"
+Conditions = [
+"""Centrify Suite|Centrify sshd"""
+"""SSHD connection close"""
+]
+Fields = [
+"""utc=({time}\d{10})"""
+"""\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w.\-]+)\s"""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+"""\d+\|\d+\|({event_name}.+?)\|\d"""
+"""status=({result}.+?)\s\w+="""
+"""pid=({process_id}\d+)"""
+"""service=({service_name}.+?)\s\w+="""
+"""runas=({account}({dest_user}.+?))\s\w+="""
+"""EntityName=({object}.+?)\s*$"""
+"""authMechanism=({auth_method}.+?)\s\w+="""
+"""reason=({result_reason}.+?)$"""
+"""client=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+"""centrifyEventID=({event_code}\d+)"""
+]
+ParserVersion = "v1.0.0"
+},
+
+{
+Name = "delinea-centrifyztps-kv-app-activity-success-localcacheflushed"
+Vendor = "Delinea"
+Product = "Centrify Zero Trust Privilege Services"
+TimeFormat = "epoch_sec"
+Conditions = [
+"""Centrify Suite|Centrify Commands"""
+"""|Local cache flushed|"""
+]
+Fields = [
+"""utc=({time}\d{10})"""
+"""\w+\s+\d+\s+\d+:\d+:\d+\s+({host}[\w.\-]+)\s"""
+"""user=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+"""\d+\|\d+\|({event_name}.+?)\|\d"""
+"""status=({result}.+?)\s\w+="""
+"""pid=({process_id}\d+)"""
+"""service=({service_name}.+?)\s\w+="""
+"""centrifyEventID=({event_code}\d+)"""
 ]
 ParserVersion = "v1.0.0"
 },

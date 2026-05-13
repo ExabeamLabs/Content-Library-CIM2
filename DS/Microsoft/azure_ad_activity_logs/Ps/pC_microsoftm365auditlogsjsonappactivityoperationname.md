@@ -24,7 +24,7 @@ Name = microsoft-m365auditlogs-json-app-activity-operationname
     """"identity":"({app}[^"]+)"[^=]+?"category":"(?!RiskyUsers|UserRiskEvents|ProvisioningLogs)[^"]+"""",
     """"?loggedByService":\s*"(?:Account Provisioning|Core Directory|({app}[^",]+))"?""",
     """targetResources":.+?type":"({object}[^",]+)""",
-    """"targetResources":.+?"displayName":"({dest_host}[\w\-.]+)"""",
+    """"targetResources":.+?"displayName":"({device_name}[\w\-.][^"]+)".+?"type":"Device"""",
     """"TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\d\d\d\dZ)"""",
     """"resultReason":"({result_reason}[^"]+?)"""",
     """"description":"({additional_info}[^"]+?)"""",

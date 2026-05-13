@@ -15,6 +15,7 @@ Name = microsoft-evsystem-json-service-state-modify-7036
    """"ProcessId":({process_id}\d+)"""
    """"Keywords":"({result}[^"]+)""""
    """The ({service_name}[^\.="]+) service entered the ({service_state}[^\.="]+) state"""
+   """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 

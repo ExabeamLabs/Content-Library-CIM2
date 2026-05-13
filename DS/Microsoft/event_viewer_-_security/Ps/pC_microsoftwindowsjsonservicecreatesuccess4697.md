@@ -26,6 +26,7 @@ Name = microsoft-windows-json-service-create-success-4697
   """exa_regex=Service File Name:\s+(|-|({process_path}({process_dir}[^\"=]+?[\\\/])?({process_name}[^\\\/\s]+)))\s*(\\t|\\n|\\r)*Service Type"""
   """exa_regex=Service File Name:\s*((?:[^\";]+)?[\\\/;])?({process_name}[^\\\/\";]+?\.[^\\\/\.;\"]+?)\s.*?\s*Service Type:"""
   """exa_regex=Service Account:\s*(|(({account_domain}[^\s"]+)\\)?({account_name}.+?))\s*(\"|$|<)"""
+  """exa_json_path=$.channel,exa_field_name=channel"""
     ]
   ParserVersion = "v1.0.0"
 

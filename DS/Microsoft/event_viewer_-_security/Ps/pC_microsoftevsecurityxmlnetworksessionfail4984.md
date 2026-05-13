@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-network-session-fail-4984
     """<Data Name\\*=('|")Role('|")>({role}[^<]+)""",
     """<Keywords>({action}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

@@ -26,7 +26,8 @@ Name = "microsoft-evsecurity-xml-group-member-add-success-eventid47"
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<]+)<""",
     """<Data Name(\\)?=('|")MemberName('|")>({user_dn}(cn)=({member}.+?),({user_ou}OU.+?DC=[\w-]+))<\/Data>"""
     """Member:(.+?({user_dn}CN=.+?,({user_ou}OU.+?DC=[\w-]+))|(?:.+?))\s*Group:"""
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

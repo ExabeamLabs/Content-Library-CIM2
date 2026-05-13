@@ -24,7 +24,8 @@ Name = microsoft-evsecurity-xml-group-member-add-success-4751
     """<System>.*?Guid(\\)?=('|")\{({process_guid}[^}]+)""",
     """<Execution ProcessID(\\)?=('|")({process_id}\d+)""",
     """<Data Name ="MemberSid">({account_id}(?=[^\\<]+\\)({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)|(?:[^\s\<]+))</Data>""",
-    """<Level>({run_level}[^<]+)<"""
+    """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+)<"""
       ]
 
 

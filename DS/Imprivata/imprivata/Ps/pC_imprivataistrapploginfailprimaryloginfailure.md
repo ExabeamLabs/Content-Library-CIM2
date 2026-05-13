@@ -1,0 +1,19 @@
+#### Parser Content
+```Java
+{
+Name = imprivata-i-str-app-login-fail-primaryloginfailure
+  Vendor = Imprivata
+  Product = Imprivata
+  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  Conditions = [ """]: Primary Login Failure,""" ,"""Failure""" ]
+  Fields = [
+    """\d\d:\d\d:\d\d ({host}[\w\-.]+) ({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
+    """({operation}Primary Login Failure),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
+    """Primary Login Failure,([^,]+,){2}({user}[\w\.\-\!\#\^\~]{1,40}\$?),({domain}[^,]+)""",
+    """({auth_method}[^,]+),({result}Failure)"""
+  ]
+  ParserVersion = v1.0.0
+
+
+}
+```

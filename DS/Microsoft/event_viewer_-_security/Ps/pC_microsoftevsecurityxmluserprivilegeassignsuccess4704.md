@@ -29,6 +29,7 @@ Fields = [
 """<Data Name\\*=('|")PrivilegeList('|")>({privileges}[^<]+?)<"""
 """<Message>({event_name}[^.<]+)\s*""",
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 
 

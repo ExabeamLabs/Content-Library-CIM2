@@ -36,6 +36,7 @@ o365-file-app-activity = {
       """exa_json_path=$.Id,exa_field_name=object_id"""
       """exa_json_path=$.RecordType,exa_field_name=object_type"""
       """exa_json_path=$.ClientIP,exa_field_name=src_ip"""
+      """"(?i:tenantid)":"({tenant_id}[^"]+)"""
 
 }
 ```

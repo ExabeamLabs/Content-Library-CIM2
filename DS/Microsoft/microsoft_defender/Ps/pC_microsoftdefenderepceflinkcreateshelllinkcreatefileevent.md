@@ -38,6 +38,7 @@ cef-defender-atp {
        """"tenantId":"({tenant_id}[^",]+)""",
        """"SHA1":"({hash_sha1}[^"]+)"""",
        """"InitiatingProcessSHA1":"({hash_sha1}[^"]+)""""
+       """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
      
 }
 ```

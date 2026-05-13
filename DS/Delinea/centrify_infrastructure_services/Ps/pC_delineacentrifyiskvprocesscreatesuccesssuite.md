@@ -8,7 +8,7 @@ Name = delinea-centrifyis-kv-process-create-success-suite
   TimeFormat = "epoch_sec"
   Conditions = [ 
 """AUDIT_TRAIL|Centrify Suite"""
-"""dzdo command execution ends"""
+"""dzdo command execution """
 ]
   Fields = [
     """utc=({time}\d{10})""",

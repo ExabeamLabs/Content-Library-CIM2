@@ -1,0 +1,29 @@
+#### Parser Content
+```Java
+{
+Name = unix-unix-kv-endpoint-activity-fail-rbacintegrityfail
+  Vendor = Unix
+  Product = Unix Auditd
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """ANOM_RBAC_INTEGRITY_FAIL""", """msg=""", """res\=failed""" , """Auditd""" ]
+  Fields = [
+      """({time}\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}Z?)""",
+      """\sauid\\?=({account_id}\d+)"""
+      """\suid\\?=({user_uid}\d+)"""
+      """\sses\\?=({session_id}\d+)""",
+      """\spid\\?=({process_id}[^\s]+)\s\w+\\?=""",
+      """\sres\\?=({result}[^"']+)""",
+      """\ssubj\\?=({additional_info}[^=]+)\s+\w+\\?=""",
+      """\sexe\\?="({process_path}({process_dir}[^"]*[\\\/]+)?({process_name}[^"]+?))""""
+      """type\\?=({event_name}({operation_type}\S+))"""
+      """cs1=({operation}.+)\s+cs1Label="""
+      """sev=({severity}\d+)"""
+      """shost=({src_host}[^\s]+)"""
+      """\sfname=({process_path}({process_dir}\/.*?)({process_name}[^\/]*?[^\\]))\s"""
+      """\sdvc=({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

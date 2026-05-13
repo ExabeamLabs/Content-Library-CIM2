@@ -30,10 +30,10 @@ Fields = [
   """"Workload\\*"+:\\*\s*"+({app}[^"\\,]+)"""
   """"NewValue\\*\"+:\\*\s*\"+({new_attribute}[^\"@\\]+)"""
   """\WfileType=({file_type}[^\s]+)"""
-  """\Wsproc=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+  """\Wsproc=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """\WfilePermission=(|({file_permissions}.+?))(\s+\w+=|\s*$)"""
   """\Wduser=(|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[^=]+?))(\s+\w+=|\s*$)"""
-  """\Wsuser=(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?)))(\s+\w+=|\s*$)"""
+  """\Wsuser=(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(({user_id}(\w+\-){4}\w+)|({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({user}[\w\.\-]{1,40}\$?)(@({domain}[^\s"]+))?)))(\s+\w+=|\s*$)"""
   """"UserId\\*\"+:\\*\s*\"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(urn:spo:guest#)?(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|system|SecurityComplianceAlerts|SecurityComplianceInsights|AAD to SharePoint Sync|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\\s@"]+)\\)?(app@sharepoint|system|({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({user}[\w\.\-]{1,40}\$?))(@({=domain}[^\s"]+))?|({full_name}[\w,\s]+?)))""""
   """src-account-name\":\"({account_name}[^\"]+)"""
   """"FileSizeBytes\\*"+:\s*({bytes}\d+)"""
@@ -50,6 +50,9 @@ Fields = [
   """"SiteUrl":\s*"({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
   """"ListName":"({resource_name}[^"]+)""""
   """"ListBaseType":"({resource_type}[^"]+)""""
+  """"site":"({site_at}[^",]+)"""",
+  """"SearchQueryText":\s*"({query}[^",]+)"""",
+  """"UniqueId":\s*"({object}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

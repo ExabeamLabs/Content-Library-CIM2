@@ -26,8 +26,8 @@ beyondtrust-json-epm-events = {
   Vendor = BeyondTrust
   Product = BeyondTrust
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-  start_timeFormat="yyyy-MM-dd'T'HH:mm:ssZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
+  start_timeFormat= ["yyyy-MM-dd'T'HH:mm:ssZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
   Fields = [
     """exa_json_path=$.@timestamp,exa_field_name=time"""
     """exa_json_path=$..Event.Type,exa_field_name=event_category"""

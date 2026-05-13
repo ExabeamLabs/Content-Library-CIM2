@@ -5,7 +5,7 @@ Name = "sentinelone-singularityp-json-configuration-modify-success-activity_type
   ParserVersion = "v1.0.0"
   Conditions = [ """"dataSource.vendor":"SentinelOne"""", """"activity_type":3756,""", """primary_description":"""", """"type":"""" ]
   Fields = ${SentinelOneParsersTemplates.json-sentinelone-activity_type.Fields} [
-    """exa_regex="data.user_name":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_regex="data.user_name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.['data.policy_name'],exa_field_name=policy_name"""
   ]  
 

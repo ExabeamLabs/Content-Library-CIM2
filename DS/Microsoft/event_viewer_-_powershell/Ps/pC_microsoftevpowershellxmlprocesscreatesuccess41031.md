@@ -15,7 +15,7 @@ Name = microsoft-evpowershell-xml-process-create-success-4103-1
     """Script Name =\s+({script_name}\S[^=]+?)\s+Command Path =""",
     """User = (({domain}[^\\]+?)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(Connected User|Shell ID) ="""
     """CommandInvocation\(.+?\):\s*"({command_invocation}[^"]+)""",
-    """value="{0,20}(?:function\s)?({command_module}[^\s"]+)""",
+    """value="*(?:function\s)?({command_module}[^\s"]+)""",
     """Host\s+Application\s*=\s*({process_command_line}.+?)\s+Engine Version =""",
     """Host\s+Application\s*=\s*({process_path}(({process_dir}[^\;=\s]+)[\\\/]+)?({process_name}[^\s]+))[^\n]+?\s+Engine Version ="""
     """CommandInvocation\(.+?\):\s*\\*"({command_invocation}[^"\\]+)""",

@@ -19,7 +19,7 @@ Fields = [
 """"keywords"+:\["+({result}[^"]+)"""
 """"pid"+:({process_id}\d+)"""
 """thread"+:[^@]+?"+id"+:({thread_id}\d+)"""
-""""TargetUserName"+:"+(None|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))""""
+""""TargetUserName"+:"+(None|({dest_user}({account_name}[\w\.\-\!\#\^\~]{1,40}\$?))|({dest_user_full_name}[^"]+))""""
 """"TargetDomainName"+:"+({dest_domain}[^"]+)"""
 """"TargetLogonId"+:"+({dest_login_id}[^"]+)"""
 """"LogonType"+:"+({login_type}\d+)"""
@@ -46,7 +46,7 @@ Fields = [
 """exa_regex="keywords"+:\["+({result}[^"]+)""",
 """exa_json_path=$..pid,exa_field_name=process_id""",
 """exa_json_path=$..thread.id,exa_field_name=thread_id""",
-"""exa_json_path=$..TargetUserName,exa_regex=^(None|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))$""",
+"""exa_json_path=$..TargetUserName,exa_regex=^(None|({dest_user}({account_name}[\w\.\-\!\#\^\~]{1,40}\$?))|({dest_user_full_name}[^"]+))$""",
 """exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
 """exa_json_path=$..TargetSid,exa_field_name=dest_user_sid""",
 """exa_json_path=$..record_id,exa_field_name=event_id""",

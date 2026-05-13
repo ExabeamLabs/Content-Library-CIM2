@@ -16,6 +16,7 @@ Name = microsoft-wdac-xml-endpoint-notification-success-3033
     """<security userid=('|")({user_sid}[^'"]+)('|")\/>"""
     """ThreadID(\\)?='({thread_id}\d+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

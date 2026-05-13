@@ -16,6 +16,7 @@ Name = microsoft-windows-xml-scheduled-task-finish-success-201
     """<Data Name\\*=('|")TaskName('|")>({task_name}[^<]+)<""",
     """<Data Name\\*=('|")ResultCode('|")>({result_code}[^<]+)<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

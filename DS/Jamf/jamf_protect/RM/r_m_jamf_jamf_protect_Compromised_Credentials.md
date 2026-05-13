@@ -7,7 +7,7 @@ Vendor: Jamf
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  91   |   38   |         16         |       3        |    4    |
+|  91   |   38   |         16         |       3        |    5    |
 
 | Event Type      | Rules    | Models    |
 | ---- | ---- | ---- |

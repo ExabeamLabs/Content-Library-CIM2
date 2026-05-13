@@ -16,6 +16,8 @@ Name = microsoft-evsystem-xml-app-activity-success-304
     """<EventID>({event_code}304)</EventID>""",
     """<EventRecordID>({event_id}[^\<]+)<\/EventRecordID>"""
     """<Level>({run_level}[^<]+)<"""
+    """"TenantId":"({tenant_id}[^"]+)"""
+    """<Channel>({channel}[^<]+)<"""
    ]
    ParserVersion = "v1.0.0"
 

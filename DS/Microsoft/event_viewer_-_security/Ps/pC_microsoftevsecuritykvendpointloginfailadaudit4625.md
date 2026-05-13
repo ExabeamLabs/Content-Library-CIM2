@@ -28,8 +28,8 @@ Name = "microsoft-evsecurity-kv-endpoint-login-fail-adaudit-4625"
     """CALLER_PROCESS_NAME\s*=\s*(|null|-|({process_path}({process_dir}(\w:)?(?:[^:\]]+)?[\\\/])?({process_name}[^\\\/"\]]+?)))\s*\]"""
     """CALLER_USER_NAME\s*=\s*(-|({src_user}[^\s]+))"""
     """CALLER_USER_DOMAIN\s*=\s*(-|({src_domain}[^\s]+))"""
-    """FAILURE_STATUS\s*=\s*({result_code}[^\s]+)"""
-    """FAILURE_SUB_STATUS\s*=\s*({result_code}[^\s]+)"""
+    """FAILURE_STATUS\s*=\s*({result_code}({failure_code}[^\s]+))"""
+    """FAILURE_SUB_STATUS\s*=\s*({result_code}({failure_code}[^\s]+))"""
   ]
 
 

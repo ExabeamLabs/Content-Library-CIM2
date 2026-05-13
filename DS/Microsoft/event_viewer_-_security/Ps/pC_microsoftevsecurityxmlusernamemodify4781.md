@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-user-name-modify-4781
     """<Data Name\\*=('|")SubjectLogonId('|")>(-|({login_id}[^<]+))<""",
     """<Data Name\\*=('|")PrivilegeList('|")>(-|({privileges}[^<]+))<""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

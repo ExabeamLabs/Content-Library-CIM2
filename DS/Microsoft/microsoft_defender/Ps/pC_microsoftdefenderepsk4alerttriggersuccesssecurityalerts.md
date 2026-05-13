@@ -24,6 +24,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-securityalerts
      """"+sourceMaterials"+:\["+({additional_info}[^"]+)""",
      """"id"+:"+({alert_id}[^"]+)""""
      """status":"({incident_status}[^"]+)""""
+     """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
    ]
 
 

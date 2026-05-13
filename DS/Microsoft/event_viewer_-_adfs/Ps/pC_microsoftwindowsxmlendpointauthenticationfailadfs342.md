@@ -21,6 +21,7 @@ Name = "microsoft-windows-xml-endpoint-authentication-fail-adfs342"
 """UserID\\*='(({user_sid}S-[^\']+)|({user_id}[^\']+))"""
 """<\/Data><Data>(({user_upn}[^@<]+?@[^\.]+?\.[^-]+)|([^\s]+?))\s*\-({failure_reason}.+?)<\/Data><Data>"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = "v1.0.0"
 

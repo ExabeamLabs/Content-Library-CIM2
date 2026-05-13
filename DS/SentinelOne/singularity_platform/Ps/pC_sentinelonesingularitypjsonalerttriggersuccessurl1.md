@@ -27,7 +27,7 @@ Name = sentinelone-singularityp-json-alert-trigger-success-url-1
     """exa_json_path=$.['src.process.image.path'],exa_regex=({process_path}({process_dir}(:?[\w:]+)?[^"]*\\)({process_name}[^"]+))$""",
     """exa_json_path=$.['event.id'],exa_field_name=alert_id""",
     """exa_json_path=$.['event.url.action'],exa_field_name=method""",
-    """exa_json_path=$.['url.address'],exa_regex=({malware_url}({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?))$""",
+    """exa_json_path=$.['url.address'],exa_regex=({malware_url}({url}(\w+:\/\/)?(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?))$""",
     """exa_json_path=$.['endpoint.type'],exa_field_name=host_type""",
   ]
 

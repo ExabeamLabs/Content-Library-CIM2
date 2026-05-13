@@ -20,7 +20,7 @@ Fields = [
 """src=(?:-|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\s+\w+="""
 """nitroAppID=({auth_package}[^\s]+)"""
 """nitroLogon_Type=({login_type}\d+)"""
-"""nitroMessage_Text=({result_code}[^\s]+)\s+\w+="""
+"""nitroMessage_Text=({result_code}({failure_code}[^\s]+))\s+\w+="""
 ]
 ParserVersion = "v1.0.0"
 

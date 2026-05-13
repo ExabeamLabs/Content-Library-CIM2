@@ -26,6 +26,8 @@ logrhythm-o365-app-activity = {
     """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
     """ITEMTYPE=({file_type}[^=]+?)\s+\w+=""",
     """RESULTCODE=({result}[^=]+?)\s+\w+="""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel"+:"+({channel}[^"]+)""""
   
 }
 ```

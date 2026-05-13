@@ -30,7 +30,7 @@ Fields = [
 """"riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes""""
 """"geoCoordinates\\*"+:\{(|({location}.+?))\}"""
 """additionalDetails\\*":\s*\\*"({additional_info}[^"\\]+)"""
-"""deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*"""
+"""deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({device_name}[^",]+)\$?\s*\\*"""
 """deviceDetail(_string)?\\*":"?\{[^\}]*"deviceId\\*":\\*"({device_id}[\w\.\-]+)"""
 """deviceDetail(_string)?\\*":"?\{[^\}]*"browser\\*":\\*"({browser}[^\\"]+)"""
 """deviceDetail(_string)?\\*":"?\{[^\}]*"operatingSystem\\*":\\*"({os}[^\\"]+)"""
@@ -86,7 +86,7 @@ Fields = [
 """exa_regex="riskDetail":[^,]+,"({additional_info}[^\]]+),"riskEventTypes"""",
 """exa_regex="location":(\{"geoCoordinates":\{\}\}|({location}\{.*?\}))""",
 """exa_regex=additionalDetails\\*":\s*\\*"({additional_info}[^"\\]+)"""
-"""exa_regex=deviceDetail\".+?"deviceId":"[^"]+".+?"displayName":"({src_host}[^"]+)"""",
+"""exa_regex=deviceDetail\".+?"deviceId":"[^"]+".+?"displayName":"({device_name}[^",]+)"""",
 """exa_regex=TimeGenerated":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,7})?Z)""",
 """exa_regex="resourceId":\s*"({resource}[^"]+)"""",
 """exa_regex="(app|resource)DisplayName":"({resource}[^"]+)"""",
@@ -112,7 +112,7 @@ Fields = [
 """"LocationDetails_string":".+?"state\\":\\"({state}[^\\",]+)\\""""
 """exa_regex="LocationDetails_string":".+?"city\\":\\"({city}[^\\",]+)\\""""
 """exa_regex="LocationDetails_string":".+?"state\\":\\"({state}[^\\",]+)\\""""
-"""exa_regex=deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({src_host}[\w\-\.]+)\$?\s*\\*""",
+"""exa_regex=deviceDetail(_string)?\\*":"?\{[^\}]*"displayName\\*":\\*"({device_name}[^",]+)\$?\s*\\*""",
 """exa_json_path=$..authenticationMethod,exa_field_name=auth_method""",
 """exa_regex="authenticationProtocol\\*":\\*"(none|({auth_method}[^\\"]+))\\*""""
 """exa_json_path=$..servicePrincipalName,exa_field_name=attribute""",
@@ -122,6 +122,10 @@ Fields = [
 """exa_json_path=$.properties.networkLocationDetails[0].networkType,exa_field_name=src_network_type""",
 """exa_json_path=$.properties.networkLocationDetails[0].networkNames,exa_field_name=src_network_zone"""
 """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
+"""exa_json_path=$.AuthenticationRequirement,exa_field_name=auth""",
+"""exa_json_path=$.MfaDetail.authMethod,exa_field_name=auth_method"""
+""""AuthenticationRequirement":"({auth}[^"]+)""""
+""""authMethod":"({auth_method}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

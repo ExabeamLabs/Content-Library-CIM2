@@ -18,6 +18,7 @@ Fields = [
 """Subject:[^=]+?\sAccount Name:\s*(|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s*Account Domain:\s*(|-|({domain}[^=]+?))\s*Logon ID:\s*(|-|({login_id}[^=]+?))\s*Target Computer:[^=]+?\sAccount Name:\s*(|-|({account_name}({dest_user}[^=]+?)))\s*Account Domain:\s*(|-|({object_dn}[^\"]+?))\s*Additional Information:"""
 """\sTarget Computer:[^=]+?Account Name:\s*({src_host}[^$:]+?)\$"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

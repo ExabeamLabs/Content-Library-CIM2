@@ -24,6 +24,7 @@ Name = microsoft-sysmon-xml-dll-load-6
     """<Data Name =('|")Signed('|")>({file_signed}true|false)<""",
     """<Data Name =('|")Signature('|")>({file_signature}[^<]+)<""",
     """<Data Name =('|")SignatureStatus('|")>({file_signature_status}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

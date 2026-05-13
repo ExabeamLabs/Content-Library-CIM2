@@ -21,7 +21,7 @@ Name = "microsoft-evsecurity-kv-user-switch-success-4648-1"
 """\w+\s*\d+\s\d+:\d+:\d+\s+(::ffff:)?(am|pm|({host}[\w\-.]+))\s+[a-zA-Z]+""",
 """({event_code}4648)""",
 """Subject(:|=)[\s;]*(\\t|\\r|\\n)*Security ID(:|=)\s*(\\t|\\r|\\n)*({user_sid}S-.*?)[\s;]*(\\t|\\r|\\n)*Account Name(:|=)""",
-"""Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
+"""Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
 """Subject(:|=).+?Account Domain(:|=)\s*(\\t|\\r|\\n)*(?:-|NT Service|({domain}[^\s]*?))[\s;]*(\\t|\\r|\\n)*Logon ID(:|=)""",
 """Subject(:|=).+?Logon ID(:|=)\s*(\\r|\\t|\\n)*({login_id}.*?)[\s;]*(\\r|\\t|\\n)*Logon GUID(:|=)""",
 """Subject(:|=).+?Logon GUID(:|=)\s*(\\r|\\t|\\n)*\{({user_login_guid}[^}]+)\}[\s;]*(\\r|\\t|\\n)*Account Whose""",

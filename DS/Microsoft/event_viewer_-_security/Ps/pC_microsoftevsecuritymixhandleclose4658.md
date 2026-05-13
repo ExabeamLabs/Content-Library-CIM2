@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-mix-handle-close-4658
     """({operation_type}closed)""",
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
     """"Channel":"({channel}[^"]+)"""
+    """"TenantId":"({tenant_id}[^"]+)"""
   ]
 
 

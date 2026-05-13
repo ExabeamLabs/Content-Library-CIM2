@@ -16,6 +16,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447-2
     """Subject:.+?Security ID:\s*({user_sid}[^\s]+)""",
     """Subject:.+?Account Name:\s*((NT AUTHORITY|({domain}[^\\\s]+))\\+)?(LOCAL SERVICE|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 # change_type is removed
 # filter_id is removed
 # filter_name is removed

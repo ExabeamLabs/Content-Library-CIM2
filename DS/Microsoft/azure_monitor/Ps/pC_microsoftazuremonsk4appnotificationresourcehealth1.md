@@ -19,7 +19,7 @@ cef-microsoft-app-activity-3 = {
   Vendor = Microsoft
   Product = Azure Monitor
   ExtractionType = json
-  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "M/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy h:mm:ss Z", "M/dd/yyyy h:mm:ss Z", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "M/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy hh:mm:ss a Z", "MM/dd/yyyy h:mm:ss Z", "M/dd/yyyy h:mm:ss Z", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ssZ"]
   Fields = [
     """"time"\s*:\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""",
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z) [\w\-.]+ """,

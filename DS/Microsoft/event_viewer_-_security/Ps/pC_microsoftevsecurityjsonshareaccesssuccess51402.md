@@ -24,6 +24,7 @@ Fields = [
 """('|")IpPort('|")>({src_port}\d+)"""
 """Source Port(=|:)\s*(\\t)*({src_port}\d+)"""
 """"Channel":"({channel}[^"]+)"""
+""""TenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

@@ -29,6 +29,8 @@ s-mssql-database-login = {
     """\Wdatabase_name:({db_name}[^\s:\+]+)""",
     """\Wstatement:(-+|({failure_reason}[^.:]+))"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)"""
   ]
  },
 
@@ -52,6 +54,7 @@ s-mssql-database-login = {
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
+       """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
      s-mssql-database-login = {
   Vendor = Microsoft
   Product = MSSQL
@@ -72,6 +75,8 @@ s-mssql-database-login = {
     """\Wdatabase_name:({db_name}[^\s:\+]+)""",
     """\Wstatement:(-+|({failure_reason}[^.:]+))"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)"""
   ]
  }
 }

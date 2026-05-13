@@ -5,7 +5,7 @@ Name = "microsoft-evsystem-xml-endpoint-notification-success-catchall"
   ParserVersion = "v1.0.0"
   Vendor = "Microsoft"
   Product = "Event Viewer - System"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"]
   Conditions = [
     """<Event xmlns=""",
     """</EventID>""",

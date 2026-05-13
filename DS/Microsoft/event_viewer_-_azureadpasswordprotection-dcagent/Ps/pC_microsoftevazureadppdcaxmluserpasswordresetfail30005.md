@@ -11,11 +11,13 @@ Name = microsoft-evazureadppdca-xml-user-password-reset-fail-30005
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}30005)</EventID>""",
     """UserName:\s*({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """<Data Name\\*=('|")Data1('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")Data2('|")>({full_name}[^<]+)</Data>""",
   ]
 
 account-password-reset = {
   Vendor = Microsoft
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d{1,10}Z)('|")/>""",
     """<Message>({event_name}[^.<]+)""",

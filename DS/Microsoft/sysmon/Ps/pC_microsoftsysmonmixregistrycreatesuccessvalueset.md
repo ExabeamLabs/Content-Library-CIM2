@@ -35,6 +35,8 @@ Name = "microsoft-sysmon-mix-registry-create-success-valueset"
     """Details:\s*({registry_details_type}DWORD|QWORD|Binary Data)?\s*({registry_details}.+?)\s*$"""
     """ComputerName(:|=)\s*({dest_host}({host}[\w.-]+))"""
     """"({log_name}Microsoft-Windows-Sysmon)"""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)""",
   ]
   ParserVersion = "v1.0.0"
 

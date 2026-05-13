@@ -36,6 +36,31 @@ symantec-dlp-alert = {
         """\|\device_id="({device_id}[^"]+)"""",
         """\|\sRR_Action="({result}[^"]+)""",
       ]
+    }
+    symantec-dlp-alert-1 = {
+      Vendor = "Symantec"
+      Product = "Symantec DLP"
+      TimeFormat = [ "MMM dd HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ssZ" ]
+      occured_timeFormat = ["yyyy-MM-dd'T'HH:mm:ssZ"]
+      Fields = [
+        """({host}[\w\.-]+)\s+DLP\|Symantec\|""",
+        """\|incident_id=({alert_id}\d+)""",
+        """\|severity=\d+\:({alert_severity}\w+)\|\w+=""",
+        """\|occurred_on=({occured_time}[^\|]+?)\s*\|""",
+        """\|reported_on=({time}[^\|]+?)\s*\|""",
+        """\|policy_name=({alert_name}[^\|]+?)\s*\|""",
+        """\|policy_rule=({alert_type}[^\|]+?)\s*\|""",
+        """\|Protocol=({protocol}[^\|]+?)\s*\|""",
+        """\|blocked=(None|({action}[^\|]+?))\s*\|""",
+        """\|host=(?:N\/A|({src_host}[^\|]+?))\s*\|""",
+        """\|machine_ip=(?:N\/A|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+        """\|deviceId=(?:N\/A|({device_id}[^\|]+?))\s*\|""",
+        """\|username=(?:N\/A|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+        """\|filename=(?:N\/A|({file_name}[^\|]+))""",
+        """\|attachment_name=(?:N\/A|({file_name}[^\|]+))""",
+        """\|filepath=(?:N\/A|({file_path}[^\|]+))""",
+        """\|dst=(?:N\/A|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)""",
+        """\|recipient=(?:N\/A|({email_recipients}[^\|]+?))\s*\|"""
     
 }
 ```

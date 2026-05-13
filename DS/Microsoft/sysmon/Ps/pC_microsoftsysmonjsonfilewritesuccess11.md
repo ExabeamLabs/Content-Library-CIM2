@@ -32,6 +32,8 @@ Fields = [
   """exa_json_path=$.Hostname,exa_field_name=host"""
   """exa_json_path=$.CreationUtcTime,exa_field_name=creation_utc_time"""
   """exa_json_path=$.EventID,exa_field_name=event_code"""
+  """"Channel"+:"+({channel}[^"]+)""""
+  """exa_json_path=$.channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

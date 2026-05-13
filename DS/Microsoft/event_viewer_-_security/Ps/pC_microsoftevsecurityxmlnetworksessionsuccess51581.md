@@ -22,6 +22,8 @@ Fields = [
   """<Data Name\\*=('|")Protocol('|")>({ms_protocol_num}.+?)</Data>"""
   """<Data Name\\*=('|")LayerName('|")>({layer_name}.+?)</Data>"""
   """<Level>({run_level}[^<]+)<"""
+  """"TenantId":"({tenant_id}[^"]+)"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

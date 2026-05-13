@@ -3,7 +3,7 @@
 {
 Name = trendmicro-officescan-kv-alert-trigger-success-deepsecuritymanager
   ParserVersion = "v1.0.0"
-  Conditions = [ """|Trend Micro|Deep Security Manager|""","""cat=""" ]
+  Conditions = [ """|Trend""","""|Deep Security Manager|""","""cat=""" ]
 
 trendmicro-security-alert = { 
   Vendor = Trend Micro

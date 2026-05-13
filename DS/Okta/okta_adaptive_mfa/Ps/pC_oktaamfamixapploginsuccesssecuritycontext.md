@@ -112,7 +112,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
-    """exa_json_path=$.actor,exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.actor,exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"({member}[^"]+)""""
     """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.target,exa_regex="type":\s*"AppGroup"\s*[^\}]+?"displayName":\s*"({group_name}[^"]+)""""

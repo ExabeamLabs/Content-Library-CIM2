@@ -31,6 +31,8 @@ Fields = [
     """\s+Image:\s*({process_path}({process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({process_name}[^:]+?))\s+FileVersion:""",
     """\s+ParentImage:\s*({parent_process_path}({parent_process_dir}(?:(\w+:)?[^:]+)?[\\\/])?({parent_process_name}[^:]+?))\s+ParentCommandLine:"""
     """IntegrityLevel:\s*({process_integrity}[^\s]+)"""
+    """<Channel>({channel}[^<]+)<"""
+    """Channel="({channel}[^"]+)""",  
 ]
 ParserVersion = "v1.0.0"
 

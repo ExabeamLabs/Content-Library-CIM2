@@ -35,7 +35,7 @@ Name = microsoft-mssql-xml-database-login-qualifiers
     """\Wobject_name:({table_name}[^\s]+)""",
     """<Level>({run_level}[^<]+)<"""
     """\Wstatement:(|-- network|Login failed.+?|Network error code.+?|({db_query}.+?))(\s+\w+:|\s*$)""",
-
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -31,7 +31,8 @@ Name = "microsoft-evsecurity-xml-group-member-remove-success-eventid"
       """<Data Name =('|")TargetSid('|")>({group_id}[^<]+)""",
       """<Data Name ="MemberName(">|":")CN\\?=({member}[^>]+)<\/Data>""",
       """<Data Name =('|")TargetUserName('|")>(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))<\/Data>""",
-      """<Level>({run_level}[^<]+)<"""
+      """<Level>({run_level}[^<]+)<""",
+      """<Channel>({channel}[^<]+)<"""
       ]
   ParserVersion = "v1.0.0"
 

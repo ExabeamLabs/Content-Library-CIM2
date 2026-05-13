@@ -6,7 +6,7 @@ Name = "unix-unix-str-endpoint-login-sshdconnectionfrom"
   Product = "Unix"
   TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSZ","MMM dd HH:mm:ss"]
   Conditions = [ 
-    """sshd["""
+    """ sshd"""
     """ Connection from """
   ]
   Fields = [
@@ -16,6 +16,7 @@ Name = "unix-unix-str-endpoint-login-sshdconnectionfrom"
     """({time}\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"""
     """\ssshd\[\d+\]:\s*({additional_info}.+?)\s*$"""
     """Connection from.*?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))((\]?:({src_port}\d+))? port\s*({=src_port}\d+))?"""
+    """\s+on\s+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\s+port\s*({dest_port}\d+)"""    
     """Connection from .*?({dest_mac}([A-Fa-f\d]+:){7}[A-Fa-f\d]+)\s*"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
   ]

@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-xml-policy-apply-6144-1
     """Provider Name\\*=('|")({provider_name}[^\'"]+)"""
     """Controllers Policy\{({policy_name}[^}\s]+)\}\s*"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

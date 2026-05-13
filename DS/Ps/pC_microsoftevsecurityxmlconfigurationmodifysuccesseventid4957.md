@@ -24,6 +24,7 @@ json-windows-events-2-aa.Fields}[
     """TargetUserName\\?"+:\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?"""",
     """"message\\*":\\*"({event_name}A user account was locked out)"""
+    """"Channel"+:"+({channel}[^"]+)""""
   
 }
 ```

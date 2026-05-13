@@ -28,11 +28,11 @@ Name = mimecast-seg-cef-email-send-receive-rcpt-1
       """"Act":"({action}[^"]+)""",
       """request=({result}\S+)\s""",
       """"RejInfo":"({result}[^"]+)"""
-      """"(Rcpt|Recipient)":"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^"]*)"""",
+      """"(Rcpt|Recipient)":"({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^"]*)"""",
       """"Subject":"?(null|({email_subject}[^,"]+?))\s*"?,""",
       """Route":"({direction}[^"]+)"""
       """"aCode":"(|({alert_id}[^"]+?))"""",
-      """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+      """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
       """"MsgId":"?(null|({message_id}[^,"]+))\s*"?,"""
       """dtz=({dtz}[^\s]+)"""
       """"fileName":"({email_attachments}[^"]+)""""

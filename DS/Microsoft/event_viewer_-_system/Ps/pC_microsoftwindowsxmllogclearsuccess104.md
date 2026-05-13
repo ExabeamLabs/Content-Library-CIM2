@@ -18,6 +18,7 @@ Fields = [
 """<SubjectDomainName>(NT AUTHORITY|({src_domain}({domain}[^<]+)))"""
 """<Message>({event_name}[^<]+)"""
 """<Level>({run_level}[^<]+)"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

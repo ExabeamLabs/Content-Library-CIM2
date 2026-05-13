@@ -27,7 +27,7 @@ Fields = [
     """destinationServiceName =({service_name}[^=]+?)\s+\w+=""",
     """"applicationName":"({app}[^"]+)"""",
     """"kind":\s*"({category}[^"]+)"""
-    """:"owner","value":"\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s*""""
+    """:"owner","value":"\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s*""""
   ]
   ParserVersion = "v1.0.0"
 

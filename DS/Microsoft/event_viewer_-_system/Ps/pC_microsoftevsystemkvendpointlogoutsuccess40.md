@@ -13,6 +13,7 @@ Name = microsoft-evsystem-kv-endpoint-logout-success-40
     """"Computer"+:"+({host}[^"]+)""",
     """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
     """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host"""
+    """channel="({channel}[^"]+)"""
   ]
 
 windows-events-2 = {

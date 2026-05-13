@@ -15,6 +15,7 @@ Name = microsoft-m365auditlogs-json-alert-trigger-datagovernance
     """exa_json_path=$.category,exa_field_name=alert_type"""
     """exa_json_path=$.description,exa_field_name=additional_info"""
     """exa_json_path=$.eventDateTime,exa_field_name=time"""
+    """exa_json_path=$.azureTenantId,exa_field_name=tenant_id"""
     ]
 
 

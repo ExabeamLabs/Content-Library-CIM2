@@ -29,6 +29,7 @@ azure-event-hub-network-events = {
       """"InitiatingProcessId":({process_id}\d+)""",
       """"InitiatingProcessAccountName":"(system|SYSTEM|NETWORK SERVICE|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """"InitiatingProcessAccountSid"+:"+({user_sid}[^"]+)""",
+      """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
     
 }
 ```

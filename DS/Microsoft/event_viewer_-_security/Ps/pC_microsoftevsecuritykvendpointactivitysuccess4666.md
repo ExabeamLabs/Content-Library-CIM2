@@ -25,6 +25,7 @@ windows-system-info = {
     """"EventSourceName":"({log_source}[^"]+)"""",
     """"IpPort":"({src_port}\d{1,5})"""
     """Channel":"({channel}[^"]+)"""
+    """"(?i:tenantid)":"({tenant_id}[^"]+)"""
   
 }
 ```

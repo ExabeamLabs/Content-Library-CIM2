@@ -18,6 +18,7 @@ Name = microsoft-evsystem-xml-alert-trigger-5829
     """<EventRecordID>({event_id}\d+)""",
     """<EventData><Data>([^<]+)<\/Data><Data>({domain}[^<]+?)\.*<\/Data><Data>({user_type}[^<]+)<\/Data><Data>({os}[^<]+)<\/Data><Data>([^<]+)<\/Data><Data>(?:N\/A|([^<]+))<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 # DL Fields are removed
   ]
 

@@ -14,6 +14,7 @@ Name = microsoft-evsystem-xml-endpoint-activity-fail-5605
     """<Execution ProcessID="({process_id}\d+)" ThreadID="({thread_id}\d+)"\/>""",
     """<Namespace>({event_hub_namespace}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
   ParserVersion = v1.0.0
 

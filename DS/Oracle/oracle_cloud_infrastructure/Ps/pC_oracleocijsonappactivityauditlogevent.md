@@ -28,7 +28,7 @@ Name = oracle-oci-json-app-activity-auditlogevent
     """exa_json_path=$.eventType,exa_field_name=event_category"""
     """exa_json_path=$.data.additionalDetails.adminValuesRemoved,exa_field_name=old_attribute"""
     """exa_json_path=$.data.additionalDetails.adminValuesAdded,exa_field_name=new_attribute"""
-    """exa_json_path=$.data.resourceName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({resource_name}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.data.resourceName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({resource_name}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.data.resourceId,exa_field_name=resource_id"""
     """exa_json_path=$.data.additionalDetails.clientIp,exa_field_name=src_ip"""
     """exa_json_path=$.data.additionalDetails.adminResourceType,exa_field_name=resource_type"""

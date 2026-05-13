@@ -11,6 +11,7 @@ json-github-actions-1 = {
     TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 	  ExtractionType = json
     Fields = [
+      """exa_json_path=$..created_at,exa_field_name=time"""
       """exa_json_path=$..@timestamp,exa_field_name=time"""
       """exa_json_path=$..action,exa_field_name=operation"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
@@ -18,8 +19,9 @@ json-github-actions-1 = {
       """exa_json_path=$..repo,exa_field_name=object"""
       """exa_json_path=$..repo,exa_field_name=repository_name"""
       """exa_json_path=$..actor,exa_regex=({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-      """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-      """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+      """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\[({user_type}[^\]"]+))?"""
+      """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\[({user_type}[^\]"]+))?"""
+      """exa_json_path=$.programmatic_access_type,exa_field_name=auth_type"""
       """exa_json_path=$..operation_type,exa_field_name=operation_type"""
       """exa_json_path=$..application_name,exa_field_name=app"""
       """exa_json_path=$..status_code,exa_field_name=status_msg"""
@@ -38,12 +40,17 @@ json-github-actions-1 = {
       """exa_json_path=$.request_method,exa_field_name=method"""
       """exa_json_path=$.url_path,exa_field_name=uri_path"""
       """exa_json_path=$.query_string,exa_field_name=query"""
+      """exa_json_path=$..actor_id,exa_field_name=user_id"""
+      """exa_json_path=$..token_scopes,exa_field_name=authorization_scope"""
+      """exa_json_path=$.oauth_credential_type,exa_field_name=object_type""",
+      """exa_json_path=$..oauth_application_name,exa_field_name=app"""
     json-github-actions-1 = {
     Vendor = GitHub
     Product = GitHub
     TimeFormat = ["epoch","yyyy-MM-dd'T'HH:mm:ss.SSSZ"]
 	  ExtractionType = json
     Fields = [
+      """exa_json_path=$..created_at,exa_field_name=time"""
       """exa_json_path=$..@timestamp,exa_field_name=time"""
       """exa_json_path=$..action,exa_field_name=operation"""
       """exa_json_path=$..user_agent,exa_field_name=user_agent"""
@@ -51,8 +58,9 @@ json-github-actions-1 = {
       """exa_json_path=$..repo,exa_field_name=object"""
       """exa_json_path=$..repo,exa_field_name=repository_name"""
       """exa_json_path=$..actor,exa_regex=({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-      """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-      """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
+      """exa_json_path=$..actor,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\[({user_type}[^\]"]+))?"""
+      """exa_json_path=$..user,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)(\[({user_type}[^\]"]+))?"""
+      """exa_json_path=$.programmatic_access_type,exa_field_name=auth_type"""
       """exa_json_path=$..operation_type,exa_field_name=operation_type"""
       """exa_json_path=$..application_name,exa_field_name=app"""
       """exa_json_path=$..status_code,exa_field_name=status_msg"""
@@ -71,6 +79,10 @@ json-github-actions-1 = {
       """exa_json_path=$.request_method,exa_field_name=method"""
       """exa_json_path=$.url_path,exa_field_name=uri_path"""
       """exa_json_path=$.query_string,exa_field_name=query"""
+      """exa_json_path=$..actor_id,exa_field_name=user_id"""
+      """exa_json_path=$..token_scopes,exa_field_name=authorization_scope"""
+      """exa_json_path=$.oauth_credential_type,exa_field_name=object_type""",
+      """exa_json_path=$..oauth_application_name,exa_field_name=app"""
     ]
   }
 }

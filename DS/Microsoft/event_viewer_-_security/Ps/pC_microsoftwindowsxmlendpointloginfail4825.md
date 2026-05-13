@@ -17,6 +17,7 @@ Name = microsoft-windows-xml-endpoint-login-fail-4825
       """<Data Name(\\)?=('|")ClientAddress('|")>({src_ip}[a-fA-F0-9\.:]+)<\/Data>""",
       """<Message>({event_name}A user was denied the access to Remote Desktop).""",
       """<Level>({run_level}[^<]+)<"""
+      """<Channel>({channel}[^<]+)<"""
     ]
     ParserVersion = "v1.0.0"
   

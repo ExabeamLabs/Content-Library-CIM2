@@ -35,6 +35,8 @@ Name = microsoft-mssql-str-group-member-add-aprl
     """target_server_principal_sid:({dest_user_sid}[^\\\s]+)""",
     """statement:.+?ADD MEMBER \[(({account_domain}[^\\]+)?\\+)?({account_id}[^\]]+)\]"""
     """statement:.+?ADD MEMBER \[(({account_domain}[^\\\]]+)?\\+)?({account_id}[^\]]+)\]((?-i)\\+[rnt])*"""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

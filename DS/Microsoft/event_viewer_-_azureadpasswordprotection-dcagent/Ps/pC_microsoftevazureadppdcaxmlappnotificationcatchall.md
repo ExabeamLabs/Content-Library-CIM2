@@ -8,6 +8,8 @@ Name = microsoft-evazureadppdca-xml-app-notification-catchall
   Conditions = [ """<EventID>""", """</EventID>""", """Microsoft-AzureADPasswordProtection-DCAgent""", """<Computer>""" ]
   Fields = ${MicrosoftParserTemplates.account-password-activity-1.Fields}[
   """<Computer>({host}[\w.-]+)</Computer>"""
+  """(30022|30021).*?<Data Name\\*=('|")Data1('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)<\/Data>"""
+  """(30022|30021).*?<Data Name\\*=('|")Data2('|")>({full_name}[^<]+)<\/Data>"""
   ]
 
 account-password-activity-1 = {

@@ -40,6 +40,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4624-7"
     """"SubjectUserSid":"({subject_sid}[^"]+)"""
     """"Process":"(-|({process_name}[^"]+))""""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

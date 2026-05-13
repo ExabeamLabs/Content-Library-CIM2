@@ -68,6 +68,9 @@ Fields = [
   """exa_json_path=$.UserID,exa_field_name=user_sid"""
   """exa_json_path=$.ParentProcessId,exa_field_name=parent_process_id"""
   """exa_json_path=$.Description,exa_field_name=additional_info"""
+  """exa_json_path=$.channel,exa_field_name=channel"""
+  """exa_regex="Channel"+:"+({channel}[^"]+)""""
+  """"Channel"+:"+({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

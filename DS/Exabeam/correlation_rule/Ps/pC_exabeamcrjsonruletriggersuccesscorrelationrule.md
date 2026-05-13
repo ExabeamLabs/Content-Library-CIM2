@@ -60,6 +60,7 @@ exa-events-ns = {
       """exa_json_path=$.source_device_entity_id,exa_field_name=source_device_entity_id"""
       """exa_json_path=$.user,exa_regex=({user}[\w\.\-]{1,40}\$?)"""
       """exa_json_path=$.trigger_time,exa_regex=({trigger_time}\d{10,13})"""
+      """exa_json_path=$..m_siteid,exa_field_name=site_id"""
     
 }
 ```

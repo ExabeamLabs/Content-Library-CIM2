@@ -24,6 +24,7 @@ Name = microsoft-evsecurity-xml-policy-modify-5447
     """<Data Name(\\)?=('|")Action('|")>({action}[^<]+)""",
     """<Keywords>({result}[^<]+)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

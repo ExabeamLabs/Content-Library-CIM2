@@ -26,6 +26,7 @@ json-windows-events-4 = {
     """"SubjectUserSid":"({user_sid}[^"]+)"""",
     """"SubjectLogonId":"({login_id}[^"]+)""""
     """"Channel":"({channel}[^"]+)"""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

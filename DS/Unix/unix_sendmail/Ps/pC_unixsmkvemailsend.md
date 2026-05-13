@@ -13,8 +13,10 @@ Name = unix-sm-kv-email-send
   ]
   Fields = [
     """({time}\d\d\d\d-\d+-\d+T\d+:\d+:\d+\.\d+[^\s]+?)""""
-    """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+(\d\S+|tag_audit_log|({=host}[\w.\-]+)\s)?"""
     """\w{3}\s\d\d\s\d\d:\d\d:\d\d\s(::ffff:)?(Message|({host}[\w\-.]+))\s""",
+    """\s*({host}[\w\-.]+):\s*from="""
+    """\d\d:\d\d:\d\d\s+(::ffff:)?(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(\d\S+|tag_audit_log|({host}[\w.\-]+)))\s+"""
+    """\w+ \d{2} \d{2}:\d{2}:\d{2} (Message forwarded from )?(::ffff:)?({host}[\w.\-]+):? \S+ ({alert_id}\S+?):""",
     """(sendmail|sm-mta)\s*\[?\d+\]?[\s\-:]+({alert_id}\w+)""",
     """\s+from=<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\ssize=({bytes}\d+)""",
@@ -23,9 +25,8 @@ Name = unix-sm-kv-email-send
     """\sproto=({protocol}[^,]+)""",
     """from=({user}[\w\.\-\!\#\^\~]{1,40}\$?),""",
     """\srelay=(::ffff:)?({dest_host}[\w\-.]+)\s*\[(::ffff:)?({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*""",
-    """\s*({host}[\w\-.]+):\s*from="""
-  ]
+    """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""
+    ]
 
 
 }

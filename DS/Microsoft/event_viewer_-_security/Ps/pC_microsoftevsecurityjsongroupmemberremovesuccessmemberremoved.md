@@ -42,6 +42,9 @@ Fields = [
 """"Keywords":"({result}[^"]+)"""
 """({event_name}A member was removed from a security-enabled)"""
 """"+MemberSid"+:"+(({dest_user_sid}S-\d+-[^"]+)|({account_id}[^"]+))"""
+""""Group":[^}]+?"(Group|Account) Name"\s*:"({group_name}[^"]+)"""
+""""Group":[^}]+?"(Group|Account) Domain"\s*:"({group_domain}[^"]+)"""
+""""Group":[^}]+?"Security ID"\s*:"({group_id}[^"]+)"""
 """"TargetSid":"({group_id}[^\s"]+)"""
 """event_id"+:({event_code}\d+)"""
 ]

@@ -45,6 +45,7 @@ Fields = [
 """Target Account.+?Account Domain:\s*(?=\w)(({dest_domain}[^\s\^\r\n$\",]+)|)(\s+[^\^\r\n$])?"""
 """Logon ID:\s+(\\t)?({login_id}.+?)\s*(\\n|\\r\s\\r\s\\n)*?Target Account:"""
 """"Channel":"({channel}[^"]+)"""
+""""TenantId":"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

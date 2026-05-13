@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-xml-network-traffic-fail-5152
     """Direction:((?-i)\\+[rnt])*\s*({direction}Outbound|Inbound)"""
     """<Computer>({dest_host}[\w\-.]+)</Computer>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
     ]
 
 

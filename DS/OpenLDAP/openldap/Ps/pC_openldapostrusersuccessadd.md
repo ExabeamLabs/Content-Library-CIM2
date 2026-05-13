@@ -4,7 +4,7 @@
 Name = openldap-o-str-user-success-add
     Conditions = [ """slapd[""", """conn=""", """op=""", """ ADD """ ]
     Fields = ${openldapParserTemplates.openldap-kv-parser.Fields}[
-      """uid=({dest_user}\w+)"""
+      """(uid=({dest_user}({account_name}[^,]+))|cn=({=dest_user}({=account_name}[^,]+))),ou=(?i:(users|people|employees|staff|members|accounts|endusers|sudoers))"""
       """dn="({dest_user_dn}[^"]+)"""
     ]
   

@@ -34,8 +34,7 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """exa_json_path=$..ActionType,exa_field_name=event_name"""
        """exa_json_path=$..DeviceName,exa_field_name=host"""
        """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
-       """exa_json_path=$..InitiatingProcessAccountName,exa_field_name=operation_type"""
-       """exa_json_path=$..InitiatingProcessAccountName,exa_field_name=event_name"""
+       """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
        """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
        """exa_regex="InitiatingProcessFolderPath"+:\s*"+({file_path}({file_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
        """exa_regex="InitiatingProcessFolderPath"+:\s*"+({process_path}({process_dir}[^"]*?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
@@ -48,6 +47,8 @@ Name = microsoft-defenderep-sk4-registry-modify-advancedhunting
        """exa_json_path=$..RegistryValueData,exa_field_name=registry_details"""
        """exa_json_path=$..PreviousRegistryValueData,exa_field_name=old_registry_details"""
        """exa_json_path=$..RegistryValueType,exa_field_name=registry_details_type"""
+       """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
+       """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
     ]
 
 

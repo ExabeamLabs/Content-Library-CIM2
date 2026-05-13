@@ -1,0 +1,24 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-evfrs-xml-endpoint-notification-success-frs"
+  ParserVersion = "v1.0.0"
+  Vendor = "Microsoft"
+  Product = "Event Viewer - File Replication Service"
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  Conditions = [ """<Event xmlns=""", """</EventID>""", """</Computer>""", """<Channel>File Replication Service<""" ]
+  Fields = [
+    """<Provider Name =("|')({provider_name}[^\'"]+)("|')""",
+    """<EventID[^>]*?>({event_code}\d+)<"""
+    """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
+    """<Computer>({host}[\w\-.]+)<"""
+    """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
+    """<EventRecordID>({event_id}[^<]+)<\/EventRecordID>"""
+    """edge_fleet="({category}[^"]+)"""
+    """edge_host="({dest_host}[\w.-]+)""""
+  ]
+
+
+}
+```

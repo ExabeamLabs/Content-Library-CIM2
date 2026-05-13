@@ -23,8 +23,9 @@ Name = microsoft-evsecurity-xml-group-create-success-4759-1
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?SubjectLogonId[^<>]+?>({login_id}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({group_domain}[^<>]+?)<\Data>""",
-    """<Data Name[^<>]+?TargetUserName[^<>]+?>({group_name}[^<>]+?)</Data>"""
-    """<Level>({run_level}[^<]+)<"""
+    """<Data Name[^<>]+?TargetUserName[^<>]+?>({group_name}[^<>]+?)</Data>""",
+    """<Level>({run_level}[^<]+)<""",
+    """<Channel>({channel}[^<]+)<"""
    ]
 
 

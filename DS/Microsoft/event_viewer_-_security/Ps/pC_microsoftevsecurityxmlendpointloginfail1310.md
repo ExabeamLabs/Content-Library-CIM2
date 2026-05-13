@@ -17,7 +17,7 @@ Name = microsoft-evsecurity-xml-endpoint-login-fail-1310
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
    """status=([^:]+:)({failure_code}({result_code}[^:]+)):"""
    """Failed NTLM Authentication for user:\s+'({domain}[^\\]+)\\({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
-   """<Message>({event_name}.+?)\s{0,100}<"""
+   """<Message>({event_name}.+?)\s*<"""
    """status=([^:]+:){2}({failure_reason}.+?)\s<"""
    """<Level>({run_level}[^<]+)<"""
    """<Channel>({channel}[^<]+)<"""

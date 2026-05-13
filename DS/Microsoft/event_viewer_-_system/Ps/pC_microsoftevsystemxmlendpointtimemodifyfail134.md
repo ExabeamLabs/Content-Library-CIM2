@@ -39,6 +39,7 @@ Name = microsoft-evsystem-xml-endpoint-time-modify-fail-134
     """<Data Name\\*=('|")RuleName('|")>({rule}[^<]+)""",
     """<Data Name\\*=('|")ErrorMessage('|")>({failure_reason}[^<]+?(\(({failure_code}[^)]+?)\))?)<"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
       ]
 
 

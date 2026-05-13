@@ -32,6 +32,7 @@ xml-sysmon-activity = {
     """<Data Name\\*=('|")State('|")>({service_state}[^<]+)<""",
     """({log_name}Microsoft-Windows-Sysmon)"""    
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
    
 }
 ```

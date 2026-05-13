@@ -37,7 +37,6 @@ Name = "microsoft-evsecurity-xml-endpoint-login-success-4624-1"
   """<Keywords>({result}.+?)</Keywords>"""
   """<Data Name(\\)?=('|")ObjectName('|")>({object}[^<>]+)<"""
   """<Level>({run_level}[^<]+)<"""
-  """<Channel>({channel}[^<]+)<"""
   """Linked Logon ID(:|=)\s*(\\[nrt])*({dest_login_id}[^\s\\;]+)\s*"""
   ]
   ParserVersion = "v1.0.0"

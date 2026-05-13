@@ -13,7 +13,7 @@ Fields = [
   """<Computer>({dest_host}({host}[\w\-.]+))</Computer>""",
    """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   """<EventID>({event_code}[^<]+)</EventID>""",
-  """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*(({domain}[^\\\/<]+)[\\\/])?({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+  """<Data Name[\\\/]*=('|")SubjectUserSid('|")>\s*({user_sid}S-[^\s"<>]+)<\/Data>""",
   """<Data Name[\\\/]*=('|")SubjectUserName('|")>({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))</Data>""",
   """<Data Name[\\\/]*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+?))</Data>""",
   """<Data Name[\\\/]*=('|")SubjectLogonId('|")>({login_id}[^<]+?)</Data>""",

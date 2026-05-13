@@ -13,7 +13,7 @@ Name = unix-ad-kv-endpoint-authentication-accounting
     """\d\d:\d\d:\d\d ({dest_host}({host}[\w\-.]+))\s*(tag_audit_log(:|\s*)|audisp-syslog\[)""",
     """msg=audit\(({time}\d{10})""",
     """\saddr=(?:\?|({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^\s]+))\s""",
-    """\sacct="(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """\sacct="(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\sres=({result}[^']+)\'""",
     """\sses=({session_id}\d+)""",
     """exe="({process_path}[^"]*)"""",

@@ -17,6 +17,7 @@ Name = microsoft-evsecurity-sk4-share-delete-success-5144
   """"SubjectUserSid":"({user_sid}[^"]+)""""
   """"ShareLocalPath":"({share_path}[^"]+)""""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId":"({tenant_id}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

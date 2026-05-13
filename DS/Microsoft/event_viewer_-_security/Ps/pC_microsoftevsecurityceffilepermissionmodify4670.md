@@ -25,6 +25,7 @@ Name = microsoft-evsecurity-cef-file-permission-modify-4670
     """"Level":"({run_level}[^"]+)"""",
     """"_ResourceId":"({resource}[^"]+)""""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
   ParserVersion = v1.0.0
 

@@ -34,6 +34,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4776"
     """keywords":\["({result}[^"]+)""""
     """"severityValue":"({result}[^"]+?)\s*""""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

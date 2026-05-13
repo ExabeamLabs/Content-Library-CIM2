@@ -10,6 +10,14 @@ Name = auth0-a-json-http-session-success-sapi
   ]
   Fields = ${Auth0AAParsersTemplates.auth0-authentication-template.Fields}[
   """exa_regex=({operation_type}sapi)"""
+  """exa_json_path=$.data.details.request.method,exa_field_name=method"""
+  """exa_json_path=$.data.details.request.path,exa_field_name=uri_path"""
+  """exa_json_path=$.data.client_id,exa_field_name=object"""
+  """exa_json_path=$.data.ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+  """exa_json_path=$.data.user_agent,exa_field_name=user_agent"""
+  """exa_json_path=$.data.response.statusCode,exa_field_name=http_response_code"""
+  """exa_json_path=$.data.details.request.method,exa_field_name=operation"""
+  """exa_json_path=$.data.description,exa_field_name=description"""
   ]
     ParserVersion = "v1.0.0"
 

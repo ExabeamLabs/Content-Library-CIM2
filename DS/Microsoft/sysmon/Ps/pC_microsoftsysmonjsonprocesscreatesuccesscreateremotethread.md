@@ -26,6 +26,7 @@ Fields = [
   """exa_json_path=$.TargetImage,exa_regex=({dest_process}({dest_process_path}(({dest_process_dir}[^"]*?)[\\\/]+)?({dest_process_name}[^"\\\/]+)))""""
   """exa_json_path=$.EventID,exa_field_name=event_code"""
   """exa_json_path=$.Category,exa_field_name=event_name"""
+  """exa_json_path=$.Channel,exa_field_name=channel"""
 ]
 ParserVersion = "v1.0.0"
 

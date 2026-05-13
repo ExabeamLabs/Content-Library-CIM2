@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
   """Host":\s*"({host}[^"]+)""""
   """({time}\w{3}\s\d+\s\d\d:\d\d:\d\d\s\d\d\d\d)"""
-  """"Username":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
+  """"Username":\s*"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
   """Username":\s*"(({email_address}[^@\"\s]+@[^\s\"]*)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^",]+))""""
   """"Username":\s*\"(({email_address}[^@\"\s]+@[^\s\"]*)|((({domain}[^@\"]+)@)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^\"@]+))""""
   """IPProtocol":\s*({protocol}[^,]+),"""

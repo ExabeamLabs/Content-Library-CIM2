@@ -21,7 +21,7 @@ json-defender-atp {
      """ActionType":\s*"({operation}({action}[^"]+))""",
      """"DeviceId":"({device_id}[^"]+)"""",
      """DeviceName":\s*"({dest_host}({host}[\w\-.]+))""",
-     """"InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""",
+     """"InitiatingProcessAccountName":\s*"(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""",
      """InitiatingProcessAccountSid":\s*"({user_sid}[^"]+)""",
      """InitiatingProcessFileName":\s*"({process_name}[^"]+)"""",
      """"InitiatingProcessFolderPath":\s*"(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))""""
@@ -34,7 +34,7 @@ json-defender-atp {
      """"InitiatingProcessId":\s*({process_id}\d+)""",
      """"tenantId":\s*"({tenant_id}[^",]+)""",
      """"InitiatingProcessAccountDomain":\s*"(-|({domain}[^"]+))"""",
-     """AccountUpn":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+     """AccountUpn":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
      """SHA1":\s*"({hash_sha1}[^"]+)"""",
      """"InitiatingProcessVersionInfoInternalFileName":\s*"({service_name}[^"]+)""",
      """Description":\s*"({additional_info}[^"]+)"""",
@@ -57,7 +57,7 @@ json-defender-atp {
      """exa_json_path=$..ActionType,exa_field_name=operation"""
      """exa_json_path=$..DeviceName,exa_field_name=dest_host"""
      """exa_json_path=$..DeviceName,exa_field_name=host"""
-     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""
+     """exa_json_path=$..InitiatingProcessAccountName,exa_regex=(SYSTEM|NETWORK SERVICE|LOCAL SERVICE|Système|system|local service|-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"""
      """exa_json_path=$..InitiatingProcessAccountSid,exa_field_name=user_sid"""
      """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""
      """exa_json_path=$..InitiatingProcessFolderPath,exa_regex=^(({process_path}({process_dir}[^"]+?[\\\/]+)({process_name}[^"\\\/]+(\.exe)))|({=process_dir}[^"]+))$"""
@@ -70,7 +70,7 @@ json-defender-atp {
      """exa_regex="InitiatingProcessParentFileName":"({parent_process_path}({parent_process_dir}[^"]+?[\\\/]+)?({parent_process_name}[^"\\\/]+))""""
      """exa_json_path=$.tenantId,exa_field_name=tenant_id"""
      """exa_json_path=$..InitiatingProcessAccountDomain,exa_regex=(-|({domain}[^$"]+))$"""
-     """exa_json_path=$..InitiatingProcessAccountUpn,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+     """exa_json_path=$..InitiatingProcessAccountUpn,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
      """exa_json_path=$..InitiatingProcessSHA1,exa_field_name=hash_sha1"""
      """exa_json_path=$..InitiatingProcessVersionInfoInternalFileName,exa_field_name=service_name"""
      """exa_json_path=$..InitiatingProcessVersionInfoFileDescription,exa_field_name=additional_info"""

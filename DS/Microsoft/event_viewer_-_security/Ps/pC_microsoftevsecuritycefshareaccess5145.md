@@ -28,7 +28,7 @@ Fields = [
   """\Wcs1=.*?({access}WriteData|AppendData).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wcs1=.*?({access}delete|Delete).*?(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wad\.ShareLocalPath=(?:[\\\?]+)?(?:\s*|({share_path}({d_parent}.*?)({d_name}[^\\]+?))(\\+)?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
-  """\Wad\.RelativeTargetName =({file_dir}(?:[^"=]+)?[\\\/])?({file_name}[^=\\:"]+?(\.\s*({file_ext}[^="\\.]{1,20}?))?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
+  """\Wad\.RelativeTargetName =({file_dir}(?:[^"=]+)?[\\\/])?({file_name}[^=\\:"]+?(\.\s*({file_ext}[^="\\.]+?))?)(\s+(\w+|\w+\.\w+)=|\s*$)""",
   """\Wad\.ObjectType=({file_type}\w+)"""
   """Source Port(=|:)\s*({src_port}\d+)"""
 ]

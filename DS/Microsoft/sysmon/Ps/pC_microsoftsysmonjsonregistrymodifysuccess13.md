@@ -28,6 +28,7 @@ Name = microsoft-sysmon-json-registry-modify-success-13
     """exa_json_path=$.message,exa_field_name=additional_info""",
     """exa_json_path=$.winlog.provider_name,exa_field_name=provider_name""",
     """exa_json_path=$.winlog.task,exa_field_name=task_name"""
+    """exa_json_path=$.channel,exa_field_name=channel"""
   ]
   ParserVersion = v1.0.0
 

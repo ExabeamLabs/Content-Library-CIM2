@@ -11,7 +11,7 @@ Conditions = [
 ]
 Fields = [
 """"timestamp":"({time}\d{13})"""",
-""""event_simpleName":"({event_code}[^"]+)"""",
+""""event_simpleName":\s*"({operation}({event_code}[^"]+))"""",
 """"aid":"({aid}[^"]+)"""",
 """"cid":"({cid}[^"]+)"""",
 """"event_platform":"({os}[^"]+)"""",
@@ -19,9 +19,12 @@ Fields = [
 """"ContextProcessId":"({process_id}[^"]+)"""",
 """"aip":"({aip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))"""",
 """"name":"({event_name}[^"]+)"""",
+""""LocalAddressIP4":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """'Content-Type:\s*({web_content_type}[^']+)'"""
+"""({os}Linux)"""
 """exa_json_path=$.timestamp,exa_field_name=time""",
 """exa_json_path=$.event_simpleName,exa_field_name=event_code""",
+"""exa_json_path=$.event_simpleName,exa_field_name=operation""",
 """exa_json_path=$.aid,exa_field_name=aid""",
 """exa_json_path=$.cid,exa_field_name=cid""",
 """exa_json_path=$.event_platform,exa_field_name=os""",
@@ -32,6 +35,8 @@ Fields = [
 """exa_json_path=$.ScriptContentName,exa_field_name=command_invocation"""
 """exa_json_path=$.ScriptContent,exa_field_name=scriptblock_text"""
 """exa_regex='Content-Type:\s*({web_content_type}[^']+)'"""
+"""exa_regex="LocalAddressIP4":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
+"""exa_regex=({os}Linux)"""
 ]
 ParserVersion = "v1.0.0"
 

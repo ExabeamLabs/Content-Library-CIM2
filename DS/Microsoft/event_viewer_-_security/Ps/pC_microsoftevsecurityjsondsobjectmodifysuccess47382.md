@@ -16,6 +16,7 @@ Name = "microsoft-evsecurity-json-ds-object-modify-success-4738-2"
     """"SubjectLogonId":"({login_id}[^"]+)"""",
     """"Category"+:"+({category}[^"]+)"""",
     """"TargetSid":"({dest_user_sid}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

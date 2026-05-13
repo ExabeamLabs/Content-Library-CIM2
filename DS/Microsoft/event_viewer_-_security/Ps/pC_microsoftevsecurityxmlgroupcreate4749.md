@@ -21,6 +21,7 @@ Name = microsoft-evsecurity-xml-group-create-4749
     """<Data Name =('|")TargetDomainName('|")>({group_domain}[^<>]+?)</Data>""",
     """<Data Name =('|")TargetUserName('|")>({group_name}[^<>]+?)</Data>""",
     """<Data Name =('|")TargetSid('|")>({group_id}[^<>]+?)<\/Data>"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

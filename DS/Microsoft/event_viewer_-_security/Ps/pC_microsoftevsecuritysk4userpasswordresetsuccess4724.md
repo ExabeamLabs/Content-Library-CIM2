@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-sk4-user-password-reset-success-4724
     """"TargetSid":"({dest_user_sid}[^"]+)"""",
     """"TargetUserName":"({dest_user}[^"]+)""""
     """"Channel":"({channel}[^"]+)"""
+    """"TenantId":"({tenant_id}[^"]+)"""
   ]
 
 

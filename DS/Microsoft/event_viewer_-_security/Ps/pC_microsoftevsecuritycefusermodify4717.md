@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-cef-user-modify-4717
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({dest_domain}[^<>]+?)</Data>""",
     """<Data Name[^<>]+?AccessGranted[^<>]+?>({access_type}[^<>]+?)</Data>""",
     """"Computer":"({host}[^"]+)"""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 json-xml-object-access = {
@@ -42,6 +43,7 @@ json-xml-object-access = {
     """<Data Name[^<>]+?ReturnCode[^<>]+?>({return_code}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

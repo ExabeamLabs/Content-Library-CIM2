@@ -12,7 +12,7 @@ Name = "symantec-wss-str-endpoint-login-fail-auth-1"
     """({host}[\w.-]+) ProxySG:"""
     """({event_name}Authentication failed)"""
     """({dest_host}[\w.-]+) ProxySG:"""
-    """ user '(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))' \(domain (\(null\)|({domain}[^\)]+))\)"""
+    """ user '(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))' \(domain (\(null\)|({domain}[^\)]+))\)"""
     """symbol: '({failure_reason}[^']+)"""
   ]
   ParserVersion = "v1.0.0"

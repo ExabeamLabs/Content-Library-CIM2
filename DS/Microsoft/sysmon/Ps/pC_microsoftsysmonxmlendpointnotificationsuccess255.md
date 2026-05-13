@@ -15,6 +15,7 @@ Fields = [
   """({log_name}Microsoft-Windows-Sysmon)"""
   """<Data Name\\*=('|")Description('|")>({additional_info}[^<]+?)\s*(\\n)?</Data>"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

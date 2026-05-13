@@ -35,6 +35,7 @@ microsoft-sentinel-app-notificatation-json = {
       """exa_json_path=$.identity.claims.uti,exa_field_name=uti""",
       """exa_json_path=$.identity.claims.ver,exa_field_name=version""",
       """exa_json_path=$.authorization.scope,exa_field_name=authorization_scope"""
+      """exa_json_path=$.tenantId,exa_field_name=tenant_id""",
     microsoft-sentinel-app-notificatation-json = {
     Vendor = Microsoft
     Product =  Microsoft Sentinel
@@ -64,6 +65,7 @@ microsoft-sentinel-app-notificatation-json = {
       """exa_json_path=$.identity.claims.uti,exa_field_name=uti""",
       """exa_json_path=$.identity.claims.ver,exa_field_name=version""",
       """exa_json_path=$.authorization.scope,exa_field_name=authorization_scope"""
+      """exa_json_path=$.tenantId,exa_field_name=tenant_id""",
     ]
   }
 }

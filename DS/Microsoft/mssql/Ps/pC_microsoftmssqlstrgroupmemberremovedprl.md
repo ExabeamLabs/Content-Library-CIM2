@@ -33,6 +33,7 @@ Name = microsoft-mssql-str-group-member-remove-dprl
     """[rnt\s]+server_principal_sid:({user_sid}[^\\\s]+)""",
     """target_server_principal_sid:({dest_user_sid}[^\\\s]+)""",
     """statement:.+?DROP MEMBER \[(({account_domain}[^\\]+)?\\)?({account_id}[^\]]+)\]"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
   ParserVersion = "v1.0.0"
 

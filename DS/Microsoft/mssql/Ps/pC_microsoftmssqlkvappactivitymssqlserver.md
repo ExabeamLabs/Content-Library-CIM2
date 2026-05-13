@@ -9,6 +9,7 @@ Name = microsoft-mssql-kv-app-activity-mssqlserver
     """[rnt\\]+action_id:({db_operation}[^\\\s]+)"""
     """database_principal_name:({db_user}[^\\\s]+)"""
     """server_principal_name:((NT SERVICE|NT AUTHORITY|NT Service|({domain}[^\\]+))?\\\\)?(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[rnt\\]*server_principal_sid:"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 microsoft-sql-events {
@@ -58,6 +59,8 @@ logrhythm-o365-app-activity = {
     """USERAGENT=\s*(|({user_agent}[^\n]+?))\s*(\w+=|$)""",
     """ITEMTYPE=({file_type}[^=]+?)\s+\w+=""",
     """RESULTCODE=({result}[^=]+?)\s+\w+="""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel"+:"+({channel}[^"]+)""""
   
 }
 ```

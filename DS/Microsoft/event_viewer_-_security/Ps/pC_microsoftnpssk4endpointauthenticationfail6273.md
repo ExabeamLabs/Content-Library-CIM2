@@ -18,6 +18,7 @@ Name = microsoft-nps-sk4-endpoint-authentication-fail-6273
     """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """NASIdentifier":"(({location}[\w.-]+))""""
     """"Channel":"({channel}[^"]+)"""
+    """"TenantId":"({tenant_id}[^"]+)"""
   ]
 
 json-windows-events-3 = {
@@ -33,6 +34,7 @@ json-windows-events-3 = {
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
     """Channel"?(:|=)"?({channel}[^"<]+)"""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

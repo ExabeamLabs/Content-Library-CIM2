@@ -12,7 +12,7 @@ azure-classicblob-json = {
     ExtractionType = json
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Fields = [
-      """exa_json_path=$..time,exa_field_name=time""",
+      """exa_regex="time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)""",
       """exa_json_path=$..resourceId,exa_field_name=resource""",
       """exa_json_path=$..category,exa_field_name=operation_type""",
       """exa_json_path=$..category,exa_field_name=category""",
@@ -30,8 +30,8 @@ azure-classicblob-json = {
       """exa_json_path=$..accountName,exa_field_name=storage_account""", 
       """exa_json_path=$..userAgentHeader,exa_field_name=user_agent""", 
       """exa_json_path=$..lastModifiedTime,exa_field_name=file_modify_time""", 
-      """exa_json_path=$..requestBodySize,exa_field_name=bytes_in""",
-      """exa_json_path=$..responseBodySize,exa_field_name=bytes_out""",
+      """exa_json_path=$..requestBodySize,exa_regex=({bytes_in}\d+)""",
+      """exa_json_path=$..responseBodySize,exa_regex=({bytes_out}\d+)""",
       """exa_json_path=$..uri,exa_field_name=file_path""",
       """exa_json_path=$..uri,exa_regex=({url}({file_path}[^"]+\\/({file_name}[^\\?"]+))[^"]*|[^"]+)""",
       """exa_json_path=$..protocol,exa_field_name=protocol""",
@@ -69,7 +69,7 @@ azure-classicblob-json = {
     ExtractionType = json
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
     Fields = [
-      """exa_json_path=$..time,exa_field_name=time""",
+      """exa_regex="time":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\d\dZ)""",
       """exa_json_path=$..resourceId,exa_field_name=resource""",
       """exa_json_path=$..category,exa_field_name=operation_type""",
       """exa_json_path=$..category,exa_field_name=category""",
@@ -87,8 +87,8 @@ azure-classicblob-json = {
       """exa_json_path=$..accountName,exa_field_name=storage_account""", 
       """exa_json_path=$..userAgentHeader,exa_field_name=user_agent""", 
       """exa_json_path=$..lastModifiedTime,exa_field_name=file_modify_time""", 
-      """exa_json_path=$..requestBodySize,exa_field_name=bytes_in""",
-      """exa_json_path=$..responseBodySize,exa_field_name=bytes_out""",
+      """exa_json_path=$..requestBodySize,exa_regex=({bytes_in}\d+)""",
+      """exa_json_path=$..responseBodySize,exa_regex=({bytes_out}\d+)""",
       """exa_json_path=$..uri,exa_field_name=file_path""",
       """exa_json_path=$..uri,exa_regex=({url}({file_path}[^"]+\\/({file_name}[^\\?"]+))[^"]*|[^"]+)""",
       """exa_json_path=$..protocol,exa_field_name=protocol""",

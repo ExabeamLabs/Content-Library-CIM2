@@ -4,13 +4,15 @@
 Name = "unix-unix-str-endpoint-login-fail-unablesshd"
   Vendor = "Unix"
   Product = "Unix"
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ","MMM dd HH:mm:ss","MMM dd HH:mm:ss yyyy", "MMM d HH:mm:ss yyyy", "MMM  d HH:mm:ss yyyy","yyyy-MM-dd HH:mm:ss"]
   Conditions = [
-    """ sshd["""
-    """]: Unable to negotiate """
+    """ sshd"""
+    """ Unable to negotiate """
   ]
   Fields = [
-    """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s+"""
+    """\w+\s+\d+\s+\d+:\d+:\d+\s+({host}(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+)))\s+sshd"""
+    """(\w+\s+\d+\s\d\d:\d\d:\d\d)?\s*(::ffff:)?({host}[\w.-]+)? sshd\["""
+    """({time}\w+\s+\d+\s+\d\d:\d\d:\d\d \d\d\d\d)\s(({host_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({host}[\w\-\.]+))(\sAP:({=host}[\w.-]+)\s+\<[^>]+\>)?\ssshd\["""
     """Unable to negotiate with (({src_ip}\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3})|({src_host}[^\s]+))"""
     """ port ({src_port}\d+)(:\s+)?({failure_reason}.+?)\.\s"""
     """\s+({process_name}\S+)\[({process_id}\d+)\]\:\s*"""

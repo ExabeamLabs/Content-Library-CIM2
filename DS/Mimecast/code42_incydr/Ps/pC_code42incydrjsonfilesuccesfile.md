@@ -11,7 +11,7 @@ Name = code42-incydr-json-file-succes-file
   Fields = [
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{3})?Z)""",
     """"action":"({event_name}[^"]+)"""",
-    """"user":\{"email":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"user":\{"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"file":\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"""",
     """"file":\{.*?"directory":"({file_dir}[^"]+)"""",
     """"file":\{.*?"originalDirectory":"({src_file_dir}[^"]+)"""",
@@ -37,19 +37,19 @@ Name = code42-incydr-json-file-succes-file
     """"file":\{.*?"owner":"([^\\]+\\+)?({file_owner}[^"]+)"""",
     """"file":\{.*?"url":"({file_url}[^"]+)"""",
     """"process":\{.*?"executable":"({process_path}[^"]+)"""",
-    """"destination":\{.*?"user":\{.*?"email":\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"destination":\{.*?"user":\{.*?"email":\[?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"destination":\{.*?"category":"({dest_group}[^"]+)"""",
     """"subject":"({email_subject}[^"]+)""""
     """"email":\{"sender":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """"email":\{"recipients":\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"+\]"""
     """"file":\{"name":"({email_attachment}[^"]+)".*?"email":\{"sender":""""
-    """"repositoryEmail":"({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""""
+    """"repositoryEmail":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""""
     """"repositoryUri":"({object}[^"]*?\/?({repository_name}[^"\/]+))""""
     """"md5":"({hash_md5}[^"]+)""""
     """"sha256":"({hash_sha256}[^"]+)""""
     """exa_json_path=$..@timestamp,exa_field_name=time""",
     """exa_json_path=$..event.action,exa_field_name=event_name""",
-    """exa_json_path=$..user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """exa_json_path=$..user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """exa_json_path=$..file,exa_regex=\{"name":"({file_name}[^"]+?(\.({file_ext}[^"\.]+))?)"""",
     """exa_json_path=$..file.directory,exa_field_name=file_dir""",
     """exa_json_path=$..file.originalDirectory,exa_field_name=src_file_dir"""
@@ -76,7 +76,7 @@ Name = code42-incydr-json-file-succes-file
     """exa_json_path=$..file,exa_regex="owner":"([^\\]+\\+)?({file_owner}[^"]+)"""",
     """exa_json_path=$..file.url,exa_field_name=file_url""",
     """exa_json_path=$..process.executable,exa_field_name=process_path""",
-    """exa_json_path=$..destination.user.email,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """exa_json_path=$..destination.user.email,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """exa_json_path=$..destination.category,exa_field_name=dest_group""",
   ]
 

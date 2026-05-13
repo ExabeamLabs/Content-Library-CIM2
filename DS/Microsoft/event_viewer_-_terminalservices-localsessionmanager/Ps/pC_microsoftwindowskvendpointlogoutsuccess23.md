@@ -16,6 +16,9 @@ Name = microsoft-windows-kv-endpoint-logout-success-23
     """"Computer"+:"+({host}[^"]+)""",
     """exa_json_path=$.log.jsonPayload.['subject.account_name'],exa_regex=(-|({user_upn}({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))|({=user}[^"]+))""",
     """exa_json_path=$.log.jsonPayload.Computer,exa_field_name=host"""
+    """exa_json_path=$.channel,exa_field_name=channel"""
+    """exa_regex="Channel"+:"+({channel}[^"]+)""""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 windows-events-2 = {

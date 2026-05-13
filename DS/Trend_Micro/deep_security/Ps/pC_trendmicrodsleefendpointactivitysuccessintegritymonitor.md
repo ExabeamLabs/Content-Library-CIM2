@@ -5,7 +5,7 @@ Name = trendmicro-ds-leef-endpoint-activity-success-integritymonitor
     Vendor = Trend Micro
     Product = Deep Security
     TimeFormat = ["yyyy-MM-dd HH:mm:ss","yyyy-MM-dd'T'HH:mm:ssZ"]
-    Conditions = [ """LEEF:""", """|Trend Micro|Deep Security Agent|""", """cat=Integrity Monitor""" ]
+    Conditions = [ """LEEF:""", """|Trend""", """|Deep Security Agent|""", """cat=Integrity Monitor""" ]
     Fields = [
       """\Wcat=({alert_type}.+?)\s*(\w+=|$)""",
       """\Wname=({event_name}({alert_name}.+?))\s*(\w+=|$)""",

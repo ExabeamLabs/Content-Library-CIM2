@@ -27,6 +27,7 @@ Fields = [
     """"operatingSystem":"({os}[^"]+)""",
     """"browser":"({browser}[^"]+)""",
     """login-({result}success)""",
+    """"resourceTenantId":\s*"({tenant_id}[^"]+)""""
   ]
 
 

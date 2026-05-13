@@ -24,6 +24,7 @@ Fields = [
 """<EventData>.*?Image:\s*({path}.+?)\s*TargetFilename:"""
 """TargetFilename:\s*({file_path}({file_dir}.*?)({file_name}[^\\.]+(\.({file_ext}[^\\.]+?))?))\s*CreationUtcTime:"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -21,6 +21,7 @@ Fields = [
   """"PrivilegeList":"(-|({privileges}[^"]*))""",
   """"Keywords":"({result}[^\"]+)"""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

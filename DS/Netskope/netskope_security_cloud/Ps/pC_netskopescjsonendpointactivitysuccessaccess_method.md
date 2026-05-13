@@ -21,7 +21,7 @@ Name = netskope-sc-json-endpoint-activity-success-access_method
     """exa_json_path=$.process_path,exa_regex=({process_path}({process_dir}[^"]*[\\\/]+)({process_name}[^\\\/"]+?))("|$)"""
     """exa_json_path=$.process_name,exa_field_name=process_name"""
     """exa_json_path=$.timestamp,exa_field_name=time"""
-    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.record_type,exa_field_name=record_type"""
     """exa_json_path=$.file_type,exa_field_name=file_type"""
     """exa_json_path=$.activity,exa_field_name=operation"""

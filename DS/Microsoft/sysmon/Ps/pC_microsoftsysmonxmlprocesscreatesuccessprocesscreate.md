@@ -38,6 +38,7 @@ Fields = [
     """<Data Name =('|")IntegrityLevel('|")>({process_integrity}[^<]+)<""",
     """<Data Name =('|")LogonId('|")>({login_id}[^<]+)<""",
     """<Data Name =('|")Description('|")>({additional_info}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -16,6 +16,7 @@ Name = microsoft-mssql-json-app-login-fail-loginfailedforuser-1
     """exa_json_path=$.event.outcome,exa_field_name=result""",
     """exa_json_path=$.message,exa_regex=Reason:\s*({failure_reason}[^"\.\[]+)""",
     """exa_json_path=$.message,exa_regex=({event_name}Login failed for user) '(({domain}[^\\:']+?)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)'""",
+    """exa_json_path=$.channel,exa_field_name=channel"""
   ]
   ParserVersion = "v1.0.0"
 

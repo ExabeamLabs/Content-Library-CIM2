@@ -22,6 +22,7 @@ Name = microsoft-evsecurity-json-process-create-success-4688
       """"NewProcessName":"({process_path}({process_dir}[^"]*?[\\\/]+)?({process_name}[^"\\\/]+))"""",
       """"SubjectLogonId":"({login_id}[^"]+)""",
       """"Channel":"({channel}[^"]+)"""
+      """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
     ]
   
 

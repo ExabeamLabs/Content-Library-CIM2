@@ -10,12 +10,14 @@ Name = microsoft-azuread-xml-user-password-modify-fail-30002
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)""",
     """<EventID>({event_code}30002)</EventID>""",
     """UserName:\s*({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """<Data Name\\*=('|")Data1('|")>({user}[\w\.\-\!\#\^\~]{1,40}\$?)</Data>""",
+    """<Data Name\\*=('|")Data2('|")>({full_name}[^<]+)</Data>""",
   ]
 
 account-password-activity = {
   Vendor = Microsoft
   Product = Event Viewer - AzureADPasswordProtection-DCAgent
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSZ" ]
   Fields = [
     """<TimeCreated SystemTime\\*=('|")({time}\d\d\d\d-\d\d\-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
     """<Message>({event_name}[^.<]+)""",

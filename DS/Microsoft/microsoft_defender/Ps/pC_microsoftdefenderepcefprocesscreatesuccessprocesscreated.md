@@ -4,7 +4,7 @@
 Name = "microsoft-defenderep-cef-process-create-success-processcreated"
 Vendor = "Microsoft"
 Product = "Microsoft Defender"
-TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ"]
 Conditions = [
 """AdvancedHunting-DeviceProcessEvents"""
 """ActionType"""
@@ -12,6 +12,7 @@ Conditions = [
 ]
 Fields = [
 """time"+:\s*"+({time}[^"]+)""""
+""""Timestamp":"({time}[^"]+)""""
 """operationName\\?"+:\s*\\?"+({operation}[^"]+?)\\?""""
 """"category\\?"+:\s*\\?"+({event_name}({category}[^"]+?))\\?""""
 """RemoteIP"+:\s*"+({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
@@ -21,7 +22,7 @@ Fields = [
 """ActionType\\?"+:\s*\\?"+({result}[^"]+?)\\?""""
 """RemoteIPType"+:\s*"+(null|({direction}[^"]+))"""
 """DeviceName\\?"+:\s*\\?"+({dest_host}[\w\-.]+?)\\?""""
-"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~.])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
+"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
 """"ProcessIntegrityLevel\\?"+:\s*\\?"+({process_integrity}[^"]+?)\\?""""
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
 """InitiatingProcessFileName\\?"+:\s*\\?"+({parent_process_name}[^"]+?)\\?",""""
@@ -43,7 +44,8 @@ Fields = [
 """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
 """"AccountUpn":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""
-""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+-\/.=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"+"""
+""""AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/.=?^_`~-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"+"""
+""""tenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

@@ -10,6 +10,7 @@ Name = microsoft-sysmon-xml-registry-12
     """<Data Name\\*=('|")EventType('|")>({operation}[^<]+)<""",
     """<Computer>({dest_host}({host}[\w\-.]+?))</Computer>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 xml-sysmon-activity = {
@@ -33,6 +34,7 @@ xml-sysmon-activity = {
     """<Data Name\\*=('|")State('|")>({service_state}[^<]+)<""",
     """({log_name}Microsoft-Windows-Sysmon)"""    
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
    
 }
 ```

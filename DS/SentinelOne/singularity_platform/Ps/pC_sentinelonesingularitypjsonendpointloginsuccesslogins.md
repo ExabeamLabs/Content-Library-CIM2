@@ -15,7 +15,7 @@ Name = sentinelone-singularityp-json-endpoint-login-success-logins
     """exa_json_path=$.['event.id'],exa_field_name=event_id""",
     """exa_regex=event.name":"({operation_type}[^"]+)""",
     """exa_json_path=$.['event.login.userName'],exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
-    """exa_regex=userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_regex=userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """event.login.failureReason":"({failure_reason}[^"]+)"""
     """exa_json_path=$.['event.login.failureReason'],exa_field_name=failure_reason"""
     """exa_json_path=$.['event.login.loginIsSuccessful'],exa_field_name=result"""
@@ -55,6 +55,8 @@ json-sentinelone-edr-events = {
       """exa_json_path=$..['account.id'],exa_field_name=account_id""",
       """exa_json_path=$..['src.process.user'],exa_regex=^((({domain}[^\\"$]+))\\+)?(({user}Système|LOCAL SERVICE|NETWORK SERVICE|[\w\.\-\!\#\^\~]{1,40}\$?))($|")""",
       """exa_json_path=$..['tgt.process.user'],exa_regex=((({dest_domain}[^\\"$]+))\\+)?((({dest_user}Système|LOCAL SERVICE|NETWORK SERVICE|[^\\"$\s]+?)|({dest_user_full_name}[^"\s$]+\s[^"\s$]+)))($|")"""
+      """"os.name":"({os}macOS)""""
+      """exa_regex="os.name":"({os}macOS)""""
     
 }
 ```

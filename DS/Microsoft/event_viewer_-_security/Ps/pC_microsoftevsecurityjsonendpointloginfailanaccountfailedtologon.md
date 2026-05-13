@@ -22,7 +22,7 @@ Fields = [
 """"Logon_Type":"({login_type}\d+)"""
 """"ObjectID":"({auth_package}[^"]+)"""
 """"Status":"({failure_reason}[^"]+)"""
-""""Sub_Status":"({result_code}[^"]+)"""
+""""Sub_Status":"({result_reason}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

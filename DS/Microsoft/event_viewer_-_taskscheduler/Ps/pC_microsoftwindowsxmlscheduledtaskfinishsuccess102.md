@@ -14,6 +14,7 @@ Name = microsoft-windows-xml-scheduled-task-finish-success-102
     """<Keywords>({result}[^<]+)<\/Keywords>""",
     """<Task>({task_name}[^<]+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

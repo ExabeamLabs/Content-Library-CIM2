@@ -19,6 +19,7 @@ Name = microsoft-windows-xml-app-activity-success-10036
     """<EventData>({additional_info}.+?)<\/EventData>"""
     """Event Name:\s*({event_name}.+?)\s+\w+:"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

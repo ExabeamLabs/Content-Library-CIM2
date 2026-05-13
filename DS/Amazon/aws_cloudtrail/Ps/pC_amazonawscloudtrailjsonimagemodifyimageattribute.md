@@ -8,7 +8,8 @@ Name = amazon-awscloudtrail-json-image-modify-imageattribute
   # TimeFormat = """yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"""
   Conditions = [ """AwsApiCall""", """"eventName":""", """"ModifyImageAttribute"""" ] 
   Fields = ${AwsParserTemplates.aws-cloudtrail-json.Fields}[
-  """exa_json_path=$.requestParameters.launchPermission.add.items,exa_field_name=added_users""",
+  """exa_json_path=$.requestParameters.launchPermission.add.items[*].userId,exa_field_name=added_users""",
+  """exa_json_path=$.requestParameters.launchPermission.add.items[*].group,exa_field_name=added_users""",
   """exa_json_path=$.requestParameters.launchPermission.remove.items,exa_field_name=removed_users""",
   """exa_json_path=$.requestParameters.imageId,exa_field_name=resource_id""",
   """exa_json_path=$..imageId,exa_field_name=image_id""",

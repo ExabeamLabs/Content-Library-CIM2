@@ -12,7 +12,7 @@ Name = netskope-sc-json-app-activity-appactivity
     """exa_json_path=$.status,exa_field_name=result"""
 # device_classification_status is removed
 # user_groups is removed
-    """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 # user_source is removed
     """exa_json_path=$.device_id,exa_field_name=device_id"""
     """exa_json_path=$.client_version,exa_field_name=client_version"""

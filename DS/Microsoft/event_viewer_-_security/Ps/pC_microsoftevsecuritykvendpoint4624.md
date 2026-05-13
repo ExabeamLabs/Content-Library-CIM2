@@ -23,7 +23,7 @@ Name = microsoft-evsecurity-kv-endpoint-4624
       """Key Length:\s*({key_length}\d+)"""
       """\sNetwork Account Name:\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+)"""
     ]
-  
+
 
 }
 ```

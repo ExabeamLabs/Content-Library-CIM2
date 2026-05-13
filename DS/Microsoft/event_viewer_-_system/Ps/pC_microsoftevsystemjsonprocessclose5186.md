@@ -18,6 +18,7 @@ Name = microsoft-evsystem-json-process-close-5186
      """ProcessID":\s*"({process_id}[^"]+)""",
      """EventType":\s*"({event_category}[^"]+)""",
      """Severity":\s*"({severity}[^"]+)""""
+     """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 

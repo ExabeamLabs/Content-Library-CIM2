@@ -39,6 +39,7 @@ cef-defender-atp-2 = {
        """InitiatingProcessAccountSid"+:\s*"+({user_sid}[^"]+)""",
        """InitiatingProcessFileName"+:\s*"+({process_name}[^"]+)""",
        """"InitiatingProcessFolderPath":\s*"({process_path}(({process_dir}[^"]+?)[\\\/]+)?({process_name}[^"\\\/]+))""""
+       """"tenantId"\s*:\s*"({tenant_id}[^"]+)"""
      
 }
 ```

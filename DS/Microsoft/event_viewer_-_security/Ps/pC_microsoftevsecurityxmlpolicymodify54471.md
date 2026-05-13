@@ -22,6 +22,8 @@ Name = microsoft-evsecurity-xml-policy-modify-5447-1
 # filter_name is removed
     """<Data Name\\*=('|")LayerName('|")>({layer_name}[^<]+)<""",
     """<Level>({run_level}[^<]+)<"""
+    """"TenantId":"({tenant_id}[^"]+)"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

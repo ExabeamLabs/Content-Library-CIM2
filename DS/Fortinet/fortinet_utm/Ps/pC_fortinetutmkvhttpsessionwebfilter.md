@@ -41,7 +41,7 @@ Name = fortinet-utm-kv-http-session-webfilter
     """cat=({category_id}\d+)""",
     """method="({method}[^"]+)"""",
     """\Wtz="?({tz}[+-]\d+)"""
-    """direction="*({direction}[^="\s]+?)"*\s*\w+="""
+    """\sdirection="*({direction}[^="\s]+?)"*\s*\w+="""
     """url="({url}[^"]+)""""
     """\Wprofile="*({profile}[^"\s]+)"*(\s|")"""
   ]

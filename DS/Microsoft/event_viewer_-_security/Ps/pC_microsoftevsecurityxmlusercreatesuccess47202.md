@@ -23,6 +23,7 @@ Name = "microsoft-evsecurity-xml-user-create-success-4720-2"
 """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)<""",
 """({event_name}A user account was created)"""
 """<Level>({run_level}[^<]+)<"""
+"""<Channel>({channel}[^<]+)<"""
   ]
 
 

@@ -4,7 +4,7 @@ Product: BloxOne DDI
 --------------------
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|  271  |  104   |         52         |       9        |    5    |
+|  271  |  104   |         52         |       9        |    6    |
 
 |    Use-Case    | Activity Types/Parsers    | MITRE ATT&CK® TTP    | Content    |
 |:----:| ---- | ---- | ---- |

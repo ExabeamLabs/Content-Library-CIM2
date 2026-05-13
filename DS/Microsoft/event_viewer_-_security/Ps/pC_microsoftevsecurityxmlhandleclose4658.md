@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-handle-close-4658
     """<Data Name\\*=('|")ProcessName('|")>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
     """<Data Name\\*=('|")HandleId('|")>({object_id}[^<>]+)</Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

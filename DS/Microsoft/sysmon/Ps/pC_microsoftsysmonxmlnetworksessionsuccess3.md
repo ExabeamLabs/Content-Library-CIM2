@@ -37,6 +37,7 @@ Name = microsoft-sysmon-xml-network-session-success-3
     """<EventData>.*?<Data Name\\*=('|")DestinationHostname('|")>(-|({dest_host}[\w\-.]+))</Data>""",
     """<EventData>.*?<Data Name\\*=('|")DestinationPort('|")>({dest_port}\d+)""",
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
  ]
 
 

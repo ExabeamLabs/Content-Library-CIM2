@@ -11,6 +11,7 @@ Name = microsoft-evsecurity-xml-group-member-list-4799
     """<Data Name[^<>]+?SubjectDomainName[^<>]+?>({src_domain}({domain}[^<>]+?))</Data>""",
     """<Data Name[^<>]+?TargetDomainName[^<>]+?>({dest_domain}[^<>]+?)</Data>""",
     """"Computer":"({host}[^"]+)"""
+    """"TenantId":"({tenant_id}[^"]+)"""
   ]
 
 json-xml-object-access = {
@@ -42,6 +43,7 @@ json-xml-object-access = {
     """<Data Name[^<>]+?ReturnCode[^<>]+?>({return_code}[^<>]+?)</Data>""",
     """<Level>({run_level}[^<]+)<"""
     """"Channel":"({channel}[^"]+)""""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

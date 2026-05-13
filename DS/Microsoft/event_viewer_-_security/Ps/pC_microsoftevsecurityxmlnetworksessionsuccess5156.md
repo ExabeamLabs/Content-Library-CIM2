@@ -28,6 +28,7 @@ Name = microsoft-evsecurity-xml-network-session-success-5156
     """<Computer>({dest_host}[\w\-.]+)</Computer>[^$]+?Direction:((?-i)\\+[rnt])*\s*({direction}Inbound)""",
     """Layer Name:\s*({layer_name}[^:]+?)(\\[rn]|\s)"""
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

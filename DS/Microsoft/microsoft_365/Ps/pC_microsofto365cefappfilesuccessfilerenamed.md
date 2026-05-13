@@ -70,11 +70,14 @@ cef-microsoft-app-activity = {
     """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
     """"Application":\s*"({app}[^"]+)"""
-    """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"type":\s*"User","userPrincipalName":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"app"+:[^\]]+?"+displayName"+:"+({app}[^,"]+)"""
     """appId":"({app_id}[^"]+)""""
     """"SiteUrl":"({url}[^"]+)""""
     """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
+    """<Channel>({channel}[^<]+)<"""
+    """"Channel"+:"+({channel}[^"]+)""""
+    """Channel="({channel}[^"]+)"""
  
 }
 ```

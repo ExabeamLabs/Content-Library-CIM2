@@ -20,6 +20,7 @@ Name = microsoft-windows-json-user-lock-success-4740-2
     """TargetUserName\\?"+:\\?"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """TargetDomainName\\?"+:\\?"({src_host}[^\s\\]+)\\?"""",
     """"message\\*":\\*"({event_name}A user account was locked out)"""
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 json-windows-events-2-aa = {

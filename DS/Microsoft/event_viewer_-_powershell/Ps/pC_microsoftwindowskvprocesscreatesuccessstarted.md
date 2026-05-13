@@ -24,6 +24,8 @@ Name = microsoft-windows-kv-process-create-success-started
     """\sComputerName =(|({dest_host}({host}[\w\-.]+?)))(\s+\w+=|\s*$)"""
     """\sMessage=({event_name}\S+)"""
     """\sEventCode=({event_code}\d+)"""
+    """"Channel"+:"+({channel}[^"]+)""""
+    """Channel="({channel}[^"]+)"""
 ]
 
 

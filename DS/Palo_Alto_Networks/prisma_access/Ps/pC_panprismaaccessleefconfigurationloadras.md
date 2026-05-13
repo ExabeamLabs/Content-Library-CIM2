@@ -26,7 +26,7 @@ leef-pan-events = {
     """\ssrcPort=({src_port}\d+)""",
     """\sdstPort=({dest_port}\d+)""",
     """\sRule=({rule}[^=]+?)\s\w+=""",
-    """usrName =(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
+    """usrName =(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-]{1,40}\$?))""",
     """URLCategoryList=({category}[^=,]+?)(,[^=]+?)?\s\w+=""",
     """URLCategory=({category}[^=]+?)\s\w+=""",
     """DirectionOfAttack=({direction}[^=]+?)\s\w+=""",

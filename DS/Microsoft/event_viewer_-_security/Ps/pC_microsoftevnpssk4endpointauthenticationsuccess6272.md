@@ -34,6 +34,7 @@ json-windows-events-3 = {
     """"IpPort":"({src_port}\d{1,5})"""
     """Source Port(=|:)\s*({src_port}\d+)"""
     """Channel"?(:|=)"?({channel}[^"<]+)"""
+    """"TenantId"\s*:\s*"({tenant_id}[^"]+)""""
   
 }
 ```

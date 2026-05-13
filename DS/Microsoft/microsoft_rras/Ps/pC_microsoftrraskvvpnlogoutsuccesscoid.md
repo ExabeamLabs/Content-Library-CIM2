@@ -14,6 +14,7 @@ Conditions = [
 Fields = [
   """CoID=\{({session_id}[^\{\}]+?)\}"""
   """The user with ip address ({src_translated_ip}[a-fA-F\d.:]+)"""
+  """"Channel"+:"+({channel}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"
 

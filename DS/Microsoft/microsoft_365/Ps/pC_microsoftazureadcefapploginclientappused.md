@@ -24,7 +24,7 @@ Fields = [
 """\"failureReason\":\"({failure_reason}[^\"]+)"""
 """"userDisplayName":"\{?(On-Premises Directory Synchronization Service Account|({full_name}({first_name}[^\s"]+?)\s+({last_name}[^"\(\),\-]+)))(\s+[^"]*?"|")"""
 """\"userDisplayName\":\"({full_name}({last_name}[^\",\s]+)\s*,\s*({first_name}[^\",]+?))\s*(\(\w+\))?\""""
-"""\"userPrincipalName\":\"(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))"""
+"""\"userPrincipalName\":\"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^"]+))"""
 """\"userPrincipalName\":\"[^@\s]*?@([\.\w+]+\.)?({email_domain}[^\.\s\"]+\.(?:com|net|info|edu|org|gov|co|jp|ru|de|ir|it|in|fr|info|pl|nl|es|gr|cz|eu|tv|me|jp|ca|cn|uk|my|cc|id|us|nz|biz|club|io|gg|fi|au|st|tw|asia|sg|ie|li|za|ch))\"""",
 """"riskDetail":"({additional_info}[^"]+)""",
 """\sreason=({result_reason}[^=]+?)\s*\w+="""

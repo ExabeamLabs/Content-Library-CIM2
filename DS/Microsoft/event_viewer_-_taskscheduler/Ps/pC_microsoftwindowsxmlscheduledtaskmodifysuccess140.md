@@ -17,6 +17,7 @@ Name = microsoft-windows-xml-scheduled-task-modify-success-140
     """<Data Name\\*=('|")ResultCode('|")>({result_code}[^<]+)<""",
     """<Data Name =('|")UserName('|")>(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?))<\/Data>"""
     """<Level>({run_level}[^<]+)<"""
+    """channel="({channel}[^"]+)"""
   ]
 
 

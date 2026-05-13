@@ -23,6 +23,7 @@ Fields = [
   """<Data Name\\*=('|")ProcessName('|")>({process_path}({process_dir}[^<]*?)({process_name}[^\\<]+?))<"""
   """({event_name}An operation was attempted on a privileged object)"""
   """<Level>({run_level}[^<]+)<"""
+  """<Channel>({channel}[^<]+)<"""
 ]
 ParserVersion = "v1.0.0"
 

@@ -27,6 +27,7 @@ Fields = [
   """<Level>({run_level}[^<]+)<"""
   """"Activity":"({event_name}[^"]+)""""
   """"Channel":"({channel}[^"]+)"""
+  """"TenantId":"({tenant_id}[^"]+)"""
 ]
 ParserVersion = "v1.0.0"
 

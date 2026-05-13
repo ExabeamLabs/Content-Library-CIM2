@@ -34,6 +34,7 @@ Name = microsoft-evsecurity-xml-handle-request-4656
     """Handle ID:\s*({handle_id}\S+)""",
     """Accesses:\s*({access}\S.*?)\s*Access Reasons:""",
     """Access Reasons:\s*(-|({access}\S.*?))\s*Access Mask:""",
+    """<Channel>({channel}[^<]+)<"""
   ]
 
 

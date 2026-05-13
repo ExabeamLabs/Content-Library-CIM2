@@ -16,7 +16,7 @@ Name = "pan-ngfw-csv-configuration-modify-success-config"
     """({event_category}CONFIG)"""
     """,CONFIG.+?\s\d\d:\d\d:\d\d,(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({src_host}[^,]+)),"""
     """,CONFIG,([^,]*,){5}({operation}[^,]+),"""
-    """,CONFIG,.+?\d\d:\d\d:\d\d([^,]*,){4}(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
+    """,CONFIG,.+?\d\d:\d\d:\d\d([^,]*,){4}(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
     """,CONFIG,([^,]*,){8}({result}[^,]+),"""
     """,CONFIG,([^,]*,){9}\s*({object}[^,]+),"""
     """,CONFIG,([^,]*,){17}({host}[^\s,]+)""",

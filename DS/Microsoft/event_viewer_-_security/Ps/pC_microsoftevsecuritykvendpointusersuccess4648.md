@@ -14,7 +14,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\+\d+:\d+)\s({host}[^\s]+)"""
 """({event_name}A logon was attempted using explicit credentials)"""
 """sourceip="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
-"""EVENT_ID="{0,20}({event_code}\d+)"""
+"""EVENT_ID="*({event_code}\d+)"""
 """EVENT_HOST="({host}[^"]+)"""
 """EVENT_USERNAME="(-|({domain}[^\\]+)\\+(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """Logon ID:\s+({login_id}[^\s]+)\s+Logon GUID"""

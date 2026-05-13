@@ -41,7 +41,7 @@ azure-app-activity-skyfromation= {
     """"+application-module"+:"+({app_module}[^"]+)""",
     """"+authorization"+:.+?action"+:"+({action}[^"]+)""",
     """"+authorization"+:.+?scope"+:"+({scope}[^"]+)""",
-    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+    """"caller"+:"+((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """"channels"+:"+({channels}[^"]+)""",
     """"claims".+?aud"+:"+({aud}[^"]+)""",
     """"claims".+?iss"+:"+({iss}[^"]+)""",

@@ -19,7 +19,7 @@ Fields = [
   """ComputerName =({host}({dest_host}[\w\-\.]+))([^\s]*\s|;)""",
   """({event_code}4624)""",
   """Logon Type(:|=)\s*(\\t|\\r|\\n)*({login_type}\d+)""",
-  """New Logon(:|=)[\s;]*(\\t|\\r|\\n)*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(\\t|\\r|\\n)*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
+  """New Logon(:|=)[\s;]*(\\t|\\r|\\n)*Security ID(:|=)[^\}:]*?Account Name(:|=)\s*(\\t|\\r|\\n)*(-|SYSTEM|(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)""",
   """New Logon(:|=)[^\}]*?Account Domain(:|=)\s*(\\t|\\r|\\n)*(-|({dest_domain}({domain}[^\s]+?)))[\s;]*(\\t|\\r|\\n)*Logon ID(:|=)""",
   """Process Name(:|=)\s*(\\t|\\r|\\n)*(?:-|({process_path}({process_dir}[^\}]*?)(\\+({process_name}[^\\]+?))?))\s*(\\t|\\r|\\n)*(Network Information:|Additional Information:)""",
   """Workstation Name(:|=)\s*(\\t|\\r|\\n)*(-|[A-Fa-f:\d.]+|(?:\\+)?({src_host_windows}({src_host}[\w.\-]+\$?)))[\s;]*(\\t|\\r|\\n)*Source Network Address(:|=)""",

@@ -17,13 +17,13 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)(\s+({host}[^:]+)\s)?""",   
       """("|')ts("|')+:\s*("|')+({time}\d+-\d+-\d+T\d+:\d+:\d+\.\d+[\+\-]\d+)""",
-      """"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"],""",
-      """"envelope":.+?"from":"({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"""",
+      """"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"],""",
+      """"envelope":.+?"from":"({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"""",
       """"message-id":.+?"subject"+:\s*\["+({email_subject}[^"]+?\])""",
       """"msg":\{.+?"header".+?"subject":\["({email_subject}[^"]+?)"\]""",
       """"msg".+?"normalizedHeader":.+?"subject":\["({email_subject}[^"]+?)"\]"""
       """"rcpts"+:\s*\[({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
-      """"verified"+:\{[^\}]*"rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
+      """"verified"+:\{[^\}]*"rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
       """"filter"+:.+?"+disposition"+:\s*"+({result}[^"]+)""",
       """"routeDirection"+:\s*"+({direction}[^"]+)""",
       """"message-id"+:\s*\["+<*({message_id}[^>"]+)""",
@@ -39,7 +39,7 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """"msgParts":\[\{[^\n]*"md5":"({hash_md5}[^"]+)"[^\n]*\],""",
       """"msgParts":\[\{[^\n]*"sha256":"({hash_sha256}[^"]+)"[^\n]*(\],|\}\])""",
       """"msg".+?normalizedHeader":.+?"reply-to":\["(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-]{1,40}\$?|({dest_user_full_name}\w+(\s+\w+)+)))"]""",
-      """"msg".+?"normalizedHeader":.+?"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>?"?\]?,""""
+      """"msg".+?"normalizedHeader":.+?"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>?"?\]?,""""
       """"country":"({country}[^"]+)""",
       """"virusNames":\s*\["({virus_name}[^"]+)""",
       """"actions":\[.+?"action":"({action}[^"]+)"""",
@@ -52,13 +52,13 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """"msg".+?"normalizedHeader":.+?"reply-to":\["[^",<>]+\s<({reply_to}[^>"]+)>"""",
       """msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """"(classification|triggeredClassification|triggeredClassifier)":\s*"({alert_type}[^",]+)""",
-      """"smtp.mailfrom":"({mailfrom}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
+      """"smtp.mailfrom":"({mailfrom}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
       """exa_json_path=$.filter..triggeredClassifier,exa_field_name=alert_type""",
       """exa_json_path=$.filter..triggeredClassification,exa_field_name=alert_type""",
       """exa_json_path=$.filter..classification,exa_field_name=alert_type""",
       """exa_json_path=$.ts,exa_field_name=time""",
-      """exa_regex="from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"],""",
-      """exa_json_path=$.envelope.from,exa_regex=({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*($|")""",
+      """exa_regex="from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*"],""",
+      """exa_json_path=$.envelope.from,exa_regex=({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>*($|")""",
       """exa_json_path=$.msg.normalizedHeader.subject[1:],exa_field_name=email_subject""",
       """exa_json_path=$.envelope.rcpts[1:],exa_regex=({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)""",
       """exa_json_path=$.filter.verified.rcpts[1:],exa_regex=({email_recipients}"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)""",
@@ -77,8 +77,8 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_regex=\{[^\}]*?"isFinal":\s*true[^\}]*?"rule":\s*"({rule}[^"]+)"""
       """exa_json_path=$.connection.resolveStatus,exa_field_name=connection_status""",
       """exa_regex="msg".+?"normalizedHeader":.+?"reply-to":\["[^",<>]+\s<({reply_to}[^>"]+)>""""
-      """exa_regex="rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)\]""",
-      """exa_regex="verified"+:\{[^\}]*"rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
+      """exa_regex="rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)\]""",
+      """exa_regex="verified"+:\{[^\}]*"rcpts"+:\s*\["({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\]]*?)"\]""",
       """exa_regex="message-id"+:\s*\["+<*({message_id}[^>"]+)""",
       """exa_regex=msgParts":[^\$]+"detectedName"+:\s*"+\s*({email_attachments}({email_attachment}[^",]+?\.({file_ext}\w+)))"""",
       """exa_regex="detectedName":"({attachment_1}[^"]+)"(.+?detectedName":"({attachment_2}[^"]+)")?(.+?detectedName":"({attachment_3}[^"]+)")?(.+?detectedName":"({attachment_4}[^"]+)?")?(.+?detectedName":"({attachment_5}[^"]+)")?(.+?detectedName":"({attachment_6}[^"]+)")?(.+?detectedName":"({attachment_7}[^"]+)")?(.+?detectedName":"({attachment_8}[^"]+)")?(.+?detectedName":"({attachment_9}[^"]+)")?(.+?detectedName":"({attachment_10}[^"]+)")?"""
@@ -86,13 +86,13 @@ Name = proofpoint-tappod-json-email-send-receive-rcpts
       """exa_json_path=$.msg.sizeBytes,exa_field_name=bytes""",
 	    """exa_regex="msgParts":\[\{[^\n]*"md5":"({hash_md5}[^"]+)"[^\n]*\],""",
       """exa_regex="msgParts":\[\{[^\n]*"sha256":"({hash_sha256}[^"]+)"[^\n]*(\],|\}\])""",
-      """exa_regex="msg".+?"normalizedHeader":.+?"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>?"?\]?,""""
+      """exa_regex="msg".+?"normalizedHeader":.+?"from"+:\s*\[?"+?({full_name}[^"@\s,<>]+\s+[^"@,<>]+?)?\s*\<?(\\u\d+)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\>]+)>?"?\]?,""""
       """exa_regex="message-id":.+?"subject"+:\s*\["+({email_subject}[^"]+?\])""",
       """exa_regex="msg":\{.+?"header".+?"subject":\["({email_subject}[^"]+?)"\]""",
       """exa_regex="msg".+?"normalizedHeader":.+?"subject":\["({email_subject}[^"]+?)"\]"""
       """exa_regex=msgParts":[^\n]*?"detectedName":"[^",]*(\.({file_ext}\w+))"""
       """exa_json_path=$..normalizedHeader.subject[0:],exa_field_name=email_subject""",
-      """exa_json_path=$..['smtp.mailfrom'],exa_regex=({mailfrom}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)$""",
+      """exa_json_path=$..['smtp.mailfrom'],exa_regex=({mailfrom}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)$""",
       """exa_json_path=$.msgParts[*].detectedName,exa_field_name=email_attachments"""
     ]
   SOAR {

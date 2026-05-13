@@ -34,6 +34,8 @@ Name = microsoft-sentinel-sk4-alert-trigger-success-loganalytics
     """"IsDomainJoined\\"+:\s*({domain_join}\w+)""",
     """"AlertLink":"({malware_url}[^"]+)""",
     """"HostName\\"+:\s*\\"({host}.*?)\\*"""",
+    """"(?i:tenantid)":"({tenant_id}[^"]+)"""
+    """"Channel"+:"+({channel}[^"]+)""""
     ]
    SOAR {
     IncidentType = "malware"

@@ -19,6 +19,7 @@ Name = microsoft-evsecurity-sk4-user-create-success-usercreated
     """"TargetUserName":"({dest_user}({account_name}[^"]+))"""
     """"TargetDomainName":"({account_domain}[^"]+)"""
     """"DisplayName":"({full_name}[^"]+)""""
+    """"TenantId":"({tenant_id}[^"]+)"""
   ]
   ParserVersion = "v1.0.0"
 

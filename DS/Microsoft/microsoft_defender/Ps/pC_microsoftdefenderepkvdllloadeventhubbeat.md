@@ -23,6 +23,7 @@ Name = microsoft-defenderep-kv-dll-load-eventhubbeat
       """"MD5":"({hash_md5}[^"]+)""",
       """"InitiatingProcessId":({process_id}\d+)""",
       """"InitiatingProcessLogonId":({login_id}\d+)""",
+      """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
     ]
 
 

@@ -20,6 +20,7 @@ Name = microsoft-evsecurity-xml-group-create-success-4727-1
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>"""	
     """<Level>({run_level}[^<]+)<"""
+    """<Channel>({channel}[^<]+)<"""
 ] 
 
 

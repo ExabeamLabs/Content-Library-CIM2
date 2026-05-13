@@ -21,6 +21,7 @@ Name = microsoft-sysmon-json-file-write-success-2
     """ProcessId:\s*({process_id}\d+)""",
     """"Image"+:"+({path}({process_path}(process_dir}[^"]+)\\+({process_name}[^"]+)))"""",
     """"TargetFilename":"({file_path}({file_dir}[^"]+?[\\\/]+)?({file_name}[^"\\\/]+?(\.({file_ext}\w+))?))"""",
+    """"Channel"+:"+({channel}[^"]+)""""
   ]
 
 

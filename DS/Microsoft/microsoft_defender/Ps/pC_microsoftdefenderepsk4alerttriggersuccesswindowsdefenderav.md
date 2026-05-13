@@ -20,6 +20,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-windowsdefenderav
     """"incidentId":\s*"({alert_id}\d+)"""
     """"mitreTechniques":\s*\[({technique}[^\]]+)\]"""
     """"evidence".+?"verdict":\s*"({result}[^"]+)"""
+    """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
   ]
 
 

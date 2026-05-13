@@ -22,7 +22,7 @@ Fields = [
 """cvpn_category:"({category}[^"]+)"""
 """event_name:"({event_name}[^"]+)"""
 """origin_?sic_?name:"CN=({origin_name}[^",]+)"""
-"""user:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+-\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
+"""user:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
 ]
 ParserVersion = "v1.0.0"
 

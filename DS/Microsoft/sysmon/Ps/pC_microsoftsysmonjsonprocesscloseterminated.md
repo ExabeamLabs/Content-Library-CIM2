@@ -20,8 +20,8 @@ Name = microsoft-sysmon-json-process-close-terminated
     """exa_json_path=$.ProcessGuid,exa_field_name=process_guid"""
     """exa_json_path=$.ProcessID,exa_field_name=process_id"""
     """exa_regex=({log_name}Microsoft-Windows-Sysmon)"""
-
-  ]
+    """exa_json_path=$.Channel,exa_field_name=channel"""
+    ]
 
 
 }
