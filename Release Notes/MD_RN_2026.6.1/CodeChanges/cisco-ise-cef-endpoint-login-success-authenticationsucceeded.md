@@ -1,0 +1,9 @@
+# Code Changes for cisco-ise-cef-endpoint-login-success-authenticationsucceeded (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['\Wsuser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | email_address |  | ['\Wsuser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | email_domain |  | ['\Wsuser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | src_host |  | ['\Wsuser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | user |  | ['\Wsuser=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,=]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |

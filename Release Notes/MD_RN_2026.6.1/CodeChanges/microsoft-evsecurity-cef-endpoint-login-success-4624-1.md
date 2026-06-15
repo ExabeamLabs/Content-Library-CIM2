@@ -1,0 +1,9 @@
+# Code Changes for microsoft-evsecurity-cef-endpoint-login-success-4624-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['<Data Name\\=(\'|")SubjectDomainName(\'|")>(-|({src_domain}({domain}.+?)))<', '<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | full_name |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | src_domain |  | ['<Data Name\\=(\'|")SubjectDomainName(\'|")>(-|({src_domain}({domain}.+?)))<', '<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | user |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |
+| edit_regex_field | user_upn |  | ['<Data Name\\=(\'|")SubjectUserName(\'|")>(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({full_name}[^\s<]+\s[^<]+)|(SYSTEM|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))<\/Data>'] |

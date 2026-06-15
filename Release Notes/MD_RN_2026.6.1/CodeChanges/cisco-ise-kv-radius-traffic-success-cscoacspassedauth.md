@@ -1,0 +1,9 @@
+# Code Changes for cisco-ise-kv-radius-traffic-success-cscoacspassedauth (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | [', User-?Name=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | email_address |  | [', User-?Name=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))', ',\s*User-?Name=(?=[^\s]+@[^\s]+)({email_address}[^\s,]+)'] |
+| edit_regex_field | email_domain |  | [', User-?Name=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | src_host |  | [', User-?Name=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |
+| edit_regex_field | user |  | [', User-?Name=((host\/)({src_host}[^,]+)|((::ffff:)?(?!(host\/)))?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|((([a-fA-F\d]{2}[-:]){5}[a-fA-F\d]{2})|(({domain}[^\\\/,]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))'] |

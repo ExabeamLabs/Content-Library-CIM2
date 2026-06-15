@@ -1,0 +1,11 @@
+# Code Changes for microsoft-o365-json-user-permission-modify-success-adddelegatedpermission (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| changed_parsed_fields | N/A |  | ['added_permissions', 'app', 'email_address', 'email_domain', 'event_name', 'new_value', 'object', 'object_id', 'old_value', 'operation', 'result', 'role_id', 'role_name', 'target', 'tenant_id', 'time', 'user_agent', 'user_id'] |
+| edit_regex_field | email_address |  | ['UserId":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | email_domain |  | ['UserId":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | new_value |  | ['ModifiedProperties":.+?"DelegatedPermissionGrant.Scope","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","OldValue":\s*"(|({old_value}[^"]+))"', 'ModifiedProperties":.+?"OldValue":\s*"(|({old_value}[^"]+))","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","Name":"DelegatedPermissionGrant.Scope'] |
+| edit_regex_field | old_value |  | ['ModifiedProperties":.+?"DelegatedPermissionGrant.Scope","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","OldValue":\s*"(|({old_value}[^"]+))"', 'ModifiedProperties":.+?"OldValue":\s*"(|({old_value}[^"]+))","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","Name":"DelegatedPermissionGrant.Scope'] |
+| removed_regex_field | permissions |  | [] |
+| added_regex_field | added_permissions |  | ['ModifiedProperties":.+?"DelegatedPermissionGrant.Scope","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","OldValue":\s*"(|({old_value}[^"]+))"', 'ModifiedProperties":.+?"OldValue":\s*"(|({old_value}[^"]+))","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","Name":"DelegatedPermissionGrant.Scope'] |

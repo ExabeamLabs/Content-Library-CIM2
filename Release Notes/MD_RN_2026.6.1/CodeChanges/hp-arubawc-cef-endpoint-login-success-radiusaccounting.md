@@ -1,0 +1,9 @@
+# Code Changes for hp-arubawc-cef-endpoint-login-success-radiusaccounting (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_mac |  | ['\Wdmac=({dest_mac}.+?)\s+([\w\.]+=|$)', '\Wduser=(host\/({src_host}[\w\-.]+)|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_mac}(((\w\d)|(\d\w))\-){5}((\w\d)|(\d\w)))|({=dest_mac}((\w\d)|(\d\w))(\w){10})|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[^\s]+))\s+\w+='] |
+| edit_regex_field | domain |  | ['\Wduser=(host\/({src_host}[\w\-.]+)|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_mac}(((\w\d)|(\d\w))\-){5}((\w\d)|(\d\w)))|({=dest_mac}((\w\d)|(\d\w))(\w){10})|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[^\s]+))\s+\w+='] |
+| edit_regex_field | email_address |  | ['\Wduser=(host\/({src_host}[\w\-.]+)|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_mac}(((\w\d)|(\d\w))\-){5}((\w\d)|(\d\w)))|({=dest_mac}((\w\d)|(\d\w))(\w){10})|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[^\s]+))\s+\w+='] |
+| edit_regex_field | src_host |  | ['\Wduser=(host\/({src_host}[\w\-.]+)|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_mac}(((\w\d)|(\d\w))\-){5}((\w\d)|(\d\w)))|({=dest_mac}((\w\d)|(\d\w))(\w){10})|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[^\s]+))\s+\w+='] |
+| edit_regex_field | user |  | ['\Wduser=(host\/({src_host}[\w\-.]+)|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_mac}(((\w\d)|(\d\w))\-){5}((\w\d)|(\d\w)))|({=dest_mac}((\w\d)|(\d\w))(\w){10})|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^=]+)|(({=domain}[^\\\s]+)\\+)?({=user}[^\s]+))\s+\w+='] |

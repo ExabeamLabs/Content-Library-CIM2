@@ -1,0 +1,8 @@
+# Code Changes for github-g-json-user-invite-success-invitemember (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['exa_json_path=$.email,exa_regex=(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$.invitee_email,exa_regex=(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | dest_user |  | ['exa_json_path=$.email,exa_regex=(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$.invitee_email,exa_regex=(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | email_address |  | ['exa_json_path=$..external_identity_nameid,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..external_identity_username,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | user |  | ['exa_json_path=$..external_identity_nameid,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..external_identity_username,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |

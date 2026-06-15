@@ -1,0 +1,11 @@
+# Code Changes for cyberark-pam-cef-user-switch-success-psmconnect (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|")', '\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | dest_domain |  | ['\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|")', '\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | dest_email_address |  | ['\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|")'] |
+| edit_regex_field | dest_user |  | ['\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\s+\w+=|")', '\sduser="?(({dest_domain}[^\\=]+)[\\\/]+)?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | domain |  | ['\ssuser="?(({domain}[^\\=]+)[\\\/]+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|")'] |
+| edit_regex_field | email_address |  | ['\ssuser="?(({domain}[^\\=]+)[\\\/]+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|")'] |
+| edit_regex_field | user |  | ['\ssuser="?(({domain}[^\\=]+)[\\\/]+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|")'] |

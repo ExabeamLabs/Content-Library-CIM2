@@ -1,0 +1,5 @@
+# Code Changes for epic-siem-json-endpoint-login-success-authentication (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Vendor": "Epic", "Product": "Epic SIEM", "ExtractionType": "json", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ", "Fields": ["exa_json_path=$.host,exa_field_name=host", "exa_json_path=$.E1Mid,exa_field_name=operation", "exa_json_path=$.IP,exa_field_name=src_ip", "exa_regex=EMPid\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\^({full_name}[^\^\"]+)\^", "exa_json_path=$.OSUSR,exa_field_name=user", "exa_json_path=$.SOURCE,exa_field_name=log_source", "exa_json_path=$.appname,exa_field_name=app", "exa_json_path=$.procid,exa_field_name=event_id", "exa_json_path=$.severityName,exa_field_name=alert_severity", "exa_json_path=$.structuredData,exa_field_name=additional_info", "exa_json_path=$.Action,exa_field_name=action"], "Name": "epic-siem-json-endpoint-login-success-authentication", "ParserVersion": "v1.0.0", "Conditions": ["Epic", "Security-SIEM", "\"E1Mid\":\"AUTHENTICATION\""]} |

@@ -1,0 +1,8 @@
+# Code Changes for delinea-ss-json-app-activity-success-eventaction (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['exa_regex="Target"+:\{.+?"Type":"USER","Name":"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | dest_user |  | ['exa_regex="Target"+:\{.+?"Type":"USER","Name":"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | email_address |  | ['exa_regex="Actor":\s*\{[^\}]*"Id":\s*"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[^\}]+"IdType":\s*"email"', 'exa_regex="Actor":\s*\{[^\}]*"Type":\s*"user"[^\}]+"Name":\s*"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | user |  | ['exa_regex="Actor":\s*\{[^\}]*"Id":\s*"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[^\}]+"IdType":\s*"email"', 'exa_regex="Actor":\s*\{[^\}]*"Type":\s*"user"[^\}]+"Name":\s*"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_regex="Notes":.+?"byUser\\*":\\*"({user}[\w\.\-\!\#\^\~]{1,40}\$?)'] |

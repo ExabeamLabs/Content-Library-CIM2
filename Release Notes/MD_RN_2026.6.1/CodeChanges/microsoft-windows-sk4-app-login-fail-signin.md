@@ -1,0 +1,8 @@
+# Code Changes for microsoft-windows-sk4-app-login-fail-signin (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"UserPrincipalName":"({email_address}[^"\s@]+@({email_domain}[^"\s@]+))"', 'exa_json_path=$..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_json_path=$.eventHubsAzureRecord..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_regex="UserPrincipalName":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"'] |
+| edit_regex_field | email_domain |  | ['"UserPrincipalName":"({email_address}[^"\s@]+@({email_domain}[^"\s@]+))"', 'exa_json_path=$..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_json_path=$.eventHubsAzureRecord..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))', 'exa_regex="UserPrincipalName":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"'] |
+| edit_regex_field | os |  | ['"(Device)?(o|O)peratingSystem":"({os}[^"]+)', 'deviceDetail(_string)?\\*":"?\{[^\}]*"operatingSystem\\*":\\*"({os}[^\\"]+)'] |
+| edit_attribute | Platform |  | ['Microsoft 365'] |

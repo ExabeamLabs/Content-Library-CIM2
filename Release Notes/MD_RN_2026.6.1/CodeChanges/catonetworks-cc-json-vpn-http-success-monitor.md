@@ -1,0 +1,5 @@
+# Code Changes for catonetworks-cc-json-vpn-http-success-monitor (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['exa_json_path=$..vpn_user_email,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)'] |

@@ -1,0 +1,10 @@
+# Code Changes for microsoft-exchange-csv-app-notification-success-routingsuppressed (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | [',(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)[\s>]*,'] |
+| edit_regex_field | dest_email_domain |  | [',(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)[\s>]*,'] |
+| edit_regex_field | direction |  | [',[<\s]*({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),', '[\s>]*,([^,]*,){2}({direction}Incoming|Originating),'] |
+| edit_regex_field | email_address |  | [',[<\s]*({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),'] |
+| edit_regex_field | email_domain |  | [',[<\s]*({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),'] |
+| edit_regex_field | email_recipients |  | [',(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)[\s>]*,'] |

@@ -1,0 +1,7 @@
+# Code Changes for cisco-umbrella-cef-http-session-proxy (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"identities"+:\["+\s*({full_name}[^"\(]+).+?\(\'?({email_address}([A-Za-z0-9!#$%&\'+\/=?^_`~.-]+)@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|\)\']+))', '"identities":\[("({dest_host}[\w\-\.]+)")?,"({full_name}[^\("]+?)(?:\s*\(\w+}\)\s*)?(\s+\(({email_address}(([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9])+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\))"'] |
+| edit_regex_field | email_domain |  | ['"identities"+:\["+\s*({full_name}[^"\(]+).+?\(\'?({email_address}([A-Za-z0-9!#$%&\'+\/=?^_`~.-]+)@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|\)\']+))', '"identities":\[("({dest_host}[\w\-\.]+)")?,"({full_name}[^\("]+?)(?:\s*\(\w+}\)\s*)?(\s+\(({email_address}(([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9])+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\))"'] |
+| edit_regex_field | full_name |  | ['"identities"+:\["+\s*({full_name}[^"\(]+).+?\(\'?({email_address}([A-Za-z0-9!#$%&\'+\/=?^_`~.-]+)@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|\)\']+))', '"identities":\[("({dest_host}[\w\-\.]+)")?,"({full_name}[^\("]+?)(?:\s*\(\w+}\)\s*)?(\s+\(({email_address}(([A-Za-z0-9]+[!#$%&\'+\/=?^_`~.\-])*[A-Za-z0-9])+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\))"'] |

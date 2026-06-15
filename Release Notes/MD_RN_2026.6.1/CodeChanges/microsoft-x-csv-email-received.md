@@ -1,0 +1,9 @@
+# Code Changes for microsoft-x-csv-email-received (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | [',\s*(?:\'|")?([^,]+Recipients_cn\=)?({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(?:\'|")?,(?:(?:\s*\'(?:[^\']|\'\')+\')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}Originating,'] |
+| edit_regex_field | dest_email_domain |  | [',\s*(?:\'|")?([^,]+Recipients_cn\=)?({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s*(?:\'|")?,(?:(?:\s*\'(?:[^\']|\'\')+\')\s*,|(?:\s*"(?:[^"]|"")+")\s*,|[^",]+?,|\s*,){9}Originating,'] |
+| edit_regex_field | email_address |  | [',\s*(?:\'|")?(|MicrosoftExchange.*?|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:\'|")?)\s*,(?:(?:\s*\'+[^\']*\'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){2}Originating,'] |
+| edit_regex_field | orig_user |  | [',\s*(?:\'|")?(|MicrosoftExchange.*?|({orig_user}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:\'|")?)\s*,(?:(?:\s*\'+[^\']*\'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){2}Originating,'] |
+| edit_regex_field | src_domain |  | [',\s*(?:\'|")?(|MicrosoftExchange.*?|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:\'|")?)\s*,(?:(?:\s*\'+[^\']*\'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){2}Originating,', ',\s*(?:\'|")?(|MicrosoftExchange.*?|({orig_user}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({src_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:\'|")?)\s*,(?:(?:\s*\'+[^\']*\'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){2}Originating,'] |

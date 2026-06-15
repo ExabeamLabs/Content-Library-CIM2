@@ -1,0 +1,10 @@
+# Code Changes for microsoft-evsecurity-kv-user-switch-success-4648-1 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | dest_email_address |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | dest_email_domain |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | dest_user |  | ['Used(:|=);?\s*(\\r|\\t|\\n)*Account Name(:|=)\s*(\\r|\\t|\\n)*(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\r|\\t|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | user |  | ['Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)'] |
+| edit_regex_field | user_upn |  | ['Subject(:|=).+?Account Name(:|=)\s*(\\t|\\r|\\n)*(?:-|SYSTEM|(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))[\s;]*(\\t|\\r|\\n)*Account Domain(:|=)'] |

@@ -1,0 +1,7 @@
+# Code Changes for microsoft-evsecurity-json-endpoint-login-success-4624-6 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | domain |  | ['"new_logon.account_domain":\s*"({domain}[^"]+)', '"subject.account_name":\s*"(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |
+| edit_regex_field | user |  | ['"subject.account_name":\s*"(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |
+| edit_regex_field | user_upn |  | ['"subject.account_name":\s*"(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..[\'subject.account_name\'],exa_regex=^(-|({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+)?))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$'] |

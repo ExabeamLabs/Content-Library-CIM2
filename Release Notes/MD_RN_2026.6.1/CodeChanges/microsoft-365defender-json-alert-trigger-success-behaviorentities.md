@@ -1,0 +1,6 @@
+# Code Changes for microsoft-365defender-json-alert-trigger-success-behaviorentities (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"AccountUpn":"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'exa_json_path=$..AccountUpn,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=!Contains(tolower($..AccountUpn), "null")'] |
+| edit_regex_field | user |  | ['"AccountName":"(null|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', '"AccountUpn":"(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"', 'exa_json_path=$..AccountName,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?),exa_match_expr=!Contains(tolower($..AccountName), "null")', 'exa_json_path=$..AccountUpn,exa_regex=(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)),exa_match_expr=!Contains(tolower($..AccountUpn), "null")'] |

@@ -1,0 +1,7 @@
+# Code Changes for amazon-awscloudtrail-sk4-app-authentication-success-cloudtrail (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | aws_account |  | ['"+userIdentity.+?AssumedRole.+?principalId\\?"+\s*:\s*\\?"+?[A-Z\d]{1,50}:(({aws_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({aws_account}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"+\s*[,\]\}]', '"userName"+\s*:\s*"+?(|({aws_email_address}({email_address}[^@"]+@[^@".]+\.[^@"]+))|({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+\s*[,\]\}]'] |
+| edit_regex_field | aws_email_address |  | ['"+userIdentity.+?AssumedRole.+?principalId\\?"+\s*:\s*\\?"+?[A-Z\d]{1,50}:(({aws_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({aws_account}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"+\s*[,\]\}]', '"userName"+\s*:\s*"+?(|({aws_email_address}({email_address}[^@"]+@[^@".]+\.[^@"]+))|({aws_account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"+\s*[,\]\}]'] |
+| edit_regex_field | email_domain |  | ['"+userIdentity.+?AssumedRole.+?principalId\\?"+\s*:\s*\\?"+?[A-Z\d]{1,50}:(({aws_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({aws_account}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"+\s*[,\]\}]'] |

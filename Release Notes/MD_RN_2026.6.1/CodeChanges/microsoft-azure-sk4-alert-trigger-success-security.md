@@ -1,0 +1,6 @@
+# Code Changes for microsoft-azure-sk4-alert-trigger-success-security (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['\Wduser=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)', '\Wsuid=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)', '\Wsuser=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+|\s*$)'] |
+| edit_regex_field | user |  | ['\"identity\".*?\"claims\".*?\"name\":\"({user}[\w\.\-\!\#\^\~]{1,40}\$?)\"', '\Wduser=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)', '\Wsuid=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)', '\Wsuser=(anonymous|({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+|\s*$)', 'userName":"(({domain}[^\\"]+)\\+)?(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\(]+)\s*)'] |

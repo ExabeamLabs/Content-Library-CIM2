@@ -1,0 +1,13 @@
+# Code Changes for symantec-cloudsoc-cef-file-activity-symanteccloudsoc (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | browser |  | ['"browser(s)?":(\[)?"({browser}[^"]+)"'] |
+| edit_regex_field | file_dir |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | object |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | resource |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | src_file_ext |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | src_file_name |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | src_file_path |  | ['"name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/]+\\\/)?(|({src_file_name}[^\\\/=]*?(\.({src_file_ext}[^"]+))?)?)))))"', '"object_name":"(|\/|({object}({resource}({src_file_path}({file_dir}[^=]*?[\\\/])?(({src_file_name}[^\\\/"]*?)(?:\.({src_file_ext}[^\\\/."]+))?)))))"'] |
+| edit_regex_field | src_ip |  | ['"host(s)?":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |
+| edit_regex_field | src_port |  | ['"host(s)?":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?'] |

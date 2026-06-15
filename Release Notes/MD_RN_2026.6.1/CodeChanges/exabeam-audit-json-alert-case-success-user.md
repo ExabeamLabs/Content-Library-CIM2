@@ -1,0 +1,8 @@
+# Code Changes for exabeam-audit-json-alert-case-success-user (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['"object_name":"({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"[^\}]+?"activity_type":"(user-password-reset|user-modify|user-disable|user-enable|user-delete|user-invite|user-invite-cancel)"', 'exa_json_path=$.object_name,exa_regex=^({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$,exa_match_expr=Contains($.activity_type,"user-")'] |
+| edit_regex_field | email_address |  | ['"user":"({email_address}[^\@]+@[^"]+)"', 'exa_json_path=$..user,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | email_domain |  | ['exa_json_path=$..user,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_attribute | activity_type |  | ['audit-log:fail', 'audit-log:success', 'user-delete:fail', 'user-delete:success', 'user-disable:fail', 'user-disable:success', 'user-enable:fail', 'user-enable:success', 'user-invite-cancel:fail', 'user-invite-cancel:success', 'user-invite:fail', 'user-invite:success', 'user-modify:fail', 'user-modify:success', 'user-password-reset:fail', 'user-password-reset:success'] |

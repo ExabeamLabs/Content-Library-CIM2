@@ -1,0 +1,10 @@
+# Code Changes for unix-unix-mix-user-switch-success-sudo (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))', '\/(user(add|del)|passwd)\s([^"]*?\s*)?({account}({dest_user}\w+?))\s*(\d\d\d\d\-|$)'] |
+| edit_regex_field | dest_user |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))', '\/(user(add|del)|passwd)\s([^"]*?\s*)?({account}({dest_user}\w+?))\s*(\d\d\d\d\-|$)'] |
+| edit_regex_field | domain |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))'] |
+| edit_regex_field | email_address |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))'] |
+| edit_regex_field | event_code |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))'] |
+| edit_regex_field | user |  | ['({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))'] |

@@ -1,0 +1,10 @@
+# Code Changes for box-ccm-cef-file-success-box (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['owned_by"+:.+?"login"+:"+({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | dest_email_domain |  | ['owned_by"+:.+?"login"+:"+({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | email_address |  | ['"user":\{[^\}]+?"name":"({full_name}[^"]+)","email":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', '\ssuser=({email_address}[^\s@]+@[^\s@]+)\s+(\w+=|$)', 'created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | email_domain |  | ['"user":\{[^\}]+?"name":"({full_name}[^"]+)","email":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', 'created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |
+| edit_regex_field | full_name |  | ['"user":\{[^\}]+?"name":"({full_name}[^"]+)","email":"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', 'created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":,]+)[",\]\}]'] |
+| edit_regex_field | user |  | ['\ssuser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+(\w+=|$)', 'created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|anonymous|Unknown User|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'] |

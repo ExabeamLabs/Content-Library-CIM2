@@ -1,0 +1,6 @@
+# Code Changes for google-cloudplatform-json-app-activity-success-googleapismethodname (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"principalEmail":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))"', 'exa_json_path=$..protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))', 'exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))'] |
+| edit_regex_field | email_domain |  | ['"principalEmail":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))"', 'exa_json_path=$..protoPayload.authenticationInfo.principalEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))', 'exa_json_path=$.jsonPayload.access.principalEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\s@"]+))'] |

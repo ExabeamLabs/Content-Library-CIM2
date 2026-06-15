@@ -1,0 +1,8 @@
+# Code Changes for microsoft-evsecurity-kv-endpoint-login-success-4624-3 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | account |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:', 'New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| edit_regex_field | email_address |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:'] |
+| edit_regex_field | user |  | ['Account Name:\s*(\\+[ntr])*(-|(({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))(\s|(\\+[ntr])*)\s*Account Domain:', 'New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |
+| edit_regex_field | user_upn |  | ['New Logon:[^"]*?Account Name(:|=)\s*(\\+[nrt])*(-|SYSTEM|(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@[^\]\s"\\,\|]+(\.[^\]\s"\\,\|]+)?)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\s*'] |

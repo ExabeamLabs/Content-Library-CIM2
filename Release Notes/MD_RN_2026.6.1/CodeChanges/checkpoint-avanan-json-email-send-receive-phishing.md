@@ -1,0 +1,9 @@
+# Code Changes for checkpoint-avanan-json-email-send-receive-phishing (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['"saas_info":[^\}]+"email":"({dest_email_address}({email_address}[^@"]+@[^\."]+\.[^"]+))"', '"sender_address":"({dest_email_address}({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"', '("entity\\*":\{[^\}]+)?"recipients\\*":\[\\*"*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\\*"\],'] |
+| edit_regex_field | dest_email_domain |  | ['("entity\\*":\{[^\}]+)?"recipients\\*":\[\\*"*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\\*"\],'] |
+| edit_regex_field | email_address |  | ['"saas_info":[^\}]+"email":"({dest_email_address}({email_address}[^@"]+@[^\."]+\.[^"]+))"', '"sender_address":"({dest_email_address}({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"', 'from_email\\*":\\*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | email_domain |  | ['"sender_address":"({dest_email_address}({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))"', 'from_email\\*":\\*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))'] |
+| edit_regex_field | email_recipients |  | ['("entity\\*":\{[^\}]+)?"recipients\\*":\[\\*"*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\\*"\],'] |

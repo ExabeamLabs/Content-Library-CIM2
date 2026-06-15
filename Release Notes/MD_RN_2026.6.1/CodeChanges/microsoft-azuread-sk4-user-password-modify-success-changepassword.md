@@ -1,0 +1,8 @@
+# Code Changes for microsoft-azuread-sk4-user-password-modify-success-changepassword (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_email_address |  | ['TargetResources":"\[\{[^\]]+?userPrincipalName\\?":\\?"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"'] |
+| edit_regex_field | dest_email_domain |  | ['TargetResources":"\[\{[^\]]+?userPrincipalName\\?":\\?"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"'] |
+| edit_regex_field | dest_user |  | ['TargetResources":"\[\{[^\]]+?displayName\\?":\\?"(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"', 'TargetResources":"\[\{[^\]]+?userPrincipalName\\?":\\?"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"'] |
+| edit_regex_field | dest_user_full_name |  | ['TargetResources":"\[\{[^\]]+?displayName\\?":\\?"(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"', 'TargetResources":"\[\{[^\]]+?userPrincipalName\\?":\\?"(({dest_email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^"]+))\\?"'] |

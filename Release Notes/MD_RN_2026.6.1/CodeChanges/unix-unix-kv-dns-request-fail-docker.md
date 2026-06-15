@@ -1,0 +1,5 @@
+# Code Changes for unix-unix-kv-dns-request-fail-docker (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| added_parser | N/A |  | {"Name": "unix-unix-kv-dns-request-fail-docker", "ParserVersion": "v1.0.0", "Vendor": "Unix", "Product": "Unix", "TimeFormat": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "Conditions": ["dockerd", "client-addr=", "dns-server=", "level="], "Fields": ["time=\"({time}[^\"]+)", "<\d+>[a-zA-Z]+\s+\d+\s+[\d:]+\s+({host}[\w\.-]+)", "({service_name}dockerd)", "level=({severity}\w+)", "msg=\"({additional_info}[^\"]+)", "client-addr=\"\w+:({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\"", "dns-server=\"\w+:({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?\"", "error=\"({failure_reason}[^\"]+)", "question=\";\s*({dns_query}[\w\.\-]+)\\tIN\\t\s({dns_query_type}[^\"]+)"]} |

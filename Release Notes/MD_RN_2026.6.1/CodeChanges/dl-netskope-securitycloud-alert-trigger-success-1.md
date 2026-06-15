@@ -1,0 +1,5 @@
+# Code Changes for dl-netskope-securitycloud-alert-trigger-success-1 (Event Builder)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_conditions | expression |  | InList(type, 'netskope-sc-sk4-alert-trigger-success-malsite','netskope-sc-sk4-alert-trigger-success-netskope','netskope-sc-sk4-alert-trigger-success-malwaretype','netskope-sc-sk4-alert-trigger-success-breach','netskope-sc-json-alert-trigger-success-policy','netskope-sc-json-alert-trigger-success-policy-1','netskope-sc-json-alert-trigger-success-compromised-1','netskope-sc-json-alert-trigger-success-malsite-1','netskope-sc-json-alert-trigger-success-malware-1','netskope-sc-cef-alert-trigger-success-useralert', 'netskope-sc-json-alert-trigger-success-ips', 'netskope-sc-json-alert-trigger-success-policy-2') && (!exists(alert_severity) || InList(toLower(alert_severity), 'unknown','low', '0', 'informational')) |

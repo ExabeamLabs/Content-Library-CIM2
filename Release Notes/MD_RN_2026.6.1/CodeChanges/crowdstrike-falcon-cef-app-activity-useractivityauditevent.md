@@ -1,0 +1,6 @@
+# Code Changes for crowdstrike-falcon-cef-app-activity-useractivityauditevent (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | email_address |  | ['"UserId":\s*"(Crowdstrike|CrowdStrike|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user_id}[^"@]+))"', '"UserId":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', '"assigned_to_uid".+?"ValueString":"({email_address}[^@"]+@[^\."]+\.[^"]+)', 'exa_regex="UserId":\s*"(Crowdstrike|CrowdStrike|({email_address}[^@"]+@[^\."]+\.[^"]+)|({user_id}[^"@]+))"', 'exa_regex="UserId":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"'] |
+| edit_regex_field | email_domain |  | ['"UserId":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"', 'exa_regex="UserId":\s*"({email_address}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"'] |

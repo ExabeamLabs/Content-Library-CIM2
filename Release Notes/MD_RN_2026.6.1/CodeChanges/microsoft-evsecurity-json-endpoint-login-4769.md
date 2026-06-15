@@ -1,0 +1,9 @@
+# Code Changes for microsoft-evsecurity-json-endpoint-login-4769 (Parser)
+
+| Code Change | Field Name | Before | After |
+|-------------|------------|--------|-------|
+| edit_regex_field | dest_domain |  | ['"TargetDomainName":"({dest_domain}({domain}[^."]+))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | dest_user |  | ['"TargetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | domain |  | ['"TargetDomainName":"({dest_domain}({domain}[^."]+))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | user |  | ['"TargetUserName":"({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))', 'exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |
+| edit_regex_field | user_upn |  | ['exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&\'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$'] |

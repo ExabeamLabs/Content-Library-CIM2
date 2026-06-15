@@ -1,5 +1,0 @@
-# Code Changes for cisco-fp-json-alert-trigger-success-502 (Parser)
-
-| Code Change | Field Name | Before | After |
-|-------------|------------|--------|-------|
-| edit_regex_field | user |  |  |
