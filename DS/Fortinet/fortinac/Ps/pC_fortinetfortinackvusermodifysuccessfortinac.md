@@ -15,7 +15,7 @@ Name = fortinet-fortinac-kv-user-modify-success-fortinac
         """userid="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
         """firstname="({first_name}[^"]+)""""
         """lastname="({last_name}[^"]+)""""
-        """email="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
+        """email="({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
         """\smsg="({additional_info}[^"]+)"""
         """cat=({category}[^=]+?)(\s+\w+=|$)"""
         """\Wsubtype="*({event_subtype}[^\"]+?)\"*(\s+\w+=|\s*$)"""

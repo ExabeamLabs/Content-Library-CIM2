@@ -26,8 +26,8 @@ Name = sentinelone-singularityp-json-user-switch-success-usersubstitution
     """exa_json_path=$.['src.process.cmdline'],exa_field_name=process_command_line""",
     """exa_json_path=$.['event.id'],exa_field_name=event_id""",
     """exa_regex=event.name":"({operation_type}[^"]+)""",
-    """exa_json_path=$.['userSubstitution.fromUserName'],exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}[^\s"]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-    """exa_json_path=$.['userSubstitution.toUserName'],exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({dest_user_full_name}[^\s"]+\s[^"]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.['userSubstitution.fromUserName'],exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({full_name}[^\s"]+\s[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.['userSubstitution.toUserName'],exa_regex=(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?))|({dest_user_full_name}[^\s"]+\s[^"]+)|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_regex="event.login.userName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """exa_json_path=$.['src.process.parent.name'],exa_field_name=grandparent_process_path"""
     """exa_json_path=$.['src.process.image.md5'],exa_field_name=hash_md5"""

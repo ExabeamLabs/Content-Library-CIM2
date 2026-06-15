@@ -24,7 +24,7 @@ Name = cisco-secureendpoint-mix-alert-trigger-success-threatdetected
     """exa_json_path=$..event_type,exa_field_name=alert_type"""
     """exa_json_path=$..network_addresses[:1].mac,exa_field_name=src_mac"""
     """exa_regex="ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    """exa_regex=user"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))""""
+    """exa_regex=user"+:\s*"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((?i)(anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))""""
     """exa_json_path=$.event.detection,exa_field_name=alert_name"""
     """exa_json_path=$.event.event_type,exa_field_name=event_name"""
   ]
@@ -42,9 +42,9 @@ s-cisco-amp-alert = {
     """dpriv=({alert_name}[^=]+?)\s\w+=""",
     """"detection":\s*"(|({alert_name}[^"]+?))"""",
     """\Wsuser=((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
-    """\Wsuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^@\s\.=]+?)))(\s+\w+=|\s*$)""",
+    """\Wsuser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^@\s\.=]+?)))(\s+\w+=|\s*$)""",
     """user":\s*"((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
-    """user"+:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))"""",
+    """user"+:\s*"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((anonymous|system)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))@(NT AUTHORITY|({domain}[^"]+)))"""",
     """hostname":\s*"({src_host}[^"]+)""",
     """file_path":\s*"(\\+\?\\+)?({file_path}[^"]+)""",
     """file_path":\s*"(\\+\?\\+)?({malware_file_name}[^"]+)""",

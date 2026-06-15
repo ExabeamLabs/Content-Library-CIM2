@@ -13,6 +13,7 @@ microsoft-azure-endpoint-json.Fields} [
     """exa_json_path=$.Uri,exa_field_name=file_path""",
     """exa_json_path=$.AccountName,exa_field_name=storage_account""",
     """exa_json_path=$.['_ResourceId'],exa_field_name=resource"""
+    """exa_json_path=$.OperationCount,exa_field_name=count"""
   
 }
 ```

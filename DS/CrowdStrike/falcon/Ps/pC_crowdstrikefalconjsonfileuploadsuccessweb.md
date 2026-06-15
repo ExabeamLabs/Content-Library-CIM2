@@ -1,0 +1,41 @@
+#### Parser Content
+```Java
+{
+Name = crowdstrike-falcon-json-file-upload-success-web
+  ParserVersion = "v1.0.0"
+  TimeFormat = "epoch"
+  Conditions = [ """"vendor":"CrowdStrike"""", """"product":"Falcon FDR"""", """"EventType":"DataEgressEnriched"""", """"Channel":"web"""" ]
+  Fields = ${CrowdStrikeParsersTemplates.json-crowdstrike-falcon-dataegressenriched.Fields}[
+    """exa_json_path=$.Destination.WebLocationHostname,exa_field_name=web_domain""",
+    """exa_json_path=$.Destination.WebLocationURL,exa_field_name=url"""   
+  ]
+
+json-crowdstrike-falcon-dataegressenriched = {
+  Vendor = CrowdStrike
+  Product = Falcon
+  ExtractionType = json
+  TimeFormat = "epoch"
+  Fields = [
+    """exa_json_path=$.timestamp,exa_regex=({time}\d{13})""",
+    """exa_json_path=$.EventType,exa_field_name=event_name""",    
+    """exa_json_path=$.event_simpleName,exa_field_name=event_name""",
+    """exa_json_path=$.ComputerName,exa_field_name=host""",
+    """exa_json_path=$.UserName,exa_regex=^(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$.UserSID,exa_field_name=user_sid""",
+    """exa_json_path=$.aid,exa_field_name=aid""",
+    """exa_json_path=$.cid,exa_field_name=cid""",
+    """exa_json_path=$.DataSize,exa_field_name=bytes""",
+    """exa_json_path=$.event_category,exa_field_name=event_category""",
+    """exa_json_path=$.event_platform,exa_field_name=os""",
+    """exa_json_path=$.File.Name,exa_field_name=file_name""",
+    """exa_json_path=$.File.AbsolutePath,exa_field_name=file_path""",
+    """exa_json_path=$.File.Extension,exa_field_name=file_ext""",
+    """exa_json_path=$.ContentSHA256HashData,exa_field_name=hash_sha256""",
+    """exa_json_path=$.Destination.Channel,exa_field_name=channel""",
+    """exa_json_path=$.PolicyName,exa_field_name=policy_name""",
+    """exa_json_path=$.PolicyID,exa_field_name=policy_id""",
+    """exa_json_path=$.ResponseAction,exa_field_name=action""",
+    """exa_json_path=$.ContextProcessID,exa_field_name=process_id"""    
+   
+}
+```

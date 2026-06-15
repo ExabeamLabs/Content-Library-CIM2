@@ -14,9 +14,9 @@ Name = postfix-postfix-str-email-subject
     """\s*({time}\w+\s*\d?\d\s\d+:\d+:\d+)""",
     """\d\d:\d\d:\d\d ({host}\S+) postfix[^:]+:\s*({message_id}[^\s:]+)""",
     """\WSubject:\s*({email_subject}[^;]+)""",
-    """\Wfrom=<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
+    """\Wfrom=<({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\Wto=<({email_recipients}[^\>]+)""",
-    """\Wto=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
+    """\Wto=<({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\Wfrom (unknown|({src_host}[\w\-.]+))\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
 

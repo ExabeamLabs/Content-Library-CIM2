@@ -9,9 +9,9 @@ Name = cisco-se-cef-email-send-receive-consolidatedlogevent
   Conditions = [ """CEF""" , """|Cisco|""", """Email Security Virtual Appliance""", """ESA_CONSOLIDATED_LOG_EVENT""" ]
   Fields = [
     """({time}\w{3}\s+\d{1,2}\s+\d\d:\d\d:\d\d\s+\d\d\d\d)"""
-    """ESAFriendlyFrom=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-\\]+)*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+))""",
+    """ESAFriendlyFrom=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)@({domain}[^\s]+))""",
     """ESAFriendlyFrom="({full_name}[^"\(\)]+[\s,]+[^"\(\)]+)"""
-    """ESAReplyTo=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\s]*)\s+(\w+=|$)""",
+    """ESAReplyTo=({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^\s]*)\s+(\w+=|$)""",
     """msg='\s*(\\=\?[^']+|({email_subject}[^']+?))\s*'""",
     """ESAMID=({alert_id}\d+)""",
     """cfp1=(not enabled|({alert_severity}[^\s]+))""",

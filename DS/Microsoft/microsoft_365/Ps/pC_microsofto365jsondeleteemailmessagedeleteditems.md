@@ -3,13 +3,14 @@
 {
 Name = microsoft-o365-json-delete-email-message-deleteditems
   ParserVersion = v1.0.0
+  ExtractionType = json
   Conditions = [""""Operation":""", """Delete""", """"Workload":"Exchange"""", """"AffectedItems":""" ]
   Fields = ${MSO365ParsersTemplates.m365-activity.Fields}[
     """"Subject\\*":[\s\\]*"({email_subject}.*?)"\}""",
     """"ParentFolder":\{"[^,]+?,"Path":"({src_email_folder}.+?)"\}"""
     """"OriginatingServer":"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?"""",
-    """\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))\s{1,100}(\w+=|$)""",
-    """"UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))"+""",
+    """\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))\s{1,100}(\w+=|$)""",
+    """"UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))"+""",
     """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"ClientIPAddress\\*":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"UserKey":"(anonymous|({user_id}[^@\"]+))""",
@@ -57,6 +58,7 @@ m365-activity = {
     """\sfname=\s*(N\/A|({email_subject}[^=]+))\smsg=""",
     """((fileType=(n\/a|N\/A|mail|calendar-event|note|message)[^\n]*?\sfname=\s*(N\/A|({email_subject}[^=]+?)))|(fileType=group[^\n]*?\sfname=\s*(N\/A|({group_name}[^=]+?)))|(fileType=(file|folder|attachment|report)[^\n]*?\sfname=\s*(N\/A|({file_name}[^=]+?)))|(fileType=process[^\n]*?\sfname=\s*(N\/A|({process_name}[^=]+?)))|(fileType=app(lication)?[^\n]*?\sfname=\s*(N\/A|({app}[^=]+?))))\s+(\w+=|$)""",
     """"OrganizationId":"({tenant_id}[^"]+)","""
+    """"MailboxOwnerUPN":"({owner}[^"]+)""""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
     """exa_json_path=$.Operation,exa_field_name=operation"""
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id"""
@@ -75,6 +77,7 @@ m365-activity = {
     """exa_json_path=$.LogonType,exa_field_name=login_type"""
     """exa_json_path=$.OrganizationName,exa_field_name=company"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
+    """exa_json_path=$.MailboxOwnerUPN,exa_field_name=owner"""
   ]
 
 }

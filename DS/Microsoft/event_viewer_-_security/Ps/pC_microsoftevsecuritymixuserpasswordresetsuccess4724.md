@@ -33,7 +33,7 @@ Fields = [
   """Target Account[^=]+?Security ID:(\\t|\\r|\\n|\s)*(|({dest_user_sid}[^:]+?))(\\t|\\r|\\n|\s)+Account Name:(\\t|\\r|\\n|\s)*(|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}[^\s]+))(\\t|\\r|\\n|\s)+Account Domain:(\\t|\\r|\\n|\s)*({dest_domain}[^",\s]+)"""
   """SubjectLogonId\\?"+:\\?"+({login_id}[^\\"]+)\\?""""
   """(?:winlog\.)?computer_name\\?"+:\\?"+({host}[\w\-.]+)\\?""""
-  """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?""""
+  """SubjectUserName\\?"+:\\?"+(?:-|(LOCAL SYSTEM|anonymous logon|LOCAL SERVICE|SYSTEM)|(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))))\\?""""
   """SubjectUserSid\\?"+:\\?"+({user_sid}[^\\"]+)\\?""""
   """TargetDomainName\\?"+:\\?"({dest_domain}[^\s\\"]+)\\?""""
   """"TargetSid\\?"+:\\?"({dest_user_sid}[^\\"]+)"""

@@ -6,7 +6,7 @@ Name = microsoft-o365-json-app-consent-grant-success-operation
   Fields = ${MSParserTemplates.m365-activity-json.Fields}[
     """exa_regex="NewValue":[^\}]+ConsentType:\s+({principal_type}[^:,]+),\s+Scope:\s+({permission}[^:,]+)[^\}]+"Name":"ConsentAction\.Permissions""""
     """exa_regex="Name":"ConsentAction\.Permissions"[^\}]+"NewValue":[^\}]+ConsentType:\s+({principal_type}[^:,]+),\s+Scope:\s+({permission}[^:,]+)"""
-    """exa_regex="Target":\[([^\}]+},){3}\{"ID":"({app}[^"]+)""""
+    """exa_regex="Target":.*"ID":"(Unknown|({app}[^"]+))","Type":1"""
   ]
   ParserVersion = "v1.0.0"
 
@@ -19,8 +19,8 @@ m365-activity-json = {
       """exa_json_path=$.CreationTime,exa_field_name=time"""
       """exa_json_path=$.OriginatingServer,exa_field_name=host"""
       """exa_json_path=$.Operation,exa_field_name=operation"""
-      """exa_regex=\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]+)\\+)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^",]+)))"""
-      """exa_regex="UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]+)\\+)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^",]+)))"""
+      """exa_regex=\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]+)\\+)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^",]+)))"""
+      """exa_regex="UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]+)\\+)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[^",]+)))"""
       """exa_regex=\sfname=\s*({object}[^=]+?)\s*(\w+=|$)"""
       """exa_regex="User-?Agent\\?":\s*\\?"({user_agent}[^"\}:]+?)\\?""""
       """exa_json_path=$.SourceFileName,exa_field_name=object"""

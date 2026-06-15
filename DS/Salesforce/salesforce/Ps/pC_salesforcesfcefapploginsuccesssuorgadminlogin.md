@@ -12,7 +12,7 @@ Name = "salesforce-sf-cef-app-login-success-suorgadminlogin"
     """({app}Sales Cloud)""",
     """cs1=({auth_method}[^\s]+)"""
     """CreatedBy\.Name\\?=({full_name}({first_name}[^\s]+)\s({last_name}[^;]+))""",
-    """CreatedBy\.Username\\=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+));"""
+    """CreatedBy\.Username\\=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+));"""
     """Display\\=({additional_info}.+?)\s*(\w+=|$)"""
   ]
 

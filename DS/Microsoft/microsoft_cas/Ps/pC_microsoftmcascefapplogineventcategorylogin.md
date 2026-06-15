@@ -14,7 +14,7 @@ Conditions = [
 Fields = [
 """EVENT_CATEGORY_({result}.+?)_LOGIN"""
 """Failure message:\s*({failure_reason}.+?)\)\s+\w+="""
-"""\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+"""\ssuser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
 """\srt=({time}\d{13})"""
 """destinationServiceName =({app}.+?)\s+\w+="""
 """\srequestClientApplication=(|({user_agent}.+?))\s+\w+="""

@@ -18,7 +18,7 @@ Name = cisco-duo-json-vpn-login-vpn
     """"os_version":"({os_version}[^"]+)"""",
     """"browser":"(Unknown|({browser}[^"]+))"""",
     """"browser_version":"({browser_version}[^"]+)"""",
-    """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"factor":"(?:n\/a|({factor}[^"]+))"""",
     """"user":[^\}]*"name":"(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
     """"application".+?"name":\s*"({service_name}[^"]+)"""

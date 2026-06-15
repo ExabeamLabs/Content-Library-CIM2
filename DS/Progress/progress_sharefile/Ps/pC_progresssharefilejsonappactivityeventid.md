@@ -9,7 +9,7 @@ Name = "progress-sharefile-json-app-activity-eventid"
   Conditions = [ """destinationServiceName =Progress ShareFile""", """"Activity":""", """"Email":""", """"EventID":""", """"ItemName":""" ]
   Fields = [
     """exa_json_path=$.Date,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
-    """exa_json_path=$.Email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.Email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.IPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.EventID,exa_field_name=event_id""",
     """exa_json_path=$.Location,exa_regex=(-|({country_code}[^,]+)),""",

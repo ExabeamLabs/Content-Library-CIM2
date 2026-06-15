@@ -13,6 +13,8 @@ Name = microsoft-o365-sk4-file-app-userkey
       """exa_json_path=$.RemovableMediaDeviceAttributes.Manufacturer,exa_field_name=removable_media_vendor"""
       """exa_json_path=$.RemovableMediaDeviceAttributes.SerialNumber,exa_field_name=removable_media_serial_number"""
       """exa_json_path=$.SiteUrl,exa_regex=({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
+      """exa_json_path=$.SiteUrl,exa_field_name=site_name"""
+      """exa_json_path=$.ApplicationId,exa_field_name=app_id"""
       """"PolicyName":\s*"({policy_name}[^"]+)""""
       """"FileExtension":\s*"({file_ext}[^"]+)""""
       """"Application":\s*"({app}[^"]+)""""
@@ -20,7 +22,8 @@ Name = microsoft-o365-sk4-file-app-userkey
       """"DeviceName":\s*"({src_host}[^"]+)""""
       """"Manufacturer":\s*"({removable_media_vendor}[^"]+)""""
       """"SerialNumber":\s*"({removable_media_serial_number}[^"]+)""""
-      """"SiteUrl":\s*"({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
+      """"SiteUrl":\s*"({site_name}({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*))"""
+      """"ApplicationId":\s*"({app_id}[^"]+)""""
     ]
 
 o365-file-app-activity = {
@@ -30,7 +33,7 @@ o365-file-app-activity = {
     Fields = [
       """"CreationTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
       """"Operation":\s*"({operation}[^"]+)""",
-      """"UserId":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)",""",
+      """"UserId":\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)",""",
       """"Workload":\s*"({app}[^"]+)"""",
       """"ObjectId":\s*"({object}[^"]+)""",
       """"Id":\s*"({object_id}[^"]+)"""", 
@@ -41,14 +44,18 @@ o365-file-app-activity = {
       """"SourceFileExtension":\s*"({src_file_ext}[^"]+)"""",
       """"UserAgent":\s*"({user_agent}[^"]+)""""
       """"UserType":"*({user_type}[^,}"]+)"*"""
+      """"SiteUrl":"({site_name}({url}[^"]+))""""
+      """"ApplicationId":"({app_id}[^"]+)""""
       """exa_json_path=$.CreationTime,exa_field_name=time"""
       """exa_json_path=$.Operation,exa_field_name=operation"""
-      """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$.Workload,exa_field_name=app"""
       """exa_json_path=$.ObjectId,exa_field_name=object"""
       """exa_json_path=$.Id,exa_field_name=object_id"""
       """exa_json_path=$.RecordType,exa_field_name=object_type"""
       """exa_json_path=$.ClientIP,exa_field_name=src_ip"""
+      """exa_json_path=$.SiteUrl,exa_field_name=site_name"""
+      """exa_json_path=$.ApplicationId,exa_field_name=app_id"""
       """"(?i:tenantid)":"({tenant_id}[^"]+)"""
 
 }

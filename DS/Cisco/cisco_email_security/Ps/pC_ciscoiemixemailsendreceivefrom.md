@@ -11,7 +11,7 @@ Name = cisco-ie-mix-email-send-receive-from
       """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s[\w\_]+:""",
       """\srt=({time}\d{13})""",
       """MID ({message_id}({alert_id}\d+))""",
-      """(F|f)rom[:'].+?<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>""",
+      """(F|f)rom[:'].+?<({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>""",
     ]
   
 

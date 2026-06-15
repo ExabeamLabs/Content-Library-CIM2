@@ -23,7 +23,7 @@ Name = unix-unix-mix-user-switch-success-sudo
 """\s({dest_host}({host}[\w\.\-]+))?:?\s*sudo:""",
 """\"agent\":\{\"id\":\"({agent_id}\d+)\"""",
 """\"agent\":\{\"name\":\"[^\"]*\",\"id\":\"({agent_id}\d+)\"""",
-"""({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))""",
+"""({event_code}sudo):\s+(?:\[[^]]+\])?\s*(({domain}[^\\:;]+)\\+)?(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)).+?USER\\*=({account}({dest_user}[^;\s]+))""",
 """\/(user(add|del)|passwd)\s([^"]*?\s*)?({account}({dest_user}\w+?))\s*(\d\d\d\d\-|$)""",
 """\WPWD\\?=({current_working_dir}[^\s;]+)""",
 """\WCOMMAND\\?=({process_relative_path}({process_relative_dir}[^\s]+[\\\/]+)?({process_name}[^;\\\/\s]+))\s(?:|;|$)""",

@@ -5,7 +5,7 @@ Name = checkpoint-avanan-json-email-send-avanansecurityevent
   ParserVersion = v1.0.0
   Conditions = [ """"avanan_security_event\"""", """"tag\"""", """"subject\"""",  """"is_incoming\":false""" ]
   Fields = ${AvananParserTemplates.json-avanan-security-alert.Fields}[
-    """from_email\\*":\\*"({orig_user}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """from_email\\*":\\*"({orig_user}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
   ]
 
 json-avanan-security-alert = {
@@ -22,13 +22,13 @@ json-avanan-security-alert = {
     """("|')subject\\*("|'):\s*("|')({email_subject}[^\\"]+?)\s*\\*("|')"""
     """("|')saas_info\\*("|'):\{[^\}]+?"full_name\\*":\\*"({full_name}[^\\"]+)\\*"""",
   //  """("|')saas_info\\*("|'):\{[^\}]+?"email\\*":\\*"({email_address}[^\\"]+)\\*"""",
-    """("entity\\*":\{[^\}]+)?"recipients\\*":\[\\*"*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\\*"\],""",
+    """("entity\\*":\{[^\}]+)?"recipients\\*":\[\\*"*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))\\*"\],""",
     """("|')description_text\\*("|'):\\*("|')({additional_info}[^\[]+?)\\*",""",
     """("|')is_quarantined\\*("|'):\s*({result}[^,]+)""",
     """sender_client_ip\\*("|'):\\*("|')\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """attachments\\*":\[\{[^\}]+?"name\\*":\\*"({email_attachments}[^"\\]+)""",
     """file_name\\*":\\*"\s*({file_name}[^\\"]+?)\s*\\*"""",
-    """from_email\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """from_email\\*":\\*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """("|')category("|'):\s*("|')({category}[^"']+)""""
     
 }

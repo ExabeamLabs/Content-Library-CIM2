@@ -3,21 +3,24 @@
 {
 Name = microsoft-o365-json-mail-access-mailitemsaccessed
   ParserVersion = v1.0.0
+  ExtractionType = json
   Conditions = [""""Operation":"MailItemsAccessed"""", """"Workload":""" ]
   Fields = ${MSO365ParsersTemplates.m365-activity.Fields}[
     """"Name":"MailAccessType","Value":"({access_type}Bind|Sync)"""",
     """"Value":"({access_type}Bind|Sync)","Name":"MailAccessType"""",
+    """"Name":"IsThrottled","Value":"({throttled}True|False)"""",
+    """"Value":"({throttled}True|False)","Name":"IsThrottled"""",
     """"ParentFolder":\{"[^,]+?,"Name":"({src_email_folder}.+?)",""",
     """"OperationCount":({count}\d{1,10})""",
     """"OriginatingServer":"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?"""",
-    """\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))\s{1,100}(\w+=|$)""",
-    """"UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))"+""",
+    """\ssuser=((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))\s{1,100}(\w+=|$)""",
+    """"UserId":"((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|(NOT-FOUND|Unknown|Sync|AirInvestigation|Sync Client|Office365 Backend Process|Device Registration Service|Microsoft Intune|Microsoft Teams Services|Microsoft Online Services|Office 365 SharePoint Online|anonymous|SecurityComplianceAlerts|SecurityComplianceInsights|(Microsoft\\[^@\s"]+)|EMPTY\.*|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s@"]{1,50})\\)(system|({user}[\w\.\-\!\#\^\~]{1,40}\$?))|({full_name}[\w,\s]+?)))"+""",
     """"ClientIP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"ClientIPAddress\\*":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """src-account-name":"({account_name}[^"]+)""",
     """"Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)""""
     """"Path":"(\\+)?(\?+|({target}[^"\}\]]+?))\s*"""",
-    """"Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
+    """"Target":.+?"ID":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """"FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)"""",
     """"os":"({os}[^"]+)"""",
     """"(browser|BrowserName)":"({browser}[^"]+)"""",
@@ -30,6 +33,8 @@ Name = microsoft-o365-json-mail-access-mailitemsaccessed
     """exa_json_path=$.ClientIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.UserKey,exa_regex=(anonymous|({user_id}[^@\"]+))""",
     """exa_json_path=$.LogonUserSid,exa_field_name=user_sid"""
+    """exa_json_path=$..OperationProperties[?(@.Name == 'IsThrottled')].Value,exa_field_name=throttled"""
+    """exa_json_path=$..Subject,exa_field_name=email_subject_list"""
   ]
 
 m365-activity = {
@@ -62,6 +67,7 @@ m365-activity = {
     """\sfname=\s*(N\/A|({email_subject}[^=]+))\smsg=""",
     """((fileType=(n\/a|N\/A|mail|calendar-event|note|message)[^\n]*?\sfname=\s*(N\/A|({email_subject}[^=]+?)))|(fileType=group[^\n]*?\sfname=\s*(N\/A|({group_name}[^=]+?)))|(fileType=(file|folder|attachment|report)[^\n]*?\sfname=\s*(N\/A|({file_name}[^=]+?)))|(fileType=process[^\n]*?\sfname=\s*(N\/A|({process_name}[^=]+?)))|(fileType=app(lication)?[^\n]*?\sfname=\s*(N\/A|({app}[^=]+?))))\s+(\w+=|$)""",
     """"OrganizationId":"({tenant_id}[^"]+)","""
+    """"MailboxOwnerUPN":"({owner}[^"]+)""""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
     """exa_json_path=$.Operation,exa_field_name=operation"""
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id"""
@@ -80,6 +86,7 @@ m365-activity = {
     """exa_json_path=$.LogonType,exa_field_name=login_type"""
     """exa_json_path=$.OrganizationName,exa_field_name=company"""
     """exa_json_path=$.UserType,exa_field_name=user_type"""
+    """exa_json_path=$.MailboxOwnerUPN,exa_field_name=owner"""
   ]
 
 }

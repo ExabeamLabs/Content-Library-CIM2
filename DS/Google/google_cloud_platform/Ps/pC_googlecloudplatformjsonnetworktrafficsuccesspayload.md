@@ -6,7 +6,7 @@ Name = "google-cloudplatform-json-network-traffic-success-payload"
   Vendor = "Google"
   Product = "Google Cloud Platform"
   ExtractionType = json
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss"
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" ]
   Conditions = [
 """"jsonPayload":"""
 """"vm_name":"""
@@ -29,6 +29,7 @@ Name = "google-cloudplatform-json-network-traffic-success-payload"
 """"src_instance":\{[^\}]*?\"vm_name\":\"({src_host}[^\"]+)"""
 """"reporter":"({reporter}[^\"]+)"""
 """"direction":"({direction}[^"]+)""""
+""""disposition":"({action}[^"]+)""""
 """exa_json_path=$.timestamp,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """exa_json_path=$.jsonPayload.start_time,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
 """exa_regex="start_time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""
@@ -49,6 +50,7 @@ Name = "google-cloudplatform-json-network-traffic-success-payload"
 """exa_json_path=$.jsonPayload.rule_details.action,exa_field_name=action"""
 """exa_json_path=$.jsonPayload.src_instance.vm_name,exa_field_name=src_host"""
 """exa_json_path=$.jsonPayload.dest_instance.vm_name,exa_field_name=dest_host"""
+"""exa_json_path=$.jsonPayload.disposition,exa_field_name=action"""
   ]
 
 

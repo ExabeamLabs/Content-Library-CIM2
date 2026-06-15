@@ -26,7 +26,7 @@ ping-events-3 = {
     """\sbrowser=\\"({user_agent}[^"]+?)\\?"""",
     """useragent="({user_agent}[^"]+)"""",
     """description="({additional_info}[^"]]+)""""
-    """\ssubject="?(||(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\-\s"\\,;\|]+\.[^\]\s"\\,;\|\-]+))|(?:[^"]+?:)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\-[^"]+)?"?(,|\s\w+=)"""  ping-events-3 = {
+    """\ssubject="?(||(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\-\s"\\,;\|]+\.[^\]\s"\\,;\|\-]+))|(?:[^"]+?:)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\-[^"]+)?"?(,|\s\w+=)"""  ping-events-3 = {
   Vendor = Ping Identity
   Product = Ping Identity
   TimeFormat = "yyyy-MM-dd HH:mm:ss"
@@ -40,7 +40,7 @@ ping-events-3 = {
     """\sbrowser=\\"({user_agent}[^"]+?)\\?"""",
     """useragent="({user_agent}[^"]+)"""",
     """description="({additional_info}[^"]]+)""""
-    """\ssubject="?(||(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\-\s"\\,;\|]+\.[^\]\s"\\,;\|\-]+))|(?:[^"]+?:)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\-[^"]+)?"?(,|\s\w+=)"""  ]
+    """\ssubject="?(||(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\-\s"\\,;\|]+\.[^\]\s"\\,;\|\-]+))|(?:[^"]+?:)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))(\-[^"]+)?"?(,|\s\w+=)"""  ]
 }
 }
 ```

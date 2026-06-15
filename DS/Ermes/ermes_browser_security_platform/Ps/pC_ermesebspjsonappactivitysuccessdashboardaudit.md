@@ -19,7 +19,7 @@ json-ermes-app-activity = {
       """exa_json_path=$..op,exa_field_name=operation"""
       """exa_json_path=$..resource,exa_field_name=resource"""
       """exa_json_path=$.message.en,exa_field_name=additional_info"""
-      """exa_json_path=$.username,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))$"""
+      """exa_json_path=$.username,exa_regex=^(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))$"""
     json-ermes-app-activity = {
     Vendor = "Ermes"
     Product = "Ermes Browser Security Platform"
@@ -34,7 +34,7 @@ json-ermes-app-activity = {
       """exa_json_path=$..op,exa_field_name=operation"""
       """exa_json_path=$..resource,exa_field_name=resource"""
       """exa_json_path=$.message.en,exa_field_name=additional_info"""
-      """exa_json_path=$.username,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))$"""
+      """exa_json_path=$.username,exa_regex=^(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?))$"""
     ]
   }
 }

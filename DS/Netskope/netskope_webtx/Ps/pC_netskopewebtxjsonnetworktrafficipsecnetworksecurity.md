@@ -17,7 +17,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """exa_json_path=$.bytes,exa_field_name=bytes"""
         """exa_json_path=$.c-ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
         """exa_json_path=$.s-ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
-        """exa_json_path=$.cs-username,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+        """exa_json_path=$.cs-username,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
         """exa_json_path=$.cs-user-agent,exa_field_name=user_agent""",
         """exa_json_path=$.sc-content-type,exa_field_name=mime""",
         """exa_json_path=$.cs-host,exa_regex=(-|({web_domain}[a-zA-z0-9.\-_]+(\.[a-zA-Z]{2,})?))\s*("|\||$|\t|\s+[\w\-\(\)]+=)""",
@@ -44,7 +44,7 @@ Name = netskope-webtx-json-network-traffic-ipsecnetworksecurity
         """"bytes":\s*"({bytes}\d+)""""
         """"c-ip":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
         """"s-ip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""""
-        """"cs-username":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+        """"cs-username":\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
         """"cs-user-agent":\s*"({user_agent}[^"]+)""""
         """"sc-content-type":\s*"({mime}[^"]+)""""
         """"cs-host":\s*"({web_domain}[^",]+)""""

@@ -22,7 +22,7 @@ Fields = [
 """ActionType\\?"+:\s*\\?"+({result}[^"]+?)\\?""""
 """RemoteIPType"+:\s*"+(null|({direction}[^"]+))"""
 """DeviceName\\?"+:\s*\\?"+({dest_host}[\w\-.]+?)\\?""""
-"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
+"""InitiatingProcessAccountName\\?"+:\s*\\?"+(system|SYSTEM|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?)|({full_name}[^",]+)))\\?"+"""
 """"ProcessIntegrityLevel\\?"+:\s*\\?"+({process_integrity}[^"]+?)\\?""""
 """InitiatingProcessAccountSid\\?"+:\s*\\?"+({user_sid}[^"]+?)\\?""""
 """InitiatingProcessFileName\\?"+:\s*\\?"+({parent_process_name}[^"]+?)\\?",""""
@@ -43,7 +43,7 @@ Fields = [
 """"SHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessSHA256":"({hash_sha256}[^",]+)",""",
 """"InitiatingProcessVersionInfoProductName":"({product_name}[^"]+)""""
-""""AccountUpn":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""
+""""AccountUpn":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)","""
 """"AccountName\\?"+:\s*\\?"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/.=?^_`~-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}({first_name}[^.\s",]+)[.\s]+({last_name}[^",]+))|({user}[\w\.\-]{1,40}\$?))"+"""
 """"tenantId"\s*:\s*"({tenant_id}[^"]+)""""
 ]

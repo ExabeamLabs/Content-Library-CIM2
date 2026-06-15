@@ -8,8 +8,8 @@ Name = google-workspace-sk4-email-send-gmaillogs
   Conditions = [ """CEF:""", """destinationServiceName =Google Apps""", """"service":"smtp-outbound"""", """dproc=Gmail Logs""", """"action_type":""" ]
   Fields = [
   """"timestamp_usec":({time}\d{13})""",
-  """"destination":\[\{"address[":]*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
-  """"source":\{"address[":]*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+  """"destination":\[\{"address[":]*({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+  """"source":\{"address[":]*({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
   """"subject":"({email_subject}[^"]+)"""",
   """"selector":"({action}[^"]+)""",
   """"success":({result}true|false)""",

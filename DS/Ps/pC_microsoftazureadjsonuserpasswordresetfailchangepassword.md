@@ -19,6 +19,8 @@ o365-file-app-activity.Fields} [
       """exa_json_path=$.RemovableMediaDeviceAttributes.Manufacturer,exa_field_name=removable_media_vendor"""
       """exa_json_path=$.RemovableMediaDeviceAttributes.SerialNumber,exa_field_name=removable_media_serial_number"""
       """exa_json_path=$.SiteUrl,exa_regex=({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
+      """exa_json_path=$.SiteUrl,exa_field_name=site_name"""
+      """exa_json_path=$.ApplicationId,exa_field_name=app_id"""
       """"PolicyName":\s*"({policy_name}[^"]+)""""
       """"FileExtension":\s*"({file_ext}[^"]+)""""
       """"Application":\s*"({app}[^"]+)""""
@@ -26,7 +28,8 @@ o365-file-app-activity.Fields} [
       """"DeviceName":\s*"({src_host}[^"]+)""""
       """"Manufacturer":\s*"({removable_media_vendor}[^"]+)""""
       """"SerialNumber":\s*"({removable_media_serial_number}[^"]+)""""
-      """"SiteUrl":\s*"({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*)"""
+      """"SiteUrl":\s*"({site_name}({url}\w+:\/+({web_domain}[^"\\\/\s]+)[^"\s]*))"""
+      """"ApplicationId":\s*"({app_id}[^"]+)""""
     
 }
 ```

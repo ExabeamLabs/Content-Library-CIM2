@@ -16,7 +16,7 @@ Fields = [
   """exa_json_path=$.Workload,exa_field_name=app"""
   """exa_json_path=$.ObjectId,exa_field_name=object"""
   """exa_json_path=$.Operation,exa_field_name=operation"""
-  """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """exa_json_path=$.ClientIP,exa_field_name=src_ip"""
   """exa_json_path=$.ipAddress,exa_field_name=src_ip"""
   """exa_json_path=$.UserAgent,exa_field_name=user_agent"""

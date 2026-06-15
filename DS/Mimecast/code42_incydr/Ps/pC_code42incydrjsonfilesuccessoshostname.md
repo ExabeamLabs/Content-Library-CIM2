@@ -33,7 +33,7 @@ Name = "code42-incydr-json-file-success-oshostname"
     """"deviceUserName"+:\s*"+({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
     """"osHostName"+:\s*"+({device_name}({dest_host}[^"]+))"""",
     """"windowTitle"+:\s*\["*({requested_app}[^"\]]+)"*\]""",
-    """"actor"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
+    """"actor"+:"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))""",
     """exa_regex="eventType"+:\s*"+({access}MODIFIED|DELETED|READ|CREATED)""",
     """exa_json_path=$.mimeTypeByExtension,exa_field_name=mime""",
     """exa_json_path=$.tabUrl,exa_field_name=url""",
@@ -52,11 +52,11 @@ Name = "code42-incydr-json-file-success-oshostname"
     """exa_json_path=$.processOwner,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.md5Checksum,exa_field_name=hash_md5""",
     """exa_json_path=$.sha256Checksum,exa_field_name=hash_sha256""",
-    """exa_json_path=$.deviceUserName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.deviceUserName,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.osHostName,exa_field_name=dest_host""",
     """exa_json_path=$.osHostName,exa_field_name=device_name""",
     """exa_json_path=$.windowTitle[0],exa_field_name=requested_app""",
-    """exa_regex="actor"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+    """exa_regex="actor"+:"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-]{1,40}\$?))"""
   ]
   ParserVersion = "v1.0.0"
 

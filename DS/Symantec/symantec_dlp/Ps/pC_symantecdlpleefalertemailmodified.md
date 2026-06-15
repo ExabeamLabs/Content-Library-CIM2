@@ -19,7 +19,7 @@ Fields = [
   """\|Symantec\|DLP(\|([^|]+?){0,1})?\|({alert_name}[^|]+?)\s*\|usrName ="""
   """\|usrName =(({src_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({email_address}[^\|@]+@[^\|@]+)|(N\/A|([^\\\|=]*\\)*({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   """\|suser=((NT AUTHORITY|({domain}[^\|\\\/]+))[\\\/]+)?(system|N\/A|([^\\\|=]*\\)*({user}[\w\.\-\!\#\^\~]{1,40}\$?))\|"""
-  """\|usrName =(?=[\w.]+@[\w.])({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """\|usrName =(?=[\w.]+@[\w.])({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """\|duser=(?=[\w.]+@[\w.])({email_recipients}[^\|]+)"""
   """\|subject=\s*((?!SFTP|HTTP|FTP|TCP|N/A)({email_subject}[^\|]+?))\s*\|"""
   """\|rules=\s*({alert_type}[^\|]+?)\s*\|"""

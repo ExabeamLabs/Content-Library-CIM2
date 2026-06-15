@@ -6,7 +6,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
   Product = "FortiGate"
   ParserVersion = "v1.0.0"
   TimeFormat = ["epoch_sec", "yyyy-MM-dd' time='HH:mm:ss"]
-  Conditions = [ """ vd=""", """ devname=""", """ devid=""", """ logid=""", """ level=""" ]
+  Conditions = [  """ devname=""", """ devid=""", """ logid=""", """ level=""" ]
   Fields = [
     """date=({time}\d\d\d\d-\d\d-\d\d[\s,]*time=\d\d:\d\d:\d\d)""",
     """eventtime="*({time}\d{10})""",
@@ -37,7 +37,7 @@ Name = "fortinet-fortigate-kv-network-traffic-logid"
     """\ssrccountry=\\?"?({src_country}[^=]+?)\\?"?\s+(\w+=|$)""",
     """\srcvdpkt=({packets_in}\d+)""",
 # poluuid is removed
-    """\suser=\\?"?\s*(N\/A|(?:host\/({src_host}[^"\\]+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^="]+))?)\s*\\?"?\s+(\w+=|$)""",
+    """\suser=\\?"?\s*(N\/A|(?:host\/({src_host}[^"\\]+))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^="]+))?)\s*\\?"?\s+(\w+=|$)""",
 # crscore is removed
 # crlevel is removed
 # craction is removed

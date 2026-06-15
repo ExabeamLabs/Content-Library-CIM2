@@ -6,7 +6,7 @@ Name = netskope-sc-json-network-traffic-traffictype-1
   Vendor = "Netskope"
   Product = "Netskope Security Cloud"
   TimeFormat = "epoch_sec"
-  Conditions = [ """"netskope_pop":""", """"traffic_type":""", """"userkey":""", """"appcategory":""", """"ur_normalized":""" ]
+  Conditions = [ """"netskope_pop":""", """"traffic_type":""", """"userkey":""", """"access_method":""", """"ur_normalized":""" ]
   Fields = [
     """"type":\s*"({operation_type}[^"]+)""",
     """"traffic_type":\s*"({app_type}[^"]+)""",
@@ -23,7 +23,7 @@ Name = netskope-sc-json-network-traffic-traffictype-1
     """"domain":"({web_domain}[^"]+)""""
     """\"+url\"+:\s*\"+(|({web_domain}[^\",\/]+))"""",
     """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)""",
-    """\"user\"+:\s*\"+(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))"""",
+    """\"user\"+:\s*\"+(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-]{1,40}\$?)))"""",
     """\"+dstport\"+:\s*({dest_port}\d+)""",
     """\"hostname\"+:\s*\"+({host}[^\",]+)""",
     """\"+appcategory\"+:\s*\"+({category}[^\",]+)""",

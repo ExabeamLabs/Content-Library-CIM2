@@ -19,7 +19,7 @@ Name = "delinea-centrifyas-kv-ssh-traffic-success-sshd"
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""
 """service=({process_path}.+?)\s\w+="""
-"""EntityName =(.+\\+)?({dest_host}[^\"\s]+)(\s|$)"""
+"""EntityName =({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """\sauthMechanism=({auth}[^\s]{1,40})"""
    ]
 

@@ -29,7 +29,7 @@ json-catonetwork = {
     """exa_json_path=$..action,exa_field_name=action""",
     """exa_json_path=$..domain_name,exa_field_name=web_domain""",
     """exa_json_path=$..http_host_name,exa_field_name=host"""
-    """exa_json_path=$..vpn_user_email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+    """exa_json_path=$..vpn_user_email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
     """exa_json_path=$..event_type,exa_field_name=event_category"""
     """exa_json_path=$..ip_protocol,exa_field_name=protocol""",
     """exa_json_path=$..application,exa_field_name=app""",
@@ -66,7 +66,7 @@ json-catonetwork = {
     """exa_json_path=$..action,exa_field_name=action""",
     """exa_json_path=$..domain_name,exa_field_name=web_domain""",
     """exa_json_path=$..http_host_name,exa_field_name=host"""
-    """exa_json_path=$..vpn_user_email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+    """exa_json_path=$..vpn_user_email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
     """exa_json_path=$..event_type,exa_field_name=event_category"""
     """exa_json_path=$..ip_protocol,exa_field_name=protocol""",
     """exa_json_path=$..application,exa_field_name=app""",

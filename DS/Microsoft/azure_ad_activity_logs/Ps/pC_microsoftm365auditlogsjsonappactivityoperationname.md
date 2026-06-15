@@ -10,7 +10,8 @@ Name = microsoft-m365auditlogs-json-app-activity-operationname
     """tenantId":"({host}[^",]+)""",
     """"?time":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{7}Z)""",
     """"time":"({time}\d{1,2}\/\d{1,2}\/\d{4} \d{2}:\d{2}:\d{2} (?:AM|PM))""",
-    """"userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """(?:"initiatedBy":|"properties":)[^}]+?"userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """initiatedBy":.+?id":"({user_uid}[^",]+)""",
     """callerIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """operationName":"({operation}[^",]+)""",
@@ -33,6 +34,7 @@ Name = microsoft-m365auditlogs-json-app-activity-operationname
     """"ErrorCode":"({error_code}[^"]+?)"""",
     """servicePrincipalName":"({attribute}[^",]+)"""",
     """"servicePrincipalId":\s*"(null|({principal_id}[^"]+))""""
+    """"ReportableIdentifier"\s*:\s*"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   ]
   ParserVersion = "v1.0.0"
 

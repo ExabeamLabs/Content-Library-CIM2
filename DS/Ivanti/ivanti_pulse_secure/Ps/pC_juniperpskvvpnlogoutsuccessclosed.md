@@ -17,7 +17,7 @@ Name = juniper-ps-kv-vpn-logout-success-closed
     """\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2}\s+({host}[\w\.-]+)\s+\S*?[\[:\s]""",
     """- \[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?\]\s+([\w\s]+?::)?(?:({domain}\w+)\\{1,20})?(({email_address}[^@]+@[^\s]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))[\(\[]""",
     """\stime=\\*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
+    """\suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)"""
     """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """\safter\s+({session_duration}\d+)\s+seconds""",
     """\swith\s+({bytes_in}\d+)\s+bytes read""",
@@ -41,7 +41,7 @@ Name = juniper-ps-kv-vpn-logout-success-closed
     """\sduration=({session_duration}\d+)""",
     """\smsg=\\*"({additional_info}[^\\"]+)"""
     """exa_regex=\stime=\\*"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
-    """exa_regex=\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
+    """exa_regex=\suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
     """exa_regex=\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_regex=\safter\s+({session_duration}\d+)\s+seconds""",
     """exa_regex=\swith\s+({bytes_in}\d+)\s+bytes read""",

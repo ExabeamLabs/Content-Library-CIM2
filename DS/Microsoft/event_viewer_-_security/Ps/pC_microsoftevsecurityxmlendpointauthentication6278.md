@@ -13,7 +13,7 @@ Name = microsoft-evsecurity-xml-endpoint-authentication-6278
     """<Data Name\\*=('|")SubjectUserSid('|")>({user_sid}[^<]+)</Data>""",
     """<Data Name\\*=('|")SubjectDomainName('|")>({domain}({src_domain}[^<]+))</Data>""",
     """<Data Name\\*=('|")SubjectLogonId('|")>({login_id}[^<]+)</Data>""",
-    """<Data Name\\*=('|")SubjectUserName('|")>(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
+    """<Data Name\\*=('|")SubjectUserName('|")>(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))</Data>""",
     """<\d+>\w+ \d+ \d\d:\d\d:\d\d ({host}[\w_\-\.]+)"""
   ]
 

@@ -20,7 +20,7 @@ defender-atp-security-alert-events = {
       """"category":"({alert_type}[^"]+)"""",
       """"description":"({additional_info}[^\n]+?)\s*","""",
       """"userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-      """userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """domainName":"({domain}[^"]+)""",
       """"status":"({incident_status}[^"]+)"""
       """"incidentId":"({alert_id}\d+)"""
@@ -39,7 +39,7 @@ defender-atp-security-alert-events = {
       """exa_json_path=$.title,exa_field_name=alert_name""",
       """exa_json_path=$.description,exa_field_name=additional_info""",
       """exa_regex="userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-      """exa_regex=userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """exa_regex=userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """exa_regex=domainName":"({domain}[^"]+)"""
       """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.mitreTechniques,exa_field_name=technique"""
@@ -61,7 +61,7 @@ defender-atp-security-alert-events = {
       """"category":"({alert_type}[^"]+)"""",
       """"description":"({additional_info}[^\n]+?)\s*","""",
       """"userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-      """userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """domainName":"({domain}[^"]+)""",
       """"status":"({incident_status}[^"]+)"""
       """"incidentId":"({alert_id}\d+)"""
@@ -80,7 +80,7 @@ defender-atp-security-alert-events = {
       """exa_json_path=$.title,exa_field_name=alert_name""",
       """exa_json_path=$.description,exa_field_name=additional_info""",
       """exa_regex="userAccount":\{[^\}]+?accountName":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-      """exa_regex=userPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """exa_regex=userPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """exa_regex=domainName":"({domain}[^"]+)"""
       """exa_json_path=$.status,exa_field_name=incident_status"""
       """exa_json_path=$.mitreTechniques,exa_field_name=technique"""

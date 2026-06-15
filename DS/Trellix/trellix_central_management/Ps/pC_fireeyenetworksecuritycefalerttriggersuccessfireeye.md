@@ -29,7 +29,7 @@ Fields = [
   """categoryOutcome=(\/)?({result}[^\s]+)"""
   """CEF:([^\|]*\|){4}({event_name}({operation}[^\|]+))""",
   """request=({object}({resource}[^\s=]+))\s*(\w+=|$)"""
-  """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+  """suser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """act=({category}[^=]+)\s+\w+="""
   """msg=({additional_info}[^=]+)\s+\w+=""",
   """fireeye\|({app}hx)"""

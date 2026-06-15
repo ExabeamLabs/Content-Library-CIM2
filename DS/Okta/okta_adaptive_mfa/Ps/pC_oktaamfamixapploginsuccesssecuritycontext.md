@@ -13,9 +13,9 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"displayMessage"\s*:\s*"({event_name}(Kerberos[^",]+user)|([^"]+))""",
     """"eventType"\s*:\s*"({alert_name}({operation}[^"]+))""",
     """"legacyEventType":\s*"({operation_details}[^"]+)"""",
-    """suser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
-    """duser\\*=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)\s\w+=""",
-   """\Wsuid=(anonymous|email|system|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
+    """suser\\*=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
+    """duser\\*=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)\s\w+=""",
+   """\Wsuid=(anonymous|email|system|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))(\s+\w+=|\s*$)""",
     """actor":\s*\{[^\}]+?"+displayName"+:\s*(null|"+(Okta System|({full_name}(?:({first_name}[^,"]+),\s*({last_name}[^"]+))|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|_oktaadagent|({=full_name}[^"]+))))")[^\}]+?"type":"User"""",
     """actor"+:\s*\{[^\}]+?"type"+:\s*"+User"[^\}]+?"+displayName"+:\s*(null|"+(Okta System|Okta Admin|(?:({full_name}({first_name}[^,"]+),\s*({last_name}[^"]+))|(Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|_oktaadagent|({=full_name}[^"]+))))")"""
     """"client":[^\]]*?"rawUserAgent"\s*:\s*"(unknown|({user_agent}[^"]+))""",
@@ -38,11 +38,11 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"severity":\s*"({alert_severity}[^"]+)""",
     """"eventType":\s*"({alert_type}[^"]+)""",
     """requestUri":\s*"({uri_path}[^"]+?)\s*"""",
-    """"target":[^\]\}]*?"type":\s*"(App)?User"[^\}]+?"alternateId"\s*:\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))""""
-    """"target":[^\]\}]*?"alternateId"\s*:\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"[^\}]+?"type":\s*"(App)?User"""",
+    """"target":[^\]\}]*?"type":\s*"(App)?User"[^\}]+?"alternateId"\s*:\s*"(unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))""""
+    """"target":[^\]\}]*?"alternateId"\s*:\s*"(unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"[^\}]+?"type":\s*"(App)?User"""",
     #moved actor regex at higher priority
-    """actor":\s*\{[^\}]+?alternateId":\s*"(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))",[^\}]+?"type":\s*"+(SystemPrincipal|User)"""",
-    """"actor"+:[^\]\}]*?"+type"+:\s*"+(SystemPrincipal|User)"+,"+alternateId"+\s*:\s*"+(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"""",
+    """actor":\s*\{[^\}]+?alternateId":\s*"(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))",[^\}]+?"type":\s*"+(SystemPrincipal|User)"""",
+    """"actor"+:[^\]\}]*?"+type"+:\s*"+(SystemPrincipal|User)"+,"+alternateId"+\s*:\s*"+(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"""",
     """"target":[^}\]]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"[^\}]+?"alternateId"\s*:\s*"({object}[^"]+)"""",
     """"target":[^}\]]+?"alternateId"\s*:\s*"({object}[^"]+)"[^\}]+?"type"\s*:\s*"(?!User)({object_type}[^"]+)"""",
     """"domain"+:"+(null|\.|({domain}[^"\/,]+))"""
@@ -58,8 +58,9 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """"target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """"target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)","""
     """serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
-    """"target":\s*\[[^\]]+?"type":"AppUser","alternateId":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-    """"target":\s*\[[^\]]+?"type":"AppGroup"[^\]]+?"displayName":"({group_name}[^"]+)""""
+    """"target":\s*\[[^\]]+?"type":"AppUser","alternateId":"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"target":\s*\[[^\]]+?"type":"AppGroup"[^\]\}]+?"displayName":"({group_name}[^"]+)""""
+    """"target":\s*\[[^\]]+?"displayName":"({group_name}[^"]+)"[^\]\}]+?"type":"AppGroup""""
     """"target":\s*\[[^\]]+?"type":"AppUser","alternateId":"({member}[^"]+)""""
     """exa_regex=serialNumber\\*":\\*"({serial_num}[^"\\]+)\\*""""
     """exa_json_path=$..published,exa_field_name=time""",
@@ -68,10 +69,10 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_json_path=$..eventType,exa_field_name=alert_name""",
     """exa_json_path=$..legacyEventType,exa_field_name=operation_details,exa_match_expr=!Contains($.legacyEventType,"null")""",
     #moved target regex to lower precendence
-    """exa_regex="target":[^\]\}]*?"type":\s*"(App)?User"[^\}]+?"alternateId"\s*:\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))""""
-    """exa_regex="target":[^\]\}]*?"alternateId"\s*:\s*"(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"[^\}]+?"type":\s*"(App)?User"""",
-    """exa_regex=actor":\s*\{[^\}]+?alternateId":\s*"(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))",[^\}]+?"type":\s*"+(SystemPrincipal|User)"""",
-    """exa_regex="actor"+:[^\]\}]*?"+type"+:\s*"+(SystemPrincipal|User)"+,"+alternateId"+\s*:\s*"+(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"""",
+    """exa_regex="target":[^\]\}]*?"type":\s*"(App)?User"[^\}]+?"alternateId"\s*:\s*"(unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))""""
+    """exa_regex="target":[^\]\}]*?"alternateId"\s*:\s*"(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"[^\}]+?"type":\s*"(App)?User"""",
+    """exa_regex=actor":\s*\{[^\}]+?alternateId":\s*"(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))",[^\}]+?"type":\s*"+(SystemPrincipal|User)"""",
+    """exa_regex="actor"+:[^\]\}]*?"+type"+:\s*"+(SystemPrincipal|User)"+,"+alternateId"+\s*:\s*"+(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))(?<!corp)(?<!local)(?<!loc)(?<!localdomain)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^\s",]+?))?))"""",
     """exa_regex=actor":\s*\{[^\}]+?"+displayName"+:\s*(null|"+(Okta System|(?:({full_name}({first_name}[^,"]+),\s*({last_name}[^"]+))|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|({=full_name}[^"]+))))")[^\}]+?"type":"User"""",
     """exa_regex=actor":\s*\{[^\}]+?"type":"User"[^\}]+?"+displayName"+:\s*(null|"+(Okta System|(?:({full_name}({first_name}[^,"]+),\s*({last_name}[^"]+))|((?i)Unknown|RSA-OKTA Admin|AD-OKTA Admin|AD Agent|({=full_name}[^"]+))))")"""
     """exa_json_path=$..client.userAgent.rawUserAgent,exa_field_name=user_agent""",
@@ -82,7 +83,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="outcome":[^\]]*?"result"\s*:\s*"({result}[^"]+)"""",
     """exa_regex="outcome":[^\]]*?"result":\s*"?(null|({result}[^\"]+))"?,"reason":\s*"?(null|({result_reason}[^"]+))""",
     """exa_json_path=$..actor.displayName,exa_field_name=full_name,exa_match_expr=Contains($.actor.type,"User")""",
-    """exa_json_path=$..actor.alternateId,exa_regex=(system@okta\.com|unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """exa_json_path=$..actor.alternateId,exa_regex=(system@okta\.com|unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
     """exa_json_path=$..client.geographicalContext.city,exa_field_name=location_city""",
     """exa_json_path=$..client.geographicalContext.state,exa_field_name=location_state""",
     """exa_json_path=$..client.geographicalContext.country,exa_field_name=location_country""",
@@ -102,7 +103,7 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="target":\s*[^\]]*?\{"alternateId":"({app_id}[^"\}]+)","displayName":"({app}[^"\}]+)[^\]\}]+?"type":"AppInstance"""",
     """exa_regex="target":\s*\[[^\]]*"type":\s*"(App)?User"[^\]]*?"displayName":\s*"({dest_user_full_name}[\w\.\-]+,?(\s+\w+)+)",\s*"detailEntry":\s*[^\}]*\}(,\{|\])""",
     """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"[^"]*","displayName":\s*"({dest_user_full_name}[\w\.\-]+,?[\s\w\-\.]+)","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
-    """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))","displayName":"[^":]+","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
+    """exa_regex="target":\s*\[[^\]]*\{"alternateId":\s*"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))","displayName":"[^":]+","id":\s*".*?"type":\s*"(App)?User",[^\}]*\}(,\{|\])"""
     """exa_regex="tunnels":"\[({additional_info}([^,]+,\\"operator\\":(null|\\"({operator_name}[^\\"]+)))?[^\]]+)"""
     """exa_json_path=$.debugContext.debugData.behaviors,exa_field_name=more_info"""
     """exa_regex=behaviors\\*":"*\{({more_info}[^\}]+)""",
@@ -112,9 +113,12 @@ Name = "okta-amfa-mix-app-login-success-securitycontext"
     """exa_regex="target":[^\]]+?"displayName":"({device_name}[^"]+)",[^\]]+?"type":"UDDevice""""
     """exa_regex="target":[^\]]+?"type":"UDDevice"[^\]]+?"displayName":"({device_name}[^"]+)",""",
     """exa_json_path=$.debugContext.debugData.risk,exa_regex=^[^\}]*?\WdetectionName\=({alert_subject}[^=]+?)\s*((,\s\w+=)|\})"""
-    """exa_json_path=$.actor,exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.actor,exa_regex="type":\s\"User\"\,\s+\"alternateId\"\:\s\"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_regex="target":\s*\[[^\]]+?"type":"AppGroup"[^\]\}]+?"displayName":"({group_name}[^"]+)""""
+    """exa_regex="target":\s*\[[^\]]+?"displayName":"({group_name}[^"]+)"[^\]\}]+?"type":"AppGroup""""
+    """exa_regex="target":\s*\[[^\]]+?"alternateId":"({member}[^"]+)"[^\]\}]+?"type":"AppUser""""
     """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"({member}[^"]+)""""
-    """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.target,exa_regex="type":\s*"AppUser"\s*[^\}]+?"alternateId":\s*"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.target,exa_regex="type":\s*"AppGroup"\s*[^\}]+?"displayName":\s*"({group_name}[^"]+)""""
   ]
 

@@ -5,10 +5,10 @@ Name = symantec-dlp-kv-alert-trigger-success-smtp
   ParserVersion = v1.0.0
   Conditions = [ """| incident_type="email"|""","""| protocol="SMTP"|""" ]
   Fields = ${SymantecParsersTemplates.symantec-dlp-alert.Fields} [
-    """\|\ssender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """\|\ssender="({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """\|\ssubject="\s*(N/A|({email_subject}[^"]+?))\s*"""",
     """\|\srecipient="(N/A|({email_recipients}[^"]+))""""
-    """\|\srecipient="({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\|\srecipient="({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 symantec-dlp-alert = {

@@ -16,7 +16,7 @@ Name = jamf-jamfpro-json-endpoint-activity-jssid
     """exa_json_path=$.event.computer.serialNumber,exa_field_name=serial_num"""
     """exa_json_path=$.event.computer.osVersion,exa_field_name=os_version"""
     """exa_json_path=$.event.computer.osBuild,exa_field_name=os_revision"""
-    """exa_json_path=$.event.computer.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*""""
+    """exa_json_path=$.event.computer.username,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*""""
     """exa_json_path=$.event.username,exa_field_name=user"""
     """exa_json_path=$.event.computer.realName,exa_field_name=full_name"""
     """exa_json_path=$.event.computer.emailAddress,exa_field_name=email_address"""

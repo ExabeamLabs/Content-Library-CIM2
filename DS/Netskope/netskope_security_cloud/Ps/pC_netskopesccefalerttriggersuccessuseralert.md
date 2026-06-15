@@ -10,7 +10,7 @@ Name = netskope-sc-cef-alert-trigger-success-useralert
   """"timestamp":\s*({time}\d{10})"""
   """"hostname":\s*"({src_host}[\w\-\.]+)"""
   """"app":\s*"({app}[^"]+)"""
-  """"user":\s*"(unknown|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|(({domain}[^"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))""""
+  """"user":\s*"(unknown|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|(({domain}[^"@\\\/]+)[\\\/]+)?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))""""
   """"object":\s*"(((Unknown( Unknown)?)|null)|({file_name}({object}[^"]+?)))\s*""""
   """"activity":\s*"({operation}[^"]+)""""
   """"os":\s*"(unknown|({os}[^"]+))"""",

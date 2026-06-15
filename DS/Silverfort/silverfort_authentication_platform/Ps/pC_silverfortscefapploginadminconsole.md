@@ -9,7 +9,7 @@ Name = silverfort-s-cef-app-login-adminconsole
   Fields = [
     """\s+({host}[\w\-.]+)\s+CEF:""",
     """rt=({time}\d\d\/\d\d\/\d\d\d\d \d\d:\d\d:\d\d.\d\d\d)""",
-    """suser="?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\ssntdom=""",
+    """suser="?(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"?\ssntdom=""",
     """sntdom="?({domain}[^"]+)"\sshost""",
     """sntdom="?({domain}[^"]+)\sshost""",
     """shost="?(n\/a|n\\a|({src_host}[\w\-\.]+))""",

@@ -26,11 +26,11 @@ Fields = [
     """[^\w]item_type"+\s*:\s*"+({file_type}[^",]+)[",\]\}]""",
     """[^\w]parent"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({file_dir}[^",]+)[",\]\}]""",
     """[^\w]additional_details"+\s*:\s*\{({additional_info}[^\}]+)[",\]\}]""",
-    """[^\w]accessible_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+[^":,]*[",\]\}],"login":"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))"}""" ,
+    """[^\w]accessible_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+[^":,]*[",\]\}],"login":"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+))"}""" ,
     """"role":"({access_type}[^"]+)"""",
     """filePermission=({permission}[^=]+?)\s+[\w]+=""",
     """created_by"+\s*:\s*[^\}]+?[^\w]name"+\s*:\s*"+({full_name}[^":,]+)[",\]\}]""",
-    """created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """created_by"+\s*:\s*[^\}]+?[^\w]login"+\s*:\s*"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 

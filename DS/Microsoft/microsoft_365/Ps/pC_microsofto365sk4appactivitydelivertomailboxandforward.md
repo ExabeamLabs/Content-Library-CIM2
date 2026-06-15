@@ -9,7 +9,7 @@ Name = microsoft-o365-sk4-app-activity-delivertomailboxandforward
   Conditions = ["""Operation":"Set-Mailbox""" , """DeliverToMailboxAndForward""" ]
   Fields = [
     """"CreationTime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)"""",
-    """Forward.+?Value":"(smtp:)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """Forward.+?Value":"(smtp:)?({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """"ResultStatus":"({result}[^"]+)"""",
     """"ClientIP":"\[?({src_ip}((\d{1,3}\.){1,3}\d{1,3}|[a-fA-F\d]+:[A-Fa-f\d:]+))\]?(:({src_port}\d+))?"""",
     """({operation}DeliverToMailboxAndForward)"""",
@@ -19,6 +19,8 @@ Name = microsoft-o365-sk4-app-activity-delivertomailboxandforward
     """({app}Office 365)"""
     """destinationServiceName =({app}.+?)\sdevice"""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
+    """"ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}({mailbox_name}[^"]+)))"""
+    """"Name":"Forward[^\}]+?Value":"(smtp:)?({email_recipients}[^"]+@[^"]+)"""
   ]
 
 

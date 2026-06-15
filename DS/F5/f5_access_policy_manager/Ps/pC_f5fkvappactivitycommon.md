@@ -35,7 +35,7 @@ Name = f5-f-kv-app-activity-common
    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\+|-)\d+:\d+\s({realm}({vpn_server}[^\s]+))"""
    """hostname' set to '({src_host}[\w\-.]+)""",
    """"timestamp":"({time}\d{10})"""
-   """attr.userPrincipalName' set to '(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+   """attr.userPrincipalName' set to '(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
    """Object="({object}[^\s]+?)"""",
    """\d\d:\d\d:\d\d(\S+)?\s({host}[\w\-\.]+)\s\w+\s"""
    """\sAccess_Profile="({access_group}[^"]+)""""

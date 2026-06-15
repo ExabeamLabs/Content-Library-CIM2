@@ -22,13 +22,16 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """destinationServiceName =({app}.+?)\sdevice""",
     """UserId":\s*"(\\.+)?\/(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=]+))(\\)?\\"\s*on behalf""",
     """UserId":\s*"(\\.+)?\/({last_name}[^,]+),\s*({first_name}[^\\"]+)\\"\s*on behalf"""
-    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^\\"]+)))"+"""
+    """"+UserId"+:"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^\\"]+)))"+"""
     """"SubjectOrBodyContainsWords":\s*"({filter_key_words}[^"]+)"""
     """"Name":\s*"MoveToFolder","Value":\s*"({object}[^"]+?)\s*""""
     """"ObjectId":\s*"(Unknown|Not Available|({object}[^"]+?))\s*""""
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s+(\w+=|$)"""
     """"OriginatingServer":\s*"({host}[\w\-.]+?)\s*\("""
     """"CorrelationId":\s*"({correlation_id}[^"]+)""""
+    """"ObjectId\\*"{1,20}:"?[\s\\]*"+(Unknown|Not Available|({object}({mailbox_name}[^"]+)))""",
+    """"TargetUserOrGroupName":"({target}[^"]+)"""",
+    """"TargetUserOrGroupName":"([^@]+)@({target_domain}[^"]*?)"""",
     """exa_json_path=$..CreationTime,exa_field_name=time""",
     """exa_json_path=$..Parameters[?(@.Name == 'MoveToFolder')].Value,exa_field_name=target""",
     """exa_json_path=$..ResultStatus,exa_field_name=result""",
@@ -36,12 +39,15 @@ Name = microsoft-o365-sk4-app-activity-success-movetofolder
     """exa_regex=({operation}MoveToFolder)""",
     """exa_json_path=$..UserId,exa_regex=\/(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^"\\=\/]+))(\\)?\\"\s*on behalf""",
     """exa_json_path=$..UserId,exa_regex=\/({last_name}[^,\\\/]+),\s*({first_name}[^\\\/"]+)\\"\s*on behalf""",
-    """exa_regex="UserId"+:\s*"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^\\"]+)))"""",
+    """exa_regex="UserId"+:\s*"+((\w{1,5}:\w{1,5}:[^\#]+\#)?({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))|(Unknown|({user_sid}[^\\"]+)))"""",
     """exa_json_path=$..Parameters[?(@.Name == 'MoveToFolder')].Value,exa_field_name=object""",
     """exa_json_path=$..ObjectId,exa_field_name=object""",
     """exa_json_path=$..OriginatingServer,exa_regex=^({host}[\w\-.]+?)\s*\(""",
     """exa_json_path=$..CorrelationID,exa_field_name=correlation_id""",
     """exa_json_path=$..Parameters[?(@.Name == 'Name')].Value,exa_field_name=rule"""
+    """exa_regex="ObjectId\\*"+:"?[\s\\]*"+(Unknown|Not Available|({object}({mailbox_name}[^"]+)))"""
+    """exa_json_path=$.TargetUserOrGroupName,exa_field_name=target""",
+    """exa_json_path=$.TargetUserOrGroupName,exa_regex=([^@]+)@({target_domain}[^"]*?)""",
   ]
 
 

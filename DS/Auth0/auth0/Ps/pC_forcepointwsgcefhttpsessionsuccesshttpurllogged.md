@@ -404,7 +404,8 @@ ParserVersion = "v1.0.0"
   TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS","yyyy-MM-dd HH:mm:ss"]
   Conditions = [ """connection authorized:""", """ user=""", """ database=""", """LOG""" ]
   Fields = [
-    """\s({host}\S+?)\spostgres\b"""
+    """\w+\s\d{1,2}\s+\d{2}:\d{2}:\d{2}\s+({host}[\w\-\.]+)\spostgres"""
+    """\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z\s+({host}[\w\-\.]+)\spostgres"""
     """({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)\s*UTC"""
     """({time}\d{4}-\d{2}-\d{2}\s(\d{2}:){2}\d{2}\.\d{3,})\sUTC""",
     """({action}connection authorized)"""
@@ -415,6 +416,7 @@ ParserVersion = "v1.0.0"
     """application_name=({app}[^\s]+)"""
     """database=({db_name}[\w\.\-]+)"""
     """:LOG:\s*({action}[^:]+)"""
+    """<Computer>({dest_host}[\w\-.]+)<"""
   ]
   ParserVersion = "v1.0.0"
 },

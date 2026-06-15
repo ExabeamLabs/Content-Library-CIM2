@@ -9,7 +9,7 @@ Name = netskope-sc-json-alert-trigger-success-dlp_match_info
   Conditions = [ """"dlp_action":""", """"file_path":""", """"acting_user":""", """"dlp_match_info"""" ]
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time"""
-    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.user,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$.file_path,exa_regex=({file_path}({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s"]+))?))("|$)"""
     """exa_json_path=$.file_type,exa_field_name=file_type"""
     """exa_json_path=$.activity,exa_field_name=operation"""

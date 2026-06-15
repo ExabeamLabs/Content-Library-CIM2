@@ -7,6 +7,7 @@ Name = postgresql-p-str-database-login-success-authenticated
    """identity=\s*({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
    """method=({auth_method}[^\s]+)"""
    """db=({db_name}[^,]+)"""
+   """<Computer>({dest_host}[\w\-.]+)<"""
  ]
 
 

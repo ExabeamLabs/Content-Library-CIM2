@@ -17,7 +17,7 @@ Fields = [
   """Workload"*:\s*"*({app}[^"]+)"*\}"""
   """ObjectId"*:\s*"*((Unknown)|({object}[^"]+))"*"""
   """Operation"*:\s*"*({operation}[^"]+)"*""" 
-  """UserId"*:\s*"*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"*"""
+  """UserId"*:\s*"*({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"*"""
   """"ClientIP\\*"+:[\s\\]*"+\[?(::ffff:)?({src_ip}(\d{1,3}\.){3}\d{1,3}|([A-Fa-f0-9]+:[A-Fa-f0-9:]+))"""",
   """src-account-name":"({account_name}[^"]+)"""
   """UserAgent","Value":"({user_agent}[^"]+)"""

@@ -15,7 +15,7 @@ Fields = [
 """exa_json_path=$.event_type,exa_field_name=event_name""",
 """exa_json_path=$.host,exa_regex=({host}[\w\-\.]+)"""
 """exa_json_path=$.location_country_code,exa_field_name=country_code""",
-"""exa_json_path=$.source_account_user_name,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+"""exa_json_path=$.source_account_user_name,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
 """exa_json_path=$.source_account_azure_id,exa_field_name=account_id""",
 """exa_json_path=$.source_endpoint_address_ip6,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_json_path=$.source_endpoint_host_name,exa_regex=({src_host}[\w\-\.]+)""",

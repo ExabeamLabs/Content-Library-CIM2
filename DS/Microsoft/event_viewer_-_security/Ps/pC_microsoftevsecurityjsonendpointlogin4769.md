@@ -45,7 +45,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-4769"
     """exa_json_path=$.MachineName,exa_regex=^({host}[\w\-.]+)$""",
     """exa_json_path=$.Hostname,exa_regex=^({host}[\w\-.]+)$""",
     """exa_regex=({event_code}4769)""",
-    """exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+(\.[^\]\s"\\,;\|]+))?))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
     """exa_json_path=$..TargetDomainName,exa_field_name=domain""",
     """exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
     """exa_json_path=$..ServiceName,exa_regex=^({src_host}[\w\-.]+\$)$""",

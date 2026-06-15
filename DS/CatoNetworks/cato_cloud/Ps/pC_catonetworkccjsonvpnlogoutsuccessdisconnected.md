@@ -13,7 +13,7 @@ Fields = [
     """exa_json_path=$.device_name,exa_field_name=host""",
     """exa_json_path=$.event_type,exa_field_name=event_category""",
     """exa_json_path=$.src_country_code,exa_field_name=src_country_code""",
-    """exa_json_path=$.vpn_user_email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+    """exa_json_path=$.vpn_user_email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
     """exa_json_path=$.client_version,exa_field_name=client_version""",
     """exa_json_path=$.tunnel_protocol,exa_field_name=tunnel_protocol""",
     """exa_json_path=$.os_version,exa_field_name=os_version""",

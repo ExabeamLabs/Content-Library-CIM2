@@ -15,8 +15,8 @@ Name = microsoft-o365-json-user-mfa-enable-success-enablestrongauthentication
     """"OrganizationId":"({tenant_id}[^"]+)",""",
     """"Value":"({object}[^"]+)","Name":"extendedAuditEventCategory"""",
     """"extendedAuditEventCategory","Value":"({object}[^"]+)""",
-    """ObjectId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """ObjectId":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """UserId":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.CreationTime,exa_field_name=time""",
     """exa_json_path=$.Operation,exa_field_name=operation""",
     """exa_json_path=$.Operation,exa_field_name=event_name""",
@@ -25,8 +25,8 @@ Name = microsoft-o365-json-user-mfa-enable-success-enablestrongauthentication
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id""",
     """exa_regex="extendedAuditEventCategory","Value":"({object}[^"]+)""",
     """exa_regex="Value":"({object}[^"]+)","Name":"extendedAuditEventCategory"""",
-    """exa_json_path=$.ObjectId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-    """exa_json_path=$.UserId,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.ObjectId,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.UserId,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   ]
 
 

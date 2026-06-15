@@ -13,7 +13,7 @@ Name = microsoft-o365-json-user-permission-modify-success-adddelegatedpermission
     """"ResultStatus":"({result}[^"]+)"""",
     """"Workload":"({app}[^"]+)"""",
     """\\\"User-Agent\\\":\\\"({user_agent}[^\"]+)\\\"""",
-    """UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """UserId":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"UserKey":"({user_id}[^@\"]+)""",
     """ModifiedProperties":.+?"ServicePrincipal.DisplayName","NewValue":"({target}[^"]+)""",
     """ModifiedProperties":.+?"NewValue":"({target}[^"]+)","Name":"ServicePrincipal.DisplayName"""",
@@ -24,8 +24,8 @@ Name = microsoft-o365-json-user-permission-modify-success-adddelegatedpermission
     """"OrganizationId":"({tenant_id}[^"]+)",""",
     """"extendedAuditEventCategory","Value":"({object}[^"]+)""",
     """"ServicePrincipal.ObjectID","NewValue":"({object_id}[^"]+)""",
-    """ModifiedProperties":.+?"DelegatedPermissionGrant.Scope","NewValue":\s*"\s*({new_value}({permissions}[^"]+))","OldValue":\s*"(|({old_value}[^"]+))"""",
-    """ModifiedProperties":.+?"OldValue":\s*"(|({old_value}[^"]+))","NewValue":\s*"\s*({new_value}({permissions}[^"]+))","Name":"DelegatedPermissionGrant.Scope""",
+    """ModifiedProperties":.+?"DelegatedPermissionGrant.Scope","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","OldValue":\s*"(|({old_value}[^"]+))"""",
+    """ModifiedProperties":.+?"OldValue":\s*"(|({old_value}[^"]+))","NewValue":\s*"\s*({new_value}({added_permissions}[^"]+))","Name":"DelegatedPermissionGrant.Scope""",
     """"NewValue":"({object_id}[^"]+)","Name":"ServicePrincipal.ObjectID""",
     """"Value":"({object}[^"]+)","Name":"extendedAuditEventCategory"""",
     """exa_json_path=$.CreationTime,exa_field_name=time""",
@@ -34,15 +34,16 @@ Name = microsoft-o365-json-user-permission-modify-success-adddelegatedpermission
     """exa_json_path=$.ResultStatus,exa_field_name=result""",
     """exa_json_path=$.Workload,exa_field_name=app""",
     """exa_regex=\\\"User-Agent\\\":\\\"({user_agent}[^\"]+)\\\"""",
-    """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.UserKey,exa_regex=({user_id}[^@\"]+)""",
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id""",
     """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.DisplayName')].NewValue,exa_field_name=target"""
+    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.DisplayName')].NewValue,exa_field_name=dest_user"""
     """exa_json_path=$.ModifiedProperties[?(@.Name =='AppRole.Value')].NewValue,exa_field_name=role_name""",
     """exa_json_path=$.ModifiedProperties[?(@.Name =='AppRole.Id')].NewValue,exa_field_name=role_id""",
-    """exa_json_path=$.ExtendedProperties[?(@.Name == 'extendedAuditEventCategory')].Value,exa_field_name=object""",
-    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.ObjectID')].NewValue,exa_field_name=object_id"""
-    """exa_json_path=$.ModifiedProperties[?(@.Name == 'DelegatedPermissionGrant.Scope')].NewValue,exa_field_name=permissions"""
+    """exa_json_path=$.ExtendedProperties[?(@.Name == 'extendedAuditEventCategory')].Value,exa_field_name=dest_user_type""",
+    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.ObjectID')].NewValue,exa_field_name=dest_user_id"""
+    """exa_json_path=$.ModifiedProperties[?(@.Name == 'DelegatedPermissionGrant.Scope')].NewValue,exa_field_name=added_permissions"""
     """exa_json_path=$.ModifiedProperties[?(@.Name == 'DelegatedPermissionGrant.Scope')].NewValue,exa_field_name=new_value"""
     """exa_json_path=$.ModifiedProperties[?(@.Name == 'DelegatedPermissionGrant.Scope')].OldValue,exa_field_name=old_value"""
   ]

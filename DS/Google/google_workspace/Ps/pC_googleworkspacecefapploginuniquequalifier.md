@@ -13,7 +13,7 @@ Fields = [
     """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"profileId":"({user_id}\d+)""",
     """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+""",
-    """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"actor"\s*:\s*\{[^=]*?"email"\s*:\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"events":\[\{[^\[\]\{\}]*"name"\s*:\s*"({operation}[^"]+)"""",
     """"name":"event_id","value":"({additional_info}[^"]+)"""",
     """"name":"EMAIL_LOG_SEARCH_RECIPIENT","value":"(unknown|({object}[^"]+))"""",
@@ -31,7 +31,7 @@ Fields = [
     """"id":\{({additional_info}[^\}]+)\}""",
 	  """"actor":\{"email":"({object}[^"]+)""""
     """"events"[\\n\s]*:[^\]]*?"name"[\\n\s]*:[\\n\s]*"login_type"[\\n\s]*,[\\n\s]*"value"[\\n\s]*:[\\n\s]*"({login_type_text}[^"]+?)""""
-    """"name":"email_forwarding_destination_address","value":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """"name":"email_forwarding_destination_address","value":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 ]
 
 

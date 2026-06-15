@@ -15,7 +15,7 @@ Name = bitglass-casb-cef-alert-trigger-success-filelink
     """"folder":"({target}[^"]+)"""",
     """"filename":"({file_name}[^"]+?(\.({file_ext}[^"]+))?)"""",
     """"application":"({process_path}[^"]+)"""",
-    """"owner":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """"owner":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """"filelink":"({additional_info}[^"]+)""""
   ]
 

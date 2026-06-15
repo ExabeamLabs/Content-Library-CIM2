@@ -17,7 +17,7 @@ Name = vectra-cd-json-app-activity-success-eventaction
   	"""exa_json_path=$.user_id,exa_field_name=user_id""",
   	"""exa_json_path=$.result_status,exa_field_name=result""",
   	"""exa_json_path=$.event_object,exa_field_name=event_category""",
-  	"""exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+  	"""exa_json_path=$.username,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   	"""exa_json_path=$.event_data,exa_field_name=additional_info""",
   	"""exa_json_path=$.id,exa_field_name=event_id"""
   ]

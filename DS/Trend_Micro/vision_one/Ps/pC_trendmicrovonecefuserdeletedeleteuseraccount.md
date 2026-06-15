@@ -5,7 +5,7 @@ Name = "trendmicro-vone-cef-user-delete-deleteuseraccount"
    ParserVersion = v1.0.0
    Conditions = [ """CEF:""", """|Trend Micro|Trend Vision One|""", """|900003|""", """ cs3=Delete user account""" ]
    Fields = ${TrendMicroParserTemplates.trendmicro-vision-one-account-audit.Fields}[
-     """'User account':\s*'(({full_name}[^'\s]+\s+[^\s']+)|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'"""
+     """'User account':\s*'(({full_name}[^'\s]+\s+[^\s']+)|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))'"""
    ]
  
 trendmicro-vision-one-account-audit = { 

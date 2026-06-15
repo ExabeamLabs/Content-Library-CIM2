@@ -14,7 +14,6 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
   Fields = [
     """"OciContainerId"\s*:\s*"({container_id}[^"]+)"""",
     """"aip":\s*"({aip}[^"]+)""",
-    """"aip":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""" #Endpoints are monitored and managed by deploying a single lightweight sensor. The aip is the sensor's public IP, which can be used to pinpoint a computer's location depending on your network. In all CrowdStrike parsers, it is parsed as src_ip. However its process related event, mapped with dest_ip.
     """"ProcessStartTime":\s*"({time}\d{10,13})""",
     """"timestamp":\s*"({time}\d{10,13})"""",
     """"event_simpleName":\s*"({event_code}[^"]+)""",
@@ -38,14 +37,13 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """"Desktop":"({client}[^",]+)"""
     """"SourceThreadId":"({thread_id}[^",]+)"""
     """"name":"({event_name}[^",]+)"""
-    """\sUSER\\?=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"@]+?))?)(\s\w+\\?=|")"""
+    """\sUSER\\?=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"@]+?))?)(\s\w+\\?=|")"""
     """"GID":"({group_id}[^"]+)""""
     """'Content-Type:({web_content_type}[^']+)'"""
     """"ComputerName":"({dest_host}[^"]+)""""
-    """"UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"UserName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.OciContainerId,exa_field_name=container_id""",
     """exa_json_path=$..aip,exa_field_name=aip""",
-    """exa_json_path=$..aip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """exa_json_path=$..timestamp,exa_field_name=time""",
     """exa_json_path=$.raw-event.timestamp,exa_field_name=time""",
     """exa_json_path=$..event_simpleName,exa_field_name=event_code""",
@@ -69,14 +67,14 @@ Name = crowdstrike-falcon-json-process-create-success-processrollup
     """exa_json_path=$..event_platform,exa_field_name=os""",
     """exa_json_path=$..IntegrityLevel,exa_field_name=process_integrity""",
     """exa_json_path=$..cid,exa_field_name=cid""",
-    """exa_regex=\sUSER\\?=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"@]+?))?)(\s\w+\\?=|")"""
+    """exa_regex=\sUSER\\?=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"@]+?))?)(\s\w+\\?=|")"""
     """exa_json_path=$..Desktop,exa_field_name=client""",
     """exa_json_path=$..SourceThreadId,exa_field_name=thread_id""",
     """exa_json_path=$..name,exa_field_name=event_name""",
     """exa_json_path=$..GID,exa_field_name=group_id"""
     """exa_regex='Content-Type:({web_content_type}[^']+)'"""
     """exa_json_path=$..ComputerName,exa_field_name=dest_host"""
-    """exa_regex="UserName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_regex="UserName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
   ]
 
 

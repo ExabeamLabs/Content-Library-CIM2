@@ -42,7 +42,7 @@ Name = "microsoft-evsecurity-json-endpoint-login-success-4770"
     """exa_regex=({event_code}4770)""",
     """exa_json_path=$..TargetDomainName,exa_field_name=domain""",
     """exa_json_path=$..TargetDomainName,exa_field_name=dest_domain""",
-    """exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
+    """exa_json_path=$..TargetUserName,exa_regex=^(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))$""",
     """exa_json_path=$..ServiceName,exa_field_name=service_name""",
     """exa_json_path=$..ServiceName,exa_regex=^({dest_host}[\w\-.]*\$)$""",
     """exa_json_path=$..TicketOptions,exa_field_name=ticket_options""",

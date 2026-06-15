@@ -5,7 +5,7 @@ Name = symantec-dlp-kv-catchall
   ParserVersion = v1.0.0
   Conditions = [ """ DLP|Symantec|""", """|incident_id=""" ]
   Fields = ${SymantecParsersTemplates.symantec-dlp-alert-1.Fields} [
-  """\|sender=(?:N\/A|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+  """\|sender=(?:N\/A|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
   """\|subject=\s*((?!SFTP|HTTP|FTP|TCP|N/A)({email_subject}[^\|]+?))\s*\|"""
   ]
 

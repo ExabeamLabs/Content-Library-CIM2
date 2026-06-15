@@ -1,0 +1,33 @@
+#### Parser Content
+```Java
+{
+Name = "crowdstrike-falcon-json-alert-trigger-containerswithoutrunasnonroot"
+Vendor = "CrowdStrike"
+Product = "Falcon"
+ExtractionType = json
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+Conditions = [
+""""Container(s) without runAsNonRoot""""
+""""name":"""
+""""detection_type":"""
+""""severity_name":"""
+]
+Fields = [
+"""exa_json_path=$.detect_timestamp,exa_field_name=time""",
+"""exa_json_path=$.timestamp,exa_field_name=time""",
+"""exa_json_path=$.name,exa_field_name=alert_name""",
+"""exa_json_path=$.name,exa_field_name=alert_subject""",
+"""exa_json_path=$.description,exa_field_name=alert_description""",
+"""exa_json_path=$.detection_type,exa_field_name=alert_type""",
+"""exa_json_path=$.severity_name,exa_field_name=alert_severity""",
+"""exa_json_path=$.status,exa_field_name=alert_status""",
+"""exa_json_path=$.remediation,exa_field_name=remediation_steps""",
+"""exa_json_path=$.resource_name,exa_field_name=resource_name"""
+"""exa_json_path=$.resource_type,exa_field_name=resource_type""",
+"""exa_json_path=$.resource_id,exa_field_name=resource_id"""
+]
+ParserVersion = "v1.0.0"
+
+
+}
+```

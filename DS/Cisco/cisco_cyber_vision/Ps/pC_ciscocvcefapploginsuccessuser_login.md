@@ -14,7 +14,7 @@ Name = cisco-cv-cef-app-login-success-user_login
     """Cisco\|([^\|]+\|){3}({event_name}[^\|]+)""",
     """\|cat=({category}[^=]+?)\s\w+=""",
     """\smsg=({additional_info}[^=]+?)\s\w+=""",
-    """\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """\ssuser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 

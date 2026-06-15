@@ -8,7 +8,7 @@ Name = "egnyte-e-sk4-file-create-success-filesystem"
   Conditions = [ """destinationServiceName =Egnyte""", """"data":""", """"action":""", """"type":"file_system"""" ]
   Fields = [
     """"timestamp"\s*:\s*"({time}[^"]+)""""
-    """\Wsuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\Wsuser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """"type"\s*:\s*"({file_type}[^"]+)""""
     """"action"\s*:\s*"({operation}[^"]+)""""
     """"data"\s*:.*?"target_path"\s*:\s*"({file_path}({file_dir}[^']*?[\\\/]+)?({file_name}[^'\\\/]+?(\.({file_ext}\w+))?))""""

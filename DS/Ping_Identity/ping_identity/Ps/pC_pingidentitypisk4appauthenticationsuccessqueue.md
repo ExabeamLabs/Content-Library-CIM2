@@ -13,8 +13,8 @@ Name = pingidentity-pi-sk4-app-authentication-success-queue
     """"message":"({additional_info}[^}]+?)"\s*\}""",
     """destinationServiceName =({app}Ping)""",
     """subject":"({email_subject}[^:]+?)","\w+":""",
-    """"fromAddress":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))",""",
-    """"toAddress":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))","""
+    """"fromAddress":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))",""",
+    """"toAddress":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))","""
   ]
   ParserVersion = "v1.0.0"
 

@@ -1,0 +1,35 @@
+#### Parser Content
+```Java
+{
+Name = "crowdstrike-falcon-json-alert-trigger-success-iom"
+  Vendor = "CrowdStrike"
+  Product = "Falcon"
+  ExtractionType = json
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  Conditions = [ """"resource":""", """"evaluation":""", """"rule":""", """"alert_logic":""" ]
+  Fields = [
+    """exa_json_path=$.resource.resource_id,exa_field_name=resource_id""",
+    """exa_json_path=$.resource.resource_type,exa_field_name=resource_type""",
+    """exa_json_path=$.resource.service,exa_field_name=service_name""",
+    """exa_json_path=$.cloud.region,exa_field_name=region""",
+    """exa_json_path=$.cloud.account_id,exa_field_name=account_id""",
+    """exa_json_path=$.cloud.account_name,exa_field_name=aws_account""",
+    """exa_json_path=$.evaluation.status,exa_field_name=result""",
+    """exa_json_path=$.evaluation.severity,exa_field_name=alert_severity""",
+    """exa_json_path=$.evaluation.created,exa_field_name=time""",
+    """exa_json_path=$.evaluation.url,exa_field_name=url""",
+    """exa_json_path=$.evaluation.rule.id,exa_field_name=alert_id""",
+    """exa_json_path=$.evaluation.rule.name,exa_field_name=alert_name""",
+    """exa_json_path=$.evaluation.rule.description,exa_field_name=alert_description""",
+    """exa_json_path=$.evaluation.rule.policy_id,exa_field_name=policy_id""",
+    """exa_json_path=$.evaluation.rule.threat.technique.name,exa_field_name=technique""",
+    """exa_json_path=$.evaluation.rule.threat.technique.id,exa_field_name=technique_key""",
+    """exa_json_path=$.evaluation.rule.threat.tactic.name,exa_field_name=tactic""",
+    """exa_json_path=$.evaluation.rule.threat.tactic.id,exa_field_name=tactic_key""",
+    """exa_json_path=$.evaluation.extension.status,exa_field_name=status_msg"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

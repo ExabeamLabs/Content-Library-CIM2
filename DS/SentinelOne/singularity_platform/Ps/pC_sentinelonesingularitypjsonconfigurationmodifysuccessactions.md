@@ -10,7 +10,7 @@ ExtractionType = json
 Fields = [
   """exa_json_path=$.createdAt,exa_field_name=time""",
   """exa_json_path=$.updatedAt,exa_field_name=time""",
-  """exa_json_path=$.userName,exa_regex=(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+  """exa_json_path=$.userName,exa_regex=(({full_name}({first_name}[^\s"]+)\s({last_name}[^"]+))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
   """exa_json_path=$.scopeName,exa_field_name=additional_info""",
   """exa_json_path=$.description,exa_field_name=description""",
   """exa_json_path=$.actions,exa_field_name=action""",

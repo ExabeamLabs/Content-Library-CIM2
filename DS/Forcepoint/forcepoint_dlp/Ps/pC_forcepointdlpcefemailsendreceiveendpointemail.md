@@ -10,7 +10,7 @@ Name = forcepoint-dlp-cef-email-send-receive-endpointemail
     """timeStamp=({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)"""
     """({host}[\w\-.]+)\s+CEF:""",
     """\Wact=({result}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
-    """duser=({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^;\]\s"\\,\|]+))[^=]*)\s+\w+="""
+    """duser=({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^;\]\s"\\,\|]+))[^=]*)\s+\w+="""
     """\Wfname=\s*(N\/A|-|({email_attachments}({email_attachment}[^=;]+)[^=]*))\s([\w\.]+=|$)"""
     """\Wfname=\s*([^;=]*)(\.({file_ext}\w+)) - \d+\.\d+\s*\w+;"""
     """\Wmsg=\s*({email_subject}[^=]+)(\s+\-\s|\s+[\w\.]+=|$)""",
@@ -19,7 +19,7 @@ Name = forcepoint-dlp-cef-email-send-receive-endpointemail
     """\WsourceHost=(?:N\/A|({src_host}[\w\-.]+))""",
     """\WdestinationHosts=(?:N\/A|(({dest_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})|({dest_host}[\w\-.]+)))""",
     """\Wsuser=(({domain}[^\\\s,@=]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)\s+(\w+=|$)""",
-    """\Wsuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\Wsuser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
   ParserVersion = "v1.0.0"
 

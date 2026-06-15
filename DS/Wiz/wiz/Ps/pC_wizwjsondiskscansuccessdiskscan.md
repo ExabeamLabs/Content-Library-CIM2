@@ -21,7 +21,7 @@ wiz-w-json-audit-log = {
     """exa_json_path=$.action,exa_field_name=event_name"""
     """exa_json_path=$.userID,exa_field_name=user"""
     """exa_json_path=$.actionParameters.error,exa_field_name=failure_reason"""
-    """exa_json_path=$.userEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.userEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   
 }
 ```

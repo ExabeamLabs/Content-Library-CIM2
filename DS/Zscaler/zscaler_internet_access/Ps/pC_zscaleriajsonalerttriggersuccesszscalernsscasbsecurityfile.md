@@ -19,7 +19,7 @@ Fields = [
 """exa_json_path=$.dlpdictnames,exa_field_name=dlp_dict""",
 """exa_json_path=$.dept,exa_field_name=department""",
 """exa_json_path=$.applicationname,exa_field_name=app""",
-"""exa_json_path=$.login,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
+"""exa_json_path=$.login,exa_regex=^({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$""",
 """exa_json_path=$.policy,exa_field_name=policy_name""",
 """exa_json_path=$.company,exa_field_name=company""",
 """exa_json_path=$.datetime,exa_field_name=time""",

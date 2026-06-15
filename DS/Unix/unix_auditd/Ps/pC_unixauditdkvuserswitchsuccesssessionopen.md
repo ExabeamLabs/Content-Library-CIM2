@@ -19,7 +19,7 @@ Name = unix-auditd-kv-user-switch-success-sessionopen
 """\sauid=\"?({account_id}\d+)""",
 """\suid=({user_id}\d+)""",
 """\sses=({session_id}\d+)""",
-"""\W+UID=\"*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\sAUID="""",
+"""\W+UID=\"*(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"\sAUID="""",
 """\sterminal=(\?|({login_type_text}[^=]+?))\s+\w+="""
 """\sres=({result}\w+)"""
   ]

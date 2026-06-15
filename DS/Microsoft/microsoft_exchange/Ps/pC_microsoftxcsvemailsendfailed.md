@@ -15,13 +15,13 @@ Name = microsoft-x-csv-email-send-failed
     """({additional_info}\w+,FAIL),""",
     """({result}FAIL)""",
     """,FAIL,\s*({alert_id}\d+)""",
-    """,\s*(?:'|")?([^,]+(Recipients_cn)\=)?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,]*?)\s*(?:'|")?,([^,]*,){9}Originating,""",
+    """,\s*(?:'|")?([^,]+(Recipients_cn)\=)?({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,]*?)\s*(?:'|")?,([^,]*,){9}Originating,""",
     """,\s*(({bytes}\d+)|)\s*,\s*(({num_recipients}\d+)|)\s*,([^,]*,){6}Originating,""",
     """,\s*({email_subject}[^,]+?)\s*,([^,]*,){3}Originating,""",
     """,\s*'({email_subject}(?:[^']|'')+?)\s*'\s*,([^,]*,){3}Originating,""",
     """,\s*"({email_subject}(?:[^"]|"")+?)\s*"\s*,([^,]*,){3}Originating,""",
-    """,\s*(?:'|")?(|MicrosoftExchange.*?|({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
-    """,\s*(?:'|")?(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
+    """,\s*(?:'|")?(|MicrosoftExchange.*?|({orig_user}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
+    """,\s*(?:'|")?(|MicrosoftExchange.*?|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?:'|")?)\s*,([^,]*,){2}Originating,""",
     """,\s*(?:'|")?(?:<>|({return_path}[^,]+?))(?:'|")?\s*,([^,]*,)Originating,"""
     """RecipientNotFound;\s+({failure_reason}[^};]+)"""
     """({direction}Originating)"""

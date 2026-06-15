@@ -20,7 +20,7 @@ cisco-events-2 = {
     """ComponentID\s*=({target}[^\]]+)""",
     """AuditDetails\s*=({additional_info}[^\]]+)""",
     """App ID\s*=({app}[^\]]+)""",
-    """userPrincipalName"+:\s*"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """userPrincipalName"+:\s*"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
   cisco-events-2 = {
   Vendor = Cisco
   Product = Cisco
@@ -35,7 +35,7 @@ cisco-events-2 = {
     """ComponentID\s*=({target}[^\]]+)""",
     """AuditDetails\s*=({additional_info}[^\]]+)""",
     """App ID\s*=({app}[^\]]+)""",
-    """userPrincipalName"+:\s*"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """userPrincipalName"+:\s*"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
   ]
 }
 }

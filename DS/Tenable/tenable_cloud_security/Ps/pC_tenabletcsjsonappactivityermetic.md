@@ -13,9 +13,9 @@ Name = tenable-tcs-json-app-activity-ermetic
          """exa_json_path=$.action,exa_field_name=operation""",
          """exa_json_path=$.result,exa_field_name=result""",
          """exa_json_path=$.time,exa_field_name=time""",
-         """exa_json_path=$.user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+         """exa_json_path=$.user,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
          """exa_json_path=$.details.role,exa_field_name=role_name""",
-         """exa_json_path=$.details.user,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+         """exa_json_path=$.details.user,exa_regex=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
          """exa_json_path=$.scope,exa_field_name=additional_info"""
   ]
   ParserVersion = "v1.0.0"

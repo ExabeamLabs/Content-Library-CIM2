@@ -10,7 +10,7 @@ Name = airlock-allowlisting-json-alert-trigger-success-pprocess
   Fields = [
     """exa_json_path=$.datetime,exa_field_name=time""",
     """exa_json_path=$.hostname,exa_regex=({host}[\w\-\.]+)"""
-    """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
+    """exa_json_path=$.username,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
     """exa_json_path=$.filename,exa_regex=^({process_path}({process_dir}[^=]*[\\\/]+)?({process_name}[^=]+?))$""",
     """exa_json_path=$.policyname,exa_field_name=policy_name""",
     """exa_json_path=$.sha256,exa_field_name=hash_sha256""",

@@ -18,7 +18,7 @@ Fields = [
 """pid=({process_id}\d+)"""
 """service=({service_name}.+?)\s\w+="""
 """runas=({account}({dest_user}.+?))\s\w+="""
-"""EntityName =({object}.+?)\s*$"""
+"""EntityName =({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"

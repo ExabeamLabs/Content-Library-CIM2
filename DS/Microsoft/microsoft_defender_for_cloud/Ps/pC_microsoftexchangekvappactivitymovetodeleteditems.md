@@ -73,7 +73,7 @@ cef-microsoft-app-activity-3.Fields}[
     Fields=[
     """exa_json_path=$.TimeGenerated,exa_field_name=time""",
     """exa_json_path=$.Description,exa_field_name=description""",
-    """exa_json_path=$.CompromisedEntity,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_host}[\w\-\.]+))""",
+    """exa_json_path=$.CompromisedEntity,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({src_host}[\w\-\.]+))""",
     """exa_json_path=$.ProductName,exa_field_name=product_name""",
     """exa_json_path=$.AlertSeverity,exa_field_name=alert_severity""",
     """exa_json_path=$.AlertType,exa_field_name=alert_type""",

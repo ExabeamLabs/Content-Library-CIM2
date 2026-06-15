@@ -25,7 +25,7 @@ Name = barracuda-firewall-kv-network-traffic-firewallactivity
     """\|duration=({duration}\d+)""",
     """\|receivedBytes=({bytes_in}\d+)""",
     """\|sentBytes=({bytes_out}\d+)""",
-    """\|user=(-|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\|"""
+    """\|user=(-|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|((({domain}[^\s]+?)[\\]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\|"""
   ]
   ParserVersion = "v1.0.0"
 

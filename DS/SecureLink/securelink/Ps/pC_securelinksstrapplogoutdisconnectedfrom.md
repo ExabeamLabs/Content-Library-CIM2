@@ -10,7 +10,7 @@ Name = securelink-s-str-app-logout-disconnectedfrom
     Fields = [
       """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)\s+({host}[\w\-\.]+)\s""",
       """Application ({app}[^,\(]+?)\s*(\(|,)""",
-      """\sAUDIT.+?\(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\)""",
+      """\sAUDIT.+?\(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))\)""",
       """duration ({duration}\w+)""",
       """({event_name}disconnected)"""
     ]

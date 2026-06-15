@@ -22,7 +22,7 @@ Name = fortinet-firewall-kv-network-traffic-notice
     """\Wdstport="*({dest_port}\d+)""",
     """\Wdstintf=\"+({dest_interface}[^\"]+)""",
     """\Wsrcintf=\"+({src_interface}[^\"]+)""",
-    """\Wuser="\s*((?:host\/({src_host}[^"]+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)\s*"""",
+    """\Wuser="\s*((?:host\/({src_host}[^"]+))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?)\s*"""",
     """\Wsentbyte=({bytes_out}\d+)""",
     """\Wrcvdbyte=({bytes_in}\d+)""",
     """\Wrcvdbyte=({bytes}\d+)""",

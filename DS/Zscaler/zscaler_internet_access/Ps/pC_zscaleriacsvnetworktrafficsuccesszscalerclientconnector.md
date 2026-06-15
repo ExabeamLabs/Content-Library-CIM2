@@ -11,7 +11,7 @@ Name = zscaler-ia-csv-network-traffic-success-zscalerclientconnector
     """({time}\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d)""""
     """({action}(Allow|Drop))"""
     """"ZscalerClientConnector","({action}[^"]+)""""
-    """\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){1}"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){1}"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){2}"({department}[^"]+)""""
     """\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){3}"({location}[^"]+)""""
     """\w{3}\s+\d+\s\d\d:\d\d:\d\d\s\d\d\d\d"(("[^"]+")?,){4}"({dest_port}\d+)""""

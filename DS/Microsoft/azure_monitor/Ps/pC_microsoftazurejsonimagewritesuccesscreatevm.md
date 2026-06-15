@@ -21,7 +21,7 @@ Name = microsoft-azure-json-image-write-success-createvm
     """exa_regex=identity\/claims\/upn"\s*:\s*"(({user_upn}[^"@\s]+@[^"]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """exa_json_path=$.identity.claims.name,exa_regex=^({full_name}[^"\(]+?)(\s\(|$)"""
     """exa_regex=identity\/claims\/givenname"\s*:\s*"({full_name}({first_name}[^"\s,]+)[\s,]+({last_name}[^"]+))"""
-    """exa_regex=\\*"Creator\\*":\\*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+    """exa_regex=\\*"Creator\\*":\\*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   ]
 
 azure-activity-json = {

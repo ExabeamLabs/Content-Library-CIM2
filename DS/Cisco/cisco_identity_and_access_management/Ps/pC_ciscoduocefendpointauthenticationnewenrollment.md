@@ -11,9 +11,9 @@ Name = "cisco-duo-cef-endpoint-authentication-newenrollment"
 """\"timestamp\":\s*({time}\d{10})"""
 """\"integration\":\s*\"({service_name}({app}[^\"]+))"""
 """\"factor\":\s*\"(?:(n\/a)|({factor}({auth_method}({operation}[^\"]+))))\"""",
-"""\"username\"\s*:\s*\"(?!AD Sync:)(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}[^\s\"]+\s[^\"]+)|((?:({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+"""\"username\"\s*:\s*\"(?!AD Sync:)(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}[^\s\"]+\s[^\"]+)|((?:({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
 """\"device\":\s*\"({mfa_device}({device_name}({object}[^\"]+)))"""
-"""\"email\":\s*\"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
+"""\"email\":\s*\"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
 """\"ip(_address)?\":\s*\"(0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{1,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\""""
 """\"result\":\s*\"({action}({result}[^\"]+))"""
 """\"browser\":\s*\"(unknown|({browser}[^\"]+))"""
@@ -22,7 +22,7 @@ Name = "cisco-duo-cef-endpoint-authentication-newenrollment"
 """\"state\":\s*\"({state}[^\"]+)"""
 """\"country\":\s*\"({mfa_country}({country}[^\"]+))"""
 """\"reason\":\s*\"(({event_name}User approved|Valid passcode|Remembered device|Trusted network)|({failure_reason}[^\"]+))"""
-"""User email:\s*(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+"""User email:\s*(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """"new_enrollment"\s*:\s*({new_enrollment}[^,]+?),[\s"\w]+?:""",
 """"host"\s*:\s*"({host}[^,"]+?)"""",
 """"reason"\s*:\s*"({failure_reason}[^"]+)"[^=]+?"result":"(denied|fraud|failure|error)"""",

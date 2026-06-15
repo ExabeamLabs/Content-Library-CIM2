@@ -10,7 +10,7 @@ Name = cloudflare-insights-json-app-activity-email
   Conditions = [ """destinationServiceName =Cloudflare""", """"Email":""" ]
   Fields = [
     """exa_regex=destinationServiceName =({app}[^\s]+)"""
-    """exa_json_path=$.Email,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^,]+))?))"""
+    """exa_json_path=$.Email,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^,]+))?))"""
     """exa_json_path=$.DestinationPort,exa_field_name=dest_port""",
     """exa_json_path=$.SourcePort,exa_field_name=src_port""",
     """exa_json_path=$.SourceIP,exa_field_name=src_ip""",

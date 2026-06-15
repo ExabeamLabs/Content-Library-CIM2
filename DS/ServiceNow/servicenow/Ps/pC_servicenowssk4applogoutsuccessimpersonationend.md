@@ -14,7 +14,7 @@ servicenow-auth-template = {
     Fields = [
       """"sys_created_on":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """destinationServiceName =({app}ServiceNow)""",
-      """"user(_name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """"user(_name)?":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """"name":"({object}[^"]+)""",
       """"parm1":"\s*(|-|({resource}[^",]+?[^\\\s])\s*)","""
     servicenow-auth-template = {
@@ -24,7 +24,7 @@ servicenow-auth-template = {
     Fields = [
       """"sys_created_on":"({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""",
       """destinationServiceName=({app}ServiceNow)""",
-      """"user(_name)?":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """"user(_name)?":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """"name":"({object}[^"]+)""",
       """"parm1":"\s*(|-|({resource}[^",]+?[^\\\s])\s*)","""
     ]

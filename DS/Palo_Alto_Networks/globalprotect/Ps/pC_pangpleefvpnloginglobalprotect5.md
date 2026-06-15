@@ -5,7 +5,7 @@ Name = pan-gp-leef-vpn-login-globalprotect-5
  Conditions = [ """LEEF:""", """|Palo Alto Networks|""", """|gateway-auth|""" ]
  ParserVersion = "v1.0.0"
    Fields = ${PaloAltoParsersTemplates.leef-paloalto-vpn-event.Fields}[
-      """usrName =(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """usrName =(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^\\\s,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       ]
 
 leef-paloalto-vpn-event = {

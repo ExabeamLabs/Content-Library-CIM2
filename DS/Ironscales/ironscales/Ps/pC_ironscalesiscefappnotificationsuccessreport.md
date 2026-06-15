@@ -11,8 +11,8 @@ ironscales-cef-template = {
       TimeFormat = "MMM dd HH:mm:ss"
       Fields = [
         """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s+\S+\s+CEF:""",
-        """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-        """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+        """suser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+        """duser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
         """cs5=({result}[^=]+?)\s+cs5Label=Report State"""
         """reason=({additional_info}[^=]+?)\s+\w+="""
         """request=({malware_url}[^\s]+)"""
@@ -27,8 +27,8 @@ ironscales-cef-template = {
       TimeFormat = "MMM dd HH:mm:ss"
       Fields = [
         """({time}\w{3}\s\d\d\s\d\d:\d\d:\d\d)\s+\S+\s+CEF:""",
-        """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
-        """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+        """suser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+        """duser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
         """cs5=({result}[^=]+?)\s+cs5Label=Report State"""
         """reason=({additional_info}[^=]+?)\s+\w+="""
         """request=({malware_url}[^\s]+)"""

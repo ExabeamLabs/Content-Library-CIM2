@@ -15,7 +15,7 @@ Fields = [
 """"Workload":"({app}[^"]+)""""
 """"ObjectId":"<?({object}[^"]+?)>?""""
 """"Operation":"({operation}[^"]+)""""
-""""From":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+""""From":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 """"FileOwner":"({full_name}[^\s\/"]+?\s+[^\/"]+?)""""
 """"Severity":"({alert_severity}[^"]+)""""
 """"IncidentId":"({alert_id}[^"]+)""""

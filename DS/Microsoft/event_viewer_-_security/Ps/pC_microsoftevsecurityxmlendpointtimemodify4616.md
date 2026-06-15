@@ -23,6 +23,7 @@ Name = microsoft-evsecurity-xml-endpoint-time-modify-4616
     """<Data Name(\\)?=('|")ProcessName('|")>({process_path}({process_dir}[^<>]*?[\\\/]+)?({process_name}[^<>\\\/]+))</Data>""",
     """<Data Name\\*=('|")TargetProcessName('|")>({dest_process_path}({dest_process_dir}[^<>]*?[\\\/]+)?({dest_process_name}[^<>\\\/]+))</Data>""",
     """<Data Name(\\)?=('|")ProcessId('|")>({process_id}[^<]+?)\s*<""",
+    """SubjectUserSid[^<>]+>({user_sid}[^<>]+)<"""
     """Security ID:\s*({user_sid}\S+)\s+Account Name:""",
     """Account Name:\s*(LOCAL SERVICE|-|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+Account Domain:""",
     """Account Domain:\s*(NT AUTHORITY|-|({domain}\S+))\s+Logon ID:""",

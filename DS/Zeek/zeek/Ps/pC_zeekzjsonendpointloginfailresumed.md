@@ -14,12 +14,12 @@ ParserVersion = "v1.0.0"
 
 auth0-authentication-template.Fields}[
     """exa_regex=({operation_type}fcp)""",
-    """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
-    """user_name"+:"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""",
-    """exa_regex="user_name":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
-    """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
+    """user_id"+:"+((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
+    """user_name"+:"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""",
+    """exa_regex="user_name":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    """exa_regex="user_id":"((({auth_type}[^|"]+)\|({domain}[^|"]+)\|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({dest_user}[\w\.\-]{1,40}\$?)))|(({=auth_type}[^|"]+)\|[^\|"@]+))"""",
     """exa_json_path=$..user_name,exa_regex=(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+))?|)"""
-    """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
+    """exa_json_path=$..user_name,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({dest_user}[\w\.\-]{1,40}\$?))"""
   ]
   ParserVersion = "v1.0.0"
 },
@@ -33,7 +33,7 @@ Fields = [
       """exa_json_path=$..hostname,exa_field_name=host"""
       """exa_json_path=$.message.description,exa_field_name=additional_info"""
       """exa_json_path=$..ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-      """exa_json_path=$..user_name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
+      """exa_json_path=$..user_name,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-]{1,40}\$?))"""
       """exa_json_path=$..user_id,exa_field_name=user_id"""
       """exa_json_path=$..user_id,exa_regex=((({auth_type}[^|"]+)\|({domain}[^|"]+)\|[^\|]*?)|(({=auth_type}[^|"]+)\|))"""
       """exa_json_path=$..client_name,exa_field_name=app"""
@@ -93,22 +93,6 @@ ParserVersion = "v1.0.0"
     """Intruder IP\s+({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
   ]
   ParserVersion = "v1.0.0"
-},
-
-{
-  Name = axway-gateway-str-endpoint-login-success-edge
-  Vendor = Axway
-  Product = Axway Gateway
-  TimeFormat = "yyyy-MM-dd HH:mm:ss"
-  Conditions = [ """edge_source=""", """edge_host=""", """edge_fleet=""", """Axway""" ]
-  Fields = [
-    """edge_source="({additional_info}[^=]+?)"\s+\w+"""
-    """edge_host="({edge_host}[^=]+?)"\s+\w+"""
-    """edge_fleet="({edge_fleet}[^"]+)"""
-    """({time}\d+-\d+-\d+\s\d+:\d+:\d+)"""
-    """\s(({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))|({dest_host}[\w\-\.]+))\s({bytes}\d+)\s+({file_path}(({file_dir}[^=]+?)[\\\/]+)?({file_name}[^\\\/]*?(\.({file_ext}\w+))?))\s+({category}[a-z])\s+({secured}[a-z])\s+({edge_response_status}[a-z])\s+({access_type}[a-z])\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|'\\_]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+({server_name}[^\s]+)\s"""
-  ]
-  ParserVersion = "v1.0.0"  
 },
 
 {

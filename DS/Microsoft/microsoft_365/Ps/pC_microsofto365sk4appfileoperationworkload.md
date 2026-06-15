@@ -14,9 +14,9 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
     """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
     """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
-    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
-    """"UserId\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?))))",""",
-    """"MailboxOwnerUPN\\*"+:[\s\\]*"+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))>?\s*"+""",
+    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
+    """"UserId\\*"+:[\s\\]*"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(Not Available|(({domain}[^"\\\/]+)[\\\/])?(Unknown|((\w+?_)?(\w+-)?\w+-\w+-\w+-\w+)|({user_sid}[^"\\\/@\s]+?)|((NT SERVICE\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)))))",""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({src_user}[\w\.\-\!\#\^\~]{1,40}\$?))>?\s*"+""",
     """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
     """sourceServiceName =({app}[^=]+?)\s+(\w+=|$)""",
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
@@ -29,12 +29,12 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
     """"AffectedItems"+:[\s\\]*\[({additional_info}[^=]+?)\s*\],""",
     """"ClientIP\\*"+:[\s\\]*"+\[?(::ffff:)?((({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F:]){1,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?)\]?(:({=src_port}\d+))?)"""",
-    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))))\s""",
+    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))))\s""",
     """\sreason=(?:None|({failure_reason}[^\s]+))""",
     """\{"Value": "(?:None|({failure_reason}[^"]+))", "Name": "MethodExecutionResult."\}""",
     """"Path":"(\\+)?(\?+|Unknown|Not Available|({object}[^=]+?))\s*"""",
     """"Subject":"\s*({additional_info}[^"]+?)\s*"""",
-    """"trc":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"trc":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """src-account-name":"({account_name}[^"]+)""",
     """"Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)""""
     """"OriginatingServer":"({host}[\w\-.]+?)\s*\(""",
@@ -45,7 +45,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"DeviceProperties":\s*\[\{[^\]]+?(("Value":\s*"({src_host}[^"]+)",\s*"Name":\s*"DisplayName")|("Name":\s*"DisplayName",\s*"Value":\s*"({=src_host}[^"]+)"))\},"""
     """"ApplicationId":({app_id}\d+)""",
     """"ServiceObjectType":"({role_name}[^",\}]+)""",
-    """"Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
+    """"Target":.+?"ID":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""",
     """("Device\.DisplayName"[^\}]*?"NewValue":"({src_host}[\w\-\.]+)",)|("NewValue":"({=src_host}[\w\-\.]+)",[^\}]*?"Device\.DisplayName")""",
     """"FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)"""",
     """"User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*"""",
@@ -70,7 +70,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """"MailAccessType","Value":"({access_type}[^"]+)"}"""
     """"AppId":"({app_id}[^"]+)"""
     """exa_regex="Target"[^\]]+"Device"[^\]]+"ID":"({host}[\w\-.]+)"""
-    """exa_regex="Target":.+?"ID":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
+    """exa_regex="Target":.+?"ID":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
     """exa_regex="User-Agent\\*"+:[\s\\]*"(|({user_agent}[^=]*?))\\*""""
     """exa_regex="FileName":"({file_name}[^"]+?(\.({file_ext}[^"\s\.]+))?)""""
     """exa_json_path=$.CreationTime,exa_field_name=time"""
@@ -79,10 +79,10 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id"""
     """exa_json_path=$.RecordType,exa_field_name=object_type"""
     """exa_json_path=$.UserId,exa_field_name=user_upn"""
-    """exa_json_path=$.UserId,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.UserId,exa_regex=(urn:[^"\s]+|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|((NT SERVICE\\*)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))))"""
     """exa_json_path=$.Workload,exa_field_name=app"""
     """exa_json_path=$.Workload,exa_field_name=resource"""
-    """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
+    """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
     """exa_json_path=$.ObjectId,exa_field_name=object_id"""
     """exa_json_path=$.ExtendedProperties,exa_field_name=more_info"""
     """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
@@ -99,6 +99,7 @@ Name = microsoft-o365-sk4-app-file-operationworkload
     """exa_json_path=$.UserType,exa_field_name=user_type"""
     """exa_json_path=$..OperationProperties[0].Value,exa_field_name=access_type"""
     """exa_json_path=$.AppId,exa_field_name=app_id"""
+    """exa_json_path=$..Subject,exa_field_name=email_subject_list"""
   ]
   ParserVersion = "v1.0.0"
 

@@ -15,7 +15,7 @@ Conditions = [
 Fields = [
 """reqaction=({result}[^\s]+)"""
 """datetime=\w{1,3}\s+({time}\w{1,3}\s+\d+\s\d\d:\d\d:\d\d\s\d{4})"""
-"""user=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
+"""user=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s"""
 """dns_reqtype=({dns_query_type}[^\s]+)"""
 """durationms=({duration}\d+)"""
 """category=(Miscellaneous or Unknown|({category}[^\=]+?)\s+\w+=)"""

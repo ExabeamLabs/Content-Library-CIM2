@@ -5,13 +5,13 @@ Name = azure-azuread-json-app-activity-useractivitydisplayname
   ParserVersion = "v1.0.0"
   Conditions = [ """"resultReason":"""", """"activityDisplayName":"""", """"targetResources":""", """"userPrincipalName":"""" ]
   Fields = ${MicrosoftParserTemplates.microsoft-azuread-json-events.Fields}[
-    """exa_json_path=$.targetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
-    """exa_json_path=$..targetResources.[?(@.type == 'User')].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_user}[\w\.\-]{1,40}\$?)))""",
+    #"""exa_json_path=$.targetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
+    """exa_json_path=$..targetResources.[?(@.type == 'User')].userPrincipalName,exa_regex=(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_user}[\w\.\-]{1,40}\$?)))""",
     """exa_json_path=$.targetResources[:1].id,exa_field_name=user_sid""",
     """exa_json_path=$.activityDisplayName,exa_field_name=operation"""
     """exa_json_path=$.ActivityDisplayName,exa_field_name=operation"""
-    """exa_json_path=$.TargetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
-    """exa_json_path=$.TargetResources.[?(@.type == 'User')].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_user}[\w\.\-]{1,40}\$?)))""",
+    #"""exa_json_path=$.TargetResources[:1].userPrincipalName,exa_field_name=dest_email_address""",
+    """exa_json_path=$.TargetResources.[?(@.type == 'User')].userPrincipalName,exa_regex=(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_user}[\w\.\-]{1,40}\$?)))""",
     """exa_json_path=$.TargetResources[:1].id,exa_field_name=user_sid""",
     """exa_json_path=$.operationType,exa_field_name=operation_type""",
     """exa_json_path=$..appId,exa_field_name=app_id"""
@@ -19,17 +19,17 @@ Name = azure-azuread-json-app-activity-useractivitydisplayname
     """exa_json_path=$..additionalDetails.[?(@.key == 'User-Agent')].value,exa_field_name=user_agent"""
     """exa_json_path=$.properties.userAgent,exa_field_name=user_agent"""
     """exa_json_path=$..targetResources.[?(@.type == 'Role')].displayName,exa_field_name=group_name"""
-     """exa_json_path=$..targetResources.[?(@.type == 'User')].displayName,exa_regex=Email:\s*(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_user}[\w\.\-]{1,40}\$?)))""",
+     """exa_json_path=$..targetResources.[?(@.type == 'User')].displayName,exa_regex=Email:\s*(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_user}[\w\.\-]{1,40}\$?)))""",
   ]
 
 microsoft-azuread-json-events = {
     Vendor = Microsoft
     Product = Azure AD Activity Logs
     ExtractionType = json
-    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
+    TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSZ"]
     Fields = [
       """exa_json_path=$..activityDateTime,exa_field_name=time""",
-      """exa_json_path=$..initiatedBy.user.userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+      """exa_json_path=$..initiatedBy.user.userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """exa_json_path=$..initiatedBy.user.id,exa_field_name=user_uid""",
       """exa_regex="initiatedBy":\s*\{[^\}]+?ipAddress":\s*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
       """exa_json_path=$..result,exa_field_name=result"""
@@ -41,7 +41,7 @@ microsoft-azuread-json-events = {
       """exa_json_path=$..correlationId,exa_field_name=correlation_id""",
       """exa_json_path=$..activityDisplayName,exa_field_name=event_name"""
       """exa_json_path=$..ActivityDateTime,exa_field_name=time""",
-      """exa_json_path=$..InitiatedBy.user.userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+      """exa_json_path=$..InitiatedBy.user.userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """exa_json_path=$..InitiatedBy.user.id,exa_field_name=user_uid""",
       """exa_regex="InitiatedBy":\s*\{[^\}]+?ipAddress":\s*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
       """exa_json_path=$..Result,exa_field_name=result"""
@@ -60,10 +60,11 @@ microsoft-azuread-json-events = {
       """exa_regex="targetResources":\s*\[[^\]]+?"displayName":"Role.WellKnownObjectName","oldValue":"\\*"*({object_name}[^\\"]+)\\*""""
       """exa_regex="targetResources":\s*\[[^\]]+?newValue":"\\*"*({role}[^\\"]+)\\*"*","displayName":"Role.DisplayName"""
       """exa_regex="targetResources":\s*\[[^\]]+?newValue":"\\*"*({object_name}[^\\"]+)\\*"*","displayName":"Role.WellKnownObjectName"""
-      """exa_json_path=$.targetResources[?(@.type == 'User')].userPrincipalName,exa_regex=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_user}[\w\.\-]{1,40}\$?)))""",
+      """exa_json_path=$.targetResources[?(@.type == 'User')].userPrincipalName,exa_regex=(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_user}[\w\.\-]{1,40}\$?)))""",
+      """exa_json_path=$..appId,exa_field_name=app_id""",
 
       """"activityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+([+-]\d\d:\d\d|Z))"""",
-      """"initiatedBy":\s*[^\}]+?userPrincipalName":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """"initiatedBy":\s*[^\}]+?userPrincipalName":\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """"initiatedBy":\s*[^\}]+?id":\s*"({user_uid}[^",]+)"""",
       """"initiatedBy":\s*\{[^\}]+?ipAddress":\s*"(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"""",
       """"callerIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -78,12 +79,13 @@ microsoft-azuread-json-events = {
       """"operationType":\s*"({operation}[^"]+)"""",
       """"correlationId":\s*"({correlation_id}[^"]+)"""",
       """"activityDisplayName":\s*"({operation}({event_name}[^"]+))"""",
-      """"targetResources":\s*\[.*?userPrincipalName":\s*"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_user}[\w\.\-]{1,40}\$?)))"""
+      """"targetResources":\s*\[.*?userPrincipalName":\s*"(({external_id}[^_@"]+?\_[^@"]+#(ext|EXT)#@[^"]+)|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({dest_user}[\w\.\-]{1,40}\$?)))"""
       """"tenantId":\s*"({tenant_id}[^"]+)"""",
       """"targetResources":\s*\[[^\]]+?"displayName":"Role.DisplayName","oldValue":"\\*"*({role}[^\\"]+)\\*""""
       """"targetResources":\s*\[[^\]]+?"displayName":"Role.WellKnownObjectName","oldValue":"\\*"*({object_name}[^\\"]+)\\*""""
       """"targetResources":\s*\[[^\]]+?newValue":"\\*"*({role}[^\\"]+)\\*"*","displayName":"Role.DisplayName"""
       """"targetResources":\s*\[[^\]]+?newValue":"\\*"*({object_name}[^\\"]+)\\*"*","displayName":"Role.WellKnownObjectName"""
+      """"appId":\s*"?(?:null|({app_id}[^"]+))"""
     
 }
 ```

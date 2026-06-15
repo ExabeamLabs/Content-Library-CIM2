@@ -1,0 +1,33 @@
+#### Parser Content
+```Java
+{
+Name = "microsoft-365defender-json-message-send-success-messageevents"
+ParserVersion = "v1.0.0"
+Vendor = "Microsoft"
+Product = "Microsoft Defender"
+ExtractionType = "json"
+TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+Conditions = [
+"""destinationServiceName =Azure""",
+""""category":"AdvancedHunting-Message""",
+""""operationName":"Publish"""",
+"""TeamsMessageId"""
+]
+Fields = [
+"""exa_json_path=$.time,exa_field_name=time""",
+"""exa_json_path=$.tenantId,exa_field_name=tenant_id""",
+"""exa_json_path=$.destinationServiceName,exa_field_name=service_name""",
+"""exa_json_path=$.category,exa_field_name=category""",
+"""exa_json_path=$.operationName,exa_field_name=operation""",
+"""exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+"""exa_json_path=$.properties.ThreadId,exa_field_name=thread_id""",
+"""exa_json_path=$.properties.MessageId,exa_field_name=message_id""",
+"""exa_json_path=$.properties.DeliveryAction,exa_field_name=action"""
+"""exa_json_path=$.properties.ReportId,exa_field_name=tracking_id"""
+"""exa_json_path=$.properties.Url,exa_field_name=uri"""
+"""exa_json_path=$.properties.UrlDomain,exa_field_name=web_domain"""
+]
+
+
+}
+```

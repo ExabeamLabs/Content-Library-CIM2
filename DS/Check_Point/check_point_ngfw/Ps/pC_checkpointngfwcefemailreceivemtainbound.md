@@ -19,8 +19,8 @@ Name = checkpoint-ngfw-cef-email-receive-mtainbound
     """\Wfailure_reason=({failure_reason}[^=]+)(\s+\w+=|\s*$)"""
     """\Wemail_message_id=({message_id}[^=]+)(\s+\w+=|\s*$)"""
     """\Wemail_content=({additional_info}[^=]+)(\s+\w+=|\s*$)"""
-    """\Wsuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-    """\WRecipient=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\Wsuser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\WRecipient=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """\Wsrc=({src_ip}((([0-9a-fA-F]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
     """\Wact=({action}[^=]+)(\s+\w+=|\s*$)"""
   ]

@@ -6,7 +6,7 @@ Vendor = Fortinet
 Product = Fortiweb Web Application Firewall
 TimeFormat = [ "epoch_sec", "yyyy-MM-dd 'time='HH:mm:ss"]
 ParserVersion = "v1.0.0"
-Conditions = [ """type="attack"""", """sub_type=""", """severity_level=""", """action="Alert""" ]
+Conditions = [ """type="attack"""", """sub_type=""", """severity_level=""", """action="""" ]
 Fields = [
   """timestamp=({time}\d{10})"""
   """date="*({time}\d\d\d\d-\d\d-\d\d time=\d\d:\d\d:\d\d)"""

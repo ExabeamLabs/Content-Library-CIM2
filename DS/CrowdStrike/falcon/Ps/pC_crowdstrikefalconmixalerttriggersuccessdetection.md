@@ -24,10 +24,9 @@ Fields = [
 """"ComputerName":\s*"({src_host}[\w\-.]+)"""
 """"LocalIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """"ComputerName":\s*"({src_host}[\w\-.]+)".*?"LocalAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","LocalPort":\s*({=src_port}\d+),"RemoteAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","RemotePort":\s*({=dest_port}\d+),"ConnectionDirection":\s*0"""
-""""ComputerName":\s*"({dest_host}[\w\-.]+)".*?"LocalAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","LocalPort":\s*({=dest_port}\d+),"RemoteAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","RemotePort":\s*({=src_port}\d+),"ConnectionDirection":\s*1"""
 """"IOCValue":\s*"({ioc}[^"]+)""""
 """"MD5String":\s*"(|({hash_md5}[^"]+))""""
-""""UserName":\s*"(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+""""UserName":\s*"(N/A|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """"FalconHostLink":\s*"({malware_url}({falcon_host_link}[^"]+))""""
 """"DetectDescription":\s*"\s*({additional_info}({alert_description}[^"]+?))\s*""""
 """"GrandparentImageFileName\\*"+:\s*\\*"+({grandparent_image_filename}[^,]+?)\\*"+,"""
@@ -60,7 +59,6 @@ Fields = [
 """"RemoteAddressIP(4|6)":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":"({dest_port}\d+)".+?"ConnectionDirection":"0"""",
 """"RemoteAddressIP(4|6)":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":"({src_port}\d+)".+?"ConnectionDirection":"1""""
 """"RemoteAddress":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))",.+?"RemotePort":({dest_port}\d+),.+?"Protocol":"({protocol}[^"]+)",.+?"ConnectionDirection""""
-""""ComputerName":\s*"({dest_host}[\w\-\.]+)"""
 """"FileName":\s*"({file_name}[^"]+?(\.({file_ext}\w+))?)","""
 """"FilePath":\s*"(|(({file_dir}[^"]+?[\\\/]+)({file_name}[^"\\\/]+(\.({file_ext}[a-zA-Z]+))))|({=file_dir}[^"]+))""""
 """"Files(Written|Accessed)":\[\{[^\}]*"FileName":"({file_name}.*?(\.({file_ext}\w{3,7}))?)","FilePath":"({file_dir}[^"]+)"\}"""
@@ -89,10 +87,9 @@ Fields = [
 """exa_json_path=$.event.ComputerName,exa_regex=^({src_host}[\w\-.]+)$""",
 """exa_json_path=$..LocalIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
 """exa_regex="ComputerName":\s*"({src_host}[\w\-.]+)".*?"LocalAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","LocalPort":\s*({=src_port}\d+),"RemoteAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","RemotePort":\s*({=dest_port}\d+),"ConnectionDirection":\s*0""",
-"""exa_regex="ComputerName":\s*"({dest_host}[\w\-.]+)".*?"LocalAddress":\s*"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?","LocalPort":\s*({=dest_port}\d+),"RemoteAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?","RemotePort":\s*({=src_port}\d+),"ConnectionDirection":\s*1""",
 """exa_json_path=$..IOCValue,exa_field_name=ioc""",
 """exa_json_path=$..MD5String,exa_field_name=hash_md5""",
-"""exa_json_path=$..UserName,exa_regex=(N/A|({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+"""exa_json_path=$..UserName,exa_regex=(N/A|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
 """exa_json_path=$..FalconHostLink,exa_field_name=falcon_host_link""",
 """exa_json_path=$..FalconHostLink,exa_field_name=malware_url""",
 """exa_json_path=$..DetectDescription,exa_field_name=alert_description""",
@@ -133,7 +130,7 @@ Fields = [
 """exa_regex="destinationServiceName":"({alert_source}[^"]+)""""
 """exa_json_path=$..Name,exa_field_name=alert_name"""
 """exa_json_path=$..Name,exa_field_name=alert_subject"""
-"""exa_json_path=$.SourceAccountName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""exa_json_path=$.SourceAccountName,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """exa_json_path=$.UTCTimestamp,exa_field_name=time"""
 """exa_regex="FileName":\s*"({file_name}[^"]+?(\.({file_ext}\w+))?)","""
 """exa_json_path=$.event.FilePath,exa_regex=^(|({file_path}({file_dir}[^"]+?[\\\/]+)({file_name}[^"\\\/]+(\.({file_ext}[a-zA-Z]+))))|({=file_dir}[^"]+))$""",
@@ -148,7 +145,7 @@ Fields = [
 """"SourceEndpointHostName":"({src_host}[\w\-.]+)"""",
 """"SourceEndpointIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """"SourceProducts":"({src_product}[^"]+)"""",
-""""SourceAccountName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+""""SourceAccountName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
 """exa_json_path=$.event.MitreAttack[0].Tactic,exa_field_name=tactic""",
 """exa_json_path=$.event.MitreAttack[0].TacticID,exa_field_name=tactic_key""",
 """exa_json_path=$.event.MitreAttack[0].Technique,exa_field_name=technique""",

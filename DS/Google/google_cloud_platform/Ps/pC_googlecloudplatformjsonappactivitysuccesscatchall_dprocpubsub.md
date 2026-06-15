@@ -29,7 +29,7 @@ Name = google-cloudplatform-json-app-activity-success-catchall_dprocpubsub
     """exa_json_path=$.resource.labels.location,exa_field_name=region""",
     """exa_json_path=$.jsonPayload.message,exa_field_name=additional_info"""
     """exa_json_path=$.reason,exa_field_name=failure_reason"""
-    """exa_json_path=$.profileUser,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+.[^\]\s"\\,\|]+)"""
+    """exa_json_path=$.profileUser,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+.[^\]\s"\\,\|]+)"""
     """exa_json_path=$.userAgent,exa_field_name=user_agent"""
     """exa_json_path=$.url,exa_field_name=url"""
     """exa_json_path=$.event,exa_field_name=event_name"""

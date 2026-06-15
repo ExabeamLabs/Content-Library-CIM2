@@ -17,7 +17,7 @@ Name = microsoft-evnps-sk4-endpoint-authentication-success-6272-1
     """"AuthenticationServer":"({auth_server}[^"]+)"""",
     """"CallingStationID":"(-|({src_mac}[^"]+))"""",
     """"FullyQualifiedSubjectMachineName":"(-|({user_type}[^"]+))"""",
-    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({=domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({=domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """"Channel":"({channel}[^"]+)"""
   ]
 
