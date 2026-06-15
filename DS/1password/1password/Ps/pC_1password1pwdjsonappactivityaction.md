@@ -23,7 +23,7 @@ Name = 1password-1pwd-json-app-activity-action
     """exa_json_path=$.location.region,exa_field_name=location_state""",
     """exa_json_path=$.user.uuid,exa_field_name=user_uid""",
     """exa_json_path=$.user.name,exa_regex=(({full_name}[^,\s:\("]+(,|\s)\s*[^"$]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
-    """exa_json_path=$.user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
+    """exa_json_path=$.user.email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
   ]
 
 

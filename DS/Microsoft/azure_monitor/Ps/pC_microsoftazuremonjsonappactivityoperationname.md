@@ -38,7 +38,7 @@ Name = microsoft-azuremon-json-app-activity-operationname
     """exa_json_path=$..event_time,exa_field_name=event_time""",
     """exa_regex="properties":\{[^\}]*?"category":"MySqlAuditLogs"[^\}]*?"user":"({db_user}[^"]+)"""",
     """exa_regex=(?i)IpAddress":\s*"(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(\%\d+)?(:({src_port}\d+))?""""
-    """exa_json_path=$.identity.UserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
+    """exa_json_path=$.identity.UserName,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$"""
     """exa_json_path=$..ActivityId,exa_field_name=activity_id""",
   ]
   ParserVersion = v1.0.0

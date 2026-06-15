@@ -24,7 +24,7 @@ Name = zscaler-bp-json-http-session-threatcategory
     """exa_json_path=$..requestHeaderSize,exa_field_name=bytes_out""",
     """exa_json_path=$..policyGroups,exa_field_name=additional_info""",
     """exa_json_path=$..userName,exa_regex=^(({full_name}[^"\s]+\s[^"$]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
-    """exa_json_path=$..email,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)$""",
+    """exa_json_path=$..email,exa_regex=^({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)$""",
     """exa_json_path=$..applicationName,exa_field_name=app"""
   ]
   ParserVersion = "v1.0.0"

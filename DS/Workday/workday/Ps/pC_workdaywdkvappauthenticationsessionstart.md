@@ -13,7 +13,7 @@ Name = workday-wd-kv-app-authentication-sessionstart
        """"Session_ID":\s*"({session_id}[^"]+)"""",
        """"Signon_IP_Address":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
        """"Device_Type":\s*"({device_type}[^"]+)"""",
-       """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)"""",
+       """"email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)"""",
        """"Authentication_Type":\s*"({auth_type}[^,]+)"""",
        """"Operating_System":\s*"({os}[^,]+)"""",
        """"Browser_Type":\s*"({user_agent}[^,]+)"""",

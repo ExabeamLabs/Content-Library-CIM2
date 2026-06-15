@@ -17,12 +17,12 @@ Name = microsoft-x-csv-email-deliver
     """({direction}Incoming)""",
     """,STOREDRIVER,[^,]+,\s*({alert_id}\d+)\s*,""",
     """({alert_type}STOREDRIVER,({action}[^,]+)),""",
-    """,\s*(?:'|")?({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)[^,]*?)\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
-    """,\s*(?:'|")?({email_address}({orig_user}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))[^,]*?\s*(?:'|")?,(?:(?:\s*'+[^']*'+)\s*,|(?:\s*"+[^"]*"+)\s*,|[^",]+?,|\s*,){9}Incoming,""",
+    """DELIVER,(-,|"+(.+?)"+,|([^,]*),){2,3}\s*(?:'|")?({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/?=^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,]*)""",
+    """DELIVER,(-,|"+(.+?)"+,|([^,]*),){2,3}\s*(?:'|")?({orig_user}[A-Za-z0-9!#$%&'+\/?=^_`~.-]+@[^\]\s"\\,\|;]+\.[^\]\s"\\,\|;]+)""",
     """,\s*({bytes}\d+)\s*,(?:[^,]*,){7}Incoming,""",
     """,\s*({num_recipients}\d+)\s*,(?:[^,]*,){6}Incoming,""",
     """,\s*({email_subject}[^,]+?)\s*,(?:[^,]*,){3}Incoming,""",
-    """,\s*['"]*(|MicrosoftExchange.*?|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))['"]*)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)\s*,(?:[^,]*,){2}Incoming,""",
+    """,\s*['"]*(|MicrosoftExchange.*?|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))['"]*)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)\s*,(?:[^,]*,){2}Incoming,""",
     """,\s*['"]*(?:<>|({return_path}[^,]+?))['"]*\s*,(?:[^,]*,)Incoming,"""
   ]
 

@@ -17,7 +17,7 @@ Fields = [
 """\ssent_bytes="({bytes_in}\d+)"""
 """\srcvd_bytes="({bytes_out}\d+)"""
 """\sapp_cat_name="({category}[^"]+)""""
-"""\ssrc_user="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+"""\ssrc_user="({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
 """action="+({proxy_action}[^"]+)""""
 ]
 ParserVersion = "v1.0.0"

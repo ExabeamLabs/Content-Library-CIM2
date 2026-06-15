@@ -9,7 +9,7 @@ Name = zeek-z-str-email-receive-success-brosmtp
   Conditions = [ """bro_smtp""" ]
   Fields = [
     """.*?({time}\d{10})\.\d{6}""",
-    """(?:[^\t]+\t){11}.*?<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """(?:[^\t]+\t){11}.*?<({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """(?:[^\t]+\t){12}.*?<({orig_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """(?:[^\t]+\t){12}({email_recipients}[^\t]+)""",
     """(?:[^\t]+\t){16}({email_subject}[^\t]+)""",

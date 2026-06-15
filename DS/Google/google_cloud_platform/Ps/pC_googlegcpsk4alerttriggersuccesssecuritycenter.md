@@ -15,7 +15,7 @@ Name = google-gcp-sk4-alert-trigger-success-securitycenter
     """resource_name:\s*"({resource_path}[^"]+)""",
     """external_uri:\s*"({url}}[^"]+)""",
     """37:\s*"({additional_info}[^"]+)"""",
-    """"security".+?1:\s*\{.+?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """"security".+?1:\s*\{.+?"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
   ]
 
 

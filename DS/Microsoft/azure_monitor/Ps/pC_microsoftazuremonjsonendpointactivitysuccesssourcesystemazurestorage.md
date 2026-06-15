@@ -8,6 +8,7 @@ Name = microsoft-azuremon-json-endpoint-activity-success-sourcesystemazurestorag
     """exa_json_path=$.Uri,exa_field_name=file_path""",
     """exa_json_path=$.AccountName,exa_field_name=storage_account""",
     """exa_json_path=$.['_ResourceId'],exa_field_name=resource"""
+    """exa_json_path=$.OperationCount,exa_field_name=count"""
   ]
 
 microsoft-azure-endpoint-json = {

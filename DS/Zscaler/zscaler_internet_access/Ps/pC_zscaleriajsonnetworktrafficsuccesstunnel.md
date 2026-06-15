@@ -7,7 +7,7 @@ Name = zscaler-ia-json-network-traffic-success-tunnel
   ParserVersion = "v1.0.0"
   TimeFormat = "EEE MMM dd HH:mm:ss yyyy"
   ExtractionType = json
-  Conditions = [ """"tunneltype":"""", """"sourceip":"""", """IKE""", """Tunnel""" ]
+  Conditions = [ """"tunneltype":"""", """"sourceip":"""", """location""", """Tunnel""" ]
   Fields = [
     """exa_json_path=$..datetime,exa_field_name=time""",
 	"""exa_json_path=$..Recordtype,exa_field_name=event_name""",
@@ -17,7 +17,7 @@ Name = zscaler-ia-json-network-traffic-success-tunnel
 	"""exa_json_path=$..location,exa_field_name=location""", 
 	"""exa_json_path=$.event.event,exa_field_name=additional_info""",
 	"""exa_json_path=$..eventreason,exa_field_name=result_reason,exa_match_expr=!InList(toLower($..eventreason), "none")""",
-	"""exa_json_path=$..user,exa_regex=((\d{1,3}\.){3}\d{1,3}|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+	"""exa_json_path=$..user,exa_regex=((\d{1,3}\.){3}\d{1,3}|NA|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
   ]
 
 

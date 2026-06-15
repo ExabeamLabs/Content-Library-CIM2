@@ -10,7 +10,7 @@ Name = forcepoint-dlp-cef-alert-trigger-success-dlpsyslog-1
     """action="({action}[^"]+)""""
     """application="({app}[^"]+)""""
     """channel="({channel}[^"]+)""""
-    """destination="({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^;\]\s"\\,\|]+)[^"]+)""""
+    """destination="({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^;\]\s"\\,\|]+)[^"]+)""""
     """incidentID="({alert_id}\d+)""""
     """eventTime="({time}\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d)""""
     """fileName ="({file_name}[^"]+)""""
@@ -18,7 +18,7 @@ Name = forcepoint-dlp-cef-alert-trigger-success-dlpsyslog-1
     """rules="({alert_name}[^"]+)""""
     """policies="({policy_name}[^"]+)""""
     """severity="({alert_severity}[^"]+)""""
-    """sourceEmail="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """sourceEmail="({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """sourceHostname="({src_host}[\w\-\.]+)""""
     """sourceUsername="(({domain}[^"\\]+?)\\)?({user}[\w\.\-]{1,40}\$?)""""
   ]

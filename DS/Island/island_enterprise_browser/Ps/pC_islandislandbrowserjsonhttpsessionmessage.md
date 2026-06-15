@@ -12,7 +12,7 @@ Name = "island-islandbrowser-json-http-session-message"
         """exa_json_path=$.hostname,exa_field_name=host""",
         """exa_json_path=$.message.source,exa_field_name=log_source""",
         """exa_json_path=$.message.userId,exa_field_name=user_id""",
-        """exa_json_path=$.message.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+        """exa_json_path=$.message.email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
         """exa_json_path=$.message.entityType,exa_field_name=object_type""",
         """exa_json_path=$.message.entityId,exa_field_name=object_id""",
         """exa_json_path=$.message.entityName,exa_field_name=object_name""",

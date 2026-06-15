@@ -10,7 +10,7 @@ Name = microsoft-o365-sk4-app-file-move
     """exa_json_path=$.Operation,exa_field_name=operation""",
     """exa_json_path=$.Operation,exa_field_name=event_name""",
     """exa_json_path=$.UserId,exa_field_name=user_upn""",
-    """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
+    """exa_json_path=$.MailboxOwnerUPN,exa_regex=^({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))$""",
     """exa_json_path=$.Workload,exa_field_name=app""",
     """exa_json_path=$.ClientIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """exa_json_path=$.ClientIPAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -23,6 +23,8 @@ Name = microsoft-o365-sk4-app-file-move
     """exa_json_path=$.ActorInfoString,exa_field_name=user_agent""",
     """exa_json_path=$.UserType,exa_field_name=user_type""",
     """exa_json_path=$.OperationProperties[?(@.Name == 'RuleName')].Value,exa_field_name=rule"""
+    """exa_json_path=$.SiteUrl,exa_field_name=site_name"""
+    """exa_json_path=$.AppId,exa_field_name=app_id"""
   ]
 
 o365-activity-template = {
@@ -36,9 +38,9 @@ o365-activity-template = {
     """"host\\*"+:[\s\\]*"+({host}[^"\\]+)""",
     """\sact=({event_name}({operation}[^=]+?))\s+(\w+=|$)""",
     """"Operation\\*"+:[\s\\]*"+({event_name}({operation}[^"\\\.]*))""",
-    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
+    """"eid\\*"+:[\s\\]*"+(Not Available|SecurityComplianceAlerts|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\\*"""", 
     """"UserId\\*"+:[\s\\]*"+({user_upn}[^",]+)",""",
-    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
+    """"MailboxOwnerUPN\\*"+:[\s\\]*"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))>?\s*"+""",
     """"(Workload|Application|Client)\\*"+:[\s\\]*"+({app}[^"\\]*)""",
     """sourceServiceName =({app}[^=]+?)\s+(\w+=|$)""",
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
@@ -51,13 +53,13 @@ o365-activity-template = {
     """"ExtendedProperties"[^]]*?UserAgent"+,\s*"+Value"+:\s*"+({user_agent}[^"]+)""",
     """"AffectedItems"+:[\s\\]*\[({additional_info}[^=]+?)\s*\],""",
     """"ClientIP\\*"+:[\s\\]*"+\[?((0\.0\.0\.0|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))?|((0\.0\.0\.0|({=src_ip}[a-fA-F\d.:]+))\]?(:({=src_port}\d+))?))"""",
-    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|([^#]+#)?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))))\s""",
+    """\ssuser=((Not Available|anonymous|SecurityComplianceAlerts|([^#]+#)?({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|(Unknown|(\w+?_)?(\w+-)?\w+-\w+-\w+-\w+|((({domain}[^\\\s]+)\\)?(S-(\d{1,2}\-){3}(\d+\-){3}\d+|({user}[\w\.\-\!\#\^\~]{1,40}\$?))))))\s""",
     """"ClientIPAddress\\*"+:[\s\\]*"+\[?(::1|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)\]?(:({=src_port}\d+))?""",
     """\sreason=(?:None|({failure_reason}[^\s]+))""",
     """\{"Value": "(?:None|({failure_reason}[^"]+))", "Name": "MethodExecutionResult."\}""",
     """"Path":"(\\+)?(\?+|({object}[^=]+?))\s*"""",
     """"Subject":"\s*({additional_info}[^"]+?)\s*"""",
-    """"trc":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"trc":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """src-account-name":"({account_name}[^"]+)""",
     """"OriginatingServer":"({host}[\w\-.]+?)\s*\(""",
     """Workload"*:\s*"*({resource}[^"]+)"""",
@@ -72,6 +74,9 @@ o365-activity-template = {
     """"UserType":\s*"*({user_type}[^,}"]+)"*"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
     """"tenantId"\s*:\s*"?({tenant_id}[^\s,=.<"]+)"""
-  
+    """"SiteUrl"\s*:\s*"({site_name}[^"]+)""""
+    """"AppId":\s*"({app_id}[^"]+)""""
+    """"ApplicationId":"({app_id}[^"]+)""""
+    
 }
 ```

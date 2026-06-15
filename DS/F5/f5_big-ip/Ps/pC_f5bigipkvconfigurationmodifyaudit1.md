@@ -10,7 +10,7 @@ Name = f5-bigip-kv-configuration-modify-audit-1
   Fields = [
     """<(?:\d{1,3})>(?:\d{0,2}\s)?({time}\w{3}\s+\d{1,2}\s+\d{2}:\d{2}:\d{2})"""
     """({host}[\w.-]+)\snotice""",
-    """\suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """\suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """\saction="({action}[^"]+)""",
     """\sstatus="({status_msg}[^"]+)"""
   ]

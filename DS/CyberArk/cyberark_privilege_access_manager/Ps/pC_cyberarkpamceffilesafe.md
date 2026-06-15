@@ -40,7 +40,7 @@ Fields = [
 """CEF:\d+\|([^\|]+\|){5}({severity}[^\|]+)"""
 """cn2="*({action}[^=]+)\s"?(\s+\w+=)"""
 """cs1="*(|({client_name}[^="]+?))(\s*\w+|")="""
-"""\ssuser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""\ssuser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """Failure Description:\s({failure_reason}[^:]+?)\s*\w+:"""
 ]
 ParserVersion = "v1.0.0"

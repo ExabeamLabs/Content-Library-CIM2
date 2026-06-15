@@ -8,14 +8,14 @@ Name = microsoft-azure-json-app-activity-updateuser
     """exa_regex=({category}UserManagement)""",
     """"Resource":\s*"({resource}[^"]+)""",
     """exa_json_path=$.Resource,exa_field_name=resource"""
-    """TargetResources":\s*"?\[[^|]+userPrincipalName\\?"?:\s*\\?"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
-    """exa_regex=(?i)TargetResources":\s*"?\[[^|]+userPrincipalName\\?"?:\s*\\?"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """TargetResources":\s*"?\[[^|]+userPrincipalName\\?"?:\s*\\?"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?""""
+    """exa_regex=(?i)TargetResources":\s*"?\[[^|]+userPrincipalName\\?"?:\s*\\?"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"ActivityDateTime":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d(\.\d{1,3})?Z)"""",
     """"ResourceId":\s*"({object}[^"]+)"""",
     """"resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
-    """"InitiatedBy":\s*"?\{\\?"user\\?":\s*\{[^\}]+"userPrincipalName\\?":\s*\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+""",
+    """"InitiatedBy":\s*"?\{\\?"user\\?":\s*\{[^\}]+"userPrincipalName\\?":\s*\\?"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+""",
     """exa_regex="resourceId":\s*\s*"({resource_id}\/SUBSCRIPTIONS\/({subscription_id}[^\/]+)\/RESOURCEGROUPS\/({resource_group}[^\/]+)(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)"""
-    """exa_regex="(?i)InitiatedBy":\s*"?\{\\?"user\\?":\s*\{[^\}]+"userPrincipalName\\?":\s*\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+""",
+    """exa_regex="(?i)InitiatedBy":\s*"?\{\\?"user\\?":\s*\{[^\}]+"userPrincipalName\\?":\s*\\?"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+""",
     """"ActivityDisplayName":\s*"({event_name}[^"]+)"""",
     """CallerIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"InitiatedBy":\s*"?\{\\?"user\\?":\s*\{[^\}]+"ipAddress\\?":\s*\\?"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})?)\\?"""",
@@ -42,8 +42,8 @@ ms-azure-eventhubs-activity = {
     """"value\\":\s*\\"({user_agent}[^"]+?)\\?",\\"key\\":\s*\\"User-Agent\\"""",
     """"key\\":\s*\\"User-Agent\\",\\"value\\":\s*\\"({user_agent}[^"]+?)\\?"""",
     """"+callerIpAddress"+:\s*"+(<null>|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+""",
-    """"+initiatedBy[^}]+"+userPrincipalName\\?"+:\s*\\?"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+"""
-    """TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """"+initiatedBy[^}]+"+userPrincipalName\\?"+:\s*\\?"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+"""
+    """TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """"+targetResources.*?"+displayName"+:\s*"+({object}[^"]+?)"+""",
     """"+targetResources.*?"+userPrincipalName"+:\s*"+({object}[^"]+?)"+"""
     """"targetResources":\s*\[\{[^\}]+\},\{"displayName"[^\]]+?\.DisplayName","newValue":\s*"\\?"({target}[^"\\]+)"""
@@ -69,8 +69,8 @@ ms-azure-eventhubs-activity = {
     """exa_regex=resourceId":\s*"({resource_id}(\/SUBSCRIPTIONS\/({subscription_id}[^\/]+))?(\/RESOURCEGROUPS\/({resource_group}[^\/]+))?(\/PROVIDERS\/({provider_name}[^\/]+))?\/[^"]+)""""
     """exa_regex="key\\":\s*\\"User-Agent\\",\\"value\\":\s*\\"({user_agent}[^"]+?)\\?"""",
     """exa_regex=(?i)"+callerIpAddress"+:\s*"+(<null>|({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?)"+""",
-    """exa_regex="+initiatedBy[^}]+"+userPrincipalName\\?"+:\s*\\?"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+"""
-    """exa_regex=TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
+    """exa_regex="+initiatedBy[^}]+"+userPrincipalName\\?"+:\s*\\?"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\\?"+"""
+    """exa_regex=TargetResources":\s*"\[[^|]+userPrincipalName\\":\s*\\"(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))\\?"""",
     """exa_regex="+targetResources.*?"+displayName"+:\s*"+({object}[^"]+?)"+""",
     """exa_regex="+targetResources.*?"+userPrincipalName"+:\s*"+({object}[^"]+?)"+"""
     """exa_regex="targetResources":\s*\[\{[^\}]+\},\{"displayName"[^\]]+?\.DisplayName","newValue":\s*"\\?"({target}[^"\\]+)"""

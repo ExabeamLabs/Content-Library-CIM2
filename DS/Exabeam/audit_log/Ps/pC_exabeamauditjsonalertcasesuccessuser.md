@@ -5,8 +5,8 @@ Name = exabeam-audit-json-alert-case-success-user
     ParserVersion = v1.0.0
     Conditions = [""""activity_type":"user-""", """"application":""", """"subject":""", """"outcome":""", """"operation":"""]
     Fields = ${EXAParsersTemplates.exabeam-audit-json-events.Fields}[
-      """"object_name":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"[^\}]+?"activity_type":"(user-password-reset|user-modify|user-disable|user-enable|user-delete|user-invite|user-invite-cancel)""""
-      """exa_json_path=$.object_name,exa_regex=^({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$,exa_match_expr=Contains($.activity_type,"user-")"""
+      """"object_name":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"[^\}]+?"activity_type":"(user-password-reset|user-modify|user-disable|user-enable|user-delete|user-invite|user-invite-cancel)""""
+      """exa_json_path=$.object_name,exa_regex=^({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))$,exa_match_expr=Contains($.activity_type,"user-")"""
     ]
   
 exabeam-audit-json-events = {
@@ -52,7 +52,7 @@ exabeam-audit-json-events = {
       """exa_json_path=$..api_method,exa_field_name=method,exa_match_expr=!InList($..api_method,"")""",
       """exa_json_path=$..api_endpoint,exa_field_name=url,exa_match_expr=!InList($..api_endpoint,"")""",
       """exa_json_path=$.api_endpoint,exa_field_name=url,exa_match_expr=!InList($.api_endpoint,"")""",
-      """exa_json_path=$..user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$..user,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$..time,exa_field_name=time"""
       """exa_json_path=$..user,exa_regex=({user_info}[^"]+)"""
     

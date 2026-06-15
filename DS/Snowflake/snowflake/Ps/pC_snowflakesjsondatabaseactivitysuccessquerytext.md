@@ -4,7 +4,7 @@
 Name = snowflake-s-json-database-activity-success-querytext
   Vendor = Snowflake
   Product = Snowflake
-  TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss.SS"]
+  TimeFormat = ["yyyy-MM-dd HH:mm:ss.SSS", "yyyy-MM-dd HH:mm:ss.SS", "yyyy-MM-dd HH:mm:ss.S"]
   ExtractionType = json
   Conditions = [  """"QUERY_ID":""", """"QUERY_TEXT":""", """"TOTAL_ELAPSED_TIME":""" ]
   Fields = [

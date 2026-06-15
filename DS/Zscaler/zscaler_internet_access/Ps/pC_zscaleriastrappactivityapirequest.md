@@ -7,7 +7,7 @@ Name = zscaler-ia-str-app-activity-apirequest
   Conditions = ["""dproc=ZIA Traffic""", """"data":""", """"workspace_id":"""", """"messages":""" ]
   Fields = ${ZscalerParsersTemplates.s-zscaler-web-activity.Fields}[
   """\surl=(\w+:\/{2})?[^\/\s]+({uri_path}\/[^?\s]+)""",
-  """"user_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """"user_email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """"role":"({role}[^"]+)""""
   ]
 
@@ -47,7 +47,7 @@ s-zscaler-web-activity = {
     """\slocation=({location}[^=]+?)\s+\w+="""
     """deviceowner=(NA|({owner_id}[^\s]+))""",
     """dname=({web_domain}[^=]+?)\s+(\w+=|$)"""
-    """login=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """login=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """urlClass=({event_category}[^=]+?)\s*\w+="""
   
 }

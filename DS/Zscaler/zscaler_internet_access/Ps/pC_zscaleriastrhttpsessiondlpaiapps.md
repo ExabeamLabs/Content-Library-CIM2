@@ -9,7 +9,7 @@ Name = zscaler-ia-str-http-session-dlp-ai-apps
   Conditions = [ """module=AI & ML Apps""", """action=""", """DLPEng=""", """url=""", """login=""" ]
   Fields = [
     """({time}\w+\s+\w+\s+\d+\s+\d+:\d+:\d+\s+\d\d\d\d)""",
-    """login=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s""",
+    """login=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@([^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s""",
     """dname=({web_domain}[^=]+?)\s+(\w+=|$)""",
     """dip=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """sip=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",

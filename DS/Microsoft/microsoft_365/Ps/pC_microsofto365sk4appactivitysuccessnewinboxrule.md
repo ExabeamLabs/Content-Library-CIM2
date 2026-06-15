@@ -20,14 +20,17 @@ Name = microsoft-o365-sk4-app-activity-success-newinboxrule
     """user="({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """user_email="({email_address}[^@"]+@[^\."]+\.[^"]+)"""",
     """"Value":"(?:smtp:)?.+?@({dest_domain}[^"]+)"""",
-    """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-    """"UserId":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?(@({domain}[^"]+))?))\s*"""",
+    """suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """"UserId":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-]{1,40}\$?(@({domain}[^"]+))?))\s*"""",
     """destinationServiceName =({app}.+?)\s*filePath""",
     """({app}Office 365)"""
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)"""
     """"OriginatingServer":"({host}\w+)\s*(\([^\)]+?\))?(\\r\\n)?""""
     """ObjectId":"(Unknown|Not Available|({object}[^"]+))"""
     """"correlationId":\s*"({correlation_id}[^"]+)""""
+    """"ObjectId\\*"{1,20}:"?[\s\\]*"+(Unknown|Not Available|({object}({mailbox_name}[^"]+)))"""
+    """"TargetUserOrGroupName":"({target}[^"]+)"""",
+    """"TargetUserOrGroupName":"([^@]+)@({target_domain}[^"]*?)"""",
   ]
 
 

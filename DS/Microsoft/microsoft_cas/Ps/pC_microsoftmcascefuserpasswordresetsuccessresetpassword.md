@@ -139,8 +139,8 @@ Conditions = [
 ]
 Fields = [
   """"Timestamp":\s*"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
-  """"RecipientEmailAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
-  """"SenderFromAddress":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
+  """"RecipientEmailAddress":\s*"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+  """"SenderFromAddress":\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""""
   """"category":\s*"({category}[^"]+?)""""
   """"FileName":\s*"({email_attachment}({file_name}[^"\.]+?(\.({file_ext}[^"]+?)))?)""""
   """"FileType":\s*"({file_type}[^"]+?)""""
@@ -149,8 +149,8 @@ Fields = [
   """"SHA256":\s*"({file_hash}[^",]+)"""
   """exa_json_path=$..Timestamp,exa_field_name=time"""
   """exa_json_path=$..time,exa_field_name=time"""
-  """exa_json_path=$..RecipientEmailAddress,exa_regex=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
-  """exa_json_path=$..SenderFromAddress,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
+  """exa_json_path=$..RecipientEmailAddress,exa_regex=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """exa_json_path=$..SenderFromAddress,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""
   """exa_json_path=$.category,exa_field_name=category"""
   """exa_json_path=$..FileName,exa_field_name=file_name"""
   """exa_json_path=$..FileName,exa_field_name=email_attachment"""

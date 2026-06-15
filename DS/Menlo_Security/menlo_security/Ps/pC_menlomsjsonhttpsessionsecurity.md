@@ -7,7 +7,7 @@ Name = menlo-ms-json-http-session-security
     TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSS", "yyyy-MM-dd'T'HH:mm:ss.SSS"]
     ExtractionType = json
     ParserVersion = "v1.0.0"
-    Conditions = [ """"vendor":""", """"Menlo Security"""", """"browser_and_version":""", """"request_type":""", """"connId":""", """"userid":""", """"user-agent":""" ]
+    Conditions = [ """"vendor":""", """"Menlo Security"""", """"product":""",""""MSIP"""", """"x-client-ip":""", """"severity":""" ]
     Fields = [
        """exa_json_path=$.event_time,exa_field_name=time""",
        """exa_json_path=$.pe_action,exa_field_name=action""",
@@ -16,11 +16,11 @@ Name = menlo-ms-json-http-session-security
        """exa_regex="dst":\s*\[?"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
        """exa_json_path=$.user-agent,exa_field_name=user_agent""",
        """exa_json_path=$.categories,exa_field_name=category""",
-       """exa_json_path=$.userid,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+       """exa_json_path=$.userid,exa_regex=(Unknown|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""",
        """exa_json_path=$.url,exa_field_name=url""",
        """exa_json_path=$.protocol,exa_field_name=protocol""",
        """exa_json_path=$.referer,exa_field_name=referrer"""
-        """exa_json_path=$.browser_and_version,exa_field_name=browser""",
+        """exa_json_path=$.browser_and_version,exa_regex=(NA|({browser}[^"]+))""",
         """exa_json_path=$.connId,exa_field_name=connection_id""",
         """exa_json_path=$.content-type,exa_field_name=mime""",
         """exa_json_path=$.domain,exa_field_name=domain""",
@@ -34,6 +34,8 @@ Name = menlo-ms-json-http-session-security
         """exa_json_path=$.response_code,exa_field_name=http_response_code""",
         """exa_json_path=$.risk_score,exa_field_name=severity""",
         """exa_regex=username="*({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
+        """exa_json_path=$.session_id,exa_field_name=session_id"""
+        """exa_json_path=$.document_url,exa_field_name=file_url"""
     ]
   
 

@@ -22,7 +22,7 @@ Fields = [
     """\Wdst_machine_name"?:"({dest_host}[^"]+)""",
     """\Wdst_machine_name"?:"({dest_host}[^"@]+)@({domain}[^"]+)""",
     """\W(user|src_user_name|dst_user_name)"?:"({full_name}[^\"\(]+?)\s*\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """\W(user|src_user_name|dst_user_name)"?:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|)(+]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)""",
+    """\W(user|src_user_name|dst_user_name)"?:"({full_name}[^,:\("]+)\s\((({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|)(+]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)""",
     """cu_rule_category"?:"({rule_type}[^"]+)""",
     """cu_rule_id"?:"({rule_id}[^"]+)""",
     """\Wevent_name"?:"({event_name}[^",]+)""",

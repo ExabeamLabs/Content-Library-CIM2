@@ -9,7 +9,7 @@ Name = airlock-allowlisting-json-app-activity-success-task
   Conditions = [ """"description":""", """"task":""", """"checkpoint":""" ,""""user":""""]
   Fields = [
     """exa_json_path=$.datetime,exa_field_name=time""",
-    """exa_json_path=$.user,exa_regex=(SYSTEM|LOCAL SERVICE|(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+    """exa_json_path=$.user,exa_regex=(SYSTEM|LOCAL SERVICE|(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
     """exa_json_path=$.description,exa_field_name=description""",
     """exa_json_path=$.task,exa_field_name=event_name""",
     """exa_json_path=$.description,exa_regex=(OTP Self Service was activated on agent ({host}[^"]+))""",

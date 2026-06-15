@@ -29,7 +29,7 @@ Name = netskope-sc-sk4-alert-trigger-success-actdetect
     """"malware_type"+:"+({alert_name}[^"]+)"""",
     """"+malware_sev"+:"+({alert_severity}[^"]+)""",
     """"severity":"({alert_severity}[^"]+)"""
-    """suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """msg[^\[:,\.]+\[({alert_source}[^]]+)"""
     """"protocol":"({protocol}[^"]+)"""",
     """"activity":\s*"({operation}[^\"]+)""",
@@ -62,7 +62,7 @@ cef-netskope-alert = {
     """"hostname":"({host}[^",]+)"""",
     """"timestamp":({time}\d{10})""",
     """"shared_domains":\s*"[\[\<\s]?({domain}[^"\s,\\\]\>]+)""",
-    """"user":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"user":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({domain}[^"@\\\/\s]+)[\\\/]+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"dstip":"({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """"alert_name":"({alert_name}[^"]+)""",
     """"url":"({malware_url}[^"]+)""",

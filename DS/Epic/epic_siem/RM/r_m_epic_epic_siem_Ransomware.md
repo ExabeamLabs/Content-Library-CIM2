@@ -7,7 +7,7 @@ Vendor: Epic
 
 | Rules | Models | MITRE ATT&CK® TTPs | Activity Types | Parsers |
 |:-----:|:------:|:------------------:|:--------------:|:-------:|
-|   3   |   0    |         2          |       4        |   19    |
+|   3   |   0    |         2          |       4        |   28    |
 
 | Event Type    | Rules    | Models |
 | ---- | ---- | ------ |

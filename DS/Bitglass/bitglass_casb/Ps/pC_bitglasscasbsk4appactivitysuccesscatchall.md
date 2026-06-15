@@ -16,14 +16,14 @@ cef-bitglass-system-info}{
     """"time":"({time}\d+\s+\w+\s+\d+\s+\d+:\d+:\d+)""",
     """"application":"({app}[^"]+)"""",
     """"filename":"\s*({file_name}[^"]+?(\.({file_ext}[^\.\s"]+))?)\s*"""",
-    """"owner":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """"owner":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"status":"({event_category}[^"]+)""",
     """"folder":"\s*({folder_name}[^"]+?)\s*"""",
     """"filelink":"({file_url}[^"]+)""",
     """"action":"({event_name}[^"]+?)"""",
     """ipaddress":"\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """"user":"({full_name}({first_name}[^\s"]+)\s({last_name}[^\s"]+))""""
-    """"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
+    """"email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""""
     """"activity":"({operation}[^"]+)""""
     """"details":"({additional_info}[^"]+)""",
     """"device":"({device_name}[^"]+)""",

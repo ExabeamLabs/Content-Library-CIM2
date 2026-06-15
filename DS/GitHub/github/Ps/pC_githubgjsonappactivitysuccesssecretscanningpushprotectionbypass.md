@@ -28,7 +28,7 @@ json-github-actions = {
       """"operation_type":\s*"({operation_type}[^"]+)""",
       """({app}github)""",
       """"key":\s*"({key_name}[^"]+)"""",
-      """"(external_identity_nameid|external_identity_username)":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+      """"(external_identity_nameid|external_identity_username)":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
       """"external_identity_username":"[^@"]+?@({domain}[^"]+)"""",
       """"external_identity_nameid":"[^@"]+?@({domain}[^"]+)"""",
       """"business":\s*"({company}[^"]+)""",
@@ -56,8 +56,8 @@ json-github-actions = {
       """exa_json_path=$.operation_type,exa_field_name=operation_type""",
       """exa_json_path=$.key,exa_field_name=key_name""",
       """exa_regex=({app}(?i)github)""",
-      """exa_json_path=$..external_identity_username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
-      """exa_json_path=$..external_identity_nameid,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+      """exa_json_path=$..external_identity_username,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+      """exa_json_path=$..external_identity_nameid,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
       """exa_json_path=$..external_identity_username,exa_regex=^[^@"]+?@({domain}[^"]+)$""",
       """exa_json_path=$..external_identity_nameid,exa_regex=^[^@"]+?@({domain}[^"]+)$"""
       """exa_json_path=$.business,exa_field_name=company"""

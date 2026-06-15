@@ -1,0 +1,44 @@
+#### Parser Content
+```Java
+{
+Name = netskope-sc-json-app-activity-success-dlp_match_info
+  Vendor = Netskope
+  Product = Netskope Security Cloud
+  TimeFormat = "epoch_sec"
+  ExtractionType = json
+  Conditions = [ """"dlp_action:""", """"alert":"no"""", """"acting_user":""", """"dlp_match_info"""" ]
+  Fields = [
+    """exa_json_path=$.timestamp,exa_field_name=time"""
+    """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.dlp_file,exa_field_name=file_name"""
+    """exa_json_path=$.file_path,exa_regex=({file_path}({file_dir}[^"]*[\\\/]+)({file_name}[^\\\/"]+?(\.(?!(_|-|\{))({file_ext}[^\\\.\s"]+))?))("|$)"""
+    """exa_json_path=$.file_type,exa_field_name=file_type"""
+    """exa_json_path=$.activity,exa_field_name=operation"""
+    """exa_json_path=$.severity,exa_field_name=alert_severity"""
+    """exa_json_path=$.dlp_rule_severity,exa_field_name=alert_severity"""
+    """exa_json_path=$.md5,exa_field_name=hash_md5"""
+    """exa_json_path=$.app,exa_field_name=app"""
+    """exa_json_path=$.dlp_incident_id,exa_field_name=alert_id"""
+    """exa_json_path=$.dlp_match_info,exa_regex=dlp_policy:({alert_type}[^|]+)"""
+    """exa_json_path=$.dlp_match_info,exa_regex=dlp_policy:({alert_name}[^|]+)"""
+    """exa_json_path=$.dlp_match_info,exa_regex="dlp_rule_name\\":\\"({rule}[^\\"]+)"""
+    """exa_json_path=$.dlp_match_info,exa_regex=dlp_action:({action}[^|]+)"""
+    """exa_json_path=$.userip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """exa_json_path=$.dstip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+    """exa_json_path=$.dstport,exa_field_name=dest_port"""
+    """exa_json_path=$.browser,exa_field_name=browser"""
+    """exa_json_path=$.useragent,exa_field_name=user_agent"""
+    """exa_json_path=$.url,exa_field_name=url"""
+    """exa_regex="page":\s*"({web_domain}[^\\\/"]+)"""
+    """exa_json_path=$.domain,exa_field_name=web_domain"""
+    """exa_json_path=$.os,exa_field_name=os"""
+    """exa_json_path=$.os_version,exa_field_name=os_version"""
+    """exa_json_path=$.file_size,exa_field_name=bytes"""
+    """exa_json_path=$.hostname,exa_field_name=host"""
+    """exa_json_path=$.referer,exa_field_name=referrer"""
+  ]
+  ParserVersion = "v1.0.0"
+
+
+}
+```

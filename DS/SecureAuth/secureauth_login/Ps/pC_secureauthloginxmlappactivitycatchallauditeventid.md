@@ -9,7 +9,7 @@ Conditions = [ """<Priority>""","""<Category>AUDIT<""", """<Appliance>""", """<V
 Fields = [
    """<HostName>({host}[^<]+)""",
    """<EventID>({event_id}\d+)</EventID>""",
-   """<UserID>(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^<]+))<\/UserID>""",
+   """<UserID>(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}[^<]+))<\/UserID>""",
    """<Realm>({app}[^<]+)""",
    """<UserAgent>(?:-|({user_agent}[^<]+))""",
    """<Message>({additional_info}[^<]+)"""

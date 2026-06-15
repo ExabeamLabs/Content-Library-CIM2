@@ -13,7 +13,7 @@ Name = forcepoint-dlp-cef-email-send-success-smtp
     """\Wdvchost=(N\/A|({host}[\w\-.]+))""",
     """({host}[\w\-.]+)\s+CEF:""",
     """\Wact=({result}.+?)(\s\-\s|\s+[\w\.]+=|$)""",
-    """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,;\|]+))""",
+    """\sduser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,;\|]+))""",
     """\Wfname=\s*({email_attachment}[^;]+?)(;.*?)?\s*([\w\.]+=|$)""",
     """\Wfname=({file_name}[^-]*(\.({file_ext}\w+)))(N\/A|.*? - ({bytes}\d+\.?\d*)\s*({bytes_unit}[^\s;]+))"""
     """\Wfname=\s*(N\/A|-|({attachment}({email_attachments}({email_attachment}[^=;]+)[^=]*)))\s([\w\.]+=|$)"""

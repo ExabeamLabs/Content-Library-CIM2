@@ -14,7 +14,7 @@ Name = trendmicro-vone-json-alert-trigger-success-techniques-mailbox
     """exa_json_path=$.filters[0].level,exa_field_name=alert_severity"""
     """exa_json_path=$.filters[0].name,exa_field_name=alert_name"""
     """exa_json_path=$.detectionTime,exa_field_name=time"""
-    """exa_json_path=$..highlightedObjects[?(@.type == 'user_account')].value,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$..highlightedObjects[?(@.type == 'user_account')].value,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
     """exa_json_path=$..highlightedObjects[?(@.type == 'detection_name')].value,exa_field_name=rule"""
     """exa_json_path=$.severity,exa_field_name=alert_severity"""
     """exa_json_path=$.description,exa_field_name=description"""

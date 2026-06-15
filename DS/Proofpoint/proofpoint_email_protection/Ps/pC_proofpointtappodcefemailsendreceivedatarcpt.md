@@ -14,7 +14,7 @@ Name = proofpoint-tappod-cef-email-send-receive-datarcpt
     """({time}\w{3}\s+\d+\s\d\d:\d\d:\d\d)\s({host}[\w\-\.]+)\s""",
     """"@timestamp"+:"+({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)"+"""
     """\sx=({alert_id}.+?)\s+(\w+=|$)""",
-    """\srcpt=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
+    """\srcpt=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+(\w+=|$)"""
   ]
 
 

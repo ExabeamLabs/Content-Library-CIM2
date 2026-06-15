@@ -15,7 +15,7 @@ Name = symantec-dlp-kv-alert-trigger-success-incidentid
     """username="(({domain}[^\\"]+)\\)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""",
     """domain="({domain}[^"]+)"""",
     """policy="({alert_type}[^"]+)"""",
-    """sender="({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+    """sender="({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
     """recipients="({target}[^"@]+@[^"]+)"""",
     """subject="\s*({additional_info}[^"]+?)\s*"""",
     """blocked="({action}\d+)""""

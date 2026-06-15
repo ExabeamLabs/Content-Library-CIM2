@@ -53,7 +53,7 @@ Fields = [
 """exa_regex="TIMEGENERATED":"({time}\d{4}-\d{1,2}-\d{1,2}\s\d\d:\d\d:\d\d(\.\d{1,3})?)""""
 """exa_json_path=$.eventHubsAzureRecord.time,exa_field_name=time""",
 """exa_json_path=$.eventHubsAzureRecord..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-"""exa_json_path=$.eventHubsAzureRecord..userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+"""exa_json_path=$.eventHubsAzureRecord..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 """exa_json_path=$.eventHubsAzureRecord..conditionalAccessStatus,exa_field_name=result""",
 """exa_json_path=$.eventHubsAzureRecord..appDisplayName,exa_field_name=app""",
 """exa_json_path=$.eventHubsAzureRecord.identity,exa_regex=(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",]+)))""",
@@ -69,7 +69,7 @@ Fields = [
 """exa_json_path=$.eventHubsAzureRecord..riskLevelAggregated,exa_field_name=severity,exa_match_expr=!Contains($.eventHubsAzureRecord..riskLevelAggregated,"none")"""
 """exa_json_path=$.time,exa_field_name=time""",
 """exa_json_path=$..ipAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
-"""exa_json_path=$..userPrincipalName,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+"""exa_json_path=$..userPrincipalName,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
 """exa_json_path=$..conditionalAccessStatus,exa_field_name=result""",
 """exa_json_path=$..appDisplayName,exa_field_name=app""",
 """exa_json_path=$.identity,exa_regex=(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}({last_name}[^",\s]+)\s*,?\s*({first_name}[^",]+)))""",
@@ -95,7 +95,6 @@ Fields = [
 """exa_regex=UserId"+:"+({user_id}[^",]+)"""
 """exa_regex="(Device)?(b|B)rowser":"({browser}[^"]+)"""
 """exa_regex="UserAgent\\*"+:\\*"+(,|({user_agent}[^"]+))"""
-"""exa_regex="(Device)?(o|O)peratingSystem":"({os}[^"]+)"""
 """exa_regex=\\*"(F|f)ailureReason\\*":\\*"({failure_reason}.+?)(\.)?\\*""""
 """exa_regex="ConditionalAccessStatus":"({result}[^"]+)""""
 """exa_regex="IPAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
@@ -104,7 +103,7 @@ Fields = [
 """exa_regex="status":\s*\{[^\}]*?"errorCode":\s*(0|({failure_code}\d+))(,|\})"""
 """exa_regex="AppDisplayName":"\s*({app}[^"]+?)\s*"""",
 """exa_regex="category":\s*"({category}[^"]+)"""",
-"""exa_regex="UserPrincipalName":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+"""exa_regex="UserPrincipalName":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
 """exa_regex="identity"+:\s*"+(({user_id}\w+-\w+-\w+-\w+-\w+)|({full_name}[^"]+))""""
 """exa_regex=UserDisplayName"+:"+([a-f\d]+(\-[a-f\d]+){4}|({full_name}[^"]+))"""
 """exa_regex="countryOrRegion":"({country_code}[^"]+)""""

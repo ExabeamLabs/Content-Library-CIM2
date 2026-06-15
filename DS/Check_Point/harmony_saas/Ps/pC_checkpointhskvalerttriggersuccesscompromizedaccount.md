@@ -18,12 +18,12 @@ Name = "checkpoint-hs-kv-alert-trigger-success-compromizedaccount"
   """"product_family":"({category}[^"]+)""""
   """"verdict":"({result}[^"]+)""""
   """"description":"({additional_info}[^"]+)""""
-  """"from_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
+  """"from_email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
   """"user":"({full_name}[^"]+)""""
   """"maliciouscontent":"({result_reason}[^"]+)""""
   """"email_subject":"({email_subject}(?:\\.|[^"\\])+)""""
   """"src_user_name":"({user}[\w\.\-\!\#\^\~]{1,40}\$?)""""
-  """"src_user_email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
+  """"src_user_email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)""""
  ]
 
 

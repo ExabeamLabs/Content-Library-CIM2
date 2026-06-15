@@ -10,7 +10,7 @@ Name = citrix-csa-json-alert-trigger-success-riskscorechange
   Fields = [
     """exa_json_path=$.timestamp,exa_field_name=time""",
     """exa_json_path=$.event_type,exa_field_name=event_name""",
-    """exa_json_path=$.entity_id,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
+    """exa_json_path=$.entity_id,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
     """exa_json_path=$.alert_type,exa_field_name=alert_type""",
     """exa_json_path=$.alert_message,exa_field_name=alert_name""",
     """exa_json_path=$.alert_value,exa_field_name=alert_severity""",

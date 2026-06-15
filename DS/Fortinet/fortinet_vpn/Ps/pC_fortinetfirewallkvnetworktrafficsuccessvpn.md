@@ -21,7 +21,7 @@ Name = fortinet-firewall-kv-network-traffic-success-vpn
     """\sremport=({dest_port}\d+)""",
     """\slocport=({src_port}\d+)""",
     """\suser=\"(?:N\/A|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\"""",
-    """\suser="(?:N\/A|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """\suser="(?:N\/A|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """\sstatus=\"*({result}[^\s"]*)\"*""",
     """\sdir=\"*({direction}[^\s"]*)\"*""",
     """\Wsentbyte=({bytes_out}\d+)""",

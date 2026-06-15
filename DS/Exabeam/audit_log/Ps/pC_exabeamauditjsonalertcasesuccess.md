@@ -48,7 +48,7 @@ exabeam-audit-json-events = {
       """exa_json_path=$..api_method,exa_field_name=method,exa_match_expr=!InList($..api_method,"")""",
       """exa_json_path=$..api_endpoint,exa_field_name=url,exa_match_expr=!InList($..api_endpoint,"")""",
       """exa_json_path=$.api_endpoint,exa_field_name=url,exa_match_expr=!InList($.api_endpoint,"")""",
-      """exa_json_path=$..user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$..user,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$..time,exa_field_name=time"""
       """exa_json_path=$..user,exa_regex=({user_info}[^"]+)"""
     exabeam-audit-json-events = {
@@ -94,7 +94,7 @@ exabeam-audit-json-events = {
       """exa_json_path=$..api_method,exa_field_name=method,exa_match_expr=!InList($..api_method,"")""",
       """exa_json_path=$..api_endpoint,exa_field_name=url,exa_match_expr=!InList($..api_endpoint,"")""",
       """exa_json_path=$.api_endpoint,exa_field_name=url,exa_match_expr=!InList($.api_endpoint,"")""",
-      """exa_json_path=$..user,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+      """exa_json_path=$..user,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
       """exa_json_path=$..time,exa_field_name=time"""
       """exa_json_path=$..user,exa_regex=({user_info}[^"]+)"""
     ]

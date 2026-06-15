@@ -5,7 +5,7 @@ Name = google-cloudplatform-sk4-network-traffic-success-payload
   ParserVersion = "v1.0.0"
   Vendor = "Google"
   Product = "Google Cloud Platform"
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
+  TimeFormat = ["yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSZ"]
   Conditions = [ """"jsonPayload":""", """"insertId":""", """googleapis.com""", """"gce_subnetwork"""" ]
   Fields = [
 """\d\d:\d\d:\d\d\.\d+Z?\s(::ffff:)?({host}[\w\-.]+)\s"""
@@ -21,7 +21,8 @@ Name = google-cloudplatform-sk4-network-traffic-success-payload
 """"reporter":"({reporter}[^\"]+)"""
 """"direction":"({direction}[^"]+)""""
 """suser=(anonymous|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+[\w=]+"""
-  ]
+""""disposition":"({action}[^"]+)""""
+]
 
 
 }

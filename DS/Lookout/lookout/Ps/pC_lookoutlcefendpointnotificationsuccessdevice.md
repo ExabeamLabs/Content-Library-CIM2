@@ -11,7 +11,7 @@ Name = "lookout-l-cef-endpoint-notification-success-device"
 	  """rt=({time}\w\w\w\s\d\d\s\d\d\d\d\s\d\d:\d\d:\d\d)""",
 	  """CEF:([^|]+\|){4}({additional_info}[^|]+)""",
 	  """sourceServiceName =({os}[^=]+)\s\w+=""",
-	  """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+	  """suser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 

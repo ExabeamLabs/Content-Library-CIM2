@@ -20,7 +20,7 @@ Name = unix-unix-str-user-switch-success-pam_unix
 """\"@timestamp\":\"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
 """\w+\s+\d+ \d\d:\d\d:\d\d(\.\S+)? ({host}({dest_ip}(\d{1,3}\.){3}\d{1,3})|({dest_host}[\w.\-]+))\s+.+?:\s*pam_unix""",
 """session opened for user ({dest_user}({account}.+?))(\(uid=({dest_user_id}\d+)\))? by""",
-"""session opened for user \S+ by (({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\(]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))?(\(uid\\?=({user_uid}({user_id}\d+))\))?""",
+"""session opened for user \S+ by (({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|\(]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))?(\(uid\\?=({user_uid}({user_id}\d+))\))?""",
 """"timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)"""
 """({time}\w\w\w \d\d \d\d:\d\d:\d\d) \[({dest_host}({host}[\w\.\-]+))\]"""
 """session opened for user ({dest_user}[^\s]+?)(\(uid=({dest_user_id}\d+)\))? by ({user}[\w\.\-\!\#\^\~]{1,40}\$?)?(\(uid=({user_uid}\d+)\))?"""

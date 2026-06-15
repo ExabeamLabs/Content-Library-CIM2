@@ -21,8 +21,8 @@ Name = "onelogin-o-cef-app-login-assumingactinguserid"
     """"event_type_name":"({operation}[^"]+)"""",
     """"event_type_description":"({additional_info}[^"]+)"""",
     """"user_id":({account}({user_id}\d+))""",
-    """suser=(({account}({user_id}\d+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
-    """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """suser=(({account}({user_id}\d+))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """duser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 

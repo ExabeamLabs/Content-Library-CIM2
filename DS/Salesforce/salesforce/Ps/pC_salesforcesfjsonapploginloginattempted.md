@@ -14,7 +14,7 @@ Name = salesforce-sf-json-app-login-loginattempted
     """exa_json_path=$.eventSource.name,exa_field_name=service_name"""
     """exa_json_path=$.userAgent,exa_field_name=user_agent"""
     """exa_json_path=$.eventType.name,exa_field_name=operation"""
-    """exa_json_path=$.employee.userName,exa_regex=^(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
+    """exa_json_path=$.employee.userName,exa_regex=^(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))$""",
     """exa_json_path=$.loginStatus.name,exa_field_name=result"""
   ]
 

@@ -23,7 +23,7 @@ Name = cisco-duo-json-endpoint-authentication-ip
     """exa_json_path=$.reason,exa_field_name=failure_reason""",
     """exa_json_path=$.new_enrollment,exa_field_name=new_enrollment""",
     """exa_json_path=$.integration,exa_field_name=service_name""",
-    """exa_json_path=$.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.location.country,exa_field_name=mfa_country"""
   ]
   ParserVersion = "v1.0.0"

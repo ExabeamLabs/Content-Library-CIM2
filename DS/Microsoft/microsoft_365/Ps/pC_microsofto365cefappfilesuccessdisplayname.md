@@ -16,7 +16,7 @@ Name = microsoft-o365-cef-app-file-success-displayname
     """"key":"MethodsUsedForValidation","value":"\[({additional_info}[^"]+)\]"""",
     """"ipAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"displayName"\s*:\s*"({full_name}({first_name}[^"\s]+)\s({last_name}[^"]+))"""
-    """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"userPrincipalName"\s*:\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
+    """"initiatedBy"\s*:\s*\{[^\}]*?"user"\s*:\s*\{[^\}]*?"userPrincipalName"\s*:\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""
     """"app"+:\{[^\}]+?"displayName"+:"+({app}[^"]+)"""",
     """"DeviceOSType"[^\}]+?"newValue":"[\[\\"]*({os}[\w\s]+?)[\\"\]]*\},"""
     """"Device OS.*?value":"({os}[^"]+)""""

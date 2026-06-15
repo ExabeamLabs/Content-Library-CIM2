@@ -11,7 +11,7 @@ Name = box-s-cef-alert-trigger-success-shield_alert
 	""""event_type":"({event_subtype}[^"]+)"""",
 	""""user":\{[^\}]*?"id":({user_id}[^"]+),""",
 	""""user":\{[^\}]*?"name":"({full_name}[^"]+)"""",
-	""""user":\{[^\}]*?"email":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+	""""user":\{[^\}]*?"email":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
 	""""additional_details":\{.*?"shield_alert":\{[^\}]*?"rule_category":"({alert_type}[^"]+)"""",
 	""""additional_details":\{.*?"shield_alert":\{[^\}]*?"rule_id":"({alert_id}[^"]+)"""",
 	""""additional_details":\{.*?"shield_alert":\{[^\}]*?"rule_name":"({alert_name}[^"]+)"""",

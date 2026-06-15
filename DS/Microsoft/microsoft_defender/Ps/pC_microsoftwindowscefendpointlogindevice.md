@@ -22,7 +22,7 @@ Fields = [
 """"AccountSid":\s*"({user_sid}[^"]+)""""
 """"RemoteIP":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""""
 """"RemotePort":\s*({src_port}\d+)"""
-""""Upn\\?":\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+""""Upn\\?":\\?"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """"ActionType":"({result}[^"]+)""""
 """"ActionType":"({result}LogonSuccess|LogonAttempted|LogonFailed)""""
 """"InitiatingProcessFileName":"({process_name}[^"]+)""""
@@ -42,7 +42,7 @@ Fields = [
 """exa_json_path=$..AccountSid,exa_field_name=user_sid,exa_match_expr=!Contains($..AccountSid,"null")"""
 """exa_json_path=$..RemoteIP,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$..RemotePort,exa_field_name=src_port"""
-"""exa_json_path=$..Upn,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""exa_json_path=$..Upn,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """exa_json_path=$..ActionType,exa_field_name=result"""
 """exa_json_path=$..InitiatingProcessFileName,exa_field_name=process_name"""
 """exa_json_path=$..InitiatingProcessFolderPath,exa_field_name=process_dir"""
@@ -53,7 +53,7 @@ Fields = [
 """exa_json_path=$..DeviceId,exa_field_name=device_id"""
 """exa_json_path=$.properties.RemoteDeviceName,exa_regex=^(|null|({src_host}[\w\-.]+))$"""
 """exa_json_path=$..FailureReason,exa_field_name=failure_reason"""
-"""exa_regex="Upn\\?":\\?"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+"""exa_regex="Upn\\?":\\?"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 """exa_json_path=$..tenantId,exa_field_name=tenant_id"""
 ]
 

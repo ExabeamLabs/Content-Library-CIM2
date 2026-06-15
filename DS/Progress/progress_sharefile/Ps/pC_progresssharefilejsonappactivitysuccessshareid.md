@@ -11,7 +11,7 @@ Name = "progress-sharefile-json-app-activity-success-shareid"
     """exa_json_path=$.CreationDate,exa_regex=({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d)""",
     """exa_json_path=$.RecipientEmail,exa_field_name=target""",
     """exa_json_path=$.UploadFolderID,exa_field_name=object_id""",
-    """exa_json_path=$.CreatorEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.CreatorEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.ShareID,exa_field_name=additional_info""",
     """exa_regex="Name":\s*"({src_file_path}({file_path}({file_dir}[^"]*?[\/]+)?({src_file_name}({file_name}[^\/"]+?(\.({src_file_ext}({file_ext}[^.\/"]+)))?))))"""",
     """exa_regex=({app}Progress ShareFile)"""

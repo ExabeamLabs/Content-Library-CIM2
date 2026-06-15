@@ -11,7 +11,7 @@ Name = netskope-casb-sk4-app-activity-success-webmail
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",
     """"category":"({additional_info}[^"]+)""",
-    """"user":"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
+    """"user":"(unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """"access_method":\s*"({auth_method}[^\"]+)""",
     """"app":\s*"\[?({app}[^\"\]]+)""",
     """"_id":"({alert_id}[^",]+)""",

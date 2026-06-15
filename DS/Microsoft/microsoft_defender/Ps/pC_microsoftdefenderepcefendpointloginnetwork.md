@@ -5,7 +5,7 @@ Name = microsoft-defenderep-cef-endpoint-login-network
   ParserVersion = v1.0.0
   Conditions = [ """DeviceLogonEvents""", """"LogonType":"Network"""", """"ActionType":""" ]
   Fields = ${MicrosoftParserTemplates.cef-defender-atp-events.Fields} [
-  """"AccountName":"((email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """"AccountName":"((email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   ]
 
 cef-defender-atp-events = {

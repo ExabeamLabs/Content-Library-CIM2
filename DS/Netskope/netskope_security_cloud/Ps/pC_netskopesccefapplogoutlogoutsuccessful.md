@@ -11,7 +11,7 @@ Name = netskope-sc-cef-app-logout-logoutsuccessful
     """"timestamp":({time}\d{10})""",
     """requestClientApplication=({app}.+?)\s+(\w+=|$)""",
     """"category":\s*"({additional_info}[^"]+)""",
-    """"user":\s*"(unknown|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """"user":\s*"(unknown|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
     """"audit_log_event":\s*"({operation}[^"]+)""",
   ]
 

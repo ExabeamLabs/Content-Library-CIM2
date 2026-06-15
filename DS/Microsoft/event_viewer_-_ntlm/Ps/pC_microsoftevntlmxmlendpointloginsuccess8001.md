@@ -5,8 +5,8 @@ Name = microsoft-evntlm-xml-endpoint-login-success-8001
   Vendor = Microsoft
   Product = Event Viewer - NTLM
   ParserVersion = v1.0.0
-  TimeFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ"
-  Conditions = [ """<EventID>8001<""", """<Message>NTLM client blocked audit: Audit outgoing NTLM authentication traffic that would be blocked""", """<Channel>Microsoft-Windows-NTLM/Operational<""" ]
+  TimeFormat = [ "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSSZ" , "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"]
+  Conditions = [ """<EventID>8001<""", """<Provider Name =""",  """<Channel>Microsoft-Windows-NTLM/Operational<""" ]
   Fields = [
     """SystemTime=('|")({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d+Z)"""
     """<Computer>({host}[^<]+?)<\/Computer>"""

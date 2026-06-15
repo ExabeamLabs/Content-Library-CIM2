@@ -9,9 +9,9 @@ Name = cisco-secureemail-cef-email-receive-fail-secureemailgateway
   Fields = [
     """({time}\w+\s\d\d\s\d\d:\d\d:\d\d(\s\d\d\d\d)?)\s(\d+|({host}[\w\-\.]+))\s""",
     """\sstart(Time)?=(\w+\s)?({time}\w+\s\d\d\s\d\d:\d\d:\d\d\s\d\d\d\d)\s""",
-    """suser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """suser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """\sduser=({email_recipients}[^\s]+)\s+(\w+=|$)""",
-    """\sduser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """\sduser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """sourceAddress=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
     """sourceHostName =({src_host}[^\s]+)""",
     """msg='\s*({email_subject}[^']+')""",

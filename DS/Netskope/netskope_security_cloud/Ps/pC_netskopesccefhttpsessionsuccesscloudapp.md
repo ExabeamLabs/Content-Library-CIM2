@@ -21,7 +21,7 @@ cef-netskope-web = {
     """"appcategory":\s*"(-|none|({categories}({category}[^",;:]+)[^"]*?))"""",
     """"other_categories":\[({categories}[^\]]+?)\]"""
     """"action":\s*"({action}[^"]+)""",
-    """"page":\s*"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?)"""",
+    """"page":\s*"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^"\/]+))({uri_path}\/[^"\?]*)?({uri_query}\?[^"]+)?)"""",
     """"policy":\s*"({additional_info}[^"]+)"""",
     """"page":\s*"(\w+:\/\/)?({web_domain}[^\\\/"]+)""",
     """"user":\s*"\s*({email_address}[^\s"@]+?@[^\s"]+\.[^\s"]+)"""",
@@ -54,7 +54,7 @@ cef-netskope-web = {
     """"appcategory":\s*"(-|none|({categories}({category}[^",;:]+)[^"]*?))"""",
     """"other_categories":\[({categories}[^\]]+?)\]"""
     """"action":\s*"({action}[^"]+)""",
-    """"page":\s*"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^\/]+?))({uri_path}\/[^\?]*?)?({uri_query}\?[^"]+)?)"""",
+    """"page":\s*"({url}(\w+:\/\/)?(({dest_ip}[A-Fa-f.:\d]+)|({web_domain}[^"\/]+))({uri_path}\/[^"\?]*)?({uri_query}\?[^"]+)?)"""",
     """"policy":\s*"({additional_info}[^"]+)"""",
     """"page":\s*"(\w+:\/\/)?({web_domain}[^\\\/"]+)""",
     """"user":\s*"\s*({email_address}[^\s"@]+?@[^\s"]+\.[^\s"]+)"""",

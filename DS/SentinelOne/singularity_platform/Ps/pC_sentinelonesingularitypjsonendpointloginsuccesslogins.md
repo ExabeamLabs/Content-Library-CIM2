@@ -15,7 +15,7 @@ Name = sentinelone-singularityp-json-endpoint-login-success-logins
     """exa_json_path=$.['event.id'],exa_field_name=event_id""",
     """exa_regex=event.name":"({operation_type}[^"]+)""",
     """exa_json_path=$.['event.login.userName'],exa_regex=^({user}[\w\.\-\!\#\^\~]{1,40}\$?)$""",
-    """exa_regex=userName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """exa_regex=userName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+?)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
     """event.login.failureReason":"({failure_reason}[^"]+)"""
     """exa_json_path=$.['event.login.failureReason'],exa_field_name=failure_reason"""
     """exa_json_path=$.['event.login.loginIsSuccessful'],exa_field_name=result"""

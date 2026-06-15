@@ -11,7 +11,7 @@ Name = cloudflare-cloudflareaudit-json-app-activity-auditlog
     """exa_json_path=$.ActionTimestamp,exa_regex=({time}\d{13})"""
     """exa_json_path=$.AccountID,exa_field_name=account_id"""
     """exa_json_path=$.ActionType,exa_field_name=action"""
-    """exa_json_path=$.ActorEmail,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """exa_json_path=$.ActorEmail,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """exa_json_path=$.ActionResult,exa_field_name=result"""
     """exa_json_path=$.AccountName,exa_field_name=account_name"""
     """exa_json_path=$.ActorType,exa_field_name=user_type"""

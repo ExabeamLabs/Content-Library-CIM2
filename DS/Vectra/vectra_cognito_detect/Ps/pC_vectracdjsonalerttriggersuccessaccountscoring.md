@@ -15,7 +15,7 @@ Name = vectra-cd-json-alert-trigger-success-accountscoring
     """exa_json_path=$.category,exa_field_name=category""",
     """exa_json_path=$.category,exa_field_name=operation""",
     """exa_json_path=$.is_prioritized,exa_field_name=additional_info""",
-    """exa_json_path=$.name,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^,]+))?))"""
+    """exa_json_path=$.name,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^,]+))?))"""
     """exa_json_path=$.urgency_score,exa_field_name=risk_score""",
   ]
   ParserVersion = "v1.0.0"  

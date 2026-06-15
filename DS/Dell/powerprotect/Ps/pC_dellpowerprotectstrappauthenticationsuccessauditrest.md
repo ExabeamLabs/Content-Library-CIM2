@@ -34,53 +34,9 @@ powerprotect-str-auditevents}{
 }
 }
 
-openaiparsertemplate = {
-  openai-json-audit-clp = {
-    Vendor = OpenAI
-    Product = ChatGPT
-    ExtractionType = json
-    TimeFormat = ["epoch_sec", "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"]
-    Fields = [
-      """exa_json_path=$.principal.id,exa_field_name=workspace_id"""
-      """exa_json_path=$.timestamp,exa_field_name=time"""
-      """exa_json_path=$.conversation.id,exa_field_name=conversation_id"""
-      """exa_json_path=$.action_data.conversation_id,exa_field_name=conversation_id"""
-      """exa_json_path=$.action_data.shared_conversation_id,exa_field_name=conversation_id"""
-      """exa_json_path=$.conversation.gpt_id,exa_field_name=ai_agent_id"""
-      """exa_json_path=$.conversation.title,exa_field_name=additional_info"""
-      """exa_json_path=$.actor.user_email,exa_field_name=email_address"""
-      """exa_json_path=$.actor.user_id,exa_field_name=user_id"""
-      """exa_json_path=$.actor.type,exa_field_name=user_type"""
-      """exa_json_path=$.action_privilege,exa_field_name=user_privilege_category"""
-      """exa_json_path=$.type,exa_field_name=event_name"""
-      """exa_json_path=$.action,exa_field_name=operation"""
-      """exa_json_path=$.action_result,exa_field_name=result"""
-      """exa_json_path=$.message.author.type,exa_field_name=message_author_type"""
-      """exa_json_path=$.message.content.value,exa_field_name=llm_request"""
-      """exa_json_path=$.message.author.tools_used,exa_field_name=ai_tool_name"""
-      """exa_json_path=$.message.files[*].name,exa_field_name=file_name"""
-      """exa_json_path=$.message.files[*].id,exa_field_name=file_id"""
-      """exa_json_path=$..action_name,exa_field_name=ai_function_name"""
-      """exa_json_path=$.message.content.annotations[*].action_name,exa_field_name=ai_function_name""" 
-      """exa_json_path=$.action_data.deleted_user_id,exa_field_name=dest_user_id"""
-      """exa_json_path=$.action_data.user_id,exa_field_name=dest_user_id"""
-      """exa_json_path=$.action_data.email_address,exa_field_name=dest_email_address"""
-      """exa_json_path=$.request_metadata.client_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-      """exa_json_path=$.request_metadata.client_user_agent,exa_field_name=user_agent"""
-      """exa_json_path=$.action_data.role,exa_field_name=role_name"""
-      """exa_json_path=$.action_data.group_id,exa_field_name=group_id"""
-      """exa_json_path=$.action_data.name,exa_field_name=group_name"""
-      """exa_json_path=$.action_data.new_name,exa_field_name=group_name"""
-      """exa_json_path=$.action_data.email_addresses,exa_field_name=email_recipients"""
-      """exa_json_path=$.action_data.email_addresses,exa_field_name=recipients"""
-      """exa_json_path=$.action_data.email_addresses[0],exa_field_name=dest_email_address"""
-      """exa_json_path=$.action_data.added_user_id,exa_field_name=member"""
-      """exa_json_path=$.action_data.removed_user_id,exa_field_name=member"""
-      """exa_json_path=$.action_data.added_user_id,exa_field_name=dest_user_id"""
 
-    ]
-  }
-}
+
+
 #============================================== Start of DefaultParsersAA section ==================================================================
 DefaultParsersAA = [
 
@@ -127,11 +83,11 @@ ParserVersion = "v1.0.0"
   Fields = [
     """({time}\w+\s+\d+ \d+:\d+:\d+)"""
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
-    """ openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
+    """ openvpn\[\d+\]:\s+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
     """IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
     """hostname":"({host}[^"]+)""",
     """exa_json_path=$.@timestamp,exa_field_name=time""",
-    """exa_regex= openvpn\[\d+\]:\s+(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
+    """exa_regex= openvpn\[\d+\]:\s+(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({account}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4})):({src_port}\d+)""",
     """exa_regex=IPv4=({src_translated_ip}[A-Fa-f:\d.]+)""",
     """exa_json_path=$.beat.hostname,exa_field_name=host"""
   ]
@@ -185,7 +141,7 @@ ParserVersion = "v1.0.0"
 ]
   Fields = [
     """openvpn\[({process_id}[^\]]+)\]""",
-    """openvpn\[[^\]]+\]\:\s(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\:({src_port}\d+)""",
+    """openvpn\[[^\]]+\]\:\s(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\/({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))\:({src_port}\d+)""",
     """({event_name}Inactivity timeout)""",
     """Inactivity timeout\s({additional_info}[^\"]+?)\s*("|$)"""
   ]
@@ -211,13 +167,13 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Act":"({action}[^"]+)""",
     """request=({result}\S+)\s""",
-    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"Rcpt":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"Subject":"(|({email_subject}[^"]+?))\s*"""",
     """"Dir":"({direction}[^"]+?)"""",
     """"IP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"Sender":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"headerFrom":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"SpamScore":\s*"?({spam_score}\d+)"""
     """"MsgId":"<({message_id}[^"]+?)>""""
     """"Virus":"({alert_name}[^"]+)""""
@@ -244,13 +200,13 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Act":"({action}[^"]+)""",
     """request=({result}\S+)\s""",
-    """"Rcpt":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """"Rcpt":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
     """"Subject":"(|({email_subject}[^"]+?))\s*"""",
     """"Dir":"({direction}[^"]+?)"""",
     """"IP":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"aCode":"(|({alert_id}[^"]+?))"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
-    """"headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"Sender":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
+    """"headerFrom":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))"""",
     """"SpamScore":\s*"?({spam_score}\d+)"""
     """"MsgId":"<({message_id}[^"]+?)>""""
     """"Virus":"({alert_name}[^"]+)""""
@@ -278,7 +234,7 @@ ParserVersion = "v1.0.0"
     """"aCode":"(|({alert_id}[^"]+?))"""",
     """"MsgSize":"*({bytes}\d+)""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
-    """"Sender":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """"Sender":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
     """"datetime":"({time}\d+-\d+-\d+T\d+:\d+:\d+-\d+)""",
     """"AttCnt":\s*"?({attachment_count}\d+)""",
     """"AttSize":\s*({attachment_size}\d+)""",
@@ -307,7 +263,7 @@ ParserVersion = "v1.0.0"
     """({message_id}[^\s"]+): to=<""",
     """"host(_name)?":"({host}[^"]+)""",
     """\d\d:\d\d:\d\d ({host}\S+) ( postfix[^:]+: )?""",
-    """\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,\|>]+)))""",
+    """\Wto=<?(\\u\d+)?((({dest_user}[\w\-\.]+)@localhost)|(({=dest_user}[^@>]+?)@({dest_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,\|>]+)))""",
     """\Wrelay=({dest_host}[\w\-.]+)\[({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?""",
     """originalAgentHostName=({host}[^"]+)\soriginalAgentAddress"""
     """\Wstatus=({result}\w+)"""
@@ -331,12 +287,12 @@ ParserVersion = "v1.0.0"
     """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{6}([+-]\d\d:\d\d)?)"""
     """({host}[\w.\-]+) postfix""",
     """({message_id}[^\s"]+): from=<""",
-    """\Wfrom=<?(\\u\d+)?((({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({src_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|>]+)))""",
+    """\Wfrom=<?(\\u\d+)?((({src_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({src_host}[^@\>\.]+)\.(?:localdomain|local|company\.web\.ds))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|>]+)))""",
     """\ssize=({bytes}\d+)""",
     """\snrcpt=({num_recipients}\d+)""",
     """"@timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d\d\dZ)""",
     """"host(_name)?":"({host}[^"]+)"""
-    """\Wto=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\Wto=<({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 },
 
@@ -354,9 +310,9 @@ ParserVersion = "v1.0.0"
     """\s*({time}\w+\s*\d?\d\s\d+:\d+:\d+)""",
     """\d\d:\d\d:\d\d ({host}\S+) postfix[^:]+:\s*({message_id}[^\s:]+)""",
     """\WSubject:\s*({email_subject}[^;]+)""",
-    """\Wfrom=<({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
+    """\Wfrom=<({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\Wto=<({email_recipients}[^\>]+)""",
-    """\Wto=<({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
+    """\Wto=<({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))""",
     """\Wfrom (unknown|({src_host}[\w\-.]+))\[({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
   ]
 },
@@ -379,8 +335,8 @@ ParserVersion = "v1.0.0"
     """"date":"({time}[^"]+)""",
     """"action":"({action}[^"]+)""",
     """"category":"(Unknown|({category}[^"]+))""",
-    """"+fromUserEmailAddress"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
-    """"+userEmailAddress"+:"+({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"+fromUserEmailAddress"+:"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+    """"+userEmailAddress"+:"+({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
     """"+url"+:"+({url}[^"]+)""",
     """"+ttpDefinition"+:"+({service_name}[^"]+)""",
     """"+subject"+:"+\s*({email_subject}.+?)\s*"+""",
@@ -411,9 +367,9 @@ ParserVersion = "v1.0.0"
     """"datetime":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d+)"""",
     """"Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({email_user}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
-    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
-    """headerFrom":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
+    """"(recipientAddress|Recipient)":"({email_user}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+))""",
+    """(senderAddress|Sender)":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
+    """headerFrom":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)))""",
     """"SenderDomain":"({email_domain}[^"]+)"""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"<({message_id}[^"]+)>"""",
@@ -456,8 +412,8 @@ ParserVersion = "v1.0.0"
     Conditions = [ """"impersonationResults":""", """"impersonationDomainSource":""", """"senderAddress":""", """"recipientAddress":""" ]
     Fields = [
       """"eventTime":\s*"({time}\d{4}-\d{2}-\d{2}T(\d{2}:){2}\d{2}(\+|-)\d+?)"""",
-      """"senderAddress":\s*"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
-      """"recipientAddress":\s*"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+      """"senderAddress":\s*"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)"""",
+      """"recipientAddress":\s*"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
       """"senderIpAddress":\s*"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
       """"subject":\s*"({email_subject}[^"]+?)"""",
       """"action":\s*"({action}[^"]+?)"""",
@@ -487,8 +443,8 @@ ParserVersion = "v1.0.0"
     """"senderIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
     """"Route":"({direction}[^"]+)""",
     """"(?:id|aCode)":"({alert_id}[^"]+)""",
-    """"(recipientAddress|Recipient)":"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
-    """(senderAddress|Sender)":"(<>|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
+    """"(recipientAddress|Recipient)":"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)""",
+    """(senderAddress|Sender)":"(<>|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)(?<!local)(?<!loc)(?<!prd)(?<!localdomain))"""",
     """"Subject":"({email_subject}[^"]+?)\s*"""",
     """"(messageId|MsgId)":"({message_id}[^"]+)""",
     """"fileName":"({file_name}({email_attachment}[^"]+\.({file_ext}[^"]+)))""",
@@ -514,7 +470,7 @@ ParserVersion = "v1.0.0"
 """,メール,""" 
 ]
   Fields = [
-    """({host}[\w\-.]+),\d+,({src_host}[\w\-.]+),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,[^,]*,({user}[\w\.\-\!\#\^\~]{1,40}\$?),(|({full_name}[^,\(\（]+(\（[^\）,]+\）)?)[^,]*),({time}\d+\/\d+\/\d+ \d+:\d+:\d+),([^,]*,){4}\s*(|({email_subject}[^,]+?))\s*,([^,]*,){21}(({email_recipients}<?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))[^,]*)|[^,]*),(<?({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))>?|[^,]*),\s*(|({email_attachments}[^,]+?\.({file_ext}[^,]+)))\s*,"""
+    """({host}[\w\-.]+),\d+,({src_host}[\w\-.]+),({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?,[^,]*,({user}[\w\.\-\!\#\^\~]{1,40}\$?),(|({full_name}[^,\(\（]+(\（[^\）,]+\）)?)[^,]*),({time}\d+\/\d+\/\d+ \d+:\d+:\d+),([^,]*,){4}\s*(|({email_subject}[^,]+?))\s*,([^,]*,){21}(({email_recipients}<?({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))[^,]*)|[^,]*),(<?({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|\>]+))>?|[^,]*),\s*(|({email_attachments}[^,]+?\.({file_ext}[^,]+)))\s*,"""
   ]
 },
 
@@ -592,7 +548,7 @@ ExtractionType = json
 ]
   Fields = [
     """timestamp":"({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d\.\d+Z)""",
-    """http_username":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
+    """http_username":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
     """http_method":"({method}[^"]+)"""",
     """squid_request_status":"({proxy_action}[^"]+)"""",
     """http_url":"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|({url}(({protocol}[^:\\\/\s,"]+):[\\\/]+)?({web_domain}[^\\\/\s:,"]+)?({uri_path}\/[^\s\?"]*)?({uri_query}\?[^"\s]*)?))""",
@@ -967,7 +923,7 @@ Fields = [
   """exa_json_path=$.RequestType,exa_field_name=dns_query_type"""
   """exa_json_path=$.ContextBaseFileName,exa_field_name=file_name"""
   """exa_json_path=$.name,exa_field_name=event_name"""
-  """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """exa_json_path=$.UserName,exa_regex=(({user_uid}[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+-[A-Fa-f0-9]+)|({user_sid}S-[^"]+)|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 ]
 ParserVersion = "v1.0.0"
 },
@@ -1075,8 +1031,8 @@ ParserVersion = "v1.0.0"
     """"event_type_name":"({operation}[^"]+)"""",
     """"event_type_description":"({additional_info}[^"]+)"""",
     """"user_id":({account}({user_id}\d+))""",
-    """suser=(({account}({user_id}\d+))|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
-    """duser=({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """suser=(({account}({user_id}\d+))|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""",
+    """duser=({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 },
 
@@ -1279,7 +1235,7 @@ ${mimecast-json-template.mimecast-json-event}{
     """"user":"(|({email_address}[^@]+@[^"]+?))"""",
     """\sReason:\s(|({failure_reason}[^=]+?))(\s+\w+=|\s*$)""",
     """\sApplication:\s*({app}[^,]+?),""",
-    """"user":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """"user":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """exa_regex=\sReason:\s*(|({failure_reason}[^="]+?))(\s+\w+:|\s*")""",
     """exa_regex=\sApplication:\s*({app}[^,]+?),""",    
   ]
@@ -1542,7 +1498,7 @@ ParserVersion = "v1.0.0"
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""
 """service=({process_path}.+?)\s\w+="""
-"""EntityName=(.+\\+)?({dest_host}[^\"\s]+)(\s|$)"""
+"""EntityName=({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """\sauthMechanism=({auth}[^\s]{1,40})"""
    ]
 },
@@ -1566,7 +1522,7 @@ ParserVersion = "v1.0.0"
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""
 """service=({process_path}.+?)\s\w+="""
-"""EntityName=(.+\\+)?({dest_host}[^\"\s]+)(\s|$)"""
+"""EntityName=({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """reason=({failure_reason}[^=\|]+?)(\s+\w+=|\|)"""
    ]
 },
@@ -1588,7 +1544,7 @@ Fields = [
   """\sdvc=({host}[^\s]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
+  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+="""
   """({app}Thycotic Software)"""
 ]
 ParserVersion = "v1.0.0"
@@ -1611,7 +1567,7 @@ Fields = [
   """\sdvc=({host}[^\s]+)"""
   """\sdvchost=({host}[^\s]+)"""
   """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """\sduser=(({domain}[^\\=]+)[\\\/]+)?(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """Details:\s*({failure_reason}.+?)\s\w+="""
   """Details:\s*({additional_info}({failure_reason}[^:=]+?)(?:\sExpected:[^=]+?)?)\s+\w+=""",
   """({app}Thycotic Software)"""
@@ -1628,7 +1584,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
 """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+"""User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
 """\s:\s+({operation}[^,]+),\s+ID:"""
 """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\sMessage:\s*({additional_info}.+?)\s*$"""
@@ -1650,7 +1606,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
 """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+"""User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
 """\s:\s+({operation}[^,]+),\s+ID:"""
 """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """TargetName:\s+(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)),"""
@@ -1675,7 +1631,7 @@ Fields = [
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
 """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+"""User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
 """\s:\s+({operation}[^,]+),\s+ID:"""
 """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """TargetName:\s+(({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)|({dest_user_full_name}\w+(\s+\w+)+)),"""
@@ -1827,7 +1783,7 @@ Fields = [
   """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
   """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
   """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-  """User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+  """User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
   """\s:\s+({operation}[^,]+),\s+ID:"""
   """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """\sMessage:\s*({failure_reason}[^,\."]+)"""
@@ -1854,7 +1810,7 @@ ParserVersion = "v1.0.0"
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
 """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+"""User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
 """\s:\s+({operation}[^,]+),\s+ID:"""
 """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\sMessage:\s*({failure_reason}[^,\.\"]+)"""
@@ -1874,7 +1830,7 @@ ParserVersion = "v1.0.0"
 """({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\dZ)"""
 """\s\d\d:\d\d:\d\d\s({host}[^\s]+)"""
 """\sIPAddress:\s*({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""User\s'(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
+"""User\s'(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|Automation|({full_name}[^']+))?'\s\(({user}[\w\.\-\!\#\^\~]{1,40}\$?)?\)"""
 """\s:\s+({operation}[^,]+),\s+ID:"""
 """\sUsername:\s*(Automation|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """\sMessage:\s*({failure_reason}.+?)\s*$"""
@@ -1914,8 +1870,8 @@ Fields = [
 """\sdvc=({dest_host}({host}[^\s]+))"""
 """\sdvchost=({dest_host}({host}[^\s]+))"""
 """\ssrc=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-"""\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-"""\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
+"""\ssuser=(({domain}[^\\\s]+?)(\\+))?(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""\sfname=((({account_domain}({dest_domain}[^\\=\s]+))(\\)+)?({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|(({=account_domain}({=dest_domain}[^=\\]+))(\\+))?({account}({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)))\s+\w+="""
 """cs3=({safe_value}.+?)\s+(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"
@@ -1939,7 +1895,7 @@ Fields = [
 """pid=({process_id}\d+)"""
 """service=({service_name}.+?)\s\w+="""
 """runas=({account}({dest_user}.+?))\s\w+="""
-"""EntityName=({object}.+?)\s*$"""
+"""EntityName=({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
 ]
 ParserVersion = "v1.0.0"
@@ -1963,7 +1919,7 @@ Fields = [
 """pid=({process_id}\d+)"""
 """service=({service_name}.+?)\s\w+="""
 """runas=({account}({dest_user}.+?))\s\w+="""
-"""EntityName=({object}.+?)\s*$"""
+"""EntityName=({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """command=({process_path}({process_dir}.*?)(\/+({process_name}[^\/]+?))?)\s*(\w+=|$)"""
 """centrifyEventID=({event_code}\d+)"""
 ]
@@ -1988,7 +1944,6 @@ Fields = [
 """pid=({process_id}\d+)"""
 """service=({service_name}.+?)\s\w+="""
 """runas=({account}({dest_user}.+?))\s\w+="""
-"""EntityName=({object}.+?)\s*$"""
 """authMechanism=({auth_method}.+?)\s\w+="""
 """reason=({result_reason}.+?)$"""
 """client=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

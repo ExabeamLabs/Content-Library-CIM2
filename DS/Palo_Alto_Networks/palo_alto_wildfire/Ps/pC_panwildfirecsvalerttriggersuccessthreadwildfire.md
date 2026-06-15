@@ -12,7 +12,7 @@ Fields = ${PaloAltoParsersTemplates.pan-csv-threat.Fields}[
   """,THREAT,([^,]*,){8}(({email_address}[^@,]+@[^\.,]+\.[^,]+)|(({domain}[^\\,]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)),"""
   """,THREAT,([^,]*,){20}(?:|({src_port}\d+)),(?:|({dest_port}\d+)),([^,]*,){3}(?:|({protocol}[^,]+)),(?:|({action}[^,]*)),\\*"*(({url}https?:\/\/[^\s\/\\$.?#].[^\s,]*?)|({file_name}[^\\\/,]+?(\.({file_ext}\w+))?))\\?"*,"""
   """,THREAT,(([^"]+?"[^"]+",)|([^,]*,){28})(({alert_name}[^,]+?)\()?({alert_id}\d+)?\)?,"""
-  """,THREAT,(?:[^,]*,){46}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),(([\/\\"]*({alert_subject}[^"]+?)[\/\\"]+)|(|({=alert_subject}[^,]+?))),({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),""",
+  """,THREAT,(?:[^,]*,){46}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),(([\/\\"]*({alert_subject}[^"]+?)[\/\\"]+)|(|({=alert_subject}[^,]+?))),({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)),""",
 ]
 SOAR {
   IncidentType = "malware"
@@ -36,8 +36,8 @@ pan-csv-threat = {
     """({event_category}THREAT)"""
     """({serial_num}[^,]+),THREAT,"""
     """,THREAT,({alert_type}({alert_name}[^,]+)),"""
-    """,THREAT,([^,]*,){3}({src_ip}(?!::)[a-fA-F\d.:]+)"""
-    """,THREAT,([^,]*,){4}({dest_ip}(?!::)[a-fA-F\d.:]+)"""
+    """,THREAT,([^,]*,){3}({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """,THREAT,([^,]*,){4}({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
     """,THREAT,([^,]*,){5}({src_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """,THREAT,([^,]*,){6}({dest_translated_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))""",
     """THREAT,([^,]*,){7}({rule}[^,]+?)\s*,"""

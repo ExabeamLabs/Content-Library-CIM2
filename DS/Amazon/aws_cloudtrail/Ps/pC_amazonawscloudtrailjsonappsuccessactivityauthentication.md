@@ -22,10 +22,10 @@ aws-cloudtrail-json-1 = {
       """exa_json_path=$.eventType,exa_field_name=event_category"""
       """exa_json_path=$.eventName,exa_field_name=operation"""
       """exa_regex="userIdentity"\s*:\s*\{[^\}]+(("type"\s*:\s*"Role")[^\}]*?"userName"\s*:\s*"({role}[^"]+)|"userName"\s*:\s*"({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))""""
-      """exa_regex="userIdentity"\s*:\s*\{[^\}]*("type":\s*"AssumedRole")[^\}]+?"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)""""
-      """exa_regex="userIdentity"\s*:\s*\{[^\}]+"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"[^\}]+("type":\s*"AssumedRole")"""
-      """exa_json_path=$.userIdentity.userName,exa_regex=(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
-      """exa_json_path=$.additionalEventData.UserName,exa_regex=(({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_regex="userIdentity"\s*:\s*\{[^\}]*("type":\s*"AssumedRole")[^\}]+?"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)""""
+      """exa_regex="userIdentity"\s*:\s*\{[^\}]+"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"[^\}]+("type":\s*"AssumedRole")"""
+      """exa_json_path=$.userIdentity.userName,exa_regex=(({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+      """exa_json_path=$.additionalEventData.UserName,exa_regex=(({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
       """exa_json_path=$.additionalEventData.LoginTo,exa_field_name=url"""
       """exa_json_path=$..accessKeyId,exa_field_name=key_id,exa_match_expr=!InList(toLower($..accessKeyId), "")"""
       """exa_json_path=$.serviceAccountId,exa_field_name=service_id"""
@@ -47,8 +47,8 @@ aws-cloudtrail-json-1 = {
 	  """"eventName":"({operation}[^"]+)"""",
     """"awsRegion":"({region}[^",]+)"""",
 	  """"userIdentity"\s*:\s*\{[^\}]+(("type"\s*:\s*"Role")[^\}]*?"userName"\s*:\s*"({role}[^"]+)|"userName"\s*:\s*"({aws_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""",
-    """"userIdentity"\s*:\s*\{[^\}]*("type":\s*"AssumedRole")[^\}]+?"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"""",
-    """"userIdentity"\s*:\s*\{[^\}]+"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"[^\}]+("type":\s*"AssumedRole")""",
+    """"userIdentity"\s*:\s*\{[^\}]*("type":\s*"AssumedRole")[^\}]+?"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"""",
+    """"userIdentity"\s*:\s*\{[^\}]+"principalId"\s*:\s*"([^},]+?(:({aws_email_address}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))))?)"[^\}]+("type":\s*"AssumedRole")""",
 	  """"accessKeyId":"({key_id}[^"]+?)""""
     """"LoginTo":"({url}[^"]+?)""""
   aws-cloudtrail-json-1 = {

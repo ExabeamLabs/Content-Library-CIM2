@@ -10,7 +10,7 @@ Name = github-g-kv-app-notification-success-githubresqued
   Fields = [
     """\sTimestamp="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\d.\d\d\d\d\d\dZ)""",
     """({host}\S+)\s+github-resqued""",
-    """\sgh.notifications.recipient="(?:nil|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """\sgh.notifications.recipient="(?:nil|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """\sservice.name="({service_name}[^"]+)"""
     """\sgh.notifications.delivery.comment.type="({additional_info}[^"]+)"""
     """\sBody="({operation}[^"]+)""",

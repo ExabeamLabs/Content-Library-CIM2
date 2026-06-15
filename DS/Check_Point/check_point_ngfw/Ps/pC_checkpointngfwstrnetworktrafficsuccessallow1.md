@@ -19,7 +19,7 @@ Name = checkpoint-ngfw-str-network-traffic-success-allow-1
     """\Wrule_name:\s*(|({rule}.+?));""",
     """\Wuser:\s*(|({user}[\w\.\-\!\#\^\~]{1,40}\$?));""",
     """\Wuser:\s*({full_name}.+?)\s*\(({account}.+?)\)""",
-    """\Wsrc_machine_name:\s*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));""",
+    """\Wsrc_machine_name:\s*({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+));""",
     """\Wxlatesrc:\s*(|({src_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}));""",
     """\Wxlatesport:\s*(|({src_translated_port}\d+));""",
     """\Wxlatedst:\s*(|({dest_translated_ip}\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}));""",

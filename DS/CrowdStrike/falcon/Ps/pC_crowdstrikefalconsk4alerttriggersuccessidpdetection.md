@@ -18,8 +18,8 @@ json-crowdstrike-alert = {
     """"Technique":"({alert_type}[^"]+)"""",
     """"eventType":"({alert_type}[^"]+)"""",
     """"SourceAccountDomain":"({domain}[^"]+)"""",
-    """"SourceAccountName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-    """"SourceAccountUpn":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SourceAccountName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"SourceAccountUpn":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SourceAccountObjectSid":"({user_sid}[^"]+)"""",
     """"SourceEndpointHostName":"({src_host}[^"]+)"""",
     """"SourceEndpointIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -37,8 +37,8 @@ json-crowdstrike-alert = {
 	  """exa_json_path=$.event.Technique,exa_field_name=alert_type""",
 	  """exa_json_path=$.metadata.eventType,exa_field_name=alert_type""",
 	  """exa_json_path=$.event.SourceAccountDomain,exa_field_name=domain""",
-	  """exa_json_path=$.event.SourceAccountName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-	  """exa_json_path=$.event.SourceAccountUpn,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+	  """exa_json_path=$.event.SourceAccountName,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+	  """exa_json_path=$.event.SourceAccountUpn,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
 	  """exa_json_path=$.event.SourceAccountObjectSid,exa_field_name=user_sid""",
 	  """exa_json_path=$.event.SourceEndpointHostName,exa_field_name=src_host""",
 	  """exa_json_path=$.event.SourceEndpointIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",
@@ -60,8 +60,8 @@ json-crowdstrike-alert = {
     """"Technique":"({alert_type}[^"]+)"""",
     """"eventType":"({alert_type}[^"]+)"""",
     """"SourceAccountDomain":"({domain}[^"]+)"""",
-    """"SourceAccountName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-    """"SourceAccountUpn":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SourceAccountName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+    """"SourceAccountUpn":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"SourceAccountObjectSid":"({user_sid}[^"]+)"""",
     """"SourceEndpointHostName":"({src_host}[^"]+)"""",
     """"SourceEndpointIpAddress":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
@@ -79,8 +79,8 @@ json-crowdstrike-alert = {
 	  """exa_json_path=$.event.Technique,exa_field_name=alert_type""",
 	  """exa_json_path=$.metadata.eventType,exa_field_name=alert_type""",
 	  """exa_json_path=$.event.SourceAccountDomain,exa_field_name=domain""",
-	  """exa_json_path=$.event.SourceAccountName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
-	  """exa_json_path=$.event.SourceAccountUpn,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+	  """exa_json_path=$.event.SourceAccountName,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""""
+	  """exa_json_path=$.event.SourceAccountUpn,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
 	  """exa_json_path=$.event.SourceAccountObjectSid,exa_field_name=user_sid""",
 	  """exa_json_path=$.event.SourceEndpointHostName,exa_field_name=src_host""",
 	  """exa_json_path=$.event.SourceEndpointIpAddress,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?""",

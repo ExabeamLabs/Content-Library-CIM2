@@ -15,7 +15,7 @@ Name = microsoft-nps-sk4-endpoint-authentication-fail-6273
     """<Data Name\\?="Reason">({failure_reason}[^<]+)""",
     """"AuthenticationProvider":({auth_server}[^"]+)"""",
     """"FullyQualifiedSubjectMachineName":"(-|({user_type}[^"]+))"""",
-    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """"SubjectUserName":"((?:host\/)({src_host}[^"]+)|({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(({domain}[^\\"]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """NASIdentifier":"(({location}[\w.-]+))""""
     """"Channel":"({channel}[^"]+)"""
     """"TenantId":"({tenant_id}[^"]+)"""

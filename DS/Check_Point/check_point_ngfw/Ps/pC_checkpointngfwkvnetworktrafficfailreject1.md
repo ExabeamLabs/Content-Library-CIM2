@@ -25,7 +25,7 @@ Name = checkpoint-ngfw-kv-network-traffic-fail-reject-1
     """service:"?({dest_port}\d+)"""
     """severity:"?({severity}\d+)"""
     """src:"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
-    """(user|src_user_name|dst_user_name)"?:"({full_name}[^,:\("]+)\s\((({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|)(+]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
+    """(user|src_user_name|dst_user_name)"?:"({full_name}[^,:\("]+)\s\((({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|)(+]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\)"""
     """src_machine_name"?:"({src_host}[^"]+)"""
     """src_machine_name"?:"({src_host}[^"@]+)@({domain}[^"]+)"""
 ] 

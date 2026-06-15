@@ -13,7 +13,7 @@ Name = "zoom-z-json-app-logout-success-signout"
     """exa_json_path=$.client_type,exa_field_name=client_type"""
     """exa_json_path=$.type,exa_field_name=operation"""
     """exa_json_path=$.version,exa_field_name=app_version"""
-    """exa_json_path=$.email,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+    """exa_json_path=$.email,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   	"""exa_regex=({app}Zoom)"""    
   ]
   ParserVersion = "v1.0.0"

@@ -17,7 +17,7 @@ Name = microsoft-o365-sk4-app-activity-success-forward
     """\ssourceServiceName =(Core Directory|Account Provisioning|({app}[^=]+?))\s*(\w+=|$)""",
     """"SubjectOrBodyContainsWords":"({filter_key_words}[^"]+)""",
     """flexString1=({event_name}[^=]+?)\s+\w+=""",
-    """Forward.+?Recipients\\?":\[?\\?"({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """Forward.+?Recipients\\?":\[?\\?"({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
     """"ClientInfoString":"({user_agent}[^"]+)""""
     """"ActorInfoString":"({user_agent}[^"]+)""""
   ]

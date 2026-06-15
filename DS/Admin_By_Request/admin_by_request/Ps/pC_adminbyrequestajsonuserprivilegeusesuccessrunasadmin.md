@@ -10,7 +10,7 @@ Name = adminbyrequest-a-json-user-privilege-use-success-runasadmin
   Fields = [
     """exa_json_path=$.requestTime,exa_field_name=time""",
     """exa_json_path=$.user.account,exa_regex=(({domain}[^\\]+)\\+)?({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
-    """exa_json_path=$.user.email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.user.email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.user.fullName,exa_field_name=full_name""",
     """exa_json_path=$.computer.name,exa_field_name=host""",
     """exa_json_path=$.computer.model,exa_field_name=additional_info""",

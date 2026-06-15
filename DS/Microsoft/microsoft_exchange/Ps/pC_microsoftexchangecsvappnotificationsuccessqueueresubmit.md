@@ -5,9 +5,9 @@ Name = microsoft-exchange-csv-app-notification-success-queueresubmit
   ParserVersion = "v1.0.0"
   Conditions = [ """,QUEUE,RESUBMIT,""" ]
   Fields = ${ExchangeParsersTemplates.exchange-dlp-email-alert-2.Fields}[
-   """,QUEUE,RESUBMIT,([^,]*,){3}({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""", #dl field removed
+   """,QUEUE,RESUBMIT,([^,]*,){3}({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""", #dl field removed
    """,QUEUE,RESUBMIT,([^,]*,){9}({email_subject}[^,]+)""",
-   """,QUEUE,RESUBMIT,([^,]*,){10}({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""" #dl field removed
+   """,QUEUE,RESUBMIT,([^,]*,){10}({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""" #dl field removed
   ]
 
 exchange-dlp-email-alert-2 = {
@@ -22,10 +22,10 @@ exchange-dlp-email-alert-2 = {
     """([^,]*,){4}\s*({dest_host}[\w\-.]+)\s*,""",
     """,({log_source}SMTP|AGENT|ROUTING|DSN)""",
     """,({event_code}HADISCARD|HARECEIVE|AGENTINFO|RECEIVE|HAREDIRECT|SEND|SUPPRESSED|RESOLVE|TRANSFER|BADMAIL|EXPAND|DROP|DSN|REDIRECT)""",
-    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)[\s>]*,""",
+    """,(SMTP|AGENT|ROUTING|DSN),[A-Z]+,([^,]*,){3}[\s<]*({email_recipients}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))[^,>]*?)(?<!local)(?<!loc)(?<!localdomain)(?<!internal)[\s>]*,""",
     """,\s*({email_subject}[^,]+?)["\s]*,([^,]*,){3}(Incoming|Originating),""",
     """,\s*"({email_subject}[^"]+?)\s*",([^,]*,){3}(Incoming|Originating),""",
-    """,[<\s]*({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
+    """,[<\s]*({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))(?<!local)(?<!loc)(?<!localdomain)(?<!localhost)[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
     """[\s>]*,([^,]*,){2}({direction}Incoming|Originating),""",
 # transport_traffic_type is removed
   

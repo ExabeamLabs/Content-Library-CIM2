@@ -22,7 +22,7 @@ Fields = [
 """exa_json_path=$.host,exa_regex=({host}[\w\-\.]+)"""
 """exa_json_path=$.LocationCountryCode,exa_field_name=location_country""",
 """exa_json_path=$.LocationCityCode,exa_field_name=city"""
-"""exa_json_path=$.SourceAccountUserName,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\-\.\/=?^_`~])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+"""exa_json_path=$.SourceAccountUserName,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
 """exa_regex="SourceEndpointAddressIP4":"({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""",
 """exa_json_path=$.SsoApplicationIdentifier,exa_field_name=app""",
 """exa_json_path=$.ClientUserAgentString,exa_field_name=user_agent""",

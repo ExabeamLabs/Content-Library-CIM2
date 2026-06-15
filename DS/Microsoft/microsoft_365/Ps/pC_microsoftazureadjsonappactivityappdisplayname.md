@@ -23,7 +23,7 @@ Name = microsoft-azuread-json-app-activity-appdisplayname
     """"failureReason":"(Other|({failure_reason}[^"]+))"""
     """"errorCode":({error_code}\d+)"""
     """"userDisplayName":"(({full_name}[^\s"]+\s+[^"]+)|({user_id}[^"]+))"""
-    """"+userPrincipalName":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""""
+    """"+userPrincipalName":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({user_id}[^"]+))""""
   ]
 
 

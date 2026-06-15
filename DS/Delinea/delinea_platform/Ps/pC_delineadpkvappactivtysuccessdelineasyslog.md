@@ -1,0 +1,36 @@
+#### Parser Content
+```Java
+{
+Name = delinea-dp-kv-app-activty-success-delineasyslog
+  ParserVersion = v1.0.0
+  Vendor = Delinea
+  Product = Delinea Platform
+  TimeFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+  Conditions = [ """DelineaSyslog""", """EventMessage="""", """EventType="Cloud.Core.""", """DirectoryServiceName =""""]
+  Fields = [
+    """\sWhenOccurred="({time}\d\d\d\d-\d\d-\d\dT\d\d:\d\d:\d\dZ)""""
+    """\sNormalizedUser="(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,\|]+\.[^\]\s"\\,\|'\\_]+))|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
+    """\sClientIPAddress="({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
+    """\sEventType="({operation}[^"]+)""""
+    """\sLevel="({severity}[^"]+)""""
+    """\sAppId="({app}[^"]+)""""
+    """\sPath="({uri_path}[^"]+)""""
+    """\sRequestUserAgent="({user_agent}[^"]+)""""
+    """\sTenant="({tenant_id}[^"]+)""""
+    """\sInternalTrackingID="({tracking_id}[^"]+)""""
+    """\sAction="({action}[^"]+)""""
+    """\sNewEntity="({additional_info}[^"]+)""""
+    """\sAzRoleName ="({role}[^"]+)""""
+    """\sAzRoleId="({role_id}[^"]+)""""
+    """\sRequestDeviceOS="(Unknown|({os}[^"]+))""""
+    """\sDirectoryServiceName ="(Unknown|({ds_name}[^"]+))""""
+    """\sUserGuid="({user_id}[^"]+)""""
+    """\sEntityUuid="({dest_user_id}[^"]+)""""
+    """\sEventMessage="({description}[^"]+)""""
+    """\sUserState="({action}[^"]+)""""
+    """\sEntityName ="(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  ]
+
+
+}
+```

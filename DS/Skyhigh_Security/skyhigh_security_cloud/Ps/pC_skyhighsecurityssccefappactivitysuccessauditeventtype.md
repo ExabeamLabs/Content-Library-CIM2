@@ -9,7 +9,7 @@ Name = skyhighsecurity-ssc-cef-app-activity-success-auditeventtype
   Fields = [
     """\d\d:\d\d:\d\d\s({host}[\w\.\-]+)""",
     """\|start=({time}\w{3} \d\d \d\d\d\d \d\d:\d\d:\d\d\.\d{1,3} \w{1,3})""",
-    """\ssuser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
+    """\ssuser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))\s+\w+=""",
     """auditEventTypeEventTypeName =({event_name}({operation}[^=]+?))\s+\w+="""
     """userInfoFirstName =({first_name}\w+)\s*"""
     """userInfoLastName =({last_name}\w+)\s*"""

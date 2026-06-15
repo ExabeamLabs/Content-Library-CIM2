@@ -16,7 +16,7 @@ Fields = [
 """"Id":"({user_id}[^"]+)""""
 """({alert_type}DlpRuleMatch)"""
 """"PolicyName":"({alert_subject}({event_name}({alert_name}[^"]+)))""""
-""""ToPerson":"({target}({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
+""""ToPerson":"({target}({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))""""
 """"RuleName":"({additional_info}[^"]+)""""
 """"Location":"(Message Body|({file_name}[^"]+))""""
 """"IncidentId":"({alert_id}[^"]+)""""

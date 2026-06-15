@@ -10,7 +10,7 @@ Name = "pan-xsoar-cef-app-authentication-audit"
     Fields = [
         """({host}[\w\-.]+)\s+\d+\s+({time}\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d+Z)""",
         """suser=(({user}[\w\.\-\!\#\^\~]{1,40}\$?)|({full_name}(?:\w+[\s,]+)+\w+))\s+\w+=""",
-        """\scs1=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s+\w+=""",
+        """\scs1=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)\s+\w+=""",
         """\scs2=({auth_method}[^=]+)\s+\w+=""",
         """\scs3=({result}[^=]+)\s+\w+=""",
         """({event_name}AUTH)""",

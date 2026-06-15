@@ -11,7 +11,7 @@ Name = "qualys-q-json-app-activity-success-action"
     """exa_json_path=$.Action,exa_field_name=action""",
     """exa_json_path=$.Action,exa_field_name=operation""",
     """exa_json_path=$.Details,exa_field_name=additional_info""",
-    """exa_json_path=$.['User Name'],exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}\w+(\s+\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
+    """exa_json_path=$.['User Name'],exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({full_name}\w+(\s+\w+)+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))""",
     """exa_json_path=$.Module,exa_field_name=category""",
     """exa_json_path=$.['User Role'],exa_field_name=role""",
     """exa_json_path=$.Date,exa_field_name=time""",

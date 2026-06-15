@@ -10,7 +10,7 @@ Name = cisco-ie-str-email-bytesfrom
     Fields = [
       """MID ({alert_id}\d+)""",
       """MID ({message_id}\d+)""",
-      """({bytes}\d+) bytes from <({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>"""
+      """({bytes}\d+) bytes from <({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)>"""
     ]
   
 

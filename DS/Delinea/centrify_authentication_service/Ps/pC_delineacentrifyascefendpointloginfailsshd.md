@@ -19,7 +19,7 @@ Name = "delinea-centrifyas-cef-endpoint-login-fail-sshd"
 """status=({result}.+?)\s\w+="""
 """pid=({process_id}\d+)"""
 """service=({process_path}.+?)\s\w+="""
-"""EntityName =(.+\\+)?({dest_host}[^\"\s]+)(\s|$)"""
+"""EntityName =({domain}[^\\]+)\\+({dest_host}[\w\-\.]+)"""
 """reason=({failure_reason}[^=\|]+?)(\s+\w+=|\|)"""
    ]
 

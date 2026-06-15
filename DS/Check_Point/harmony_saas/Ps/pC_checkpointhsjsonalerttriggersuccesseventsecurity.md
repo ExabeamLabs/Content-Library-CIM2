@@ -24,7 +24,7 @@ Name = "checkpoint-hs-json-alert-trigger-success-event-security"
    """exa_json_path=$.event.entity.entity_payload.dmarc_result,exa_field_name=dmarc_result"""
    """exa_json_path=$.event.entity.entity_payload.saas_spam_verdict,exa_field_name=spam_score"""
    """exa_json_path=$.event.entity.entity_payload.subject,exa_field_name=email_subject"""
-   """exa_regex=entity_type\\":\s*\\"office365_emails_user\\",\s*\\"label\\":\s*\\"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
+   """exa_regex=entity_type\\":\s*\\"office365_emails_user\\",\s*\\"label\\":\s*\\"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)"""
    """exa_json_path=$.event.security_event.entity_payload.category,exa_field_name=alert_type"""
  ]
 

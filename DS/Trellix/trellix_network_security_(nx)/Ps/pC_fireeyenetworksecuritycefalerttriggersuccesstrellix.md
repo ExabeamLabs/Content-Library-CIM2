@@ -26,7 +26,7 @@ Fields = [
   """categoryOutcome=(\/)?({result}[^\s]+)"""
   """CEF:([^\|]*\|){4}({event_name}({operation}[^\|]+))""",
   """request=({object}({resource}[^\s=]+))\s*(\w+=|$)"""
-  """suser=suser=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.-])*[A-Za-z0-9]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
+  """suser=suser=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)|({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""
   """act=({category}[^=]+)\s+\w+="""
   """msg=({additional_info}[^=]+)\s+\w+=""",
   """\|Trellix\|({app}[^\|]+)\|"""

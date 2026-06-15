@@ -8,7 +8,7 @@ Name = microsoft-o365-sk4-app-file-success-group
   Fields = ${MicrosoftAzureParsersTemplates.json-microsoft-app-activity.Fields} [
     """"targetResources":[^\}]+?"displayName":"\s*({resource}({object}[^"]+?))\s*"""",
     """\sfname=\s*(N\/A|({resource}({object}[^=]+?)))\s*(\w+=|$)""",
-    """duser=(({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s]+))"""
+    """duser=(({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|({dest_user}[^\s]+))"""
   ]
 
 json-microsoft-app-activity = {

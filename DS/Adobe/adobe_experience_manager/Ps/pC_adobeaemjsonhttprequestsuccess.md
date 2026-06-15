@@ -23,7 +23,7 @@ Name = adobe-aem-json-http-request-success
       """exa_json_path=$.proto,exa_field_name=protocol"""
       """exa_json_path=$.size,exa_field_name=bytes"""
       """exa_json_path=$.agent,exa_field_name=user_agent"""
-      """exa_json_path=$.user,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
+      """exa_json_path=$.user,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(-|({user}[\w\.\-\!\#\^\~]{1,40}\$?)))"""
       """exa_json_path=$.level,exa_regex=(\w+:)?({severity}[^"]+)"""
       """exa_json_path=$.msg,exa_field_name=additional_info"""
       """exa_json_path=$.client,exa_regex=(::ffff:)?({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""

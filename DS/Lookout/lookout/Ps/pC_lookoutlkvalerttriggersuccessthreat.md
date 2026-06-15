@@ -13,7 +13,7 @@ Name = "lookout-l-kv-alert-trigger-success-threat"
 	  """details.severity=({alert_severity}[^,]+)""",
 	  """details.classifications=({alert_name}[^,]+)""",
     """details.type=({alert_type}[^,]+)""",
-	  """target.emailAddress=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+	  """target.emailAddress=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
 	  """target.platform=({os}[^,]+)"""
 	  """details.action=({action}[^,]+)""",
     """, details.type=({additional_info}[^,]+)"""

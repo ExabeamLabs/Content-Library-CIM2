@@ -15,7 +15,7 @@ Name = microsoft-defenderep-sk4-alert-trigger-success-securityalerts
      """"+hostStates"+:[^\}\]]+?riskScore"+:"+({alert_severity}[^"]+)""",
      """"+hostStates"+:[^=]+?accountName"+:"+({user}[\w\.\-\!\#\^\~]{1,40}\$?)""",
      """"+hostStates"+:[^=]+?domainName"+:"+({domain}[^"]+)""",
-     """"+hostStates"+:[^=]+?userPrincipalName"+:"+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
+     """"+hostStates"+:[^=]+?userPrincipalName"+:"+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""",
      """recommendedActions"+[^=]+?severity"+:"+({alert_severity}[^"]+)""",
      """recommendedActions"+[^=]+?title"+:"+({alert_name}[^"]+)""",
      """"+category"+:"+({alert_type}[^"]+)""",

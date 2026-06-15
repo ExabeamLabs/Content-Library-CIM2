@@ -22,7 +22,7 @@ proofpoint-casb-json-alert-trigger-events = {
       """exa_json_path=$.sub_type,exa_field_name=alert_type""",
       """exa_json_path=$.related_events[0].event_classification.category,exa_field_name=event_name""",
       """exa_json_path=$.related_events[0].full_name,exa_field_name=full_name""",
-      """exa_json_path=$.related_events[0].user_email,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+      """exa_json_path=$.related_events[0].user_email,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
       """exa_json_path=$.id,exa_field_name=alert_id""",
       """exa_json_path=$.description,exa_field_name=additional_info""",
       """exa_json_path=$.related_events[0].cloud_service,exa_field_name=target""",

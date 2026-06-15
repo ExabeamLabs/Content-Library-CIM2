@@ -16,7 +16,7 @@ Name = accellion-kw-kv-email-send-success-withfiles
     """\sSubject:\s*"*\s*({email_subject}[^"]+)\s*"*""",
     """\sTo:\s*({email_recipients}.+?)\s*with files \[({email_attachments}({email_attachment}[^,"\]]+).+?({file_ext}\w+))\]""",
     """s*with files \[({email_attachment}[^\],]*(\.({file_ext}\w+)))"""
-    """\sTo:\s*({dest_email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+    """\sTo:\s*({dest_email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   ]
 
 

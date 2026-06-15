@@ -21,7 +21,7 @@ Fields = [
   """\Wdvchost=({host}[\w\-\.]+)(\s+\w+=|\s*$)"""
   """\Wsuser=({src_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """\Wduser=({dest_user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """\Wduser=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
+  """\Wduser=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))"""
   """\Wcn2=({alert_id}\d+)"""
   """\Wcs1=({alert_name}[^=]+?)(\s+\w+=|\s*$)"""
   """\Wsproc=({process_name}[^=]+?)(\s+\w+=|\s*$)"""

@@ -14,7 +14,7 @@ Name = microsoft-adfs-kv-app-activity-fail-364
     """({event_name}Encountered error during federation passive request)"""
     """Protocol Name:\s+({protocol}[\w\-]+)"""
     """Relying Party:\s+({relying_party_id}[^\s]+)"""
-    """:\s+({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+-"""
+    """:\s+({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))\s+-"""
     """Exception details:\s+({additional_info}[^>(,]+)\s+-"""
   ]
   ParserVersion = "v1.0.0"

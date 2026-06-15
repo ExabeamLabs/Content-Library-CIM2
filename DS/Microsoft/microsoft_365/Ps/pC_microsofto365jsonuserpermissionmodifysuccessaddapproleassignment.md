@@ -13,7 +13,7 @@ Name = microsoft-o365-json-user-permission-modify-success-addapproleassignment
     """"ResultStatus":"({result}[^"]+)"""",
     """"Workload":"({app}[^"]+)"""",
     """\\\"User-Agent\\\":\\\"({user_agent}[^\"]+)\\\"""",
-    """UserId":"({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """UserId":"({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """"UserKey":"({user_id}[^@\"]+)""",
     """ModifiedProperties":.+?"ServicePrincipal.DisplayName","NewValue":"({target}[^"]+)""",
     """ModifiedProperties":.+?"NewValue":"({target}[^"]+)","Name":"ServicePrincipal.DisplayName"""",
@@ -32,14 +32,16 @@ Name = microsoft-o365-json-user-permission-modify-success-addapproleassignment
     """exa_json_path=$.ResultStatus,exa_field_name=result""",
     """exa_json_path=$.Workload,exa_field_name=app""",
     """exa_regex=\\\"User-Agent\\\":\\\"({user_agent}[^\"]+)\\\"""",
-    """exa_json_path=$.UserId,exa_regex=({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
+    """exa_json_path=$.UserId,exa_regex=({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))""",
     """exa_json_path=$.UserKey,exa_regex=({user_id}[^@\"]+)""",
     """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.DisplayName')].NewValue,exa_field_name=target""",
+    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.DisplayName')].NewValue,exa_field_name=dest_user""",
     """exa_json_path=$.OrganizationId,exa_field_name=tenant_id""",
     """exa_json_path=$.ModifiedProperties[?(@.Name =='AppRole.Value')].NewValue,exa_field_name=role_name""",
+    """exa_json_path=$.ModifiedProperties[?(@.Name =='AppRole.Value')].NewValue,exa_field_name=added_permissions""",
     """exa_json_path=$.ModifiedProperties[?(@.Name =='AppRole.Id')].NewValue,exa_field_name=role_id""",
-    """exa_json_path=$.ExtendedProperties[?(@.Name == 'extendedAuditEventCategory')].Value,exa_field_name=object""",
-    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.ObjectID')].NewValue,exa_field_name=object_id"""
+    """exa_json_path=$.ExtendedProperties[?(@.Name == 'extendedAuditEventCategory')].Value,exa_field_name=dest_user_type""",
+    """exa_json_path=$.ModifiedProperties[?(@.Name == 'ServicePrincipal.ObjectID')].NewValue,exa_field_name=dest_user_id"""
   ]
 
 

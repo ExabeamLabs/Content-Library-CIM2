@@ -20,7 +20,7 @@ Fields = [
   """"id\.resp_p":({dest_port}\d+)"""
   """"hostname":"?({src_host}[^,"]+)"""
   """"username":"?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """"username":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""""
+  """"username":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""""
   """"success":({result}[^,]+)""",
   """exa_json_path=$.ts,exa_field_name=time""",
   """exa_json_path=$._system_name,exa_field_name=host""",
@@ -32,8 +32,8 @@ Fields = [
   """exa_json_path=$.hostname,exa_field_name=src_host""",
   """exa_json_path=$.username,exa_regex=({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
   """exa_regex="username":"?({user}[\w\.\-\!\#\^\~]{1,40}\$?)"""
-  """exa_json_path=$.username,exa_regex=(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""",
-  """exa_regex="username":"(({email_address}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""""
+  """exa_json_path=$.username,exa_regex=(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""",
+  """exa_regex="username":"(({email_address}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({email_domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+))|(?<!local)|(({user}[\w\.\-\!\#\^\~]{1,40}\$?)(@({domain}[^"]+)?)))""""
   """exa_json_path=$.success,exa_field_name=result"""
 ]
 ParserVersion = "v1.0.0"

@@ -18,7 +18,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """"event_data"\s*:\s*\{.*?"Status"\s*:\s*"({result_code}[\w\-]+)"""",
     """"TargetUserName"\s*:\s*"(?![^\s"@]+@[^\s"@]+)({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))"""",
     """"TargetUserName"\s*:\s*"({user_upn}[^@"]+@[^\]\s"\\,\|]+\.[^\]\s"\\,\|]+)?(({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))@({dest_domain}({domain}[^\s"@]+)))?"""",
-    """"TargetUserName"\s*:\s*"(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
+    """"TargetUserName"\s*:\s*"(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
     """"(record_number|record_id)"\s*:\s*"*({event_id}\d+)""",
     """"channel":"({channel}[^"]+)""""
     """exa_json_path=$.message,exa_regex=({event_name}The (computer|domain controller) attempted to validate the credentials for an account)""",
@@ -27,7 +27,7 @@ Name = microsoft-evsecurity-json-endpoint-login-4776-1
     """exa_json_path=$..event_id,exa_field_name=event_code""",
     """exa_json_path=$..event_data.Workstation,exa_regex=^(({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?|(?:(?!NULL)(\\*({src_host}[^\s"]+))))$""",
     """exa_json_path=$..event_data.Status,exa_field_name=result_code""",
-    """exa_json_path=$..TargetUserName,exa_regex=(({user_upn}([A-Za-z0-9]+[!#$%&'+\/=?^_`~.\-])*[A-Za-z0-9]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
+    """exa_json_path=$..TargetUserName,exa_regex=(({user_upn}[A-Za-z0-9!#$%&'+\/=?^_`~.-]+@({dest_domain}({domain}[^\]\s"\\,;\|]+\.[^\]\s"\\,;\|]+)))|({dest_user}({user}[\w\.\-\!\#\^\~]{1,40}\$?))(@({=dest_domain}({=domain}[^\s"@]+)))?)""",
     """exa_json_path=$..record_number,exa_field_name=event_id""",
     """exa_json_path=$..record_id,exa_field_name=event_id"""
     """exa_json_path=$..channel,exa_field_name=channel"""
