@@ -25,6 +25,8 @@ Fields = [
 """exa_json_path=$.causality_actor_process_image_md5,exa_field_name=hash_md5"""
 """exa_json_path=$.action_local_ip,exa_regex=({src_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({src_port}\d+))?"""
 """exa_json_path=$.action_remote_ip,exa_regex=({dest_ip}((([0-9a-fA-F.]{0,4}):{1,2}){1,7}([0-9a-fA-F]){0,4})|(((25[0-5]|(2[0-4]|1\d|[0-9]|)\d)\.?\b){4}))(:({dest_port}\d+))?"""
+"""exa_json_path=$.name,exa_field_name=alert_name"""
+"""exa_json_path=$.alert_type,exa_field_name=alert_type"""
 ]
 ParserVersion = "v1.0.0"
 
